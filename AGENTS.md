@@ -1,7 +1,10 @@
 ---
-id: "awesome-okf-xs-agents"
-version: "0.1.0"
-source: "xuanspace（玄境）智能体协作入口模板"
+type: Playbook
+title: Awesome OKF for Xuanspace 智能体协作入口
+sources:
+  - id: xuanspace-agents
+    resource: https://github.com/xinetzone/xuanspace
+    title: XuanSpace（玄境）智能体协作入口模板
 ---
 
 # Awesome OKF for Xuanspace 智能体协作入口
@@ -40,7 +43,7 @@ source: "xuanspace（玄境）智能体协作入口模板"
 | 🚀 入门指南 | [.agents/ONBOARDING.md](.agents/ONBOARDING.md) | 快速开始、常用操作、文档库结构速览 |
 | 📜 全局核心规则 | [.agents/global-core-rules.md](.agents/global-core-rules.md) | 启动协议、内容敏感度分流、OKF 文档规范 |
 | 🧭 上下文路由表 | [.agents/context-routing.md](.agents/context-routing.md) | 任务类型→必读规范映射表 |
-| 📄 文档元数据规范 | [.agents/rules/frontmatter.md](.agents/rules/frontmatter.md) | YAML/TOML 内容-元数据二分法 |
+| 📄 文档元数据规范 | [.agents/rules/frontmatter.md](.agents/rules/frontmatter.md) | OKF v0.2 YAML frontmatter 规范 |
 
 ## 目录结构说明
 
@@ -65,7 +68,7 @@ awesome-okf-xs/
 ## 文档规范要点
 
 - **语言**：正文使用中文，文件名使用 kebab-case 纯英文
-- **格式**：Markdown，遵循 YAML/TOML 内容-元数据二分法（详见 [.agents/rules/frontmatter.md](.agents/rules/frontmatter.md)）
+- **格式**：Markdown，遵循 OKF v0.2 YAML frontmatter 规范（详见 [.agents/rules/frontmatter.md](.agents/rules/frontmatter.md)）
 - **知识组织**：结构化的知识文档优先使用 OKF bundle 组织，存放在 `bundles/` 下
 - **路径引用**：Markdown 交叉引用使用相对路径，禁止 `file:///` 绝对路径
-- **派生产物溯源**：源自外部（如 xuanspace 或其他项目）的知识文档须在 frontmatter 中标注 `source` 字段
+- **派生产物溯源**：源自外部（如 xuanspace 或其他项目）的知识文档须在 frontmatter 中标注 `sources` 字段

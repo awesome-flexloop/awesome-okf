@@ -20,7 +20,7 @@
 ├── global-core-rules.md   # 全局核心规则
 ├── context-routing.md     # 上下文路由表
 └── rules/                 # 具体规则目录
-    └── frontmatter.md     # 文档元数据二分法规范
+    └── frontmatter.md     # 文档元数据（OKF frontmatter）规范
 ```
 
 ## 使用方式

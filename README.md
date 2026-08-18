@@ -1,7 +1,10 @@
 ---
-id: "awesome-okf-xs-readme"
-version: "0.1.0"
-source: "xuanspace（玄境）README 结构模板"
+type: Reference
+title: Awesome OKF for Xuanspace
+sources:
+  - id: xuanspace-readme
+    resource: https://github.com/xinetzone/xuanspace
+    title: XuanSpace（玄境）README 结构模板
 ---
 
 # Awesome OKF for Xuanspace

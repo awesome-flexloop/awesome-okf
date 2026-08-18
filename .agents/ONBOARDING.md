@@ -52,7 +52,7 @@ awesome-okf-xs/
 ## 文档规范
 
 - 语言：正文中文，文件名 kebab-case 纯英文
-- 格式：Markdown + YAML/TOML 内容-元数据二分法
+- 格式：Markdown + OKF v0.2 YAML frontmatter
 - 路径引用：相对路径，禁止 file:/// 绝对路径
 
 详细规范见 [rules/frontmatter.md](rules/frontmatter.md)。

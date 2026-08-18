@@ -29,11 +29,12 @@
 - **参考资料**：原始来源、外部资料、参考实现，存放于 `references/`
 - 新增知识文档前，先确认其归属目录，避免内容分散
 
-## 4. 文档 YAML/TOML 二分法
+## 4. 文档元数据（frontmatter）规范
 
-所有 Markdown 文档遵循内容-元数据分离原则：
-- **YAML frontmatter**：仅保留 id、x-toml-ref、source、version 等极简连接字段
-- **TOML 元数据**：扩展元数据存放于 `.meta/toml/` 镜像路径（后续任务建立）
+所有 Markdown 文档采用 OKF v0.2 规定的 YAML frontmatter 作为唯一元数据来源（元数据内嵌，不引入外置元数据文件）：
+- **唯一必填字段**：`type`
+- **推荐字段**：`title`、`description`、`resource`、`tags`
+- **可选家族**：`sources`（溯源）、`generated`/`verified`（信任）、`status`/`stale_after`（生命周期）
 - 详细规范见 [rules/frontmatter.md](rules/frontmatter.md)
 
 ## 5. 三阶段递进工作法
@@ -56,5 +57,5 @@
 
 - **语言**：正文中文，文件名 kebab-case 纯英文
 - **路径引用**：相对路径，禁止 file:/// 绝对路径
-- **派生产物溯源**：源自外部的知识文档须标注 source 字段
+- **派生产物溯源**：源自外部的知识文档须标注 sources 字段
 - **提交规范**：Conventional Commits，type(scope): subject，中文主体
