@@ -9,7 +9,7 @@ status: stable
 stale_after: 2027-12-31
 sources:
   - id: okf-spec
-    resource: https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md
+    resource: /references/okf-spec.md
     title: Open Knowledge Format (OKF) SPEC v0.2
 ---
 
@@ -52,4 +52,4 @@ OKF v0.2 将 provenance、trust、lifecycle 与 attestation 提升为一级内�
 - [信任：generated 与 verified](./trust-generated-verified.md)
 - [生命周期：status 与 stale_after](./lifecycle-status-stale.md)
 
-[^okf-spec]: Open Knowledge Format (OKF) SPEC v0.2，见 vendor/knowledge-catalog/okf/SPEC.md。
+[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](/references/okf-spec.md)。

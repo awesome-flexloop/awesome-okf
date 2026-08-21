@@ -9,7 +9,7 @@ status: stable
 stale_after: 2027-12-31
 sources:
   - id: okf-spec
-    resource: https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md
+    resource: /references/okf-spec.md
     title: Open Knowledge Format (OKF) SPEC v0.2
 ---
 
@@ -47,4 +47,11 @@ sources:
 
 `references/` 子目录约定性地把外部材料、运行指令或代码作为知识包内的一级概念镜像进来。信源（sources）、执行器（executors）与认证器（attesters）通常指向其中（例如 `references/attesters/revenue.py`）。它是一项命名约定，而非要求。[^okf-spec]
 
-[^okf-spec]: Open Knowledge Format (OKF) SPEC v0.2，见 vendor/knowledge-catalog/okf/SPEC.md。
+## 相关概念
+
+- [概念文档](./concept-documents.md)
+- [索引文件](./index-files.md)
+- [日志文件](./log-files.md)
+- [可认证计算](./attested-computations.md)
+
+[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](/references/okf-spec.md)。

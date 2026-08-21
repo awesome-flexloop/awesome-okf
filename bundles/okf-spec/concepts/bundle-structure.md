@@ -9,7 +9,7 @@ status: stable
 stale_after: 2027-12-31
 sources:
   - id: okf-spec
-    resource: https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md
+    resource: /references/okf-spec.md
     title: Open Knowledge Format (OKF) SPEC v0.2
 ---
 
@@ -55,4 +55,4 @@ path/to/bundle/
 - [索引文件](./index-files.md)
 - [日志文件](./log-files.md)
 
-[^okf-spec]: Open Knowledge Format (OKF) SPEC v0.2，见 vendor/knowledge-catalog/okf/SPEC.md。
+[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](/references/okf-spec.md)。
