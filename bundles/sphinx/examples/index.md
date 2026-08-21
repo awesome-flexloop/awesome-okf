@@ -15,3 +15,7 @@
 ## 高级示例
 
 * [自定义Builder输出Markdown](04-custom-builder.md) — 创建自定义Builder将Sphinx文档输出为Markdown格式，实现MarkdownTranslator和MarkdownWriter。
+
+## 实战示例
+
+* [部署到Read the Docs全流程](05-readthedocs-deployment.md) — 从仓库结构到RTD配置、多版本管理、私有依赖处理、本地测试构建的完整部署流程。

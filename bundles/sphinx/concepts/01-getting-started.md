@@ -23,10 +23,24 @@ sources:
 
 ## 安装 Sphinx
 
-Sphinx 要求 Python ≥ 3.12 [F-003]，使用 pip 安装：
+Sphinx 要求 Python ≥ 3.12 [F-003]，推荐使用 pip 安装：
 
 ```bash
 pip install sphinx
+```
+
+使用 conda 安装：
+
+```bash
+conda install -c conda-forge sphinx
+# 或创建独立环境
+conda create -n docs python=3.12 sphinx && conda activate docs
+```
+
+使用 Docker（无需本地安装）：
+
+```bash
+docker run --rm -v $(pwd):/docs sphinxdoc/sphinx sphinx-build -b html . _build/html
 ```
 
 安装后可获得三个命令行工具 [F-007]：
@@ -95,6 +109,22 @@ This is my first Sphinx document.
 ```
 
 创建 `intro.rst` 并在 toctree 中引用它。
+
+### 偏好 Markdown？
+
+Sphinx 默认使用 reStructuredText，安装 MyST-Parser 即可使用 Markdown：
+
+```bash
+pip install myst-parser
+```
+
+```python
+# conf.py
+extensions = ['myst_parser']
+source_suffix = {'.rst': 'restructuredtext', '.md': 'markdown'}
+```
+
+然后就可以创建 `intro.md` 用 Markdown 编写文档了。详见 [Markdown与MyST支持](19-markdown-and-myst.md)。
 
 ## 使用 sphinx-build 构建文档
 
