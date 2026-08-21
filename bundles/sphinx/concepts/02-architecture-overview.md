@@ -27,26 +27,58 @@ Sphinx 采用 **Application-Centric（以应用为中心）** 的架构设计—
 
 Sphinx 的核心组件可分为四层：
 
-```
-┌─────────────────────────────────────────────────────┐
-│                   Sphinx (应用层)                     │
-│  - 持有所有子组件引用                                  │
-│  - 提供 add_*/connect() 扩展 API                      │
-│  - 协调构建流程 build()                               │
-├──────────┬──────────┬──────────┬──────────┬──────────┤
-│  Config  │EventMgr  │Project   │ Registry │  Theme   │
-│ (配置)   │(事件)    │(文件发现) │(组件注册) │(主题)    │
-├──────────┴──────────┴──────────┴──────────┴──────────┤
-│              BuildEnvironment (环境层)                  │
-│  - all_docs/dependencies/included (文档索引)           │
-│  - domaindata (各域数据)                             │
-│  - pickle缓存 (ENV_VERSION=66)                        │
-├─────────────────────────────────────────────────────┤
-│  Builder (构建层)                                      │
-│  ├─ Phase: READING → 读取+解析文档                     │
-│  ├─ Phase: WRITING → Transform → Translator/Writer    │
-│  └─ 13种内置Builder（html/latex/epub3/...）            │
-└─────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph L1["① Sphinx · 应用层"]
+        APP["Sphinx<br/>持有所有子组件引用<br/>提供 add_*/connect() 扩展API<br/>协调构建流程 build()"]
+    end
+
+    subgraph L2["② 核心服务组件"]
+        direction LR
+        CFG["Config<br/>(配置)"]
+        EVT["EventManager<br/>(事件)"]
+        PRJ["Project<br/>(文件发现)"]
+        REG["Registry<br/>(组件注册)"]
+        THM["Theme<br/>(主题)"]
+    end
+
+    subgraph L3["③ BuildEnvironment · 环境层"]
+        ENV["BuildEnvironment<br/>all_docs/dependencies/included (文档索引)<br/>domaindata (各域数据)<br/>pickle缓存 (ENV_VERSION=66)"]
+    end
+
+    subgraph L4["④ Builder · 构建层"]
+        BLD["Builder — 13种内置Builder(html/latex/epub3/...)"]
+        R["READING 阶段<br/>读取 + 解析文档"]
+        W["WRITING 阶段<br/>Transform → Translator/Writer"]
+        BLD --> R
+        BLD --> W
+    end
+
+    APP --> CFG
+    APP --> EVT
+    APP --> PRJ
+    APP --> REG
+    APP --> THM
+    APP --> ENV
+    APP --> BLD
+    BLD -. 读写 .-> ENV
+
+    classDef app fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1
+    classDef svc fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px,color:#4a148c
+    classDef env fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20
+    classDef bld fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#bf360c
+    classDef phase fill:#fff8e1,stroke:#f9a825,stroke-width:1px,color:#f57f17
+
+    class APP app
+    class CFG,EVT,PRJ,REG,THM svc
+    class ENV env
+    class BLD bld
+    class R,W phase
+
+    style L1 fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1
+    style L2 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px,color:#4a148c
+    style L3 fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20
+    style L4 fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#bf360c
 ```
 
 ### 核心类职责
