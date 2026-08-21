@@ -123,3 +123,9 @@ created: "2026-08-21"
 | 概念 | 12 | 00-introduction ~ 11-migration-guide |
 | 实战 | 5 | 00-quickstart ~ 04-custom-auth |
 | **合计** | **20篇** | 约2.5万字 |
+
+### 提交记录
+
+- **Commit**: `1ecbb2d` — `docs(jupyter-notebook): 基于源码深度学习生成OKF Wiki教程`
+- **变更**: 20 files changed, 5916 insertions(+)
+- **R→I→E→V→C 全流程完成**: ✅
