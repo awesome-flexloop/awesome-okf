@@ -92,7 +92,7 @@ sources: ["generation metadata"]
 **concepts/（26个概念文档）**:
 - 入门篇：00-introduction.md, 01-getting-started.md（更新：增加conda/Docker安装、Markdown快速开始）, 02-architecture-overview.md
 - 核心架构篇：03-application-class.md, 04-config-system.md, 05-event-system.md, 06-registry.md, 07-build-environment.md, 08-project-and-docutils.md
-- 领域输出篇：09-domain-system.md, 10-builder-system.md, 11-html-builder.md, 12-autodoc.md, 13-theme-system.md, 14-intersphinx.md
+- 域输出篇：09-domain-system.md, 10-builder-system.md, 11-html-builder.md, 12-autodoc.md, 13-theme-system.md, 14-intersphinx.md
 - 高级篇：15-extension-development.md, 16-i18n.md, 17-search-system.md
 - 用户指南篇（新增）：18-rest-primer.md, 19-markdown-and-myst.md, 20-cross-references-guide.md, 21-deployment.md, 22-builtin-extensions.md, 23-latex-and-pdf.md, 24-faq-troubleshooting.md, 25-glossary.md
 - `index.md` — 概念文档索引（更新：从18篇→26篇，增加"用户指南篇"分区）

@@ -27,7 +27,7 @@ Registry 在 `__init__` 中初始化约 20 个字典/列表，每种组件类型
 | 容器 | 类型 | 注册内容 |
 |------|------|---------|
 | `builders` | `dict[str, type[Builder]]` | 构建器类 |
-| `domains` | `dict[str, type[Domain]]` | 领域类 |
+| `domains` | `dict[str, type[Domain]]` | 域类 |
 | `domain_directives` | `dict[str, dict[str, type[Directive]]]` | 各域的指令 |
 | `domain_roles` | `dict[str, dict[str, RoleFunction\|XRefRole]]` | 各域的角色 |
 | `domain_indices` | `dict[str, list[type[Index]]]` | 各域的索引 |
@@ -78,13 +78,13 @@ def create_builder(self, app: Sphinx, name: str, env: BuildEnvironment) -> Build
 
 ## Domain 注册与创建
 
-### 注册领域
+### 注册域
 
 ```python
 def add_domain(self, domain: type[Domain], override: bool = False) -> None:
 ```
 
-领域类必须有 `name` 属性。`create_domains(env)` 方法遍历所有已注册领域，创建实例，并将 `domain_directives`、`domain_roles`、`domain_indices`、`domain_object_types` 中通过 `add_directive_to_domain` 等方法注册的组件"移植"到对应领域实例上。
+域类必须有 `name` 属性。`create_domains(env)` 方法遍历所有已注册域，创建实例，并将 `domain_directives`、`domain_roles`、`domain_indices`、`domain_object_types` 中通过 `add_directive_to_domain` 等方法注册的组件"移植"到对应域实例上。
 
 ### 域内组件注册
 
@@ -296,5 +296,5 @@ def add_autodoc_attrgetter(self, typ: type, attrgetter: Callable) -> None:
 - [Sphinx应用类](03-application-class.md)
 - [事件系统](05-event-system.md)
 - [Builder 构建器体系](10-builder-system.md)
-- [Domain 领域系统](09-domain-system.md)
+- [Domain 域系统](09-domain-system.md)
 - [扩展开发详解](15-extension-development.md)

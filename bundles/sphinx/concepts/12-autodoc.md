@@ -232,7 +232,7 @@ sphinx-apidoc -o docs/source/api src/mypackage --separate --module-first
 
 ## 相关概念
 
-- [Domain 领域系统](09-domain-system.md)
+- [Domain 域系统](09-domain-system.md)
 - [扩展开发详解](15-extension-development.md)
 - [Intersphinx 跨项目引用](14-intersphinx.md)
 - [使用Autodoc生成API文档](../examples/03-autodoc-api.md)

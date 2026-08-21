@@ -82,7 +82,7 @@ Domain是一组描述和链接特定知识域对象的指令和角色的集合�
 
 域的存在避免了不同语言的命名冲突，也使得支持新语言的扩展更容易编写。
 
-→ 参见 [Domain领域系统](09-domain-system.md)
+→ 参见 [Domain域系统](09-domain-system.md)
 
 ## E
 
@@ -120,7 +120,7 @@ Sphinx内置扩展，允许链接到其他Sphinx项目的文档。通过下载�
 
 Sphinx文档的基本构建块。每个"对象指令"（如 `.. py:function::`、`.. cpp:class::`、`.. js:module::`）创建一个对象块，记录代码实体的信息（名称、签名、参数、描述等）。大多数对象可以通过对应的角色交叉引用（如 `:py:func:` 引用 `.. py:function::` 定义的函数）。
 
-→ 参见 [Autodoc自动文档](12-autodoc.md)、[Domain领域系统](09-domain-system.md)
+→ 参见 [Autodoc自动文档](12-autodoc.md)、[Domain域系统](09-domain-system.md)
 
 ## R
 
@@ -186,5 +186,5 @@ Translator是docutils的Visitor模式组件，遍历doctree节点并调用对应
 - [架构总览](02-architecture-overview.md)
 - [Sphinx应用类](03-application-class.md)
 - [Builder构建器体系](10-builder-system.md)
-- [Domain领域系统](09-domain-system.md)
+- [Domain域系统](09-domain-system.md)
 - [扩展开发详解](15-extension-development.md)

@@ -79,7 +79,7 @@ Sphinx应用提供的组件注册API：
 | `app.add_directive(name, directive_cls, override=False)` | 指令 |
 | `app.add_role(name, role, override=False)` | 角色 |
 | `app.add_generic_role(name, nodeclass, override=False)` | 通用角色 |
-| `app.add_domain(domain_cls, override=False)` | 领域 |
+| `app.add_domain(domain_cls, override=False)` | 域 |
 | `app.add_directive_to_domain(domain, name, cls, override=False)` | 域内指令 |
 | `app.add_role_to_domain(domain, name, role, override=False)` | 域内角色 |
 | `app.add_index_to_domain(domain, index_cls)` | 域内索引 |

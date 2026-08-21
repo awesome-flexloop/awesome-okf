@@ -84,7 +84,7 @@ class _Opt:
 | `exclude_patterns` | `[]` | `'env'` | `list[str]` | 排除的文件模式 |
 | `include_patterns` | `['**']` | `'env'` | `list[str]` | 包含的文件模式 |
 | `default_role` | `None` | `'env'` | `str` | 默认reST角色 |
-| `primary_domain` | `'py'` | `'env'` | `str\|None` | 默认领域 |
+| `primary_domain` | `'py'` | `'env'` | `str\|None` | 默认域 |
 
 ### 显示配置
 

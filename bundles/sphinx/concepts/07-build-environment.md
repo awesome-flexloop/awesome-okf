@@ -18,7 +18,7 @@ sources:
 
 # 构建环境
 
-`BuildEnvironment`（定义在 [sphinx/environment/__init__.py](file:///d:/spaces/SpecWeave/external/libs/docs/sphinx/sphinx/environment/__init__.py)）是 Sphinx 构建过程中的核心数据容器。它存储所有文档的索引信息、依赖关系、领域数据、TOC结构、搜索索引等，并通过 pickle 序列化到磁盘实现增量构建。理解 BuildEnvironment 是理解 Sphinx 如何"记住"上次构建结果并只重新处理变更文档的关键。
+`BuildEnvironment`（定义在 [sphinx/environment/__init__.py](file:///d:/spaces/SpecWeave/external/libs/docs/sphinx/sphinx/environment/__init__.py)）是 Sphinx 构建过程中的核心数据容器。它存储所有文档的索引信息、依赖关系、域数据、TOC结构、搜索索引等，并通过 pickle 序列化到磁盘实现增量构建。理解 BuildEnvironment 是理解 Sphinx 如何"记住"上次构建结果并只重新处理变更文档的关键。
 
 ## 核心数据结构
 
@@ -64,11 +64,11 @@ doctree 的持久化路径：`{doctreedir}/{docname}.doctree`（pickle文件）�
 | `glob_toctrees` | `set[str]` | 使用了 `:glob:` 选项的toctree所在文档 |
 | `numbered_toctrees` | `set[str]` | 使用了 `:numbered:` 选项的toctree所在文档 |
 
-### 领域数据
+### 域数据
 
 | 属性 | 类型 | 说明 |
 |------|------|------|
-| `domaindata` | `dict[str, dict[str, Any]]` | domainname → 领域专属数据字典（各Domain自行管理结构） |
+| `domaindata` | `dict[str, dict[str, Any]]` | domainname → 域专属数据字典（各Domain自行管理结构） |
 | `domains` | `_DomainsContainer` | 所有已注册Domain的实例容器 |
 
 每个 Domain 在 `domaindata[domain.name]` 中存储自己的交叉引用数据，例如 Python域存储所有 `py:func`、`py:class` 等对象的位置信息。
@@ -255,4 +255,4 @@ default_settings = {
 - [Sphinx应用类](03-application-class.md)
 - [架构总览](02-architecture-overview.md)
 - [Builder 构建器体系](10-builder-system.md)
-- [Domain 领域系统](09-domain-system.md)
+- [Domain 域系统](09-domain-system.md)

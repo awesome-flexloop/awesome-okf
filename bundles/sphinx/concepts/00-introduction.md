@@ -22,7 +22,7 @@ sources:
 
 Sphinx 是一个**智能且美观的文档生成器**（Python documentation generator）[F-001]。它最初由 Georg Brandl 为 Python 官方文档创建，现已成为 Python 生态乃至更广泛开源社区中最主流的文档工具。Sphinx 使用 reStructuredText（reST）作为默认标记语言，通过扩展也支持 Markdown，能够将纯文本源文件转换为 HTML、PDF（LaTeX）、EPUB、man 手册页、Texinfo、XML 等多种输出格式。
 
-Sphinx 完全使用 Python 编写，采用 **BSD-2-Clause** 开源许可证发布 [F-002]，项目托管于 GitHub（https://github.com/sphinx-doc/sphinx）。当前版本为 **9.1.1**（beta 开发版本），构建系统使用 flit_core，要求 Python ≥ 3.12 [F-003]。
+Sphinx 完全使用 Python 编写，采用 **BSD-2-Clause** 开源许可证发布 [F-002]，项目托管于 GitHub（<https://github.com/sphinx-doc/sphinx>）。当前版本为 **9.1.1**（beta 开发版本），构建系统使用 flit_core，要求 Python ≥ 3.12 [F-003]。
 
 ## 核心能力
 
@@ -48,7 +48,7 @@ Sphinx 通过 Builder（构建器）抽象层支持 13 种内置输出格式 [F-
 
 ### 交叉引用与语义标记
 
-Sphinx 最核心的能力之一是**跨文档智能交叉引用**。通过 Domain（领域）抽象，Sphinx 能够为不同编程语言（Python、C、C++、JavaScript）和知识域提供语义化的描述指令和引用角色。例如，在 Python 域中可以使用 `:py:func:\`funcname\`` 引用函数、`:py:class:\`Classname\`` 引用类，Sphinx 会自动解析这些引用并生成正确的超链接。
+Sphinx 最核心的能力之一是**跨文档智能交叉引用**。通过 Domain（域）抽象，Sphinx 为不同编程语言（Python、C、C++、JavaScript 等）和结构化知识域（如标准文档域 `std`）提供了两类语义标记：**描述指令**（declarative directives，如 `.. py:function:: funcname` 用于声明一个函数）和**引用角色**（cross-reference roles，如 `` :py:func:`funcname` `` 用于引用已声明的函数、`` :py:class:`Classname` `` 用于引用类）。Sphinx 会自动解析这些引用并生成正确的超链接。
 
 ### 扩展体系
 

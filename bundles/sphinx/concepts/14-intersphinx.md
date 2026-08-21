@@ -189,5 +189,5 @@ python -m sphinx.ext.intersphinx https://docs.python.org/3/objects.inv | grep "p
 ## 相关概念
 
 - [事件系统](05-event-system.md)
-- [Domain 领域系统](09-domain-system.md)
+- [Domain 域系统](09-domain-system.md)
 - [Autodoc 自动文档生成](12-autodoc.md)

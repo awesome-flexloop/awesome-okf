@@ -21,7 +21,7 @@ sources:
 
 # 项目管理与 Docutils 集成
 
-Sphinx 构建在 docutils 库之上。docutils 提供了 reStructuredText 解析、文档树（doctree）表示和基础的转换/输出框架，Sphinx 在其基础上添加了交叉引用、领域系统、多格式输出等高级功能。本文档介绍 Project（源文件管理）以及 Sphinx 与 docutils 的集成点。
+Sphinx 构建在 docutils 库之上。docutils 提供了 reStructuredText 解析、文档树（doctree）表示和基础的转换/输出框架，Sphinx 在其基础上添加了交叉引用、域系统、多格式输出等高级功能。本文档介绍 Project（源文件管理）以及 Sphinx 与 docutils 的集成点。
 
 ## Project 类
 

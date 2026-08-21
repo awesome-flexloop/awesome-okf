@@ -66,7 +66,7 @@ def __init__(
 
 - 核心基础设施：`sphinx.addnodes`, `sphinx.config`, `sphinx.registry`, `sphinx.extension`, `sphinx.parsers`, `sphinx.roles`, `sphinx.directives`, `sphinx.versioning`
 - 构建器：`sphinx.builders.changes`, `sphinx.builders.html`, `sphinx.builders.latex`, `sphinx.builders.epub3`, `sphinx.builders.dirhtml`, `sphinx.builders.dummy`, `sphinx.builders.gettext`, `sphinx.builders.linkcheck`, `sphinx.builders.manpage`, `sphinx.builders.singlehtml`, `sphinx.builders.texinfo`, `sphinx.builders.text`, `sphinx.builders.xml`
-- 领域：`sphinx.domains.c`, `sphinx.domains.cpp`, `sphinx.domains.python`, `sphinx.domains.javascript`, `sphinx.domains.math`, `sphinx.domains.rst`, `sphinx.domains.std`, `sphinx.domains.changeset`, `sphinx.domains.citation`, `sphinx.domains.index`
+- 域：`sphinx.domains.c`, `sphinx.domains.cpp`, `sphinx.domains.python`, `sphinx.domains.javascript`, `sphinx.domains.math`, `sphinx.domains.rst`, `sphinx.domains.std`, `sphinx.domains.changeset`, `sphinx.domains.citation`, `sphinx.domains.index`
 - 指令：`sphinx.directives.admonitions`, `sphinx.directives.code`, `sphinx.directives.other`, `sphinx.directives.patches`
 - 转换器：`sphinx.transforms`, `sphinx.transforms.i18n`, `sphinx.transforms.references`, `sphinx.transforms.post_transforms`, `sphinx.transforms.compact_bullet_list`, `sphinx.transforms.post_transforms.code`, `sphinx.transforms.post_transforms.images`
 - 环境收集器：`sphinx.environment.collectors.dependencies`, `sphinx.environment.collectors.asset`, `sphinx.environment.collectors.metadata`, `sphinx.environment.collectors.title`, `sphinx.environment.collectors.toctree`

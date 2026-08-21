@@ -382,5 +382,5 @@ my_extension = "my_extension"
 - [Sphinx应用类](03-application-class.md)
 - [组件注册中心](06-registry.md)
 - [事件系统](05-event-system.md)
-- [Domain 领域系统](09-domain-system.md)
+- [Domain 域系统](09-domain-system.md)
 - [编写第一个Sphinx扩展](../examples/01-first-extension.md)

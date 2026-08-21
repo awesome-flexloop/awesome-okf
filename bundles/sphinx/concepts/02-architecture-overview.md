@@ -39,7 +39,7 @@ Sphinx 的核心组件可分为四层：
 ├──────────┴──────────┴──────────┴──────────┴──────────┤
 │              BuildEnvironment (环境层)                  │
 │  - all_docs/dependencies/included (文档索引)           │
-│  - domaindata (各领域数据)                             │
+│  - domaindata (各域数据)                             │
 │  - pickle缓存 (ENV_VERSION=66)                        │
 ├─────────────────────────────────────────────────────┤
 │  Builder (构建层)                                      │
@@ -56,10 +56,10 @@ Sphinx 的核心组件可分为四层：
 | `Sphinx` | `application.py` | 应用中枢，组装所有组件，提供扩展API，驱动构建流程 |
 | `Config` | `config.py` | 配置管理，读取conf.py，管理配置项注册和值访问 |
 | `EventManager` | `events.py` | 事件订阅/发射系统，16个核心事件，按priority排序执行 |
-| `BuildEnvironment` | `environment/__init__.py` | 构建环境，存储文档索引、依赖关系、领域数据，pickle缓存 |
+| `BuildEnvironment` | `environment/__init__.py` | 构建环境，存储文档索引、依赖关系、域数据，pickle缓存 |
 | `Builder` | `builders/__init__.py` | 构建器基类，控制构建流程，输出到目标格式 |
 | `SphinxComponentRegistry` | `registry.py` | 组件注册中心，管理builders/domains/directives/roles/transforms |
-| `Domain` | `domains/__init__.py` | 领域基类，封装编程语言/知识域的描述指令和引用角色 |
+| `Domain` | `domains/__init__.py` | 域基类，封装编程语言/知识域的描述指令和引用角色 |
 | `Project` | `project.py` | 源文件发现与管理 |
 | `Theme` | `theming.py` | 主题加载与配置（HTML主题） |
 | `Extension` | `extension.py` | 扩展元数据（版本、并行安全标志） |

@@ -122,7 +122,7 @@ def build(self, force_all: bool = False, filenames: Sequence[Path] = ()) -> None
 | `add_directive(name, directive_cls, override=False)` | 注册reST指令 |
 | `add_role(name, role, override=False)` | 注册reST角色 |
 | `add_generic_role(name, nodeclass, override=False)` | 注册通用角色（内容包裹为指定节点） |
-| `add_domain(domain_cls, override=False)` | 注册领域 |
+| `add_domain(domain_cls, override=False)` | 注册域 |
 | `add_directive_to_domain(domain, name, cls, override=False)` | 向指定域注册指令 |
 | `add_role_to_domain(domain, name, role, override=False)` | 向指定域注册角色 |
 | `add_index_to_domain(domain, index_cls)` | 向指定域注册索引 |

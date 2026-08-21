@@ -531,4 +531,4 @@ Knuth的文学编程 [Knuth1984]_ 影响了文档工具的设计。
 - [Markdown/MyST 支持](19-markdown-and-myst.md)
 - [交叉引用完全指南](20-cross-references-guide.md)
 - [5分钟快速上手](01-getting-started.md)
-- [Domain领域系统](09-domain-system.md)
+- [Domain域系统](09-domain-system.md)

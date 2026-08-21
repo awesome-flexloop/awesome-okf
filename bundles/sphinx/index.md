@@ -43,11 +43,11 @@ Sphinx 是 Python 生态最主流的文档生成器，最初为 Python 官方文
 | [构建环境](concepts/07-build-environment.md) | BuildEnvironment、pickle缓存、增量构建 |
 | [项目管理与Docutils集成](concepts/08-project-and-docutils.md) | Project类、Parser/Transform/Translator |
 
-### 领域与输出（源码视角）
+### 域与输出（源码视角）
 
 | 文档 | 说明 |
 |------|------|
-| [Domain领域系统](concepts/09-domain-system.md) | Domain基类、6大内置域、交叉引用解析 |
+| [Domain域系统](concepts/09-domain-system.md) | Domain基类、6大内置域、交叉引用解析 |
 | [Builder构建器体系](concepts/10-builder-system.md) | 13种Builder、构建流程、并行构建 |
 | [HTML构建器详解](concepts/11-html-builder.md) | StandaloneHTMLBuilder、模板、静态文件 |
 | [Autodoc自动文档](concepts/12-autodoc.md) | 从docstring生成API文档 |

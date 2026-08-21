@@ -293,5 +293,5 @@ nitpicky = True  # 将所有缺失引用警告转为错误（CI推荐）
 - [reStructuredText 基础语法](18-rest-primer.md)
 - [Markdown/MyST 支持](19-markdown-and-myst.md)
 - [Intersphinx跨项目引用](14-intersphinx.md)
-- [Domain领域系统](09-domain-system.md)
+- [Domain域系统](09-domain-system.md)
 - [Autodoc自动文档](12-autodoc.md)

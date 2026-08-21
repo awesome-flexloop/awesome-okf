@@ -17,9 +17,9 @@
 * [07. 构建环境](07-build-environment.md) — BuildEnvironment：all_docs/dependencies/included索引、doctree pickle缓存、domaindata、TOC数据、增量构建机制。
 * [08. 项目管理与Docutils集成](08-project-and-docutils.md) — Project类源文件发现、Parser/Transform/Writer/Translator、addnodes自定义节点、SphinxTransform两阶段处理。
 
-## 领域输出篇（09-14）
+## 域输出篇（09-14）
 
-* [09. Domain领域系统](09-domain-system.md) — Domain基类、6大内置域（py/c/cpp/js/rst/std）、ObjType对象类型、resolve_xref交叉引用解析、get_objects搜索索引。
+* [09. Domain域系统](09-domain-system.md) — Domain基类、6大内置域（py/c/cpp/js/rst/std）、ObjType对象类型、resolve_xref交叉引用解析、get_objects搜索索引。
 * [10. Builder构建器体系](10-builder-system.md) — Builder基类、13种内置Builder、构建三阶段、build_all/build_update/build_specific模式、parallel并行构建。
 * [11. HTML构建器详解](11-html-builder.md) — StandaloneHTMLBuilder、Jinja2模板渲染、静态文件处理、全局页面（genindex/search）、html-collect-pages事件。
 * [12. Autodoc自动文档生成](12-autodoc.md) — sphinx.ext.autodoc：autoclass/automodule指令、Documenter体系、napoleon Google/NumPy风格、sphinx-apidoc。
