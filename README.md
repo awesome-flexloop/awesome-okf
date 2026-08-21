@@ -58,6 +58,12 @@ awesome-okf-xs/
 
 3. AI 协作：阅读 [AGENTS.md](AGENTS.md) 了解智能体协作规范
 
+## 已收录知识束（Bundles）
+
+| Bundle | 路径 | 简介 |
+|---|---|---|
+| OKF 规范中文转译知识包 | [bundles/okf-spec/](bundles/okf-spec/) | OKF v0.2 规范中文转译知识包（15 概念 + 3 示例 + 1 信源），权威信源为 [GoogleCloudPlatform/knowledge-catalog](https://github.com/GoogleCloudPlatform/knowledge-catalog) 的 SPEC.md |
+
 ## 文档与资源
 
 - 🤖 **AI 协作**：详见 [AGENTS.md](AGENTS.md)
