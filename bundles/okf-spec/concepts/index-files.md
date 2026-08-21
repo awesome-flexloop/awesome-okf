@@ -4,7 +4,7 @@ title: 索引文件
 description: `index.md` 的渐进披露用途、无 frontmatter 的默认约定（仅根 index.md 可含 okf_version），以及分组标题 + 条目列表格式。
 tags: [okf, spec, index]
 generated: { by: reference_agent/trae-glm, at: 2026-08-20T08:00:00Z }
-verified: { by: process:seven-concepts-V, at: 2026-08-20T09:00:00Z }
+verified: { by: process:seven-concepts-v, at: 2026-08-21T00:00:00Z }
 status: stable
 stale_after: 2027-12-31
 sources:

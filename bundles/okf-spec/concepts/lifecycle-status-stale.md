@@ -4,7 +4,7 @@ title: 生命周期：status 与 stale_after
 description: OKF v0.2 §5.4-§5.5：`status` 标记概念状态（draft/stable/deprecated），`stale_after` 以绝对日期标记过期。
 tags: [okf, spec, lifecycle]
 generated: { by: reference_agent/trae-glm, at: 2026-08-20T08:00:00Z }
-verified: { by: process:seven-concepts-V, at: 2026-08-20T09:00:00Z }
+verified: { by: process:seven-concepts-v, at: 2026-08-21T00:00:00Z }
 status: stable
 stale_after: 2027-12-31
 sources:

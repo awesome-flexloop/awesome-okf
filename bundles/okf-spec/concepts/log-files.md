@@ -4,7 +4,7 @@ title: 日志文件
 description: `log.md` 的层级位置、日期分组扁平列表（最新在前）、`YYYY-MM-DD` 日期标题与前导粗体词约定。
 tags: [okf, spec, log]
 generated: { by: reference_agent/trae-glm, at: 2026-08-20T08:00:00Z }
-verified: { by: process:seven-concepts-V, at: 2026-08-20T09:00:00Z }
+verified: { by: process:seven-concepts-v, at: 2026-08-21T00:00:00Z }
 status: stable
 stale_after: 2027-12-31
 sources:

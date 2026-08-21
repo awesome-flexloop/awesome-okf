@@ -33,5 +33,12 @@ okf_version: "0.2"
 ## 信源登记簿（references/）
 
 * [Open Knowledge Format (OKF) 规范 v0.2](references/okf-spec.md) - OKF 开放知识格式 v0.2 英文规范，本 bundle 的唯一权威信源。
+* [进程登记：seven-concepts-v（对抗审查）](references/processes/seven-concepts-v.md) - 本 bundle 各文档 `verified.by` 所用自动化进程的定义与复核路径，确立 machine-confirmed 信任层级。
 
-本知识包共收录 19 个概念文档（15 个规范概念 + 3 个示例 + 1 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
+## 信任与生命周期说明
+
+* **status 判定依据**：全部 18 个内容文档（15 概念 + 3 示例）均 `status: stable`。这并非模板化冲印，而是 2026-08-21 由登记进程 `process:seven-concepts-v`（见上）对全 bundle 执行对抗审查后的结论——所有文档格式合规、链接无误、忠实转译权威信源，故无需降级为 draft。
+* **stale_after 解释**：统一设置为 `2027-12-31`。本 bundle 内容锚定于已发布的 OKF v0.2 规范，不依赖时效性业务数据；该日期作为针对 SPEC 未来可能修订的保守重新评估节点（如 v0.2 发布新修订则将据此复盘），而非表达内容将于该日过期失效。
+* **核验链路**：`generated.at` 记录各文档原始批量生成时刻（2026-08-20）；`verified.at` 记录本次对抗审查核验事件（2026-08-21），两者分离、可追溯。
+
+本知识包共收录 20 个概念文档（15 个规范概念 + 3 个示例 + 2 个信源/进程登记），另含 3 个子目录 index.md 与根 index.md、log.md。

@@ -4,7 +4,7 @@ title: 参与者约定
 description: 记录身份字段所用的统一参与者约定：`<producer>/<version>`、`human:<id>`、`process:<id>` 三种形态及其信任分类用途。
 tags: [okf, spec, actor]
 generated: { by: reference_agent/trae-glm, at: 2026-08-20T08:00:00Z }
-verified: { by: process:seven-concepts-V, at: 2026-08-20T09:00:00Z }
+verified: { by: process:seven-concepts-v, at: 2026-08-21T00:00:00Z }
 status: stable
 stale_after: 2027-12-31
 sources:

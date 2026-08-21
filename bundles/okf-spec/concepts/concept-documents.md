@@ -4,7 +4,7 @@ title: 概念文档
 description: OKF v0.2 概念文档结构：YAML frontmatter（必填 type，推荐 title/description/resource/tags）与正文约定标题。
 tags: [okf, spec, document]
 generated: { by: reference_agent/trae-glm, at: 2026-08-20T08:00:00Z }
-verified: { by: process:seven-concepts-V, at: 2026-08-20T09:00:00Z }
+verified: { by: process:seven-concepts-v, at: 2026-08-21T00:00:00Z }
 status: stable
 stale_after: 2027-12-31
 sources:

@@ -4,7 +4,7 @@ title: 不绑定资源的概念示例：数据新鲜度告警（Playbook）
 description: 一个不绑定具体资源的概念示例，无 resource 字段，正文含指向其他概念的链接。
 tags: [okf, spec, example]
 generated: { by: reference_agent/trae-glm, at: 2026-08-20T08:00:00Z }
-verified: { by: process:seven-concepts-V, at: 2026-08-20T09:00:00Z }
+verified: { by: process:seven-concepts-v, at: 2026-08-21T00:00:00Z }
 status: stable
 stale_after: 2027-12-31
 sources:

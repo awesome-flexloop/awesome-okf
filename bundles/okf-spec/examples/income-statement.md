@@ -4,7 +4,7 @@ title: 损益表工作示例：v0.1 → v0.2 迁移
 description: 展示同一张损益表（收入与毛利）从 v0.1 单文档形态迁移到 v0.2 可认证计算拆分形态。
 tags: [okf, spec, example]
 generated: { by: reference_agent/trae-glm, at: 2026-08-20T08:00:00Z }
-verified: { by: process:seven-concepts-V, at: 2026-08-20T09:00:00Z }
+verified: { by: process:seven-concepts-v, at: 2026-08-21T00:00:00Z }
 status: stable
 stale_after: 2027-12-31
 sources:

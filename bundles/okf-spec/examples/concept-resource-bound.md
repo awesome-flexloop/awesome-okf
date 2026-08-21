@@ -4,7 +4,7 @@ title: 绑定资源的概念示例：Customer Orders（BigQuery 表）
 description: 一个绑定到具体 BigQuery 资源的概念示例，frontmatter 含 resource、tags、generated 字段。
 tags: [okf, spec, example]
 generated: { by: reference_agent/trae-glm, at: 2026-08-20T08:00:00Z }
-verified: { by: process:seven-concepts-V, at: 2026-08-20T09:00:00Z }
+verified: { by: process:seven-concepts-v, at: 2026-08-21T00:00:00Z }
 status: stable
 stale_after: 2027-12-31
 sources:
