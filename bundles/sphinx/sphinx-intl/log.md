@@ -17,7 +17,7 @@ sources:
 - **Bundle 名称**: sphinx-intl
 - **生成时间**: 2026-08-21T14:52:00Z
 - **源码路径**: `external/libs/docs/sphinx-intl/`
-- **输出路径**: `projects/awesome-okf-xs/bundles/sphinx-intl/`
+- **输出路径**: `projects/awesome-okf-xs/bundles/sphinx/sphinx-intl/`（2026-08-22 分组重构：从 `bundles/sphinx-intl/` 迁移）
 - **生成工具**: source-code-to-okf-wiki skill（R→I→E→V→C 工作流）
 - **遵循方法论**: seven-concepts-cmd 编排
 

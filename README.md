@@ -31,12 +31,18 @@ sources:
 
 ```
 awesome-okf-xs/
-├── bundles/          # OKF bundle 文档（结构化知识束）
-├── docs/             # 通用文档与索引
-├── references/       # 参考资料与原始来源
-├── .agents/          # AI 智能体规范目录
-├── AGENTS.md         # 智能体协作入口
-└── README.md         # 本文件 - 项目说明
+├── bundles/              # OKF bundle 文档（按技术生态分组的知识束）
+│   ├── meta/             # 📐 规范与格式（OKF 规范本体）
+│   ├── python/           # 🐍 Python 语言核心
+│   ├── conda/            # 📦 Conda 包管理生态
+│   ├── jupyter/          # 📓 Jupyter 数据科学生态
+│   ├── sphinx/           # 📄 Sphinx 文档工程生态
+│   └── tooling/          # 🔧 通用开发工具
+├── docs/                 # 通用文档与索引
+├── references/           # 参考资料与原始来源
+├── .agents/              # AI 智能体规范目录
+├── AGENTS.md             # 智能体协作入口
+└── README.md             # 本文件 - 项目说明
 ```
 
 ## 快速开始
@@ -62,7 +68,9 @@ awesome-okf-xs/
 
 | Bundle | 路径 | 简介 |
 |---|---|---|
-| OKF 规范中文转译知识包 | [bundles/okf-spec/](bundles/okf-spec/) | OKF v0.2 规范中文转译知识包（15 概念 + 3 示例 + 1 信源），权威信源为 [GoogleCloudPlatform/knowledge-catalog](https://github.com/GoogleCloudPlatform/knowledge-catalog) 的 SPEC.md |
+| OKF 规范中文转译知识包 | [bundles/meta/okf-spec/](bundles/meta/okf-spec/) | OKF v0.2 规范中文转译知识包（15 概念 + 3 示例 + 1 信源），权威信源为 [GoogleCloudPlatform/knowledge-catalog](https://github.com/GoogleCloudPlatform/knowledge-catalog) 的 SPEC.md |
+
+> 📚 **完整知识束索引**：共 24 个知识束，按技术生态分为 6 组，详见 [bundles/index.md](bundles/index.md)。
 
 ## 文档与资源
 

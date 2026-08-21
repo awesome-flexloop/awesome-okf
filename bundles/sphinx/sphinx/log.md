@@ -16,7 +16,7 @@ sources: ["generation metadata"]
 - **生成时间**: 2026-08-21T09:47:00Z（初版），2026-08-21T11:10:00Z（第二轮用户指南更新）
 - **源码版本**: Sphinx 9.1.1 (beta) + Sphinx官方文档 (sphinx-doc.org/en/master/)
 - **源码路径**: `external/libs/docs/sphinx/` + `https://www.sphinx-doc.org/en/master/`
-- **输出路径**: `projects/awesome-okf-xs/bundles/sphinx/`
+- **输出路径**: `projects/awesome-okf-xs/bundles/sphinx/sphinx/`（2026-08-22 分组重构：从 `bundles/sphinx/` 迁移）
 - **生成工具**: source-code-to-okf-wiki skill (R→I→E→V→C workflow)
 
 ## 生成阶段记录

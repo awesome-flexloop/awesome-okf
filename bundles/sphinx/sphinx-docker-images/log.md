@@ -18,7 +18,7 @@ sources:
 - **生成时间**：2026-08-21T14:49:00Z
 - **源码版本**：sphinx-docker-images（Sphinx 8.2.3）
 - **源码路径**：`external/libs/docs/sphinx-docker-images/`
-- **输出路径**：`projects/awesome-okf-xs/bundles/sphinx-docker-images/`
+- **输出路径**：`projects/awesome-okf-xs/bundles/sphinx/sphinx-docker-images/`（2026-08-22 分组重构：从 `bundles/sphinx-docker-images/` 迁移）
 - **生成工具**：source-code-to-okf-wiki skill（R→I→E→V→C workflow）+ seven-concepts-cmd 方法论编排
 - **场景识别**：知识沉淀（场景4），链路 R→I→E→V→C
 
