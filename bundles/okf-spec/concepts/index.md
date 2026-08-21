@@ -1,5 +1,7 @@
 # 规范概念
 
+## 核心规范转译
+
 * [OKF 规范动机](motivation.md) - OKF 的动机：人可读、可解析、可 diff、可移植，以及溯源、信任、新鲜度、生命周期、认证成为一级字段的理由。
 * [OKF 术语表](terminology.md) - OKF v0.2 核心术语的中英对照与定义（知识包、概念、溯源、可信度信号、信任层级、可认证计算等）。
 * [知识包结构](bundle-structure.md) - OKF v0.2 知识包的目录树结构、三种分发方式，以及保留文件名（index.md、log.md）。
@@ -12,6 +14,17 @@
 * [索引文件](index-files.md) - `index.md` 的渐进披露用途、无 frontmatter 的默认约定（仅根 index.md 可含 okf_version），以及分组标题 + 条目列表格式。
 * [日志文件](log-files.md) - `log.md` 的层级位置、日期分组扁平列表（最新在前）、`YYYY-MM-DD` 日期标题与前导粗体词约定。
 * [可认证计算（Attested Computations）](attested-computations.md) - OKF v0.2 可认证计算概念：runtime/parameters/computation/executor/attester 契约字段、内联与文件两种计算方式、消费者的用法，以及 verification 与 attestation 之别。
-* [合规性（Conformance）](conformance.md) - OKF v0.2 合规三要件，以及消费者对 trust/lifecycle/provenance/computation 字段族的处理要求与“不得拒绝”清单。
+* [合规性（Conformance）](conformance.md) - OKF v0.2 合规三要件，以及消费者对 trust/lifecycle/provenance/computation 字段族的处理要求与"不得拒绝"清单。
 * [版本控制](versioning.md) - OKF v0.2 版本规则：<major>.<minor> 格式、次版本为向后兼容增量、主版本为破坏性变更，以及知识包声明目标版本方式与已推迟事项。
 * [相对 v0.1 的变更](changes-from-v0.1.md) - OKF v0.2 相对 v0.1 的两处破坏性变更（timestamp 与 # Citations 的取代）与全部增量变更（新字段族、Attested Computation、# Computation、actor 约定）。
+
+## 设计与实践
+
+* [OKF 设计原则](design-principles.md) - 三大设计原则（最小意见化/生产者-消费者独立/格式而非平台）驱动规范中每一个设计决策。
+* [OKF 实践指南](practical-guidance.md) - 10 条来自 v0.1 注释版和社区实践的使用建议：type 治理、扩展字段、自动化索引、断链即特性、结构化 Markdown、log vs git、Obsidian 对比、引用演进、目录放置、三规则验证。
+
+## 生态工具
+
+* [OKF Validator](tooling-validator.md) - 官方在线验证工具（okf.md/validator），上传目录即可检查合规性，浏览器端运行保护隐私。
+* [OKF Agent Skill](tooling-agent-skill.md) - 为 AI 智能体（Claude Code/Codex/Gemini CLI）提供的技能包，含 SKILL.md 提示词和 validate.sh 验证脚本，支持"一句话创建知识包"。
+* [OKF Knowledge Catalog CLI](tooling-knowledge-catalog.md) - Google Cloud Platform 官方维护的工具链仓库（knowledge-catalog），含 npm 包 @okf/okf、CLI 工具和规范源码。
