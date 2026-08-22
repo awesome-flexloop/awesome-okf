@@ -11,6 +11,12 @@ Jupyter 是数据科学与交互式计算的核心平台，从底层的 ZeroMQ �
 
 ## 学习路径
 
+### 入口层：元包与生态总览
+
+| 顺序 | 知识束 | 一句话简介 |
+|------|--------|-----------|
+| 0 | [jupyter](jupyter/index.md) | Jupyter 元包——一站式安装入口（notebook/jupyterlab/nbconvert/ipykernel/ipywidgets）、配置系统、目录规范、Kernel 架构、.ipynb 文件格式、C/S 通信模型、ipywidgets 交互控件、nbconvert 转换、JupyterHub 多用户部署（v1.2.0.dev0） |
+
 ### 协议层：内核通信基础
 
 | 顺序 | 知识束 | 一句话简介 |
