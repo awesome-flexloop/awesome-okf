@@ -4,6 +4,7 @@ title: LosslessRSTParser 与自定义 Transform
 description: rst-to-myst 的无损 RST 解析器和 docutils AST 变换机制。
 tags: [parser, docutils, transform, lossless, ast]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:57:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

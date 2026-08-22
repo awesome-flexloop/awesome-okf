@@ -4,6 +4,7 @@ title: 三种编译类型
 description: web-compile支持的三种编译能力详解：SCSS→CSS编译、JS压缩、Jinja2模板渲染
 tags: [web, compile, sass, scss, css, javascript, minify, jinja2, template]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T05:22:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

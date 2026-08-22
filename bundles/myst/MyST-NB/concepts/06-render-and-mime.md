@@ -4,6 +4,7 @@ title: 渲染与 MIME 类型
 description: MIME 类型优先级系统、多输出格式渲染、图片处理、ipywidgets、stderr 处理、自定义渲染插件
 tags: [myst-nb, render, mime, output, ipywidgets, image]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

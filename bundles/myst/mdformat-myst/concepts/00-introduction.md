@@ -4,6 +4,7 @@ title: mdformat-myst 项目介绍与安装
 description: mdformat-myst 是 mdformat 的 MyST Markdown 兼容性插件，提供 MyST 语法格式化支持。
 tags: [introduction, installation, myst, markdown, mdformat]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:56:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

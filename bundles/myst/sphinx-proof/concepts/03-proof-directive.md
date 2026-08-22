@@ -4,6 +4,7 @@ title: 证明指令
 description: proof 指令的用法、与定理的配合方式、admonition 节点实现、无编号设计
 tags: [sphinx, proof, directive, admonition, proof-environment]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:16:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

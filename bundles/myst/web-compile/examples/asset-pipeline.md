@@ -4,6 +4,7 @@ title: 资产编译流水线
 description: 使用web-compile构建Sphinx主题和文档站点静态资源的完整示例，包括配置、CI集成和开发工作流
 tags: [web, compile, example, sphinx, theme, asset-pipeline, ci]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T05:28:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

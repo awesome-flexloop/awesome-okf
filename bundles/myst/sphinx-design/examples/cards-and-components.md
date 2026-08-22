@@ -1,5 +1,5 @@
 ---
-type: example
+type: Example
 title: 卡片与交互组件示例
 description: card/card-carousel/dropdown/tab-set/button/徽章的综合用法示例
 tags:
@@ -11,7 +11,10 @@ tags:
 - button
 - badge
 - example
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

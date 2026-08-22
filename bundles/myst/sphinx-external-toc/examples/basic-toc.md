@@ -4,6 +4,7 @@ title: 基础 _toc.yml 示例
 description: 多种场景的 _toc.yml 完整示例——小型项目、多章节书籍、Jupyter Book 格式、含外部链接和glob
 tags: [sphinx, sphinx-extension, toctree, example, yaml, configuration, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:05:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

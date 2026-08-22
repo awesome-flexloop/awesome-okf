@@ -4,6 +4,7 @@ title: 多语言 REPL 提示符配置
 description: Bash、Python REPL、IPython、PowerShell 等不同环境下的提示符剥离配置方案，正则表达式速查
 tags: [sphinx, sphinx-extension, copybutton, example, prompt, regex, repl, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

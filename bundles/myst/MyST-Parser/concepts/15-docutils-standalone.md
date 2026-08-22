@@ -4,6 +4,7 @@ title: Docutils 独立使用
 description: 不依赖 Sphinx 直接使用 MyST-Parser——Python API、CLI 工具、自定义 Writer
 tags: [myst, docutils, standalone, cli, api, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

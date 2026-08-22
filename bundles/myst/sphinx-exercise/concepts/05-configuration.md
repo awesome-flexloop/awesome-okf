@@ -4,6 +4,7 @@ title: 配置项参考
 description: sphinx-exercise 的全部配置项：hide_solutions、exercise_style、numfig 编号格式与 i18n 配置
 tags: [sphinx, exercise, configuration, hide-solutions, i18n, numfig]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:54:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

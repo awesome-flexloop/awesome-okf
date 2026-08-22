@@ -4,6 +4,7 @@ title: _toc.yml 语法详解
 description: _toc.yml 文件的完整语法——三种格式（default/jb-book/jb-article）、条目类型、选项配置、shorthand 语法
 tags: [sphinx, sphinx-extension, toctree, yaml, syntax, jupyter-book, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:05:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

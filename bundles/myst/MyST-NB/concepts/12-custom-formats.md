@@ -4,6 +4,7 @@ title: 自定义格式与扩展
 description: nb_custom_formats 注册自定义 Notebook 格式读取器、自定义渲染器插件、自定义 MIME 渲染器
 tags: [myst-nb, custom-format, extension, plugin, entry-point]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

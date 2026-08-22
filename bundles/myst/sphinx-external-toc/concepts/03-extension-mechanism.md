@@ -4,6 +4,7 @@ title: 扩展工作机制
 description: sphinx-external-toc 如何接管 Sphinx 导航——禁用内置 Collector、SiteMap 数据模型、Transform 注入 toctree 节点
 tags: [sphinx, sphinx-extension, toctree, architecture, transform, collector, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:05:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -4,6 +4,7 @@ title: Glue 变量粘贴
 description: glue() 函数在代码中存储变量，{glue} 角色/指令在文档中粘贴，跨页面引用、NbGlueDomain
 tags: [myst-nb, glue, variable, cross-reference, paste, scrapbook]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

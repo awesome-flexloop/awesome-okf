@@ -4,6 +4,7 @@ title: 快速开始
 description: 安装 sphinx-tabs 并创建第一个标签页组件，掌握 tabs/tab 指令的基本用法
 tags: [sphinx, tabs, installation, setup, getting-started]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:24:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

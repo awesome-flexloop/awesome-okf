@@ -4,6 +4,7 @@ title: 分组标签同步与配置
 description: group-tab 跨页面同步用法、禁用 CSS 加载、禁用标签关闭等配置示例
 tags: [sphinx, tabs, group-tab, configuration, example, sync]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:38:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -4,6 +4,7 @@ title: Python API编程
 description: 使用Python API操作jupyter-cache：编程方式管理缓存、执行Notebook、自定义配置和检索结果
 tags: [jupyter, cache, python, api, example, programmatic]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:52:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

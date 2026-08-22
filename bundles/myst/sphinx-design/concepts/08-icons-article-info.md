@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 图标系统与文章信息栏
 description: octicon/fontawesome/material 三类图标角色用法，article-info 文章元信息指令
 tags:
@@ -10,7 +10,10 @@ tags:
 - fontawesome
 - material
 - article-info
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

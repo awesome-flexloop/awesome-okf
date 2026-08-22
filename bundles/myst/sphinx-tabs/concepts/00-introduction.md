@@ -4,6 +4,7 @@ title: sphinx-tabs 简介
 description: sphinx-tabs 是什么——为 Sphinx 文档提供可切换标签页组件，支持多语言代码示例、分组同步和无障碍访问
 tags: [sphinx, tabs, introduction, ui-component, extension]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:22:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

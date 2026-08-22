@@ -4,6 +4,7 @@ title: 交叉引用实战
 description: MyST Markdown 中各种交叉引用方式——文档间引用、锚点引用、标签引用、intersphinx
 tags: [myst, sphinx, cross-reference, intersphinx, toctree, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -4,6 +4,7 @@ title: 交叉引用与编号映射
 description: 使用 label/numref 引用定理，配置跨类型编号共享（如推论跟随定理编号）
 tags: [sphinx, proof, cross-reference, numbering, numref, label]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:18:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -4,6 +4,7 @@ title: Notebook执行与插件体系
 description: jupyter-cache的执行器插件体系、BasicExecutor实现、自定义执行器和读取器的扩展方式
 tags: [jupyter, cache, executor, plugin, kernel, execution, entry-points]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:42:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

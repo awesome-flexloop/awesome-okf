@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 01 - 安装、启用与基础配置
 description: sphinx-book-theme 的安装方法、启用步骤、最小配置和常见问题排查
 tags:
@@ -7,7 +7,10 @@ tags:
 - installation
 - getting-started
 - configuration
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -4,6 +4,7 @@ title: github-activity 简介
 description: github-activity是什么——通过GitHub GraphQL API生成仓库变更日志的CLI工具，支持PR分类、Markdown输出和标签自定义
 tags: [github, activity, changelog, graphql, cli, release-notes]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T05:02:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

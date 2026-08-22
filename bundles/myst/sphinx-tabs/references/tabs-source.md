@@ -4,6 +4,7 @@ title: sphinx-tabs 源码路径映射
 description: sphinx-tabs 核心源文件路径、职责与关键代码位置索引
 tags: [sphinx, tabs, source, directive, executable-books]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:20:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

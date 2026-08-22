@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 设计系统与 CSS 类名体系
 description: sphinx-design 的 sd- 前缀 CSS 类命名体系、语义色、间距、响应式断点
 tags:
@@ -8,7 +8,10 @@ tags:
 - css
 - design-system
 - styling
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

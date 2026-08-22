@@ -4,6 +4,7 @@ title: sphinx-togglebutton 简介
 description: sphinx-togglebutton 是什么——为 Sphinx 文档添加折叠/切换按钮的轻量扩展，支持提示框折叠和任意内容折叠
 tags: [sphinx, toggle, collapsible, introduction, extension]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:02:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

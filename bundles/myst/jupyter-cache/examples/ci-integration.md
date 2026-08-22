@@ -4,6 +4,7 @@ title: CI集成与缓存策略
 description: 在CI/CD流水线中使用jupyter-cache加速Notebook文档构建，包括GitHub Actions配置和缓存持久化策略
 tags: [jupyter, cache, ci, cd, github-actions, build, example]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:54:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 07 - 布局与模板定制
 description: SBT的页面布局结构、Jinja2模板继承机制、组件覆盖方法、自定义侧边栏和页脚
 tags:
@@ -8,7 +8,10 @@ tags:
 - templates
 - jinja2
 - customization
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

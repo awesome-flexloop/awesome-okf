@@ -4,6 +4,7 @@ title: 配置项参考
 description: jupyter-cache的缓存限制、执行配置、数据库路径等配置项说明
 tags: [jupyter, cache, configuration, settings, cache-limit, database]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:48:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

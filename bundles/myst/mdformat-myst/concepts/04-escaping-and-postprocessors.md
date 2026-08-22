@@ -4,6 +4,7 @@ title: 转义机制与后处理器原理
 description: mdformat-myst 如何在渲染后自动转义 MyST 特殊字符，避免普通文本被误解析。
 tags: [escaping, postprocessor, special-characters, paragraph, text]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:56:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

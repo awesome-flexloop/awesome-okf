@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 02 - 主题架构与PST继承
 description: sphinx-book-theme 如何继承 pydata-sphinx-theme，模板继承链，事件系统，以及双初始化机制
 tags:
@@ -8,7 +8,10 @@ tags:
 - pydata-sphinx-theme
 - inheritance
 - events
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

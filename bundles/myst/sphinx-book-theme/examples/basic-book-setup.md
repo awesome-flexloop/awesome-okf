@@ -1,5 +1,5 @@
 ---
-type: example
+type: Example
 title: 基础书籍配置
 description: sphinx-book-theme 的最小配置、常用配置和完整书籍项目结构示例
 tags:
@@ -7,7 +7,10 @@ tags:
 - example
 - setup
 - configuration
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -5,6 +5,7 @@ description: 将 reStructuredText 转换为 MyST Markdown 的 CLI 工具和 Pyth
 okf_version: "0.2"
 tags: [rst, myst, markdown, conversion, sphinx, docutils]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:58:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 ---

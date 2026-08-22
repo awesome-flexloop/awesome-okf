@@ -4,6 +4,7 @@ title: mdformat 渲染集成与自定义渲染器
 description: rst-to-myst 如何使用 mdformat 引擎渲染 tokens 以及自定义渲染器的实现。
 tags: [mdformat, rendering, custom-renderer, extensions, references]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:57:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

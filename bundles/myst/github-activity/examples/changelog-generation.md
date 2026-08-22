@@ -4,6 +4,7 @@ title: 变更日志生成
 description: 使用github-activity生成Release Notes、配置Token、CI集成和自定义分类的完整示例
 tags: [github, activity, changelog, example, release-notes, ci]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T05:12:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -4,6 +4,7 @@ title: MyST 扩展语法速查
 description: MyST-Parser 支持的 18 个扩展语法的语法格式、配置项和使用示例速查表
 tags: [myst, sphinx, syntax, extensions, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

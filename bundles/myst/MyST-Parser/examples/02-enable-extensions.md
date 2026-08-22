@@ -4,6 +4,7 @@ title: 启用与配置扩展语法
 description: 常用扩展组合的配置示例——学术文档、API文档、项目文档等场景
 tags: [myst, sphinx, extensions, configuration, dollarmath, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

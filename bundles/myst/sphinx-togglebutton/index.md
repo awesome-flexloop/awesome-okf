@@ -5,6 +5,7 @@ title: "sphinx-togglebutton — Sphinx 内容折叠按钮扩展"
 description: "为 Sphinx 文档添加折叠/展开切换按钮的轻量扩展，支持提示框折叠和任意内容折叠，核心仅 107 行 Python 代码"
 tags: [sphinx, toggle, collapsible, dropdown, extension, executable-books, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:15:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 05 - Margin 指令与边注旁注
 description: margin 指令用法、SideNoteNode 机制、HandleFootnoteTransform 脚注转边注原理、sidenote 与 marginnote 区别
 tags:
@@ -10,7 +10,10 @@ tags:
 - footnote
 - directive
 - transform
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

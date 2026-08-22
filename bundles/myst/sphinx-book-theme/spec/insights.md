@@ -1,7 +1,10 @@
 ---
 type: spec
 title: sphinx-book-theme 架构洞察与知识地图
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 sources:
 - spec/facts.md

@@ -4,6 +4,7 @@ title: sphinx-external-toc 源码路径映射
 description: sphinx-external-toc 核心源文件路径、数据模型与配置选项索引
 tags: [sphinx, sphinx-extension, toctree, navigation, source, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:05:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

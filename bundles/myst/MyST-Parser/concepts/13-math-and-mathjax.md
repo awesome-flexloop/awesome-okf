@@ -4,6 +4,7 @@ title: 数学公式与 MathJax
 description: dollarmath/amsmath 扩展的数学公式语法、MathJax 配置自动调整
 tags: [myst, sphinx, math, mathjax, dollarmath, amsmath, latex, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

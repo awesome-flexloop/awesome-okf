@@ -4,6 +4,7 @@ title: MyST Notebook 文件格式
 description: .ipynb 标准格式和 .md 文本格式（mystnb）的编写方式，code-cell/raw-cell/markdown-cell 语法
 tags: [myst-nb, notebook, format, code-cell, ipynb, mystnb]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

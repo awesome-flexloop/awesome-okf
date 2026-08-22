@@ -4,6 +4,7 @@ title: 自定义样式与图标
 description: 如何自定义 sphinx-copybutton 的外观——CSS 样式覆盖、自定义 SVG 图标、选择器定制、本地化支持
 tags: [sphinx, sphinx-extension, copybutton, customization, css, svg, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

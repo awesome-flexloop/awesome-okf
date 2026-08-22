@@ -4,6 +4,7 @@ title: MyST Notebook 语法速查
 description: MyST 文本格式 Notebook（mystnb）的语法速查——code-cell、raw-cell、cell metadata、glue、eval 语法
 tags: [myst-nb, notebook, syntax, cheatsheet, code-cell]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

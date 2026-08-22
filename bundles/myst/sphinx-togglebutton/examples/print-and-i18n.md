@@ -4,6 +4,7 @@ title: 打印与国际化配置
 description: 配置 sphinx-togglebutton 的打印行为、自定义提示文本和多语言支持
 tags: [sphinx, toggle, print, i18n, configuration]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:12:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

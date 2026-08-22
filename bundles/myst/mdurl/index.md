@@ -5,6 +5,7 @@ okf_version: '0.2'
 generated:
   by: reference_agent/trae-cn
   at: '2026-08-23'
+verified: grep-verified
 status: stable
 stale_after: '2027-08-23'
 tags:

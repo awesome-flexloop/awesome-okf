@@ -4,6 +4,7 @@ title: web-compile 源码路径映射
 description: web-compile 核心源文件、编译函数、CLI选项和配置格式索引
 tags: [web, compile, sass, scss, javascript, jinja2, cli, build]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T05:16:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 折叠与标签页
 description: dropdown（折叠容器）和 tab-set/tab-item/tab-set-code（标签页）的用法、选项、同步机制
 tags:
@@ -8,7 +8,10 @@ tags:
 - dropdown
 - tabs
 - interactive
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

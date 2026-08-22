@@ -4,6 +4,7 @@ title: MyST-Parser 简介
 description: MyST-Parser 是什么——Sphinx 的 Markdown 解析器扩展，MyST 语法的核心实现
 tags: [myst, sphinx, parser, markdown, introduction, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

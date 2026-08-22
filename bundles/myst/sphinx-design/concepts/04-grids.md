@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 网格布局系统
 description: grid/grid-item/grid-item-card 指令的用法、响应式参数、间距与对齐
 tags:
@@ -8,7 +8,10 @@ tags:
 - grid
 - layout
 - responsive
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

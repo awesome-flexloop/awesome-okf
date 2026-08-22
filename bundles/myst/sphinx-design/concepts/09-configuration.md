@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 配置与自定义指令
 description: sphinx-design 的所有配置项详解、自定义指令继承机制、conf.py 配置示例
 tags:
@@ -7,7 +7,10 @@ tags:
 - design
 - configuration
 - custom-directive
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

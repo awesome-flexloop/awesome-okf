@@ -4,6 +4,7 @@ title: 门控练习包裹内容
 description: 使用 exercise-start/end 和 solution-start/end 门控指令对包裹任意 RST 内容，无需缩进嵌套
 tags: [sphinx, exercise, gated, example, wrap, no-indent]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

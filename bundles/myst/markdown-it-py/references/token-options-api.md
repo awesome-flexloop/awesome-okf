@@ -4,6 +4,7 @@ title: Token 与 Options API 参考
 description: Token 类完整字段/方法签名速查，OptionsType 全部选项说明
 tags: [markdown-it-py, token, options, api, reference]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:05:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

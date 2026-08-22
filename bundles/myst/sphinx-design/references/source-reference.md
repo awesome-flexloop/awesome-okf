@@ -1,5 +1,5 @@
 ---
-type: reference
+type: Reference
 title: sphinx-design 源码参考与配置速查
 description: sphinx-design 源码路径映射、指令/角色/配置项完整速查表
 tags:
@@ -8,7 +8,10 @@ tags:
 - design
 - components
 - reference
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

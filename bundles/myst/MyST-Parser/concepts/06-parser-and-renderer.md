@@ -4,6 +4,7 @@ title: 解析器与渲染器
 description: create_md_parser 工厂函数、DocutilsRenderer/SphinxRenderer 的工作机制
 tags: [myst, sphinx, parser, renderer, markdown-it, docutils, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

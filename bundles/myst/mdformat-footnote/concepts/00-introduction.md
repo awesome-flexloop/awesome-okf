@@ -4,6 +4,7 @@ title: mdformat-footnote 项目介绍与安装
 description: mdformat-footnote 是 mdformat 的脚注语法支持插件，提供脚注格式化和自动排序功能。
 tags: [introduction, installation, footnote, markdown, mdformat]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:56:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

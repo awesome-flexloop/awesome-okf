@@ -4,6 +4,7 @@ title: 代码隐藏与输出控制
 description: remove-input/output/cell 标签、scroll_outputs、代码折叠（Hide Code Cell）、prompt 自定义、行号
 tags: [myst-nb, hide, remove, scroll, code-cell, toggle]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

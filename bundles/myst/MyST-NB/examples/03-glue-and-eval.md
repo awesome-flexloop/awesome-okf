@@ -4,6 +4,7 @@ title: Glue 与 Eval 变量使用
 description: glue() 粘贴变量、{glue} 引用、{eval} 内联求值的完整示例
 tags: [myst-nb, glue, eval, variable, cross-reference]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

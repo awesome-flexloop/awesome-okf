@@ -5,6 +5,7 @@ description: MyST-NB——Jupyter Notebook 的 Sphinx/docutils 解析器中文 W
 tags: [myst-nb, jupyter, notebook, sphinx, myst]
 okf_version: "0.2"
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

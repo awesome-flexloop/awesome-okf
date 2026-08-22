@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 04 - 头部按钮系统
 description: 头部按钮的三阶段注入机制、下载按钮组、启动按钮组、源码按钮组的构建逻辑和自定义方法
 tags:
@@ -8,7 +8,10 @@ tags:
 - launch-buttons
 - source-buttons
 - download-buttons
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

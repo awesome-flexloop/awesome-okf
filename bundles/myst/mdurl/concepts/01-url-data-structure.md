@@ -4,6 +4,7 @@ title: URL 数据结构
 description: mdurl 的核心数据结构——URL namedtuple 的八个字段语义、MutableURL 内部构建器与不可变设计模式
 tags: [mdurl, url, namedtuple, data-structure, mutableurl]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T01:10:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

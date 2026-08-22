@@ -4,6 +4,7 @@ title: CLI 工具独立使用
 description: 使用 myst-docutils-* CLI 工具脱离 Sphinx 转换 Markdown 到 HTML/LaTeX/XML
 tags: [myst, cli, docutils, standalone, html, latex, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -4,6 +4,7 @@ title: mdformat-footnote 插件核心实现
 description: plugin.py 实现 update_mdit、CLI 参数添加和脚注渲染器。
 tags: [source-code, footnote, markdown, mdformat, plugin]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:55:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

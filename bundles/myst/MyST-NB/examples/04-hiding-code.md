@@ -4,6 +4,7 @@ title: 代码隐藏与输出控制实战
 description: 使用 cell tags 和 mystnb metadata 控制代码显示/隐藏、输出滚动、stderr 处理
 tags: [myst-nb, hide, remove, scroll, toggle, code-cell]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

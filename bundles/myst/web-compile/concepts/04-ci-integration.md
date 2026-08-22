@@ -4,6 +4,7 @@ title: CI集成
 description: web-compile在CI/CD流水线中的使用：变更检测退出码、GitHub Actions配置、预提交钩子和开发工作流
 tags: [web, compile, ci, cd, github-actions, pre-commit, exit-code, automation]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T05:26:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

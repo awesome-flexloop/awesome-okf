@@ -4,6 +4,7 @@ title: CLI 命令详解
 description: jcache命令行工具的完整用法，包括缓存管理、Notebook管理和项目管理子命令
 tags: [jupyter, cache, cli, command-line, jcache]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:44:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

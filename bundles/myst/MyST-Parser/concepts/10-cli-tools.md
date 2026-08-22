@@ -4,6 +4,7 @@ title: CLI 工具
 description: myst-docutils-* 系列命令行工具和 myst-anchors 的用法
 tags: [myst, cli, docutils, command-line, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

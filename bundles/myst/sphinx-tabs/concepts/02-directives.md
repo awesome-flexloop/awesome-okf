@@ -4,6 +4,7 @@ title: 四个指令详解
 description: sphinx-tabs 的四个指令（tabs/tab/group-tab/code-tab）的语法、选项、继承关系和 HTML 输出结构
 tags: [sphinx, tabs, directive, container, inheritance]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:26:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

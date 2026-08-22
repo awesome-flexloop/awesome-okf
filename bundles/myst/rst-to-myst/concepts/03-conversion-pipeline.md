@@ -4,6 +4,7 @@ title: 三阶段转换流水线架构
 description: rst-to-myst 的核心架构：RST→docutils AST→markdown-it tokens→MyST Markdown 三阶段转换。
 tags: [pipeline, architecture, ast, tokens, rendering, conversion-flow]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:57:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

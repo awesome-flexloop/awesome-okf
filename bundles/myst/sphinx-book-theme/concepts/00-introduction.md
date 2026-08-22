@@ -1,12 +1,15 @@
 ---
-type: concept
+type: Concept
 title: 00 - sphinx-book-theme 主题概述
 description: sphinx-book-theme 的定位、核心特性、技术栈与适用场景
 tags:
 - sphinx-book-theme
 - introduction
 - overview
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

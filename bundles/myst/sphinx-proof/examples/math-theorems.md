@@ -4,6 +4,7 @@ title: 数学定理排版
 description: 使用 sphinx-proof 排版数学定理、引理、定义、证明的完整示例，包含交叉引用
 tags: [sphinx, proof, example, math, theorem, proof-environment]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:22:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

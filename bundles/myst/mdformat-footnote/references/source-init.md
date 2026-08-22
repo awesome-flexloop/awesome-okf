@@ -4,6 +4,7 @@ title: mdformat-footnote 插件入口模块
 description: mdformat_footnote 包的 __init__.py 入口，定义版本、插件名和导出接口。
 tags: [source-code, footnote, markdown, mdformat]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:55:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

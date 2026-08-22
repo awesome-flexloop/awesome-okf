@@ -4,6 +4,7 @@ title: web-compile 简介
 description: web-compile是什么——Python生态的Web静态资源编译CLI工具，支持SCSS→CSS、JS压缩、Jinja2模板渲染和[hash]缓存失效
 tags: [web, compile, sass, scss, css, javascript, jinja2, cli, asset-pipeline, build-tool]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T05:18:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

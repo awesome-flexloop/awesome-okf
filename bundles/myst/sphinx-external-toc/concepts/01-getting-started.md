@@ -4,6 +4,7 @@ title: 快速开始
 description: 安装和配置 sphinx-external-toc 的最小步骤，创建第一个 _toc.yml 文件并替换原生 toctree
 tags: [sphinx, sphinx-extension, toctree, getting-started, setup, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:05:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

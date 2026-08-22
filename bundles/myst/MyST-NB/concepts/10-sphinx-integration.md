@@ -4,6 +4,7 @@ title: Sphinx 集成机制
 description: sphinx_setup 注册流程、Parser 继承链、Post-Transforms、CSS/JS 资源加载、NbMetadataCollector
 tags: [myst-nb, sphinx, integration, setup, post-transform]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

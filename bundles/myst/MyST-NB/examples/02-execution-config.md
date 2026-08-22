@@ -4,6 +4,7 @@ title: 执行模式与缓存配置
 description: 5 种执行模式的配置对比、jupyter-cache 使用、CI 场景配置、错误处理策略
 tags: [myst-nb, execution, cache, ci, jupyter-cache]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

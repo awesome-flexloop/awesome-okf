@@ -1,7 +1,10 @@
 ---
 type: spec
 title: sphinx-book-theme 源码事实采集
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 sources:
 - src/sphinx_book_theme/__init__.py

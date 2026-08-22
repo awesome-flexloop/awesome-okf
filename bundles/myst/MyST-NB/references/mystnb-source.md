@@ -4,6 +4,7 @@ title: MyST-NB 源码路径映射
 description: MyST-NB 核心源文件路径、关键类/函数/配置项索引，供概念文档和示例溯源
 tags: [myst-nb, source, mapping, reference]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

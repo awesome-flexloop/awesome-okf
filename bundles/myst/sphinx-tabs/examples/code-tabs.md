@@ -4,6 +4,7 @@ title: 多语言代码标签页
 description: 使用 code-tab 指令创建多语言代码示例，包括自定义标签名、行号高亮和跨页同步
 tags: [sphinx, tabs, code-tab, example, multilingual, syntax-highlighting]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:36:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

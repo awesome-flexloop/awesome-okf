@@ -4,6 +4,7 @@ title: 基本 RST 到 MyST 转换
 description: 使用 CLI 和 Python API 将简单 RST 文档转换为 MyST Markdown。
 tags: [example, conversion, cli, python-api, basic-usage]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:58:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

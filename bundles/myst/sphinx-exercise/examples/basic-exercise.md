@@ -4,6 +4,7 @@ title: 基础练习与解答
 description: 创建练习块、关联解答、交叉引用、无编号练习等基础用法示例
 tags: [sphinx, exercise, example, basic, cross-reference]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:56:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

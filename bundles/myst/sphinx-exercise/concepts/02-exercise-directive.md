@@ -4,6 +4,7 @@ title: 练习指令详解
 description: exercise 指令的语法、选项（label/class/nonumber/hidden）、自动编号机制与交叉引用
 tags: [sphinx, exercise, directive, numbering, cross-reference]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:48:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

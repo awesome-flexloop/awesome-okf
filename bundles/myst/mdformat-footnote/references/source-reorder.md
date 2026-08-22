@@ -4,6 +4,7 @@ title: mdformat-footnote 脚注重排序逻辑
 description: _reorder.py 实现脚注分类、依赖图构建、重排序和 ID 重新分配。
 tags: [source-code, footnote, reordering, algorithm]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:55:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

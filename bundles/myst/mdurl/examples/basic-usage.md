@@ -4,6 +4,7 @@ title: mdurl 基础使用
 description: mdurl 核心 API 的完整可运行示例——URL 解析、字段访问、修改重构、编码解码的实战演示
 tags: [mdurl, url, example, basic-usage]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T01:25:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

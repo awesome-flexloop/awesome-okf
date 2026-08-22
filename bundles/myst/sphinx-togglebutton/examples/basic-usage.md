@@ -4,6 +4,7 @@ title: 基础使用示例
 description: sphinx-togglebutton 的常见使用场景：提示框折叠、答案隐藏、内容区域折叠的完整 RST 示例
 tags: [sphinx, toggle, example, admonition, dropdown]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:10:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

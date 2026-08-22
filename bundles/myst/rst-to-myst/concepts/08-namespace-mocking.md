@@ -4,6 +4,7 @@ title: ApplicationNamespace 与 Sphinx 扩展加载机制
 description: rst-to-myst 如何通过 Mock Sphinx 应用收集 docutils 和 Sphinx 的指令/角色注册表。
 tags: [namespace, sphinx, mock, application, directive, role, domain]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:57:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

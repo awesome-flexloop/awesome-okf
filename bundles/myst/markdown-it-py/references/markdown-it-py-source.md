@@ -4,6 +4,7 @@ title: markdown-it-py 源码路径映射
 description: markdown-it-py 核心源文件路径、职责与关键代码位置索引，覆盖全部核心模块
 tags: [markdown-it-py, markdown, parser, source, reference]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

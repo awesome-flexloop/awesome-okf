@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 08 - 样式定制与第三方扩展适配
 description: SCSS样式架构、CSS自定义方法、暗色模式、打印样式，以及对myst-nb、sphinx-design等第三方扩展的内置样式适配
 tags:
@@ -10,7 +10,10 @@ tags:
 - dark-mode
 - print
 - extensions
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -4,6 +4,7 @@ title: 四阶段处理管线
 description: 读取→执行→转换→渲染四阶段处理流程，每个阶段的核心组件与扩展点
 tags: [myst-nb, pipeline, architecture, execute, render]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

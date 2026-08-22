@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 徽章与按钮
 description: bdg/bdg-link/bdg-ref 徽章角色和 button-link/button-ref 按钮指令的用法、tooltip、富文本Stash/Graft机制
 tags:
@@ -9,7 +9,10 @@ tags:
 - button
 - role
 - directive
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

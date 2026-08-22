@@ -4,6 +4,7 @@ title: CLI 工具独立使用
 description: mystnb-docutils-*、mystnb-quickstart、mystnb-to-jupyter 命令的使用示例
 tags: [myst-nb, cli, docutils, standalone, quickstart]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

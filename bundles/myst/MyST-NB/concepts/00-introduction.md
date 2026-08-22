@@ -4,6 +4,7 @@ title: MyST-NB 简介
 description: MyST-NB 是什么——定位、核心能力、与 MyST-Parser 的关系、适用场景
 tags: [myst-nb, introduction, jupyter, notebook, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -1,7 +1,10 @@
 ---
 type: log
 title: sphinx-book-theme 更新日志
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: active
 ---
 

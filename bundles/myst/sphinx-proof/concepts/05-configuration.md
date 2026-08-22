@@ -4,6 +4,7 @@ title: 配置项参考
 description: sphinx-proof 的全部配置项：主题选择、编号映射、标题格式、字体粗细、CSS定制
 tags: [sphinx, proof, configuration, theme, css, styling]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:20:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

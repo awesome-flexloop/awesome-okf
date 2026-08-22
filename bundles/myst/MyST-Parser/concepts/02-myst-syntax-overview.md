@@ -4,6 +4,7 @@ title: MyST 语法概览
 description: MyST Markdown 的核心语法特性——CommonMark 基础、指令、角色、交叉引用、扩展语法总览
 tags: [myst, sphinx, syntax, markdown, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

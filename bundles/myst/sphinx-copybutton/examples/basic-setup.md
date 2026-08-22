@@ -4,6 +4,7 @@ title: 基础配置示例
 description: sphinx-copybutton 的最小化和常用配置完整 conf.py 示例，从零开始启用代码块复制功能
 tags: [sphinx, sphinx-extension, copybutton, example, configuration, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

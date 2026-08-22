@@ -4,6 +4,7 @@ title: rst-to-myst CLI 命令行接口
 description: cli.py 基于 click 实现 ast/tokens/stream/convert/directives/roles 子命令。
 tags: [source-code, cli, click, rst-to-myst, command-line]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:55:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

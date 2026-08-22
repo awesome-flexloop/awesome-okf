@@ -4,6 +4,7 @@ title: 配置文件详解
 description: web-compile配置文件的完整格式：YAML/JSON/TOML支持、sass_files/js_files/jinja_files映射、jinja_variables配置
 tags: [web, compile, configuration, yaml, config, sass, jinja]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T05:24:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

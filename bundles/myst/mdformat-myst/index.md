@@ -5,6 +5,7 @@ description: mdformat 的 MyST Markdown 语法格式化插件，支持角色、�
 okf_version: "0.2"
 tags: [myst, markdown, mdformat, formatter, plugin]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:58:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 ---

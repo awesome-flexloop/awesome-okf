@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 卡片组件
 description: card/card-carousel 指令的用法、内容分隔语法、图片/链接/阴影选项
 tags:
@@ -7,7 +7,10 @@ tags:
 - design
 - card
 - component
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

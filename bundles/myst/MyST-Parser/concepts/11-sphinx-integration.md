@@ -4,6 +4,7 @@ title: Sphinx 集成机制
 description: setup_sphinx() 注册流程、source_suffix/source_parser、配置值注册、事件连接
 tags: [myst, sphinx, integration, setup, extension, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

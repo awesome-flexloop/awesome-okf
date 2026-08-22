@@ -4,6 +4,7 @@ title: Python API 使用指南
 description: rst-to-myst 作为 Python 库的核心 API 函数、参数和返回值详解。
 tags: [python-api, programming, rst_to_myst, to_docutils_ast, compile_namespace]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:57:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

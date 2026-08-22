@@ -4,6 +4,7 @@ title: 快速开始
 description: 安装 sphinx-exercise，配置 conf.py，创建第一个练习和解答块
 tags: [sphinx, exercise, installation, getting-started, setup]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:46:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

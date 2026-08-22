@@ -4,6 +4,7 @@ title: 高级转换场景
 description: 处理 Sphinx 指令、Front Matter、数学公式和自定义指令映射的示例。
 tags: [example, sphinx, directives, front-matter, math]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:58:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

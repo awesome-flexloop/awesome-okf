@@ -4,6 +4,7 @@ title: sphinx-exercise 简介
 description: sphinx-exercise 是什么——为 Sphinx 文档添加练习与解答块，支持自动编号、交叉引用、全局隐藏解答、门控指令和多语言
 tags: [sphinx, exercise, solution, education, introduction, extension]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:44:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

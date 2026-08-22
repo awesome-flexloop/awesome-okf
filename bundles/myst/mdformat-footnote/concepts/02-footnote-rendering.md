@@ -4,6 +4,7 @@ title: 脚注渲染格式与缩进规则
 description: mdformat-footnote 如何渲染脚注引用和定义，以及缩进处理逻辑。
 tags: [footnote, rendering, indent, format, reference]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:56:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

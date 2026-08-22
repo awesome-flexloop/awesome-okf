@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 09 - 国际化与高级主题
 description: 翻译系统使用方法、资产哈希缓存机制、子主题开发、与sphinx-external-toc/sphinx-copybutton等扩展协作
 tags:
@@ -8,7 +8,10 @@ tags:
 - translation
 - sub-theme
 - caching
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

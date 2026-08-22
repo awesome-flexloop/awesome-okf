@@ -4,6 +4,7 @@ title: URL 解析与格式化
 description: mdurl 的 parse() 和 format() 函数详解——URL 字符串解析为 URL namedtuple 的完整流程、slashes_denote_host 参数、以及反向格式化
 tags: [mdurl, url, parse, format, slashes_denote_host]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T01:15:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

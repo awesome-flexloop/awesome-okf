@@ -4,6 +4,7 @@ title: 脚注排序逻辑与分类机制
 description: mdformat-footnote 如何将脚注按引用顺序重排、处理嵌套引用和孤立脚注。
 tags: [footnote, reordering, classification, dependency-graph, orphans]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:56:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

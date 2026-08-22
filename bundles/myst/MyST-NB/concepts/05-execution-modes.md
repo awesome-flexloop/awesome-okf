@@ -4,6 +4,7 @@ title: 执行模式与缓存
 description: 5 种执行模式（off/auto/force/cache/inline）的行为差异、jupyter-cache 缓存机制、排除模式、超时与错误处理
 tags: [myst-nb, execution, cache, jupyter-cache, nbclient]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

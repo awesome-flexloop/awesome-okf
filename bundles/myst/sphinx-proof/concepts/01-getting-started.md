@@ -4,6 +4,7 @@ title: 快速开始
 description: 安装 sphinx-proof，创建第一个定理和证明块，掌握基础用法
 tags: [sphinx, proof, installation, getting-started, theorem]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:12:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

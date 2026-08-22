@@ -4,6 +4,7 @@ title: MyST 文档格式化示例
 description: 使用 mdformat-myst 格式化包含各种 MyST 语法的 Markdown 文档。
 tags: [example, formatting, myst, cli, directive]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:58:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

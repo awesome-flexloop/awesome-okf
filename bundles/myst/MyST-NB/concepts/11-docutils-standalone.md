@@ -4,6 +4,7 @@ title: Docutils 独立使用
 description: 脱离 Sphinx 使用 mystnb-docutils-* CLI 工具和 Python API 转换 Notebook
 tags: [myst-nb, docutils, standalone, cli, api]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

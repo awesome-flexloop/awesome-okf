@@ -4,6 +4,7 @@ title: rst-to-myst RST 解析器模块
 description: parser.py 实现 LosslessRSTParser 和自定义 docutils Transforms。
 tags: [source-code, parser, docutils, rst, ast]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:55:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

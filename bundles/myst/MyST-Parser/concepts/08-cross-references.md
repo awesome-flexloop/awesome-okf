@@ -4,6 +4,7 @@ title: 交叉引用
 description: MyST 的 Markdown 风格交叉引用、MystReferenceResolver 解析流程、intersphinx 集成
 tags: [myst, sphinx, cross-reference, intersphinx, pending-xref, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

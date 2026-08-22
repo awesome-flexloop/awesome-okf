@@ -4,6 +4,7 @@ title: 配置系统
 description: NbParserConfig 三层覆盖体系（全局→文件→Cell）、nb_* 配置项、配置继承与覆盖规则
 tags: [myst-nb, config, nbparserconfig, metadata, cell-config]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

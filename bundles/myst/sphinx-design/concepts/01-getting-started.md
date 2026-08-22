@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 快速上手
 description: sphinx-design 的安装、启用、验证与常见问题
 tags:
@@ -8,7 +8,10 @@ tags:
 - design
 - getting-started
 - setup
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -4,6 +4,7 @@ title: 指令转换机制与 directives.yml 映射
 description: rst-to-myst 如何通过 directives.yml 和自定义转换映射将 RST 指令转为 MyST 指令。
 tags: [directive, conversion, directives.yml, mapping, fence]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:57:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

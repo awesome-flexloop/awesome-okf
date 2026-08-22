@@ -4,6 +4,7 @@ title: 指令与角色
 description: MyST 中使用指令（Directive）和角色（Role）的语法、Mock 桥接机制、自定义指令注册
 tags: [myst, sphinx, directive, role, mock, bridge, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

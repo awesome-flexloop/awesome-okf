@@ -5,6 +5,7 @@ title: "sphinx-external-toc — 外部目录导航"
 description: "sphinx-external-toc 用单一 _toc.yml 文件定义 Sphinx 站点导航结构，支持集中式目录管理、多种编号样式和 Jupyter Book 格式"
 tags: [sphinx, sphinx-extension, toctree, navigation, yaml, jupyter-book, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:05:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

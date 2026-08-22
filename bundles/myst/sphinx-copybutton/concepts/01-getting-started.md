@@ -4,6 +4,7 @@ title: 快速开始
 description: 从零开始安装和配置 sphinx-copybutton 的最小化步骤，5分钟内启用代码块复制功能
 tags: [sphinx, sphinx-extension, copybutton, getting-started, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

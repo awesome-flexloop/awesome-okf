@@ -4,6 +4,7 @@ title: 分组标签与代码标签
 description: group-tab 的跨页面同步机制、code-tab 的多语言代码示例用法，以及 sessionStorage 状态持久化原理
 tags: [sphinx, tabs, group-tab, code-tab, sessionstorage, sync]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:28:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

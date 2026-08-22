@@ -4,6 +4,7 @@ title: 快速开始
 description: 安装 jupyter-cache，初始化缓存，添加Notebook，执行和查看结果的基本CLI流程
 tags: [jupyter, cache, installation, cli, getting-started]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:36:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

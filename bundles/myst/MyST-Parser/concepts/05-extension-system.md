@@ -4,6 +4,7 @@ title: 扩展语法系统
 description: MyST 的 18 个可选扩展语法详解——启用方式、语法格式、配置项
 tags: [myst, sphinx, extensions, syntax, dollarmath, colon-fence, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

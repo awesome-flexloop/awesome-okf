@@ -4,6 +4,7 @@ title: 缓存架构设计
 description: jupyter-cache 的双表数据库设计、内容哈希键机制、缓存文件布局和LRU淘汰策略
 tags: [jupyter, cache, architecture, database, sqlalchemy, hash, lru]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:38:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

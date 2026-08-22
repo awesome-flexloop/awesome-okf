@@ -4,6 +4,7 @@ title: rst-to-myst mdformat 渲染集成
 description: mdformat_render.py 实现 token 到 MyST Markdown 文本的渲染和自定义渲染器。
 tags: [source-code, mdformat, render, myst, markdown]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:55:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

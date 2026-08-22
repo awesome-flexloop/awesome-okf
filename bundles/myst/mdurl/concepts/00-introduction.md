@@ -4,6 +4,7 @@ title: mdurl 简介
 description: mdurl 是什么——Markdown URL处理工具库的定位、起源、核心API与在 Executable Books 生态中的角色
 tags: [mdurl, markdown, url, introduction]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T01:05:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

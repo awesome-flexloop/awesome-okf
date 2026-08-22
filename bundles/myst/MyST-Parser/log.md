@@ -3,6 +3,7 @@ type: Log
 title: MyST-Parser Bundle 变更日志
 okf_version: "0.2"
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 ---

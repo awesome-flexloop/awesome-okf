@@ -5,6 +5,7 @@ description: mdformat 的脚注语法支持插件，提供脚注自动排序、�
 okf_version: "0.2"
 tags: [footnote, markdown, mdformat, formatter, plugin]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:58:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 ---

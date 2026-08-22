@@ -4,6 +4,7 @@ title: 指令选项 YAML 格式化机制
 description: mdformat-myst 如何识别并自动格式化 MyST 指令的选项 YAML 块。
 tags: [directive, yaml, formatting, fence, ruamel]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:56:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

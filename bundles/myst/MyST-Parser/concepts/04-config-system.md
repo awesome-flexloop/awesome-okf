@@ -4,6 +4,7 @@ title: 配置系统
 description: MdParserConfig 数据类、配置项自动注册、全局/文件级双层配置体系详解
 tags: [myst, sphinx, config, mdparserconfig, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

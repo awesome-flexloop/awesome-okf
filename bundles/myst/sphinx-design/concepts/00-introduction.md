@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: sphinx-design 简介
 description: sphinx-design 的定位、核心特性、技术栈与适用场景
 tags:
@@ -7,7 +7,10 @@ tags:
 - extension
 - design
 - overview
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

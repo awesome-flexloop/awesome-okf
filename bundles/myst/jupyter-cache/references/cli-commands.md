@@ -4,6 +4,7 @@ title: CLI 命令参考
 description: jcache CLI 全部命令、子命令和选项的完整参考
 tags: [jupyter, cache, cli, command-line, reference]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:32:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

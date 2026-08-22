@@ -4,6 +4,7 @@ title: 扩展架构与注册机制
 description: sphinx-copybutton 如何注册到 Sphinx——三步注册范式、Jinja2 模板桥接 Python 与 JavaScript 的配置传递机制
 tags: [sphinx, sphinx-extension, copybutton, architecture, setup, jinja2, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

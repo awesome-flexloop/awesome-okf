@@ -4,6 +4,7 @@ title: 命令行工具详细用法
 description: rst2myst CLI 的所有子命令、选项和配置文件用法详解。
 tags: [cli, command-line, usage, options, convert, stream]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:57:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

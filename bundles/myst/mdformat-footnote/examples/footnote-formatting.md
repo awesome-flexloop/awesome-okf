@@ -4,6 +4,7 @@ title: 脚注格式化与排序示例
 description: 使用 mdformat-footnote 格式化脚注并自动按引用顺序排序。
 tags: [example, footnote, formatting, ordering, cli]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:58:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

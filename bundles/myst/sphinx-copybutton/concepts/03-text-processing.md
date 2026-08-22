@@ -4,6 +4,7 @@ title: 文本处理与提示符剥离
 description: sphinx-copybutton 的核心智能——如何剥离 shell/REPL 提示符、处理行续接和 HERE 文档、排除行号等不需要的内容
 tags: [sphinx, sphinx-extension, copybutton, text-processing, prompt, regex, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

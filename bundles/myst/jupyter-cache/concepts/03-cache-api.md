@@ -4,6 +4,7 @@ title: 缓存API详解
 description: JupyterCacheBase 的核心Python API：添加/查询/删除缓存、Notebook生命周期管理、Artifact处理
 tags: [jupyter, cache, api, python, notebook, artifact]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:40:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

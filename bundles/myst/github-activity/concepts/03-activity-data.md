@@ -4,6 +4,7 @@ title: 数据获取与处理
 description: github-activity的GraphQL查询、分页机制、pandas DataFrame数据流和Markdown渲染
 tags: [github, graphql, pandas, data, api, pagination]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T05:08:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

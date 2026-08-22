@@ -4,6 +4,7 @@ title: 快速开始
 description: 安装web-compile、创建配置文件、执行第一次编译、理解输出和退出码
 tags: [web, compile, installation, getting-started, quickstart]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T05:20:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

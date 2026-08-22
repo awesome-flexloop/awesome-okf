@@ -4,6 +4,7 @@ title: 三阶段解析管线
 description: MyST-Parser 的 Markdown→Token→AST→输出三阶段解析管线架构详解
 tags: [myst, sphinx, architecture, pipeline, parsing, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

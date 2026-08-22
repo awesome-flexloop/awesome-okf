@@ -4,6 +4,7 @@ title: 自定义编号与配置
 description: 跨类型编号映射、中文编号格式、简约主题、自定义标题格式等配置示例
 tags: [sphinx, proof, configuration, numbering, theme, example]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:24:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

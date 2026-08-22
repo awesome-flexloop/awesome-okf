@@ -4,6 +4,7 @@ title: 配置项参考
 description: sphinx-tabs 的全部配置项详解：builder 兼容性、CSS加载控制、标签关闭行为、条件资源加载机制
 tags: [sphinx, tabs, configuration, builder, assets, css]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

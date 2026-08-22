@@ -4,6 +4,7 @@ title: mdformat 插件架构与 mdformat-myst 组成
 description: 解析 mdformat 插件机制以及 mdformat-myst 如何通过组合扩展实现 MyST 支持。
 tags: [plugin, architecture, mdformat, markdown-it, extension]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:56:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

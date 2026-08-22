@@ -4,6 +4,7 @@ title: 基础标签页
 description: sphinx-tabs 基础用法示例：创建简单标签页、嵌套标签页、带代码块的标签页
 tags: [sphinx, tabs, example, basic]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:34:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

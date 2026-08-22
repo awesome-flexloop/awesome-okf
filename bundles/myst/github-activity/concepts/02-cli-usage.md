@@ -4,6 +4,7 @@ title: CLI命令详解
 description: github-activity CLI的完整用法：仓库指定、时间范围、输出格式、认证、缓存等选项
 tags: [github, activity, cli, command, options, changelog]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T05:06:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

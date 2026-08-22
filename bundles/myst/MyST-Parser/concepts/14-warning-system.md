@@ -4,6 +4,7 @@ title: 警告系统
 description: MystWarnings 枚举、create_warning 统一警告创建、警告抑制机制
 tags: [myst, sphinx, warning, error, mystwarnings, suppress-warnings, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

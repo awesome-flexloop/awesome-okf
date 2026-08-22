@@ -4,6 +4,7 @@ title: MyST 语法支持范围
 description: mdformat-myst 支持的 MyST 语法元素及其渲染输出格式。
 tags: [myst-syntax, role, comment, block-break, target, math]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:56:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

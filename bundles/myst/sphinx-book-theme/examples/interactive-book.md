@@ -1,5 +1,5 @@
 ---
-type: example
+type: Example
 title: 交互式计算书籍配置
 description: 配置Binder/Colab/JupyterHub启动按钮、Thebe在线代码执行、Jupyter笔记本下载的完整示例
 tags:
@@ -10,7 +10,10 @@ tags:
 - colab
 - thebe
 - jupyter
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

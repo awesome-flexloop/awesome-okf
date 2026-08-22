@@ -4,6 +4,7 @@ title: 自定义指令与角色
 description: 在 MyST Markdown 中创建和使用自定义 Sphinx 指令和角色的完整示例
 tags: [myst, sphinx, directive, role, custom, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

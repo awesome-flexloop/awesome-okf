@@ -4,6 +4,7 @@ title: 门控指令
 description: exercise-start/exercise-end 和 solution-start/solution-end 门控指令对的用法、工作原理和适用场景
 tags: [sphinx, exercise, gated, directive, wrap-content]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:52:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

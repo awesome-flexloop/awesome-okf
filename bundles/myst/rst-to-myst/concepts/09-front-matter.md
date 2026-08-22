@@ -4,6 +4,7 @@ title: Front Matter 提取与 YAML 输出
 description: rst-to-myst 如何将 RST 文档开头的 field list 转换为 YAML front matter。
 tags: [front-matter, yaml, field-list, metadata, document-header]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:57:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

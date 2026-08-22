@@ -4,6 +4,7 @@ title: MarkdownItRenderer 与 AST→Token 遍历
 description: MarkdownItRenderer 如何作为 docutils NodeVisitor 将 AST 转换为 markdown-it token 流。
 tags: [markdown-it, token, renderer, nodevisitor, ast-traversal]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:57:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

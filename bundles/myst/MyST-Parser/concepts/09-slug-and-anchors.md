@@ -4,6 +4,7 @@ title: Slug 与标题锚点
 description: 三种 slug 预设算法（github/gitlab/docutils）、标题锚点自动生成、unique_slug 去重
 tags: [myst, sphinx, slug, anchor, heading, id, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

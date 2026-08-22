@@ -1,12 +1,15 @@
 ---
-type: reference
+type: Reference
 title: sphinx-book-theme 源码路径映射与配置速查
 description: 源码文件位置、核心配置项完整列表、指令/角色/事件速查
 tags:
 - sphinx-book-theme
 - reference
 - configuration
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

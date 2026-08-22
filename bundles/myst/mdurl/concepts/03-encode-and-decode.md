@@ -4,6 +4,7 @@ title: URL 编码与解码
 description: mdurl 的 encode() 和 decode() 函数——百分号编解码原理、DEFAULT 与 COMPONENT 两种模式、查找表缓存机制与 UTF-8 多字节处理
 tags: [mdurl, url, encode, decode, percent-encoding, utf-8]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T01:20:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

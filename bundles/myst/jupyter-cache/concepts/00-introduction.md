@@ -4,6 +4,7 @@ title: jupyter-cache 简介
 description: jupyter-cache 是什么——Jupyter Notebook执行结果的通用缓存层，避免重复执行，支持CI和文档构建
 tags: [jupyter, cache, notebook, execution, introduction, mybinder]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:34:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

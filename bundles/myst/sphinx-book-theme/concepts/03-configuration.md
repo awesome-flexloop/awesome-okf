@@ -1,12 +1,15 @@
 ---
-type: concept
+type: Concept
 title: 03 - 配置系统详解
 description: sphinx-book-theme 的完整配置项说明，包括主题选项、侧边栏组件、导航配置等
 tags:
 - sphinx-book-theme
 - configuration
 - html_theme_options
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

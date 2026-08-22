@@ -4,6 +4,7 @@ title: 基础 Sphinx + MyST-NB 配置
 description: 从零开始配置 Sphinx + MyST-NB 的完整 conf.py 和项目结构示例
 tags: [myst-nb, sphinx, setup, conf.py, quickstart]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

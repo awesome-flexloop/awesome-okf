@@ -4,6 +4,7 @@ title: 配置项参考
 description: sphinx-togglebutton 的全部配置项详解：选择器、提示文本、打印行为及其在 conf.py 中的设置方法
 tags: [sphinx, toggle, configuration, selector, i18n]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:08:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

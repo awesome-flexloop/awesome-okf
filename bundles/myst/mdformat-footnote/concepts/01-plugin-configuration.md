@@ -4,6 +4,7 @@ title: 插件配置与 CLI 选项
 description: mdformat-footnote 的配置读取机制和 --keep-footnote-orphans 命令行选项。
 tags: [configuration, cli, options, orphans, config]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:56:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

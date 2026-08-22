@@ -4,6 +4,7 @@ title: 无障碍设计
 description: sphinx-tabs 的 WAI-ARIA 标签页模式实现：ARIA 属性、键盘导航、语义化 HTML 元素和屏幕阅读器支持
 tags: [sphinx, tabs, accessibility, aria, wai-aria, keyboard-navigation]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:32:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

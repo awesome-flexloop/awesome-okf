@@ -4,6 +4,7 @@ title: mdformat-myst 插件入口模块
 description: mdformat_myst 包的 __init__.py 入口，定义版本号和文档字符串。
 tags: [source-code, myst, markdown, mdformat]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:55:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

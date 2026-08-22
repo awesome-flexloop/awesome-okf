@@ -4,6 +4,7 @@ title: 快速开始
 description: 安装github-activity、配置GitHub Token、生成第一个变更日志
 tags: [github, activity, installation, getting-started, token]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T05:04:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

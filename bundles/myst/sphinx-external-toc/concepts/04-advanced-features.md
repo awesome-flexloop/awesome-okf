@@ -4,6 +4,7 @@ title: 高级功能
 description: sphinx-external-toc 的进阶用法——章节编号样式、glob 模式匹配、外部链接、CLI 工具、与 Jupyter Book 集成
 tags: [sphinx, sphinx-extension, toctree, advanced, numbering, glob, cli, jupyter-book, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:05:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

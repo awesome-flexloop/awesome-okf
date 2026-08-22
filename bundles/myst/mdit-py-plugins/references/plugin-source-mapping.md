@@ -4,6 +4,7 @@ title: mdit-py-plugins 插件源码映射
 description: mdit-py-plugins 全部22个插件的源码路径、导出函数、规则类型和Token类型索引
 tags: [mdit-py-plugins, plugins, source, reference]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

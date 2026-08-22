@@ -4,6 +4,7 @@ title: rst-to-myst 命名空间 Mock 系统
 description: namespace.py 实现 ApplicationNamespace Mock Sphinx 应用以收集指令和角色。
 tags: [source-code, namespace, sphinx, mock, directive, role]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:55:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

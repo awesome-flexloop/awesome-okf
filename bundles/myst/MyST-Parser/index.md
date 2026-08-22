@@ -5,6 +5,7 @@ description: MyST Markdown 解析器的中文 Wiki 教程——从安装配置�
 tags: [myst, sphinx, markdown, parser, myst-parser]
 okf_version: "0.2"
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -4,6 +4,7 @@ title: 定理类型详解
 description: sphinx-proof 15种可编号定理类型的语法、选项、标题格式和编号机制
 tags: [sphinx, proof, theorem, directive, types, numbering]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:14:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

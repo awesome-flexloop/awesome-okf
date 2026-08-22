@@ -4,6 +4,7 @@ title: 快速开始
 description: 安装 MyST-Parser、配置 Sphinx conf.py、编写第一个 MyST Markdown 文档
 tags: [myst, sphinx, getting-started, setup, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -4,6 +4,7 @@ title: 快速开始
 description: 安装 MyST-NB、最小 conf.py 配置、第一个可执行 Notebook 文档
 tags: [myst-nb, quickstart, install, setup, conf.py]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:30:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

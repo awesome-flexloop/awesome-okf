@@ -4,6 +4,7 @@ title: 解答指令详解
 description: solution 指令的语法、与练习的关联方式、标题文本规则、hide_solutions 全局隐藏机制
 tags: [sphinx, exercise, solution, directive, hide, teacher-student]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:50:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -4,6 +4,7 @@ title: 读取器与执行器扩展
 description: Notebook读取器和执行器的工作原理、内置实现以及如何通过entry points开发自定义扩展
 tags: [jupyter, cache, reader, executor, plugin, entry-points, extension]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:46:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

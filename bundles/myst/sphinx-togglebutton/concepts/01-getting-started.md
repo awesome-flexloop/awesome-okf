@@ -4,6 +4,7 @@ title: 快速开始
 description: 安装 sphinx-togglebutton 并完成最小配置，实现提示框折叠和内容切换
 tags: [sphinx, toggle, installation, setup, getting-started]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:04:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

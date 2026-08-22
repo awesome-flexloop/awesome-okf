@@ -4,6 +4,7 @@ title: YAML Frontmatter
 description: Markdown 文件开头的 YAML 元数据、文件级配置覆盖、html_meta 和 substitutions 合并
 tags: [myst, sphinx, yaml, frontmatter, metadata, topmatter, myst-parser]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

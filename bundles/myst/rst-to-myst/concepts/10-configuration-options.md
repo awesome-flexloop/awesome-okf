@@ -4,6 +4,7 @@ title: 转换选项详解
 description: rst-to-myst 的所有转换选项的作用、默认值和使用场景。
 tags: [configuration, options, conversion-settings, colon-fences, dollar-math]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:57:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

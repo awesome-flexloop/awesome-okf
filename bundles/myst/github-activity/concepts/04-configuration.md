@@ -4,6 +4,7 @@ title: 标签分类配置
 description: 自定义PR分类规则：修改默认标签和前缀匹配、创建自定义分类、配置文件格式
 tags: [github, activity, configuration, tags, labels, categorization]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T05:10:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

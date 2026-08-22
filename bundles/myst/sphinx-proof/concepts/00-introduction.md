@@ -4,6 +4,7 @@ title: sphinx-proof 简介
 description: sphinx-proof 是什么——为 Sphinx 文档提供数学定理/引理/定义/证明等学术排版环境，支持自动编号和交叉引用
 tags: [sphinx, proof, theorem, math, introduction, academic]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:10:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -4,6 +4,7 @@ title: sphinx-external-toc 简介
 description: sphinx-external-toc 是什么——用单一 _toc.yml 文件定义 Sphinx 站点导航结构，替代分散在各文档中的 toctree 指令
 tags: [sphinx, sphinx-extension, toctree, navigation, introduction, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:05:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

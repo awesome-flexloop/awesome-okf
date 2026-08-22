@@ -4,6 +4,7 @@ title: 基本CLI使用
 description: jcache CLI的基本操作流程：初始化、添加Notebook、执行、查看缓存和匹配状态
 tags: [jupyter, cache, cli, example, basic-usage]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:50:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

@@ -4,6 +4,7 @@ title: sphinx-proof 源码路径映射
 description: sphinx-proof 核心源文件、15种定理类型指令与配置项索引
 tags: [sphinx, proof, theorem, directive, source, math]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T04:08:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

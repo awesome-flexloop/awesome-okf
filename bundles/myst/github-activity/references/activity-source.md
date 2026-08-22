@@ -4,6 +4,7 @@ title: github-activity 源码路径映射
 description: github-activity 核心源文件、API函数、CLI命令和PR分类配置索引
 tags: [github, activity, changelog, graphql, cli, source]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T05:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

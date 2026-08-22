@@ -4,6 +4,7 @@ title: mdformat-myst 指令格式化模块
 description: _directives.py 实现 MyST 指令选项 YAML 格式化和 fence 渲染覆写。
 tags: [source-code, myst, directive, yaml, formatting]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:55:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

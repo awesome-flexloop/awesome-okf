@@ -1,5 +1,5 @@
 ---
-type: example
+type: Example
 title: 网格布局示例集
 description: grid/grid-item/grid-item-card 的各种用法示例，从简单两列到响应式复杂布局
 tags:
@@ -8,7 +8,10 @@ tags:
 - grid
 - example
 - layout
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

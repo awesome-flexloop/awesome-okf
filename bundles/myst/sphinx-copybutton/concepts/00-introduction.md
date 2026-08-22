@@ -4,6 +4,7 @@ title: sphinx-copybutton 简介
 description: sphinx-copybutton 是什么——为 Sphinx 代码块添加一键复制按钮的轻量扩展，定位、特点与适用场景
 tags: [sphinx, sphinx-extension, copybutton, introduction, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

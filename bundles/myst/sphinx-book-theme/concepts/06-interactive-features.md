@@ -1,5 +1,5 @@
 ---
-type: concept
+type: Concept
 title: 06 - 交互功能详解
 description: 全屏模式、TOC智能隐藏、Thebe在线代码执行、打印优化、侧边栏切换修复等JavaScript交互功能
 tags:
@@ -9,7 +9,10 @@ tags:
 - thebe
 - intersection-observer
 - print
-generated: 2026-08-23
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

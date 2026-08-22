@@ -5,6 +5,7 @@ title: "sphinx-copybutton — 代码块一键复制"
 description: "sphinx-copybutton 是为 Sphinx 代码块添加复制按钮的轻量扩展，支持智能提示符剥离、多语言本地化、自定义图标，核心仅99行Python代码"
 tags: [sphinx, sphinx-extension, copybutton, clipboard, javascript, myst]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T03:00:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

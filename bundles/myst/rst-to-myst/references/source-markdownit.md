@@ -4,6 +4,7 @@ title: rst-to-myst MarkdownIt 渲染器
 description: markdownit.py 实现 MarkdownItRenderer 将 docutils AST 转换为 markdown-it tokens。
 tags: [source-code, markdown-it, token, renderer, ast]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:55:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:

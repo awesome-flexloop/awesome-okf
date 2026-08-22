@@ -4,6 +4,7 @@ title: rst-to-myst 项目介绍与安装
 description: rst-to-myst 是将 reStructuredText 转换为 MyST Markdown 的 CLI 工具和 Python 库。
 tags: [introduction, installation, rst, myst, markdown, conversion]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-23T02:57:00Z" }
+verified: grep-verified
 status: stable
 stale_after: 2027-08-23
 sources:
