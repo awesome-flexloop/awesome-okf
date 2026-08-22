@@ -3,15 +3,15 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识束总索引"
 description: "awesome-okf-xs 知识束（bundles）分组导航——按技术生态组织的开源项目源码中文教程"
-total_bundles: 36
-groups: 10
+total_bundles: 44
+groups: 11
 ---
 
 # 知识束总索引（Bundles Index）
 
 > **OKF (Open Knowledge Format)** 知识束是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识束包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **36 个知识束**，按技术生态分为 **10 个分组**。
+> 当前共 **44 个知识束**，按技术生态分为 **11 个分组**。
 
 ---
 
@@ -48,6 +48,19 @@ groups: 10
 └─────────────────────┘  └──────────────────────────────┘
 
 ┌──────────────────────────────────────────────────────┐
+│           📊 pydata/ 科学计算生态                     │
+│  NumPy · pandas · matplotlib · Plotly · Dash        │
+│  PyTables · 数值计算 · 数据分析 · 可视化 · Web应用    │
+└──────────────────────────┬───────────────────────────┘
+                           │ 模型训练/数据处理
+┌──────────────────────────▼───────────────────────────┐
+│           🧠 onnx/ 机器学习模型生态                    │
+│  ONNX标准 · IR · 优化器 · 模型转换器                  │
+│  onnx-mlir编译器 · TensorRT后端                      │
+│  （跨框架模型交换格式，AI模型互操作性基石）            │
+└──────────────────────────┬───────────────────────────┘
+                           │ 模型部署/推理
+┌──────────────────────────▼───────────────────────────┐
 │           🤖 agnes-ai/ AI大模型生态                    │
 │  多模态API网关 · 对话/图像/视频 · Agent工具调用        │
 │   （独立AI服务层，通过OpenAI兼容SDK调用）              │
@@ -77,6 +90,9 @@ groups: 10
             → 📄 sphinx  掌握文档工程能力（项目文档写作）
               → 📓 jupyter 交互式计算与数据分析
                 → 📊 pydata 科学计算全栈（NumPy→pandas→matplotlib/plotly→Dash→PyTables）
+                  → 🧠 onnx 机器学习模型生态（模型交换格式·转换器·编译器·推理后端）
+                    → 🤖 agnes-ai 大模型API（AI服务调用）
+                      → 🤖 ai-agent Agent框架（智能体构建）
 ```
 
 ---
@@ -95,6 +111,7 @@ groups: 10
 | [🤖 AgnesAI 大模型生态](agnes-ai/index.md) | 1 | AgnesAI多模态AI平台——OpenAI兼容API、对话/图像/视频生成、Agent工具调用 |
 | [🤖 AI Agent 框架](ai-agent/index.md) | 1 | AI Agent运行时框架——Agent循环、工具系统、记忆架构、多代理编排、插件架构、通信协议 |
 | [📊 PyData 科学计算生态](pydata/index.md) | 6 | NumPy/pandas/matplotlib/Plotly/Dash/PyTables——数值计算、数据分析、可视化、Web应用、HDF5存储 |
+| [🧠 ONNX 机器学习生态](onnx/index.md) | 8 | ONNX标准/IR-Python/优化器/ONNXMLTools/sklearn-onnx/tf2onnx/onnx-mlir/onnx-tensorrt——跨框架模型交换、转换器、编译器、推理后端 |
 
 ---
 
@@ -185,3 +202,16 @@ groups: 10
 | [plotly](pydata/plotly/index.md) | 交互式可视化——Figure数据模型、BasePlotlyType对象层级、Plotly Express高级API、renderers渲染框架（4概念+1示例+1信源，共10文档） |
 | [dash](pydata/dash/index.md) | Web应用框架——Dash主类、WSGI/ASGI多后端、回调系统(Input/Output/State)、组件系统、MCP集成（4概念+1示例+1信源，共10文档） |
 | [pytables](pydata/pytables/index.md) | HDF5数据管理——Node/Group/Leaf/Table层次、Atom类型系统、Blosc2压缩、CSI分块索引、NumPy/pandas集成（4概念+1示例+1信源，共10文档） |
+
+### 🧠 [ONNX 机器学习生态](onnx/index.md)
+
+| 知识束 | 简介 |
+|--------|------|
+| [onnx](onnx/onnx/index.md) | ONNX 标准核心——Protobuf IR（ModelProto/GraphProto/NodeProto/TensorProto）、OpSchema链式算子注册、Shape Inference形状推断、Checker模型验证、Python Helper API、C++ 核心IR双向链表、序列化/外部数据、版本转换（15概念+5示例+9信源，共29文档） |
+| [ir-py](onnx/ir-py/index.md) | ONNX 纯Python IR参考实现——Model/Graph/Node/Value/Tensor核心实体、双向链表图结构、TensorProtocol张量协议、Tape录制回放、serde序列化/反序列化、名称管理与元数据（9概念+4示例+5信源，共18文档） |
+| [optimizer](onnx/optimizer/index.md) | ONNX模型优化器——Pass基类体系（ImmutablePass/PredicateBasedPass/FullGraphBasedPass）、PassManager定点迭代、40+内置优化Pass、nanobind Python绑定、C API、自定义Pass开发（8概念+3示例+4信源，共15文档） |
+| [onnxmltools](onnx/onnxmltools/index.md) | 多框架转换器——CoreML/LightGBM/XGBoost/CatBoost/H2O/LibSVM转ONNX、Topology IR、转换器注册、类型系统、树模型转换、Pipeline元数据（8概念+4示例+4信源，共16文档） |
+| [sklearn-onnx](onnx/sklearn-onnx/index.md) | Scikit-learn转换器——Pipeline/FeatureUnion拓扑转换、ONNX算子代数、转换器注册机制、自定义转换器开发、分类器/回归器/预处理算子映射（7概念+4示例+4信源，共15文档） |
+| [tensorflow-onnx](onnx/tensorflow-onnx/index.md) | TensorFlow转换器（tf2onnx）——Keras/SavedModel转ONNX、版本化算子集注册、GraphMatcher图重写、图内部API、优化器Pass、数据布局与类型转换（8概念+4示例+4信源，共16文档） |
+| [onnx-mlir](onnx/onnx-mlir/index.md) | ONNX-MLIR编译器——基于LLVM/MLIR的端到端编译栈、ONNX Dialect/Krnl Dialect、Lowering Pipeline、ExecutionSession运行时、OMCompile编译器驱动、PyRuntime Python绑定（7概念+2示例+3信源，共12文档） |
+| [onnx-tensorrt](onnx/onnx-tensorrt/index.md) | TensorRT后端解析器（onnx2trt）——ModelImporter ONNX解析管线、算子注册与Plugin机制、ShapedWeights权重内存模型、错误诊断与支持度查询、自定义Plugin开发（6概念+3示例+3信源，共12文档） |
