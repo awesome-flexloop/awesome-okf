@@ -34,3 +34,4 @@ Jupyter 是数据科学与交互式计算的核心平台，从底层的 ZeroMQ �
 | 顺序 | 知识束 | 一句话简介 |
 |------|--------|-----------|
 | 4 | [jupyter-docker-stacks](jupyter-docker-stacks/index.md) | Jupyter 官方 Docker 镜像——镜像层级体系（base→minimal→scipy→专业栈）、启动生命周期、Hook 自定义、用户权限、GPU 支持、CI/CD 构建 |
+| 5 | [cookiecutter-docker-stacks](cookiecutter-docker-stacks/index.md) | Jupyter Docker 镜像模板生成器——一键生成包含 Dockerfile/pytest测试/CI/CD/DevContainer 的自定义镜像项目，14个基础镜像预设、TrackedContainer测试框架、GitHub Actions自动发布 |
