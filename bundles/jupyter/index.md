@@ -29,11 +29,12 @@ Jupyter 是数据科学与交互式计算的核心平台，从底层的 ZeroMQ �
 |------|--------|-----------|
 | 2 | [nbformat](nbformat/index.md) | Notebook 文件格式——NotebookNode 数据模型、v4 JSON 格式、读写 API、验证器、信任签名机制、版本迁移 |
 
-### 应用层：用户交互
+### 应用层：用户交互与工具
 
 | 顺序 | 知识束 | 一句话简介 |
 |------|--------|-----------|
 | 3 | [jupyter-notebook](jupyter-notebook/index.md) | Jupyter Notebook v7——基于 JupyterLab 的后端 App、前端 Shell、Handler 体系、Shim 兼容层、前后端扩展系统 |
+| 9 | [nbconvert](nbconvert/index.md) | Notebook格式转换工具——六阶段转换管线(Exporter→Preprocessor→Filter→Template→Writer→Postprocessor)、HTML/PDF/Markdown/脚本多格式输出、单元格标签控制、papermill参数化报告、自定义Exporter开发 |
 
 ### 部署层：容器化运行
 
