@@ -47,3 +47,9 @@ Jupyter 是数据科学与交互式计算的核心平台，从底层的 ZeroMQ �
 | 顺序 | 知识束 | 一句话简介 |
 |------|--------|-----------|
 | 6 | [pr-triage-board-bot](pr-triage-board-bot/index.md) | PR分类看板机器人——基于GitHub App和Project V2 GraphQL API，按7个维度（作者类型/变更规模/CI状态/审批状态/合并冲突/维护者参与度/创建时间）自动分类同步开放PR，每小时对账更新，TypeScript实现 |
+
+### 治理层：社区治理与决策机制
+
+| 顺序 | 知识束 | 一句话简介 |
+|------|--------|-----------|
+| 7 | [governance](governance/index.md) | Jupyter 治理模型——EC/SSC/Foundation三主体架构、共识寻求+投票兜底决策流程、子项目自治体系、常设委员会与工作组（DEI/CoC/社区建设）、排序复选选举机制、商标许可与行为准则 |
