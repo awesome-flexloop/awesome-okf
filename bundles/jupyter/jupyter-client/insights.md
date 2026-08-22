@@ -46,7 +46,7 @@ generated: "2026-08-22"
 - F-068: execute_interactive() 使用 zmq.asyncio.Poller 同时监听 iopub 和 stdin
 
 **反常识**：
-1. **heartbeat 通道不使用 DEALER/ROUTER，而是 REQ/REP**：这是唯一使用 REQ/REP 模式的通道（F-105）。REQ/REP 强制严格的 send→recv→send 顺序，心跳失败时必须销毁并重建 socket（F-157）——这是因为 REP 状态机在超时后无法恢复。这使得心跳通道在实现上比其他通道复杂得多（需要 _create_socket() 重建逻辑）。
+1. **heartbeat 通道不使用 DEALER/ROUTER，而是 REQ/REP**：这是唯一使用 REQ/REP 模式的通道（F-105）。REQ/REP 强制严格的 send→recv→send 顺序，心跳失败时必须销毁并重建 socket（F-166）——这是因为 REP 状态机在超时后无法恢复。这使得心跳通道在实现上比其他通道复杂得多（需要 _create_socket() 重建逻辑）。
 2. **control 通道不是"带外"通道，它与 shell 通道共享同一个 ROUTER**：在 kernel 端，control 和 shell 是两个独立的 ROUTER socket，但它们都接收 DEALER 客户端的消息。关键区别在于 kernel 端对 control 消息有独立的处理线程/队列，这确保 shutdown_request 不会被前面排队的 execute_request 阻塞。但客户端侧 control 和 shell 使用相同类型的 socket（DEALER），没有任何优先级机制。
 
 **行动建议**：
@@ -96,12 +96,12 @@ generated: "2026-08-22"
 - F-045: KernelProvisionerBase 是抽象基类，定义了 poll/wait/send_signal/kill/terminate/launch_kernel/cleanup 等抽象方法
 - F-149: LocalProvisioner.pre_launch() 处理端口缓存、CurveZMQ 密钥生成、连接文件写入
 - F-099: format_kernel_cmd() 替换 {connection_file} 等模板变量
-- F-250: _finalize_env() 为 Python 内核移除 PYTHONEXECUTABLE 环境变量
+- F-162: _finalize_env() 为 Python 内核移除 PYTHONEXECUTABLE 环境变量
 - F-141: ensure_native_kernel 自动注册 ipykernel 的 python3 spec
 
 **反常识**：
 1. **KernelSpec 不直接知道如何启动进程——它只提供 argv 模板，启动逻辑在 Provisioner 中**：KernelSpec 是纯数据，KernelManager 通过 format_kernel_cmd() 替换模板变量后交给 Provisioner。这意味着同一个 KernelSpec 可以被不同的 Provisioner 以完全不同的方式"启动"——LocalProvisioner 用 Popen 本地启动，而远程 Provisioner 可能通过 SSH/Kubernetes API 启动。KernelSpec 与 Provisioner 的绑定是通过 metadata.kernel_provisioner 声明式配置的（F-144），而非代码硬编码。
-2. **interrupt_mode="message" 不是默认行为，默认是 "signal"**：F-136 显示默认 interrupt_mode 是 "signal"（即 SIGINT），这在 Windows 上需要特殊处理（F-082 使用 win_interrupt.send_interrupt）。"message" 模式通过 control 通道发送 interrupt_request，是远程内核的唯一可行方式，但本地默认仍用信号。这导致本地和远程内核的中断路径完全不同。
+2. **interrupt_mode="message" 不是默认行为，默认是 "signal"**：F-136 显示默认 interrupt_mode 是 "signal"（即 SIGINT），这在 Windows 上需要特殊处理（F-163 使用 win_interrupt.send_interrupt）。"message" 模式通过 control 通道发送 interrupt_request，是远程内核的唯一可行方式，但本地默认仍用信号。这导致本地和远程内核的中断路径完全不同。
 
 **行动建议**：
 - 自定义内核必须正确设置 interrupt_mode——远程内核必须用 "message"，否则 SIGINT 无法发送到远程进程
@@ -122,9 +122,9 @@ generated: "2026-08-22"
 - F-055/F-056/F-057/F-058: AsyncKernelClient 的 channel class 使用 AsyncZMQSocketChannel
 - F-082/F-083: reqrep(wrapped, ...) 装饰器统一添加 reply 参数支持
 - F-039/F-041: KernelManager 的异步内部方法通过 run_sync() 暴露同步版本（如 _async_start_kernel → start_kernel）
-- F-034/F-825: AsyncKernelManager 直接将 async 方法赋值为公开方法，不做 run_sync 包装
+- F-034/F-164: AsyncKernelManager 直接将 async 方法赋值为公开方法，不做 run_sync 包装
 - F-035/F-036: IOLoopKernelManager/AsyncIOLoopKernelManager 将 connect_* 方法包装为 ZMQStream
-- F-016: as_zmqstream 装饰器在创建 socket 时临时替换 context._socket_class
+- F-167: as_zmqstream 装饰器在创建 socket 时临时替换 context._socket_class
 
 **反常识**：
 1. **KernelClient 基类的核心方法都是 async 实现，同步版本是派生出来的**：F-030 中 KernelClient 定义了 `_async_get_shell_msg`、`_async_recv_reply`、`_async_wait_for_ready` 等 async 方法，但它自身并不直接暴露 async API——这些 async 方法前缀是 `_async_`。BlockingKernelClient 通过 run_sync() 包装它们（F-044-F-049），而 AsyncKernelClient 直接将它们赋值为公开方法（F-047-F-052）。这意味着"基类即 async 实现"，同步是派生特性。
