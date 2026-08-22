@@ -1,3 +1,24 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/plugin-playground/src/types.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/transpiler.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/loader.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/resolver.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/modules.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/known-modules.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/requirejs.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/runtime-shared-modules.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/contents.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/command-completion.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/index.ts
+type: Facts
+okf_version: '0.2'
+title: plugin-playground 源码事实清单
+generated: '2026-08-22'
+tags:
+- facts
+---
+
 # Plugin Playground 源码事实清单 (Facts)
 
 > R阶段产出：所有事实均为可验证的源码客观描述，编号 F-xxx，禁止推断性表述。

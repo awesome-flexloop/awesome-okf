@@ -1,9 +1,38 @@
 ---
 type: Insights
-okf_version: "0.2"
-title: "jupyter-client Insights"
-tags: ["jupyter", "kernel", "zmq", "architecture", "protocol", "python"]
-generated: "2026-08-22"
+okf_version: '0.2'
+title: jupyter-client 架构洞察
+tags:
+- jupyter
+- kernel
+- zmq
+- architecture
+- protocol
+- python
+generated: '2026-08-22'
+sources:
+- ../../../../../external/libs/jupyter/jupyter_client/pyproject.toml
+- ../../../../../external/libs/jupyter/jupyter_client/README.md
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/__init__.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/_version.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/adapter.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/asynchronous/__init__.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/asynchronous/client.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/blocking/__init__.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/blocking/client.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/channels.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/channelsabc.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/client.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/clientabc.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/connect.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/consoleapp.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/ioloop/__init__.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/ioloop/manager.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/ioloop/restarter.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/jsonutil.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/kernelapp.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/kernelspec.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/kernelspecapp.py
 ---
 
 # jupyter-client Insights

@@ -1,3 +1,37 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/jupyter-scheduler/pyproject.toml
+- ../../../../../external/libs/jupyter/jupyter-scheduler/package.json
+- ../../../../../external/libs/jupyter/jupyter-scheduler/README.md
+- ../../../../../external/libs/jupyter/jupyter-scheduler/setup.py
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/__tests__/backend-utils.spec.ts
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/__tests__/jupyter_scheduler.spec.ts
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/advanced-options.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/advanced-table/advanced-table-header.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/advanced-table/advanced-table.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/advanced-table/index.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/backend-picker.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/box.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/button-bar.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/button.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/cluster.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/collapsible-panel.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/compute-type-picker.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/confirm-buttons.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/confirm-dialog-buttons.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/create-schedule-options.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/environment-picker.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/error-boundary.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/files-directory-link.tsx
+- ../../../../../external/libs/jupyter/jupyter-scheduler/src/components/heading.tsx
+type: Facts
+okf_version: '0.2'
+title: jupyter-scheduler 源码事实清单
+generated: '2026-08-22'
+tags:
+- facts
+---
+
 # Jupyter Scheduler 源码事实清单
 
 > R阶段产出：零推测事实清单，所有事实均可通过源码路径验证。

@@ -1,3 +1,13 @@
+---
+type: Insights
+okf_version: '0.2'
+title: xeus-lite-demo 架构洞察
+generated: '2026-08-22'
+tags:
+- insights
+- architecture
+---
+
 # xeus-lite-demo 架构洞察
 
 > I阶段（架构洞察）产出的核心洞察四元组与知识地图。

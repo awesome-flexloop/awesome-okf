@@ -1,3 +1,29 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/p5-kernel/pyproject.toml
+- ../../../../../external/libs/jupyter/p5-kernel/package.json
+- ../../../../../external/libs/jupyter/p5-kernel/README.md
+- ../../../../../external/libs/jupyter/p5-kernel/setup.py
+- ../../../../../external/libs/jupyter/p5-kernel/lerna.json
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel-extension/package.json
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel-extension/src/declarations.d.ts
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel-extension/src/index.ts
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel-extension/style/index.js
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel-extension/tsconfig.json
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel/package.json
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel/src/executor.ts
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel/src/index.ts
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel/src/kernel.ts
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel/style/index.js
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel/tsconfig.json
+type: Facts
+okf_version: '0.2'
+title: p5-kernel 源码事实清单
+generated: '2026-08-22'
+tags:
+- facts
+---
+
 # p5-kernel 源码事实清单
 
 > R阶段（事实采集）产出的零推测事实清单，每个事实均可通过源码路径验证。

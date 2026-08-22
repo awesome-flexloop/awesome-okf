@@ -1,3 +1,35 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/jupyterlab_server/pyproject.toml
+- ../../../../../external/libs/jupyter/jupyterlab_server/README.md
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/__init__.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/__main__.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/_version.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/app.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/config.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/handlers.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/licenses_app.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/licenses_handler.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/listings_handler.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/process.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/process_app.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/pytest_plugin.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/server.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/settings_handler.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/settings_utils.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/spec.py
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/test_data/app-settings/overrides.json
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/test_data/schemas/@jupyterlab/apputils-extension/themes.json
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/test_data/schemas/@jupyterlab/codemirror-extension/commands.json
+- ../../../../../external/libs/jupyter/jupyterlab_server/jupyterlab_server/test_data/schemas/@jupyterlab/shortcuts-extension/plugin.json
+type: Facts
+okf_version: '0.2'
+title: jupyterlab_server 源码事实清单
+generated: '2026-08-22'
+tags:
+- facts
+---
+
 # jupyterlab_server v2.28.0 — R阶段事实清单
 
 > 源码路径：`d:\spaces\SpecWeave\external\libs\jupyter\jupyterlab_server\jupyterlab_server\`

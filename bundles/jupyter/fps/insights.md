@@ -1,3 +1,25 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/fps/pyproject.toml
+- ../../../../../external/libs/jupyter/fps/README.md
+- ../../../../../external/libs/jupyter/fps/src/fps/__init__.py
+- ../../../../../external/libs/jupyter/fps/src/fps/_config.py
+- ../../../../../external/libs/jupyter/fps/src/fps/_context.py
+- ../../../../../external/libs/jupyter/fps/src/fps/_importer.py
+- ../../../../../external/libs/jupyter/fps/src/fps/_module.py
+- ../../../../../external/libs/jupyter/fps/src/fps/_signal.py
+- ../../../../../external/libs/jupyter/fps/src/fps/cli/_cli.py
+- ../../../../../external/libs/jupyter/fps/src/fps/web/fastapi.py
+- ../../../../../external/libs/jupyter/fps/src/fps/web/server.py
+type: Insights
+okf_version: '0.2'
+title: fps 架构洞察
+generated: '2026-08-22'
+tags:
+- insights
+- architecture
+---
+
 # FPS 架构洞察
 
 > I阶段产出：核心洞察四元组（陈述/证据/反常识/行动）+ 知识地图

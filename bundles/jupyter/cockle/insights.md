@@ -1,22 +1,43 @@
 ---
 type: Insights
-title: Cockle 架构洞察
+title: cockle 架构洞察
 description: I阶段产出：核心洞察四元组（陈述/证据/反常识/行动）与知识地图
-tags: [insights, architecture, design, patterns, shell, wasm]
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T00:00:00+08:00" }
+tags:
+- insights
+- architecture
+- design
+- patterns
+- shell
+- wasm
+generated:
+  by: agent:source-code-to-okf-wiki
+  at: '2026-08-22T00:00:00+08:00'
 status: stable
 stale_after: 2027-08-22
 sources:
-  - id: cockle-shell-impl
-    title: src/shell_impl.ts
-  - id: cockle-base-shell
-    title: src/base_shell.ts
-  - id: cockle-commands
-    title: src/commands/
-  - id: cockle-worker
-    title: src/base_shell_worker.ts
-  - id: cockle-buffered-io
-    title: src/buffered_io/
+- ../../../../../external/libs/jupyter/cockle/package.json
+- ../../../../../external/libs/jupyter/cockle/README.md
+- ../../../../../external/libs/jupyter/cockle/src/aliases.ts
+- ../../../../../external/libs/jupyter/cockle/src/ansi.ts
+- ../../../../../external/libs/jupyter/cockle/src/argument.ts
+- ../../../../../external/libs/jupyter/cockle/src/arguments.ts
+- ../../../../../external/libs/jupyter/cockle/src/base_shell.ts
+- ../../../../../external/libs/jupyter/cockle/src/base_shell_worker.ts
+- ../../../../../external/libs/jupyter/cockle/src/buffered_io/defs.ts
+- ../../../../../external/libs/jupyter/cockle/src/buffered_io/index.ts
+- ../../../../../external/libs/jupyter/cockle/src/buffered_io/main_io.ts
+- ../../../../../external/libs/jupyter/cockle/src/buffered_io/sab.ts
+- ../../../../../external/libs/jupyter/cockle/src/buffered_io/service_worker_main_io.ts
+- ../../../../../external/libs/jupyter/cockle/src/buffered_io/service_worker_utils.ts
+- ../../../../../external/libs/jupyter/cockle/src/buffered_io/service_worker_worker_io.ts
+- ../../../../../external/libs/jupyter/cockle/src/buffered_io/shared_array_buffer_main_io.ts
+- ../../../../../external/libs/jupyter/cockle/src/buffered_io/shared_array_buffer_worker_io.ts
+- ../../../../../external/libs/jupyter/cockle/src/buffered_io/worker_io.ts
+- ../../../../../external/libs/jupyter/cockle/src/builtin/alias_command.ts
+- ../../../../../external/libs/jupyter/cockle/src/builtin/bool_commands.ts
+- ../../../../../external/libs/jupyter/cockle/src/builtin/builtin_command.ts
+- ../../../../../external/libs/jupyter/cockle/src/builtin/cd_command.ts
+okf_version: '0.2'
 ---
 
 # Cockle 架构洞察

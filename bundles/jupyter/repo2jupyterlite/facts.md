@@ -1,3 +1,19 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/repo2jupyterlite/repo2jupyterlite/app.py
+- ../../../../../external/libs/jupyter/repo2jupyterlite/repoproviders/github.py
+- ../../../../../external/libs/jupyter/repo2jupyterlite/repoproviders/utils.py
+- ../../../../../external/libs/jupyter/repo2jupyterlite/binderlite/run.py
+- ../../../../../external/libs/jupyter/repo2jupyterlite/binderlite/publish.py
+- ../../../../../external/libs/jupyter/repo2jupyterlite/webpack.config.js
+type: Facts
+okf_version: '0.2'
+title: repo2jupyterlite 源码事实清单
+generated: '2026-08-22'
+tags:
+- facts
+---
+
 # repo2jupyterlite 源码事实清单
 
 &gt; R阶段产出：零推测事实，每条事实指向具体源码位置。禁止出现"用于"/"目的是"/"设计为"等推断词。

@@ -1,26 +1,44 @@
 ---
 type: Insights
-title: IPython 架构洞察
+title: ipython 架构洞察
 description: I阶段产出：核心洞察四元组（陈述/证据/反常识/行动）与知识地图
-tags: [insights, architecture, design, patterns, ipython, repl]
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T00:00:00+08:00" }
+tags:
+- insights
+- architecture
+- design
+- patterns
+- ipython
+- repl
+generated:
+  by: agent:source-code-to-okf-wiki
+  at: '2026-08-22T00:00:00+08:00'
 status: stable
 stale_after: 2027-08-22
 sources:
-  - id: ipython-interactiveshell
-    title: IPython/core/interactiveshell.py
-  - id: ipython-terminal-app
-    title: IPython/terminal/ipapp.py
-  - id: ipython-magic
-    title: IPython/core/magic.py
-  - id: ipython-inputtransformer
-    title: IPython/core/inputtransformer2.py
-  - id: ipython-events
-    title: IPython/core/events.py
-  - id: ipython-formatters
-    title: IPython/core/formatters.py
-  - id: ipython-display
-    title: IPython/core/display.py
+- ../../../../../external/libs/jupyter/ipython/pyproject.toml
+- ../../../../../external/libs/jupyter/ipython/README.rst
+- ../../../../../external/libs/jupyter/ipython/setup.py
+- ../../../../../external/libs/jupyter/ipython/ipython/__init__.py
+- ../../../../../external/libs/jupyter/ipython/ipython/__main__.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/__init__.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/_dunder_ops.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/alias.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/application.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/async_helpers.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/autocall.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/builtin_trap.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/compilerop.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/completer.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/completerlib.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/crashhandler.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/debugger.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/debugger_backport.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/display.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/display_functions.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/display_trap.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/displayhook.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/displaypub.py
+okf_version: '0.2'
 ---
 
 # IPython 架构洞察

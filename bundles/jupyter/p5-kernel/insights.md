@@ -1,3 +1,30 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/p5-kernel/pyproject.toml
+- ../../../../../external/libs/jupyter/p5-kernel/package.json
+- ../../../../../external/libs/jupyter/p5-kernel/README.md
+- ../../../../../external/libs/jupyter/p5-kernel/setup.py
+- ../../../../../external/libs/jupyter/p5-kernel/lerna.json
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel-extension/package.json
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel-extension/src/declarations.d.ts
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel-extension/src/index.ts
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel-extension/style/index.js
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel-extension/tsconfig.json
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel/package.json
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel/src/executor.ts
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel/src/index.ts
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel/src/kernel.ts
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel/style/index.js
+- ../../../../../external/libs/jupyter/p5-kernel/packages/p5-kernel/tsconfig.json
+type: Insights
+okf_version: '0.2'
+title: p5-kernel 架构洞察
+generated: '2026-08-22'
+tags:
+- insights
+- architecture
+---
+
 # p5-kernel 架构洞察
 
 > I阶段（架构洞察）产出的核心洞察四元组，每个洞察包含陈述、证据、反常识点和行动建议。

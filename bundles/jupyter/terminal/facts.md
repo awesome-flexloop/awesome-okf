@@ -1,3 +1,23 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/terminal/install.json
+- ../../../../../external/libs/jupyter/terminal/deploy/jupyter-lite.json
+- ../../../../../external/libs/jupyter/terminal/src/index.ts
+- ../../../../../external/libs/jupyter/terminal/src/tokens.ts
+- ../../../../../external/libs/jupyter/terminal/src/client.ts
+- ../../../../../external/libs/jupyter/terminal/src/shell.ts
+- ../../../../../external/libs/jupyter/terminal/jupyterlite_terminal/__init__.py
+- ../../../../../external/libs/jupyter/terminal/jupyterlite_terminal/add_on.py
+- ../../../../../external/libs/jupyter/terminal/rspack.config.js
+- ../../../../../external/libs/jupyter/terminal/worker.rspack.config.js
+type: Facts
+okf_version: '0.2'
+title: terminal 源码事实清单
+generated: '2026-08-22'
+tags:
+- facts
+---
+
 # JupyterLite Terminal 源码事实清单
 
 > R阶段产出：零推测事实，每条事实指向具体源码位置。禁止出现"用于"/"目的是"/"设计为"等推断词。

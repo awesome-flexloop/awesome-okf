@@ -1,28 +1,35 @@
 ---
 type: Facts
-okf_version: "0.2"
-title: "jupyter-client Facts"
-tags: ["jupyter", "kernel", "zmq", "client", "protocol", "python"]
-generated: "2026-08-22"
+okf_version: '0.2'
+title: jupyter-client 源码事实清单
+tags:
+- jupyter
+- kernel
+- zmq
+- client
+- protocol
+- python
+generated: '2026-08-22'
 sources:
-  - "../../../../../external/libs/jupyter/jupyter_client/pyproject.toml"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/__init__.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/_version.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/connect.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/session.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/client.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/manager.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/kernelspec.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/channels.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/blocking/client.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/asynchronous/client.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/ioloop/manager.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/provisioning/provisioner_base.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/provisioning/local_provisioner.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/provisioning/factory.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/multikernelmanager.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/launcher.py"
-  - "../../../../../external/libs/jupyter/jupyter_client/jupyter_client/restarter.py"
+- ../../../../../external/libs/jupyter/jupyter_client/pyproject.toml
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/_version.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/channels.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/multikernelmanager.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/launcher.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/restarter.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/jsonutil.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/connect.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/client.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/blocking/client.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/asynchronous/client.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/manager.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/ioloop/manager.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/kernelspec.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/session.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/provisioning/provisioner_base.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/provisioning/local_provisioner.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/provisioning/factory.py
+- ../../../../../external/libs/jupyter/jupyter_client/jupyter_client/__init__.py
 ---
 
 # jupyter-client Facts

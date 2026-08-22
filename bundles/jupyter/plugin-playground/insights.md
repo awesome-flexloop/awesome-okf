@@ -1,3 +1,38 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/plugin-playground/pyproject.toml
+- ../../../../../external/libs/jupyter/plugin-playground/package.json
+- ../../../../../external/libs/jupyter/plugin-playground/README.md
+- ../../../../../external/libs/jupyter/plugin-playground/setup.py
+- ../../../../../external/libs/jupyter/plugin-playground/src/archive.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/command-completion.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/components/url-load-hint.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/contents.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/dialogs.tsx
+- ../../../../../external/libs/jupyter/plugin-playground/src/encoding.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/errors.tsx
+- ../../../../../external/libs/jupyter/plugin-playground/src/example-sidebar.tsx
+- ../../../../../external/libs/jupyter/plugin-playground/src/export-template.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/export-toolbar.tsx
+- ../../../../../external/libs/jupyter/plugin-playground/src/icons.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/index.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/known-modules.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/loaded-plugins-sidebar.tsx
+- ../../../../../external/libs/jupyter/plugin-playground/src/loader.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/modules.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/raw-loader.d.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/requirejs.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/resolver.ts
+- ../../../../../external/libs/jupyter/plugin-playground/src/runtime-shared-modules.ts
+type: Insights
+okf_version: '0.2'
+title: plugin-playground 架构洞察
+generated: '2026-08-22'
+tags:
+- insights
+- architecture
+---
+
 # Plugin Playground 架构洞察 (Insights)
 
 > I阶段产出：基于 facts.md 中215条事实提炼核心架构洞察，设计知识地图与文档清单。

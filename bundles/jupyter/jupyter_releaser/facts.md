@@ -1,3 +1,33 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/jupyter_releaser/pyproject.toml
+- ../../../../../external/libs/jupyter/jupyter_releaser/README.md
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/__init__.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/__main__.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/actions/__init__.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/actions/common.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/actions/finalize_release.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/actions/generate_changelog.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/actions/populate_release.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/actions/prep_release.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/actions/publish_changelog.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/changelog.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/cli.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/lib.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/mock_github.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/npm.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/python.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/schema.json
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/tee.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/util.py
+type: Facts
+okf_version: '0.2'
+title: jupyter_releaser 源码事实清单
+generated: '2026-08-22'
+tags:
+- facts
+---
+
 # jupyter_releaser 事实清单（R阶段）
 
 > 本文件记录从源码中提取的可验证事实，编号 F-001 起。所有事实均指向具体源码路径，禁止推测。

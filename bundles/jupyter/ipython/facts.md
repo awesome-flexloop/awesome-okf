@@ -1,70 +1,45 @@
 ---
 type: Facts
-title: IPython 源码事实清单
+title: ipython 源码事实清单
 description: R阶段产出：从零推测事实，每条事实指向具体源码位置
-tags: [facts, source-code, evidence, verification, ipython, jupyter, repl]
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T00:00:00+08:00" }
+tags:
+- facts
+- source-code
+- evidence
+- verification
+- ipython
+- jupyter
+- repl
+generated:
+  by: agent:source-code-to-okf-wiki
+  at: '2026-08-22T00:00:00+08:00'
 status: stable
 stale_after: 2027-08-22
 sources:
-  - id: ipython-init
-    title: IPython/__init__.py
-  - id: ipython-main
-    title: IPython/__main__.py
-  - id: ipython-release
-    title: IPython/core/release.py
-  - id: ipython-terminal-app
-    title: IPython/terminal/ipapp.py
-  - id: ipython-interactiveshell
-    title: IPython/core/interactiveshell.py
-  - id: ipython-terminal-shell
-    title: IPython/terminal/interactiveshell.py
-  - id: ipython-magic
-    title: IPython/core/magic.py
-  - id: ipython-magics-init
-    title: IPython/core/magics/__init__.py
-  - id: ipython-magics-table
-    title: IPython/core/magics/_table.py
-  - id: ipython-inputtransformer
-    title: IPython/core/inputtransformer2.py
-  - id: ipython-events
-    title: IPython/core/events.py
-  - id: ipython-hooks
-    title: IPython/core/hooks.py
-  - id: ipython-formatters
-    title: IPython/core/formatters.py
-  - id: ipython-display
-    title: IPython/core/display.py
-  - id: ipython-displaypub
-    title: IPython/core/displaypub.py
-  - id: ipython-displayhook
-    title: IPython/core/displayhook.py
-  - id: ipython-history
-    title: IPython/core/history.py
-  - id: ipython-extensions
-    title: IPython/core/extensions.py
-  - id: ipython-completer
-    title: IPython/core/completer.py
-  - id: ipython-compilerop
-    title: IPython/core/compilerop.py
-  - id: ipython-prefilter
-    title: IPython/core/prefilter.py
-  - id: ipython-alias
-    title: IPython/core/alias.py
-  - id: ipython-application
-    title: IPython/core/application.py
-  - id: ipython-shellapp
-    title: IPython/core/shellapp.py
-  - id: ipython-oinspect
-    title: IPython/core/oinspect.py
-  - id: ipython-debugger
-    title: IPython/core/debugger.py
-  - id: ipython-paths
-    title: IPython/paths.py
-  - id: ipython-display-public
-    title: IPython/display.py
-  - id: ipython-ext-autoreload
-    title: IPython/extensions/autoreload.py
+- ../../../../../external/libs/jupyter/ipython/pyproject.toml
+- ../../../../../external/libs/jupyter/ipython/README.rst
+- ../../../../../external/libs/jupyter/ipython/setup.py
+- ../../../../../external/libs/jupyter/ipython/ipython/__init__.py
+- ../../../../../external/libs/jupyter/ipython/ipython/__main__.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/__init__.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/_dunder_ops.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/alias.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/application.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/async_helpers.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/autocall.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/builtin_trap.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/compilerop.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/completer.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/completerlib.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/crashhandler.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/debugger.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/debugger_backport.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/display.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/display_functions.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/display_trap.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/displayhook.py
+- ../../../../../external/libs/jupyter/ipython/ipython/core/displaypub.py
+okf_version: '0.2'
 ---
 
 # IPython 源码事实清单

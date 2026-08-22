@@ -1,9 +1,17 @@
 ---
 type: Insights
-title: I阶段架构洞察与知识结构设计
+title: jupyterlite-demo 架构洞察
 description: 从源码事实中提炼的4个核心洞察，以及知识地图和文档分组设计
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T18:00:00+08:00" }
+generated:
+  by: agent:source-code-to-okf-wiki
+  at: '2026-08-22T18:00:00+08:00'
 status: stable
+sources:
+- ../../../../../external/libs/jupyter/demo/README.md
+okf_version: '0.2'
+tags:
+- insights
+- architecture
 ---
 
 # I 阶段：架构洞察与知识结构设计

@@ -1,30 +1,34 @@
 ---
 type: Facts
-title: Jupyter Core 源码事实清单
+title: jupyter-core 源码事实清单
 description: R阶段产出：从零推测事实，每条事实指向具体源码位置
-tags: [facts, source-code, evidence, verification, jupyter-core, paths, configuration, traitlets]
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T00:00:00+08:00" }
+tags:
+- facts
+- source-code
+- evidence
+- verification
+- jupyter-core
+- paths
+- configuration
+- traitlets
+generated:
+  by: agent:source-code-to-okf-wiki
+  at: '2026-08-22T00:00:00+08:00'
 status: stable
 stale_after: 2027-08-22
 sources:
-  - id: jupytercore-pyproject
-    title: pyproject.toml
-    path: "../../../../../external/libs/jupyter/jupyter_core/pyproject.toml"
-  - id: jupytercore-paths
-    title: jupyter_core/paths.py
-    path: "../../../../../external/libs/jupyter/jupyter_core/jupyter_core/paths.py"
-  - id: jupytercore-app
-    title: jupyter_core/application.py
-    path: "../../../../../external/libs/jupyter/jupyter_core/jupyter_core/application.py"
-  - id: jupytercore-command
-    title: jupyter_core/command.py
-    path: "../../../../../external/libs/jupyter/jupyter_core/jupyter_core/command.py"
-  - id: jupytercore-version
-    title: jupyter_core/version.py
-    path: "../../../../../external/libs/jupyter/jupyter_core/jupyter_core/version.py"
-  - id: jupytercore-init
-    title: jupyter_core/__init__.py
-    path: "../../../../../external/libs/jupyter/jupyter_core/jupyter_core/__init__.py"
+- ../../../../../external/libs/jupyter/jupyter_core/pyproject.toml
+- ../../../../../external/libs/jupyter/jupyter_core/README.md
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/__init__.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/__main__.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/application.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/command.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/migrate.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/paths.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/troubleshoot.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/utils/__init__.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/version.py
+okf_version: '0.2'
 ---
 
 # Jupyter Core 源码事实清单

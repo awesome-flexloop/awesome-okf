@@ -1,3 +1,34 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/jupyter_releaser/pyproject.toml
+- ../../../../../external/libs/jupyter/jupyter_releaser/README.md
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/__init__.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/__main__.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/actions/__init__.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/actions/common.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/actions/finalize_release.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/actions/generate_changelog.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/actions/populate_release.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/actions/prep_release.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/actions/publish_changelog.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/changelog.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/cli.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/lib.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/mock_github.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/npm.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/python.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/schema.json
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/tee.py
+- ../../../../../external/libs/jupyter/jupyter_releaser/jupyter_releaser/util.py
+type: Insights
+okf_version: '0.2'
+title: jupyter_releaser 架构洞察
+generated: '2026-08-22'
+tags:
+- insights
+- architecture
+---
+
 # jupyter_releaser 架构洞察与知识地图（I阶段）
 
 ## 核心洞察

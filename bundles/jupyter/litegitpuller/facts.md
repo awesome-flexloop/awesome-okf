@@ -1,3 +1,21 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/litegitpuller/pyproject.toml
+- ../../../../../external/libs/jupyter/litegitpuller/package.json
+- ../../../../../external/libs/jupyter/litegitpuller/README.md
+- ../../../../../external/libs/jupyter/litegitpuller/setup.py
+- ../../../../../external/libs/jupyter/litegitpuller/litegitpuller/__init__.py
+- ../../../../../external/libs/jupyter/litegitpuller/src/__tests__/litegitpuller.spec.ts
+- ../../../../../external/libs/jupyter/litegitpuller/src/gitpuller.ts
+- ../../../../../external/libs/jupyter/litegitpuller/src/index.ts
+type: Facts
+okf_version: '0.2'
+title: litegitpuller 源码事实清单
+generated: '2026-08-22'
+tags:
+- facts
+---
+
 # litegitpuller 事实清单（R阶段采集）
 
 > 零推测原则：以下事实均从源码中直接提取，不含推断性表述。每个事实指向具体源码位置。

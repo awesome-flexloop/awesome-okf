@@ -1,22 +1,45 @@
 ---
 type: Insights
-title: JavaScript Kernel 架构洞察
+title: javascript-kernel 架构洞察
 description: I阶段产出：核心洞察四元组（陈述/证据/反常识/行动）与知识地图
-tags: [insights, architecture, design, patterns, anti-patterns]
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T00:00:00+08:00" }
+tags:
+- insights
+- architecture
+- design
+- patterns
+- anti-patterns
+generated:
+  by: agent:source-code-to-okf-wiki
+  at: '2026-08-22T00:00:00+08:00'
 status: stable
 stale_after: 2027-08-22
 sources:
-  - id: jk-kernel
-    title: kernel.ts
-  - id: jk-backends
-    title: runtime_backends.ts
-  - id: jk-executor
-    title: executor.ts
-  - id: jk-widget
-    title: widgets/widget.ts
-  - id: jk-startup
-    title: startup.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/pyproject.toml
+- ../../../../../external/libs/jupyter/javascript-kernel/package.json
+- ../../../../../external/libs/jupyter/javascript-kernel/README.md
+- ../../../../../external/libs/jupyter/javascript-kernel/setup.py
+- ../../../../../external/libs/jupyter/javascript-kernel/lerna.json
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel-extension/package.json
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel-extension/src/declarations.d.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel-extension/src/index.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel-extension/tsconfig.json
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/package.json
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/comm/index.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/comm/manager.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/display.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/errors.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/executor.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/index.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/kernel.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/runtime_backends.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/runtime_evaluator.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/runtime_protocol.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/runtime_remote.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/startup.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/widgets/index.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/widgets/version.ts
+- ../../../../../external/libs/jupyter/javascript-kernel/packages/javascript-kernel/src/widgets/widget.ts
+okf_version: '0.2'
 ---
 
 # JavaScript Kernel 架构洞察

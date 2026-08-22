@@ -1,3 +1,38 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/pyodide-kernel/pyproject.toml
+- ../../../../../external/libs/jupyter/pyodide-kernel/package.json
+- ../../../../../external/libs/jupyter/pyodide-kernel/README.md
+- ../../../../../external/libs/jupyter/pyodide-kernel/setup.py
+- ../../../../../external/libs/jupyter/pyodide-kernel/lerna.json
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel-extension/package.json
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel-extension/schema/kernel.v0.schema.json
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel-extension/src/declarations.d.ts
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel-extension/src/index.ts
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel-extension/style/index.js
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel-extension/tsconfig.json
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel-extension/webpack.config.js
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel/package.json
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel/py/ipykernel/ipykernel/__init__.py
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel/py/ipykernel/ipykernel/comm.py
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel/py/ipykernel/pyproject.toml
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel/py/piplite/piplite/__init__.py
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel/py/piplite/piplite/cli.py
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel/py/piplite/piplite/piplite.py
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel/py/piplite/pyproject.toml
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel/py/pyodide-kernel/pyodide_kernel/__init__.py
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel/py/pyodide-kernel/pyodide_kernel/comm.py
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel/py/pyodide-kernel/pyodide_kernel/display.py
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel/py/pyodide-kernel/pyodide_kernel/interpreter.py
+- ../../../../../external/libs/jupyter/pyodide-kernel/packages/pyodide-kernel/py/pyodide-kernel/pyodide_kernel/jsonutil.py
+type: Facts
+okf_version: '0.2'
+title: pyodide-kernel 源码事实清单
+generated: '2026-08-22'
+tags:
+- facts
+---
+
 # Pyodide Kernel 事实清单
 
 > R阶段产出：零推测，纯代码事实。每个事实指向具体源码路径。

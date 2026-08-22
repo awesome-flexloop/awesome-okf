@@ -1,3 +1,22 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/litegitpuller/pyproject.toml
+- ../../../../../external/libs/jupyter/litegitpuller/package.json
+- ../../../../../external/libs/jupyter/litegitpuller/README.md
+- ../../../../../external/libs/jupyter/litegitpuller/setup.py
+- ../../../../../external/libs/jupyter/litegitpuller/litegitpuller/__init__.py
+- ../../../../../external/libs/jupyter/litegitpuller/src/__tests__/litegitpuller.spec.ts
+- ../../../../../external/libs/jupyter/litegitpuller/src/gitpuller.ts
+- ../../../../../external/libs/jupyter/litegitpuller/src/index.ts
+type: Insights
+okf_version: '0.2'
+title: litegitpuller 架构洞察
+generated: '2026-08-22'
+tags:
+- insights
+- architecture
+---
+
 # litegitpuller 架构洞察与知识地图（I阶段）
 
 ## 核心架构洞察

@@ -1,3 +1,20 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/repo2jupyterlite/package.json
+- ../../../../../external/libs/jupyter/repo2jupyterlite/README.md
+- ../../../../../external/libs/jupyter/repo2jupyterlite/setup.py
+- ../../../../../external/libs/jupyter/repo2jupyterlite/repo2jupyterlite/__init__.py
+- ../../../../../external/libs/jupyter/repo2jupyterlite/src/App.jsx
+- ../../../../../external/libs/jupyter/repo2jupyterlite/src/detectors.js
+type: Insights
+okf_version: '0.2'
+title: repo2jupyterlite 架构洞察
+generated: '2026-08-22'
+tags:
+- insights
+- architecture
+---
+
 # repo2jupyterlite 架构洞察
 
 &gt; I阶段产出：核心洞察四元组（陈述/证据/反常识/行动）+ 知识地图

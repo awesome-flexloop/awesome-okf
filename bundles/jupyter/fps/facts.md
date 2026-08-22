@@ -1,3 +1,20 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/fps/src/fps/__init__.py
+- ../../../../../external/libs/jupyter/fps/src/fps/_module.py
+- ../../../../../external/libs/jupyter/fps/src/fps/_context.py
+- ../../../../../external/libs/jupyter/fps/src/fps/_importer.py
+- ../../../../../external/libs/jupyter/fps/src/fps/_config.py
+- ../../../../../external/libs/jupyter/fps/src/fps/_signal.py
+- ../../../../../external/libs/jupyter/fps/src/fps/cli/_cli.py
+type: Facts
+okf_version: '0.2'
+title: fps 源码事实清单
+generated: '2026-08-22'
+tags:
+- facts
+---
+
 # FPS 源码事实清单
 
 > R阶段产出：零推测事实，每条事实指向具体源码位置。禁止出现"用于"/"目的是"/"设计为"等推断词。

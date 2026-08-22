@@ -3,6 +3,7 @@ okf_version: "0.2"
 type: group
 title: "📓 Jupyter 数据科学生态"
 description: "Jupyter 交互式计算生态——协议、格式、应用与部署"
+total_bundles: 56
 ---
 
 # 📓 Jupyter 数据科学生态
@@ -51,6 +52,7 @@ Jupyter 是数据科学与交互式计算的核心平台，从底层的 ZeroMQ �
 | 16 | [plugin-playground](plugin-playground/index.md) | JupyterLab 插件快速原型工具——浏览器端TypeScript即时转译、AsyncFunction沙箱执行、Proxy驱动Token依赖注入、CSS快照-提交-回滚事务、四级模块解析链（已知模块→联邦扩展→本地文件→CDN RequireJS），无需构建即可实时编写和测试JupyterLab插件 |
 | 17 | [jupyterlab-latex](jupyterlab-latex/index.md) | JupyterLab LaTeX 编辑扩展——为 .tex 文件提供实时编译预览、双向SyncTeX导航、富编辑工具栏，后端Tornado调度LaTeX编译（xelatex/pdflatex/lualatex/tectonic多引擎+BibTeX自动检测），前端pdfjs-dist渲染PDF+Shift+Ctrl/Cmd+Click反向同步，TypeScript+Python双插件架构（v4.4.0） |
 | 18 | [jupyter-renderers](jupyter-renderers/index.md) | JupyterLab 官方MIME渲染器扩展集合——FASTA生物序列(MSA)、GeoJSON地理数据(Leaflet)、KaTeX/MathJax2数学公式、Vega/Vega-Lite可视化五个预构建扩展，Lerna monorepo管理，MIME渲染器四要素模式与ILatexTypesetter服务模式，hatch-jupyter-builder Python wheel打包 |
+| 31 | [anywidget](anywidget/index.md) | 自定义Jupyter Widget工具包——ESM零构建前端协议、AnyWidget基类(ipywidgets.DOMWidget)、WidgetTrait双观察者同步、Comm消息通道、Custom Messages自定义消息、HMR热更新(SolidJS响应式+Vite插件)、React/Svelte/Vue多框架桥接、descriptor.py零依赖traitlets替代方案，Python/JS双包架构 |
 | 10 | [try-jupyter](try-jupyter/index.md) | JupyterLite浏览器端体验站点——基于Pyodide+Xeus双内核(WASM)、零安装Python/C++/R/SQLite环境、Pixi构建管线、GitHub Pages部署、Playwright E2E测试 |
 | 23 | [echo-kernel](echo-kernel/index.md) | JupyterLite最小示例内核——Echo Kernel回显内核（约150行核心代码），BaseKernel模板方法模式、JupyterFrontEndPlugin插件注册、TypeScript+hatchling双构建系统，自定义JupyterLite内核开发最佳入门模板（v0.4.0） |
 | 26 | [pyodide-kernel](pyodide-kernel/index.md) | JupyterLite Pyodide Python内核——基于Pyodide WASM在浏览器运行CPython 3.12，双层架构（构建Addon+运行时WASM）、Comlink/Coincident双Worker模式、piplite三级包管理、IPython三层兼容适配（Mock→Patch→Subclass）、跨边界消息桥接（v0.9.0a1，Pyodide v0.29.3） |

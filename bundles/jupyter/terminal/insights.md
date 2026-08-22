@@ -1,3 +1,27 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/terminal/pyproject.toml
+- ../../../../../external/libs/jupyter/terminal/package.json
+- ../../../../../external/libs/jupyter/terminal/README.md
+- ../../../../../external/libs/jupyter/terminal/setup.py
+- ../../../../../external/libs/jupyter/terminal/src/__tests__/jupyterlite_terminal.spec.ts
+- ../../../../../external/libs/jupyter/terminal/src/client.ts
+- ../../../../../external/libs/jupyter/terminal/src/coincident.d.ts
+- ../../../../../external/libs/jupyter/terminal/src/coincident.worker.ts
+- ../../../../../external/libs/jupyter/terminal/src/comlink.worker.ts
+- ../../../../../external/libs/jupyter/terminal/src/exec.ts
+- ../../../../../external/libs/jupyter/terminal/src/index.ts
+- ../../../../../external/libs/jupyter/terminal/src/shell.ts
+- ../../../../../external/libs/jupyter/terminal/src/tokens.ts
+type: Insights
+okf_version: '0.2'
+title: terminal 架构洞察
+generated: '2026-08-22'
+tags:
+- insights
+- architecture
+---
+
 # JupyterLite Terminal 架构洞察
 
 > I阶段产出：核心洞察四元组（陈述/证据/反常识/行动）+ 知识地图

@@ -1,9 +1,16 @@
 ---
 type: Facts
-title: R阶段事实采集清单
+title: jupyterlite-demo 源码事实清单
 description: 基于 jupyterlite/demo 仓库源码采集的零推测事实清单，共90条事实，覆盖项目元信息、依赖配置、笔记本内容、数据文件、构建部署
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T18:00:00+08:00" }
+generated:
+  by: agent:source-code-to-okf-wiki
+  at: '2026-08-22T18:00:00+08:00'
 status: stable
+sources:
+- ../../../../../external/libs/jupyter/demo/requirements.txt
+okf_version: '0.2'
+tags:
+- facts
 ---
 
 # R 阶段：事实采集清单

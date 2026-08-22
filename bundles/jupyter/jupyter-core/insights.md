@@ -1,21 +1,33 @@
 ---
 type: Insights
-title: Jupyter Core 架构洞察
+title: jupyter-core 架构洞察
 description: I阶段产出：核心洞察四元组（陈述/证据/反常识/行动）与知识地图
-tags: [insights, architecture, design, patterns, jupyter-core, paths, cross-platform]
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T00:00:00+08:00" }
+tags:
+- insights
+- architecture
+- design
+- patterns
+- jupyter-core
+- paths
+- cross-platform
+generated:
+  by: agent:source-code-to-okf-wiki
+  at: '2026-08-22T00:00:00+08:00'
 status: stable
 stale_after: 2027-08-22
 sources:
-  - id: jupytercore-paths
-    title: jupyter_core/paths.py
-    path: "../../../../../external/libs/jupyter/jupyter_core/jupyter_core/paths.py"
-  - id: jupytercore-app
-    title: jupyter_core/application.py
-    path: "../../../../../external/libs/jupyter/jupyter_core/jupyter_core/application.py"
-  - id: jupytercore-command
-    title: jupyter_core/command.py
-    path: "../../../../../external/libs/jupyter/jupyter_core/jupyter_core/command.py"
+- ../../../../../external/libs/jupyter/jupyter_core/pyproject.toml
+- ../../../../../external/libs/jupyter/jupyter_core/README.md
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/__init__.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/__main__.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/application.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/command.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/migrate.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/paths.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/troubleshoot.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/utils/__init__.py
+- ../../../../../external/libs/jupyter/jupyter_core/jupyter_core/version.py
+okf_version: '0.2'
 ---
 
 # Jupyter Core 架构洞察

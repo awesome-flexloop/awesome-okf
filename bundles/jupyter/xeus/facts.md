@@ -1,3 +1,38 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/xeus/pyproject.toml
+- ../../../../../external/libs/jupyter/xeus/package.json
+- ../../../../../external/libs/jupyter/xeus/README.md
+- ../../../../../external/libs/jupyter/xeus/setup.py
+- ../../../../../external/libs/jupyter/xeus/lerna.json
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-core/package.json
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-core/src/index.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-core/src/interfaces.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-core/src/kernel.base.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-core/src/worker.base.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-core/tsconfig.json
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-extension/lab.webpack.config.js
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-extension/package.json
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-extension/src/index.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-extension/src/tokens.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-extension/style/index.js
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-extension/tsconfig.json
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/package.json
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/src/coincident.worker.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/src/comlink.worker.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/src/index.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/src/interfaces.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/src/kernel.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/src/worker.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/tsconfig.json
+type: Facts
+okf_version: '0.2'
+title: xeus 源码事实清单
+generated: '2026-08-22'
+tags:
+- facts
+---
+
 # jupyterlite-xeus 源码事实清单
 
 > R阶段产出：零推测事实，每条事实指向具体源码位置。禁止出现"用于"/"目的是"/"设计为"等推断词。

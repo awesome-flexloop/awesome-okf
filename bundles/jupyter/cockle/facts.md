@@ -1,24 +1,28 @@
 ---
 type: Facts
-title: Cockle 源码事实清单
+title: cockle 源码事实清单
 description: R阶段产出：从零推测事实，每条事实指向具体源码位置
-tags: [facts, source-code, evidence, verification, shell, wasm, browser]
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T00:00:00+08:00" }
+tags:
+- facts
+- source-code
+- evidence
+- verification
+- shell
+- wasm
+- browser
+generated:
+  by: agent:source-code-to-okf-wiki
+  at: '2026-08-22T00:00:00+08:00'
 status: stable
 stale_after: 2027-08-22
 sources:
-  - id: cockle-pkg
-    title: package.json
-  - id: cockle-readme
-    title: README.md
-  - id: cockle-shell
-    title: src/shell.ts
-  - id: cockle-shell-impl
-    title: src/shell_impl.ts
-  - id: cockle-base-shell
-    title: src/base_shell.ts
-  - id: cockle-defs
-    title: src/defs.ts
+- ../../../../../external/libs/jupyter/cockle/src/defs.ts
+- ../../../../../external/libs/jupyter/cockle/src/shell.ts
+- ../../../../../external/libs/jupyter/cockle/src/base_shell.ts
+- ../../../../../external/libs/jupyter/cockle/src/shell_impl.ts
+- ../../../../../external/libs/jupyter/cockle/src/parse.ts
+- ../../../../../external/libs/jupyter/cockle/src/tokenize.ts
+okf_version: '0.2'
 ---
 
 # Cockle 源码事实清单

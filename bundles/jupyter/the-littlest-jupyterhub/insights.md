@@ -1,14 +1,23 @@
 ---
 type: Insights
-title: The Littlest JupyterHub 架构洞察
+title: the-littlest-jupyterhub 架构洞察
 description: I阶段产出：基于事实清单提炼核心架构洞察四元组与知识地图
-tags: [insights, architecture, jupyterhub, tljh, design-patterns]
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T16:10:00+08:00" }
+tags:
+- insights
+- architecture
+- jupyterhub
+- tljh
+- design-patterns
+generated:
+  by: agent:source-code-to-okf-wiki
+  at: '2026-08-22T16:10:00+08:00'
 status: stable
 stale_after: 2027-08-22
 sources:
-  - id: tljh-facts
-    title: facts.md
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/pyproject.toml
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/README.md
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/setup.py
+okf_version: '0.2'
 ---
 
 # The Littlest JupyterHub 架构洞察

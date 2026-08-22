@@ -1,54 +1,42 @@
 ---
 type: Facts
-title: The Littlest JupyterHub 源码事实清单
+title: the-littlest-jupyterhub 源码事实清单
 description: R阶段产出：从零推测事实，每条事实指向具体源码位置
-tags: [facts, source-code, evidence, verification, jupyterhub, tljh, jupyter, devops]
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T16:00:00+08:00" }
+tags:
+- facts
+- source-code
+- evidence
+- verification
+- jupyterhub
+- tljh
+- jupyter
+- devops
+generated:
+  by: agent:source-code-to-okf-wiki
+  at: '2026-08-22T16:00:00+08:00'
 status: stable
 stale_after: 2027-08-22
 sources:
-  - id: tljh-readme
-    title: README.md
-  - id: tljh-setup
-    title: setup.py
-  - id: tljh-pyproject
-    title: pyproject.toml
-  - id: tljh-installer
-    title: tljh/installer.py
-  - id: tljh-config
-    title: tljh/config.py
-  - id: tljh-config-schema
-    title: tljh/config_schema.py
-  - id: tljh-configurer
-    title: tljh/configurer.py
-  - id: tljh-hooks
-    title: tljh/hooks.py
-  - id: tljh-conda
-    title: tljh/conda.py
-  - id: tljh-user
-    title: tljh/user.py
-  - id: tljh-traefik
-    title: tljh/traefik.py
-  - id: tljh-systemd
-    title: tljh/systemd.py
-  - id: tljh-jupyterhub-config
-    title: tljh/jupyterhub_config.py
-  - id: tljh-yaml
-    title: tljh/yaml.py
-  - id: tljh-utils
-    title: tljh/utils.py
-  - id: tljh-log
-    title: tljh/log.py
-  - id: tljh-migrator
-    title: tljh/migrator.py
-  - id: tljh-normalize
-    title: tljh/normalize.py
-  - id: tljh-apt
-    title: tljh/apt.py
-  - id: tljh-user-creating-spawner
-    title: tljh/user_creating_spawner.py
-  - id: tljh-bootstrap
-    title: bootstrap/bootstrap.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/pyproject.toml
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/config.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/config_schema.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/configurer.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/hooks.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/installer.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/conda.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/traefik.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/systemd.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/jupyterhub_config.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/yaml.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/utils.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/log.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/migrator.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/normalize.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/apt.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/user_creating_spawner.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/tljh/user.py
+- ../../../../../external/libs/jupyter/the-littlest-jupyterhub/bootstrap/bootstrap.py
+okf_version: '0.2'
 ---
 
 # The Littlest JupyterHub 源码事实清单

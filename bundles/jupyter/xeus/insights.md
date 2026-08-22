@@ -1,3 +1,39 @@
+---
+sources:
+- ../../../../../external/libs/jupyter/xeus/pyproject.toml
+- ../../../../../external/libs/jupyter/xeus/package.json
+- ../../../../../external/libs/jupyter/xeus/README.md
+- ../../../../../external/libs/jupyter/xeus/setup.py
+- ../../../../../external/libs/jupyter/xeus/lerna.json
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-core/package.json
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-core/src/index.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-core/src/interfaces.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-core/src/kernel.base.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-core/src/worker.base.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-core/tsconfig.json
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-extension/lab.webpack.config.js
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-extension/package.json
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-extension/src/index.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-extension/src/tokens.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-extension/style/index.js
+- ../../../../../external/libs/jupyter/xeus/packages/xeus-extension/tsconfig.json
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/package.json
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/src/coincident.worker.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/src/comlink.worker.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/src/index.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/src/interfaces.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/src/kernel.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/src/worker.ts
+- ../../../../../external/libs/jupyter/xeus/packages/xeus/tsconfig.json
+type: Insights
+okf_version: '0.2'
+title: xeus 架构洞察
+generated: '2026-08-22'
+tags:
+- insights
+- architecture
+---
+
 # jupyterlite-xeus 架构洞察
 
 > I阶段产出：基于F-001~F-137事实清单提炼的核心洞察。每条洞察包含四元组：陈述/证据/反常识/行动。

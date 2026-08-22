@@ -1,3 +1,12 @@
+---
+type: Facts
+okf_version: '0.2'
+title: xeus-lite-demo 源码事实清单
+generated: '2026-08-22'
+tags:
+- facts
+---
+
 # xeus-lite-demo 源码事实清单
 
 > R阶段（事实采集）产出的零推测事实清单，每个事实均可通过源码路径验证。
