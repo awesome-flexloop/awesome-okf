@@ -52,7 +52,7 @@ deepcode --version
 }
 ```
 
-默认模型为 `deepseek-v4-flask`。可通过 `MODEL` 环境变量或 `model` 字段切换：
+默认模型为 `deepseek-v4-flash`。可通过 `MODEL` 环境变量或 `model` 字段切换：
 
 ```json
 {
