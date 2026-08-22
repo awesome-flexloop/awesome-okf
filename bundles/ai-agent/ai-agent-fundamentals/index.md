@@ -1,62 +1,92 @@
 ---
 okf_version: "0.2"
+title: "AI Agent 架构基础"
+description: "AI Agent 框架跨项目架构模式对比知识库 - 12个开源项目源码深度分析，提炼8大核心架构模式"
+tags:
+  - ai-agent
+  - fundamentals
+  - architecture
+  - patterns
+  - cross-project
+generated: 2026-08-23T02:00:00+08:00
+status: stable
+stale_after: P1Y
+sources:
+  - external/libs/models/ai/
+related:
+  - "[[hermes-agent]]"
+  - "[[veadk-python]]"
+  - "[[zleap-agent]]"
+  - "[[deepseek-harness]]"
+  - "[[intelligent-terminal]]"
+  - "[[cordis]]"
+  - "[[second-me]]"
+  - "[[agency-agents]]"
+  - "[[agency-agents-app]]"
+  - "[[anthropics-skills]]"
+  - "[[book-to-skill]]"
+  - "[[i-have-adhd]]"
 ---
 
-# AI Agent 框架核心架构知识库
+# AI Agent 架构基础
 
-本知识包系统分析了 12 个 AI Agent 相关开源项目的源码，覆盖 Python、TypeScript、C++/Rust 四种语言生态，提炼出 AI Agent 框架的 9 大核心架构概念，通过 hermes-agent、Cordis、Second-Me、Intelligent Terminal 四个深度示例进行代码级走读。所有内容均溯源至 `external/libs/models/ai/` 目录下的源码文件，遵循 [OKF v0.2 规范](https://github.com/awesome-flexloop/awesome-okf)。
+本知识包系统分析了 **12 个 AI Agent 开源项目**的源码（Python/TypeScript/C++/Rust 多语言生态），提炼出 AI Agent 框架的**8 大跨项目架构模式**。每个模式文档对比 4-5 个框架的实现差异，帮助读者建立系统性认知。
 
-## 项目覆盖
+> 📖 **阅读建议**：如果你是 AI Agent 框架初学者，建议先阅读 [agent-core-loop-pattern](concepts/agent-core-loop-pattern.md) 建立核心循环概念，再按兴趣深入各项目 bundle。如果你要做框架选型，直接看 [choose-framework](examples/choose-framework.md) 示例。
 
-| 项目 | 语言 | 核心特色 |
-|------|------|---------|
-| hermes-agent | Python | 75+参数可配置Agent、ToolRegistry单例、MoA多代理、工具集DAG组合 |
-| veadk-python | Python | Agent/Runner分层、长短记忆分离、运行时委托（adk/codex/piagent） |
-| Zleap-Agent | TypeScript | Workspace-first上下文隔离、Run/Work/Step三级状态机、Hook系统 |
-| deepseek-harness | TypeScript | "一切皆插件"Cordis架构、Capability Seam模式、ACP支持 |
-| Cordis | TypeScript | 时空可组合性元框架：Context原型链+Fiber生命周期+5种事件模式 |
-| agency-agents | Markdown | 280+专业Agent persona、18部门、多工具适配脚本 |
-| anthropics/skills | MD+Python | Anthropic官方Skills参考实现、SKILL.md标准 |
-| book-to-skill | Python | 编译时知识蒸馏、四层产出结构、24-51×token节省 |
-| i-have-adhd | MD+Shell | 认知科学驱动的输出风格技能、10条规则 |
-| intelligent-terminal | C++/Rust | Windows Terminal原生Agent集成、ACP协议、COM/OSC |
-| Second-Me | Python/TS | 三层记忆HMM（L0→L1→L2）+ LoRA个性化+去中心化Agent网络 |
+## 项目覆盖一览
 
-## 基础概念（concepts/）
+| 层级 | 项目 | 语言 | 核心特色 |
+|------|------|------|---------|
+| **Tier 1** | [hermes-agent](../hermes-agent/) | Python | Nous Research 多Provider/平台/工具Agent框架，802个py文件 |
+| **Tier 1** | [veadk-python](../veadk-python/) | Python | 火山引擎 VeADK，基于 google-adk 的企业级 Agent SDK |
+| **Tier 1** | [zleap-agent](../zleap-agent/) | TS/Rust | 12包monorepo，Fiber状态机+Workspace OS+Tauri桌面端 |
+| **Tier 1** | [deepseek-harness](../deepseek-harness/) | TypeScript | 50+包Cordis插件架构，MCP/ACP双协议，Event-Sourcing会话 |
+| **Tier 1** | [intelligent-terminal](../intelligent-terminal/) | C++/Rust | Windows Terminal Agent集成，双进程架构，COM+JSON-RPC |
+| **Tier 2** | [cordis](../cordis/) | TypeScript | 元框架，DI+Fiber生命周期+5种事件模式，9个包 |
+| **Tier 2** | [second-me](../second-me/) | Python/TS | 三层记忆HMM（L0→L1→L2），LoRA个性化数字分身 |
+| **Tier 3** | [agency-agents](../agency-agents/) | Markdown | 270+ Persona角色库，17部门分类，NEXUS编排 |
+| **Tier 3** | [agency-agents-app](../agency-agents-app/) | Rust/Svelte | Tauri 2桌面应用，35个后端命令，Svelte 5 Runes |
+| **Tier 3** | [anthropics-skills](../anthropics-skills/) | Python/MD | Anthropic官方Skills规范，SKILL.md格式+渐进式加载 |
+| **Tier 3** | [book-to-skill](../book-to-skill/) | Python | 知识编译系统，7种格式解析器，四层产出流水线 |
+| **Tier 3** | [i-have-adhd](../i-have-adhd/) | Shell/MD | ADHD认知适配技能，10条输出规则，10+平台集成 |
 
-* [AI Agent 框架导论](concepts/00-introduction.md) — 什么是AI Agent框架、核心子系统、12个项目全景、学习路径与前置知识
-* [Agent 核心循环](concepts/01-agent-loop.md) — think-act-observe循环的工程实现、三种执行模式（并发/顺序/分段）、状态机设计、waterfall事件链、运行时委托
-* [工具系统](concepts/02-tool-system.md) — 工具注册、Function Calling、授权门控、ToolRegistry单例、工具集DAG组合、Capability Seam三角色模式
-* [记忆架构](concepts/03-memory-architecture.md) — 短期/长期记忆分离、分区记忆+RRF向量召回、Second-Me三层记忆建模（L0原始摄取→L1身份洞察→L2 LoRA对齐）
+## 🧩 核心概念（Concepts）
 
-## 进阶架构（concepts/）
+| 概念文档 | 核心问题 | 对比项目 |
+|---------|---------|---------|
+| [agent-core-loop-pattern](concepts/agent-core-loop-pattern.md) | Agent 如何"思考-行动-观察"？不同循环模式有何差异？ | hermes/deepseek/zleap/veadk |
+| [provider-adapter-pattern](concepts/provider-adapter-pattern.md) | 如何统一接入不同LLM？适配器模式如何设计？ | hermes/zleap/veadk/deepseek |
+| [plugin-architecture-patterns](concepts/plugin-architecture-patterns.md) | 插件系统的复杂度阶梯：注册表→Cordis→Capability Seam | cordis/hermes/deepseek |
+| [multi-agent-orchestration](concepts/multi-agent-orchestration.md) | 多Agent如何协作？Gateway/MoA/Workspace/Subagent对比 | hermes/zleap/veadk/agency-agents |
+| [memory-architecture-patterns](concepts/memory-architecture-patterns.md) | 记忆如何分层？短期/长期/HMM三层模型对比 | hermes/veadk/zleap/second-me |
+| [mcp-acp-protocols](concepts/mcp-acp-protocols.md) | MCP和ACP协议有何区别？传输层如何抽象？ | hermes/deepseek/intelligent-terminal |
+| [tool-system-design](concepts/tool-system-design.md) | 工具有哪些注册模式？执行生命周期如何设计？ | hermes/cordis/zleap/deepseek/intelligent |
+| [prompt-architecture](concepts/prompt-architecture.md) | Prompt如何分层组织？Token预算如何分配？ | hermes/zleap/deepseek/veadk/second-me |
 
-* [多智能体编排](concepts/04-multi-agent.md) — MoA两阶段推理（fan-out→aggregator）、Workspace流水线、子代理委派、去中心化AI Space、Persona+Playbook编排
-* [模型 Provider 抽象](concepts/05-provider-abstraction.md) — 适配器模式、ProviderRegistry/ModelRegistry双注册表、模型级能力覆盖、Service Seam、运行时委托
-* [上下文管理](concepts/06-context-management.md) — 滑动窗口+摘要压缩、Workspace级上下文隔离、编译时知识蒸馏、token预算分配、发现循环税
+## 🎯 实战示例（Examples）
 
-## 扩展与生态（concepts/）
+| 示例 | 场景 |
+|------|------|
+| [compare-agent-loops](examples/compare-agent-loops.md) | 4大框架Agent核心循环代码级对比，理解实现差异 |
+| [choose-framework](examples/choose-framework.md) | 框架选型决策指南：企业级/桌面端/嵌入式/个人AI/协议层 |
+| [build-agent-from-scratch](examples/build-agent-from-scratch.md) | 60行Python实现最小Think-Act-Observe循环 |
 
-* [技能与 Persona 系统](concepts/07-skill-persona.md) — SKILL.md开放标准、280+ Persona角色库、知识编译四层产出、认知适配风格技能、信任/风险审计、模型内化人格
-* [插件化架构模式](concepts/08-plugin-architecture.md) — 从简单注册表到Cordis Fiber生命周期、Context原型链（extend/isolate/intercept）、五种事件分发模式、Capability Seam、声明式YAML组合
-* [Agent 通信协议](concepts/09-agent-protocols.md) — MCP（模型上下文协议）、ACP（Agent客户端协议）、多平台传输层抽象、COM进程外服务器、OSC 133错误事件总线
+## 📚 参考信源（References）
 
-## 实战示例（examples/）
+| 信源 | 内容 |
+|------|------|
+| [cross-project-sources](references/cross-project-sources.md) | 12个项目源码位置+事实采集文件索引（865条零推测事实） |
 
-* [hermes-agent 架构深度走读](examples/hermes-agent-deep-dive.md) — AIAgent入口、75+参数配置、ToolRegistry单例、工具集DAG解析、MoA两阶段实现、13种设计模式盘点、安全多层防御
-* [Cordis 插件系统深度解析](examples/cordis-plugin-system.md) — Context原型链Object.create()、Fiber PENDING→LOADING→ACTIVE→DISPOSED状态机、Service依赖注入、五种事件分发模式（emit/parallel/serial/bail/waterfall）、YAML声明式组合
-* [Second-Me 分层记忆模型解析](examples/second-me-memory-model.md) — L0 FileInfo/BioInfo、L1 Chunk/MemoryType/TimeType/Shade阴影生成、L2 SelfQA+Preference Pairs+LoRA+DPO、GraphRAG+ChromaDB、AI Space host/participant策略
-* [Intelligent Terminal ACP 集成模式](examples/intelligent-terminal-acp.md) — C++/Rust双语言架构、helper+master双进程、COM进程外服务器、Named Pipe/stdio双通道、预热启动+Stash模式、OSC 133错误自动检测、wtcli终端控制
+## 学习路径
 
-## 信源登记簿（references/）
-
-* [AI Agent 框架源码信源登记](references/ai-agent-sources.md) — 12个项目的源码路径、版本信息、核心目录结构、关键文件清单、核心类索引、跨项目架构概念映射
-
-## 信任与生命周期说明
-
-* **status 判定依据**：全部 15 个内容文档（10 个概念 + 4 个示例 + 1 个信源登记）均 `status: stable`。内容基于对 `external/libs/models/ai/` 目录下 12 个开源项目源码的逐模块阅读与事实提取，经 source-code-to-okf-wiki 五阶段流程（R→I→E→V→C）生成。
-* **stale_after 解释**：统一设置为 `2027-08-22`。AI Agent 框架领域迭代迅速（MCP/ACP等新协议持续演进），但核心架构模式（Agent循环、工具注册表、插件系统、记忆分层）具有较长时效性；该日期作为对框架生态重大变化（如MCP/ACP标准正式发布1.0、Agent协议格局变化）的保守重新评估节点。
-* **核验链路**：`generated.at` 记录各文档原始生成时刻（2026-08-22）；`verified.at` 记录 V 阶段对抗审查核验事件（2026-08-22），两者分离、可追溯。
-* **内容敏感度**：本知识包分析的全部 12 个项目均为公开开源代码（GitHub 公开仓库），无访问控制要求，属公开内容（Public），遵循标准工作流。
-
-本知识包共收录 15 个内容文档（10 个概念 + 4 个示例 + 1 个信源登记），另含 3 个子目录 index.md、1 个 bundle 根 index.md、1 个 group 索引和 1 个 log.md。
+```
+入门路径：
+  agent-core-loop-pattern → build-agent-from-scratch → choose-framework
+    ↓
+进阶路径（按方向选择）：
+  ├─ 框架开发：plugin-architecture-patterns → provider-adapter-pattern → cordis bundle
+  ├─ 多Agent系统：multi-agent-orchestration → hermes/zleap bundle
+  ├─ 记忆系统：memory-architecture-patterns → second-me bundle
+  └─ 协议集成：mcp-acp-protocols → intelligent-terminal bundle
+```
