@@ -1,4 +1,6 @@
 ---
+type: bundle
+title: "myst-execute 与 Thebe 交互式执行"
 okf_version: "0.2"
 ---
 

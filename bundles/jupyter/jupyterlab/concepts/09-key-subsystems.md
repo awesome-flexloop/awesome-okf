@@ -1,398 +1,254 @@
 ---
 type: Concept
 title: "09 关键子系统"
-description: PageConfig 全局配置、命令系统与快捷键、StateDB 状态持久化、设置系统、Router 前端路由、LayoutRestorer 布局恢复、Poll 轮询与 Disposable 资源管理
-tags: [jupyterlab, pageconfig, commands, statedb, settings, router, disposables, signal, poll]
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T08:18:00Z" }
-verified: { by: "process:grep-api-verification", at: "2026-08-22T08:18:00Z" }
+description: PageConfig 全局配置、CommandRegistry 命令系统、StateDB 状态持久化、SettingRegistry 设置注册表、Router 前端路由、Signal/Disposable 模式与翻译系统
+tags: [jupyterlab, pageconfig, commands, statedb, settingregistry, router, signal, disposable, translation]
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
-stale_after: 2027-02-22
+stale_after: 2027-08-23
 sources:
   - id: source-map
     resource: /references/source-code-map.md
     title: JupyterLab 源码文件地图
 ---
 
-## PageConfig：全局配置入口
+# 09 关键子系统
 
-`PageConfig` 是 `@jupyterlab/coreutils` 提供的命名空间（[F-034](/references/source-code-map.md)），位于 `packages/coreutils/src/pageconfig.ts`，提供对页面全局配置的访问。
+JupyterLab 之所以能支撑起一个完整的 IDE 式交互环境，不仅依赖 Shell 布局和插件系统，还依赖一组横切所有功能包的基础子系统。本章逐个剖析这些"地基设施"：服务端渲染的全局配置、统一命令入口、客户端状态数据库、带 Schema 校验的设置系统、前端 URL 路由、贯穿全框架的 Signal/Disposable 模式，以及 gettext 国际化体系。理解它们，是读懂任意一个核心扩展源码的前提。
 
-### 配置来源
+## PageConfig：服务端渲染的全局配置
 
-1. **HTML `<script>` 标签**：后端在渲染 HTML 页面时，将配置写入 `<script id="jupyter-config-data" type="application/json">` 标签
-2. **CLI 参数**：`jupyter lab --option=value` 通过 `page_config_data` 注入
-3. **环境变量**：以 `JUPYTERLAB_` 开头的环境变量
+`PageConfig` 是 `@jupyterlab/coreutils` 导出的命名空间，定义在 `packages/coreutils/src/pageconfig.ts`。它是前端读取后端配置的唯一入口，所有运行期参数——基础 URL、WebSocket URL、认证 token、静态资源路径、工作区名、是否 devMode 等——都通过它获取（F-167）。
+
+### 配置注入方式
+
+PageConfig 的核心方法是 `getOption(name: string): string`。它按以下优先级查找配置：
+
+1. **HTML `<script>` 标签**：后端用 Jinja2 渲染页面时，将 JSON 内联到 `<script id="jupyter-config-data" type="application/json">` 中。`getOption` 首次调用时通过 `document.getElementById('jupyter-config-data')` 读取并 `JSON.parse`，结果缓存到模块级变量 `configData`。
+2. **`body.dataset` 回退**：为兼容经典 Notebook，若 script 标签中找不到，则读取 `document.body.dataset[key]`（经 `decodeURIComponent` 解码）。
+3. **Node 端 CLI/环境变量**：在测试或 SSR 场景下，若没有 `document`，则解析 `process.argv` 中的 `--jupyter-config-data` 指向的 JSON 文件，或读取 `JUPYTER_CONFIG_DATA` 环境变量。
+
+所有值都被强制序列化为字符串；非字符串值会在加载时 `JSON.stringify`。后端 `LabApp.initialize_handlers()` 设置的 `page_config_data`（F-167）正是通过这套机制到达前端，其中包含 `devMode`、`token`、`exposeAppInBrowser`、`quitButton`、`allow_hidden_files`、`delete_to_trash`、`notebookVersion`、`buildAvailable`、`buildCheck`、`extensionManager`、`news`、JupyterHub 相关字段等。
 
 ### 核心 API
 
 ```typescript
 namespace PageConfig {
-  function getOption(name: string): string;       // 获取配置值
-  function setOption(name: string, value: string): void;  // 设置配置值（通常由框架调用）
-  function getBaseUrl(): string;                   // 获取 baseUrl
-  function getWsUrl(baseUrl?: string): string;     // 获取 WebSocket URL
-  function getTreeUrl(): string;                   // 获取 tree URL
-  function getOption(name: string): string;        // 通用配置获取
+  function getOption(name: string): string;
+  setOption(name: string, value: string): string;
+  getBaseUrl(): string;
+  getWsUrl(baseUrl?: string): string;
+  getToken(): string;
+  getTreeUrl(): string;
+  getShareUrl(): string;
+  getNotebookVersion(): [number, number, number];
+  getUrl(options: IGetUrlOptions): string;
+  namespace Extension {
+    const deferred: string[];
+    const disabled: string[];
+    function isDeferred(id: string): boolean;
+    function isDisabled(id: string): boolean;
+  }
+}
+```
+
+- `getBaseUrl()` 读取 `baseUrl` 并做 `URLExt.normalize`，默认 `/`。
+- `getWsUrl()` 优先读 `wsUrl`，否则把 `http(s)://` 前缀替换成 `ws(s)://` 自动推导，Kernel/WebSocket 客户端依赖它（F-164）。
+- `getToken()` 读取 `token`，回退到 body 的 `jupyterApiToken`。
+- `PageConfig.Extension` 子命名空间解析 `deferredExtensions` 和 `disabledExtensions` 两个 JSON 数组，`isDeferred`/`isDisabled` 支持按完整插件 id 或扩展名（冒号前部分）匹配，供插件加载器决定跳过或延迟加载哪些插件。
+
+## CommandRegistry：统一的用户操作入口
+
+命令注册表来自 `@lumino/commands`（F-145、F-148），不是 `@jupyterlab/*` 包，但它是 JupyterLab 所有用户操作的中枢。菜单项点击、快捷键、命令面板搜索、工具栏按钮、路由命令——最终都汇聚到 `CommandRegistry.execute(id, args)`。
+
+### 核心 API
+
+```typescript
+class CommandRegistry {
+  addCommand(id: string, options: ICommandOptions): IDisposable;
+  execute(id: string, args?: ReadonlyJSONObject): Promise<any>;
+  addKeyBinding(options: IKeyBindingOptions): IDisposable;
+  notifyCommandChanged(id: string): void;
 }
 ```
 
-### 常用配置项
+`addCommand` 的 `ICommandOptions` 包含：
+- `label: string`（或返回字符串的函数）：命令显示名，命令面板据此搜索。
+- `execute: (args) => void | Promise<any>`：命令实际逻辑。
+- `isEnabled?` / `isToggled?` / `isVisible?`：动态状态回调，控制菜单项是否可用、是否勾选。
+- `icon?` / `iconClass?` / `caption?`：图标与提示。
 
-| 配置项 | 说明 | 示例值 |
-|--------|------|--------|
-| `baseUrl` | 后端 API 基础 URL | `/` 或 `http://localhost:8888/` |
-| `wsUrl` | WebSocket URL | `ws://localhost:8888/` |
-| `appUrl` | 应用 URL 前缀 | `/lab/` |
-| `staticUrl` | 静态资源 URL | `/static/` |
-| `token` | 认证 token | `abc123...` |
-| `appName` | 应用名称 | `JupyterLab` |
-| `appVersion` | 应用版本 | `4.4.0` |
-| `devMode` | 是否开发模式 | `true`/`false` |
-| `frontendUrl` | 前端公开 URL（JupyterHub） | — |
-| `hubPrefix` | JupyterHub 前缀 | `/hub/` |
-| `hubUser` | JupyterHub 用户名 | — |
-| `treePath` | 默认打开的目录路径 | — |
-| `workspace` | 工作区名称 | `default` |
-| `buildAvailable` | 是否有可用构建 | `true`/`false` |
-| `extensionManager` | 扩展管理器类型 | `pypi`/`readonly` |
-| `disabled` | 禁用插件模式列表 | `{patterns: [...]}` |
-| `deferred` | 延迟插件模式列表 | `{patterns: [...]}` |
-| `federated_extensions` | Federated 扩展清单 | `[{name, load, extension, ...}]` |
-| `mathjaxUrl` | MathJax URL | — |
-| `terminalsAvailable` | 是否有终端 | `true`/`false` |
+`addKeyBinding` 把一个 CSS `selector`、一组按键序列 `keys` 和一个 `command` id 绑定起来。JupyterLab 在 document 上监听 `keydown` 并调用 `commands.processKeydownEvent(event)`（见 `examples/cell/src/index.ts:115-121` 的用法），只有焦点元素匹配 selector 时快捷键才触发。快捷键本身也可以通过 SettingRegistry 的 `jupyter.lab.shortcuts` 字段由用户自定义（F-049）。
 
-### 使用示例
+命令 id 约定使用 `namespace:action` 格式，如 `notebook:run-cell`、`filebrowser:create-new-directory`，与 StateDB 的 id 命名约定一致。
+
+## StateDB：客户端状态持久化
+
+`@jupyterlab/statedb` 提供 `StateDB` 类（`packages/statedb/src/statedb.ts`），是一个基于 `IDataConnector` 抽象的键值数据库，默认使用浏览器 LocalStorage 作为后端（F-067、F-144）。
+
+### DataConnector 抽象模式
+
+StateDB 不直接读写 LocalStorage，而是委托给一个 `IDataConnector<string>` 连接器。构造时可传入自定义 connector，不传则使用内存版 `StateDB.Connector`。SettingRegistry 通过自己的 `SettingConnector`（访问服务端 settings API）替换这个 connector，从而把同一份 StateDB 接口复用于远程数据。这就是"DataConnector 抽象模式"：同一套 fetch/save/remove/list 语义可对接 LocalStorage、REST API、内存对象等任意后端。
+
+### 核心 API
 
 ```typescript
-import { PageConfig } from '@jupyterlab/coreutils';
-
-// 获取 base URL
-const baseUrl = PageConfig.getBaseUrl();  // e.g., "http://localhost:8888/"
-
-// 获取 auth token
-const token = PageConfig.getOption('token');
-
-// 获取 WebSocket URL
-const wsUrl = PageConfig.getWsUrl();  // 自动将 http(s) 转换为 ws(s)
-
-// 检查是否开发模式
-const isDev = PageConfig.getOption('devMode') === 'true';
-```
-
-## 命令系统
-
-命令系统基于 Lumino 的 `CommandRegistry`（通过 `app.commands` 访问），是插件间松耦合交互的核心机制（[F-035](/references/source-code-map.md)）。
-
-### 注册命令
-
-```typescript
-app.commands.addCommand('my-ext:run-code', {
-  label: 'Run Custom Code',               // 显示名称
-  caption: 'Execute custom code',         // 提示文本
-  icon: 'ui-components:run-icon',         // 图标
-  isEnabled: (args) => true,              // 是否可用
-  isVisible: (args) => true,              // 是否可见
-  isToggled: (args) => false,             // 是否切换选中
-  execute: (args) => {                    // 执行函数
-    const { notebook, cell } = args as any;
-    console.log('Running code in', notebook);
-  }
-});
-```
-
-### 快捷键绑定
-
-```typescript
-app.commands.addKeyBinding({
-  command: 'my-ext:run-code',
-  keys: ['Accel Shift R'],                // 按键组合（Accel = Ctrl/Cmd）
-  selector: 'body',                       // CSS 选择器（匹配时才生效）
-  args: { source: 'keyboard' }
-});
-```
-
-### 命令执行
-
-```typescript
-// 执行命令
-await app.commands.execute('my-ext:run-code', { notebook: panel });
-
-// 查询命令状态
-const isEnabled = app.commands.isEnabled('my-ext:run-code');
-
-// 命令面板集成
-// 通过 ICommandPalette Token 将命令注册到命令面板
-palette.addItem({
-  command: 'my-ext:run-code',
-  category: 'My Extension',
-  args: {}
-});
-```
-
-### 命令约定
-
-- 命令 ID 格式：`<extension-name>:<action>`（如 `notebook:run-cell`、`filebrowser:create-new-file`）
-- 核心命令前缀：`docmanager:`、`notebook:`、`filebrowser:`、`apputils:`、`application:` 等
-- 常用核心命令：
-  - `application:toggle-left-area` / `toggle-right-area`
-  - `notebook:run-cell` / `notebook:run-all-cells`
-  - `docmanager:save` / `docmanager:save-as`
-  - `filebrowser:create-new-launcher`
-
-## Signal 信号系统
-
-Signal 是 Lumino 提供的观察者模式实现（[F-037](/references/source-code-map.md)），位于 `@lumino/signaling`。JupyterLab 中几乎所有异步事件都通过 Signal 传递。
-
-### 基本用法
-
-```typescript
-import { Signal, ISignal } from '@lumino/signaling';
-
-class MyService {
-  // 定义 Signal：sender 类型为 this，payload 类型为 string
-  private _changed = new Signal<this, string>(this);
-
-  get changed(): ISignal<this, string> {
-    return this._changed;
-  }
-
-  doSomething() {
-    // 发射信号
-    this._changed.emit('something happened');
-  }
+class StateDB<T extends ReadonlyPartialJSONValue = ReadonlyPartialJSONValue> {
+  constructor(options?: StateDB.IOptions<T>);
+  readonly changed: ISignal<this, StateDB.Change>;
+  fetch(id: string): Promise<T | undefined>;
+  save(id: string, value: T): Promise<void>;
+  remove(id: string): Promise<void>;
+  list(namespace: string): Promise<{ ids: string[]; values: T[] }>;
+  clear(): Promise<void>;
+  toJSON(): Promise<{ readonly [id: string]: T }>;
 }
-
-// 监听信号
-const service = new MyService();
-service.changed.connect((sender, message) => {
-  console.log('Received:', message);
-});
 ```
 
-### Signal vs Promise vs EventEmitter
+- id 约定为 `namespace:identifier` 格式。`list(namespace)` 会按冒号前缀过滤，只返回该命名空间下的条目。
+- 写入时内部用 `{ v: value }` 信封序列化，读取时解包，避免与原始值冲突。
+- `changed` 信号在 save/remove/clear 时发射，类型为 `{ id: string | null; type: 'clear' | 'remove' | 'save' }`。
+- 构造函数支持 `transform: Promise<DataTransform<T>>`，可在数据库就绪前执行 `cancel`/`clear`/`merge`/`overwrite` 四种数据迁移操作，用于版本升级时的状态结构调整。
 
-| 特性 | Signal | Promise | EventEmitter |
-|------|--------|---------|-------------|
-| 发射次数 | 多次 | 一次 | 多次 |
-| 同步/异步 | 同步触发 | 异步 resolve | 同步触发 |
-| 类型安全 | 强类型（TypeScript） | 强类型 | 字符串 event name |
-| 生命周期 | 与 sender 绑定 | 一次性 | 手动管理 |
-| this 上下文 | 自动绑定 sender | 无 | 需要 bind |
-| Disconnect | `signal.disconnect()` 或 `Signal.disconnect(sender)` | — | `removeListener` |
+StateDB 被 SettingRegistry 直接依赖（F-144），并经 services 被 workspaces 间接使用，是设置和工作区在客户端的状态缓存基础。
 
-### JupyterLab 中常用 Signal
+## SettingRegistry：带 Schema 校验的插件设置
 
-| Signal | 所在类 | 触发时机 |
-|--------|--------|---------|
-| `currentChanged` | LabShell | 当前 Widget 变化 |
-| `activeCellChanged` | Notebook | 活跃 Cell 变化 |
-| `fileChanged` | ContentsManager | 文件创建/保存/删除/重命名 |
-| `modelChanged` | Notebook/DocumentWidget | 数据模型切换 |
-| `stateChanged` | ICellModel/StateDB | 状态变化 |
-| `runningChanged` | KernelManager/SessionManager | 运行中实例列表变化 |
-| `saveState` | Context/NotebookPanel | 保存状态变化 |
-| `connectionStatusChanged` | ServiceManager | 连接状态变化 |
+`@jupyterlab/settingregistry`（`packages/settingregistry/src/`）提供 `SettingRegistry` 类和 `ISettingRegistry` Token（F-049、F-165）。它在 StateDB 之上增加了三层能力：
 
-## Disposable 资源管理
-
-Lumino 的 `Disposable` 模式用于资源生命周期管理（[F-036](/references/source-code-map.md)），位于 `@lumino/disposable`。
+1. **JSON Schema 校验**：每个插件可携带一个 schema（JSON Schema draft），用户设置通过 `ajv`（^8.12.0）校验，非法值被拒绝并返回 `ISchemaValidator.IError[]`。
+2. **默认值合并**：加载时把 schema 中的 `default` 与用户覆盖值合并为 `composite`，插件通过 `settings.get(key)` 同时拿到 `composite` 和 `user` 两份值。
+3. **声明式 UI 扩展点**：schema 中的 `jupyter.lab.menus`、`jupyter.lab.shortcuts`、`jupyter.lab.toolbars`、`jupyter.lab.metadataforms` 等字段由对应核心扩展读取，自动生成菜单、快捷键、工具栏、元数据表单，无需插件手写代码。表单 UI 由 `@rjsf/utils`（^5.13.4）驱动的 React JSON Schema Form 渲染。
 
 ### 核心接口
 
 ```typescript
-interface IDisposable {
-  readonly isDisposed: boolean;
-  dispose(): void;
+interface ISettingRegistry {
+  readonly connector: IDataConnector<IPlugin, string, string>;
+  readonly plugins: { [name: string]: IPlugin | undefined };
+  readonly pluginChanged: ISignal<this, string>;
+  load(plugin: string): Promise<ISettingRegistry.ISettings>;
+  reload(plugin: string): Promise<ISettingRegistry.ISettings>;
+  get(plugin: string, key: string): Promise<{ composite; user }>;
+  set(plugin: string, key: string, value: PartialJSONValue): Promise<void>;
+  remove(plugin: string, key: string): Promise<void>;
+  transform(plugin: string, transforms: { compose?; fetch? }): IDisposable;
+  upload(plugin: string, raw: string): Promise<void>;
 }
 ```
 
-### 常用类
+`IPlugin` 包含 `id`、`data`（`{ composite, user }`）、`raw`（带注释的 JSON 字符串，由 json5 解析）、`schema`、`version`。`ISettings` 是单个插件的设置句柄，提供 `changed` 信号、`composite`/`user` 对象、`get/set/remove/save/validate` 方法。插件在 activate 中 `await settingRegistry.load(pluginId)` 拿到 ISettings 后，监听 `changed` 信号响应配置变更。
 
-| 类 | 用途 |
-|----|------|
-| `DisposableDelegate` | 包装一个函数，dispose 时调用 |
-| `DisposableSet` | 多个 disposable 的集合，dispose 时全部清理 |
-| `DisposableToken` | 带值的 disposable |
+## Router：前端 URL 路由
 
-### 使用模式
+`Router` 类位于 `@jupyterlab/application`（`packages/application/src/router.ts`），实现 `IRouter` 接口，负责把浏览器 URL 路径映射到命令执行（F-154）。
 
-```typescript
-import { DisposableDelegate, DisposableSet, IDisposable } from '@lumino/disposable';
+### 工作机制
 
-// 模式1：返回 disposable 作为清理句柄
-function addCustomButton(widget: NotebookPanel): IDisposable {
-  const button = new ToolbarButton({ ... });
-  widget.toolbar.insertItem(10, 'my-button', button);
-  return new DisposableDelegate(() => {
-    button.dispose();
-    widget.toolbar.removeItem('my-button');
-  });
-}
-
-// 模式2：使用 DisposableSet 管理多个资源
-const disposables = new DisposableSet();
-disposables.add(widget.model.contentChanged.connect(handler));
-disposables.add(widget.disposed.connect(cleanup));
-// 清理所有资源
-disposables.dispose();
-
-// 模式3：Signal.disconnect 清理信号连接
-someObject.someSignal.connect(handler, this);
-// 清理时
-Signal.disconnect(this);  // 断开 this 连接的所有信号
-```
-
-Widget 的 `disposed` 信号在 Widget 被销毁时发射，是清理资源的关键时机。
-
-## Poll 轮询器
-
-`Poll` 位于 `@jupyterlab/coreutils`（`packages/coreutils/src/poll.ts`），提供基于 `requestAnimationFrame` + `setTimeout` 的可靠轮询（[F-038](/references/source-code-map.md)）：
+Router 内部维护一个 `Map<RegExp, { command: string; rank: number }>`。`register(options)` 注册一条规则：
 
 ```typescript
-import { Poll } from '@jupyterlab/coreutils';
-
-const poll = new Poll({
-  name: 'kernel-status-poll',
-  factory: async () => {
-    // 轮询任务：刷新运行中内核列表
-    await kernelManager.refreshRunning();
-  },
-  frequency: {
-    interval: 5000,           // 正常轮询间隔（毫秒）
-    backoff: false,           // 是否指数退避
-    maxInterval: 300000       // 最大间隔
-  },
-  standby: 'when-hidden'      // 页面隐藏时的行为
-});
-
-// 手动触发轮询
-await poll.tick;
-await poll.refresh();
-
-// 暂停/恢复
-poll.stop();
-poll.start();
-
-// 清理
-poll.dispose();
-```
-
-`Debouncer` 和 `Throttler` 也在 coreutils 中，用于防抖和节流。
-
-## StateDB：前端状态持久化
-
-`StateDB` 位于 `@jupyterlab/statedb`（[F-045](/references/source-code-map.md)），提供键值对形式的前端状态持久化：
-
-```typescript
-interface IStateDB {
-  fetch(id: string): Promise<ReadonlyJSONValue | undefined>;
-  save(id: string, value: ReadonlyJSONValue): Promise<void>;
-  remove(id: string): Promise<void>;
-  list(namespace?: string): Promise<{ ids: string[]; values: ReadonlyJSONValue[] }>;
-  changed: ISignal<IStateDB, IChange>;
-}
-```
-
-### 存储后端
-
-- 浏览器 `localStorage`（小数据量）
-- IndexedDB（大数据量，通过 JupyterLab 封装）
-
-### 使用场景
-
-| 键前缀 | 存储内容 |
-|--------|---------|
-| `layout-restorer:data` | 布局恢复数据（打开的文件、面板位置） |
-| `docmanager:paths` | 最近打开的文件路径 |
-| `<plugin-id>:*` | 各插件的持久化状态 |
-| `commands` | 最近执行的命令历史 |
-
-## 设置系统（SettingRegistry）
-
-`SettingRegistry` 位于 `@jupyterlab/settingregistry`（[F-046](/references/source-code-map.md)），在 StateDB 之上提供 JSON Schema 驱动的设置管理：
-
-1. 插件通过 `schema/` 目录提供 JSON Schema 文件定义可配置项
-2. 用户在 Settings Editor 中修改设置，保存到 StateDB
-3. 插件通过 `settingRegistry.load(id)` 获取设置，监听 `changed` 信号响应设置变化
-
-```typescript
-// 加载设置
-const settings = await settingRegistry.load('@jupyterlab/notebook-extension:tracker');
-
-// 读取设置
-const autoStartKernel = settings.get('autoStartDefaultKernel').composite as boolean;
-
-// 监听设置变化
-settings.changed.connect((sender, change) => {
-  console.log(`Setting ${change.key} changed:`, change.newValue);
+router.register({
+  pattern: /\/lab\/tree\/(.+)/,
+  command: 'filebrowser:open-path',
+  rank: 100
 });
 ```
 
-## Router：前端路由
+`navigate(path, options)` 更新 URL：
+- 用 `history.pushState` 改变地址栏（不刷新页面）。
+- 若 `options.hard === true`，则调用 `window.location.reload()` 做硬刷新。
+- 若 `options.skipRouting !== true`，则在下一帧通过 `requestAnimationFrame` 调用 `route()`。
 
-`Router` 位于 `@jupyterlab/application`（`src/router.ts`），管理浏览器 URL 和前端导航（[F-024](/references/source-code-map.md)）：
+`route()` 收集所有匹配当前 `request`（path + search + hash）的规则，按 `rank` 降序排序后**依次执行**对应命令，命令参数为 `IRouter.ILocation`（含 hash/path/request/search）。如果某个命令返回 `router.stop` 这个特殊 Token，则短路，后续规则不再执行。命令执行异常被捕获并打印警告，不会阻断后续路由。路由完成后发射 `routed` 信号。
+
+`current` getter 实时解析 `window.location.href`，去掉 base 前缀得到应用内路径。Router 构造时需要 `base` 和 `commands` 两个参数，base 通常来自 `PageConfig.getBaseUrl()`。
+
+## Signal/Disposable 模式
+
+这两个模式来自 `@lumino/signaling` 和 `@lumino/disposable`（F-145、F-148），是整个 JupyterLab 组件通信和资源管理的基石，重要性甚至高于 React 状态模型。
+
+### Signal：发布-订阅
 
 ```typescript
-interface IRouter {
-  readonly current: ILocation;         // 当前 URL 解析结果
-  routed: ISignal<IRouter, ILocation>;  // 路由信号
-  navigate(url: string, options?: INavigateOptions): void;  // 导航到 URL
-  register(radix: number, pattern: RegExp, options?: IRegisterOptions): IDisposable;  // 注册路由处理器
+import { Signal, ISignal } from '@lumino/signaling';
+
+class Model {
+  private _changed = new Signal<this, string>(this);
+  get changed(): ISignal<this, string> { return this._changed; }
+  doSomething() { this._changed.emit('value'); }
 }
+
+model.changed.connect((sender, value) => {
+  console.log(value);
+});
 ```
 
-URL 结构：`<baseUrl>/lab/<workspace>/tree/<path>` 或 `<baseUrl>/lab/workspaces/<name>`
+`Signal<TSender, TArgs>` 是强类型的事件源。`connect(slot, thisArg?)` 返回 `boolean`（是否已连接），`disconnect` 解绑。`Signal.clearData(someObject)` 可以一次性清理某对象持有的所有信号连接，避免内存泄漏。StateDB 的 `changed`、SettingRegistry 的 `pluginChanged`、Router 的 `routed`、DocumentRegistry 的 `changed`、Widget Factory 的 `widgetCreated`——所有跨组件通知都用 Signal。
 
-插件通过 `router.register()` 注册 URL 模式处理器。例如：
-- `/lab/tree/path/to/file.ipynb` → 文件浏览器打开指定路径
-- `/lab/workspaces/<name>` → 加载指定工作区
-
-## LayoutRestorer：布局恢复
-
-`LayoutRestorer` 位于 `@jupyterlab/application`（`src/layoutrestorer.ts`），负责在页面刷新后恢复之前的布局（[F-025](/references/source-code-map.md)）：
-
-1. 插件通过 `restorer.add(widget, name)` 注册需要恢复的 Widget
-2. 布局变化时，LayoutRestorer 将布局状态保存到 StateDB
-3. 页面重新加载时，从 StateDB 读取布局状态
-4. 恢复各面板位置、大小、打开的文件
-5. `app.restored` Promise 在布局恢复完成后 resolve
+### Disposable：确定性资源释放
 
 ```typescript
-// 插件注册 Widget 到布局恢复
-restorer.add(notebookPanel, 'notebook:' + panel.context.path);
+import { IDisposable, DisposableDelegate } from '@lumino/disposable';
+
+const d: IDisposable = someRegistry.register(...);
+d.dispose();
 ```
 
-## 路径和 URL 工具
+`IDisposable` 只有一个 `dispose(): void` 方法和一个 `isDisposed` 属性。`DisposableDelegate(fn)` 把一个函数包装成 disposable，调用 dispose 时执行该函数，常用于"反注册"逻辑（如 `Router.register` 返回的 DisposableDelegate 删除规则，`DocumentRegistry.addWidgetFactory` 返回的 disposable 移除工厂）。`DisposableSet` 可以聚合多个 disposable 统一释放。Widget 基类本身实现了 IDisposable，Widget 销毁时级联释放子 Widget 和信号连接。
 
-coreutils 提供路径和 URL 处理工具（[F-033](/references/source-code-map.md)）：
+## 翻译系统
 
-### PathExt（路径处理）
+`@jupyterlab/translation`（`packages/translation/`，F-069）提供基于 gettext 的国际化能力。后端使用 `jupyterlab_server.translation_utils` 的 gettext 翻译器（F-143），前端由 `TranslationManager` 实现 `ITranslator` 接口。
+
+核心抽象是 `ITranslator`，通过 `translator.load(domain)` 返回一个 language bundle，bundle 提供 `__(msgid, ...args)`、`_n(singular, plural, n, ...args)`、`_p(context, msgid, ...args)` 等方法。`nullTranslator` 是默认的空实现，直接返回原字符串。
+
+插件通过 Token `ITranslator` 注入翻译器，所有面向用户的字符串都应包裹：
 
 ```typescript
-import { PathExt } from '@jupyterlab/coreutils';
-
-PathExt.basename('/foo/bar.txt');        // 'bar.txt'
-PathExt.dirname('/foo/bar.txt');         // '/foo'
-PathExt.extname('bar.txt');              // '.txt'
-PathExt.join('foo', 'bar', 'baz.txt');   // 'foo/bar/baz.txt'
-PathExt.normalize('foo//bar/../baz');    // 'foo/baz'
-PathExt.normalizeExtension('.ipynb');    // '.ipynb'
+const trans = translator.load('my-domain');
+app.commands.addCommand('my:cmd', {
+  label: trans.__('My Command'),
+  execute: () => showDialog({ title: trans.__('Hello') })
+});
 ```
 
-### URLExt（URL 处理）
+设置 schema 中的 `title`/`description` 也会被自动提取翻译。翻译资源在构建时从源码提取 .po 文件，运行时按需加载。
 
-```typescript
-import { URLExt } from '@jupyterlab/coreutils';
+## 子系统协作关系
 
-URLExt.join('http://example.com', 'api', 'contents');  // 'http://example.com/api/contents'
-URLExt.encodeParts('path with spaces');   // URL 编码
-URLExt.isLocal(url);                      // 是否本地 URL
+```mermaid
+flowchart LR
+    PC["PageConfig<br/>(coreutils)"] -->|baseUrl/token| Router
+    PC -->|baseUrl/wsUrl| Services["@jupyterlab/services"]
+    PC -->|deferred/disabled| Plugins["插件加载器"]
+    CR["CommandRegistry<br/>(@lumino/commands)"] --> Router
+    Router -->|execute| CR
+    SDB["StateDB<br/>(statedb)"] --> SR["SettingRegistry<br/>(settingregistry)"]
+    SR -->|ajv 校验| Schema["JSON Schema"]
+    SR -->|jupyter.lab.*| CR
+    SR -->|jupyter.lab.toolbars| TB["工具栏"]
+    Sig["Signal (@lumino/signaling)"] -.-> SDB
+    Sig -.-> SR
+    Sig -.-> Router
+    Disp["Disposable (@lumino/disposable)"] -.-> SDB
+    Disp -.-> Router
+    TR["ITranslator (translation)"] --> Plugins
 ```
+
+这些子系统并非孤立存在：PageConfig 为 Router 和 services 提供 URL 基础；Router 把 URL 分发给 CommandRegistry；SettingRegistry 在 StateDB 之上叠加 Schema 校验，并通过 `jupyter.lab.shortcuts`/`jupyter.lab.menus` 反向配置 CommandRegistry；Signal 和 Disposable 贯穿所有对象的生命周期管理。掌握这张协作网，就能在阅读任意扩展源码时快速定位"它从哪里读配置、把操作注册到哪、把状态存到哪、如何响应变化、如何清理资源"。
 
 ## 相关概念
 
 - [02 应用框架与 Shell 布局](/concepts/02-application-shell.md)
 - [03 插件系统与依赖注入](/concepts/03-plugin-system.md)
 - [04 服务层与后端通信](/concepts/04-service-layer.md)
-- [08 构建系统与运行模式](/concepts/08-build-and-modes.md)
-- [源码文件地图](/references/source-code-map.md)
+- [07 扩展生态系统](/concepts/07-extension-ecosystem.md)
+
+## 相关示例
+
+- [01 最小扩展：Hello World 插件](/examples/01-minimal-extension.md)
+- [02 自定义文件类型查看器](/examples/02-custom-file-type.md)

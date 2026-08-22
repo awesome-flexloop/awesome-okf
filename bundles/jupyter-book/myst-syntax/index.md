@@ -1,4 +1,6 @@
 ---
+type: bundle
+title: "myst-syntax 语法扩展"
 okf_version: "0.2"
 ---
 

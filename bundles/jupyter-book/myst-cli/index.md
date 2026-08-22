@@ -1,4 +1,6 @@
 ---
+type: bundle
+title: "myst-cli 命令行工具"
 okf_version: "0.2"
 ---
 

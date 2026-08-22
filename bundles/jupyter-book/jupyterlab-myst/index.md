@@ -1,4 +1,6 @@
 ---
+type: bundle
+title: "jupyterlab-myst JupyterLab 扩展"
 okf_version: "0.2"
 ---
 
