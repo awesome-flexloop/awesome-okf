@@ -85,9 +85,16 @@ Sphinx 是 Python 生态最主流的文档生成器，最初为 Python 官方文
 | [自定义Builder输出Markdown](examples/04-custom-builder.md) | 创建Markdown Builder完整代码 |
 | [部署到Read the Docs全流程](examples/05-readthedocs-deployment.md) | RTD配置、多版本管理、私有依赖处理 |
 
-### 信源登记簿
+### API参考与信源
 
-* [信源索引](references/index.md) — 源码关键片段、官方文档URL索引、reST语法速查表
+* [信源索引](references/index.md) — 源码关键片段、API参考手册、官方文档URL索引、reST语法速查表
+* [Sphinx应用类API](references/application-api.md) — Sphinx类完整方法参考
+* [事件系统API](references/events-api.md) — EventManager与核心事件参考
+* [配置系统API](references/config-api.md) — Config/_Opt/ENUM API参考
+* [组件注册表API](references/registry-api.md) — SphinxComponentRegistry方法参考
+* [Builder基类API](references/builder-api.md) — Builder类属性与方法参考
+* [核心事件完整列表](references/core-events-list.md) — 17个核心事件参数与触发时机
+* [扩展元数据格式](references/extension-metadata.md) — ExtensionMetadata字段说明
 
 ## 学习路径建议
 

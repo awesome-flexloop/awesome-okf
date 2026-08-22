@@ -1,15 +1,31 @@
-# 信源登记簿（references/）
+# Sphinx API参考与信源索引
 
-本目录存放概念文档中 `sources` 字段指向的信源登记文件，记录源码关键片段、API签名与官方文档URL。
+本目录包含Sphinx源码学习的参考文档，分为源码关键片段、API参考和外部资源三类。
 
-## 源码信源
+## 源码关键片段
 
-* [Sphinx 应用初始化源码](sphinx-app-init.md) — `Sphinx.__init__` 核心初始化流程、内置扩展清单、关键步骤顺序。
-* [核心事件列表与触发时机](event-lifecycle.md) — 16个核心事件定义、回调签名、触发阶段、Builder/扩展专用事件。
-* [Builder 基类核心方法](builder-base.md) — Builder类属性、核心构建方法、构建流程阶段、13种内置构建器。
-* [扩展 setup 函数签名与返回值](extension-setup.md) — Extension类、setup函数规范、add_*注册方法速查表。
+| 文档 | 说明 |
+|------|------|
+| [sphinx-app-init.md](sphinx-app-init.md) | Sphinx.__init__方法核心源码片段与初始化顺序 |
+| [builder-base.md](builder-base.md) | Builder基类的类属性、初始化和核心构建方法源码 |
+| [event-lifecycle.md](event-lifecycle.md) | 核心事件定义、回调签名与触发阶段 |
+| [extension-setup.md](extension-setup.md) | 扩展setup函数签名、返回值元数据和Extension类 |
 
-## 官方文档信源
+## API参考（源码Grep验证）
 
-* [Sphinx 官方文档入口与关键URL](official-docs.md) — 官方文档各章节URL索引、版本信息、入门/用户指南/扩展开发/参考的入口链接。
-* [reStructuredText 语法速查](rest-syntax-quickref.md) — reST常用语法速查表：段落、行内标记、列表、代码块、表格、链接、指令、角色等。
+| 文档 | 说明 |
+|------|------|
+| [application-api.md](application-api.md) | Sphinx应用类完整API：__init__参数、属性、add_*方法、build方法 |
+| [config-api.md](config-api.md) | 配置系统API：Config类、_Opt/ENUM类型、add_config_value参数 |
+| [events-api.md](events-api.md) | 事件系统API：EventManager、connect/emit/add_event、EventListener |
+| [registry-api.md](registry-api.md) | 组件注册表API：SphinxComponentRegistry各组件注册方法 |
+| [builder-api.md](builder-api.md) | Builder基类API：属性、模板方法、write_doc/get_target_uri |
+| [extension-metadata.md](extension-metadata.md) | ExtensionMetadata字段完整说明与并行安全声明 |
+| [core-events-list.md](core-events-list.md) | 17个核心事件完整列表：参数、触发时机、用途 |
+
+## 用户参考
+
+| 文档 | 说明 |
+|------|------|
+| [rest-syntax-quickref.md](rest-syntax-quickref.md) | reStructuredText语法速查表：段落/列表/表格/代码块/指令/角色 |
+| [official-docs.md](official-docs.md) | Sphinx官方文档关键页面URL索引 |

@@ -1,260 +1,215 @@
 ---
 type: "concept"
-title: "5分钟快速上手"
-description: "安装Sphinx、sphinx-quickstart初始化、sphinx-build构建、conf.py配置基础、Python API快速体验"
-tags: [getting-started, installation, quickstart, CLI]
-generated: { by: "reference_agent/claude-opus-4", at: "2026-08-21T09:47:00Z" }
-verified: { by: "process:seven-concepts-v", at: "2026-08-21T09:47:00Z" }
+title: 快速开始
+description: 安装Sphinx、使用sphinx-quickstart创建项目、sphinx-build命令用法、conf.py配置文件概览。
+tags: [sphinx, getting-started, installation, quickstart]
+generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T15:30:00+08:00" }
+verified: { by: "process:grep-verification", at: "2026-08-22T15:30:00+08:00" }
 status: stable
-stale_after: 2027-08-21
+stale_after: 2027-08-22
 sources:
-  - id: pyproject
-    resource: pyproject.toml
-    title: "Sphinx pyproject.toml CLI入口点"
-  - id: cmd-build
-    resource: sphinx/cmd/build.py
-    title: "sphinx-build命令行入口"
-  - id: cmd-quickstart
-    resource: sphinx/cmd/quickstart.py
-    title: "sphinx-quickstart"
+  - id: facts
+    resource: /spec/facts.md
+    title: Sphinx源码事实清单
+  - id: application-api
+    resource: /references/application-api.md
+    title: Sphinx应用类API参考
 ---
+# 快速开始
 
-# 5分钟快速上手
+## 安装
 
-## 安装 Sphinx
-
-Sphinx 要求 Python ≥ 3.12 [F-003]，推荐使用 pip 安装：
+使用 pip 安装 Sphinx：
 
 ```bash
 pip install sphinx
 ```
 
-使用 conda 安装：
-
-```bash
-conda install -c conda-forge sphinx
-# 或创建独立环境
-conda create -n docs python=3.12 sphinx && conda activate docs
-```
-
-使用 Docker（无需本地安装）：
-
-```bash
-docker run --rm -v $(pwd):/docs sphinxdoc/sphinx sphinx-build -b html . _build/html
-```
-
-安装后可获得三个命令行工具 [F-007]：
-
-| 命令 | 入口模块 | 用途 |
-|------|---------|------|
-| `sphinx-build` | `sphinx.cmd.build:main` | 从源文件构建文档 |
-| `sphinx-quickstart` | `sphinx.cmd.quickstart:main` | 交互式初始化Sphinx项目 |
-| `sphinx-apidoc` | `sphinx.ext.apidoc:main` | 从Python包自动生成API文档骨架 |
-
-此外 `sphinx-autogen`（`sphinx.ext.autosummary.generate:main`）由 autosummary 扩展提供。
-
 验证安装：
 
 ```bash
 sphinx-build --version
-# 输出：sphinx-build 9.1.1
+# sphinx-build 9.1.1
 ```
 
-## 使用 sphinx-quickstart 初始化项目
+## 创建项目：sphinx-quickstart
+
+Sphinx 提供交互式项目初始化工具：
 
 ```bash
-mkdir mydocs && cd mydocs
-sphinx-quickstart
+sphinx-quickstart docs
 ```
 
-`sphinx-quickstart` 会交互式询问项目名称、作者、版本等信息，然后生成以下目录结构：
+这会在 `docs/` 目录下创建以下文件结构：
 
 ```
-mydocs/
-├── conf.py          # Sphinx配置文件
-├── index.rst        # 主文档（toctree入口）
-├── Makefile         # make命令（Unix）
-└── make.bat         # make命令（Windows）
+docs/
+├── build/           # 构建输出目录（生成）
+├── source/          # 源文件目录
+│   ├── _static/     # 静态资源（图片、CSS等）
+│   ├── _templates/  # 自定义模板
+│   ├── conf.py      # 配置文件（核心）
+│   └── index.rst    # 根文档
+└── Makefile         # make命令入口
 ```
+
+### 非交互式创建
+
+```bash
+sphinx-quickstart docs --no-sep -p "My Project" -a "Author Name" -v "0.1" -l en
+```
+
+关键参数：
+- `--no-sep`：源文件和构建目录不分离
+- `-p`：项目名
+- `-a`：作者名
+- `-v`：版本号
+- `-l`：语言（如 `en`、`zh_CN`）
+
+## 构建文档：sphinx-build
+
+基本构建命令：
+
+```bash
+sphinx-build -b html <sourcedir> <outdir>
+```
+
+参数说明（对应 [F-005](/spec/facts.md) Sphinx.__init__ 参数）：
+
+| 参数 | 说明 | 对应Sphinx参数 |
+|------|------|------|
+| `-b <builder>` | 指定构建器（html/latex/epub/text/man等） | `buildername` |
+| `-c <confdir>` | 指定配置目录（默认同源目录） | `confdir` |
+| `-d <doctreedir>` | 指定doctree缓存目录 | `doctreedir` |
+| `-E` | 不使用缓存，全量重建（freshenv=True） | `freshenv` |
+| `-W` | 警告视为错误 | `warningiserror` |
+| `-j N` | N个并行构建任务 | `parallel` |
+| `-v` | 详细输出 | `verbosity` |
+| `-D <key>=<value>` | 覆盖配置项 | `confoverrides` |
+| `-t <tag>` | 添加标签 | `tags` |
+
+### 常用构建示例
+
+```bash
+# 构建HTML
+sphinx-build -b html docs/source docs/build/html
+
+# 构建HTML（全量重建）
+sphinx-build -b html -E docs/source docs/build/html
+
+# 构建PDF（需LaTeX环境）
+sphinx-build -b latex docs/source docs/build/latex
+cd docs/build/latex && make
+
+# 构建ePub
+sphinx-build -b epub docs/source docs/build/epub
+
+# 并行构建（4线程）
+sphinx-build -b html -j 4 docs/source docs/build/html
+
+# 检查链接
+sphinx-build -b linkcheck docs/source docs/build/linkcheck
+```
+
+### 使用Makefile
+
+quickstart 生成的 Makefile 提供便捷命令：
+
+```bash
+cd docs
+make html          # 构建HTML
+make clean         # 清理构建输出
+make html SPHINXOPTS="-E -j 4"  # 带参数
+```
+
+## 配置文件 conf.py
+
+`conf.py` 是 Sphinx 项目的核心配置文件（见 [F-032](/spec/facts.md)），它本身是一个 Python 文件，在 Sphinx 初始化时被执行。
+
+### 基本配置项
+
+```python
+# 项目信息
+project = 'My Project'
+copyright = '2024, Author Name'
+author = 'Author Name'
+release = '0.1.0'
+
+# 通用配置
+extensions = [
+    'sphinx.ext.autodoc',      # 自动API文档
+    'sphinx.ext.napoleon',     # NumPy/Google风格docstring
+    'sphinx.ext.viewcode',     # 源码链接
+    'sphinx.ext.intersphinx',  # 跨项目引用
+]
+templates_path = ['_templates']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+# HTML输出配置
+html_theme = 'alabaster'
+html_static_path = ['_static']
+
+# 语言
+language = 'en'
+```
+
+### conf.py 作为扩展
+
+`conf.py` 本身可以作为一个 Sphinx 扩展——如果定义了 `setup(app)` 函数，Sphinx 会自动调用它（见 [F-014](/spec/facts.md) 初始化流程中config.setup的处理）：
+
+```python
+def setup(app):
+    app.add_config_value('my_setting', 'default', 'env')
+    app.connect('build-finished', my_handler)
+    return {
+        'version': '0.1',
+        'parallel_read_safe': True,
+        'parallel_write_safe': True,
+    }
+```
+
+这使得在 conf.py 中也能注册自定义组件和事件监听。
 
 ## 编写第一个文档
 
-编辑 `index.rst`：
+在 `source/index.rst` 中：
 
 ```rst
-.. My Documentation master file
-
-Welcome to My Documentation
-===========================
+Welcome to My Project's documentation!
+======================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   intro
+   install
+   usage
+   api
 
-Introduction
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+```
+
+创建 `source/install.rst`：
+
+```rst
+Installation
 ============
 
-This is my first Sphinx document.
+To install My Project::
 
-.. note::
-
-   This is a note directive.
-
-.. code-block:: python
-
-   def hello():
-       print("Hello, Sphinx!")
+   pip install my-project
 ```
 
-创建 `intro.rst` 并在 toctree 中引用它。
-
-### 偏好 Markdown？
-
-Sphinx 默认使用 reStructuredText，安装 MyST-Parser 即可使用 Markdown：
-
-```bash
-pip install myst-parser
-```
-
-```python
-# conf.py
-extensions = ['myst_parser']
-source_suffix = {'.rst': 'restructuredtext', '.md': 'markdown'}
-```
-
-然后就可以创建 `intro.md` 用 Markdown 编写文档了。详见 [Markdown与MyST支持](19-markdown-and-myst.md)。
-
-## 使用 sphinx-build 构建文档
-
-```bash
-# HTML输出
-sphinx-build -b html . _build/html
-
-# 指定源目录和输出目录
-sphinx-build -b html sourcedir outputdir
-
-# 只构建特定文件
-sphinx-build -b html . _build/html intro.rst
-
-# 全量重建（清除缓存）
-sphinx-build -b html -E . _build/html
-
-# 将警告视为错误
-sphinx-build -b html -W . _build/html
-
-# 并行构建（4个进程）
-sphinx-build -b html -j 4 . _build/html
-```
-
-`-b` 参数指定构建器名称（默认 `html`）。常用选项：
-
-| 选项 | 说明 |
-|------|------|
-| `-b <builder>` | 选择构建器（html/latex/text/epub3/linkcheck等） |
-| `-E` | 不使用缓存，全量重建 |
-| `-j N` | N个并行构建进程 |
-| `-W` | 警告转为错误 |
-| `-c <dir>` | 指定配置文件目录 |
-| `-D <setting=value>` | 覆盖配置项 |
-| `-t <tag>` | 设置标签（用于only指令） |
-| `-v` / `-vv` | 增加详细程度 |
-
-构建完成后，用浏览器打开 `_build/html/index.html` 查看结果。
-
-## conf.py 配置基础
-
-`conf.py` 是一个 Python 文件，Sphinx 在构建时执行它来加载配置。最小配置：
-
-```python
-# conf.py
-project = 'My Documentation'
-copyright = '2026, Your Name'
-author = 'Your Name'
-release = '0.1.0'
-
-# 扩展模块
-extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.napoleon',
-]
-
-# 主题
-html_theme = 'alabaster'
-```
-
-常用配置项：
-
-| 配置项 | 说明 | 默认值 |
-|--------|------|-------|
-| `project` | 项目名称 | - |
-| `author` | 作者名 | - |
-| `release` | 完整版本号 | - |
-| `version` | 短版本号 | release值 |
-| `extensions` | 启用的扩展列表 | `[]` |
-| `source_suffix` | 源文件后缀 | `.rst` |
-| `master_doc` / `root_doc` | 主文档名 | `'index'` |
-| `html_theme` | HTML主题 | `'alabaster'` |
-| `language` | 文档语言 | `None`（英文） |
-| `exclude_patterns` | 排除的文件模式 | `[]` |
-
-## 使用 Python API 构建文档
-
-除了命令行，Sphinx 也提供 Python API [F-008]：
-
-```python
-from sphinx.application import Sphinx
-
-# 创建Sphinx应用实例
-app = Sphinx(
-    srcdir='./source',        # 源文件目录
-    confdir='./source',       # 配置文件目录
-    outdir='./build/html',    # 输出目录
-    doctreedir='./build/.doctrees',  # doctree缓存目录
-    buildername='html',       # 构建器名称
-    freshenv=True,            # 清除缓存环境
-    warningiserror=False,     # 警告不转错误
-    verbosity=0,              # 详细程度
-    parallel=0,               # 并行进程数
-)
-
-# 执行构建
-app.build()
-
-# 构建完成后检查状态码
-if app.statuscode == 0:
-    print("Build succeeded!")
-else:
-    print(f"Build finished with problems (status code: {app.statuscode})")
-```
-
-也可以通过 `app.connect()` 在构建过程中插入自定义逻辑：
-
-```python
-def on_build_finished(app, exception):
-    if exception is None:
-        print("Build finished successfully!")
-
-app.connect('build-finished', on_build_finished)
-app.build()
-```
-
-## 使用 Makefile 便捷构建
-
-`sphinx-quickstart` 生成的 `Makefile` 提供便捷命令：
-
-```bash
-make html       # 构建HTML
-make clean      # 清理构建输出
-make latexpdf   # 构建LaTeX并编译为PDF
-make epub       # 构建EPUB
-make linkcheck  # 检查链接
-make help       # 查看所有可用目标
-```
+然后运行 `make html`，在 `build/html/index.html` 查看输出。
 
 ## 相关概念
 
-- [Sphinx 简介](00-introduction.md)
-- [架构总览](02-architecture-overview.md)
-- [Sphinx应用类](03-application-class.md)
+- [00-简介](00-introduction.md) — Sphinx是什么
+- [02-应用类](02-application.md) — Sphinx初始化流程详解
+- [03-配置系统](03-config-system.md) — conf.py配置系统深入
+- [07-扩展开发](07-extension-dev.md) — 编写自定义扩展
