@@ -217,6 +217,6 @@ AI 会生成 Markdown 内容：
 
 ## 相关示例
 
-- [首次聊天快速上手](/examples/first-chat.md)
-- [Magic Commands 使用](/examples/magic-commands-usage.md)
-- [配置自定义 MCP 服务器](/examples/custom-mcp-server.md)
+- [首次聊天快速上手](first-chat.md)
+- [Magic Commands 使用](magic-commands-usage.md)
+- [配置自定义 MCP 服务器](custom-mcp-server.md)

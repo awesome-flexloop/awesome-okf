@@ -24,7 +24,7 @@ generated:
 
 - Jupyter AI 已安装并正常运行
 - Node.js 已安装（用于运行 npm 包形式的 MCP 服务器）
-- 了解 [MCP 协议基础](/concepts/04-protocols-acp-mcp.md)
+- 了解 [MCP 协议基础](../concepts/04-protocols-acp-mcp.md)
 
 ## 配置文件格式
 
@@ -303,7 +303,7 @@ pip install mcp
 
 ## 相关概念
 
-- [自定义 MCP 服务器](/concepts/08-custom-mcp-servers.md)
-- [MCP 工具与 Notebook 交互](/concepts/07-mcp-tools-and-notebooks.md)
-- [ACP 与 MCP 双协议](/concepts/04-protocols-acp-mcp.md)
-- [MCP 配置参考](/references/mcp-config-reference.md)
+- [自定义 MCP 服务器](../concepts/08-custom-mcp-servers.md)
+- [MCP 工具与 Notebook 交互](../concepts/07-mcp-tools-and-notebooks.md)
+- [ACP 与 MCP 双协议](../concepts/04-protocols-acp-mcp.md)
+- [MCP 配置参考](../references/mcp-config-reference.md)

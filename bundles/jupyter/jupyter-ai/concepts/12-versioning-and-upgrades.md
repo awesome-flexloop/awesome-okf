@@ -146,7 +146,7 @@ conda activate jupyter-ai
 
 ## 相关概念
 
-- [元包架构](/concepts/03-metapackage-architecture.md)
-- [安装与配置](/concepts/01-installation-and-setup.md)
-- [Entry Points API](/concepts/09-entry-points-api.md)
-- [元包源码参考](/references/metapackage-source.md)
+- [元包架构](03-metapackage-architecture.md)
+- [安装与配置](01-installation-and-setup.md)
+- [Entry Points API](09-entry-points-api.md)
+- [元包源码参考](../references/metapackage-source.md)

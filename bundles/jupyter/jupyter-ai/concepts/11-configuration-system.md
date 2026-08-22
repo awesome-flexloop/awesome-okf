@@ -87,7 +87,7 @@ c.AiMagics.max_history = 2  # Magic 命令保留的对话轮数
 
 ### MCP 配置
 
-MCP 服务器配置不通过 Traitlets，而是通过 JSON 文件配置，详见 [自定义 MCP 服务器](/concepts/08-custom-mcp-servers.md)。
+MCP 服务器配置不通过 Traitlets，而是通过 JSON 文件配置，详见 [自定义 MCP 服务器](08-custom-mcp-servers.md)。
 
 ## API Key 配置
 
@@ -155,9 +155,9 @@ c.AiExtension.model_providers = {
 
 ## 相关概念
 
-- [安装与配置](/concepts/01-installation-and-setup.md)
-- [自定义 MCP 服务器](/concepts/08-custom-mcp-servers.md)
-- [AI Persona 系统](/concepts/05-ai-personas.md)
-- [Magic Commands](/concepts/10-magic-commands.md)
-- [配置参考](/references/config-reference.md)
-- [MCP 配置参考](/references/mcp-config-reference.md)
+- [安装与配置](01-installation-and-setup.md)
+- [自定义 MCP 服务器](08-custom-mcp-servers.md)
+- [AI Persona 系统](05-ai-personas.md)
+- [Magic Commands](10-magic-commands.md)
+- [配置参考](../references/config-reference.md)
+- [MCP 配置参考](../references/mcp-config-reference.md)

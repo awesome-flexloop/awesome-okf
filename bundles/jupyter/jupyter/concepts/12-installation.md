@@ -1,39 +1,75 @@
 ---
 type: Concept
 title: 安装与环境管理
-description: Jupyter 安装方法（pip/conda/mamba）、虚拟环境最佳实践、Jupyter 与环境内核的关系、在虚拟环境中使用 Jupyter、添加自定义环境内核
-tags: [jupyter, installation, pip, conda, venv, virtual-environment, kernel, ipykernel, mamba]
-generated: { by: "source-code-to-okf-wiki/trae", at: "2026-08-22T11:15:00+08:00" }
-verified: { by: "process:seven-concepts-v", at: "2026-08-22T11:30:00+08:00" }
+description: Jupyter 生态安装方法总览（pip/conda/uv/mamba/pixi）、虚拟环境最佳实践、Jupyter 与环境内核的关系、Kernel 管理、Jupyter Console 与多语言 Kernel 安装
+tags: [jupyter, installation, pip, conda, uv, mamba, pixi, venv, virtual-environment, kernel, ipykernel, jupyter-console, kernels]
+generated: { by: "source-code-to-okf-wiki/trae", at: "2026-08-22T15:30:00+08:00" }
+verified: { by: "process:seven-concepts-v", at: "2026-08-22T16:00:00+08:00" }
 status: stable
 stale_after: 2027-08-22
 sources:
   - id: jupyter-metasource
     resource: /references/jupyter-metasource.md
+    title: Jupyter 元包源码信源登记
+  - id: jupyter-install-docs
+    resource: https://docs.jupyter.org/en/latest/install.html
+    title: Jupyter 官方安装文档
+  - id: jupyter-docs
+    resource: https://docs.jupyter.org/
+    title: Jupyter 官方文档
 ---
 
 # 安装与环境管理
 
-正确安装和配置 Jupyter 环境是高效使用 Jupyter 的第一步。Jupyter 的安装涉及几个需要理解的关键概念：Jupyter 本身、Python 环境、内核注册之间的关系。
+正确安装和配置 Jupyter 环境是高效使用 Jupyter 的第一步。Jupyter 生态包含多个组件——Notebook 界面、Jupyter Console 终端、多语言 Kernel 等，不同组件有不同的安装方式。
+
+## Jupyter 生态组件概览
+
+根据 [Jupyter 官方安装文档](https://docs.jupyter.org/en/latest/install.html)，Jupyter 生态主要包含三类可安装组件：
+
+| 组件 | 说明 | 安装入口 |
+|---|---|---|
+| **Jupyter Notebook Interface** | 基于 Web 的交互式笔记本界面，融合代码、叙述文本、公式和可视化 | `pip install notebook` 或 `pip install jupyterlab` |
+| **Jupyter Console** | 基于终端的交互式计算控制台 | `pip install jupyter-console` |
+| **Jupyter Kernels** | 为不同编程语言和代码执行行为提供支持的内核 | 各语言独立安装（见下文） |
+
+> **提示**：各工具的最佳实践安装方式请参考对应工具的官方文档。本页提供通用安装指南和常见问题排查。
 
 ## 安装方式
 
 ### 使用 pip 安装
 
 ```bash
-# 安装完整 Jupyter 包（包含 notebook, jupyterlab, ipykernel 等）
+# 安装完整 Jupyter 元包（包含 notebook, jupyterlab, nbconvert, ipykernel, ipywidgets）
 pip install jupyter
 
-# 仅安装 JupyterLab（更现代的界面）
+# 仅安装 JupyterLab（推荐，更现代的界面）
 pip install jupyterlab
 
 # 仅安装经典 Notebook（v7+）
 pip install notebook
+
+# 安装 Jupyter Console（终端交互）
+pip install jupyter-console
 ```
 
 > **注意**：`jupyter` 是元包（metapackage），安装它会自动安装 notebook、nbconvert、ipykernel、ipywidgets、jupyterlab 五个依赖包。它本身不包含任何代码。
 
-### 使用 conda/mamba 安装
+### 使用 uv 安装（推荐，新一代 Python 包管理器）
+
+[uv](https://docs.astral.sh/uv/) 是用 Rust 编写的高速 Python 包管理器，兼容 pip 接口：
+
+```bash
+# 使用 uv 安装
+uv pip install jupyterlab
+
+# 创建环境并安装
+uv venv myproject
+source myproject/bin/activate  # Windows: myproject\Scripts\activate
+uv pip install jupyterlab pandas numpy
+```
+
+### 使用 conda/mamba/micromamba 安装
 
 [Anaconda](https://www.anaconda.com/) 或 [Miniconda](https://docs.conda.io/en/latest/miniconda.html) 是数据科学社区广泛使用的 Python 发行版，自带 conda 包管理器：
 
@@ -41,8 +77,11 @@ pip install notebook
 # 使用 conda 安装
 conda install jupyter
 
-# 使用 mamba（更快的 conda 替代品）
+# 使用 mamba（更快的 conda 替代品，C++ 实现）
 mamba install jupyter
+
+# 使用 micromamba（更轻量的 mamba）
+micromamba install -c conda-forge jupyterlab
 
 # conda-forge 频道通常有更新版本
 conda install -c conda-forge jupyterlab
@@ -53,7 +92,22 @@ Conda 的优势：
 - 自带 Python 和常用科学计算包（Anaconda 完整版）
 - 管理非 Python 依赖（如 CUDA、C 库）更方便
 - 环境隔离内置
-- mamba 用 C++ 重写了解析器，速度比 conda 快很多
+- mamba/micromamba 用 C++ 重写了解析器，速度比 conda 快很多
+
+### 使用 pixi 安装
+
+[pixi](https://pixi.sh/) 是基于 conda 生态的跨语言包管理器，使用 `pixi.toml` 管理项目依赖：
+
+```bash
+# 在现有 pixi 项目中添加
+pixi add jupyterlab
+
+# 初始化新项目
+pixi init myproject
+cd myproject
+pixi add jupyterlab pandas numpy
+pixi run jupyter lab
+```
 
 ### 使用 Homebrew（macOS）
 
@@ -72,6 +126,9 @@ jupyter lab
 # 启动经典 Notebook
 jupyter notebook
 
+# 启动 Jupyter Console（终端交互）
+jupyter console
+
 # 指定端口
 jupyter lab --port 8889
 
@@ -89,6 +146,21 @@ jupyter lab --ip 0.0.0.0
 
 ```
 http://localhost:8888/?token=abc123def456...
+```
+
+### Jupyter Console 使用
+
+Jupyter Console 是终端中的交互式环境，适合快速测试代码：
+
+```bash
+# 启动 Python Console
+jupyter console
+
+# 启动指定 Kernel
+jupyter console --kernel=python3
+
+# 启动时执行初始化代码
+jupyter console --existing=<kernel-id>
 ```
 
 ## 虚拟环境与 Jupyter 的关系
@@ -122,7 +194,7 @@ jupyter lab
 
 ```bash
 # 步骤 1：在基础环境安装 JupyterLab
-pip install jupyterlab  # 或 conda install jupyterlab
+pip install jupyterlab  # 或 conda install jupyterlab / uv pip install jupyterlab
 
 # 步骤 2：为每个项目创建虚拟环境
 python -m venv project1-env
@@ -211,6 +283,22 @@ conda install nb_conda_kernels
 
 安装后，所有包含 ipykernel 的 conda 环境会自动出现在 Kernel 列表中。
 
+## 安装多语言 Kernel
+
+Jupyter 不仅支持 Python，还可以通过安装不同 Kernel 支持多种编程语言：
+
+| 语言 | Kernel 包 | 安装命令 |
+|---|---|---|
+| Python | ipykernel | `pip install ipykernel`（通常已随 Jupyter 安装） |
+| R | IRkernel | 在 R 中执行 `install.packages('IRkernel')` 然后 `IRkernel::installspec()` |
+| Julia | IJulia | 在 Julia 中执行 `using Pkg; Pkg.add("IJulia")` |
+| Bash/Shell | bash_kernel | `pip install bash_kernel && python -m bash_kernel.install` |
+| C++ | xeus-cling | `conda install -c conda-forge xeus-cling` |
+| TypeScript/JavaScript | itypescript | `npm install -g itypescript && its --install=global` |
+| SQL | JupySQL | `pip install jupysql` |
+
+更多 Kernel 请参考 [Jupyter Kernels 列表](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)。
+
 ## 验证安装
 
 安装后运行以下命令验证：
@@ -280,7 +368,7 @@ print(sys.version)
 
 ### 问题 4：多个 Python 安装冲突
 
-系统 Python、conda Python、pyenv Python 等可能冲突。使用以下命令确认使用的是哪个 Python：
+系统 Python、conda Python、pyenv Python、uv Python 等可能冲突。使用以下命令确认使用的是哪个 Python：
 
 ```bash
 which python    # Unix
@@ -288,7 +376,7 @@ where python    # Windows
 which jupyter
 ```
 
-建议使用虚拟环境（venv/conda）隔离项目，避免污染系统 Python。
+建议使用虚拟环境（venv/conda/uv）隔离项目，避免污染系统 Python。
 
 ### 问题 5：端口被占用
 
@@ -305,6 +393,19 @@ netstat -ano | findstr :8888
 taskkill /PID <pid> /F
 ```
 
+### 问题 6：JupyterLab 扩展安装后不显示
+
+JupyterLab 3.x+ 支持预构建扩展（prebuilt extensions），大多数扩展通过 pip/conda 安装后即可使用，无需 `jupyter labextension install`：
+
+```bash
+# 预构建扩展（推荐）
+pip install jupyterlab-git
+# 重启 JupyterLab 即可使用
+
+# 检查已安装扩展
+jupyter labextension list
+```
+
 ## 升级 Jupyter
 
 ```bash
@@ -312,10 +413,16 @@ taskkill /PID <pid> /F
 pip install --upgrade jupyterlab
 pip install --upgrade notebook
 
+# uv
+uv pip install --upgrade jupyterlab
+
 # conda
 conda update jupyterlab
 # 或使用 conda-forge
 conda update -c conda-forge jupyterlab
+
+# micromamba
+micromamba update -c conda-forge jupyterlab
 ```
 
 ## 相关概念
@@ -324,3 +431,4 @@ conda update -c conda-forge jupyterlab
 - [目录结构与文件位置](05-directories.md) — kernelspec 存放位置
 - [Kernel 架构](06-kernel-architecture.md) — Kernel 启动机制与 kernelspec
 - [jupyter 命令与子命令发现](03-jupyter-command.md) — jupyter --version/--paths 命令
+- [配置系统](04-config-system.md) — Jupyter 配置文件与环境变量

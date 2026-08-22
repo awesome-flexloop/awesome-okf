@@ -1,8 +1,12 @@
 ---
 type: Concept
 title: Jupyter AI 简介
-description: Jupyter AI 是什么、核心能力、设计理念与支持的 AI Agent 一览
-tags: [introduction, overview, jupyter-ai, agents, features]
+description: Jupyter AI 是什么、核心能力、设计理念、支持的 AI Agent 一览，以及 Jupyter 生态 AI 全景（jupyter-ai、jupyter-ai-contrib、jupyterlite/ai）
+tags: [introduction, overview, jupyter-ai, agents, features, ecosystem, ai]
+generated: { by: "source-code-to-okf-wiki/trae", at: "2026-08-22T15:30:00+08:00" }
+verified: { by: "process:seven-concepts-v", at: "2026-08-22T16:00:00+08:00" }
+status: stable
+stale_after: 2027-08-22
 sources:
   - id: readme
     resource: external/libs/jupyter/jupyter-ai/README.md
@@ -13,15 +17,31 @@ sources:
   - id: agents-md
     resource: external/libs/jupyter/jupyter-ai/AGENTS.md
     title: AGENTS.md
-status: stable
-generated:
-  by: reference_agent/source-code-to-okf-wiki
-  at: 2026-08-22
+  - id: jupyter-ai-org
+    resource: https://jupyter.org/ai
+    title: Jupyter AI 官方页面
+  - id: jupyter-ai-docs
+    resource: https://jupyter-ai.readthedocs.io/en/stable/
+    title: Jupyter AI 官方文档
 ---
 
 # Jupyter AI 简介
 
-Jupyter AI 是一个将 AI Agent 连接到 JupyterLab 计算笔记本的开源扩展。它在 JupyterLab 中提供原生聊天界面，让你可以与前沿 AI Agent 协作，包括 Claude、Codex、GitHub Copilot、Goose、Kiro、Mistral Vibe、OpenCode 等。
+Jupyter AI 是一个将 AI Agent 连接到 JupyterLab 计算笔记本的开源扩展。它在 JupyterLab 中提供原生聊天界面，让你可以与前沿 AI Agent 协作，包括 Claude、Codex、GitHub Copilot、Goose、Kilo、Kiro、Mistral Vibe、OpenCode 等。
+
+## Jupyter 生态 AI 全景
+
+AI 和大语言模型（LLM）在 Jupyter 社区中扮演着越来越重要的角色。根据 [Jupyter 官方 AI 页面](https://jupyter.org/ai)，Jupyter 生态中有多个 AI 相关项目：
+
+| 项目 | 说明 | 特点 |
+|---|---|---|
+| **Jupyter AI**（本教程） | 将 AI Agent 连接到 JupyterLab Notebook 的官方扩展 | 支持 Agentic 工作流、MCP 工具调用、多 Agent、服务端持续运行 |
+| **jupyter-ai-contrib** | 社区组织，托管基于 Jupyter AI 构建的扩展、集成和实验项目 | 早期项目快速原型开发、社区维护 |
+| **jupyterlite/ai** | 为 JupyterLab、Notebook 7 和 JupyterLite 提供 AI 代码补全和聊天 | 无需服务端组件，可在浏览器端 JupyterLite 中使用 |
+
+> **jupyter-ai 与 jupyterlite/ai 的区别**：两者都为 JupyterLab 和 Notebook v7+ 提供 AI 功能。`jupyterlite/ai` 不依赖服务端组件，可在浏览器端 JupyterLite 中使用；`jupyter-ai` 支持 Agentic 工作流，可在浏览器关闭或断开后继续在服务端运行。两者功能有重叠，都实现了 Agentic 工作流和工具调用。值得注意的是，`jupyterlite/ai` 还实现了 AI 代码补全，而 `jupyter-ai` 实现了多 Agent 工作流。
+
+> **AI 贡献政策**：Jupyter 目前没有全项目统一的 AI 贡献政策。Jupyter 主要由半独立的子项目组成，每个子项目有各自的实践和贡献政策。
 
 ## 核心定位
 
@@ -38,7 +58,7 @@ Jupyter AI 的核心价值在于**把 AI Agent 深度集成到 Notebook 工作�
 | 特性 | 说明 |
 |---|---|
 | 💬 协作聊天 | 与 AI Persona 和其他用户在共享聊天中协作，拖拽附件共享上下文 |
-| 🤖 前沿 Agent | 直接使用 Claude、Codex、Copilot、Goose、Kiro、Mistral Vibe 等 |
+| 🤖 前沿 Agent | 直接使用 Claude、Codex、Copilot、Goose、Kilo、Kiro、Mistral Vibe、OpenCode 等 |
 | ⚡ 实时 UI | 基于新的 RTC 后端，实时查看其他用户或 Agent 编辑文件 |
 | 🛡️ 默认护栏 | Agent 在写入文件、运行命令或使用 MCP 工具前请求权限 |
 | 📓 Notebook 工具 | AI Persona 可写入、调试和运行 Notebook |
@@ -46,7 +66,7 @@ Jupyter AI 的核心价值在于**把 AI Agent 深度集成到 Notebook 工作�
 
 ## 支持的 AI Agent
 
-Jupyter AI 默认不内置任何 Agent，需要单独安装。以下是官方支持的 Agent 列表：
+Jupyter AI **默认不内置任何 Agent**，需要单独安装。以下是官方支持的 Agent 列表：
 
 | Agent | 安装 | ACP 适配器 |
 |---|---|---|
@@ -58,24 +78,30 @@ Jupyter AI 默认不内置任何 Agent，需要单独安装。以下是官方支
 | Kiro CLI | 官方 CLI 安装 | 内置支持 |
 | Mistral Vibe | `pip install mistral-vibe` 或 `uv tool install mistral-vibe` | 内置支持 |
 | OpenCode | 官方 CLI 安装 | 内置支持 |
-| Jupyternaut | `pip install 'jupyter-ai[jupyternaut]'` | 内置（直接模型调用） |
+| Jupyternaut | `pip install 'jupyter-ai[jupyternaut]'` | 内置（直接模型调用，非 ACP） |
 
 Jupyter AI 会**自动检测**环境中可用的 Agent，无需手动配置。
 
 ## 版本信息
 
-- **当前版本**：3.1.3
+- **当前版本**：3.1.x
 - **Python 要求**：>=3.9
 - **许可证**：BSD-3-Clause
 - **仓库**：https://github.com/jupyterlab/jupyter-ai
 - **文档**：https://jupyter-ai.readthedocs.io/
+- **社区讨论**：[JupyterLab Zulip 频道](https://jupyter.zulipchat.com/#narrow/channel/469762-jupyterlab)
+- **每周会议**：Jupyter AI 周会（见 [Jupyter 社区日历](https://jupyter.org/community#calendar)）
+
+> Jupyter AI 目前作为 [Jupyter-Frontends 子项目](https://github.com/jupyterlab/frontends-team-compass) 的孵化项目。
 
 ## v3 架构变革
 
 Jupyter AI v3 进行了重大架构重构：[^agents-md]
 
-- **从单体仓库（monorepo）变为元包（metapackage）**：v3 不再是单体仓库，而是由多个独立子包（通过 `submodules/manifest.json` 注册的 12 个 jupyter-ai-contrib 子包 + jupyterlab_chat 核心依赖）组合而成，每个子包位于独立仓库
+- **从单体仓库（monorepo）变为元包（metapackage）**：v3 不再是单体仓库，而是由多个独立子包（通过 `submodules/manifest.json` 注册的 jupyter-ai-contrib 子包 + jupyterlab_chat 核心依赖）组合而成，每个子包位于独立仓库
 - **元包本身几乎为空**：`jupyter-ai` 包只包含版本号、默认 MCP 工具注册、文档聚合基础设施
+- **默认无 Agent**：v3 不再内置任何 Agent，用户按需安装所需的 Agent CLI 和适配器
+- **ACP + MCP 双协议**：通过 Agent Client Protocol 连接外部 Agent，通过 Model Context Protocol 暴露 Jupyter 工具
 - **子包独立发版**：每个子包遵循 SemVer，元包通过版本上限（ceiling pin）控制兼容性
 - **文档聚合**：用户文档存放在主仓库，贡献者/开发者文档存放在各子包仓库，通过 Sphinx 扩展自动聚合
 
@@ -88,10 +114,11 @@ Jupyter AI 遵循以下设计原则：[^contributors]
 3. **提示透明**：聊天界面和 Magic 命令使用的系统提示开源可见
 4. **可追溯**：生成的 Notebook 和 Magic 输出均标注由 Jupyter AI 生成
 5. **以人为中心**：聊天界面符合通用聊天应用习惯，设置界面最小化且易懂
+6. **安全护栏默认开启**：Agent 写入文件、运行命令、调用工具前必须获得用户授权
 
 ## 相关概念
 
-- [安装与配置](/concepts/01-installation-and-setup.md)
-- [聊天界面](/concepts/02-chat-interface.md)
-- [元包架构](/concepts/03-metapackage-architecture.md)
-- [ACP 与 MCP 双协议](/concepts/04-protocols-acp-mcp.md)
+- [安装与配置](01-installation-and-setup.md)
+- [聊天界面](02-chat-interface.md)
+- [元包架构](03-metapackage-architecture.md)
+- [ACP 与 MCP 双协议](04-protocols-acp-mcp.md)

@@ -199,7 +199,7 @@ Jupyter AI 支持多种附件方式：
 
 ## 下一步
 
-- [Notebook AI 辅助工作流](/examples/notebook-ai-assistant.md)：更深入的 Notebook AI 协作示例
-- [Magic Commands 使用](/examples/magic-commands-usage.md)：在单元格中直接使用 AI
-- [配置自定义 MCP 服务器](/examples/custom-mcp-server.md)：为 AI 添加更多工具
-- [创建自定义 Persona](/examples/custom-persona.md)：开发自己的 AI 角色
+- [Notebook AI 辅助工作流](notebook-ai-assistant.md)：更深入的 Notebook AI 协作示例
+- [Magic Commands 使用](magic-commands-usage.md)：在单元格中直接使用 AI
+- [配置自定义 MCP 服务器](custom-mcp-server.md)：为 AI 添加更多工具
+- [创建自定义 Persona](custom-persona.md)：开发自己的 AI 角色

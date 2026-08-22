@@ -173,7 +173,7 @@ Jupyter AI 在单一会话中可同时扮演多个协议角色：
 
 ## 相关概念
 
-- [MCP 工具与 Notebook 交互](/concepts/07-mcp-tools-and-notebooks.md)
-- [ACP 与 MCP 双协议](/concepts/04-protocols-acp-mcp.md)
-- [自定义 MCP 服务器](/concepts/08-custom-mcp-servers.md)
-- [自定义 MCP 服务器示例](/examples/custom-mcp-server.md)
+- [MCP 工具与 Notebook 交互](../concepts/07-mcp-tools-and-notebooks.md)
+- [ACP 与 MCP 双协议](../concepts/04-protocols-acp-mcp.md)
+- [自定义 MCP 服务器](../concepts/08-custom-mcp-servers.md)
+- [自定义 MCP 服务器示例](../examples/custom-mcp-server.md)

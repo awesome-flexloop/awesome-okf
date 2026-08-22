@@ -183,13 +183,13 @@ class DebugPersona(BasePersona):
         self.send_message(NewMessage(body=f"Received: {message.body}", sender=self.id))
 ```
 
-完整的 API 参考见 [Persona API 参考](/references/persona-api.md)。
+完整的 API 参考见 [Persona API 参考](../references/persona-api.md)。
 
 ## 相关概念
 
-- [ACP 与 MCP 双协议](/concepts/04-protocols-acp-mcp.md)
-- [聊天界面](/concepts/02-chat-interface.md)
-- [Entry Points API](/concepts/09-entry-points-api.md)
-- [MCP 工具与 Notebook 交互](/concepts/07-mcp-tools-and-notebooks.md)
-- [Persona API 参考](/references/persona-api.md)
-- [自定义 Persona 示例](/examples/custom-persona.md)
+- [ACP 与 MCP 双协议](04-protocols-acp-mcp.md)
+- [聊天界面](02-chat-interface.md)
+- [Entry Points API](09-entry-points-api.md)
+- [MCP 工具与 Notebook 交互](07-mcp-tools-and-notebooks.md)
+- [Persona API 参考](../references/persona-api.md)
+- [自定义 Persona 示例](../examples/custom-persona.md)

@@ -155,9 +155,9 @@ AI Persona 典型的 Notebook 操作序列：
 
 ## 相关概念
 
-- [ACP 与 MCP 双协议](/concepts/04-protocols-acp-mcp.md)
-- [自定义 MCP 服务器](/concepts/08-custom-mcp-servers.md)
-- [AI Persona 系统](/concepts/05-ai-personas.md)
-- [Entry Points API](/concepts/09-entry-points-api.md)
-- [MCP 配置与工具参考](/references/mcp-config-reference.md)
-- [Entry Points 参考](/references/entry-points-reference.md)
+- [ACP 与 MCP 双协议](04-protocols-acp-mcp.md)
+- [自定义 MCP 服务器](08-custom-mcp-servers.md)
+- [AI Persona 系统](05-ai-personas.md)
+- [Entry Points API](09-entry-points-api.md)
+- [MCP 配置与工具参考](../references/mcp-config-reference.md)
+- [Entry Points 参考](../references/entry-points-reference.md)

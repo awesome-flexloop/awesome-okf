@@ -4,9 +4,10 @@ title: Jupyter Bundle 生成日志
 description: OKF wiki生成过程记录：R→I→E→V→C各阶段执行详情
 tags: ["jupyter", "log", "generation"]
 generated: 2026-08-22T11:45:00+08:00
+updated: 2026-08-22T12:30:00+08:00
 status: active
 stale_after: 2027-08-22
-sources: ["generation metadata"]
+sources: ["generation metadata", "https://docs.jupyter.org/en/latest/install.html"]
 ---
 
 # Jupyter Bundle 生成日志
@@ -148,3 +149,22 @@ sources: ["generation metadata"]
 | examples/ | 6 | 5篇示例文档 + 1篇索引 |
 | 根目录 | 2 | index.md + log.md |
 | **合计** | **24** | |
+
+---
+
+## 更新记录
+
+### 2026-08-22 更新（基于官方安装文档补充）
+
+**信源**：https://docs.jupyter.org/en/latest/install.html
+
+**更新范围**：
+- `concepts/12-installation.md`：重大更新，新增以下内容：
+  - uv（Astral Rust包管理器）安装方法与环境创建
+  - pixi（conda-forge包管理器）安装方法
+  - Jupyter Console终端交互使用说明
+  - 多语言Kernel安装速查表（Python/R/Julia/C++/Bash等10+语言）
+  - conda/mamba环境配置细节补充（jupyter_core依赖说明）
+  - 新增sources字段引用官方安装文档
+- 同步更新父级 [../index.md](../index.md)：添加 jupyter-ai 应用层条目
+- 关联创建 [../jupyter-ai/log.md](../jupyter-ai/log.md)：jupyter-ai子bundle生成日志

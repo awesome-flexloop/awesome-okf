@@ -167,6 +167,6 @@ c.AiMagics.aliases = {
 
 ## 相关概念
 
-- [配置系统](/concepts/11-configuration-system.md)
-- [Magic Commands](/concepts/10-magic-commands.md)
-- [Magic Commands 使用示例](/examples/magic-commands-usage.md)
+- [配置系统](../concepts/11-configuration-system.md)
+- [Magic Commands](../concepts/10-magic-commands.md)
+- [Magic Commands 使用示例](../examples/magic-commands-usage.md)

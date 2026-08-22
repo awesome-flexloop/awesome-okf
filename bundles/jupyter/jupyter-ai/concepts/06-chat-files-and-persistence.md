@@ -111,8 +111,8 @@ Magic Commands（%ai/%%ai）的对话上下文独立于聊天面板：
 
 ## 相关概念
 
-- [聊天界面](/concepts/02-chat-interface.md)
-- [元包架构](/concepts/03-metapackage-architecture.md)
-- [ACP 与 MCP 双协议](/concepts/04-protocols-acp-mcp.md)
-- [AI Persona 系统](/concepts/05-ai-personas.md)
-- [配置系统](/concepts/11-configuration-system.md)
+- [聊天界面](02-chat-interface.md)
+- [元包架构](03-metapackage-architecture.md)
+- [ACP 与 MCP 双协议](04-protocols-acp-mcp.md)
+- [AI Persona 系统](05-ai-personas.md)
+- [配置系统](11-configuration-system.md)

@@ -255,6 +255,6 @@ class LLMReviewPersona(BasePersona):
 
 ## 相关概念
 
-- [AI Persona 系统](/concepts/05-ai-personas.md)
-- [Entry Points API](/concepts/09-entry-points-api.md)
-- [Persona API 参考](/references/persona-api.md)
+- [AI Persona 系统](../concepts/05-ai-personas.md)
+- [Entry Points API](../concepts/09-entry-points-api.md)
+- [Persona API 参考](../references/persona-api.md)

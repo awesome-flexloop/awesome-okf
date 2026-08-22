@@ -139,9 +139,9 @@ Agent 调用工具（写入文件、执行命令、MCP 工具）时会弹出权�
 
 ## 相关概念
 
-- [安装与配置](/concepts/01-installation-and-setup.md)
-- [AI Persona 系统](/concepts/05-ai-personas.md)
-- [ACP 与 MCP 双协议](/concepts/04-protocols-acp-mcp.md)
-- [MCP 工具与 Notebook 交互](/concepts/07-mcp-tools-and-notebooks.md)
-- [聊天文件与持久化](/concepts/06-chat-files-and-persistence.md)
-- [首次聊天示例](/examples/first-chat.md)
+- [安装与配置](01-installation-and-setup.md)
+- [AI Persona 系统](05-ai-personas.md)
+- [ACP 与 MCP 双协议](04-protocols-acp-mcp.md)
+- [MCP 工具与 Notebook 交互](07-mcp-tools-and-notebooks.md)
+- [聊天文件与持久化](06-chat-files-and-persistence.md)
+- [首次聊天示例](../examples/first-chat.md)

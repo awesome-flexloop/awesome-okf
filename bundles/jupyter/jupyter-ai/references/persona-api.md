@@ -152,7 +152,7 @@ class DebugPersona(BasePersona):
 
 ## 相关概念
 
-- [AI Persona 系统](/concepts/05-ai-personas.md)
-- [ACP 与 MCP 双协议](/concepts/04-protocols-acp-mcp.md)
-- [Entry Points API](/concepts/09-entry-points-api.md)
-- [自定义 Persona 示例](/examples/custom-persona.md)
+- [AI Persona 系统](../concepts/05-ai-personas.md)
+- [ACP 与 MCP 双协议](../concepts/04-protocols-acp-mcp.md)
+- [Entry Points API](../concepts/09-entry-points-api.md)
+- [自定义 Persona 示例](../examples/custom-persona.md)

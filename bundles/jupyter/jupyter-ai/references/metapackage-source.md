@@ -108,6 +108,6 @@ generated:
 
 ## 相关概念
 
-- [元包架构](/concepts/03-metapackage-architecture.md)
-- [MCP 工具与 Notebook 交互](/concepts/07-mcp-tools-and-notebooks.md)
-- [Entry Points API](/concepts/09-entry-points-api.md)
+- [元包架构](../concepts/03-metapackage-architecture.md)
+- [MCP 工具与 Notebook 交互](../concepts/07-mcp-tools-and-notebooks.md)
+- [Entry Points API](../concepts/09-entry-points-api.md)

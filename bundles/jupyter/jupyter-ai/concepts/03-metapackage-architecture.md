@@ -196,9 +196,9 @@ docs/source/developers/index.md     → 显示在主站的 Developers 下
 
 ## 相关概念
 
-- [Jupyter AI 简介](/concepts/00-introduction.md)
-- [ACP 与 MCP 双协议](/concepts/04-protocols-acp-mcp.md)
-- [AI Persona 系统](/concepts/05-ai-personas.md)
-- [Entry Points API](/concepts/09-entry-points-api.md)
-- [版本与升级](/concepts/12-versioning-and-upgrades.md)
-- [元包源码参考](/references/metapackage-source.md)
+- [Jupyter AI 简介](00-introduction.md)
+- [ACP 与 MCP 双协议](04-protocols-acp-mcp.md)
+- [AI Persona 系统](05-ai-personas.md)
+- [Entry Points API](09-entry-points-api.md)
+- [版本与升级](12-versioning-and-upgrades.md)
+- [元包源码参考](../references/metapackage-source.md)

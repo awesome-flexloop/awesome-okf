@@ -112,7 +112,7 @@ just start         # 启动 JupyterLab
 
 ## 相关概念
 
-- [Entry Points API](/concepts/09-entry-points-api.md)
-- [AI Persona 系统](/concepts/05-ai-personas.md)
-- [自定义 Persona 示例](/examples/custom-persona.md)
-- [Persona API 参考](/references/persona-api.md)
+- [Entry Points API](../concepts/09-entry-points-api.md)
+- [AI Persona 系统](../concepts/05-ai-personas.md)
+- [自定义 Persona 示例](../examples/custom-persona.md)
+- [Persona API 参考](persona-api.md)

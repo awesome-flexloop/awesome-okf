@@ -43,6 +43,8 @@ Jupyter 是数据科学与交互式计算的核心平台，从底层的 ZeroMQ �
 | 3 | [jupyter-notebook](jupyter-notebook/index.md) | Jupyter Notebook v7——基于 JupyterLab 的后端 App、前端 Shell、Handler 体系、Shim 兼容层、前后端扩展系统 |
 | 24 | [jupyterlab](jupyterlab/index.md) | JupyterLab 下一代交互式IDE——Lumino+React+TypeScript前端、Tornado/Python后端、插件化架构（Token依赖注入）、LabShell八区域布局、DocumentRegistry文档工厂模式、ServiceManager服务聚合、Notebook/Cell三层Widget、Federated扩展生态、Core/Dev/App三运行模式（v4.x） |
 | 12 | [jupyterlab-desktop](jupyterlab-desktop/index.md) | JupyterLab 官方跨平台桌面应用（Electron）——内置Python环境管理、多窗口多会话、Jupyter Server自动启停、Factory预创建服务器、双层设置系统、CLI命令行工具、三层导航安全架构（v4.6.x） |
+| 25 | [jupyter-ai](jupyter-ai/index.md) | Jupyter AI 官方AI助手扩展——ACP+MCP双协议架构、多Agent支持（Claude/Codex/Copilot/Goose/Kiro等）、Jupyternaut默认Persona、聊天界面与Magic Commands双模式、Notebook AI工具集、实时协作、安全护栏、自定义MCP服务器与Persona扩展（v3.1.x） |
+| 29 | [jupyterlite-ai](jupyterlite-ai/index.md) | JupyterLite AI 浏览器端AI扩展——基于Vercel AI SDK的ToolLoopAgent引擎、Lumino Token DI架构、5大内置Provider（OpenAI/Anthropic/Google/Mistral/Generic）、工具调用与审批机制、MCP协议集成、Persona人设系统、JupyterLite纯浏览器WASM环境支持（v0.19.0） |
 | 13 | [lumino](lumino/index.md) | Lumino 桌面级Web UI工具集——Widget组件模型、MessageLoop消息循环、Signal类型安全事件、Layout布局引擎（DockPanel/BoxPanel/TabPanel）、CommandRegistry命令/快捷键、VirtualDOM虚拟DOM、Application插件化应用框架、DataGrid高性能Canvas表格，是JupyterLab的核心前端基础（v2026.7.3） |
 | 9 | [nbconvert](nbconvert/index.md) | Notebook格式转换工具——六阶段转换管线(Exporter→Preprocessor→Filter→Template→Writer→Postprocessor)、HTML/PDF/Markdown/脚本多格式输出、单元格标签控制、papermill参数化报告、自定义Exporter开发 |
 | 15 | [jupyterlab-github](jupyterlab-github/index.md) | JupyterLab GitHub浏览器扩展——通过Contents.IDrive接口将GitHub仓库映射为只读虚拟文件系统，双模式请求（直连/代理），支持大文件Blob降级、MyBinder一键启动、GitHub Enterprise部署，TypeScript+Python双组件架构（v4.0.0） |
@@ -51,16 +53,20 @@ Jupyter 是数据科学与交互式计算的核心平台，从底层的 ZeroMQ �
 | 18 | [jupyter-renderers](jupyter-renderers/index.md) | JupyterLab 官方MIME渲染器扩展集合——FASTA生物序列(MSA)、GeoJSON地理数据(Leaflet)、KaTeX/MathJax2数学公式、Vega/Vega-Lite可视化五个预构建扩展，Lerna monorepo管理，MIME渲染器四要素模式与ILatexTypesetter服务模式，hatch-jupyter-builder Python wheel打包 |
 | 10 | [try-jupyter](try-jupyter/index.md) | JupyterLite浏览器端体验站点——基于Pyodide+Xeus双内核(WASM)、零安装Python/C++/R/SQLite环境、Pixi构建管线、GitHub Pages部署、Playwright E2E测试 |
 | 23 | [echo-kernel](echo-kernel/index.md) | JupyterLite最小示例内核——Echo Kernel回显内核（约150行核心代码），BaseKernel模板方法模式、JupyterFrontEndPlugin插件注册、TypeScript+hatchling双构建系统，自定义JupyterLite内核开发最佳入门模板（v0.4.0） |
+| 26 | [pyodide-kernel](pyodide-kernel/index.md) | JupyterLite Pyodide Python内核——基于Pyodide WASM在浏览器运行CPython 3.12，双层架构（构建Addon+运行时WASM）、Comlink/Coincident双Worker模式、piplite三级包管理、IPython三层兼容适配（Mock→Patch→Subclass）、跨边界消息桥接（v0.9.0a1，Pyodide v0.29.3） |
+| 27 | [terminal](terminal/index.md) | JupyterLite浏览器端终端扩展——六插件架构替换JupyterLab TerminalManager、mock-socket WebSocket桥接、cockle WASM shell、Coincident(SAB)/Comlink(SW)双Worker通信模式、HeadlessShellPool编程式命令池、DriveFS文件系统挂载、主题自动同步（v1.7.0-a0） |
+| 30 | [cockle](cockle/index.md) | Cockle 浏览器内 bash-like Shell——三层Shell架构(Shell/BaseShellWorker/ShellImpl)、四类命令(Builtin/WASM/JS/External)、Tokenizer+Parser解析管线、SharedArrayBuffer/Service Worker双路同步stdin、Emscripten MEMFS+PROXYFS虚拟文件系统、Comlink/Coincident双Worker通信模式（v1.8.0-a0） |
 | 19 | [ui-profiler](ui-profiler/index.md) | JupyterLab UI性能基准测试扩展——Benchmark×Scenario N×M测量矩阵、6种测量方法(Execution Time/CSS Stylesheets/Rules/Groups/Usage/JS Self-Profiling)、10种内置场景、减法式CSS性能分析、MutationObserver/ResizeObserver驱动的Dramaturg自动化层、IQR鲁棒统计、火焰图可视化，支持自定义Benchmark/Scenario扩展 |
 | 20 | [jupyter-collaboration](jupyter-collaboration/index.md) | Jupyter实时协作扩展——基于Yjs CRDT的多用户同时编辑、WebSocket实时同步、Awareness用户感知（光标/选区/在线状态）、SQLiteYStore CRDT持久化、外带变更检测、文档Fork分叉与时间线版本导航、RtcContentProvider透明替换JupyterLab内容提供者、Jupyter Events事件系统（v5.0.0） |
 | 21 | [jupyterlab-webrtc-docprovider](jupyterlab-webrtc-docprovider/index.md) | JupyterLab P2P实时协作扩展——基于WebRTC DataChannel+y-webrtc实现浏览器直连文档同步，无需中心协作服务器，4插件架构(core/factory/status/retro-status)、SHA256房间ID隐私保护、三级配置优先级、SimplePeer分块补丁、BroadcastChannel同浏览器标签页发现，支持JupyterLab/JupyterLite/RetroLab（v0.2.0） |
 
-### 部署层：容器化运行
+### 部署层：容器化运行与静态部署
 
 | 顺序 | 知识束 | 一句话简介 |
 |------|--------|-----------|
 | 4 | [jupyter-docker-stacks](jupyter-docker-stacks/index.md) | Jupyter 官方 Docker 镜像——镜像层级体系（base→minimal→scipy→专业栈）、启动生命周期、Hook 自定义、用户权限、GPU 支持、CI/CD 构建 |
 | 5 | [cookiecutter-docker-stacks](cookiecutter-docker-stacks/index.md) | Jupyter Docker 镜像模板生成器——一键生成包含 Dockerfile/pytest测试/CI/CD/DevContainer 的自定义镜像项目，14个基础镜像预设、TrackedContainer测试框架、GitHub Actions自动发布 |
+| 28 | [xeus-lite-demo](xeus-lite-demo/index.md) | JupyterLite xeus 内核部署模板——GitHub Template 一键创建 JupyterLite 站点、双环境模型（构建环境vs WASM运行时）、多语言内核（Python/R/C++）、conda 包管理（emscripten-forge）、GitHub Actions 自动部署到 GitHub Pages |
 
 ### 自动化层：社区运营工具
 

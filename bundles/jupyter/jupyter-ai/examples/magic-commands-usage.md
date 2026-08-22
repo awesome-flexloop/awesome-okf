@@ -265,6 +265,6 @@ def calculate_factorial(n):
 
 ## 相关示例
 
-- [首次聊天快速上手](/examples/first-chat.md)
-- [Notebook AI 辅助工作流](/examples/notebook-ai-assistant.md)
-- [Magic Commands 概念](/concepts/10-magic-commands.md)
+- [首次聊天快速上手](first-chat.md)
+- [Notebook AI 辅助工作流](notebook-ai-assistant.md)
+- [Magic Commands 概念](../concepts/10-magic-commands.md)

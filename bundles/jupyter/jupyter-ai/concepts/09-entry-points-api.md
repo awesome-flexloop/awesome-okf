@@ -91,7 +91,7 @@ async def process_message(self, message: Message):
 
 可以直接传入 LangChain/LLM 的 `astream()` 输出。
 
-详细 API 见 [Persona API 参考](/references/persona-api.md)。
+详细 API 见 [Persona API 参考](../references/persona-api.md)。
 
 ## 注册 MCP 工具
 
@@ -196,10 +196,10 @@ my_command = "my_package.commands:my_chat_command"
 
 ## 相关概念
 
-- [AI Persona 系统](/concepts/05-ai-personas.md)
-- [MCP 工具与 Notebook 交互](/concepts/07-mcp-tools-and-notebooks.md)
-- [自定义 MCP 服务器](/concepts/08-custom-mcp-servers.md)
-- [Persona API 参考](/references/persona-api.md)
-- [Entry Points 参考](/references/entry-points-reference.md)
-- [配置参考](/references/config-reference.md)
-- [自定义 Persona 示例](/examples/custom-persona.md)
+- [AI Persona 系统](05-ai-personas.md)
+- [MCP 工具与 Notebook 交互](07-mcp-tools-and-notebooks.md)
+- [自定义 MCP 服务器](08-custom-mcp-servers.md)
+- [Persona API 参考](../references/persona-api.md)
+- [Entry Points 参考](../references/entry-points-reference.md)
+- [配置参考](../references/config-reference.md)
+- [自定义 Persona 示例](../examples/custom-persona.md)

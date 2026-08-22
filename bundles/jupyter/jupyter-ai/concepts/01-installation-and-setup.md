@@ -178,8 +178,8 @@ uv pip install -U jupyter-ai
 
 ## 相关概念
 
-- [Jupyter AI 简介](/concepts/00-introduction.md)
-- [聊天界面](/concepts/02-chat-interface.md)
-- [AI Persona 系统](/concepts/05-ai-personas.md)
-- [配置系统](/concepts/11-configuration-system.md)
-- [首次聊天示例](/examples/first-chat.md)
+- [Jupyter AI 简介](00-introduction.md)
+- [聊天界面](02-chat-interface.md)
+- [AI Persona 系统](05-ai-personas.md)
+- [配置系统](11-configuration-system.md)
+- [首次聊天示例](../examples/first-chat.md)

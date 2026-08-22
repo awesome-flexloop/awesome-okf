@@ -114,7 +114,7 @@ Jupyter AI 在一个会话中可同时扮演多个 MCP 角色：
 
 ### 内置 MCP 工具
 
-Jupyter AI 默认注册了 16 个 MCP 工具（分为 Notebook 工具集和 JupyterLab 工具集），详见 [MCP 配置与工具参考](/references/mcp-config-reference.md)。
+Jupyter AI 默认注册了 16 个 MCP 工具（分为 Notebook 工具集和 JupyterLab 工具集），详见 [MCP 配置与工具参考](../references/mcp-config-reference.md)。
 
 ### 自定义 MCP 服务器
 
@@ -123,7 +123,7 @@ Jupyter AI 默认注册了 16 个 MCP 工具（分为 Notebook 工具集和 Jupy
 - **Stdio 服务器**：本地进程方式（如文件系统工具、GitHub 工具）
 - **HTTP 服务器**：远程 HTTP 方式（如企业内部工具服务）
 
-配置后重启 JupyterLab，所有 ACP Agent 都能自动使用这些工具。详见 [自定义 MCP 服务器](/concepts/08-custom-mcp-servers.md)。
+配置后重启 JupyterLab，所有 ACP Agent 都能自动使用这些工具。详见 [自定义 MCP 服务器](08-custom-mcp-servers.md)。
 
 ## 协议协作流程
 
@@ -171,8 +171,8 @@ Jupyter AI 默认注册了 16 个 MCP 工具（分为 Notebook 工具集和 Jupy
 
 ## 相关概念
 
-- [元包架构](/concepts/03-metapackage-architecture.md)
-- [AI Persona 系统](/concepts/05-ai-personas.md)
-- [MCP 工具与 Notebook 交互](/concepts/07-mcp-tools-and-notebooks.md)
-- [自定义 MCP 服务器](/concepts/08-custom-mcp-servers.md)
-- [MCP 配置与工具参考](/references/mcp-config-reference.md)
+- [元包架构](03-metapackage-architecture.md)
+- [AI Persona 系统](05-ai-personas.md)
+- [MCP 工具与 Notebook 交互](07-mcp-tools-and-notebooks.md)
+- [自定义 MCP 服务器](08-custom-mcp-servers.md)
+- [MCP 配置与工具参考](../references/mcp-config-reference.md)

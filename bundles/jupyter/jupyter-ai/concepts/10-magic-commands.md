@@ -142,7 +142,7 @@ Magic Commands 通过 `AiMagics` 配置类管理设置。
 
 ## 相关概念
 
-- [AI Persona 系统](/concepts/05-ai-personas.md)
-- [MCP 工具与 Notebook 交互](/concepts/07-mcp-tools-and-notebooks.md)
-- [安装与配置](/concepts/01-installation-and-setup.md)
-- [Magic Commands 示例](/examples/magic-commands-usage.md)
+- [AI Persona 系统](05-ai-personas.md)
+- [MCP 工具与 Notebook 交互](07-mcp-tools-and-notebooks.md)
+- [安装与配置](01-installation-and-setup.md)
+- [Magic Commands 示例](../examples/magic-commands-usage.md)

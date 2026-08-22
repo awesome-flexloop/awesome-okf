@@ -168,7 +168,7 @@ HTTP 服务器通过 URL 连接到远程运行的 MCP 服务。适用于企业�
 
 ## Entry Points 方式注册（开发者）
 
-除了 JSON 配置文件，Python 包还可以通过 entry points 注册 MCP 工具，详见 [Entry Points API](/concepts/09-entry-points-api.md) 和 [工具注册 API 参考](/references/entry-points-reference.md#工具注册-jupyter_server_mcp-tools)。
+除了 JSON 配置文件，Python 包还可以通过 entry points 注册 MCP 工具，详见 [Entry Points API](09-entry-points-api.md) 和 [工具注册 API 参考](../references/entry-points-reference.md#工具注册-jupyter_server_mcp-tools)。
 
 ## 故障排查
 
@@ -186,9 +186,9 @@ HTTP 服务器通过 URL 连接到远程运行的 MCP 服务。适用于企业�
 
 ## 相关概念
 
-- [ACP 与 MCP 双协议](/concepts/04-protocols-acp-mcp.md)
-- [MCP 工具与 Notebook 交互](/concepts/07-mcp-tools-and-notebooks.md)
-- [配置系统](/concepts/11-configuration-system.md)
-- [Entry Points API](/concepts/09-entry-points-api.md)
-- [MCP 配置参考](/references/mcp-config-reference.md)
-- [配置自定义 MCP 服务器示例](/examples/custom-mcp-server.md)
+- [ACP 与 MCP 双协议](04-protocols-acp-mcp.md)
+- [MCP 工具与 Notebook 交互](07-mcp-tools-and-notebooks.md)
+- [配置系统](11-configuration-system.md)
+- [Entry Points API](09-entry-points-api.md)
+- [MCP 配置参考](../references/mcp-config-reference.md)
+- [配置自定义 MCP 服务器示例](../examples/custom-mcp-server.md)
