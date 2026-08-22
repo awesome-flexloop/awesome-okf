@@ -35,6 +35,7 @@ Jupyter 是数据科学与交互式计算的核心平台，从底层的 ZeroMQ �
 |------|--------|-----------|
 | 3 | [jupyter-notebook](jupyter-notebook/index.md) | Jupyter Notebook v7——基于 JupyterLab 的后端 App、前端 Shell、Handler 体系、Shim 兼容层、前后端扩展系统 |
 | 9 | [nbconvert](nbconvert/index.md) | Notebook格式转换工具——六阶段转换管线(Exporter→Preprocessor→Filter→Template→Writer→Postprocessor)、HTML/PDF/Markdown/脚本多格式输出、单元格标签控制、papermill参数化报告、自定义Exporter开发 |
+| 10 | [try-jupyter](try-jupyter/index.md) | JupyterLite浏览器端体验站点——基于Pyodide+Xeus双内核(WASM)、零安装Python/C++/R/SQLite环境、Pixi构建管线、GitHub Pages部署、Playwright E2E测试 |
 
 ### 部署层：容器化运行
 
