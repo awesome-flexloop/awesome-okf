@@ -210,3 +210,6 @@ sources:
 - F-164: jupyter_client/manager.py:824-837 — AsyncKernelManager 将所有 _async_* 方法直接赋值为公开 async 方法（start_kernel、shutdown_kernel 等），不经 run_sync 包装
 - F-165: jupyter_client/client.py:429-443 — `_async_is_alive()` 在 parent 是 KernelManager 时委托给 manager，否则通过 hb_channel.is_beating() 判断存活，无心跳时返回 True
 - F-166: jupyter_client/channels.py:106-124 — HBChannel._create_socket() 创建新的 zmq.REQ socket 并注册到 poller，心跳失败时调用此方法重建 socket 以打破 REQ/REP 状态机死锁
+- F-167: jupyter_client/ioloop/manager.py:16-33 — `as_zmqstream()` 装饰器在 connect_* 方法中临时将 context._socket_class 替换为 ZMQStream，创建后立即恢复，使通道返回 Tornado ZMQStream 对象
+- F-168: jupyter_client/asynchronous/client.py:47-52 — AsyncKernelClient 将 KernelClient 的 `_async_get_shell_msg`/`_async_get_iopub_msg`/`_async_get_stdin_msg`/`_async_get_control_msg`/`_async_wait_for_ready` 直接赋值为公开方法
+- F-169: jupyter_client/asynchronous/client.py:64-76 — AsyncKernelClient 使用 reqrep(wrapped, ...) 将 execute/history/complete/inspect/kernel_info/comm_info/shutdown 包装为支持 reply 参数的 async 方法

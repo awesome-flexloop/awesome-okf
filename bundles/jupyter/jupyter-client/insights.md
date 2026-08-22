@@ -127,7 +127,7 @@ generated: "2026-08-22"
 - F-167: as_zmqstream 装饰器在创建 socket 时临时替换 context._socket_class
 
 **反常识**：
-1. **KernelClient 基类的核心方法都是 async 实现，同步版本是派生出来的**：F-030 中 KernelClient 定义了 `_async_get_shell_msg`、`_async_recv_reply`、`_async_wait_for_ready` 等 async 方法，但它自身并不直接暴露 async API——这些 async 方法前缀是 `_async_`。BlockingKernelClient 通过 run_sync() 包装它们（F-044-F-049），而 AsyncKernelClient 直接将它们赋值为公开方法（F-047-F-052）。这意味着"基类即 async 实现"，同步是派生特性。
+1. **KernelClient 基类的核心方法都是 async 实现，同步版本是派生出来的**：F-030 中 KernelClient 定义了 `_async_get_shell_msg`、`_async_recv_reply`、`_async_wait_for_ready` 等 async 方法，但它自身并不直接暴露 async API——这些 async 方法前缀是 `_async_`。BlockingKernelClient 通过 run_sync() 包装它们（F-031），而 AsyncKernelClient 直接将它们赋值为公开方法（F-168）。这意味着"基类即 async 实现"，同步是派生特性。
 2. **BlockingKernelClient 和 AsyncKernelClient 几乎不添加新逻辑，纯靠方法赋值和 channel class 替换**：两个子类的代码量极小（blocking/client.py 72 行，asynchronous/client.py 76 行），差异主要在 channel class（ZMQSocketChannel vs AsyncZMQSocketChannel）和是否用 run_sync 包装。execute/complete/inspect 等业务方法通过 reqrep 装饰器从基类继承，没有任何代码重复。
 
 **行动建议**：
