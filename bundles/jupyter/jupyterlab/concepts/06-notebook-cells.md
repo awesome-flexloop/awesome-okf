@@ -1,331 +1,144 @@
 ---
 type: Concept
 title: "06 Notebook 与 Cell 架构"
-description: NotebookPanel/Notebook/Cell 三层 Widget 结构、三种 Cell 类型、NotebookModel 数据模型、Cell 执行流程与 NotebookActions
-tags: [jupyterlab, notebook, cell, codecell, markdowncell, notebookpanel, cellmodel]
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T08:15:00Z" }
-verified: { by: "process:grep-api-verification", at: "2026-08-22T08:15:00Z" }
+description: "JupyterLab Notebook 的三层 Widget 结构、Cell 类型体系、NotebookModel 数据模型、代码执行流程与窗口化渲染机制"
+tags: [jupyterlab, notebook, cell, widget, lumino, yjs, kernel, windowing]
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
-stale_after: 2027-02-22
+stale_after: 2027-08-23
 sources:
   - id: source-map
     resource: /references/source-code-map.md
     title: JupyterLab 源码文件地图
 ---
 
-## Notebook 三层 Widget 结构
+Notebook 是 JupyterLab 的核心交互单元。一个 `.ipynb` 文件在前端被渲染为三层嵌套的 Widget 结构，每层承担不同职责：外层 `NotebookPanel` 负责文档外壳与会话管理，中层 `Notebook` 负责单元格列表的选择与键盘导航，底层 `Cell` 负责单个单元格的编辑与渲染。本文拆解这三层结构及其协作机制。
 
-JupyterLab 的 Notebook UI 采用三层嵌套 Widget 结构（[F-027](/references/source-code-map.md)）：
+## 三层 Widget 结构
 
-```mermaid
-flowchart TB
-    subgraph panel["NotebookPanel (DocumentWidget)"]
-        TBAR["Toolbar<br/>(保存/插入/运行/重启等按钮)"]
-        subgraph nb["Notebook (StaticNotebook)"]
-            direction TB
-            CL["CellList<br/>(有序 Cell 列表)"]
-            C1["Cell 1<br/>(CodeCell/MarkdownCell/RawCell)"]
-            C2["Cell 2"]
-            C3["Cell 3..."]
-        end
-    end
-
-    CTX["Context<NotebookModel>"]
-    NBMODEL["NotebookModel"]
-    CMOD["CellModel[]"]
-
-    panel --> CTX
-    panel --> TBAR
-    panel --> nb
-    CTX --> NBMODEL
-    nb --> CL
-    CL --> C1
-    CL --> C2
-    CL --> C3
-    NBMODEL --> CMOD
-    C1 -.-> CMOD
-    C2 -.-> CMOD
-
-    style panel fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
-    style nb fill:#e8f5e9,stroke:#2e7d32
-    style CTX fill:#fff3e0,stroke:#e65100
-```
-
-### 第一层：NotebookPanel
-
-`NotebookPanel` 继承自 `DocumentWidget<Notebook, INotebookModel>`（[F-027](/references/source-code-map.md)），位于 `packages/notebook/src/panel.ts`：
-
-```typescript
-class NotebookPanel extends DocumentWidget<Notebook, INotebookModel> {
-  readonly content: Notebook;                // Notebook Widget
-  readonly sessionContext: ISessionContext;  // 内核会话上下文
-  readonly toolbar: Toolbar;                 // 工具栏
-  readonly revealed: Promise<void>;          // 首次渲染完成
-
-  // 信号
-  kernelChanged: Signal<this, IKernelConnection>;
-  sessionChanged: Signal<this, ISessionModel>;
-  saveState: Signal<NotebookPanel, SaveState>;
-}
-```
-
-NotebookPanel 在构造时：
-1. 创建 `Notebook` widget 作为 content
-2. 创建 `SessionContext`（连接内核）
-3. 监听 `sessionContext.kernelChanged` 和 `sessionContext.statusChanged`，转发信号
-4. 监听 `context.saveState` 转发保存状态
-5. 连接模型变化：当 context 的 model 切换时，更新 Notebook 的 model
-6. 工具栏按钮通过 `NotebookPanel.createToolbar(panel)` 静态方法创建（[F-027](/references/source-code-map.md)）
-
-### 第二层：Notebook（StaticNotebook）
-
-`Notebook` 类继承自 `StaticNotebook`（[F-026](/references/source-code-map.md)），位于 `packages/notebook/src/widget.ts`。它是 Notebook 的核心 Widget：
-
-| 属性/方法 | 说明 |
-|----------|------|
-| `model: INotebookModel` | 数据模型（cells、metadata、nbformat 等） |
-| `activeCellIndex: number` | 当前活跃 Cell 的索引 |
-| `activeCell: Cell` | 当前活跃 Cell Widget |
-| `widgets: readonly Cell[]` | 所有 Cell Widget 只读列表 |
-| `mode: 'edit' \| 'command'` | 编辑模式/命令模式 |
-| `addCell(index, cell)` | 插入 Cell |
-| `moveCell(fromIndex, toIndex)` | 移动 Cell |
-| `deleteCell(index)` | 删除 Cell |
-| `select(index)` | 选中 Cell |
-| `deselect(index)` | 取消选中 |
-| `extendSelectionTo(index)` | 扩展选区 |
-| `scrollToItem(index)` | 滚动到指定 Cell |
-| `activeCellChanged` 信号 | 活跃 Cell 变化 |
-| `stateChanged` 信号 | 状态变化 |
-| `modelChanged` 信号 | 模型变化 |
-| `selectionChanged` 信号 | 选区变化 |
-
-`StaticNotebook` 包含编辑器无关的 Notebook 逻辑，`Notebook` 类添加了与 CodeMirror 编辑器的集成。
-
-Notebook 在编辑/命令两种模式间切换：
-- **Command 模式**：键盘快捷键生效（如按 B 插入下方 Cell），蓝色边框标记
-- **Edit 模式**：焦点在 Cell 编辑器内，绿色边框标记，可直接输入代码/文本
-
-### 第三层：Cell
-
-`Cell` 类继承自 Lumino 的 `Widget`（[F-026](/references/source-code-map.md)），位于 `packages/cells/src/widget.ts`。它是所有 Cell 类型的抽象基类：
-
-```typescript
-class Cell<T extends ICellModel = ICellModel> extends Widget {
-  readonly model: T;                          // Cell 数据模型
-  readonly editor: CodeEditor.IEditor;        // 代码编辑器
-  readonly readOnly: boolean;
-  readonly inputArea: InputArea;              // 输入区域
-  readonly editorWidget: Widget;              // 编辑器 Widget
-  readonly node: HTMLElement;                 // DOM 节点
-
-  // 状态
-  isSelected: boolean;
-  activeCell: boolean;
-  mode: 'edit' | 'command';
-  placeholder: boolean;
-  scrollItemIntoView: boolean;
-}
-```
-
-## 三种 Cell 类型
-
-Cell 类层级如下（[F-026](/references/source-code-map.md)）：
+JupyterLab 的 Notebook UI 遵循 Lumino Widget 嵌套模式，从外到内分为三层：
 
 ```
-Widget
-  └── Cell<T>
-        ├── CodeCell        (代码单元：执行代码+显示输出)
-        ├── RawCell         (原始单元：不渲染、不执行)
-        └── AttachmentsCell (附件单元：带附件的单元)
-              └── MarkdownCell (Markdown单元：编辑/预览双模式)
+NotebookPanel (DocumentWidget)
+├── Toolbar (工具栏：保存/插入/运行/中断/重启)
+└── Notebook (StaticNotebook → WindowedList)
+    ├── Cell 0 (CodeCell / MarkdownCell / RawCell)
+    ├── Cell 1
+    └── Cell N
 ```
 
-### CodeCell（代码单元）
+### NotebookPanel：外层面板
 
-`CodeCell` 是最常用的 Cell 类型，包含三部分：
+`NotebookPanel` 定义在 `packages/notebook/src/panel.ts:33`，继承自 `DocumentWidget<Notebook, INotebookModel>`。它是文档注册表（DocumentRegistry）创建的顶层 Widget，包含两个子区域：
 
-```mermaid
-flowchart TB
-    subgraph cc["CodeCell Widget"]
-        direction TB
-        IP["InputPrompt<br/>[ ]: (In [n]:)"]
-        IA["InputArea<br/>(代码编辑器)"]
-        OA["OutputArea<br/>(输出区域)"]
-        OP["OutputPrompt<br/>[n]: (Out[n]:)"]
-    end
+- **工具栏**（`this.toolbar`）：CSS 类 `jp-NotebookPanel-toolbar`，承载保存、插入单元格、运行、中断内核、重启内核等按钮。
+- **内容区**（`this.content`）：即 `Notebook` 实例，CSS 类 `jp-NotebookPanel-notebook`。
 
-    OAS["OutputAreaModel"]
-    IA -->|"绑定"| CM["CodeCellModel"]
-    OA --> OAS
+`NotebookPanel` 在构造时将 `context.model` 赋给 `this.content.model`（panel.ts:46），建立模型与视图的绑定。它还监听 `sessionContext.kernelChanged` 和 `statusChanged` 信号：当内核切换时，自动将 `language_info` 和 `kernelspec` 写入文档 metadata（panel.ts:191-243）；当内核自动重启时弹出提示对话框。`NotebookPanel` 还实现了打印符号 `[Printing.symbol]`，通过 nbconvert 将 Notebook 转为 HTML 后调用浏览器打印（panel.ts:151-166）。
 
-    style cc fill:#e3f2fd,stroke:#1565c0
-```
+### Notebook：单元格列表 Widget
 
-核心属性：
-- `outputArea: OutputArea` — 输出区域 Widget，显示执行结果
-- `model: ICodeCellModel` — 代码 Cell 模型（包含 `executionCount`、`outputs`）
-- `executeCount: number | null` — 执行计数（In [n]/Out [n]）
-- `outputs: IOuputAreaModel` — 输出模型（stdout、display_data、error 等）
+`StaticNotebook` 定义在 `packages/notebook/src/widget.ts:206`，继承自 `WindowedList<NotebookViewModel>`。`Notebook` 类（widget.ts:1766）继承 `StaticNotebook`，增加了交互能力：
 
-执行代码时的行为：
-1. 用户按 Shift+Enter
-2. `NotebookActions.run(cell, sessionContext)` 被调用
-3. 获取 Cell 源码文本
-4. 通过 `sessionContext.session.kernel.execute()` 发送 execute_request 到内核
-5. 内核返回的消息流（stream、execute_result、display_data、error）被追加到 OutputAreaModel
-6. OutputArea Widget 监听模型变化，实时渲染输出
+- **activeCellIndex**（widget.ts:1976）：当前活动单元格的索引，通过 setter 触发 `activeCellChanged` 和 `stateChanged` 信号。当列表为空时返回 -1。
+- **activeCell**（widget.ts:2034）：当前活动单元格的 `Cell` Widget 实例。
+- **mode**：`NotebookMode` 类型，取值 `'command'` 或 `'edit'`（widget.ts:175）。命令模式下键盘事件由 Notebook 处理（导航、快捷键），编辑模式下事件传递给 CodeMirror 编辑器。
+- **selectionChanged** 信号：多选状态变化时触发。
 
-### MarkdownCell（Markdown 单元）
+`StaticNotebook` 持有 `rendermime`（MIME 渲染注册表）、`contentFactory`（Cell 工厂）、`editorConfig` 和 `notebookConfig` 配置对象。它通过 `modelChanged` 信号在模型切换时重建 Cell Widget 列表。
 
-`MarkdownCell` 继承自 `AttachmentsCell`（[F-026](/references/source-code-map.md)），支持两种模式：
+### Cell：单个单元格
 
-- **编辑模式**：显示 Markdown 源码编辑器（CodeMirror）
-- **渲染模式**：渲染后的 Markdown（标题、列表、代码块、Mermaid 图表、数学公式等）
+`Cell<T extends ICellModel>` 定义在 `packages/cells/src/widget.ts:196`，继承 Lumino `Widget`。Cell 的 DOM 结构包含：
 
-双击渲染的 Markdown Cell 切换到编辑模式，Ctrl+Enter 或 Shift+Enter 运行（渲染）。
+- `jp-Cell-header`：单元格头部（CellHeader）
+- `jp-Cell-inputWrapper`：输入区包装，包含 `InputCollapser`、`InputArea`（CodeMirror 编辑器 + Prompt）
+- `jp-Cell-outputWrapper`：输出区包装（仅 CodeCell），包含 `OutputCollapser` 和 `OutputArea`
+- `jp-Cell-footer`：单元格尾部（CellFooter）
 
-MarkdownCell 支持附件（图片等内嵌资源），由 `AttachmentsCell` 基类处理。
+Cell 支持 `inputHidden`/`outputHidden` 折叠状态，并将折叠状态持久化到模型 metadata 的 `jupyter.source_hidden`/`jupyter.outputs_hidden` 字段（widget.ts:473-493）。Cell 还实现了 `inViewport` 信号，配合窗口化系统在单元格进入/离开视口时触发渲染或回收。
 
-### RawCell（原始单元）
+## Cell 类型体系
 
-`RawCell` 不渲染、不执行，内容原样显示。主要用于在导出（nbconvert）时保留原始文本。
+JupyterLab 支持三种 Cell 类型，均在 `packages/cells/src/widget.ts` 中定义：
 
-## NotebookModel：Notebook 数据模型
+### CodeCell（代码单元格）
 
-`NotebookModel` 实现 `INotebookModel` 接口（[F-030](/references/source-code-map.md)），位于 `packages/notebook/src/model.ts`，管理 Notebook 的 JSON 数据：
+`CodeCell` 继承 `Cell<ICodeCellModel>`（widget.ts:1091），是唯一可执行的 Cell 类型。它在构造时创建 `OutputArea` 实例（widget.ts:1117），用于渲染内核返回的输出结果。CodeCell 额外维护：
 
-```typescript
-interface INotebookModel extends IModel {
-  readonly cells: IObservableList<ICellModel>;  // Cell 模型列表（可观察）
-  readonly metadata: IObservableJSON;            // Notebook 元数据
-  readonly nbformat: number;                     // nbformat 版本（4）
-  readonly nbformatMinor: number;                // nbformat 次版本（5）
-  readonly defaultKernelLanguage: string;        // 默认内核语言
-  readonly defaultKernelName: string;            // 默认内核名称
-  activeCellIndex: number;                       // 活跃 Cell 索引
-  readOnly: boolean;
-}
-```
+- **prompt**：执行计数提示符，如 `[1]`、`[*]`（运行中）、`[ ]`（未执行）。
+- **outputArea**：`OutputArea` Widget，管理 `OutputAreaModel` 中的输出列表。
+- **executionState** / **executionCount**：来自模型的执行状态和计数，驱动 Prompt 显示。
 
-### Cell 模型层级
+### MarkdownCell（Markdown 单元格）
 
-```
-ICellModel
-  ├── IRawCellModel (RawCell)
-  ├── IAttachmentsCellModel
-  │     └── IMarkdownCellModel (MarkdownCell)
-  └── ICodeCellModel (CodeCell)
-        ├── executionCount: number | null
-        ├── outputs: IOutputAreaModel
-        ├── clearOnNextExecution: boolean
-```
+`MarkdownCell` 继承 `AttachmentsCell<IMarkdownCellModel>`（widget.ts:2162），支持编辑/预览双模式。在编辑模式下显示 CodeMirror 编辑器，在渲染模式下通过 `rendermime` 将 Markdown 渲染为 HTML。它还支持标题折叠（`headingCollapsed`），点击标题旁的折叠按钮可隐藏该标题下的所有子单元格。MarkdownCell 管理附件（attachments），保存时自动清理未引用的附件（panel.ts:86-98）。
 
-所有 Cell 模型都继承自 `ICellModel`：
-```typescript
-interface ICellModel extends ICodeEditor.IModel {
-  type: 'code' | 'markdown' | 'raw';
-  id: string;
-  contentChanged: ISignal<this, void>;
-  stateChanged: ISignal<this, IChangedArgs>;
-  metadata: IObservableJSON;
-  trusted: boolean;
-  // from ICodeEditor.IModel:
-  // value: IObservableString (Cell 文本内容)
-  // mimeType: string
-  // selections: IObservableMap
-}
-```
+### RawCell（原始单元格）
 
-### 模型与 Widget 的绑定
+`RawCell` 继承 `Cell<IRawCellModel>`（widget.ts:2688），不经过任何渲染器，直接显示原始文本。RawCell 通常用于 nbconvert 导出时需要原样保留的内容（如 LaTeX 原文）。
 
-Notebook Widget 通过 CellList（[F-031](/references/source-code-map.md)）维护 Widget 列表与模型列表的同步：
+## NotebookModel 与 sharedModel
 
-1. Notebook 构造时，监听 `model.cells.changed` 信号
-2. 当模型列表变化（添加/删除/移动 Cell）时，自动创建/销毁/移动对应的 Cell Widget
-3. Cell Widget 的 `model` 属性指向对应的 CellModel
-4. Cell Widget 监听模型的 `contentChanged` 和 `stateChanged`，自动更新 UI
+`NotebookModel` 定义在 `packages/notebook/src/model.ts:99`，实现 `INotebookModel` 接口。其核心数据结构包括：
 
-这是经典的 MVVM/MVC 模式——模型是 JSON 数据，Widget 是视图，Notebook 类充当控制器。
+- **cells: CellList**（model.ts:157）：可观察的单元格模型列表，基于 `IObservableList`，在增删改时发出 `changed` 信号。
+- **sharedModel: ISharedNotebook**（model.ts:68）：底层 Yjs CRDT 文档，默认由 `YNotebook.create()` 创建（model.ts:109）。它存储单元格内容、metadata、nbformat 版本号，是实时协作的数据基础。
+- **metadata**（model.ts:199）：Notebook 级元数据的副本，提供 `getMetadata`/`setMetadata`/`deleteMetadata` 方法。
+- **nbformat / nbformatMinor**：Notebook 格式版本号，来自 sharedModel。
+- **deletedCells: string[]**：自上次运行以来删除的单元格 ID 列表。
+- **dirty / readOnly**：文档脏标记和只读状态，dirty 委托给 sharedModel。
 
-## NotebookActions：Notebook 操作集
+`NotebookModel` 构造时连接 `_cells.changed`、`sharedModel.changed` 和 `sharedModel.metadataChanged` 三个信号，将底层 Yjs 文档变化转发为 Lumino 信号，供 Widget 层响应。模型支持 `standaloneModel` 标志——当外部传入 sharedModel 时为 false（协作场景），否则为 true（独立文档）。
 
-`NotebookActions` 命名空间（位于 `packages/notebook/src/actions.tsx`）封装了所有 Notebook 级别的操作（[F-026](/references/source-code-map.md)）：
+## 代码执行流程
 
-| 方法 | 功能 |
+CodeCell 的执行是 Notebook 最核心的交互链路，涉及前端、Kernel 服务和输出渲染三层：
+
+1. **触发**：用户点击运行按钮或按 `Shift+Enter`，调用 `NotebookActions.runAndAdvance`（actions.tsx:814）或 `NotebookActions.run`（actions.tsx:737）。
+2. **委托执行器**：`runCell` 内部函数（actions.tsx:3050）将执行请求封装为 `INotebookCellExecutor.IRunCellOptions`，调用可插拔的 `executor.runCell()`；未设置 executor 时回退到 `defaultRunCell`。
+3. **Kernel 请求**：默认执行器通过 `sessionContext.session.kernel.requestExecute()` 向 Kernel 发送 `execute_request` 消息，携带代码内容和 `store_history` 标志。
+4. **IOPub 消息流**：Kernel 通过 IOPub 通道回发状态消息：`status: busy` → `execute_input` → 多个 `stream`/`display_data`/`execute_result`/`error` 消息 → `status: idle`。
+5. **输出追加**：`@jupyterlab/services` 的 Future 对象将每条 IOPub 消息转为 `IObservableList` 变更，CodeCell 的 `OutputAreaModel` 追加输出项。
+6. **渲染更新**：`OutputArea` Widget 监听 model 变化，通过 `rendermime` 注册表为每种 MIME 类型选择渲染器，将输出渲染为 DOM 节点。
+7. **执行计数**：收到 `execute_input` 消息时更新 `executionCount`，Prompt 从 `[*]` 变为 `[N]`。
+
+## 窗口化渲染
+
+对于包含数百甚至数千个 Cell 的大型 Notebook，JupyterLab 采用窗口化（windowing）技术避免一次性渲染所有 Cell。核心实现在 `packages/notebook/src/windowing.ts`：
+
+- **NotebookViewModel**（windowing.ts:136）：继承 `WindowedListModel`，估算每个 Cell 的高度（基于编辑器行数和输出行数），为虚拟滚动条提供位置计算。
+- **NotebookWindowedLayout**：自定义布局，只将视口内（含 overscan 区域）的 Cell 挂载到 DOM，视口外的 Cell 被 `Widget.detach` 移除但保留实例。
+- **IntersectionObserver**（windowing.ts:49-51）：子类化 IntersectionObserver，在 Notebook 滚动时暂停回调以避免性能抖动，精确检测 Cell 进入/离开视口。
+- **content-visibility CSS**：另一种窗口化模式（`contentVisibility`），利用浏览器原生 CSS `content-visibility: auto` 跳过离屏 Cell 的渲染，比 `full` 模式更轻量。
+- **ScrollbarItem**（widget.ts:1565）：虚拟滚动条上的迷你条目，显示 Cell 类型、执行计数和脏标记，帮助用户在长 Notebook 中定位。
+
+窗口化模式由 `notebookConfig.windowingMode` 控制，可选 `'full'`、`'defer'`、`'contentVisibility'`。NotebookPanel 在 `onBeforeHide`/`onBeforeShow` 中设置 `content.isParentHidden`（panel.ts:171-186），通知窗口化列表在 Notebook 隐藏时暂停观察。
+
+## Cell 工具栏扩展点
+
+`@jupyterlab/cell-toolbar` 包提供了 Cell 级别的工具栏扩展点。`CellToolbarTracker`（celltoolbartracker.ts:53）为每个 Notebook 创建追踪器，在活动 Cell 旁显示浮动工具栏。扩展开发者可通过注册 Widget 扩展向工具栏添加按钮——`CellToolbarTracker` 本身作为一个 Widget Extension，在 Notebook 创建时自动实例化（celltoolbartracker.ts:523）。这使得第三方扩展可以为特定类型的 Cell（如代码单元格）添加上下文操作按钮，而无需修改核心代码。
+
+## NotebookActions：常用操作的静态封装
+
+`NotebookActions` 是一个命名空间（actions.tsx:146），以静态函数形式封装了 Notebook 的所有常用操作，命令系统和 UI 按钮都委托给它：
+
+| 分类 | 方法 |
 |------|------|
-| `run(notebook, sessionContext)` | 运行当前 Cell |
-| `runAll(notebook, sessionContext)` | 运行所有 Cell |
-| `runAndAdvance(notebook, sessionContext)` | 运行并跳到下一个 Cell |
-| `runAndInsert(notebook, sessionContext)` | 运行并插入新 Cell |
-| `runSelected(notebook, sessionContext)` | 运行选中的 Cell |
-| `insertAbove(notebook)` | 在上方插入 Cell |
-| `insertBelow(notebook)` | 在下方插入 Cell |
-| `deleteCells(notebook)` | 删除选中 Cell |
-| `selectAbove(notebook)` | 选中上方 Cell |
-| `selectBelow(notebook)` | 选中下方 Cell |
-| `moveCellUp(notebook)` | 上移 Cell |
-| `moveCellDown(notebook)` | 下移 Cell |
-| `cut(notebook)` | 剪切 Cell |
-| `copy(notebook)` | 复制 Cell |
-| `paste(notebook)` | 粘贴 Cell |
-| `changeCellType(notebook, type)` | 切换 Cell 类型（code/markdown/raw） |
-| `splitCell(notebook)` | 分割 Cell |
-| `mergeCells(notebook)` | 合并 Cell |
-| `undo(notebook)` | 撤销 |
-| `redo(notebook)` | 重做 |
-| `toggleAllLineNumbers(notebook)` | 切换行号显示 |
-| `clearAllOutputs(notebook)` | 清除所有输出 |
-| `restartRunAll(notebook, sessionContext)` | 重启内核并运行所有 |
+| 执行 | `run`、`runCells`、`runAndAdvance`、`runAndInsert`、`runAll`、`runAllAbove`、`runAllBelow`、`runSelected` |
+| 编辑 | `deleteCells`、`insertAbove`、`insertBelow`、`splitCell`、`mergeCells`、`changeCellType` |
+| 移动 | `moveUp`、`moveDown`、`moveCells` |
+| 剪贴板 | `copy`、`paste`、`copyOrCut`、`copyToSystemClipboard`、`pasteFromSystemClipboard` |
+| 选择/历史 | `selectAll`、`undo`、`redo` |
 
-每个操作都是一个静态方法，接收 notebook widget 和 sessionContext 作为参数，修改 notebook model，Widget 自动响应模型变化。
-
-## Cell 执行流程
-
-```mermaid
-sequenceDiagram
-    participant U as 用户
-    participant NA as NotebookActions
-    participant NB as Notebook
-    participant CC as CodeCell
-    participant SC as SessionContext
-    participant K as Kernel (后端)
-    participant OA as OutputArea
-
-    U->>U: 按 Shift+Enter
-    U->>NA: runAndAdvance(notebook, sessionContext)
-    NA->>NB: activeCell (当前 CodeCell)
-    NA->>CC: model.value.text (获取源码)
-    NA->>SC: sessionContext.session.kernel
-    Note over NA: 设置 executionCount = null (In [*]:)
-    NA->>K: kernel.execute(code, { ... })
-    Note over K: 内核执行代码
-    K-->>OA: IOPub stream (stdout)
-    OA->>OA: 添加输出到 OutputAreaModel
-    K-->>OA: IOPub display_data
-    OA->>OA: 渲染富媒体输出
-    K-->>OA: IOPub execute_result (Out [n]:)
-    OA->>CC: 更新 executionCount
-    K-->>OA: IOPub status (idle)
-    NA->>NB: activeCellIndex++ (跳到下一个)
-```
-
-## 工具栏默认按钮
-
-`NotebookPanel.createToolbar()` 创建以下工具栏按钮（[F-027](/references/source-code-map.md)）：
-- **保存**（Save）：保存 Notebook
-- **插入**（Insert）：在下方插入 Cell
-- **剪切/复制/粘贴**：Cell 编辑操作
-- **运行**（Run）：运行当前 Cell
-- **中断**（Stop）：中断内核
-- **重启**（Restart）：重启内核
-- **Cell 类型选择器**：切换 code/markdown/raw
-- **命令面板**：打开命令面板
-- **Kernel 指示器**：显示内核状态
+这些函数均接收 `Notebook` 实例作为第一个参数，操作其 model 和 activeCellIndex。例如 `deleteCells`（actions.tsx:501）从 model 中移除选中的 Cell 并调整 activeCellIndex；`changeCellType`（actions.tsx:708）将 Cell 在 code/markdown/raw 之间转换，保留源文本内容。
 
 ## 相关概念
 
-- [05 文档注册与 Widget 工厂模式](/concepts/05-document-widget-system.md)
-- [04 服务层与后端通信](/concepts/04-service-layer.md)
-- [03 插件系统与依赖注入](/concepts/03-plugin-system.md)
-- [源码文件地图](/references/source-code-map.md)
+- [05 文档注册与 Widget 工厂](/concepts/05-document-registry.md)
+- [07 扩展生态系统](/concepts/07-extension-ecosystem.md)
+- [04 服务层与后端通信](/concepts/04-services-and-communication.md)
+- [08 构建系统与运行模式](/concepts/08-build-and-modes.md)

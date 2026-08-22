@@ -1,3 +1,9 @@
+---
+type: bundle
+title: "Jupyter Book CLI"
+okf_version: "0.2"
+---
+
 # Jupyter Book CLI
 
 Jupyter Book v2 是基于 MyST 引擎的下一代科学文档出版工具，采用 **Python + TypeScript 双层架构**——Python 层管理 Node.js 环境，TypeScript 层委托 myst-cli 实现文档构建、多格式导出和预览。

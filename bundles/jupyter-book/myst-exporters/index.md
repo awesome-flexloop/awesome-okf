@@ -1,3 +1,9 @@
+---
+type: bundle
+title: "myst-exporters 多格式导出器"
+okf_version: "0.2"
+---
+
 # myst-exporters：多格式导出器
 
 myst-exporters 是 MyST 生态的多格式导出引擎，将 MyST Markdown 文档（MDAST）转换为 HTML、LaTeX、PDF、DOCX、JATS XML、Markdown、Typst 等多种输出格式，同时支持 JATS XML 和 LaTeX 的导入。

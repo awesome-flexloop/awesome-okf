@@ -1,3 +1,9 @@
+---
+type: bundle
+title: "myst-theme 主题系统"
+okf_version: "0.2"
+---
+
 # myst-theme：MyST 主题系统
 
 myst-theme 是 MyST 生态的主题和渲染层，提供 Book（多页面文档站）和 Article（单页文章）两个基于 Remix SSR 的主题，以及一套完整的 React 组件库（MDAST→React 渲染器、Provider 系统、Jupyter 集成组件）和 CSS 变量驱动的样式系统。

@@ -1,3 +1,9 @@
+---
+type: bundle
+title: "mystmd 核心引擎"
+okf_version: "0.2"
+---
+
 # mystmd：MyST Markdown 引擎核心
 
 mystmd 是 MyST（Markedly Structured Text）生态的 TypeScript 引擎核心，提供 Markdown 解析（基于 markdown-it + micromark 风格插件）、MDAST 转换管线（30+ 个 transform 插件）、公共类型系统、配置加载、frontmatter 解析和多格式导出的底层基础设施。
