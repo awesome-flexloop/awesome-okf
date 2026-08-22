@@ -3,15 +3,15 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识束总索引"
 description: "awesome-okf-xs 知识束（bundles）分组导航——按技术生态组织的开源项目源码中文教程"
-total_bundles: 24
-groups: 6
+total_bundles: 36
+groups: 10
 ---
 
 # 知识束总索引（Bundles Index）
 
-> **OKF (Open Knowledge Format)** 知识束是面向开源项目源码的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识束包含概念文档（concepts/）、实战示例（examples/）、源码参考（references/）三层结构。
+> **OKF (Open Knowledge Format)** 知识束是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识束包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **24 个知识束**，按技术生态分为 **6 个分组**。
+> 当前共 **36 个知识束**，按技术生态分为 **10 个分组**。
 
 ---
 
@@ -28,11 +28,16 @@ groups: 6
 │           对象模型 · GC · 字节码 · 导入系统            │
 └──────────┬──────────────────────────┬────────────────┘
            │                          │
-┌──────────▼──────────┐  ┌────────────▼─────────────────┐
+┌─────────────────────┬──────────────────────────┬────────────────┐
 │ 📦 conda/ 环境管理   │  │ 🔧 tooling/ 通用开发工具      │
 │ 包管理 · 锁定 · 打包 │  │ 任务自动化 · CI 集成          │
 │ 安装器 · Rust 引擎   │  │                              │
 └──────────┬──────────┘  └────────────┬─────────────────┘
+           │                          │
+┌──────────▼──────────────────────────▼─────────────────┐
+│ 🏗️ cmake/ 构建系统                                    │
+│ CMake构建生成器 · 多后端 · CTest测试 · CPack打包       │
+└──────────┬──────────────────────────┬─────────────────┘
            │                          │
            ├──────────────────────────┤
            │                          │
@@ -41,6 +46,19 @@ groups: 6
 │ 计算 · Notebook     │  │ 文档生成 · 扩展 · 国际化      │
 │ 内核协议 · Docker   │  │ 社交卡片 · 重定向 · 数学渲染  │
 └─────────────────────┘  └──────────────────────────────┘
+
+┌──────────────────────────────────────────────────────┐
+│           🤖 agnes-ai/ AI大模型生态                    │
+│  多模态API网关 · 对话/图像/视频 · Agent工具调用        │
+│   （独立AI服务层，通过OpenAI兼容SDK调用）              │
+└──────────────────────────┬───────────────────────────┘
+                           │ 模型调用
+┌──────────────────────────▼───────────────────────────┐
+│           🤖 ai-agent/ AI Agent框架                   │
+│  Agent循环 · 工具系统 · 记忆架构 · 多代理编排          │
+│  插件系统 · 通信协议 · 技能/Persona                   │
+│   （构建在大模型API之上的Agent运行时架构）             │
+└──────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -52,10 +70,13 @@ groups: 6
 ```
 📐 okf-spec       了解 OKF 知识束格式规范（30分钟）
   → 🐍 cpython   理解 Python 解释器底层（选读核心章节）
-    → 🔧 pyinvoke 掌握 Python 任务自动化（实用工具）
-      → 📦 conda 深入环境与包管理（日常开发必备）
-        → 📄 sphinx  掌握文档工程能力（项目文档写作）
-          → 📓 jupyter 交互式计算与数据分析
+    → 🔧 copier  掌握项目模板脚手架（创建标准化项目）
+      → 🔧 pyinvoke 掌握 Python 任务自动化（实用工具）
+        → 📦 conda 深入环境与包管理（日常开发必备）
+          → 🏗️ cmake 掌握跨平台构建系统（C/C++项目必备）
+            → 📄 sphinx  掌握文档工程能力（项目文档写作）
+              → 📓 jupyter 交互式计算与数据分析
+                → 📊 pydata 科学计算全栈（NumPy→pandas→matplotlib/plotly→Dash→PyTables）
 ```
 
 ---
@@ -68,8 +89,12 @@ groups: 6
 | [🐍 Python 语言核心](python/index.md) | 1 | CPython 解释器核心架构——所有 Python 知识的底座 |
 | [📦 Conda 包管理生态](conda/index.md) | 6 | Conda 核心、lock/pack/constructor 工具链、Rattler Rust 实现、文档门户 |
 | [📓 Jupyter 数据科学生态](jupyter/index.md) | 4 | 内核协议、Notebook 格式、Notebook 应用、Docker 部署 |
-| [📄 Sphinx 文档工程生态](sphinx/index.md) | 9 | Sphinx 核心、功能扩展、输出渲染扩展、Docker 部署 |
-| [🔧 通用开发工具](tooling/index.md) | 3 | PyInvoke 任务引擎、invocations 任务集合、GitHub Problem Matcher |
+| [📄 Sphinx 文档工程生态](sphinx/index.md) | 10 | Sphinx 核心、默认主题、功能扩展、输出渲染扩展、Docker 部署 |
+| [🔧 通用开发工具](tooling/index.md) | 5 | PyInvoke 任务引擎、Copier 项目模板、invocations 任务集合、GitHub Problem Matcher、Ninja 极速构建 |
+| [🏗️ CMake 构建系统生态](cmake/index.md) | 1 | CMake 跨平台构建生成器——门面模式、状态快照、多生成器工厂、目标传播、CTest/CPack 集成 |
+| [🤖 AgnesAI 大模型生态](agnes-ai/index.md) | 1 | AgnesAI多模态AI平台——OpenAI兼容API、对话/图像/视频生成、Agent工具调用 |
+| [🤖 AI Agent 框架](ai-agent/index.md) | 1 | AI Agent运行时框架——Agent循环、工具系统、记忆架构、多代理编排、插件架构、通信协议 |
+| [📊 PyData 科学计算生态](pydata/index.md) | 6 | NumPy/pandas/matplotlib/Plotly/Dash/PyTables——数值计算、数据分析、可视化、Web应用、HDF5存储 |
 
 ---
 
@@ -112,6 +137,7 @@ groups: 6
 | 知识束 | 简介 |
 |--------|------|
 | [sphinx](sphinx/sphinx/index.md) | 文档生成器核心——Builder、Doctree、Domain、扩展接口、主题 |
+| [alabaster](sphinx/alabaster/index.md) | Sphinx 默认主题——极简架构（130行Python）、50+配置选项、组件化侧边栏、主题开发范本 |
 | [sphinx-argparse](sphinx/sphinx-argparse/index.md) | CLI 文档——argparse 自动文档、man page、嵌套子命令 |
 | [sphinx-autobuild](sphinx/sphinx-autobuild/index.md) | 热重载预览——文件监听、自动重建、WebSocket 刷新 |
 | [sphinx-intl](sphinx/sphinx-intl/index.md) | 国际化——gettext 目录、Transifex、翻译统计 |
@@ -125,6 +151,37 @@ groups: 6
 
 | 知识束 | 简介 |
 |--------|------|
+| [ninja](tooling/ninja/index.md) | Ninja 极速构建系统——Node-Edge二分图依赖模型、关键路径并行调度、mtime增量构建、depfile头依赖追踪、dyndep动态依赖、CMake/Meson/gn后端引擎（11概念+5示例+8信源，共27文档） |
+| [copier](tooling/copier/index.md) | 项目模板渲染与更新——Jinja2 沙箱、问卷系统、Git 版本管理、三向合并更新、任务/迁移、Python API |
 | [pyinvoke](tooling/pyinvoke/index.md) | 任务自动化——Pythonic CLI 任务、Context、Runner、Watcher |
 | [invocations](tooling/invocations/index.md) | 官方任务集——打包、测试、文档、CI、检查格式化 |
 | [github-problem-matcher](tooling/github-problem-matcher/index.md) | Actions 注解——Problem Matcher 模式、正则捕获、PR 错误高亮 |
+
+### 🏗️ [CMake 构建系统生态](cmake/index.md)
+
+| 知识束 | 简介 |
+|--------|------|
+| [cmake](cmake/cmake/index.md) | CMake 核心构建系统——两阶段执行模型、不可变状态快照、多生成器工厂（Makefile/Ninja/VS/Xcode）、目标属性 PUBLIC/PRIVATE/INTERFACE 传播、find_package Module/Config 双模式、策略系统、CTest 测试、CPack 打包（13概念+3示例+6信源，共22文档） |
+
+### 🤖 [AgnesAI 大模型生态](agnes-ai/index.md)
+
+| 知识束 | 简介 |
+|--------|------|
+| [agnes-ai-models](agnes-ai/agnes-ai-models/index.md) | AgnesAI统一API网关——OpenAI兼容接口、对话补全、文生图、文生视频、Function Calling/Agent工具调用、速率限制、错误处理、生产最佳实践（8概念+5示例+2信源，共17文档） |
+
+### 🤖 [AI Agent 框架](ai-agent/index.md)
+
+| 知识束 | 简介 |
+|--------|------|
+| [ai-agent](ai-agent/ai-agent/index.md) | AI Agent框架核心架构——Agent循环、工具系统（注册表/Capability Seam）、记忆架构（ST/LT/HMM三层）、多代理编排（MoA/Workspace/Subagent）、Provider抽象、上下文管理（压缩/知识蒸馏）、技能Persona系统（SKILL.md/280+角色）、插件架构（Cordis Fiber/Context原型链）、通信协议（MCP/ACP/COM/OSC）（10概念+4示例+1信源，共15文档） |
+
+### 📊 [PyData 科学计算生态](pydata/index.md)
+
+| 知识束 | 简介 |
+|--------|------|
+| [numpy](pydata/numpy/index.md) | 科学计算基础库——ndarray多维数组、ufunc通用函数、dtype类型系统、广播规则、索引切片、线性代数、随机数（8概念+2示例+4信源，共18文档） |
+| [pandas](pydata/pandas/index.md) | 数据分析核心库——DataFrame/Series数据模型、BlockManager列式存储、Index体系、GroupBy split-apply-combine、IO读写（4概念+1示例+1信源，共10文档） |
+| [matplotlib](pydata/matplotlib/index.md) | 绑图基础库——Artist层级体系、多后端渲染、pyplot状态机、OO接口、属性系统（4概念+1示例+1信源，共10文档） |
+| [plotly](pydata/plotly/index.md) | 交互式可视化——Figure数据模型、BasePlotlyType对象层级、Plotly Express高级API、renderers渲染框架（4概念+1示例+1信源，共10文档） |
+| [dash](pydata/dash/index.md) | Web应用框架——Dash主类、WSGI/ASGI多后端、回调系统(Input/Output/State)、组件系统、MCP集成（4概念+1示例+1信源，共10文档） |
+| [pytables](pydata/pytables/index.md) | HDF5数据管理——Node/Group/Leaf/Table层次、Atom类型系统、Blosc2压缩、CSI分块索引、NumPy/pandas集成（4概念+1示例+1信源，共10文档） |
