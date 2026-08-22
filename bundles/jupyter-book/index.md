@@ -66,16 +66,16 @@ Jupyter Book v2 与 MySTmd 是 Executable Books 组织推出的新一代技术�
 
 ## 📊 知识束概览
 
-| 层次 | 知识束 | Tier | 状态 |
-|------|--------|------|------|
-| 核心引擎 | [mystmd](mystmd/index.md) | Tier 1 | 🔄 生成中 |
-| 工具链 | [myst-cli](myst-cli/index.md) | Tier 1 | 🔄 生成中 |
-| 语法层 | [myst-syntax](myst-syntax/index.md) | Tier 2 | 🔄 生成中 |
-| 输出层 | [myst-exporters](myst-exporters/index.md) | Tier 2 | 🔄 生成中 |
-| 应用层 | [jupyter-book](jupyter-book/index.md) | Tier 2 | 🔄 生成中 |
-| 执行层 | [myst-execute](myst-execute/index.md) | Tier 2 | 🔄 生成中 |
-| IDE集成 | [jupyterlab-myst](jupyterlab-myst/index.md) | Tier 3 | 🔄 生成中 |
-| 表现层 | [myst-theme](myst-theme/index.md) | Tier 2 | 🔄 生成中 |
+| 层次 | 知识束 | Tier | 内容文档数 |
+|------|--------|------|-----------|
+| 核心引擎 | [mystmd](mystmd/index.md) | Tier 1 | 26 |
+| 工具链 | [myst-cli](myst-cli/index.md) | Tier 1 | 19 |
+| 语法层 | [myst-syntax](myst-syntax/index.md) | Tier 2 | 16 |
+| 输出层 | [myst-exporters](myst-exporters/index.md) | Tier 2 | 16 |
+| 应用层 | [jupyter-book](jupyter-book/index.md) | Tier 2 | 10 |
+| 执行层 | [myst-execute](myst-execute/index.md) | Tier 2 | 15 |
+| IDE集成 | [jupyterlab-myst](jupyterlab-myst/index.md) | Tier 3 | 13 |
+| 表现层 | [myst-theme](myst-theme/index.md) | Tier 2 | 13 |
 
 ## 📖 推荐学习路径
 
