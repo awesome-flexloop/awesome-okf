@@ -1,9 +1,14 @@
 ---
-okf_version: "0.2"
-type: group
+type: category
 title: "📖 Jupyter Book v2 / MySTmd 生态"
-description: "Executable Books 新一代技术文档工具链源码级中文教程——8个知识束，覆盖MyST解析引擎、CLI工具链、语法扩展、多格式导出、Notebook执行、交互式代码运行、JupyterLab集成与主题系统"
+okf_version: "0.2"
+description: "Executable Books 新一代技术文档工具链源码级中文教程——8个知识束、128篇内容文档（70概念+25示例+33信源），覆盖MyST解析引擎、CLI工具链、语法扩展、多格式导出、Notebook执行、交互式代码运行、JupyterLab集成与主题系统"
 total_bundles: 8
+total_content_docs: 128
+total_md_files: 191
+verified: grep-verified
+generated: true
+status: stable
 ---
 
 # 📖 Jupyter Book v2 / MySTmd 生态
@@ -11,8 +16,6 @@ total_bundles: 8
 Jupyter Book v2 与 MySTmd 是 Executable Books 组织推出的新一代技术文档工具链，采用 TypeScript 实现统一的 Markdown 解析引擎、多格式导出、Notebook 执行和交互式发布能力。本组知识束收录其核心项目的系统化中文源码教程，覆盖从 Markdown 解析到多格式发布的完整管线。
 
 所有知识束遵循 [OKF v0.2 规范](../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经 Grep 级源码验证。
-
-> ⚠️ 本文档为构建中占位文件，最终统计数据将在所有知识束生成完成后更新。
 
 ## 🏗️ 生态架构管线
 
