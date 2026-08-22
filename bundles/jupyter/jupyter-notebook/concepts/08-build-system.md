@@ -2,7 +2,6 @@
 title: 构建系统
 type: concept
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "08"
 difficulty: intermediate
 tags: ["build", "hatchling", "lerna", "packaging"]

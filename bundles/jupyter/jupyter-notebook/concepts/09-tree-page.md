@@ -2,7 +2,6 @@
 title: 文件浏览器与Tree页面
 type: concept
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "09"
 difficulty: beginner
 tags: ["frontend", "tree", "file-browser", "routing"]
@@ -48,7 +47,7 @@ class TreeHandler(NotebookBaseHandler):
         raise web.HTTPError(404)
 ```
 
-> **信源**: [app.py:L133-170](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L133-L170)（F-022）
+> **信源**: [app.py:L133-170](/references/00-source-registry.md#S-004)（F-022）
 
 ### 路由决策树
 
@@ -140,7 +139,7 @@ TreeHandler和NotebookHandler之间有双向重定向：
 default_url = Unicode("/tree", config=True)
 ```
 
-> **信源**: [app.py:L251](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L251)
+> **信源**: [app.py:L251](/references/00-source-registry.md#S-004)
 
 `default_url = "/tree"` 意味着访问 `http://localhost:8888/` 会自动跳转到 `http://localhost:8888/tree`，即文件浏览器页面。
 

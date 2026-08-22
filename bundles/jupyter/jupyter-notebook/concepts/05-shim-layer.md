@@ -2,7 +2,6 @@
 title: 配置兼容层（notebook_shim）
 type: concept
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "05"
 difficulty: advanced
 tags: ["backend", "shim", "compatibility", "configuration", "migration"]
@@ -43,7 +42,7 @@ from notebook_shim.shim import NotebookConfigShimMixin
 class JupyterNotebookApp(NotebookConfigShimMixin, LabServerApp):
 ```
 
-> **信源**: [app.py:L32,L242](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L32)（F-014）
+> **信源**: [app.py:L32,L242](/references/00-source-registry.md#S-004)（F-014）
 
 关键观察：
 1. `NotebookConfigShimMixin` **不在notebook包内**，而是来自独立的 `notebook_shim` 包
@@ -115,7 +114,7 @@ nbclassic_enabled = self.server_extension_is_enabled("nbclassic")
 page_config["nbclassic_enabled"] = nbclassic_enabled
 ```
 
-> **信源**: [app.py:L330-331](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L330-L331)
+> **信源**: [app.py:L330-331](/references/00-source-registry.md#S-004)
 
 nbclassic提供了Notebook 6.x的**完整UI复刻**，在v7的JupyterLab基座上运行经典界面。前端通过 `nbclassic_enabled` 标志检测是否安装了nbclassic，并可能显示切换提示。
 

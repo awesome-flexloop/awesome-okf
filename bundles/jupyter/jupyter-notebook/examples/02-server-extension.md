@@ -2,7 +2,6 @@
 title: 开发服务端扩展
 type: example
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "02"
 difficulty: intermediate
 tags: ["extension", "backend", "server", "api", "handler"]

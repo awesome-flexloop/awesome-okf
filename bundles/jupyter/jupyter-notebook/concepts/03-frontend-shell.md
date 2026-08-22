@@ -2,7 +2,6 @@
 title: 前端Shell布局
 type: concept
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "03"
 difficulty: intermediate
 tags: ["frontend", "shell", "lumino", "layout"]
@@ -28,7 +27,7 @@ export class NotebookApp extends JupyterFrontEnd<INotebookShell> {
 }
 ```
 
-> **信源**: [app.ts:L27-35](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/packages/application/src/app.ts#L27-L35)（F-030, F-031）
+> **信源**: [app.ts:L27-35](/references/00-source-registry.md#S-006)（F-030, F-031）
 
 - `NotebookApp` 在构造时创建或接收一个 `NotebookShell` 实例
 - Shell通过泛型参数 `INotebookShell` 暴露给插件系统
@@ -44,7 +43,7 @@ export const INotebookShell = new Token<INotebookShell>(
 export interface INotebookShell extends NotebookShell {}
 ```
 
-> **信源**: [shell.ts:L31-38](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/packages/application/src/shell.ts#L31-L38)（F-034）
+> **信源**: [shell.ts:L31-38](/references/00-source-registry.md#S-007)（F-034）
 
 Token字符串 `@jupyter-notebook/application:INotebookShell` 是全局唯一的DI标识符。插件在需要访问Shell时声明依赖此Token：
 
@@ -128,7 +127,7 @@ export class NotebookShell extends Widget implements JupyterFrontEnd.IShell {
 }
 ```
 
-> **信源**: [shell.ts:L82-100](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/packages/application/src/shell.ts#L82-L100)（F-037）
+> **信源**: [shell.ts:L82-100](/references/00-source-registry.md#S-007)（F-037）
 
 ### PanelHandler vs SidePanelHandler
 
@@ -171,7 +170,7 @@ export interface IUserLayout {
 }
 ```
 
-> **信源**: [shell.ts:L52-71](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/packages/application/src/shell.ts#L52-L71)
+> **信源**: [shell.ts:L52-71](/references/00-source-registry.md#S-007)
 
 `IUserLayout` 允许用户自定义widget的打开位置。例如，将文件浏览器从默认的left区域移到right区域。
 

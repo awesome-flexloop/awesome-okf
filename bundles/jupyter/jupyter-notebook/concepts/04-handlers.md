@@ -2,7 +2,6 @@
 title: 请求处理器体系
 type: concept
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "04"
 difficulty: intermediate
 tags: ["backend", "handler", "tornado", "routing"]
@@ -30,7 +29,7 @@ JupyterHandler (jupyter_server.base.handlers)
                 └── CustomCssHandler   (/custom/custom.css)
 ```
 
-> **信源**: [app.py:L49](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L49) `class NotebookBaseHandler(ExtensionHandlerJinjaMixin, ExtensionHandlerMixin, JupyterHandler)`（F-019）
+> **信源**: [app.py:L49](/references/00-source-registry.md#S-004) `class NotebookBaseHandler(ExtensionHandlerJinjaMixin, ExtensionHandlerMixin, JupyterHandler)`（F-019）
 
 ## NotebookBaseHandler
 
@@ -44,7 +43,7 @@ def custom_css(self) -> t.Any:
     return self.settings.get("custom_css", True)
 ```
 
-> **信源**: [app.py:L52-54](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L52-L54)
+> **信源**: [app.py:L52-54](/references/00-source-registry.md#S-004)
 
 从Tornado settings中读取 `custom_css` 配置，供Jinja2模板决定是否加载自定义CSS。
 
@@ -76,7 +75,7 @@ def get_page_config(self) -> dict[str, t.Any]:
     return page_config
 ```
 
-> **信源**: [app.py:L56-130](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L56-L130)（F-020, F-025）
+> **信源**: [app.py:L56-130](/references/00-source-registry.md#S-004)（F-020, F-025）
 
 #### page_config 字段详解
 
@@ -158,7 +157,7 @@ class TreeHandler(NotebookBaseHandler):
         raise web.HTTPError(404)
 ```
 
-> **信源**: [app.py:L133-170](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L133-L170)（F-022）
+> **信源**: [app.py:L133-170](/references/00-source-registry.md#S-004)（F-022）
 
 ### 路由逻辑
 
@@ -191,7 +190,7 @@ class NotebookHandler(NotebookBaseHandler):
         return self.write(tpl)
 ```
 
-> **信源**: [app.py:L203-218](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L203-L218)（F-023）
+> **信源**: [app.py:L203-218](/references/00-source-registry.md#S-004)（F-023）
 
 逻辑：
 1. 如果路径是目录 → 重定向到 `/tree/<path>`（让TreeHandler处理）
@@ -211,7 +210,7 @@ class FileHandler(NotebookBaseHandler):
         return self.write(tpl)
 ```
 
-> **信源**: [app.py:L193-200](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L193-L200)
+> **信源**: [app.py:L193-200](/references/00-source-registry.md#S-004)
 
 与NotebookHandler类似，直接渲染edit.html，不检查文件是否存在。
 
@@ -227,7 +226,7 @@ class ConsoleHandler(NotebookBaseHandler):
         return self.write(tpl)
 ```
 
-> **信源**: [app.py:L173-180](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L173-L180)
+> **信源**: [app.py:L173-180](/references/00-source-registry.md#S-004)
 
 ## TerminalHandler
 
@@ -241,7 +240,7 @@ class TerminalHandler(NotebookBaseHandler):
         return self.write(tpl)
 ```
 
-> **信源**: [app.py:L183-190](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L183-L190)
+> **信源**: [app.py:L183-190](/references/00-source-registry.md#S-004)
 
 ## CustomCssHandler
 
@@ -265,7 +264,7 @@ class CustomCssHandler(NotebookBaseHandler):
             return self.write(css_f.read())
 ```
 
-> **信源**: [app.py:L221-239](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L221-L239)（F-024）
+> **信源**: [app.py:L221-239](/references/00-source-registry.md#S-004)（F-024）
 
 CSS文件查找顺序：
 1. `~/.jupyter/custom/custom.css`（用户自定义CSS）
@@ -287,7 +286,7 @@ self.handlers.append(("/custom/custom.css", CustomCssHandler))
 super().initialize_handlers()
 ```
 
-> **信源**: [app.py:L350-356](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L350-L356)（F-021）
+> **信源**: [app.py:L350-356](/references/00-source-registry.md#S-004)（F-021）
 
 路由模式使用Tornado的正则语法：
 - `(.*)` 捕获任意路径作为参数传给Handler的get/post方法

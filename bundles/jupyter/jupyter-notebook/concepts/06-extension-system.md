@@ -2,7 +2,6 @@
 title: 插件系统
 type: concept
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "06"
 difficulty: advanced
 tags: ["frontend", "extension", "plugin", "token-di", "lumino"]
@@ -54,7 +53,7 @@ export const INotebookShell = new Token<INotebookShell>(
 );
 ```
 
-> **信源**: [shell.ts:L31-33](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/packages/application/src/shell.ts#L31-L33)（F-034）
+> **信源**: [shell.ts:L31-33](/references/00-source-registry.md#S-007)（F-034）
 
 Token字符串约定：`@namespace/package-name:ServiceName`，确保全局唯一。
 
@@ -166,7 +165,7 @@ namespace CommandIDs {
 }
 ```
 
-> **信源**: [application-extension/src/index.ts:L92-137](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/packages/application-extension/src/index.ts#L92-L137)（F-038）
+> **信源**: [application-extension/src/index.ts:L92-137](/references/00-source-registry.md#S-009)（F-038）
 
 ### 注册命令
 
@@ -206,7 +205,7 @@ Notebook前端使用 `IRouter` 服务处理URL路由。
 const TREE_PATTERN = new RegExp('/(notebooks|edit)/(.*)');
 ```
 
-> **信源**: [application-extension/src/index.ts:L76](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/packages/application-extension/src/index.ts#L76)（F-039）
+> **信源**: [application-extension/src/index.ts:L76](/references/00-source-registry.md#S-009)（F-039）
 
 这个正则匹配 `/notebooks/...` 和 `/edit/...` 路径，插件注册路由处理器来响应URL导航：
 
@@ -294,7 +293,7 @@ def _jupyter_labextension_paths():
     return [{"src": "labextension", "dest": "@jupyter-notebook/lab-extension"}]
 ```
 
-> **信源**: [__init__.py:L19-20](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/__init__.py#L19-L20)（F-028）
+> **信源**: [__init__.py:L19-20](/references/00-source-registry.md#S-003)（F-028）
 
 安装后，pip将前端构建产物（JS bundle）放到Python包的 `labextension/` 目录，JupyterLab/Notebook在启动时扫描此目录加载插件。
 

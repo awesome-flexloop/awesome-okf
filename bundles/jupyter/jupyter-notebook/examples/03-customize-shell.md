@@ -2,7 +2,6 @@
 title: 自定义Shell布局
 type: example
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "03"
 difficulty: advanced
 tags: ["shell", "layout", "frontend", "customization", "widget"]

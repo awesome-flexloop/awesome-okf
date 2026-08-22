@@ -2,7 +2,6 @@
 title: 快速开始
 type: example
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "00"
 difficulty: beginner
 tags: ["quickstart", "installation", "setup"]

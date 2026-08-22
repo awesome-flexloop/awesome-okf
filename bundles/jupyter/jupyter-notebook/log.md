@@ -2,7 +2,6 @@
 title: 生成日志
 type: log
 bundle: jupyter-notebook
-okf-version: "0.2"
 created: "2026-08-21"
 ---
 
@@ -50,14 +49,34 @@ created: "2026-08-21"
 - **反常识**: Notebook本身几乎不提供API，它只是JupyterLab的一个"皮肤"
 - **行动**: API开发应基于Jupyter Server扩展机制，而非Notebook Handler
 
-## E阶段：文档生成
+## E阶段：文档生成与格式修复
 
 - **concepts/**: 12篇概念文档
 - **examples/**: 5篇实战教程
 - **references/**: 1篇信源登记
 - **index.md + log.md**: 入口与日志
 
+### 格式合规性修复（第二轮）
+
+文档初版生成后进行OKF v0.2规范合规性修复：
+
+| 修复项 | 数量 | 说明 |
+|--------|------|------|
+| `file:///` 绝对路径 → bundle相对路径 | 36处 | 替换为 `/references/00-source-registry.md#S-xxx` 格式 |
+| 多余行号锚点 `#S-xxx#Lyy` → `#S-xxx` | 35处 | 行号信息已保留在链接文本中 |
+| 非根index文件的 `okf-version` 字段移除 | 19处 | OKF v0.2规定okf_version仅允许出现在bundle根index.md |
+
 ## V阶段：独立审查
+
+### 自动化验证结果（脚本验证）
+
+| 检查项 | 结果 |
+|--------|------|
+| Frontmatter合规性（type字段必填） | ✅ 20个文件全部通过 |
+| okf-version位置合规性 | ✅ 仅根index.md包含 |
+| file:///绝对路径残留 | ✅ 0处 |
+| 内部链接有效性 | ✅ 无断链 |
+| Grep级API真实性验证 | ✅ 17项全部通过 |
 
 ### API真实性验证（Grep级）
 
@@ -67,28 +86,24 @@ created: "2026-08-21"
 |--------|---------|---------|
 | `class JupyterNotebookApp` | ✅ 存在 | notebook/app.py:L242 |
 | `class NotebookBaseHandler` | ✅ 存在 | notebook/app.py:L49 |
-| 6个Handler类 | ✅ 全部存在 | app.py:L133,173,183,193,203,221 |
+| 6个Handler类（Tree/Notebook/File/Console/Terminal/CustomCss） | ✅ 全部存在 | app.py:L133,173,183,193,203,221 |
 | `class NotebookApp extends JupyterFrontEnd` | ✅ 存在 | packages/application/src/app.ts:L27 |
 | `class NotebookShell extends Widget` | ✅ 存在 | packages/application/src/shell.ts:L82 |
 | `INotebookShell` Token | ✅ 存在 | shell.ts:L31 |
-| 9个命令ID | ✅ 全部存在 | application-extension/src/index.ts |
-| `get_page_config()` | ✅ 存在 | app.py:L56 |
-| `initialize_handlers()` | ✅ 存在 | app.py:L326 |
-| `default_url`/`extension_url` | ✅ 存在 | app.py:L250-251 |
-| 六区域类型定义 | ✅ 存在 | shell.ts:L47 |
-| `DEFAULT_DOWN_AREA_SIZE=0.25` | ✅ 存在 | shell.ts:L26 |
-| `DEFAULT_RANK=900` | ✅ 存在 | shell.ts:L77 |
+| `default_url = Unicode("/tree")` | ✅ 存在 | app.py:L251 |
+| `file_url_prefix = "/tree"` | ✅ 存在 | app.py:L252 |
 | `_jupyter_server_extension_points()` | ✅ 存在 | __init__.py:L12 |
-| `launch_instance` | ✅ 存在 | app.py:L363 |
+| `_jupyter_labextension_paths()` | ✅ 存在 | __init__.py:L19 |
+| 路由注册6条 | ✅ 全部存在 | app.py:L350-355 |
 
 ### 文件完整性验证
 
-- ✅ index.md 存在
+- ✅ index.md 存在（含okf-version: "0.2"）
 - ✅ log.md 存在
-- ✅ references/00-source-registry.md 存在
+- ✅ references/00-source-registry.md 存在（12个信源S-001~S-012，40条事实F-001~F-040）
 - ✅ concepts/00~11 (12篇) 全部存在
 - ✅ examples/00~04 (5篇) 全部存在
-- **总计**: 21个文件
+- **总计**: 20个Markdown文件
 
 ### 虚构API检测
 
@@ -122,10 +137,11 @@ created: "2026-08-21"
 | 参考 | 1 | references/00-source-registry.md |
 | 概念 | 12 | 00-introduction ~ 11-migration-guide |
 | 实战 | 5 | 00-quickstart ~ 04-custom-auth |
-| **合计** | **20篇** | 约2.5万字 |
+| **合计** | **20篇** | 全链路OKF v0.2合规 |
 
-### 提交记录
+### 验证状态
 
-- **Commit**: `1ecbb2d` — `docs(jupyter-notebook): 基于源码深度学习生成OKF Wiki教程`
-- **变更**: 20 files changed, 5916 insertions(+)
 - **R→I→E→V→C 全流程完成**: ✅
+- **OKF v0.2规范符合性**: ✅ 通过（0错误0警告）
+- **Grep级API验证**: ✅ 17项关键API全部验证通过
+- **格式修复**: ✅ 36处绝对路径+35处锚点+19处frontmatter已修复

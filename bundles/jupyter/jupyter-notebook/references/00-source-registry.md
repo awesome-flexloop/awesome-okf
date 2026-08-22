@@ -2,7 +2,6 @@
 title: 信源登记
 type: reference
 bundle: jupyter-notebook
-okf-version: "0.2"
 created: "2026-08-21"
 source:
   repo: "https://github.com/jupyter/notebook"

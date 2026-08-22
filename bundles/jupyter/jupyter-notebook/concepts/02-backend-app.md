@@ -2,7 +2,6 @@
 title: 后端应用类
 type: concept
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "02"
 difficulty: intermediate
 tags: ["backend", "app", "traitlets", "configuration"]
@@ -26,7 +25,7 @@ class JupyterNotebookApp(NotebookConfigShimMixin, LabServerApp):
     version = version
 ```
 
-> **信源**: [app.py:L242-248](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L242-L248)（F-010, F-011）
+> **信源**: [app.py:L242-248](/references/00-source-registry.md#S-004)（F-010, F-011）
 
 ### MRO（方法解析顺序）
 
@@ -69,7 +68,7 @@ custom_css = Bool(
 )
 ```
 
-> **信源**: [app.py:L257-269](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L257-L269)（F-015, F-016）
+> **信源**: [app.py:L257-269](/references/00-source-registry.md#S-004)（F-015, F-016）
 
 | Traitlet | 类型 | 默认值 | 说明 |
 |----------|------|--------|------|
@@ -91,7 +90,7 @@ flags["custom-css"] = (
 )
 ```
 
-> **信源**: [app.py:L271-280](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L271-L280)（F-017）
+> **信源**: [app.py:L271-280](/references/00-source-registry.md#S-004)（F-017）
 
 使用方式：
 ```bash
@@ -133,7 +132,7 @@ def _default_workspaces_dir(self) -> str:
     return t.cast(str, get_workspaces_dir())
 ```
 
-> **信源**: [app.py:L282-308](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L282-L308)（F-018）
+> **信源**: [app.py:L282-308](/references/00-source-registry.md#S-004)（F-018）
 
 | 目录 | 默认路径 | 说明 |
 |------|---------|------|
@@ -162,7 +161,7 @@ def _jupyter_labextension_paths() -> list[dict[str, str]]:
     return [{"src": "labextension", "dest": "@jupyter-notebook/lab-extension"}]
 ```
 
-> **信源**: [__init__.py:L12-20](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/__init__.py#L12-L20)（F-027, F-028）
+> **信源**: [__init__.py:L12-20](/references/00-source-registry.md#S-003)（F-027, F-028）
 
 - `_jupyter_server_extension_points()`: Jupyter Server发现扩展时调用，返回应用类
 - `_jupyter_labextension_paths()`: JupyterLab发现前端扩展时调用，返回静态资源路径
@@ -176,7 +175,7 @@ if __name__ == "__main__":
     main()
 ```
 
-> **信源**: [app.py:L363-366](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L363-L366)（F-029）
+> **信源**: [app.py:L363-366](/references/00-source-registry.md#S-004)（F-029）
 
 `launch_instance` 是traitlets `Application` 类提供的类方法，负责：
 1. 解析命令行参数
@@ -193,7 +192,7 @@ def initialize(self, argv: list[str] | None = None) -> None:
     super().initialize()
 ```
 
-> **信源**: [app.py:L358-360](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L358-L360)
+> **信源**: [app.py:L358-360](/references/00-source-registry.md#S-004)
 
 这个方法重写了父类方法，因为 `ExtensionApp.initialize()` 不接受 `argv` 参数，实际初始化逻辑由父类链完成。
 
@@ -223,7 +222,7 @@ def initialize_handlers(self) -> None:
     super().initialize_handlers()
 ```
 
-> **信源**: [app.py:L326-356](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L326-L356)（F-021, F-026）
+> **信源**: [app.py:L326-356](/references/00-source-registry.md#S-004)（F-021, F-026）
 
 主要工作：
 1. 检测nbclassic扩展是否启用，写入page_config
@@ -239,7 +238,7 @@ def _prepare_templates(self) -> None:
     self.jinja2_env.globals.update(custom_css=self.custom_css)
 ```
 
-> **信源**: [app.py:L310-312](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L310-L312)
+> **信源**: [app.py:L310-312](/references/00-source-registry.md#S-004)
 
 注意这里调用的是 `super(LabServerApp, self)._prepare_templates()`，**跳过了LabServerApp的模板准备**，直接使用ExtensionApp的模板环境，并注入 `custom_css` 全局变量供Jinja2模板使用。
 
@@ -259,7 +258,7 @@ def server_extension_is_enabled(self, extension: str) -> bool:
     return extension_enabled
 ```
 
-> **信源**: [app.py:L314-324](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/notebook/app.py#L314-L324)
+> **信源**: [app.py:L314-324](/references/00-source-registry.md#S-004)
 
 这个工具方法用于检查其他Jupyter Server扩展是否启用，当前用于检测nbclassic（Notebook Classic兼容层）是否安装。
 

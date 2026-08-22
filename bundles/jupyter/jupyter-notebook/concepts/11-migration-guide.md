@@ -2,7 +2,6 @@
 title: v6到v7迁移指南
 type: concept
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "11"
 difficulty: intermediate
 tags: ["migration", "compatibility", "upgrade", "v6", "v7"]

@@ -2,7 +2,6 @@
 title: 架构总览
 type: concept
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "01"
 difficulty: intermediate
 tags: ["architecture", "frontend", "backend"]

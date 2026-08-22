@@ -2,7 +2,6 @@
 title: 集成自定义认证
 type: example
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "04"
 difficulty: advanced
 tags: ["authentication", "security", "backend", "login", "token"]

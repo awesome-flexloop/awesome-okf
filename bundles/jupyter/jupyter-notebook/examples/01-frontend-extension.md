@@ -2,7 +2,6 @@
 title: 开发前端扩展
 type: example
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "01"
 difficulty: advanced
 tags: ["extension", "frontend", "plugin", "typescript", "sidebar"]

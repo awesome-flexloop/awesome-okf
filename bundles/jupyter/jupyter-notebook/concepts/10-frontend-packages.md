@@ -2,7 +2,6 @@
 title: 前端包结构
 type: concept
 bundle: jupyter-notebook
-okf-version: "0.2"
 chapter: "10"
 difficulty: intermediate
 tags: ["frontend", "packages", "monorepo", "lerna"]
@@ -108,7 +107,7 @@ namespace CommandIDs {
 }
 ```
 
-> **信源**: [application-extension/src/index.ts:L92-137](file:///d:/spaces/SpecWeave/external/libs/jupyter/notebook/packages/application-extension/src/index.ts#L92-L137)（F-038）
+> **信源**: [application-extension/src/index.ts:L92-137](/references/00-source-registry.md#S-009)（F-038）
 
 ### 3. notebook-extension（Notebook专属功能包）
 
