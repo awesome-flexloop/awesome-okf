@@ -7,46 +7,38 @@ generated: 2026-08-23
 verified: true
 status: stable
 stale_after: 2027-12-31
+sources:
+  - path: "mystmd/packages/myst-directives/src/"
+  - path: "mystmd/packages/myst-roles/src/"
 ---
 
 # 常用指令实战
 
-本文档提供 MyST 常用指令的完整可运行示例。
-
-## 提示框（Admonition）
-
-### 基础提示框
-
+本文档提�?MyST 常用指令的完整可运行示例�?
+## 提示框（Admonition�?
+### 基础提示�?
 ```markdown
 :::{note}
-这是一条备注信息。
-:::
+这是一条备注信息�?:::
 
 :::{tip}
-使用 `myst start` 启动热重载开发服务器。
-:::
+使用 `myst start` 启动热重载开发服务器�?:::
 
 :::{warning}
-删除操作不可恢复，请谨慎执行。
-:::
+删除操作不可恢复，请谨慎执行�?:::
 
 :::{danger}
-高压危险！请勿在通电时打开机箱。
-:::
+高压危险！请勿在通电时打开机箱�?:::
 ```
 
-### 自定义标题
-
+### 自定义标�?
 ```markdown
-:::{admonition} 我的自定义标题
-:class: tip
+:::{admonition} 我的自定义标�?:class: tip
 
-这是一个自定义标题、自定义样式的提示框。
-:::
+这是一个自定义标题、自定义样式的提示框�?:::
 
 :::{note} 注意
-这是一个有标题的 note。
-:::
+这是一个有标题�?note�?:::
 ```
 
 ### 可折叠提示框
@@ -55,8 +47,7 @@ stale_after: 2027-12-31
 :::{note} 点击展开答案
 :open: false
 
-答案是 42。
-:::
+答案�?42�?:::
 ```
 
 ### 隐藏图标
@@ -65,8 +56,7 @@ stale_after: 2027-12-31
 :::{important}
 :icon: false
 
-这是一个没有图标的重要提示。
-:::
+这是一个没有图标的重要提示�?:::
 ```
 
 ### 11 种提示框类型
@@ -84,18 +74,15 @@ stale_after: 2027-12-31
 :::{seealso} 另见 :::
 ```
 
-## 代码块
-
-### 基础代码块
-
+## 代码�?
+### 基础代码�?
 ````markdown
 ```{code} python
 print("Hello, MyST!")
 ```
 ````
 
-### 带行号
-
+### 带行�?
 ````markdown
 ```{code-block} python
 :linenos:
@@ -108,20 +95,17 @@ def fibonacci(n):
 ```
 ````
 
-### 指定行号起始值
-
+### 指定行号起始�?
 ````markdown
 ```{code} python
 :lineno-start: 10
 
-# 这是第10行
-def hello():
+# 这是�?0�?def hello():
     print("Hello!")
 ```
 ````
 
-### 高亮行
-
+### 高亮�?
 ````markdown
 ```{code} python
 :emphasize-lines: 2,4-5
@@ -134,8 +118,7 @@ def example():
 ```
 ````
 
-### 文件名标签
-
+### 文件名标�?
 ````markdown
 ```{code} python
 :filename: hello.py
@@ -144,8 +127,7 @@ print("Hello, World!")
 ```
 ````
 
-### 带标题和标签（可引用）
-
+### 带标题和标签（可引用�?
 ````markdown
 ```{code} python
 :caption: 斐波那契数列递归实现
@@ -157,11 +139,9 @@ def fib(n):
     return fib(n-1) + fib(n-2)
 ```
 
-参见 {ref}`code-fibonacci` 中的斐波那契实现。
-````
+参见 {ref}`code-fibonacci` 中的斐波那契实现�?````
 
-## 图片与图表
-
+## 图片与图�?
 ### 基础图片
 
 ```markdown
@@ -172,18 +152,15 @@ def fib(n):
 :::
 ```
 
-### 带标题和编号的图表
-
+### 带标题和编号的图�?
 ````markdown
 :::{figure} images/architecture.png
 :width: 90%
-:alt: 系统架构图
-:label: fig-architecture
+:alt: 系统架构�?:label: fig-architecture
 
-**图1**：系统架构概览，展示了三个核心模块的关系。
-:::
+**�?**：系统架构概览，展示了三个核心模块的关系�?:::
 
-如 {ref}`fig-architecture` 所示...
+�?{ref}`fig-architecture` 所�?..
 ````
 
 ### 可执行代码单元格
@@ -204,17 +181,16 @@ plt.show()
 
 ## 表格
 
-### Markdown 表格（带标题）
-
+### Markdown 表格（带标题�?
 ````markdown
 :::{table} 常用编程语言对比
 :label: tbl-languages
 
-| 语言 | 类型 | 用途 |
+| 语言 | 类型 | 用�?|
 |------|------|------|
-| Python | 解释型 | 数据科学、Web |
-| TypeScript | 编译型 | Web前端 |
-| Rust | 编译型 | 系统编程 |
+| Python | 解释�?| 数据科学、Web |
+| TypeScript | 编译�?| Web前端 |
+| Rust | 编译�?| 系统编程 |
 :::
 ````
 
@@ -235,22 +211,13 @@ plt.show()
 ### 列表表格（复杂内容）
 
 ````markdown
-:::{list-table} 功能对比表
-:header-rows: 1
+:::{list-table} 功能对比�?:header-rows: 1
 
 *   - 功能
-    - 免费版
-    - 专业版
-*   - 基础编辑
-    - ✅
-    - ✅
-*   - 协作编辑
-    - ❌
-    - ✅
-*   - 导出PDF
-    - ❌
-    - ✅
-:::
+    - 免费�?    - 专业�?*   - 基础编辑
+    - �?    - �?*   - 协作编辑
+    - �?    - �?*   - 导出PDF
+    - �?    - �?:::
 ````
 
 ## 数学公式
@@ -258,9 +225,7 @@ plt.show()
 ### 行内公式
 
 ```markdown
-质能方程 $E=mc^2$ 是爱因斯坦提出的。
-圆的面积公式为 {math}`A = \pi r^2`。
-```
+质能方程 $E=mc^2$ 是爱因斯坦提出的�?圆的面积公式�?{math}`A = \pi r^2`�?```
 
 ### 块级公式（带标签可引用）
 
@@ -271,8 +236,7 @@ plt.show()
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 ```
 
-求根公式（{eq}`eq-quadratic`）用于解一元二次方程。
-````
+求根公式（{eq}`eq-quadratic`）用于解一元二次方程�?````
 
 ### 多行对齐
 
@@ -291,10 +255,9 @@ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 :::{dropdown} 点击查看详细说明
 :open: false
 
-这里是折叠的详细内容，可以包含 **Markdown** 格式的文本、代码块、图片等。
-
+这里是折叠的详细内容，可以包�?**Markdown** 格式的文本、代码块、图片等�?
 ```{code} python
-print("嵌套的代码块也可以")
+print("嵌套的代码块也可�?)
 ```
 :::
 ```
@@ -307,6 +270,5 @@ print("嵌套的代码块也可以")
 :title: 示例网站
 :placeholder: images/screenshot.png
 
-嵌入的外部网页（PDF导出时显示占位图）
-:::
+嵌入的外部网页（PDF导出时显示占位图�?:::
 ```
