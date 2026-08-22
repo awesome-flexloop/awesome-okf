@@ -1,0 +1,52 @@
+# repo2jupyterlite 教程更新日志
+
+## 2026-08-22
+
+- 初始版本生成，基于 repo2jupyterlite v0.3.0（兼容 JupyterLite 0.5.0+）
+- 完成 R→I→E→V→C 五阶段工作流
+- R阶段：源码深度阅读，采集128条零推断事实（facts.md）
+- I阶段：提炼5条架构洞察（双重重定向、懒构建、双层缓存、零拷贝+哨兵、ContentProvider链），设计知识地图
+- E阶段（信源先行）：生成 7 个 references 信源文档
+  - metasource.md（项目元数据）
+  - cli-source.md（CLI入口）
+  - github-provider-source.md（GitHub Provider API登记）
+  - cache-source.md（缓存工具与slug编码）
+  - binderlite-run-source.md（FastAPI路由与请求处理）
+  - publisher-source.md（Publisher抽象与本地实现）
+  - frontend-source.md（React前端与URL检测器）
+- E阶段（概念文档）：生成 9 个 concepts 概念文档
+  - 00-introduction.md（简介）
+  - 01-getting-started.md（快速开始）
+  - 02-cli-usage.md（CLI命令详解）
+  - 03-binderlite-web.md（BinderLite Web应用）
+  - 04-repo-providers.md（仓库提供者系统）
+  - 05-publisher-system.md（Publisher存储系统）
+  - 06-build-process.md（构建流程与缓存策略）
+  - 07-frontend-detectors.md（前端URL解析机制）
+  - 08-architecture-summary.md（整体架构总结）
+- E阶段（示例文档）：生成 4 个 examples 实践示例
+  - 01-cli-build.md（CLI构建仓库示例）
+  - 02-run-binderlite.md（运行BinderLite服务示例）
+  - 03-custom-provider.md（自定义GitLab Provider完整示例）
+  - 04-custom-publisher.md（自定义S3 Publisher完整示例）
+- 生成根索引、子目录索引和更新日志
+- C阶段（模式沉淀）：生成 6 个 patterns 可复用模式文档
+  - double-redirect-canonicalization.md（双重重定向规范化模式）
+  - lazy-build-cache-stampede.md（懒构建触发与缓存雪崩防护模式）
+  - dual-layer-lru-cache.md（双层LRU缓存模式）
+  - sentinel-file-atomic-publish.md（哨兵文件原子发布模式）
+  - zero-copy-build.md（零拷贝构建模式）
+  - content-provider-chain.md（ContentProvider责任链模式）
+- V阶段验证：Grep验证所有核心API存在于源码中，修正事实错误（slug编码、badge/REES不存在），frontmatter合规，交叉链接一致
+- 核心覆盖模块：
+  - CLI双阶段流程（fetch via ContentProvider → build via jupyter lite build）
+  - ContentProvider责任链（8种数据源：Local/Git/Zenodo/Figshare/Dataverse/Hydroshare/SWHID/Mercurial）
+  - GitHubRepoProvider异步API解析（branch/tag→commit SHA）
+  - 双层LRU缓存策略（成功结果+ETag、404结果5分钟TTL）
+  - BinderLite FastAPI应用（/v1/路由双重重定向、/render/静态文件挂载、FileResponse直接服务）
+  - 懒构建触发机制（仅HTML请求触发构建，文件请求404防缓存雪崩）
+  - Publisher抽象接口与LocalFilesystemPublisher零拷贝实现
+  - 哨兵文件原子发布模式
+  - React前端URL实时解析（ParsedRepoURL、GitHub检测、Launch跳转）
+  - slug编码（escapism安全编码，保留`-`/`/`实现目录嵌套）
+  - 扩展点（自定义Provider、自定义Publisher）
