@@ -53,3 +53,9 @@ Jupyter 是数据科学与交互式计算的核心平台，从底层的 ZeroMQ �
 | 顺序 | 知识束 | 一句话简介 |
 |------|--------|-----------|
 | 7 | [governance](governance/index.md) | Jupyter 治理模型——EC/SSC/Foundation三主体架构、共识寻求+投票兜底决策流程、子项目自治体系、常设委员会与工作组（DEI/CoC/社区建设）、排序复选选举机制、商标许可与行为准则 |
+
+### 文档工具层：文档生成与渲染
+
+| 顺序 | 知识束 | 一句话简介 |
+|------|--------|-----------|
+| 8 | [papyri](papyri/index.md) | Python docstring→IR文档生成器——RST解析为类型化中间表示(IR)，三端架构(Python gen/TypeScript ingest/Astro viewer)，跨包交叉引用，CBOR确定性打包，交互式文档浏览 |
