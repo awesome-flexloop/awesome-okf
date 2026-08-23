@@ -95,3 +95,26 @@ status: stable
 > **源码位置**：`external/libs/ai/datawhalechina/`
 >
 > **生成时间**：2026-08-23 | **维护者**：OKF Wiki Bot
+
+```{toctree}
+:hidden:
+
+torch-rechub/index
+deepagents/index
+base-llm/index
+happy-llm/index
+hello-agents/index
+all-in-rag/index
+easy-vecdb/index
+key-book/index
+pumpkin-book/index
+tiny-universe/index
+handy-ollama/index
+handy-n8n/index
+easy-vibe/index
+vibe-vibe/index
+code-your-own-llm/index
+Agent-Learning-Hub/index
+deepagents-in-action/index
+members-visualization/index
+```

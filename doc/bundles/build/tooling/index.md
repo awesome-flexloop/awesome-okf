@@ -22,3 +22,14 @@ description: "不绑定特定生态、可独立服务任意项目的通用开发
 | 3 | [pyinvoke](pyinvoke/index.md) | PyInvoke 任务自动化引擎——Pythonic 的 CLI 任务定义、Context 对象、Collection 命名空间、Runner 执行模型、Watcher 文件监控、Terminal IO |
 | 4 | [invocations](invocations/index.md) | PyInvoke 官方任务集合——打包发布、测试（pytest）、文档（Sphinx）、CI 自动化、代码检查格式化、自动文档组合模式 |
 | 5 | [github-problem-matcher](github-problem-matcher/index.md) | GitHub Actions 错误注解——Problem Matcher JSON 模式、正则捕获组、测试验证、将编译器/linter 错误在 PR 中高亮显示 |
+
+```{toctree}
+:hidden:
+
+ninja/index
+copier/index
+pyinvoke/index
+invocations/index
+github-problem-matcher/index
+nuitka/index
+```

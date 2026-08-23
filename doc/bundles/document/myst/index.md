@@ -173,3 +173,27 @@ status: stable
 - **API 验证**：核心项目 34 个关键 API 经 Grep 级源码验证通过
 - **链接验证**：1379 个内部链接 0 断链
 - **frontmatter**：360 个文件 YAML 元数据完整合规
+
+```{toctree}
+:hidden:
+
+markdown-it-py/index
+mdurl/index
+mdit-py-plugins/index
+MyST-Parser/index
+MyST-NB/index
+mdformat-myst/index
+mdformat-footnote/index
+rst-to-myst/index
+sphinx-book-theme/index
+sphinx-design/index
+sphinx-copybutton/index
+sphinx-togglebutton/index
+sphinx-tabs/index
+sphinx-exercise/index
+sphinx-proof/index
+sphinx-external-toc/index
+jupyter-cache/index
+github-activity/index
+web-compile/index
+```

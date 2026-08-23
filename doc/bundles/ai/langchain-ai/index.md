@@ -125,3 +125,27 @@ langchain (核心框架)
 - **文档生成日期**：2026-08-23
 - **源码来源**：https://github.com/langchain-ai
 - **许可证**：各项目采用 MIT 或其他开源许可（详见各 bundle）
+
+```{toctree}
+:hidden:
+
+langchain/index
+langgraph/index
+langchainjs/index
+langgraphjs/index
+langchain-google/index
+langchain-mongodb/index
+langsmith-sdk/index
+langsmith-cli/index
+deepagents/index
+deepagentsjs/index
+open-swe/index
+openevals/index
+openwiki/index
+openwork/index
+chat-langchain/index
+social-media-agent/index
+docs/index
+helm/index
+terraform/index
+```

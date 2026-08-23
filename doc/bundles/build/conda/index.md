@@ -38,3 +38,14 @@ Conda 是 Python 生态中最流行的跨平台包管理器与环境管理器，
 | 顺序 | 知识束 | 一句话简介 |
 |------|--------|-----------|
 | 6 | [conda-docs](conda-docs/index.md) | Conda 官方文档门户——Sphinx 多项目文档架构、插件生态、installer 生成、社区贡献指南 |
+
+```{toctree}
+:hidden:
+
+conda/index
+conda-lock/index
+conda-pack/index
+constructor/index
+rattler/index
+conda-docs/index
+```

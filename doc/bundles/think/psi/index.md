@@ -46,3 +46,12 @@ description: "ψ=ψ(ψ) 自指递归理论体系——哲学、数学、宇宙�
 - [XOR-SHIFT宇宙本论源码](psi-universe/references/universe-source.md)
 - [宇宙本论三大公理](psi-universe/references/three-axioms.md)
 - [GodGPT隐私政策与服务条款](godgpt/references/godgpt-legal.md)
+
+```{toctree}
+:hidden:
+
+psi-core/index
+psi-math/index
+psi-universe/index
+godgpt/index
+```

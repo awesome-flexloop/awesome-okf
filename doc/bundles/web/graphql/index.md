@@ -14,3 +14,9 @@ description: "GraphQL 查询语言系统化中文教程——语法、Schema 类
 | 顺序 | 知识束 | 一句话简介 |
 |------|--------|-----------|
 | 1 | [graphql](graphql/index.md) | GraphQL 核心规范——查询语言语法、Schema 类型系统、验证/执行管线、内省系统与 AI 集成 |
+
+```{toctree}
+:hidden:
+
+graphql/index
+```

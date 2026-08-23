@@ -96,3 +96,16 @@ Jupyter Book v2 与 MySTmd 是 Executable Books 组织推出的新一代技术�
 - **生成方法**：source-code-to-okf-wiki 技能（R→I→E→V→C 五阶段链路）
 - **方法论指导**：seven-concepts-cmd（R→I→E 知识沉淀场景）
 - **与旧版关系**：现有 [myst/](../myst/index.md) 分组覆盖旧版 Executable Books Python 生态（MyST-Parser/MyST-NB/markdown-it-py 等 Sphinx 扩展），本分组覆盖新一代 TypeScript 实现的 Jupyter Book v2 / MySTmd 引擎
+
+```{toctree}
+:hidden:
+
+mystmd/index
+myst-cli/index
+myst-syntax/index
+myst-exporters/index
+jupyter-book/index
+myst-execute/index
+jupyterlab-myst/index
+myst-theme/index
+```

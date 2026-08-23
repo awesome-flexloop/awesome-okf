@@ -106,3 +106,11 @@ stale_after: 2027-08-23
 - **方法论指导**：seven-concepts-cmd（R→I→E 知识沉淀）
 - **API验证**：120条coze-py事实+125条coze-studio事实+110条cozeloop-python事实，共355条可验证源码事实
 - **frontmatter**：63个文件YAML元数据完整
+
+```{toctree}
+:hidden:
+
+coze-py/index
+coze-studio/index
+cozeloop-python/index
+```

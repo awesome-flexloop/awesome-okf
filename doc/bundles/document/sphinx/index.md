@@ -46,3 +46,18 @@ Sphinx 是 Python 生态最强大的文档生成工具，支持 reStructuredText
 ## 相关案例
 
 - **Sphinx 多项目架构实战**：参见 [conda 生态的 conda-docs](../../build/conda/conda-docs/index.md)，这是 Sphinx 多项目文档门户架构的典型案例，包含 Sphinx 配置深度定制与插件组合使用。
+
+```{toctree}
+:hidden:
+
+sphinx/index
+sphinx-argparse/index
+sphinx-autobuild/index
+sphinx-intl/index
+sphinx-websupport/index
+alabaster/index
+sphinxcontrib-jsmath/index
+sphinxext-opengraph/index
+sphinxext-rediraffe/index
+sphinx-docker-images/index
+```

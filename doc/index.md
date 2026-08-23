@@ -20,7 +20,7 @@ readme
 
 ```{toctree}
 :caption: 知识束库
-:maxdepth: 2
+:maxdepth: 4
 
 bundles/index
 ```

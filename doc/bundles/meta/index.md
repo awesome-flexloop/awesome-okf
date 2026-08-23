@@ -14,3 +14,9 @@ description: "OKF 格式规范与元知识——所有知识束遵循的格式�
 | 顺序 | 知识束 | 一句话简介 |
 |------|--------|-----------|
 | 1 | [okf-spec](okf-spec/index.md) | OKF (Open Knowledge Format) v0.2 规范本体——知识束目录结构、文档类型、交叉引用路径、术语约定、版本规范 |
+
+```{toctree}
+:hidden:
+
+okf-spec/index
+```

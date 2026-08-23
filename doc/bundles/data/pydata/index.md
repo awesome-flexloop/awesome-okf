@@ -43,3 +43,15 @@ PyTables ──→ NumPy ←── pandas ←── matplotlib
 5. **交互式可视化**：plotly.py（Figure → Express → 渲染）
 6. **Web应用**：plotly.py → Dash（回调 → 组件 → 多页面）
 7. **数据存储**：NumPy → PyTables（HDF5 → Table → 压缩索引）
+
+```{toctree}
+:hidden:
+
+numpy/index
+sympy/index
+pandas/index
+matplotlib/index
+plotly/index
+dash/index
+pytables/index
+```

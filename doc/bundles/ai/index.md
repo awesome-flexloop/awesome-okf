@@ -22,3 +22,17 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🚀 TRAE Community 生态](trae/index.md) | 字节跳动 AI 编程 IDE 社区——平台应用、技能/模板/MCP 扩展、学习资源、社区治理 |
 | [🐧 腾讯开源生态](tencent/index.md) | 腾讯系开源与商业项目——CodeBuddy 产品矩阵、AI 红队平台、ncnn 推理框架 |
 | [⚡ PocketFlow 极简 LLM 应用框架](pocketflow/index.md) | 100 行代码的极简 LLM Agent 框架——节点+流程抽象、6 大设计模式、实战教程 |
+
+```{toctree}
+:hidden:
+
+agnes-ai/index
+ai-agent/index
+langchain-ai/index
+datawhale/index
+coze/index
+deepseek/index
+trae/index
+tencent/index
+pocketflow/index
+```

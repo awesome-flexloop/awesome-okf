@@ -69,3 +69,13 @@ PocketFlow 是一个仅约100行核心代码的极简 LLM Agent 框架，由 The
 > **源码位置**：d:\spaces\SpecWeave\external\libs\ai\ThePocket\PocketFlow
 > 
 > **生成时间**：2026-08-23 | **维护者**：OKF Wiki Bot
+
+```{toctree}
+:hidden:
+
+pocketflow-core/index
+pocketflow-patterns/index
+tutorial-codebase-knowledge/index
+tutorial-wan-video/index
+tutorial-video-qa/index
+```

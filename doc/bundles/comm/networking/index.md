@@ -74,3 +74,14 @@ description: "Python SSH/远程控制生态——从底层协议实现到高层�
 | [pexpect](pexpect/index.md) | 9 | 4 | 1 | 77 | 4.9.0 |
 | [scrapli](scrapli/index.md) | 9 | 4 | 1 | 133 | 2.0-dev |
 | **合计** | **60** | **25** | **6** | **725** | — |
+
+```{toctree}
+:hidden:
+
+paramiko/index
+fabric/index
+netmiko/index
+asyncssh/index
+pexpect/index
+scrapli/index
+```

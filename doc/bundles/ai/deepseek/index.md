@@ -107,3 +107,20 @@ deep-spec (投机解码草稿模型训练评估)
 - **文档生成日期**：2026-08-23
 - **源码来源**：https://github.com/deepseek-ai
 - **许可证**：各项目采用 MIT 或其他开源许可（详见各 bundle）
+
+```{toctree}
+:hidden:
+
+deep-gemm/index
+flash-mla/index
+tile-kernels/index
+deep-ep/index
+dual-pipe/index
+lplb/index
+deep-spec/index
+deepseek-ocr/index
+deepseek-ocr2/index
+deepseek-math-v2/index
+engram/index
+awesome-deepseek-agent/index
+```

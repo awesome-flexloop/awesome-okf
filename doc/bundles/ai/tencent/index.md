@@ -38,3 +38,12 @@ status: stable
 - [ncnn 知识束](ncnn/index.md) — 神经网络推理框架源码教程
 - [CodeBuddy 官网](https://www.codebuddy.cn/) — CodeBuddy 产品入口
 - [腾讯开源](https://opensource.tencent.com/) — 腾讯开源项目总览
+
+```{toctree}
+:hidden:
+
+codebuddy/index
+ai-infra-guard/index
+octop/index
+ncnn/index
+```

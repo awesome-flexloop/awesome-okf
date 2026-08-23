@@ -110,3 +110,10 @@ groups: "AgnesAI生态"
 - API Base URL：`https://apihub.agnes-ai.com/v1`
 - 官方站点：https://agnes-ai.com/（国际）/ https://agnes-ai.cn/（中国）
 - API平台：https://platform.agnes-ai.com/
+
+```{toctree}
+:hidden:
+
+agnes-ai-models/index
+gode-agents/index
+```

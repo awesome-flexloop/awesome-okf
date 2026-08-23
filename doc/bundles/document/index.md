@@ -18,3 +18,13 @@ description: "技术文档工具链与交互式计算平台——从文档生成
 | [📖 Jupyter Book v2 / MySTmd 生态](jupyter-book/index.md) | TypeScript 新一代技术文档工具链——MyST 引擎、CLI 工具链、多格式导出、主题系统 |
 | [🔣 KaTeX 数学排版](katex/index.md) | KaTeX 快速 Web 数学排版库——LaTeX 表达式渲染为 HTML+MathML |
 | [📓 Jupyter 数据科学生态](jupyter/index.md) | Jupyter 交互式计算生态——协议、格式、应用与部署 |
+
+```{toctree}
+:hidden:
+
+sphinx/index
+myst/index
+jupyter-book/index
+katex/index
+jupyter/index
+```

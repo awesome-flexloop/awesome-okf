@@ -110,3 +110,28 @@ total_bundles: 21
 > **生成时间**：2026-08-23 | **维护者**：OKF Wiki Bot
 > 
 > **内容统计**：21 个知识束，共 213 个内容文档（140 概念 + 48 示例 + 25 信源），1500+ 条零推测事实，21 个 facts.md 信源底稿
+
+```{toctree}
+:hidden:
+
+ai-agent-fundamentals/index
+hermes-agent/index
+veadk-python/index
+zleap-agent/index
+deepseek-harness/index
+intelligent-terminal/index
+cordis/index
+second-me/index
+agency-agents/index
+agency-agents-app/index
+anthropics-skills/index
+book-to-skill/index
+i-have-adhd/index
+codewhale/index
+deepseek-reasonix/index
+openai-codex/index
+nanobot/index
+deepcode-cli/index
+opencode/index
+pi-cli/index
+```

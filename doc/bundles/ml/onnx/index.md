@@ -120,3 +120,16 @@ status: stable
 - **API验证**：43个关键API经Grep级源码验证（.py/.cc/.cpp/.h/.hpp/.proto）
 - **链接验证**：613个内部链接0断链
 - **frontmatter**：150个文件YAML元数据完整
+
+```{toctree}
+:hidden:
+
+onnx/index
+ir-py/index
+optimizer/index
+onnxmltools/index
+sklearn-onnx/index
+tensorflow-onnx/index
+onnx-mlir/index
+onnx-tensorrt/index
+```

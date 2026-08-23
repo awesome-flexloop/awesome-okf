@@ -17,3 +17,12 @@ description: "构建、打包与开发工具链生态——环境与包管理、
 | [📦 scikit-build 构建后端](scikit-build/index.md) | scikit-build-core——基于 CMake 的 PEP 517 独立构建后端，CMake 作为一等公民（锚点组） |
 | [🏗️ CMake 构建系统生态](cmake/index.md) | CMake 跨平台构建系统生成器及其测试/打包工具链 |
 | [🔧 通用开发工具](tooling/index.md) | 不绑定特定生态、可独立服务任意项目的通用开发工具 |
+
+```{toctree}
+:hidden:
+
+conda/index
+scikit-build/index
+cmake/index
+tooling/index
+```

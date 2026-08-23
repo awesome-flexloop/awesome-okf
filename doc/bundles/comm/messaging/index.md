@@ -117,3 +117,12 @@ status: stable
 - **API 验证**：所有类名/方法名经 Grep 源码验证存在性，杜绝虚构 API
 - **frontmatter**：所有文档遵循 OKF v0.2 YAML frontmatter 规范
 - **验证结果**：API 验证全部通过（libzmq 90+ API、cppzmq 30+、pyzmq 30+、dramatiq 30+ 经 Grep 源码验证）、链接零断链
+
+```{toctree}
+:hidden:
+
+libzmq/index
+cppzmq/index
+pyzmq/index
+dramatiq/index
+```

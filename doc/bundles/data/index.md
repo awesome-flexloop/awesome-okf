@@ -14,3 +14,9 @@ description: "Python 数据科学生态核心库——数值计算、数据分�
 | 分组 | 一句话简介 |
 |------|-----------|
 | [📊 PyData 科学计算生态](pydata/index.md) | Python 科学计算与数据科学生态——NumPy/pandas/matplotlib/Plotly/Dash/PyTables |
+
+```{toctree}
+:hidden:
+
+pydata/index
+```

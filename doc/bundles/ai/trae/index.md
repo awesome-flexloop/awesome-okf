@@ -125,3 +125,20 @@ awesome-trae/00-introduction → trae-co-creation-projects/00-introduction
 - **许可证**：各仓库独立（Demo Wall 为 MIT）
 - **文档生成日期**：2026-04-22
 - **方法论**：七概念方法论（R→I→E→V→C）+ source-code-to-okf-wiki 工作流
+
+```{toctree}
+:hidden:
+
+trae-co-creation-demo-wall/index
+trae-co-creation-demo-wall-intl/index
+trae-skills/index
+trae-templates/index
+trae-mcp/index
+trae-learning/index
+awesome-trae/index
+trae-demos/index
+trae-agents/index
+trae-co-creation-projects/index
+trae-discussions/index
+trae-friends-events/index
+```

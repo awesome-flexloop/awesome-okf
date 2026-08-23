@@ -15,3 +15,10 @@ description: "Web 应用开发生态——高性能 ASGI Web 框架与 API 查�
 |------|-----------|
 | [⚡ FastAPI Web 框架生态](fastapi/index.md) | FastAPI 高性能 ASGI Web 框架——类型注解驱动、依赖注入树、OpenAPI 自动生成 |
 | [📡 GraphQL 核心规范与生态](graphql/index.md) | GraphQL 查询语言系统化中文教程——语法、Schema 类型系统、验证执行管线、内省系统 |
+
+```{toctree}
+:hidden:
+
+fastapi/index
+graphql/index
+```
