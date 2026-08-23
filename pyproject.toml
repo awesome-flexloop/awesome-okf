@@ -1,0 +1,23 @@
+[project]
+name = "awesome-okf-xs"
+version = "0.1.0"
+description = "Awesome OKF for Xuanspace - 开源知识格式文档库"
+requires-python = ">=3.14"
+license = { text = "Apache-2.0" }
+
+[project.urls]
+Repository = "https://github.com/awesome-flexloop/awesome-okf"
+Documentation = "https://awesome-okf-xs.readthedocs.io/"
+
+[project.optional-dependencies]
+doc = [
+    "sphinx>=7.0",
+    "myst-parser>=4.0",
+    "sphinx-book-theme>=1.0",
+    "sphinx-design",
+    "sphinx-copybutton",
+    "sphinx-tippy",
+    "sphinx-sitemap",
+    "sphinxext-opengraph",
+    "sphinx-contributors",
+]

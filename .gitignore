@@ -71,6 +71,12 @@ instance/
 # Sphinx documentation
 docs/_build/
 
+# Sphinx documentation (awesome-okf-xs)
+doc/_build/
+doc/bundles/
+doc/api/
+doc/_static/fonts/
+
 # PyBuilder
 .pybuilder/
 target/
