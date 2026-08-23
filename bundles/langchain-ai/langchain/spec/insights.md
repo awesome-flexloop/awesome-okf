@@ -7,6 +7,19 @@ generated: { by: "reference_agent/trae-solo", at: 2026-08-23 }
 verified: { by: "process:seven-concepts-v", at: 2026-08-23 }
 status: stable
 stale_after: 2027-02-23
+sources:
+  - id: ref-core
+    resource: /references/core-abstractions.md
+    title: 核心抽象源码信源
+  - id: ref-msg
+    resource: /references/messages-tools.md
+    title: 消息与工具源码信源
+  - id: ref-po
+    resource: /references/prompts-output.md
+    title: 提示词、模型与输出解析源码信源
+  - id: ref-rc
+    resource: /references/runnables-callbacks.md
+    title: 回调、追踪与检索源码信源
 ---
 
 # langchain-core 架构洞察

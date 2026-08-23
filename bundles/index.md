@@ -3,15 +3,15 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识束总索引"
 description: "awesome-okf-xs 知识束（bundles）分组导航——按技术生态组织的开源项目源码中文教程"
-total_bundles: 44
-groups: 11
+total_bundles: 236
+groups: 23
 ---
 
 # 知识束总索引（Bundles Index）
 
 > **OKF (Open Knowledge Format)** 知识束是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识束包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **44 个知识束**，按技术生态分为 **11 个分组**。
+> 当前共 **236 个知识束**，按技术生态分为 **23 个分组**。
 
 ---
 
@@ -71,6 +71,13 @@ groups: 11
 │  Agent循环 · 工具系统 · 记忆架构 · 多代理编排          │
 │  插件系统 · 通信协议 · 技能/Persona                   │
 │   （构建在大模型API之上的Agent运行时架构）             │
+└──────────────────────────┬───────────────────────────┘
+                           │ LLM应用编排
+┌──────────────────────────▼───────────────────────────┐
+│           🦜🔗 langchain-ai/ LLM应用框架生态           │
+│  LangChain/LangGraph(Python+JS) · 深度研究Agent      │
+│  SWE Agent · 可观测性SDK · 评测库 · 基础设施部署      │
+│  （LLM应用开发的事实标准框架，Runnable组合协议）       │
 └──────────────────────────────────────────────────────┘
 ```
 
@@ -93,6 +100,8 @@ groups: 11
                   → 🧠 onnx 机器学习模型生态（模型交换格式·转换器·编译器·推理后端）
                     → 🤖 agnes-ai 大模型API（AI服务调用）
                       → 🤖 ai-agent Agent框架（智能体构建）
+                        → 🦜🔗 langchain-ai LLM应用框架（Runnable/LangGraph/Agent编排）
+                          → 🐳 datawhale AI学习社区（LLM全栈/RAG/Agent/推荐系统/ML理论）
 ```
 
 ---
@@ -109,9 +118,12 @@ groups: 11
 | [🔧 通用开发工具](tooling/index.md) | 5 | PyInvoke 任务引擎、Copier 项目模板、invocations 任务集合、GitHub Problem Matcher、Ninja 极速构建 |
 | [🏗️ CMake 构建系统生态](cmake/index.md) | 1 | CMake 跨平台构建生成器——门面模式、状态快照、多生成器工厂、目标传播、CTest/CPack 集成 |
 | [🤖 AgnesAI 大模型生态](agnes-ai/index.md) | 1 | AgnesAI多模态AI平台——OpenAI兼容API、对话/图像/视频生成、Agent工具调用 |
-| [🤖 AI Agent 框架](ai-agent/index.md) | 1 | AI Agent运行时框架——Agent循环、工具系统、记忆架构、多代理编排、插件架构、通信协议 |
+| [🤖 AI Agent 框架](ai-agent/index.md) | 21 | AI Agent运行时框架——Agent循环、工具系统、记忆架构、多代理编排、插件架构、通信协议、Coding Agent源码解读 |
 | [📊 PyData 科学计算生态](pydata/index.md) | 6 | NumPy/pandas/matplotlib/Plotly/Dash/PyTables——数值计算、数据分析、可视化、Web应用、HDF5存储 |
 | [🧠 ONNX 机器学习生态](onnx/index.md) | 8 | ONNX标准/IR-Python/优化器/ONNXMLTools/sklearn-onnx/tf2onnx/onnx-mlir/onnx-tensorrt——跨框架模型交换、转换器、编译器、推理后端 |
+| [📖 Jupyter Book v2 / MySTmd 生态](jupyter-book/index.md) | 8 | MyST引擎/CLI/语法扩展/多格式导出/Jupyter Book CLI/Notebook执行/Thebe交互/JupyterLab扩展/主题系统——TypeScript新一代技术文档工具链 |
+| [🐳 Datawhale 开源 AI 学习社区](datawhale/index.md) | 18 | LLM教程/RAG/Agent/向量数据库/推荐系统/ML理论——torch-rechub/deepagents/base-llm/happy-llm/hello-agents/all-in-rag等18个项目的源码级中文教程 |
+| [🦜🔗 LangChain-AI LLM应用框架](langchain-ai/index.md) | 19 | LangChain/LangGraph核心框架(Python+JS)、Google/MongoDB集成、LangSmith可观测性、deepagents深度研究Agent、open-swe SWE Agent、openevals评测、openwiki、基础设施部署 |
 
 ---
 
@@ -190,7 +202,21 @@ groups: 11
 
 | 知识束 | 简介 |
 |--------|------|
-| [ai-agent](ai-agent/ai-agent/index.md) | AI Agent框架核心架构——Agent循环、工具系统（注册表/Capability Seam）、记忆架构（ST/LT/HMM三层）、多代理编排（MoA/Workspace/Subagent）、Provider抽象、上下文管理（压缩/知识蒸馏）、技能Persona系统（SKILL.md/280+角色）、插件架构（Cordis Fiber/Context原型链）、通信协议（MCP/ACP/COM/OSC）（10概念+4示例+1信源，共15文档） |
+| [ai-agent-fundamentals](ai-agent/ai-agent-fundamentals/index.md) | Agent跨项目基础——6大核心架构模式对比、4框架代码级对比、框架选型指南 |
+| [hermes-agent](ai-agent/hermes-agent/index.md) | 渐进式披露多Agent框架——Think-Act-Observe循环、ToolRegistry(100+工具)、MCP/ACP双协议 |
+| [veadk-python](ai-agent/veadk-python/index.md) | 火山引擎Agent SDK——A2A/A2UI协议、RAG知识库、Sequential/Parallel/Loop/Supervisor组合模式 |
+| [zleap-agent](ai-agent/zleap-agent/index.md) | Workspace-first Agent——Run→Work→WorkStep三级Fiber状态机、PostgreSQL+pgvector双线记忆 |
+| [deepseek-harness](ai-agent/deepseek-harness/index.md) | Cordis插件架构(50+包)、Phase状态机+Inbox双队列、MCP/ACP双协议 |
+| [intelligent-terminal](ai-agent/intelligent-terminal/index.md) | Windows Terminal原生Agent——双进程架构、ACP JSON-RPC 2.0、命名管道传输 |
+| [cordis](ai-agent/cordis/index.md) | 可组合插件元框架——Context DI容器、Fiber六状态生命周期、5种事件派发模式 |
+| [second-me](ai-agent/second-me/index.md) | 个人AI数字分身——L0→L1→L2三层记忆HMM、LoRA微调+DPO对齐 |
+| [codewhale](ai-agent/codewhale/index.md) | Rust Coding Agent——21 crate workspace、Fleet多Agent、Workflow双轨引擎、ExecPolicy沙箱 |
+| [deepseek-reasonix](ai-agent/deepseek-reasonix/index.md) | Go Agent运行时——ACP v1协议、arbiter/governor运行循环、QQ/飞书Bot网关、Checkpoint恢复 |
+| [openai-codex](ai-agent/openai-codex/index.md) | OpenAI Codex CLI——三语言架构(JS/Rust/Python)、三层沙箱防御、AGENTS.md/Skills系统 |
+| [nanobot](ai-agent/nanobot/index.md) | Python多端Agent——MessageBus+WebSocket、CLI/TUI/WebUI三端、SDK类型系统 |
+| [deepcode-cli](ai-agent/deepcode-cli/index.md) | TypeScript编码助手——三包monorepo、10种权限作用域、MCP工具命名空间 |
+| [opencode](ai-agent/opencode/index.md) | Terminal Coding Agent——Bun+Turbo+SST、SessionV2/Context Epoch、混合云部署 |
+| [pi-cli](ai-agent/pi-cli/index.md) | Pi AI CLI——9包monorepo、AI/TUI双层、5个内置prompt工作流 |
 
 ### 📊 [PyData 科学计算生态](pydata/index.md)
 
@@ -215,3 +241,63 @@ groups: 11
 | [tensorflow-onnx](onnx/tensorflow-onnx/index.md) | TensorFlow转换器（tf2onnx）——Keras/SavedModel转ONNX、版本化算子集注册、GraphMatcher图重写、图内部API、优化器Pass、数据布局与类型转换（8概念+4示例+4信源，共16文档） |
 | [onnx-mlir](onnx/onnx-mlir/index.md) | ONNX-MLIR编译器——基于LLVM/MLIR的端到端编译栈、ONNX Dialect/Krnl Dialect、Lowering Pipeline、ExecutionSession运行时、OMCompile编译器驱动、PyRuntime Python绑定（7概念+2示例+3信源，共12文档） |
 | [onnx-tensorrt](onnx/onnx-tensorrt/index.md) | TensorRT后端解析器（onnx2trt）——ModelImporter ONNX解析管线、算子注册与Plugin机制、ShapedWeights权重内存模型、错误诊断与支持度查询、自定义Plugin开发（6概念+3示例+3信源，共12文档） |
+
+### 📖 [Jupyter Book v2 / MySTmd 生态](jupyter-book/index.md)
+
+| 知识束 | 简介 |
+|--------|------|
+| [mystmd](jupyter-book/mystmd/index.md) | MyST引擎核心——myst-parser（markdown-it+tokensToMyst MDAST生成）、myst-transforms（30+转换插件）、myst-common类型系统、myst-config配置、myst-frontmatter元数据、myst-spec节点规范（13概念+5示例+8信源，共26文档） |
+| [myst-cli](jupyter-book/myst-cli/index.md) | 命令行工具——build多格式构建管线、start开发服务器、init项目初始化、clean清理、项目加载与TOC、模板系统、版本迁移、Session缓存（10概念+4示例+5信源，共19文档） |
+| [myst-syntax](jupyter-book/myst-syntax/index.md) | 语法扩展——指令系统（admonition/code/figure/table/math/include）、角色系统（cite/ref/abbr/term）、Mermaid/SI单位等高级语法（9概念+3示例+4信源，共16文档） |
+| [myst-exporters](jupyter-book/myst-exporters/index.md) | 多格式导出——HTML/LaTeX/PDF/DOCX/JATS XML/Markdown/Typst导出器、jtex模板引擎、JATS/LaTeX导入转换器（10概念+3示例+3信源，共16文档） |
+| [jupyter-book](jupyter-book/jupyter-book/index.md) | Jupyter Book v2 CLI——Python+TypeScript双层架构、nodeenv环境管理、myst-cli白标发行版、模板系统（6概念+2示例+2信源，共10文档） |
+| [myst-execute](jupyter-book/myst-execute/index.md) | Notebook执行与Thebe交互——myst-execute内核管理/缓存/执行管线、Thebe Core API/Binder连接、Thebe Lite Pyodide无服务器执行、Thebe React hooks（8概念+3示例+4信源，共15文档） |
+| [jupyterlab-myst](jupyter-book/jupyterlab-myst/index.md) | JupyterLab扩展——三插件架构（content-factory/executor/mime-renderer）、MySTMarkdownCell、内联表达式、Widget React集成（6概念+3示例+4信源，共13文档） |
+| [myst-theme](jupyter-book/myst-theme/index.md) | 主题系统——三层分离架构（styles/packages/themes）、CSS变量主题切换、命名网格线布局、myst-to-react MDAST→React渲染、Provider分层、Book/Article Remix SSR主题（8概念+2示例+3信源，共13文档） |
+
+### 🐳 [Datawhale 开源 AI 学习社区](datawhale/index.md)
+
+| 知识束 | 简介 |
+|--------|------|
+| [torch-rechub](datawhale/torch-rechub/index.md) | 推荐系统框架——30+模型（DSSM/DeepFM/DIN/MMoE等）、CTR/Match/MTL/Seq四类Trainer、ONNX导出与部署 |
+| [deepagents](datawhale/deepagents/index.md) | 多语言Agent平台monorepo——libs/（acp/cli/code/evals/talon）+ openwiki，三层栈架构 |
+| [base-llm](datawhale/base-llm/index.md) | 从NLP到LLM全栈教程——分词/Word2Vec/RNN/Transformer/BERT/GPT/LoRA/RLHF/量化/部署 |
+| [happy-llm](datawhale/happy-llm/index.md) | 从零构建大模型——Transformer/PLM/LLaMA2手写实现/GRPO强化学习/RAG/Agent |
+| [hello-agents](datawhale/hello-agents/index.md) | 从零构建智能体——16章：ReAct范式/框架开发/记忆/上下文工程/MCP-A2A通信协议/Agentic-RL/评估 |
+| [all-in-rag](datawhale/all-in-rag/index.md) | RAG技术全栈指南——数据准备/索引构建/检索进阶/生成重排/评估体系/Graph RAG项目实战 |
+| [easy-vecdb](datawhale/easy-vecdb/index.md) | 向量数据库原理与实践——向量检索/ANN算法（IVF/PQ/HNSW/LSH）/Annoy/Faiss/Milvus |
+| [key-book](datawhale/key-book/index.md) | 机器学习理论钥匙书——可学性/计算复杂度/泛化界/稳定性/一致性/收敛率/遗憾界七大支柱 |
+| [pumpkin-book](datawhale/pumpkin-book/index.md) | 南瓜书——西瓜书公式推导伴读，16章公式逐一推导 |
+| [tiny-universe](datawhale/tiny-universe/index.md) | 大模型白盒子构建指南——TinyDiffusion/TinyRAG/TinyAgent/TinyLLM手搓实现 |
+| [handy-ollama](datawhale/handy-ollama/index.md) | Ollama本地大模型部署教程——安装/模型管理/API/OpenAI兼容接口/WebUI/生产部署 |
+| [handy-n8n](datawhale/handy-n8n/index.md) | n8n工作流自动化教程——6章从入门到高级，AI工作流与自定义节点 |
+| [easy-vibe](datawhale/easy-vibe/index.md) | Vibe Coding多语言教程——10语言文档站、200+交互组件、AI Agent友好设计 |
+| [vibe-vibe](datawhale/vibe-vibe/index.md) | Vibe开发教程——Basic入门/中英双语/100+交互组件/Docker部署 |
+| [code-your-own-llm](datawhale/code-your-own-llm/index.md) | 手写LLM精简便签——全栈式LLM学习路径与文档写作规范 |
+| [Agent-Learning-Hub](datawhale/Agent-Learning-Hub/index.md) | Agent学习路线图——9阶段Todo List、11级Project Ladder、9大资源分类 |
+| [deepagents-in-action](datawhale/deepagents-in-action/index.md) | deepagents实战教程——Agent Harness定位、虚拟文件系统与Context Engineering、7种模板 |
+| [members-visualization](datawhale/members-visualization/index.md) | Datawhale成员可视化（占位收录，仓库仅含.npmrc） |
+
+### 🦜🔗 [LangChain-AI LLM应用框架](langchain-ai/index.md)
+
+| 知识束 | 简介 |
+|--------|------|
+| [langchain](langchain-ai/langchain/index.md) | LangChain核心框架(Python)——Runnable组合协议、Message/Tool抽象、Prompt分层、输出解析、回调、检索（73事实/5洞察/10概念/4参考/3示例） |
+| [langgraph](langchain-ai/langgraph/index.md) | LangGraph Agent编排框架(Python)——StateGraph/节点/边、Channel通道、Pregel BSP引擎、checkpoint持久化、Stream流式（128事实/6洞察/8概念/3参考/2示例） |
+| [langchainjs](langchain-ai/langchainjs/index.md) | LangChain核心框架(JS/TS)——Runnable/Message/Tool、ReactAgent、Middleware、pnpm+turbo工作区（109事实/5洞察/8概念/3参考/2示例） |
+| [langgraphjs](langchain-ai/langgraphjs/index.md) | LangGraph编排框架(JS/TS)——StateGraph/Annotation、通道、checkpoint、Pregel执行（7洞察/6概念/2参考/2示例） |
+| [langchain-google](langchain-ai/langchain-google/index.md) | Google GenAI/VertexAI集成——双后端ChatModel、Embeddings、provider抽象与鉴权（85事实/3洞察/3概念） |
+| [langchain-mongodb](langchain-ai/langchain-mongodb/index.md) | MongoDB集成——向量存储、Atlas Vector Search、聚合管道、聊天历史与缓存（79事实/4洞察/3概念） |
+| [langsmith-sdk](langchain-ai/langsmith-sdk/index.md) | LangSmith可观测性SDK(JS)——traceable装饰器、RunTree追踪、评测器、匿名化（100事实/4洞察/4概念） |
+| [langsmith-cli](langchain-ai/langsmith-cli/index.md) | LangSmith命令行工具(Go)——Cobra命令树、v1/v2透明切换、OAuth多Profile（57事实/3洞察/3概念/2参考） |
+| [deepagents](langchain-ai/deepagents/index.md) | 深度研究Agent框架(Python)——planning/sub-agent/todo/context、ACP协议、Profile机制（64事实/5洞察/4概念/6参考，含lca变体） |
+| [deepagentsjs](langchain-ai/deepagentsjs/index.md) | 深度研究Agent框架(TS)——中间件三层组装、子代理隔离、可插拔后端（83事实/3洞察/3概念） |
+| [open-swe](langchain-ai/open-swe/index.md) | 开源SWE Agent——五图工厂、durable dispatch、reviewer findings、scheduler-reconcile闭环（70事实/4洞察/4概念） |
+| [openevals](langchain-ai/openevals/index.md) | LLM评测库(JS+Python)——exact匹配、LLM-as-Judge、统一评测器协议（50事实/3洞察/3概念） |
+| [openwiki](langchain-ai/openwiki/index.md) | Wiki/文档Agent(TS)——Agent-CLI分层、OAuth+Token管理、ngrok内网穿透（76事实/3洞察/3概念/2参考） |
+| [openwork](langchain-ai/openwork/index.md) | 工作流CLI(TS)——桌面壳+deepagents内核、HITL审批、sql.js检查点（26事实/2洞察/1概念） |
+| [chat-langchain](langchain-ai/chat-langchain/index.md) | 对话Demo应用——双文件合约(agent.py+identity.py)、六层中间件管道（26事实/2洞察/1概念/2参考） |
+| [social-media-agent](langchain-ai/social-media-agent/index.md) | 社交媒体Agent(TS+Python)——14图微服务、HITL状态机、scatter-gather并行（34事实/10洞察/1概念） |
+| [docs](langchain-ai/docs/index.md) | LangChain官方文档站——单源MDX双语构建、docs.json导航中心化、pipeline构建管道（100事实/2洞察，参考型） |
+| [helm](langchain-ai/helm/index.md) | Helm Chart部署——五Chart分层矩阵、内置依赖vs外部服务双模式、三种入口互斥（85事实/4洞察，参考型） |
+| [terraform](langchain-ai/terraform/index.md) | Terraform基础设施——四云模块矩阵、count条件编排、20+precondition守卫（56事实/1洞察，参考型） |

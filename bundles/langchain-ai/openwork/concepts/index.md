@@ -1,0 +1,3 @@
+# 核心概念
+
+- [总览](/langchain-ai/openwork/concepts/overview) — openwork 是什么、解决什么问题、核心机制与架构

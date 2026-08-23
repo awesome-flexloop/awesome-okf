@@ -169,8 +169,8 @@ ContentBlock = (
 ```python
 from langchain_core.messages import (
     HumanMessage, SystemMessage, AIMessage, ToolMessage,
-    tool_call,
 )
+from langchain_core.messages.tool import tool_call
 
 # 1. 基本消息
 messages = [

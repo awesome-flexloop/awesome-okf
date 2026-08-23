@@ -1,3 +1,12 @@
+---
+type: spec
+scope: langgraph
+name: facts
+version: "0.2"
+source: https://github.com/langchain-ai/langgraph
+description: LangGraph 源码事实验证清单——从核心模块提取的 128 条编号事实
+---
+
 # LangGraph 事实清单
 
 ## 项目元信息

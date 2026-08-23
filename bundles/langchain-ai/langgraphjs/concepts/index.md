@@ -1,11 +1,3 @@
----
-type: Index
-title: 核心概念索引
-description: LangGraphJS 核心概念文档导航
-tags: [index, concepts]
-status: stable
----
-
 # 核心概念
 
 - [总览](overview) — LangGraphJS 是什么、四层架构、设计哲学

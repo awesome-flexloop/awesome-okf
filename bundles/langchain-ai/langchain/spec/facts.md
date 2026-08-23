@@ -1,3 +1,27 @@
+---
+type: spec
+title: langchain-core 源码事实清单
+description: 从 langchain_core 源码逐模块提取的编号事实 F-lc-001~073，零推测，每条含文件路径与行号
+tags: [langchain, facts, source-verification]
+generated: { by: "reference_agent/trae-solo", at: 2026-08-23 }
+verified: { by: "process:seven-concepts-v", at: 2026-08-23 }
+status: stable
+stale_after: 2027-02-23
+sources:
+  - id: src-core
+    resource: /references/core-abstractions.md
+    title: 核心抽象源码信源
+  - id: src-msg
+    resource: /references/messages-tools.md
+    title: 消息与工具源码信源
+  - id: src-po
+    resource: /references/prompts-output.md
+    title: 提示词、模型与输出解析源码信源
+  - id: src-rc
+    resource: /references/runnables-callbacks.md
+    title: 回调、追踪与检索源码信源
+---
+
 # langchain-core 事实清单
 
 > 源码根：`d:/spaces/SpecWeave/external/libs/ai/langchain-ai/langchain/libs/core/langchain_core/`
@@ -181,3 +205,9 @@ F-lc-070: 文件 `runnables/passthrough.py` 中定义 `RunnablePassthrough` 和 
 ## 公共导出
 
 F-lc-071: 文件 `runnables/__init__.py` 第28-33行导出 `RunnableBinding`、`RunnableGenerator`、`RunnableLambda`、`RunnableParallel`、`RunnableSequence`；第48-49行导出 `RunnableAssign`、`RunnablePassthrough`。使用懒加载（第98-114行 `_dynamic_imports`）。
+
+## Document Loaders（document_loaders/base.py）
+
+F-lc-072: 文件 `document_loaders/base.py` 第26行类 `BaseLoader(ABC)`。第37行方法 `load(self) -> list[Document]`，实现为 `return list(self.lazy_load())`（不应被子类重写）。第45行 `async def aload(self) -> list[Document]`，实现为 `[document async for document in self.alazy_load()]`。第53行方法 `load_and_split(self, text_splitter: TextSplitter | None = None) -> list[Document]`，默认使用 `RecursiveCharacterTextSplitter`（需要 `langchain_text_splitters` 包）。第91行方法 `lazy_load(self) -> Iterator[Document]`，若子类重写了 `load` 则委托 `iter(self.load())`，否则抛 `NotImplementedError`。第102行 `async def alazy_load(self) -> AsyncIterator[Document]`，通过 `run_in_executor` 在线程池中逐步迭代同步 `lazy_load`。
+
+F-lc-073: 文件 `document_loaders/base.py` 第117行抽象类 `BaseBlobParser(ABC)`。第127-128行抽象方法 `lazy_parse(self, blob: Blob) -> Iterator[Document]`。第140行方法 `parse(self, blob: Blob) -> list[Document]`，实现为 `return list(self.lazy_parse(blob))`（子类不应重写）。
