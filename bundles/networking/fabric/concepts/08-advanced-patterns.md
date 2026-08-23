@@ -325,5 +325,5 @@ class MyFab(Fab):
 - [配置体系](03-configuration.md)
 - [多主机并行](05-group-parallel.md)
 - [命令执行](04-command-execution.md)
-- [pyinvoke 执行模型](../../tooling/pyinvoke/concepts/08-execution-model.md)
+- [pyinvoke 执行模型](../../../tooling/pyinvoke/index.md)
 - [paramiko 认证体系](../../paramiko/concepts/05-authentication.md)

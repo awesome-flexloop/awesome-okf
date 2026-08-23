@@ -3,15 +3,15 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识束总索引"
 description: "awesome-okf-xs 知识束（bundles）分组导航——按技术生态组织的开源项目源码中文教程"
-total_bundles: 240
-groups: 24
+total_bundles: 246
+groups: 25
 ---
 
 # 知识束总索引（Bundles Index）
 
 > **OKF (Open Knowledge Format)** 知识束是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识束包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **240 个知识束**，按技术生态分为 **24 个分组**。
+> 当前共 **246 个知识束**，按技术生态分为 **25 个分组**。
 
 ---
 
@@ -126,6 +126,7 @@ groups: 24
 | [🦜🔗 LangChain-AI LLM应用框架](langchain-ai/index.md) | 19 | LangChain/LangGraph核心框架(Python+JS)、Google/MongoDB集成、LangSmith可观测性、deepagents深度研究Agent、open-swe SWE Agent、openevals评测、openwiki、基础设施部署 |
 | [ψ Ψhē 理论体系](psi/index.md) | 4 | ψ=ψ(ψ)自指递归理论——核心哲学(塌缩/回声/观察者)、数学形式化(CST/RH证明/坍缩数学)、XOR-SHIFT宇宙本论、GodGPT应用 |
 | [📨 消息通信生态](messaging/index.md) | 4 | ZeroMQ核心(libzmq)、C++绑定(cppzmq)、Python绑定(pyzmq)、Python分布式任务队列(dramatiq)——套接字抽象、ZMTP协议、I/O线程、Actor模型、Broker抽象 |
+| [🌐 SSH与远程控制](networking/index.md) | 6 | paramiko SSH2协议栈、fabric高层部署、netmiko多厂商网络SSH、asyncssh异步SSH、pexpect交互控制、scrapli Zig+Python新一代网络自动化 |
 
 ---
 
@@ -321,3 +322,14 @@ groups: 24
 | [cppzmq](messaging/cppzmq/index.md) | C++ header-only绑定——RAII三巨头(context_t/socket_t/message_t)、sockopt类型安全选项、const_buffer/mutable_buffer内存抽象、poller_t多态事件多路复用、multipart_t高层多部分消息 |
 | [pyzmq](messaging/pyzmq/index.md) | Python绑定——Cython/CFFI双后端可插拔、sugar纯Python语法层(Socket.send_string/json/pyobj/multipart)、asyncio子类覆写协程集成、attrsettr描述符选项系统、_future事件状态机、auth ZAP认证、eventloop/green/devices生态 |
 | [dramatiq](messaging/dramatiq/index.md) | Python分布式任务队列——Actor装饰器双重身份、Broker防腐层(Redis/RabbitMQ/Stub)、Worker SEDA线程模型(ConsumerThread+WorkerThread+PriorityQueue)、Middleware洋葱模型、Message frozen dataclass信封、Encoder序列化、Results结果后端、CLI多进程+Watcher热重载 |
+
+### 🌐 [SSH与远程控制](networking/index.md)
+
+| 知识束 | 简介 |
+|--------|------|
+| [paramiko](networking/paramiko/index.md) | 纯Python SSH2协议库——Transport加密隧道、Channel多路复用、SSHClient高层门面、SFTPClient文件传输、PKey/RSAKey/Ed25519Key密钥体系、端口转发、ServerInterface服务端（123事实/11概念/5示例/1信源） |
+| [fabric](networking/fabric/index.md) | 高层远程执行框架——Connection继承invoke.Context组合paramiko.SSHClient、Config多层配置、SerialGroup/ThreadingGroup并行、Remote Runner、Transfer文件传输、Tunnel跳板机（92事实/9概念/4示例/1信源） |
+| [netmiko](networking/netmiko/index.md) | 多厂商网络设备SSH——ConnectHandler工厂、BaseConnection模板方法、100+驱动继承体系、SSHDetect自动探测、send_command/send_config_set三种命令模式、SCP文件传输（120事实/10概念/4示例/1信源） |
+| [asyncssh](networking/asyncssh/index.md) | asyncio异步SSH全栈——SSHClientConnection协程状态机、Channel→Stream→Process三层IO、SFTP v3-v6多版本、SCP、端口转发、SSHServer双端对称、后量子KEX（180事实/12概念/4示例/1信源） |
+| [pexpect](networking/pexpect/index.md) | Expect式交互控制——spawn PTY子进程、expect正则匹配引擎、before/after/match三元组、pxssh SSH登录状态机、PopenSpawn跨平台、REPLWrapper REPL封装（77事实/9概念/4示例/1信源） |
+| [scrapli](networking/scrapli/index.md) | Zig+Python新一代网络自动化——Cli/Netconf双驱动、FFI ctypes绑定libscrapli、BIN/SSH2/Telnet可插拔Transport、YAML声明式44平台定义、同步/异步正交API（133事实/9概念/4示例/1信源） |

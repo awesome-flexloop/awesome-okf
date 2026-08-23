@@ -48,7 +48,7 @@ fabric v4 建立在两个核心库之上：
 
 | 依赖 | 角色 | 知识束 |
 |------|------|--------|
-| **invoke** (pyinvoke) | 任务执行框架：Context、Config、Runner、Task、Executor、Program CLI | [pyinvoke](../../tooling/pyinvoke/concepts/00-introduction.md) |
+| **invoke** (pyinvoke) | 任务执行框架：Context、Config、Runner、Task、Executor、Program CLI | [pyinvoke](../../../tooling/pyinvoke/index.md) |
 | **paramiko** | SSH 协议底层：SSHClient、Transport、Channel、SFTPClient、AuthStrategy | [paramiko](../../paramiko/concepts/00-introduction.md) |
 
 架构关系：

@@ -18,7 +18,7 @@ sources:
 
 fabric 是一个高层 Python 库，用于通过 SSH 执行 shell 命令和管理远程主机。它建立在两个成熟的底层库之上：
 
-- **[invoke](../../tooling/pyinvoke/concepts/00-introduction.md)**：任务执行框架，提供 Context、Config、Runner、Task、CLI Program 等基础设施
+- **[invoke](../../../tooling/pyinvoke/index.md)**：任务执行框架，提供 Context、Config、Runner、Task、CLI Program 等基础设施
 - **[paramiko](../../paramiko/concepts/00-introduction.md)**：纯 Python SSH2 协议库，提供 SSHClient、Transport、Channel、SFTPClient 等 SSH 原语
 
 fabric 的定位是"胶水层"——它将 invoke 的任务执行模型和 paramiko 的 SSH 能力组合成一套面向远程运维的 API。
@@ -116,4 +116,4 @@ fabric 提供了 `Connection.from_v1(env)` 和 `Config.from_v1(env)` 两个备�
 - [Connection 详解](02-connection.md)
 - [配置体系](03-configuration.md)
 - [paramiko SSHClient](../../paramiko/concepts/02-ssh-client.md) — fabric 的 SSH 底层
-- [pyinvoke Context 对象](../../tooling/pyinvoke/concepts/03-context-object.md) — Connection 的父类
+- [pyinvoke Context 对象](../../../tooling/pyinvoke/index.md) — Connection 的父类

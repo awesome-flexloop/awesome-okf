@@ -186,7 +186,7 @@ responder = Responder(
 c.run("sudo whoami", watchers=[responder], pty=True)
 ```
 
-Watcher 在输出流中匹配模式并自动响应。详见 [pyinvoke Watcher](../../tooling/pyinvoke/concepts/09-watchers.md)。
+Watcher 在输出流中匹配模式并自动响应。详见 [pyinvoke Watcher](../../../tooling/pyinvoke/index.md)。
 
 ### in_stream — 标准输入
 
@@ -299,5 +299,5 @@ sudo:
 - [Connection 详解](02-connection.md)
 - [配置体系](03-configuration.md)
 - [多主机并行](05-group-parallel.md)
-- [pyinvoke Runner](../../tooling/pyinvoke/concepts/06-runners.md)
+- [pyinvoke Runner](../../../tooling/pyinvoke/index.md)
 - [paramiko Channel](../../paramiko/concepts/04-channel.md)

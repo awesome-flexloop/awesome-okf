@@ -4,7 +4,7 @@ okf_version: "0.2"
 
 # fabric 知识库
 
-本知识包是高层 SSH 命令执行库 [fabric](https://www.fabfile.org)（v4.0.0）的系统化中文教程，基于源码深度阅读生成。fabric 建立在 [paramiko](../../paramiko/concepts/00-introduction.md)（SSH 协议底层）和 [pyinvoke](../../tooling/pyinvoke/concepts/00-introduction.md)（任务执行框架）之上，遵循 [OKF v0.2 规范](concepts/00-introduction.md)。
+本知识包是高层 SSH 命令执行库 [fabric](https://www.fabfile.org)（v4.0.0）的系统化中文教程，基于源码深度阅读生成。fabric 建立在 [paramiko](../paramiko/concepts/00-introduction.md)（SSH 协议底层）和 [pyinvoke](../../tooling/pyinvoke/index.md)（任务执行框架）之上，遵循 [OKF v0.2 规范](concepts/00-introduction.md)。
 
 ## 入门与基础（concepts/）
 

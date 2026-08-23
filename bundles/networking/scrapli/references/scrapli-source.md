@@ -73,7 +73,7 @@ external/libs/scrapli/scrapli/
 | `transport.py` | `TransportKind` 枚举、`Options` 抽象基类、`BinOptions`/`Ssh2Options`/`TelnetOptions`/`TestOptions` |
 | `session.py` | Session `Options` dataclass：读大小、超时、回车符、录制器配置 |
 | `auth.py` | `LookupKeyValue` dataclass、Auth `Options` dataclass：用户名/密码/密钥/lookups |
-| `exceptions.py` | 异常层次：ScrapliException 基类及 15 个子类 |
+| `exceptions.py` | 异常层次：ScrapliException 基类及 16 个子类（共 17 个异常类） |
 | `ffi.py` | libscrapli 共享库定位与加载，支持 Linux（musl/gnu）和 macOS |
 | `ffi_types.py` | ctypes 类型定义：ZigSlice、ZigU64Slice、Cancel、LibScrapliFFIResult、回调包装器 |
 | `ffi_options.py` | ctypes Structure 定义：CLI/Netconf/Session/Auth/Transport 选项结构体 |

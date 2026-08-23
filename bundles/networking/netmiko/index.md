@@ -6,7 +6,7 @@ okf_version: "0.2"
 
 本知识包是多厂商网络设备 SSH/Telnet CLI 自动化库 [netmiko](https://github.com/ktbyers/netmiko)（v4.7.0）的系统化中文教程，基于源码深度阅读生成，覆盖从快速上手到高级模式的完整知识体系。所有内容均溯源至 netmiko 源码（`netmiko/` 包核心模块），遵循 [OKF v0.2 规范](/concepts/00-introduction.md)。
 
-netmiko 基于 [paramiko](../../paramiko/concepts/00-introduction.md) 构建，通过 PTY 交互式 shell 和 CLI screen-scraping 模型统一管理 100+ 种网络平台。
+netmiko 基于 [paramiko](../paramiko/concepts/00-introduction.md) 构建，通过 PTY 交互式 shell 和 CLI screen-scraping 模型统一管理 100+ 种网络平台。
 
 ## 入门与基础（concepts/）
 

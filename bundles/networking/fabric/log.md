@@ -150,10 +150,10 @@
 
 ### 交叉引用检查
 
-- 跨束引用 paramiko 使用相对路径 `../../paramiko/concepts/` 格式
-- 跨束引用 pyinvoke 使用相对路径 `../../tooling/pyinvoke/concepts/` 格式
+- 跨束引用 paramiko 使用相对路径 `../../paramiko/concepts/` 格式（子目录内）
+- 跨组引用 pyinvoke 使用相对路径 `../../../tooling/pyinvoke/index.md` 格式（子目录内，需三层 `../` 到达 bundles/）
 - 束内引用使用相对路径（如 `02-connection.md`）
-- 所有引用目标文件均存在
+- 所有引用目标文件均存在（2026-08-23 全局验证修正：pyinvoke 链接路径从 `../../tooling/pyinvoke/concepts/` 修正为 `../../../tooling/pyinvoke/index.md`）
 
 ### 虚构 API 修复记录
 
