@@ -7,7 +7,7 @@ title: Awesome OKF for Xuanspace 文档首页
 
 > 技术为器、思想为道，器以载道
 
-欢迎来到 **Awesome OKF for Xuanspace** 文档站。本库是 [XuanSpace（玄境）](https://github.com/xinetzone/xuanspace) 项目的开源知识格式（OKF）文档库，以 OKF bundle（知识束）形式组织 236 个开源项目的源码中文教程。
+欢迎来到 **Awesome OKF for Xuanspace** 文档站。本库是 [XuanSpace（玄境）](https://github.com/xinetzone/xuanspace) 项目的开源知识格式（OKF）文档库，以 OKF bundle（知识束）形式组织 248 个开源项目的源码中文教程。
 
 ## 文档导航
 
@@ -32,6 +32,6 @@ bundles/index
 
 ## 关于知识束
 
-知识束（bundle）是 OKF（Open Knowledge Format）规定的结构化知识单元，每个知识束包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。当前共收录 **236 个知识束**，按技术生态分为 **23 个分组**。
+知识束（bundle）是 OKF（Open Knowledge Format）规定的结构化知识单元，每个知识束包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。当前共收录 **248 个知识束**，按技术生态分为 **10 个技术域、28 个分组**。
 
 详见 [知识束总索引](bundles/index.md)。
