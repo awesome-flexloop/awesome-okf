@@ -1,7 +1,6 @@
 from pathlib import Path
 import os
 import sys
-import subprocess
 import importlib.util
 import importlib.metadata
 
@@ -121,43 +120,3 @@ html_theme_options = {
 }
 
 
-def setup(app):
-    """Sphinx setup 钩子：创建 bundles 符号链接/联接。"""
-    import platform
-    doc_dir = ROOT / 'doc'
-    bundles_link = doc_dir / 'bundles'
-    bundles_target = ROOT / 'bundles'
-
-    if not bundles_target.exists():
-        raise FileNotFoundError(f"bundles 目录不存在: {bundles_target}")
-
-    if bundles_link.is_symlink() or bundles_link.exists():
-        try:
-            resolved = bundles_link.resolve()
-            if resolved == bundles_target.resolve():
-                return
-        except (OSError, RuntimeError):
-            pass
-        if bundles_link.is_dir() and not bundles_link.is_symlink():
-            raise RuntimeError(
-                f"{bundles_link} 已作为普通目录存在，请删除后重试。"
-                f"该路径应由 Sphinx 自动创建为指向 {bundles_target} 的链接。"
-            )
-        if bundles_link.is_symlink():
-            bundles_link.unlink()
-
-    if platform.system() == 'Windows':
-        try:
-            os.symlink(
-                str(bundles_target), str(bundles_link), target_is_directory=True
-            )
-        except OSError:
-            subprocess.run(
-                ['cmd', '/c', 'mklink', '/J',
-                 str(bundles_link), str(bundles_target)],
-                check=True, capture_output=True
-            )
-    else:
-        os.symlink(
-            str(bundles_target), str(bundles_link), target_is_directory=True
-        )

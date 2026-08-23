@@ -15,7 +15,7 @@
    git clone git@github.com:awesome-flexloop/awesome-okf.git
    ```
 
-2. 查看目录结构，了解 bundles/ 与 docs/ 的用途
+2. 查看目录结构，了解 doc/ 与 doc/bundles/ 的用途
 
 3. 阅读根目录 `AGENTS.md` 与 `context-routing.md`，了解协作规范
 
@@ -23,8 +23,8 @@
 
 | 能力 | 方式 | 说明 |
 |---|---|---|
-| 了解文档库结构 | 阅读本文件「目录结构速览」 | 掌握 bundles/docs/references 分工 |
-| 查找知识文档 | 进入 `docs/index.md` 或 `bundles/` | 按 bundle 索引定位 |
+| 了解文档库结构 | 阅读本文件「目录结构速览」 | 掌握 doc/bundles 分工 |
+| 查找知识文档 | 进入 `doc/index.md` 或 `doc/bundles/` | 按 bundle 索引定位 |
 | 新增知识文档 | 按 `context-routing.md` 确定存放目录 | 遵循 frontmatter 规范 |
 | AI 协作 | 阅读 `AGENTS.md` | 遵循启动协议 |
 
@@ -32,12 +32,11 @@
 
 ```
 awesome-okf-xs/
-├── bundles/       # OKF bundle 文档（结构化知识束）
-├── docs/          # 通用文档与索引
-├── references/    # 参考资料与原始来源
-├── .agents/       # AI 智能体规范
-├── AGENTS.md      # 智能体入口
-└── README.md      # 项目说明
+├── doc/                # Sphinx 文档工程
+│   └── bundles/        # OKF bundle 文档（结构化知识束）
+├── .agents/            # AI 智能体规范
+├── AGENTS.md           # 智能体入口
+└── README.md           # 项目说明
 ```
 
 ## 第一次任务？
@@ -46,7 +45,7 @@ awesome-okf-xs/
 
 1. 已读取根目录 `AGENTS.md`
 2. 根据任务类型查阅 `context-routing.md`
-3. 涉及具体知识文档时，先确认其目标目录（bundles/ 或 docs/）
+3. 涉及具体知识文档时，先确认其目标目录（doc/bundles/ 或 doc/）
 4. 简单任务可直接执行，复杂任务先规划再动手
 
 ## 文档规范

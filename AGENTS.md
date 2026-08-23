@@ -49,26 +49,23 @@ sources:
 
 ```
 awesome-okf-xs/
-├── bundles/          # OKF bundle 文档（结构化知识束）
-├── docs/             # 通用文档与索引
-├── references/       # 参考资料与原始来源
-├── .agents/          # AI 智能体规范目录（本规范所在目录）
-├── AGENTS.md         # 本文件 - 智能体入口
-└── README.md         # 项目说明
+├── doc/                # Sphinx 文档工程
+│   └── bundles/        # OKF bundle 文档（结构化知识束）
+├── .agents/            # AI 智能体规范目录（本规范所在目录）
+├── AGENTS.md           # 本文件 - 智能体入口
+└── README.md           # 项目说明
 ```
 
 ### 目录用途
 
 | 目录 | 适用场景 |
 |---|---|
-| `bundles/` | 以 OKF bundle 形式组织的结构化知识文档 |
-| `docs/` | 总览、索引、指南等通用文档 |
-| `references/` | 原始来源、外部资料、参考实现 |
+| `doc/bundles/` | 以 OKF bundle 形式组织的结构化知识文档 |
 
 ## 文档规范要点
 
 - **语言**：正文使用中文，文件名使用 kebab-case 纯英文
 - **格式**：Markdown，遵循 OKF v0.2 YAML frontmatter 规范（详见 [.agents/rules/frontmatter.md](.agents/rules/frontmatter.md)）
-- **知识组织**：结构化的知识文档优先使用 OKF bundle 组织，存放在 `bundles/` 下
+- **知识组织**：结构化的知识文档优先使用 OKF bundle 组织，存放在 `doc/bundles/` 下
 - **路径引用**：Markdown 交叉引用使用相对路径，禁止 `file:///` 绝对路径
 - **派生产物溯源**：源自外部（如 xuanspace 或其他项目）的知识文档须在 frontmatter 中标注 `sources` 字段

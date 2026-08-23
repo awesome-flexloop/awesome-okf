@@ -14,7 +14,7 @@
 |---|---|---|
 | **了解文档库/快速开始** | [ONBOARDING.md](ONBOARDING.md) | - |
 | **新增/修改知识文档** | [rules/frontmatter.md](rules/frontmatter.md) | [../README.md](../README.md) |
-| **组织 OKF bundle** | [rules/frontmatter.md](rules/frontmatter.md) | [../bundles/](../bundles/) |
+| **组织 OKF bundle** | [rules/frontmatter.md](rules/frontmatter.md) | [../doc/bundles/](../doc/bundles/) |
 | **添加外部参考资料** | - | [../references/](../references/) |
 | **修改 .agents/ 规范本身** | [README.md](README.md) | - |
 | **来自 xuanspace 的知识沉淀** | [global-core-rules.md](global-core-rules.md) | [上游 xuanspace](https://github.com/xinetzone/xuanspace) |
@@ -30,5 +30,5 @@
 
 以下任务建议先规划再执行：
 - 新增 OKF bundle 结构
-- 重构 bundles/ 或 docs/ 的目录组织
+- 重构 doc/ 或 doc/bundles/ 的目录组织
 - 批量迁移外部知识到 OKF 格式
