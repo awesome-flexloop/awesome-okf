@@ -10,7 +10,7 @@ generated:
 verified:
   by: "process:seven-concepts-v"
   at: "2026-08-23T00:00:00Z"
-status: draft
+status: stable
 ---
 
 # 🐳 Datawhale 开源 AI 学习社区

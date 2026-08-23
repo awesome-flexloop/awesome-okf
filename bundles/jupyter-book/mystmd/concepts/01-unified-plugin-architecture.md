@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: concept
 title: 统一插件架构（unified/micromark/markdown-it）
 description: MySTmd 的插件体系基于 unified 生态的 Plugin 接口，但底层解析使用 markdown-it 而非 micromark。DirectiveSpec/RoleSpec/TransformSpec/MystPlugin 构成完整的扩展契约。
 tags: [mystmd, unified, plugin, markdown-it, directive, role, transform]

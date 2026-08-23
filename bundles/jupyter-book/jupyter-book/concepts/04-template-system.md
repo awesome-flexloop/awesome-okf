@@ -244,10 +244,10 @@ exports:
 3. 在 myst.yml 中指定本地路径：`template: ./my-template`
 4. 构建时使用自定义模板
 
-详见 [自定义 jtex 模板示例](/examples/02-custom-jtex-template.md)。
+详见 [自定义 jtex 模板示例](../../myst-exporters/examples/02-custom-jtex-template.md)。
 
 ## 相关概念
 
-- [08-jtex-template-engine](/myst-exporters/concepts/08-jtex-template-engine.md)：jtex 模板引擎详解
-- [03-pdf-export](/myst-exporters/concepts/03-pdf-export.md)：PDF 导出流程
-- [02-custom-jtex-template](/myst-exporters/examples/02-custom-jtex-template.md)：自定义模板示例
+- [jtex 模板引擎](../../myst-exporters/concepts/08-jtex-template-engine.md)：jtex 模板引擎详解
+- [PDF 导出](../../myst-exporters/concepts/03-pdf-export.md)：PDF 导出流程
+- [自定义 jtex 模板示例](../../myst-exporters/examples/02-custom-jtex-template.md)：自定义模板示例

@@ -141,7 +141,11 @@ JupyterLab 插件之间有三种主要通信方式：
 
 **3. Signal/Slot 事件**：Lumino 的 `@lumino/signaling` 提供发布-订阅模式（F-145）。服务对象暴露 `ISignal`，其他插件通过 `signal.connect(slot)` 监听事件。例如 `INotebookTracker.currentChanged` 在当前 Notebook 切换时发射信号，`ILabStatus.busySignal` 在应用忙闲状态变化时发射。
 
-此外，`WidgetTracker<T>` 是一种常用的服务模式，用于追踪特定类型的 Widget 实例，提供 `currentWidget`、`widgetAdded`、`forEach()` 等 API（F-047）。
+此外，`WidgetTracker<T>` 是一种常用的服务模式，用于追踪特定类型的 Widget 实例，提供 `currentWidget`、`widgetAdded`、`forEach()` 等 API（F-047）。追踪器本身通常作为 `provides` 的返回值暴露为 Token 服务，使其他插件能够响应当前活动文档的切换。
+
+## 插件 ID 命名与多插件包
+
+插件 ID 遵循 `<package-name>:<plugin-name>` 格式。同一个 npm 包可以导出多个 `JupyterFrontEndPlugin` 对象，通过冒号后的名称区分。例如 `@jupyterlab/notebook-extension` 包导出了 `tracker`、`factory`、`widget-factory`、`tools`、`kernel-status`、`code-console`、`cloned-outputs`、`copy-output`、`cell-executor`、`log-output`、`page-handler` 等十余个插件（F-074），每个插件负责一个独立的功能切片。这种细粒度的插件拆分使得各功能之间通过 Token 解耦，单个插件的禁用不会影响其他功能。核心功能扩展包共有 36 个（F-074），加上 6 个 MIME 渲染扩展包（F-073），构成了 JupyterLab 的完整前端功能集。
 
 ## 核心扩展示例
 

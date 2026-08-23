@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: concept
 title: 参考文献处理（citation-js-utils）
 description: citation-js-utils 包基于 citation-js 提供 BibTeX 解析、CSL-JSON 处理和引用文本格式化能力，支持 APA/Vancouver/Harvard 等引用样式。
 tags: [mystmd, citation, bibtex, csl, bibliography]

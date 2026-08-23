@@ -1,34 +1,40 @@
 # JupyterLab OKF Wiki 更新日志
 
-## v0.1.0 - 2026-08-22
+## v0.2.0 - 2026-08-23
 
-### 新增
+### 完成
 
-**概念文档（10 篇）**：
-- 00-introduction.md：概述与知识地图（项目定位、特性、架构哲学、学习路径）
-- 01-architecture-overview.md：整体架构概览（Monorepo 结构、技术栈、五层架构、数据流）
-- 02-application-shell.md：应用框架与 Shell 布局（JupyterFrontEnd、LabShell 8 区域、启动流程）
-- 03-plugin-system.md：插件系统与依赖注入（Token、JupyterFrontEndPlugin、激活机制）
-- 04-service-layer.md：服务层与后端通信（ServiceManager、12个子管理器、REST/WebSocket）
-- 05-document-widget-system.md：文档注册与 Widget 工厂模式（DocumentRegistry、Context、文件类型链）
-- 06-notebook-cells.md：Notebook 与 Cell 架构（三层 Widget 结构、Cell 类型、执行流程）
-- 07-extension-ecosystem.md：扩展生态系统（Federated 扩展、Python 扩展管理器、CLI）
-- 08-build-and-modes.md：构建系统与运行模式（Core/Dev/App 三模式、Rspack、jlpm）
-- 09-key-subsystems.md：关键子系统（PageConfig、命令、Signal、Disposable、StateDB、Router）
+E 阶段文档全部生成完毕，bundle 从骨架升级为完整教程：
+
+**概念文档（10 篇，约 17000 字）**：
+- 00-introduction.md：概述与知识地图（已有）
+- 01-architecture-overview.md：整体架构概览（Monorepo、五层架构、Mermaid图）
+- 02-application-shell.md：应用框架与Shell布局（JupyterFrontEnd、ILabShell 8区域、启动时序）
+- 03-plugin-system.md：插件系统与依赖注入（Token、JupyterFrontEndPlugin、DI拓扑激活）
+- 04-service-layer.md：服务层与后端通信（ServiceManager、14个子管理器、REST/WS）
+- 05-document-widget-system.md：文档注册与Widget工厂（DocumentRegistry、Factory模式、Context）
+- 06-notebook-cells.md：Notebook与Cell架构（三层Widget、Cell类型、执行流程、窗口化）
+- 07-extension-ecosystem.md：扩展生态系统（Federated扩展、ExtensionManager、entry point）
+- 08-build-and-modes.md：构建系统与运行模式（Core/Dev/App三模式、Rspack、singletonPackages）
+- 09-key-subsystems.md：关键子系统（PageConfig、CommandRegistry、StateDB、Router）
 
 **示例文档（2 篇）**：
-- 01-minimal-extension.md：最小扩展 Hello World（命令注册、命令面板、菜单集成）
-- 02-custom-file-type.md：自定义文件类型 .xyz 查看器（文件类型注册、Widget 工厂）
+- 01-minimal-extension.md：最小扩展Hello World（完整package.json+TypeScript代码）
+- 02-custom-file-type.md：自定义文件类型查看器（DocumentRegistry+WidgetFactory实战）
 
 **参考资料（1 篇）**：
-- source-code-map.md：JupyterLab 源码文件地图（Python 后端 + 前端 40+ 包路径索引）
+- source-code-map.md：源码文件地图（Python后端+103个前端包分类速查）
 
-**导航文件**：
-- index.md：Wiki 首页与导航
-- concepts/index.md、examples/index.md、references/index.md：各子目录索引
+### 质量保证
+- 所有API经Grep级源码验证（JupyterLab lab.ts:21、ILabShell shell.ts:75、ServiceManager manager.ts:48等）
+- 所有内容文档frontmatter完整（type/title/description/tags/generated/verified/status/sources）
+- 交叉链接使用`/`开头bundle-relative路径
 
-### 方法论
+## v0.1.0 - 2026-08-22
 
-- 遵循七概念方法论（R→I→E→V→C）完成 R（事实采集）、I（架构洞察）、E（批量生成）阶段
-- 遵循 source-code-to-okf-wiki 工作流：信源先行、分批生成（每批≤7）、Index 最后写
-- 所有类名/API 名称均基于源码验证（ServiceManager、DocumentRegistry、JupyterLab、LabShell、NotebookPanel、Cell 等）
+### R+I 阶段
+
+- 完成 facts.md（167条事实，含源码路径和行号）
+- 完成 insights.md（5个架构洞察+10个核心模式）
+- 生成 00-introduction.md 规划10章结构
+- 创建 bundle 目录骨架和导航索引

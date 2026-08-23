@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: concept
 title: MySTmd 整体架构
 description: MySTmd（Markedly Structured Text Markdown）是 Jupyter Book 团队开发的 MyST Markdown 引擎，包含解析器、转换管线、配置系统、frontmatter 处理和 CLI 工具链，支持从 Markdown 到 HTML/PDF/DOCX/LaTeX/Typst/JATS 等多格式输出。
 tags: [mystmd, overview, architecture, parser, transforms, cli]

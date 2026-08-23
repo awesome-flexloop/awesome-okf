@@ -1,5 +1,5 @@
 ---
-type: Example
+type: example
 title: 编写自定义 Transform 插件
 description: 演示如何编写一个 unified Plugin 形式的自定义 Transform，对 MDAST 树进行后处理，包括遍历、修改和创建节点。
 tags: [mystmd, transform, plugin, unified, mdast]

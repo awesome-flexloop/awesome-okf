@@ -1,5 +1,5 @@
 ---
-type: Example
+type: example
 title: 编写自定义 Directive（块级指令）
 description: 演示如何创建自定义 MyST 指令（DirectiveSpec），包括参数、选项、内容体解析、递归 MyST 解析，以及在 mystParse 和 MystPlugin 中注册。
 tags: [mystmd, directive, custom-directive, block, extension]

@@ -1,5 +1,5 @@
 ---
-type: Reference
+type: reference
 title: myst-spec / myst-spec-ext 节点类型源码信源
 description: myst-spec 包定义的 50+ MyST 规范 AST 节点类型，以及 myst-spec-ext 的 deprecated 类型别名源码登记。
 tags: [mystmd, myst-spec, ast, node-types, mdast]

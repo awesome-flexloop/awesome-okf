@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: concept
 title: MDAST 节点类型规范（myst-spec）
 description: myst-spec 包定义了 MyST Markdown 的 50+ 种 AST 节点类型，是 MDAST 的 MyST 超集规范，myst-spec-ext 提供向后兼容的 deprecated 类型别名。
 tags: [mystmd, myst-spec, mdast, node-types, ast]

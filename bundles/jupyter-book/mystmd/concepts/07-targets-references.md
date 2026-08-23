@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: concept
 title: 目标与引用系统（Targets & References）
 description: MyST 通过 (target)= 标记锚点目标，支持交叉引用链接到标题、图表、公式、代码块等元素。目标提取、全局编号和引用解析分阶段在 transform 管线中执行。
 tags: [mystmd, targets, cross-references, links, identifiers]

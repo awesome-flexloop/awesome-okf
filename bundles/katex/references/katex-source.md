@@ -1,21 +1,24 @@
 ---
 type: Reference
 title: KaTeX 源码信源
-description: KaTeX v0.18.4 源码仓库与核心文件索引
+description: KaTeX v0.18.4 源码仓库与核心文件索引，含官网页面对应关系
 tags: [katex, source, reference]
-generated: { by: "reference_agent/trae-cn", at: 2026-08-22T22:30:00+08:00 }
-verified: { by: "process:grep-verification", at: 2026-08-22T22:30:00+08:00 }
+generated: { by: "reference_agent/trae-cn", at: 2026-08-23T21:00:00+08:00 }
+verified: { by: "process:grep-verification", at: 2026-08-23T21:00:00+08:00 }
 status: stable
-stale_after: 2027-02-22
+stale_after: 2027-02-23
 sources:
   - id: katex-repo
     resource: https://github.com/KaTeX/KaTeX
     title: KaTeX GitHub Repository
+  - id: katex-website
+    resource: /references/katex-website.md
+    title: KaTeX 官网信源
 ---
 
 ## KaTeX 源码索引
 
-本文档登记 KaTeX v0.18.4 源码中各核心模块的文件路径，作为 Wiki 中所有事实溯源的信源目标。
+本文档登记 KaTeX v0.18.4 源码中各核心模块的文件路径，作为 Wiki 中所有事实溯源的信源目标。官网用户文档信源见 [katex-website.md](/references/katex-website.md)；源码揭示"内部如何工作"，官网说明"怎么用"和"默认值是什么"，二者互补。
 
 ### 入口与配置
 
@@ -112,3 +115,30 @@ sources:
 | 化学扩展 | `contrib/mhchem/mhchem.js` | mhchem化学方程式支持 |
 | 无障碍字符串 | `contrib/render-a11y-string/render-a11y-string.ts` | 生成无障碍文本表示 |
 | 脚本类型 | `contrib/mathtex-script-type/mathtex-script-type.js` | script[type=math/tex]自动渲染 |
+
+### 源码与官网页面对应关系
+
+下表说明源码模块与官网文档页面的对应关系，便于从"使用文档"追溯到"实现位置"。官网页面稳定 ID 定义见 [katex-website.md](/references/katex-website.md)。
+
+| 源码模块/文件 | 对应官网页面 ID | 关联说明 |
+|--------------|----------------|---------|
+| `katex.ts`（render/renderToString） | web-api | 公共 API 的实现入口；官网 API 页说明调用方式，源码定义实现 |
+| `src/Settings.ts`（SETTINGS_SCHEMA） | web-options | 配置选项的类型与约束定义；官网 Options 页提供默认值和用法说明，部分默认值（strict/trust/globalGroup）需以官网为准 |
+| `cli.js` | web-cli | CLI 入口实现；官网 CLI 页列出全部 18 个选项，与 Settings 选项存在映射关系 |
+| `src/MacroExpander.ts`、`src/macros.ts` | web-api、web-options | 宏展开机制与内置宏；官网 API 页说明持久宏（macros 对象共享）用法，Options 页说明 maxExpand 和 macro 函数值 |
+| `src/Lexer.ts`、`src/Parser.ts` | — | 词法分析与语法解析属内部实现，官网无直接对应页面 |
+| `src/buildTree.ts`、`src/buildHTML.ts`、`src/buildMathML.ts` | web-options（output 选项） | 渲染管线；官网 Options 页的 output 选项（html/mathml/htmlAndMathml）控制渲染路径选择 |
+| `src/domTree.ts` | — | 虚拟 DOM 属内部实现，官网无直接对应页面 |
+| `src/defineFunction.ts`、`src/functions/` | web-supported | 函数注册表与命令实现；官网 Supported Functions 页列出用户可见的命令清单 |
+| `src/Options.ts`、`src/Style.ts`、`src/fontMetrics.ts` | web-font | 渲染样式与字体度量；官网 Font 页说明字号缩放（1.21em）、单位换算和字体格式配置 |
+| `contrib/auto-render/` | web-autorender | 自动渲染扩展实现；官网 Auto-render 页说明 delimiters、ignoredTags 等选项 |
+| `contrib/copy-tex/`、`contrib/mhchem/`、`contrib/mathtex-script-type/`、`contrib/render-a11y-string/` | web-libs | 官方扩展实现；官网 Libraries 页列出扩展清单和第三方库索引 |
+| `src/styles/`（SCSS） | web-browser、web-font | 样式表与字体声明；官网 Browser 页说明 font-display 策略，Font 页说明 Sass 变量覆盖 |
+| `package.json`（构建配置） | web-node、web-versions | 包定义与版本；官网 Node 页说明构建要求（Node 22.13+、corepack、pnpm），Versions 页提供版本索引（注意版本标注可能滞后） |
+
+### 双信源使用原则
+
+1. **架构机制以源码为准**：Lexer、MacroExpander、Parser、buildTree、虚拟 DOM 等内部实现细节，以本文件索引的源码路径为权威信源。
+2. **配置默认值以官网为准**：strict、trust、globalGroup 等选项的默认值在源码类型定义中未以人类可读方式标注，以 web-options 页面为权威来源；详见 [facts.md 修正-1~修正-7](/spec/facts.md#事实复核修正)。
+3. **使用方法以官网为准**：安装方式、CDN 链接、API 调用示例、CLI 参数说明、安全建议等面向使用者的内容，以 katex-website.md 登记的官网页面为权威信源。
+4. **版本基准以源码 package.json 为准**：本 bundle 基于 v0.18.4；官网 Versions 页面标注的 0.16.47 滞后于文档页 CDN 版本，版本差异记录在 [facts.md 修正-8](/spec/facts.md#修正-8官网版本号标注不一致)。

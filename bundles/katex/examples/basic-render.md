@@ -1,16 +1,25 @@
 ---
 type: Example
 title: 基础渲染示例
-description: KaTeX render()和renderToString()的基本用法，行内/显示模式，常见公式渲染示例。
-tags: [katex, example, render, displayMode, basic]
-generated: { by: "reference_agent/trae-cn", at: 2026-08-22T22:40:00+08:00 }
-verified: { by: "process:seven-concepts-v", at: 2026-08-22T22:40:00+08:00 }
+description: KaTeX render() 和 renderToString() 的基本用法，String.raw 避免转义，行内/显示模式，常见公式渲染示例，持久宏共享。
+tags: [katex, example, render, displayMode, basic, string-raw]
+generated: { by: "reference_agent/trae-cn", at: 2026-08-23T22:30:00+08:00 }
+verified: { by: "process:seven-concepts-v", at: 2026-08-23T22:30:00+08:00 }
 status: stable
-stale_after: 2027-08-22
+stale_after: 2027-08-23
 sources:
   - id: src
     resource: /references/katex-source.md
     title: KaTeX 源码信源
+  - id: web-api
+    resource: /references/katex-website.md#web-api
+    title: KaTeX 官网 API 页面
+  - id: web-browser
+    resource: /references/katex-website.md#web-browser
+    title: KaTeX 官网 Browser 页面
+  - id: web-options
+    resource: /references/katex-website.md#web-options
+    title: KaTeX 官网 Options 页面
 ---
 
 ## 浏览器端渲染
@@ -35,20 +44,35 @@ sources:
 
 渲染结果（行内模式默认）：`c² = a² + b²`
 
-### 显示模式（displayMode）
+### 使用 String.raw 避免转义
+
+JavaScript 字符串中反斜杠需要双重转义（`\\frac`），可读性较差。可使用 `String.raw` 模板标签直接书写 LaTeX 源码[^web-api]：
 
 ```javascript
 katex.render(
-    "\\int_0^\\infty e^{-x^2}\\,dx = \\frac{\\sqrt{\\pi}}{2}",
+    String.raw`\int_0^\infty e^{-x^2}\,dx = \frac{\sqrt{\pi}}{2}`,
     document.getElementById("display-formula"),
     { displayMode: true }
 );
 ```
 
-`displayMode: true` 使公式：
+注意：`String.raw` 无法转义 `${` 和反引号本身，包含这些字符的公式仍需普通字符串。
+
+### 显示模式（displayMode）
+
+```javascript
+katex.render(
+    String.raw`\int_0^\infty e^{-x^2}\,dx = \frac{\sqrt{\pi}}{2}`,
+    document.getElementById("display-formula"),
+    { displayMode: true }
+);
+```
+
+`displayMode: true` 使公式[^web-options]：
 - 块级显示（独占一行、居中）
 - 积分/求和等大算符使用大号字形
 - 上下标位置在正上方/正下方（行内模式在角上）
+- 禁用最外层关系符或二元运算符后的自动换行
 
 ### 服务端渲染（Node.js）
 
@@ -215,6 +239,21 @@ HTML：
 
 或者使用 [auto-render扩展](/examples/auto-render-usage.md) 自动处理 `$...$` 分隔符。
 
+## 持久宏（Persistent Macros）
+
+KaTeX 的 `render` 和 `renderToString` 表面上是无状态的，但通过传入**共享的 `macros` 对象**可实现宏定义在多次调用间持久化[^web-api]：
+
+```javascript
+const macros = {};
+
+katex.render(String.raw`\gdef\RR{\mathbb{R}}`, el1, { macros });
+katex.render(String.raw`\RR^n`, el2, { macros });
+```
+
+当作者使用 `\gdef` 时，KaTeX 将宏定义插入传入的 `macros` 对象，由于该对象在多次调用间持续存在，后续渲染可以使用前面定义的宏。
+
+**安全注意**：持久宏可改变 KaTeX 行为（如重定义标准命令），应仅在共同信任的多个元素间使用；不应跨多用户消息启用。多用户场景应为每条消息创建独立的 `macros` 对象。详见 [宏系统](/concepts/09-macro-system.md) 和 [安全与错误处理](/concepts/18-security-and-errors.md)。
+
 ## 输出格式选择
 
 ```javascript
@@ -231,7 +270,13 @@ katex.render(expr, el, {output: "htmlAndMathml"});
 ## 相关内容
 
 - [快速开始](/concepts/01-getting-started.md)
+- [安装与运行时](/concepts/15-installation-and-runtime.md)
 - [渲染管线](/concepts/06-render-pipeline.md)
 - [配置系统](/concepts/10-settings-options.md)
+- [支持的函数](/concepts/19-supported-functions.md)
 - [自定义宏示例](/examples/custom-macros.md)
 - [错误处理示例](/examples/error-handling.md)
+
+[^web-api]: 官网 API 页面，https://katex.org/docs/api
+[^web-browser]: 官网 Browser 页面，https://katex.org/docs/browser
+[^web-options]: 官网 Options 页面，https://katex.org/docs/options

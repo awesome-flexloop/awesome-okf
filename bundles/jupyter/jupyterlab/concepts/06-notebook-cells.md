@@ -138,7 +138,7 @@ CodeCell 的执行是 Notebook 最核心的交互链路，涉及前端、Kernel 
 
 ## 相关概念
 
-- [05 文档注册与 Widget 工厂](/concepts/05-document-registry.md)
+- [05 文档注册与 Widget 工厂](/concepts/05-document-widget-system.md)
 - [07 扩展生态系统](/concepts/07-extension-ecosystem.md)
-- [04 服务层与后端通信](/concepts/04-services-and-communication.md)
+- [04 服务层与后端通信](/concepts/04-service-layer.md)
 - [08 构建系统与运行模式](/concepts/08-build-and-modes.md)

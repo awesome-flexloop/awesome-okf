@@ -1,5 +1,5 @@
 ---
-type: Example
+type: example
 title: 使用 mystParse 解析 MyST Markdown
 description: 演示如何使用 myst-parser 的 mystParse 函数解析 MyST Markdown 字符串为 MDAST 树，并访问解析结果。
 tags: [mystmd, parser, mystParse, mdast, vfile]

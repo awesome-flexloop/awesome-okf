@@ -1,5 +1,5 @@
 ---
-type: Reference
+type: reference
 title: myst-transforms 转换插件源码信源
 description: myst-transforms 包导出的 30+ 个 MDAST 转换插件、basicTransformations 复合管线以及 getFrontmatter 函数的源码登记。
 tags: [mystmd, transforms, mdast, unified, plugin]

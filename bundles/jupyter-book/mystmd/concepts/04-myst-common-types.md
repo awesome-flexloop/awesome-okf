@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: concept
 title: 公共类型系统（myst-common）
 description: myst-common 包定义了 MySTmd 所有包共享的核心类型（GenericNode/DirectiveSpec/RoleSpec/TransformSpec/MystPlugin）、RuleId 枚举以及工具函数，是整个引擎的类型基础。
 tags: [mystmd, types, common, generic-node, ruleid]

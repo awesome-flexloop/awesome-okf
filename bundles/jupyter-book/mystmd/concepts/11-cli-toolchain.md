@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: concept
 title: CLI 工具链（mystmd）
 description: mystmd 是基于 commander 的命令行工具，提供 init/build/start/clean/templates 五个核心子命令，通过 myst-cli 包的 Session 系统执行文档构建、开发服务器和模板管理。
 tags: [mystmd, cli, commander, build, dev-server]

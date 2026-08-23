@@ -1,16 +1,25 @@
 ---
 type: Example
 title: 错误处理示例
-description: KaTeX的错误处理机制，包括throwOnError、errorColor、strict模式、ParseError捕获和错误恢复策略。
-tags: [katex, example, error, ParseError, strict, throwOnError]
-generated: { by: "reference_agent/trae-cn", at: 2026-08-22T22:40:00+08:00 }
-verified: { by: "process:seven-concepts-v", at: 2026-08-22T22:40:00+08:00 }
+description: KaTeX 的错误处理机制，包括 throwOnError、errorColor、strict 模式（默认 warn）、ParseError 捕获、错误消息 HTML 转义（& < >）、trust 安全配置和安全封装函数。
+tags: [katex, example, error, ParseError, strict, throwOnError, security, xss]
+generated: { by: "reference_agent/trae-cn", at: 2026-08-23T22:30:00+08:00 }
+verified: { by: "process:seven-concepts-v", at: 2026-08-23T22:30:00+08:00 }
 status: stable
-stale_after: 2027-08-22
+stale_after: 2027-08-23
 sources:
   - id: src
     resource: /references/katex-source.md
     title: KaTeX 源码信源
+  - id: web-error
+    resource: /references/katex-website.md#web-error
+    title: KaTeX 官网 Handling Errors 页面
+  - id: web-security
+    resource: /references/katex-website.md#web-security
+    title: KaTeX 官网 Security 页面
+  - id: web-options
+    resource: /references/katex-website.md#web-options
+    title: KaTeX 官网 Options 页面
 ---
 
 ## KaTeX错误类型
@@ -121,19 +130,15 @@ try {
 
 ## strict模式：非标准用法警告
 
-`strict` 选项控制 KaTeX 对不推荐用法的处理：
+`strict` 选项控制 KaTeX 对不推荐用法的处理，默认值为 `"warn"`[^web-options]：
 
-### strict: false（默认）
-
-静默接受所有支持的命令，不输出警告。
-
-### strict: "warn"
+### strict: "warn"（默认）
 
 在控制台输出警告，但继续渲染：
 
 ```javascript
 katex.render("\\rm{旧字体命令}", el, {
-    strict: "warn"
+    strict: "warn"  // 默认值
 });
 // Console: "LaTeX-incompatible input: \rm is an old font command"
 ```
@@ -144,6 +149,16 @@ strict模式警告的常见问题：
 - 多余的花括号
 - 不推荐的命令别名
 - Unicode字符不支持
+
+### strict: false / "ignore"
+
+静默接受所有支持的命令，不输出警告：
+
+```javascript
+katex.render(latex, el, { strict: false });
+// 或
+katex.render(latex, el, { strict: "ignore" });
+```
 
 ### strict: "error"
 
@@ -280,6 +295,32 @@ katex.render(userInputLatex, el, {
 });
 ```
 
+## 错误消息的 HTML 转义
+
+KaTeX 抛出的错误消息可能包含**未转义的 LaTeX 源码**[^web-security]。将错误消息显示到页面前，必须进行 HTML 转义，否则可能导致 `<script>` 注入攻击[^web-error]：
+
+```javascript
+function escapeHtml(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+}
+
+try {
+    katex.render(expr, element);
+} catch (e) {
+    if (e instanceof katex.ParseError) {
+        element.innerHTML = '<span class="error">'
+            + escapeHtml(e.message) + '</span>';
+    } else {
+        throw e;
+    }
+}
+```
+
+未转义的不可信 LaTeX 源码或异常消息可能包含 `<script>` 标签等恶意内容，直接通过 `innerHTML` 插入会导致 XSS。
+
 ## 封装安全渲染函数
 
 实际项目中，建议封装一个安全的渲染函数统一处理错误：
@@ -296,13 +337,10 @@ function safeRenderKatex(latex, element, options = {}) {
     const defaultOptions = {
         throwOnError: false,
         errorColor: "#cc0000",
-        strict: "ignore",
-        maxExpand: 2000,
-        macros: {
-            "\\RR": "\\mathbb{R}",
-            "\\NN": "\\mathbb{N}",
-        },
-        trust: false,  // 不信任用户输入
+        strict: "warn",
+        maxExpand: 1000,
+        macros: {},
+        trust: false,
         ...options,
     };
 
@@ -340,9 +378,10 @@ function safeRenderToString(latex, options = {}) {
     try {
         return katex.renderToString(latex, {
             throwOnError: false,
-            strict: "ignore",
+            strict: "warn",
             trust: false,
             maxExpand: 1000,
+            macros: {},
             ...options,
         });
     } catch (e) {
@@ -391,5 +430,11 @@ renderMathInElement(document.body, {
 
 - [快速开始](/concepts/01-getting-started.md)
 - [配置系统](/concepts/10-settings-options.md)
+- [安全与错误处理](/concepts/18-security-and-errors.md)
 - [基础渲染示例](/examples/basic-render.md)
 - [自动渲染使用示例](/examples/auto-render-usage.md)
+- [常见问题](/concepts/21-common-issues.md)
+
+[^web-error]: 官网 Handling Errors 页面，https://katex.org/docs/error
+[^web-security]: 官网 Security 页面，https://katex.org/docs/security
+[^web-options]: 官网 Options 页面，https://katex.org/docs/options

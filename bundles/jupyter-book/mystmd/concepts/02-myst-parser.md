@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: concept
 title: MyST 解析器（myst-parser）
 description: myst-parser 包提供 MyST Markdown 的核心解析能力，包括 markdown-it 分词器创建、Token 到 MDAST 的转换、指令和角色的后处理，以及 VFile 错误收集。
 tags: [mystmd, parser, markdown-it, mdast, tokenization]

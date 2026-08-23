@@ -235,7 +235,7 @@ build:
 
 ### 自定义模板
 
-参考 [自定义 jtex 模板示例](/myst-exporters/examples/02-custom-jtex-template.md)。
+参考 [自定义 jtex 模板示例](../../myst-exporters/examples/02-custom-jtex-template.md)。
 
 ## 部署到 GitHub Pages
 

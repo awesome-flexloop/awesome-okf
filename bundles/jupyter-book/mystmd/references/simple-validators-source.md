@@ -1,5 +1,5 @@
 ---
-type: Reference
+type: reference
 title: simple-validators 验证器源码信源
 description: simple-validators 包提供的 20+ 个运行时验证函数、ValidationOptions 类型以及错误/警告收集机制的源码登记。
 tags: [mystmd, validation, simple-validators, schema, config]

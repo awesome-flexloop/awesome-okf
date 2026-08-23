@@ -1,5 +1,5 @@
 ---
-type: Reference
+type: reference
 title: myst-frontmatter Frontmatter 解析源码信源
 description: myst-frontmatter 包导出的 20+ 个 frontmatter 子模块索引，包括 affiliations、biblio、contributors、exports、numbering、page、project、site 等。
 tags: [mystmd, frontmatter, metadata, yaml, bibliography]

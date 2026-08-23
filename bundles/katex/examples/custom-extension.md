@@ -1,49 +1,129 @@
 ---
 type: Example
 title: 自定义扩展示例
-description: 使用__defineFunction添加自定义LaTeX命令，包括简单装饰命令、新的数学结构和带可选参数的命令。
-tags: [katex, example, extension, defineFunction, custom]
-generated: { by: "reference_agent/trae-cn", at: 2026-08-22T22:40:00+08:00 }
-verified: { by: "process:seven-concepts-v", at: 2026-08-22T22:40:00+08:00 }
+description: 使用 __defineFunction 添加自定义 LaTeX 命令，包括装饰命令、无参数符号命令和带参数命令；遵循 v0.18.4 API 规范（顶层 props 字段），同时提供 htmlBuilder 与 mathmlBuilder 以满足无障碍要求。
+tags: [katex, example, extension, defineFunction, custom, domTree, mathml, accessibility]
+generated: { by: "reference_agent/trae-cn", at: 2026-08-23T22:40:00+08:00 }
+verified: { by: "process:seven-concepts-v", at: 2026-08-23T22:40:00+08:00 }
 status: stable
-stale_after: 2027-08-22
+stale_after: 2027-08-23
 sources:
   - id: src
     resource: /references/katex-source.md
     title: KaTeX 源码信源
+  - id: web-migration
+    resource: /references/katex-website.md#web-migration
+    title: KaTeX 官网 Migration 页面
+  - id: web-options
+    resource: /references/katex-website.md#web-options
+    title: KaTeX 官网 Options 页面
 ---
 
-## 扩展API概览
+## 扩展 API 概览
 
-KaTeX 提供三个内部扩展API（注意双下划线前缀表示内部API，未来版本可能变更）：
+KaTeX 默认导出对象上暴露以下扩展 API（`__` 前缀表示内部 API，未来版本可能变更）[^src]：
 
 | API | 作用 |
 |-----|------|
-| `katex.__defineFunction(spec)` | 注册新的LaTeX函数命令 |
-| `katex.__defineMacro(name, body)` | 注册全局宏（等价于 `katex.__defineMacro`） |
+| `katex.__defineFunction(spec)` | 注册新的 LaTeX 函数命令 |
+| `katex.__defineMacro(name, body)` | 注册全局宏 |
 | `katex.__defineSymbol(mode, family, cls, char, name)` | 注册单个符号 |
 | `katex.__setFontMetrics(family, metrics)` | 扩展字体度量 |
-| `katex.__domTree` | 虚拟DOM节点类（Span、Anchor等） |
+| `katex.__domTree` | 虚拟 DOM 节点类：Span、Anchor、SymbolNode、SvgNode、PathNode、LineNode |
+| `katex.__renderToDomTree(expr, options)` | 渲染为虚拟 DOM 树（HTML+MathML） |
+| `katex.__renderToHTMLTree(expr, options)` | 渲染为虚拟 DOM 树（仅 HTML） |
 
-其中 `__defineFunction` 是最强大的扩展机制，可以添加全新的渲染逻辑。
+> **版本注意**：v0.17.0 起 `__defineFunction` 的属性不再包裹在 `props` 中，需将 `numArgs`、`allowedInText` 等字段直接放在定义对象顶层[^web-migration]。本示例基于 v0.18.4。
 
-> **注意**：这些API带有 `__` 前缀，表示它们是内部API。在生产中使用时，请锁定KaTeX版本并关注KaTeX更新日志。
+## defineFunction 规范结构
 
-## 示例1：简单装饰命令（\circled）
-
-为内容添加圆圈包围效果：
+`__defineFunction` 接收一个 FunctionSpec 对象[^src]：
 
 ```javascript
-// 注册 \circled{...} 命令
+katex.__defineFunction({
+    type: "nodeType",
+    names: ["\\cmd"],
+    numArgs: 0,
+    argTypes: [],
+    allowedInText: false,
+    allowedInMath: true,
+    allowedInArgument: false,
+    infix: false,
+    primitive: false,
+    handler({parser, token, funcName}, args) { /* 返回 ParseNode */ },
+    htmlBuilder(group, options) { /* 返回虚拟 DOM 节点 */ },
+    mathmlBuilder(group, options) { /* 返回 MathML 节点 */ },
+});
+```
+
+### 字段说明
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `type` | string | ParseNode 类型标识，builder 中通过 `group.type` 识别 |
+| `names` | string[] | 命令名数组，支持一个实现注册多个别名 |
+| `numArgs` | number | 必填参数数量（0~9） |
+| `numOptionalArgs` | number | 可选参数数量 |
+| `argTypes` | string[] | 各参数的类型（color/size/url/raw/original/hbox/primitive/math/text） |
+| `allowedInText` | boolean | 是否允许在文本模式中使用 |
+| `allowedInMath` | boolean | 是否允许在数学模式中使用 |
+| `handler` | function | 解析阶段回调，返回 ParseNode |
+| `htmlBuilder` | function | HTML 渲染阶段回调，返回 domTree 节点 |
+| `mathmlBuilder` | function | MathML 渲染阶段回调，返回 MathML 节点 |
+
+### 无障碍要求
+
+KaTeX 默认输出 HTML+MathML 双格式（`output: "htmlAndMathml"`），MathML 供屏幕阅读器识别语义。**自定义函数必须同时提供 `htmlBuilder` 和 `mathmlBuilder`**，缺少 mathmlBuilder 会导致屏幕阅读器无法读取自定义命令[^src]。
+
+## 示例 1：无参数符号命令（\checkbox）
+
+最简单的扩展：注册一个渲染为 Unicode 符号的命令，无需消费参数。
+
+```javascript
+import katex from "katex";
+import {MathNode, TextNode} from "katex/src/mathMLTree";
+
+katex.__defineFunction({
+    type: "checkbox",
+    names: ["\\checkbox"],
+    numArgs: 0,
+    allowedInText: true,
+    allowedInMath: true,
+    handler({parser}) {
+        return {type: "checkbox", mode: parser.mode};
+    },
+    htmlBuilder(group, options) {
+        const {Span, SymbolNode} = katex.__domTree;
+        return new Span(
+            ["mord"],
+            [new SymbolNode("\u2610", 0.8, 0.0, 0, 0, 0.8)]
+        );
+    },
+    mathmlBuilder(group, options) {
+        return new MathNode("mtext", [new TextNode("\u2610")]);
+    },
+});
+
+katex.render("\\checkbox \\text{未完成}", el);
+```
+
+`SymbolNode`（HTML）构造参数为 `(text, height, depth, italic, skew, width)`，这些度量值影响排版对齐。MathML 节点 `MathNode`/`TextNode` 需从 `katex/src/mathMLTree` 导入，不通过 `__domTree` 暴露。
+
+## 示例 2：带参数的装饰命令（\circled）
+
+注册一个接收一个参数并用圆圈包围的命令。由于递归渲染任意 ParseNode 需要内部 `buildGroup`（未公开暴露），本示例通过从 KaTeX 源码导入内部构建模块实现：
+
+```javascript
+import katex from "katex";
+import {buildGroup as buildHTMLGroup} from "katex/src/buildHTML";
+import {buildGroup as buildMathMLGroup} from "katex/src/buildMathML";
+
 katex.__defineFunction({
     type: "circled",
     names: ["\\circled"],
-    props: {
-        numArgs: 1,
-        allowedInText: true,
-        allowedInMath: true,
-    },
-    // 解析阶段：创建ParseNode
+    numArgs: 1,
+    allowedInText: true,
+    allowedInMath: true,
     handler({parser, token}, args) {
         return {
             type: "circled",
@@ -52,17 +132,12 @@ katex.__defineFunction({
             body: args[0],
         };
     },
-    // HTML渲染阶段
     htmlBuilder(group, options) {
-        // 构建子节点
-        const body = katex.__renderToHTMLTree
-            ? buildGroup(group.body, options)
-            : buildGroupInline(group.body, options);
-
-        // 使用Span创建带圆圈边框的容器
-        const node = new katex.__domTree.Span(
-            ["circled"],  // CSS类
-            [body],       // 子节点
+        const {Span} = katex.__domTree;
+        const body = buildHTMLGroup(group.body, options);
+        return new Span(
+            ["mord", "circled"],
+            [body],
             {
                 style: {
                     display: "inline-block",
@@ -75,285 +150,203 @@ katex.__defineFunction({
                 }
             }
         );
-        return node;
     },
-    // MathML渲染阶段
     mathmlBuilder(group, options) {
-        // 简单地将子内容包裹在 <menclose> 中
-        return new mathMLTree.MathNode(
-            "menclose",
-            [buildGroupMathML(group.body, options)],
-            {notation: "circle"}
-        );
+        return buildMathMLGroup(group.body, options);
     },
 });
 
-// 使用
 katex.render("\\circled{x} + \\circled{1}", el);
 ```
 
-## 示例2：更实际的自定义命令（\ evaluated at）
+> **说明**：`buildGroup` 是 KaTeX 内部分发函数，接收单个 `AnyParseNode` 和 `Options`，委托给已注册的 htmlBuilder/mathmlBuilder。默认导出的 `buildHTML(tree, options)` 接收 ParseNode **数组**并返回整棵 DomSpan（含 display 包装），`buildMathML(tree, texExpression, options, isDisplayMode, forMathmlOnly)` 需要 5 个参数并返回 `<math><semantics>` 包装——二者用于构建完整表达式，不适合嵌入自定义 builder 的子节点。这些内部 API 不包含在公共 API 中，从 `katex/src/` 深度导入需要打包工具（webpack/rollup）配置，且不保证跨版本稳定。若不想依赖内部模块，可直接操作 `katex.__domTree` 节点类手动构建 HTML 子树，但无法自动处理任意嵌套数学表达式；MathML 节点需从 `katex/src/mathMLTree` 导入。
 
-创建 `\\eval{expr}_{lower}^{upper}` 命令（在指定点求值），类似 `\\left.\\frac{df}{dx}\\right|_{x=0}`：
+### 配套 CSS
 
-```javascript
-katex.__defineFunction({
-    type: "evalat",
-    names: ["\\eval"],
-    props: {
-        numArgs: 1,
-        allowedInText: false,
-        allowedInMath: true,
-    },
-    handler({parser, token}, args) {
-        // 消费可选的上下标（类似 \sqrt 的可选参数方式）
-        let subscript = null;
-        let superscript = null;
-
-        // 查看下一个token是否是 _ 或 ^
-        let next = parser.gullet.future();
-        while (next.text === "_" || next.text === "^") {
-            parser.gullet.consume();  // 消费 _ 或 ^
-            const arg = parser.parseGroup();
-            if (next.text === "_") {
-                subscript = arg;
-            } else {
-                superscript = arg;
-            }
-            next = parser.gullet.future();
-        }
-
-        return {
-            type: "evalat",
-            mode: parser.mode,
-            body: args[0],
-            subscript,
-            superscript,
-        };
-    },
-    htmlBuilder(group, options) {
-        // 构建主体
-        const body = buildGroup(group.body, options);
-
-        // 创建竖线（|）
-        const bar = new katex.__domTree.Span(
-            ["vertical-bar"],
-            [],
-            { style: { "border-left": "0.06em solid currentColor" } }
-        );
-
-        // 组装主容器
-        const elements = [body, bar];
-
-        // 添加上下标
-        const supsub = [];
-        if (group.superscript) {
-            const supNode = buildGroup(group.superscript, options.havingStyle(options.style.sup()));
-            supsub.push(new katex.__domTree.Span(["vlist-t"], [
-                new katex.__domTree.Span(["vlist-r"], [
-                    new katex.__domTree.Span(["vlist"], [supNode])
-                ])
-            ]));
-        }
-        if (group.subscript) {
-            const subNode = buildGroup(group.subscript, options.havingStyle(options.style.sub()));
-            supsub.push(new katex.__domTree.Span(["vlist-t"], [
-                new katex.__domTree.Span(["vlist-r"], [
-                    new katex.__domTree.Span(["vlist"], [subNode])
-                ])
-            ]));
-        }
-
-        const supsubWrap = new katex.__domTree.Span(["msupsub"], [
-            new katex.__domTree.Span(["vlist-t", "vlist-r"], supsub)
-        ]);
-
-        const inner = new katex.__domTree.Span([], elements);
-        return new katex.__domTree.Span(["mord", "evalat"], [inner, supsubWrap]);
-    },
-    mathmlBuilder(group, options) {
-        const children = [buildGroupMathML(group.body, options)];
-        // 简单MathML表示
-        return new mathMLTree.MathNode("mrow", children);
-    },
-});
-
-// 使用
-katex.render("\\eval{\\frac{x^2}{2}}_0^1", el, {displayMode: true});
-// 等价于：\left.\frac{x^2}{2}\right|_0^1 = 1/2 - 0 = 1/2
-```
-
-## 示例3：自定义符号（\diamond）
-
-使用 `__defineSymbol` 添加单个数学符号：
-
-```javascript
-// 直接映射到Unicode字符
-katex.__defineSymbol(
-    "math",        // 模式：math或text
-    "main",        // 字体族
-    "mord",        // 数学类
-    "\u25ca",      // Unicode字符（◇ LOZENGE）
-    "\\diamond"    // LaTeX命令名
-);
-
-katex.render("A\\diamond B", el);
-// 渲染：A ◇ B
-```
-
-## 示例4：颜色常量宏
-
-通过 `__defineMacro` 注册常用颜色简写：
-
-```javascript
-// 注意：__defineMacro的第二个参数可以是字符串（简单替换）
-katex.__defineMacro("\\red", "\\textcolor{#df0000}{#1}");
-katex.__defineMacro("\\blue", "\\textcolor{#0000df}{#1}");
-katex.__defineMacro("\\green", "\\textcolor{#008000}{#1}");
-
-// 使用：\red{x} → 红色的x
-katex.render("\\red{x} + \\blue{y} = \\green{z}", el);
-```
-
-注意：带参数的宏通过 `#1` 引用参数，KaTeX 自动推断参数数量。
-
-## 编写htmlBuilder的要点
-
-### 虚拟DOM工具函数
-
-在扩展中构建虚拟DOM节点时，可以使用 KaTeX 内部暴露的 `katex.__domTree` 中的类：
-
-```javascript
-const {Span, Anchor, SymbolNode, SvgNode, DocumentFragment} = katex.__domTree;
-```
-
-但更方便的是使用 buildCommon 中的工具函数（这些函数不直接暴露，需要参考KaTeX源码使用模式）。
-
-### 样式传递（不可变Options）
-
-在htmlBuilder中渲染子节点时，**必须**使用新的Options对象：
-
-```javascript
-htmlBuilder(group, options) {
-    // 子节点使用上标样式（缩小）
-    const supOptions = options.havingStyle(options.style.sup());
-    const childHtml = buildGroup(group.child, supOptions);
-
-    // 子节点使用红色
-    const redOptions = options.withColor("#ff0000");
-    const redChild = buildGroup(group.body, redOptions);
-
-    // 不可直接修改：options.color = "red"; ← 错误！
+```css
+.katex .circled {
+    line-height: 1.2;
 }
 ```
 
-### CSS类名约定
+## 示例 3：使用 __defineSymbol 注册符号
 
-尽量使用KaTeX已有的CSS类名来获得正确的间距和大小：
-
-| 类名 | 用途 |
-|------|------|
-| `.mord`, `.mop`, `.mbin`, `.mrel` 等 | 数学类，影响间距 |
-| `.vlist-t`, `.vlist-r`, `.vlist`, `.vlist-s` | 垂直列表布局 |
-| `.msupsub` | 上下标容器 |
-| `.pstrut` | 支柱（撑开行高） |
-| `.sizing`, `.size1`~`.size11` | 字号控制 |
-| `.delimsizing` | 分隔符尺寸 |
-| `.mtight` | 紧密间距（script样式下自动添加） |
-
-## 完整的简单扩展示例：\checkbox
-
-一个自包含的、最小的扩展示例（可直接复制使用）：
+对于仅映射到单个字符的命令，`__defineSymbol` 比 `__defineFunction` 更简洁：
 
 ```javascript
+katex.__defineSymbol(
+    "math",
+    "main",
+    "mord",
+    "\u25ca",
+    "\\diamond"
+);
+
+katex.render("A\\diamond B", el);
+```
+
+参数依次为：模式（`"math"`/`"text"`）、字体族、数学类（`mord`/`mop`/`mbin`/`mrel` 等）、Unicode 字符、命令名。
+
+## 示例 4：自包含 IIFE 扩展
+
+推荐将扩展包装在 IIFE 中，在 KaTeX 加载后注册：
+
+```javascript
+import katex from "katex";
+import {MathNode, TextNode} from "katex/src/mathMLTree";
+
 (function() {
-    // 检查katex是否已加载
-    if (typeof katex === "undefined") {
-        console.warn("KaTeX not loaded; custom \\checkbox not registered.");
-        return;
-    }
+    const {Span, SymbolNode} = katex.__domTree;
 
     katex.__defineFunction({
-        type: "checkbox",
-        names: ["\\checkbox", "\\square"],
-        props: {
-            numArgs: 0,
-            allowedInText: true,
-            allowedInMath: true,
+        type: "checkedbox",
+        names: ["\\checked"],
+        numArgs: 0,
+        allowedInText: true,
+        allowedInMath: true,
+        handler({parser}) {
+            return {type: "checkedbox", mode: parser.mode};
         },
-        handler({parser, token}) {
-            return {
-                type: "checkbox",
-                mode: parser.mode,
-            };
-        },
-        htmlBuilder(group, options) {
-            // 创建一个空方框（□）
-            const size = options.sizeMultiplier * 1.0;  // 1em大小
-            return new katex.__domTree.Span(
-                ["mord", "checkbox-symbol"],
-                [new katex.__domTree.SymbolNode(
-                    "\u2610",  // □ BALLOT BOX
-                    0.8,  // height
-                    0.0,  // depth
-                    0,    // italic
-                    0,    // skew
-                    0.8   // width
-                )],
-                {
-                    style: {
-                        position: "relative",
-                        top: "-0.1em",
-                    }
-                }
+        htmlBuilder() {
+            return new Span(
+                ["mord"],
+                [new SymbolNode("\u2611", 0.8, 0.0, 0, 0, 0.8)]
             );
         },
-        mathmlBuilder(group, options) {
-            return new mathMLTree.MathNode("mo", [
-                new mathMLTree.TextNode("\u2610")
-            ]);
+        mathmlBuilder() {
+            return new MathNode("mtext", [new TextNode("\u2611")]);
         },
     });
 
-    // \checked 命令（打勾的方框☑）
     katex.__defineFunction({
-        type: "checked",
-        names: ["\\checked", "\\boxtimes"],
-        props: {numArgs: 0, allowedInText: true, allowedInMath: true},
+        type: "emptybox",
+        names: ["\\square"],
+        numArgs: 0,
+        allowedInText: true,
+        allowedInMath: true,
         handler({parser}) {
-            return {type: "checked", mode: parser.mode};
+            return {type: "emptybox", mode: parser.mode};
         },
-        htmlBuilder(group, options) {
-            return new katex.__domTree.Span(
+        htmlBuilder() {
+            return new Span(
                 ["mord"],
-                [new katex.__domTree.SymbolNode("\u2611", 0.8, 0.0, 0, 0, 0.8)]
+                [new SymbolNode("\u2610", 0.8, 0.0, 0, 0, 0.8)]
             );
         },
-        mathmlBuilder(group, options) {
-            return new mathMLTree.MathNode("mo", [
-                new mathMLTree.TextNode("\u2611")
-            ]);
+        mathmlBuilder() {
+            return new MathNode("mtext", [new TextNode("\u2610")]);
         },
     });
 })();
 
-// 使用
-katex.render("\\checkbox \\text{未完成} \\quad \\checked \\text{已完成}", el);
+katex.render("\\square \\text{待办} \\quad \\checked \\text{完成}", el);
 ```
+
+## htmlBuilder 编写要点
+
+### 虚拟 DOM 节点
+
+通过 `katex.__domTree` 访问虚拟节点类[^src]：
+
+```javascript
+const {
+    Span,
+    Anchor,
+    SymbolNode,
+    SvgNode,
+    PathNode,
+    LineNode,
+} = katex.__domTree;
+```
+
+| 类 | 用途 |
+|----|------|
+| `Span` | 最常用的容器节点，对应 `<span>` |
+| `Anchor` | 超链接节点，对应 `<a>` |
+| `SymbolNode` | 单个字符符号，携带度量信息 |
+| `SvgNode` | SVG 容器 |
+| `PathNode` | SVG 路径 |
+| `LineNode` | 线条（分数线、根号等） |
+
+### 不可变 Options 传递
+
+渲染子节点时必须通过 `options.having*()` 或 `options.with*()` 创建新 Options 实例，不得直接修改 `options` 属性[^src]：
+
+```javascript
+htmlBuilder(group, options) {
+    const supOptions = options.havingStyle(options.style.sup());
+    const redOptions = options.withColor("#ff0000");
+    // 使用新 options 渲染子节点...
+}
+```
+
+常用转换方法：
+
+| 方法 | 作用 |
+|------|------|
+| `options.havingStyle(style)` | 切换 TeX 样式（sup/sub/fracNum/fracDen 等） |
+| `options.withColor(color)` | 切换颜色 |
+| `options.withSize(size)` | 切换字号 |
+| `options.withFont(font)` | 切换字体族 |
+| `options.havingCrampedStyle()` | 切换到 cramped 样式 |
+
+### CSS 类名约定
+
+尽量复用 KaTeX 已有 CSS 类名以获得正确的间距和大小：
+
+| 类名 | 用途 |
+|------|------|
+| `.mord`、`.mop`、`.mbin`、`.mrel` 等 | 数学原子类，影响间距 |
+| `.vlist-t`、`.vlist-r`、`.vlist`、`.vlist-s` | 垂直列表布局 |
+| `.msupsub` | 上下标容器 |
+| `.pstrut` | 支柱（撑开行高） |
+| `.sizing`、`.size1`~`.size11` | 字号控制 |
+| `.mtight` | 紧密间距（script 样式下自动添加） |
+
+自定义类名应加前缀（如 `.myext-circled`），避免与 KaTeX 内置类冲突。
+
+## MathML 与无障碍
+
+### 双输出架构
+
+KaTeX 默认 `output: "htmlAndMathml"`，MathML 节点放在 HTML 节点之前，通过 CSS 视觉上隐藏 MathML 但屏幕阅读器可读取。自定义函数的 `mathmlBuilder` 应返回有语义的 MathML 结构。
+
+### mathmlBuilder 简化策略
+
+若构建完整 MathML 子树较复杂，最低限度应返回包含文本内容的 MathML 节点，使屏幕阅读器能读出命令含义。MathML 节点类需从 `katex/src/mathMLTree` 导入，不通过 `__domTree` 暴露：
+
+```javascript
+import {MathNode, TextNode} from "katex/src/mathMLTree";
+
+mathmlBuilder(group, options) {
+    if (group.type === "checkbox") {
+        return new MathNode("mtext", [new TextNode("\u2610")]);
+    }
+}
+```
+
+对于装饰性命令，可在 MathML 中使用 `<menclose>` 或 `<mrow>` 包裹子内容（需从源码导入 `mathMLTree` 模块）。
 
 ## 扩展加载最佳实践
 
-1. **版本锁定**：由于 `__` API不稳定，在package.json中锁定KaTeX版本
-2. **加载顺序**：扩展脚本必须在katex.js之后、渲染调用之前加载
-3. **错误处理**：扩展注册失败时给console警告，不要阻断其他渲染
-4. **命名空间**：自定义CSS类名加前缀（如 `.myext-circled`），避免与KaTeX内置类冲突
-5. **MathML支持**：始终提供mathmlBuilder，否则屏幕阅读器无法读取自定义命令
-6. **测试**：在displayMode和inlineMode下都测试自定义命令的渲染效果
-7. **考虑贡献**：如果扩展有通用价值，考虑贡献到KaTeX官方contrib/目录
+1. **版本锁定**：`__` API 不保证向后兼容，在 `package.json` 中锁定 KaTeX 版本
+2. **加载顺序**：扩展脚本必须在 `katex.js` 之后、渲染调用之前加载
+3. **存在性检查**：注册前检查 `typeof katex !== "undefined"`，失败时给 console 警告而非阻断
+4. **命名空间**：自定义 CSS 类名加前缀，自定义命令名避免与内置命令冲突
+5. **双 builder**：始终同时提供 `htmlBuilder` 和 `mathmlBuilder`，确保无障碍访问
+6. **模式测试**：在 `displayMode: true` 和 `false` 下分别测试自定义命令
+7. **Options 不可变**：builder 中不得直接修改 `options`，使用 `having*`/`with*` 方法
+8. **考虑贡献**：通用扩展可考虑贡献到 KaTeX 官方 `contrib/` 目录
 
 ## 相关内容
 
 - [函数注册表](/concepts/08-function-registry.md)
 - [渲染管线](/concepts/06-render-pipeline.md)
-- [虚拟DOM树](/concepts/07-dom-tree.md)
+- [虚拟 DOM 树](/concepts/07-dom-tree.md)
+- [配置选项](/concepts/10-settings-options.md)
+- [版本迁移](/concepts/22-migration.md)
 - [自定义宏示例](/examples/custom-macros.md)
+- [安全信任示例](/examples/security-trust.md)
+
+[^src]: 源码信源见 [references/katex-source.md](/references/katex-source.md)，FunctionSpec 定义于 `src/defineFunction.ts`，虚拟 DOM 节点定义于 `src/domTree.ts`。
+[^web-migration]: 官网 Migration 页面，https://katex.org/docs/migration；v0.17.0 变更说明 `__defineFunction` 属性不再包裹在 `props` 中。

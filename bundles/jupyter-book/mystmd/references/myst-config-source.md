@@ -1,5 +1,5 @@
 ---
-type: Reference
+type: reference
 title: myst-config 配置系统源码信源
 description: myst-config 包的配置类型定义（Config/ProjectConfig/SiteConfig/ErrorRule）、验证器以及站点清单类型的源码登记。
 tags: [mystmd, config, project, site, error-rules, validation]

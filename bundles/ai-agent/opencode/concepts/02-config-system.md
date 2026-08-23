@@ -12,7 +12,9 @@ verified:
 status: stable
 stale_after: 2027-08-23
 sources:
-  - /references/source.md
+  - id: src
+    resource: /references/source.md
+    title: 源码信源
 ---
 
 # 配置系统

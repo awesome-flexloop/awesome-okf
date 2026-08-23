@@ -1,62 +1,147 @@
 ---
 type: spec
-title: CodeWhale 架构洞察
-description: 从 CodeWhale 源码中提炼的核心设计决策、机制与反直觉约束
-tags: [codewhale, rust, agent, insight]
-generated: { by: "okf-wiki-bot", at: "2026-08-23T12:00:00+08:00" }
-verified: { by: "process:grep-verification", at: "2026-08-23T12:00:00+08:00" }
-status: draft
-stale_after: 2027-08-23
+scope: codewhale
+name: insights
+version: "0.1.0"
+source: local
+description: "CodeWhale 核心架构洞察：从 crate 模块化设计到 Fleet 多 Agent 编排、Workflow JS 引擎、MCP 集成和 Skill 系统的深度分析"
 ---
 
-# CodeWhale 深度洞察
+# CodeWhale 核心洞察
 
-## 1. `Op`-in / `EventMsg`-out：一种格式统一所有客户端
+## 洞察一：Crate 模块化设计——21 个 crate 的严格分层与边界意识
 
-**陈述**：CodeWhale 的核心引擎向所有消费者（TUI、CLI exec、app-server、测试）暴露同一条 `OpEnvelope` 进 / `EventMsg` 出的通道契约，使有头与无头两种运行方式共享同一套状态机代码路径。
+### 陈述
 
-**证据**：[F-014] 定义 `EngineHandle` 持有 `tx_op` / `rx_event`；[F-044][F-045] 定义可序列化的 `OpEnvelope` 与 `Op` 枚举；[F-046] 定义 `EventMsg` 输出枚举；[F-019][F-020] 显示 `spawn_engine` 与 `spawn_headless_thread` 都回到同一个 `EngineHandle`。
+CodeWhale 将一个约 68 万行的 Rust 编码 Agent 拆分为 21 个职责单一的 crate，形成从协议层到 UI 层的严格依赖方向。`core` crate 是运行时边界的汇聚点，但它本身不依赖 `tui`——终端 UI 建立在 core 之上，而非反之。
 
-**反常识**：传统上「交互式 TUI」与「无头 CLI」通常是两套独立的调度逻辑，各自维护自己的消息循环。CodeWhale 却把引擎做成「TUI 无关」的 mailbox（`core/src/engine/mod.rs` 明确声明 engine 是 terminal-free 的），把 TUI 降级为这个 mailbox 的一个消费者。这意味着「无头会话」不是降级特性，而是首类（first-class）路径。
+### 证据
 
-**行动**：学习一个 Agent 框架时，先找它的「通道契约」而非 UI 入口。若你能画出一张 `Op → Engine → EventMsg` 的时序图，就抓住了这类架构的骨架。
+- workspace 成员列表明确定义了 21 个 crate（F-001）。
+- `codewhale-core` 依赖 agent、config、execpolicy、hooks、mcp、protocol、state、tools，但不依赖 tui（F-008）。
+- `codewhale-tui` 反向依赖 core、tools、workflow、workflow-js、mcp 等（F-020）。
+- `codewhale-protocol` 是最底层 crate 之一，仅依赖 chrono、serde、serde_json、uuid，不依赖任何内部 crate（F-013）。
+- `codewhale-agent`（模型注册）仅依赖 config 和 serde，极其轻量（F-009）。
+- `codewhale-command-contract` 依赖 core，是 TUI 命令提取的原型边界（F-025）。
+- Engine 模块注释明确写道："The TUI crate depends on `core`, not the reverse"（`crates/core/src/engine/mod.rs:9`）。
 
-## 2. 三层边界是逐步落地的「迁移前沿」，而非一次性重构
+### 反常识
 
-**陈述**：`crates/core`、`crates/protocol`、`crates/tools` 等 crate 是正在从巨型 `tui` crate 中「搬家」出去的边界产物，注释里保留了明确的分期规划（issue #5261/#5262）与「哪些已搬、哪些未搬」的状态声明。
+通常大型 Rust 项目会把核心逻辑放在最大的 crate（这里是 tui），但 CodeWhale 正在主动将 turn loop、session、thread manager 从 tui 迁移到 core。engine/mod.rs 的注释直言："Only request-building and fragments have moved so far. The turn loop still lives in `crates/tui/src/core/engine/turn_loop.rs`"。这是一个**进行中的架构迁移**，而非已完成的完美分层——core 目前同时包含已迁移的 `Runtime`（900+ 行）和新建的 `Engine`（channel 边界证明），两者并存。
 
-**证据**：[F-007] 显示 `core` 只声明了 7 个子模块；[F-012] 的引擎注释声明「此模块刻意很小，先形式化 ThreadId/SessionId 与 Op-in/EventMsg-out 边界」；[F-021][F-024] 注释写明 `Thread`/`Session` split 跟随 #5261、journal 树操作跟随 #5262；[F-086] 表明真正的大 `EngineConfig`（含 `allow_shell`、`trust_mode`、`mcp_config_path`）仍在 `tui` crate 中。
+### 行动
 
-**反常识**：初次阅读会以为 `crates/core` 的 `Engine` 就是整个运行时，但注释明确指出真实的 turn loop 仍在 `crates/tui` 里，`core` 目前只承担「无 TUI 也能启动会话」的最小证明。所谓「核心 crate」在早期并非拥有核心逻辑的地方。
+- 阅读源码时，`crates/core/src/lib.rs` 的 `Runtime` 是当前无头运行时的实际入口，而 `crates/core/src/engine/mod.rs` 的 `Engine` 是未来 turn loop 迁移的目标边界。
+- 新增核心功能应优先放入 core 或更低层 crate，避免在 tui 中添加不依赖终端的逻辑。
+- protocol crate 是跨进程通信的唯一类型来源，不应引入业务逻辑依赖。
 
-**行动**：读一个进行中的大型重构代码库时，不要用目录名推断职责；要读模块头部的 doc comment——它们常常是「迁移地图」，比类型签名更能说明「谁才是当前真正的 owner」。
+---
 
-## 3. 工具系统的分级裁判：校验、资源调度、终态三者分离
+## 洞察二：Fleet 多 Agent 编排——持久化 worker 与权限传递的 clamp 模型
 
-**陈述**：CodeWhale 把「一次工具调用」的生命周期拆成三个独立的类型层：`ToolCall`（未校验的原始请求）→ `PreparedToolCall`（校验与资源声明）→ `ToolExecutionOutcome`（机器可读的终态），每一层只处理一个关注点。
+### 陈述
 
-**证据**：[F-056] 定义原始 `ToolCall`；[F-061] 定义 `PreparedToolCall` 携带 `read_only`/`approval`/`resources: Vec<ResourceClaim>`；[F-062] 定义七种 `ResourceClaim` 及其 `conflicts_with`；[F-063] `schedule_non_conflicting` 用资源声明做并行分批；[F-064][F-065] 定义 `ToolTerminalStatus` 与 `ToolExecutionOutcome`。
+Fleet 不是简单的 prompt fanout，而是一个本地优先的持久化多 worker 控制平面。每个 fleet worker 是一个无头的 `codewhale exec` 进程，拥有重试、重启存活、账本审计追踪。核心安全原则是"委派转移工作，永不转移权威"——子 agent 的权限被 clamp 到父级实时姿态，只读性在委派链中传递。
 
-**反常识**：多数工具系统只关心「成功/失败」二元结果。CodeWhale 额外把「取消」「超时」「拒绝」「参数非法」做成一等终态（`ToolTerminalStatus` 六变体），并在注释里说明这是为了「转录仍能闭合、运行时不能把取消误报为失败」。终态语义与用户可见结果（`ToolResult::success`）被刻意分开。
+### 证据
 
-**行动**：设计自己的工具/函数调用层时，把「校验」「并发调度」「终态建模」分成独立类型；尤其是「取消」与「超时」应作为显式终态，而不是塞进一个 `Failed` 字符串里。
+- Fleet worker 是无头 `codewhale exec` 运行，状态存储在 `.codewhale/fleet.jsonl`（F-074, F-075）。
+- 8 种角色：worker、scout、planner、reviewer、builder、verifier、consultant、custom，每种有不同的写/网络/shell 姿态（F-076）。
+- 默认 spawn 深度为 3，子 agent 继承父级工具注册表包括 `agent` 本身（F-077）。
+- 只读父级委派给写角色时，子级的权限被 clamp：scout 的 builder child 落地为只读，raw shell 和 mutating tools 被拒绝（F-078）。
+- `ChildAuthority::clamp` 在 `fleet/exact.rs` 中对每个字段取交集，deny-list 取并集（F-078）。
+- `codewhale fleet resume <run-id>` 是幂等的重启恢复动词，重放账本并协调心跳丢失的租约（`docs/FLEET.md:31-36`）。
 
-## 4. MCP 的「管理」与「传输」被 trait 隔离，无头服务器是一个纯函数协议循环
+### 反常识
 
-**陈述**：`McpManager` 只负责 name→config/client 的登记与限定名（`mcp__server__tool`）去重，真正的通信由 `McpManagedClient` trait 抽象，且提供了一个从 stdin 逐行读 JSON-RPC 的 `run_stdio_server` 纯函数入口。
+多 agent 系统通常假设"专门的 builder 角色就应该能写文件"。但 CodeWhale 的 scout 即使委派给 builder，builder 也不能写——因为 scout 本身是只读的。角色定义的是**意图姿态**，父级的有效姿态始终是上限。这意味着一个配置为只读的 agent 无法通过委派来"升级"权限，即使它调用了一个名义上有写权限的角色。这与许多 agent 框架中"子 agent 拥有角色声明的全部权限"形成鲜明对比。
 
-**证据**：[F-070] 定义 `McpManagedClient` trait 的四个方法；[F-071] 定义 `McpManager` 只持有 `configs` 与 `clients` 两个 HashMap；[F-066] 公开 `ChildProcessMcpClient`；[F-072] 定义 `run_stdio_server(initial_definitions) -> Result<Vec<McpServerDefinition>>`。
+### 行动
 
-**反常识**：MCP 常被想象成一个庞大的远程调用栈，但 CodeWhale 的 MCP crate 核心是「把每个服务器当成一个可替换的 `Box<dyn McpManagedClient>`」；测试内存客户端（`InMemoryMcpClient`）之所以存在，注释里写的是「曾在 mcp-server 路径里塞假数据会让坏集成看起来和好的一样（#4727）」。抽象的作用首先是为测试保真，其次才是多传输支持。
+- 设计 Fleet profile 时，角色的默认权限是意图而非保证；实际权限由父级姿态 clamp。
+- 需要持久化、重启存活的工作应使用 Fleet CLI（`codewhale fleet run`），而非短暂的 `agent` 工具 fanout。
+- `/fleet workers` 查看当前会话子 agent，`codewhale fleet status` 查看持久化账本——两者是不同的数据集。
 
-**行动**：为外部协议写集成层时，先定义最小 trait（list/call/read），把具体传输（stdio/http）放到 trait 实现之后；用一个内存实现锁死测试，避免「假成功」污染看似正常的集成。
+---
 
-## 5. Workflow/Fleet 是「声明式 IR + 命令式 JS VM」的双轨，且容量被常量硬编码封顶
+## 洞察三：Workflow 引擎——声明式 IR + 命令式 JS 双轨设计与确定性回放
 
-**陈述**：Workflow 被拆成两个 crate：`workflow` 承载静态的声明式 IR（gates、fleet、replay、红线），`workflow-js` 承载沙箱化的 QuickJS（rquickjs）命令式运行时，脚本通过 `task()`/`parallel()`/`pipeline()` 派发子代理，容量上限以常量形式写死。
+### 陈述
 
-**证据**：[F-073] 列出 `workflow` 的 16 个子模块（含 `gates`、`fleet_snapshot`、`replay`、`review_repair`）；[F-074] `gates` 公开 `GateKind`/`GateOutcome`/`stopship_gate_pipeline`；[F-075] `DEFAULT_FLEET_WORKFLOW_MAX_AGENTS = 1000`、`MAX_DEPTH = 5`；[F-077][F-078] `workflow-js` 只有 5 个模块且 `WORKFLOW_LIFETIME_CAP = 1000`、`WORKFLOW_MAX_CONCURRENT = 16`。
+CodeWhale 的 Workflow 系统采用双轨架构：`codewhale-workflow` 提供类型化的声明式 IR（8 种节点类型、预算/权限/模型策略），`codewhale-workflow-js` 提供基于 QuickJS 的命令式 JS 运行时。两者共享 1000 agent 生命周期上限和 16 并发上限，但职责严格分离——IR 负责校验/记录/回放，JS 负责动态编排。
 
-**反常识**：一个「Agent 编排」能力被同时实现为两套看起来重叠的机制（静态 IR 与 JS VM），但注释明确画了边界——静态 IR 负责 record/replay 与 model policy，JS VM 只经 `WorkflowDriver` 与外界交谈、且 `Date.now()`/`Math.random()` 直接抛错以保证可重放。这不是功能重复，而是「确定性（可回放）与命令式表达力」的刻意分工。
+### 证据
 
-**行动**：在 Agent 编排里区分「要重放/审计的」与「要表达自由的」两层。凡是会被回放、比对、审计的路径，就要像这里一样把时间与随机数的入口全部掐死。
+- WorkflowSpec 包含 goal、budget、permissions、model_policy、gates、nodes（F-066）。
+- 8 种节点：BranchSet（并行/串行分支）、Leaf（实际 agent 任务）、Sequence、Reduce、TeacherReview、LoopUntil、Cond、Expand（F-067）。
+- JS 运行时基于 rquickjs，VM 单线程，通过 channel 与多线程引擎桥接（F-071）。
+- JS 全局函数：`task()` 派发 subagent、`parallel()`/`pipeline()` 扇出、`log()`/`phase()` 进度、`budget` 预算快照（F-072）。
+- `Date.now()`、`new Date()`、`Math.random()` 在 JS 中抛出异常，确保运行可确定性回放（F-072）。
+- 硬上限：1000 agent/run、5 层深度、16 并发、1000 项/parallel 调用（F-070, F-073）。
+- IsolationMode.Auto 在并行写时自动解析为 Worktree，避免并发写冲突（F-069）。
+
+### 反常识
+
+大多数工作流引擎选择要么全声明式（如 DAG）要么全命令式（如脚本）。CodeWhale 同时提供两者，但不是简单叠加——声明式 IR 有 `TeacherReview` 和 `PromotionGate` 这样的"教师评审循环"（自动对比 baseline/candidate 回放分数、检查测试通过、策略违规），这在纯命令式 JS 中很难声明性地保证。而 JS 侧则承担 IR 难以表达的动态 fanout（`Expand` 节点在运行时生成子节点）。关键设计是：JS 不能直接执行副作用，所有 `task()` 调用都通过 `WorkflowDriver` trait 桥接到宿主，使得 JS 逻辑可以在 `FakeDriver` 上完全测试。
+
+### 行动
+
+- 需要可审计、可回放的多步编排使用声明式 WorkflowSpec TOML。
+- 需要动态条件分支和运行时生成任务的使用 JS workflow，但注意确定性约束（不能用 Date/random）。
+- Workflow 节点的 `role` 和 `profile` 字段在 dispatch 时通过 Fleet roster 解析，不在定义时绑定。
+
+---
+
+## 洞察四：MCP 集成——防重放、名称折叠安全与调用时过滤
+
+### 陈述
+
+CodeWhale 的 MCP 实现在工具代理兼容性之外，解决了三个实际安全问题：限定名碰撞、过滤器绕过和失败重试导致的重复副作用。工具名经过 sanitize 折叠后碰撞会被拒绝；过滤器在调用时（而非仅列出时）强制执行；失败的 qualified tool call 不会回退到重新解析循环。
+
+### 证据
+
+- 限定名格式 `mcp__<server>__<tool>`，超过 64 字符时哈希截断（F-039）。
+- `sanitize_component` 将 `-`、`.`、非字母数字折叠为 `_` 并小写化；`my-server`、`my_server`、`My.Server` 全部限定为 `mcp__my_server__*`，注册第二个会报错（F-040）。
+- ToolFilter 在 `call_tool` 时检查，不仅在 `list_tools` 时；deny 优先于 allow（F-037, F-043）。
+- `call_qualified_tool` 的快速路径在调用失败时直接返回错误，不 fall through 到扫描循环——防止文件写入/提交/付费 API 被执行两次（F-044）。
+- stdio JSON-RPC 服务器支持 13 个方法，包括完整的 server 生命周期管理（F-042）。
+- 插件贡献的 MCP 服务器使用更严格的审查边界：未知字段失败关闭、远程 literal headers 被拒绝、声明的网络主机必须精确匹配（`docs/MCP.md:48-57`）。
+
+### 反常识
+
+MCP 工具名通常被视为不透明字符串，但 CodeWhale 发现名称折叠会引入安全问题：如果 `my-server` 和 `my_server` 都注册为 MCP 服务器，它们的工具都映射到 `mcp__my_server__*`，HashMap 迭代顺序决定哪个服务器响应调用——这是一个非确定性的安全漏洞。代码通过在注册时检测折叠后碰撞来关闭这个问题。类似地，大多数实现在 list 时过滤工具就满足了，但 CodeWhale 在 call 时也过滤，因为客户端可以直接构造限定名调用而不经过 list。
+
+### 行动
+
+- 配置 MCP 服务器时避免使用仅在 `-`/`_`/`.` 上不同的名称。
+- 插件捆绑的 MCP 服务器比用户 `mcp.json` 配置的服务器受到更严格的验证，这是设计有意为之。
+- MCP 工具调用失败不会自动重试，需要调用方自行处理——这对于有副作用的工具是正确的行为。
+
+---
+
+## 洞察五：Skill 系统——四层架构与所有权边界
+
+### 陈述
+
+CodeWhale 的 Skill 系统采用四层架构：根目录（优先级和所有权的唯一来源）、审计（只读未合并磁盘清单）、变更控制器（唯一写入者）、管理器视图（TUI 仅发事件不写文件）。关键设计是只有 CodeWhale 拥有的目录可写，兼容的外部目录（`.claude/skills`、`.cursor/skills` 等）只读发现。
+
+### 证据
+
+- Skills 是可复用的 `SKILL.md` 指令包（F-096）。
+- 四层架构：Root catalog → Audit → Mutation controller → Skills manager view（F-096）。
+- 可写目录：项目级 `<workspace>/.codewhale/skills/` 和全局级 `~/.codewhale/skills/`（F-097）。
+- 只读兼容目录包括 `.agents/skills`、`.claude/skills`、`.cursor/skills`、`.opencode/skills` 等（`docs/SKILLS.md:35-37`）。
+- 审计层故意**不合并**同名 skill，显示每个磁盘副本以使冲突和遮蔽可见（`docs/SKILLS.md:21-22`）。
+- 运行时发现（SkillRegistry）合并 skill 供模型使用，但审计显示所有副本（`docs/SKILLS.md:20-22`）。
+- TUI 视图从不直接调用安装助手或触碰文件系统，它发出变更请求，宿主运行控制器（`docs/SKILLS.md:96-98`）。
+- 插件可以贡献 MCP 服务器和 skills，但需要 hash-bound trust receipt 才能启用（F-098, F-099）。
+
+### 反常识
+
+大多数 agent 工具的 skill 系统会合并所有发现路径中的同名 skill，让"最后加载的获胜"。CodeWhale 的审计层反其道而行：它**故意不合并**，让用户看到同一 skill 名在 `.claude/skills/` 和 `.codewhale/skills/` 中各有一个副本。运行时确实合并（模型看到一个），但审计视图保持透明。此外，TUI 本身被禁止写文件——它只能发出意图事件，由宿主的变更控制器执行。这种"视图与控制器严格分离"在终端应用中不常见，但防止了 TUI 渲染逻辑意外损坏用户文件。
+
+### 行动
+
+- 安装 skill 时使用 `/skill install`，不要手动复制到外部兼容目录（外部目录只读）。
+- 如果 skill 行为异常，用 `/skills inspect` 查看所有磁盘副本和来源路径。
+- 插件更新后 trust receipt 自动失效（hash 不匹配），需要重新审查才能激活。

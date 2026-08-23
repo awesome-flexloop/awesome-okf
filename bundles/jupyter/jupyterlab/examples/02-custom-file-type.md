@@ -1,483 +1,342 @@
 ---
 type: Example
-title: "02 自定义文件类型：注册 .xyz 文件查看器"
-description: 为自定义文件扩展名 .xyz 注册新的文件类型、模型工厂和 Widget 工厂，实现专用查看器，包含文件类型注册、Widget 创建和工具栏配置
-tags: [jupyterlab, custom-file-type, widget-factory, model-factory, document-registry, extension]
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T08:20:00Z" }
-verified: { by: "process:grep-api-verification", at: "2026-08-22T08:20:00Z" }
+title: "02 自定义文件类型查看器"
+description: 创建一个打开 .xyz 文件并显示自定义内容的 JupyterLab 扩展，涵盖文件类型注册、Widget、WidgetFactory 与 DocumentRegistry 集成
+tags: [jupyterlab, extension, document, widget, factory, file-type, tutorial]
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
-stale_after: 2027-02-22
+stale_after: 2027-08-23
 sources:
   - id: source-map
     resource: /references/source-code-map.md
     title: JupyterLab 源码文件地图
-  - id: document-widget
-    resource: /concepts/05-document-widget-system.md
-    title: 文档注册与 Widget 工厂模式
 ---
 
-# 自定义文件类型：注册 .xyz 文件查看器
+# 02 自定义文件类型查看器
 
-本示例演示如何为 JupyterLab 注册一个新的自定义文件类型（.xyz），并为其创建专用的 Widget 查看器。我们将创建一个简单的 XYZ 文件查看器，能够显示 XYZ 格式的 3D 分子坐标文件（本示例以文本显示为主，可替换为实际渲染库如 3Dmol.js）。
+在 [示例 01](/examples/01-minimal-extension.md) 中我们注册了一条命令。本例更进一步：让 JupyterLab 能够"打开"一种全新的文件格式 `.xyz`，双击文件时显示一个自定义查看器。这是 JupyterLab 文档系统的标准扩展模式——注册文件类型、实现内容 Widget、实现 WidgetFactory、把工厂注册到 DocumentRegistry（F-053）。
+
+> **前置条件**：已完成 [示例 01](/examples/01-minimal-extension.md) 的项目脚手架（package.json、tsconfig.json），了解 `JupyterFrontEndPlugin`、`activate` 函数和 Token 注入。建议先阅读 [05 文档注册与 Widget 工厂](/concepts/05-document-widget-system.md)。
 
 ## 目标
 
-完成本示例后，你将能够：
-1. 注册新的文件类型（.xyz）到 DocumentRegistry
-2. 创建自定义 Widget 工厂
-3. 创建自定义 Widget 显示文件内容
-4. 配置工具栏按钮
-5. 在文件浏览器中双击 .xyz 文件自动用我们的查看器打开
+创建一个扩展，实现：
 
-## 前置条件
+1. 注册 `.xyz` 文件类型（`contentType: 'file'`、`fileFormat: 'text'`）。
+2. 双击 `.xyz` 文件时打开一个自定义 Widget，读取文件文本内容并渲染。
+3. 在 Widget 工具栏添加一个"刷新"按钮，重新读取文件内容。
 
-- 完成 [01 最小扩展](01-minimal-extension.md)
-- 理解 DocumentRegistry 和 Widget 工厂机制（参考 [05 文档注册与 Widget 工厂](/concepts/05-document-widget-system.md)）
+## 核心 API 回顾
+
+涉及以下来自 `@jupyterlab/docregistry` 的真实 API：
+
+- **`DocumentRegistry`**：文档注册表，`app.docRegistry` 是其实例。提供 `addFileType()`、`addWidgetFactory()`、`addModelFactory()` 等方法。
+- **`ABCWidgetFactory<T, U>`**：Widget 工厂抽象基类，子类实现 `createNewWidget(context, source?)` 返回 Widget；基类负责工具栏装配、`widgetCreated` 信号发射。
+- **`DocumentWidget<T, U>`**：文档 Widget 标准外壳，继承 `MainAreaWidget<T>`，持有 `context`，自动处理标题与文件路径同步、dirty 状态。
+- **`DocumentRegistry.IContext<U>`**：文档上下文，提供 `ready: Promise<void>`、`model: IModel`、`path`、`save()`、`pathChanged` 信号等。
+- **`DocumentRegistry.IModel`**：文档模型接口，`toString(): string` 返回模型的文本表示。文本文件使用内置的 `text` 模型（`TextModelFactory`，name 为 `'text'`）。
 
 ## 项目结构
 
+在示例 01 的基础上增加两个源文件：
+
 ```
-xyz-viewer/
+my-xyz-viewer/
 ├── package.json
-├── pyproject.toml
 ├── tsconfig.json
 └── src/
-    ├── index.ts          # 插件入口
-    └── widget.ts         # XYZ Widget 和工厂定义
+    ├── index.ts      # 插件入口：注册文件类型和工厂
+    └── widget.ts     # 内容 Widget 和 WidgetFactory
 ```
 
-## 步骤 1：创建 XYZ Widget
+## 步骤 1：package.json 依赖
 
-### src/widget.ts
+```json
+{
+  "name": "@my-org/my-xyz-viewer",
+  "version": "0.1.0",
+  "description": "A custom .xyz file viewer for JupyterLab",
+  "keywords": ["jupyter", "jupyterlab", "jupyterlab-extension"],
+  "license": "BSD-3-Clause",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "files": ["lib/**/*.{js,d.ts,map}"],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf lib"
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^4.7.0-alpha.1",
+    "@jupyterlab/docregistry": "^4.7.0-alpha.1",
+    "@jupyterlab/ui-components": "^4.7.0-alpha.1",
+    "@lumino/messaging": "^2.0.0",
+    "@lumino/widgets": "^2.0.0",
+    "@lumino/coreutils": "^2.0.0",
+    "@lumino/disposable": "^2.0.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.5.0",
+    "rimraf": "^5.0.0"
+  },
+  "jupyterlab": {
+    "extension": true
+  }
+}
+```
+
+`@jupyterlab/docregistry` 提供 DocumentRegistry/ABCWidgetFactory/DocumentWidget；`@jupyterlab/ui-components` 提供 `ToolbarButton` 和 `refreshIcon`；`@lumino/widgets` 提供 `Widget` 基类，`@lumino/messaging` 提供 `Message` 类型。这些都是 singletonPackages，由宿主提供（F-139）。
+
+## 步骤 2：内容 Widget（src/widget.ts）
+
+内容 Widget 负责实际渲染。它继承 Lumino `Widget`，在 `onAfterShow` 生命周期中等待 `context.ready`，然后通过 `context.model.toString()` 读取文本并写入 DOM。
 
 ```typescript
-import { DocumentRegistry, ABCWidgetFactory, DocumentWidget } from '@jupyterlab/docregistry';
+import { Message } from '@lumino/messaging';
 import { Widget } from '@lumino/widgets';
-import { ToolbarButton } from '@jupyterlab/apputils';
-import { PromiseDelegate } from '@lumino/coreutils';
+import { DocumentRegistry, DocumentWidget } from '@jupyterlab/docregistry';
+import { ToolbarButton, refreshIcon } from '@jupyterlab/ui-components';
 
-/**
- * XYZ 文件模型接口
- */
-interface IXYZData {
-  atomCount: number;
-  comment: string;
-  atoms: { element: string; x: number; y: number; z: number }[];
-}
-
-/**
- * XYZ 查看器 Widget
- * 显示 XYZ 文件内容和解析后的原子信息
- */
-export class XYZWidget extends Widget {
-  private _context: DocumentRegistry.IContext<DocumentRegistry.IModel>;
-  private _content: HTMLPreElement;
-  private _info: HTMLDivElement;
-  private _ready = new PromiseDelegate<void>();
-
+export class XyzContentWidget extends Widget {
   constructor(context: DocumentRegistry.IContext<DocumentRegistry.IModel>) {
     super();
     this._context = context;
-    this.addClass('jp-xyzViewer');
-    this.id = `xyz-viewer-${Private.id++}`;
-    this.title.label = context.path.split('/').pop() || 'XYZ Viewer';
-    this.title.closable = true;
-
-    // 创建 DOM 结构
-    const container = document.createElement('div');
-    container.className = 'jp-xyzViewer-container';
-
-    // 信息面板（原子数量等）
-    this._info = document.createElement('div');
-    this._info.className = 'jp-xyzViewer-info';
-    container.appendChild(this._info);
-
-    // 内容区域
-    this._content = document.createElement('pre');
-    this._content.className = 'jp-xyzViewer-content';
-    container.appendChild(this._content);
-
-    this.node.appendChild(container);
-
-    // 监听模型变化
-    context.ready.then(() => {
-      this._onContentChanged();
-      this._ready.resolve(undefined);
-    });
-
-    context.model.contentChanged.connect(this._onContentChanged, this);
-    context.fileChanged.connect(this._onFileChanged, this);
+    this.addClass('jp-XyzViewer');
+    this.node.style.padding = '8px';
+    this.node.style.overflow = 'auto';
+    this.node.style.whiteSpace = 'pre-wrap';
+    this.node.style.fontFamily = 'monospace';
   }
 
-  /**
-   * Promise that resolves when the widget is ready
-   */
-  get ready(): Promise<void> {
-    return this._ready.promise;
-  }
-
-  /**
-   * The widget's context
-   */
   get context(): DocumentRegistry.IContext<DocumentRegistry.IModel> {
     return this._context;
   }
 
-  /**
-   * 解析 XYZ 文件内容
-   * XYZ 格式：
-   * 第1行：原子数量
-   * 第2行：注释行
-   * 第3+行：元素名 X Y Z
-   */
-  private _parseXYZ(text: string): IXYZData | null {
-    const lines = text.trim().split('\n');
-    if (lines.length < 2) return null;
-
-    const atomCount = parseInt(lines[0].trim(), 10);
-    if (isNaN(atomCount)) return null;
-
-    const comment = lines[1];
-    const atoms: IXYZData['atoms'] = [];
-
-    for (let i = 2; i < Math.min(lines.length, 2 + atomCount); i++) {
-      const parts = lines[i].trim().split(/\s+/);
-      if (parts.length >= 4) {
-        atoms.push({
-          element: parts[0],
-          x: parseFloat(parts[1]),
-          y: parseFloat(parts[2]),
-          z: parseFloat(parts[3])
-        });
-      }
-    }
-
-    return { atomCount, comment, atoms };
-  }
-
-  /**
-   * 内容变化处理
-   */
-  private _onContentChanged(): void {
-    const text = this._context.model.toString();
-    this._content.textContent = text;
-
-    const data = this._parseXYZ(text);
-    if (data) {
-      // 统计元素
-      const elements = new Map<string, number>();
-      data.atoms.forEach(a => {
-        elements.set(a.element, (elements.get(a.element) || 0) + 1);
-      });
-      const elementSummary = Array.from(elements.entries())
-        .map(([el, count]) => `${el}: ${count}`)
-        .join(', ');
-
-      this._info.innerHTML = `
-        <strong>XYZ File Info</strong><br/>
-        Atoms: ${data.atomCount}<br/>
-        Comment: ${data.comment}<br/>
-        Elements: ${elementSummary}
-      `;
-    } else {
-      this._info.innerHTML = '<strong>Invalid XYZ file format</strong>';
-    }
-  }
-
-  /**
-   * 文件路径变化处理
-   */
-  private _onFileChanged(): void {
-    this.title.label = this._context.path.split('/').pop() || 'XYZ Viewer';
-  }
-
-  /**
-   * 清理资源
-   */
-  dispose(): void {
-    if (this.isDisposed) return;
-    this._context.model.contentChanged.disconnect(this._onContentChanged, this);
-    this._context.fileChanged.disconnect(this._onFileChanged, this);
-    super.dispose();
-  }
-}
-
-/**
- * XYZ 文档 Widget 类型（content=XYZWidget, model=IModel）
- */
-type XYZDocumentWidget = DocumentWidget<XYZWidget, DocumentRegistry.IModel>;
-
-/**
- * XYZ Widget 工厂
- * 继承 ABCWidgetFactory，实现 createNewWidget 方法
- */
-export class XYZWidgetFactory extends ABCWidgetFactory<XYZDocumentWidget, DocumentRegistry.IModel> {
-  constructor() {
-    super({
-      name: 'XYZ Viewer',
-      label: 'XYZ Viewer',
-      modelName: 'text',
-      fileTypes: ['xyz'],
-      defaultFor: ['xyz'],
-      readOnly: true,
-      toolbarFactory: (widget: XYZDocumentWidget) => {
-        return [
-          {
-            name: 'refresh',
-            widget: new ToolbarButton({
-              iconClass: 'jp-RefreshIcon jp-Icon jp-Icon-16',
-              onClick: () => {
-                widget.context.revert();
-              },
-              tooltip: 'Refresh XYZ file'
-            })
-          }
-        ];
-      }
+  protected onAfterShow(msg: Message): void {
+    super.onAfterShow(msg);
+    void this._context.ready.then(() => {
+      this._render();
     });
   }
 
-  /**
-   * 创建新的文档 Widget
-   * 框架在用户打开 .xyz 文件时调用此方法
-   */
-  protected createNewWidget(
-    context: DocumentRegistry.IContext<DocumentRegistry.IModel>
-  ): XYZDocumentWidget {
-    const content = new XYZWidget(context);
-    return new DocumentWidget({ content, context });
+  refresh(): void {
+    this._render();
   }
+
+  private _render(): void {
+    const text = this._context.model.toString();
+    const banner = '=== .xyz File Contents ===\n\n';
+    this.node.textContent = banner + text;
+  }
+
+  private _context: DocumentRegistry.IContext<DocumentRegistry.IModel>;
 }
 
-/**
- * 私有命名空间，用于生成唯一 ID
- */
-namespace Private {
-  export let id = 0;
+export class XyzDocumentWidget extends DocumentWidget<XyzContentWidget> {
+  constructor(context: DocumentRegistry.IContext<DocumentRegistry.IModel>) {
+    const content = new XyzContentWidget(context);
+    super({ context, content });
+    this.id = `xyz-${context.path}`;
+    this.title.label = context.path.split('/').pop() ?? 'untitled.xyz';
+    this.title.closable = true;
+
+    const refreshButton = new ToolbarButton({
+      icon: refreshIcon,
+      onClick: () => content.refresh(),
+      tooltip: 'Refresh .xyz Content'
+    });
+    this.toolbar.addItem('refresh', refreshButton);
+  }
 }
 ```
 
-## 步骤 2：编写插件入口
+### 关键点
 
-### src/index.ts
+- **`XyzContentWidget`** 是纯 Lumino Widget，不直接知道 JupyterLab 的文档外壳。它持有 `context`，通过 `context.ready` Promise 确保模型已从后端加载完成（F-053）。`context.model.toString()` 返回文档模型的文本内容——对于 `fileFormat: 'text'` 的文件，内置 text 模型已自动完成文件内容的加载与同步。
+- **`onAfterShow`** 是 Lumino Widget 生命周期消息，在 Widget 首次显示时触发。这里延迟渲染以避免在 Widget 还未挂载到 DOM 时操作节点。
+- **`XyzDocumentWidget`** 继承 `DocumentWidget<XyzContentWidget>`，泛型参数指定内容 Widget 类型。构造时创建 content 并通过 `super({ context, content })` 传入。`DocumentWidget` 基类自动：
+  - 把 `context.ready` 合并到 `reveal` Promise（MainAreaWidget 的渐显机制）；
+  - 监听 `context.pathChanged` 更新标题标签；
+  - 监听 model 的 `dirty` 状态更新标题的未保存标记。
+- **工具栏按钮**通过 `this.toolbar.addItem('refresh', refreshButton)` 添加。`ToolbarButton` 来自 `@jupyterlab/apputils`，`refreshIcon` 来自 `@jupyterlab/ui-components`。这是"可选工具栏按钮"的最简实现，无需使用 IWidgetExtension。
+
+## 步骤 3：WidgetFactory（src/widget.ts，续）
+
+```typescript
+import { ABCWidgetFactory } from '@jupyterlab/docregistry';
+
+export class XyzWidgetFactory extends ABCWidgetFactory<XyzDocumentWidget> {
+  protected createNewWidget(
+    context: DocumentRegistry.IContext<DocumentRegistry.IModel>
+  ): XyzDocumentWidget {
+    return new XyzDocumentWidget(context);
+  }
+}
+```
+
+`ABCWidgetFactory` 已经实现了 `IWidgetFactory` 接口的全部公共逻辑（`name`、`fileTypes`、`readOnly`、`preferKernel`、`createNew`、`widgetCreated` 信号、dispose 等）。子类只需实现抽象方法 `createNewWidget(context, source?)`，返回一个 Widget 实例。基类的 `createNew` 会调用 `createNewWidget`，然后自动装配工具栏并发射 `widgetCreated` 信号（`packages/docregistry/src/default.ts:465`）。
+
+工厂的配置（name、支持哪些 fileTypes、modelName 等）通过构造函数的 `IWidgetFactoryOptions` 传入，在插件入口中提供。
+
+## 步骤 4：插件入口（src/index.ts）
 
 ```typescript
 import {
   JupyterFrontEnd,
   JupyterFrontEndPlugin
 } from '@jupyterlab/application';
-import { XYZWidgetFactory } from './widget';
+import { DocumentRegistry } from '@jupyterlab/docregistry';
+import { XyzWidgetFactory } from './widget';
 
-/**
- * XYZ 文件类型扩展插件
- * 注册 .xyz 文件类型和查看器 Widget 工厂
- */
-const xyzPlugin: JupyterFrontEndPlugin<void> = {
-  id: 'xyz-viewer:plugin',
+const plugin: JupyterFrontEndPlugin<void> = {
+  id: '@my-org/my-xyz-viewer:plugin',
   autoStart: true,
+  requires: [],
   activate: (app: JupyterFrontEnd) => {
-    const { docRegistry } = app;
+    const docRegistry = app.docRegistry;
 
-    // 1. 注册 .xyz 文件类型
-    docRegistry.addFileType({
-      name: 'xyz',
-      displayName: 'XYZ File',
-      extensions: ['.xyz'],
-      mimeTypes: ['chemical/x-xyz'],
-      contentType: 'file',
-      fileFormat: 'text',
-      iconClass: 'jp-MaterialIcon jp-CodeIcon'  // 复用代码文件图标
+    docRegistry.addFileType(
+      {
+        name: 'xyz',
+        displayName: 'XYZ File',
+        extensions: ['.xyz'],
+        contentType: 'file',
+        fileFormat: 'text',
+        mimeTypes: ['text/plain']
+      },
+      ['XYZ Viewer']
+    );
+
+    const factory = new XyzWidgetFactory({
+      name: 'XYZ Viewer',
+      fileTypes: ['xyz'],
+      defaultFor: ['xyz'],
+      modelName: 'text',
+      readOnly: true
     });
 
-    // 2. 创建并注册 Widget 工厂
-    const factory = new XYZWidgetFactory();
     docRegistry.addWidgetFactory(factory);
 
-    // 3. 添加 CSS 样式（通过注入 <style> 标签）
-    const style = document.createElement('style');
-    style.textContent = `
-      .jp-xyzViewer {
-        overflow: auto;
-        height: 100%;
-      }
-      .jp-xyzViewer-container {
-        padding: 10px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-      .jp-xyzViewer-info {
-        background: var(--jp-layout-color2);
-        padding: 8px 12px;
-        border-radius: 4px;
-        margin-bottom: 10px;
-        font-family: var(--jp-ui-font-family);
-        font-size: var(--jp-ui-font-size1);
-      }
-      .jp-xyzViewer-content {
-        flex: 1;
-        background: var(--jp-layout-color0);
-        border: 1px solid var(--jp-border-color1);
-        border-radius: 4px;
-        padding: 10px;
-        overflow: auto;
-        font-family: var(--jp-code-font-family);
-        font-size: var(--jp-code-font-size);
-        white-space: pre;
-        margin: 0;
-      }
-    `;
-    document.head.appendChild(style);
-
-    console.log('XYZ Viewer extension activated!');
+    console.log('XYZ viewer extension activated!');
   }
 };
 
-export default xyzPlugin;
+export default plugin;
 ```
 
-## 步骤 3：配置 package.json
+### 代码解读
 
-```json
+- **`docRegistry.addFileType(fileType, factories?)`**（`packages/docregistry/src/registry.ts:287`）：注册文件类型。
+  - `name: 'xyz'`：文件类型内部标识，工厂的 `fileTypes` 数组用它关联。
+  - `extensions: ['.xyz']`：文件扩展名，文件浏览器据此匹配图标和默认打开方式。
+  - `contentType: 'file'`：内容类型为普通文件（区别于 `'notebook'` 和 `'directory'`）。
+  - `fileFormat: 'text'`：文本格式，Contents API 以文本方式读取。
+  - `mimeTypes: ['text/plain']`：关联 MIME 类型。
+  - 第二个参数 `['XYZ Viewer']` 把该文件类型关联到名为 "XYZ Viewer" 的工厂，并自动把该工厂设为该类型的默认打开工厂。这等价于后续 `addWidgetFactory` 时工厂声明 `defaultFor: ['xyz']`，这里两种方式都用了以确保默认关联（实际二选一即可，同时使用不会冲突）。
+- **`new XyzWidgetFactory(options)`**：工厂选项：
+  - `name: 'XYZ Viewer'`：工厂唯一名称，显示在"打开方式"菜单中。
+  - `fileTypes: ['xyz']`：此工厂能打开的文件类型名列表（对应 addFileType 的 name）。
+  - `defaultFor: ['xyz']`：双击 `.xyz` 文件时默认使用此工厂打开。
+  - `modelName: 'text'`：使用内置的文本模型工厂（`TextModelFactory`，name 为 `'text'`）。JupyterLab 已默认注册 text 模型，无需自己注册 ModelFactory。
+  - `readOnly: true`：标记为只读查看器，不会触发保存逻辑。
+- **`docRegistry.addWidgetFactory(factory)`**（`registry.ts:124`）：把工厂注册到文档注册表，返回 `IDisposable`。注册后，DocumentManager 在打开 `.xyz` 文件时会查找名为 "XYZ Viewer" 的工厂，调用其 `createNew(context)` 创建 Widget。
+- **不需要手动注册 ModelFactory**：因为我们复用内置的 `'text'` 模型。如果需要自定义数据模型（如二进制解析、结构化文档），才需要实现 `IModelFactory` 并调用 `docRegistry.addModelFactory()`。
+
+## 步骤 5：构建与安装
+
+```bash
+npm install
+npm run build
+jupyter labextension develop --overwrite .
+jupyter lab
+```
+
+## 步骤 6：测试
+
+1. 在 JupyterLab 文件浏览器中，右键 → New → Text File，命名为 `test.xyz`。
+2. 双击 `test.xyz`，应打开一个标签页，标题为 `test.xyz`，内容区域显示 `=== .xyz File Contents ===` 后跟文件文本。
+3. 编辑文件内容（可改用文本编辑器打开修改），回到 XYZ Viewer 标签页，点击工具栏的刷新按钮，内容应更新。
+4. 在文件上右键 → "Open With"，应能看到 "XYZ Viewer" 选项。
+
+## 工作流程图
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant FB as FileBrowser
+    participant DM as DocumentManager
+    participant DR as DocumentRegistry
+    participant F as XyzWidgetFactory
+    participant W as XyzDocumentWidget
+    participant C as Context
+
+    User->>FB: 双击 test.xyz
+    FB->>DM: openOrReveal('test.xyz')
+    DM->>DR: getWidgetFactoryForType('xyz')
+    DR-->>DM: XyzWidgetFactory
+    DM->>C: 创建 Context (modelName='text')
+    DM->>F: createNew(context)
+    F->>W: new XyzDocumentWidget(context)
+    W->>W: 创建 XyzContentWidget + 工具栏
+    F-->>DM: widget
+    DM->>Shell: add(widget, 'main')
+    W->>C: await context.ready
+    C-->>W: model 已加载
+    W->>W: onAfterShow → model.toString() 渲染
+```
+
+## 进阶：使用 IWidgetExtension 注入工具栏
+
+上文直接在 `XyzDocumentWidget` 构造函数中添加工具栏按钮，简单直接。如果想把工具栏按钮做成可复用的横切扩展（例如为所有文档类型添加一个"导出"按钮），可以实现 `DocumentRegistry.IWidgetExtension`：
+
+```typescript
+import { IDisposable } from '@lumino/disposable';
+import { ToolbarButton } from '@jupyterlab/ui-components';
+
+class MyToolbarExtension
+  implements DocumentRegistry.IWidgetExtension<XyzDocumentWidget, DocumentRegistry.IModel>
 {
-  "name": "xyz-viewer",
-  "version": "0.1.0",
-  "description": "XYZ file viewer for JupyterLab",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "scripts": {
-    "build": "jlpm build:lib && jlpm build:labextension",
-    "build:lib": "tsc",
-    "build:labextension": "jupyter labextension build .",
-    "watch": "tsc -w",
-    "clean": "rimraf lib tsconfig.tsbuildinfo"
-  },
-  "dependencies": {
-    "@jupyterlab/application": "^4.0.0",
-    "@jupyterlab/apputils": "^4.0.0",
-    "@jupyterlab/docregistry": "^4.0.0",
-    "@lumino/widgets": "^2.0.0",
-    "@lumino/coreutils": "^2.0.0"
-  },
-  "devDependencies": {
-    "typescript": "~5.0.0",
-    "rimraf": "~5.0.0",
-    "@jupyterlab/builder": "^4.0.0"
-  },
-  "jupyterlab": {
-    "extension": true,
-    "outputDir": "xyz_viewer/labextension",
-    "_buildConfig": {
-      "sharedPackages": {
-        "@jupyterlab/application": { "singleton": true, "bundled": false },
-        "@jupyterlab/apputils": { "singleton": true, "bundled": false },
-        "@jupyterlab/docregistry": { "singleton": true, "bundled": false },
-        "@lumino/widgets": { "singleton": true, "bundled": false },
-        "@lumino/coreutils": { "singleton": true, "bundled": false }
-      }
-    }
-  }
-}
-```
-
-## 步骤 4：创建 Python 包
-
-参考 [01 最小扩展](01-minimal-extension.md) 的 pyproject.toml 和 __init__.py，将包名改为 `xyz_viewer`。
-
-## 关键代码解析
-
-### 文件类型注册
-
-```typescript
-docRegistry.addFileType({
-  name: 'xyz',               // 内部唯一标识
-  displayName: 'XYZ File',   // 用户可见名称
-  extensions: ['.xyz'],      // 扩展名列表
-  mimeTypes: ['chemical/x-xyz'],  // MIME 类型
-  contentType: 'file',       // 内容类型：'file'|'notebook'|'directory'
-  fileFormat: 'text',        // 文件格式：'text'|'json'|'base64'
-  iconClass: '...'           // CSS 图标类
-});
-```
-
-### Widget 工厂配置
-
-```typescript
-class XYZWidgetFactory extends ABCWidgetFactory<XYZDocumentWidget, DocumentRegistry.IModel> {
-  // 在构造函数中传入工厂选项
-  constructor() {
-    super({
-      name: 'XYZ Viewer',           // 工厂名（在 "Open With" 菜单中显示）
-      modelName: 'text',            // 使用的模型（'text' 是内置文本模型）
-      fileTypes: ['xyz'],           // 支持的文件类型
-      defaultFor: ['xyz'],          // 作为 .xyz 文件的默认打开方式
-      readOnly: true,               // 只读查看器
-      toolbarFactory: (widget) => [...]  // 工具栏按钮工厂
+  createNew(
+    widget: XyzDocumentWidget,
+    context: DocumentRegistry.IContext<DocumentRegistry.IModel>
+  ): IDisposable {
+    const button = new ToolbarButton({
+      label: 'Export',
+      onClick: () => console.log('Export', context.path),
+      tooltip: 'Export this file'
     });
-  }
-
-  // 实现抽象方法：创建新的文档 Widget
-  protected createNewWidget(context) {
-    return new DocumentWidget({ content: new XYZWidget(context), context });
+    widget.toolbar.addItem('export', button);
+    return { dispose: () => button.dispose() };
   }
 }
+
+docRegistry.addWidgetExtension('XYZ Viewer', new MyToolbarExtension());
 ```
 
-关键要点：
-- 继承 `ABCWidgetFactory<T, U>` 抽象类（`T` 是 Widget 类型，`U` 是 Model 类型）
-- 构造函数中通过 `super(options)` 传入工厂配置
-- 必须实现 `protected createNewWidget(context)` 方法，返回一个 `DocumentWidget` 实例
-- `DocumentWidget` 构造函数接收 `{content, context}`，自动处理工具栏、reveal 信号等
-- `toolbarFactory` 返回工具栏按钮数组，按钮在 Widget 创建后自动添加
+`DocumentRegistry.IWidgetExtension<T, U>` 只有一个 `createNew(widget, context)` 方法，在工厂每次创建 Widget 后被调用，返回的 IDisposable 在 Widget 销毁时释放。这是 JupyterLab 核心扩展为 Notebook/编辑器注入工具栏按钮的标准方式。
 
-### Widget 创建
+## 注意事项
 
-`createNewWidget(context)` 方法在用户打开 .xyz 文件时被调用：
-1. 创建内容 Widget（XYZWidget）
-2. 包装为 DocumentWidget（包含 toolbar、context）
-3. DocumentRegistry 自动为 Widget 应用已注册的 WidgetExtension
-
-### Context 的使用
-
-`context` 提供：
-- `context.model.toString()`：获取文件文本内容
-- `context.model.contentChanged`：内容变化信号
-- `context.fileChanged`：文件路径变化信号
-- `context.path`：文件路径
-- `context.revert()`：恢复到磁盘上的版本
-- `context.save()`：保存文件
-- `context.ready`：Context 初始化完成 Promise
-
-## 测试
-
-1. 构建并安装扩展：`jlpm build && pip install -e .`
-2. 创建一个测试文件 `test.xyz`：
-
-```xyz
-5
-Methane (CH4)
-C      0.000000    0.000000    0.000000
-H      0.640101    0.640101    0.640101
-H     -0.640101   -0.640101    0.640101
-H     -0.640101    0.640101   -0.640101
-H      0.640101   -0.640101   -0.640101
-```
-
-3. 启动 JupyterLab：`jupyter lab`
-4. 在文件浏览器中双击 `test.xyz`
-5. 应该看到我们的 XYZ Viewer 打开，显示文件信息面板和原始内容
-
-## 扩展思路
-
-1. **可编辑支持**：将 `readOnly: false`，在 XYZWidget 中添加 CodeMirror 编辑器
-2. **3D 渲染**：集成 3Dmol.js 或 Three.js 渲染分子 3D 结构
-3. **MIME 渲染器**：作为 MIME 渲染扩展，在 Notebook 输出中渲染内联 XYZ
-4. **设置支持**：添加设置项控制显示样式
-5. **导出功能**：工具栏添加导出为其他格式（PDB、JSON）按钮
+1. **模型选择**：本例用 `modelName: 'text'` 复用内置文本模型，适用于纯文本查看器。若文件是 JSON 或二进制，应使用 `'json'` 模型或自定义 ModelFactory。
+2. **`context.ready`**：必须等待它 resolve 后再读取 model，否则 `toString()` 可能返回空字符串。`ready` 在模型从后端 Contents API 加载完成后 resolve。
+3. **只读 vs 可编辑**：`readOnly: true` 的工厂不提供保存能力。若要支持编辑，应设置 `readOnly: false`，让内容 Widget 修改 `model`（通过 `model.fromString(text)` 或共享模型 API），Context 会自动处理 dirty 状态和保存。
+4. **id 唯一性**：Widget 的 `id` 应基于文件路径生成，避免多个同名文件的 Widget id 冲突。
+5. **资源释放**：如果 Widget 中连接了 Signal 或注册了事件监听，应重写 `onCloseRequest` 或实现 `dispose` 清理。`DocumentWidget` 基类已处理大部分与 context 相关的信号解绑。
+6. **工厂 name 与 fileType name 大小写**：DocumentRegistry 内部按小写匹配，工厂的 `fileTypes` 和 `defaultFor` 应使用与 `addFileType` 的 `name` 一致的值（大小写不敏感，但建议保持一致）。
 
 ## 相关概念
 
-- [05 文档注册与 Widget 工厂模式](/concepts/05-document-widget-system.md)
+- [05 文档注册与 Widget 工厂](/concepts/05-document-widget-system.md)
 - [03 插件系统与依赖注入](/concepts/03-plugin-system.md)
-- [01 最小扩展示例](01-minimal-extension.md)
-- [源码文件地图](/references/source-code-map.md)
+- [09 关键子系统](/concepts/09-key-subsystems.md)
+
+## 相关示例
+
+- [01 最小扩展：Hello World 插件](/examples/01-minimal-extension.md)

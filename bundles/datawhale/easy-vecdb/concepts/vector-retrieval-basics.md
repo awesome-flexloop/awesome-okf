@@ -1,0 +1,135 @@
+---
+title: 向量检索基础
+type: concept
+bundle: /datawhale/easy-vecdb
+description: 向量嵌入原理（Word2Vec/GloVe/BERT/GPT）、相似度度量（欧氏距离/内积/余弦相似度）、归一化、暴力搜索与维度灾难
+related:
+  - /datawhale/easy-vecdb/concepts/ann-algorithms
+  - /datawhale/easy-vecdb/concepts/ivf-pq-quantization
+  - /datawhale/easy-vecdb/examples/mini-vector-db
+sources:
+  - https://github.com/datawhalechina/easy-vecdb/blob/main/docs/base/chapter3/向量嵌入算法基础.md
+  - https://github.com/datawhalechina/easy-vecdb/blob/main/docs/base/chapter4/向量搜索算法基础.md
+tags:
+  - vector-embedding
+  - similarity
+  - curse-of-dimensionality
+---
+
+# 向量检索基础
+
+向量检索是向量数据库的核心功能。要理解向量数据库，首先需要掌握三个基础概念：**向量嵌入**（如何将非结构化数据转化为向量）、**相似度度量**（如何衡量向量间的相似程度）和**维度灾难**（为什么暴力搜索在高维大规模场景下失效）。
+
+## 向量嵌入
+
+向量嵌入（Vector Embeddings）将文本、图像、音频等非结构化数据转换为高维向量，使语义相似的内容在向量空间中距离更近。
+
+### 静态向量嵌入
+
+静态嵌入为每个词汇分配一个固定不变的向量，不随上下文变化。
+
+- **Word2Vec**：基于浅层神经网络，通过 CBOW（上下文预测中心词）和 Skip-gram（中心词预测上下文）两种任务学习词向量。仅捕捉局部上下文窗口内的词汇关联。
+- **GloVe**：结合全局语料共现统计，通过构建"词-词共现矩阵"学习向量，能捕捉线性语义关系（如"国王 - 男人 + 女人 ≈ 王后"）。
+
+静态嵌入的根本局限是"一词一向量"，无法区分多义词。例如"苹果"在"吃苹果"和"苹果手机"中向量完全相同。
+
+### 动态向量嵌入
+
+动态嵌入根据上下文为同一词汇生成不同向量，以 BERT 和 GPT 为代表。
+
+- **BERT**：双向 Transformer 编码器，通过 MLM（遮掩语言模型）预训练任务同时捕捉上下上文，适合文本理解任务。输出 768 维向量（base 模型）。
+- **GPT**：单向 Transformer 解码器，通过自回归语言模型逐词预测下文，适合文本生成任务。
+
+实验表明，BERT 对多义词"打"在不同语境（击打/游戏/编织/通讯）下生成的向量余弦相似度在 0.77~0.87 之间，而 Word2Vec 静态向量恒为 1.0。
+
+## 相似度度量
+
+给定向量集合 {v₁, v₂, ..., vₙ} 和查询向量 q，相似度度量决定了"哪些向量与 q 最相似"。
+
+### 欧氏距离（L2）
+
+$$\text{dist}(q, v) = \sqrt{\sum_{i=1}^{d}(q_i - v_i)^2}$$
+
+衡量两点间的绝对直线距离，值越小越相似。适用于图像特征匹配等关注物理距离的场景。计算包含 d 次减法、d 次乘法、(d-1) 次加法和 1 次开方运算。
+
+### 内积（IP）
+
+$$\text{sim}(q, v) = \sum_{i=1}^{d} q_i v_i$$
+
+衡量向量方向的对齐程度，值越大越相似。深度学习模型输出的 Embedding 常用内积计算相似度。计算包含 d 次乘法和 (d-1) 次加法，比 L2 少了减法和开方运算。
+
+### 余弦相似度
+
+$$\cos(q, v) = \frac{q \cdot v}{\|q\|_2 \|v\|_2}$$
+
+衡量向量夹角的余弦值，忽略向量长度，只关注方向。取值范围 [-1, 1]，值越大越相似。广泛用于文本语义相似度计算。
+
+### 归一化的关键作用
+
+L2 归一化将向量缩放到单位长度（模为 1）：`V_norm = V / ||V||₂`。归一化后：
+
+- 欧氏距离的排序与内积完全一致（`||a-b||² = 2 - 2a·b`）
+- 消除了向量长度对相似度判断的干扰
+- 余弦相似度等价于内积
+
+在向量索引构建前进行归一化是标准操作流程。
+
+### 度量选择指南
+
+| 场景 | 推荐度量 | 原因 |
+|------|---------|------|
+| 图像/物理特征匹配 | L2 | 关注绝对位置差异 |
+| 文本/语义相似度 | 余弦/IP | 方向比大小更重要 |
+| 推荐系统（物品热度编码在模长中） | IP（不归一化） | 向量长度承载信息 |
+| 已归一化向量 | L2 或 IP 等价 | 排序一致，选计算更快的 IP |
+
+## 暴力搜索
+
+暴力搜索（Brute Force Search）遍历所有向量计算相似度，排序后返回 Top-K。不依赖任何预构建索引，精度 100%。
+
+```python
+from scipy.spatial.distance import cdist
+import numpy as np
+
+distances = cdist(query_vectors, database_vectors, metric='euclidean')
+top_k_indices = np.argsort(distances, axis=1)[:, :k]
+```
+
+暴力搜索的时间复杂度为 O(N×d)，其中 N 是向量数量，d 是维度。在 50 万条 1024 维向量上的实测耗时约 3 秒（3 条查询）。当数据量增长到百万、千万甚至亿级时，暴力搜索无法满足实时性要求。
+
+## 维度灾难
+
+维度灾难（Curse of Dimensionality）是高维空间中距离度量失效的现象：
+
+1. **距离趋同**：随着维度升高，所有点对之间的距离差异缩小。在 2 维空间中最近邻与平均点距离差异明显，但在 1000 维空间中最近邻距离与平均距离几乎相同（比值逼近 1）。
+2. **空间稀疏**：高维空间中数据点极度稀疏，大多数区域是空的。
+3. **距离失去区分能力**：最近邻并不比普通点更近多少，基于距离的检索失去意义。
+
+### 余弦相似度的抗灾变性
+
+余弦相似度比欧氏距离更能抵抗维度灾难，因为：
+
+- 只关注方向，不受向量模长随维度增长的影响
+- 高维随机向量趋于正交（相似度集中在 0 附近），但相对顺序仍可保持
+- 天然具有幅度不变性
+
+但余弦相似度并非完全免疫——高维下相似度值域收缩，区分度同样会下降。
+
+## 向量数据库的核心模块
+
+一个完整的向量数据库包含六大模块：
+
+| 模块 | 作用 |
+|------|------|
+| 向量存储 | 存储所有 embedding（NumPy/mmap/GPU buffer） |
+| 索引 | 加速相似度搜索（IVF/HNSW/PQ/LSH） |
+| 相似度计算 | 计算向量距离（Cosine/L2/IP） |
+| 查询引擎 | 查询路由、nprobe 控制、结果聚合 |
+| 元数据管理 | ID、文本内容、标签、业务字段 |
+| 持久化 | 向量/索引/元数据保存到磁盘，支持 load/rebuild |
+
+## 延伸阅读
+
+- [ANN 近似最近邻算法](/datawhale/easy-vecdb/concepts/ann-algorithms) — 如何通过近似计算打破暴力搜索的效率瓶颈
+- [IVF 与 PQ 量化](/datawhale/easy-vecdb/concepts/ivf-pq-quantization) — 空间划分与向量压缩的经典组合
+- [手写 Mini Vector DB](/datawhale/easy-vecdb/examples/mini-vector-db) — 用 200 行 Python 实现向量数据库

@@ -1,5 +1,5 @@
 ---
-type: Example
+type: example
 title: 参考文献引用处理
 description: 演示如何使用 citation-js-utils 解析 BibTeX、创建引用渲染器、格式化内联引用和生成参考文献列表。
 tags: [mystmd, citation, bibtex, csl, bibliography]

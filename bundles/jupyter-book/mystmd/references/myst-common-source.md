@@ -1,5 +1,5 @@
 ---
-type: Reference
+type: reference
 title: myst-common 公共类型与工具源码信源
 description: myst-common 包的核心类型定义（GenericNode/DirectiveSpec/RoleSpec/TransformSpec/MystPlugin）、RuleId 枚举以及工具函数的源码登记。
 tags: [mystmd, common, types, plugin, directive, role, transform]

@@ -1,16 +1,19 @@
 ---
 type: Concept
 title: 贡献扩展模块
-description: KaTeX contrib/ 目录下的官方扩展模块：copy-tex（复制LaTeX源码）、mhchem（化学方程式）、render-a11y-string（无障碍字符串）、mathtex-script-type（script标签自动渲染）。
-tags: [katex, contrib, extension, copy-tex, mhchem, a11y]
-generated: { by: "reference_agent/trae-cn", at: 2026-08-22T22:35:00+08:00 }
-verified: { by: "process:seven-concepts-v", at: 2026-08-22T22:35:00+08:00 }
+description: KaTeX contrib/ 目录下的官方扩展模块：auto-render（自动渲染）、copy-tex（复制 LaTeX 源码）、mhchem（化学方程式）、render-a11y-string（无障碍字符串）、mathtex-script-type（script 标签自动渲染）。第三方生态库索引见生态文档。
+tags: [katex, contrib, extension, copy-tex, mhchem, a11y, mathtex]
+generated: { by: "reference_agent/trae-cn", at: 2026-08-23T22:00:00+08:00 }
+verified: { by: "process:seven-concepts-v", at: 2026-08-23T22:00:00+08:00 }
 status: stable
-stale_after: 2027-08-22
+stale_after: 2027-08-23
 sources:
   - id: src
     resource: /references/katex-source.md
     title: KaTeX 源码信源
+  - id: web-libs
+    resource: /references/katex-website.md#web-libs
+    title: KaTeX 官网 Extensions & Libraries 页面
 ---
 
 ## contrib/ 扩展目录
@@ -24,6 +27,10 @@ sources:
 | mhchem | 化学方程式和化学式排版（`\ce{...}`命令） |
 | render-a11y-string | 生成公式的可读文本字符串（无障碍辅助） |
 | mathtex-script-type | 自动渲染 `<script type="math/tex">` 标签中的公式 |
+
+> **范围说明**：`contrib/` 目录共 5 个扩展（见上表）。官网 Extensions & Libraries 页面列出 4 个官方扩展（auto-render、copy-tex、mathtex-script-type、mhchem），render-a11y-string 同样存在于 `contrib/` 目录[^web-libs]。第三方库（React/Vue/Angular/Android/iOS/Rust/Ruby/微信小程序等）的索引见 [生态与版本](/concepts/23-ecosystem-and-versions.md)，不在本文档范围内。
+
+[^web-libs]: 官网 Extensions & Libraries 页面，https://katex.org/docs/libs
 
 ## copy-tex 扩展
 
@@ -46,19 +53,18 @@ import 'katex/contrib/copy-tex';
 
 ### 工作原理
 
-copy-tex 使用浏览器的 Selection API 和 Clipboard API：
-1. 监听 `copy` 事件
-2. 检查选中内容是否包含KaTeX渲染元素
-3. 查找KaTeX MathML注解中的 `<annotation encoding="application/x-tex">` 节点（buildMathML生成的原始LaTeX源码）
-4. 将annotation中的LaTeX源码写入剪贴板
+copy-tex 在脚本加载时自动注册一个 `copy` 事件监听器，无需手动初始化：
 
-copy-tex 不需要调用任何初始化函数，引入脚本后自动生效。
+1. 用户复制时，检查选区是否包含 KaTeX 渲染的 MathML 元素
+2. 若包含，从 MathML 的 `<annotation>` 节点中提取原始 LaTeX 源码
+3. 行内公式用 `$...$` 包裹，行间公式用 `$$...$$` 包裹
+4. 将 LaTeX 源码作为纯文本写入剪贴板，同时保留 HTML 格式
+
+当选区不包含 KaTeX 内容或浏览器不支持相关 API 时，扩展直接返回，不影响默认复制行为。
 
 ### 浏览器兼容性
 
-- Chrome/Edge/Firefox/Safari 现代版本均支持
-- 依赖 Selection API 和 ClipboardEvent API
-- 在不支持的浏览器上优雅降级（仍使用默认复制行为）
+copy-tex 依赖浏览器的 Selection API 和 ClipboardEvent API。当 API 不可用时，扩展直接返回，浏览器保持默认复制行为（优雅降级）。KaTeX 支持的主流浏览器（Chrome、Safari、Firefox、Opera、Edge）均提供这些 API。
 
 ## mhchem 扩展
 
@@ -88,18 +94,17 @@ katex.render("\\pu{1.5e-6 mol}", element3);
 
 ### 工作原理
 
-mhchem 扩展通过 `__defineFunction` 注册 `\ce` 和 `\pu` 两个命令：
-- `\ce{...}`：解析化学表达式
-- `\pu{...}`：解析物理量单位（Physical Unit）
+mhchem 扩展通过 `__defineMacro` 注册 `\ce` 和 `\pu` 两个宏命令（以及内部辅助命令 `\tripledash`）：
+- `\ce{...}`：排版化学表达式
+- `\pu{...}`：排版物理量单位（Physical Unit）
 
-mhchem 内部有自己的解析器（在 [contrib/mhchem/mhchem.js](https://github.com/KaTeX/KaTeX/blob/main/contrib/mhchem/mhchem.js) 中），它是MathJax-mhchem的KaTeX移植版本，将化学语法转换为KaTeX的ParseNode树，再使用KaTeX的buildHTML/buildMathML渲染。
+mhchem 是 [MathJax-mhchem](https://mhchem.github.io/MathJax-mhchem/) 的 KaTeX 移植版本（基于 mhchem 3.3.0），源码位于 [contrib/mhchem/mhchem.js](https://github.com/KaTeX/KaTeX/blob/main/contrib/mhchem/mhchem.js)。它通过宏展开将化学语法转换为 KaTeX 原生命令，再由 KaTeX 的标准解析和渲染管线处理。
 
 ### 注意事项
 
-- mhchem 是独立的JavaScript文件，引入后自动注册命令，无需额外配置
-- mhchem 的解析器相对较大（~100KB压缩后），按需引入
-- 化学渲染效果依赖mhchem内置的样式规则，KaTeX的核心样式不足以渲染所有化学结构
-- 不支持完整的LaTeX mhchem包的所有功能（如复杂的有机化学结构）
+- mhchem 是独立的 JavaScript 文件，引入后自动注册宏命令，无需额外配置
+- 它是 MathJax-mhchem 的移植版本，对原 LaTeX mhchem 包的部分功能做了适配和简化
+- 具体支持的化学语法详见 [mhchem 文档](https://mhchem.github.io/MathJax-mhchem/)
 
 ## render-a11y-string 扩展
 
@@ -110,35 +115,33 @@ mhchem 内部有自己的解析器（在 [contrib/mhchem/mhchem.js](https://gith
 - 语音朗读
 - 公式的纯文本摘要
 
-例如 `\frac{a}{b}` 可能生成 "StartFraction a Over b EndFraction"。
+例如 `\frac{1}{2}` 会生成 "start fraction, 1, divided by, 2, end fraction"。
 
 ### 使用方法
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/contrib/render-a11y-string.min.js"></script>
-```
+该扩展导出独立的 `renderA11yString` 函数，接收 LaTeX 字符串和可选的配置选项，返回人类可读的文本字符串：
 
 ```javascript
-// 引入后，katex对象上添加了renderToString方法的附加选项
-// 或使用独立API：
-const a11yString = katex.renderToString("\\frac{a}{b}", {
-    // render-a11y-string自动添加aria-label
-});
+import renderA11yString from 'katex/contrib/render-a11y-string';
+
+const a11yString = renderA11yString("\\frac{1}{2}");
+// "start fraction, 1, divided by, 2, end fraction"
 ```
 
-render-a11y-string 通过向 KaTeX 的构建流程中注入字符串生成逻辑，在渲染过程中同时生成公式的文本描述，作为 `aria-label` 属性添加到KaTeX根元素上。
+该函数调用 KaTeX 的内部解析接口获取解析树，再遍历解析树生成文本描述。它不修改 `katex.render` 或 `katex.renderToString` 的行为，也不会自动向渲染结果添加 `aria-label`。如需无障碍标注，需由调用方自行将返回的字符串设置到相应元素的属性上。
 
-### 内部结构
+### 字符串生成规则
 
-该扩展定义了一套从ParseNode到字符串的规则：
-- 分数 → "StartFraction ... Over ... EndFraction"
-- 上标 → "Superscript ... Baseline" 或 "... squared"/"... cubed"
-- 下标 → "Subscript ... Baseline"
-- 根号 → "StartRoot ... EndRoot"
-- 求和/积分 → "Sum from ... to ... of ..."
-- 希腊字母 → 英文名称（"alpha"、"beta"等）
+该扩展遍历 KaTeX 解析树，为不同类型的节点生成对应的英文短语：
 
-这些字符串遵循 Nemeth Braille（盲文）和MathML规范的惯例。
+- 分数 → "start fraction, ..., divided by, ..., end fraction"
+- 上标 → "start superscript, ..., end superscript"，幂次为 2 或 3 时读作 "squared"/"cubed"
+- 下标 → "start subscript, ..., end subscript"（对数下标读作 "base"）
+- 根号 → "square root of, ..., end square root"
+- 常用运算符和函数 → 英文名称（"plus"、"equals"、"sine"、"sum" 等）
+- 括号和分隔符 → "left parenthesis"、"right parenthesis" 等
+
+生成的字符串以逗号分隔，旨在提升屏幕阅读器的可读性。
 
 ## mathtex-script-type 扩展
 
@@ -162,30 +165,51 @@ render-a11y-string 通过向 KaTeX 的构建流程中注入字符串生成逻辑
 
 ### 工作原理
 
-脚本加载时自动执行：
-1. 查找 `document.querySelectorAll('script[type^="math/tex"]')`
-2. 提取script标签的textContent
-3. 判断是否为display mode（检查type中是否包含 `mode=display`）
-4. 创建span元素，调用katex.render()渲染
-5. 用渲染后的span替换原script标签
+脚本加载时自动执行一次：
+
+1. 遍历页面中的 `<script>` 标签，筛选 `type` 属性匹配 `math/tex` 的标签
+2. 根据 `type` 中是否包含 `mode=display` 判断行内或行间模式
+3. 行间公式创建 `<div class="equation">`，行内公式创建 `<span class="inline-equation">`
+4. 调用 `katex.render()` 渲染 LaTeX 内容；渲染失败时在控制台输出错误并显示原始文本
+5. 用渲染后的元素替换原 `<script>` 标签
 
 ### 注意事项
 
-- 此扩展在脚本加载时自动执行一次，不会处理后续动态添加的script标签
-- 与auto-render相比，这种方式的优点是搜索引擎可能看到原始LaTeX内容
-- 但由于使用 `<script>` 标签，内容不会被搜索引擎索引为可见文本
-- 现代KaTeX推荐使用auto-render（`$...$`/`$$...$$`）或手动调用render
+- 此扩展在脚本加载时自动执行一次，不会处理后续动态添加的 `<script>` 标签
+- 必须在 KaTeX 核心脚本之后加载
+- 现代项目通常使用 auto-render 扩展（`$...$`/`$$...$$` 分隔符）或手动调用 `katex.render()`
 
 ## 扩展的加载机制
 
-所有contrib扩展遵循相同的加载模式：
-1. 依赖全局 `katex` 对象（必须先加载katex.js）
-2. 自执行脚本，引入后立即生效（无需手动初始化）
-3. 通过 `__defineFunction` 等内部API注册新命令或行为
-4. 使用独立的CSS文件（如果需要额外样式）
+contrib 扩展的共同特点：
+
+1. 依赖 KaTeX 核心（必须先加载 katex.js）
+2. 以独立脚本或模块形式提供，可按需引入
+3. 各扩展的注册方式不同：mhchem 通过 `__defineMacro` 注册宏命令；auto-render 暴露 `renderMathInElement` 函数；copy-tex 和 mathtex-script-type 在加载时自动注册事件监听器或执行 DOM 扫描；render-a11y-string 导出独立的字符串生成函数
+4. 当前版本的 contrib 扩展均不附带独立的 CSS 文件（copy-tex 自 v0.16.0 起不再需要 CSS）
+
+## 第三方生态库
+
+除官方 `contrib/` 扩展外，KaTeX 社区还提供了按平台/语言分类的第三方库[^web-libs]：
+
+| 平台/语言 | 代表库 |
+|-----------|--------|
+| React | react-katex、react-latex |
+| Vue | vue-katex |
+| Angular 2+ | ng-katex |
+| Android | KaTeXView |
+| iOS | KaTeX-iOS、KatexUtils |
+| Rust | katex-rs（服务端渲染绑定） |
+| Ruby | katex-ruby（Rails/Hanami 集成） |
+| Web Components | katex-element、katex-expression |
+| 微信小程序 | @rojer/katex-mini |
+| AsciiMath | asciimath2tex（先转 LaTeX 再渲染） |
+
+完整的第三方库索引和版本生态说明见 [生态与版本](/concepts/23-ecosystem-and-versions.md)。
 
 ## 相关概念
 
 - [自动渲染扩展](/concepts/13-auto-render.md)
 - [函数注册表](/concepts/08-function-registry.md)
 - [快速开始](/concepts/01-getting-started.md)
+- [生态与版本](/concepts/23-ecosystem-and-versions.md)

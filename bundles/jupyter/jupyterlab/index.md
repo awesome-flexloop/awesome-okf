@@ -1,11 +1,26 @@
+---
+okf_version: "0.2"
+type: bundle
+title: "JupyterLab 源码学习 Wiki"
+description: "JupyterLab 下一代交互式IDE——Lumino+React+TypeScript前端、Tornado/Python后端、插件化架构（Token依赖注入）、LabShell八区域布局、DocumentRegistry文档工厂模式、ServiceManager服务聚合、Notebook/Cell三层Widget、Federated扩展生态、Core/Dev/App三运行模式（v4.7.0-alpha.1）"
+total_content_docs: 13
+total_concepts: 10
+total_examples: 2
+total_references: 1
+verified: grep-verified
+generated: true
+status: stable
+---
+
 # JupyterLab 源码学习 Wiki
 
 JupyterLab 是 Project Jupyter 的下一代基于 Web 的交互式开发环境，采用 TypeScript + React + Lumino 构建前端，Python（Tornado/Jupyter Server）构建后端。本 Wiki 从源码层面系统讲解 JupyterLab 的架构设计、核心机制和扩展开发。
 
-- **Bundle 版本**：v0.1.0
-- **源码版本**：JupyterLab 4.x
-- **生成时间**：2026-08-22
+- **Bundle 版本**：v0.2.0
+- **源码版本**：JupyterLab 4.7.0-alpha.1
+- **生成时间**：2026-08-23
 - **方法论**：七概念 R→I→E→V→C 五阶段链路 + source-code-to-okf-wiki 工作流
+- **内容统计**：10篇概念 + 2篇示例 + 1篇信源 = 13篇内容文档
 
 ## 快速导航
 

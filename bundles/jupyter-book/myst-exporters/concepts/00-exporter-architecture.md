@@ -136,7 +136,7 @@ Handler 通过 opts.handlers 可以覆盖或扩展默认 handlers，这是插件
 
 ## 构建编排层
 
-myst-exporters 包本身只做单文件 MDAST→目标格式转换。项目级的多文件构建、PDF 编译、模板整合等编排逻辑在 [myst-cli](/concepts/03-myst-cli-relationship.md) 的 build 层实现。
+myst-exporters 包本身只做单文件 MDAST→目标格式转换。项目级的多文件构建、PDF 编译、模板整合等编排逻辑在 [myst-cli](../../jupyter-book/concepts/03-myst-cli-relationship.md) 的 build 层实现。
 
 `localArticleExport` 函数（myst-cli/src/build/utils/localArticleExport.ts）根据 export format 分发到具体的 `runXxxExport` 函数：
 - runTexExport：调用 myst-to-tex 得到 LatexResult → jtex renderTemplate → 写 .tex 文件

@@ -1,5 +1,5 @@
 ---
-type: Reference
+type: reference
 title: myst-parser 解析器源码信源
 description: myst-parser 核心解析器源码登记，包含 mystParse、createTokenizer、MarkdownParseState、tokensToMyst、applyDirectives、applyRoles 的完整 API。
 tags: [mystmd, parser, markdown-it, mdast, tokenizer]

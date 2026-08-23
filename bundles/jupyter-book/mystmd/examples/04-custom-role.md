@@ -1,5 +1,5 @@
 ---
-type: Example
+type: example
 title: 编写自定义 Role（行内角色）
 description: 演示如何创建自定义 MyST 角色（RoleSpec），包括参数/选项验证和返回 MDAST 节点，并在 mystParse 中注册使用。
 tags: [mystmd, role, custom-role, inline, extension]

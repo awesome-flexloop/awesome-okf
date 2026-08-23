@@ -3,15 +3,15 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识束总索引"
 description: "awesome-okf-xs 知识束（bundles）分组导航——按技术生态组织的开源项目源码中文教程"
-total_bundles: 236
-groups: 23
+total_bundles: 240
+groups: 24
 ---
 
 # 知识束总索引（Bundles Index）
 
 > **OKF (Open Knowledge Format)** 知识束是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识束包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **236 个知识束**，按技术生态分为 **23 个分组**。
+> 当前共 **240 个知识束**，按技术生态分为 **24 个分组**。
 
 ---
 
@@ -124,6 +124,8 @@ groups: 23
 | [📖 Jupyter Book v2 / MySTmd 生态](jupyter-book/index.md) | 8 | MyST引擎/CLI/语法扩展/多格式导出/Jupyter Book CLI/Notebook执行/Thebe交互/JupyterLab扩展/主题系统——TypeScript新一代技术文档工具链 |
 | [🐳 Datawhale 开源 AI 学习社区](datawhale/index.md) | 18 | LLM教程/RAG/Agent/向量数据库/推荐系统/ML理论——torch-rechub/deepagents/base-llm/happy-llm/hello-agents/all-in-rag等18个项目的源码级中文教程 |
 | [🦜🔗 LangChain-AI LLM应用框架](langchain-ai/index.md) | 19 | LangChain/LangGraph核心框架(Python+JS)、Google/MongoDB集成、LangSmith可观测性、deepagents深度研究Agent、open-swe SWE Agent、openevals评测、openwiki、基础设施部署 |
+| [ψ Ψhē 理论体系](psi/index.md) | 4 | ψ=ψ(ψ)自指递归理论——核心哲学(塌缩/回声/观察者)、数学形式化(CST/RH证明/坍缩数学)、XOR-SHIFT宇宙本论、GodGPT应用 |
+| [📨 消息通信生态](messaging/index.md) | 4 | ZeroMQ核心(libzmq)、C++绑定(cppzmq)、Python绑定(pyzmq)、Python分布式任务队列(dramatiq)——套接字抽象、ZMTP协议、I/O线程、Actor模型、Broker抽象 |
 
 ---
 
@@ -301,3 +303,21 @@ groups: 23
 | [docs](langchain-ai/docs/index.md) | LangChain官方文档站——单源MDX双语构建、docs.json导航中心化、pipeline构建管道（100事实/2洞察，参考型） |
 | [helm](langchain-ai/helm/index.md) | Helm Chart部署——五Chart分层矩阵、内置依赖vs外部服务双模式、三种入口互斥（85事实/4洞察，参考型） |
 | [terraform](langchain-ai/terraform/index.md) | Terraform基础设施——四云模块矩阵、count条件编排、20+precondition守卫（56事实/1洞察，参考型） |
+
+### ψ [Ψhē 理论体系](psi/index.md)
+
+| 知识束 | 简介 |
+|--------|------|
+| [psi-core](psi/psi-core/index.md) | Ψhē核心哲学——ψ=ψ(ψ)自指递归方程、塌缩动力学、回声递归、观察者形成、语言涌现、现实结晶、元递归、统一回归（8概念+2示例+2信源） |
+| [psi-math](psi/psi-math/index.md) | Ψhē数学形式化——theory_psi最小核心、坍缩集合论(CST)、黎曼猜想多路径证明、坍缩数学十大系统、物理常数坍缩起源、ZFC元数学批判（6概念+1示例+2信源） |
+| [psi-universe](psi/psi-universe/index.md) | XOR-SHIFT宇宙本论——三大公理、FLIP/XOR/SHIFT操作层级、REC递归与元操作符、D0-D∞维度谱系、宇宙本体论(D10)、信息场与意识理论（6概念+1示例+2信源） |
+| [godgpt](psi/godgpt/index.md) | GodGPT应用——AI灵性引导产品定位、深度共情/模式识别/扎根灵性智慧三大功能、订阅制+推广联盟商业模式、开曼群岛法律框架（4概念+1示例+2信源） |
+
+### 📨 [消息通信生态](messaging/index.md)
+
+| 知识束 | 简介 |
+|--------|------|
+| [libzmq](messaging/libzmq/index.md) | ZeroMQ C++ 核心库——四层管线(socket→pipe→session→engine)、socket_base_t模板方法、msg_t引用计数与零拷贝、ZMTP 3.x握手与帧编码、mailbox命令传递、io_thread/poller多路复用、fq/lb/dist路由算法、trie/mtrie订阅过滤 |
+| [cppzmq](messaging/cppzmq/index.md) | C++ header-only绑定——RAII三巨头(context_t/socket_t/message_t)、sockopt类型安全选项、const_buffer/mutable_buffer内存抽象、poller_t多态事件多路复用、multipart_t高层多部分消息 |
+| [pyzmq](messaging/pyzmq/index.md) | Python绑定——Cython/CFFI双后端可插拔、sugar纯Python语法层(Socket.send_string/json/pyobj/multipart)、asyncio子类覆写协程集成、attrsettr描述符选项系统、_future事件状态机、auth ZAP认证、eventloop/green/devices生态 |
+| [dramatiq](messaging/dramatiq/index.md) | Python分布式任务队列——Actor装饰器双重身份、Broker防腐层(Redis/RabbitMQ/Stub)、Worker SEDA线程模型(ConsumerThread+WorkerThread+PriorityQueue)、Middleware洋葱模型、Message frozen dataclass信封、Encoder序列化、Results结果后端、CLI多进程+Watcher热重载 |

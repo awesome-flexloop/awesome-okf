@@ -1,135 +1,157 @@
 ---
 type: Concept
-title: 内置 Prompt 模板
-description: .pi/prompts/ 目录包含5个内置 slash command prompt：cl（changelog 审计）、is（issue 分析）、pr（PR 审查）、sa（安全公告）、wr（任务收尾）。
-tags: [pi-cli, prompts, slash-command, workflow]
-generated: 2026-08-23
-verified: 2026-08-23
+title: "内置 Prompts（.pi/prompts/）"
+description: ".pi/prompts/ 下五个 slash prompt（cl/is/pr/sa/wr）覆盖 changelog 审计、issue 分析、PR 审查、安全公告更新、任务收尾提交的完整开发周期，各有严格流程约束和安全规则。"
+tags: [pi-cli, prompts, workflow, slash-commands, development]
+generated: { by: "reference_agent/trae-cn", at: 2026-08-23T10:00:00+08:00 }
+verified: { by: "process:grep-verification", at: 2026-08-23T10:00:00+08:00 }
 status: stable
-stale_after: 2026-11-23
+stale_after: 2027-08-23
 sources:
-  - .pi/prompts/cl.md:1-54
-  - .pi/prompts/is.md:1-28
-  - .pi/prompts/pr.md:1-37
-  - .pi/prompts/sa.md:1-163
-  - .pi/prompts/wr.md:1-41
+  - id: src
+    resource: /references/source.md
+    title: 源码信源
 ---
 
-# 内置 Prompt 模板
+# 内置 Prompts（.pi/prompts/）
 
-`.pi/prompts/` 目录包含5个内置 slash command prompt 模板，每个文件以 YAML frontmatter 开头声明 `description` 和可选的 `argument-hint`。这些 prompt 构成了一套自我维护的开发工作流。
+`.pi/prompts/` 目录包含五个 slash prompt，构成一套自我维护的开发工作流。它们覆盖从 issue 分析到任务收尾提交的完整开发周期，每个 prompt 都有严格的流程约束和安全规则。
 
-## `/cl` — Changelog 审计
+## 五个 Prompt 概览
 
-**文件**：`.pi/prompts/cl.md`
+| 命令 | 文件 | 用途 |
+|------|------|------|
+| `/cl` | `cl.md` | 发布前审计 changelog 条目 |
+| `/is` | `is.md` | 分析 GitHub issue（bug 或功能请求） |
+| `/pr` | `pr.md` | 结构化 PR 审查 |
+| `/sa` | `sa.md` | 更新 GitHub 安全公告 |
+| `/wr` | `wr.md` | 端到端收尾任务（changelog + commit + push + close） |
 
-**用途**：发布前审计所有自上次发布以来的 changelog 条目。
+推荐组合顺序：`/is` 分析 → 实现 → `/pr` 审查 → `/cl` 审计 changelog → `/wr` 收尾。
 
-**流程**：
-1. 查找最后发布标签：`git tag --sort=-version:refname | head -1`
-2. 列出该标签以来的所有提交
-3. 读取每个包（ai、tui、coding-agent）的 `[Unreleased]` 段
-4. 逐条提交检查：跳过 changelog 更新、纯文档变更、发布内务、生成的模型目录变更
-5. 确定提交影响的包，验证对应包中存在 changelog 条目
-6. 跨包重复规则：ai/agent/tui 中影响最终用户的变更应复制到 coding-agent changelog
-7. 在 `packages/coding-agent/CHANGELOG.md` 的 `[Unreleased]` 段开头插入 `### New Features` 段
-8. 报告缺失条目和需要跨包复制的条目
+## /cl — Changelog 审计
 
-**Changelog 格式**：按 Breaking Changes → Added → Changed → Fixed → Removed 顺序排列。内部归属格式为 `Fixed foo ([#123](url))`，外部贡献格式为 `Added bar ([#456](url) by [@user](url))`。
+`cl.md` 审计自上次发布以来所有提交的 changelog 条目。
 
-## `/is` — Issue 分析
+**流程：**
 
-**文件**：`.pi/prompts/is.md`
-
-**用途**：分析 GitHub issue（bug 或功能请求）。参数：`<issue>`。
-
-**规则**：
-- 非 CI 环境下，先通过 GitHub CLI 添加 `inprogress` 标签并指派给本地 `gh` 用户
-- 完整阅读 issue、所有评论和链接的 issue/PR
-- **不信任 issue 中的分析**，独立验证行为并从代码推导
-- Bug：忽略 issue 中的根因分析，完整读取相关代码，追踪代码路径，识别真实根因，提议修复
-- 功能请求：不信任实现提议，完整读取代码，提议最简洁的实现方式，列出受影响文件
-- 仅分析和提议，不实现（除非明确要求）
-
-## `/pr` — PR 审查
-
-**文件**：`.pi/prompts/pr.md`
-
-**用途**：从 URL 审查 GitHub PR，输出结构化分析。参数：`<PR-URL>`。
-
-**规则**：
-- 分析前添加 `inprogress` 标签
-- 完整阅读 PR 页面：描述、评论、提交、变更文件
-- 识别链接的 issue 并完整阅读
-- **不切换到 PR 分支**，使用 `gh pr diff`、`gh pr view`、`gh api` 和本地 main 分支文件分析
-- 不检查 changelog 条目（贡献者 PR 不应编辑 CHANGELOG.md，由维护者合并时添加）
-- 检查是否需要更新 coding-agent README 或文档
-
-**输出格式**（每个 PR）：
-- **What it does**：简短段落描述变更和意图
-- **Good**：可靠的选择或改进
-- **Bad**：具体问题、回归、缺失测试、风险
-- **Ugly**：微妙或高影响问题
-- **Tests**：覆盖范围、缺失项、现有测试是否充分
-- **Open questions for you**：仅阻塞合并决策的问题（无则省略）
-
-## `/sa` — 安全公告更新
-
-**文件**：`.pi/prompts/sa.md`
-
-**用途**：更新 GitHub 安全公告以准备发布。参数：`<advisory-url-or-draft-path>`。
-
-**安全规则**：
-- 不发布公告、不更改状态、不请求 CVE，除非用户明确同意或草稿 markdown 明确设置 `request_cve: true`
-- **不使用浏览器会话、浏览器 cookie 或 cookie 提取**获取公告评论
-- GitHub 不通过公共 API 公开仓库安全公告评论，404 是预期行为
-- 必须明确告知用户评论未包含，邀请用户粘贴相关评论
-- 公告正文不包含 PoC 材料
-
-**流程**：
-1. 解析公告 URL 或读取本地草稿
-2. 获取公告 JSON，记录原始 severity/CVSS vector/CVSS score
-3. 独立调查：阅读公告文本、元数据、受影响包、版本范围、CWE、引用
-4. 确定漏洞是否已修复，识别补丁版本和正确受影响版本范围
-5. 与用户讨论 CVSS vector/score/severity
-6. 询问是否请求 CVE
-7. 在 `/tmp` 起草发布就绪的 markdown 文件，包含 YAML frontmatter 和结构化正文
-8. 用户批准后，重新读取文件，构建 JSON payload，通过 `gh api -X PATCH` 更新公告
-
-**草稿格式**：包含 advisory_url、owner、repo、ghsa_id、summary、original_severity/cvss_vector/cvss_score（审计上下文）、severity、cvss_vector、cvss_score、cwe_ids、vulnerabilities、request_cve 等 frontmatter 字段；正文包含 Info、Impact、Affected versions、The solution、Recommendations、Workarounds、Timeline、Credits、References 段。
-
-## `/wr` — 任务收尾
-
-**文件**：`.pi/prompts/wr.md`
-
-**用途**：端到端完成当前任务，包括 changelog、提交和推送。参数：`[instructions]`。
-
-**上下文检测规则**：
-- 对话中已有 GitHub issue/PR 时使用该上下文
-- 工作来自 `/is` 或 `/pr` 时，假设 issue/PR 上下文已知
-- 无 GitHub 上下文时视为非 GitHub 工作
-
-**执行顺序**：
-1. 添加或更新相关包的 `[Unreleased]` changelog 条目
-2. 如关联 GitHub issue/PR 且本次会话未发过最终评论，起草并发布一条最终评论，必须以独立行结尾：
+1. 查找最后发布标签：
+   ```bash
+   git tag --sort=-version:refname | head -1
    ```
+2. 列出该标签以来的所有提交：
+   ```bash
+   git log <tag>..HEAD --oneline
+   ```
+3. 读取每个包的 `[Unreleased]` 段（`packages/ai/CHANGELOG.md`、`packages/tui/CHANGELOG.md`、`packages/coding-agent/CHANGELOG.md`）。
+4. 对每个提交检查是否需要 changelog 条目，跳过 changelog 更新、纯文档变更、发布内务、生成的模型目录变更。
+5. **跨包重复规则**：`ai`、`agent`、`tui` 中影响最终用户的变更应同时复制到 `coding-agent` changelog。
+6. 在 `packages/coding-agent/CHANGELOG.md` 的 `## [Unreleased]` 开头插入 `### New Features` 段。
+7. 报告缺失条目的提交和需要跨包复制的条目。
+
+**Changelog 区段顺序：** `### Breaking Changes` → `### Added` → `### Changed` → `### Fixed` → `### Removed`。
+
+外部贡献格式：`Description ([#N](url) by [@user](url))`。
+
+## /is — Issue 分析
+
+`is.md` 分析 GitHub issue，参数为 issue 编号。
+
+**关键约束：**
+
+- 非 CI 环境下，分析前通过 `gh` 给 issue 添加 `inprogress` 标签并分配给本地 `gh` 用户。
+- 完整读取 issue，包括所有评论和关联的 issue/PR：
+  ```sh
+  gh issue view <issue> --json title,body,comments,labels,assignees,state,url,author,createdAt,updatedAt,closedByPullRequestsReferences
+  ```
+- **不信任 issue 中的分析**，独立验证行为并从代码推导结论。
+- **Bug**：忽略 issue 中的根因分析（可能错误），完整读取所有相关代码文件，追踪代码路径识别真实根因，提出修复方案。
+- **功能请求**：不信任 issue 中的实现提案，完整读取相关代码，提出最简洁的实现方式，列出受影响文件。
+- **只分析和提议，不实现**，除非用户明确要求。
+
+## /pr — PR 审查
+
+`pr.md` 对一个或多个 PR URL 执行结构化审查。
+
+**流程：**
+
+1. 分析前通过 `gh` 给 PR 添加 `inprogress` 标签。
+2. 完整读取 PR 页面（描述、所有评论、所有提交、所有变更文件）。
+3. 识别 PR 中引用的关联 issue 并完整读取。
+4. 不切换到 PR 分支，使用 `gh pr diff`、`gh pr view`、`gh api` 和本地 main 分支文件分析 diff；需要 PR 文件内容时用 `git show <ref>:<path>`。
+5. 不检查 changelog 条目（贡献者 PR 不应编辑 CHANGELOG.md，维护者合并时添加）。
+6. 检查 README 和 docs 是否需要更新。
+
+**输出六段结构：**
+
+- **What it does**：简短描述变更及其意图。
+- **Good**：可靠的选择或改进。
+- **Bad**：具体问题、回归、缺失测试或风险。
+- **Ugly**：微妙或高影响问题。
+- **Tests**：覆盖范围、缺失项、现有测试是否充分。
+- **Open questions for you**：仅阻碍合并决策的问题，无则省略整段。
+
+无问题时在 Bad 和 Ugly 下明确说明。
+
+## /sa — 安全公告更新
+
+`sa.md` 更新 GitHub 安全公告以供发布，参数为公告 URL 或草稿路径。
+
+**严格安全约束：**
+
+- **不发布公告、不更改状态、不请求 CVE**，除非用户明确同意或草稿 markdown 中明确写有 `request_cve: true`。
+- **禁止使用浏览器会话、浏览器 cookie 或 cookie 提取**来获取公告评论。GitHub 不通过公开 API 暴露仓库安全公告评论，猜测的 `/comments`、`/timeline`、`/events` 端点返回 404 是预期行为。
+- 必须明确告知用户：`Advisory comments were not included because GitHub does not expose them through the public API. Paste any relevant comments if you want them considered.`
+- **禁止在公告正文中包含 PoC（概念验证）材料**。
+
+**流程：**
+
+1. 解析公告 URL 为 `owner`、`repo`、`GHSA` ID。
+2. 获取公告：
+   ```sh
+   gh api repos/<owner>/<repo>/security-advisories/<GHSA>
+   ```
+3. 记录原始严重性、CVSS 向量和 CVSS 分数。
+4. 检查公告 JSON 中的 references、credits、关联 issue/PR。
+5. 起草更新后的 markdown，经用户确认后应用。
+
+## /wr — 任务收尾
+
+`wr.md`（"Wrap it"）端到端完成当前任务，按顺序执行 changelog 更新、评论起草、提交、推送、关闭 issue。
+
+**上下文检测规则：**
+
+- 如果对话历史已提及 GitHub issue 或 PR，使用现有上下文。
+- 如果工作来自 `/is` 或 `/pr`，假设 issue/PR 上下文已从对话历史获知，不重新询问。
+- 如果没有 GitHub issue/PR，视为非 GitHub 工作。
+
+**执行顺序：**
+
+1. 在 `## [Unreleased]` 下添加或更新相关包的 changelog 条目。
+2. 如果关联 GitHub issue/PR 且本会话尚未发布最终评论，以用户语气起草并发布恰好一条最终评论，评论必须以独立行结尾：
+   ```text
    This comment is AI-generated by `/wr`
    ```
-3. 仅提交本次会话变更的文件（禁止 `git add .` 或 `git add -A`）
-4. 如恰好关联一个 issue，提交信息包含 `closes #<issue>`；多个 issue 时停止询问；无 issue 时不包含
-5. 检查当前分支，非 main 分支时停止询问（除非用户明确要求从其他分支推送）
-6. 推送当前分支
-7. 如恰好关联一个 issue，推送后以 reason `completed` 关闭该 issue
+3. 仅提交本会话中更改的文件。
+4. 如果恰好关联一个 issue，commit message 包含 `closes #<issue>`；多个 issue 则停止询问；非 issue 工作不包含 `closes #`。
+5. 检查当前分支，非 `main` 分支则停止询问（除非用户明确指示从其他分支推送）。**非 main 分支跳过 changelog**。
+6. 推送当前分支。
+7. 如果恰好关联一个 issue，推送后以 `completed` 原因显式关闭该 issue：
+   ```sh
+   gh issue view <issue> --json state,stateReason,labels
+   gh issue close <issue> --reason completed
+   ```
+   已关闭但原因为非 COMPLETED 的，先重新打开再关闭；已关闭为 COMPLETED 但仍有 `inprogress` 标签的，重新打开再关闭。
 
-**约束**：
-- 非 main 分支跳过 changelog
-- 代码变更时提交前运行必要检查
-- 不打开 PR（除非明确要求）
-- 非 GitHub 工作不发布评论
-- 本次会话已发过最终评论时不重复发布
+**约束：**
+
+- **禁止** `git add .` 或 `git add -A`，仅暂存相关文件。
+- 代码变更时提交前运行必要检查。
+- 不主动开 PR。
+- 本会话已发布最终评论的，不重复发布。
 
 ## 相关概念
 
-- [项目简介](/concepts/00-introduction.md)
-- [AI 包详解](/concepts/02-ai-package.md)
-- [Monorepo 架构](/concepts/01-monorepo-architecture.md)
+- [Pi AI CLI 简介](./00-introduction.md)
+- [Monorepo 架构](./01-monorepo-architecture.md)
+- [基础使用示例](../examples/01-basic-usage.md)

@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: concept
 title: 配置系统（myst-config）
 description: myst-config 包提供三级配置体系——项目配置、站点配置和错误规则，通过 myst.yml 文件定义，支持插件注册、导航菜单、错误级别覆盖等。
 tags: [mystmd, config, myst.yml, project, site, error-rules]

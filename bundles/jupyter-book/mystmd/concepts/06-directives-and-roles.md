@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: concept
 title: 指令与角色系统（Directives & Roles）
 description: MyST 的扩展语法机制——指令（块级）和角色（行内），通过 DirectiveSpec/RoleSpec 声明式定义，支持参数、选项、内容体，以及递归解析嵌套 MyST 内容。
 tags: [mystmd, directive, role, extension, myst-directives, myst-roles]

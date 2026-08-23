@@ -1,5 +1,5 @@
 ---
-type: Reference
+type: reference
 title: mystmd CLI 与周边包源码信源
 description: mystmd CLI 主入口、citation-js-utils 引用处理工具以及 markdown-it-myst 插件的源码登记。
 tags: [mystmd, cli, citation, markdown-it, commander]

@@ -172,8 +172,8 @@ title: "欢迎来到我的第一本书"
 
 ## 目录
 
-- [安装指南](chapters/installation.md)
-- [Markdown 示例](markdown.md)
+- 安装指南（`chapters/installation.md`）
+- Markdown 示例（`markdown.md`）
 
 ## 关于本书
 

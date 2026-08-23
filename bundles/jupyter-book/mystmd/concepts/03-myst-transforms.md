@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: concept
 title: MDAST 转换管线（myst-transforms）
 description: myst-transforms 包提供 30+ 个 unified Plugin 形式的 AST 转换，basicTransformations 按严格顺序组合 22 个核心 transform，构成 MyST 文档处理的核心管线。
 tags: [mystmd, transforms, mdast, pipeline, plugin]

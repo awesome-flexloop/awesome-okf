@@ -1,338 +1,160 @@
 ---
 type: Concept
 title: "07 扩展生态系统"
-description: JupyterLab 扩展类型（prebuilt federated vs source）、Python 扩展管理器、LabExtensionApp 构建命令、扩展安装/禁用流程
-tags: [jupyterlab, extension, federated, prebuilt, pip, extension-manager, labextension]
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T08:16:00Z" }
-verified: { by: "process:grep-api-verification", at: "2026-08-22T08:16:00Z" }
+description: "JupyterLab 双扩展模型、Prebuilt/Source 扩展格式、Python 扩展管理器抽象层、PluginManager 插件锁定机制与 CLI 命令"
+tags: [jupyterlab, extension, plugin, federated, prebuilt, pypi, entry-point, pip]
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
-stale_after: 2027-02-22
+stale_after: 2027-08-23
 sources:
   - id: source-map
     resource: /references/source-code-map.md
     title: JupyterLab 源码文件地图
 ---
 
-## 扩展类型演进
+JupyterLab 的扩展系统是其"插件即一切"架构哲学的直接体现。它采用前后端双轨模型：前端扩展以 npm 包形式分发，提供 UI 组件和交互逻辑；后端扩展以 Python 包形式注册 server extension，提供 REST API 和内核侧能力。扩展管理器本身通过 Python entry point 机制实现可插拔，企业可以对接 conda、内部 npm registry 等自定义包源。
 
-JupyterLab 的扩展系统经历了重要演进：
+## 双扩展模型
 
-| 类型 | JupyterLab 版本 | 构建方式 | 安装方式 | 是否需要 node |
-|------|----------------|---------|---------|--------------|
-| **Source 扩展** | 1.x - 3.x | 与 JupyterLab 一起构建（webpack） | `jupyter labextension install <npm-pkg>` | ✅ 需要 |
-| **Prebuilt (Federated) 扩展** | 3.0+ | 独立构建，运行时动态加载 | `pip install <python-pkg>` | ❌ 不需要 |
+一个完整的 JupyterLab 扩展可能包含两部分：
 
-从 JupyterLab 3.0 开始，**prebuilt (federated) 扩展成为主流**。第三方扩展以独立 Python 包形式分发，通过 `pip install` 安装，包含预构建的 JS bundle，JupyterLab 启动时从 `labextensions/` 目录动态加载。这大大降低了扩展安装门槛——用户不再需要 Node.js 环境。
+### 前端 npm 扩展（JupyterFrontEndPlugin）
 
-## Federated Extension（Prebuilt 扩展）
+前端扩展是一个 npm 包，在其 `package.json` 的 `jupyterlab` 字段中声明类型。JupyterLab 在构建时扫描这些字段，将扩展分为三类：
 
-### 工作原理
+- **extensions**：标准功能扩展，导出一个或多个 `JupyterFrontEndPlugin` 对象，包含 `id`、`autoStart`、`requires`/`optional`/`provides` 声明和 `activate` 函数。核心包的 `staging/package.json` 中注册了 46 个核心 extensions（F-138）。
+- **mimeExtensions**：MIME 渲染扩展，专门负责特定 MIME 类型的文件渲染（如 JSON、PDF、Vega、JavaScript）。核心注册了 5 个 mimeExtensions（F-138）：`@jupyterlab/javascript-extension`、`@jupyterlab/json-extension`、`@jupyterlab/mermaid-extension`、`@jupyterlab/pdf-extension`、`@jupyterlab/vega5-extension`。
+- **singletonPackages**：单例包约束，确保 React、Lumino、CodeMirror、Yjs 等框架包在整个应用中只有一个实例（F-139）。核心列表包含约 70 个包，防止多实例导致的 context 丢失或状态不一致。
 
-Federated 扩展的核心思想是：扩展**独立于 JupyterLab 核心进行构建**，生成的 bundle 在运行时被 JupyterLab 动态加载。
+### Python server extension（_jupyter_server_extension_points）
 
-```mermaid
-flowchart LR
-    subgraph build["扩展开发者构建阶段"]
-        DEV["扩展源码<br/>(TS/React)"] --> RSP["Rspack/Webpack 构建"]
-        RSP --> BUNDLE["扩展 Bundle<br/>(static/index.js 等)"]
-        BUNDLE --> PKG["Python 包<br/>(包含 static/)"]
-        PKG --> PYPI["发布到 PyPI"]
-    end
+当扩展需要自定义 REST API、后端逻辑或 Kernel 侧 companion 时，需要同时提供 Python 包。Python 包通过 `_jupyter_server_extension_points()` 函数声明 server extension，返回 `[{"module": "package_name", "app": ExtensionApp}]` 列表（F-156）。Jupyter Server 启动时自动发现并加载这些扩展。
 
-    subgraph runtime["用户运行时"]
-        PIP["pip install my-ext"] --> LABEXT["安装到 labextensions/<name>/"]
-        JL["JupyterLab 启动"] --> DISCOVER["扫描 labextensions/ 目录"]
-        DISCOVER --> LOAD["动态加载扩展 bundle<br/>(<script> 注入)"]
-        LOAD --> PLUGIN["注册插件到 PluginRegistry"]
-        PLUGIN --> ACTIVATE["插件激活"]
-    end
+扩展的 `package.json` 中可通过 `jupyterlab.discovery` 字段声明 companion 类型：`"server"` 表示需要 Python server extension，`"kernel"` 表示需要 Kernel 侧包。扩展管理器在安装时检测此字段，返回对应的 `needs_restart` 提示（pypi.py:620-628）。
 
-    style build fill:#e8f5e9,stroke:#2e7d32
-    style runtime fill:#e3f2fd,stroke:#1565c0
-```
+## Prebuilt 与 Source 扩展
 
-### 扩展目录结构
+### Prebuilt/Federated 扩展
 
-一个标准的 prebuilt 扩展包含：
+Prebuilt 扩展（又称 federated 扩展）是预编译为独立 bundle 的前端扩展。扩展开发者使用 `jupyter-builder` 将扩展打包为独立的 JavaScript chunk，通过 pip 安装到 `labextensions` 目录。JupyterLab 启动时通过 module federation 动态加载这些 chunk，**无需运行 `jupyter lab build`**。
 
-```
-my-jupyterlab-extension/
-├── package.json              # npm 包配置（含 jupyterlab._buildConfig）
-├── pyproject.toml            # Python 包配置
-├── setup.py                  # 或 setup.cfg
-├── jupyter-config/
-│   └── server-config/        # Jupyter Server 配置
-│       └── my-ext.json
-├── src/
-│   └── index.ts              # 插件入口（导出 JupyterFrontEndPlugin[]）
-└── my_ext/                   # Python 包
-    ├── __init__.py
-    └── labextension/         # 构建后的静态资源（安装到 share/jupyter/labextensions/）
-        └── static/
-            ├── index.js
-            ├── index.js.map
-            └── package.json
-```
+这是当前推荐的扩展分发方式。`ExtensionPackage.pkg_type` 字段值为 `"prebuilt"`（manager.py:63）。pip 安装后立即可用，终端用户不需要 Node.js 环境。
 
-### _buildConfig 配置
+### Source 扩展
 
-扩展的 `package.json` 中的 `jupyterlab._buildConfig` 字段是 federated 构建的关键配置：
-
-```json
-{
-  "name": "my-extension",
-  "version": "1.0.0",
-  "jupyterlab": {
-    "extension": true,
-    "outputDir": "my_ext/labextension",
-    "_buildConfig": {
-      "federated_extensions": [],
-      "sharedPackages": {
-        "@jupyterlab/application": {
-          "singleton": true,
-          "bundled": false,
-          "requiredVersion": "^4.0.0"
-        },
-        "@jupyterlab/apputils": {
-          "singleton": true,
-          "bundled": false
-        },
-        "@lumino/widgets": {
-          "singleton": true,
-          "bundled": false
-        },
-        "react": {
-          "singleton": true,
-          "bundled": false
-        },
-        "react-dom": {
-          "singleton": true,
-          "bundled": false
-        }
-      }
-    }
-  }
-}
-```
-
-关键概念：
-- **sharedPackages**：声明共享依赖，这些包不会被打包进扩展 bundle，而是使用 JupyterLab 核心提供的实例。`singleton: true` 确保全局唯一实例，`bundled: false` 表示不打包到 bundle 中
-- **federated_extensions**：声明依赖的其他 federated 扩展
-- **outputDir**：构建输出目录（Python 包内的 labextension 目录）
-
-### 扩展入口模块
-
-扩展的 `src/index.ts` 导出插件数组：
-
-```typescript
-import { JupyterFrontEndPlugin } from '@jupyterlab/application';
-
-const plugin1: JupyterFrontEndPlugin<void> = {
-  id: 'my-extension:plugin1',
-  autoStart: true,
-  activate: (app) => {
-    console.log('my-extension plugin1 activated!');
-  }
-};
-
-const plugin2: JupyterFrontEndPlugin<void> = {
-  id: 'my-extension:plugin2',
-  autoStart: true,
-  requires: [INotebookTracker],
-  activate: (app, notebooks) => {
-    // ...
-  }
-};
-
-export default [plugin1, plugin2];
-```
+Source 扩展是未预编译的 npm 包，需要参与 JupyterLab 的 Rspack 构建过程。安装后必须运行 `jupyter lab build` 将扩展代码打包进主 bundle。`pkg_type` 值为 `"source"`。Source 扩展主要用于开发阶段或需要深度定制构建的场景。构建检查会识别需要加入构建的 source 扩展，状态标记为 `warning`（manager.py:612-615）。
 
 ## Python 扩展管理器
 
-Python 后端提供了扩展管理 API，位于 `jupyterlab/extensions/` 目录（[F-044](/references/source-code-map.md)）。
+扩展管理器负责发现、安装、启用/禁用扩展。JupyterLab 通过抽象基类 `ExtensionManager` 定义统一接口，支持多种包管理后端。
 
-### 扩展管理器类层级
+### ExtensionManager 抽象基类
 
-```mermaid
-flowchart TB
-    EM["ExtensionManager (abstract)"]
-    PM["PluginManager"]
-    PEM["PyPIExtensionManager"]
-    REM["ReadOnlyExtensionManager"]
+`ExtensionManager` 定义在 `jupyterlab/extensions/manager.py:301`，继承自 `PluginManager`。任何具体实现必须实现五个抽象方法：
 
-    EM -->|被继承| PEM
-    EM -->|被继承| REM
-    PM -->|被使用| EM
+- `metadata`（property）：返回 `ExtensionManagerMetadata`，包含管理器名称、是否可安装、安装路径。
+- `get_latest_version(extension)`：异步获取扩展的最新版本号。
+- `list_packages(query, page, per_page)`：异步搜索可用扩展，返回 `{name: ExtensionPackage}` 字典和总页数。
+- `install(extension, version)`：异步安装扩展，返回 `ActionResult`。
+- `uninstall(extension)`：异步卸载扩展，返回 `ActionResult`。
 
-    style EM fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+基类还提供了黑白名单机制：通过 `allowed_extensions_uris`/`blocked_extensions_uris` 配置远程列表 URL，使用 Tornado `PeriodicCallback` 定时刷新（默认 1 小时间隔，manager.py:352-357）。白名单模式下只允许列表中的扩展安装，黑名单模式下列表中的扩展被禁止。
+
+### 内置管理器
+
+**ReadOnlyExtensionManager**（readonly.py:13）：不支持安装/卸载的管理器。`metadata` 返回 `can_install=False`，`install`/`uninstall` 返回 `status: "error"`，`is_install_allowed` 始终返回 `False`。适用于禁用扩展安装的受限环境。当配置的扩展管理器实例化失败时，LabApp 自动回退到此管理器（F-092）。
+
+**PyPIExtensionManager**（pypi.py:198）：默认管理器，使用 pip 作为包管理器、PyPI.org 作为包源。关键实现细节：
+
+- 使用 `httpx.AsyncClient` 异步 HTTP 客户端访问 PyPI JSON API（pypi.py:224），支持 `ALL_PROXY`/`http_proxy`/`HTTP_PROXY`/`https_proxy`/`HTTPS_PROXY` 环境变量代理配置（pypi.py:67-73），兼容 httpx 0.28+ 的 `mounts` API。
+- 使用 XML-RPC API 的 `browse` 方法搜索带有 `Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt` classifier 的包（pypi.py:482），并手动补充已知的语言包（LANGUAGE_PACKS 元组，pypi.py:165-195）。
+- 使用 `async_lru.alru_cache` 缓存包元数据，默认缓存大小 1500（pypi.py:207-209），缓存超时 5 分钟。
+- 搜索结果按组织优先级排序：Project Jupyter（@jupyter）优先级 1，JupyterLab Community（@jupyterlab-contrib）优先级 2，其他优先级 3，示例仓库优先级 4（pypi.py:435-458）。
+- 安装时使用 `pip install --constraint` 固定 `jupyterlab==当前版本`，防止扩展依赖不兼容的 JupyterLab 版本（pypi.py:531-544）。
+- 安装前通过 `pip install --dry-run --report -` 获取安装计划，下载 wheel/sdist 后读取其中的 `package.json` 检测 `jupyterlab.discovery` 字段，确定是否需要重启 server 或 kernel（pypi.py:557-628）。
+
+### Entry Point 扩展点
+
+扩展管理器本身也是可扩展的。`jupyterlab/extensions/__init__.py` 通过 `importlib.metadata.entry_points(group="jupyterlab.extension_manager_v1")` 动态发现所有注册的管理器工厂（F-113）。pyproject.toml 中注册了两个内置 entry point（F-014）：
+
+```toml
+[project.entry-points."jupyterlab.extension_manager_v1"]
+readonly = "jupyterlab.extensions:get_readonly_manager"
+pypi = "jupyterlab.extensions:get_pypi_manager"
 ```
 
-### ExtensionManager（抽象基类）
+第三方包可以注册自己的 entry point，实现 conda 包管理器、企业内部 npm registry 管理器等。LabApp 的 `extension_manager` 配置项（默认 `"pypi"`，可选 `"readonly"`）决定使用哪个管理器（F-083）。
 
-`ExtensionManager`（`jupyterlab/extensions/manager.py`）定义扩展管理的抽象接口（[F-044](/references/source-code-map.md)）：
+## 扩展数据结构
 
-| 方法/属性 | 说明 |
-|----------|------|
-| `metadata_latest(symlink)` | 获取扩展元数据列表（名称、版本、描述、是否安装等） |
-| `install(name, version, pin)` | 安装扩展（抽象方法） |
-| `uninstall(name)` | 卸载扩展（抽象方法） |
-| `disable(extension_name)` | 禁用扩展 |
-| `enable(extension_name)` | 启用扩展 |
-| `validate()` | 验证已安装的扩展 |
+### ExtensionPackage
 
-### ExtensionPackage 数据类
+`ExtensionPackage` 是 frozen dataclass（manager.py:55-101），描述一个扩展的完整元数据：
 
-```python
-@dataclass
-class ExtensionPackage:
-    name: str                     # 包名
-    description: str              # 描述
-    homepage_url: str             # 主页 URL
-    pkg_type: ExtensionPackageType  # 'prebuilt', 'source' 或 'prebuilt'
-    latest_version: str           # 最新版本
-    installed_version: Optional[str]  # 已安装版本
-    status: ExtensionPackageStatus   # 'installed', 'warning', 'error', 'deprecated'
-    installed: ExtensionPackageMetadata  # 已安装版本的元数据
-    pkg_info: Dict                # PyPI 包信息
-```
-
-### PluginManager（插件管理器）
-
-`PluginManager`（也在 `manager.py` 中）管理插件级别的启用/禁用（[F-044](/references/source-code-map.md)），与 `ExtensionManager` 的区别是：Extension 是 npm 包级别，Plugin 是插件级别（一个 Extension 可以包含多个 Plugin）。
-
-### PyPIExtensionManager
-
-`PyPIExtensionManager`（`jupyterlab/extensions/pypi.py`）通过 PyPI 安装扩展（[F-044](/references/source-code-map.md)）：
-- 使用 `pip install <package-name>` 命令安装 Python 包
-- 安装后自动发现 labextensions
-- 支持从 PyPI 搜索可安装的 JupyterLab 扩展
-
-### ReadOnlyExtensionManager
-
-`ReadOnlyExtensionManager`（`jupyterlab/extensions/readonly.py`）用于受限环境（[F-044](/references/source-code-map.md)）：
-- `install()` 和 `uninstall()` 抛出 `NotImplementedError`
-- 只允许查看和启用/禁用已安装的扩展
-- 通常在容器化/只读文件系统环境中使用
-
-### 扩展管理器注册
-
-`jupyterlab/extensions/__init__.py` 中的 `MANAGERS` 字典注册可用的扩展管理器（[F-044](/references/source-code-map.md)）：
-
-```python
-MANAGERS = {
-    "pypi": PyPIExtensionManager,
-    "readonly": ReadOnlyExtensionManager,
-}
-```
-
-通过 `page_config_data.extensionManager` 配置启用哪个管理器。前端的 ExtensionHandler 调用对应的管理器。
-
-## HTTP API：ExtensionHandler
-
-前端通过 `/lab/api/extensions` 端点与扩展管理器交互（[labapp.py#L811-L831](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterlab/jupyterlab/labapp.py#L811-L831)）：
-
-| 方法 | 路径 | 功能 |
+| 字段 | 类型 | 说明 |
 |------|------|------|
-| GET | `/lab/api/extensions` | 获取已安装扩展列表 |
-| POST | `/lab/api/extensions` | 安装扩展（body: `{name, version?}`）|
-| DELETE | `/lab/api/extensions/<name>` | 卸载扩展 |
-| POST | `/lab/api/extensions/<name>/enable` | 启用扩展 |
-| POST | `/lab/api/extensions/<name>/disable` | 禁用扩展 |
+| `name` | str | 包名 |
+| `description` | str | 包描述 |
+| `pkg_type` | str | `"prebuilt"` 或 `"source"` |
+| `installed` | bool/None | 是否已安装 |
+| `installed_version` | str | 已安装版本 |
+| `latest_version` | str | 最新可用版本 |
+| `status` | str | `"ok"`/`"warning"`/`"error"` |
+| `enabled` | bool | 是否启用 |
+| `core` | bool | 是否为核心包 |
+| `allowed` | bool | 是否被黑白名单允许 |
+| `approved` | bool | 是否被管理员批准 |
+| `companion` | str/None | companion 类型：`"server"`/`"kernel"`/`None` |
+| `install` | dict/None | 安装指令（包管理器、包名） |
 
-类似地，`/lab/api/plugins` 端点管理插件级别操作。
+### ActionResult
 
-## jupyter labextension 命令
+`ActionResult` 是 frozen dataclass（manager.py:104-118），作为扩展操作的返回值：
 
-JupyterLab 提供了 CLI 命令管理扩展：
+- `status`：`"ok"`/`"warning"`/`"error"`
+- `message`：可选的人类可读说明
+- `needs_restart`：需要重启的组件列表，有效值为 `"frontend"`、`"kernel"`、`"server"`。前端根据此列表提示用户刷新页面或重启内核。
 
-```bash
-# 列出已安装扩展
-jupyter labextension list
+## PluginManager：插件级启用/禁用/锁定
 
-# 安装扩展（source 扩展，需要 node）
-jupyter labextension install <npm-package>
+`PluginManager` 类（manager.py:181）管理插件（plugin）粒度的启用/禁用，比扩展（extension）粒度更细——一个扩展包可以包含多个插件。关键特性：
 
-# 卸载扩展
-jupyter labextension uninstall <extension-name>
+- **三级管理级别**（manager.py:196-200）：`sys_prefix`（默认，当前 Python 环境）、`user`（用户级）、`system`（系统级），通过 `level` traitlet 配置。
+- **锁定规则**：`lock_rules` 是一个 `frozenset[str]`，支持两种格式：插件名（`extension:plugin`）或扩展名（`extension`，锁定该扩展下所有插件）。`_find_locked` 方法（manager.py:228-246）检测给定插件列表中哪些被锁定。
+- **lock_all**：布尔值，为 True 时锁定所有插件，禁止在 UI 中启用/禁用（对应 LabApp 的 `lock_all_plugins` 配置项，F-084）。
+- **enable/disable 方法**：委托给 `commands.py` 中的 `enable_extension`/`disable_extension` 函数，写入对应级别的配置文件。成功时返回 `ActionResult(status="ok", needs_restart=["frontend"])`。
 
-# 启用/禁用扩展
-jupyter labextension enable <extension-name>
-jupyter labextension disable <extension-name>
+## REST API
 
-# 检查扩展状态
-jupyter labextension check <extension-name>
+扩展管理器通过 HTTP API 暴露给前端 UI：
 
-# 构建（source 扩展安装后需要构建）
-jupyter lab build
-jupyter lab build --dev-build  # 开发构建（source maps）
-jupyter lab build --minimize=False  # 不压缩（更快构建）
+- **GET `/lab/api/extensions`**（ExtensionHandler）：支持 `refresh`、`query`、`page`、`per_page` 参数，返回分页扩展列表和 RFC 5988 Link 头（first/prev/next/last）（F-109）。
+- **POST `/lab/api/extensions`**：支持 `install`、`uninstall`、`enable`、`disable` 四种命令（F-110）。
+- **GET `/lab/api/plugins`**（PluginHandler）：返回插件锁定信息 `{lockRules, allLocked}`（F-112）。
+- **POST `/lab/api/plugins`**：支持 `enable`/`disable` 插件。
 
-# 清理构建
-jupyter lab clean
+## CLI 命令
 
-# 查看扩展安装路径
-jupyter lab path
-```
+`jupyter-labextension` 命令（入口点定义在 pyproject.toml，F-013）提供扩展管理的命令行接口，实现位于 `jupyterlab/labextensions.py`：
 
-## 扩展发现与加载机制
+| 子命令 | 功能 |
+|--------|------|
+| `install <name>` | 安装扩展（支持 `--pin-version-as` 固定版本） |
+| `uninstall <name>` | 卸载扩展（`--all` 卸载全部） |
+| `enable <name>` | 启用扩展/插件（`--level` 指定级别） |
+| `disable <name>` | 禁用扩展/插件（`--level` 指定级别） |
+| `list` | 列出已安装扩展（`--verbose` 显示详情） |
+| `update [name]` | 更新扩展（`--all` 更新全部） |
+| `check` | 检查扩展兼容性（`--installed` 仅检查已安装） |
 
-JupyterLab 启动时如何找到扩展：
-
-```mermaid
-flowchart TB
-    START(["LabApp.initialize_settings()"]) --> PATHS["确定扩展路径<br/>(app_dir, user_settings_dir,<br/>workspaces_dir, labextensions_dir)"]
-    PATHS --> SCAN["扫描 labextensions/ 目录<br/>查找每个扩展的 package.json"]
-    SCAN --> DISABLED["检查 disabled 配置<br/>(page_config.disabled)"]
-    DISABLED --> CONFIG["构建 disabled/deferred 插件列表"]
-    CONFIG --> INJECT["注入 page_config_data<br/>(federated_extensions, disabled, deferred)"]
-    INJECT --> HTML["生成 HTML 页面<br/>(<script> 标签加载各扩展 bundle)"]
-    HTML --> BROWSER["浏览器加载并执行"]
-    BROWSER --> REG["扩展导出的插件被注册"]
-    REG --> ACT["插件按依赖顺序激活"]
-```
-
-### labextensions 目录位置
-
-federated 扩展安装到以下目录：
-- **系统级**：`<sys-prefix>/share/jupyter/labextensions/`
-- **用户级**：`~/.local/share/jupyter/labextensions/`（Linux）或 `%APPDATA%/jupyter/labextensions/`（Windows）
-- **环境级**：`<env-prefix>/share/jupyter/labextensions/`
-
-每个扩展是一个子目录，包含 `package.json` 和 `static/` 目录。
-
-## 前端扩展管理器 UI
-
-JupyterLab 提供了内置的 Extension Manager UI（默认禁用，需在 Settings → Extension Manager 中启用）。启用后，用户可以在左侧面板搜索、安装、卸载扩展，无需使用命令行。前端 UI 通过 `ExtensionHandler` HTTP API 与后端交互。
-
-## 扩展开发要点
-
-### 共享依赖的重要性
-
-Federated 扩展必须正确声明 sharedPackages，否则会导致：
-- **多实例问题**：如果 React/Lumino 被打包进扩展 bundle，会有两个 React 实例导致 hooks 错误、Context 失效
-- **版本冲突**：使用不同版本的 @jupyterlab/* 包可能导致 API 不兼容
-- **包体积膨胀**：重复打包核心库增加 bundle 大小
-
-### 扩展兼容性
-
-- JupyterLab 使用 semver 版本管理。扩展的 `requiredVersion` 声明兼容的 JupyterLab 版本范围
-- JupyterLab 4.x 扩展不能在 3.x 上运行（Breaking changes）
-- 扩展可以通过 `package.json.jupyterlab.mimeExtension` 声明为 MIME 渲染扩展（不需要 Shell 访问权限）
-
-### 常见扩展模式
-
-| 模式 | 说明 | 示例 |
-|------|------|------|
-| **命令扩展** | 添加新命令和菜单项 | 添加自定义操作 |
-| **Widget 扩展** | 添加新 Widget/面板 | 文件浏览器、自定义面板 |
-| **MIME 渲染扩展** | 注册新文件类型渲染器 | 自定义文件预览 |
-| **Widget 工厂扩展** | 注册新文档类型 | 自定义编辑器 |
-| **Widget Extension** | 为已有 Widget 添加功能 | 为 Notebook 添加按钮 |
-| **服务提供扩展** | 通过 Token 提供服务 | LSP、调试器适配器 |
+所有命令均支持 `--app-dir`、`--dev-build`、`--minimize`、`--debug-log-path` 等通用选项。底层委托给 `commands.py` 中的模块级函数（`install_extension`、`uninstall_extension`、`enable_extension` 等），这些函数再委托给 `_AppHandler` 的对应方法（F-136）。
 
 ## 相关概念
 
 - [03 插件系统与依赖注入](/concepts/03-plugin-system.md)
 - [08 构建系统与运行模式](/concepts/08-build-and-modes.md)
-- [最小扩展示例](/examples/01-minimal-extension.md)
-- [源码文件地图](/references/source-code-map.md)
+- [06 Notebook 与 Cell 架构](/concepts/06-notebook-cells.md)
+- [01 整体架构概览](/concepts/01-architecture-overview.md)

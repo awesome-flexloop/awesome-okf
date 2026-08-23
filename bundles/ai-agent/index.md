@@ -3,12 +3,12 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 14
+total_bundles: 21
 ---
 
 # 🤖 AI Agent 框架
 
-本组存放 AI Agent 运行时框架与架构模式的源码中文教程，覆盖 Python/TypeScript/C++/Rust 四种语言生态中 14 个开源项目的核心架构设计。从 Agent 基础概念到生产级框架实现，从插件架构到多Agent编排，从通信协议到个人AI数字分身，构建完整的 AI Agent 知识体系。
+本组存放 AI Agent 运行时框架与架构模式的源码中文教程，覆盖 Python/TypeScript/C++/Rust/Go 五种语言生态中 21 个开源项目的核心架构设计。从 Agent 基础概念到生产级框架实现，从插件架构到多Agent编排，从通信协议到 Coding Agent 源码解读，构建完整的 AI Agent 知识体系。
 
 ## 推荐学习路径
 
@@ -75,6 +75,18 @@ total_bundles: 14
 | [i-have-adhd](i-have-adhd/index.md) | 辅助技能 | 3+1+1=5 | ADHD认知辅助技能——10条ADHD友好输出规则、Session Hooks偏好持久化、10+IDE/Agent平台集成、Always-On跨应用模式 |
 | [cli-anything](cli-anything/index.md) | CLI框架 | 8+3+6=17 | Agent原生CLI接口框架——ReplSkin双语终端外壳、SKILL.md自动生成(AST+Jinja2)、PreviewBundle v1三层持久化协议、CLI-Hub包管理器(注册表+pip安装器)、Matrix技能矩阵、Cursor/Claude/Codex多平台插件适配、四层测试与真实软件原则 |
 
+### 💻 Tier 4：Coding Agent 源码解读
+
+| 知识束 | 语言 | 文档数 | 一句话简介 |
+|--------|------|--------|-----------|
+| [codewhale](codewhale/index.md) | Rust | 8+2+1=11 | CodeWhale Coding Agent——21 crate Cargo workspace、Fleet多Agent控制平面、Workflow双轨引擎(TOML+JS)、MCP安全三重防护、Skill四层所有权架构、ExecPolicy沙箱(Seatbelt/bwrap) |
+| [deepseek-reasonix](deepseek-reasonix/index.md) | Go/TS | 8+2+1=11 | DeepSeek Reasonix——ACP v1协议(JSON-RPC/Factory/inbox)、Agent运行循环(arbiter/governor/compaction)、Bot网关(QQ/飞书适配器)、Checkpoint恢复(fork/branch)、Fleet DAG调度、Wails桌面应用 |
+| [openai-codex](openai-codex/index.md) | TS/Rust/Py | 7+2+1=10 | OpenAI Codex CLI——三语言架构(Node.js CLI+Rust TUI+Python SDK)、Bazel构建、三层沙箱防御(平台沙箱/execpolicy/SafetyCheck)、AGENTS.md目录树发现、Skills显式/隐式调用 |
+| [nanobot](nanobot/index.md) | Python/TS | 6+1+1=8 | Nanobot Agent——Python Agent核心(AgentLoop/Runner)、MessageBus消息总线+WebSocket协议、SDK类型系统(StreamEvent/RunResult)、CLI/TUI(Bun+OpenTUI)/WebUI(React+Vite)三端架构 |
+| [deepcode-cli](deepcode-cli/index.md) | TypeScript | 5+1+1=7 | DeepCode CLI——三包monorepo(cli/core/vscode-ide-companion)、10种权限作用域(read-in-cwd/network/git等)、MCP客户端(mcp__server__tool命名空间)、12个斜杠命令 |
+| [opencode](opencode/index.md) | TypeScript | 5+1+1=7 | OpenCode Terminal Coding Agent——Bun+Turbo+SST技术栈、SessionV2会话模型(Context Epoch)、V2配置规范、infra模块(app/console/lake/stage/stats/secret)、Cloudflare+AWS混合云部署 |
+| [pi-cli](pi-cli/index.md) | TypeScript | 5+1+1=7 | Pi AI CLI——9包monorepo(ai/tui/agent/client/server/evals等)、AI包(models/oauth/cli/compat/images)、TUI差分渲染引擎、5个内置prompt(cl/is/pr/sa/wr)、锁步版本控制 |
+
 ---
 
 ## 跨项目概念对照
@@ -93,8 +105,8 @@ total_bundles: 14
 
 ---
 
-> **信任声明**：本分组索引基于 14 个 AI Agent 开源项目源码逐模块分析生成，所有知识束均经 OKF 五阶段流程（R→I→E→V→C）验证。
+> **信任声明**：本分组索引基于 21 个 AI Agent 开源项目源码逐模块分析生成，所有知识束均经 OKF 五阶段流程（R→I→E→V→C）验证。
 > 
 > **生成时间**：2026-08-23 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：14 个知识束，共 152 个内容文档（96 概念 + 37 示例 + 19 信源），953 条零推测事实，14 个 facts.md 信源底稿
+> **内容统计**：21 个知识束，共 213 个内容文档（140 概念 + 48 示例 + 25 信源），1500+ 条零推测事实，21 个 facts.md 信源底稿

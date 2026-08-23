@@ -1,16 +1,19 @@
 ---
 type: Concept
 title: 自动渲染扩展
-description: KaTeX auto-render 扩展（contrib/auto-render）的使用方法，包括renderMathInElement()API、分隔符配置、DOM扫描机制和自定义处理。
-tags: [katex, auto-render, contrib, delimiter, dom]
-generated: { by: "reference_agent/trae-cn", at: 2026-08-22T22:35:00+08:00 }
-verified: { by: "process:seven-concepts-v", at: 2026-08-22T22:35:00+08:00 }
+description: KaTeX auto-render 扩展（contrib/auto-render）的使用方法，包括 renderMathInElement() API、默认 8 条分隔符（不含 $...$）、ignoredTags 默认值、preProcess/errorCallback 钩子、displayMode 由分隔符决定，以及宏持久化与 ESM 版本。
+tags: [katex, auto-render, contrib, delimiter, dom, esm]
+generated: { by: "reference_agent/trae-cn", at: 2026-08-23T22:00:00+08:00 }
+verified: { by: "process:seven-concepts-v", at: 2026-08-23T22:00:00+08:00 }
 status: stable
-stale_after: 2027-08-22
+stale_after: 2027-08-23
 sources:
   - id: src
     resource: /references/katex-source.md
     title: KaTeX 源码信源
+  - id: web-autorender
+    resource: /references/katex-website.md#web-autorender
+    title: KaTeX 官网 Auto-render Extension 页面
 ---
 
 ## auto-render 扩展简介
@@ -34,6 +37,8 @@ auto-render 是 KaTeX 的官方扩展模块，位于 [contrib/auto-render/](http
 
 `defer` 属性确保脚本在DOM解析完成后执行。`onload` 回调在脚本加载完成后调用渲染函数。
 
+> **版本注意**：官网 Auto-render 页面的 CDN 示例引用 `katex@0.18.1`（扩展版本），而核心 katex.js 引用 `0.18.4`。本 bundle 以源码 v0.18.4 为基准，实际使用时建议两者保持一致版本，详见 [事实清单修正-8](/spec/facts.md#修正-8官网版本号标注不一致)。
+
 ### npm 方式
 
 ```bash
@@ -55,6 +60,10 @@ document.addEventListener("DOMContentLoaded", function() {
 ```
 
 注意：需要确保katex本体在auto-render之前加载，auto-render依赖全局的 `katex` 对象。
+
+auto-render 也提供 ESM 版本 `contrib/auto-render.mjs`，支持 `nomodule` 回退[^web-autorender]。
+
+[^web-autorender]: 官网 Auto-render Extension 页面，https://katex.org/docs/autorender
 
 ## renderMathInElement() API
 
@@ -79,7 +88,7 @@ function renderMathInElement(
 | `throwOnError` | boolean | — | 传递给 katex.render 的选项 |
 | `errorColor` | string | — | 传递给 katex.render 的选项 |
 | `macros` | object | — | 传递给 katex.render 的选项 |
-| `displayMode` | boolean | — | **不设置此选项**（由分隔符决定） |
+| `displayMode` | boolean | — | **被忽略**：显示模式由每条分隔符的 `display` 键决定，而非此选项[^web-autorender] |
 | 其他 KaTeX 选项 | — | — | 所有其他 SettingsOptions 都可以传递 |
 
 ### 默认分隔符
@@ -192,6 +201,23 @@ renderMathInElement(document.body, {
     }
 });
 ```
+
+### 5. 宏持久化
+
+`options.macros` 对象默认为空对象 `{}`，在多次内部 `katex.render` 调用间传递[^web-autorender]。这意味着同一页面中连续的方程可以通过 `\gdef` 建立共享宏：
+
+```javascript
+renderMathInElement(document.body, {
+    macros: {}  // 同一对象在所有匹配的公式间共享
+});
+```
+
+```latex
+$$ \gdef\RR{\mathbb{R}} $$
+$$ f: \RR \to \RR $$
+```
+
+第二个公式中的 `\RR` 由第一个公式的 `\gdef` 定义。持久宏的安全注意事项见 [宏系统](/concepts/09-macro-system.md) 和 [安全与错误处理](/concepts/18-security-and-errors.md)：不应跨多用户消息共享 macros 对象。
 
 ## 使用注意事项
 

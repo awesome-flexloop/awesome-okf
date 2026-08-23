@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: concept
 title: 错误处理与 VFile 消息系统
 description: MySTmd 使用 VFile 作为错误/警告/信息的收集容器，通过 fileError/fileWarn/fileInfo 上报问题，每个消息关联 RuleId 用于分类和严重级别覆盖。
 tags: [mystmd, error-handling, vfile, ruleid, diagnostics]

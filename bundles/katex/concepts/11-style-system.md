@@ -1,16 +1,19 @@
 ---
 type: Concept
 title: 样式系统
-description: KaTeX 的 TeX 样式模型（8种Style），样式转换方法（sup/sub/fracNum/fracDen/cramp），数学原子类（mord/mop/mbin等）和tight spacing规则。
-tags: [katex, style, tex-style, cramped, math-class, spacing]
-generated: { by: "reference_agent/trae-cn", at: 2026-08-22T22:35:00+08:00 }
-verified: { by: "process:seven-concepts-v", at: 2026-08-22T22:35:00+08:00 }
+description: KaTeX 的 TeX 样式模型（8种Style），样式转换方法（sup/sub/fracNum/fracDen/cramp），数学原子类（mord/mop/mbin等）、tight spacing规则，以及官网 Font 页说明的 1.21em 默认缩放与 TeX 单位换算。
+tags: [katex, style, tex-style, cramped, math-class, spacing, units]
+generated: { by: "reference_agent/trae-cn", at: 2026-08-23T22:00:00+08:00 }
+verified: { by: "process:seven-concepts-v", at: 2026-08-23T22:00:00+08:00 }
 status: stable
-stale_after: 2027-08-22
+stale_after: 2027-08-23
 sources:
   - id: src
     resource: /references/katex-source.md
     title: KaTeX 源码信源
+  - id: web-font
+    resource: /references/katex-website.md#web-font
+    title: KaTeX 官网 Font 页面
 ---
 
 ## TeX 样式模型
@@ -111,6 +114,35 @@ Style 不直接控制字号大小，但通过 `size` 属性和 Options 的 `size
 - SS → sizeMultiplier × 0.5（上上标缩小50%）
 
 这是通过 `Options.havingStyle()` 中的 `sizeMultiplier` 调整实现的。
+
+## 渲染缩放与 TeX 单位（用户视角）
+
+> 本节内容来自官网 Font 页面，面向集成 KaTeX 的开发者；内部 Style 转换规则见上文。
+
+### 1.21em 默认缩放
+
+KaTeX 默认以周围上下文字体大小的 **1.21 倍** 渲染数学公式，使上下标更易读[^web-font]。这一缩放通过 CSS 实现，可用自定义 CSS 覆盖：
+
+```css
+.katex { font-size: 1.1em; }
+```
+
+`Style` 内部的 `sizeMultiplier`（S→0.7、SS→0.5）是在这个 1.21em 基准之上的二次缩放，二者共同决定最终像素大小。
+
+### TeX 单位与绝对长度
+
+KaTeX 支持所有 TeX 单位（包括 cm、in 等绝对单位）。绝对单位相对于 **默认 TeX 字号 10pt** 统一缩放，而非浏览器的 1cm 物理长度[^web-font]：
+
+| TeX 单位 | 换算基准 | 示例 |
+|----------|---------|------|
+| em | 相对于当前字号 | `1em` = 当前字号宽度 |
+| mu | 1/18 em（数学单位） | `18mu` = `1em` |
+| cm | 相对 10pt 缩放 | `\kern1cm` ≡ `\kern2.845275em` |
+| in | 相对 10pt 缩放 | `1in` = 2.54cm（TeX 基准） |
+
+因此，由于浏览器默认字号通常大于 10pt，KaTeX 中的 `1cm` kern 视觉上会比浏览器原生的 `1cm` 更大。相对单位与绝对单位均相对于 10pt 字体的 LaTeX 统一缩放[^web-font]。
+
+[^web-font]: 官网 Font 页面，https://katex.org/docs/font
 
 ## 数学原子类（MathClass）
 

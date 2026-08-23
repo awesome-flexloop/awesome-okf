@@ -1,282 +1,205 @@
 ---
 type: Concept
 title: "04 服务层与后端通信"
-description: ServiceManager 聚合架构、12 个子管理器详解、REST API 与 WebSocket 通信机制、ServerConnection 配置
-tags: [jupyterlab, services, servicemanager, kernel, rest-api, websocket, backend]
-generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T08:13:00Z" }
-verified: { by: "process:grep-api-verification", at: "2026-08-22T08:13:00Z" }
+description: ServiceManager 聚合架构与子管理器清单、ServerConnection 通信基础设施、REST API 与 WebSocket 通信模式、连接状态管理与 standby 轮询策略
+tags: [jupyterlab, services, servicemanager, kernel, rest-api, websocket, serverconnection, backend]
+generated:
+  by: reference_agent/trae-cn
+  at: "2026-08-23"
+verified: grep-verified
 status: stable
-stale_after: 2027-02-22
+stale_after: 2027-08-23
 sources:
   - id: source-map
     resource: /references/source-code-map.md
     title: JupyterLab 源码文件地图
-  - id: manager-ts
-    resource: https://github.com/jupyterlab/jupyterlab/blob/main/packages/services/src/manager.ts
-    title: ServiceManager source
 ---
 
 ## ServiceManager：后端服务的统一入口
 
-`ServiceManager` 是 JupyterLab 前端与 Python 后端通信的核心聚合类（[F-009](/references/source-code-map.md)），位于 `packages/services/src/manager.ts`。它实现 `IServiceManager` 接口，聚合了 12 个子管理器实例（[F-009](/references/source-code-map.md)）：
+`ServiceManager` 是 JupyterLab 前端与 Python 后端通信的核心聚合类，定义在 `packages/services/src/manager.ts:48`。它实现 `ServiceManager.IManager` 接口，将所有后端服务子管理器聚合为一个统一对象，通过 `JupyterFrontEnd.serviceManager` 属性暴露给插件（`frontend.ts:117`）。`@jupyterlab/services` 包是 Jupyter REST API 的 TypeScript 客户端，负责 Kernel/Session/Content/Terminal 等全部后端通信（F-046）。
 
-```mermaid
-flowchart TB
-    SM["ServiceManager"] --> SRV["serverSettings<br/>ServerConnection.ISettings"]
-    SM --> SES["sessions<br/>SessionManager"]
-    SM --> KM["kernels<br/>KernelManager"]
-    SM --> KSM["kernelspecs<br/>KernelspecManager"]
-    SM --> SETM["settings<br/>SettingManager"]
-    SM --> TM["terminals<br/>TerminalManager"]
-    SM --> BM["builder<br/>BuildManager"]
-    SM --> CM["contents<br/>ContentsManager"]
-    SM --> EM["events<br/>EventManager"]
-    SM --> WM["workspaces<br/>WorkspaceManager"]
-    SM --> NBM["nbconvert<br/>NbConvertManager"]
-    SM --> UM["user<br/>UserManager"]
+`ServiceManager` 构造函数（`manager.ts:52-90`）接收 `Partial<ServiceManager.IOptions>`，关键参数包括 `serverSettings`（通过 `ServerConnection.makeSettings()` 生成默认值）和 `standby`（默认为 `'when-hidden'`）。构造时，所有子管理器以 `normalized` 配置对象统一创建。`ready` Promise 在 `sessions`、`kernelspecs` 以及 `terminals`（如果可用）全部完成首次数据获取后 resolve。
 
-    style SM fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
-    style CM fill:#e8f5e9,stroke:#2e7d32
-    style KM fill:#fff3e0,stroke:#e65100
-    style SES fill:#fff3e0,stroke:#e65100
-```
+## 子管理器清单
 
-### ServiceManager 构造与初始化
+`ServiceManager` 聚合了 11 个子管理器，每个对应一组 Jupyter Server REST API 端点：
 
-`ServiceManager` 通过 options 构造（[manager.ts#L97-L156](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterlab/packages/services/src/manager.ts#L97-L156)），关键参数：
+| 属性 | 类型 | 职责 | 对应后端 API |
+|------|------|------|-------------|
+| `contents` | `Contents.IManager` | 文件/目录 CRUD、检查点 | `/api/contents/` |
+| `sessions` | `Session.IManager` | 内核会话生命周期管理 | `/api/sessions/` |
+| `kernels` | `Kernel.IManager` | Kernel 实例管理 | `/api/kernels/` |
+| `kernelspecs` | `KernelSpec.IManager` | 可用内核规格信息 | `/api/kernelspecs` |
+| `terminals` | `Terminal.IManager` | 终端会话管理 | `/api/terminals/` |
+| `settings` | `Setting.IManager` | 插件设置持久化 | `/api/settings/` |
+| `workspaces` | `Workspace.IManager` | 工作区布局状态 | `/api/workspaces/` |
+| `nbconvert` | `NbConvert.IManager` | Notebook 导出格式 | `/api/nbconvert/` |
+| `builder` | `Builder.IManager` | 前端资源构建（已弃用） | `/lab/api/build` |
+| `events` | `Event.IManager` | 后端事件流（SSE） | `/api/events` |
+| `user` | `User.IManager` | 当前用户信息 | `/api/me` |
 
-```typescript
-interface IOptions {
-  serverSettings?: ServerConnection.ISettings;  // 服务器连接配置
-  standby?: 'when-hidden' | 'never' | 'always'; // 轮询策略（默认 when-hidden）
-  wsUrl?: string;                               // WebSocket URL
-  kernels?: Kernel.IManager;                    // 自定义 kernel 管理器
-  contents?: Contents.IManager;                 // 自定义 contents 管理器
-  // ... 其他子管理器可自定义注入
-}
-```
+此外还有 `serverSettings: ServerConnection.ISettings` 属性保存共享的服务器连接配置。
 
-构造后，`ready` Promise 在所有子管理器完成首次 fetch 后 resolve。`isReady` 标志指示服务管理器是否就绪。
-
-### Standby 模式（性能优化）
-
-`standby` 选项控制网络轮询行为（[F-012](/references/source-code-map.md)）：
-
-| 模式 | 行为 |
-|------|------|
-| `'when-hidden'`（默认） | 页面不可见时暂停轮询（节省资源） |
-| `'never'` | 始终轮询（适合后台计算场景） |
-| `'always'` | 始终维持连接（旧模式，已 deprecated） |
-
-通过 Page Visibility API（`document.visibilityState`）检测页面可见性，在 `visibilitychange` 事件中切换轮询状态。
-
-## 子管理器详解
+各子管理器在构造时通过 `connectionFailure` 信号将连接错误代理到 ServiceManager 级别（`manager.ts:78-80`），`kernelspecs`、`sessions`、`terminals` 的连接失败都会触发 ServiceManager 的 `connectionFailure` 信号。
 
 ### ContentsManager（文件内容管理）
 
-`ContentsManager` 负责文件/目录的 CRUD 操作（[F-011](/references/source-code-map.md)），对应后端 `/api/contents/` REST API：
+`ContentsManager` 负责文件和目录的 CRUD 操作，对应 `/api/contents/` REST API。提供 `get(path)`（GET 获取内容）、`save(path, options)`（PUT 保存）、`delete(path)`（DELETE 删除）、`rename(path, newPath)`（PATCH 重命名）、`newUntitled(options)`（POST 新建）、`copy(path, toDir)`（POST 复制）以及检查点管理（`createCheckpoint`/`listCheckpoints`/`restoreCheckpoint`）。文件变化时发射 `fileChanged` 信号。
 
-| 方法 | HTTP | API 路径 | 说明 |
-|------|------|---------|------|
-| `get(path, options)` | GET | `/api/contents/{path}` | 获取文件/目录内容 |
-| `save(path, options)` | PUT | `/api/contents/{path}` | 保存文件 |
-| `newUntitled(options)` | POST | `/api/contents/` | 创建新文件/目录 |
-| `delete(path)` | DELETE | `/api/contents/{path}` | 删除文件/目录 |
-| `rename(path, newPath)` | PATCH | `/api/contents/{path}` | 重命名/移动文件 |
-| `copy(path, toDir)` | POST | `/api/contents/{toDir}` | 复制文件 |
-| `createCheckpoint(path)` | POST | `/api/contents/{path}/checkpoints` | 创建检查点 |
-| `listCheckpoints(path)` | GET | `/api/contents/{path}/checkpoints` | 列出检查点 |
-| `restoreCheckpoint(path, id)` | POST | `/api/contents/{path}/checkpoints/{id}` | 恢复到检查点 |
+### SessionManager 与 KernelManager（会话与内核）
 
-`ContentsManager` 还暴露 `fileChanged` 信号，在文件创建/保存/删除/重命名时发射。
-
-文件模型 `Contents.IModel` 包含：`name`, `path`, `type`（'file'|'directory'|'notebook'）, `content`, `format`, `mimetype`, `size`, `writable`, `created`, `last_modified`。
-
-### SessionManager（会话管理）
-
-`SessionManager` 管理内核会话（[F-013](/references/source-code-map.md)），对应 `/api/sessions/` API。会话（session）将一个文档（通常是 Notebook 或 Console）绑定到一个 Kernel 实例。
-
-| 方法 | 说明 |
-|------|------|
-| `startNew(options)` | 启动新会话（创建内核+连接文档） |
-| `refreshRunning()` | 刷新运行中会话列表 |
-| `stopIfNeeded(path)` | 如果路径不再需要内核，停止对应会话 |
-| `running()` 迭代器 | 遍历当前运行中的会话 |
-
-关键信号：`runningChanged`（会话列表变化）、`connectionStatusChanged`（连接状态变化）。
-
-### KernelManager（内核管理）
-
-`KernelManager` 直接管理 Kernel 实例的生命周期（[F-011](/references/source-code-map.md)）：
-
-| 方法 | 说明 |
-|------|------|
-| `startNew(options)` | 启动新内核进程 |
-| `refreshRunning()` | 刷新运行中内核列表 |
-| `interruptKernel(id)` | 中断内核（发送 SIGINT） |
-| `restartKernel(id)` | 重启内核 |
-| `shutdown(id)` | 关闭内核 |
-| `connectTo(options)` | 连接到已有内核（WebSocket 连接） |
-
-`KernelManager` 管理的 `IKernelConnection` 接口提供：
-- **Shell channel**：发送代码执行请求（`execute()`），接收执行结果
-- **IOPub channel**：接收内核输出（stdout、stderr、display_data、error 等）
-- **Stdin channel**：内核请求输入（如 Python 的 `input()`）
-- **Control channel**：控制命令（中断、重启、调试等）
-- **HB channel**：心跳检测（判断内核是否存活）
-
-### KernelspecManager（内核规格管理）
-
-获取可用内核的规格信息（名称、显示名、语言、资源文件路径等），对应 `/api/kernelspecs` API。
+`SessionManager` 管理内核会话，将一个文档（Notebook 或 Console）绑定到一个 Kernel 实例。提供 `startNew(options)`、`refreshRunning()`、`stopIfNeeded(path)` 等方法，以及 `runningChanged`、`connectionStatusChanged` 信号。`KernelManager` 直接管理 Kernel 生命周期，提供 `startNew()`、`interruptKernel(id)`、`restartKernel(id)`、`shutdown(id)`、`connectTo(options)` 等方法。Kernel 连接通过 WebSocket 进行 Jupyter Kernel Protocol 通信。
 
 ### TerminalManager（终端管理）
 
-管理终端会话，对应 `/api/terminals/` API：
-- `startNew()` 创建新终端
-- `connectTo(name)` 连接到已有终端（WebSocket 连接到终端 PTY）
-- `refreshRunning()` 刷新运行中终端列表
-- `runningChanged` 信号通知终端列表变化
+`TerminalManager` 管理终端会话，对应 `/api/terminals/` API。`startNew()` 创建新终端，`connectTo(name)` 通过 WebSocket 连接到已有终端的 PTY，转发终端输入输出数据。`runningChanged` 信号通知终端列表变化。
 
-### SettingManager（设置管理）
+### 其他管理器
 
-管理前端扩展的用户设置（JSON Schema 驱动），对应 `/api/settings/` API：
-- `fetch(id)` 获取某个插件的设置
-- `save(id, raw)` 保存设置
-- `upload()/download()` 批量导入/导出设置
-- `changed` 信号通知设置变化
-
-### EventManager（事件管理）
-
-通过 Server-Sent Events（SSE）监听后端事件（如内核启动完成、文件变化等），对应 `/api/events` 端点。`EventManager` 维护一个 `EventStream`，支持订阅事件。
-
-### WorkspaceManager（工作区管理）
-
-管理工作区布局状态（哪个文件打开在哪个位置），对应 `/api/workspaces/` API。工作区可以保存/加载/列出/删除。
-
-### BuildManager（构建管理）
-
-管理前端资源构建（仅在开发模式下使用），提供 `build()`、`shouldCheck`、`isAvailable` 等属性和方法，通过 `/lab/api/build` WebSocket 端点与后端的 Builder handler 通信。
-
-### NbConvertManager（导出管理）
-
-管理通过 nbconvert 导出 Notebook 为其他格式（HTML、PDF、Markdown、Python 脚本等），对应 `/api/nbconvert/` API：
-- `getExportFormats()` 获取可用导出格式列表
-- `getExportUrl(path, format)` 获取导出文件 URL
-
-### UserManager（用户管理）
-
-获取当前用户信息（在 JupyterHub 等多用户环境下使用），对应 `/api/me` API。
+- **`SettingManager`**：基于 JSON Schema 的插件设置管理，`fetch(id)` 获取设置、`save(id, raw)` 保存设置，对应 `/api/settings/`。
+- **`WorkspaceManager`**：工作区布局状态的保存/加载/列出/删除，对应 `/api/workspaces/`（F-050）。
+- **`NbConvertManager`**：`getExportFormats()` 获取可用导出格式列表，`getExportUrl(path, format)` 构造导出 URL。
+- **`KernelSpecManager`**：获取可用内核的规格（名称、显示名、语言、资源路径），`ready` Promise 在首次获取后 resolve。
+- **`EventManager`**：通过 Server-Sent Events（SSE）监听后端事件流，对应 `/api/events` 端点。
+- **`UserManager`**：获取当前用户身份信息，在 JupyterHub 等多用户环境下使用，对应 `/api/me`。
+- **`BuildManager`**：管理前端资源构建，通过 `/lab/api/build` 端点与后端 `BuildHandler` 通信（F-104），在 JupyterLab v5 中将被移除。
 
 ## ServerConnection：通信基础设施
 
-所有子管理器的底层通信都通过 `ServerConnection` 模块（[F-014](/references/source-code-map.md)），位于 `packages/services/src/serverconnection.ts`。它提供：
+所有子管理器的底层 HTTP 和 WebSocket 通信都通过 `ServerConnection` 模块（`packages/services/src/serverconnection.ts`）完成。它提供三个核心 API：
 
-### 配置对象 ServerConnection.ISettings
+### ServerConnection.makeSettings()
 
-```typescript
-interface ISettings {
-  readonly baseUrl: string;          // 后端基础 URL（如 http://localhost:8888/）
-  readonly wsUrl: string;            // WebSocket URL（如 ws://localhost:8888/）
-  readonly token: string;            // 认证 token
-  readonly init: RequestInit;        // fetch 默认参数（headers 等）
-  readonly ajaxSettings: ISettings;  // 兼容旧版
-  readonly fetch: (input: RequestInfo, init?: RequestInit) => Promise<Response>;
-  readonly Headers: typeof Headers;
-  readonly Request: typeof Request;
-  readonly WebSocket: typeof WebSocket;
-}
-```
+`makeSettings(options?)`（`serverconnection.ts:120`）创建并返回 `ServerConnection.ISettings` 对象，包含：
 
-默认配置通过 `PageConfig` 获取（`baseUrl`, `wsUrl`, `token` 等），使用浏览器原生 `fetch` 和 `WebSocket`。
+- `baseUrl`：后端基础 URL（如 `http://localhost:8888/`）
+- `wsUrl`：WebSocket URL（如 `ws://localhost:8888/`）
+- `token`：认证 token，从 PageConfig 获取
+- `fetch`：HTTP 请求函数，默认使用浏览器原生 `fetch`
+- `WebSocket`：WebSocket 构造函数，浏览器端使用原生 WebSocket
+- `init`：默认 `RequestInit`（headers 等）
 
-### makeRequest：统一 HTTP 请求
+ServiceManager 构造时调用 `ServerConnection.makeSettings()` 获取默认配置（`manager.ts:55`）。
 
-`ServerConnection.makeRequest(url, init, settings)` 是所有 REST API 调用的统一入口：
+### ServerConnection.makeRequest()
 
-1. 自动添加 `Authorization: token <token>` 头
+`makeRequest(url, init, settings)`（`serverconnection.ts:144`）是所有 REST API 调用的统一入口，负责：
+
+1. 自动添加 `Authorization: token <token>` 认证头
 2. 处理 `X-XSRFToken` 防跨站请求伪造
-3. 统一错误处理：将 HTTP 错误响应封装为 `ServerConnection.ResponseError`
-4. 支持自定义 fetch 实现（便于测试和代理）
+3. 统一错误处理：HTTP 错误响应封装为 `ServerConnection.ResponseError`（`serverconnection.ts:155`），网络错误封装为 `ServerConnection.NetworkError`（`serverconnection.ts:213`，继承自 `TypeError`）
+4. 支持自定义 `fetch` 实现（便于测试和代理）
 
-### WebSocket 连接
+### WebSocket 连接管理
 
-内核和终端的实时通信使用 WebSocket。`ServerConnection` 提供 `makeSettings()` 来获取正确的 WebSocket URL 和 token，自动处理：
-- 将 `http://` 替换为 `ws://`，`https://` 替换为 `wss://`
-- 在 URL 参数中添加 `token=<token>` 用于认证
-- 支持通过 `WIDGETS_WS_URL` 等环境变量配置代理
+Kernel 和 Terminal 的实时通信使用 WebSocket。`ServerConnection` 通过 `makeSettings()` 生成正确的 WebSocket URL，自动将 `http://` 替换为 `ws://`、`https://` 替换为 `wss://`，并在 URL 参数中附加 `token` 用于认证。Node.js 环境使用 `ws` 包（F-164），浏览器端使用原生 WebSocket。
 
-## 通信协议总结
+## REST API 通信模式
+
+每个子管理器对应 Jupyter Server 的一组 REST 端点。JupyterLab 自身还通过 `/lab/api/*` 前缀注册了 Lab 专属 Handler（F-089）：
+
+| Handler | 路由 | 方法 | 功能 |
+|---------|------|------|------|
+| `BuildHandler` | `/lab/api/build` | GET/POST/DELETE | 查询/触发/取消前端构建（F-104、F-106） |
+| `ExtensionHandler` | `/lab/api/extensions` | GET/POST | 扩展列表查询与安装/卸载/启用/禁用（F-108、F-110） |
+| `PluginHandler` | `/lab/api/plugins` | GET/POST | 插件锁定状态查询与启用/禁用（F-111、F-112） |
+| `NewsHandler` | `/lab/api/news` | GET | 获取公告通知 Atom feed（F-098、F-101） |
+| `CheckForUpdateHandler` | `/lab/api/update` | GET | 检查 JupyterLab 版本更新（F-098、F-099） |
+
+所有 Handler 方法均使用 `@web.authenticated` 装饰器要求认证（F-103）。
 
 ```mermaid
 flowchart LR
     subgraph frontend["前端 ServiceManager"]
-        REST["REST 调用<br/>(makeRequest)"]
-        WS["WebSocket<br/>(Kernel/Terminal)"]
-        SSE["Server-Sent Events<br/>(EventManager)"]
+        REST["REST 调用<br/>makeRequest + fetch"]
+        WS["WebSocket<br/>Kernel / Terminal"]
+        SSE["SSE 事件流<br/>EventManager"]
     end
 
-    subgraph backend["Python 后端"]
-        H["Tornado Handlers"]
-        B["BuildHandler"]
+    subgraph jupyter_server["Jupyter Server REST API"]
+        KA["/api/kernels"]
+        SA["/api/sessions"]
+        CA["/api/contents"]
+        TA["/api/terminals"]
+        SETA["/api/settings"]
+        WA["/api/workspaces"]
+    end
+
+    subgraph lab_handlers["Lab Handlers (/lab/api/*)"]
+        BH["BuildHandler"]
         EH["ExtensionHandler"]
         PH["PluginHandler"]
-        K["Kernel WebSocket"]
-        T["Terminal WebSocket"]
-        EV["Event SSE"]
+        NH["NewsHandler"]
     end
 
-    REST -->|"GET/POST/PUT/PATCH/DELETE"| H
-    REST --> B
+    subgraph kernel["Kernel 进程"]
+        KI["ipykernel / IRKernel / ..."]
+    end
+
+    REST -->|"GET/POST/PUT/PATCH/DELETE"| KA
+    REST --> SA
+    REST --> CA
+    REST --> TA
+    REST --> SETA
+    REST --> WA
+    REST --> BH
     REST --> EH
     REST --> PH
-    WS -->|"Kernel Protocol"| K
-    WS -->|"Terminal PTY"| T
-    SSE -->|"SSE stream"| EV
+    REST --> NH
+    WS -->|"Kernel Protocol (ZMQ 桥接)"| KI
+    WS -->|"PTY 数据转发"| TA
+    SSE -->|"text/event-stream"| jupyter_server
 
     style REST fill:#e3f2fd,stroke:#1565c0
     style WS fill:#e8f5e9,stroke:#2e7d32
     style SSE fill:#fff3e0,stroke:#e65100
 ```
 
-| 通信方式 | 协议 | 使用场景 |
-|---------|------|---------|
-| REST API | HTTP (fetch) | 文件操作、会话管理、设置、内核规格、用户信息、nbconvert |
-| WebSocket | ws/wss | 内核通信（execute/iopub）、终端 PTY、构建进度 |
-| SSE | HTTP text/event-stream | 后端事件流（EventManager） |
+## WebSocket 通信
 
-## Kernel Protocol（内核协议）
+Kernel 通信是服务层最复杂的部分。前端通过 WebSocket 连接到 Jupyter Server，服务器端将 WebSocket 消息桥接到 Kernel 的 ZMQ 端口。一条 Kernel 消息是 JSON 对象，包含 `channel`（`shell`/`iopub`/`stdin`/`control`/`hb`）、`header`（`msg_id`/`msg_type`/`session`/`version`）、`parent_header`、`metadata`、`content`、`buffers` 字段。Shell channel 发送执行请求，IOPub channel 接收输出（stream/display_data/execute_result/error/status），Control channel 处理中断/重启等控制命令，HB channel 做心跳检测。
 
-前端与 Kernel 之间通过 WebSocket 传递 Jupyter Kernel Protocol 消息。消息是 JSON 对象，格式如下：
+Terminal 通信则简单得多——WebSocket 直接转发 PTY 的原始字节流，前端 xterm.js 渲染终端界面。
 
-```json
-{
-  "channel": "shell" | "iopub" | "stdin" | "control" | "hb",
-  "header": {
-    "msg_id": "uuid",
-    "msg_type": "execute_request" | "execute_reply" | "stream" | "display_data" | ...,
-    "username": "username",
-    "session": "session-uuid",
-    "date": "ISO8601 timestamp",
-    "version": "5.5"
-  },
-  "parent_header": { ... },
-  "metadata": { ... },
-  "content": { ... },
-  "buffers": [ ... ]
-}
+## 连接状态管理
+
+Kernel 和 Terminal 连接维护了 `ConnectionStatus` 状态枚举，定义在 `packages/services/src/kernel/kernel.ts:1052`：
+
+```typescript
+export type ConnectionStatus = 'connected' | 'connecting' | 'disconnected';
 ```
 
-核心消息类型：
-- **Shell channel**：`execute_request` → `execute_reply`（执行代码，返回执行计数和状态）
-- **IOPub channel**：`stream`（stdout/stderr输出）、`display_data`（富媒体输出）、`execute_result`（执行结果）、`error`（错误 traceback）、`status`（busy/idle/starting 状态变化）
-- **Stdin channel**：`input_request` → `input_reply`（内核请求用户输入）
-- **Control channel**：`interrupt_request`、`shutdown_request`、`debug_request` 等控制命令
-- **HB channel**：心跳包（ping/pong），检测内核存活
+`KernelConnection` 和 `DefaultTerminalConnection` 都暴露 `connectionStatus` 属性和 `connectionStatusChanged` 信号。状态转换流程为：初始 `connecting` → WebSocket 连接成功变为 `connected` → 连接断开或错误变为 `disconnected` → 自动重连时回到 `connecting`。
+
+ServiceManager 层面通过 `connectionFailure: ISignal<IManager, Error>` 信号（`manager.ts:95`）统一代理子管理器的连接失败事件。插件可以监听此信号或使用 `IConnectionLost` Token（`tokens.ts:16`）自定义连接丢失时的行为（默认弹出对话框提示用户）。
+
+## standby 轮询策略
+
+`standby` 选项控制各管理器何时暂停对后端 API 的轮询，定义在 `ServiceManager.IOptions`（`manager.ts:243`）中，类型为 `Poll.Standby | (() => boolean | Poll.Standby)`，默认值为 `'when-hidden'`（`manager.ts:56`）。
+
+| 策略值 | 行为 |
+|--------|------|
+| `'when-hidden'`（默认） | 页面不可见（`document.visibilityState === 'hidden'`）时暂停轮询，节省带宽和服务器资源 |
+| `'never'` | 始终轮询，不暂停，适合需要后台持续监控的场景 |
+| `'always'` | 始终维持连接（旧模式，行为与 `'never'` 类似） |
+
+该策略被 `KernelManager`、`SessionManager`、`TerminalManager`、`KernelSpecManager`、`EventManager` 等所有需要轮询的子管理器共享（各 manager.ts 构造函数中均以 `options.standby ?? 'when-hidden'` 传递）。内部使用 Lumino 的 `Poll` 类实现基于 Page Visibility API 的定时轮询控制。
+
+## 服务层在架构中的角色
+
+服务层是前端插件系统与 Python 后端之间的唯一通信通道。插件通过 `JupyterFrontEnd.serviceManager` 获取 ServiceManager 实例，进而访问各个子管理器。这种聚合设计使得插件不需要关心底层的认证、URL 构造、错误处理、WebSocket 重连等细节——这些都由 ServerConnection 和各子管理器统一封装。例如，Context 对象在保存文档时直接调用 `serviceManager.contents.save(path, model)`，无需手动构造 HTTP 请求或处理 token 认证（F-053）。
+
+后端方面，JupyterLab 自身的 Handler 注册在 `/lab/api/*` 前缀下（F-089），而 Kernel、Session、Contents、Terminal 等核心 API 由 jupyter_server 包提供，注册在 `/api/*` 前缀下。jupyterlab 包本身是一个"薄"后端层——大量核心功能委托给 jupyter_server 和 jupyterlab_server，自身主要负责前端构建编排、扩展管理和少量 Lab 专属 API。
 
 ## 相关概念
 
+- [00 概述与知识地图](/concepts/00-introduction.md)
 - [01 整体架构概览](/concepts/01-architecture-overview.md)
+- [02 应用框架与 Shell 布局](/concepts/02-application-shell.md)
 - [03 插件系统与依赖注入](/concepts/03-plugin-system.md)
 - [05 文档注册与 Widget 工厂](/concepts/05-document-widget-system.md)
-- [09 关键子系统 - PageConfig](/concepts/09-key-subsystems.md)
-- [源码文件地图](/references/source-code-map.md)
+- [06 Notebook 与 Cell 架构](/concepts/06-notebook-cells.md)
+- [07 扩展生态系统](/concepts/07-extension-ecosystem.md)
+- [08 构建系统与运行模式](/concepts/08-build-and-modes.md)
+- [09 关键子系统](/concepts/09-key-subsystems.md)

@@ -8,7 +8,9 @@ sources:
   - https://github.com/datawhalechina/hello-agents/blob/main/docs/chapter16/第十六章%20毕业设计.md
 ---
 
-# 第十六章 毕业设计：构建属于你的多智能体应用
+# 第十六章 毕业设计
+
+> 构建属于你的多智能体应用
 
 ## 章节概要
 

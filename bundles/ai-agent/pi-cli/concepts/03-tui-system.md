@@ -1,27 +1,28 @@
 ---
 type: Concept
-title: TUI 终端 UI 系统
-description: @earendil-works/pi-tui 是带差分渲染的终端 UI 库，提供组件系统、模糊搜索、LaTeX 渲染、键绑定管理、终端图片协议和 overlay 焦点管理。
-tags: [pi-cli, tui, terminal, 组件, 差分渲染, fuzzy, latex, keybindings]
-generated: 2026-08-23
-verified: 2026-08-23
+title: "TUI 系统（packages/tui）"
+description: "@earendil-works/pi-tui 是带差分渲染的终端 UI 库，核心为 Component 接口、TuiBase 16ms 节流渲染引擎、overlay 栈焦点管理、fuzzy 模糊搜索、LaTeX 渲染和 Kitty 键盘协议支持。"
+tags: [pi-cli, tui, terminal, rendering, component, keyboard]
+generated: { by: "reference_agent/trae-cn", at: 2026-08-23T10:00:00+08:00 }
+verified: { by: "process:grep-verification", at: 2026-08-23T10:00:00+08:00 }
 status: stable
-stale_after: 2026-11-23
+stale_after: 2027-08-23
 sources:
-  - packages/tui/src/index.ts:1-147
-  - packages/tui/src/tui.ts:23-1263
+  - id: src
+    resource: /references/source.md
+    title: 源码信源
 ---
 
-# TUI 终端 UI 系统
+# TUI 系统（packages/tui）
 
-`@earendil-works/pi-tui` 是一个最小化终端 UI 实现，核心特性是差分渲染（differential rendering）。它不依赖 ncurses 或类似的全功能终端库，而是直接操作 ANSI 转义序列。
+`@earendil-works/pi-tui` 是 Pi 的终端 UI 组件库，提供差分渲染引擎、组件系统、overlay 焦点管理、模糊搜索、LaTeX 渲染和键盘输入处理。它是 coding-agent 交互式界面的基础。
 
-## 组件接口
+## Component 接口
 
 所有 TUI 组件必须实现 `Component` 接口：
 
-```typescript
-interface Component {
+```ts
+export interface Component {
   render(width: number): string[];
   handleInput?(data: string): void;
   wantsKeyRelease?: boolean;
@@ -29,102 +30,226 @@ interface Component {
 }
 ```
 
-- `render(width)`：将组件渲染为字符串行数组
-- `handleInput(data)`：可选，组件获得焦点时处理键盘输入
-- `wantsKeyRelease`：是否接收 Kitty 协议的按键释放事件（默认 false）
-- `invalidate()`：使缓存渲染状态失效
+- `render(width)`：接收当前视口宽度，返回字符串数组，每行一个元素。
+- `handleInput?(data)`：可选，组件获得焦点时接收键盘输入。
+- `wantsKeyRelease?`：为 `true` 时接收 Kitty 协议的按键释放事件，默认 `false`。
+- `invalidate()`：清除缓存渲染状态，在主题变更或需要从头重渲染时调用。
 
-`Focusable` 接口扩展 Component，增加 `focused: boolean` 属性。获得焦点时组件应在光标位置发出 `CURSOR_MARKER`（一个零宽 APC 序列），TUI 会找到该标记并定位硬件光标，用于 IME 候选窗口定位。
+## 内置组件
 
-## 导出组件
-
-`packages/tui/src/index.ts` 导出以下组件：
+`src/index.ts` 导出完整组件集：
 
 | 组件 | 用途 |
 |------|------|
-| `Box` | 通用容器/边框 |
-| `Editor` | 多行文本编辑器 |
-| `HStack` / `VStack` | 水平/垂直栈布局 |
-| `Image` | 终端图片显示 |
-| `Input` | 单行输入 |
-| `Loader` / `CancellableLoader` | 加载指示器 |
-| `Markdown` | Markdown 渲染（基于 marked） |
-| `ScrollView` | 可滚动视图 |
-| `SelectList` | 选择列表 |
-| `SettingsList` | 设置项列表 |
-| `Spacer` | 弹性间距 |
+| `Box` | 通用容器 |
+| `VStack` / `HStack` | 垂直/水平栈布局 |
 | `Text` / `TruncatedText` | 文本显示 |
+| `Markdown` | Markdown 渲染 |
+| `Input` / `Editor` | 单行输入 / 多行编辑器 |
+| `ScrollView` | 可滚动视图 |
+| `SelectList` / `SettingsList` | 选择列表 / 设置列表 |
+| `Loader` / `CancellableLoader` | 加载指示器 |
+| `Image` | 终端图片 |
+| `Spacer` | 弹性间距 |
 
 ## 差分渲染引擎
 
-`TuiBase` 抽象类实现核心渲染逻辑：
+`TuiBase` 抽象类实现差分渲染，核心常量为最小渲染间隔 16ms（约 60fps）：
 
-- **最小渲染间隔**：16ms（约60fps），通过 `requestRender()` 调度
-- **即时渲染路径**：键盘输入后调用 `requestImmediateRender()`，通过 `process.nextTick` 绕过 setTimeout 节流（Windows 上 `setTimeout(0)` 可能消耗完整16ms tick）
-- **全屏重绘计数**：`fullRedraws` 属性跟踪全屏重绘次数
-- **收缩清除**：`clearOnShrink` 选项控制内容缩小时是否清空空行（由 `PI_CLEAR_ON_SHRINK` 环境变量控制）
-- **硬件光标**：由 `PI_HARDWARE_CURSOR` 环境变量控制
+```ts
+private static readonly MIN_RENDER_INTERVAL_MS = 16;
+```
 
-## Overlay 系统
+渲染调度分两条路径：
 
-TUI 维护一个 overlay 栈，用于模态组件：
+**节流渲染**（`requestRender`）：通过 `process.nextTick` 调度 `scheduleRender()`，后者用 `setTimeout` 保证距上次渲染至少 16ms：
 
-- `showOverlay(component, options?)`：显示 overlay，返回 `OverlayHandle`
-- `hideOverlay()`：隐藏最顶层 overlay
-- overlay 支持锚点定位（9种锚点：center、top-left、top-right 等）、绝对/百分比定位、边距配置
-- 焦点恢复有三种状态：`inactive`、`eligible`（可恢复）、`blocked`（被其他组件遮挡）
-- overlay 可标记为 `nonCapturing`，显示时不捕获键盘焦点
+```ts
+requestRender(force = false): void {
+  if (force) {
+    this.resetRenderState();
+    this.requestImmediateRender();
+    return;
+  }
+  if (this.renderRequested) return;
+  this.renderRequested = true;
+  process.nextTick(() => this.scheduleRender());
+}
 
-## 模糊搜索 (`fuzzy.ts`)
+private scheduleRender(): void {
+  if (this.stopped || this.renderTimer || !this.renderRequested) return;
+  const elapsed = performance.now() - this.lastRenderAt;
+  const delay = Math.max(0, TuiBase.MIN_RENDER_INTERVAL_MS - elapsed);
+  this.renderTimer = setTimeout(() => {
+    this.renderTimer = undefined;
+    if (this.stopped || !this.renderRequested) return;
+    this.renderRequested = false;
+    this.lastRenderAt = performance.now();
+    this.doRender();
+    if (this.renderRequested) this.scheduleRender();
+  }, delay);
+}
+```
 
-导出 `fuzzyFilter` 和 `fuzzyMatch` 函数及 `FuzzyMatch` 类型，用于 SelectList、Autocomplete 等组件的模糊匹配。
+**即时渲染**（`requestImmediateRender`）：键盘输入后调用，通过 `process.nextTick` 绕过 setTimeout 节流，取消任何待处理的节流定时器：
 
-## LaTeX 渲染 (`latex.ts`)
+```ts
+private requestImmediateRender(): void {
+  this.cancelRenderTimer();
+  this.renderRequested = true;
+  if (this.immediateRenderScheduled) return;
+  this.immediateRenderScheduled = true;
+  process.nextTick(() => {
+    this.immediateRenderScheduled = false;
+    if (this.stopped || !this.renderRequested) return;
+    this.cancelRenderTimer();
+    this.renderRequested = false;
+    this.lastRenderAt = performance.now();
+    this.doRender();
+  });
+}
+```
 
-导出 `renderLatex` 函数和 `RenderLatexOptions` 类型，支持在终端中渲染 LaTeX 数学公式。
+这在 Windows 上尤其重要，因为 `setTimeout(0)` 可能消耗完整 16ms tick。自定义组件的 `handleInput()` 后无需手动调用渲染，框架自动触发即时渲染。
 
-## 键绑定系统 (`keybindings.ts`)
+`requestRender(true)` 强制重置渲染状态并立即重绘。
 
-导出完整的键绑定管理：
+## Overlay 栈与焦点管理
 
-- `KeybindingsManager`：键绑定管理器类
-- `getKeybindings()` / `setKeybindings()`：获取/设置键绑定配置
-- `Keybinding`、`KeybindingDefinition`、`KeybindingConflict` 等类型
-- `TUI_KEYBINDINGS`：默认 TUI 键绑定常量
+`TuiBase` 维护 overlay 栈用于模态组件，`showOverlay()` 返回 `OverlayHandle`：
 
-## 键盘处理 (`keys.ts`)
+```ts
+showOverlay(component: Component, options?: OverlayOptions): OverlayHandle {
+  const entry: OverlayStackEntry = {
+    component,
+    preFocus: this.focusedComponent,
+    hidden: false,
+    focusOrder: ++this.focusOrderCounter,
+  };
+  this.overlayStack.push(entry);
+  if (!options?.nonCapturing && this.isOverlayVisible(entry)) {
+    this.setFocus(component);
+  }
+  this.terminal.hideCursor();
+  this.requestRender();
+  return {
+    hide: () => { /* 移除 overlay 并恢复焦点 */ },
+    setHidden: (hidden: boolean) => { /* 隐藏/显示，切换焦点 */ },
+    isHidden: () => entry.hidden,
+    focus: () => { /* 聚焦此 overlay */ },
+    unfocus: (unfocusOptions?) => { /* 移焦，支持 blocked 恢复 */ },
+    isFocused: () => this.focusedComponent === component,
+  };
+}
+```
 
-- `Key` 常量：键标识符
-- `parseKey(data)`：解析原始输入为键事件
-- `matchesKey(data, keyId)`：匹配键组合（AGENTS.md 规定禁止硬编码键检查，必须使用默认键绑定配置）
-- `isKeyRelease()` / `isKeyRepeat()`：Kitty 协议事件判断
-- Kitty 键盘协议支持：`isKittyProtocolActive()`、`setKittyProtocolActive()`、`decodeKittyPrintable()`
+焦点恢复不是简单的栈弹出，而是三态机制：
 
-## 终端图片 (`terminal-image.ts`)
+- **`eligible`**：overlay 可见且拥有焦点，可被恢复。
+- **`blocked`**：焦点被非 overlay 组件临时占据，记住被遮挡的目标，当该组件释放焦点时恢复到 overlay。
+- **`inactive`**：无待恢复的 overlay 焦点。
 
-支持多种终端图片协议：
+这处理了"overlay 弹出自动补全列表 → 用户焦点移到输入框 → 补全关闭后焦点应回到 overlay"等复杂场景。
 
-- Kitty 图形协议（`encodeKitty`、`allocateImageId`、`deleteKittyImage`）
-- iTerm2 图片协议（`encodeITerm2`）
-- 终端能力检测（`detectCapabilities`、`getCapabilities`、`setCapabilities`）
-- 多种图片格式尺寸获取：PNG、JPEG、GIF、WebP
-- 单元格尺寸查询和图片行数计算
+## 终端能力检测
 
-## 终端颜色 (`terminal-colors.ts`)
+### 背景色与配色方案
 
-- OSC 11 背景色查询（`parseOsc11BackgroundColor`）
-- 配色方案报告解析（`parseTerminalColorSchemeReport`）：深色/浅色模式检测
-- `RgbColor` 和 `TerminalColorScheme` 类型
+TUI 支持 OSC 11 背景色查询和 DSR 配色方案通知：
 
-## 其他功能
+- 查询终端背景色：OSC `11` 响应被解析为 RGB。
+- 配色方案通知：DSR `CSI ? 996 n`，终端回复深色 `CSI ? 997 ; 1 n` 或浅色 `CSI ? 997 ; 2 n`。
 
-- **Autocomplete**：`AutocompleteProvider`、`CombinedAutocompleteProvider`、`SlashCommand` 类型
-- **StdinBuffer**：输入缓冲，用于批量分割
-- **工具函数**：`visibleWidth`、`truncateToWidth`、`wrapTextWithAnsi`、`stripTerminalSequences`、`sliceByColumn`、`getOsc8LinkAtColumn`
-- **TuiAltScreen / TuiMainScreen**：备用屏幕和主屏幕渲染模式
+### Kitty 键盘协议
+
+支持 Kitty 键盘协议以获得增强的按键识别（修饰键、按键释放等）。协议状态为全局：
+
+```ts
+export function setKittyProtocolActive(active: boolean): void;
+export function isKittyProtocolActive(): boolean;
+```
+
+## fuzzy.ts：模糊搜索
+
+`fuzzyMatch()` 实现子序列模糊匹配——查询字符按序出现即可，不必连续。分数越低匹配越好：
+
+```ts
+export interface FuzzyMatch {
+  matches: boolean;
+  score: number;
+}
+
+export function fuzzyMatch(query: string, text: string): FuzzyMatch {
+  // 连续匹配加分（score -= consecutiveMatches * 5）
+  // 词边界匹配加分（score -= 10）
+  // 间隙惩罚（score += gap * 2）
+  // 完全相等额外加分（score -= 100）
+}
+```
+
+`fuzzyFilter()` 过滤集合并按分数排序。还支持字母-数字交换匹配（如 `"openai3"` 匹配 `"3openai"`）。
+
+## latex.ts：LaTeX 渲染
+
+`renderLatex()` 将 LaTeX 命令转换为 Unicode 符号。内置希腊字母表映射：
+
+```ts
+const SYMBOLS: Readonly<Record<string, string>> = {
+  alpha: "α", beta: "β", gamma: "γ", delta: "δ",
+  epsilon: "ϵ", varepsilon: "ε", pi: "π",
+  Gamma: "Γ", Delta: "Δ", Theta: "Θ", Lambda: "Λ",
+  Pi: "Π", Sigma: "Σ",
+  // ... 完整希腊字母及数学符号
+};
+```
+
+## keys.ts：键盘处理
+
+`keys.ts` 同时支持传统终端转义序列和 Kitty 键盘协议，导出：
+
+- `Key`：类型安全的键标识符辅助对象。
+- `matchesKey(data, keyId)`：检查输入数据是否匹配键标识符。
+- `parseKey(data)`：解析输入并返回键标识符。
+- `isKeyRelease(data)` / `isKeyRepeat(data)`：判断事件类型。
+- `decodeKittyPrintable(data)`：解码 Kitty 协议的可打印字符。
+
+部分 Ctrl+符号组合与 ASCII 码重叠（如 `Ctrl+[` = ESC），Kitty 协议可区分 Ctrl+Shift 组合。
+
+## KeybindingsManager
+
+键绑定管理器支持配置自定义快捷键、冲突检测：
+
+```ts
+export {
+  getKeybindings,
+  setKeybindings,
+  KeybindingsManager,
+  TUI_KEYBINDINGS,
+  type Keybinding,
+  type KeybindingConflict,
+  type KeybindingDefinition,
+} from "./keybindings.ts";
+```
+
+## 终端图片
+
+支持 Kitty 图形协议和 iTerm2 图片协议，自动检测终端能力并提供回退：
+
+```ts
+export {
+  detectCapabilities,
+  encodeKitty,
+  encodeITerm2,
+  renderImage,
+  imageFallback,
+  getImageDimensions,
+  type TerminalCapabilities,
+  type ImageProtocol,
+} from "./terminal-image.ts";
+```
 
 ## 相关概念
 
-- [项目简介](/concepts/00-introduction.md)
-- [AI 包详解](/concepts/02-ai-package.md)
-- [Monorepo 架构](/concepts/01-monorepo-architecture.md)
+- [AI 包（packages/ai）](./02-ai-package.md)
+- [Monorepo 架构](./01-monorepo-architecture.md)
+- [内置 Prompts](./04-builtin-prompts.md)

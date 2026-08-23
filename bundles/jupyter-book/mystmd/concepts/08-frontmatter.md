@@ -1,5 +1,5 @@
 ---
-type: Concept
+type: concept
 title: Frontmatter 元数据系统
 description: MyST 通过 YAML frontmatter 定义页面、项目和站点三个层级的元数据，myst-frontmatter 包提供 20+ 子模块分别处理 affiliations/contributors/biblio/numbering/kernelspec 等各类元数据。
 tags: [mystmd, frontmatter, yaml, metadata, bibliography]

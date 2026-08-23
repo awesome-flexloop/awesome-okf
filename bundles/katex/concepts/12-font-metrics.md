@@ -1,16 +1,19 @@
 ---
 type: Concept
 title: 字体与度量
-description: KaTeX 字体系统的组织结构，fontMetrics 度量数据，Unicode字符支持，以及字体度量提取工具链。
-tags: [katex, font, metrics, unicode, glyph]
-generated: { by: "reference_agent/trae-cn", at: 2026-08-22T22:35:00+08:00 }
-verified: { by: "process:seven-concepts-v", at: 2026-08-22T22:35:00+08:00 }
+description: KaTeX 字体系统的组织结构，fontMetrics 度量数据，Unicode 字符支持，字体度量提取工具链，以及官网 Font 页说明的字体格式、Browserslist 构建、Sass 变量和字体目录配置。
+tags: [katex, font, metrics, unicode, glyph, browserslist, sass]
+generated: { by: "reference_agent/trae-cn", at: 2026-08-23T22:00:00+08:00 }
+verified: { by: "process:seven-concepts-v", at: 2026-08-23T22:00:00+08:00 }
 status: stable
-stale_after: 2027-08-22
+stale_after: 2027-08-23
 sources:
   - id: src
     resource: /references/katex-source.md
     title: KaTeX 源码信源
+  - id: web-font
+    resource: /references/katex-website.md#web-font
+    title: KaTeX 官网 Font 页面
 ---
 
 ## KaTeX 字体体系
@@ -70,7 +73,7 @@ function getGlobalMetrics(size: number): {
 
 ### 符号注册
 
-符号在 [src/symbols.ts](https://github.com/KaTeX/KaTeX/blob/main/src/symbols.rs)（实际是.ts）中通过 `defineSymbol()` 注册到不同模式和字体中：
+符号在 [src/symbols.ts](https://github.com/KaTeX/KaTeX/blob/main/src/symbols.ts) 中通过 `defineSymbol()` 注册到不同模式和字体中：
 
 ```typescript
 defineSymbol(
@@ -169,9 +172,65 @@ KaTeX 对 Unicode 的支持通过几层机制实现：
 
 这些工具在 KaTeX 的**构建阶段**运行，生成嵌入到 dist 中的度量数据。运行时使用预生成的数据，不需要实时解析字体文件。
 
+## 字体格式与构建配置（用户视角）
+
+> 本节内容来自官网 Font 页面，面向从源码构建或自定义字体的开发者。
+
+### 三种字体格式
+
+KaTeX 提供三种字体格式[^web-font]：
+
+| 格式 | 适用场景 |
+|------|---------|
+| `.ttf` | 支持非常旧的浏览器和本地安装 |
+| `.woff` | 现代浏览器广泛支持 |
+| `.woff2` | 现代浏览器，体积更小、加载更快 |
+
+### Browserslist 按需构建
+
+从源码构建时，根据 [Browserslist](https://github.com/browserslist/browserslist) 配置自动转译代码，并**只包含目标环境所需的字体格式**[^web-font]。可通过 `BROWSERSLIST` 环境变量指定目标环境：
+
+```bash
+BROWSERSLIST="Chrome 68" pnpm build
+```
+
+也可通过 `USE_(FONT NAME)` 环境变量强制包含或排除某种字体格式，取值为 `"true"` 或 `"false"`[^web-font]。
+
+### Sass 变量覆盖
+
+使用 Sass 时可通过 `@use ... with (...)` 覆盖字体格式和字体目录变量[^web-font]：
+
+```scss
+// 仅使用 woff2，不包含 ttf/woff
+@use 'node_modules/katex/src/styles/katex' with (
+    $use-ttf: false,
+    $use-woff: false,
+    $use-woff2: true
+);
+
+// 自定义字体目录
+@use 'node_modules/katex/src/styles/katex' with (
+    $font-folder: "path/to/fonts"
+);
+```
+
+字体属性通过修改 `src/styles/fonts.scss` 文件中的变量控制。默认构建期望字体位于 `katex.min.css` 同级的 `fonts` 目录；CSS 通过相对 URL 引用字体（如 `url("fonts/KaTeX_AMS-Regular.woff2")`），移动或重命名字体会导致渲染失败[^web-font]。修改字体目录后需重新 `pnpm build`。
+
+### CSS、字体目录与构建工具的关系
+
+三者的协作关系如下：
+
+1. **CSS**（`katex.css`/`katex.min.css`）通过 `@font-face` 声明引用字体文件，路径是相对于 CSS 文件位置的 `fonts/` 子目录
+2. **字体目录**（`fonts/`）必须与 CSS 文件位于同级目录，否则 `url("fonts/...")` 解析失败
+3. **构建工具**（webpack/rollup + Sass + Browserslist）决定打包哪些字体格式、字体文件输出位置，以及是否转译以兼容目标浏览器
+
+因此，自托管时只需保持 `katex.min.css` 与 `fonts/` 目录的相对位置不变即可；使用打包工具时，需确保 loader 正确处理字体文件并输出到对应路径。更多自托管与字体加载策略见 [字体与单位](/concepts/17-fonts-and-units.md)。
+
+[^web-font]: 官网 Font 页面，https://katex.org/docs/font
+
 ## 字号系统
 
-LaTeX 有10个标准字号命令（从 `\tiny` 到 `\HUGE`），KaTeX 通过 `sizeMultipliers` 数组定义它们的相对倍数：
+LaTeX 有 10 个标准字号命令（从 `\tiny` 到 `\HUGE`），KaTeX 通过 `sizeMultipliers` 数组定义它们的相对倍数。该数组共 11 项（索引 0~10），其中索引 5 为 `\normalsize`（`Options.BASESIZE = 6`，数组下标 `size-1 = 5`）：
 
 ```typescript
 // [src/Options.ts]
@@ -180,18 +239,17 @@ const sizeMultipliers = [
     0.6,    // 1: \scriptsize
     0.7,    // 2: \footnotesize
     0.8,    // 3: \small
-    0.9,    // 4: (smaller than \normalsize)
-    1.0,    // 5: (unused / also normalsize-1)
-    1.0,    // 6: \normalsize (BASESIZE)
-    1.2,    // 7: \large
-    1.44,   // 8: \Large
-    1.728,  // 9: \LARGE
-    2.074,  // 10: \huge
-    2.488,  // 11: \HUGE (实际上在sizeStyleMap中10同时映射\huge和\HUGE到不同倍数)
+    0.9,    // 4: \normalsize-1
+    1.0,    // 5: \normalsize (BASESIZE)
+    1.2,    // 6: \large
+    1.44,   // 7: \Large
+    1.728,  // 8: \LARGE
+    2.074,  // 9: \huge
+    2.488,  // 10: \HUGE
 ];
 ```
 
-注意：从 normalsize 开始，每级字号是前一个的 1.2 倍（1.2^0=1.0, 1.2^1=1.2, 1.2^2=1.44, 1.2^3=1.728, 1.2^4=2.074），这是经典的 LaTeX 几何缩放比例。
+注意：从 normalsize（索引 5）开始，每级字号是前一个的 1.2 倍（1.2^0=1.0, 1.2^1=1.2, 1.2^2=1.44, 1.2^3=1.728, 1.2^4=2.074, 1.2^5=2.488），这是经典的 LaTeX 几何缩放比例。
 
 ## minRuleThickness
 
