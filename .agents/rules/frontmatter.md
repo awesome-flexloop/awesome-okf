@@ -132,3 +132,33 @@ stale_after: 2026-09-23    # 绝对日期；当日或之后内容视为过期
 3. 每个保留文件名（`index.md`、`log.md`）遵循对应结构。
 
 消费者**不得**因下述原因拒绝 bundle：缺少可选字段、未知 `type` 值、未知额外字段、断链、缺少 `index.md`。
+
+## 14. 构建兼容性（Sphinx 前端日期序列化）
+
+本项目使用 Sphinx + myst_parser 构建（`doc/conf.py`）。存在两个已知的构建兼容性约束：
+
+### 14.1 裸日期/时间戳自动加引号
+
+OKF v0.2 允许 frontmatter 中的裸日期/时间戳（如 `stale_after: 2026-09-23`、`generated.at: 2026-06-20T22:53:05Z`、`usage_window.from`）。但 myst_parser 会把无引号的 YAML 日期解析为 `datetime.date` 对象，进而在 `dict_to_fm_field_list` 中 `json.dumps` 时报：
+
+```
+TypeError: Object of type date is not JSON serializable
+```
+
+**本项目已内置修复**：`doc/conf.py` 通过 `source-read` 钩子 `_quote_frontmatter_dates`，在解析前为 frontmatter 块内的裸日期/时间戳自动补上双引号（覆盖行级与嵌套 map 两种场景）。因此**生产者无需修改日期格式**，照常按 OKF 规范书写裸日期即可。
+
+> 若未来重构 `doc/conf.py` 移除该钩子，必须保留此兼容性处理，否则全量构建将崩溃。
+
+### 14.2 可选扩展探测容错
+
+`doc/conf.py` 的 `_has()` 使用 `importlib.util.find_spec` 探测可选扩展（如 `sphinxext.opengraph`）。当顶层包不存在时会抛 `ModuleNotFoundError`，必须用 `try/except` 捕获并返回 `False`：
+
+```python
+def _has(mod: str) -> bool:
+    try:
+        return importlib.util.find_spec(mod) is not None
+    except (ImportError, ModuleNotFoundError):
+        return False
+```
+
+> **修复落地验证（防反模式）**：修改 `doc/conf.py` 后，必须实际运行 `sphinx-build -b dummy -E doc _build/dummy <文件>` 验证构建通过，并用 `git diff`/`git status` 核对变更确实落入工作树与提交。**禁止仅凭过程描述自认为"修复已完成"**——历史教训：曾因上下文丢失导致修复逻辑未真正写入文件、构建仍崩溃，而任务被误报为完成。
