@@ -10,7 +10,11 @@
 本脚本在 Sphinx 解析前扫描 index.md 的 toctree 链（引用语义，基于 Sphinx docname）：
   1) 校验每个 toctree 引用都能解析到真实存在的 .md——含「被 toctree 引用为目录
      index 的 xxx/index.md 必须存在」；
-  2) 从 doc/index.md 沿 index.md 的 toctree 链做 BFS，校验所有 .md 内容文档均可达。
+  2) 从 doc/index.md 沿 index.md 的 toctree 链做 BFS，校验所有 .md 内容文档均可达；
+  3) 目录文件清单一致性：对每个含 toctree 的 index.md，校验其目录内全部内容
+     （子目录 index 与直接 .md 文件）均已列入该 toctree（无「缺失条目」）。
+     这是 1)/2) 的盲区补充——某文件虽可经其他路径可达，但其所在目录的
+     index.md toctree 却未收录自身内容，构成目录文件清单不一致。
 
 刻意不做「每个含 .md 的目录都有 index.md」的机械要求：trae-skills 等 bundle 允许
 根 index.md 的 toctree 直接逐条列出 concepts/spec 等子目录下的内容文件，此时这些
@@ -178,13 +182,84 @@ def check_reachable(
     return [f"未收录(不可达): {_display(u)}" for u in unreached]
 
 
+def expected_entries(src_dir: Path) -> set[str]:
+    """计算目录内容隐含的应列 toctree 条目集合（docname 形式）。
+
+    对齐 fix_toctrees.collect_entries 语义：
+    - 子目录含 index.md → ``<subdir>/index``；
+    - 子目录无 index.md → 逐条列出其直接 .md 文件 ``<subdir>/<file>``；
+    - 目录内直接 .md 文件（index/README 除外）→ ``<file>``；
+    - 跳过隐藏项（.spec 除外）与构建产物目录。
+    """
+    expected: set[str] = set()
+    try:
+        items = list(src_dir.iterdir())
+    except OSError:
+        return expected
+    for item in items:
+        if item.name.startswith(".") and item.name != ".spec":
+            continue
+        if item.name in EXCLUDE_DIRS:
+            continue
+        if item.is_dir():
+            if (item / INDEX_NAME).exists():
+                expected.add(f"{item.name}/index")
+            else:
+                for f in item.glob("*.md"):
+                    if f.name.lower() != "readme.md":
+                        expected.add(f"{item.name}/{f.stem}")
+        elif item.is_file() and item.suffix == ".md":
+            if item.name != INDEX_NAME and item.name.lower() != "readme.md":
+                expected.add(item.stem)
+    return expected
+
+
+def _to_docname(entry: str) -> str | None:
+    """把 toctree 条目归一化为相对其 index.md 所在目录的 docname；非本地文件目标返回 None。
+
+    绝对 docname（``/xxx``，相对 srcdir）为跨目录引用，不参与单目录一致性比对。
+    """
+    e = entry.strip()
+    if not e or _SKIP_ENTRY.match(e):
+        return None
+    tm = re.match(r"^.+\s*<\s*([^>]+?)\s*>$", e)  # RST 风格 `标题 <docname>`
+    if tm:
+        e = tm.group(1)
+    e = e.replace("\\", "/")
+    if e.startswith("/"):
+        return None
+    return re.sub(r"\.(md|rst|txt)$", "", e)
+
+
+def check_consistency(index_files: list[Path]) -> list[str]:
+    """校验每个含 toctree 的 index.md：目录内全部内容均已列入（无缺失条目）。
+
+    覆盖 check_broken/check_reachable 的盲区：文件虽可经其他路径全局可达，
+    但其所在目录的 index.md toctree 未收录自身内容（目录文件清单不一致）。
+    """
+    errors: list[str] = []
+    for idx in index_files:
+        entries = extract_entries(idx)
+        if not entries:
+            continue  # 无 toctree 的 index.md 不在本检查范围
+        listed = {
+            d
+            for e in entries
+            if (d := _to_docname(e)) is not None
+        }
+        for m in sorted(expected_entries(idx.parent) - listed):
+            errors.append(f"缺失条目: {_display(idx)} 的 toctree 未收录 {m}")
+    return errors
+
+
 def run_scan(srcdir: Path) -> list[str]:
-    """对给定 doc 根执行完整扫描（断链 + 可达性）。"""
+    """对给定 doc 根执行完整扫描（断链 + 可达性 + 目录文件清单一致性）。"""
     index_files = index_files_under(srcdir)
     if not index_files:
         return ["未找到任何 index.md"]
     errors, edges = check_broken(index_files, srcdir)
     errors += check_reachable(srcdir, edges, all_md_under(srcdir))
+    errors += check_consistency(index_files)
     return errors
 
 
@@ -212,8 +287,17 @@ def self_test() -> bool:
         d = tmp / "missingidx"
         d.mkdir()
         (d / INDEX_NAME).write_text("```{toctree}\n\nsub/index\n```\n", encoding="utf-8")
+        # 拦截用例：目录文件清单不一致——extra.md 可经根 toctree 全局可达，
+        # 但其所在目录 a/index.md 的 toctree 未收录自身内容（仅 reachable 检查漏判）
+        e = tmp / "consistency"
+        (e / "a" / "notes").mkdir(parents=True)
+        (e / "a" / "notes" / "x.md").write_text("# x\n", encoding="utf-8")
+        (e / "a" / "notes" / INDEX_NAME).write_text("```{toctree}\n\nx\n```\n", encoding="utf-8")
+        (e / "a" / "extra.md").write_text("# extra\n", encoding="utf-8")
+        (e / "a" / INDEX_NAME).write_text("```{toctree}\n\nnotes/index\n```\n", encoding="utf-8")
+        (e / INDEX_NAME).write_text("```{toctree}\n\na/index\na/extra\n```\n", encoding="utf-8")
 
-        for name, expect_ok in (("pass", True), ("broken", False), ("orphan", False), ("missingidx", False)):
+        for name, expect_ok in (("pass", True), ("broken", False), ("orphan", False), ("missingidx", False), ("consistency", False)):
             errors = run_scan(tmp / name)
             actual_ok = not errors
             if actual_ok == expect_ok:
