@@ -12,6 +12,8 @@ Documentation = "https://awesome-okf-xs.readthedocs.io/"
 [project.optional-dependencies]
 doc = [
     "sphinx>=7.0",
+    "invoke",
+    "invocations==4.1.0",
     "myst-parser>=4.0",
     "sphinx-book-theme>=1.0",
     "sphinx-design",
