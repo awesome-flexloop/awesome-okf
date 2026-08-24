@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: jupyterlite 指令——嵌入 JupyterLab
-description: 使用 .. jupyterlite:: 指令在文档中嵌入完整的 JupyterLab 界面，支持打开指定 Notebook 和 Markdown 文件
+description: "使用 .. jupyterlite:: 指令在文档中嵌入完整的 JupyterLab 界面，支持打开指定 Notebook 和 Markdown 文件"
 tags: [directive, jupyterlite, jupyterlab, iframe]
 generated: { by: "source-code-to-okf-wiki", at: "2026-08-22T20:00:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-22T20:00:00+08:00" }

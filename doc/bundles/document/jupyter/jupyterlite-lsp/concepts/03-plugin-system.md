@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: 三插件体系
-description: @jupyterlite/lsp 核心包的三个插件（hacksPlugin、serverPlugin、routesPlugin）的职责、依赖关系与启动机制
+description: "@jupyterlite/lsp 核心包的三个插件（hacksPlugin、serverPlugin、routesPlugin）的职责、依赖关系与启动机制"
 tags: [plugin, jupyterlite, hacks, server, routes, token]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-22T00:00:00Z" }
 verified: { by: "process:grep-verification", at: "2026-08-22T00:00:00Z" }

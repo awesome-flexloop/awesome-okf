@@ -279,3 +279,7 @@ model.observe_messages(echo_bot)
 - [双传输架构](/concepts/dual-transport.md)
 - [消息生命周期](/concepts/message-lifecycle.md)
 - [扩展点系统](/concepts/extension-points.md)
+
+[^chat-manager-py]: chat_manager.py
+[^events-py]: binderhub/events.py 源码
+[^models-py]: models.py

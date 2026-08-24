@@ -9,10 +9,10 @@ stale_after: 2027-08-22
 sources:
   - id: widget-source
     resource: /external/libs/jupyter/lumino/packages/widgets/src/widget.ts
-    title: @lumino/widgets Widget 源码
+    title: "@lumino/widgets Widget 源码"
   - id: title-source
     resource: /external/libs/jupyter/lumino/packages/widgets/src/title.ts
-    title: @lumino/widgets Title 源码
+    title: "@lumino/widgets Title 源码"
 ---
 
 # Widget 生命周期与 DOM 管理

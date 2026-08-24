@@ -1,6 +1,6 @@
 ---
 type: Concept
-title: %show 魔法命令
+title: "%show 魔法命令"
 description: p5-kernel 的 %show magic 命令语法、参数、iframe srcdoc 生成机制、display 更新与增量渲染
 tags: [magic, show, iframe, srcdoc, display-data, incremental-rendering]
 generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T17:00:00+08:00" }

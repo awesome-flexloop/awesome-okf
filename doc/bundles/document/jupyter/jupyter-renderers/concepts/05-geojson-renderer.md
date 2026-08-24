@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: GeoJSON 地理数据渲染器
-description: @jupyterlab/geojson-extension 扩展实现，使用 Leaflet 地图库渲染 GeoJSON 地理数据，支持多种底图切换、API Key 管理、属性弹窗和 Notebook 滚动适配
+description: "@jupyterlab/geojson-extension 扩展实现，使用 Leaflet 地图库渲染 GeoJSON 地理数据，支持多种底图切换、API Key 管理、属性弹窗和 Notebook 滚动适配"
 tags: [geojson, leaflet, map, gis, mime-renderer]
 sources:
   - id: geojson-index
@@ -329,3 +329,5 @@ export const mapIcon = new LabIcon({
 - [FASTA 生物序列渲染器](/concepts/04-fasta-renderer.md)
 - [Vega/Vega-Lite 可视化渲染器](/concepts/07-vega-renderer.md)
 - [IRenderMime 核心 API 参考](/references/rendermime-interfaces-api.md)
+
+[^geojson-icons]: geojson-extension/src/icons.ts

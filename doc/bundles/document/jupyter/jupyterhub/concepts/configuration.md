@@ -423,3 +423,5 @@ JupyterHub 按以下顺序查找配置文件：
 - [Authenticator 认证系统](authenticator.md) — 认证器配置与插件体系
 - [Spawner 机制](spawner.md) — Spawner 配置与服务器生命周期
 - [应用生命周期](lifecycle.md) — 配置在 initialize() 阶段的加载流程
+
+[^app-src]: JupyterHub Application 源码参考

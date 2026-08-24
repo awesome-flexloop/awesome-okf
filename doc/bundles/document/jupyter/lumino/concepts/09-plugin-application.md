@@ -9,13 +9,13 @@ stale_after: 2027-08-22
 sources:
   - id: application-source
     resource: /external/libs/jupyter/lumino/packages/application/src/index.ts
-    title: @lumino/application 源码
+    title: "@lumino/application 源码"
   - id: plugins-source
     resource: /external/libs/jupyter/lumino/packages/coreutils/src/plugins.ts
-    title: @lumino/coreutils PluginRegistry 源码
+    title: "@lumino/coreutils PluginRegistry 源码"
   - id: token-source
     resource: /external/libs/jupyter/lumino/packages/coreutils/src/token.ts
-    title: @lumino/coreutils Token 源码
+    title: "@lumino/coreutils Token 源码"
 ---
 
 # 插件化应用框架

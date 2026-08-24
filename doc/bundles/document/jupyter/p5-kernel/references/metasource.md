@@ -12,10 +12,10 @@ sources:
     title: 根 package.json
   - id: kernel-pkg
     resource: https://github.com/jupyterlite/p5-kernel/blob/main/packages/p5-kernel/package.json
-    title: @jupyterlite/p5-kernel package.json
+    title: "@jupyterlite/p5-kernel package.json"
   - id: ext-pkg
     resource: https://github.com/jupyterlite/p5-kernel/blob/main/packages/p5-kernel-extension/package.json
-    title: @jupyterlite/p5-kernel-extension package.json
+    title: "@jupyterlite/p5-kernel-extension package.json"
   - id: pyproject
     resource: https://github.com/jupyterlite/p5-kernel/blob/main/pyproject.toml
     title: pyproject.toml

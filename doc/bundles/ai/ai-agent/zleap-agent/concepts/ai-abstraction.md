@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: AI 抽象层
-description: @zleap/ai 包的 ProviderAdapter 统一接口、ProviderCapabilities 能力声明、AssistantStreamEvent 流式事件模型、Anthropic/OpenAI 兼容双 Provider 实现、SSE 流式解析、Embeddings 向量化与 Faux 降级嵌入。
+description: "@zleap/ai 包的 ProviderAdapter 统一接口、ProviderCapabilities 能力声明、AssistantStreamEvent 流式事件模型、Anthropic/OpenAI 兼容双 Provider 实现、SSE 流式解析、Embeddings 向量化与 Faux 降级嵌入。"
 tags: [zleap-agent, ai, provider, llm, anthropic, openai, sse, streaming, embeddings, rag]
 generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T12:00:00+08:00" }
 status: stable
@@ -9,7 +9,7 @@ stale_after: 2027-08-22
 sources:
   - id: ai-types
     resource: ../../../../../../external/libs/models/ai/Zleap-Agent/packages/ai/src/types.ts
-    title: @zleap/ai 类型系统
+    title: "@zleap/ai 类型系统"
   - id: ai-anthropic
     resource: ../../../../../../external/libs/models/ai/Zleap-Agent/packages/ai/src/providers/anthropic.ts
     title: Anthropic Provider

@@ -9,7 +9,7 @@ stale_after: 2027-08-22
 sources:
   - id: messaging-source
     resource: /external/libs/jupyter/lumino/packages/messaging/src/index.ts
-    title: @lumino/messaging 源码
+    title: "@lumino/messaging 源码"
 ---
 
 # MessageLoop 消息循环机制

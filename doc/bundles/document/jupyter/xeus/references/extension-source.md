@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: JupyterLab扩展注册参考
-description: @jupyterlite/xeus-extension 包的JupyterLab插件注册、内核规格提供和empack元数据
+description: "@jupyterlite/xeus-extension 包的JupyterLab插件注册、内核规格提供和empack元数据"
 tags: [extension, jupyterlab, plugin, kernel-spec, tokens, typescript]
 generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T20:10:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-22T20:10:00+08:00" }

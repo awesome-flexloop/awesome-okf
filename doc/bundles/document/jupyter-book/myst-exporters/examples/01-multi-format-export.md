@@ -35,7 +35,7 @@ jupyter-book init
 
 创建 `paper.md`：
 
-```markdown
+````markdown
 ---
 title: "My Research Paper"
 authors:
@@ -75,7 +75,7 @@ See @fig:example for an illustration.
 ## Conclusion
 
 The results demonstrate the power of unified multi-format export.
-```
+````
 
 ## 步骤 2：配置导出格式
 

@@ -47,7 +47,7 @@ export class LocalDiskCache<T> implements ICache<T> {
 ### 实现细节
 
 - 构造时通过 `mkdirSync(cachePath, { recursive: true })` 递归创建缓存目录
-- `_makeKeyPath(key)` 使用 `path.join(cachePath, `${key}${extension}`)` 生成文件路径
+- `_makeKeyPath(key)` 使用 ``path.join(cachePath, `${key}${extension}`)`` 生成文件路径
 - `get()` 使用 `JSON.parse(readFileSync(keyPath, 'utf8'))` 反序列化
 - `set()` 使用 `writeFileSync(keyPath, JSON.stringify(document), 'utf8')` 序列化写入
 - key 通常是 MD5 哈希值（十六进制字符串），不包含路径分隔符，可直接作为文件名

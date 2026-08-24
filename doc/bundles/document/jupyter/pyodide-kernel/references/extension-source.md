@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: JupyterLab Extension 源码参考
-description: @jupyterlite/pyodide-kernel-extension JupyterLab 扩展源码，负责在 JupyterLab 中注册 Pyodide 内核规范
+description: "@jupyterlite/pyodide-kernel-extension JupyterLab 扩展源码，负责在 JupyterLab 中注册 Pyodide 内核规范"
 tags: [extension, jupyterlab, plugin, kernel-spec]
 generated: { by: "source-code-to-okf-wiki", at: "2026-08-22T00:00:00Z" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-22T00:00:00Z" }
@@ -11,7 +11,7 @@ sources:
   - id: ext-index
     resource: /references/extension-source.md
     title: "packages/pyodide-kernel-extension/src/index.ts"
-  - id:ext-schema
+  - id: ext-schema
     resource: /references/extension-source.md
     title: "packages/pyodide-kernel-extension/schema/kernel.v0.schema.json"
 ---

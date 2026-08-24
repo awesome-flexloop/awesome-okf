@@ -179,11 +179,11 @@ kernelspec:
 
 这是一个包含代码的笔记本页面。
 
-```{code-cell}
+```python
 print("Hello, World!")
 ```
 
-```{code-cell}
+```python
 import numpy as np
 x = np.linspace(0, 2*np.pi, 100)
 print(f"x shape: {x.shape}")

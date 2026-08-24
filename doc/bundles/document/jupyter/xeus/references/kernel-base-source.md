@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: xeus-core 基类API参考
-description: @jupyterlite/xeus-core 包的核心抽象基类、接口定义和日志系统API
+description: "@jupyterlite/xeus-core 包的核心抽象基类、接口定义和日志系统API"
 tags: [api, base-class, kernel, worker, typescript]
 generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T20:10:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-22T20:10:00+08:00" }

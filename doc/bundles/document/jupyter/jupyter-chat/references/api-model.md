@@ -163,3 +163,7 @@ interface IChatContext {
   readonly awareness?: IAwareness;
 }
 ```
+
+[^input-model-ts]: input-model.ts
+[^message-ts]: message.ts
+[^model-ts]: model.ts

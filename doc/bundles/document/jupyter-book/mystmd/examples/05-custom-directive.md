@@ -525,7 +525,7 @@ export default snippetDirective;
 
 ## 示例 6：在 mystParse 中注册和使用
 
-```ts
+````ts
 // test-directives.ts
 import { mystParse } from 'myst-parser';
 import { VFile } from 'vfile';
@@ -584,7 +584,7 @@ directives.forEach((d: any) => {
 vfile.messages.forEach(m => {
   console.log(`[${m.fatal ? 'ERROR' : 'WARN'}] line ${m.line}: ${m.message}`);
 });
-```
+````
 
 ## 示例 7：打包为 MystPlugin
 

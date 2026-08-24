@@ -3,7 +3,7 @@ type: concept
 title: "执行引擎：字段解析与值完成"
 description: "GraphQL 执行引擎核心算法：ExecuteRequest 入口、CoerceVariableValues、ExecuteOperation（query 并行/mutation 串行/subscription 事件流）、CollectFields/DoesFragmentTypeApply/MergeSelectionSets、ExecuteField/CoerceArgumentValues/ResolveFieldValue、CompleteValue 各分支（Scalar/Enum/Object/Interface/Union/List/NonNull）以及 Non-Null 错误传播与 ResolveAbstractType。"
 sources:
-  - /references/spec-section-6-execution.md
+  - resource: /references/spec-section-6-execution.md
     facts: [F-303, F-304, F-305, F-306, F-307, F-308, F-309, F-310, F-311, F-312, F-313, F-314, F-315, F-316, F-317, F-318, F-319, F-320, F-321, F-322, F-323, F-324, F-325, F-326, F-327, F-328, F-329, F-330, F-331, F-332, F-333, F-334, F-335, F-336, F-337, F-338, F-339, F-340, F-341, F-342, F-343, F-344, F-345, F-346, F-347, F-348, F-349, F-350, F-351, F-352, F-353, F-354, F-355, F-356, F-357, F-358, F-359, F-360, F-361, F-362, F-363, F-364, F-365, F-366, F-367, F-368, F-369, F-370, F-371, F-372, F-373, F-374, F-375]
 ---
 

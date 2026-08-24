@@ -3,7 +3,7 @@ type: concept
 title: "指令、包装类型与输入系统"
 description: "GraphQL ListType 与 NonNullType 包装语法、指令系统（@skip/@include/@deprecated/@specifiedBy/@oneOf）、自定义指令 DirectiveDefinition、指令位置分类、输入强制转换规则以及变量定义与类型兼容性。"
 sources:
-  - /references/spec-section-3-type-system.md
+  - resource: /references/spec-section-3-type-system.md
     facts: [F-195, F-196, F-197, F-198, F-199, F-200, F-201, F-202, F-203, F-204, F-205, F-206, F-207, F-208, F-209, F-210, F-211, F-212, F-213, F-214, F-215, F-216, F-217, F-218]
 ---
 

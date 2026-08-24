@@ -227,3 +227,10 @@ jlpm build-py
 # dist/jupyterlab_geojson-*.whl
 # ...
 ```
+
+[^fasta-init]: jupyterlab_fasta/__init__.py
+[^fasta-pyproject]: fasta-extension/pyproject.toml
+[^geojson-init]: jupyterlab_geojson/__init__.py
+[^katex-init]: jupyterlab_katex/__init__.py
+[^mathjax2-init]: jupyterlab_mathjax2/__init__.py
+[^vega3-init]: jupyterlab_vega3/__init__.py

@@ -186,7 +186,7 @@ papyri gen your-package.toml \
 3. **exclude 使用限定名**：格式为 `module:attribute`，支持子模块路径
 4. **submodules 必须可导入**：列出的子模块会被 `importlib.import_module()` 导入
 5. **docs_path 指向 RST 文件**：叙述文档与 API 文档统一在 IR 层交叉引用
-6. **{{version}} 模板**：meta.tag 中的 `{{version}}` 会被替换为包的实际版本号
+6. **\{{version}} 模板**：meta.tag 中的 `\{{version}}` 会被替换为包的实际版本号
 
 ## 相关示例
 

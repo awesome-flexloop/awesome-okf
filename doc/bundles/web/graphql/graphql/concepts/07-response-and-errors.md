@@ -3,7 +3,7 @@ type: concept
 title: "响应格式、错误冒泡与序列化"
 description: "GraphQL 响应的三种形态（execution result/response stream/request error）、data/errors/extensions 结构、request error 与 execution error 的区别、错误对象格式（message/locations/path/extensions）、Non-Null 错误冒泡 path 规则、序列化原语与 JSON 映射、字段顺序保持以及 Appendix C 语法产生式汇总。"
 sources:
-  - /references/spec-section-7-response.md
+  - resource: /references/spec-section-7-response.md
     facts: [F-376, F-377, F-378, F-379, F-380, F-381, F-382, F-383, F-384, F-385, F-386, F-387, F-388, F-389, F-390, F-391, F-392, F-393, F-394, F-395, F-396, F-397, F-398, F-399, F-400, F-401, F-402, F-403, F-404, F-405, F-406, F-407, F-408, F-409, F-410, F-411, F-412, F-413, F-414, F-415, F-416, F-417, F-418, F-419, F-420, F-421, F-422, F-423, F-424, F-425, F-426, F-427, F-428, F-429, F-430, F-431, F-432, F-433, F-434]
 ---
 

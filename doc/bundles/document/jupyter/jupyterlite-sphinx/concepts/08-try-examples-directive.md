@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: try_examples 指令——交互式文档示例
-description: 使用 .. try_examples:: 指令将 doctest 格式的代码示例转为可在 JupyterLite 中运行的交互式 Notebook，支持 autodoc 自动注入
+description: "使用 .. try_examples:: 指令将 doctest 格式的代码示例转为可在 JupyterLite 中运行的交互式 Notebook，支持 autodoc 自动注入"
 tags: [directive, try-examples, doctest, interactive, autodoc]
 generated: { by: "source-code-to-okf-wiki", at: "2026-08-22T20:00:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-22T20:00:00+08:00" }

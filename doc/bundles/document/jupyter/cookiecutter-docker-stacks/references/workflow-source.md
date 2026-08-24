@@ -47,7 +47,7 @@ sources:
 | 配置项 | 值 | 说明 |
 |--------|-----|------|
 | runs-on | ubuntu-24.04 | 构建运行器 |
-| concurrency group | `${{ github.workflow }}-${{ github.ref }}` | 同分支并发取消 |
+| concurrency group | `$\{{ github.workflow }}-$\{{ github.ref }}` | 同分支并发取消 |
 | DOCKER_BUILDKIT | 1 | 启用BuildKit |
 | BUILDKIT_PROGRESS | plain | 完整构建日志 |
 | permissions.contents | write | 允许写内容 |
@@ -70,7 +70,7 @@ datascience.yaml, pyspark.yaml, all-spark.yaml
 | 步骤 | 命令 | 说明 |
 |------|------|------|
 | Install cookiecutter | pip install -r requirements-test.txt | 安装cookiecutter |
-| Create project | cookiecutter --no-input --config-file configs/${{matrix.config}} | 使用预设配置生成项目 |
+| Create project | cookiecutter --no-input --config-file configs/$\{{matrix.config}} | 使用预设配置生成项目 |
 | Build image | docker build image/ | 在/tmp/my-jupyter-stack下构建 |
 | Install test deps | pip install -r requirements-dev.txt | 安装测试依赖 |
 | Run tests | pytest tests/ | foundation.yaml跳过（无Jupyter Server） |

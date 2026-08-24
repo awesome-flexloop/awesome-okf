@@ -3,11 +3,11 @@ type: example
 title: "错误处理与 Non-Null 冒泡"
 description: "通过图书馆场景的 Schema 演示 request error 与 execution error 的响应区别、Non-Null 错误冒泡链、errors 数组的 path/locations/extensions 字段以及部分数据响应模式。"
 sources:
-  - /references/spec-section-5-validation.md
+  - resource: /references/spec-section-5-validation.md
     facts: [F-249, F-250, F-252, F-254, F-256, F-261, F-268, F-270, F-272, F-285, F-287, F-289, F-293, F-295]
-  - /references/spec-section-6-execution.md
+  - resource: /references/spec-section-6-execution.md
     facts: [F-303, F-307, F-308, F-309, F-311, F-313, F-349, F-355, F-356, F-361, F-368, F-369, F-370, F-371, F-372, F-373, F-374, F-375]
-  - /references/spec-section-7-response.md
+  - resource: /references/spec-section-7-response.md
     facts: [F-376, F-377, F-378, F-380, F-381, F-384, F-385, F-386, F-387, F-388, F-389, F-390, F-393, F-394, F-395, F-396, F-397, F-398, F-399, F-400, F-401, F-402, F-403, F-404, F-405, F-406]
 ---
 

@@ -55,4 +55,4 @@ md = MarkdownIt().use(<plugin_func>, **options)
 | tasklists | `mdit_py_plugins.tasklists` | `- [x] task` | Core | enabled, label, label_after | html_inline(checkbox) |
 | texmath | `mdit_py_plugins.texmath` | `\(x\)` / `\[x\]` | Block+Inline | - | math_inline/block |
 | wordcount | `mdit_py_plugins.wordcount` | （自动统计） | Core | per_minute, count_func, store_text | （无新Token） |
-| substitution | `mdit_py_plugins.substitution` | {{variable}} | Inline | - | - |
+| substitution | `mdit_py_plugins.substitution` | \{{variable}} | Inline | - | - |

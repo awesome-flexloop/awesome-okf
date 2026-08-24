@@ -9,7 +9,7 @@ stale_after: 2027-08-22
 sources:
   - id: disposable-source
     resource: /external/libs/jupyter/lumino/packages/disposable/src/index.ts
-    title: @lumino/disposable 源码
+    title: "@lumino/disposable 源码"
 ---
 
 # IDisposable 资源管理模式

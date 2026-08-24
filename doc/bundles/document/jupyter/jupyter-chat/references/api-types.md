@@ -217,3 +217,6 @@ class MimeModel:
     metadata: dict | None = None
     trusted: bool | None = None
 ```
+
+[^models-py]: models.py
+[^types-ts]: TypeScript类型定义

@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: voici 指令——嵌入 Voici 仪表板
-description: 使用 .. voici:: 指令嵌入 Voici 仪表板（基于 Voilà 的静态仪表板渲染），需要安装 voici 包
+description: "使用 .. voici:: 指令嵌入 Voici 仪表板（基于 Voilà 的静态仪表板渲染），需要安装 voici 包"
 tags: [directive, voici, dashboard, voila]
 generated: { by: "source-code-to-okf-wiki", at: "2026-08-22T20:00:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-22T20:00:00+08:00" }

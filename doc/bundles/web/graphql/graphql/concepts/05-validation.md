@@ -3,7 +3,7 @@ type: concept
 title: "验证管线与规则体系"
 description: "GraphQL 验证在执行前进行，覆盖文档验证（操作命名/匿名操作/单根字段订阅）、字段验证（叶子字段/字段合并/参数名）、参数验证、片段验证（spread 可能性/目标类型/环检测/未使用片段）、值验证、指令验证以及变量验证的 IsVariableUsageAllowed 类型兼容性算法。"
 sources:
-  - /references/spec-section-5-validation.md
+  - resource: /references/spec-section-5-validation.md
     facts: [F-249, F-250, F-251, F-252, F-253, F-254, F-255, F-256, F-257, F-258, F-259, F-260, F-261, F-262, F-263, F-264, F-265, F-266, F-267, F-268, F-269, F-270, F-271, F-272, F-273, F-274, F-275, F-276, F-277, F-278, F-279, F-280, F-281, F-282, F-283, F-284, F-285, F-286, F-287, F-288, F-289, F-290, F-291, F-292, F-293, F-294, F-295, F-296, F-297, F-298, F-299, F-300, F-301, F-302]
 ---
 

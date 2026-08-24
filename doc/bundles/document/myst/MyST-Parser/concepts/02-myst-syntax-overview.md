@@ -77,7 +77,7 @@ print("代码块中的代码")
 
 ### 常用内置指令
 
-```markdown
+````markdown
 ```{note} 注意
 这是一个注意提示。
 ```
@@ -105,7 +105,7 @@ print("带行号的代码块")
 
 ```{include} subfile.md
 ```
-```
+````
 
 ## 角色（Role）
 

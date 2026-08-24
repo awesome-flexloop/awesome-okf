@@ -9,7 +9,7 @@ stale_after: 2027-08-22
 sources:
   - id: vdom-source
     resource: /external/libs/jupyter/lumino/packages/virtualdom/src/index.ts
-    title: @lumino/virtualdom 源码
+    title: "@lumino/virtualdom 源码"
 ---
 
 # 虚拟 DOM 渲染引擎

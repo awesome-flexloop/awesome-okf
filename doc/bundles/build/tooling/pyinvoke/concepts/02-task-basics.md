@@ -2,7 +2,7 @@
 type: Concept
 title: Task 基础
 description: Task 类详解：@task 参数、任务名与别名、默认任务、帮助文本、pre/post 钩子、autoprint、iterable/incrementable 参数
-tags: [pyinvoke, task, decorator, @task, call]
+tags: [pyinvoke, task, decorator, "@task", call]
 generated: { by: "reference_agent/trae-glm", at: "2026-08-21T10:00:00Z" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-21T12:00:00Z" }
 status: stable

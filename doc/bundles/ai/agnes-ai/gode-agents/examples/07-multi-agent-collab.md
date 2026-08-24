@@ -15,8 +15,6 @@ sources:
     title: Tools API 参考
 ---
 
-# 多智能体协作
-
 ## 概述
 
 本示例演示如何使用 `managed_agents` 参数实现多智能体协作。通过将专业化的子 Agent（如搜索专家、计算专家、代码专家）注册到主 Agent，主 Agent 可以根据任务需求自动选择并调用合适的子 Agent 来完成子任务，形成"总管+专家"的协作模式。每个子 Agent 必须设置 `name` 和 `description`，主 Agent 根据 description 判断何时调用哪个子 Agent。

@@ -127,3 +127,6 @@ interface IChatPanel extends Widget {
   toolbar: Widget;
 }
 ```
+
+[^factory-ts]: factory.ts
+[^lab-token-ts]: token.ts

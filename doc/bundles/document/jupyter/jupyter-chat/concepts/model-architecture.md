@@ -343,3 +343,8 @@ function ChatInput() {
 - [扩展点系统](/concepts/extension-points.md)
 - [消息生命周期](/concepts/message-lifecycle.md)
 - [Model API 参考](/references/api-model.md)
+
+[^context-ts]: context.ts
+[^input-model-ts]: input-model.ts
+[^message-ts]: message.ts
+[^model-ts]: model.ts

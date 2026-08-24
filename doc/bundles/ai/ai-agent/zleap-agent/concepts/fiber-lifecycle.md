@@ -9,7 +9,7 @@ stale_after: 2027-08-22
 sources:
   - id: core-types
     resource: ../../../../../../external/libs/models/ai/Zleap-Agent/packages/core/src/types.ts
-    title: @zleap/core 类型系统
+    title: "@zleap/core 类型系统"
   - id: core-runtime
     resource: ../../../../../../external/libs/models/ai/Zleap-Agent/packages/core/src/runtime.ts
     title: AgentRuntime 核心运行时

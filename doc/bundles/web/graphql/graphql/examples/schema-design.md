@@ -3,7 +3,7 @@ type: example
 title: "Schema 设计实战"
 description: "通过内容平台场景演示 Interface 与 Union、枚举、输入对象、自定义指令、Non-Null 权衡以及 Connection/Edge/PageInfo 游标分页模式的 Schema 设计。"
 sources:
-  - /references/spec-section-3-type-system.md
+  - resource: /references/spec-section-3-type-system.md
     facts: [F-112, F-113, F-114, F-115, F-116, F-117, F-138, F-141, F-143, F-144, F-147, F-149, F-150, F-156, F-157, F-158, F-159, F-161, F-164, F-165, F-166, F-167, F-168, F-172, F-173, F-174, F-175, F-176, F-179, F-180, F-181, F-182, F-183, F-184, F-185, F-192, F-193, F-195, F-196, F-197, F-198, F-199, F-200, F-201, F-202, F-203, F-204, F-213]
 ---
 

@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: 核心LSP包源码引用（@jupyterlite/lsp）
-description: @jupyterlite/lsp 核心包的 plugin.ts、servers.ts、session.ts、tokens.ts 源码引用
+description: "@jupyterlite/lsp 核心包的 plugin.ts、servers.ts、session.ts、tokens.ts 源码引用"
 tags: [source, lsp, plugin, session, tokens]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-22T00:00:00Z" }
 status: stable

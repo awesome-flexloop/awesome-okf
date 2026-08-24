@@ -307,3 +307,10 @@ const plugin: JupyterFrontEndPlugin<void> = {
 - [生命周期事件](/concepts/lifecycle-events.md)
 - [附件系统](/concepts/attachment-system.md)
 - [Token 与命令参考](/references/api-tokens.md)
+
+[^events-py]: binderhub/events.py 源码
+[^factory-ts]: factory.ts
+[^models-py]: models.py
+[^registers-idx]: registers/index.ts
+[^token-ts]: chatFileType 令牌常量模块
+[^types-ts]: TypeScript类型定义

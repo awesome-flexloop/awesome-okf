@@ -283,3 +283,9 @@ KaTeX 扩展在 package.json 中声明了禁用列表：[^katex-pkg]
 - [MIME 渲染器开发模式](/concepts/02-mime-renderer-pattern.md)
 - [自定义数学公式排版器](/examples/02-custom-latex-typesetter.md)
 - [IRenderMime 核心 API 参考](/references/rendermime-interfaces-api.md)
+
+[^katex-autorender]: katex-extension/src/autorender.ts
+[^katex-index]: katex-extension/src/index.ts
+[^katex-pkg]: katex-extension/package.json
+[^mathjax2-index]: mathjax2-extension/src/index.ts
+[^mathjax2-typesetter]: mathjax2-extension/src/typesetter.ts

@@ -210,3 +210,8 @@ import './index.css';
 ```
 
 这是 JupyterLab 元包的安装配置文件，标记该包由 Python 包管理器管理。
+
+[^fasta-pkg]: fasta-extension/package.json
+[^katex-pkg]: katex-extension/package.json
+[^lerna]: lerna.json
+[^root-pkg]: root package.json

@@ -3,7 +3,7 @@ type: concept
 title: "内省系统：GraphQL 的自描述机制"
 description: "GraphQL 内省系统通过 __ 前缀保留名称、元字段（__typename/__type/__schema）和一组内省类型（__Schema/__Type/__Field/__InputValue/__EnumValue/__Directive/__TypeKind/__DirectiveLocation）使类型系统自身可被 GraphQL 语言查询，支撑工具生态并成为 AI agent 自动发现 API 能力的基础设施。"
 sources:
-  - /references/spec-section-4-introspection.md
+  - resource: /references/spec-section-4-introspection.md
     facts: [F-219, F-220, F-221, F-222, F-223, F-224, F-225, F-226, F-227, F-228, F-229, F-230, F-231, F-232, F-233, F-234, F-235, F-236, F-237, F-238, F-239, F-240, F-241, F-242, F-243, F-244, F-245, F-246, F-247, F-248]
 ---
 

@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: 轮询与信号系统
-description: @lumino/polling双Poll轮询(_statusPoll 3s/backoff、_fetchPoll按需)和@lumino/signaling事件驱动20+信号，实现自动状态同步与UI响应。
+description: "@lumino/polling双Poll轮询(_statusPoll 3s/backoff、_fetchPoll按需)和@lumino/signaling事件驱动20+信号，实现自动状态同步与UI响应。"
 tags: [polling, signal, lumino, event-driven, refresh, standby, poll, status-poll, fetch-poll, reactivity]
 generated:
   by: source-code-to-okf-wiki

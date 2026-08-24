@@ -9,10 +9,10 @@ stale_after: 2027-08-22
 sources:
   - id: boxlayout-source
     resource: /external/libs/jupyter/lumino/packages/widgets/src/boxlayout.ts
-    title: @lumino/widgets BoxLayout 源码
+    title: "@lumino/widgets BoxLayout 源码"
   - id: docklayout-source
     resource: /external/libs/jupyter/lumino/packages/widgets/src/docklayout.ts
-    title: @lumino/widgets DockLayout 源码
+    title: "@lumino/widgets DockLayout 源码"
 prerequisites:
   - /lumino/concepts/06-layout-system
   - /lumino/concepts/05-widget-lifecycle

@@ -376,3 +376,5 @@ def main(argv=None):
 - [Proxy 代理系统](proxy.md) — Proxy 在 init_proxy() 阶段的启动与路由注册流程
 - [Spawner 机制](spawner.md) — init_spawners() 阶段的 Spawner 状态恢复与服务器管理
 - [ORM 数据模型](orm.md) — init_db() 阶段创建的数据库表结构与数据模型
+
+[^app-src]: JupyterHub Application 源码参考

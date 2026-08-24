@@ -238,10 +238,10 @@ si 角色内置了完整的 SI 单位映射：
 |------|------|------|
 | `{subscript}` / `{sub}` | 下标 | H{sub}`2`O |
 | `{superscript}` / `{sup}` | 上标 | x{sup}`2` |
-| `{underline}` / `{u}` | 下划线 | {u}`重要` |
-| `{delete}` / `{del}` | 删除线 | {del}`过时内容` |
-| `{smallcaps}` | 小型大写 | {smallcaps}`MyST` |
-| `{span}` | 通用行内容器（加CSS类） | {span}`text` |
+| `{underline}` / `{u}` | 下划线 | \{u}`重要` |
+| `{delete}` / `{del}` | 删除线 | \{del}`过时内容` |
+| `{smallcaps}` | 小型大写 | \{smallcaps}`MyST` |
+| `{span}` | 通用行内容器（加CSS类） | \{span}`text` |
 
 ## 行内表达式（Eval 角色）
 

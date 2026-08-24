@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: JupyterLite 应用框架源码信源
-description: @jupyterlite/application包的JupyterLiteApp应用框架、扩展加载机制的源码API登记
+description: "@jupyterlite/application包的JupyterLiteApp应用框架、扩展加载机制的源码API登记"
 tags: [application, jupyterlab, extension, plugin, app]
 generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T15:08:00+08:00" }
 status: stable

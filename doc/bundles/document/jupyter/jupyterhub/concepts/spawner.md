@@ -317,3 +317,6 @@ async def progress(self):
 - [Authenticator 认证系统](authenticator.md) — 认证器与 Spawner 的协作关系
 - [ORM 数据模型](orm.md) — Spawner/User/Server 在数据库中的持久化模型
 - [JupyterHub 多用户部署](/concepts/11-jupyterhub.md) — JupyterHub 架构总览中 Spawner 的定位
+
+[^orm-source]: JupyterHub ORM 源码参考
+[^spawner-source]: JupyterHub Spawner 源码参考

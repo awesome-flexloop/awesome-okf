@@ -161,3 +161,5 @@ AI Persona 典型的 Notebook 操作序列：
 - [Entry Points API](09-entry-points-api.md)
 - [MCP 配置与工具参考](../references/mcp-config-reference.md)
 - [Entry Points 参考](../references/entry-points-reference.md)
+
+[^tools-group]: tools_group.md

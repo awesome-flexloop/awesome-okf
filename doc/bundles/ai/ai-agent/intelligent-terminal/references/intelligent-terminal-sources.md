@@ -8,7 +8,7 @@ status: stable
 stale_after: 2027-08-22
 sources:
   - id: intelligent-terminal-github
-    resource: https://github.com/microsoft/terminal (fork: intelligent-terminal)
+    resource: "https://github.com/microsoft/terminal (fork: intelligent-terminal)"
     title: Intelligent Terminal GitHub 仓库
 ---
 

@@ -102,3 +102,5 @@ cookiecutter-docker-stacks 使用 **BSD 3-Clause License**（Jupyter Development
 - [模板结构解析](02-template-structure.md)
 - [模板变量详解](03-cookiecutter-variables.md)
 - [Dockerfile模板与编写指南](04-dockerfile-template.md)
+
+[^src-readme]: 项目 README 源码文档

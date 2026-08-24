@@ -380,3 +380,7 @@ export default extension;
 - [Vega/Vega-Lite 可视化渲染器](/concepts/07-vega-renderer.md)
 - [IRenderMime 核心 API 参考](/references/rendermime-interfaces-api.md)
 - [创建自定义 MIME 渲染器](/examples/01-custom-mime-renderer.md)
+
+[^fasta-index]: fasta-extension/src/index.ts
+[^geojson-index]: geojson-extension/src/index.ts
+[^vega3-index]: vega3-extension/src/index.ts

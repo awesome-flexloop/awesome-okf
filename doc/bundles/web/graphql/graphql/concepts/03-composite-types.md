@@ -3,7 +3,7 @@ type: concept
 title: "复合类型：对象、接口、联合与枚举"
 description: "深入 GraphQL 类型系统的复合类型：ObjectTypeDefinition 的字段/参数/接口实现、InterfaceTypeDefinition 的 implements 机制、UnionTypeDefinition 成员类型、EnumTypeDefinition 枚举值与指令、InputObjectTypeDefinition 输入对象、@oneOf 指令、类型扩展以及抽象类型的 resolveType 机制。"
 sources:
-  - /references/spec-section-3-type-system.md
+  - resource: /references/spec-section-3-type-system.md
     facts: [F-138, F-139, F-140, F-141, F-142, F-143, F-144, F-145, F-146, F-147, F-148, F-149, F-150, F-151, F-152, F-153, F-154, F-155, F-156, F-157, F-158, F-159, F-160, F-161, F-162, F-163, F-164, F-165, F-166, F-167, F-168, F-169, F-170, F-171, F-172, F-173, F-174, F-175, F-176, F-177, F-178, F-179, F-180, F-181, F-182, F-183, F-184, F-185, F-186, F-187, F-188, F-189, F-190, F-191, F-192, F-193, F-194]
 ---
 

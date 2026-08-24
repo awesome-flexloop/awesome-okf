@@ -10,13 +10,13 @@ stale_after: "2027-02-22"
 sources:
   - id: app-token
     resource: /references/core-api-tokens.md
-    title: @jupyterlab/application JupyterFrontEnd
+    title: "@jupyterlab/application JupyterFrontEnd"
   - id: apputils-tokens
     resource: /references/core-api-tokens.md
-    title: @jupyterlab/apputils 核心服务Token
+    title: "@jupyterlab/apputils 核心服务Token"
   - id: services-tokens
     resource: /references/core-api-tokens.md
-    title: @jupyterlab/services 服务层API
+    title: "@jupyterlab/services 服务层API"
 ---
 
 ## 核心 Token（依赖注入标识）

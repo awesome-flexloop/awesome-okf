@@ -530,3 +530,14 @@ satisfiable(And(A, Or(B, C), Not(And(A, B))))
 satisfiable(And(A, Not(A)))
 # False（不可满足）
 ```
+
+[^F-003]: facts.md F-003 — __init_subclass__ 类假设初始化
+[^F-011]: facts.md F-011 — Basic 公开方法清单
+[^F-012]: facts.md F-012 — is_* 类型检查属性
+[^F-076]: facts.md F-076 — assumptions 模块导出清单
+[^F-077]: facts.md F-077 — ask() 查询函数与推理机制
+[^F-078]: facts.md F-078 — Q 谓词对象与谓词分类
+[^F-079]: facts.md F-079 — refine() 表达式细化
+[^F-080]: facts.md F-080 — CNF/EncodedCNF 合取范式编码
+[^F-081]: facts.md F-081 — Literal 类
+[^F-082]: facts.md F-082 — satask() SAT 推理函数

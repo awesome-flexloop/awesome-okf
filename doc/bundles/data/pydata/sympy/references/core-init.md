@@ -389,3 +389,6 @@ array([0.00000000e+00, 1.00000000e+00, 1.22464680e-16])
 [^F-058]: facts.md F-058 — EvalfMixin 数值求值
 [^F-059]: facts.md F-059 — N() 函数
 [^F-060]: facts.md F-060 — evalf 底层引擎
+
+[^F-045]: facts.md F-045 — sympify 函数签名与转换规则
+[^F-046]: facts.md F-046 — converter 字典与自定义类型转换

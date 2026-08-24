@@ -9,7 +9,7 @@ stale_after: 2027-08-22
 sources:
   - id: commands-source
     resource: /external/libs/jupyter/lumino/packages/commands/src/index.ts
-    title: @lumino/commands 源码
+    title: "@lumino/commands 源码"
 prerequisites:
   - /lumino/concepts/07-command-system
   - /lumino/concepts/05-widget-lifecycle

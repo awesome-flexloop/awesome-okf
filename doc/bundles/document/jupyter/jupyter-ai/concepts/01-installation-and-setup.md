@@ -183,3 +183,5 @@ uv pip install -U jupyter-ai
 - [AI Persona 系统](05-ai-personas.md)
 - [配置系统](11-configuration-system.md)
 - [首次聊天示例](../examples/first-chat.md)
+
+[^troubleshooting]: troubleshooting.md

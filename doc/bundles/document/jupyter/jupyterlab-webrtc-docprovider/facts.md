@@ -65,7 +65,7 @@ sources:
 - F-031: `manager.ts:78-94` — `initUrlParams()` 从 `window.location.search` 解析 `room`/`username`/`usercolor` 三个 URL 参数；`initRandomParams()` 生成 `UUID.uuid4()` room、`getRandomColor().slice(1)` usercolor、`getAnonymousUserName()` username
 - F-032: `manager.ts:107-113` — `disabled` getter：仅当 `PageConfig.getOption('collaborative') === 'true'` 时返回 `this._composite.disabled`，否则直接返回 true
 - F-033: `manager.ts:123-157` — `username`/`usercolor`/`roomName` 三个 getter 均按"URL 参数 → 插件设置 → 随机值"的短路求值顺序（`||`）解析
-- F-034: `manager.ts:167-178` — `fullRoomId`：roomPrefix 依次取 `PageConfig 'webRtcRoomPrefix'`、设置 `roomPrefix`、否则本地主机（`LOCAL_HOSTS`）用 `UUID.uuid4()` 而其他 host 用 `window.location.origin`；最终 `codec.hex.fromBits(hash.sha256.hash(`${roomPrefix}-${roomName}`))`
+- F-034: `manager.ts:167-178` — `fullRoomId`：roomPrefix 依次取 `PageConfig 'webRtcRoomPrefix'`、设置 `roomPrefix`、否则本地主机（`LOCAL_HOSTS`）用 `UUID.uuid4()` 而其他 host 用 `window.location.origin`；最终 ``codec.hex.fromBits(hash.sha256.hash(`${roomPrefix}-${roomName}`))``
 - F-035: `manager.ts:188-210` — `signalingUrls`：先 `JSON.parse(PageConfig 'fullWebRtcSignalingUrls')`，再取设置 `signalingUrls`，均无效时 `console.warn` 提示"不推荐用于生产"并返回 `DEFAULT_SIGNALING_SERVERS`
 - F-036: `manager.ts:215-249` — `peerCount` setter 在值变化时 emit `stateChanged`；`stateChanged`/`trans` getter 与 `_settings`/`_urlParams`/`_randomParams`/`_peerCount` 私有字段
 

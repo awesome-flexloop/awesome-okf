@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: 子命令与路径导航
-description: parser_navigate 递归导航机制、:path: 选项用法、多级子命令文档化策略、命令名与别名处理
+description: "parser_navigate 递归导航机制、:path: 选项用法、多级子命令文档化策略、命令名与别名处理"
 tags: [sphinx-argparse, subcommands, path, parser_navigate, NavigationException, nested-subcommands]
 generated: { by: "reference_agent/trae-glm", at: "2026-08-21T22:39:00Z" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-21T22:39:00Z" }

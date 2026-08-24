@@ -218,3 +218,9 @@ class BaseChatModel(ABC):
 - [消息生命周期](/concepts/message-lifecycle.md)
 - [ChatManager 生命周期管理](/concepts/chat-manager.md)
 - [生命周期事件](/concepts/lifecycle-events.md)
+
+[^factory-ts]: factory.ts
+[^init-py]: jupyterlite_echo_kernel/__init__.py
+[^ws-handler-ts]: websocket-handler.ts
+[^ws-model-py]: websocket_model.py
+[^ychat-py]: ychat.py

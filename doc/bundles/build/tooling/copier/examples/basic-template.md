@@ -32,7 +32,7 @@ python-template/
     └── main.py.jinja
 ```
 
-注意目录名 `{{package_name}}/` 使用了 Jinja2 变量语法，会根据用户输入动态渲染。
+注意目录名 `\{{package_name}}/` 使用了 Jinja2 变量语法，会根据用户输入动态渲染。
 
 ## 2. 编写 copier.yml
 
@@ -124,7 +124,7 @@ docker run --rm {{ project_name }}
 
 ## 作者
 
-{{ author_name }} <{{ author_email }}>
+\{{ author_name }} <\{{ author_email }}>
 ```
 
 **pyproject.toml.jinja**：
@@ -163,14 +163,14 @@ build/
 .pytest_cache/
 ```
 
-**{{package_name}}/__init__.py.jinja**：
+**\{{package_name}}/__init__.py.jinja**：
 ```jinja
 """{{ project_description }}"""
 
 __version__ = "0.1.0"
 ```
 
-**{{package_name}}/main.py.jinja**：
+**\{{package_name}}/main.py.jinja**：
 ```jinja
 """Main entry point for {{ project_name }}."""
 

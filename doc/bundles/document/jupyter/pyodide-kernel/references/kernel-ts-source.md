@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: TypeScript Kernel 源码参考
-description: @jupyterlite/pyodide-kernel npm 包的 TypeScript 源码结构，包括主线程 Kernel、Worker 抽象、Comlink/Coincident 两种 Worker 实现
+description: "@jupyterlite/pyodide-kernel npm 包的 TypeScript 源码结构，包括主线程 Kernel、Worker 抽象、Comlink/Coincident 两种 Worker 实现"
 tags: [typescript, kernel, worker, comlink, coincident]
 generated: { by: "source-code-to-okf-wiki", at: "2026-08-22T00:00:00Z" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-22T00:00:00Z" }

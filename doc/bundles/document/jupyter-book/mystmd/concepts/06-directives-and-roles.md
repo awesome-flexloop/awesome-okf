@@ -61,13 +61,13 @@ Body content here.
 
 ### 指令结构
 
-```
+````
 ```{name} <arg>                    ← 名称 + 参数
 :key: value                       ← 选项（YAML 或键值对）
                                   ← 空行分隔选项和 body
 Body content here...              ← 内容体
 ```
-```
+````
 
 ## 角色语法
 

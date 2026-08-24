@@ -3,7 +3,7 @@ type: concept
 title: "片段、变量作用域与 Schema Coordinates"
 description: "深入 GraphQL 片段（FragmentDefinition/FragmentSpread/InlineFragment）的类型条件与 spread 可能性规则，变量定义作用域与 IsVariableUsageAllowed 兼容性检查，以及 Schema Coordinates 自包含坐标语法。"
 sources:
-  - /references/spec-section-2-language.md
+  - resource: /references/spec-section-2-language.md
     facts: [F-045, F-046, F-047, F-048, F-049, F-050, F-051, F-052, F-053, F-054, F-055, F-084, F-085, F-086, F-087, F-088, F-089, F-090, F-091, F-092, F-093]
 ---
 

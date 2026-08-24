@@ -312,13 +312,13 @@ best_acc = max(rf_acc, lr_acc)
 
 | 模型 | 准确率 |
 |------|--------|
-| Random Forest | {eval}`rf_acc:.2%` |
-| Logistic Regression | {eval}`lr_acc:.2%` |
+| Random Forest | \{eval}`rf_acc:.2%` |
+| Logistic Regression | \{eval}`lr_acc:.2%` |
 
-**最佳模型**: {eval}`best_model`（准确率 {eval}`best_acc:.2%`）
+**最佳模型**: \{eval}`best_model`（准确率 \{eval}`best_acc:.2%`）
 
-数据集: {eval}`data.feature_names` 共 {eval}`len(data.data)` 个样本，
-训练集 {eval}`len(X_train)` 个，测试集 {eval}`len(X_test)` 个。
+数据集: \{eval}`data.feature_names` 共 \{eval}`len(data.data)` 个样本，
+训练集 \{eval}`len(X_train)` 个，测试集 \{eval}`len(X_test)` 个。
 
 ## 相关文档
 

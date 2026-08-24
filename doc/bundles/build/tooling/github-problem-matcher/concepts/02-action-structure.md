@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: Action 结构解析
-description: action.yml 逐行解析、composite action 机制、::add-matcher:: workflow 命令与 GitHub Actions 上下文变量
+description: "action.yml 逐行解析、composite action 机制、::add-matcher:: workflow 命令与 GitHub Actions 上下文变量"
 tags: [github-problem-matcher, action.yml, composite-action, workflow-command, github-actions]
 generated: { by: "reference_agent/trae-glm", at: "2026-08-21T14:50:00Z" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-21T14:50:00Z" }
@@ -131,29 +131,29 @@ echo '::remove-matcher owner=sphinx-problem-matcher-loose::'
 echo '::remove-matcher owner=sphinx-problem-matcher-loose-no-severity::'
 ```
 
-## ${{ github.action_path }} 上下文变量
+## $\{{ github.action_path }} 上下文变量
 
-`${{ github.action_path }}` 是 GitHub Actions 的内置上下文变量，指向当前正在执行的 Action 所在的目录路径。
+`$\{{ github.action_path }}` 是 GitHub Actions 的内置上下文变量，指向当前正在执行的 Action 所在的目录路径。
 
 在 github-problem-matcher 中：
 - 当 workflow 执行 `uses: sphinx-doc/github-problem-matcher@master` 时
 - GitHub runner 将该 Action 下载到本地缓存目录
-- `${{ github.action_path }}` 就指向那个缓存目录
+- `$\{{ github.action_path }}` 就指向那个缓存目录
 - 通过拼接 `/sphinx_matcher.json` 得到 matcher JSON 文件的绝对路径
 
-为什么不用相对路径？因为 composite action 中 `run` 命令的工作目录是**项目代码目录**（`${{ github.workspace }}`），而不是 Action 自身的目录。如果直接写 `echo '::add-matcher::sphinx_matcher.json'`，runner 会在项目代码目录中查找这个文件，自然找不到。
+为什么不用相对路径？因为 composite action 中 `run` 命令的工作目录是**项目代码目录**（`$\{{ github.workspace }}`），而不是 Action 自身的目录。如果直接写 `echo '::add-matcher::sphinx_matcher.json'`，runner 会在项目代码目录中查找这个文件，自然找不到。
 
 ### 常用 GitHub 上下文变量
 
 | 变量 | 指向 |
 |------|------|
-| `${{ github.action_path }}` | 当前 Action 的目录 |
-| `${{ github.workspace }}` | 项目代码检出目录 |
-| `${{ github.repository }}` | 仓库名（`owner/repo` 格式） |
-| `${{ github.sha }}` | 当前 commit SHA |
-| `${{ github.ref }}` | 当前分支或 tag 的 ref |
-| `${{ github.event_name }}` | 触发事件名（push/pull_request 等） |
-| `${{ runner.os }}` | runner 操作系统（Linux/macOS/Windows） |
+| `$\{{ github.action_path }}` | 当前 Action 的目录 |
+| `$\{{ github.workspace }}` | 项目代码检出目录 |
+| `$\{{ github.repository }}` | 仓库名（`owner/repo` 格式） |
+| `$\{{ github.sha }}` | 当前 commit SHA |
+| `$\{{ github.ref }}` | 当前分支或 tag 的 ref |
+| `$\{{ github.event_name }}` | 触发事件名（push/pull_request 等） |
+| `$\{{ runner.os }}` | runner 操作系统（Linux/macOS/Windows） |
 
 ## shell: sh 的作用
 

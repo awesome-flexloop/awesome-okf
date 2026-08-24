@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: Vega/Vega-Lite 可视化渲染器
-description: @jupyterlab/vega3-extension 使用 vega-embed 渲染 Vega 3 和 Vega-Lite 2 声明式可视化图表，支持数据加载、PNG导出和多文档工厂
+description: "@jupyterlab/vega3-extension 使用 vega-embed 渲染 Vega 3 和 Vega-Lite 2 声明式可视化图表，支持数据加载、PNG导出和多文档工厂"
 tags: [vega, vega-lite, visualization, chart, vega-embed, mime-renderer]
 sources:
   - id: vega3-index
@@ -285,3 +285,5 @@ fileTypes: [
 - [FASTA 生物序列渲染器](/concepts/04-fasta-renderer.md)
 - [GeoJSON 地理数据渲染器](/concepts/05-geojson-renderer.md)
 - [IRenderMime 核心 API 参考](/references/rendermime-interfaces-api.md)
+
+[^vega3-index]: vega3-extension/src/index.ts

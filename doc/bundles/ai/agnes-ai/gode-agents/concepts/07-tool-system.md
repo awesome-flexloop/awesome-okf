@@ -2,7 +2,7 @@
 type: Concept
 title: 工具系统：@tool装饰器与Tool基类
 description: Tool基类四要素、@tool装饰器自动Schema生成、工具开发指南
-tags: [工具, Tool, @tool, 装饰器, Schema]
+tags: [工具, Tool, "@tool", 装饰器, Schema]
 generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T12:20:00+08:00" }
 status: stable
 stale_after: 2027-08-22

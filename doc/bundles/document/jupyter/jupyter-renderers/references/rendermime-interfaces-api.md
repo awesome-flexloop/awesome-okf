@@ -263,3 +263,9 @@ this._resolver.resolveUrl('').then((path: string) => {
   });
 });
 ```
+
+[^fasta-index]: fasta-extension/src/index.ts
+[^geojson-index]: geojson-extension/src/index.ts
+[^katex-index]: katex-extension/src/index.ts
+[^mathjax2-typesetter]: mathjax2-extension/src/typesetter.ts
+[^vega3-index]: vega3-extension/src/index.ts

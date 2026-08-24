@@ -69,7 +69,7 @@ Directives 是 MyST 中的块级扩展语法，使用 `{directive_name}` 标记�
 
 来源：myst-ext-exercise
 
-```markdown
+````markdown
 ```{exercise} 练习 1
 :label: ex-1
 练习内容...
@@ -79,7 +79,7 @@ Directives 是 MyST 中的块级扩展语法，使用 `{directive_name}` 标记�
 :label: sol-1
 解答内容...
 ```
-```
+````
 
 支持 exercise 和 solution 配对，带编号和交叉引用。
 
@@ -87,7 +87,7 @@ Directives 是 MyST 中的块级扩展语法，使用 `{directive_name}` 标记�
 
 来源：myst-ext-tabs
 
-```markdown
+````markdown
 ::::{tab-set}
 :::{tab-item} Python
 ```python
@@ -100,7 +100,7 @@ print("Hello")
 ```
 :::
 ::::
-```
+````
 
 创建可切换的标签页，支持同步选择（sync-tab）。
 

@@ -9,7 +9,7 @@ sources:
     title: root package.json
   - id: index-ts
     resource: external/libs/jupyter/jupyter-chat/packages/jupyter-chat/src/index.ts
-    title: @jupyter/chat index.ts
+    title: "@jupyter/chat index.ts"
   - id: pyproject
     resource: external/libs/jupyter/jupyter-chat/python/jupyterlab-chat/pyproject.toml
     title: pyproject.toml

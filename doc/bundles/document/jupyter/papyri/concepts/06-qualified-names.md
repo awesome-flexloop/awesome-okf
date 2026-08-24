@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: 限定名与交叉引用
-description: Papyri 的限定名（Qualified Names）系统——使用 : 分隔符消除模块/属性歧义，以及 CrossRef/RefInfo/LocalRef 的引用机制
+description: "Papyri 的限定名（Qualified Names）系统——使用 : 分隔符消除模块/属性歧义，以及 CrossRef/RefInfo/LocalRef 的引用机制"
 tags: [papyri, qualified-names, cross-reference, refinfo, linking]
 generated: { by: reference_agent/trae-soLO, at: "2026-08-22T00:00:00Z" }
 verified: { by: "process:grep-api-check", at: "2026-08-22T00:00:00Z" }

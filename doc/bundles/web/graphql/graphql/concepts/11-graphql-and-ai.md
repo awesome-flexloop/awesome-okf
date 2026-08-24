@@ -3,9 +3,9 @@ type: concept
 title: "GraphQL 与 AI：MCP、语义内省与 Agent"
 description: "GraphQL 在 AI 领域的定位与实践：AI WG MCP 服务器架构（FastMCP、list_types/run_query 工具、OpenAIEmbedder+EmbeddingStore 语义索引）、语义内省 RFC（__search/__definitions/__SearchResult/__SchemaDefinition）、GraphQL vs REST 在 AI 场景对比及 MCP/RAG/Agents 三大用例。"
 sources:
-  - /references/mcp-server-source.md
+  - resource: /references/mcp-server-source.md
     facts: [F-435, F-436, F-437, F-438, F-439, F-440, F-441, F-442, F-443, F-444, F-445, F-446, F-447, F-448, F-449, F-450, F-451, F-452, F-453, F-454, F-455, F-456, F-457, F-458, F-459, F-460, F-461, F-462, F-463, F-464, F-465, F-466, F-467, F-468, F-469, F-470, F-471, F-472, F-473, F-474, F-475, F-476, F-477, F-478, F-479, F-480, F-481, F-482, F-483, F-484, F-485, F-486, F-487, F-488, F-489, F-490, F-491, F-492, F-493, F-494, F-495, F-496, F-497, F-498, F-499, F-500, F-501, F-502, F-503, F-504, F-505, F-506, F-507, F-508, F-509, F-510, F-511, F-512, F-513, F-514, F-515, F-516, F-517, F-518, F-519, F-520, F-521, F-522, F-523, F-524, F-525, F-526, F-527, F-528, F-529, F-530, F-531, F-532, F-533, F-534, F-535, F-536, F-537, F-538, F-539, F-540, F-541, F-542, F-543, F-544, F-545, F-546, F-547, F-548, F-549, F-550, F-551, F-552, F-553, F-554, F-555, F-556, F-557, F-558, F-559, F-560, F-574, F-575, F-576, F-577, F-578, F-579, F-580, F-581, F-582, F-583, F-584, F-585, F-586, F-653, F-654, F-655, F-656, F-657, F-658, F-659, F-660, F-661, F-662, F-663, F-664, F-665, F-666, F-667, F-668, F-669]
-  - /references/semantic-introspection-rfc.md
+  - resource: /references/semantic-introspection-rfc.md
     facts: [F-587, F-588, F-589, F-590, F-591, F-592, F-593, F-594, F-595, F-596, F-597, F-598, F-599, F-600, F-601, F-602, F-603, F-604, F-605, F-606, F-607, F-608, F-609, F-610, F-611, F-612]
 ---
 

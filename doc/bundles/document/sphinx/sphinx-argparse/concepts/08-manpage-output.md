@@ -1,8 +1,8 @@
 ---
 type: Concept
 title: Man page 输出格式
-description: :manpage: 选项生成标准Unix手册页结构，SYNOPSIS/DESCRIPTION/OPTIONS/SUB-COMMANDS等章节，man page构建器使用方法
-tags: [sphinx-argparse, manpage, man-builder, :manpage:, SYNOPSIS, troff]
+description: ":manpage: 选项生成标准Unix手册页结构，SYNOPSIS/DESCRIPTION/OPTIONS/SUB-COMMANDS等章节，man page构建器使用方法"
+tags: [sphinx-argparse, manpage, man-builder, ":manpage:", SYNOPSIS, troff]
 generated: { by: "reference_agent/trae-glm", at: "2026-08-21T22:41:00Z" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-21T22:41:00Z" }
 status: stable

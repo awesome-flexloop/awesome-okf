@@ -2,7 +2,7 @@
 type: Example
 title: 嵌套内容增强完整示例
 description: 综合运用@before/@after/@replace/@skip四种内容注入模式，添加说明、示例、警告、交叉引用，覆盖参数/子命令/参数组各层级
-tags: [sphinx-argparse, example, content-enhancement, @before, @after, @replace, @skip, definition-list]
+tags: [sphinx-argparse, example, content-enhancement, "@before", "@after", "@replace", "@skip", definition-list]
 generated: { by: "reference_agent/trae-glm", at: "2026-08-21T22:45:00Z" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-21T22:45:00Z" }
 status: stable

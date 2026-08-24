@@ -202,3 +202,7 @@ docs/source/developers/index.md     → 显示在主站的 Developers 下
 - [Entry Points API](09-entry-points-api.md)
 - [版本与升级](12-versioning-and-upgrades.md)
 - [元包源码参考](../references/metapackage-source.md)
+
+[^agents-md]: 文档贡献指南
+[^contributors]: contributors/index.md
+[^versioning]: versioning.md

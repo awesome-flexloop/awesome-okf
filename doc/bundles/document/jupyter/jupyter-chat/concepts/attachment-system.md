@@ -372,3 +372,12 @@ declare module '@jupyter/chat' {
 - [模型层架构](/concepts/model-architecture.md)
 - [扩展点系统](/concepts/extension-points.md)
 - [核心类型参考](/references/api-types.md)
+
+[^chat-widget.tsx]: ChatWidget 前端组件源码
+[^input-model-ts]: input-model.ts
+[^models-py]: models.py
+[^registers-idx]: registers/index.ts
+[^types-ts]: TypeScript类型定义
+[^websocket_handler.py]: WebSocket 消息处理器源码
+[^ws-model-py]: websocket_model.py
+[^ychat-py]: ychat.py

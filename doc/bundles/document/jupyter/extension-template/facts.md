@@ -94,9 +94,9 @@ title: extension-template 源码事实清单
 
 ## Python 包模板
 
-- F-059: {{python_name}}/__init__.py.jinja:1-8 — 从 _version 导入 __version__，导入失败时 fallback 为 "dev" 并警告
-- F-060: {{python_name}}/__init__.py.jinja:13-17 — _jupyter_labextension_paths() 返回 labextension 路径配置
-- F-061: {{python_name}}/__init__.py.jinja:20-36 — frontend-and-server 类型额外定义 _jupyter_server_extension_points() 和 _load_jupyter_server_extension()，调用 setup_route_handlers()
+- F-059: \{{python_name}}/__init__.py.jinja:1-8 — 从 _version 导入 __version__，导入失败时 fallback 为 "dev" 并警告
+- F-060: \{{python_name}}/__init__.py.jinja:13-17 — _jupyter_labextension_paths() 返回 labextension 路径配置
+- F-061: \{{python_name}}/__init__.py.jinja:20-36 — frontend-and-server 类型额外定义 _jupyter_server_extension_points() 和 _load_jupyter_server_extension()，调用 setup_route_handlers()
 
 ## 安装元数据
 

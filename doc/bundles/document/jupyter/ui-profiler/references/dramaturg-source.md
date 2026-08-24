@@ -13,7 +13,7 @@ sources:
     title: src/dramaturg.ts 浏览器自动化层实现
   - id: lumino-keyboard
     resource: /references/dramaturg-source.md
-    title: @lumino/keyboard 键盘布局
+    title: "@lumino/keyboard 键盘布局"
 ---
 
 ## 设计定位

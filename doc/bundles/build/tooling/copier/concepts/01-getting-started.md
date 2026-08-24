@@ -103,7 +103,7 @@ pip install -e .
 
 ## 作者
 
-{{ author_name }}
+\{{ author_name }}
 ```
 
 **{{project_name}}/main.py.jinja**：
@@ -117,7 +117,7 @@ if __name__ == "__main__":
     main()
 ```
 
-注意目录名 `{{project_name}}/` 也是模板——它会被渲染为用户输入的项目名。
+注意目录名 `\{{project_name}}/` 也是模板——它会被渲染为用户输入的项目名。
 
 ## 第四步：生成项目
 

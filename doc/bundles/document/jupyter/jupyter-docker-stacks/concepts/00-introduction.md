@@ -82,3 +82,5 @@ Docker Hub 上的旧镜像不再更新。
 - [5分钟快速上手](01-getting-started.md)
 - [镜像层级架构](02-image-hierarchy.md)
 - [启动生命周期](07-startup-lifecycle.md)
+
+[^src-readme]: 项目 README 源码文档

@@ -214,3 +214,9 @@ class ChatMessageEvent:
 ```
 
 通过 `model.observe_messages(callback)` 注册的回调接收此事件。
+
+[^chat-manager-py]: chat_manager.py
+[^events-py]: binderhub/events.py 源码
+[^models-py]: models.py
+[^ws-model-py]: websocket_model.py
+[^ychat-py]: ychat.py

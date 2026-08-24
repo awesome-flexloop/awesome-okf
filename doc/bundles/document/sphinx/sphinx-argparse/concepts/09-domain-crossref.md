@@ -1,8 +1,8 @@
 ---
 type: Concept
 title: Commands 域与交叉引用
-description: ArgParseDomain 自定义Sphinx域、:command: 交叉引用角色、命令注册机制、resolve_xref解析流程
-tags: [sphinx-argparse, domain, ArgParseDomain, cross-reference, :command:, XRefRole, resolve_xref]
+description: "ArgParseDomain 自定义Sphinx域、:command: 交叉引用角色、命令注册机制、resolve_xref解析流程"
+tags: [sphinx-argparse, domain, ArgParseDomain, cross-reference, ":command:", XRefRole, resolve_xref]
 generated: { by: "reference_agent/trae-glm", at: "2026-08-21T22:42:00Z" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-21T22:42:00Z" }
 status: stable

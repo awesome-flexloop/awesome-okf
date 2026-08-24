@@ -645,3 +645,18 @@ count_ops(x**2 + 2*x + 1, visual=True)  # 3*ADD + DIV + 2*MUL + 2*POW
 # 系数浮点化
 nfloat(x**2 + Rational(1,3)*x + Rational(1,2))  # x**2 + 0.333333333333333*x + 0.5
 ```
+
+[^F-045]: facts.md F-045 — sympify 函数签名与转换规则
+[^F-046]: facts.md F-046 — converter 字典与自定义类型转换
+[^F-047]: Tools API 参考
+[^F-048]: facts.md F-048 — FunctionClass 元类
+[^F-050]: facts.md F-050 — Function 基类
+[^F-054]: facts.md F-054 — Derivative 类
+[^F-055]: facts.md F-055 — Lambda 类
+[^F-056]: facts.md F-056 — Subs 类
+[^F-057]: facts.md F-057 — expand 系列函数定义，参见 core/function.py
+[^F-058]: facts.md F-058 — EvalfMixin 数值求值
+[^F-059]: facts.md F-059 — N() 函数
+[^F-060]: facts.md F-060 — evalf 底层引擎
+[^F-061]: facts.md F-061 — Relational 类层次
+[^F-062]: facts.md F-062 — 关系运算符与别名

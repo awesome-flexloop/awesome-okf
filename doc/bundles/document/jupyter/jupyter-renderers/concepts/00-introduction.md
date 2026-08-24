@@ -75,3 +75,6 @@ pip install jupyterlab-vega3
 - [MIME 渲染器开发模式](/concepts/02-mime-renderer-pattern.md)
 - [扩展类型：MIME 渲染器 vs 应用扩展](/concepts/03-extension-types.md)
 - [IRenderMime 核心 API 参考](/references/rendermime-interfaces-api.md)
+
+[^readme]: 项目说明
+[^root-pkg]: root package.json

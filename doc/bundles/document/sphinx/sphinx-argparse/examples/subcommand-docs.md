@@ -2,7 +2,7 @@
 type: Example
 title: 多页面子命令文档化
 description: 为复杂CLI工具拆分为多页面文档的完整方案，包含主页面、子命令页面、交叉引用和toctree组织
-tags: [sphinx-argparse, example, subcommands, multi-page, toctree, :path:, :nosubcommands:]
+tags: [sphinx-argparse, example, subcommands, multi-page, toctree, ":path:", ":nosubcommands:"]
 generated: { by: "reference_agent/trae-glm", at: "2026-08-21T22:44:00Z" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-21T22:44:00Z" }
 status: stable

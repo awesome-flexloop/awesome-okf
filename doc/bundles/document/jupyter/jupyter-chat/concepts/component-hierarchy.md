@@ -247,3 +247,8 @@ protected createNewWidget(context): LabChatPanel {
 - [模型层架构](/concepts/model-architecture.md)
 - [扩展点系统](/concepts/extension-points.md)
 - [消息生命周期](/concepts/message-lifecycle.md)
+
+[^chat-tsx]: chat.tsx
+[^chat-widget]: chat-widget.tsx
+[^context-ts]: context.ts
+[^factory-ts]: factory.ts

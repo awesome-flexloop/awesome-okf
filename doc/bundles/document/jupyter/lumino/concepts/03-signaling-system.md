@@ -9,7 +9,7 @@ stale_after: 2027-08-22
 sources:
   - id: signaling-source
     resource: /external/libs/jupyter/lumino/packages/signaling/src/index.ts
-    title: @lumino/signaling 源码
+    title: "@lumino/signaling 源码"
 ---
 
 # Signal/Slot 类型安全事件系统

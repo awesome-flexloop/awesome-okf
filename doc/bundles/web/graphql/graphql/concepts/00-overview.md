@@ -3,7 +3,7 @@ type: concept
 title: "GraphQL 概览与五大设计原则"
 description: "GraphQL 是什么、不是什么，五大设计原则如何塑造其查询语言与运行时，以及验证-执行-响应三阶段管线全局图与生态概览。"
 sources:
-  - /references/spec-section-1-overview.md
+  - resource: /references/spec-section-1-overview.md
     facts: [F-001, F-002, F-003, F-004, F-005, F-006, F-007, F-008, F-009, F-010, F-613, F-614, F-615, F-616, F-617, F-618, F-619, F-620, F-621, F-622, F-623, F-624]
 ---
 

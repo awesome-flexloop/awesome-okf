@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: FASTA 生物序列渲染器
-description: @jupyterlab/fasta-extension 扩展实现，使用 MSA（Multiple Sequence Alignment）查看器渲染 FASTA/Clustal 格式的生物序列数据
+description: "@jupyterlab/fasta-extension 扩展实现，使用 MSA（Multiple Sequence Alignment）查看器渲染 FASTA/Clustal 格式的生物序列数据"
 tags: [fasta, bioinformatics, msa, sequence-alignment, mime-renderer]
 sources:
   - id: fasta-index
@@ -241,3 +241,5 @@ pip install jupyterlab-fasta
 - [GeoJSON 地理数据渲染器](/concepts/05-geojson-renderer.md)
 - [Vega/Vega-Lite 可视化渲染器](/concepts/07-vega-renderer.md)
 - [IRenderMime 核心 API 参考](/references/rendermime-interfaces-api.md)
+
+[^fasta-index]: fasta-extension/src/index.ts

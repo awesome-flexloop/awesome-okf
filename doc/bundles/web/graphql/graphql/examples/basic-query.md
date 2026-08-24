@@ -3,9 +3,9 @@ type: example
 title: "基础查询与变更示例"
 description: "通过电商场景的完整 Schema，演示 query 的字段选择、嵌套对象、参数、别名、片段，mutation 创建订单，subscription 订单状态更新，以及变量的使用。"
 sources:
-  - /references/spec-section-2-language.md
+  - resource: /references/spec-section-2-language.md
     facts: [F-011, F-031, F-035, F-037, F-038, F-039, F-040, F-042, F-043, F-044, F-045, F-047, F-048, F-049, F-051, F-053, F-054, F-056, F-073, F-075, F-077, F-078, F-080, F-081, F-082, F-083, F-084, F-085]
-  - /references/spec-section-3-type-system.md
+  - resource: /references/spec-section-3-type-system.md
     facts: [F-098, F-103, F-104, F-105, F-108, F-118, F-119, F-138, F-140, F-141, F-144, F-149, F-150, F-172, F-174, F-175, F-179, F-180, F-181, F-192, F-195, F-197, F-198]
 ---
 

@@ -2,7 +2,7 @@
 type: Example
 title: 基础任务定义与执行
 description: 从安装到定义第一个 @task 任务、执行任务、传递参数的完整示例
-tags: [pyinvoke, task, @task, getting-started, basic, example]
+tags: [pyinvoke, task, "@task", getting-started, basic, example]
 generated: { by: "reference_agent/trae-glm", at: "2026-08-21T10:00:00Z" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-21T12:00:00Z" }
 status: stable

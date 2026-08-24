@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: 算法工具与集合库
-description: @lumino/algorithm迭代器与函数式操作、@lumino/collections BTree/LinkedList、核心工具函数、轮询与键盘
+description: "@lumino/algorithm迭代器与函数式操作、@lumino/collections BTree/LinkedList、核心工具函数、轮询与键盘"
 tags: [lumino, algorithm, collections, iterator, btree, functional-programming, utilities]
 generated: { by: "source-code-to-okf-wiki/trae", at: "2026-08-22T13:55:00+08:00" }
 status: stable
@@ -9,13 +9,13 @@ stale_after: 2027-08-22
 sources:
   - id: algorithm-source
     resource: /external/libs/jupyter/lumino/packages/algorithm/src
-    title: @lumino/algorithm 源码
+    title: "@lumino/algorithm 源码"
   - id: collections-source
     resource: /external/libs/jupyter/lumino/packages/collections/src
-    title: @lumino/collections 源码
+    title: "@lumino/collections 源码"
   - id: coreutils-source
     resource: /external/libs/jupyter/lumino/packages/coreutils/src
-    title: @lumino/coreutils 源码
+    title: "@lumino/coreutils 源码"
 ---
 
 # 算法工具与集合库

@@ -3,7 +3,7 @@ type: example
 title: "Python 服务端实战"
 description: "基于 graphql-core 从零构建可运行的 GraphQL 服务器：SDL 定义、Root resolver 类、graphql_sync 执行、HTTP handler，以及 Strawberry/Ariadne 等 code-first 替代方案。"
 sources:
-  - /references/mcp-server-source.md
+  - resource: /references/mcp-server-source.md
     facts: [F-437, F-561, F-562, F-563, F-564, F-565, F-566, F-567, F-568, F-569, F-570, F-571, F-572, F-573]
 ---
 

@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: Agent 编排引擎
-description: @zleap/agent 包的 L2 编排层架构——ConversationService 对话服务、ChatEngine 执行引擎、Workspace 管线、Turn Loop 模型推理循环、内置工具集、MCP 运行时、记忆梦境整理与对话压缩机制。
+description: "@zleap/agent 包的 L2 编排层架构——ConversationService 对话服务、ChatEngine 执行引擎、Workspace 管线、Turn Loop 模型推理循环、内置工具集、MCP 运行时、记忆梦境整理与对话压缩机制。"
 tags: [zleap-agent, agent, orchestration, conversation, chat-engine, workspace, turn-loop, mcp, moa]
 generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T12:00:00+08:00" }
 status: stable

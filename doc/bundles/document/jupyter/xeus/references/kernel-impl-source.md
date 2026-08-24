@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: xeus empack内核实现API参考
-description: @jupyterlite/xeus 包的WebWorkerKernel和EmpackedXeusRemoteKernel具体实现API
+description: "@jupyterlite/xeus 包的WebWorkerKernel和EmpackedXeusRemoteKernel具体实现API"
 tags: [api, kernel, empack, mambajs, typescript]
 generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T20:10:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-22T20:10:00+08:00" }

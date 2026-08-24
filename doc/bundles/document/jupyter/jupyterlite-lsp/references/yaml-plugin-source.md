@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: YAML语言服务器包源码引用（@jupyterlite/lsp-yaml）
-description: @jupyterlite/lsp-yaml 语言服务器包的 plugin.ts、server.ts、tokens.ts、worker.ts 源码引用
+description: "@jupyterlite/lsp-yaml 语言服务器包的 plugin.ts、server.ts、tokens.ts、worker.ts 源码引用"
 tags: [source, yaml, json, language-server, worker]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-22T00:00:00Z" }
 status: stable

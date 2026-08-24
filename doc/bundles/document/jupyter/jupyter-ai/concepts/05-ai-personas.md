@@ -193,3 +193,5 @@ class DebugPersona(BasePersona):
 - [MCP 工具与 Notebook 交互](07-mcp-tools-and-notebooks.md)
 - [Persona API 参考](../references/persona-api.md)
 - [自定义 Persona 示例](../examples/custom-persona.md)
+
+[^user-guide]: users/index.md

@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: Markdown 支持
-description: :markdown: 和 :markdownhelp: 两个独立标志的用法与区别，CommonMark 解析器实现、支持的Markdown语法、限制与注意事项
+description: ":markdown: 和 :markdownhelp: 两个独立标志的用法与区别，CommonMark 解析器实现、支持的Markdown语法、限制与注意事项"
 tags: [sphinx-argparse, markdown, CommonMark, markdownhelp, markdown-support, parse_markdown_block]
 generated: { by: "reference_agent/trae-glm", at: "2026-08-21T22:40:00Z" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-21T22:40:00Z" }

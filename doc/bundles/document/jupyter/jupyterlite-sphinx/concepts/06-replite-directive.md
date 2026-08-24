@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: replite 指令——嵌入交互式 REPL
-description: 使用 .. replite:: 指令嵌入交互式 REPL 控制台，支持预填代码和丰富的 REPL 行为配置
+description: "使用 .. replite:: 指令嵌入交互式 REPL 控制台，支持预填代码和丰富的 REPL 行为配置"
 tags: [directive, replite, repl, console, interactive]
 generated: { by: "source-code-to-okf-wiki", at: "2026-08-22T20:00:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-22T20:00:00+08:00" }

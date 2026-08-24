@@ -299,3 +299,10 @@ export { MathJaxTypesetter } from './typesetter';
 - [数学公式渲染：KaTeX vs MathJax2](/concepts/06-math-renderers.md)
 - [IRenderMime 核心 API 参考](/references/rendermime-interfaces-api.md)
 - [package.json 扩展配置参考](/references/extension-config-reference.md)
+
+[^katex-autorender]: katex-extension/src/autorender.ts
+[^katex-index]: katex-extension/src/index.ts
+[^katex-pkg]: katex-extension/package.json
+[^mathjax2-index]: mathjax2-extension/src/index.ts
+[^mathjax2-pkg]: mathjax2-extension/package.json
+[^mathjax2-typesetter]: mathjax2-extension/src/typesetter.ts

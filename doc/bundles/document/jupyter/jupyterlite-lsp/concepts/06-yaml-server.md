@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: YAML/JSON 语言服务器
-description: @jupyterlite/lsp-yaml 包的实现——yaml-language-server 的 Web Worker 封装、WaitQueue 消息桥接、JSONLanguageServer 类
+description: "@jupyterlite/lsp-yaml 包的实现——yaml-language-server 的 Web Worker 封装、WaitQueue 消息桥接、JSONLanguageServer 类"
 tags: [yaml, json, language-server, web-worker, wait-queue, yaml-language-server]
 generated: { by: "reference_agent/trae-cn", at: "2026-08-22T00:00:00Z" }
 verified: { by: "process:grep-verification", at: "2026-08-22T00:00:00Z" }

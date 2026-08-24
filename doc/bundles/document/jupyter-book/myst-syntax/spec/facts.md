@@ -87,10 +87,10 @@ sources:
 
 ### 各角色详情
 
-- **F-S046**: abbreviationRole 主名 'abbreviation'，别名 ['abbr']。body 格式 "缩写(全称)"（如 "CSS(Cascading Style Sheets)"），使用正则 /^(.+?)\(([^()]+)\)$/ 匹配。生成 abbreviation 节点，title 属性为全称。
+- **F-S046**: abbreviationRole 主名 'abbreviation'，别名 ['abbr']。body 格式 "缩写(全称)"（如 "CSS(Cascading Style Sheets)"），使用正则 `/^(.+?)\(([^()]+)\)$/` 匹配。生成 abbreviation 节点，title 属性为全称。
 - **F-S047**: citeRole 主名 'cite'，别名 18 个：cite:p/cite:t/cite:ps/cite:ts/cite:ct/cite:cts/cite:alp/cite:alps/cite:label/cite:labelpar/cite:year/cite:yearpar/cite:author/cite:authors/cite:authorpar/cite:authorpars/cite:cauthor/cite:cauthors。body 为逗号/分号分隔的引用键。支持前缀后缀语法 {prefix}key{suffix}。kind 根据别名确定：parenthetical（含:p/par/alp）或 narrative。cite:year 设置 partial:'year'，cite:author* 设置 partial:'author'。单引用直接返回 Cite 节点，多引用包裹在 CiteGroup 中。
 - **F-S048**: CiteKind 类型为 'parenthetical' | 'narrative'。parenthetical 为括号引用（如 [Author 2020]），narrative 为叙述引用（如 Author (2020)）。
-- **F-S049**: refRole 主名 'ref'，别名 ['eq','numref','prf:ref','proof:ref']。body 支持 "显示文本<标签>" 格式（正则 /^(.+?)<([^<>]+)>$/）。生成 crossReference 节点，kind 为角色名。
+- **F-S049**: refRole 主名 'ref'，别名 ['eq','numref','prf:ref','proof:ref']。body 支持 "显示文本<标签>" 格式（正则 `/^(.+?)<([^<>]+)>$/`）。生成 crossReference 节点，kind 为角色名。
 - **F-S050**: mathRole 主名 'math'，body 为 LaTeX 行内数学表达式（必填），生成 inlineMath 节点，支持 typst 选项。
 - **F-S051**: chemRole 主名 'chemicalFormula'，别名 ['chem']，body 为化学式字符串，生成 chemicalFormula 节点。
 - **F-S052**: siRole 主名 'si'，body 格式 "数值<\\单位命令>"（如 "10<\\kilo\\gram>"），使用正则 /([0-9.,eE-]+)\s?<([\\a-zA-Z\s]+)>/ 匹配。解析 \\command 形式的单位，通过 UNITS 映射表转换为符号（如 \\kilo→k, \\gram→g）。包含完整的 SI 基本单位、导出单位、词头映射表（yocto~yotta, Å 等特殊单位）。

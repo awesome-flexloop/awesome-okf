@@ -2,7 +2,7 @@
 type: Example
 title: 使用 @tool 装饰器创建自定义工具
 description: 学习@tool装饰器，创建自定义天气查询/计算器/文本处理工具
-tags: [工具, @tool, 自定义工具]
+tags: [工具, "@tool", 自定义工具]
 generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T12:40:00+08:00" }
 status: stable
 stale_after: 2027-08-22

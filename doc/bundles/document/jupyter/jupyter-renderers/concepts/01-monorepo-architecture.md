@@ -217,3 +217,8 @@ twine upload dist/*
 - [扩展类型：MIME 渲染器 vs 应用扩展](/concepts/03-extension-types.md)
 - [Python 入口点与打包参考](/references/python-entrypoint-reference.md)
 - [package.json 扩展配置参考](/references/extension-config-reference.md)
+
+[^fasta-pkg]: fasta-extension/package.json
+[^lerna]: lerna.json
+[^release]: RELEASE.md
+[^root-pkg]: root package.json

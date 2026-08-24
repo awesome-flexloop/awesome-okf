@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: notebooklite 指令——嵌入经典 Notebook
-description: 使用 .. notebooklite:: 指令嵌入经典 Jupyter Notebook 界面（tree视图），retrolite 为其别名
+description: "使用 .. notebooklite:: 指令嵌入经典 Jupyter Notebook 界面（tree视图），retrolite 为其别名"
 tags: [directive, notebooklite, classic-notebook, retrolite]
 generated: { by: "source-code-to-okf-wiki", at: "2026-08-22T20:00:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-22T20:00:00+08:00" }

@@ -2,7 +2,7 @@
 type: Reference
 title: Tools API 参考
 description: codified-smolagents 工具系统API参考，包含Tool基类、@tool装饰器、ToolCollection、PipelineTool、SpaceToolWrapper及内置工具
-tags: [Tool, 工具, @tool装饰器, ToolCollection, PipelineTool, 默认工具, API参考]
+tags: [Tool, 工具, "@tool装饰器", ToolCollection, PipelineTool, 默认工具, API参考]
 generated: { by: "source-code-to-okf-wiki", at: "2026-08-22T22:00:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-22T22:00:00+08:00" }
 status: stable

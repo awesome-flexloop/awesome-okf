@@ -291,3 +291,6 @@ pip install jupyterlab-fasta
 - [扩展类型：MIME 渲染器 vs 应用扩展](/concepts/03-extension-types.md)
 - [Python 入口点参考](/references/python-entrypoint-reference.md)
 - [扩展配置参考](/references/extension-config-reference.md)
+
+[^fasta-pyproject]: fasta-extension/pyproject.toml
+[^root-pkg]: root package.json

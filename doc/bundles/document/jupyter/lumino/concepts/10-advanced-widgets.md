@@ -9,13 +9,13 @@ stale_after: 2027-08-22
 sources:
   - id: widgets-source
     resource: /external/libs/jupyter/lumino/packages/widgets/src
-    title: @lumino/widgets 源码目录
+    title: "@lumino/widgets 源码目录"
   - id: datagrid-source
     resource: /external/libs/jupyter/lumino/packages/datagrid/src
-    title: @lumino/datagrid 源码目录
+    title: "@lumino/datagrid 源码目录"
   - id: dragdrop-source
     resource: /external/libs/jupyter/lumino/packages/dragdrop/src/index.ts
-    title: @lumino/dragdrop 源码
+    title: "@lumino/dragdrop 源码"
 ---
 
 # 高级组件与DataGrid

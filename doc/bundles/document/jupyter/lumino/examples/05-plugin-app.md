@@ -9,7 +9,7 @@ stale_after: 2027-08-22
 sources:
   - id: application-source
     resource: /external/libs/jupyter/lumino/packages/application/src/index.ts
-    title: @lumino/application 源码
+    title: "@lumino/application 源码"
 prerequisites:
   - /lumino/concepts/09-plugin-application
   - /lumino/concepts/07-command-system

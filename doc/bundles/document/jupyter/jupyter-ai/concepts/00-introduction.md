@@ -122,3 +122,6 @@ Jupyter AI 遵循以下设计原则：[^contributors]
 - [聊天界面](02-chat-interface.md)
 - [元包架构](03-metapackage-architecture.md)
 - [ACP 与 MCP 双协议](04-protocols-acp-mcp.md)
+
+[^agents-md]: 文档贡献指南
+[^contributors]: contributors/index.md

@@ -3,7 +3,7 @@ type: concept
 title: "Schema 与类型系统入门"
 description: "GraphQL SchemaDefinition 的根操作类型配置、六种命名类型与两种包装类型概览、内建标量类型规范、Enum/FieldDefinition/InputValueDefinition 基础语法，以及类型引用与 Description 机制。"
 sources:
-  - /references/spec-section-3-type-system.md
+  - resource: /references/spec-section-3-type-system.md
     facts: [F-029, F-030, F-086, F-087, F-094, F-095, F-096, F-097, F-098, F-099, F-100, F-101, F-102, F-103, F-104, F-105, F-106, F-107, F-108, F-109, F-110, F-111, F-112, F-113, F-114, F-115, F-116, F-117, F-118, F-119, F-120, F-121, F-122, F-123, F-124, F-125, F-126, F-127, F-128, F-129, F-130, F-131, F-132, F-133, F-134, F-135, F-136, F-137, F-141, F-149, F-150, F-172, F-173, F-174, F-175, F-176]
 ---
 

@@ -144,7 +144,7 @@ kernelspec:
 
 ## 数据加载
 
-```{code-cell}
+```python
 import numpy as np
 import pandas as pd
 
@@ -158,9 +158,7 @@ data.head()
 
 ## 数据统计
 
-```{code-cell}
-:tags: [hide-input]
-
+```python
 print(f"数据共 {len(data)} 行")
 print(f"y 均值: {data['y'].mean():.3f}")
 print(f"y 标准差: {data['y'].std():.3f}")
@@ -168,13 +166,7 @@ print(f"y 标准差: {data['y'].std():.3f}")
 
 ## 可视化
 
-```{code-cell}
----
-mystnb:
-  figure:
-    caption: "随机游走图"
-    name: fig-random-walk
----
+```python
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots()
 ax.plot(data['x'], data['y'])

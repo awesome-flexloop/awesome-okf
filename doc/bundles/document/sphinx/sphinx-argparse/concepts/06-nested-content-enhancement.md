@@ -2,7 +2,7 @@
 type: Concept
 title: 嵌套内容增强系统
 description: 利用指令体内嵌内容和definition_list语法，通过@before/@after/@replace/@skip四种classifier精确注入自定义文档
-tags: [sphinx-argparse, nested-content, definition-list, @before, @after, @replace, @skip, content-injection]
+tags: [sphinx-argparse, nested-content, definition-list, "@before", "@after", "@replace", "@skip", content-injection]
 generated: { by: "reference_agent/trae-glm", at: "2026-08-21T22:40:00Z" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-21T22:40:00Z" }
 status: stable

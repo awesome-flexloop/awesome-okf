@@ -345,3 +345,9 @@ ChatMessageAction 枚举定义了 4 种消息事件：[^models-py]
 - [双传输架构](/concepts/dual-transport.md)
 - [生命周期事件](/concepts/lifecycle-events.md)
 - [附件系统](/concepts/attachment-system.md)
+
+[^input-model-ts]: input-model.ts
+[^message-ts]: message.ts
+[^model-ts]: model.ts
+[^models-py]: models.py
+[^ychat-py]: ychat.py

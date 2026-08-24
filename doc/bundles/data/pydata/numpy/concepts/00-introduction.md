@@ -97,3 +97,5 @@ NumPy（ndarray + ufunc + dtype）
 - [ndarray 数据模型](01-ndarray-model.md)
 - [dtype 类型系统](02-dtype-system.md)
 - [ufunc 通用函数](03-ufunc-system.md)
+
+[^numpy-core]: NumPy 核心初始化源码

@@ -9,7 +9,7 @@ stale_after: 2027-08-22
 sources:
   - id: layout-source
     resource: /external/libs/jupyter/lumino/packages/widgets/src/layout.ts
-    title: @lumino/widgets Layout 源码
+    title: "@lumino/widgets Layout 源码"
 ---
 
 # 布局系统详解

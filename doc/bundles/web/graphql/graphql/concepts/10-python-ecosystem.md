@@ -3,7 +3,7 @@ type: concept
 title: "Python 生态：客户端与服务端实践"
 description: "Python GraphQL 生态全景：7 个客户端库与 6 个服务端库对比，graphql-core 作为底层实现的地位，以及基于 graphql-core 的测试服务器实现模式（Root 类、resolver 方法、make_handler）。"
 sources:
-  - /references/mcp-server-source.md
+  - resource: /references/mcp-server-source.md
     facts: [F-437, F-561, F-562, F-563, F-564, F-565, F-566, F-567, F-568, F-569, F-570, F-571, F-572, F-573, F-625, F-626, F-627, F-628, F-629, F-630, F-631, F-632, F-633, F-634, F-635, F-636, F-637]
 ---
 
