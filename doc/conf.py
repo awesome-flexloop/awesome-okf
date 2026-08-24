@@ -79,16 +79,18 @@ extlinks = {}
 
 if os.environ.get("GITHUB_ACTIONS"):
     html_baseurl = os.environ.get(
-        "SITEMAP_URL_BASE", "https://awesome-flexloop.github.io/"
+        "SITEMAP_URL_BASE", "https://awesome-flexloop.github.io/awesome-okf/"
     )
 elif not os.environ.get("READTHEDOCS"):
     if "sphinx_sitemap" not in extensions and _has("sphinx_sitemap"):
         extensions.append("sphinx_sitemap")
     html_baseurl = "http://127.0.0.1:8000/"
-    sitemap_url_scheme = "{link}"
+# sitemap 链接使用实际文件布局（根路径），避免默认 {lang}/{version}/{link}
+# 前缀造成 sitemap URL 与部署文件不一致（404）
+sitemap_url_scheme = "{link}"
 sitemap_locales = [None]
 
-ogp_site_url = "https://awesome-okf-xs.readthedocs.io/"
+ogp_site_url = "https://awesome-flexloop.github.io/awesome-okf/"
 # 禁用社交卡片图片生成：matplotlib 渲染卡片文本时会把标题中的 $...$
 # （如 bundles/katex 文档）当作数学模式解析并崩溃，故仅保留 meta 标签。
 ogp_social_cards = {"enable": False}
