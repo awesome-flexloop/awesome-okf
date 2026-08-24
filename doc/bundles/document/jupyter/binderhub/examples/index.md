@@ -76,3 +76,12 @@ helm list -n <namespace>
 helm history binderhub -n <namespace>
 helm rollback binderhub <revision> -n <namespace>
 ```
+
+```{toctree}
+:hidden:
+
+01-basic-config
+02-custom-provider
+03-kubernetes-deploy
+04-local-dev
+```

@@ -141,4 +141,6 @@ trae-agents/index
 trae-co-creation-projects/index
 trae-discussions/index
 trae-friends-events/index
+spec/index
+log
 ```

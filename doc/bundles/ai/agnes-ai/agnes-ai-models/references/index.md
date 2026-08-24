@@ -18,3 +18,10 @@
 ## 信源验证说明
 
 所有事实均直接提取自官方仓库 `external/libs/models/AgnesAI/AgnesAI-Models/` 中的文档，未添加推断性内容。API调用示例与官方examples/目录下代码保持一致。
+
+```{toctree}
+:hidden:
+
+model-catalog
+readme
+```

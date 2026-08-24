@@ -64,3 +64,11 @@ awesome-deepseek-agent/
 ├── examples/              # 示例索引（资源列表无代码示例）
 └── index.md               # 本文件
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+```

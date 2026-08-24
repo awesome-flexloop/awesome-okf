@@ -9,3 +9,13 @@
 | [YAML语言服务器包源码引用](yaml-plugin-source.md) | packages/lsp-yaml/src/{index,plugin,server,tokens,worker}.ts | JSONLanguageServer、Worker 桥接、SPEC 定义 |
 | [Python包源码引用](python-source.md) | src/jupyterlite_lsp/{__init__,constants,js}.py + pyproject.toml | Python 包入口、路径解析、flit 配置 |
 | [构建系统源码引用](build-source.md) | dodo.py + package.json + lerna.json + .binder/environment.yml | doit 任务、构建脚本、开发环境依赖 |
+
+```{toctree}
+:hidden:
+
+build-source
+core-plugin-source
+hacks-source
+python-source
+yaml-plugin-source
+```

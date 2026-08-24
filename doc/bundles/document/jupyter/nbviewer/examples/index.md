@@ -61,3 +61,15 @@ kubectl rollout status -w deployment/nbviewer
 helm history nbviewer
 helm rollback nbviewer
 ```
+
+```{toctree}
+:hidden:
+
+01-basic-config
+02-local-files
+03-custom-provider
+04-docker-deploy
+invoke-tasks
+local-debug
+manual-upgrade
+```

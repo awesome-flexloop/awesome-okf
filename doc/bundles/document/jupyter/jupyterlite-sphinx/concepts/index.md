@@ -29,3 +29,21 @@ Concepts 是 jupyterlite-sphinx 的系统性知识文档，按学习路径分三
 | [10-build-process](10-build-process.md) | Sphinx 构建生命周期钩子、jupyter lite build 命令行构造、文件复制流程 |
 | [11-node-hierarchy](11-node-hierarchy.md) | docutils 自定义节点继承体系、HTML 生成方法、访问器注册机制 |
 | [12-frontend-js](12-frontend-js.md) | 前端 JavaScript 函数、iframe 懒加载、移动端检测、ConfigLoader 运行时热配置 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-installation
+02-quick-start
+03-directive-overview
+04-jupyterlite-directive
+05-notebooklite-directive
+06-replite-directive
+07-voici-directive
+08-try-examples-directive
+09-configuration
+10-build-process
+11-node-hierarchy
+12-frontend-js
+```

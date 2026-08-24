@@ -53,3 +53,22 @@ description: "Nuitka V4.1rc11 核心概念文档——按学习路径排列"
     → 10-freezer-distribution → 11-plugin-system
     → 12-variables-closures → 13-cli-options
 ```
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-compilation-pipeline
+02-architecture-overview
+03-ast-tree-building
+04-node-ir-system
+05-type-shapes
+06-module-import-system
+07-optimization-passes
+08-c-code-generation
+09-c-compilation-backend
+10-freezer-distribution
+11-plugin-system
+12-variables-closures
+13-cli-options
+```

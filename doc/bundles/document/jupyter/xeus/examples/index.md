@@ -23,3 +23,11 @@ status: stable
 - 阅读 [快速开始](../concepts/01-getting-started.md) 了解基本安装
 - 阅读 [构建系统详解](../concepts/05-build-system.md) 理解构建流程
 - 阅读 [双Worker通信模式](../concepts/03-dual-worker-modes.md) 理解部署时的跨域隔离配置
+
+```{toctree}
+:hidden:
+
+advanced-deploy
+basic-deploy
+custom-env
+```

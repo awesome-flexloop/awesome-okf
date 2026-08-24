@@ -35,3 +35,17 @@
     ↓
 06-URL参数参考 → 07-限制注意事项 → 08-自定义Provider
 ```
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture
+03-gitpuller-base
+04-platform-pullers
+05-extension-plugin
+06-url-parameters
+07-limitations
+08-custom-provider
+```

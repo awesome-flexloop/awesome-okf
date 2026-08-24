@@ -73,3 +73,14 @@ mystmd
 ### 规格说明
 - [事实清单](spec/facts.md) — 148 条编号源码事实
 - [架构洞察](spec/insights.md) — 5 个核心洞察与知识地图
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

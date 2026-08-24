@@ -39,3 +39,15 @@ sources:
 - 配置 **7 个 YAML Issue 模板**覆盖 5 种社区行为（投稿/报告问题/更新信息/需求征集），并禁用空 Issue
 - 当前已收录 2 个 Demo（Minecraft Guilin City Walk、TraeClaw），Demo #2 期数标注与 README 汇总存在不一致
 - 两个 Demo 展示了平台接受多种项目形态：传统 Web App（命令行运行）和 AI 插件（自然语言安装）
+
+```{toctree}
+:hidden:
+
+concepts/00-introduction
+concepts/01-demo-format
+concepts/02-contribution-process
+examples/submit-demo
+references/demos-source
+spec/facts
+spec/insights
+```

@@ -62,3 +62,12 @@ CLI 入口为 `docs` 命令（`docs dev` / `docs build` / `docs mv` / `docs migr
 `d:/spaces/SpecWeave/external/libs/ai/langchain-ai/docs/`
 
 > 本知识束为参考型 bundle，不包含 concepts/ 深度概念文档和 examples/ 示例文档。所有事实均通过直接读取仓库源码（docs.json、AGENTS.md、pyproject.toml、pipeline/ 代码、Makefile 等）提取验证。
+
+```{toctree}
+:hidden:
+
+references/site-structure
+spec/facts
+spec/insights
+log
+```

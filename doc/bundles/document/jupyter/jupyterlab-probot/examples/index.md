@@ -22,3 +22,10 @@ description: jupyterlab-probot 实用示例导航
 - 如何扩展配置 Schema
 - 如何编写 nock 录制测试
 
+
+```{toctree}
+:hidden:
+
+01-local-setup
+02-custom-config
+```

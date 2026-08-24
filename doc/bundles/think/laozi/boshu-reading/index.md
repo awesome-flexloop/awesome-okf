@@ -80,3 +80,14 @@ okf_version: "0.2"
 研究型读者：
   全部概念 → laozi-lineage交叉引用 → references中各信源
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

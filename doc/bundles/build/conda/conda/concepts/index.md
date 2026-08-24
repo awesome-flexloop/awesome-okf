@@ -34,3 +34,26 @@
 * [15-插件系统](15-plugin-system.md) — CondaPluginManager（pluggy）、19 种钩子类型、FORBIDDEN_HEADERS 安全边界、内置插件目录结构、求解器可插拔。
 * [16-网关层 I/O](16-gateways-io.md) — CondaSession 五协议适配器、disk/ 磁盘操作、并行下载、repodata 缓存管理、subprocess 子进程封装。
 * [17-公开 Python API](17-public-api.md) — Solver/SubdirData/PackageCacheData/PrefixData 四个 API 类、_internal 委托模式、reload() 强制刷新、Beta API 声明。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-channel-subdir
+04-matchspec
+05-version-system
+06-package-records
+07-context-configuration
+08-index-and-repodata
+09-solver-and-resolve
+10-transaction-link
+11-environments-history
+12-cli-commands
+13-shell-activation
+14-exceptions-and-errors
+15-plugin-system
+16-gateways-io
+17-public-api
+```

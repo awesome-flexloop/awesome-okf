@@ -28,3 +28,15 @@
 |------|------|
 | [06-planning-interval.md](06-planning-interval.md) | Plan-and-Execute 模式——planning_interval 规划间隔、PlanningStep 观察、执行摘要 |
 | [07-multi-agent-collab.md](07-multi-agent-collab.md) | 多智能体协作——Managed Agents 注册、子 Agent 自动调用、GradioUI 可视化 |
+
+```{toctree}
+:hidden:
+
+01-first-agent
+02-code-agent-basic
+03-custom-tool
+04-web-search-agent
+05-different-models
+06-planning-interval
+07-multi-agent-collab
+```

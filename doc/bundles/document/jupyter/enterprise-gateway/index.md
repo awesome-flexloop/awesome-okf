@@ -56,3 +56,14 @@ description: "Jupyter Enterprise Gateway：Jupyter内核的远程管理网关，
 | 响应端口 | 8877 |
 | 许可证 | Modified BSD License |
 | 源码路径 | `external/libs/jupyter/enterprise_gateway/` |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

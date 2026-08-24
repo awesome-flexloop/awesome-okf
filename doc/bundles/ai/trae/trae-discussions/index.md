@@ -38,3 +38,15 @@ sources:
 - ⚠️ README 引用的横幅图片路径 `./assets/images/` **目录不存在**，图片无法显示，可能是模板生成后未完全配置，但不影响核心导航功能
 - 定义 **5 个讨论分类**覆盖社区互动全场景：社交（General）、建议（Ideas）、求助（Q&A）、分享（Knowledge）、协作（Collaboration）
 - Quick Links 指向的治理文档（CONTRIBUTING.md / CODE_OF_CONDUCT.md）位于 GitHub Organization 的 `.github` 仓库中，不在本仓库内
+
+```{toctree}
+:hidden:
+
+concepts/00-introduction
+concepts/01-discussion-categories
+concepts/02-community-etiquette
+examples/start-discussion
+references/discussions-source
+spec/facts
+spec/insights
+```

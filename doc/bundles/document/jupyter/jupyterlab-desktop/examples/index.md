@@ -15,3 +15,10 @@
 - [核心概念](../concepts/index.md) — 概念文档
 - [源码信源](../references/index.md) — 源码信源文档
 - [返回首页](../index.md)
+
+```{toctree}
+:hidden:
+
+cli-usage-examples
+python-env-examples
+```

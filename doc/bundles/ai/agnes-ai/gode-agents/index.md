@@ -159,3 +159,13 @@ result = agent.run("搜索一下最新的AI研究进展")
 
 - **源码路径**：`external/libs/models/AgnesAI/GodeAgents/`
 - **AgnesAI 分组**：[../index.md](../index.md)
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+```

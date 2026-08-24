@@ -22,3 +22,22 @@
 * [11 · 异常处理](11-exception-handling.md) — HTTPException/RequestValidationError/ResponseValidationError 层级、三个默认处理器、EndpointContext 错误定位
 * [12 · 流式响应与 WebSocket](12-streaming-websocket.md) — SSE anyio 内存流+keepalive、JSONL 流式、生成器端点自动检测、APIWebSocketRoute
 * [13 · 测试与高级特性](13-testing-advanced.md) — TestClient、dependency_overrides 测试替换、BackgroundTasks、Default/DefaultPlaceholder、frontend 静态前端
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-application
+02-routing-system
+03-path-operations
+04-dependency-injection
+05-parameter-declaration
+06-request-body
+07-response-model
+08-openapi-generation
+09-security
+10-middleware-cors
+11-exception-handling
+12-streaming-websocket
+13-testing-advanced
+```

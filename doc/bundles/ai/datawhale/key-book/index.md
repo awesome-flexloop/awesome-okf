@@ -75,3 +75,30 @@ sources:
 2. 从有限到无限的三层分析框架递进
 3. PAC 学习与统计学习理论在稳定性处统一
 4. 离线 i.i.d. 到在线非平稳的范式转换
+
+```{toctree}
+:hidden:
+
+concepts/computational-complexity
+concepts/consistency
+concepts/convergence-rate
+concepts/generalization-bound
+concepts/learnability
+concepts/regret-bound
+concepts/stability
+examples/pac-3dnf
+examples/ucb-bandit
+examples/vc-dimension-linear
+references/appendix
+references/chapter1
+references/chapter2
+references/chapter3
+references/chapter4
+references/chapter5
+references/chapter6
+references/chapter7
+references/chapter8
+spec/facts
+spec/insights
+log
+```

@@ -96,3 +96,14 @@ JupyterLite Demo 采用极简的「三件套」部署模式：
 5. **交互控件**：学习 [04-交互式控件](examples/04-interactive-widgets.md) 和 [05-地图可视化](examples/05-interactive-maps.md)
 6. **创意编程**：探索 [06-创意编程](examples/06-creative-coding.md) 的 p5.js 和物理模拟
 7. **定制站点**：阅读 [06-部署流水线](concepts/06-deployment-github-pages.md) 和 [07-自定义指南](concepts/07-customization-guide.md)，跟着 [07-构建自定义站点](examples/07-custom-demo-site.md) 打造自己的站点
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

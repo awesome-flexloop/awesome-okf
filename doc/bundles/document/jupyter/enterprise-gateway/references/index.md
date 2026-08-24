@@ -11,3 +11,15 @@
 * [ResponseManager加密通信源码](response-manager-source.md) — RSA+AES加密的连接信息回传通道、Response事件机制、KernelChannel枚举。
 * [HTTP Handler源码](handlers-source.md) — API端点路由、Handler动态Mixin替换机制、Swagger文档服务。
 * [会话管理与KernelSpec缓存源码](session-manager-source.md) — SessionManager内存会话、FileKernelSessionManager/WebhookKernelSessionManager持久化、KernelSpecCache文件监控缓存。
+
+```{toctree}
+:hidden:
+
+app-entry-source
+config-mixin-source
+handlers-source
+kernel-manager-source
+process-proxy-source
+response-manager-source
+session-manager-source
+```

@@ -112,3 +112,14 @@ jupyterlab-ui-profiler 是 JupyterLab 官方维护的 UI 性能基准测试扩�
 | CSS规则组分析 | 分块删除→测量→恢复 | 所有现代浏览器 | 评估CSS代码分割策略 |
 | CSS规则使用率分析 | MutationObserver+规则删除 | 所有现代浏览器 | 只测量实际使用的规则 |
 | JS函数级Profiling | `window.Profiler` API | Chrome/Edge 94+ | 函数级CPU采样，火焰图可视化 |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

@@ -106,3 +106,14 @@ JupyterLab Demo 是 Jupyter 官方团队维护的演示仓库，它通过 Binder
 - CI 测试：GitHub Actions 验证 Data.ipynb、Fasta.ipynb、R.ipynb 三个 Notebook
 
 > ⚠️ **版本注意**：本仓库基于 JupyterLab 0.27（2017年版本），现代 JupyterLab 4.x 的扩展API已发生较大变化（特别是预构建扩展系统）。concepts/08 和 examples/05 中关于扩展开发的内容以现代 JupyterLab 4.x API 为准，而仓库本身的 fasta/geojson 扩展使用的是旧版API。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

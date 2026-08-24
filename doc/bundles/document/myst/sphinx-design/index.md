@@ -140,3 +140,14 @@ sources:
 - [sphinx-copybutton](https://github.com/executablebooks/sphinx-copybutton) — 一键复制代码块按钮扩展
 - [sphinx-external-toc](https://github.com/executablebooks/sphinx-external-toc) — 外部 `_toc.yml` 站点导航扩展
 - [myst 系列](https://github.com/executablebooks/MyST-Parser) — MyST Markdown 生态与 Executable Books 工具链
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

@@ -20,3 +20,12 @@
 - **JupyterLab要求**: >=4.0.0
 - **许可证**: BSD-3-Clause
 - **仓库**: https://github.com/jupyterlite/litegitpuller
+
+```{toctree}
+:hidden:
+
+build-config-source
+gitpuller-ts-source
+index-ts-source
+python-package-source
+```

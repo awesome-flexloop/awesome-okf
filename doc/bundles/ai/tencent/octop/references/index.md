@@ -8,3 +8,14 @@
 * [数据库层：Pool Protocol、RepoBundle 与 SharedServices DI](db-layer.md) — `src/octop/infra/db/pool.py`、`services.py`、`factory.py`：DatabasePool Protocol、SqlitePool（WAL+RLock）、PostgresPool（psycopg_pool）、RepoBundle 22 个 Repository、SharedServices DI 容器、open_database 工厂、resolve_sqlite_db_path、should_defer_control_plane_db、数据库迁移（schema v7）。
 * [CLI 与 HTTP API：_LazyCLI、20 子命令、FastAPI 工厂](cli-api.md) — `src/octop/cli/main.py`、`registry.py`、`commands/run.py`、`src/octop/api/app.py`：_LazyCLI 延迟加载、COMMANDS 注册表 20 子命令、UTF-8 stdio 兼容、三层传输（Offline/Embedded/External）、octop run 选项与自签名证书、build_app FastAPI 工厂、50+ 路由挂载、OctopError 异常处理、Dashboard SPA fallback。
 * [Harness 技术栈：外部包依赖与 PathLayout](harness-stack.md) — `pyproject.toml`、`src/octop/config.py`、`src/octop/infra/utils/paths.py`、`AGENTS.md`：orcakit-harness-agent/harness-gateway/harness-memory/harness-browser 四个外部包、OctopConfig/DatabaseConfig/TlsConfig/BackupConfig frozen dataclass、load_config 环境变量覆盖、PathLayout 文件系统布局（~/.octop/）、模块边界硬禁令、i18n/时区、前端技术栈。
+
+```{toctree}
+:hidden:
+
+agent-manager
+cli-api
+db-layer
+gateway
+harness-stack
+server-launch
+```

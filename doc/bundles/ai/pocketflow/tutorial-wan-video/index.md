@@ -118,3 +118,19 @@ shared = {
 - 流程编排：[flow.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/flow.py)
 - 入口程序：[main.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/main.py)
 - 工具函数：[utils/](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/utils/)
+
+```{toctree}
+:hidden:
+
+concepts/character-consistency
+concepts/self-loop-iteration
+concepts/video-pipeline
+examples/basic-usage
+examples/neural-networks-demo
+references/animate-video-node
+references/combine-node
+references/generate-audio-node
+references/generate-image-node
+references/generate-scenes-node
+references/generate-script-node
+```

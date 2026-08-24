@@ -11,3 +11,13 @@
 | [splitkv](/ai/deepseek/flash-mla/concepts/splitkv) | SplitKV 长序列分块并行技术、调度元数据、两阶段执行、Ring Buffer 流水线 |
 | [kv-cache-quantization](/ai/deepseek/flash-mla/concepts/kv-cache-quantization) | FP8 E4M3 KV cache 量化方案、V32/MODEL1 两种模式对比、反量化流程、精度设计 |
 | [hopper-blackwell-kernels](/ai/deepseek/flash-mla/concepts/hopper-blackwell-kernels) | Hopper (SM90) WGMMA+TMA+DSM 与 Blackwell (SM100) tmem+UTCMMA+UTCCP 内核设计差异 |
+
+```{toctree}
+:hidden:
+
+hopper-blackwell-kernels
+kv-cache-quantization
+mla-decoding
+overview
+splitkv
+```

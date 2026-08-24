@@ -239,3 +239,13 @@ A: 推荐使用 WSL2（Windows Subsystem for Linux）获得完整的 Linux 环�
 - [概念文档](../concepts/index.md) —— 深入理解Ninja的设计原理
 - [参考文档](../references/index.md) —— 源代码级别的参考
 - [Ninja 源码仓库](https://github.com/ninja-build/ninja)
+
+```{toctree}
+:hidden:
+
+01-minimal-build
+02-cxx-project
+03-parallel-jobs
+04-incremental-deps
+05-subcommand-usage
+```

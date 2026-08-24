@@ -28,3 +28,13 @@
 Binder体验 → 本地搭建 → 自定义配置 → 添加内容 → 扩展开发
 (01)        (03)       (02)         (04)       (05)
 ```
+
+```{toctree}
+:hidden:
+
+01-launch-binder
+02-custom-demo-talk
+03-local-setup
+04-add-demo-content
+05-extension-dev
+```

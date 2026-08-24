@@ -22,3 +22,16 @@ sources: https://github.com/datawhalechina/happy-llm
 * [第六章 大模型训练实践](chapter6-training-practice.md) — Transformers、DeepSpeed、LoRA/QLoRA 工业级训练。
 * [第七章 大模型应用](chapter7-applications.md) — LLM 评测、RAG 检索增强、Agent 智能体。
 * [第八章 大模型强化学习](chapter8-reinforcement-learning.md) — GRPO、OPD、Search-R1、ReTool Agentic RL。
+
+```{toctree}
+:hidden:
+
+chapter1-nlp-basics
+chapter2-transformer
+chapter3-plm
+chapter4-llm
+chapter5-build-llm
+chapter6-training-practice
+chapter7-applications
+chapter8-reinforcement-learning
+```

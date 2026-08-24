@@ -10,3 +10,14 @@
 - [Profile 机制](/ai/langchain-ai/deepagents/references/profiles) — Harness Profile、Provider Profile、模型特化调优
 - [ACP 协议](/ai/langchain-ai/deepagents/references/acp-protocol) — Agent Client Protocol 集成、`AgentServerACP`
 - [lca-deepagents 变体](/ai/langchain-ai/deepagents/references/lca-variant) — LangChain Academy 课程材料仓库说明
+
+```{toctree}
+:hidden:
+
+acp-protocol
+api
+backends
+lca-variant
+middleware-stack
+profiles
+```

@@ -26,3 +26,14 @@ sources: https://github.com/datawhalechina/handy-n8n
 ## 实战篇
 
 * [C06 n8n 案例分享](c06-case-studies.md) — GitHub Trending 每日推送、GitHub Issue 飞书通知。
+
+```{toctree}
+:hidden:
+
+c01-introduction
+c02-installation
+c03-basic-concepts
+c04-advanced-usage
+c05-community-nodes
+c06-case-studies
+```

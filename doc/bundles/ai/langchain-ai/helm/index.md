@@ -66,3 +66,12 @@ PostgreSQL、Redis、MongoDB 均支持 `external.enabled` 切换：内置模式�
 * **核验链路**：`generated.at` 记录生成时刻，事实零推测，所有版本号、镜像 tag、文件路径均经源码验证。
 
 本知识包为参考型 bundle，不包含 concepts/ 和 examples/ 目录。共收录 1 个信源登记文档，另含 spec/ 子目录（facts.md + insights.md）、references/index.md 与根 index.md、log.md。
+
+```{toctree}
+:hidden:
+
+references/index
+spec/facts
+spec/insights
+log
+```

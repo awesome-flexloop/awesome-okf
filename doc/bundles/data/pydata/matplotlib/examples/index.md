@@ -28,3 +28,9 @@
 可选依赖：
 - SciPy（用于部分示例的 KDE 曲线）
 - Jupyter Notebook（推荐交互式运行）
+
+```{toctree}
+:hidden:
+
+basic-plotting
+```

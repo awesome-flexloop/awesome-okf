@@ -115,3 +115,37 @@ Deep Agents 是一个开源的 Agent 框架（agent harness），构建在 LangC
 | 核心包数 | 7 个 libs 包 + 5 个 partner 子包 |
 | 核心 SDK 版本 | 0.7.8 |
 | dcode 版本 | 0.1.59 |
+
+```{toctree}
+:hidden:
+
+concepts/acp-protocol
+concepts/cli-toolchain
+concepts/code-module
+concepts/core-sdk
+concepts/evals-suite
+concepts/monorepo-architecture
+concepts/talon-runtime
+examples/acp-custom-agent
+examples/cli-deploy-agent
+examples/create-deep-agent
+examples/dcode-quickstart
+examples/run-evals
+examples/talon-telegram
+references/acp-readme
+references/cli-readme
+references/code-agents
+references/code-architecture
+references/code-readme
+references/evals-agents
+references/evals-readme
+references/libs-architecture
+references/libs-development
+references/libs-readme
+references/root-agents
+references/root-readme
+references/talon-readme
+spec/facts
+spec/insights
+log
+```

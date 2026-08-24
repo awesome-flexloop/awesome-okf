@@ -104,3 +104,14 @@ jupyter lite serve
 3. **输出发布**：通过 `publishExecuteResult()`、`stream()` 等方法向前端发送消息
 4. **插件注册**：使用 `JupyterFrontEndPlugin` + `IKernelSpecs.register()` 注册内核
 5. **构建配置**：TypeScript编译 + JupyterLab builder + hatchling Python打包的完整配置
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

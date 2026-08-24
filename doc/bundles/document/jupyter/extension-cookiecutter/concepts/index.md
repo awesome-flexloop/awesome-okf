@@ -23,3 +23,21 @@
 - [10 Binder 集成](10-binder-integration.md) — Binder 配置、environment.yml、postBuild、PR 自动链接
 - [11 代码质量工具](11-code-quality.md) — ruff、black、mypy、mdformat、pre-commit
 - [12 打包发布](12-packaging-release.md) — 手动发布、Jupyter Releaser、conda-forge
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-cookiecutter-basics
+03-project-structure
+04-extension-app
+05-api-handlers
+06-config-discovery
+07-testing
+08-build-system
+09-ci-workflows
+10-binder-integration
+11-code-quality
+12-packaging-release
+```

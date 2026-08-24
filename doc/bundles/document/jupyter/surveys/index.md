@@ -44,3 +44,14 @@ description: "Jupyter/IPython社区调查数据集仓库系统教程：数据集
 | 收录数据集 | 6个（2015-2023） |
 | 最早数据 | 2015年12月 |
 | 源码路径 | `external/libs/jupyter/surveys/` |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

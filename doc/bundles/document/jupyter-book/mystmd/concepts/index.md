@@ -39,3 +39,21 @@ mystmd 概念文档按学习路径编号，建议按顺序阅读。
 |------|------|------|
 | 10 | [配置系统](10-configuration-system.md) | myst.yml、ProjectConfig/SiteConfig/ErrorRule、插件注册、nav/actions 配置 |
 | 11 | [CLI 工具链](11-cli-toolchain.md) | myst init/build/start/clean/templates、commander、Session、构建流程 |
+
+```{toctree}
+:hidden:
+
+00-overview
+01-unified-plugin-architecture
+02-myst-parser
+03-myst-transforms
+04-myst-common-types
+05-error-handling
+06-directives-and-roles
+07-targets-references
+08-frontmatter
+09-myst-spec-node-types
+10-configuration-system
+11-cli-toolchain
+12-citation-js-utils
+```

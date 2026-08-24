@@ -4,3 +4,12 @@
 * [FTP 交互自动化](ftp-interaction.md) — FTP 登录、文件上传下载、目录操作。
 * [密码提示自动响应](password-prompts.md) — sudo/SSH/密钥密码短语自动响应、waitnoecho、避免密码回显。
 * [REPL 交互控制](repl-control.md) — 使用 REPLWrapper 控制 Python/Bash/数据库 REPL。
+
+```{toctree}
+:hidden:
+
+ftp-interaction
+password-prompts
+repl-control
+ssh-login-automation
+```

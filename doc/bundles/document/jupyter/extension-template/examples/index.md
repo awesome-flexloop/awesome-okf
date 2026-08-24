@@ -29,3 +29,12 @@
 4. `jlpm install` 安装 JS 依赖
 5. `jlpm build` 或 `jlpm run watch` 构建
 6. `jupyter lab` 启动 JupyterLab
+
+```{toctree}
+:hidden:
+
+01-hello-world
+02-full-stack-server
+03-mime-renderer
+04-custom-dark-theme
+```

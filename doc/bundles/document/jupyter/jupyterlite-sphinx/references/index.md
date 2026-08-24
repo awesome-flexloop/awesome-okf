@@ -15,3 +15,12 @@ References 是概念文档和示例文档的信源文件，提供源码级索引
 | 信源 | 内容 |
 |------|------|
 | [config-reference](config-reference.md) | 所有 conf.py 配置项速查表：默认值、类型、功能说明、源码行号引用 |
+
+```{toctree}
+:hidden:
+
+config-reference
+js-source
+main-source
+try-examples-source
+```

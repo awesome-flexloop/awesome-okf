@@ -21,3 +21,13 @@
 | 示例 | 说明 |
 |------|------|
 | [05-tab-completion.md](05-tab-completion.md) | 自定义 Tab 补全、命令状态监听、终端尺寸同步和主题切换 |
+
+```{toctree}
+:hidden:
+
+01-basic-shell
+02-using-commands
+03-external-command
+04-custom-config
+05-tab-completion
+```

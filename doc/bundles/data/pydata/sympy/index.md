@@ -63,3 +63,12 @@ okf_version: "0.2"
 * **stale_after 解释**：统一设置为 `2027-12-31`。SymPy 核心 API（Basic/Expr/Symbol/Number/Add/Mul/Pow、sympify、simplify、integrate、solve、Matrix）自 SymPy 1.0 以来保持高度稳定，该日期作为对未来大版本变化的保守重新评估节点。
 * **核验链路**：`generated.at` 记录原始生成时刻（2026-04-22）；`verified.at` 记录过程核验事件（2026-04-22），所有类名、函数名、参数名均通过源码Read/Grep验证，示例代码通过Python执行验证。
 * **覆盖范围**：覆盖 core/、assumptions/、calculus/、functions/、integrals/、simplify/、series/、solvers/、matrices/、polys/、logic/、ntheory/、sets/、stats/、concrete/、tensor/、printing/、parsing/、codegen/、utilities/、vector/ 共22个核心模块；排除 physics/、geometry/、plotting/、crypto/、holonomic/、liealgebras/、categories/、combinatorics/、diffgeom/、discrete/ 等领域专用模块。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

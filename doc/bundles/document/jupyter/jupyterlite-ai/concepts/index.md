@@ -67,3 +67,19 @@
 - [API 参考](/references/index.md) — 接口定义、源码索引、工具/提供商参考
 - [实践示例](/examples/index.md) — 从安装到开发的操作指南
 - [官方文档](https://jupyterlite-ai.readthedocs.io/)
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-architecture-overview
+02-token-di-system
+03-provider-system
+04-tool-system
+05-agent-engine
+06-skill-system
+07-settings-and-config
+08-mcp-integration
+09-chat-ui
+10-code-completion
+```

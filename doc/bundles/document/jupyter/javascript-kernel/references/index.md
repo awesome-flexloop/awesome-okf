@@ -12,3 +12,10 @@ generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T00:00:00+08:00
 - [源码文件索引](source-files.md) — 核心源码文件位置与职责、依赖关系图、外部依赖版本、Widget 文件清单
 - [事实清单](../facts.md) — R 阶段从源码采集的 149 条零推测事实
 - [架构洞察](../insights.md) — I 阶段提炼的 5 个核心架构洞察、反常识发现、知识地图
+
+```{toctree}
+:hidden:
+
+api-reference
+source-files
+```

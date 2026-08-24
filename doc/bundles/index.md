@@ -145,3 +145,18 @@ flowchart LR
 | [Ψhē 理论体系](think/psi/index.md)          | 4  | ψ=ψ(ψ) 自指递归理论体系——哲学、数学、宇宙学、意识研究与 AI 应用 |
 | [📜 老子（Laozi）知识包](think/laozi/index.md) | 1  | 《老子》（《道德经》）相关知识包——帛书《老子》阅读教程           |
 
+
+```{toctree}
+:hidden:
+
+ai/index
+build/index
+comm/index
+data/index
+document/index
+meta/index
+ml/index
+python/index
+think/index
+web/index
+```

@@ -34,3 +34,16 @@ stale_after: 2026-12-31
 
 * [Tape 图变换：算子录制、Builder 魔术方法与运算符重载](06-tape-transform.md) — Tape.op() 录制节点与 initializer、Builder.__getattr__ 伪方法调用、_magic_handler ClassVar 动态注入实现算术运算符重载、三种图构建方式对比。
 * [名称管理、元数据存储与废弃 API](07-name-metadata.md) — NameAuthority 命名治理与永不释放设计、MetadataStore 失效标记（invalidate/valid）、meta（临时分析）vs metadata_props（可序列化）双轨元数据、Input()→ir.val() 废弃迁移、Attr* 工厂函数。
+
+```{toctree}
+:hidden:
+
+00-overall-architecture
+01-core-entities
+02-tensor-protocol
+03-type-system
+04-doubly-linked-graph
+05-serde
+06-tape-transform
+07-name-metadata
+```

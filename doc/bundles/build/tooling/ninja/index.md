@@ -171,3 +171,14 @@ Hello, Ninja!
 - **Meson 构建系统**：[mesonbuild.com](https://mesonbuild.com/)
 - **GN 元构建系统**：[gn.googlesource.com/gn](https://gn.googlesource.com/gn/)
 - **Python 生成器库**：[ninja_syntax.py](https://github.com/ninja-build/ninja/blob/master/misc/ninja_syntax.py)
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

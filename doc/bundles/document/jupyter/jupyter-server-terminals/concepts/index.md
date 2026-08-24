@@ -20,3 +20,15 @@
 ## 配置与平台
 
 * [Shell 配置与平台差异](06-shell-configuration.md) — Shell 确定优先级链、平台默认 Shell（PowerShell/Bash）、Login Shell 模式、环境变量、跨平台注意事项。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-extension-app
+03-terminal-manager
+04-rest-api
+05-websocket
+06-shell-configuration
+```

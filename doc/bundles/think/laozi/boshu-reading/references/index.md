@@ -15,3 +15,12 @@
 - 引用格式使用 bundle-relative 绝对路径（`/references/xxx.md`）
 - 本地PDF文件路径在各信源文档中标注，便于读者直接查阅
 - 关联的 laozi-lineage bundle（学术性版本源流）通过 lineage-cross-ref.md 交叉引用
+
+```{toctree}
+:hidden:
+
+core-manuscripts
+historical-commentaries
+lineage-cross-ref
+modern-studies
+```

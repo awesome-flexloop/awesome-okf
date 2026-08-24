@@ -48,3 +48,23 @@
        ↓
 11 → 12 → 13 → 14（进阶：Kernel、自定义文档、服务端、React）
 ```
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-hello-world
+02-project-setup
+03-plugin-basics
+04-commands
+05-widgets-shell
+06-signals
+07-palette-launcher
+08-menus-toolbars
+09-settings-state
+10-notifications-logging
+11-kernel-interaction
+12-documents
+13-server-extension
+14-advanced-ui
+```

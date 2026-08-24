@@ -11,3 +11,13 @@
 | [构建环境配置](build-env-source.md) | `.github/build-environment.yml` | CI 构建环境的 conda 工具链定义 |
 | [CI/CD 流水线](deploy-workflow-source.md) | `.github/workflows/deploy.yml` | GitHub Actions 自动构建与部署流程 |
 | [示例 Notebook](demo-notebook-source.md) | `content/demo.ipynb` | xeus-python + ipycanvas 笑脸绘制示例 |
+
+```{toctree}
+:hidden:
+
+build-env-source
+demo-notebook-source
+deploy-workflow-source
+environment-source
+readme-source
+```

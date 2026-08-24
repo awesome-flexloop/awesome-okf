@@ -21,3 +21,12 @@ stale_after: "2027-02-22"
 | [benchmarks-source.md](benchmarks-source.md) | 6种Benchmark（execution-time/style-sheets/style-rules/style-rule-groups/rule-usage/self-profile）的源码实现分析 |
 | [scenarios-source.md](scenarios-source.md) | 10种内置Scenario（menuOpen/menuSwitch/tabSwitch/sidebarOpen/completer/scroll/debugger/create-cells/custom等）的源码实现分析 |
 | [dramaturg-source.md](dramaturg-source.md) | Dramaturg浏览器自动化层的源码分析（waitForSelector/waitForLayout/click/hover/fill等） |
+
+```{toctree}
+:hidden:
+
+api-tokens
+benchmarks-source
+dramaturg-source
+scenarios-source
+```

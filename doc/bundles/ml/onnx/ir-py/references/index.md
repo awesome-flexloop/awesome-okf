@@ -19,3 +19,12 @@ stale_after: 2026-12-31
 * [_enums.py 类型枚举：DataType 与 AttributeType](enums-types.md) — `src/onnx_ir/_enums.py`（~410行）：AttributeType 15种属性类型、DataType 27种数据类型（FLOAT/DOUBLE/BFLOAT16/FLOAT8/INT4/INT2等）、numpy↔ONNX dtype 映射、位宽表、分类查询方法。
 * [_tape.py/serde.py/tape.py：图变换录制与 Protobuf 序列化](tape-serde.md) — `src/onnx_ir/_tape.py`（~240行）Tape/Builder 图构建录制器、`src/onnx_ir/serde.py`（~1200行）from_proto/to_proto 多态序列化、TensorProtoTensor 零拷贝包装、两阶段图反序列化、文本格式支持。
 * [_io.py/_metadata.py/_linked_list.py/_name_authority.py：IO、元数据、链表与命名](io-metadata.md) — `src/onnx_ir/_io.py`（~200行）load/save 与外部数据、`_metadata.py`（~50行）MetadataStore 失效标记、`_linked_list.py`（~280行）DoublyLinkedSet 双向链表、`_name_authority.py`（~70行）NameAuthority 自动唯一命名。
+
+```{toctree}
+:hidden:
+
+core-entities
+enums-types
+io-metadata
+tape-serde
+```

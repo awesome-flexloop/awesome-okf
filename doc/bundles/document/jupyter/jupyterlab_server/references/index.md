@@ -48,3 +48,15 @@ description: "jupyterlab_server 源码信源文档总目录"
 | `test_utils.py` | 210 | 测试工具（非生产代码） |
 | `pytest_plugin.py` | 148 | 测试fixtures（非生产代码） |
 | `rest-api.yml` | ~200 | OpenAPI 3.0规范 |
+
+```{toctree}
+:hidden:
+
+app-source
+config-source
+handlers-source
+i18n-source
+misc-source
+settings-source
+workspaces-source
+```

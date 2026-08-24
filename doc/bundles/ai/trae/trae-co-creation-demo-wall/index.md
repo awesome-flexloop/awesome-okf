@@ -143,3 +143,36 @@ sources:
 - **文档生成日期**：2026-04-22
 - **文档有效期至**：2026-10-22
 - **许可证**：详见项目 LICENSE 文件
+
+```{toctree}
+:hidden:
+
+concepts/00-introduction
+concepts/01-getting-started
+concepts/02-architecture-overview
+concepts/03-data-model
+concepts/04-auth-system
+concepts/05-i18n-routing
+concepts/06-api-routes
+concepts/07-crud-layer
+concepts/08-rich-text-editor
+concepts/09-cos-storage
+concepts/10-audit-governance
+concepts/11-dictionary-system
+concepts/12-frontend-components
+concepts/13-form-submission
+concepts/14-like-system
+concepts/15-docker-deployment
+concepts/16-testing
+examples/admin-review
+examples/cos-file-upload
+examples/custom-crud-api
+examples/dictionary-management
+examples/docker-deploy
+examples/setup-dev-environment
+examples/submit-work
+examples/user-registration-auth
+references/demo-wall-source
+spec/facts
+spec/insights
+```

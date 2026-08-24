@@ -22,3 +22,20 @@
 * [09-StreamWatcher 自动响应](09-watchers.md) — Responder 密码自动输入、FailingResponder 失败检测、自定义 watcher。
 * [10-终端与 IO](10-terminals-io.md) — 伪终端 PTY、输出控制、字符缓冲模式、平台兼容性。
 * [11-高级模式](11-advanced-patterns.md) — 自定义 Program/Executor/Runner、MockContext 测试、嵌入使用。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-task-basics
+03-context-object
+04-collection-namespace
+05-configuration
+06-runners
+07-cli-program
+08-execution-model
+09-watchers
+10-terminals-io
+11-advanced-patterns
+```

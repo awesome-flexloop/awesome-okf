@@ -10,3 +10,14 @@
 | 03 | [与 myst-cli 的关系](03-myst-cli-relationship.md) | 白标环境变量、代码复用比例、功能等价性 |
 | 04 | [模板系统](04-template-system.md) | myst-templates 仓库、template.yml、jtex 渲染整合 |
 | 05 | [从 v1 迁移](05-migration-from-v1.md) | _config.yml→myst.yml、Sphinx→myst-cli、指令兼容 |
+
+```{toctree}
+:hidden:
+
+00-v2-architecture
+01-python-entry-nodeenv
+02-ts-cli-commands
+03-myst-cli-relationship
+04-template-system
+05-migration-from-v1
+```

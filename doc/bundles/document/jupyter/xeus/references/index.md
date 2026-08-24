@@ -21,3 +21,15 @@ status: stable
 | [python-addon-source.md](python-addon-source.md) | Python构建端XeusAddon（post_build、环境创建、内核复制、empack打包） | F-108~F-130 |
 | [conda-env-source.md](conda-env-source.md) | Conda环境创建与pip依赖安装 | F-131~F-137 |
 | [metasource.md](metasource.md) | 项目元数据与依赖版本 | F-001~F-014 |
+
+```{toctree}
+:hidden:
+
+conda-env-source
+extension-source
+kernel-base-source
+kernel-impl-source
+metasource
+python-addon-source
+worker-modes-source
+```

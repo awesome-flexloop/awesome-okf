@@ -64,3 +64,14 @@ Vibe Vibe 践行 Andrej Karpathy 于 2025 年提出的 **Vibe Coding** 理念—
 ## 变更记录
 
 详见 [log.md](/ai/datawhale/vibe-vibe/log.md)。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

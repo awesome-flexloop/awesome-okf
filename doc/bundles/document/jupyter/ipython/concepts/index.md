@@ -40,3 +40,22 @@
 |------|------|
 | [12-async-support.md](12-async-support.md) | 顶层 await 原生支持、should_run_async 检测、asyncio/trio/curio 事件循环集成、%autoawait |
 | [13-terminal-frontend.md](13-terminal-frontend.md) | TerminalInteractiveShell 终端增强、prompt_toolkit 集成、pt_inputhooks GUI 事件循环、embed() 嵌入 API |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-shell-lifecycle
+04-magic-system
+05-execution-pipeline
+06-display-system
+07-input-transform
+08-completer-history
+09-extension-system
+10-events-hooks
+11-custom-magics
+12-async-support
+13-terminal-frontend
+```

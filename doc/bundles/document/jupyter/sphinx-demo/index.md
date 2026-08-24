@@ -118,3 +118,15 @@ cd build/html && python -m http.server 8000
 4. **添加交互**：[06-TryExamples](concepts/06-try-examples.md) → [07-Notebook嵌入](concepts/07-notebook-embedding.md)，让文档活起来
 5. **定制外观**：[08-样式定制](concepts/08-customization.md)，打造品牌化文档
 6. **自动部署**：[09-CI/CD部署](concepts/09-ci-deployment.md)，配置GitHub Actions自动发布
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+facts
+insights
+```

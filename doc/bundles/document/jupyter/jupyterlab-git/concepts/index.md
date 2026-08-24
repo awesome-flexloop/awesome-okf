@@ -36,3 +36,21 @@
 2. **前端开发者**：03 → 04 → 06 → 07 → 09 → 10（重点看前端插件系统、UI组件、信号轮询、命令菜单）
 3. **后端开发者**：05 → 08 → 11（重点看REST API、Git执行引擎、配置系统）
 4. **扩展开发者**：03 → 06 → 05 → 10（重点看插件注册、Diff Provider扩展、API调用、命令注册）
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-extension-plugin-system
+04-git-extension-model
+05-rest-api-and-communication
+06-diff-provider-system
+07-ui-components-and-widgets
+08-server-git-execution
+09-polling-and-signals
+10-commands-and-menu
+11-configuration-and-settings
+12-stash-and-advanced
+```

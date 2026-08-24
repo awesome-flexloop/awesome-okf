@@ -37,3 +37,20 @@ status: stable
 | 09 | [Schema国际化选择器](/concepts/09-schema-i18n-selectors.md) | 默认选择器、自定义选择器配置、JSON Pointer路径匹配 |
 | 10 | [Crowdin贡献者集成](/concepts/10-contributors-crowdin.md) | API集成、报告下载、Markdown格式化、构建时自动更新 |
 | 11 | [双模式分发机制](/concepts/11-dual-mode-distribution.md) | 独立扩展包vs集中语言包、目录结构差异、打包配置对比 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-cli-commands
+04-extraction-pipeline
+05-catalog-management
+06-json-jed-format
+07-hatch-build-hook
+08-runtime-discovery
+09-schema-i18n-selectors
+10-contributors-crowdin
+11-dual-mode-distribution
+```

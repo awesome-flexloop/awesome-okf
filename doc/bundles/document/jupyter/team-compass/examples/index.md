@@ -5,3 +5,9 @@
 | 示例 | 内容 |
 |------|------|
 | [提名一位新团队成员](nominating-new-member.md) | 按照5步提名流程，完整演示从内部沟通到正式加入的操作步骤 |
+
+```{toctree}
+:hidden:
+
+nominating-new-member
+```

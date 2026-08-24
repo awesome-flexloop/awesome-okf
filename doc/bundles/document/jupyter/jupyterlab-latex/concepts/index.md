@@ -32,3 +32,16 @@ jupyterlab-latex 的核心概念按阅读顺序排列，从入门到进阶逐层
 开发者路径：00 → 02 → 03 → 04 → 05（理解架构后二次开发）
 运维路径：   01 → 07 → 04 troubleshooting（安装配置与排障）
 ```
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-latex-compilation
+04-pdf-viewer
+05-synctex-sync
+06-editing-tools
+07-configuration
+```

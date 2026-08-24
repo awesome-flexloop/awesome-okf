@@ -11,3 +11,17 @@ myst-syntax 概念文档按学习路径编号。
 - [06 交叉引用与文献引用](06-cross-references-citations.md) — ref/cite 角色和引用解析
 - [07 文件包含与嵌入](07-include-embed.md) — include/literal-include/embed 指令
 - [08 高级指令](08-advanced-directives.md) — Mermaid/TOC/Raw/SI/化学式等
+
+```{toctree}
+:hidden:
+
+00-directive-role-basics
+01-admonition-callouts
+02-code-blocks
+03-figures-images
+04-tables
+05-math
+06-cross-references-citations
+07-include-embed
+08-advanced-directives
+```

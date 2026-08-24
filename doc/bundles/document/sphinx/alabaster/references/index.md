@@ -5,3 +5,9 @@
 | 信源文件 | 说明 |
 |----------|------|
 | [alabaster-source.md](alabaster-source.md) | Alabaster 核心源文件路径映射、关键代码位置、setup() 函数参考 |
+
+```{toctree}
+:hidden:
+
+alabaster-source
+```

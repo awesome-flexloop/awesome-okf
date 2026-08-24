@@ -5,3 +5,13 @@
 - [MyST 处理管线](process-myst.md) — process/myst.ts 解析转换执行
 - [项目加载](project-load.md) — project/load.ts 和 TOC 解析
 - [Session 会话](session-session.md) — Session 依赖注入容器
+
+```{toctree}
+:hidden:
+
+build-build
+cli-index
+process-myst
+project-load
+session-session
+```

@@ -14,3 +14,9 @@
 4. **多输出回调**：一个回调同时更新图表和统计面板
 5. **多页面应用**：use_pages + register_page + page_container + path_template动态路由
 6. **回调链**：dcc.Interval实时更新 + 回调串联（图表→统计自动更新）
+
+```{toctree}
+:hidden:
+
+first-dash-app
+```

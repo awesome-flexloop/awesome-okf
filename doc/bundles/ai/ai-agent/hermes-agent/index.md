@@ -71,3 +71,24 @@ Hermes Agent 是一个渐进式披露（Progressive Disclosure）的多Agent框�
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
 > 
 > **内容统计**：10 个概念 + 4 个示例 + 1 个信源 = 15 个内容文档
+
+```{toctree}
+:hidden:
+
+concepts/acp-adapter
+concepts/agent-core-loop
+concepts/cli-app-entry
+concepts/cron-scheduler
+concepts/gateway-multi-agent
+concepts/mcp-protocol
+concepts/memory-subsystem
+concepts/platform-plugin
+concepts/provider-abstraction
+concepts/tool-registry
+examples/create-simple-agent
+examples/register-custom-tool
+examples/setup-gateway-multi-agent
+examples/use-mcp-server
+references/hermes-agent-sources
+.spec/facts
+```

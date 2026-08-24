@@ -15,3 +15,13 @@
 
 * [AI 与 API 集成](ai-api-integration.md) — 集群节点（Chain/Agent）、Memory 记忆、RAG 向量检索、Tools 工具、MCP 协议、HTTP Request 通用连接。对应 C04。
 * [高级实战](advanced-practice.md) — 子工作流、Error Trigger 错误处理、社区节点、TypeScript 自定义节点开发、GitHub 实战案例。对应 C04-C06。
+
+```{toctree}
+:hidden:
+
+advanced-practice
+ai-api-integration
+data-processing
+getting-started
+workflow-design
+```

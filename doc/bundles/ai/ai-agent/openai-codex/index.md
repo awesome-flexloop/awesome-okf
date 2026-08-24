@@ -132,3 +132,14 @@ openai-codex/
 ## 许可证
 
 Apache-2.0
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

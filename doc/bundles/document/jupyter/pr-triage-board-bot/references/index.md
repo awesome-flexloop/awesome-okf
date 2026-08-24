@@ -10,3 +10,14 @@
 | [field-implementations-source.md](field-implementations-source.md) | 七个核心字段实现源码索引（authorkind/openedat/totallineschanged/maintainerengagement/cistatus/mergeconflicts/approvalstatus + 未注册的fileschangedtype） |
 | [graphql-source.md](graphql-source.md) | GraphQL查询文件索引（prs.gql/project.gql/projectitems.gql，分页与字段结构） |
 | [utils-source.md](utils-source.md) | 工具函数源码索引（memoize、getGraphQL、getCollaborators、getMergedPRCount缓存机制） |
+
+```{toctree}
+:hidden:
+
+field-config-source
+field-implementations-source
+graphql-source
+main-source
+project-source
+utils-source
+```

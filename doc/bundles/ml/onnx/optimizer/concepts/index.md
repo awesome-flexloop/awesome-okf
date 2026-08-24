@@ -30,3 +30,15 @@ stale_after: 2026-12-31
 
 * [Python API、CLI 与 C API 使用指南](05-python-cli-api.md) — optimize()函数用法、get_available_passes()/get_fuse_and_elimination_passes()辅助函数、CLI参数与流程、C++自由函数API、纯C API注意事项、大模型自动处理、典型优化管道。
 * [自定义 Pass 开发方法](06-custom-pass.md) — PredicateBasedPass vs FullGraphBasedPass选择决策树、patternMatchPredicate编写模式、runTransform节点操作规范、tryReplacingAllUsesWith保护机制、pass_util工具函数库、子图递归处理、opset版本兼容、注册新pass方法。
+
+```{toctree}
+:hidden:
+
+00-overall-architecture
+01-pass-system
+02-builtin-passes
+03-pass-execution
+04-fusion-patterns
+05-python-cli-api
+06-custom-pass
+```

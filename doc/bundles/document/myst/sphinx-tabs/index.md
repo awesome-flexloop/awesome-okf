@@ -73,3 +73,14 @@ extensions = ['sphinx_tabs.tabs']
 ## 更新日志
 
 见 [log.md](/log.md)。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

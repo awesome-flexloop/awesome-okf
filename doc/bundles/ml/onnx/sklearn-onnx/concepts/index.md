@@ -29,3 +29,14 @@ stale_after: 2026-12-31
 
 * [OnnxOperator代数API：嵌入式DSL、类工厂、延迟求值、三件套自动生成](04-onnx-operator-algebra.md) — ClassFactory 动态生成算子类、OnnxOperator 延迟求值 AST、add_to() 递归展开、OnnxOperatorMixin 三件套自动桥接（parser/shape_calculator/converter 只需一个 to_onnx_operator）、运算符重载、wrap_as_onnx_mixin 动态混入。
 * [Pipeline/FeatureUnion/ColumnTransformer处理、类型推断initial_types](05-pipeline-feature-union.md) — initial_types 类型声明与自动推断（guess_initial_types）、DataType 类型层次、ZipMap 注入机制（三种模式）、Pipeline 顺序串联（中间步骤自动 zipmap=False）、FeatureUnion 并行加权拼接、ColumnTransformer 列切片+条件合并+递归转换、final_types 输出覆盖。
+
+```{toctree}
+:hidden:
+
+00-overall-architecture
+01-conversion-pipeline
+02-topology-ir
+03-converter-registration
+04-onnx-operator-algebra
+05-pipeline-feature-union
+```

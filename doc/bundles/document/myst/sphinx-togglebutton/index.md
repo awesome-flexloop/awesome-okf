@@ -68,3 +68,14 @@ sphinx-togglebutton/
 | [sphinx-tabs](https://github.com/executablebooks/sphinx-tabs) | 同生态标签页组件扩展 |
 | [sphinx-exercise](https://github.com/executablebooks/sphinx-exercise) | 同生态练习/答案指令扩展（答案折叠是典型应用场景） |
 | [sphinx-design](https://github.com/executablebooks/sphinx-design) | 更丰富的 UI 组件库（含 dropdown 指令） |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

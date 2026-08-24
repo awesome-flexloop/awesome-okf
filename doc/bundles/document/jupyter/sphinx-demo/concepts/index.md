@@ -38,3 +38,19 @@
 4. **交互功能**：[06-TryExamples](06-try-examples.md) → [07-NotebookLite](07-notebook-embedding.md) → [10-禁用控制](10-disabling-examples.md)
 5. **高级主题**：[08-样式定制](08-customization.md) → [09-CI/CD部署](09-ci-deployment.md)
 6. **动手实践**：前往[实践示例](/examples/index.md)跟着教程构建完整站点
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-project-structure
+02-quick-start
+03-sphinx-conf
+04-kernel-comparison
+05-config-files
+06-try-examples
+07-notebook-embedding
+08-customization
+09-ci-deployment
+10-disabling-examples
+```

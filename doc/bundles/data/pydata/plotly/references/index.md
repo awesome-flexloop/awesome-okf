@@ -50,3 +50,9 @@
 | ipywidgets (>=7.0) | FigureWidget Jupyter 交互支持（可选） |
 | kaleido | 静态图片导出（PNG/SVG/PDF，可选） |
 | packaging | 版本比较 |
+
+```{toctree}
+:hidden:
+
+graph-obj-model
+```

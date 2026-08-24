@@ -13,3 +13,11 @@
 - 第一次读：先看 [03-三周通读计划](03-reading-plan.md)，按计划开始阅读
 - 读完第一遍后：看 [01-开篇对照阅读](01-first-chapters.md)，重新体会德经开篇
 - 遇到异文时：参考 [02-异文对照实操](02-variant-walkthrough.md) 的五步法处理其他异文
+
+```{toctree}
+:hidden:
+
+01-first-chapters
+02-variant-walkthrough
+03-reading-plan
+```

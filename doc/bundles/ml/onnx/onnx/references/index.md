@@ -23,3 +23,16 @@ stale_after: 2026-12-31
 * [common/ir.h：C++ IR 核心类](cpp-ir.md) — `onnx/common/ir.h`：Graph/Node/Value 三核心结构体、Node 双向循环链表（哨兵节点）、CRTP Attributes、Value replaceAllUsesWith、Dimension 三态、AttributeKind 12种、initializer_node_、used_names_ O(1) 查重、subgraph_bearing_nodes_、Use 结构体。
 * [shape_inference.h/cc/shape_inference.py：形状推断实现](shape-inference.md) — `onnx/defs/shape_inference.h`、`onnx/defs/shape_inference.cc`、`onnx/shape_inference.py`：InferenceContext 抽象接口、InferenceFunction/DataPropagationFunction、ShapeInferenceOptions（check_type/error_mode/data_prop）、kMaxMaterializedRank=1024、Python infer_shapes() 封装。
 * [compose.py/parser.py/printer.py/version_converter.py/inliner.py：图组合、解析打印、版本转换与内联](compose-parser-printer.md) — `onnx/compose.py`、`onnx/parser.py`/`parser.cc`、`onnx/printer.py`、`onnx/version_converter.py`、`onnx/inliner.py`：merge_models 前提条件、add_prefix 前缀策略与子图递归、parse_model/parse_graph/parse_function/parse_node、to_text 打印、convert_version 跨版本转换、inline_local_functions 递归内联、inline_selected_functions 选择性内联。
+
+```{toctree}
+:hidden:
+
+checker
+compose-parser-printer
+cpp-ir
+helper-api
+onnx-proto
+op-schema
+serialization
+shape-inference
+```

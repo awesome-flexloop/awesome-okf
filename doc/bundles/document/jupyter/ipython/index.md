@@ -183,3 +183,14 @@ Out[4]: array([0.  , 0.25, 0.5 , 0.75, 1.  ])
 - **ipykernel**：[ipython/ipykernel](https://github.com/ipython/ipykernel) — IPython 的 Jupyter 内核
 - **traitlets**：[ipython/traitlets](https://github.com/ipython/traitlets) — IPython 使用的配置框架
 - **prompt_toolkit**：[prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) — 终端 UI 库
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

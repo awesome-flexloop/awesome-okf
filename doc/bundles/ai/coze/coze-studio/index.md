@@ -58,3 +58,12 @@ stale_after: 2027-08-23
 | [前端架构参考](/references/frontend-architecture.md) | Rush.js 配置、四级包层次、20+ arch 包、Rsbuild |
 | [IDL 与 API 契约参考](/references/idl-api-contracts.md) | Thrift IDL 组织、18 服务、Base/BaseResp、bigint 处理 |
 | [部署与基础设施参考](/references/deployment-infrastructure.md) | 11 Docker 服务、270+ 环境变量、可插拔选项、Helm Chart |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

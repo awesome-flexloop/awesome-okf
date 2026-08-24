@@ -13,3 +13,12 @@
 2. **依赖注入**：学习 [Token依赖注入](02-token-injection.md)，掌握如何使用JupyterLab核心服务
 3. **UI构建**：通过 [自定义命令与UI面板](03-custom-command.md)，学会创建丰富的用户界面
 4. **多文件开发**：通过 [本地模块导入与CSS样式](04-local-import.md)，掌握生产级插件的组织方式
+
+```{toctree}
+:hidden:
+
+01-hello-world
+02-token-injection
+03-custom-command
+04-local-import
+```

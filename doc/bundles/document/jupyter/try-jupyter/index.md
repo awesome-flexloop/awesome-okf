@@ -156,3 +156,14 @@ pixi run python -m http.server 8000 --directory dist
 | cpp-tiny-ray-tracer.ipynb | C++23 | 光线追踪渲染器 |
 | r.ipynb | R | R语言+ggplot2可视化 |
 | sqlite.ipynb | SQLite | SQL查询演示 |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

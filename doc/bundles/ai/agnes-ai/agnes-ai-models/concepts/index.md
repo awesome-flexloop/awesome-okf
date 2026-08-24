@@ -32,3 +32,16 @@
      ↓                    ↓                     ↓
   了解平台           掌握API调用           上线生产环境
 ```
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-api-authentication
+03-chat-completions
+04-image-generation
+05-video-generation
+06-rate-limits
+07-error-handling
+```

@@ -9,3 +9,13 @@
 | [vuln-struct.md](vuln-struct.md) | `pkg/vulstruct/` | Info、VersionVul、AdvisoryEngine、ReadVersionVul |
 | [python-subsystems.md](python-subsystems.md) | `mcp-scan/`、`agent-scan/`、`AIG-PromptSecurity/`、`common/agent/` | Python 子系统目录结构、命令行参数、ParseStdoutLine 协议 |
 | [data-rules.md](data-rules.md) | `data/fingerprints/`、`data/vuln/`、`data/mcp/`、`data/eval/` | YAML/JSON 数据格式、DSL 语法、规模统计 |
+
+```{toctree}
+:hidden:
+
+data-rules
+go-server
+python-subsystems
+scan-engine
+vuln-struct
+```

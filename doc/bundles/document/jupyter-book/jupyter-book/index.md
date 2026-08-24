@@ -48,3 +48,14 @@ Jupyter Book v2 CLI
 
 ## 相关知识束
 - [myst-exporters](../myst-exporters/index.md) — 底层多格式导出引擎
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

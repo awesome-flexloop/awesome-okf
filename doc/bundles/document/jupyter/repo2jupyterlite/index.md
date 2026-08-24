@@ -170,3 +170,15 @@ CLI模式:                          BinderLite模式:
 5. **哨兵文件原子性**：先写所有文件再写哨兵，消费者只检查哨兵存在性，无需文件锁
 6. **零拷贝构建**：本地模式直接构建到目标目录，避免临时目录拷贝的IO开销
 7. **ContentProvider责任链**：按顺序检测URL匹配，易于扩展新的数据源类型
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+patterns/index
+facts
+insights
+log
+```

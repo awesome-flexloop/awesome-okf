@@ -22,3 +22,14 @@
 | 文件 | 说明 |
 |------|------|
 | [readme-source.md](readme-source.md) | `README.rst` 原文与中文使用说明 |
+
+```{toctree}
+:hidden:
+
+dockerfile-base
+dockerfile-ci
+dockerfile-latexpdf
+readme-source
+workflow-build
+workflow-build-ci
+```

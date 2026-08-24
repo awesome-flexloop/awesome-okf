@@ -44,3 +44,12 @@ okf_version: "0.2"
 * **核验链路**：代码示例基于 tf2onnx 公开 API（from_keras/from_saved_model/from_function/@tf_op 装饰器），API 签名与源码一致。
 
 本知识包共收录 13 个内容文档（7 个概念 + 3 个示例 + 3 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

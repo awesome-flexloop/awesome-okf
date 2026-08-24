@@ -30,3 +30,16 @@ sources:
 | [host-guide-source.md](host-guide-source.md) | docs/host-guide.md | 会议主持流程、开场脚本、录制规范 |
 | [survey-source.md](survey-source.md) | docs/surveys/2020-jupyterlab-survey.md | 2020年用户调查问卷结构 |
 | [conf-py-source.md](conf-py-source.md) | docs/conf.py + .readthedocs.yml + requirements.txt + gen_contributors.py | Sphinx 构建系统、ReadTheDocs 配置、自动化脚本 |
+
+```{toctree}
+:hidden:
+
+becoming-member-source
+conf-py-source
+decision-making-source
+host-guide-source
+member-guide-source
+readme-source
+survey-source
+team-source
+```

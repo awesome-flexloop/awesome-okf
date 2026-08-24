@@ -32,3 +32,14 @@
 - [示例文档索引](../examples/index.md)
 - [源码信源索引](../references/index.md)
 - [教程首页](../index.md)
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-dual-bridge-architecture
+03-jupyter-style-class
+04-css-generation-pipeline
+05-build-and-extension
+```

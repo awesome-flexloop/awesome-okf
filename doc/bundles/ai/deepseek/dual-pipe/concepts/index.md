@@ -6,3 +6,14 @@
 - [P2P 通信模式](/ai/deepseek/dual-pipe/concepts/communication-pattern) — 全局 tensor shape 配置、批量通信、rank 映射
 - [DualPipeV 与 DualPipe 对比](/ai/deepseek/dual-pipe/concepts/dualpipev-comparison) — V 型调度 vs 对称双向调度的差异与选择
 - [自定义模块集成](/ai/deepseek/dual-pipe/concepts/custom-module-integration) — 如何编写 PipelineStage、overlapped_forward_backward 接口、WeightGradStore 集成
+
+```{toctree}
+:hidden:
+
+communication-pattern
+custom-module-integration
+dualpipe-algorithm
+dualpipev-comparison
+overview
+zero-bubble
+```

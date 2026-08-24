@@ -41,3 +41,11 @@ jlpm && jlpm build
 jupyter labextension develop . --overwrite
 jupyter lab
 ```
+
+```{toctree}
+:hidden:
+
+01-hello-world
+02-commands-palette
+03-custom-widget
+```

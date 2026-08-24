@@ -12,3 +12,16 @@ pyzmq 核心概念文档，按学习路径排列。
 | 05 | [异步双路径：Future 状态机与 asyncio 集成](05-async-future-asyncio.md) | _AsyncSocket 状态机、shadow socket、asyncio/tornado 双适配、Windows 兼容 |
 | 06 | [认证与 ZAP](06-auth-zap.md) | ZAP 协议、Authenticator、PLAIN/CURVE、Thread/Asyncio 认证器、证书管理 |
 | 07 | [生态模块：eventloop、green、devices、log 与 utils](07-ecosystem-eventloop-green-devices-log.md) | tornado 集成、gevent 适配、设备代理、PUBHandler 日志、jsonapi |
+
+```{toctree}
+:hidden:
+
+00-architecture-dual-backend
+01-context-lifecycle
+02-socket-sugar
+03-frame-message
+04-poller
+05-async-future-asyncio
+06-auth-zap
+07-ecosystem-eventloop-green-devices-log
+```

@@ -18,3 +18,11 @@
 
 - 扩展实现源码参考：见 [jupyterlite-sphinx bundle](/document/jupyter/jupyterlite-sphinx/)（同目录下）
 - JupyterLite 核心参考：见 [jupyterlite bundle](/document/jupyter/jupyterlite/)
+
+```{toctree}
+:hidden:
+
+ci-workflow-source
+conf-py-source
+json-config-source
+```

@@ -16,3 +16,16 @@
 - [05 - CLI 与 TUI](/concepts/05-cli-tui.md)——命令系统、Bubble Tea TUI、MCP/插件管理
 - [06 - Checkpoint 与恢复](/concepts/06-checkpoint-recovery.md)——blob 存储、事务回滚、fork/branch
 - [07 - Fleet 与 Subagent](/concepts/07-fleet-subagents.md)——并行调度、写路径声明、DAG 依赖
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-project-architecture
+02-agent-run-loop
+03-acp-protocol
+04-bot-gateway
+05-cli-tui
+06-checkpoint-recovery
+07-fleet-subagents
+```

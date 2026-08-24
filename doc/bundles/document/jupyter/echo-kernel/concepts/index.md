@@ -19,3 +19,13 @@
 3. **深入实现**：[03-EchoKernel实现详解](03-echokernel-implementation.md)
 4. **构建发布**：[04-构建与打包系统](04-build-and-packaging.md)
 5. **动手实践**：前往[实践示例](/examples/index.md)跟着教程开发自己的内核
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-kernel-architecture
+02-plugin-registration
+03-echokernel-implementation
+04-build-and-packaging
+```

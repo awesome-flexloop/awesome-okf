@@ -53,3 +53,23 @@ Trae Templates 是 TRAE IDE 的社区维护项目模板集合，采用 MIT 许�
 4. 参考 [使用 Next.js 模板](/examples/use-nextjs-template.md) 动手实践
 5. 如需 AI 辅助开发，阅读 [AGENTS.md 开发契约](/concepts/07-agents-contract.md) 和 [superpowers-init 示例](/examples/use-superpowers-init.md)
 6. 想贡献模板，阅读 [创建自定义模板](/examples/create-custom-template.md)
+
+```{toctree}
+:hidden:
+
+concepts/00-introduction
+concepts/01-template-classification
+concepts/02-web-frontend-templates
+concepts/03-backend-templates
+concepts/04-mobile-desktop-templates
+concepts/05-data-ai-templates
+concepts/06-tools-devops-templates
+concepts/07-agents-contract
+examples/agents-md-config
+examples/create-custom-template
+examples/use-nextjs-template
+examples/use-superpowers-init
+references/templates-source
+spec/facts
+spec/insights
+```

@@ -6,3 +6,14 @@
 * [维度谱系](03-dimension-spectrum.md) - 维度谱系D0-D∞
 * [宇宙本体论](04-cosmic-ontology.md) - 宇宙本体论(D10中心理论)
 * [信息场](05-information-field.md) - 信息场与意识理论
+
+```{toctree}
+:hidden:
+
+00-three-axioms
+01-flip-xor-shift
+02-recursion-meta-operator
+03-dimension-spectrum
+04-cosmic-ontology
+05-information-field
+```

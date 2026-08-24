@@ -89,3 +89,19 @@ stale_after: 2027-08-22
 | [子命令与工具](08-subcommands-tools.md) | [主入口 API](../references/main-source.md)（NinjaMain/Tool函数） |
 | [Ninja 内部实现](09-ninja-internals.md) | 全部 API 参考 |
 | [构建生成器集成](10-build-generators.md) | [Manifest解析器 API](../references/parser-source.md) |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-dependency-graph
+04-build-execution
+05-manifest-language
+06-incremental-build
+07-parallel-execution
+08-subcommands-tools
+09-ninja-internals
+10-build-generators
+```

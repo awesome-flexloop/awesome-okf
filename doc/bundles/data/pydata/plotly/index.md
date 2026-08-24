@@ -99,3 +99,12 @@ plotly/
 - Plotly 6.x 要求 Jupyter Notebook >= 7、JupyterLab >= 3
 - 静态图片导出需要安装 kaleido 包：`pip install kaleido`
 - Plotly Express 依赖 numpy 和 narwhals（DataFrame 抽象层）
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

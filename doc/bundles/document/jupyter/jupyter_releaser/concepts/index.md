@@ -27,3 +27,19 @@
 | [08-dry-run-and-mock.md](08-dry-run-and-mock.md) | Dry-run模式、Mock GitHub Server、本地PyPI、端到端测试 | 05, 02 |
 | [09-github-actions.md](09-github-actions.md) | Composite Actions、工作流模板、权限配置、Secrets管理 | 05, 10 |
 | [10-authentication.md](10-authentication.md) | GitHub Token、PyPI OIDC Trusted Publishing、npm Token | 09 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-cli-commands
+04-config-and-hooks
+05-release-pipeline
+06-python-npm-dual
+07-changelog-system
+08-dry-run-and-mock
+09-github-actions
+10-authentication
+```

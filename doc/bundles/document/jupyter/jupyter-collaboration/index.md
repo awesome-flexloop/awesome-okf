@@ -100,3 +100,14 @@ jupyter lab
 - [Yjs文档](https://docs.yjs.dev/)
 - [pycrdt](https://github.com/jupyter-server/pycrdt)
 - [Jupyter Server文档](https://jupyter-server.readthedocs.io/)
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

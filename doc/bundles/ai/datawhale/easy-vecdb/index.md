@@ -74,3 +74,14 @@ generated: '2026-08-23'
 - **嵌入质量决定上限**：索引只决定能否接近上限，嵌入模型和分块策略才是效果天花板
 - **选型三维定位**：Annoy（轻量只读）、Faiss（高性能引擎）、Milvus（分布式数据库）各有适用场景
 - **RAG 是杀手级应用**：向量数据库因 LLM 崛起成为 AI 基础设施，RAG 串联全链路
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

@@ -169,3 +169,13 @@ DeepEP 是 DeepSeek 混合并行训练栈的通信基石：
 | `EP_BUFFER_DEBUG` | `0` | 非零值打印缓冲区调试信息 |
 | `EP_AVOID_RECORD_STREAM` | `0` | 使用 EventHandle 内部张量记录替代 record_stream |
 | `EP_NUM_MAX_LOCAL_RANKS` | `16` | 最大本地 rank 数（CPU buffer VA 空间计算用） |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+```

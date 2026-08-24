@@ -96,3 +96,14 @@ MyST-Parser/
     ├── myst-parser-source.md
     └── extensions-cheatsheet.md
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

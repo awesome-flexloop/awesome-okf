@@ -39,3 +39,20 @@ stale_after: "2027-02-22"
 |------|------|------|
 | 10 | (../concepts/10-custom-extensions.md | IUIProfiler Token注入、IBenchmark/IScenario接口实现、configSchema编写、编程式调用 |
 | 11 | (../concepts/11-server-extension.md | COOP/COEP/Document-Policy三个HTTP头、跨域隔离、禁用扩展、反向代理配置、COEP问题排查 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-architecture-overview
+02-profiler-core
+03-benchmarks
+04-scenarios
+05-css-profiling
+06-js-profiling
+07-dramaturg-automation
+08-statistics-and-results
+09-ui-and-visualization
+10-custom-extensions
+11-server-extension
+```

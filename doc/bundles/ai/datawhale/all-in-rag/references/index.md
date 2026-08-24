@@ -26,3 +26,18 @@
 * [第八章 项目实战一（基础篇）](chapter8-project-basic.md) — "尝尝咸淡"食谱 RAG 系统（FAISS+混合检索+查询路由+流式生成）。
 * [第九章 项目实战一优化（选修篇）](chapter9-project-graph-rag.md) — Graph RAG 优化（Neo4j+Milvus 双引擎+智能路由+多跳推理）。
 * [第十章 项目实战二（选修篇）](chapter10-project-two.md) — 规划中。
+
+```{toctree}
+:hidden:
+
+chapter1-rag-intro
+chapter10-project-two
+chapter2-data-preparation
+chapter3-index-construction
+chapter4-retrieval-optimization
+chapter5-generation
+chapter6-evaluation
+chapter7-advanced-rag
+chapter8-project-basic
+chapter9-project-graph-rag
+```

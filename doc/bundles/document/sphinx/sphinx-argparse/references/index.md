@@ -13,3 +13,9 @@
 - **GitHub 仓库**：[sphinx-doc/sphinx-argparse](https://github.com/sphinx-doc/sphinx-argparse)
 - **官方文档**：[sphinx-argparse.readthedocs.io](https://sphinx-argparse.readthedocs.io/)
 - **PyPI**：[sphinx-argparse](https://pypi.org/project/sphinx-argparse/)
+
+```{toctree}
+:hidden:
+
+sphinx-argparse-source
+```

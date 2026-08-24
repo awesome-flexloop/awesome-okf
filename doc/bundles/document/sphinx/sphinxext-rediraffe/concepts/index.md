@@ -8,3 +8,16 @@
 - [Builder体系详解](05-builders.md) — html/dirhtml自动生成、rediraffecheckdiff CI检查、rediraffewritediff自动写入
 - [Jinja2模板系统](06-jinja-templates.md) — 默认模板分析、5个模板变量、自定义模板、URL参数保留、三层降级
 - [路径处理与跨平台兼容](07-path-and-cross-platform.md) — Windows/POSIX路径转换、dirhtml目录URL处理、增量JSON记录、冲突检测
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-redirect-graph
+04-configuration
+05-builders
+06-jinja-templates
+07-path-and-cross-platform
+```

@@ -79,3 +79,14 @@ sphinx-external-toc/
 | [sphinx-book-theme](https://github.com/executablebooks/sphinx-book-theme) | Jupyter Book 主题——sphinx-external-toc 的主要使用场景 |
 | [sphinx-copybutton](https://github.com/executablebooks/sphinx-copybutton) | 代码复制按钮——Executable Books 生态常用扩展 |
 | [MyST Parser](https://github.com/executablebooks/MyST-Parser) | MyST Markdown——Executable Books 生态核心 |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

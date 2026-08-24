@@ -53,3 +53,20 @@ sources: []
 3. **理解前端**：02 → 06 → 07 → 08 → 09
 4. **运维配置**：05 → 10
 5. **二次开发**：02 → 03 → 05 → 11
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-installation
+02-architecture
+03-backend-api
+04-kernel-usage
+05-configuration
+06-statusbar
+07-topbar-monitor
+08-kernel-sidebar
+09-classic-notebook
+10-prometheus
+11-custom-metrics
+```

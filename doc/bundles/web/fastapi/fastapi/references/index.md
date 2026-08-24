@@ -10,3 +10,16 @@
 | [security.md](security.md) | 安全认证：SecurityBase、HTTP Basic/Bearer/Digest、OAuth2 密码模式、Authorization 头解析 | F-080 ~ F-091, F-144, F-145, F-157, F-158 |
 | [middleware-exceptions.md](middleware-exceptions.md) | 中间件与异常：CORS/GZip/WSGI 薄再导出、AsyncExitStackMiddleware、HTTPException/ValidationError 异常层级、默认处理器 | F-092 ~ F-094, F-100 ~ F-106, F-138 ~ F-143 |
 | [responses-encoders.md](responses-encoders.md) | 响应与编码：响应类再导出、jsonable_encoder、UploadFile、DefaultPlaceholder、SSE、BackgroundTasks、_compat 兼容层 | F-095 ~ F-098, F-107 ~ F-137, F-152 ~ F-156 |
+
+```{toctree}
+:hidden:
+
+applications
+dependencies
+middleware-exceptions
+openapi
+params
+responses-encoders
+routing
+security
+```

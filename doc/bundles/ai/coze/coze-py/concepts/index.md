@@ -20,3 +20,18 @@
 - [07 WebSocket 实时通信](/concepts/07-websockets-realtime.md) — Builder 模式、EventHandler、实时对话/语音
 - [08 音频与语音](/concepts/08-audio-voice.md) — TTS、ASR、声音管理、实时房间、直播、声纹
 - [09 分页模式与资源管理](/concepts/09-pagination-resources.md) — 三种分页器、文件、数据集、工作空间等
+
+```{toctree}
+:hidden:
+
+00-overview-architecture
+01-auth-system
+02-client-init
+03-chat-streaming
+04-bot-management
+05-workflows
+06-conversations
+07-websockets-realtime
+08-audio-voice
+09-pagination-resources
+```

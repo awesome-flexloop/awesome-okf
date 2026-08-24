@@ -12,3 +12,18 @@ myst-cli 概念文档按学习路径编号。
 - [07 版本迁移](07-migration.md) — myst-migrate 升级旧版项目
 - [08 Session 与缓存](08-session-cache.md) — Session 容器和双层缓存
 - [09 Store 状态管理](09-store-state.md) — Redux 风格状态管理
+
+```{toctree}
+:hidden:
+
+00-cli-architecture
+01-build-pipeline
+02-start-dev-server
+03-init-project
+04-clean-command
+05-project-load-toc
+06-template-system
+07-migration
+08-session-cache
+09-store-state
+```

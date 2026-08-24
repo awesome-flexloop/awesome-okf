@@ -77,3 +77,14 @@ open-swe/
 └── examples/             # 使用示例（1 篇）
     └── triggering-agent-run.md
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

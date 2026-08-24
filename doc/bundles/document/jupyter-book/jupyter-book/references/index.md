@@ -6,3 +6,10 @@
 |------|------|
 | [Python 入口与 nodeenv](python-entry.md) | __main__.py 的 main() 函数、nodeenv.py 的 Node.js 查找/安装函数 |
 | [TS CLI 入口与命令委托](ts-cli-entry.md) | index.ts 的白标配置和命令注册、clirun.ts 执行器、各命令委托实现 |
+
+```{toctree}
+:hidden:
+
+python-entry
+ts-cli-entry
+```

@@ -113,4 +113,5 @@ stale_after: 2027-08-23
 coze-py/index
 coze-studio/index
 cozeloop-python/index
+log
 ```

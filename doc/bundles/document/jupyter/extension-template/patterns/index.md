@@ -15,3 +15,11 @@
 1. **条件渲染模式**适用于任何基于模板的代码生成场景，不仅限于 Copier
 2. **双包分发模式**是 Jupyter 生态的标准实践，但也适用于其他需要"pip install 就能用"的 Web UI 库
 3. **认证 Handler 模式**是安全红线，任何在 Jupyter Server 中注册路由的扩展必须遵循
+
+```{toctree}
+:hidden:
+
+authenticated-api-handler
+conditional-rendering
+dual-package-distribution
+```

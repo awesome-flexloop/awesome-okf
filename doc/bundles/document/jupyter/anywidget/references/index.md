@@ -20,3 +20,14 @@ stale_after: 2027-08-23
 | [descriptor](descriptor.md) | 描述符协议与文件内容管理 | _descriptor.py, _file_contents.py |
 | [hmr](hmr.md) | HMR热更新与开发工作流 | JS runtime, packages/vite/ |
 | [framework-bridges](framework-bridges.md) | 多前端框架桥接 | packages/types, packages/react, packages/svelte, packages/vue |
+
+```{toctree}
+:hidden:
+
+descriptor
+esm-protocol
+framework-bridges
+hmr
+traits
+widget-base
+```

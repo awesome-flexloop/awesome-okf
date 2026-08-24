@@ -52,3 +52,34 @@
 | [23-latex-and-pdf.md](23-latex-and-pdf.md) | LaTeX/PDF输出定制 |
 | [24-faq-troubleshooting.md](24-faq-troubleshooting.md) | 常见问题与故障排查 |
 | [25-glossary.md](25-glossary.md) | 核心术语速查表 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-application-class
+04-config-system
+05-event-system
+06-registry
+07-build-environment
+08-project-and-docutils
+09-domain-system
+10-builder-system
+11-html-builder
+12-autodoc
+13-theme-system
+14-intersphinx
+15-extension-development
+16-i18n
+17-search-system
+18-rest-primer
+19-markdown-and-myst
+20-cross-references-guide
+21-deployment
+22-builtin-extensions
+23-latex-and-pdf
+24-faq-troubleshooting
+25-glossary
+```

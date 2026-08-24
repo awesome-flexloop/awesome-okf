@@ -12,3 +12,14 @@
 | [jit-kernel-compilation](/ai/deepseek/deep-gemm/concepts/jit-kernel-compilation) | JIT 编译系统、NVCC/NVRTC、两级缓存、内核加载、CRTP 启动模式 |
 | [moe-operations](/ai/deepseek/deep-gemm/concepts/moe-operations) | MegaMoE 对称缓冲区融合核、环形通信、权重交错、双精度方案 |
 | [performance-optimization](/ai/deepseek/deep-gemm/concepts/performance-optimization) | TMA、WGMMA/TCGen05、PDL、Thread Block Cluster、SM 控制、Swizzle、Pipeline |
+
+```{toctree}
+:hidden:
+
+fp8-gemm
+grouped-gemm
+jit-kernel-compilation
+moe-operations
+overview
+performance-optimization
+```

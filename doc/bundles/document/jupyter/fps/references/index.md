@@ -10,3 +10,14 @@
 | [signal-source.md](signal-source.md) | `src/fps/_signal.py` | Signal类（connect/emit/iterate） |
 | [cli-source.md](cli-source.md) | `src/fps/cli/_cli.py` | CLI命令选项与执行流程 |
 | [web-source.md](web-source.md) | `src/fps/web/fastapi.py` + `src/fps/web/server.py` | FastAPIModule、ServerModule |
+
+```{toctree}
+:hidden:
+
+cli-source
+config-source
+context-source
+module-source
+signal-source
+web-source
+```

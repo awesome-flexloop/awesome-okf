@@ -46,3 +46,17 @@
 ### 路径3：测试Jupyter基础工具（不涉及网络）
 
 简介 → 快速上手 → Core插件 → [基础测试示例](/examples/01-basic-core-test.md)
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-core-plugin
+04-client-plugin
+05-server-plugin
+06-tornasync-plugin
+07-echo-kernel
+08-fixture-factories
+```

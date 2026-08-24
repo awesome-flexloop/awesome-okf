@@ -6,3 +6,14 @@
 - [Channels 通道体系](channels) — BaseChannel 与内置通道类型
 - [Checkpoint 持久化](checkpointing) — 检查点链表、后端、时间旅行
 - [Pregel 执行引擎](pregel-execution) — 超步调度、任务、中断、流式
+
+```{toctree}
+:hidden:
+
+annotation
+channels
+checkpointing
+overview
+pregel-execution
+state-graph
+```

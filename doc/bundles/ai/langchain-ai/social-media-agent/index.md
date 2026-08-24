@@ -81,3 +81,13 @@ social-media-agent/
 ├── log.md
 └── index.md
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+references/index
+spec/facts
+spec/insights
+log
+```

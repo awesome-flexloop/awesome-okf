@@ -15,3 +15,11 @@
 1. 先完成 [本地构建与预览](01-local-build.md)，确保能在本地运行站点
 2. 阅读 [自定义内核环境](02-custom-kernel.md)，了解如何定制站点功能
 3. 参考 [添加新Notebook](03-add-notebook.md)，实践贡献内容
+
+```{toctree}
+:hidden:
+
+01-local-build
+02-custom-kernel
+03-add-notebook
+```

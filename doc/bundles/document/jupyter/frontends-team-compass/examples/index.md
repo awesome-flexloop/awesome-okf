@@ -28,3 +28,10 @@ sources:
 
 - **首次贡献者**：先阅读 [hosting-a-meeting.md](hosting-a-meeting.md)，尝试主持一次会议是参与团队建设的最好方式
 - **现任成员**：参考 [nominating-new-member.md](nominating-new-member.md)，当发现持续贡献的社区成员时主动提名
+
+```{toctree}
+:hidden:
+
+hosting-a-meeting
+nominating-new-member
+```

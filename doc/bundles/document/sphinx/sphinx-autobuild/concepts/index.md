@@ -16,3 +16,16 @@
 - [05. 文件监听与过滤](05-file-watching.md) — watchfiles 异步监听、IgnoreFilter 双模式匹配、默认忽略目录、调试模式
 - [06. 服务器与热重载](06-server-and-hotreload.md) — Starlette ASGI 应用、WebSocket 通信、asyncio.Event 信号机制、Lifespan 管理
 - [07. 中间件注入机制](07-middleware-injection.md) — JavascriptInjectorMiddleware、ASGI 响应拦截、Content-Length 修正、Cache-Control 处理
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-cli-and-entrypoint
+04-builder-system
+05-file-watching
+06-server-and-hotreload
+07-middleware-injection
+```

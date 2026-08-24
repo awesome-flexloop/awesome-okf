@@ -38,3 +38,11 @@ jupyter server --ServerApp.token=mytoken --port=8888 --no-browser
 | 基础 API 使用 | [内容管理服务](../concepts/07-contents-service.md)、[内核管理](../concepts/08-kernel-management.md)、[会话管理](../concepts/09-sessions-service.md) |
 | 编写简单扩展 | [扩展系统](../concepts/10-extension-system.md)、[Handler 继承体系](../concepts/04-handler-hierarchy.md) |
 | WebSocket 内核通信 | [WebSocket 通信](../concepts/11-websocket-communication.md)、[内核管理](../concepts/08-kernel-management.md)、[异步编程模型](../concepts/14-async-programming.md) |
+
+```{toctree}
+:hidden:
+
+01-basic-api-usage
+02-simple-extension
+03-websocket-kernel
+```

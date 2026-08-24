@@ -38,3 +38,15 @@ sources:
 - 仓库明确**区分 Agent 和 MCP**：Agent 配置在 trae-agents，工具服务器在 trae-mcp
 - 遵循**质量优先于数量**的冷启动策略：先打磨 1 个高质量参考实现，再通过模板和 Issue 流程引导社区贡献
 - 提供 2 个 Issue 模板：Agent Request（新 Agent 请求）和 Bug Report（问题反馈）
+
+```{toctree}
+:hidden:
+
+concepts/00-introduction
+concepts/01-agent-structure
+concepts/02-git-commit-agent
+examples/create-agent
+references/agents-source
+spec/facts
+spec/insights
+```

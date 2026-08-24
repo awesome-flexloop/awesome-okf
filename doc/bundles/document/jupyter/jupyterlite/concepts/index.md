@@ -23,3 +23,17 @@
 3. **存储与持久化**：[05-浏览器存储](05-browser-storage.md)
 4. **构建与部署**：[06-Python构建系统](06-build-system.md)
 5. **扩展开发**：[07-内核类型](07-kernel-types.md) → [08-扩展架构](08-extension-architecture.md)
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-architecture-overview
+02-kernel-system
+03-contents-and-filesystem
+04-service-worker-bridge
+05-browser-storage
+06-build-system
+07-kernel-types
+08-extension-architecture
+```

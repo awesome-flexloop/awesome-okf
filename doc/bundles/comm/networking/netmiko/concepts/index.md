@@ -16,3 +16,18 @@ okf_version: "0.2"
 | 07 | [SSH 自动探测](07-ssh-autodetect.md) | SSHDetect、指纹库、三种探测方法 |
 | 08 | [SCP 文件传输](08-file-transfer.md) | FileTransfer/SCPConn、file_transfer、MD5 校验 |
 | 09 | [高级模式](09-advanced-patterns.md) | session_log、TextFSM、异常处理、并发连接 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-connect-handler
+03-base-connection
+04-command-execution
+05-config-mgmt
+06-driver-hierarchy
+07-ssh-autodetect
+08-file-transfer
+09-advanced-patterns
+```

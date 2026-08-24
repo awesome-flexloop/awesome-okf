@@ -7,3 +7,11 @@
 | [导出器入口导出表](exporter-entrypoints.md) | 各导出器包入口文件导出的公共 API（Plugin、Serializer、类型、工具函数）|
 | [jtex 模板引擎源码](jtex-template-engine.md) | renderTemplate 函数、Nunjucks 配置、LaTeX/Typst imports 渲染 |
 | [构建编排与导入器](build-orchestration.md) | myst-cli build 层多格式编排、jats-to-myst/tex-to-myst 入口 |
+
+```{toctree}
+:hidden:
+
+build-orchestration
+exporter-entrypoints
+jtex-template-engine
+```

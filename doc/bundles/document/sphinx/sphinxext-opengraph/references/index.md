@@ -5,3 +5,9 @@
 ## 信源列表
 
 - [sphinxext-opengraph 源码信源登记](sphinxext-opengraph-source.md) — v0.13.0 源码路径、版本信息、核心模块、配置项与公开API完整清单
+
+```{toctree}
+:hidden:
+
+sphinxext-opengraph-source
+```

@@ -19,3 +19,17 @@
 
 - [07-前端URL解析机制](07-frontend-detectors.md) — React应用、ParsedRepoURL、GitHub URL检测规则、Webpack构建
 - [08-整体架构总结](08-architecture-summary.md) — 双模式架构全景、数据流图、设计决策、扩展点
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-cli-usage
+03-binderlite-web
+04-repo-providers
+05-publisher-system
+06-build-process
+07-frontend-detectors
+08-architecture-summary
+```

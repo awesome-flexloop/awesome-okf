@@ -53,3 +53,13 @@ okf_version: "0.2"
 - **E 阶段**：生成 9 篇概念文档 + 4 篇信源文档 + 2 篇示例文档，每篇 frontmatter 的 `sources.facts` 字段标注支撑该文档的事实编号
 - 所有 API、类名、方法签名均经过源码 Grep 级验证
 - 文档当前验证状态为 `v-pending`（待独立 V 阶段验证）
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/index
+log
+```

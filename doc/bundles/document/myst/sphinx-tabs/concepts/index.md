@@ -10,3 +10,14 @@
 | 03 | [分组标签与代码标签](/concepts/03-group-and-code-tabs.md) | group-tab 跨页同步机制、code-tab 多语言代码 |
 | 04 | [配置项参考](/concepts/04-configuration.md) | 全部配置项、条件资源加载机制 |
 | 05 | [无障碍设计](/concepts/05-accessibility.md) | WAI-ARIA 实现、键盘导航、语义化 HTML |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-directives
+03-group-and-code-tabs
+04-configuration
+05-accessibility
+```

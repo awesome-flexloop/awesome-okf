@@ -5,3 +5,13 @@
 - [02 - 配置系统](/concepts/02-config-system.md) — V2 配置规范、.opencode 目录、11 个配置审查组
 - [03 - 会话与工具](/concepts/03-session-tools.md) — SessionV2、Context Epoch、自动压缩、工具注册表、权限
 - [04 - 部署与基础设施](/concepts/04-deployment-infra.md) — SST 部署、Cloudflare + AWS、GitHub Action、数据湖
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-architecture
+02-config-system
+03-session-tools
+04-deployment-infra
+```

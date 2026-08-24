@@ -26,3 +26,19 @@ stale_after: "2027-08-22"
 | [foundation-dc-source.md](foundation-dc-source.md) | docs/jupyter_foundation.md, docs/distinguished_contributors.md | Jupyter 基金会与杰出贡献者制度 |
 | [elections-papers-source.md](elections-papers-source.md) | docs/elections/README.md, docs/papers.md | STV选举计票工具与学术论文流程 |
 | [infrastructure-history-source.md](infrastructure-history-source.md) | noxfile.py, README.md, docs/archive/governance.md, docs/_data/ | 文档构建基础设施（MyST+Nox）与BDFL历史 |
+
+```{toctree}
+:hidden:
+
+coc-source
+committees-source
+decision-making-source
+elections-papers-source
+executive-council-source
+foundation-dc-source
+infrastructure-history-source
+overview-source
+ssc-source
+subprojects-source
+trademarks-license-source
+```

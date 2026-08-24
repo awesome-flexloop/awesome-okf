@@ -31,3 +31,14 @@ external/libs/jupyter/extension-template/
     ├── style/variables.css             # CSS 变量（theme）
     └── .github/workflows/              # CI/CD 工作流
 ```
+
+```{toctree}
+:hidden:
+
+ci-workflows-source
+copier-config
+frontend-entry-source
+package-json-source
+pyproject-source
+server-routes-source
+```

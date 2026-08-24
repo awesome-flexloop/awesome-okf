@@ -5,3 +5,9 @@
 | 信源文件 | 说明 |
 |----------|------|
 | [togglebutton-source.md](togglebutton-source.md) | 核心源文件路径映射、setup() 函数与 Toggle 指令代码参考 |
+
+```{toctree}
+:hidden:
+
+togglebutton-source
+```

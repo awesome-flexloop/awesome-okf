@@ -20,3 +20,18 @@
 - [07 - CI/CD与GitHub Pages部署](07-cicd-deployment.md) — GitHub Actions工作流、BASE_URL配置、部署故障排查
 - [08 - 贡献新数据集](08-contributing-data.md) — Fork→PR流程、README模板、匿名化检查清单
 - [09 - Binder可复现性](09-binder-reproducibility.md) — Binder配置、依赖管理、零配置运行notebook
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-repository-structure
+03-dataset-conventions
+04-myst-docs-system
+05-survey-analysis-pipeline
+06-dataset-catalog
+07-cicd-deployment
+08-contributing-data
+09-binder-reproducibility
+```

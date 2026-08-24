@@ -26,3 +26,18 @@
 - [返回首页](../index.md)
 - [示例文档](../examples/)
 - [参考资料](../references/)
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-architecture-overview
+02-application-shell
+03-plugin-system
+04-service-layer
+05-document-widget-system
+06-notebook-cells
+07-extension-ecosystem
+08-build-and-modes
+09-key-subsystems
+```

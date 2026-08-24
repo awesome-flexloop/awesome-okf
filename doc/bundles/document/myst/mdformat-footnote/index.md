@@ -62,3 +62,14 @@ mdformat document.md
 
 - [事实清单](/spec/facts.md) - R阶段零推断事实采集
 - [架构洞察](/spec/insights.md) - I阶段核心洞察四元组与知识地图
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

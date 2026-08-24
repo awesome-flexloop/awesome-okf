@@ -12,3 +12,14 @@
 | [talks-yml-source.md](talks-yml-source.md) | talks.yml | 四种演讲场景的文件配置 |
 | [narrative-source.md](narrative-source.md) | narrative/*.md | 四份演示脚本内容 |
 | [ci-workflow-source.md](ci-workflow-source.md) | .github/workflows/*.yml, jupyter_notebook_config.py | CI工作流与Jupyter配置 |
+
+```{toctree}
+:hidden:
+
+binder-config-source
+build-py-source
+ci-workflow-source
+narrative-source
+repo-readme
+talks-yml-source
+```

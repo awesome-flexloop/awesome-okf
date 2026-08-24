@@ -26,3 +26,9 @@ pio.renderers.default = "browser"   # 浏览器
 pio.renderers.default = "svg"       # 静态 SVG
 pio.renderers.default = "png"       # 静态 PNG（需 kaleido）
 ```
+
+```{toctree}
+:hidden:
+
+interactive-charts
+```

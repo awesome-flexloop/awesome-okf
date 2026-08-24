@@ -11,3 +11,13 @@
 | [spawner-source.md](spawner-source.md) | Spawner 基类及 LocalProcessSpawner：生命周期方法、状态属性、资源配置 traitlets |
 | [proxy-source.md](proxy-source.md) | Proxy 基类与 ConfigurableHTTPProxy：抽象方法、CHP 配置、路由数据格式 |
 | [orm-source.md](orm-source.md) | ORM 数据模型：SQLAlchemy 实体类、列定义、关系映射、外键策略、自定义列类型 |
+
+```{toctree}
+:hidden:
+
+app-source
+auth-source
+orm-source
+proxy-source
+spawner-source
+```

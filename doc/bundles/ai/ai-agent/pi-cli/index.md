@@ -37,3 +37,14 @@ Pi 是一个自扩展编码代理项目，采用多包 monorepo 架构。本 wik
 ## 变更记录
 
 见 [log.md](/log.md)。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

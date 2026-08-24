@@ -126,3 +126,26 @@ jupyter lab
 │  └──────────────────────────────────────────────────┘  │
 └─────────────────────────────────────────────────────────┘
 ```
+
+```{toctree}
+:hidden:
+
+examples/index
+references/index
+concepts/00-introduction
+concepts/01-installation-and-setup
+concepts/02-chat-interface
+concepts/03-metapackage-architecture
+concepts/04-protocols-acp-mcp
+concepts/05-ai-personas
+concepts/06-chat-files-and-persistence
+concepts/07-mcp-tools-and-notebooks
+concepts/08-custom-mcp-servers
+concepts/09-entry-points-api
+concepts/10-magic-commands
+concepts/11-configuration-system
+concepts/12-versioning-and-upgrades
+facts
+insights
+log
+```

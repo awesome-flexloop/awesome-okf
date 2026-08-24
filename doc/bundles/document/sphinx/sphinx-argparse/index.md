@@ -57,3 +57,11 @@
 ### 信源登记（References）
 
 - [sphinx-argparse 源码信源登记](references/sphinx-argparse-source.md) — 源码版本、核心模块、API结构
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+```

@@ -14,3 +14,11 @@ sources: https://github.com/datawhalechina/pumpkin-book
 * [线性回归最小二乘推导](linear-regression-derivation.md) — 一元线性回归参数 w 和 b 的最小二乘估计完整推导，多元线性回归矩阵形式闭式解。对应南瓜书第3章。
 * [SVM 对偶问题推导](svm-dual-derivation.md) — 间隔最大化原问题→拉格朗日函数→对偶问题→KKT条件→支持向量识别的完整链路。对应南瓜书第6章。
 * [BP 反向传播算法推导](bp-backpropagation.md) — 单隐层网络输出层与隐层梯度项推导，Sigmoid 导数性质与链式法则应用。对应南瓜书第5章。
+
+```{toctree}
+:hidden:
+
+bp-backpropagation
+linear-regression-derivation
+svm-dual-derivation
+```

@@ -58,3 +58,13 @@ category: examples
 - 所有示例中的日期标签 `2026-07-28` 应替换为实际使用的版本标签
 - 命令中的 `${PWD}` 表示当前工作目录（PowerShell 中使用 `${PWD}`，bash 中使用 `$(pwd)`）
 - Dockerfile 示例假设构建上下文在包含 Dockerfile 的目录中
+
+```{toctree}
+:hidden:
+
+01-basic-run
+02-custom-image
+03-gpu-cuda
+04-ci-integration
+05-recipes
+```

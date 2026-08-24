@@ -46,3 +46,28 @@ okf_version: "0.2"
 * **核验链路**：`generated: true` 标记各文档由源码→OKF 工作流生成；`verified: false` 标记 V 阶段对抗审查核验事件，两者分离、可追溯。
 
 本知识包共收录 18 个内容文档（13 个概念 + 3 个示例 + 2 个信源参考），另含 spec/ 目录下的 facts.md 与 insights.md（R/I 阶段中间产出）和根 index.md。
+
+```{toctree}
+:hidden:
+
+concepts/00-introduction
+concepts/01-pep517-build-backend
+concepts/02-quickstart
+concepts/03-settings-system
+concepts/04-cmake-integration
+concepts/05-build-flow
+concepts/06-wheel-and-sdist
+concepts/07-program-discovery
+concepts/08-editable-installs
+concepts/09-cmake-file-api
+concepts/10-dynamic-metadata
+concepts/11-plugins-and-compat
+concepts/12-version-gating
+examples/basic-c-extension
+examples/editable-workflow
+examples/pybind11-module
+references/config-entry-points
+references/skbuild-core-source
+spec/facts
+spec/insights
+```

@@ -112,3 +112,14 @@ fps hello:Hello
 │  Config:   JSON config file + CLI --set          │
 └─────────────────────────────────────────────────┘
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

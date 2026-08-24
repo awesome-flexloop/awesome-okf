@@ -24,3 +24,16 @@
 | [builtin-source.md](builtin-source.md) | 12 个内置命令的类结构和命令清单 |
 | [buffered-io-source.md](buffered-io-source.md) | SharedArrayBuffer 和 Service Worker 两种缓冲 IO 实现 API |
 | [config-source.md](config-source.md) | Environment、Aliases、History、Termios、cockle-config.json 格式参考 |
+
+```{toctree}
+:hidden:
+
+buffered-io-source
+builtin-source
+command-source
+config-source
+io-source
+parser-source
+shell-api
+worker-source
+```

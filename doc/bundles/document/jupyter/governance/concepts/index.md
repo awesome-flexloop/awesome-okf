@@ -63,3 +63,25 @@ sources:
 ## 信源溯源
 
 所有概念文档的事实依据来自 [references/](../references/index.md) 目录中的原始信源文档。每个概念文档的 frontmatter `sources` 字段标注了其依据的信源。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-governance-model
+02-history-and-evolution
+03-executive-council
+04-software-steering-council
+05-jupyter-foundation
+06-software-subprojects
+07-committees-and-working-groups
+08-union-of-councils
+09-decision-making
+10-elections-and-voting
+11-new-subprojects
+12-distinguished-contributors
+13-code-of-conduct
+14-trademarks-and-licensing
+15-academic-papers
+16-doc-infrastructure
+```

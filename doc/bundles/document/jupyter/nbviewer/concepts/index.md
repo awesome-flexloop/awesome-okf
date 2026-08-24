@@ -51,3 +51,28 @@
 | D8 | [测试与密钥管理](08-testing-and-secrets.md) | 冒烟测试（test_nbviewer.py + BeautifulSoup）、git-crypt加密模式、statuspage sidecar监控、密钥文件清单 |
 
 > **注意**：部署运维文档编号（D3-D8）与应用文档编号存在重叠，通过文件名后缀区分（如 `03-app-and-traitlets.md` vs `03-deployment-config.md`）。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-app-and-traitlets
+03-deployment-config
+04-cicd-and-automation
+04-handler-hierarchy
+05-provider-plugin-system
+05-version-update
+06-helm-deploy-process
+06-render-pipeline
+07-caching-system
+07-fastly-cdn
+08-testing-and-secrets
+08-uri-rewrite
+09-format-system
+10-github-client
+11-rate-limit-security
+12-custom-provider
+13-deployment
+```

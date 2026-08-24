@@ -102,3 +102,14 @@ MyST-NB/
     ├── mystnb-source.md
     └── notebook-cheatsheet.md
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

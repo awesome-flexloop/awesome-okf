@@ -104,3 +104,12 @@ for event in coze.chat.stream(
 - [概念文档索引](/concepts/index.md)
 - [示例文档索引](/examples/index.md)
 - [API 参考索引](/references/index.md)
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

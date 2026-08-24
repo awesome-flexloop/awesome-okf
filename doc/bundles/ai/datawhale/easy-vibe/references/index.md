@@ -12,3 +12,9 @@ Easy-Vibe 官方 GitHub 仓库（datawhalechina/easy-vibe），包含 README、A
 - 在线文档：https://datawhalechina.github.io/easy-vibe/
 - 许可证：CC BY-NC-SA 4.0
 - 本地路径：`external/libs/ai/datawhalechina/easy-vibe`
+
+```{toctree}
+:hidden:
+
+source-repo
+```

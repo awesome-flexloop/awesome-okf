@@ -30,3 +30,17 @@
 |------|------|
 | [07-workspace-layout.md](07-workspace-layout.md) | 工作区布局与交互体验设计——Dock Panel/单文档模式/布局预设 |
 | [08-extension-demo.md](08-extension-demo.md) | 插件架构与扩展生态——Everything is a Plugin的设计哲学 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-repo-structure
+02-binder-config
+03-build-system
+04-demo-capabilities
+05-notebook-examples
+06-data-files
+07-workspace-layout
+08-extension-demo
+```

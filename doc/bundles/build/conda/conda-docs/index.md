@@ -42,3 +42,12 @@ okf_version: "0.2"
 * **stale_after 解释**：文档门户架构（Sphinx+RTD+多项目模式）变化频率较低；Sphinx 扩展版本和主题配置可能随时间更新，但核心架构模式稳定。建议在 conda-docs 仓库有重大架构变更（如迁移到 MkDocs、或 ReadTheDocs 配置格式大版本升级）时重新评估。
 
 本知识包共收录 14 个内容文档（8 个概念 + 2 个示例 + 4 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

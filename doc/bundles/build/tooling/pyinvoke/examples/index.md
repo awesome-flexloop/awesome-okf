@@ -7,3 +7,13 @@
 * [使用 Program 构建自定义 CLI](custom-cli.md) — 通过 Program 类将 invoke 任务集合打包为独立 CLI 工具。对应概念：[CLI 与 Program 类](../concepts/07-cli-program.md)。
 * [Watcher 自动化响应](file-watcher-automation.md) — 使用 Responder 和 FailingResponder 自动响应命令行提示（如 sudo 密码输入）。对应概念：[StreamWatcher 自动响应](../concepts/09-watchers.md)、[Runner 系统](../concepts/06-runners.md)。
 * [使用 MockContext 测试任务](testing-tasks.md) — 使用 MockContext 对 invoke 任务进行单元测试，验证命令调用和参数。对应概念：[Context 对象](../concepts/03-context-object.md)、[Task 基础](../concepts/02-task-basics.md)。
+
+```{toctree}
+:hidden:
+
+basic-task
+custom-cli
+file-watcher-automation
+namespace-organization
+testing-tasks
+```

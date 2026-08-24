@@ -104,3 +104,14 @@ Jupyter 是 Project Jupyter 的元包（metapackage），作为安装入口点�
 - 核心依赖（install_requires）：notebook、nbconvert、ipykernel、ipywidgets、jupyterlab
 - 文档系统：Sphinx + MyST Markdown（pydata_sphinx_theme）
 - 注意事项：jupyter/jupyter 本身是元包，不含 Python 源代码；核心实现分布在各子项目中
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

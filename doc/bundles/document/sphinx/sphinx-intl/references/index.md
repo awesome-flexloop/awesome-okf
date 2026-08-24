@@ -8,3 +8,12 @@
 * [basic.py 核心业务逻辑 API 参考](basic-api.md) — UpdateItem/UpdateResult 数据类、update/build/stat 核心函数、多进程并行更新机制。
 * [catalog.py PO/POT/MO 文件操作 API 参考](catalog-api.md) — load_po/dump_po/write_mo 函数、条目过滤、update_with_fuzzy 合并逻辑、Babel 底层封装。
 * [transifex.py Transifex 集成 API 参考](transifex-api.md) — Transifex CLI 检测、资源名规范化、tx add 命令模板、配置文件生成。
+
+```{toctree}
+:hidden:
+
+basic-api
+catalog-api
+commands-api
+transifex-api
+```

@@ -13,3 +13,17 @@
 | [06](06-core-fields.md) | 七个核心字段详解 | Author Kind/Opened At/Total Lines Changed/Maintainer Engagement/CI Status/Merge Conflicts/Approval Status的计算逻辑与判定规则 |
 | [07](07-sync-loop.md) | 同步循环与增量更新 | 全量对账算法、双源数据获取、映射构建、过期清理、值比较策略（Date时间戳/===）、Dry Run模式、幂等性保证 |
 | [08](08-cli-and-action.md) | CLI与GitHub Action集成 | commander参数设计、composite action编排、私钥安全处理、SWC+tsc构建系统、CI/CD流水线、本地与Action部署对比 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-auth-and-octokit
+04-project-class
+05-field-plugin-system
+06-core-fields
+07-sync-loop
+08-cli-and-action
+```

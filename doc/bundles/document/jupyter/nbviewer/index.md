@@ -217,3 +217,14 @@ kubectl rollout status -w deployment/nbviewer
 helm history nbviewer
 helm rollback nbviewer <REVISION>
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

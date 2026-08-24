@@ -37,3 +37,18 @@ description: "jupyterlab_server 核心概念文档索引"
 
 ### 二次开发（基于LabServerApp构建）
 00 → 02 → 03 → [app-source.md](../references/app-source.md) → [config-source.md](../references/config-source.md)
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-app-and-config
+04-handlers-and-routing
+05-settings-system
+06-workspaces
+07-themes-listings-licenses
+08-internationalization
+09-process-and-cli
+```

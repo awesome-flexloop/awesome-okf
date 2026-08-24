@@ -52,3 +52,16 @@ okf_version: "0.2"
 * **stale_after 解释**：统一设置为 `2027-12-31`。MyST 语法扩展核心（DirectiveSpec/RoleSpec 接口、admonition/code/figure/table/math等核心指令、cite/ref等核心角色）在 mystmd 1.x 中保持稳定，该日期作为对未来大版本变化的保守重新评估节点。
 * **核验链路**：`generated` 记录原始生成时刻（2026-08-23）；`verified: true` 记录过程核验，所有指令名、选项名、别名、输出节点类型均通过源码 Read/Grep 验证。
 * **覆盖范围**：覆盖 myst-directives 的全部 28 个默认指令（admonition/code/code-cell/figure/image/table/list-table/csv-table/math/mermaid/include/embed/bibliography/glossary/toc/index/genindex/div/aside/dropdown/iframe/raw/rawLatex/rawTypst/blockquote/mdast/mystdemo/widget）和 myst-roles 的全部 20 个默认角色（span/abbr/chem/cite/delete/math/ref/doc/download/index/term/si/eval/smallcaps/subscript/superscript/underline/keyboard/rawLatex/rawTypst）；未覆盖 mdastDirective/mystdemoDirective/widgetDirective(anywidget) 的详细内部实现（属于特定用途/实验性功能）。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+facts
+insights
+log
+```

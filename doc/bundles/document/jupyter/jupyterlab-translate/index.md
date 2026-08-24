@@ -160,3 +160,14 @@ jupyterlab-translate/
 - [语言包Cookiecutter模板](https://github.com/jupyterlab/jupyterlab-language-pack-cookiecutter)
 - [JupyterLab官方文档](https://jupyterlab.readthedocs.io/)
 - [Crowdin翻译平台](https://crowdin.com/project/jupyterlab)
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

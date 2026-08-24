@@ -45,3 +45,14 @@ okf_version: "0.2"
 * **status 判定依据**：全部 16 个内容文档（7 个概念 + 3 个示例 + 6 个信源登记）均 `status: stable`。内容基于对 Octop v0.9.25 源码核心模块的逐文件阅读与事实提取（133 条事实），经 R→I→E→V 四阶段流程生成，V 阶段通过 Grep 验证关键类名、命令数和 ACP runner 一致性。
 * **stale_after 解释**：统一设置为 `2027-08-23`。Octop 核心架构（四层依赖禁令、组合根独占、Harness 委托、Greenfield 延迟绑定、单进程 asyncio）在 0.9.x 系列保持稳定；该日期作为对未来大版本（如 1.0 引入 breaking change 或 harness 包 API 重构）的保守重新评估节点。
 * **外部包边界**：harness-agent/gateway/memory/browser 是腾讯内部包，本文档只描述 Octop 如何调用它们的公共 API，不虚构其内部实现。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

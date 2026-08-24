@@ -80,3 +80,14 @@ npm start
 
 BSD-3-Clause（与 Jupyter 生态一致）
 
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

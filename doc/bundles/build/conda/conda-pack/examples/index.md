@@ -24,3 +24,12 @@ sources: []
 ## 编程接口
 
 - [04-Python API 编程与自动化](04-python-api-automation.md) — Python API 使用、CI/CD 集成、批量打包、S3上传、错误处理
+
+```{toctree}
+:hidden:
+
+01-basic-pack-deploy
+02-formats-and-compression
+03-filtering-and-customization
+04-python-api-automation
+```

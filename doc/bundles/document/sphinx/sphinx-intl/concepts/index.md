@@ -19,3 +19,17 @@
 
 * [07. Transifex 平台集成](07-transifex-integration.md) — Transifex CLI 检测、资源名规范化、tx config 自动配置、云端协作工作流。
 * [08. 配置读取与 Python 兼容层](08-config-and-compat.md) — read_config 执行 conf.py、Tags 类、execfile_ Python 2/3 兼容、自动配置检测流程。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-cli-commands
+03-translation-workflow
+04-catalog-operations
+05-update-mechanism
+06-build-stat-mechanism
+07-transifex-integration
+08-config-and-compat
+```

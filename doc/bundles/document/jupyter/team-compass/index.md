@@ -137,3 +137,14 @@ team-compass/
 - **原始信源版本**：2025-02 数据快照（contributors last-check-in）
 - **内容级别**：公开（Public）
 - **许可证说明**：原始文档遵循 Jupyter 项目许可证（3-Clause BSD），本 bundle OKF 格式
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

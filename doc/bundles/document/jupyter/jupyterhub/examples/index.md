@@ -14,3 +14,11 @@
 |------|------|
 | [custom-authenticator.md](custom-authenticator.md) | 自定义认证器开发：最小实现、密码哈希、auth_state 持久化、注册与测试 |
 | [custom-spawner.md](custom-spawner.md) | 自定义 Spawner 开发：必须实现的方法、SSH Spawner 示例、状态持久化、SSE 进度事件 |
+
+```{toctree}
+:hidden:
+
+custom-authenticator
+custom-spawner
+quickstart
+```

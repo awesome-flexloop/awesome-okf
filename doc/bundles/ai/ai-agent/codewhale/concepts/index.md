@@ -8,3 +8,16 @@
 - [05 - Fleet 多 Agent](/concepts/05-fleet-subagents.md) — Fleet 控制平面、角色分类、权限 clamp、Workflow 集成
 - [06 - 技能与 Hooks](/concepts/06-skills-hooks.md) — Skills 四层架构、Hooks 生命周期、插件系统
 - [07 - 沙箱与执行策略](/concepts/07-sandbox-execpolicy.md) — execpolicy 引擎、三层规则、Shell 展开防护、Seatbelt/bwrap
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-workspace-architecture
+02-agent-core
+03-mcp-protocol
+04-tool-system
+05-fleet-subagents
+06-skills-hooks
+07-sandbox-execpolicy
+```

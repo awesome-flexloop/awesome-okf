@@ -88,3 +88,14 @@ alabaster/
 | [sphinx-autobuild](/document/sphinx/sphinx-autobuild/index.md) | 实时预览——开发主题时的热重载工具 |
 | [sphinx-docker-images](/document/sphinx/sphinx-docker-images/index.md) | Docker 构建——CI/CD 环境下构建文档 |
 | [conda-docs](/build/conda/conda-docs/index.md) | 多项目文档——Sphinx 配置深度定制的实战案例 |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

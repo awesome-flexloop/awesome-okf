@@ -85,3 +85,25 @@ pip install torch-rechub[all]
 - GitHub：https://github.com/datawhalechina/torch-rechub
 - 文档：https://datawhalechina.github.io/torch-rechub/
 - 许可证：MIT
+
+```{toctree}
+:hidden:
+
+concepts/data-pipeline
+concepts/feature-engineering
+concepts/model-architecture
+concepts/multi-task-learning
+concepts/onnx-export
+concepts/tracking-and-visualization
+concepts/trainer-system
+examples/deepfm-ctr-training
+examples/dssm-matching-export
+references/basic-layers-module
+references/data-and-utils-module
+references/models-module
+references/serving-and-onnx-module
+references/trainers-module
+spec/facts
+spec/insights
+log
+```

@@ -17,3 +17,14 @@
 2. **开发者**：01-ide → 02-cli → 03-npc，掌握从本地到云端的完整研发链路
 3. **安全工程师**：05-security 重点阅读六步闭环与对抗性审查机制
 4. **办公用户**：04-workbuddy 了解在线助手能力
+
+```{toctree}
+:hidden:
+
+00-product-matrix
+01-ide
+02-cli
+03-npc
+04-workbuddy
+05-security
+```

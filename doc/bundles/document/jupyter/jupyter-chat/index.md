@@ -74,3 +74,29 @@ jupyter-chat/
 └── python/
     └── jupyterlab-chat/        # jupyterlab_chat - Python 后端
 ```
+
+```{toctree}
+:hidden:
+
+concepts/architecture-overview
+concepts/attachment-system
+concepts/chat-manager
+concepts/component-hierarchy
+concepts/crdt-sync
+concepts/dual-transport
+concepts/extension-points
+concepts/lifecycle-events
+concepts/message-lifecycle
+concepts/model-architecture
+examples/bot-integration
+examples/custom-extension
+examples/minimal-chat
+references/api-model
+references/api-python
+references/api-tokens
+references/api-types
+.spec/facts
+.spec/insights
+facts
+insights
+```

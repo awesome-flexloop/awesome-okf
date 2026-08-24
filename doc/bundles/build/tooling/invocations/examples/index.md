@@ -7,3 +7,13 @@
 * [多站点文档构建配置](multi-site-docs.md) — 配置 docs 模块管理多个 Sphinx 站点（API + WWW），含双站构建和 watch_docs 监控。对应概念：[Sphinx 文档管理](../concepts/04-docs-sphinx.md)、[文件监控](../concepts/07-utilities-watchers.md)。
 * [文件监控自动测试](file-watch-auto-test.md) — 使用 watch 模块实现代码变化时自动运行测试/覆盖率，打造 TDD 反馈循环，含多任务监控模式。对应概念：[工具函数与文件监控](../concepts/07-utilities-watchers.md)、[测试与覆盖率](../concepts/03-testing-pytest.md)。
 * [打包安装验证模式](test-install-verification.md) — 使用 release.test_install 在临时 venv 中验证包安装、导入、类型检查，自定义增强验证流程。对应概念：[包发布生命周期](../concepts/05-packaging-release.md)、[工具函数](../concepts/07-utilities-watchers.md)。
+
+```{toctree}
+:hidden:
+
+basic-usage
+custom-release-flow
+file-watch-auto-test
+multi-site-docs
+test-install-verification
+```

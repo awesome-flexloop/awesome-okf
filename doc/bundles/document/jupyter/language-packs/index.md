@@ -120,3 +120,14 @@ JupyterLab Language Packs 是 Jupyter 官方维护的多语言翻译包 monorepo
 - 覆盖扩展：17 个（JupyterLab核心 + Notebook + Git + LSP + 协作 + Widgets 等）
 - 自动化：6 个 GitHub Actions 工作流 + 4 个 Python 脚本
 - 核心设计：**人类只做翻译，Bot 处理所有 Git/构建/发布操作**
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

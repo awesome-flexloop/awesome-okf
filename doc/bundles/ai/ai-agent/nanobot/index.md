@@ -98,3 +98,14 @@ nanobot/
 | 构建 | Hatchling, 自定义 WebUI 构建钩子 |
 | 部署 | Docker (多阶段), docker-compose, systemd, LaunchAgent |
 | 测试 | pytest, pytest-asyncio, vitest, basedpyright (strict) |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

@@ -21,3 +21,10 @@ generated:
 - 阅读 [Concepts 03 - 扩展类型](../concepts/03-extension-types.md) 理解 MIME 渲染器 vs 应用扩展的区别
 - 阅读 [Concepts 08 - Python 打包](../concepts/08-python-packaging.md) 理解预构建扩展打包机制
 - 参考 [References - IRenderMime API](../references/rendermime-interfaces-api.md) 查阅接口定义
+
+```{toctree}
+:hidden:
+
+01-custom-mime-renderer
+02-custom-latex-typesetter
+```

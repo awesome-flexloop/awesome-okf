@@ -90,3 +90,14 @@ jupyterhub/
 ├── oauth.py            # OAuth 2.0 提供方
 └── metrics.py          # Prometheus 指标
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

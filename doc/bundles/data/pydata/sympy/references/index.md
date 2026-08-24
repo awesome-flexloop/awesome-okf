@@ -35,3 +35,21 @@ title: SymPy 信源登记簿
 | [多项式代数系统](polys-algebra-source.md) | `polys/` (polytools.py, constructor.py, factortools.py, groebnertools.py) | Poly类、域系统、factor/gcd/Groebner基 |
 | [逻辑、集合、数论与离散数学](logic-sets-source.md) | `logic/`, `sets/`, `ntheory/`, `concrete/` | 布尔逻辑、集合运算、数论函数、求和乘积 |
 | [张量/统计/打印/代码生成/向量](tensor-stats-source.md) | `tensor/`, `stats/`, `printing/`, `codegen/`, `vector/`, `utilities/lambdify.py` | 索引张量、概率统计、多格式输出、代码生成、向量微积分 |
+
+```{toctree}
+:hidden:
+
+assumptions-source
+basic-source
+calculus-integrals-source
+core-init
+functions-source
+logic-sets-source
+matrices-source
+numbers-symbols-source
+polys-algebra-source
+series-solvers-source
+simplify-source
+sympify-function-source
+tensor-stats-source
+```

@@ -84,3 +84,14 @@ sources:
 - [概念文档索引](../concepts/index.md)
 - [示例文档索引](../examples/index.md)
 - [教程首页](../index.md)
+
+```{toctree}
+:hidden:
+
+application-source
+command-source
+migrate-source
+paths-source
+troubleshoot-source
+utils-source
+```

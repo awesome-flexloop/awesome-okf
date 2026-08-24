@@ -28,3 +28,17 @@ generated:
 2. **MIME 渲染器路径**：02 → 04 → 05 → 07（对比三个渲染器的共性与差异）
 3. **应用扩展路径**：03 → 06（理解 ILatexTypesetter 服务模式）
 4. **打包发布路径**：01 → 08（从 monorepo 构建到 wheel 发布）
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-monorepo-architecture
+02-mime-renderer-pattern
+03-extension-types
+04-fasta-renderer
+05-geojson-renderer
+06-math-renderers
+07-vega-renderer
+08-python-packaging
+```

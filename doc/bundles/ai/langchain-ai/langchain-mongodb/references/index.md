@@ -27,3 +27,9 @@ langchain_mongodb/
 ├── agent_toolkit/           # MongoDB Agent 工具包
 └── graphrag/                # GraphRAG 实现
 ```
+
+```{toctree}
+:hidden:
+
+api
+```

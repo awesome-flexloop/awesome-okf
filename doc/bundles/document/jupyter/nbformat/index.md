@@ -38,3 +38,14 @@ description: "Jupyter Notebook格式参考实现：.ipynb文件的读写、验�
 | Python要求 | ≥ 3.10 |
 | 许可证 | BSD-3-Clause |
 | 源码路径 | `external/libs/jupyter/nbformat/nbformat/` |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

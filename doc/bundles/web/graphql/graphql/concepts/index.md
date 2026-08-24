@@ -22,3 +22,20 @@
 * [09-fragments-and-advanced-syntax](09-fragments-and-advanced-syntax.md) — 片段、变量作用域与 Schema Coordinates
 * [10-python-ecosystem](10-python-ecosystem.md) — Python 生态：客户端与服务端实践
 * [11-graphql-and-ai](11-graphql-and-ai.md) — GraphQL 与 AI：MCP、语义内省与 Agent
+
+```{toctree}
+:hidden:
+
+00-overview
+01-query-language-basics
+02-schema-and-types
+03-composite-types
+04-directives-and-wrapping-types
+05-validation
+06-execution
+07-response-and-errors
+08-introspection
+09-fragments-and-advanced-syntax
+10-python-ecosystem
+11-graphql-and-ai
+```

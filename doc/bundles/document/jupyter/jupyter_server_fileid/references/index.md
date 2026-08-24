@@ -50,3 +50,13 @@ jupyter_server_fileid/
 - [核心概念](../concepts/index.md) — 概念文档
 - [示例代码](../examples/index.md) — 可运行的代码示例
 - [返回首页](../index.md)
+
+```{toctree}
+:hidden:
+
+cli-source
+extension-source
+handler-source
+manager-source
+pytest-plugin-source
+```

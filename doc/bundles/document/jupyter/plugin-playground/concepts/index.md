@@ -20,3 +20,18 @@
 * [07-联邦扩展与共享模块](07-federated-extensions.md) — Webpack Module Federation、window._JUPYTERLAB容器、联邦扩展自动发现、共享作用域semver匹配。
 * [08-样式处理与CSS隔离](08-style-handling.md) — 动态style标签注入、CSS @import重写、快照栈事务（快照-提交-回滚）、多插件样式隔离。
 * [09-导出、分享与工具栏集成](09-export-share.md) — ZIP/Wheel导出、链接分享、工具栏按钮、Run on Save、命令面板、侧边栏面板、AI辅助。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-architecture-overview
+02-plugin-basics
+03-typescript-transpilation
+04-module-resolution
+05-plugin-loader
+06-token-system
+07-federated-extensions
+08-style-handling
+09-export-share
+```

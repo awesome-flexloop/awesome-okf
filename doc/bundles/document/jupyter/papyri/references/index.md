@@ -31,3 +31,13 @@ sources:
 - [教程首页](../index.md)
 - [概念文档索引](../concepts/index.md)
 - [示例文档索引](../examples/index.md)
+
+```{toctree}
+:hidden:
+
+cli-source
+config-source
+ir-nodes-source
+papyri-source
+viewer-source
+```

@@ -15,3 +15,13 @@
 ## 高级篇
 
 - [04 配置、批量上报与性能](/concepts/04-configuration-batching.md) — 四队列批量上报引擎、数据截断与超大数据上报、客户端生命周期管理、超时配置、队列配置、生产环境性能优化
+
+```{toctree}
+:hidden:
+
+00-overview-architecture
+01-tracing-model
+02-llm-instrumentation
+03-context-propagation
+04-configuration-batching
+```

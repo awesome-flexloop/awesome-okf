@@ -51,3 +51,23 @@ Trae Skills 是 TRAE IDE 的社区维护 Agent Skills 集合，采用 MIT 许可
 2. 阅读 [SKILL.md 格式规范](/concepts/01-skill-format.md) 掌握文件结构
 3. 阅读 [创建第一个 Skill](/examples/create-first-skill.md) 动手实践
 4. 参考 [编写自定义 Skill](/concepts/07-write-skill.md) 深入学习高级模式
+
+```{toctree}
+:hidden:
+
+concepts/00-introduction
+concepts/01-skill-format
+concepts/02-skill-categories
+concepts/03-prompt-only-skills
+concepts/04-script-assisted-skills
+concepts/05-workflow-skills
+concepts/06-community-points
+concepts/07-write-skill
+examples/create-first-skill
+examples/points-contribution
+examples/skill-with-python-script
+examples/trigger-condition-design
+references/skills-source
+spec/facts
+spec/insights
+```

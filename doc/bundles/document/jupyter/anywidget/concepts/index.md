@@ -18,3 +18,14 @@ stale_after: 2027-08-23
 | 03 | [前端通信协议](03-frontend-communication.md) | 02 | Comm通道、消息类型、ESM导出格式、Custom Messages |
 | 04 | [HMR热更新](04-hmr-dev.md) | 01 | 文件监视、SolidJS响应式更新、Vite插件集成 |
 | 05 | [多框架桥接](05-framework-bridges.md) | 03 | React/Svelte/Vue集成、TypeScript类型、model proxy |
+
+```{toctree}
+:hidden:
+
+00-overall-architecture
+01-widget-lifecycle
+02-trait-sync
+03-frontend-communication
+04-hmr-dev
+05-framework-bridges
+```

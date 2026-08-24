@@ -22,3 +22,13 @@ stale_after: 2027-08-21
 | [tagging-source.md](tagging-source.md) | tagging/ Python工具架构、Tagger/Manifest清单 | 标签自动化系统 |
 | [tests-source.md](tests-source.md) | pytest框架、TrackedContainer、测试目录组织 | 测试框架 |
 | [makefile-ci-source.md](makefile-ci-source.md) | Makefile目标、变量、GitHub Actions工作流 | 构建与CI/CD |
+
+```{toctree}
+:hidden:
+
+dockerfiles
+makefile-ci-source
+startup-scripts
+tagging-source
+tests-source
+```

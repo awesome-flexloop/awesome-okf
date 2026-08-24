@@ -21,3 +21,13 @@ Jupyter AI 实用示例，覆盖从快速上手到自定义开发的典型场景
 | 示例 | 说明 |
 |---|---|
 | [创建自定义 Persona](custom-persona.md) | 开发自定义 AI Persona 并通过 entry points 注册 |
+
+```{toctree}
+:hidden:
+
+custom-mcp-server
+custom-persona
+first-chat
+magic-commands-usage
+notebook-ai-assistant
+```

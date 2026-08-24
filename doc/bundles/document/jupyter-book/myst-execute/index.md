@@ -58,3 +58,14 @@ okf_version: "0.2"
 * **status 判定依据**：全部 17 个内容文档（8 个概念 + 3 个示例 + 4 个信源登记 + 2 个 spec 文档 + 根 index.md），非 index 文件均 `status: stable`。内容基于对 myst-execute 0.4.0 源码（`external/libs/ai/jupyter-book/mystmd/packages/myst-execute/src/`）和 thebe 源码（`external/libs/ai/jupyter-book/thebe/packages/`）的逐模块阅读与事实提取。
 * **stale_after 解释**：统一设置为 `2027-12-31`。myst-execute 作为 MyST 构建插件核心 API 自 0.1 以来保持稳定；thebe-core 的链式 API（Config→Server→Session→Notebook→Cell）自 thebe v0.5+ 定型；thebe-react 的 Provider/Hook 模式也已稳定。该日期作为对未来大版本变化的保守重新评估节点。
 * **核验链路**：`generated` 记录原始生成时刻（2026-08-23）；`verified: true`，所有类名、函数名、参数名均通过源码 Read 工具验证。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

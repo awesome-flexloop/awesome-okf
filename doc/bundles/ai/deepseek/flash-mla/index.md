@@ -139,3 +139,13 @@ out, lse = flash_mla_with_kvcache(
 | [DeepEP](/ai/deepseek/deep-ep/) | DeepSeek 专家并行通信库，提供 all-to-all 通信原语，用于 MoE 模型的分布式推理与训练 |
 | [FlashAttention](https://github.com/Dao-AILab/flash-attention) | FlashMLA 灵感来源，FlashAttention 2&3 提供 IO-aware 精确注意力的 tiling 与 online softmax 基础思想 |
 | [CUTLASS](https://github.com/NVIDIA/cutlass) | NVIDIA CUTLASS 库，FlashMLA SM100 Dense Prefill/Backward 基于 CUTLASS 实现 |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+```

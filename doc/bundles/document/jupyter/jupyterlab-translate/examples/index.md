@@ -15,3 +15,12 @@ status: stable
 | 02 | [语言包仓库工作流](/examples/02-language-pack-workflow.md) | 维护集中式语言包仓库的批量处理、Crowdin集成、发布流程 | CLI命令、双模式分发、Crowdin集成 |
 | 03 | [自定义Schema选择器](/examples/03-custom-schema-selectors.md) | 配置自定义JSON Schema选择器提取非标准字段、翻译上下文分组 | Schema选择器、提取流水线 |
 | 04 | [Hatch构建钩子配置](/examples/04-hatch-hook-integration.md) | 语言包和扩展的pyproject.toml完整配置、构建验证、常见问题 | Hatch构建钩子、运行时发现 |
+
+```{toctree}
+:hidden:
+
+01-basic-extension-i18n
+02-language-pack-workflow
+03-custom-schema-selectors
+04-hatch-hook-integration
+```

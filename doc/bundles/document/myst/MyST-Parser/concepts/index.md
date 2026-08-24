@@ -37,3 +37,24 @@
 | [13-math-and-mathjax.md](13-math-and-mathjax.md) | 数学公式——dollarmath/amsmath、MathJax 自动配置 |
 | [14-warning-system.md](14-warning-system.md) | 警告系统——MystWarnings 枚举、create_warning、抑制机制 |
 | [15-docutils-standalone.md](15-docutils-standalone.md) | Docutils 独立使用——脱离 Sphinx 的 Python API 和 CLI |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-myst-syntax-overview
+03-architecture-pipeline
+04-config-system
+05-extension-system
+06-parser-and-renderer
+07-directives-and-roles
+08-cross-references
+09-slug-and-anchors
+10-cli-tools
+11-sphinx-integration
+12-frontmatter
+13-math-and-mathjax
+14-warning-system
+15-docutils-standalone
+```

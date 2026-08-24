@@ -145,3 +145,23 @@ xeus/
 ## 相关Bundle
 
 - [fps](../fps/index.md) — JupyterLite的FastAPI插件系统（JupyterLite核心插件框架）
+
+```{toctree}
+:hidden:
+
+examples/index
+references/index
+concepts/00-introduction
+concepts/01-getting-started
+concepts/02-architecture
+concepts/03-dual-worker-modes
+concepts/04-kernel-lifecycle
+concepts/05-build-system
+concepts/06-package-management
+concepts/07-filesystem-bridge
+concepts/08-extension-registration
+concepts/09-custom-kernel
+facts
+insights
+log
+```

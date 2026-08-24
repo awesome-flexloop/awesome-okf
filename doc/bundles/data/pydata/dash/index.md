@@ -52,3 +52,12 @@ okf_version: "0.2"
 * **status 判定依据**：共 10 个内容文档（4 个概念 + 1 个示例 + 1 个信源登记 + 3 个子目录 index + 根 index.md），非 index 文件均 `status: stable`。内容基于对 Dash 4.4.1 源码（`external/libs/python/dash/dash/` 目录）核心子系统的逐模块阅读与事实提取。
 * **stale_after 解释**：统一设置为 `2027-12-31`。Dash 核心 API（Dash类、callback装饰器、Input/Output/State、Component基类）自 Dash 1.0 以来保持高度稳定；Dash 4.x 引入了多后端支持和MCP集成，但核心概念不变，该日期作为对未来大版本变化的保守重新评估节点。
 * **核验链路**：`generated.at` 记录原始生成时刻（2026-08-22）；`verified.at` 记录过程核验事件（2026-08-22），所有类名、方法名、参数名均通过源码阅读验证。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

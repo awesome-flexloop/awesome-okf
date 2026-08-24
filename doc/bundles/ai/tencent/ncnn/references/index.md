@@ -6,3 +6,14 @@
 * [allocator.h — 内存分配器](allocator.md) — NCNN_MALLOC_ALIGN/OVERREAD、fastMalloc 跨平台实现、PoolAllocator/UnlockedPoolAllocator、VkAllocator 层级（Blob/Weight/Staging）。
 * [gpu.h/pipeline.h/command.h/pipelinecache.h — Vulkan 后端](vulkan-backend.md) — create_gpu_instance、GpuInfo/VulkanDevice、Pipeline 管线、VkCompute/VkTransfer 命令录制、PipelineCache 缓存。
 * [CMakeLists.txt — 构建系统](build-system.md) — 版本定义、NCNN_VULKAN/OPENMP/INT8/PYTHON/BF16/WEIGHT_QUANT/BATCH/PIXEL/RUNTIME_CPU/SIMPLEVK 等构建选项、平台分支。
+
+```{toctree}
+:hidden:
+
+allocator
+build-system
+layer-base
+mat-tensor
+net-extractor
+vulkan-backend
+```

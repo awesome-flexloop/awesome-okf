@@ -18,3 +18,10 @@ sources:
 
 - [Lumino 源码信源登记](lumino-source.md) — 本地源码路径、19个包清单、核心文件索引、构建配置
 - [包依赖关系与 API 速查表](package-api-map.md) — 分层依赖图、核心接口签名、Widget 生命周期消息序列
+
+```{toctree}
+:hidden:
+
+lumino-source
+package-api-map
+```

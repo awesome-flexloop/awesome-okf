@@ -33,3 +33,15 @@ pytest_jupyter/__init__.py (导入jupyter_core的所有内容)
 3. 按兴趣方向阅读：
    - 内核测试方向：[Echo内核](echo-kernel-source.md) → [Client插件](jupyter-client-source.md)
    - Server测试方向：[Tornado异步测试](pytest-tornasync-source.md) → [Server插件](jupyter-server-source.md)
+
+```{toctree}
+:hidden:
+
+echo-kernel-source
+init-source
+jupyter-client-source
+jupyter-core-source
+jupyter-server-source
+pytest-tornasync-source
+utils-source
+```

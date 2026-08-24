@@ -90,3 +90,20 @@ related:
   ├─ 记忆系统：memory-architecture-patterns → second-me bundle
   └─ 协议集成：mcp-acp-protocols → intelligent-terminal bundle
 ```
+
+```{toctree}
+:hidden:
+
+concepts/agent-core-loop-pattern
+concepts/mcp-acp-protocols
+concepts/memory-architecture-patterns
+concepts/multi-agent-orchestration
+concepts/plugin-architecture-patterns
+concepts/prompt-architecture
+concepts/provider-adapter-pattern
+concepts/tool-system-design
+examples/build-agent-from-scratch
+examples/choose-framework
+examples/compare-agent-loops
+references/cross-project-sources
+```

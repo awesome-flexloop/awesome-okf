@@ -26,3 +26,11 @@
 运行 Python 示例需要：
 - Python 3.8+
 - `py-rattler` 包（`pip install py-rattler` 或 `conda install -c conda-forge py-rattler`）
+
+```{toctree}
+:hidden:
+
+basic-solve-install
+repodata-fetch-cache
+virtual-package-detection
+```

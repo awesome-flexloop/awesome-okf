@@ -42,3 +42,14 @@ jupyter-renderers 是 JupyterLab 官方维护的 MIME 渲染器扩展集合，�
 | [IRenderMime API 参考](references/rendermime-interfaces-api.md) | IRendererFactory、IRenderer、IExtension、IOptions、IMimeModel 核心接口 |
 | [扩展配置参考](references/extension-config-reference.md) | mimeExtension vs extension、rank、safe、dataType、fileTypes、documentWidgetFactoryOptions |
 | [Python 入口点参考](references/python-entrypoint-reference.md) | _jupyter_labextension_paths、labextension 目录结构、pyproject.toml 配置 |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

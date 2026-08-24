@@ -9,3 +9,13 @@
 | [session-source.md](session-source.md) | `jupyter_client/session.py` | Session 消息协议：序列化、HMAC签名、ZMQ收发、Message包装 |
 | [provisioning-source.md](provisioning-source.md) | `jupyter_client/provisioning/` | Provisioner 框架：KernelProvisionerBase、LocalProvisioner、工厂模式 |
 | [channels-connect-source.md](channels-connect-source.md) | `jupyter_client/channels.py` + `connect.py` | 通道实现、连接文件管理、Socket创建、心跳监控 |
+
+```{toctree}
+:hidden:
+
+channels-connect-source
+client-source
+manager-source
+provisioning-source
+session-source
+```

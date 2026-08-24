@@ -11,3 +11,13 @@
 | [dspark-model](/ai/deepseek/deep-spec/concepts/dspark-model) | DSpark 块级锚点采样、噪声嵌入构造、Markov 头三种变体（vanilla/gated/rnn）、多任务损失设计、DFlash 变体 |
 | [eagle3-model](/ai/deepseek/deep-spec/concepts/eagle3-model) | Eagle3 5层目标隐状态拼接、双维度注意力输入、TTT自回归训练、FusedLogSoftmaxLoss Triton 融合损失、KV cache 复用 |
 | [training-pipeline](/ai/deepseek/deep-spec/concepts/training-pipeline) | FSDP 分片策略、BF16Optimizer 混合精度、CUDAPrefetcher、目标隐状态缓存格式、StatelessResumableDistributedSampler、原子 Checkpoint 管理 |
+
+```{toctree}
+:hidden:
+
+dspark-model
+eagle3-model
+overview
+speculative-decoding-training
+training-pipeline
+```

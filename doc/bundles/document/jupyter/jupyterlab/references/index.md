@@ -13,3 +13,9 @@
 - [返回首页](../index.md)
 - [概念文档](../concepts/)
 - [示例文档](../examples/)
+
+```{toctree}
+:hidden:
+
+source-code-map
+```

@@ -99,3 +99,14 @@ langchain/
 | `langchain-anthropic` | Anthropic Claude 模型实现 |
 | `langchain-text-splitters` | 文档切分工具（`RecursiveCharacterTextSplitter`） |
 | `langchain` (classic) | 高层 Agent/Chain 实现（legacy） |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

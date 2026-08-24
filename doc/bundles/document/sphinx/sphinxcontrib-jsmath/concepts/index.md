@@ -6,3 +6,14 @@
 - [03 - 数学节点访问者](03-math-node-visitors.md) — html_visit_math/html_visit_displaymath 详解、docutils visitor 模式、SkipNode 机制。
 - [04 - 智能JS加载机制](04-smart-js-loading.md) — install_jsmath 三重条件检查、env-updated 事件时机、按需资源加载模式。
 - [05 - 国际化与并行安全](05-i18n-and-parallel.md) — gettext 消息目录、并行读写安全、mypy 严格类型检查、TYPE_CHECKING 条件导入。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-setup-and-registration
+03-math-node-visitors
+04-smart-js-loading
+05-i18n-and-parallel
+```

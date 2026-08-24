@@ -114,3 +114,14 @@ codebuddy/
 - **核验链路**：`generated.at` 与 `verified.at` 均为 2026-08-23T00:00:00Z，由 `reference_agent/trae-solo` 生成、`process:seven-concepts-v` 过程核验。所有产品名称、版本号、URL 均直接引自官方页面。
 - **覆盖范围**：覆盖 CodeBuddy IDE、CLI、NPC、WorkBuddy、Security 五个产品及插件形态；不含定价细则、API 文档细节、未公开功能与第三方对比评测。
 - **内容敏感度**：本束内容全部来自公开发布的官方网页，属公开内容（Public），存放于 `bundles/` 公共规划区域。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

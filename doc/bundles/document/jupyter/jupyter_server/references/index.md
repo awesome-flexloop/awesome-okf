@@ -45,3 +45,18 @@ sources: []
 | 源码版本 | v2.21.0.dev0 |
 | Python 要求 | ≥ 3.10 |
 | 源码路径 | `external/libs/jupyter/jupyter_server/` |
+
+```{toctree}
+:hidden:
+
+auth-source
+config-source
+contents-source
+extension-source
+gateway-source
+handlers-source
+kernels-source
+serverapp-source
+services-source
+websocket-base-source
+```

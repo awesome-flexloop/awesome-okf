@@ -41,3 +41,16 @@ status: stable
 2. 动手部署 → [从零部署](../examples/01-first-deployment.md)
 3. 理解核心 → [02-站点配置](02-site-configuration.md) → [03-内核生态](03-kernel-ecosystem.md) → [05-Pyodide库](05-pyodide-libraries.md)
 4. 进阶定制 → [06-部署流水线](06-deployment-github-pages.md) → [07-自定义指南](07-customization-guide.md)
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-demo-overview
+02-site-configuration
+03-kernel-ecosystem
+04-content-and-data
+05-pyodide-libraries
+06-deployment-github-pages
+07-customization-guide
+```

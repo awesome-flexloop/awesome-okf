@@ -40,3 +40,24 @@ status: stable
 |------|------|------|
 | [noauth-source.md](noauth-source.md) | `plugins/noauth/src/fps_noauth/main.py` | NoAuth 实现（最简单的认证后端） |
 | [fps-kernels-source.md](fps-kernels-source.md) | `plugins/kernels/src/fps_kernels/main.py` | KernelsModule 实现、内核生命周期管理、会话管理 |
+
+```{toctree}
+:hidden:
+
+app-source
+auth-api-source
+cli-source
+contents-api-source
+fps-kernels-source
+frontend-source
+kernel-api-source
+kernels-api-source
+lab-api-source
+main-module-source
+noauth-source
+pyproject-source
+readme-source
+terminals-api-source
+yjs-api-source
+yrooms-api-source
+```

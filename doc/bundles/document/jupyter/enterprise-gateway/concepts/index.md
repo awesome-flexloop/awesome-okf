@@ -22,3 +22,20 @@
 * [内核启动流程详解](09-kernel-launch-flow.md) — 从POST /api/kernels到内核就绪的11阶段完整时序、launcher职责、SSH隧道建立。
 * [部署模式与Kernel Launcher](10-deployment-modes.md) — Python/R/Scala Launcher职责、Docker/K8s/YARN部署模式、kernelspec配置、Docker镜像、Helm部署。
 * [安全认证与高可用](11-security-and-ha.md) — Token认证、CORS配置、SSL/TLS双向认证、用户授权与模拟、负载均衡算法、standalone/replication HA模式。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-app-and-config
+04-process-proxy
+05-kernel-management
+06-response-manager
+07-http-api-handlers
+08-session-management
+09-kernel-launch-flow
+10-deployment-modes
+11-security-and-ha
+```

@@ -152,3 +152,14 @@ papyri gen my-lib.toml --upload
 - 跨包交叉引用的文档系统
 - 需要将 docstring 转换为可移植 IR 的工具链
 - 本地/离线文档查看器
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

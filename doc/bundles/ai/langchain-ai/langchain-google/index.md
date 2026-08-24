@@ -115,3 +115,14 @@ langchain-google/
 |---|---|---|
 | langchain | [/langchain-ai/langchain/](/ai/langchain-ai/langchain/) | LangChain 核心框架，langchain-google 实现其 ChatModel/Embeddings/Tool 接口 |
 | langgraph | [/langchain-ai/langgraph/](/ai/langchain-ai/langgraph/) | LangChain 编排框架，可与 ChatGoogleGenerativeAI 组合构建 Agent |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

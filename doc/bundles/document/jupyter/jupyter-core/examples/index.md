@@ -32,3 +32,11 @@ sources:
 - [核心概念](../concepts/index.md) — 系统学习 jupyter_core 架构与 API
 - [源码信源](../references/index.md) — 源码信源文档
 - [返回首页](../index.md)
+
+```{toctree}
+:hidden:
+
+01-basic-usage
+02-custom-app
+03-path-customization
+```

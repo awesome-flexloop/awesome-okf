@@ -22,3 +22,13 @@
  ├── 05-custom-directive — 块级扩展 + 递归解析
  └── 02-custom-transform — AST 后处理
 ```
+
+```{toctree}
+:hidden:
+
+00-basic-parsing
+02-custom-transform
+03-citations-example
+04-custom-role
+05-custom-directive
+```

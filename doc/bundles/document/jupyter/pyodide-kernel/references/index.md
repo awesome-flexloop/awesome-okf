@@ -9,3 +9,13 @@
 | [kernel-py-source.md](kernel-py-source.md) | `packages/pyodide-kernel/py/pyodide-kernel/pyodide_kernel/` | 浏览器端Python Kernel（PyodideKernel/Interpreter/LiteStream/LiteDisplay/Comm/Mocks/Patches） |
 | [piplite-source.md](piplite-source.md) | `packages/pyodide-kernel/py/piplite/piplite/` | piplite包管理器（install函数、三级查找、常量、PiplitePyPIManager） |
 | [extension-source.md](extension-source.md) | `packages/pyodide-kernel-extension/src/` | JupyterLab扩展插件注册、Kernel Spec定义、插件设置Schema |
+
+```{toctree}
+:hidden:
+
+addon-source
+extension-source
+kernel-py-source
+kernel-ts-source
+piplite-source
+```

@@ -80,3 +80,11 @@ engram/
 ├── examples/              # 使用示例（1 篇）
 └── index.md               # 本文件
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+```

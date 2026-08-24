@@ -149,3 +149,14 @@ codewhale/
 - **版本**：0.9.10
 - **本地路径**：`d:\spaces\SpecWeave\external\libs\ai\agents\CodeWhale\`
 - **关键文件**：Cargo.toml、21 个 crate 的 Cargo.toml 和 src/、docs/ 目录下的官方文档
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

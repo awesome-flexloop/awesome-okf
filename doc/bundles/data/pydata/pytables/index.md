@@ -142,3 +142,12 @@ with tb.open_file('data.h5', mode='w', title='My data') as f:
 - 生成日期：2026-08-22
 - OKF 格式版本：0.2
 - 分析源码路径：`tables/`
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

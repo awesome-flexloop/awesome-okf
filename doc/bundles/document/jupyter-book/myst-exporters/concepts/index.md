@@ -14,3 +14,18 @@
 | 07 | [Typst 导出](07-typst-export.md) | TypstSerializer、宏收集、与 LaTeX 对称 |
 | 08 | [jtex 模板引擎](08-jtex-template-engine.md) | Nunjucks 渲染、imports 合并、模板目录结构 |
 | 09 | [导入转换器](09-import-converters.md) | jats-to-myst、tex-to-myst 栈式解析器 |
+
+```{toctree}
+:hidden:
+
+00-exporter-architecture
+01-html-export
+02-latex-export
+03-pdf-export
+04-docx-export
+05-jats-export
+06-markdown-export
+07-typst-export
+08-jtex-template-engine
+09-import-converters
+```

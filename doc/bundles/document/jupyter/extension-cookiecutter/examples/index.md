@@ -10,3 +10,11 @@
 
 - [02 添加自定义 API 端点](02-custom-endpoint.md) — 添加 CRUD REST API 端点（GET/POST/PUT/DELETE）、路径参数、请求体验证、错误处理、状态码规范
 - [03 添加可配置参数](03-configurable-extension.md) — 使用 traitlets 添加多种类型配置（Unicode/Integer/Bool/List/Dict/Float）、参数验证器、settings 传递、测试配置覆盖
+
+```{toctree}
+:hidden:
+
+01-basic-ping-extension
+02-custom-endpoint
+03-configurable-extension
+```

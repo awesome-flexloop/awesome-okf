@@ -30,3 +30,15 @@ stale_after: 2026-12-31
 
 * [树模型转换范式：LightGBM/XGBoost/CoreML算子集与属性模板](05-tree-models.md) — 树模型统一范式：TreeEnsembleClassifier/Regressor属性对模板、平行数组节点编码、add_node函数、三框架共性与差异、zipmap/split/without_onnx_ml后处理选项。
 * [Pipeline转换、元数据传播与校验工具](06-pipeline-metadata.md) — 复合模型处理：SparkML/CoreML Pipeline转换、CoreML元数据自动提取（author/license/description）、模型I/O工具、命名合规校验、形状计算器校验工具。
+
+```{toctree}
+:hidden:
+
+00-overall-architecture
+01-topology-ir
+02-conversion-pipeline
+03-converter-registration
+04-type-system
+05-tree-models
+06-pipeline-metadata
+```

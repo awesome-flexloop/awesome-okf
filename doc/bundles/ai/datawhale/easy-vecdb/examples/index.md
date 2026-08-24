@@ -19,3 +19,11 @@
 | 示例 | 说明 |
 |------|------|
 | [milvus-getting-started.md](milvus-getting-started.md) | PyMilvus 核心 API 实战：Collection 管理、数据插入、IVF_PQ 索引、向量搜索、元数据过滤 |
+
+```{toctree}
+:hidden:
+
+milvus-getting-started
+mini-vector-db
+rag-with-faiss
+```

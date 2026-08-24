@@ -42,3 +42,22 @@
 - 自定义主题：00 → 01 → 09 → 做 [示例 04](../examples/04-custom-dark-theme.md)
 
 **工程化**：11 → 12 → 13
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-copier-basics
+03-four-extension-types
+04-project-structure
+05-build-system
+06-frontend-extension
+07-server-extension
+08-mime-renderer
+09-theme-extension
+10-settings-schema
+11-testing-strategy
+12-ci-workflows
+13-packaging-release
+```

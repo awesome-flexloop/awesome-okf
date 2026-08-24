@@ -102,3 +102,13 @@ deep_gemm.fp8_gemm_nt((a_fp8, a_sf), (b_fp8, b_sf), d)
 |---|---|
 | [DeepEP](/ai/deepseek/deep-ep/) | DeepSeek 专家并行（EP）通信库，提供 all-to-all 等通信原语，与 DeepGEMM 分组 GEMM/MegaMoE 协同使用 |
 | [TileLang Kernels](/ai/deepseek/tile-kernels/) | TileLang 编写的核函数库（如 SwiGLU+weight 到 FP8 的融合算子），作为 DeepGEMM 的补充 |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+```

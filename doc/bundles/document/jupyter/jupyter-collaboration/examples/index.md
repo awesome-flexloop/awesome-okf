@@ -20,3 +20,12 @@
 | 恢复误删内容 | [04-fork-timeline-usage.md](04-fork-timeline-usage.md) |
 | 集成自定义存储后端 | [02-custom-document-type.md](02-custom-document-type.md) |
 | JupyterHub部署配置 | [01-setup-config.md](01-setup-config.md) |
+
+```{toctree}
+:hidden:
+
+01-setup-config
+02-custom-document-type
+03-collaboration-events
+04-fork-timeline-usage
+```

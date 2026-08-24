@@ -8,3 +8,16 @@
 - [ReAct Agent](/ai/langchain-ai/langchainjs/concepts/react-agent) — createAgent、LangGraph 图拓扑、状态管理与结构化输出
 - [Middleware](/ai/langchain-ai/langchainjs/concepts/middleware) — Agent 横切扩展、六钩子织入、洋葱模型与内置中间件
 - [Document 与 Embedding](/ai/langchain-ai/langchainjs/concepts/document-embedding) — 文档数据模型、向量化抽象与 RAG 基础
+
+```{toctree}
+:hidden:
+
+document-embedding
+message-system
+middleware
+overview
+prompt-templates
+react-agent
+runnable-interface
+tool-definition
+```

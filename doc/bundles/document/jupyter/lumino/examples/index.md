@@ -76,3 +76,13 @@ npx vite
 - [核心概念文档](../concepts/index.md) — 每个示例对应的概念文档
 - [参考资料索引](../references/index.md) — API 速查表和源码信源
 - [Lumino 主页](../index.md) — 回到 Lumino bundle 首页
+
+```{toctree}
+:hidden:
+
+01-create-widget
+02-signal-communication
+03-layout-basics
+04-commands-shortcuts
+05-plugin-app
+```

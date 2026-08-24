@@ -14,3 +14,12 @@ sources:
 * [Solver 求解器 API](solver-init.md) — Conda 高层求解 API：`Solver` 类的 `__init__` 构造函数及三个公开方法 `solve_final_state()`、`solve_for_diff()`、`solve_for_transaction()`，通过插件后端委托模式实现求解器可插拔。
 * [SubdirData 仓库数据 API](subdir-data-api.md) — Conda 仓库元数据管理 API：`SubdirData` 类封装 repodata.json 的加载、查询与缓存，提供单频道查询 `query()`、跨频道查询 `query_all()`、记录遍历 `iter_records()` 和数据重载 `reload()` 方法。
 * [插件钩子规范 (hookspec)](plugin-hookspec.md) — Conda 插件系统的 Pluggy hookspec 定义：`CondaSpecs` 类声明所有插件扩展点，包括 `conda_solvers`（求解器注册）和 `conda_subcommands`（子命令注册）等钩子，以及 `_hookspec`/`hookimpl` 装饰器标记。
+
+```{toctree}
+:hidden:
+
+cli-main
+plugin-hookspec
+solver-init
+subdir-data-api
+```

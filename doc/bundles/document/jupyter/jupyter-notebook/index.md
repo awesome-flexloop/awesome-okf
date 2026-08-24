@@ -86,3 +86,29 @@ tags: ["jupyter", "notebook", "python", "typescript", "jupyterlab"]
 - [JupyterLab文档](https://jupyterlab.readthedocs.io/)
 - [Jupyter Server文档](https://jupyter-server.readthedocs.io/)
 - [notebook_shim包](https://github.com/jupyter/notebook_shim)
+
+```{toctree}
+:hidden:
+
+concepts/00-introduction
+concepts/01-architecture-overview
+concepts/02-backend-app
+concepts/03-frontend-shell
+concepts/04-handlers
+concepts/05-shim-layer
+concepts/06-extension-system
+concepts/07-jupyterhub-integration
+concepts/08-build-system
+concepts/09-tree-page
+concepts/10-frontend-packages
+concepts/11-migration-guide
+examples/00-quickstart
+examples/01-frontend-extension
+examples/02-server-extension
+examples/03-customize-shell
+examples/04-custom-auth
+references/00-source-registry
+facts
+insights
+log
+```

@@ -49,3 +49,16 @@ stale_after: 2027-08-22
 | 文档 | 源文件 | 核心类型 |
 |------|--------|---------|
 | [主入口 API](main-source.md) | `src/ninja.cc` | NinjaMain、Options、Tool 函数、Status、Clean、GraphViz |
+
+```{toctree}
+:hidden:
+
+build-source
+eval-source
+graph-source
+logs-source
+main-source
+parser-source
+state-source
+util-source
+```

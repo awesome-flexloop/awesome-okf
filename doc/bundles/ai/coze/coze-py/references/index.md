@@ -7,3 +7,13 @@
 - [对话与工作流参考](/references/chat-workflow.md) — ChatClient/AsyncChatClient、Message、ChatEvent/ChatEventType、ChatPoll、工具调用模型、WorkflowsClient/runs/chat、WorkflowEvent
 - [WebSocket 实时通信与音频参考](/references/websockets-audio.md) — WebsocketsBaseClient、EventHandler、Builder 模式、Chat/Audio WS 客户端、音频配置模型、Audio HTTP 客户端（Speech/Transcriptions/Voices/Rooms/Live/VoiceprintGroups）
 - [数据模型、分页与资源管理参考](/references/data-pagination.md) — CozeModel、DynamicStrEnum、NumberPaged/TokenPaged/LastIDPaged、Bot 模型/枚举、Conversation/Section、File、Dataset/Document/Photo、Workspace、Templates、Variables、Folders、Connectors
+
+```{toctree}
+:hidden:
+
+auth-model
+chat-workflow
+coze-client
+data-pagination
+websockets-audio
+```

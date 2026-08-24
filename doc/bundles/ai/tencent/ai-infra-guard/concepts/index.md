@@ -11,3 +11,15 @@ AI-Infra-Guard 的核心概念解析，建议按顺序阅读。
 | 04 | [WebSocket 通信协议](04-websocket-protocol.md) | 消息信封、事件类型、SSE 推送、心跳 |
 | 05 | [Go/Python 桥接机制](05-python-bridge.md) | 子进程调用、JSON 行协议、上下文取消 |
 | 06 | [MCP 安全扫描](06-mcp-scan.md) | 三种传输协议、静态规则、LLM 动态测试 |
+
+```{toctree}
+:hidden:
+
+00-architecture
+01-task-types
+02-fingerprint-dsl
+03-vuln-matching
+04-websocket-protocol
+05-python-bridge
+06-mcp-scan
+```

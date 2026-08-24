@@ -11,3 +11,13 @@
 | [built-in-tools.md](built-in-tools.md) | 内置 AI 工具（discover_commands、execute_command、browser_fetch 等） |
 | [built-in-providers.md](built-in-providers.md) | 内置 AI Provider（Anthropic、Google、Mistral、OpenAI、Generic） |
 | [plugin-architecture.md](plugin-architecture.md) | JupyterLab 插件架构与依赖关系 |
+
+```{toctree}
+:hidden:
+
+built-in-providers
+built-in-tools
+plugin-architecture
+source-code
+tokens-api
+```

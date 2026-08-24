@@ -70,3 +70,24 @@ DeepSeek Harness 是深度求索（DeepSeek）官方推出的智能体框架，�
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
 > 
 > **内容统计**：10 个概念 + 4 个示例 + 1 个信源 = 15 个内容文档
+
+```{toctree}
+:hidden:
+
+concepts/acp-agent-protocol
+concepts/agent-runtime-loop
+concepts/cordis-plugin-architecture
+concepts/filesystem-and-shell
+concepts/llm-abstraction-layer
+concepts/mcp-protocol-integration
+concepts/session-and-context
+concepts/skill-system
+concepts/tool-and-subagent
+concepts/web-client
+examples/build-agent-loop
+examples/connect-mcp-server
+examples/create-cordis-plugin
+examples/define-custom-tool
+references/deepseek-harness-sources
+.spec/facts
+```

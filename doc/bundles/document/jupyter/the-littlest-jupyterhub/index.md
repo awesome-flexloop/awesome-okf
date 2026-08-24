@@ -91,3 +91,35 @@ tags: [jupyter, jupyterhub, tljh, multi-user, devops, data-science]
 - **源码路径**：`external/libs/jupyter/the-littlest-jupyterhub/`
 - **上游仓库**：https://github.com/jupyterhub/the-littlest-jupyterhub
 - **License**：3-Clause BSD
+
+```{toctree}
+:hidden:
+
+concepts/00-introduction
+concepts/01-installation
+concepts/02-architecture
+concepts/03-config-system
+concepts/04-user-management
+concepts/05-traefik-proxy
+concepts/06-plugin-system
+concepts/07-installation-deep-dive
+examples/01-basic-install
+examples/02-config-basics
+examples/03-github-auth
+examples/04-https-letsencrypt
+examples/05-custom-plugin
+examples/06-resource-limits
+references/bootstrap-source
+references/conda-source
+references/config-source
+references/configurer-source
+references/hooks-source
+references/installer-source
+references/systemd-source
+references/traefik-source
+references/user-source
+references/utility-modules-source
+facts
+insights
+log
+```

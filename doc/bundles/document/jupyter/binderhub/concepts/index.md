@@ -24,3 +24,21 @@
 | 10 | [事件日志与Prometheus指标](10-event-logging-metrics.md) | EventLog JSON Schema事件注册与发射、Prometheus指标定义（BUILD_TIME/LAUNCH_TIME/BUILD_COUNT等） |
 | 11 | [Helm Chart部署](11-helm-deployment.md) | Helm Chart结构、values.yaml配置解析、binderhub_config.py动态加载、BinderSpawnerMixin |
 | 12 | [安全认证与构建令牌](12-security-auth.md) | JWT build_token机制（HS256/aud/exp/origin）、HubOAuth认证、IP黑名单网络检查、CORS配置、User-Agent Bot拦截 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-app-and-traitlets
+04-build-system
+05-repo-provider-system
+06-event-stream
+07-registry-integration
+08-launcher-and-jupyterhub
+09-health-quota-ratelimit
+10-event-logging-metrics
+11-helm-deployment
+12-security-auth
+```

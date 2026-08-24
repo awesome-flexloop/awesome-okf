@@ -21,3 +21,10 @@
 | 第六章 | `code/C6/` | LlamaIndex 评估示例 |
 | 第八章 | `code/C8/` | 基础 RAG 食谱问答系统（详见上文） |
 | 第九章 | `code/C9/` | Graph RAG 优化系统（详见上文） |
+
+```{toctree}
+:hidden:
+
+c8-basic-rag
+c9-graph-rag
+```

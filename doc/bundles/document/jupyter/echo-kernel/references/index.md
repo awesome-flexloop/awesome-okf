@@ -13,3 +13,11 @@
 ## 信源版本
 
 所有信源基于 echo-kernel v0.4.0（JupyterLite 0.7.0 兼容版本）。
+
+```{toctree}
+:hidden:
+
+kernel-source
+plugin-source
+python-source
+```

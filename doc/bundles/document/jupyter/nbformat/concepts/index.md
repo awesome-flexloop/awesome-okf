@@ -21,3 +21,19 @@
 * [信任与签名](08-trust-and-signing.md) — HMAC签名算法、NotebookNotary门面类、SQLite/内存存储、信任判断规则、jupyter-trust CLI。
 * [v4格式详解](09-v4-format.md) — v4.5 JSON格式完整规范：顶层结构、四种cell类型、四种output类型、MIME bundle、metadata、JSON Schema约束。
 * [深入实战](10-advanced-patterns.md) — 动态导入import_item、Sentinel哨兵、深拷贝优化原理、自定义验证relax模式、遍历修改Notebook、常见陷阱。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-notebook-node
+04-read-write-api
+05-version-system
+06-validation
+07-notebook-construction
+08-trust-and-signing
+09-v4-format
+10-advanced-patterns
+```

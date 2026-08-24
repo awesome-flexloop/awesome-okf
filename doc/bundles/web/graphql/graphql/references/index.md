@@ -11,3 +11,17 @@
 * [spec-section-7-response](spec-section-7-response.md) — 规范 Section 7：Response + Appendix C
 * [mcp-server-source](mcp-server-source.md) — AI WG MCP 服务器源码
 * [semantic-introspection-rfc](semantic-introspection-rfc.md) — 语义内省 RFC
+
+```{toctree}
+:hidden:
+
+mcp-server-source
+semantic-introspection-rfc
+spec-section-1-overview
+spec-section-2-language
+spec-section-3-type-system
+spec-section-4-introspection
+spec-section-5-validation
+spec-section-6-execution
+spec-section-7-response
+```

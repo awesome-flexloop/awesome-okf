@@ -61,3 +61,12 @@ okf_version: "0.2"
 * **核验链路**：`generated.at` 记录各文档原始生成时刻（2026-08-21）；`verified.at` 记录 V 阶段对抗审查核验事件，两者分离、可追溯。
 
 本知识包共收录 27 个内容文档（18 个概念 + 5 个示例 + 4 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

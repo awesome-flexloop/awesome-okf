@@ -124,3 +124,14 @@ Sphinx 是 Python 生态最主流的文档生成器，最初为 Python 官方文
 - Python要求：≥ 3.12
 - 核心依赖：docutils ≥0.21、Jinja2 ≥3.1、Pygments ≥2.17、Babel ≥2.13
 - Markdown支持：MyST-Parser ≥4.0（第三方扩展）
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

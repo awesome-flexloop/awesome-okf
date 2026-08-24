@@ -44,3 +44,12 @@ okf_version: "0.2"
 * **status 判定依据**：全部 16 个内容文档（8 个概念 + 2 个示例 + 4 个信源登记 + 3 个子目录 index + 根 index.md + log.md），非 index/log 文件均 `status: stable`。内容基于对 NumPy 2.x 源码（`external/libs/python/NumPy/numpy/numpy/` 目录）核心子系统的逐模块阅读与事实提取（43个编号源码事实 F-001 ~ F-043）。
 * **stale_after 解释**：统一设置为 `2027-12-31`。NumPy 核心 API（ndarray、ufunc、dtype、广播）自 NumPy 1.0 以来保持高度稳定；NumPy 2.0 做了一些清理但核心概念不变，该日期作为对未来大版本变化的保守重新评估节点。
 * **核验链路**：`generated.at` 记录原始生成时刻（2026-08-22）；`verified.at` 记录过程核验事件（2026-08-22），所有类名、函数名、参数名均通过源码Grep验证。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

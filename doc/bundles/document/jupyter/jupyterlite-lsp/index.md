@@ -41,3 +41,14 @@ jupyterlite-lsp 为 [JupyterLite](https://jupyterlite.rtfd.io)（浏览器端 Ju
 ### [源码引用](references/index.md)
 
 源码级引用文档，直接对应到源文件。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

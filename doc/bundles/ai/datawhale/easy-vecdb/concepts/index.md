@@ -22,3 +22,14 @@
 |------|------|
 | [annoy-practice.md](annoy-practice.md) | Spotify 轻量 ANN 库、随机投影树、mmap 内存映射、多进程共享、API 调优 |
 | [faiss-milvus-engineering.md](faiss-milvus-engineering.md) | Faiss 高性能检索库（GPU/索引/调优）、Milvus 分布式数据库（架构/API/AI应用） |
+
+```{toctree}
+:hidden:
+
+ann-algorithms
+annoy-practice
+faiss-milvus-engineering
+hnsw-lsh
+ivf-pq-quantization
+vector-retrieval-basics
+```

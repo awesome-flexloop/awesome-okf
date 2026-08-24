@@ -14,3 +14,9 @@
 2. **运行环境**：推荐在 Jupyter Notebook/Lab 中交互式运行示例代码
 3. **学习路径**：先阅读 [concepts/](../concepts/00-introduction.md) 理解核心概念，再运行示例巩固
 4. **参考源码**：示例中涉及的 API 实现细节见 [references/](../references/core-init.md)
+
+```{toctree}
+:hidden:
+
+basic-dataframe-ops
+```

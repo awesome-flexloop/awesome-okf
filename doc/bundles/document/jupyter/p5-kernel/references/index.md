@@ -10,3 +10,12 @@
 | [P5Kernel 类信源](kernel-source.md) | P5Kernel 类的完整 API、构造选项、私有字段 | `packages/p5-kernel/src/kernel.ts` |
 | [P5Executor 类信源](executor-source.md) | P5Executor 类方法、MIME 渲染、内置文档 | `packages/p5-kernel/src/executor.ts` |
 | [扩展注册信源](extension-source.md) | JupyterLab 插件注册、CDN 配置、KernelSpec | `packages/p5-kernel-extension/src/index.ts` |
+
+```{toctree}
+:hidden:
+
+executor-source
+extension-source
+kernel-source
+metasource
+```

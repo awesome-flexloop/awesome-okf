@@ -29,3 +29,16 @@ status: stable
 1. **每个事实可溯源**：概念文档中的每个技术事实都应追溯到references中对应的源码位置
 2. **Grep级验证**：API名称、函数签名、常量值需通过Grep在源码中验证存在
 3. **版本绑定**：所有文档绑定到v1.3.7版本，版本升级后需更新信源
+
+```{toctree}
+:hidden:
+
+api-source
+cli-source
+constants-config
+contributors-source
+converters-source
+finder-source
+plugin-source
+utils-source
+```

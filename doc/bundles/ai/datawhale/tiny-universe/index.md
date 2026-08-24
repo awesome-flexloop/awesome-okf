@@ -61,3 +61,20 @@ tiny-universe 是 Datawhale 发起的开源学习项目，以"白盒"为导向�
 - [模块结构详述](/ai/datawhale/tiny-universe/references/readme-modules)
 - [发布时间线](/ai/datawhale/tiny-universe/references/readme-news)
 - [模块路线图示例](/ai/datawhale/tiny-universe/examples/module-roadmap)
+
+```{toctree}
+:hidden:
+
+concepts/tiny-agent
+concepts/tiny-diffusion
+concepts/tiny-llm
+concepts/tiny-rag
+concepts/white-box-philosophy
+examples/module-roadmap
+references/readme-modules
+references/readme-news
+references/readme-overview
+spec/facts
+spec/insights
+log
+```

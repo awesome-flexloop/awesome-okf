@@ -12,3 +12,16 @@
 | 6 | [配置类 config.py](config-py-source.md) | `jupyterlab_latex/config.py` (33行) | traitlets 配置项（引擎、shell escape、run_times 等） |
 | 7 | [SyncTeX 同步 synctex.py](synctex-py-source.md) | `jupyterlab_latex/synctex.py` (233行) | 正向/反向同步、响应解析 |
 | 8 | [命令执行 util.py](util-py-source.md) | `jupyterlab_latex/util.py` (62行) | 跨平台子进程（Windows同步/Unix异步） |
+
+```{toctree}
+:hidden:
+
+build-py-source
+config-py-source
+error-tsx-source
+index-ts-source
+pagenumber-tsx-source
+pdf-ts-source
+synctex-py-source
+util-py-source
+```

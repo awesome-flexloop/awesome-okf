@@ -39,3 +39,12 @@ examples/basic-plotting.md（动手实践）
     │     └── 03-pyplot-state-machine
     └── examples/basic-plotting.md
 ```
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-artist-hierarchy
+02-backend-system
+03-pyplot-state-machine
+```

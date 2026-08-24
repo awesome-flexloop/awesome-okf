@@ -7,3 +7,13 @@
 | 02 | [CLI命令详解](/concepts/02-cli-usage.md) | 完整CLI选项参考、时间范围、输出控制 |
 | 03 | [数据获取与处理](/concepts/03-activity-data.md) | GraphQL API、分页、DataFrame数据流 |
 | 04 | [标签分类配置](/concepts/04-configuration.md) | 自定义分类规则、JSON配置文件 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-cli-usage
+03-activity-data
+04-configuration
+```

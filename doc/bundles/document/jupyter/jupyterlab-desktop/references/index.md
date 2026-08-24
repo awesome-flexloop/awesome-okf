@@ -25,3 +25,20 @@
 - [核心概念](../concepts/index.md) — 概念文档
 - [示例文档](../examples/index.md) — 实战示例
 - [返回首页](../index.md)
+
+```{toctree}
+:hidden:
+
+app-source
+cli-source
+config-source
+env-source
+event-source
+main-source
+navigation-source
+registry-source
+server-source
+sessionwindow-source
+settings-source
+tokens-source
+```

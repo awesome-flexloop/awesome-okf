@@ -39,3 +39,12 @@ ONNX-MLIR 将 ONNX 计算图编译为最小运行时支持的原生共享库，�
 * **核验链路**：事实来源于对源码的静态分析（31条事实F-001~F-031，每条附源码路径和行号证据），洞察基于事实提炼（3个洞察I-01~I-03，各含证据链、反常识点和行动建议），示例代码基于验证过的API编写（run_main_graph C ABI、OMTensor/OMTensorList、ExecutionSession动态加载、PyRuntime Python绑定）。
 
 本知识包共收录 9 个内容文档（6 个概念 + 1 个示例 + 2 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

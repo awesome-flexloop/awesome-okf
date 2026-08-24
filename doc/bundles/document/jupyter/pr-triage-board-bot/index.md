@@ -190,3 +190,14 @@ flowchart TB
 ## 许可协议
 
 pr-triage-board-bot 使用 [BSD 3-Clause License](https://github.com/yuvipanda/pr-triage-board-bot/blob/main/LICENSE)。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

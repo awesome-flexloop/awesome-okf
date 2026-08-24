@@ -11,3 +11,15 @@
 | [member-guide-source.md](member-guide-source.md) | docs/team/member-guide.md | 团队资源、沟通渠道策略、5项成员职责、PR合并5原则 |
 | [conf-py-source.md](conf-py-source.md) | docs/conf.py, readthedocs.yml, docs/requirements.txt, .pre-commit-config.yaml | Sphinx配置、MyST Markdown支持、sphinx-book-theme、RTD构建配置 |
 | [gen-contributors-source.md](gen-contributors-source.md) | docs/scripts/gen_contributors.py, docs/_static/custom.css | YAML→HTML贡献者表格自动生成脚本逻辑、CSS样式定义 |
+
+```{toctree}
+:hidden:
+
+becoming-member-source
+conf-py-source
+decision-making-source
+gen-contributors-source
+member-guide-source
+readme-source
+team-source
+```

@@ -24,3 +24,13 @@ status: stable
 - 示例03：需要理解示例01-02，建议阅读[协作编辑Yjs](../concepts/09-collaboration-yjs.md)
 - 示例04：需要理解示例01，建议阅读[Contents文件服务](../concepts/06-contents-service.md)和[内核管理](../concepts/07-kernel-management.md)
 - 示例05：需要理解FPS模块系统，建议阅读[FPS模块系统](../concepts/03-fps-module-system.md)和[插件开发指南](../concepts/12-plugin-development.md)
+
+```{toctree}
+:hidden:
+
+01-basic-startup
+02-token-auth
+03-collaboration
+04-rest-api-usage
+05-custom-plugin
+```

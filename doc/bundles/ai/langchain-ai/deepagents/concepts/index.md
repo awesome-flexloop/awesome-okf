@@ -8,3 +8,12 @@
 - [规划与子代理](/ai/langchain-ai/deepagents/concepts/planning-subagents) — 子代理隔离、三种形态、task 工具、默认通用子代理
 - [Todo 与上下文管理](/ai/langchain-ai/deepagents/concepts/todo-context) — 摘要压缩、消息卸载、技能与内存、DeltaChannel
 - [ACP 协议](/ai/langchain-ai/deepagents/concepts/acp-protocol) — Agent Client Protocol 集成、编辑器对接、会话管理
+
+```{toctree}
+:hidden:
+
+acp-protocol
+overview
+planning-subagents
+todo-context
+```

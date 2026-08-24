@@ -49,3 +49,32 @@
 * [常见问题](/concepts/21-common-issues.md) — DOCTYPE/quirks mode、智能引号、aligned/matrix 间距、align vs aligned、MathJax 命名映射、CSS 排障。
 * [版本迁移](/concepts/22-migration.md) — v0.13-v0.18 迁移要点：CSS 类名前缀、__defineFunction、contrib 路径、\relax、宏参数行为。
 * [生态与版本](/concepts/23-ecosystem-and-versions.md) — Users 列表、Versions 版本说明、官方扩展入口、第三方库索引（React/Vue/Angular/Android/iOS/Rust/Ruby/小程序等）。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-lexer
+04-macro-expander
+05-parser
+06-render-pipeline
+07-dom-tree
+08-function-registry
+09-macro-system
+10-settings-options
+11-style-system
+12-font-metrics
+13-auto-render
+14-contrib-extensions
+15-installation-and-runtime
+16-command-line
+17-fonts-and-units
+18-security-and-errors
+19-supported-functions
+20-support-table
+21-common-issues
+22-migration
+23-ecosystem-and-versions
+```

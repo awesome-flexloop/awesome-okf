@@ -22,3 +22,20 @@ ncnn 核心架构概念，共 12 篇，按依赖顺序组织。
 * [09 层注册表与自定义层](09-layer-registry.md) — layer_type_enum 构建期生成、DEFINE_LAYER_CREATOR 宏、register_custom_layer、内置层覆盖。
 * [10 Python 绑定](10-python-binding.md) — pybind11、Mat↔numpy 零拷贝 buffer protocol、model_zoo 20 个预训练模型、Python 自定义层。
 * [11 量化与低精度推理](11-quantization.md) — int8 量化、fp16/bf16 存储、elemsize=1/2、权重量化 int4/int6/int8、quantize/dequantize/requantize。
+
+```{toctree}
+:hidden:
+
+00-overall-architecture
+01-net-extractor
+02-mat-tensor-system
+03-layer-abstraction
+04-allocator
+05-option-config
+06-vulkan-gpu
+07-simd-packing
+08-paramdict-modelbin
+09-layer-registry
+10-python-binding
+11-quantization
+```

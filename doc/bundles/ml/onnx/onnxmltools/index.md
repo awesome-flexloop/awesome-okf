@@ -43,3 +43,12 @@ okf_version: "0.2"
 * **stale_after 解释**：统一设置为 `2027-12-31`。onnxmltools 核心架构（9入口非对称设计、Topology IR四核心类、双注册池、compile五阶段流水线、树模型属性模板）自1.x以来稳定，新转换器和算子支持不断添加但核心设计不变；该日期作为针对未来大版本的保守重新评估节点。
 
 本知识包共收录 16 个内容文档（7 个概念 + 3 个示例 + 3 个信源登记 + 3 个子目录index + 根index + log）。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

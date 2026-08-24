@@ -45,3 +45,12 @@ onnx-ir 是 ONNX 格式的纯 Python 中间表示，核心设计特点是 IR 层
 * **核验链路**：事实来源于对源码的静态分析，洞察基于事实提炼，示例代码基于验证过的 API 编写。
 
 本知识包共收录 15 个内容文档（8 个概念 + 3 个示例 + 4 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

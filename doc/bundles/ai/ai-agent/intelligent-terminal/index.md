@@ -69,3 +69,24 @@ Intelligent Terminal 是 Windows Terminal 的原生 AI Agent 集成方案（Wind
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
 > 
 > **内容统计**：10 个概念 + 4 个示例 + 1 个信源 = 15 个内容文档
+
+```{toctree}
+:hidden:
+
+concepts/acp-json-rpc-protocol
+concepts/agent-pane-ui
+concepts/agent-registry
+concepts/com-protocol-server
+concepts/dual-process-architecture
+concepts/hooks-auto-upgrade
+concepts/named-pipe-transport
+concepts/osc133-autofix
+concepts/settings-configuration
+concepts/wtcli-command-tool
+examples/configure-agent-profile
+examples/develop-custom-agent
+examples/enable-autofix-osc133
+examples/use-agent-pane
+references/intelligent-terminal-sources
+.spec/facts
+```

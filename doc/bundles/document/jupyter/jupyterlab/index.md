@@ -63,3 +63,14 @@ JupyterLab 是 Project Jupyter 的下一代基于 Web 的交互式开发环境�
 ## 更新日志
 
 见 [log.md](log.md)
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

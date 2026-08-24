@@ -23,3 +23,26 @@
 - [15 核心规则深入](15-core-rules-deep-dive.md)
 - [16 安全与 XSS 防护](16-security-and-xss.md)
 - [17 JS 兼容与 Python 扩展](17-migration-and-compatibility.md)
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-presets-and-options
+03-token-stream
+04-parsing-pipeline
+05-ruler
+06-state-block
+07-state-inline
+08-block-rules
+09-inline-rules
+10-renderer
+11-syntax-tree-node
+12-plugin-system
+13-url-and-link-processing
+14-common-utilities
+15-core-rules-deep-dive
+16-security-and-xss
+17-migration-and-compatibility
+```

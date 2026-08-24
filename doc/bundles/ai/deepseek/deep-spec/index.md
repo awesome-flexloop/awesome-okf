@@ -169,3 +169,13 @@ DeepSpec/
 | [DeepGEMM](/ai/deepseek/deep-gemm/) | DeepSeek 高性能 JIT GEMM 核函数库，为 LLM 训练/推理提供矩阵乘法能力 |
 | [DeepEP](/ai/deepseek/deep-ep/) | DeepSeek 专家并行通信库，提供 all-to-all 通信原语 |
 | [DualPipe](/ai/deepseek/dual-pipe/) | DeepSeek 双向流水线并行调度算法 |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+```

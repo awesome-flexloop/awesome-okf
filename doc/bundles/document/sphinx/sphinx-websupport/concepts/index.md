@@ -29,3 +29,18 @@ title: "sphinxcontrib-websupport 概念文档"
 
 * [08-前端集成](08-frontend-integration.md) — websupport.js jQuery 插件、COMMENT_OPTIONS 配置、评论弹窗/投票/回复/提议 UI 交互、AJAX API 端点约定、CSS 样式定制。
 * [09-搜索适配器](09-search-adapters.md) — BaseSearch 抽象接口、NullSearch（无搜索）、WhooshSearch（纯 Python 全文检索）、XapianSearch（高性能 C++ 引擎）、搜索索引构建与查询流程。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-websupport-api
+04-builder-system
+05-comment-system
+06-storage-backend
+07-materialized-path
+08-frontend-integration
+09-search-adapters
+```

@@ -33,3 +33,20 @@
 | [09-external-commands.md](09-external-commands.md) | 主线程外部命令的注册、IRunContext 接口、Tab 补全和跨线程桥接 |
 | [10-wasm-js-commands.md](10-wasm-js-commands.md) | WASM/JS 命令包配置、cockle-config.json 格式、Emscripten-forge 编译要求 |
 | [11-worker-communication.md](11-worker-communication.md) | Comlink 与 Coincident 两种 Worker 通信模式的对比和选择策略 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-command-system
+04-parsing-pipeline
+05-io-system
+06-filesystem
+07-buffered-io
+08-builtin-commands
+09-external-commands
+10-wasm-js-commands
+11-worker-communication
+```

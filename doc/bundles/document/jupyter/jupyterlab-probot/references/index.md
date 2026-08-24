@@ -26,3 +26,10 @@ description: jupyterlab-probot 源码参考文档导航
 | [CODE_OF_CONDUCT.md](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterlab-probot/CODE_OF_CONDUCT.md) | 项目行为准则 |
 | [LICENSE](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterlab-probot/LICENSE) | BSD-3-Clause 许可证 |
 
+
+```{toctree}
+:hidden:
+
+config-schema-source
+index-ts-source
+```

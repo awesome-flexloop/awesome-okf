@@ -26,3 +26,21 @@
 
 * [CTest 测试集成](ctest-integration.md) — enable_testing()、add_test() 注册、测试过滤/并行/超时、Fixture 测试依赖排序、LABELS 标签、CDash Dashboard 上报、CTest 脚本模式。
 * [CPack 打包集成](cpack-integration.md) — install() 规则收集、TGZ/DEB/RPM/NSIS/DMG 多格式生成、组件化打包（COMPONENT）、CPackConfig.cmake 配置、cpack 命令行选项。
+
+```{toctree}
+:hidden:
+
+build-type
+configure-generate
+cpack-integration
+ctest-integration
+find-module
+generator-pattern
+overall-architecture
+policy-system
+state-snapshot
+target-model
+toolchain-detection
+variable-scope
+working-mode
+```

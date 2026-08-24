@@ -53,3 +53,12 @@ okf_version: "0.2"
 * **status 判定依据**：全部 10 个内容文档（4 个概念 + 1 个示例 + 2 个信源登记 + 3 个子目录 index + 根 index.md），非 index 文件均 `status: stable`。内容基于对 Matplotlib 3.x 源码（`external/libs/python/matplotlib/matplotlib/lib/matplotlib/` 目录）核心子系统的逐模块阅读与事实提取，所有类名、方法名、行号均通过 Grep 精确定位。
 * **stale_after 解释**：统一设置为 `2027-12-31`。Matplotlib 核心架构（Artist 层次、后端抽象、pyplot 状态机）自 1.x 以来保持高度稳定；3.x 系列持续增强但核心 API 没有 Breaking Change，该日期作为对未来大版本变化的保守重新评估节点。
 * **核验链路**：`generated.at` 记录原始生成时刻（2026-08-22T15:00:00Z）；`verified.at` 记录过程核验事件（2026-08-22T15:30:00Z），所有类名、函数名、参数名、行号均通过源码 Grep 和类定义头部读取验证。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

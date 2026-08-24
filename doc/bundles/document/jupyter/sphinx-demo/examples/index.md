@@ -26,3 +26,12 @@
 - **要做Pyodide文档** → [02-Pyodide配置](02-pyodide-setup.md)
 - **需要预编译包（ipycanvas等）** → [03-Xeus配置](03-xeus-setup.md)
 - **要嵌入可视化Notebook** → [04-Matplotlib笔记本](04-matplotlib-notebook.md)
+
+```{toctree}
+:hidden:
+
+01-minimal-site
+02-pyodide-setup
+03-xeus-setup
+04-matplotlib-notebook
+```

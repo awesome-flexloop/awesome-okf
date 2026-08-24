@@ -77,3 +77,14 @@ langsmith-sdk/
 ├── index.md               # 本文件
 └── log.md                 # 生成日志
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

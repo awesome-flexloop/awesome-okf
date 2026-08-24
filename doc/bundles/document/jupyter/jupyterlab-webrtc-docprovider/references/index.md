@@ -23,3 +23,17 @@ stale_after: 2027-08-22
 | [vendor-source.md](vendor-source.md) | `vendor/SimplePeerExtended.js`, `vendor/int64-buffer.min.js` | simple-peer大消息分块补丁、Int64BE编码、webpack替换规则 |
 | [python-source.md](python-source.md) | `pyproject.toml`, `setup.py`, `jupyterlab_webrtc_docprovider/__init__.py` | Python打包配置、jupyter_packaging构建系统、版本同步机制 |
 | [readme-source.md](readme-source.md) | `README.md`, `CONTRIBUTING.md` | 用户文档、安装说明、配置指南、开发流程 |
+
+```{toctree}
+:hidden:
+
+icons-schema-source
+manager-source
+plugin-source
+provider-source
+python-source
+readme-source
+status-source
+tokens-source
+vendor-source
+```

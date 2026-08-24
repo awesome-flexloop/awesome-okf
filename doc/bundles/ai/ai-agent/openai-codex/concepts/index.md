@@ -7,3 +7,15 @@
 - [04 - 沙箱执行模型](./04-sandbox-execution.md) — 平台原生沙箱（Seatbelt/Landlock/bwrap/Windows）、execpolicy、SafetyCheck 三层防御
 - [05 - Skills 与 AGENTS.md](./05-skills-agents-md.md) — AGENTS.md 目录树发现、SKILL.md 技能系统、显式/隐式调用、信任边界
 - [06 - Python SDK](./06-python-sdk.md) — openai-codex 包、同步/异步客户端、JSON-RPC 子进程通信、认证、沙箱控制
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-workspace-architecture
+02-rust-core-tui
+03-nodejs-cli
+04-sandbox-execution
+05-skills-agents-md
+06-python-sdk
+```

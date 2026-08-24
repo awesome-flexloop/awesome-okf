@@ -167,3 +167,15 @@ import regex
 
 ### 三层IPython适配
 先 mock 缺失模块（让import不报错），再 patch 运行时配置（matplotlib backend），最后子类化替换不兼容行为。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+patterns
+facts
+insights
+log
+```

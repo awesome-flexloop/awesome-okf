@@ -48,3 +48,12 @@
 ```
 {JUPYTER_URL}?repo=https%3A%2F%2Fgithub.com%2F{OWNER}%2F{REPO}&uploadpath=%2F{TARGET_DIR}
 ```
+
+```{toctree}
+:hidden:
+
+01-basic-github
+02-gitlab-repo
+03-open-notebook
+04-custom-uploadpath
+```

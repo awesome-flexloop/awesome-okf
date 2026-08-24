@@ -11,3 +11,12 @@
 
 - [03-自定义仓库提供者示例](03-custom-provider.md) — 实现GitLabRepoProvider，添加GitLab仓库支持
 - [04-自定义Publisher示例](04-custom-publisher.md) — 实现S3Publisher，将构建产物上传到云存储CDN
+
+```{toctree}
+:hidden:
+
+01-cli-build
+02-run-binderlite
+03-custom-provider
+04-custom-publisher
+```

@@ -22,3 +22,14 @@
 |------|------|
 | [05-extension-basics.md](05-extension-basics.md) | 编写 IPython 扩展（load_ipython_extension）、autoreload 使用、pip 可安装扩展打包 |
 | [06-event-hooks.md](06-event-hooks.md) | 注册事件回调（计时/日志）、自定义钩子（编辑器/剪贴板）、embed() 嵌入式调试 |
+
+```{toctree}
+:hidden:
+
+01-basic-usage
+02-using-magics
+03-display-rich-output
+04-custom-magic
+05-extension-basics
+06-event-hooks
+```

@@ -21,3 +21,17 @@
 核心理解：03 → 04 → 05
 深入实现：06 → 07 → 08
 ```
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-plugin-system
+04-language-server-interface
+05-mock-socket-bridge
+06-yaml-server
+07-build-system
+08-python-package
+```

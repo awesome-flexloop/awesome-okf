@@ -10,3 +10,12 @@ okf_version: "0.2"
 | [命令执行模式对比](send-commands.md) | send_command vs send_command_timing、expect_string、超时处理 |
 | [批量配置变更](config-changes.md) | send_config_set、配置文件、多设备并发、Juniper commit、回滚 |
 | [TextFSM 输出解析](output-parsing-textfsm.md) | use_textfsm、ntc-templates、TTP、Genie/pyATS 结构化输出 |
+
+```{toctree}
+:hidden:
+
+config-changes
+multi-vendor-connect
+output-parsing-textfsm
+send-commands
+```

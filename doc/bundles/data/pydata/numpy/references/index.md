@@ -8,3 +8,12 @@
 | [ndarray与数组创建API源码](ndarray-source.md) | `_core/multiarray.py`、`_core/numeric.py`、`_core/fromnumeric.py` | ndarray类定义、数组创建函数签名、规约包装机制 |
 | [ufunc通用函数系统源码](ufunc-source.md) | `_core/umath.py` | ufunc列表、ufunc属性（nin/nout/nargs/identity）、frompyfunc工厂、errstate错误控制 |
 | [dtype与数值类型系统源码](dtype-source.md) | `_core/_dtype.py`、`_core/numerictypes.py` | kind字符映射、类型层次树、genericTypeRank、标志位常量、结构化dtype字符串表示 |
+
+```{toctree}
+:hidden:
+
+core-init
+dtype-source
+ndarray-source
+ufunc-source
+```

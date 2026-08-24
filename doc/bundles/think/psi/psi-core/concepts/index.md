@@ -8,3 +8,16 @@
 * [现实结晶](05-reality-crystallization.md) - 现实结晶：可能性塌缩为实在
 * [元递归](06-meta-recursion.md) - 元递归：递归的递归
 * [统一回归](07-unity-return.md) - 统一回归：万法归一
+
+```{toctree}
+:hidden:
+
+00-psi-equation
+01-collapse-dynamics
+02-echo-and-recursion
+03-observer-formation
+04-language-emergence
+05-reality-crystallization
+06-meta-recursion
+07-unity-return
+```

@@ -13,3 +13,17 @@
 | [BaseHandler与Handlers源码](base-handlers-source.md) | binderhub/base.py、binderhub/main.py、binderhub/handlers/repoproviders.py — Handler基类、UI处理器、配置端点 |
 | [健康/配额/限流/指标源码](health-quota-ratelimit-source.md) | binderhub/health.py、binderhub/quota.py、binderhub/ratelimit.py、binderhub/metrics.py、binderhub/events.py、binderhub/utils.py |
 | [Helm Chart配置源码](helm-config-source.md) | helm-chart/binderhub/ — values.yaml、binderhub_config.py、deployment/rbac/service/ingress/pdb模板、BinderSpawnerMixin |
+
+```{toctree}
+:hidden:
+
+app-source
+base-handlers-source
+build-source
+builder-source
+health-quota-ratelimit-source
+helm-config-source
+launcher-source
+registry-source
+repoproviders-source
+```

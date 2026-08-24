@@ -9,3 +9,13 @@
 | [MCP 配置与工具参考](mcp-config-reference.md) | mcp_settings.json 格式、16 个默认工具、权限系统 |
 | [配置系统参考](config-reference.md) | CLI 参数、配置文件、Jupyternaut 设置、Magic 命令配置 |
 | [Entry Points 参考](entry-points-reference.md) | 插件分组、注册格式、版本约束、开发环境 |
+
+```{toctree}
+:hidden:
+
+config-reference
+entry-points-reference
+mcp-config-reference
+metapackage-source
+persona-api
+```

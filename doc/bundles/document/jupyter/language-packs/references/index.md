@@ -29,3 +29,17 @@ status: active
 
 * [package-structure-source.md](package-structure-source.md) — 单个语言包目录结构、pyproject.toml 配置信源
 * [gettext-format-source.md](gettext-format-source.md) — Gettext POT/PO/MO 文件格式分析信源
+
+```{toctree}
+:hidden:
+
+crowdin-config-source
+gettext-format-source
+package-structure-source
+release-process-source
+repo-map-source
+repo-readme
+requirements-source
+scripts-source
+workflows-source
+```

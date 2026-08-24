@@ -23,3 +23,15 @@
 | 序号 | 文档 | 内容 |
 |------|------|------|
 | 04 | [核心异文选读](04-key-variants.md) | 6组最重要的哲学异文（大器免成/晚成、绝圣弃智/绝智弃辩等） |
+
+```{toctree}
+:hidden:
+
+00-why-boshu
+01-four-systems
+02-de-before-dao
+03-taboo-characters
+04-key-variants
+05-using-commentaries
+06-collection-usage
+```

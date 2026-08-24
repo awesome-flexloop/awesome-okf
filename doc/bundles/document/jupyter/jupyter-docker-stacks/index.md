@@ -170,3 +170,27 @@ flowchart TD
 ## 许可协议
 
 Jupyter Docker Stacks 使用 [BSD 3-Clause License](https://github.com/jupyter/docker-stacks/blob/main/LICENSE.md)。
+
+```{toctree}
+:hidden:
+
+examples/index
+references/index
+concepts/00-introduction
+concepts/01-getting-started
+concepts/02-image-hierarchy
+concepts/03-foundation-layer
+concepts/04-base-notebook
+concepts/05-minimal-scipy
+concepts/06-specialized-stacks
+concepts/07-startup-lifecycle
+concepts/08-hooks-and-customization
+concepts/09-user-permissions
+concepts/10-tagging-system
+concepts/11-testing-framework
+concepts/12-build-ci-cd
+concepts/13-best-practices
+facts
+insights
+log
+```

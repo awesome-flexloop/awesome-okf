@@ -20,3 +20,9 @@ status: active
 * [Jupyter 官方网站](https://jupyter.org/)
 * [Jupyter GitHub 组织](https://github.com/jupyter)
 * [Jupyter Protocol 规范](https://jupyter-client.readthedocs.io/en/latest/messaging.html)
+
+```{toctree}
+:hidden:
+
+jupyter-metasource
+```

@@ -46,3 +46,23 @@
 | [12-prompt-templates.md](12-prompt-templates.md) | 提示词模板系统——YAML 模板结构、Jinja2 变量渲染、planning/managed_agent/final_answer 子模板 |
 | [13-monitoring-logging.md](13-monitoring-logging.md) | 监控与日志——AgentLogger 日志系统、Monitor Token 计数、异常层次、工具验证 |
 | [14-advanced-features.md](14-advanced-features.md) | 高级特性——Managed Agents 多智能体协作、Hub 集成、CLI 命令行、GradioUI 界面 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-multi-step-agent
+04-memory-system
+05-tool-calling-agent
+06-code-agent
+07-tool-system
+08-builtin-tools
+09-model-layer
+10-agent-types
+11-python-executor
+12-prompt-templates
+13-monitoring-logging
+14-advanced-features
+```

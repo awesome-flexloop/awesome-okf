@@ -128,3 +128,12 @@ pandas/
 ## 📝 许可证说明
 
 pandas 使用 **BSD 3-Clause License** 开源许可证，本知识包基于该许可证对源码进行学习、分析和文档编写。所有引用的类名、方法名、代码片段均来自 pandas 官方源码。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

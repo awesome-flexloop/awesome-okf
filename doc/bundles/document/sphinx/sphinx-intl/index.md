@@ -87,3 +87,12 @@ sphinx-intl 是 Sphinx 文档生态的国际化（i18n）翻译辅助工具，�
 - 构建系统：setuptools + setuptools_scm
 - CLI 入口：`sphinx-intl` → `sphinx_intl.commands:main`
 - 代码规模：7 个 Python 文件，约 600 行核心代码
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

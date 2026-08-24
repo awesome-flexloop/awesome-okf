@@ -84,3 +84,34 @@ constructor 的设计体现了以下架构原则：
 4. **两阶段管线**：FCP 将"求解"与"下载"分离，支持 `--dry-run` 预验证
 5. **离线优先**：Payload 内置精简 repodata 缓存，安装时完全离线
 6. **模板方法**：Jinja2 模板分离 Python 逻辑与脚本内容（header.sh/main.nsi.tmpl）
+
+```{toctree}
+:hidden:
+
+concepts/00-introduction
+concepts/01-getting-started
+concepts/02-architecture-overview
+concepts/03-construct-yaml-schema
+concepts/04-installer-types
+concepts/05-cli-and-entrypoint
+concepts/06-fcp-fetch-and-solve
+concepts/07-conda-interface
+concepts/08-preconda-payload
+concepts/09-platform-installers
+concepts/10-docker-build
+concepts/11-multi-env-and-channels
+concepts/12-build-outputs
+concepts/13-signing-and-security
+concepts/14-utils-and-helpers
+examples/basic-miniconda
+examples/custom-installer
+examples/docker-installer
+examples/multi-env-installer
+examples/signed-installer
+references/construct-schema
+references/fcp-solver
+references/main-cli
+references/shar-installer
+references/winexe-installer
+log
+```

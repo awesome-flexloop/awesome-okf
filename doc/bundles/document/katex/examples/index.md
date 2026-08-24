@@ -10,3 +10,16 @@
 * [Node.js 服务端渲染示例](/examples/node-ssr.md) — Node.js（CJS/ESM）与 Deno 中 renderToString、CSS/字体引入、HTML 页面组装、mhchem 扩展、预渲染缓存。对应概念：[安装与运行时](/concepts/15-installation-and-runtime.md)。
 * [安全与信任配置示例](/examples/security-trust.md) — 不可信输入配置、trust 函数策略、maxSize/maxExpand 防御、错误消息 HTML 转义、输出消毒白名单、持久宏隔离。对应概念：[安全与错误处理](/concepts/18-security-and-errors.md)。
 * [命令行渲染示例](/examples/cli-render.md) — npx katex 从 stdin 到 stdout、--input/--output/--display-mode/--macro/--macro-file/--no-throw-on-error、批量处理。对应概念：[命令行接口](/concepts/16-command-line.md)。
+
+```{toctree}
+:hidden:
+
+auto-render-usage
+basic-render
+cli-render
+custom-extension
+custom-macros
+error-handling
+node-ssr
+security-trust
+```

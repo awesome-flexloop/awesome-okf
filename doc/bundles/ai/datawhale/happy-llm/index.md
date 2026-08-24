@@ -134,3 +134,14 @@ happy-llm/
 > **开源协议**：CC BY-NC-SA 4.0
 >
 > **生成时间**：2026-08-23 | **维护者**：OKF Wiki Bot
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

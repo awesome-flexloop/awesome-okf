@@ -36,3 +36,13 @@ okf_version: "0.2"
 * **核验链路**：`generated.at` 记录各文档原始生成时刻；`verified.at` 记录 V 阶段对抗审查核验事件，两者分离、可追溯。当前全部文档 `verified.by` 为 `process:v-pending`，待 V 阶段核验。
 
 本知识包共收录 11 个内容文档（7 个概念 + 2 个示例 + 2 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。R 阶段事实与 I 阶段洞察保留在 `spec/facts.md` 与 `spec/insights.md`。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/index
+log
+```

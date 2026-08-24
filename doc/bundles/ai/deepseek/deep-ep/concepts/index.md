@@ -12,3 +12,14 @@
 | [Elastic vs Legacy](elastic-vs-legacy.md) | V2 ElasticBuffer 与 V1 Buffer 的架构差异、API 对比、迁移指南 |
 | [低延迟模式](low-latency-mode.md) | V1 IBGDA 低延迟推理路径、零拷贝优化、rank 屏蔽机制 |
 | [JIT 编译系统](jit-compilation.md) | 运行时 CUDA 内核编译原理、CRTP 启动器框架、内核缓存机制 |
+
+```{toctree}
+:hidden:
+
+dispatch-combine
+elastic-vs-legacy
+jit-compilation
+low-latency-mode
+moe-parallelism
+overview
+```

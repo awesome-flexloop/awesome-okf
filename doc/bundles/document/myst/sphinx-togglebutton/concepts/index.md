@@ -15,3 +15,12 @@
 |------|------|
 | [02-toggle-directive.md](02-toggle-directive.md) | toggle 指令详解——语法、选项、DOM 结构、两种折叠模式对比 |
 | [03-configuration.md](03-configuration.md) | 配置项参考——选择器、提示文本、打印行为、配置传递机制 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-toggle-directive
+03-configuration
+```

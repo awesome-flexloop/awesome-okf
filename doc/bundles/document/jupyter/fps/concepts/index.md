@@ -25,3 +25,17 @@
 | [06-signal-system.md](06-signal-system.md) | Signal异步发布-订阅机制、回调与迭代器两种模式 |
 | [07-web-modules.md](07-web-modules.md) | FastAPIModule和ServerModule、模块化路由注册 |
 | [08-plugin-architecture.md](08-plugin-architecture.md) | Entry-points插件发现、插件间解耦、Jupyverse实践 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-module-system
+03-context-sharing
+04-lifecycle-phases
+05-configuration-system
+06-signal-system
+07-web-modules
+08-plugin-architecture
+```

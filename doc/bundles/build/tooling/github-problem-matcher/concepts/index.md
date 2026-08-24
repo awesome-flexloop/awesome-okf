@@ -13,3 +13,14 @@
 * [03-Problem Matcher JSON 格式](03-matcher-json.md) — problemMatcher/pattern/regexp 字段说明、捕获组映射机制、owner 命名、多行匹配。
 * [04-三种正则模式详解](04-regex-patterns.md) — 严格模式、宽松模式、兜底模式的正则逐字符解析、覆盖场景、协作关系。
 * [05-测试 Problem Matcher](05-testing.md) — test_matcher.js 逐行解析、零框架测试方法、如何为自定义 matcher 编写单元测试。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-action-structure
+03-matcher-json
+04-regex-patterns
+05-testing
+```

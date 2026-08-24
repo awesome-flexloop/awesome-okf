@@ -13,3 +13,17 @@ okf_version: "0.2"
 * [平台定义系统](06-platform-definitions.md) — YAML 定义、44个内置平台、模式层级、自定义定义
 * [NETCONF 驱动](07-netconf.md) — Netconf 类、RPC 操作、数据存储类型、锁/提交/验证
 * [高级模式](08-advanced-patterns.md) — 回调读取、提示输入、结构化解析、异常处理、FFI 深入
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-transport-layer
+03-auth-session
+04-cli-driver
+05-async-mode
+06-platform-definitions
+07-netconf
+08-advanced-patterns
+```

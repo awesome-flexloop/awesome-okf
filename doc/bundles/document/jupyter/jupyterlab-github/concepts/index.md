@@ -9,3 +9,15 @@
 | 04 | [浏览器 UI 组件与交互](04-browser-ui.md) | GitHubFileBrowser、GitHubUserInput、GitHubErrorPanel 三个控件、工具栏按钮、MyBinder 集成、事件循环防循环机制 |
 | 05 | [服务端代理与认证](05-server-proxy.md) | GitHubHandler Tornado 代理、Token 安全机制、Link 头分页自动聚合、扩展注册与自动启用 |
 | 06 | [配置与设置系统](06-configuration.md) | 前端设置 Schema（baseUrl/accessToken/defaultRepo）、服务端 traitlets 配置、Token 优先级、GitHub Enterprise 支持 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-github-drive
+04-browser-ui
+05-server-proxy
+06-configuration
+```

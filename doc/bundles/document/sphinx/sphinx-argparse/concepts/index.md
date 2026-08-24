@@ -28,3 +28,20 @@ sphinx-argparse 的核心概念按学习路径排列，建议按顺序阅读。
 | [09 - Commands 域与交叉引用](09-domain-crossref.md) | ArgParseDomain自定义域、:command:角色、命令注册与resolve_xref解析 |
 | [10 - 命令索引生成](10-command-indices.md) | CommandsIndex/CommandsByGroupIndex、临时文件桥接机制、in_toctree配置 |
 | [11 - conf.py 配置选项详解](11-configuration.md) | 全部sphinxarg_配置项、四种典型配置方案 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-directive-basics
+03-directive-options
+04-parser-data-model
+05-nested-subcommands
+06-nested-content-enhancement
+07-markdown-support
+08-manpage-output
+09-domain-crossref
+10-command-indices
+11-configuration
+```

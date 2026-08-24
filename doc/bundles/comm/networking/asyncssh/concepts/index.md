@@ -12,3 +12,20 @@
 - [端口转发](09-port-forwarding.md) — forward_local_port/forward_remote_port、SOCKS、UNIX socket、TUN/TAP。
 - [服务端开发](10-server.md) — SSHServer 回调、create_server、自定义认证、SFTPServer VFS、进程工厂。
 - [高级模式](11-advanced-patterns.md) — 并发连接、加密算法配置、后量子密钥交换、调试日志、异常处理。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-async-connection
+03-channels
+04-streams-processes
+05-authentication
+06-keys-certificates
+07-sftp
+08-scp
+09-port-forwarding
+10-server
+11-advanced-patterns
+```

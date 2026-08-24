@@ -20,3 +20,18 @@
 
 * [08-编译器流水线](08-compiler-pipeline.md) — 源码→Tokenizer→AST→符号表→CFG→字节码五阶段、PyCodeObject、marshal 序列化。
 * [09-模块与导入系统](09-module-import.md) — _inittab 内置模块注册表、__builtins__、导入锁、sys.modules 缓存、C 扩展模块。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-source-layout
+02-object-model
+03-type-system
+04-reference-counting
+05-garbage-collector
+06-interpreter-frame
+07-bytecode-execution
+08-compiler-pipeline
+09-module-import
+```

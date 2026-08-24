@@ -51,3 +51,15 @@ Anthropic Skills 是 Anthropic 官方发布的 Agent Skills 参考实现，定�
 > **信任声明**：本文档基于 Anthropic Skills 官方仓库源码分析，经 OKF 五阶段流程生成。
 > 
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
+
+```{toctree}
+:hidden:
+
+concepts/eval-benchmark-framework
+concepts/progressive-loading
+concepts/skill-md-format-spec
+concepts/skill-packaging
+examples/write-custom-skill
+references/anthropics-skills-sources
+.spec/facts
+```

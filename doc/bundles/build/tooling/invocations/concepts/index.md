@@ -27,3 +27,19 @@
 
 * [09-Sphinx Autodoc 扩展](09-autodoc-sphinx.md) — autodoc 模块为 Sphinx 自动文档化 Invoke Task、TaskDocumenter 原理、配置方法。
 * [10-组合模式：组装任务集合](10-composition-patterns.md) — 三种导入方式、配置覆盖模式、跨 Collection 调用、创建自定义子集合、命名技巧。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-checks-formatting
+03-testing-pytest
+04-docs-sphinx
+05-packaging-release
+06-ci-automation
+07-utilities-watchers
+08-vendorize
+09-autodoc-sphinx
+10-composition-patterns
+```

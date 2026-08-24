@@ -58,3 +58,12 @@ okf_version: "0.2"
 * **核验链路**：所有文档基于 2026-08-21 的源码静态分析生成，F-xxx 编号为文档内事实标记。
 
 本知识包共收录 24 个内容文档（16 个概念 + 4 个示例 + 4 个信源登记），另含 3 个子目录 index.md 与根 index.md。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

@@ -49,3 +49,21 @@ status: stable
 - **插件开发者**：重点阅读 03→04→05→12，再参考 examples/05-custom-plugin.md
 - **部署运维**：重点阅读 01→05→09→11
 - **理解架构**：按顺序阅读 02→03→04→05→06→07→08→09
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-fps-module-system
+04-app-and-router
+05-auth-system
+06-contents-service
+07-kernel-management
+08-lab-frontend
+09-collaboration-yjs
+10-terminals
+11-cli-and-configuration
+12-plugin-development
+```

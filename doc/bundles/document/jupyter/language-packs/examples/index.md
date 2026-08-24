@@ -23,3 +23,11 @@ status: active
 ## 译者篇
 
 * [03. 贡献翻译](03-contribute-translation.md) — Crowdin账号注册、选择语言、翻译编辑器使用、In-Context实时翻译、翻译质量指南、术语表、校对者申请、新语言申请
+
+```{toctree}
+:hidden:
+
+01-install-language-pack
+02-build-from-source
+03-contribute-translation
+```

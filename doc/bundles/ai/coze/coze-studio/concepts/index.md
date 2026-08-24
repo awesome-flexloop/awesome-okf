@@ -16,3 +16,17 @@ Coze Studio 核心架构与设计概念文档。
 - [Rush.js Monorepo 前端架构](/concepts/06-rushjs-monorepo.md) — 四级包层次、Rsbuild 构建、Semi+Zustand 技术栈
 - [工作流与智能体编辑器](/concepts/07-workflow-editor.md) — FlowGram 引擎、workflow/agent-ide 包结构
 - [部署与运维](/concepts/08-deployment-operations.md) — Docker Compose、Helm K8s、Makefile、数据库迁移
+
+```{toctree}
+:hidden:
+
+00-overview-ddd-architecture
+01-ddd-layers
+02-thrift-idl-codegen
+03-auth-middleware
+04-pluggable-infrastructure
+05-llm-integration
+06-rushjs-monorepo
+07-workflow-editor
+08-deployment-operations
+```

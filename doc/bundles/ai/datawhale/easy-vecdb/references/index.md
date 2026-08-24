@@ -6,3 +6,10 @@
 |---------|--------|------|
 | [docs-chapters.md](docs-chapters.md) | `docs/` 目录 | 全部教程章节的路径、标题与内容摘要（六大部分 40+ 章节） |
 | [source-code-map.md](source-code-map.md) | `src/` 目录 | 代码项目结构、核心模块与文件职责（ANN 算法/Cre_milvus/图RAG 等） |
+
+```{toctree}
+:hidden:
+
+docs-chapters
+source-code-map
+```

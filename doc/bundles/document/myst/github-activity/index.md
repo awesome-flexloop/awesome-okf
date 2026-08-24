@@ -64,3 +64,14 @@ github-activity owner/repo --since v0.1.0 --until v0.2.0 --output CHANGELOG.md
 ## 更新日志
 
 见 [log.md](/log.md)。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

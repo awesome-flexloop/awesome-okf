@@ -19,3 +19,19 @@
 * [端口转发](08-port-forwarding.md) — 本地/远程/SOCKS 转发、direct-tcpip 通道、隧道实现。
 * [服务端开发](09-server.md) — ServerInterface、SFTPServer、SFTPServerInterface、构建自定义 SSH 服务端。
 * [高级模式](10-advanced-patterns.md) — ProxyCommand 跳板机、连接池、并发通道、日志调试、异常处理最佳实践。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-ssh-client
+03-transport
+04-channel
+05-authentication
+06-keys-and-hostkeys
+07-sftp
+08-port-forwarding
+09-server
+10-advanced-patterns
+```

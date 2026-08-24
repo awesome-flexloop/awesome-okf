@@ -24,3 +24,14 @@
 - **后端API路由**：以 `handlers.py` 中的路由表为准
 - **Git命令执行**：以 `git.py` 中的 `execute()` 和 `Git.__execute()` 为核心
 - **扩展生命周期**：以 `index.ts` 的 `activate()` 函数为入口
+
+```{toctree}
+:hidden:
+
+git-py-source
+handlers-py-source
+index-ts-source
+init-py-source
+model-ts-source
+tokens-ts-source
+```

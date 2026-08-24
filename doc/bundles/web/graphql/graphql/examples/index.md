@@ -6,3 +6,12 @@
 * [schema-design](schema-design.md) — Schema 设计实战（接口/联合/枚举/分页）
 * [error-handling](error-handling.md) — 错误处理与 Non-Null 冒泡
 * [python-server](python-server.md) — Python 服务端实战（graphql-core）
+
+```{toctree}
+:hidden:
+
+basic-query
+error-handling
+python-server
+schema-design
+```

@@ -10,3 +10,18 @@
 - [回调系统](/ai/langchain-ai/langchain/concepts/callback-system) — BaseCallbackHandler、CallbackManager 双树、RunManager 与 BaseTracer
 - [检索器与向量库](/ai/langchain-ai/langchain/concepts/retriever-vectorstore) — BaseRetriever、VectorStore、Embeddings 与 as_retriever 桥接
 - [文档与加载器](/ai/langchain-ai/langchain/concepts/document-loader) — Document、Blob、BaseLoader 懒加载与 BaseBlobParser
+
+```{toctree}
+:hidden:
+
+callback-system
+chat-model
+document-loader
+message-types
+output-parser
+overview
+prompt-system
+retriever-vectorstore
+runnable-protocol
+tool-abstraction
+```

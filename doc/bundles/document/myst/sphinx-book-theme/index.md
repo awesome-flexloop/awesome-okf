@@ -108,3 +108,14 @@ Sphinx主题与扩展初始化时机不同，SBT通过 setup() 立即调用 + co
 - [参考文档（1篇）](/references/index.md) — 配置速查、API参考
 - [R阶段事实采集](spec/facts.md) — 192条零推断源码事实
 - [I阶段洞察提炼](spec/insights.md) — 4个核心洞察与知识地图
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

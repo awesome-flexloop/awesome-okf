@@ -31,3 +31,18 @@
 | 07 | [UI测试框架](07-ui-testing.md) | Playwright E2E测试、fixtures设计、notebook参数化、cell执行监控、stderr错误检测 |
 | 08 | [部署](08-deployment.md) | GitHub Actions三阶段流水线、GitHub Pages正式部署、ReadTheDocs PR预览、权限配置 |
 | 09 | [终端支持](09-terminal-support.md) | Cockle WASM终端、预安装包（git/vim/nano等）、命令别名、Git环境变量、终端限制 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-configuration-system
+04-kernel-ecosystem
+05-build-pipeline
+06-notebooks-and-content
+07-ui-testing
+08-deployment
+09-terminal-support
+```

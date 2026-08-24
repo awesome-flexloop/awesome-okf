@@ -17,3 +17,15 @@
 
 - [05-扩展注册与 CDN 配置](05-extension-registration.md) — JupyterLab 插件、KernelSpec 定义、p5Url 配置
 - [06-构建与打包](06-build-and-packaging.md) — TypeScript 构建、p5-docs 生成、hatchling Python 包、双发布
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-architecture-overview
+02-kernel-implementation
+03-executor-and-rendering
+04-magic-commands
+05-extension-registration
+06-build-and-packaging
+```

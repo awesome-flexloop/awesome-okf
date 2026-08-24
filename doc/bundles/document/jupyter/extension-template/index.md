@@ -104,3 +104,15 @@ jupyter lab       # 终端 2：启动 JupyterLab
 - [Extension Examples Repository](https://github.com/jupyterlab/extension-examples)
 - [Jupyter Releaser](https://github.com/jupyter-server/jupyter_releaser)
 - [Copier Documentation](https://copier.readthedocs.io)
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+patterns/index
+facts
+insights
+log
+```

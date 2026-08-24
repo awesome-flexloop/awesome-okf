@@ -7,3 +7,13 @@
 | 02 | [三种编译类型](/concepts/02-compilation-types.md) | SASS编译、JS压缩、Jinja2渲染详解 |
 | 03 | [配置文件详解](/concepts/03-configuration.md) | YAML/JSON/TOML配置、文件映射、变量注入 |
 | 04 | [CI集成](/concepts/04-ci-integration.md) | GitHub Actions、pre-commit、tox/nox集成 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-compilation-types
+03-configuration
+04-ci-integration
+```

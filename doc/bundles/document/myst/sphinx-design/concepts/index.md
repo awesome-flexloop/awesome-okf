@@ -12,3 +12,18 @@
 | 07 | [徽章与按钮](/concepts/07-badges-buttons.md) | bdg系列角色、button-link/button-ref指令、tooltip |
 | 08 | [图标系统与文章信息栏](/concepts/08-icons-article-info.md) | octicon/fontawesome/material图标、article-info指令 |
 | 09 | [配置与自定义指令](/concepts/09-configuration.md) | 所有配置项详解、sd_custom_directives自定义指令 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-extension-architecture
+03-design-system
+04-grids
+05-cards
+06-dropdown-tabs
+07-badges-buttons
+08-icons-article-info
+09-configuration
+```

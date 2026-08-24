@@ -9,3 +9,13 @@
 - [GitHub Actions部署工作流解析](deploy-workflow-source.md) — CI/CD流水线：触发条件、权限配置、Node.js环境、Pages部署
 - [分析工具函数源码解析](analysis-utils-source.md) — 2018用户测试数据处理：时间转换、数据加载、dropzone编码、cleaner函数
 - [数据集README模板解析](dataset-readme-source.md) — 各数据集README的frontmatter格式、章节结构、列定义表格规范
+
+```{toctree}
+:hidden:
+
+analysis-utils-source
+dataset-readme-source
+deploy-workflow-source
+myst-config-source
+noxfile-source
+```

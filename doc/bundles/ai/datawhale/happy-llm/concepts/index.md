@@ -17,3 +17,15 @@
 * [GRPO 强化学习](grpo-reinforcement-learning.md) — 组内相对优势估计、RLVR 可验证奖励、PPO 到 GRPO 的演进。对应第八章。
 * [RAG 检索增强生成](rag-retrieval-augmented-generation.md) — 文档分块、Embedding、向量检索、Prompt 组装，缓解幻觉。对应第七章。
 * [Agent 智能体](agent-intelligent-agent.md) — ReAct 范式、工具调用、多轮交互、自主规划。对应第七章。
+
+```{toctree}
+:hidden:
+
+agent-intelligent-agent
+grpo-reinforcement-learning
+llama2-implementation
+model-training
+pretrained-language-model
+rag-retrieval-augmented-generation
+transformer-architecture
+```

@@ -22,3 +22,11 @@
 * 共享模块加载（runtime-shared-modules.ts）：F-206~F-215
 
 所有API签名、参数名、返回类型、默认值均经过源码验证，禁止虚构API。
+
+```{toctree}
+:hidden:
+
+loader-transpiler-api
+resolver-api
+source-index
+```

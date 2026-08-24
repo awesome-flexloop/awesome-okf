@@ -10,3 +10,14 @@
 * [签名与信任机制源码](sign-source.md) — NotebookNotary、HMAC签名、SignatureStore存储、信任判断、jupyter-trust CLI。
 * [v4构造API源码](v4-nbbase-source.md) — v4/nbbase.py工厂函数(new_notebook/new_code_cell等)、rwbase读写基础设施。
 * [版本转换converter源码](converter-source.md) — converter.py中convert()递归逐步转换逻辑、升级/降级路径、版本模块接口契约。
+
+```{toctree}
+:hidden:
+
+converter-source
+init-api
+notebooknode-source
+sign-source
+v4-nbbase-source
+validator-source
+```

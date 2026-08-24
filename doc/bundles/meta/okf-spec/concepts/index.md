@@ -28,3 +28,28 @@
 * [OKF Validator](tooling-validator.md) - 官方在线验证工具（okf.md/validator），上传目录即可检查合规性，浏览器端运行保护隐私。
 * [OKF Agent Skill](tooling-agent-skill.md) - 为 AI 智能体（Claude Code/Codex/Gemini CLI）提供的技能包，含 SKILL.md 提示词和 validate.sh 验证脚本，支持"一句话创建知识包"。
 * [OKF Knowledge Catalog CLI](tooling-knowledge-catalog.md) - Google Cloud Platform 官方维护的工具链仓库（knowledge-catalog），含 npm 包 @okf/okf、CLI 工具和规范源码。
+
+```{toctree}
+:hidden:
+
+actor-convention
+attested-computations
+bundle-structure
+changes-from-v0.1
+concept-documents
+conformance
+cross-linking-paths
+design-principles
+index-files
+lifecycle-status-stale
+log-files
+motivation
+practical-guidance
+provenance-sources
+terminology
+tooling-agent-skill
+tooling-knowledge-catalog
+tooling-validator
+trust-generated-verified
+versioning
+```

@@ -58,3 +58,17 @@ sources:
 ## 信源溯源
 
 所有概念文档的事实依据来自 [references/](../references/index.md) 目录中的原始信源文档。每个概念文档的 frontmatter `sources` 字段标注了其依据的信源。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-team-council
+02-meetings
+03-decision-making
+04-member-guide
+05-host-guide
+06-extension-contribution
+07-doc-infrastructure
+08-community-survey
+```

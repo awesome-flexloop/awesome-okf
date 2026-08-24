@@ -127,3 +127,14 @@ openevals/
 | 轨迹匹配 | `createTrajectoryMatchEvaluator` | boolean | 完全确定 |
 | 轨迹评判 | `createTrajectoryLLMAsJudge` | boolean/number | 非确定 |
 | 多轮模拟 | `multiturn` | EvaluatorResult[] | 非确定 |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

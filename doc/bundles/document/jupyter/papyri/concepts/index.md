@@ -101,3 +101,22 @@ Papyri 概念文档按推荐阅读顺序排列。建议从 00 开始，依次阅
 - [教程首页](../index.md)
 - [源码信源索引](../references/index.md)
 - [示例文档索引](../examples/index.md)
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-ir-and-docbundle
+04-ir-node-types
+05-gen-pipeline
+06-qualified-names
+07-config-system
+08-pack-and-upload
+09-graphstore-and-crosslinks
+10-rst-parsing
+11-directive-handlers
+12-ingest-and-viewer
+13-cli-reference
+```

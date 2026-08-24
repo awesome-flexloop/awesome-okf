@@ -97,3 +97,14 @@ RST 文本 → LosslessRSTParser → docutils AST → MarkdownItRenderer → mar
 
 - [事实清单](/spec/facts.md) - R阶段零推断事实采集（71条事实）
 - [架构洞察](/spec/insights.md) - I阶段5个核心洞察四元组与知识地图
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

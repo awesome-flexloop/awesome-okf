@@ -196,4 +196,5 @@ sphinx-external-toc/index
 jupyter-cache/index
 github-activity/index
 web-compile/index
+log
 ```

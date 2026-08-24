@@ -47,3 +47,12 @@ okf_version: "0.2"
 * **架构形态确认**：Zig 核心（libscrapli 共享库）+ Python ctypes 薄绑定，双驱动（Cli/Netconf）×双 API（同步/异步）正交设计，四种可插拔 Transport，YAML 声明式平台定义。
 
 本知识包共收录 14 个内容文档（9 个概念 + 4 个示例 + 1 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

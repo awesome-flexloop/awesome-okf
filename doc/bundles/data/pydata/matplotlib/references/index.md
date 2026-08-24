@@ -50,3 +50,9 @@
 1. **Grep 定位**：使用正则 `^class ClassName` 和 `^def funcName` 在源码中精确定义行
 2. **源码阅读**：对核心类（Artist、FigureBase、_AxesBase、Axes、Figure、Line2D、Patch 等）读取类定义头部和 `__init__` 方法，确认属性和参数
 3. **交叉验证**：交叉检查 pyplot 函数与 Axes 方法的对应关系（如 `plt.plot` → `Axes.plot`）
+
+```{toctree}
+:hidden:
+
+artist-hierarchy
+```

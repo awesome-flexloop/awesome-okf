@@ -51,3 +51,14 @@ I Have ADHD 是专为 ADHD（注意力缺陷多动障碍）用户设计的 AI �
 > **信任声明**：本文档基于 i-have-adhd 源码逐模块分析，经 OKF 五阶段流程生成。本工具不构成医疗建议，ADHD诊断与治疗请咨询专业医疗人员。
 > 
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
+
+```{toctree}
+:hidden:
+
+concepts/multi-platform-integration
+concepts/session-hooks-mechanism
+concepts/ten-output-rules
+examples/install-adhd-skill
+references/i-have-adhd-sources
+.spec/facts
+```

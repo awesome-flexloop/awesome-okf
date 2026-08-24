@@ -65,3 +65,16 @@ stale_after: 2027-02-22
 - **核心依赖**：sphinx≥4、jupyterlite-core≥0.2,<0.9
 - **可选依赖**：jupytext（Markdown Notebook 支持）、voici（仪表板渲染）
 - **建议搭配**：sphinx.ext.autodoc + numpydoc/napoleon（自动为 docstring 示例添加交互）
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+facts
+insights
+log
+```

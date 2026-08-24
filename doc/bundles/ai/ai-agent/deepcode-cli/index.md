@@ -82,3 +82,14 @@ deepcode-cli/
 - **许可证**：MIT
 - **版本**：0.2.1
 - **主页**：https://deepcode.vegamo.cn
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

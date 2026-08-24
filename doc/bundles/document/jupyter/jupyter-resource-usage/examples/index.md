@@ -31,3 +31,9 @@ sources: []
 - ✅ REST API调用
 - ✅ Prometheus禁用（解决卡顿）
 - ✅ 多租户环境配置
+
+```{toctree}
+:hidden:
+
+01-basic-usage
+```

@@ -13,3 +13,17 @@
 | 06 | [Encoder 编码层](06-encoder.md) | Encoder ABC、JSONEncoder/PickleEncoder、全局编码器管理 |
 | 07 | [Results 结果后端](07-results-backend.md) | ResultBackend 抽象、Redis/Stub 实现、Results 中间件 |
 | 08 | [CLI 与 Watcher](08-cli-and-watcher.md) | 多进程 fork、信号处理、watchdog 热重载、Canteen 共享内存 |
+
+```{toctree}
+:hidden:
+
+00-overall-architecture
+01-actor-decorator
+02-broker-abstraction
+03-worker-threading-model
+04-message-and-serialization
+05-middleware-pipeline
+06-encoder
+07-results-backend
+08-cli-and-watcher
+```

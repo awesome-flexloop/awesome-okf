@@ -26,3 +26,12 @@ sources:
 ## 来源
 
 - GitHub: <https://github.com/datawhalechina/members-visualization>
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

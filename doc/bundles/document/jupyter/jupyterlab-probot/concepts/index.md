@@ -26,3 +26,14 @@ description: jupyterlab-probot 核心概念文档导航
 - **扩展功能**：02 → 04 → 05
 - **部署上线**：01 → 05
 
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-probot-architecture
+03-config-system
+04-event-handlers
+05-testing-deployment
+```

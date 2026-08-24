@@ -7,3 +7,11 @@
 | [插件入口模块](source-init.md) | `mdformat_footnote/__init__.py` | 版本号、插件名和导出 |
 | [插件核心实现](source-plugin.md) | `mdformat_footnote/plugin.py` | update_mdit、RENDERERS、CLI参数 |
 | [脚注重排序逻辑](source-reorder.md) | `mdformat_footnote/_reorder.py` | 分类、依赖图、排序、ID重分配 |
+
+```{toctree}
+:hidden:
+
+source-init
+source-plugin
+source-reorder
+```

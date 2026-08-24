@@ -11,3 +11,13 @@
 | [构建后处理脚本](scripts-source.md) | `scripts/add_plausible.py`、`scripts/filter_xeus_kernels.py` | Plausible分析注入、Xeus内核过滤 |
 | [UI测试框架](test-source.md) | `ui-tests/conftest.py`、`ui-tests/test_notebooks.py`、`ui-tests/utils.py` | Pytest fixtures、Playwright自动化、notebook参数化测试、错误检测逻辑 |
 | [CI/CD工作流](ci-source.md) | `.github/workflows/deploy.yml`、`.github/workflows/rtd-preview.yml`、`.readthedocs.yml` | GitHub Pages部署流水线、RTD PR预览、ReadTheDocs构建 |
+
+```{toctree}
+:hidden:
+
+ci-source
+config-source
+pyproject-source
+scripts-source
+test-source
+```

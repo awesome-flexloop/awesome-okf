@@ -123,3 +123,13 @@ governance/
 - **原始信源版本**：2026年8月 main 分支
 - **内容级别**：公开（Public）
 - **许可证说明**：原始文档 CC0，本 bundle OKF 格式
+
+```{toctree}
+:hidden:
+
+concepts/index
+references/index
+facts
+insights
+log
+```

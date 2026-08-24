@@ -35,3 +35,20 @@
 - [示例文档](../examples/index.md) — 实战操作示例
 - [源码信源](../references/index.md) — 源码信源文档
 - [返回首页](../index.md)
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-architecture-overview
+02-app-entry-lifecycle
+03-session-window-system
+04-server-management
+05-python-env-management
+06-settings-config
+07-cli-system
+08-event-ipc-system
+09-security-navigation
+10-multi-window-multisession
+11-build-development
+```

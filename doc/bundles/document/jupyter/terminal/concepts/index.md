@@ -31,3 +31,17 @@
 
 ### API速查路径
 - 信源文档提供了完整的API签名和源码映射，参见[信源参考](/references/index.md)
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-plugin-system
+04-shell-and-worker
+05-headless-exec
+06-drivefs-and-stdin
+07-theme-and-settings
+08-build-and-extension
+```

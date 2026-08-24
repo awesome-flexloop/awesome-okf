@@ -78,3 +78,15 @@ jupyter_releaser 的核心设计可以概括为：
 3. **Hook + Skip + Options 三位一体**：配置系统提供正交的扩展机制
 4. **双生态统一**：Python 和 npm 包在同一套流水线中发布
 5. **Dry-Run 优先**：完整流程可在本地 Mock 环境中测试，不触碰真实服务
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+patterns
+facts
+insights
+log
+```

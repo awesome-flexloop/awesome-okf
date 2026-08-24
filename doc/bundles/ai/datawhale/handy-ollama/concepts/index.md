@@ -28,3 +28,13 @@ bundle: /datawhale/handy-ollama
 ## 生产实践
 
 * [生产部署实践](production-deployment.md) — Docker 容器化部署与网络配置、GPU 调度与多模型并发管理、RAG 检索增强生成（LangChain/LlamaIndex/DeepSeek R1）、Agent ReAct 工具调用、本地隐私保护优势、从单模型到多模型服务的完整应用栈。
+
+```{toctree}
+:hidden:
+
+api-openai-compatibility
+model-management-modelfile
+ollama-architecture-installation
+production-deployment
+webui-tool-integration
+```

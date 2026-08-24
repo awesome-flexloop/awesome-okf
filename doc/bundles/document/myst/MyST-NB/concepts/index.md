@@ -34,3 +34,21 @@
 | [10-sphinx-integration.md](10-sphinx-integration.md) | Sphinx 集成机制——setup 注册流程、Post-Transforms、资源加载 |
 | [11-docutils-standalone.md](11-docutils-standalone.md) | Docutils 独立使用——CLI 工具、Python API |
 | [12-custom-formats.md](12-custom-formats.md) | 自定义格式与扩展——自定义 Reader、渲染器、MIME 插件 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-notebook-format
+03-processing-pipeline
+04-config-system
+05-execution-modes
+06-render-and-mime
+07-glue
+08-eval
+09-hiding-code
+10-sphinx-integration
+11-docutils-standalone
+12-custom-formats
+```

@@ -24,3 +24,16 @@
 | [events-hooks-source.md](events-hooks-source.md) | EventManager 事件系统（register/unregister/trigger、5 个预定义事件：pre_execute/pre_run_cell/post_execute/post_run_cell/shell_initialized）、Hooks 钩子系统（set_hook、CommandChainDispatcher 职责链、TryNext 异常、4 个内置 hook：editor/synchronize_with_editor/show_in_pager/clipboard_get）、Events 与 Hooks 的设计区别 |
 | [extension-source.md](extension-source.md) | ExtensionManager 扩展管理器（load_extension/unload_extension/reload_extension）、扩展入口点（load_ipython_extension/unload_ipython_extension）、内置扩展示例（autoreload 自动重载、storemagic 变量持久化、deduperreload 去重重载）、%load_ext/%unload_ext/%reload_ext 魔法 |
 | [history-completer-source.md](history-completer-source.md) | HistoryManager 历史管理（SQLite 后端、HistorySavingThread 异步保存线程、HistoryAccessor 读取接口、DummyDB 空实现）、IPCompleter 补全系统（Jedi 补全、字典键补全、MatcherAPIv2 协议、Completion/CompletionContext/SimpleCompletion 类型）、AliasManager 别名管理（Alias 类、默认别名 cat/cp/mv/rm/mkdir、AliasError 异常） |
+
+```{toctree}
+:hidden:
+
+app-source
+display-source
+events-hooks-source
+extension-source
+history-completer-source
+inputtransformer-source
+interactiveshell-source
+magic-source
+```

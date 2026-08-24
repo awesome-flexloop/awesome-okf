@@ -126,3 +126,14 @@ stale_after: "2027-08-23"
 - **官方仓库**：https://github.com/datawhalechina/pumpkin-book
 - **在线阅读**：https://datawhalechina.github.io/pumpkin-book/
 - **配套视频**：https://www.bilibili.com/video/BV1Mh411e7VU
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

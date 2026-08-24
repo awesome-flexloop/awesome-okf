@@ -18,3 +18,18 @@ generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T00:00:00+08:00
 - [07-富媒体输出系统](07-display-system.md) — display() 函数、DisplayHelper、MIME bundle 类型、display_id 动态更新、自定义输出方法
 - [08-启动扩展机制](08-startup-extensions.md) — IJavaScriptKernelStartupRegistry Token、前端插件预加载模块、registerCommTarget
 - [09-常见问题与限制](09-faq-limitations.md) — 模式选择、Magic Imports 问题、DOM 限制、调试技巧、与 IPython 差异
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-kernel-architecture
+03-execution-model
+04-runtime-backends
+05-widget-system
+06-comm-protocol
+07-display-system
+08-startup-extensions
+09-faq-limitations
+```

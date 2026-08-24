@@ -135,3 +135,13 @@ tile_kernels/
 | [DeepGEMM](/ai/deepseek/deep-gemm/) | DeepSeek 高性能 C++ JIT GEMM 库，负责核心矩阵乘法；TileKernels 为其提供量化、MoE dispatch/combine 等补充算子 |
 | [DeepEP](/ai/deepseek/deep-ep/) | DeepSeek 专家并行通信库，负责跨节点 all-to-all 通信；TileKernels 负责本地 dispatch/combine |
 | [TileLang](https://github.com/tile-ai/tilelang) | TileKernels 使用的 Python DSL 编译器和 JIT 运行时 |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+```

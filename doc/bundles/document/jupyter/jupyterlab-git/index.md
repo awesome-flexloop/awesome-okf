@@ -109,3 +109,14 @@ jupyterlab-git/
 ├── style/                        # 全局 CSS 样式
 └── package.json                  # NPM 包配置
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

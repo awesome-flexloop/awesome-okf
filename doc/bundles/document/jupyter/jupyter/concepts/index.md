@@ -36,3 +36,21 @@ status: active
 
 * [11. JupyterHub 多用户部署](11-jupyterhub.md) — JupyterHub 四个核心子系统（Hub/Proxy/Authenticator/Spawner）、用户登录流程、四种部署模式（TLJH/Docker/Z2JH/HPC）、用户隔离与资源管理。
 * [12. 安装与环境管理](12-installation.md) — pip/conda/mamba 安装方法、虚拟环境与 Jupyter 的关系、多 Kernel 工作流、ipykernel install 命令、常见安装问题排查、升级与验证。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-what-is-jupyter
+02-ecosystem-architecture
+03-jupyter-command
+04-config-system
+05-directories
+06-kernel-architecture
+07-notebook-format
+08-client-server
+09-widgets-display
+10-notebook-doc-convert
+11-jupyterhub
+12-installation
+```

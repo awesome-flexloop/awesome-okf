@@ -21,3 +21,16 @@ conda-docs 知识包的概念文档，按学习路径排列：
 * [贡献指南与社区参与](05-contributing.md) — 贡献入口分类、文档/代码贡献流程、测试覆盖率要求、跨仓库路由
 * [社区支持与帮助渠道](06-community-support.md) — 多渠道支持矩阵、排障指南、高效提问最佳实践
 * [许可证与商业使用边界](07-license.md) — BSD 3-Clause 条款、生态组件许可证差异、商业合规要点
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-doc-portal-arch
+02-sphinx-config
+03-installers
+04-ecosystem-projects
+05-contributing
+06-community-support
+07-license
+```

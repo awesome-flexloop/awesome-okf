@@ -9,3 +9,13 @@
 | [03-autodoc-api.md](03-autodoc-api.md) | 使用Autodoc生成API文档：autodoc+napoleon配置 |
 | [04-custom-builder.md](04-custom-builder.md) | 自定义Builder输出Markdown：完整代码 |
 | [05-readthedocs-deployment.md](05-readthedocs-deployment.md) | 部署到Read the Docs全流程 |
+
+```{toctree}
+:hidden:
+
+01-first-extension
+02-custom-directive
+03-autodoc-api
+04-custom-builder
+05-readthedocs-deployment
+```

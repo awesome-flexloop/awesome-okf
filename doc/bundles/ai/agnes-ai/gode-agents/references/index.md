@@ -25,3 +25,15 @@
 |------|------|
 | [../facts.md](../facts.md) | R 阶段产出：从源码采集的 161 条零推测事实清单（F-001~F-161） |
 | [../insights.md](../insights.md) | I 阶段产出：5 个核心架构洞察四元组与知识地图设计 |
+
+```{toctree}
+:hidden:
+
+agents-api
+executor-api
+memory-api
+models-api
+prompts-reference
+tools-api
+utils-api
+```

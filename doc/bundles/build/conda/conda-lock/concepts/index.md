@@ -40,3 +40,24 @@ sources:
 
 * [14-依赖类别与传播](14-categories-and-deps.md) — main/dev 自定义 category、apply_categories() BFS 传播算法、_truncate_main_category() main 截断规则、v2 多 category 设计动机、安装时类别过滤。
 * [15-跨平台锁定策略](15-cross-platform-locking.md) — DEFAULT_PLATFORMS、CONDA_SUBDIR 覆盖、platform selectors 与 markers 双重过滤、fake python binary 防 libmamba 失败、多平台锁文件结构、平台映射表、跨平台安装自动选择。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-lock-specification
+04-channel-model
+05-dependency-types
+06-lockfile-formats
+07-source-parsers
+08-conda-solver
+09-pypi-solver
+10-virtual-packages
+11-cli-commands
+12-content-hash
+13-invoke-conda
+14-categories-and-deps
+15-cross-platform-locking
+```

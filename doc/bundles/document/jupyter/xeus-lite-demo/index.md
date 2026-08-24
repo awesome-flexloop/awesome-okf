@@ -106,3 +106,14 @@ GitHub Actions (CI 构建)
 3. **自动化**：阅读 [06-CI/CD流水线](concepts/06-cicd-pipeline.md) 理解自动部署原理
 4. **多语言**：根据需要阅读 [07-多语言内核](concepts/07-kernel-options.md) → 动手做 [02-Python](examples/02-numpy-matplotlib.md)/[03-R](examples/03-r-kernel.md)/[04-C++](examples/04-cpp-kernel.md) 示例
 5. **扩展**：学习 [08-内容管理](concepts/08-content-and-notebooks.md) → [05-插件安装](examples/05-add-jupyterlite-plugins.md)
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

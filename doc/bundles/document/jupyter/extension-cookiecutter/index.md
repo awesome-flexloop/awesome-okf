@@ -106,3 +106,14 @@ jupyter server --autoreload
 - [Hatchling Build Backend](https://hatch.pypa.io/latest/)
 - [Jupyter Releaser](https://github.com/jupyter-server/jupyter_releaser)
 - [traitlets Documentation](https://traitlets.readthedocs.io)
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

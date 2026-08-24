@@ -11,3 +11,10 @@
 |------|----------|----------|
 | CLI 快速入门 | [CLI](/concepts/02-cli.md) | [CLI 官网](/references/cli.md)、[IDE 文档](/references/docs-intro.md) |
 | IDE 产设研工作流 | [CodeBuddy IDE](/concepts/01-ide.md) | [IDE 官网](/references/ide.md)、[IDE 文档](/references/docs-intro.md) |
+
+```{toctree}
+:hidden:
+
+ide-workflow
+quick-start-cli
+```

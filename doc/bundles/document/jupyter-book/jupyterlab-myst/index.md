@@ -69,3 +69,14 @@ jupyterlab-myst 是 IDE 内的编辑增强工具，让作者在编写 Notebook �
 * **status 判定依据**：全部 15 个内容文档（6 个概念 + 3 个示例 + 4 个信源登记 + 2 个 spec 文档 + 根 index.md），非 index 文件均 `status: stable`。内容基于对 jupyterlab-myst 源码（`external/libs/ai/jupyter-book/jupyterlab-myst/src/`）的逐模块阅读与事实提取。
 * **stale_after 解释**：统一设置为 `2027-12-31`。jupyterlab-myst 针对 JupyterLab 4.x 设计，核心 API（三个插件、MySTMarkdownCell、inline expression 的 user_expressions 机制）自 v2.0 以来保持稳定。如果 JupyterLab 5.x 发布可能需要适配，但核心概念和 MyST 语法支持不会有大变化。
 * **核验链路**：`generated` 记录原始生成时刻（2026-08-23）；`verified: true`，所有类名、函数名、插件 ID、参数名均通过源码 Read 工具验证。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

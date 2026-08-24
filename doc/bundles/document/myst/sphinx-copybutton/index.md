@@ -88,3 +88,14 @@ sphinx-copybutton/
 | [sphinx-book-theme](https://github.com/executablebooks/sphinx-book-theme) | Jupyter Book 主题——sphinx-copybutton 的主要使用场景之一 |
 | [sphinx-design](https://github.com/executablebooks/sphinx-design) | Sphinx 设计组件——配合使用提供更丰富的代码展示 |
 | [MyST Parser](https://github.com/executablebooks/MyST-Parser) | MyST Markdown 解析器——Executable Books 生态核心 |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

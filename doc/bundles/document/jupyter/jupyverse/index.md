@@ -130,3 +130,14 @@ jupyverse
 | `jupyverse[retrolab]` | RetroLab 前端 |
 | `jupyverse[nbclassic]` | Notebook Classic 前端 |
 | `jupyverse[test]` | 测试依赖（pytest, httpx 等） |
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

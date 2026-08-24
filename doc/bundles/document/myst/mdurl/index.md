@@ -38,3 +38,14 @@ tags:
 * **核验链路**：`generated.at` 记录各文档原始生成时刻，遵循 seven-concepts 方法论 R→I→E 三阶段流程，事实零推测、API 均经源码验证。
 
 本知识包共收录 6 个内容文档（4 个概念 + 1 个示例 + 1 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

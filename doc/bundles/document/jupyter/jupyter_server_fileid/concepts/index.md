@@ -48,3 +48,17 @@ sources:
 - [示例代码](../examples/index.md) — 可运行的代码示例
 - [源码信源](../references/index.md) — 源码信源文档
 - [返回首页](../index.md)
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-file-id-manager
+04-arbitrary-vs-local
+05-event-sync-mechanism
+06-http-api
+07-extension-configuration
+08-cli-and-database
+```

@@ -17,3 +17,13 @@
 - **文档质量提升**：使用"嵌套内容增强"为自动生成文档添加示例和注意事项
 - **偏好Markdown**：参考"Markdown集成示例"配置Markdown支持
 - **需要man page**：参考"Man Page与命令索引"配置man page输出和命令索引
+
+```{toctree}
+:hidden:
+
+basic-usage
+content-enhancement
+manpage-and-index
+markdown-integration
+subcommand-docs
+```

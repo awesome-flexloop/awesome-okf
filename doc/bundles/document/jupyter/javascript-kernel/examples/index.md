@@ -14,3 +14,14 @@ generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T00:00:00+08:00
 - [04-富媒体输出](04-rich-output.md) — HTML 表格、Markdown、LaTeX、SVG 饼图、Canvas 动画、JSON、console.table、display_id 动态更新、自定义 _toMime
 - [05-IFrame DOM 操作](05-iframe-dom.md) — Canvas 绘图、创建交互元素、window.parent 访问主页面、DOM 动画、样式注入、资源清理
 - [06-异步编程与数据获取](06-async-data.md) — fetch API/POST/并行请求/错误处理、数据可视化、定时器轮询、WebSocket 实时通信、实时时钟
+
+```{toctree}
+:hidden:
+
+01-first-notebook
+02-magic-imports
+03-using-widgets
+04-rich-output
+05-iframe-dom
+06-async-data
+```

@@ -20,3 +20,18 @@
 - [ReadTheDocs 自动检测与集成](07-readthedocs-integration.md) — RTD环境URL自动检测、canonical URL配置、版本化文档最佳实践
 - [社交卡片生成](08-social-cards.md) — 基于Matplotlib的社交预览卡片生成机制，图片渲染、缓存复用、样式自定义与字体配置
 - [自定义Meta标签与扩展协作](09-custom-meta-tags.md) — 通过ogp_custom_meta_tags添加Twitter Cards、Article元数据，以及与其他扩展的协作注意事项
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-configuration
+03-tag-generation
+04-description-extraction
+05-image-handling
+06-per-page-overrides
+07-readthedocs-integration
+08-social-cards
+09-custom-meta-tags
+```

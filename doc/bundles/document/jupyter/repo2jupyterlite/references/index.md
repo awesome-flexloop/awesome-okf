@@ -13,3 +13,15 @@
 | [binderlite-run-source.md](binderlite-run-source.md) | binderlite/run.py | FastAPI 应用：路由、重定向、构建触发逻辑 |
 | [publisher-source.md](publisher-source.md) | binderlite/publish.py | Publisher 抽象基类与 LocalFilesystemPublisher |
 | [frontend-source.md](frontend-source.md) | src/App.jsx + src/detectors.js + webpack.config.js | 前端React应用、URL解析器、Webpack配置 |
+
+```{toctree}
+:hidden:
+
+binderlite-run-source
+cache-source
+cli-source
+frontend-source
+github-provider-source
+metasource
+publisher-source
+```

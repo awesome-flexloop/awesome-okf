@@ -101,3 +101,14 @@ jupyter lite serve
 5. **掌握存储**：学习 [05-浏览器存储](concepts/05-browser-storage.md) 理解IndexedDB持久化
 6. **构建定制**：阅读 [06-构建系统](concepts/06-build-system.md) 和 [02-配置示例](examples/02-site-configuration.md)
 7. **扩展开发**：学习 [07-内核类型](concepts/07-kernel-types.md) 和 [08-扩展架构](concepts/08-extension-architecture.md)
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

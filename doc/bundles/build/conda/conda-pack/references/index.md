@@ -8,3 +8,12 @@
 * [formats.py 归档格式模块](formats-source.md) — `conda_pack/formats.py`，包含 TarArchive、ZipArchive、SquashFSArchive、NoArchive 和并行压缩写入器（约577行）。
 * [prefixes.py 前缀替换模块](prefixes-source.md) — `conda_pack/prefixes.py`，文本/二进制前缀替换、shebang 正则、macOS codesign、Windows distlib 入口点处理（约196行）。
 * [cli.py 与辅助模块](cli-source.md) — `conda_pack/cli.py`（CLI入口，约183行）、`conda_pack/compat.py`（跨平台兼容，约45行）、`conda_pack/_progress.py`（进度条，约99行）。
+
+```{toctree}
+:hidden:
+
+cli-source
+core-source
+formats-source
+prefixes-source
+```

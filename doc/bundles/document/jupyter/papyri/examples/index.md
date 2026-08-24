@@ -72,3 +72,12 @@ pnpm dev
 - [教程首页](../index.md)
 - [概念文档索引](../concepts/index.md)
 - [源码信源索引](../references/index.md)
+
+```{toctree}
+:hidden:
+
+01-basic-gen
+02-custom-config
+03-pack-and-upload
+04-custom-directive-handler
+```

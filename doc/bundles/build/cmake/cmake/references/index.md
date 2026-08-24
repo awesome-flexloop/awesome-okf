@@ -16,3 +16,14 @@ sources:
 * [cmCommand：CMake 命令执行体系](cmdexec.md) — `cmCommand` 基类与命令注册（`Source/cmCommand.h`、`Source/cmCommand.cxx`、`Source/cmCommands.cxx`）：Clone 模式执行、cmExecutionStatus 控制流、Builtin vs Scripted 命令分类、GetPredefinedCommands 注册 100+ 内置命令、find_package Module/Config 双模式查找。
 * [cmMakefile：目录级执行上下文](cmmakefile.md) — `cmMakefile` 类（`Source/cmMakefile.h`、`Source/cmMakefile.cxx`）：单目录执行上下文、ReadListFile 解析执行、变量管理 API、AddSubDirectory 递归子目录、Properties 多层属性存储、cmCacheManager 缓存变量、IssueMessage 错误报告。
 * [ctest/cpack：集成工具链](ctest-cpack.md) — CTest（`Source/ctest.cxx`、`Source/CTest/`）和 CPack（`Source/cpack.cxx`、`Source/CPack/`）：add_test 注册、CTestTestfile.cmake 测试发现、Fixture 依赖排序、CDash HTTP 上报、install() 规则收集、TGZ/DEB/RPM/NSIS/DMG 多格式生成器工厂、CPackComponent 组件打包。
+
+```{toctree}
+:hidden:
+
+cmake-class
+cmdexec
+cmglobalgenerator
+cmmakefile
+cmstate
+ctest-cpack
+```

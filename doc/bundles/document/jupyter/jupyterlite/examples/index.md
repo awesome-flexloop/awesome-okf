@@ -10,3 +10,12 @@
 | 02 | [站点配置](02-site-configuration.md) | jupyter-lite.json配置详解、应用设置、内核配置、禁用扩展、设置覆盖 |
 | 03 | [内容管理API使用](03-contents-api-usage.md) | BrowserStorageDrive的CRUD操作、检查点管理、文件变更监听 |
 | 04 | [Pyodide内核文件系统](04-pyodide-filesystem.md) | DriveFS挂载点、文件读写、注意事项、JS互操作 |
+
+```{toctree}
+:hidden:
+
+01-quickstart-deploy
+02-site-configuration
+03-contents-api-usage
+04-pyodide-filesystem
+```

@@ -9,3 +9,13 @@
 | 02 | [MyST 语法支持范围](02-myst-syntax-support.md) | 角色、注释、块中断、目标、数学公式的渲染格式 |
 | 03 | [指令选项 YAML 格式化机制](03-directive-formatting.md) | MyST 指令识别和选项 YAML 自动格式化 |
 | 04 | [转义机制与后处理器原理](04-escaping-and-postprocessors.md) | 自动转义 MyST 特殊字符的双层机制 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-plugin-architecture
+02-myst-syntax-support
+03-directive-formatting
+04-escaping-and-postprocessors
+```

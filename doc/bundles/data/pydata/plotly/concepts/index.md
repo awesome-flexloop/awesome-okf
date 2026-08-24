@@ -25,3 +25,12 @@
 4. 最后读 **03-rendering-io** 掌握输出与部署
 5. 需要深入源码细节时参考 **references/** 目录
 6. 需要可运行代码时参考 **examples/** 目录
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-figure-model
+02-plotly-express
+03-rendering-io
+```

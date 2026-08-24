@@ -10,3 +10,16 @@ myst-execute 概念文档按学习路径编号。
 - [05 Thebe Binder 连接](05-thebe-binder.md) — Binder 会话启动和内核连接
 - [06 Thebe Lite（Pyodide）](06-thebe-lite-pyodide.md) — 无服务器浏览器内执行
 - [07 Thebe React 集成](07-thebe-react.md) — React hooks 和 Provider
+
+```{toctree}
+:hidden:
+
+00-execution-architecture
+01-myst-execute-kernel
+02-execution-cache
+03-thebe-core-api
+04-thebe-configuration
+05-thebe-binder
+06-thebe-lite-pyodide
+07-thebe-react
+```

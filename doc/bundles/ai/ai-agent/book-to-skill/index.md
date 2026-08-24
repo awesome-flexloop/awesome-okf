@@ -52,3 +52,15 @@ Book to Skill 是将书籍/文档转化为 AI Agent 可执行技能的知识编�
 > **信任声明**：本文档基于 book-to-skill 源码逐模块分析，经 OKF 五阶段流程生成。
 > 
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
+
+```{toctree}
+:hidden:
+
+concepts/dependency-management
+concepts/four-layer-pipeline
+concepts/multi-format-parsers
+concepts/security-sanitization
+examples/convert-book-to-skill
+references/book-to-skill-sources
+.spec/facts
+```

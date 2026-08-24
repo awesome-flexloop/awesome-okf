@@ -80,3 +80,14 @@ extension-examples/
 - [extension-examples仓库](https://github.com/jupyterlab/extension-examples)
 - [JupyterLab Extension Tutorial](https://jupyterlab.readthedocs.io/en/stable/extension/extension_tutorial.html)
 - [Lumino文档](https://lumino.readthedocs.io/)
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

@@ -21,3 +21,11 @@ Easy-Vibe 把"用自然语言描述需求、由 AI 实现、人来决策与迭�
 1. 先读 [Vibe Coding 理念](/ai/datawhale/easy-vibe/concepts/01-vibe-coding-philosophy.md)，理解项目"是什么、教什么、为谁服务"。
 2. 再读 [多语言文档站架构](/ai/datawhale/easy-vibe/concepts/02-multilingual-docs-architecture.md)，理解 10 语言内容如何组织与构建。
 3. 最后读 [部署与工具链](/ai/datawhale/easy-vibe/concepts/03-deployment-toolchain.md)，理解从源码到多形态产物的完整链路。
+
+```{toctree}
+:hidden:
+
+01-vibe-coding-philosophy
+02-multilingual-docs-architecture
+03-deployment-toolchain
+```

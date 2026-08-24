@@ -15,3 +15,18 @@
 - [07 编写自定义插件](07-writing-plugins.md)
 - [08 GFM组合插件](08-gfm-composite-plugin.md)
 - [09 插件速查表](09-plugin-reference.md)
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-plugin-basics
+02-using-plugins
+03-block-plugins
+04-inline-plugins
+05-core-postprocess-plugins
+06-footnote-deep-dive
+07-writing-plugins
+08-gfm-composite-plugin
+09-plugin-reference
+```

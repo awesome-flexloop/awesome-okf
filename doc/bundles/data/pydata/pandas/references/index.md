@@ -51,3 +51,9 @@
 - **许可证**: BSD 3-Clause（见 `LICENSE` 文件）
 - **构建系统**: Meson（`meson.build`）
 - **C 扩展目录**: `pandas/_libs/`（.pyx 文件需编译为 .so/.pyd）
+
+```{toctree}
+:hidden:
+
+core-init
+```

@@ -82,3 +82,21 @@ generated: { by: "reference_agent/trae-cn", at: "2026-08-22T10:00:00Z" }
 
 - **源码参考**：[references/index.md](../references/index.md) - 核心模块源码解析
 - **示例代码**：[examples/index.md](../examples/index.md) - 可运行的Python示例
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-exporter-hierarchy
+04-preprocessor-system
+05-template-system
+06-filters-system
+07-writers-and-postprocessors
+08-cli-and-configuration
+09-custom-exporter
+10-custom-preprocessor
+11-custom-template
+12-execution-and-integration
+```

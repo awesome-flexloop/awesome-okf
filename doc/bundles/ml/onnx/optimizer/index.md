@@ -43,3 +43,12 @@ okf_version: "0.2"
 * **已知限制**：所有源码文件标注 "highly EXPERIMENTAL"，API 可能变化；C API 存在 `C_API_OtimizeFromFile` 拼写错误（ABI 兼容性导致无法修复）；项目不做常量折叠（需配合 onnx-simplifier 使用）。
 
 本知识包共收录 12 个内容文档（7 个概念 + 2 个示例 + 3 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

@@ -31,3 +31,13 @@
 3. 复制示例代码到本地运行，或根据示例修改适配你的项目
 
 所有示例代码均基于官方examples目录下的代码扩展和注释，确保可运行性。
+
+```{toctree}
+:hidden:
+
+agent-workflow
+chat-completion
+image-generation
+openai-compatible
+video-generation
+```

@@ -143,3 +143,14 @@ await shell.input('ls -la\n');
 - **Emscripten-forge**：[prefix.dev 频道](https://prefix.dev/channels/emscripten-forge)
 - **Comlink**：[GoogleChromeLabs/comlink](https://github.com/GoogleChromeLabs/comlink)
 - **Coincident**：[WebReflection/coincident](https://github.com/WebReflection/coincident)
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

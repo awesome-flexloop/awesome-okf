@@ -49,3 +49,14 @@ Agency Agents App 是基于 Agency Agents 构建的原生桌面应用，采用 T
 > **信任声明**：本文档基于 Agency Agents App v0.3.0 源码逐模块分析，经 OKF 五阶段流程生成。
 > 
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
+
+```{toctree}
+:hidden:
+
+concepts/catalog-install-store
+concepts/svelte5-runes-architecture
+concepts/tauri-backend-commands
+examples/build-tauri-app
+references/agency-agents-app-sources
+.spec/facts
+```

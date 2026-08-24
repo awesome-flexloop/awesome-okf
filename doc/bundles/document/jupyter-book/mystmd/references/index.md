@@ -12,3 +12,16 @@
 | [myst-spec-source.md](myst-spec-source.md) | `myst-spec/src/` (index.ts, ext.ts), `myst-spec-ext/src/index.ts` | 50+ AST 节点类型, SourceFileKind |
 | [simple-validators-source.md](simple-validators-source.md) | `simple-validators/src/` (index.ts, validators.ts, types.ts) | validateBoolean, validateString, validateNumber, validateObject 等 20+ 验证函数 |
 | [mystmd-cli-source.md](mystmd-cli-source.md) | `mystmd/src/` (index.ts, build.ts), `citation-js-utils/src/index.ts`, `markdown-it-myst/src/index.ts` | CLI命令, CitationRenderer, markdown-it-myst 插件导出 |
+
+```{toctree}
+:hidden:
+
+myst-common-source
+myst-config-source
+myst-frontmatter-source
+myst-parser-source
+myst-spec-source
+myst-transforms-source
+mystmd-cli-source
+simple-validators-source
+```

@@ -2,3 +2,10 @@
 
 * [GodGPT法律](godgpt-legal.md) - 隐私政策与服务条款
 * [GodGPT官网](godgpt-website.md) - GodGPT官网
+
+```{toctree}
+:hidden:
+
+godgpt-legal
+godgpt-website
+```

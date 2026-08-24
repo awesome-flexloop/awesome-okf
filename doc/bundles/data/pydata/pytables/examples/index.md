@@ -26,3 +26,9 @@ pip install tables numpy pandas
 阅读示例前建议先了解：
 - [概念文档](../concepts/) 中的核心概念（00→01→02→03 顺序）
 - [参考文档](../references/) 中的 API 细节
+
+```{toctree}
+:hidden:
+
+hdf5-basics
+```

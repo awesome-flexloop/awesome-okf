@@ -29,3 +29,21 @@
 | 10 | [内核启动与自动重启](10-kernel-launch-and-restart.md) | 启动全流程、KernelRestarter、心跳监控、重启风暴防护 |
 | 11 | [异步与线程模型](11-async-and-threading.md) | 同步/异步/线程化并发模型、ZMQ线程安全规则 |
 | 12 | [CLI工具与应用](12-cli-and-applications.md) | jupyter-kernelspec/run/kernel 三个CLI入口 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-channels-system
+04-connection-and-session
+05-client-hierarchy
+06-kernel-manager
+07-multi-kernel-manager
+08-kernel-provisioner
+09-kernel-spec
+10-kernel-launch-and-restart
+11-async-and-threading
+12-cli-and-applications
+```

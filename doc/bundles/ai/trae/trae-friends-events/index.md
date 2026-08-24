@@ -38,3 +38,17 @@ trae-friends-events 是 TRAE Friends 社区活动数据管理仓库，采用纯 
 | 文档 | 说明 |
 |------|------|
 | [活动数据和脚本索引](/references/events-source.md) | 目录结构、events.csv 数据概况、update_readme.py 函数索引、时间轴展示规则 |
+
+```{toctree}
+:hidden:
+
+concepts/00-introduction
+concepts/01-csv-cms-pattern
+concepts/02-event-data-format
+concepts/03-contribution-workflow
+examples/add-event
+examples/run-update-script
+references/events-source
+spec/facts
+spec/insights
+```

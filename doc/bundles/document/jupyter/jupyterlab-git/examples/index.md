@@ -22,3 +22,11 @@
 
 - [概念文档](../concepts/)：深入了解 jupyterlab-git 的架构、API 和内部机制
 - [源码信源](../references/)：查看核心源码文件的分析文档
+
+```{toctree}
+:hidden:
+
+01-basic-usage
+02-branch-merge-workflow
+03-diff-and-stash
+```

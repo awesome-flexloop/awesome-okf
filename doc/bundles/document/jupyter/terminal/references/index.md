@@ -30,3 +30,14 @@
 | SW Worker | `src/comlink.worker.ts` | ComlinkTerminalShellWorker |
 | Python入口 | `jupyterlite_terminal/__init__.py` | 版本 + labextension路径 |
 | 构建插件 | `jupyterlite_terminal/add_on.py` | WASM文件复制post_build钩子 |
+
+```{toctree}
+:hidden:
+
+client-source
+exec-source
+metasource
+plugin-source
+python-source
+shell-source
+```

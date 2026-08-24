@@ -21,3 +21,12 @@
 | `tee.py` | `jupyter_releaser/tee.py` | ~162 | 异步tee子进程输出捕获（subprocess-tee修改版） |
 | `mock_github.py` | `jupyter_releaser/mock_github.py` | ~276 | FastAPI Mock GitHub API服务器（dry-run模式使用） |
 | `schema.json` | `jupyter_releaser/schema.json` | ~49 | 配置文件JSON Schema（skip/options/hooks） |
+
+```{toctree}
+:hidden:
+
+actions-source
+cli-source
+lib-source
+util-source
+```

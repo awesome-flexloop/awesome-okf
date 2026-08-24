@@ -49,3 +49,19 @@ stale_after: 2027-08-22
                           07 → 09
                     08 → 10
 ```
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-webrtc-manager
+04-document-provider
+05-room-and-signaling
+06-plugin-system
+07-status-bar
+08-vendor-patches
+09-configuration
+10-build-and-packaging
+```

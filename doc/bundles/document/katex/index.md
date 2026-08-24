@@ -188,3 +188,14 @@ examples/custom-macros    （了解Options）→ 10-settings-options
 - **许可证**：MIT
 - **官方仓库**：https://github.com/KaTeX/KaTeX
 - **官方网站**：https://katex.org
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

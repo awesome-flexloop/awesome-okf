@@ -126,3 +126,14 @@ function draw() {
 5. **扩展配置**：学习 [05-扩展注册](concepts/05-extension-registration.md) 了解 CDN 配置和内核注册
 6. **进阶实践**：尝试 [02-粒子系统](examples/02-particle-system.md) 和 [03-外部包导入](examples/03-external-packages.md)
 7. **构建发布**：阅读 [06-构建与打包](concepts/06-build-and-packaging.md) 了解双包发布流程
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

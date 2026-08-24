@@ -19,3 +19,15 @@ sources: https://github.com/datawhalechina/handy-ollama
 * [第五章 Ollama 在 LangChain 中的使用](chapter5-langchain.md) — `docs/C5/`：Python 集成（langchain-ollama、ChatPromptTemplate、多模态、工具调用、RAG）、JavaScript 集成。
 * [第六章 Ollama 可视化界面部署](chapter6-webui.md) — `docs/C6/`：FastAPI+WebSocket 自建可视化对话界面、Open WebUI（Node.js/Docker 两种部署方式）。
 * [第七章 应用案例](chapter7-applications.md) — `docs/C7/`：AI Copilot 编程助手、Dify 接入本地模型、LangChain/LlamaIndex RAG、LangChain/LlamaIndex Agent、DeepSeek R1+RAG 七个实战案例。
+
+```{toctree}
+:hidden:
+
+chapter1-introduction
+chapter2-installation
+chapter3-customization
+chapter4-rest-api
+chapter5-langchain
+chapter6-webui
+chapter7-applications
+```

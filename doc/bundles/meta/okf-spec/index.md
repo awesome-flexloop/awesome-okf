@@ -57,3 +57,12 @@ okf_version: "0.2"
 * **核验链路**：`generated.at` 记录各文档原始生成时刻（核心文档 2026-08-20，新增文档 2026-08-21）；核心文档 `verified.at` 为 2026-08-21 对抗审查核验时刻，新增文档待后续独立核验。
 
 本知识包共收录 27 个内容文档（20 个概念 + 4 个示例 + 3 个信源/进程登记），另含 4 个子目录 index.md 与根 index.md、log.md。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

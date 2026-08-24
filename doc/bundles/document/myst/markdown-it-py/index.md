@@ -133,3 +133,14 @@ mdit-py-plugins（扩展插件集） → markdown-it-py → mdurl（URL处理）
 ## 变更日志
 
 见 [log.md](log.md)
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

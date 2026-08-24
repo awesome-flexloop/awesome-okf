@@ -25,3 +25,11 @@ stale_after: "2027-02-22"
         ↓
 高级 → 02-自定义Scenario（按需学习）
 ```
+
+```{toctree}
+:hidden:
+
+00-first-benchmark
+01-css-profiling
+02-custom-scenario
+```

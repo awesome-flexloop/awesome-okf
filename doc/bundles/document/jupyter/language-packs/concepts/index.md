@@ -42,3 +42,24 @@ status: active
 * [13. 翻译规范与 PO 文件格式](13-translation-guide.md) — PO语法规则、占位符/快捷键/Markdown/复数处理、中文术语一致性、标点规范、fuzzy标记
 * [14. 本地开发环境搭建](14-dev-setup.md) — 环境要求、依赖安装、常见开发任务（更新POT/构建/测试）、Conda环境配置
 * [15. 故障排查与常见问题](15-troubleshooting.md) — 安装问题、翻译显示问题、构建问题、Crowdin同步问题、CI/CD问题的诊断与解决方案
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-architecture-overview
+02-repository-structure
+03-repository-map-config
+04-crowdin-integration
+05-package-anatomy
+06-gettext-i18n
+07-automation-scripts
+08-cicd-pipeline
+09-release-workflow
+10-entry-point-discovery
+11-version-management
+12-adding-extension
+13-translation-guide
+14-dev-setup
+15-troubleshooting
+```

@@ -40,3 +40,14 @@
 3. **文件发布系统**：哨兵文件+零拷贝模式适用于任何需要原子性发布文件的场景
 4. **插件化架构**：ContentProvider责任链是开闭原则的经典实现，适用于任何需要扩展输入类型的系统
 5. **防御性设计**：懒构建模式的"仅入口请求触发昂贵操作"思想可推广到任何懒加载/懒计算场景
+
+```{toctree}
+:hidden:
+
+content-provider-chain
+double-redirect-canonicalization
+dual-layer-lru-cache
+lazy-build-cache-stampede
+sentinel-file-atomic-publish
+zero-copy-build
+```

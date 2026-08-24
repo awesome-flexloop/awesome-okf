@@ -29,3 +29,15 @@ sources: https://github.com/datawhalechina/pumpkin-book
 ## 勘误
 
 * [勘误表](errata.md) — 纸质版各印次（第2版第6次印刷至第1版第4次印刷）的公式与文字勘误汇总。
+
+```{toctree}
+:hidden:
+
+ch1-2-foundations
+ch12-16-advanced
+ch3-4-linear-tree
+ch5-6-nn-svm
+ch7-8-bayes-ensemble
+ch9-11-clustering-dim-feature
+errata
+```

@@ -39,3 +39,15 @@ status: stable
 - 大部分示例使用 **Python (Pyodide)** 内核
 - 创意编程示例使用 **p5.js** 内核
 - 示例中的 `%pip install` 命令在浏览器中执行，无需本地安装
+
+```{toctree}
+:hidden:
+
+01-first-deployment
+02-python-basics
+03-data-visualization
+04-interactive-widgets
+05-interactive-maps
+06-creative-coding
+07-custom-demo-site
+```

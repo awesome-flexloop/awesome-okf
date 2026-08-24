@@ -63,3 +63,24 @@ Jupyter Server 核心概念文档共 16 篇，按学习路径分为四个阶段�
 理解原理：03 → 04 → 05 → 06
 核心开发：07 → 08 → 09 → 10
 高级主题：11 → 12 → 13 → 14 → 15
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-serverapp-lifecycle
+04-handler-hierarchy
+05-auth-system
+06-config-management
+07-contents-service
+08-kernel-management
+09-sessions-service
+10-extension-system
+11-websocket-communication
+12-gateway-client
+13-events-and-logging
+14-async-programming
+15-deployment-and-security
+```

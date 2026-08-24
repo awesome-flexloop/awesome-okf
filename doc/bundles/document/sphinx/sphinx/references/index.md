@@ -29,3 +29,21 @@
 |------|------|
 | [rest-syntax-quickref.md](rest-syntax-quickref.md) | reStructuredText语法速查表：段落/列表/表格/代码块/指令/角色 |
 | [official-docs.md](official-docs.md) | Sphinx官方文档关键页面URL索引 |
+
+```{toctree}
+:hidden:
+
+application-api
+builder-api
+builder-base
+config-api
+core-events-list
+event-lifecycle
+events-api
+extension-metadata
+extension-setup
+official-docs
+registry-api
+rest-syntax-quickref
+sphinx-app-init
+```

@@ -10,3 +10,16 @@
 | 05 | [CLI命令详解](/concepts/05-cli-reference.md) | jcache命令行工具完整参考 |
 | 06 | [读取器与执行器扩展](/concepts/06-readers-and-executors.md) | 自定义读取器/执行器开发、entry points插件 |
 | 07 | [配置项参考](/concepts/07-configuration.md) | 缓存路径、大小限制、执行配置、数据库配置 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture
+03-cache-api
+04-notebook-execution
+05-cli-reference
+06-readers-and-executors
+07-configuration
+```

@@ -134,3 +134,14 @@ display(new IntSlider({ value: 50, min: 0, max: 100 }));
 - [JupyterLite 文档](https://jupyterlite.readthedocs.io/)
 - [Jupyter Widgets 文档](https://ipywidgets.readthedocs.io/)
 - [Comlink 文档](https://github.com/GoogleChromeLabs/comlink)
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

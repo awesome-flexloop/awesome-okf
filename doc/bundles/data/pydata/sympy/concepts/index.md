@@ -42,3 +42,21 @@ title: SymPy 概念文档索引
 2. **数学运算**：04 → 06 → 07 → 08 → 运行 [examples/calculus-examples.md](../examples/calculus-examples.md)
 3. **线性代数**：09 → 运行 [examples/solving-equations.md](../examples/solving-equations.md)
 4. **源码溯源**：阅读 [references/](../references/) 中的信源文档
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-expression-tree
+02-symbols-numbers
+03-sympify-basics
+04-function-basics
+05-assumptions
+06-simplification
+07-calculus
+08-solvers
+09-matrices
+10-polynomials
+11-discrete-math
+12-advanced-topics
+```

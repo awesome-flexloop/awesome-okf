@@ -190,3 +190,14 @@ c.KubernetesBuildExecutor.cpu_limit = 2
 c.RateLimiter.limit = 100
 c.RateLimiter.period_seconds = 3600
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

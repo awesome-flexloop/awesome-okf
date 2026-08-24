@@ -7,3 +7,15 @@
 * [04 错误处理](04-error-handling.md) — error_t（继承 std::exception）、EAGAIN 与 optional 返回值、ZMQ_ASSERT 边界、EINTR 重试、ETERM 关停、常见错误码。
 * [05 poller_t 与事件多路复用](05-poller.md) — event_flags、poller_event<T> 布局兼容、add/remove/modify/wait_all、active_poller_t 回调分发、poller_ref_t。
 * [06 multipart 高层抽象](06-multipart.md) — recv_multipart/send_multipart 迭代器接口、multipart_t 容器、encode/decode（RFC 50）、选型建议。
+
+```{toctree}
+:hidden:
+
+00-overview
+01-context
+02-socket
+03-message-and-buffer
+04-error-handling
+05-poller
+06-multipart
+```

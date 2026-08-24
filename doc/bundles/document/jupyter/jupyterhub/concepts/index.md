@@ -19,3 +19,16 @@
 | [proxy.md](proxy.md) | 代理系统：Proxy 抽象、ConfigurableHTTPProxy 实现、路由管理、并发控制 |
 | [orm.md](orm.md) | ORM 数据模型：SQLAlchemy 实体（User/Server/Group/Role/Token 等）、关系映射 |
 | [handlers.md](handlers.md) | HTTP 请求处理：BaseHandler、页面处理器、API 处理器、认证中间件 |
+
+```{toctree}
+:hidden:
+
+architecture-overview
+authenticator
+configuration
+handlers
+lifecycle
+orm
+proxy
+spawner
+```

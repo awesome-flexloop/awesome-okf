@@ -9,3 +9,15 @@
 * [04 - 数据库层与 DI](04-db-di.md) — DatabasePool Protocol、SqlitePool（WAL+RLock+foreign_keys）、PostgresPool（psycopg_pool min1/max8）、RepoBundle 22 个 Repository、SharedServices DI 容器、open_database 工厂、Greenfield 延迟绑定、数据库迁移（schema v7）、资源表 id/{entity}_id 约定。
 * [05 - ACP 双向集成](05-acp-protocol.md) — ACP 入站（octop acp stdio 服务器，Zed 等 IDE 驱动）与出站（acp_runner 工具委托）、四个内置 runner（opencode/codebuddy/claude_code/codex）、per-user runner 配置 + per-agent tool_enabled、六种 action、HTTP API、Zed 配置示例。
 * [06 - CLI 命令体系](06-cli-commands.md) — _LazyCLI Click Group 延迟加载、COMMANDS 注册表 20 子命令、全局选项（--user/--agent/--json/-v）、Windows UTF-8 兼容、Offline/Embedded/External 三层传输、octop run 选项与自签名证书、CLI 状态文件 cli_state.json。
+
+```{toctree}
+:hidden:
+
+00-architecture
+01-server-lifecycle
+02-agent-runtime
+03-gateway-channels
+04-db-di
+05-acp-protocol
+06-cli-commands
+```

@@ -26,3 +26,19 @@
 | [Invoke任务源码](tasks-source.md) | tasks.py中FastlyService类和invoke任务的完整API解析：fastly CDN后端同步、trigger-build触发Docker构建、doitall全流程、upgrade未实现抛NotImplementedError |
 | [Statuspage Sidecar源码](statuspage-source.md) | statuspage/目录：独立Dockerfile（python:3.7-alpine）和statuspage.py监控脚本，作为Kubernetes sidecar监控GitHub API速率限制并上报Statuspage.io |
 | [测试源码解析](tests-source.md) | tests/test_nbviewer.py冒烟测试：BeautifulSoup解析首页、参数化链接检查、无conftest.py、无重试助手、pytest直接请求https://nbviewer.org |
+
+```{toctree}
+:hidden:
+
+app-source
+cicd-source
+client-utils-source
+config-source
+handlers-source
+project-meta-source
+providers-source
+render-cache-source
+statuspage-source
+tasks-source
+tests-source
+```

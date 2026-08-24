@@ -119,3 +119,14 @@ URL参数 → activate() → Provider选择 → Puller.clone()
                                         ▼
                               filebrowser:open-path（自动打开文件）
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

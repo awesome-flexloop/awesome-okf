@@ -40,3 +40,22 @@
 | 11 | [虚拟包检测](11-virtual-packages.md) | OS/CUDA/glibc/CPU 微架构检测、环境变量覆盖、交叉编译 |
 | 12 | [网络/缓存/配置](12-networking-cache-config.md) | HTTP中间件栈、多级缓存、.condarc兼容配置 |
 | 13 | [锁文件与多语言绑定](13-lock-files-and-bindings.md) | LockFile格式、Python/JS绑定、CLI工具、包上传 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-crates-architecture
+03-conda-types-foundation
+04-matchspec-and-versionspec
+05-package-records-and-repodata
+06-solving-dependencies
+07-repodata-gateway
+08-package-streaming
+09-install-and-transaction
+10-shell-activation
+11-virtual-packages
+12-networking-cache-config
+13-lock-files-and-bindings
+```

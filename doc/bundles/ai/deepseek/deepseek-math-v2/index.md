@@ -81,3 +81,11 @@ deepseek-math-v2/
 ├── examples/              # 使用示例（2 篇）
 └── index.md               # 本文件
 ```
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+```

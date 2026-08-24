@@ -37,3 +37,15 @@ sources:
 - 采用 **hub 索引**定位而非全量收录：通过"More"链接将深度内容导向 trae-demos、trae-agents 等姊妹仓库
 - 贡献审核采用**量化权重评分**，区别于大多数 awesome-list 的纯主观审核
 - 维护中英双语 README（README.md + README_zh.md），贡献需同步更新
+
+```{toctree}
+:hidden:
+
+concepts/00-introduction
+concepts/01-contribution-guide
+concepts/02-resource-categories
+examples/add-resource
+references/awesome-source
+spec/facts
+spec/insights
+```

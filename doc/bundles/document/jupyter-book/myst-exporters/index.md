@@ -55,3 +55,14 @@ myst-exporters
 ### 规格说明
 - [事实清单](spec/facts.md) — 从源码提取的编号事实
 - [架构洞察](spec/insights.md) — 核心架构洞察与知识地图
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

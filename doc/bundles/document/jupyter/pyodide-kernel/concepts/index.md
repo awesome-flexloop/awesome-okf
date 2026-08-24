@@ -25,3 +25,17 @@
 | 文档 | 说明 |
 |------|------|
 | [08-lockfile-customization.md](08-lockfile-customization.md) | Lockfile定制——pyodide-lock.json结构、PyodideLockAddon配置、UvPipCompile依赖解析、性能优化 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-architecture-overview
+03-worker-communication
+04-build-addons
+05-package-management
+06-python-compatibility
+07-message-bridge
+08-lockfile-customization
+```

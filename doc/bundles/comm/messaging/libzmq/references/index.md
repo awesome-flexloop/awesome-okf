@@ -7,3 +7,15 @@
 * [ZMTP 线协议：帧格式与握手完整索引](zmtp-wire-protocol.md) — zmtp_engine、v2_encoder/decoder、greeting 字节布局
 * [command_t 与 mailbox：命令传递完整索引](command.md) — command.hpp、mailbox、signaler 的命令传递机制
 * [options_t：套接字选项完整索引](options.md) — src/options.hpp 的全字段类型/默认值/选项常量
+
+```{toctree}
+:hidden:
+
+command
+ctx
+msg
+options
+socket-base
+zmq-h-api
+zmtp-wire-protocol
+```

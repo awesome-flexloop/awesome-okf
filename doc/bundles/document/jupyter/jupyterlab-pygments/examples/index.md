@@ -14,3 +14,10 @@
 - [概念文档索引](../concepts/index.md)
 - [源码信源索引](../references/index.md)
 - [教程首页](../index.md)
+
+```{toctree}
+:hidden:
+
+01-customize-style
+02-pygments-highlight
+```

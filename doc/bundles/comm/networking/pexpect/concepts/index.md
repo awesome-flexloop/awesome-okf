@@ -17,3 +17,17 @@
 * [跨平台 spawn 变体](06-cross-platform-spawn.md) — PopenSpawn（跨平台无 PTY）、fdspawn（文件描述符）、SocketSpawn（socket）、Unix vs Windows 差异。
 * [REPLWrapper REPL 封装](07-replwrap.md) — REPLWrapper 封装 Python/Bash/Zsh REPL、run_command、续行检测、工厂函数。
 * [高级模式](08-advanced-patterns.md) — FSM 有限状态机、run() 函数、超时处理、非阻塞读取、异步 expect、调试技巧。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-spawn-class
+03-expect-patterns
+04-send-interact
+05-pxssh
+06-cross-platform-spawn
+07-replwrap
+08-advanced-patterns
+```

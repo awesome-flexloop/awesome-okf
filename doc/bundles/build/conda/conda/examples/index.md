@@ -7,3 +7,13 @@
 * [查询已安装包和包缓存](query-installed-packages.md) — PrefixData 查询环境包、PackageCacheData 浏览本地缓存、SubdirData.query_all() 全通道搜索、三级记录对比。对应概念：[三级包记录模型](../concepts/06-package-records.md)、[Index 与 Repodata](../concepts/08-index-and-repodata.md)、[公开 Python API](../concepts/17-public-api.md)。
 * [自定义求解器插件](custom-solver-plugin.md) — 继承 classic Solver 实现 LoggingSolver、@plugins.hookimpl 注册 conda_solvers 钩子、pyproject.toml 入口点配置。对应概念：[插件系统](../concepts/15-plugin-system.md)、[Solver 求解器与 SAT 算法](../concepts/09-solver-and-resolve.md)。
 * [虚拟包检测与使用](virtual-packages.md) — 9 种内置虚拟包（__cuda/__glibc/__archspec 等）详解、环境变量覆盖机制、PackageRecord.virtual_package() 工厂方法、自定义虚拟包插件。对应概念：[三级包记录模型](../concepts/06-package-records.md)、[插件系统](../concepts/15-plugin-system.md)。
+
+```{toctree}
+:hidden:
+
+basic-env-create
+custom-solver-plugin
+matchspec-queries
+query-installed-packages
+virtual-packages
+```

@@ -54,3 +54,14 @@ Code Your Own LLM 是 Datawhale 出品的全栈式大语言模型参考指南，
 - GitHub 仓库：https://github.com/datawhalechina/code-your-own-llm
 - 在线阅读：https://datawhalechina.github.io/code-your-own-llm/
 - 开源协议：CC BY-NC-SA 4.0
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

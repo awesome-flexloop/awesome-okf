@@ -29,3 +29,18 @@
 | [07 - 布局与模板定制](/concepts/07-layout-and-templates.md) | 页面结构、Jinja2模板继承、组件覆盖、侧边栏和页脚定制 |
 | [08 - 样式定制与第三方扩展适配](/concepts/08-customization.md) | SCSS架构、CSS变量、暗色模式、打印样式、扩展适配 |
 | [09 - 国际化与高级主题](/concepts/09-internationalization.md) | 翻译系统、缓存清除、子主题开发、扩展协作、弃用功能 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-theme-architecture
+03-configuration
+04-header-buttons
+05-margin-sidenotes
+06-interactive-features
+07-layout-and-templates
+08-customization
+09-internationalization
+```

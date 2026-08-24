@@ -64,3 +64,12 @@ pytest_plugins = [
     "pytest_jupyter.jupyter_server",
 ]
 ```
+
+```{toctree}
+:hidden:
+
+01-basic-core-test
+02-kernel-testing
+03-server-api-test
+04-custom-server-config
+```

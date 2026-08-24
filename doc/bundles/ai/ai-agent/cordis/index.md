@@ -63,3 +63,20 @@ Cordis 是面向可组合插件应用的服务框架（TypeScript实现），核
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
 > 
 > **内容统计**：7 个概念 + 3 个示例 + 1 个信源 = 11 个内容文档
+
+```{toctree}
+:hidden:
+
+concepts/context-container
+concepts/event-system
+concepts/fiber-lifecycle
+concepts/plugin-module
+concepts/reflect-metadata
+concepts/service-registry
+concepts/timer-scheduler
+examples/build-bundle-app
+examples/create-basic-plugin
+examples/use-event-bus
+references/cordis-sources
+.spec/facts
+```

@@ -46,3 +46,18 @@
 1. **新手**：按顺序阅读快速入门 → 核心功能
 2. **有经验开发者**：直接阅读高级功能和开发者示例
 3. **JupyterLite 用户**：重点阅读 01-quick-start 和 08-jupyterlite-deployment
+
+```{toctree}
+:hidden:
+
+01-quick-start
+02-configure-provider
+03-chat-with-ai
+04-use-builtin-tools
+05-notebook-operations
+06-custom-mcp-servers
+07-custom-persona
+08-jupyterlite-deployment
+09-develop-custom-tool
+10-develop-custom-provider
+```

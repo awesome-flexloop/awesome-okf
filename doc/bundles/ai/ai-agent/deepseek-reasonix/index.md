@@ -78,3 +78,13 @@ DeepSeek-Reasonix 是 DeepSeek 开源的 Go 语言 AI 编码 Agent，支持 ACP 
 ## 变更日志
 
 见 [log.md](/log.md)。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/index
+log
+```

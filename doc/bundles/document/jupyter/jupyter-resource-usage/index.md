@@ -125,3 +125,14 @@ pip install jupyter-resource-usage
 - 📖 **概念文档**：[concepts/index.md](concepts/index.md) — 深入理解各模块
 - 💡 **使用示例**：[examples/index.md](examples/index.md) — 实际使用场景
 - 📋 **信源登记**：[references/index.md](references/index.md) — 事实来源
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

@@ -28,3 +28,16 @@
 | wsserver-py | websocketserver.py | JupyterWebsocketServer |
 | tokens-ts | tokens.ts | IDocumentProviderFactory, IAwarenessProviderFactory, IForkManagerToken |
 | yprovider-ts | yprovider.ts | WebSocketProvider, RtcContentProvider, SharedModelFactory |
+
+```{toctree}
+:hidden:
+
+app-source
+handlers-source
+loaders-source
+rooms-source
+stores-source
+tokens-source
+websocketserver-source
+yprovider-source
+```

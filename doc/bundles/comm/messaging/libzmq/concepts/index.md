@@ -21,3 +21,21 @@
 
 * [11 消息模式实现](11-patterns.md) — fq/lb/dist 算法、ROUTER 路由、PUB/SUB trie/mtrie 过滤
 * [12 编解码与帧格式](12-encoder-decoder.md) — v2_encoder/decoder 状态机、零拷贝、命令帧
+
+```{toctree}
+:hidden:
+
+00-overview
+01-context
+02-socket-base
+03-message
+04-pipe
+05-session
+06-zmtp-engine
+07-io-thread-poller
+08-command-mailbox
+09-options
+10-transport
+11-patterns
+12-encoder-decoder
+```

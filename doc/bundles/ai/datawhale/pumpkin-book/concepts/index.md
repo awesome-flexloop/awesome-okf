@@ -31,3 +31,14 @@ sources: https://github.com/datawhalechina/pumpkin-book
 ## 无监督学习
 
 * [聚类与降维](clustering-and-dimensionality-reduction.md) — 聚类性能度量、k-Means/DBSCAN/层次聚类；PCA主成分分析、KPCA核化降维、流形学习(Isomap/LLE)；特征选择三方法。
+
+```{toctree}
+:hidden:
+
+bayesian-and-ensemble-learning
+clustering-and-dimensionality-reduction
+linear-models-and-decision-trees
+model-evaluation-and-selection
+neural-networks-and-svm
+positioning-and-usage
+```

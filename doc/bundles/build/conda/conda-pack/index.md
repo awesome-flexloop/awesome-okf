@@ -89,3 +89,21 @@ conda-pack 是一个用于将 conda 环境打包为可重定位归档的命令�
 ```
 references/ 源码索引 → 05-打包流程 → 07-归档格式 → 08-CLI接口
 ```
+
+```{toctree}
+:hidden:
+
+examples/index
+references/index
+concepts/00-introduction
+concepts/01-getting-started
+concepts/02-architecture-overview
+concepts/03-conda-env-and-file
+concepts/04-environment-loading
+concepts/05-packing-process
+concepts/06-prefix-replacement
+concepts/07-archive-formats
+concepts/08-cli-interface
+concepts/09-conda-unpack
+log
+```

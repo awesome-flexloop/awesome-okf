@@ -12,3 +12,14 @@
 | [mhc-multi-head-compute](/ai/deepseek/tile-kernels/concepts/mhc-multi-head-compute) | DeepSeek-V4 MHC 结构、多头残差、Sinkhorn 归一化、训练/推理双路径、梯度融合 |
 | [tilelang-dsl-patterns](/ai/deepseek/tile-kernels/concepts/tilelang-dsl-patterns) | TileLang DSL 编程模式、@tilelang.jit、T.prim_func、T.Kernel、T.Parallel、warp 原语、宏复用 |
 | [autograd-integration](/ai/deepseek/tile-kernels/concepts/autograd-integration) | autograd.Function 封装模式、fuse_grad_acc、main_grad、partial buffer reduce |
+
+```{toctree}
+:hidden:
+
+autograd-integration
+fp8-quantization
+mhc-multi-head-compute
+moe-kernels
+overview
+tilelang-dsl-patterns
+```

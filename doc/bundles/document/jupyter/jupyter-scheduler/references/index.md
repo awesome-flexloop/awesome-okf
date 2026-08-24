@@ -30,3 +30,16 @@
 | `src/tokens.ts` | 前端Token定义（IAdvancedOptions/TelemetryHandler） |
 | `src/handler.ts` | 前端SchedulerService API客户端 |
 | `src/model.ts` | 前端数据模型 |
+
+```{toctree}
+:hidden:
+
+app-entry-source
+backend-registry-source
+executor-source
+handlers-source
+models-source
+orm-source
+scheduler-source
+task-runner-source
+```

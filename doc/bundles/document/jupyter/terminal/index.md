@@ -134,3 +134,14 @@ npx static-handler --coi _output/
 3. **双Worker自动降级**：SAB模式优先（高性能同步IO），Service Worker兜底（广兼容性）
 4. **HeadlessShellPool独立通道**：无头shell不连接UI、不注册到终端列表，为编程式调用提供隔离通道
 5. **Python构建插件**：TerminalAddon在JupyterLite构建时自动复制cockle WASM文件，零配置部署
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

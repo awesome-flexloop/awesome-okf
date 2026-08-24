@@ -23,3 +23,15 @@
 |------|------|------|
 | 05 | [周会制度](05-weekly-meetings.md) | 周会时间/平台、HackMD议程管理、GitHub Issue归档、同步/异步参与 |
 | 06 | [文档构建基础设施](06-doc-infrastructure.md) | Sphinx+MyST技术栈、构建时贡献者表格自动生成、RTD自动部署 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-team-membership
+02-becoming-member
+03-decision-making
+04-member-guide
+05-weekly-meetings
+06-doc-infrastructure
+```

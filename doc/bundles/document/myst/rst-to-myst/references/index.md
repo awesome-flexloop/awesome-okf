@@ -9,3 +9,13 @@
 | [MarkdownIt 渲染器](source-markdownit.md) | `rst_to_myst/markdownit.py` | docutils NodeVisitor、token生成 |
 | [mdformat 渲染集成](source-mdformat-render.md) | `rst_to_myst/mdformat_render.py` | MDRenderer使用、自定义渲染器 |
 | [命名空间 Mock 系统](source-namespace.md) | `rst_to_myst/namespace.py` | ApplicationNamespace、Sphinx扩展加载 |
+
+```{toctree}
+:hidden:
+
+source-cli
+source-markdownit
+source-mdformat-render
+source-namespace
+source-parser
+```

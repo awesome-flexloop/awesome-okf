@@ -14,3 +14,10 @@
 - [返回首页](../index.md)
 - [概念文档](../concepts/)
 - [参考资料](../references/)
+
+```{toctree}
+:hidden:
+
+01-minimal-extension
+02-custom-file-type
+```

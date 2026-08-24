@@ -116,3 +116,12 @@ nuitka/
 如果你是Nuitka新用户，从 [基本编译示例](examples/basic-compilation.md) 开始。
 
 如果你想理解Nuitka架构，从 [编译流水线](concepts/01-compilation-pipeline.md) 开始按学习路径阅读。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+log
+```

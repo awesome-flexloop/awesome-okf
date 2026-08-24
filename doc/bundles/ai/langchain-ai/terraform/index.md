@@ -104,3 +104,12 @@ terraform/
 |---|---|---|
 | LangSmith SDK | [/langchain-ai/langsmith-sdk/](/ai/langchain-ai/langsmith-sdk/) | Terraform 部署的 LangSmith 平台的客户端 SDK |
 | LangSmith CLI | [/langchain-ai/langsmith-cli/](/ai/langchain-ai/langsmith-cli/) | 与部署的 LangSmith 实例交互的 CLI 工具 |
+
+```{toctree}
+:hidden:
+
+references/index
+spec/facts
+spec/insights
+log
+```

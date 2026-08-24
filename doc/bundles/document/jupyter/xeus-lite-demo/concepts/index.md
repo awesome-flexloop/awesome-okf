@@ -25,3 +25,17 @@
 |------|------|
 | [07-多语言内核支持](07-kernel-options.md) | Python/R/C++/Lua 内核配置与选择指南 |
 | [08-内容目录与 Notebook](08-content-and-notebooks.md) | content/ 目录管理、Notebook 和数据文件组织 |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-xeus-jupyterlite
+02-dual-environment
+03-github-template-deploy
+04-runtime-env-config
+05-build-env-config
+06-cicd-pipeline
+07-kernel-options
+08-content-and-notebooks
+```

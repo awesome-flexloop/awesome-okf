@@ -16,3 +16,12 @@
 1. **新手入门**：00-introduction → 01-app-architecture → 运行 [examples/first-dash-app.md](../examples/first-dash-app.md) 中的 Hello World
 2. **核心机制**：02-callback-system → 03-component-system → 运行交互式图表示例
 3. **源码溯源**：阅读 [references/dash-app-init.md](../references/dash-app-init.md) 理解底层实现
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-app-architecture
+02-callback-system
+03-component-system
+```

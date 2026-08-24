@@ -17,3 +17,15 @@
 
 - [post_gen_project.py 生成后钩子解析](post-gen-hook-source.md) — 条件文件删除机制、递归删除工具函数
 - [CI/CD 工作流源码解析](ci-workflow-source.md) — 两套 CI 体系、矩阵构建、Jupyter Releaser、lint.sh 脚本
+
+```{toctree}
+:hidden:
+
+ci-workflow-source
+cookiecutter-json
+extension-app-source
+handler-source
+post-gen-hook-source
+pyproject-source
+test-source
+```

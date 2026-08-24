@@ -9,3 +9,13 @@
 | [03-glue-and-eval.md](03-glue-and-eval.md) | Glue 变量粘贴与 Eval 内联求值——数据叙事完整示例 |
 | [04-hiding-code.md](04-hiding-code.md) | 代码隐藏与输出控制——tags 和 mystnb metadata 详解 |
 | [05-cli-standalone.md](05-cli-standalone.md) | CLI 工具独立使用——mystnb-* 命令、Python API、批量转换 |
+
+```{toctree}
+:hidden:
+
+01-basic-setup
+02-execution-config
+03-glue-and-eval
+04-hiding-code
+05-cli-standalone
+```

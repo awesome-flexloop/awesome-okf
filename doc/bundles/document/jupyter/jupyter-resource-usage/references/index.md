@@ -29,3 +29,9 @@ sources: []
 - GitHub仓库：https://github.com/jupyter-server/jupyter-resource-usage
 - PyPI：https://pypi.org/project/jupyter-resource-usage/
 - 文档：https://jupyter-server.github.io/jupyter-resource-usage/
+
+```{toctree}
+:hidden:
+
+source-code
+```

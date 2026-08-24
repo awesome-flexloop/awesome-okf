@@ -26,3 +26,13 @@
 | `jupyter-config/jupyter_notebook_config.d/jupyterlab_github.json` | 旧版 Notebook Server 扩展自动启用配置 |
 | `package.json` | npm 包配置、JupyterLab 扩展元数据、依赖声明 |
 | `pyproject.toml` | Python 包配置、Hatchling 构建、hatch-jupyter-builder 集成 |
+
+```{toctree}
+:hidden:
+
+browser-ts-source
+contents-ts-source
+github-ts-source
+index-ts-source
+init-py-source
+```

@@ -129,3 +129,14 @@ examples:
 * **stale_after**：2027-08-23——base-llm 为活跃教程项目，部分章节（C16 安全工程）标注"建设中"，需定期重新评估。
 
 本知识束共收录 8 个概念文档 + 1 个示例登记 + 1 个信源登记，另含 concepts/examples/references 三个子目录索引和根 index.md、log.md。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+log
+```

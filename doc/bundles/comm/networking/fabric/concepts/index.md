@@ -17,3 +17,17 @@
 * [文件传输](06-file-transfer.md) — Transfer 类、get/put、SFTP 封装、路径插值、file-like 对象与权限保留。
 * [隧道与跳板机](07-tunnels.md) — forward_local/forward_remote、Tunnel/TunnelManager、ProxyJump/ProxyCommand 多跳代理。
 * [高级模式](08-advanced-patterns.md) — Executor 按主机分组、ConnectionCall、OpenSSHAuthStrategy、MockRemote 测试工具。
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-connection
+03-configuration
+04-command-execution
+05-group-parallel
+06-file-transfer
+07-tunnels
+08-advanced-patterns
+```

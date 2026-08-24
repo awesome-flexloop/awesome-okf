@@ -14,3 +14,18 @@
 | [07](07-devcontainer.md) | Dev Container开发环境 | VS Code开发容器、Docker-in-Docker、推荐扩展 |
 | [08](08-config-presets.md) | 预设配置与基础镜像选择 | 14个预设配置、镜像继承关系、场景化选择指南 |
 | [09](09-best-practices.md) | 最佳实践 | Dockerfile编写、安全、性能、版本管理、测试、CI/CD |
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-getting-started
+02-template-structure
+03-cookiecutter-variables
+04-dockerfile-template
+05-testing-framework
+06-cicd-workflow
+07-devcontainer
+08-config-presets
+09-best-practices
+```

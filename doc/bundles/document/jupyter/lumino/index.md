@@ -122,3 +122,14 @@ Lumino 的设计遵循以下原则：
 - [GitHub 仓库](https://github.com/jupyterlab/lumino)
 - [官方 API 文档](https://jupyterlab.github.io/lumino/)
 - [JupyterLab](https://github.com/jupyterlab/jupyterlab) — Lumino 的最大应用案例
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

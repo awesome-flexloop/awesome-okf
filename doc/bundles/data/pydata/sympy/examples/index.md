@@ -27,3 +27,11 @@ init_printing()  # 启用漂亮打印
 ```
 
 建议按顺序学习：basic-symbols → calculus-examples → solving-equations。
+
+```{toctree}
+:hidden:
+
+basic-symbols
+calculus-examples
+solving-equations
+```

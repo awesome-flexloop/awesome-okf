@@ -160,4 +160,6 @@ surveys/index
 team-compass/index
 the-littlest-jupyterhub/index
 xeus/index
+extension-examples/index
+jupyter-client/index
 ```

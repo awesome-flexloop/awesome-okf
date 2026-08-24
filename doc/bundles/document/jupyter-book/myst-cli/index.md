@@ -55,3 +55,16 @@ okf_version: "0.2"
 * **stale_after 解释**：统一设置为 `2027-12-31`。MyST CLI 核心架构（commander 命令注册、Session DI 容器、Redux 状态管理、多格式导出管线）在 mystmd 1.x 中保持稳定，该日期作为对未来大版本变化的保守重新评估节点。
 * **核验链路**：`generated` 记录原始生成时刻（2026-08-23）；`verified: true` 记录过程核验，所有类名、函数名、参数名均通过源码 Read/Grep 验证。
 * **覆盖范围**：覆盖 myst-cli 的 init/build/start/clean 四大核心命令、Session 依赖注入容器、Redux Store 状态管理、双层缓存策略、模板系统、版本迁移机制、项目加载与TOC解析；覆盖 myst-directives 默认指令列表（28个）和 myst-roles 默认角色列表（25个）；未覆盖 myst-common 解析器内部实现、myst-transforms 详细转换逻辑、myst-templates 模板渲染细节。
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+spec/facts
+spec/insights
+facts
+insights
+log
+```

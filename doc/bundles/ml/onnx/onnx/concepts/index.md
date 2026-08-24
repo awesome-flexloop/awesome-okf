@@ -37,3 +37,22 @@ stale_after: 2026-12-31
 * [文本解析器与打印器](11-parser-printer.md) — onnxtxt文本格式、parse_model/parse_graph/parse_function/parse_node四个解析函数、to_text打印、TextualSerializer实验性警告、ParseError错误处理。
 * [C++ 核心 IR](12-cpp-core-ir.md) — Graph/Node/Value三核心结构体所有权模型、Node双向循环链表哨兵模式、CRTP Attributes类型安全访问、Value use-def链与replaceAllUsesWith、Use双向链表、Dimension三态、AttributeKind 12种、initializer_node_ Param节点、used_names_哈希表、subgraph_bearing_nodes_索引。
 * [版本转换与函数内联](13-version-converter-inliner.md) — convert_version跨版本adapter机制、OpSchema函数体vs模型局部函数、inline_local_functions递归内联、inline_selected_functions选择性内联（白名单/黑名单模式）、inline_schema_functions控制、函数调用循环检测。
+
+```{toctree}
+:hidden:
+
+00-overall-architecture
+01-protobuf-ir
+02-tensor-type-system
+03-computation-graph
+04-opset-versioning
+05-operator-schema
+06-shape-inference
+07-model-checker
+08-serialization
+09-python-helpers
+10-graph-compose
+11-parser-printer
+12-cpp-core-ir
+13-version-converter-inliner
+```

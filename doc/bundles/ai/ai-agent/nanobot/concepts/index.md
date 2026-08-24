@@ -6,3 +6,14 @@
 - [03 - 消息总线与事件驱动](/concepts/03-bus-messaging.md) — MessageBus、WebSocket 通道、多聊天复用与认证
 - [04 - SDK 类型系统](/concepts/04-sdk-types.md) — StreamEventType、RunResult、StreamEvent、SessionSnapshot
 - [05 - 多接口架构](/concepts/05-multi-interface.md) — CLI、TUI（Bun+TypeScript）、WebUI（React）三端实现
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-architecture
+02-agent-runtime
+03-bus-messaging
+04-sdk-types
+05-multi-interface
+```

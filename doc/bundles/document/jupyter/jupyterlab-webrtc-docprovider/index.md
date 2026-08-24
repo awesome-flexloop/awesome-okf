@@ -140,3 +140,14 @@ URL参数 (?room=&username=&usercolor=)
 - [y-webrtc](https://github.com/yjs/y-webrtc) — WebRTC connector for Yjs
 - [Yjs](https://github.com/yjs/yjs) — CRDT framework
 - [JupyterLab](https://github.com/jupyterlab/jupyterlab) — Jupyter 前端
+
+```{toctree}
+:hidden:
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```

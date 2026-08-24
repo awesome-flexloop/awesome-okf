@@ -39,3 +39,15 @@ sources:
 - 采用 **Issue 表单驱动投稿**：只需在 GitHub 网页填写表单，维护者审核通过后负责展示
 - **接受任何阶段的项目**：从想法到生产环境都可分享，区别于 trae-demos 要求 polished 成品
 - 提供中英双语 Markdown Issue 模板（project-submission.md / project-submission-zh.md）
+
+```{toctree}
+:hidden:
+
+concepts/00-introduction
+concepts/01-project-submission
+concepts/02-review-criteria
+examples/submit-project
+references/co-creation-source
+spec/facts
+spec/insights
+```

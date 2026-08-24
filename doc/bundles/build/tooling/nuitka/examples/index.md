@@ -25,3 +25,13 @@ basic-compilation
   ├→ module-mode
   └→ plugin-usage（需standalone-build基础）
 ```
+
+```{toctree}
+:hidden:
+
+basic-compilation
+module-mode
+onefile-build
+plugin-usage
+standalone-build
+```

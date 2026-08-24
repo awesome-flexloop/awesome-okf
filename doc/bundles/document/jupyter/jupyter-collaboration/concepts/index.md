@@ -40,3 +40,18 @@ graph LR
     Fork --> Front
     Front -.-> Examples[examples/]
 ```
+
+```{toctree}
+:hidden:
+
+00-introduction
+01-architecture-overview
+02-ydoc-extension
+03-document-room
+04-ystore-persistence
+05-websocket-protocol
+06-awareness-protocol
+07-file-loading
+08-fork-timeline
+09-frontend-provider
+```

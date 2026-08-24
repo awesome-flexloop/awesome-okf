@@ -92,3 +92,18 @@ python main.py --repo https://github.com/pallets/flask --language Chinese
   - [call_llm.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/call_llm.py)
   - [crawl_github_files.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/crawl_github_files.py)
   - [crawl_local_files.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/crawl_local_files.py)
+
+```{toctree}
+:hidden:
+
+concepts/code-analysis-workflow
+concepts/pipeline-architecture
+examples/basic-usage
+references/analyze-relationships
+references/combine-tutorial
+references/fetch-repo
+references/identify-abstractions
+references/order-chapters
+references/utility-functions
+references/write-chapters
+```
