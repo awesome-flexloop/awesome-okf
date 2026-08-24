@@ -122,14 +122,8 @@ html_theme_options = {
     "use_download_button": True,
     "use_fullscreen_button": True,
     "footer_content_items": "author.html, copyright.html, last-updated.html, extra-footer.html",
-}
-
-# 移除侧边栏冗余搜索框：sphinx-book-theme 默认在侧边栏顶部注入搜索组件，
-# 与顶部导航栏搜索框重复，故只保留侧边栏导航，移除搜索字段。
-html_sidebars = {
-    "**": [
-        "sidebar-nav-bs.html",
-    ],
+    # 移除顶部导航栏搜索框（保留左侧边栏搜索框）
+    "navbar_persistent": [],
 }
 
 # --- frontmatter 裸日期/时间戳自动加引号 -------------------------------

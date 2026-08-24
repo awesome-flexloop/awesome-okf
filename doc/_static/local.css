@@ -151,6 +151,11 @@ figcaption {
     }
 }
 
+/* 隐藏顶部 article header 区域的搜索图标按钮（保留侧边栏搜索框） */
+.article-header-buttons .search-button {
+    display: none !important;
+}
+
 /* 小屏手机 */
 @media (max-width: 480px) {
     body {
