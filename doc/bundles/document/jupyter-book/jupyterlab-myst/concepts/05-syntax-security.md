@@ -57,11 +57,11 @@ Directives 是 MyST 中的块级扩展语法，使用 `{directive_name}` 标记�
 
 来源：myst-ext-proof
 
-```markdown
+````markdown
 ```{proof} 定理名称
 证明内容...
 ```
-```
+````
 
 支持的 proof 类型包括：theorem、lemma、proof、definition、remark、corollary、proposition 等。
 

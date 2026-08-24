@@ -650,7 +650,11 @@ nfloat(x**2 + Rational(1,3)*x + Rational(1,2))  # x**2 + 0.333333333333333*x + 0
 [^F-046]: facts.md F-046 — converter 字典与自定义类型转换
 [^F-047]: Tools API 参考
 [^F-048]: facts.md F-048 — FunctionClass 元类
+[^F-049]: facts.md F-049 — Application 基类（已应用函数）
 [^F-050]: facts.md F-050 — Function 基类
+[^F-051]: facts.md F-051 — AppliedUndef 未定义函数应用实例
+[^F-052]: facts.md F-052 — UndefinedFunction 未定义函数元类
+[^F-053]: facts.md F-053 — WildFunction 模式匹配函数通配符
 [^F-054]: facts.md F-054 — Derivative 类
 [^F-055]: facts.md F-055 — Lambda 类
 [^F-056]: facts.md F-056 — Subs 类
@@ -660,3 +664,4 @@ nfloat(x**2 + Rational(1,3)*x + Rational(1,2))  # x**2 + 0.333333333333333*x + 0
 [^F-060]: facts.md F-060 — evalf 底层引擎
 [^F-061]: facts.md F-061 — Relational 类层次
 [^F-062]: facts.md F-062 — 关系运算符与别名
+[^F-074]: facts.md F-074 — 函数类继承链体系

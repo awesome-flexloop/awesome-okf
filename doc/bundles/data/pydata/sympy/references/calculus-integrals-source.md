@@ -623,6 +623,8 @@ laplace_transform(exp(-a*t)*sin(b*t), t, s, noconds=True)
 
 [^F-054]: facts.md F-054 — Derivative 类
 [^F-083]: facts.md F-083 — calculus 模块导出（奇点/单调性/凸性/极值/有限差分）
+[^F-086]: facts.md F-086 — euler_equations 欧拉-拉格朗日方程
+[^F-087]: facts.md F-087 — AccumBounds 累积极限界
 [^F-095]: facts.md F-095 — integrals 模块导出与积分变换
 [^F-096]: facts.md F-096 — Integral 类与 integrate 函数
 [^F-097]: facts.md F-097 — heurisch 启发式 Risch 算法

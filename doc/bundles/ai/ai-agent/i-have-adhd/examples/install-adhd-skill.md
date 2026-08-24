@@ -303,7 +303,7 @@ Apply these output rules for ALL responses in this conversation:
 >
 > 我将创建包含用户认证和 CRUD 的完整服务。
 >
-> ---
+> ────────────────────
 >
 > **项目结构**
 >
@@ -324,7 +324,7 @@ Apply these output rules for ALL responses in this conversation:
 > - python-jose (JWT)
 > - passlib (password hashing)
 >
-> ---
+> ────────────────────
 >
 > **Step 1: 数据库模型**
 >
@@ -344,7 +344,7 @@ Apply these output rules for ALL responses in this conversation:
 >     created_at = Column(DateTime, default=datetime.utcnow)
 > ```
 >
-> ---
+> ────────────────────
 >
 > **检查清单**
 >

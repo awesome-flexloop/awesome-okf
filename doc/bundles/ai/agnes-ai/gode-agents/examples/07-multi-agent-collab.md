@@ -33,7 +33,7 @@ sources:
 
 ## 完整代码
 
-```python
+````python
 """
 示例 07: 多智能体协作
 演示：创建子Agent → name/description设置 → managed_agents注册 → 自动调用 → __call__模板 → GradioUI
@@ -423,7 +423,7 @@ print("""
      ⚠ 嵌套过深会导致响应变慢、成本增加
      ⚠ 合理设置每层的 max_steps
 """)
-```
+````
 
 ## 运行说明
 

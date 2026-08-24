@@ -320,7 +320,7 @@ except AgentError as e:
 
 ### 使用工具函数
 
-```python
+````python
 from codified_smolagents.utils import (
     parse_code_blobs, truncate_content, make_json_serializable,
     is_valid_name, parse_json_blob, get_imports,
@@ -381,7 +381,7 @@ x = sqrt(16)
 """
 imports = get_imports(code)
 print(imports)  # ['os', 'sys', 'math', 'collections', 'numpy']
-```
+````
 
 ### 工具验证
 

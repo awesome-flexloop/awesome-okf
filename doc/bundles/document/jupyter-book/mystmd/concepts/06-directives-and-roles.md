@@ -53,11 +53,11 @@ Body content here.
 
 ### 短形式（行内指令）
 
-```markdown
+````markdown
 ```{directive-name} argument
 ```
 （无 body，仅参数）
-```
+````
 
 ### 指令结构
 
