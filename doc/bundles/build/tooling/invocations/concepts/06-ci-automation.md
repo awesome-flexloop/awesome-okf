@@ -4,7 +4,7 @@ title: CI 环境自动化
 description: 使用 ci 模块在持续集成环境中创建 sudo 用户、执行特权命令、设置 SSH 免密登录
 tags: [invocations, ci, continuous-integration, sudo, ssh, circleci]
 generated: { by: "reference_agent/trae-glm", at: "2026-08-21T14:00:00Z" }
-verified: { by: "process:seven-concepts-v", at: "2026-08-21T16:00:00Z" }
+verified: { by: "process:source-code-to-okf-wiki-v", at: "2026-08-24" }
 status: stable
 stale_after: 2027-12-31
 sources:
@@ -163,7 +163,7 @@ else:
 
 ## 注意事项
 
-- ci 模块主要面向 CircleCI 设计，但可以通过配置 `ci.sudo.group` 适配其他 CI 环境（如使用 `wheel` 组而非 `sudo` 组的系统）
+- ci 模块主要面向 CircleCI 设计，但可以通过配置 `ci.sudo.groups` 适配其他 CI 环境（如使用 `wheel` 组而非 `sudo` 组的系统）
 - 默认密码 `"secret"` 仅用于测试，**不要在生产环境中使用**
 - `make_sshable` 生成的密钥无密码短语，仅适合 CI 测试环境
 - `sudo_run` 的 PATH 保留方式是 workaround，某些环境可能需要额外配置

@@ -4,7 +4,7 @@ title: 包发布生命周期
 description: 使用 packaging.release 模块管理 Python 包的版本检查、changelog 维护、构建、上传到 PyPI 的完整发布流程
 tags: [invocations, packaging, release, pypi, publish, semantic-versioning, twine]
 generated: { by: "reference_agent/trae-glm", at: "2026-08-21T14:00:00Z" }
-verified: { by: "process:seven-concepts-v", at: "2026-08-21T16:00:00Z" }
+verified: { by: "process:source-code-to-okf-wiki-v", at: "2026-08-24" }
 status: stable
 stale_after: 2027-12-31
 sources:
@@ -266,7 +266,6 @@ ns.configure({
         "clean": False,                   # 是否默认清理构建目录
         "directory": "dist",              # 构建输出目录
         "python": "python",               # 构建用的 Python
-        "find_opts": "",                  # find 命令额外选项
     },
 })
 ```

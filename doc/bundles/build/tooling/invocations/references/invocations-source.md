@@ -4,10 +4,14 @@ title: Invocations 源码信源登记
 description: Invocations v4.1.0 源码路径、版本信息、核心模块清单与公开 API
 tags: [invocations, source, reference, v4.1.0]
 generated: { by: "reference_agent/trae-glm", at: "2026-08-21T14:00:00Z" }
-verified: { by: "process:seven-concepts-v", at: "2026-08-21T16:00:00Z" }
+verified: { by: "process:source-code-to-okf-wiki-v", at: "2026-08-24" }
 status: stable
 stale_after: 2027-12-31
 sources:
+  - id: invocations-vendor-v4.1.0
+    resource: file:///d:/spaces/SpecWeave/external/libs/tools/pyinvoke/invocations/invocations
+    title: SpecWeave vendor 本地源码（v4.1.0，editable 安装）
+    author: process:seven-concepts-v
   - id: invocations-github
     resource: https://github.com/pyinvoke/invocations
     title: Invocations GitHub 仓库
@@ -44,7 +48,7 @@ sources:
 Invocations 源码位于 SpecWeave 仓库的外部依赖目录：
 
 ```
-external/libs/pyinvoke/invocations/
+external/libs/tools/pyinvoke/invocations/invocations/
 ```
 
 该目录通过 git submodule 引入（vendor 区域），本地不做修改。
