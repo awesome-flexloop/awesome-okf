@@ -52,6 +52,8 @@ myst_enable_extensions = [
 ]
 myst_heading_anchors = 3
 myst_commonmark_only = False
+# 将文档 frontmatter title 注入为 H1，避免无 title 的文档从 H2 开始导致跳级
+myst_title_to_header = True
 
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "**.ipynb_checkpoints"]
@@ -64,6 +66,7 @@ suppress_warnings = [
     "ref.ref",
     "toc.external",
     "etoc.toctree",
+    "ref.footnote",
 ]
 
 copybutton_exclude = '.linenos, .gp'
