@@ -26,6 +26,10 @@ jobs:
         run: python scripts/check-utf8.py
       - name: Check UTF-8 gate self-test (probe dual-direction)
         run: python scripts/check-utf8.py --self-test
+      - name: Check toctree/index.md integrity (gate)
+        run: python scripts/check-toctrees.py
+      - name: Check toctree gate self-test (probe dual-direction)
+        run: python scripts/check-toctrees.py --self-test
       - name: Install dependencies
         run: pip install -e ".[doc]"
       - name: Build HTML

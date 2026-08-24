@@ -28,6 +28,8 @@
 - **通用文档**：总览、索引、指南等，存放于 `docs/`
 - **参考资料**：原始来源、外部资料、参考实现，存放于 `references/`
 - 新增知识文档前，先确认其归属目录，避免内容分散
+- **bundle 导航完整性**：每个 bundle 必须生成根 `index.md`，并以 `{toctree}` 引用该 bundle 的全部内容文档（含子目录 index，如 `concepts/index`、`concepts/00-introduction`）；被 toctree 引用为目录 index 的 `xxx/index.md` 必须存在，内容文档不得孤立于任何 toctree 链之外
+- 新增/迁移 bundle 后运行 `python scripts/check-toctrees.py`（及 `--self-test`）验证零断链、零孤立内容；该脚本已接入 CI 作为构建前置门
 
 ## 4. 文档元数据（frontmatter）规范
 
