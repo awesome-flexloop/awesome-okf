@@ -25,6 +25,8 @@
 |---|---|---|
 | 了解文档库结构 | 阅读本文件「目录结构速览」 | 掌握 doc/bundles 分工 |
 | 查找知识文档 | 进入 `doc/index.md` 或 `doc/bundles/` | 按 bundle 索引定位 |
+| 构建 HTML 文档 | `invoke build` | Sphinx 构建输出到 `_build/html/` |
+| 运行 CI 质量门 | `invoke gates.all` | UTF-8 + toctree 完整性检查（含自检探针） |
 | 新增知识文档 | 按 `context-routing.md` 确定存放目录 | 遵循 frontmatter 规范 |
 | AI 协作 | 阅读 `AGENTS.md` | 遵循启动协议 |
 
@@ -32,8 +34,14 @@
 
 ```
 awesome-okf-xs/
-├── doc/                # Sphinx 文档工程
-│   └── bundles/        # OKF bundle 文档（结构化知识束）
+├── doc/                # Sphinx 文档工程（源文件）
+│   ├── bundles/        # OKF bundle 文档（结构化知识束）
+│   ├── conf.py         # Sphinx 构建配置
+│   └── index.md        # 文档首页
+├── tasks/              # Invoke 任务包（build/gates 等）
+│   ├── docs.py         # 文档构建任务
+│   └── gates.py        # CI 质量门任务
+├── scripts/            # CI 检查脚本（被 tasks/gates.py 调用）
 ├── .agents/            # AI 智能体规范
 ├── AGENTS.md           # 智能体入口
 └── README.md           # 项目说明

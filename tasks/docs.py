@@ -1,12 +1,15 @@
-"""Invoke 任务集合：基于 `invocations`（v4.1.0，vendor 源码 editable 安装）。
+"""Sphinx 文档构建任务，包装 `invocations.docs` 并注入项目配置。
 
 根 `build` 包装 `invocations.docs` 的构建语义并注入 `-E -b html`，
 使 `invoke build` 等价于 CI 原命令 `sphinx-build -E -b html doc _build/html`；
 `clean/browse/tree/doctest` 直接复用 `invocations.docs` 原任务。
 """
+from __future__ import annotations
+
 import os
 import sys
-from invoke import Collection, task
+
+from invoke import task
 from invocations import docs
 
 
@@ -61,15 +64,3 @@ def clean(c) -> None:
 browse = docs._browse
 tree = docs.tree
 doctest = docs.doctest
-
-
-ns = Collection(build, clean, browse, tree, doctest)
-ns.configure(
-    {
-        "sphinx": {
-            "source": "doc",
-            "target": "_build/html",
-            "target_file": "index.html",
-        }
-    }
-)

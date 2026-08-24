@@ -31,7 +31,7 @@ sources:
 
 ```
 awesome-okf-xs/
-├── doc/                  # Sphinx 文档工程
+├── doc/                  # Sphinx 文档工程（源文件目录）
 │   ├── bundles/          # OKF bundle 文档（按技术生态分组的知识束）
 │   │   ├── meta/         # 📐 规范与格式（OKF 规范本体）
 │   │   ├── python/       # 🐍 Python 语言核心
@@ -41,7 +41,13 @@ awesome-okf-xs/
 │   │   └── tooling/      # 🔧 通用开发工具
 │   ├── conf.py           # Sphinx 构建配置
 │   └── index.md          # 文档首页
+├── tasks/                # Invoke 任务包（命名空间组织）
+│   ├── docs.py           # 文档构建任务（build/clean/browse/...）
+│   └── gates.py          # CI 质量门任务（utf8/toctrees）
+├── scripts/              # CI 检查脚本（被 tasks/gates.py 调用）
 ├── .agents/              # AI 智能体规范目录
+├── .github/workflows/    # CI/CD 工作流
+├── pyproject.toml        # 项目元数据与依赖声明
 ├── AGENTS.md             # 智能体协作入口
 └── README.md             # 本文件 - 项目说明
 ```

@@ -49,18 +49,32 @@ sources:
 
 ```
 awesome-okf-xs/
-├── doc/                # Sphinx 文档工程
-│   └── bundles/        # OKF bundle 文档（结构化知识束）
+├── doc/                # Sphinx 文档工程（源文件目录）
+│   ├── bundles/        # OKF bundle 文档（结构化知识束）
+│   ├── conf.py         # Sphinx 构建配置
+│   └── index.md        # 文档首页
+├── tasks/              # Invoke 任务包（命名空间组织）
+│   ├── __init__.py     # 命名空间入口
+│   ├── docs.py         # 文档构建任务（build/clean/browse/...）
+│   └── gates.py        # CI 质量门任务（utf8/toctrees）
+├── scripts/            # CI 检查脚本（被 tasks/gates.py 调用）
+│   ├── check-toctrees.py
+│   ├── check-utf8.py
+│   └── scan-history-utf8.py
 ├── .agents/            # AI 智能体规范目录（本规范所在目录）
+├── .github/workflows/  # CI/CD 工作流
+├── pyproject.toml      # 项目元数据与依赖声明
 ├── AGENTS.md           # 本文件 - 智能体入口
 └── README.md           # 项目说明
 ```
 
 ### 目录用途
 
-| 目录 | 适用场景 |
+| 目录/文件 | 适用场景 |
 |---|---|
 | `doc/bundles/` | 以 OKF bundle 形式组织的结构化知识文档 |
+| `tasks/` | Invoke 任务定义（`invoke build` 构建、`invoke gates.all` 跑质量门） |
+| `scripts/` | CI 质量门底层检查脚本（一般通过 `invoke gates.*` 间接调用） |
 
 ## 文档规范要点
 

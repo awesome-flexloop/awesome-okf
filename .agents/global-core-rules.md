@@ -30,7 +30,7 @@
 - 新增知识文档前，先确认其归属目录，避免内容分散
 - **bundle 导航完整性**：每个 bundle 必须生成根 `index.md`，并以 `{toctree}` 引用该 bundle 的全部内容文档（含子目录 index，如 `concepts/index`、`concepts/00-introduction`）；被 toctree 引用为目录 index 的 `xxx/index.md` 必须存在，内容文档不得孤立于任何 toctree 链之外
 - **bundle 根 index.md 强制项**：凡「含子目录」的 bundle 根目录必须生成 `index.md`（本项目治理强化为 MUST；OKF 标准中 index.md 为 MAY）。粒度限定于含子目录的 bundle 根——对「仅含 .md、无子目录」的叶目录不强制（trae-skills 等 bundle 允许根 index.md 的 toctree 直接逐条列出子目录内容文件）；该规则已由 `scripts/check-toctrees.py` 的 bundle-root 检测并入门禁
-- 新增/迁移 bundle 后运行 `python scripts/check-toctrees.py`（及 `--self-test`）验证零断链、零孤立内容；该脚本已接入 CI 作为构建前置门
+- 新增/迁移 bundle 后运行 `invoke gates.toctrees`（等价于 `python scripts/check-toctrees.py`，含 `--self-test` 自检探针）验证零断链、零孤立内容；`invoke gates.all` 可一次性运行全部质量门。脚本已接入 CI 作为构建前置门
 
 ## 4. 文档元数据（frontmatter）规范
 
