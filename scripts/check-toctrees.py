@@ -12,11 +12,13 @@
      index 的 xxx/index.md 必须存在」；
   2) 从 doc/index.md 沿 index.md 的 toctree 链做 BFS，校验所有 .md 内容文档均可达；
   3) 目录文件清单一致性：对每个含 toctree 的 index.md，校验其目录内全部内容
-     （子目录 index 与直接 .md 文件）均已列入该 toctree（无「缺失条目」）。
-     这是 1)/2) 的盲区补充——某文件虽可经其他路径可达，但其所在目录的
-     index.md toctree 却未收录自身内容，构成目录文件清单不一致。
+        （子目录 index 与直接 .md 文件）均已列入该 toctree（无「缺失条目」）。
+       这是 1)/2) 的盲区补充——某文件虽可经其他路径可达，但其所在目录的
+       index.md toctree 却未收录自身内容，构成目录文件清单不一致；
+  4) bundle 根目录(含子目录)必须存在 index.md（项目级治理强化，非 OKF 标准要求）：
+       对 doc/bundles 下「含非隐藏子目录却缺 index.md」的目录报「缺失 index.md」。
 
-刻意不做「每个含 .md 的目录都有 index.md」的机械要求：trae-skills 等 bundle 允许
+刻意不做「每个含 .md 的叶子目录都有 index.md」的机械要求：trae-skills 等 bundle 允许
 根 index.md 的 toctree 直接逐条列出 concepts/spec 等子目录下的内容文件，此时这些
 子目录本身无需 index.md；只要全部 .md 可由 doc/index.md 出发经 toctree 链可达即合法。
 
@@ -252,14 +254,52 @@ def check_consistency(index_files: list[Path]) -> list[str]:
     return errors
 
 
+def check_bundle_root_index(srcdir: Path) -> list[str]:
+    """bundle 根目录(含子目录)必须生成 index.md（项目级治理强化，非 OKF 标准要求）。
+
+    OKF v0.2 中 bundle 根 index.md 为 MAY（可选，见 okf-spec 的 bundle-structure.md），
+    但本项目治理强化为 MUST：bundle 根是整束内容的导航入口，缺 index.md 会使该 bundle
+    的内容无法经 doc/index.md 出发的 toctree 链被发现，构成「结构性孤立」。
+
+    粒度：仅要求「含非隐藏子目录的目录（bundle 根）」有 index.md；对「含 .md 但无
+    子目录」的叶目录不强制——trae-skills 等 bundle 允许根 index.md 的 toctree 直接
+    逐条列出子目录内容文件，叶目录本身无需 index.md。
+
+    扫描范围限定在 bundles 版本库：优先扫 ``srcdir/bundles``；若 srcdir 无 bundles
+    子目录（如自检探针的临时目录），则直接扫 srcdir 自身侧，以便破坏性探针能验证拦截。
+    """
+    bundles_root = srcdir / "bundles" if (srcdir / "bundles").is_dir() else srcdir
+    if not bundles_root.is_dir():
+        return []
+    dirs: list[Path] = [bundles_root]
+    for d in bundles_root.rglob("*"):
+        if d.is_dir() and not any(
+            part in EXCLUDE_DIRS or part.startswith(".")
+            for part in d.relative_to(bundles_root).parts
+        ):
+            dirs.append(d)
+    errors: list[str] = []
+    for d in dirs:
+        if (d / INDEX_NAME).exists():
+            continue
+        has_content_subdir = any(
+            it.is_dir() and it.name not in EXCLUDE_DIRS and not it.name.startswith(".")
+            for it in d.iterdir()
+        )
+        if has_content_subdir:
+            errors.append(f"缺失 index.md: {_display(d)}")
+    return errors
+
+
 def run_scan(srcdir: Path) -> list[str]:
-    """对给定 doc 根执行完整扫描（断链 + 可达性 + 目录文件清单一致性）。"""
+    """对给定 doc 根执行完整扫描（断链 + 可达性 + 目录文件清单一致性 + bundle 根 index）。"""
     index_files = index_files_under(srcdir)
     if not index_files:
         return ["未找到任何 index.md"]
     errors, edges = check_broken(index_files, srcdir)
     errors += check_reachable(srcdir, edges, all_md_under(srcdir))
     errors += check_consistency(index_files)
+    errors += check_bundle_root_index(srcdir)
     return errors
 
 
@@ -296,8 +336,13 @@ def self_test() -> bool:
         (e / "a" / "extra.md").write_text("# extra\n", encoding="utf-8")
         (e / "a" / INDEX_NAME).write_text("```{toctree}\n\nnotes/index\n```\n", encoding="utf-8")
         (e / INDEX_NAME).write_text("```{toctree}\n\na/index\na/extra\n```\n", encoding="utf-8")
+        # 拦截用例：bundle 根目录(含子目录)缺失 index.md
+        f = tmp / "missingbundle"
+        (f / "concepts").mkdir(parents=True)
+        (f / "concepts" / "x.md").write_text("# x\n", encoding="utf-8")
+        (f / "concepts" / INDEX_NAME).write_text("```{toctree}\n\nx\n```\n", encoding="utf-8")
 
-        for name, expect_ok in (("pass", True), ("broken", False), ("orphan", False), ("missingidx", False), ("consistency", False)):
+        for name, expect_ok in (("pass", True), ("broken", False), ("orphan", False), ("missingidx", False), ("consistency", False), ("missingbundle", False)):
             errors = run_scan(tmp / name)
             actual_ok = not errors
             if actual_ok == expect_ok:
