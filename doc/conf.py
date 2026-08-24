@@ -124,6 +124,14 @@ html_theme_options = {
     "footer_content_items": "author.html, copyright.html, last-updated.html, extra-footer.html",
 }
 
+# 移除侧边栏冗余搜索框：sphinx-book-theme 默认在侧边栏顶部注入搜索组件，
+# 与顶部导航栏搜索框重复，故只保留侧边栏导航，移除搜索字段。
+html_sidebars = {
+    "**": [
+        "sidebar-nav-bs.html",
+    ],
+}
+
 # --- frontmatter 裸日期/时间戳自动加引号 -------------------------------
 # myst_parser 会把无引号的 YAML 日期解析为 datetime.date 对象，进而在
 # dict_to_fm_field_list 中 json.dumps 时报 "Object of type date is not
