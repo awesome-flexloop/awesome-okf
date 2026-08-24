@@ -35,6 +35,11 @@ path/to/bundle/
 - 该目录的 tarball 或 zip 归档。
 - 更大仓库中的一个子目录。
 
+> **本项目治理强化（非 OKF 标准要求）**：OKF 标准中 bundle 根 `index.md` 为 MAY（可选），
+> 但本仓库（awesome-okf-xs）将其强化为 **MUST**——凡「含子目录」的 bundle 根目录必须生成
+> `index.md` 并以 `{toctree}` 引用该 bundle 内容，作为整束导航入口。对「仅含 .md、无子目录」
+> 的叶目录不强制。该约束已由 `scripts/check-toctrees.py` 的 bundle-root 检测入门禁。
+
 ## 保留文件名
 
 以下文件名在层级任一层都有既定含义，**不得（MUST NOT）用作概念文档**：[^okf-spec]
