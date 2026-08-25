@@ -13,7 +13,7 @@ Documentation = "https://awesome-okf-xs.readthedocs.io/"
 doc = [
     "sphinx>=7.0",
     "invoke",
-    "invocations==4.1.0",
+    "invocations>=4.0",
     "myst-parser>=4.0",
     "sphinx-book-theme>=1.0",
     "sphinx-design",
