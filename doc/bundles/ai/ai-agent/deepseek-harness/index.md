@@ -89,5 +89,4 @@ examples/connect-mcp-server
 examples/create-cordis-plugin
 examples/define-custom-tool
 references/deepseek-harness-sources
-.spec/facts
 ```

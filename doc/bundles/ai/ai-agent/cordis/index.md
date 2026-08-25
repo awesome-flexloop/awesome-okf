@@ -78,5 +78,4 @@ examples/build-bundle-app
 examples/create-basic-plugin
 examples/use-event-bus
 references/cordis-sources
-.spec/facts
 ```

@@ -89,5 +89,4 @@ examples/build-sequential-workflow
 examples/expose-a2a-server
 examples/quickstart-agent
 references/veadk-python-sources
-.spec/facts
 ```

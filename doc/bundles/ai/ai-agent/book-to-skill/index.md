@@ -62,5 +62,4 @@ concepts/multi-format-parsers
 concepts/security-sanitization
 examples/convert-book-to-skill
 references/book-to-skill-sources
-.spec/facts
 ```

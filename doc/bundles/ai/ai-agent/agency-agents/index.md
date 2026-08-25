@@ -62,5 +62,4 @@ concepts/nexus-orchestration
 concepts/persona-division-structure
 examples/create-custom-persona
 references/agency-agents-sources
-.spec/facts
 ```

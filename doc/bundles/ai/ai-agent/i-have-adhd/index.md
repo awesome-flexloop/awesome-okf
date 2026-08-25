@@ -60,5 +60,4 @@ concepts/session-hooks-mechanism
 concepts/ten-output-rules
 examples/install-adhd-skill
 references/i-have-adhd-sources
-.spec/facts
 ```

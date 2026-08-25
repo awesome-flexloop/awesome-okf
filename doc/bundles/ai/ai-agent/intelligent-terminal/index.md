@@ -88,5 +88,4 @@ examples/develop-custom-agent
 examples/enable-autofix-osc133
 examples/use-agent-pane
 references/intelligent-terminal-sources
-.spec/facts
 ```

@@ -95,8 +95,6 @@ references/api-model
 references/api-python
 references/api-tokens
 references/api-types
-.spec/facts
-.spec/insights
 facts
 insights
 ```

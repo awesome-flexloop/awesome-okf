@@ -72,5 +72,4 @@ examples/deploy-second-me
 examples/train-personal-ai
 examples/use-space-strategy
 references/second-me-sources
-.spec/facts
 ```

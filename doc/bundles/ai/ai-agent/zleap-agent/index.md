@@ -90,5 +90,4 @@ examples/create-custom-workspace
 examples/schedule-cron-task
 examples/setup-zleap-agent
 references/zleap-agent-sources
-.spec/facts
 ```

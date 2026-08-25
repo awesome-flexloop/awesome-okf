@@ -90,5 +90,4 @@ examples/register-custom-tool
 examples/setup-gateway-multi-agent
 examples/use-mcp-server
 references/hermes-agent-sources
-.spec/facts
 ```

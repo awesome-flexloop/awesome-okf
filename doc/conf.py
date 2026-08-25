@@ -56,7 +56,16 @@ myst_commonmark_only = False
 myst_title_to_header = True
 
 templates_path = ["_templates"]
-exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "**.ipynb_checkpoints"]
+# `.spec` 为 OKF 生成流程的内部工作目录（含 file:/// 机器绝对路径），不发布；
+# 排除以免 Sphinx 对未收录的 .spec/*.md 报 toc.not_included（曾被误用 toctree 引用压制）
+exclude_patterns = [
+    "_build",
+    "Thumbs.db",
+    ".DS_Store",
+    "**.ipynb_checkpoints",
+    "**/.spec/**",
+    "**/.spec",
+]
 numfig = True
 nitpicky = False
 
@@ -67,7 +76,19 @@ suppress_warnings = [
     "toc.external",
     "etoc.toctree",
     "ref.footnote",
+    # 内联代码的高亮失败（未知 lexer / lexer 解析错误）在工具类文档中大量存在，
+    # 属噪音而非内容错误：置灰并不影响阅读，故统一抑制。
+    "misc.highlighting_failure",
+    # tippy 提示词需联网抓取 RTD/Wikipedia/DOI，离线构建必然失败并重复告警。
+    "tippy.rtd",
+    "tippy.wiki",
+    "tippy.doi",
 ]
+
+# tippy 关卡：禁用在离线/CI 环境必然失败的网络预取（关联 -cli dopamine），避免重复警告并拖慢构建。
+tippy_enable_wikitips = False
+tippy_enable_doitips = False
+tippy_skip_urls = ["https://*.readthedocs.io/*"]
 
 copybutton_exclude = '.linenos, .gp'
 copybutton_selector = ":not(.prompt) > div.highlight pre"

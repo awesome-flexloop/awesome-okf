@@ -58,5 +58,4 @@ concepts/svelte5-runes-architecture
 concepts/tauri-backend-commands
 examples/build-tauri-app
 references/agency-agents-app-sources
-.spec/facts
 ```

@@ -61,5 +61,4 @@ concepts/skill-md-format-spec
 concepts/skill-packaging
 examples/write-custom-skill
 references/anthropics-skills-sources
-.spec/facts
 ```

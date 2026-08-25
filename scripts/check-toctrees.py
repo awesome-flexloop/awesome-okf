@@ -39,7 +39,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_SCAN = (ROOT / "doc",)
-EXCLUDE_DIRS = {"_build", "_static", ".git"}
+# `.spec` 为 OKF 生成流程的内部工作目录（含机器本地 file:/// 绝对路径），
+# 被 .gitignore 的 `*.spec` 排除、永不提交；不得作为发布内容扫描或引用。
+EXCLUDE_DIRS = {"_build", "_static", ".git", ".spec"}
 INDEX_NAME = "index.md"
 
 # MyST `{toctree}` 指令的开/闭围栏（支持反引号与冒号围栏）
@@ -48,6 +50,21 @@ _FENCE_CLOSE = re.compile(r"^(?:`{3,}|:{3,})\s*$")
 # 非文件目标的 toctree 条目（角色/URL/锚点），静默跳过
 _SKIP_ENTRY = re.compile(r"^(https?://|mailto:|[#{\[]|genindex|modindex|search)$")
 _OPTION = re.compile(r"^\s*:")
+
+
+def _is_internal_hidden_ref(entry: str) -> bool:
+    """toctree 条目是否指向内部隐藏工作目录（如 `.spec`）。
+
+    `.spec` 等隐藏目录被 EXCLUDE_DIRS 排除、永不提交，禁止被发布 toctree 引用。
+    无论本地是否存在同名工作文件，此类引用在 CI 版本库中必然悬空，须确定性拦截，
+    避免 gate 因本地多出手文件而误放行（环境相关门禁反模式）。
+    """
+    e = entry.strip()
+    m = re.match(r"^.+\s*<\s*([^>]+?)\s*>$", e)  # RST 风格 `标题 <docname>`
+    if m:
+        e = m.group(1)
+    e = e.replace("\\", "/").lstrip("/")
+    return any(seg.startswith(".") and seg not in (".", "..") for seg in e.split("/"))
 
 
 def _display(path: Path) -> str:
@@ -143,6 +160,12 @@ def check_broken(index_files: list[Path], srcdir: Path) -> tuple[list[str], dict
         src_dir = idx.parent
         targets: set[Path] = set()
         for ent in extract_entries(idx):
+            if _is_internal_hidden_ref(ent):
+                errors.append(
+                    f"断链: {_display(idx)} 的 toctree 引用内部隐藏目录: 「{ent}」"
+                    "（.spec 等工作目录被排除、永不提交，禁止发布引用）"
+                )
+                continue
             t = resolve_target(src_dir, ent, srcdir)
             if t is None:
                 hint = "（目录缺 index.md）" if ent.endswith("/index") else ""
@@ -191,7 +214,7 @@ def expected_entries(src_dir: Path) -> set[str]:
     - 子目录含 index.md → ``<subdir>/index``；
     - 子目录无 index.md → 逐条列出其直接 .md 文件 ``<subdir>/<file>``；
     - 目录内直接 .md 文件（index/README 除外）→ ``<file>``；
-    - 跳过隐藏项（.spec 除外）与构建产物目录。
+    - 跳过隐藏项与内部工作目录（.spec 在 EXCLUDE_DIRS，与 _build/_static 同级）。
     """
     expected: set[str] = set()
     try:
@@ -199,9 +222,7 @@ def expected_entries(src_dir: Path) -> set[str]:
     except OSError:
         return expected
     for item in items:
-        if item.name.startswith(".") and item.name != ".spec":
-            continue
-        if item.name in EXCLUDE_DIRS:
+        if item.name.startswith(".") or item.name in EXCLUDE_DIRS:
             continue
         if item.is_dir():
             if (item / INDEX_NAME).exists():
