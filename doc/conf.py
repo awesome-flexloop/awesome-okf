@@ -85,10 +85,18 @@ suppress_warnings = [
     "tippy.doi",
 ]
 
-# tippy 关卡：禁用在离线/CI 环境必然失败的网络预取（关联 -cli dopamine），避免重复警告并拖慢构建。
+# tippy 关卡：断开所有需联网的 tooltip 数据源（wiki/doi/rtd），
+# 避免离线/CI 环境每次构建重复触发 requests 网络失败警告并拖慢构建。
 tippy_enable_wikitips = False
 tippy_enable_doitips = False
-tippy_skip_urls = ["https://*.readthedocs.io/*"]
+tippy_rtd_urls = []  # 不登记 RTD 预取源，杜绝 fetch_rtd_tips
+# 兜底：命中即跳过该链接，使其既不生成 tooltip 也不进入任何 fetch 集合
+tippy_skip_urls = [
+    "https://*.readthedocs.io/*",
+    "https://www.readthedocs.org/",
+    "https://en.wikipedia.org/wiki/",  # 双保险：即便 wikitips 误开也不联网
+    "https://doi.org/",
+]
 
 copybutton_exclude = '.linenos, .gp'
 copybutton_selector = ":not(.prompt) > div.highlight pre"
