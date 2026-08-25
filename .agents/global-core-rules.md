@@ -7,27 +7,30 @@
 所有任务必须严格遵循根目录 `AGENTS.md` 中的启动协议（步骤 1-4），包括：
 - 步骤 1：读取 AGENTS.md 全文
 - 步骤 2：按上下文路由表确定规范
+  - 步骤 2.3：内容敏感度预检（公开/私域判定），见 §2
 - 步骤 3：按需读取对应规范（不要一次加载全部）
-- 步骤 3.5：自检清单
+- 步骤 3.5：自检清单（6项检查）
 - 步骤 4：执行任务
 
 ## 2. 内容敏感度分流
 
 ### 公开内容（Public）
-- 公开发布的开源知识、官方文档、公开文章
-- **工作流**：标准工作流，存放于 doc/bundles/ 或 doc/
+- **判定依据**：公开发布的开源知识、官方文档、公开文章、开源代码、公开发布的网页
+- **特征**：无访问控制（无 code/token/邀请码）、公开域名、无"保密/内部/个人"标注
+- **工作流**：标准工作流，存放于 `doc/bundles/` 或 `doc/`
 
 ### 私域内容（Private）
-- 个人笔记、内部讨论、含访问控制的内容
+- **判定依据**：个人笔记、内部讨论、需 code/token 访问的私域分享链接、含个人隐私/商业秘密的内容
+- **特征**：URL 含 `share?code=`/`token=`/邀请码等参数、企业内部域名、用户标注"私域"/"内部"/"保密"/"个人"
 - **工作流**：跳过公开规划，在用户指定目录执行
 - 不确定时默认按私域处理或向用户确认
 
 ## 3. OKF 文档组织规范
 
 - **bundle（知识束）**：结构化、有明确主题边界的知识文档，以 bundle 为单位组织，存放于 `doc/bundles/`
-- **通用文档**：总览、索引、指南等，存放于 `docs/`
-- **参考资料**：原始来源、外部资料、参考实现，存放于 `references/`
-- 新增知识文档前，先确认其归属目录，避免内容分散
+- **通用文档**：总览、索引、指南等，存放于 `doc/`（无独立 `docs/` 目录）
+- **静态资源**：CSS、图片等，存放于 `doc/_static/`
+- **新增知识文档前**，先确认其归属目录，避免内容分散
 - **bundle 导航完整性**：每个 bundle 必须生成根 `index.md`，并以 `{toctree}` 引用该 bundle 的全部内容文档（含子目录 index，如 `concepts/index`、`concepts/00-introduction`）；被 toctree 引用为目录 index 的 `xxx/index.md` 必须存在，内容文档不得孤立于任何 toctree 链之外
 - **bundle 根 index.md 强制项**：凡「含子目录」的 bundle 根目录必须生成 `index.md`（本项目治理强化为 MUST；OKF 标准中 index.md 为 MAY）。粒度限定于含子目录的 bundle 根——对「仅含 .md、无子目录」的叶目录不强制（trae-skills 等 bundle 允许根 index.md 的 toctree 直接逐条列出子目录内容文件）；该规则已由 `scripts/check-toctrees.py` 的 bundle-root 检测并入门禁
 - 新增/迁移 bundle 后运行 `invoke gates.toctrees`（等价于 `python scripts/check-toctrees.py`，含 `--self-test` 自检探针）验证零断链、零孤立内容；`invoke gates.all` 可一次性运行全部质量门。脚本已接入 CI 作为构建前置门
@@ -55,7 +58,8 @@
 修复完成后，**必须验证变更实际落地**，禁止仅凭过程描述自认为已完成：
 
 - 用 `git diff` / `git status` 核对修改确实写入目标文件与提交
-- 实际运行构建/测试命令验证效果（如 Sphinx 用 `sphinx-build -b dummy -E doc _build/dummy <文件>`）
+- 实际运行构建/测试命令验证效果（如 Sphinx 用 `invoke build` 或 `sphinx-build -b dummy -E doc _build/dummy <文件>`）
+- 新增/修改 bundle 后运行 `invoke gates.toctrees` 验证导航完整性
 - 上下文丢失或会话压缩后，若依赖摘要判断任务状态，必须先核实磁盘与 git 的真实状态
 
 > 历史教训：曾因上下文丢失导致 `doc/conf.py` 修复逻辑未真正写入文件，构建仍崩溃，而任务被误报为"已完成并提交"。
@@ -66,9 +70,26 @@
 - 根据 `context-routing.md` 只读取与当前任务相关的规范
 - 简单任务（如修改单个文档错别字）可只读取核心规则后直接执行
 
-## 7. 其他基础规则
+## 7. 构建与 CI 规则
+
+- **构建命令**：使用 `invoke build` 构建 HTML 文档，输出到 `_build/html/`
+- **质量门**：提交前运行 `invoke gates.all` 确保 UTF-8 编码和 toctree 完整性通过
+- **本地预览**：使用 `invoke browse` 启动本地服务器预览构建结果
+- **CI 工作流**：`.github/workflows/pages.yml` 配置了 GitHub Pages 自动部署，推送 main 分支时自动构建
+- **conf.py 修改**：修改 `doc/conf.py` 后必须运行 `invoke build` 验证构建通过，禁止仅凭代码审查判断正确性
+- **依赖管理**：文档构建依赖在 `pyproject.toml` 的 `[project.optional-dependencies] doc` 中声明
+
+## 8. 与 SpecWeave 主项目的关系
+
+- 本项目是 SpecWeave `projects/` 区域下的第一方子项目（git submodule），通过 [SpecWeave projects/AGENTS.md](../../AGENTS.md) 路由进入
+- 本项目规范**自治管理**，保持轻量定位——不复制主项目的 commands/、skills/、protocols/ 等复杂结构
+- 从主项目路由进入本项目时，遵循本文件的启动协议（已包含内容敏感度预检等关键检查点），无需回退到主项目规范
+- 本项目的 `.agents/` 规范只包含 OKF 文档库协作必需的最小规范集
+
+## 9. 其他基础规则
 
 - **语言**：正文中文，文件名 kebab-case 纯英文
-- **路径引用**：相对路径，禁止 file:/// 绝对路径
+- **路径引用**：相对路径，禁止 `file:///` 绝对路径
 - **派生产物溯源**：源自外部的知识文档须标注 sources 字段
-- **提交规范**：Conventional Commits，type(scope): subject，中文主体
+- **提交规范**：Conventional Commits，`type(scope): subject`，中文主体描述"为什么"
+- **.agents/ 规范本身**：修改本目录下的规范文件时，确保 AGENTS.md 的入口表与 context-routing.md 同步更新
