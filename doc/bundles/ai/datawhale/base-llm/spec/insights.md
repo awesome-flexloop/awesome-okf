@@ -25,7 +25,7 @@ Transformer 在教程中处于承上启下的核心位置。第 4 章深入剖�
 ## 知识地图
 
 ```
-base-llm 知识束
+base-llm 知识包
 │
 ├── 概念层（8 篇）
 │   ├── nlp-basics          ← C1: NLP 概述/发展历程/技术层次

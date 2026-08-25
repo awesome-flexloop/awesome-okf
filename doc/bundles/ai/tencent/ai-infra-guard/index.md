@@ -1,7 +1,7 @@
 ---
 okf_version: "0.2"
 type: bundle
-title: AI-Infra-Guard 知识束
+title: AI-Infra-Guard 知识包
 description: 腾讯朱雀实验室 AI 基础设施安全检测工具源码解析，涵盖分布式架构、指纹DSL、漏洞匹配、WebSocket协议与Go/Python桥接。
 tags: [ai-infra-guard, security, ai-security, fingerprint, vulnerability, mcp, go, python]
 generated: { by: "reference_agent/trae-solo", at: "2026-08-23T00:00:00Z" }
@@ -10,7 +10,7 @@ status: stable
 stale_after: 2027-08-23
 ---
 
-# AI-Infra-Guard（A.I.G）知识束
+# AI-Infra-Guard（A.I.G）知识包
 
 AI-Infra-Guard 是腾讯朱雀实验室开源的 AI 基础设施安全检测工具，采用 Go + Python 混合架构，支持 AI 组件指纹识别、CVE 漏洞匹配、MCP 插件安全审计、大模型越狱评测和 Agent 安全评估。
 

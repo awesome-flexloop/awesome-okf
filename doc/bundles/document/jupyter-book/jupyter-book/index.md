@@ -46,7 +46,7 @@ Jupyter Book v2 CLI
 - [事实清单](spec/facts.md) — 从源码提取的编号事实
 - [架构洞察](spec/insights.md) — 核心架构洞察与知识地图
 
-## 相关知识束
+## 相关知识包
 - [myst-exporters](../myst-exporters/index.md) — 底层多格式导出引擎
 
 ```{toctree}

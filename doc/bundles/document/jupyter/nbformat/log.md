@@ -1,10 +1,10 @@
 ---
 okf_version: "0.2"
 type: Log
-title: "nbformat 知识束更新日志"
+title: "nbformat 知识包更新日志"
 ---
 
-# nbformat 知识束更新日志
+# nbformat 知识包更新日志
 
 ## 2026-08-22 — R/I 阶段完成（全量验证通过）
 

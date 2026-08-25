@@ -7,7 +7,7 @@ description: "构建、打包与开发工具链生态——环境与包管理、
 
 # 🔨 构建系统与包管理生态
 
-本域存放构建与开发工具链相关的基础设施知识束——从 Conda 环境与包管理、CMake/scikit-build 跨平台构建，到 Copier/Ninja/PyInvoke 等通用开发工具，构成"环境管理 → 构建生成 → 任务自动化"的完整工具链。其中 **scikit-build** 为本域锚点组。
+本域存放构建与开发工具链相关的基础设施知识包——从 Conda 环境与包管理、CMake/scikit-build 跨平台构建，到 Copier/Ninja/PyInvoke 等通用开发工具，构成"环境管理 → 构建生成 → 任务自动化"的完整工具链。其中 **scikit-build** 为本域锚点组。
 
 ## 域内分组导航
 

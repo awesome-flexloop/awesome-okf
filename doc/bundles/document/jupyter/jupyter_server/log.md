@@ -1,10 +1,10 @@
 ---
 okf_version: "0.2"
 type: Log
-title: "jupyter_server 知识束更新日志"
+title: "jupyter_server 知识包更新日志"
 ---
 
-# jupyter_server 知识束更新日志
+# jupyter_server 知识包更新日志
 
 ## 2026-08-22 — 初始版本
 
@@ -53,7 +53,7 @@ title: "jupyter_server 知识束更新日志"
 - `examples/index.md` — 示例索引
 
 #### 导航文件
-- `index.md` — 知识束首页（bundle 类型）
+- `index.md` — 知识包首页（bundle 类型）
 
 #### 组索引更新
 - 更新 `../index.md`（jupyter 组索引），新增"服务层：后端核心服务"分类，收录 jupyter_server 和 jupyter-core

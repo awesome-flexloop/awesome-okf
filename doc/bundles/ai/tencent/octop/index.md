@@ -4,7 +4,7 @@ title: Octop 自托管 AI 助手平台
 okf_version: "0.2"
 ---
 
-# Octop 源码知识束
+# Octop 源码知识包
 
 本知识包是腾讯 WorkBuddy 团队开源的自托管多用户、多 Agent AI 助手平台 [Octop](https://github.com/Tencent/WorkBuddy)（MIT 许可证，v0.9.25）的系统化中文源码教程。Octop 以单个 Python wheel 分发，集成 FastAPI 后端、React Dashboard 和 Click CLI，核心 AI 能力委托给 `orcakit-harness-agent`（LangGraph）、`harness-gateway`、`harness-memory`、`harness-browser` 四个外部包。
 

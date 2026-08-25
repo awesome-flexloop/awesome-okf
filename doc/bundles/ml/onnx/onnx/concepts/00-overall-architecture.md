@@ -127,7 +127,7 @@ VERSION_TABLE 维护 ONNX release → IR version → opset version 的映射，i
 - 实现 C++ checker、shape_inference、version_converter
 - 管理 OpSchema 算子注册表
 
-周边项目（optimizer、onnxmltools、sklearn-onnx、tensorflow-onnx、onnx-mlir、onnx-tensorrt 等）均有独立的知识束覆盖。
+周边项目（optimizer、onnxmltools、sklearn-onnx、tensorflow-onnx、onnx-mlir、onnx-tensorrt 等）均有独立的知识包覆盖。
 
 ## 关键反常识
 

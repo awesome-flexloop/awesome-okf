@@ -73,7 +73,7 @@ jupyter_server
 └──────────────────┬──────────────────────────┘
                    │ HTTP / WebSocket
 ┌──────────────────▼──────────────────────────┐
-│              Jupyter Server                 │  ◀── 本知识束
+│              Jupyter Server                 │  ◀── 本知识包
 │  ┌─────────┐ ┌────────┐ ┌────────────────┐  │
 │  │ Contents│ │ Kernels│ │ Extensions     │  │
 │  │ Manager │ │ Manager│ │ (ExtensionApp) │  │

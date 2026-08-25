@@ -15,11 +15,11 @@ status: stable
 
 本知识包分组收录 [TRAE Community](https://github.com/trae-community) 开源社区生态各核心仓库的系统化中文源码教程。TRAE 是字节跳动推出的 AI 编程 IDE，trae-community 组织维护了围绕 TRAE 生态的展示平台、技能系统、模板库、MCP 服务器、学习文档和社区治理仓库。
 
-所有知识束遵循 [OKF v0.2 规范](../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经源码事实验证。
+所有知识包遵循 [OKF v0.2 规范](../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经源码事实验证。
 
-## 📊 知识束概览
+## 📊 知识包概览
 
-| 板块 | 知识束 | 级别 | 概念 | 示例 | 信源 | 内容文档 |
+| 板块 | 知识包 | 级别 | 概念 | 示例 | 信源 | 内容文档 |
 |------|--------|------|------|------|------|---------|
 | 🖥️ 平台应用 | [trae-co-creation-demo-wall](trae-co-creation-demo-wall/index.md) | L2 | 17 | 8 | 1 | 26 |
 | 🖥️ 平台应用 | [trae-co-creation-demo-wall-intl](trae-co-creation-demo-wall-intl/index.md) | L2 | 7 | 7 | 1 | 15 |
@@ -33,20 +33,20 @@ status: stable
 | 👥 社区治理 | [trae-co-creation-projects](trae-co-creation-projects/index.md) | L0 | 3 | 1 | 1 | 5 |
 | 👥 社区治理 | [trae-discussions](trae-discussions/index.md) | L0 | 3 | 1 | 1 | 5 |
 | 👥 社区治理 | [trae-friends-events](trae-friends-events/index.md) | L1 | 4 | 2 | 1 | 7 |
-| **合计** | **12 知识束** | | **71** | **36** | **12** | **119** |
+| **合计** | **12 知识包** | | **71** | **36** | **12** | **119** |
 
 > 注："内容文档"指 concepts/examples/references 目录下的实质性文档。含导航索引、spec 工作文件共 **155 个 .md 文件**。
 
 ## 🖥️ 平台应用层
 
-| 知识束 | 一句话简介 |
+| 知识包 | 一句话简介 |
 |--------|-----------|
 | [trae-co-creation-demo-wall](trae-co-creation-demo-wall/index.md) | AI 共创作品展示墙——Next.js 15 全栈应用，Prisma+PostgreSQL 数据层，NextAuth v5 认证，next-intl 三语国际化，腾讯云 COS 存储，Tiptap 富文本编辑，RBAC 权限+审核+审计日志治理闭环，Docker 五服务编排部署 |
 | [trae-co-creation-demo-wall-intl](trae-co-creation-demo-wall-intl/index.md) | 展示墙国际版——面向海外部署的变体，Vercel Edge Config 边缘缓存，5 语言支持（增印尼语/越南语），CSV 数据导出，GDPR 合规审计留存（SetNull 策略），移除用户封禁系统，Vercel Serverless 优先部署 |
 
 ## 🔌 扩展系统层
 
-| 知识束 | 一句话简介 |
+| 知识包 | 一句话简介 |
 |--------|-----------|
 | [trae-skills](trae-skills/index.md) | 社区技能仓库——SKILL.md 提示词包规范（YAML frontmatter+Markdown 指令体），三类技能模式（纯 Prompt/脚本辅助/Workflow 编排），12 个社区技能实现，Python 脚本集成模式，社区积分自动化激励机制（GitHub Actions + Ledger 幂等去重） |
 | [trae-templates](trae-templates/index.md) | 项目模板仓库——五维分面分类法（前端/后端/移动/AI/工具），23 个最小可用模板，superpowers-trae-init 的 .trae/ 配置驱动模式，AGENTS.md 作为 AI 开发契约文件（4条铁律+工具映射+触发器字典） |
@@ -54,7 +54,7 @@ status: stable
 
 ## 📚 学习资源层
 
-| 知识束 | 一句话简介 |
+| 知识包 | 一句话简介 |
 |--------|-----------|
 | [trae-learning](trae-learning/index.md) | 官方学习站——VitePress 文档站架构，自定义主题（Canvas 3D 地球仪+玻璃拟态），Vibecoding 理念（心流/意图/反馈），4 篇指南+6 篇实战教程三级递进，GitHub Pages 自动部署，双语 Issue 模板贡献闭环 |
 | [awesome-trae](awesome-trae/index.md) | awesome-list 资源索引——8 大分类双层架构，跨仓库 hub 索引模式（导向姊妹仓库），中英双语维护，4 维权重评分审核机制（Relevance 30%+Quality 30%+Documentation 20%+Impact 20%） |
@@ -62,7 +62,7 @@ status: stable
 
 ## 👥 社区治理层
 
-| 知识束 | 一句话简介 |
+| 知识包 | 一句话简介 |
 |--------|-----------|
 | [trae-agents](trae-agents/index.md) | Agent 配置仓库——"文档即配置"目录约定，README.md 8 章节规范，_template 模板，git-commit-generator 高质量参考实现冷启动 |
 | [trae-co-creation-projects](trae-co-creation-projects/index.md) | 共创项目征集——Issue 表单驱动低门槛投稿，接受所有阶段项目，Collaboration 30% 权重差异化审核，中英双语提交 |

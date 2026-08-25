@@ -7,7 +7,7 @@ description: "LangChain 官方文档站（docs.langchain.com）的结构索引�
 
 # LangChain 官方文档站
 
-本知识束是对 LangChain 官方文档站仓库（`langchain-ai/docs`）的**参考型索引**，记录文档站的目录结构、MDX 组织方式、构建管道和质量保障体系。文档站托管于 Mintlify，线上地址为 [docs.langchain.com](https://docs.langchain.com)，采用单源 MDX + 构建时双语（Python/JavaScript）拆分的架构。
+本知识包是对 LangChain 官方文档站仓库（`langchain-ai/docs`）的**参考型索引**，记录文档站的目录结构、MDX 组织方式、构建管道和质量保障体系。文档站托管于 Mintlify，线上地址为 [docs.langchain.com](https://docs.langchain.com)，采用单源 MDX + 构建时双语（Python/JavaScript）拆分的架构。
 
 ## 文档站结构概览
 
@@ -39,14 +39,14 @@ description: "LangChain 官方文档站（docs.langchain.com）的结构索引�
 
 CLI 入口为 `docs` 命令（`docs dev` / `docs build` / `docs mv` / `docs migrate`），通过 `uv` 安装。Makefile 封装了完整的开发、构建、lint、测试工作流。
 
-## 知识束内容
+## 知识包内容
 
 | 文档 | 类型 | 说明 |
 |------|------|------|
 | [references/site-structure.md](/ai/langchain-ai/docs/references/site-structure.md) | 参考索引 | src/ 目录下主要 MDX 文件、子目录、pipeline/ 和 scripts/ 的完整结构化索引 |
 | [spec/facts.md](/ai/langchain-ai/docs/spec/facts.md) | 事实采集 | 100 条从仓库源码提取的事实（目录结构、frontmatter 规范、构建管道、CI 等） |
 | [spec/insights.md](/ai/langchain-ai/docs/spec/insights.md) | 架构洞察 | 2 条深度洞察：单源双语构建模式、导航中心化与文件去中心化的张力 |
-| [log.md](/ai/langchain-ai/docs/log.md) | 更新日志 | 本知识束的变更历史 |
+| [log.md](/ai/langchain-ai/docs/log.md) | 更新日志 | 本知识包的变更历史 |
 
 ## 关键数字
 
@@ -61,7 +61,7 @@ CLI 入口为 `docs` 命令（`docs dev` / `docs build` / `docs mv` / `docs migr
 
 `d:/spaces/SpecWeave/external/libs/ai/langchain-ai/docs/`
 
-> 本知识束为参考型 bundle，不包含 concepts/ 深度概念文档和 examples/ 示例文档。所有事实均通过直接读取仓库源码（docs.json、AGENTS.md、pyproject.toml、pipeline/ 代码、Makefile 等）提取验证。
+> 本知识包为参考型 bundle，不包含 concepts/ 深度概念文档和 examples/ 示例文档。所有事实均通过直接读取仓库源码（docs.json、AGENTS.md、pyproject.toml、pipeline/ 代码、Makefile 等）提取验证。
 
 ```{toctree}
 :hidden:

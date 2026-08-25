@@ -46,7 +46,7 @@ external/libs/fabric/fabric/
 
 fabric v4 建立在两个核心库之上：
 
-| 依赖 | 角色 | 知识束 |
+| 依赖 | 角色 | 知识包 |
 |------|------|--------|
 | **invoke** (pyinvoke) | 任务执行框架：Context、Config、Runner、Task、Executor、Program CLI | [pyinvoke](../../../../build/tooling/pyinvoke/index.md) |
 | **paramiko** | SSH 协议底层：SSHClient、Transport、Channel、SFTPClient、AuthStrategy | [paramiko](../../paramiko/concepts/00-introduction.md) |

@@ -1,8 +1,8 @@
-# jupyterlab_pygments 知识束变更日志
+# jupyterlab_pygments 知识包变更日志
 
 ## 2026-08-22
 
-- **初始化知识束**：基于 source-code-to-okf-wiki 工作流（R→I→E→V→C 五阶段）从源码生成 OKF v0.2 规范 Wiki 教程
+- **初始化知识包**：基于 source-code-to-okf-wiki 工作流（R→I→E→V→C 五阶段）从源码生成 OKF v0.2 规范 Wiki 教程
 - **源码版本**：jupyterlab_pygments v0.3.0
 - **覆盖范围**：
   - 5 篇源码信源文档（style.py, __init__.py, generate_css.py, src/index.ts+style/, 构建配置）

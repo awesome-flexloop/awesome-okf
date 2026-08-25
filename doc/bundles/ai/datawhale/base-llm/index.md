@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: index
 title: "Base LLM — 从 NLP 到 LLM 的算法全栈教程"
 bundle: base-llm
-description: "Datawhale base-llm 教程的 OKF 知识束，系统覆盖 NLP 基础→词向量→RNN→Transformer→BERT/GPT→LoRA/RLHF→量化部署→安全多模态的完整技术脉络"
+description: "Datawhale base-llm 教程的 OKF 知识包，系统覆盖 NLP 基础→词向量→RNN→Transformer→BERT/GPT→LoRA/RLHF→量化部署→安全多模态的完整技术脉络"
 sources:
   - https://github.com/datawhalechina/base-llm
 concepts:
@@ -39,7 +39,7 @@ examples:
 
 # Base LLM — 从 NLP 到 LLM 的算法全栈教程
 
-本知识束系统化转译 [Datawhale/base-llm](https://github.com/datawhalechina/base-llm) 开源教程，遵循"Base LLM is all you need"理念，从传统自然语言处理（NLP）基础出发，沿词向量→循环神经网络→Transformer→预训练模型→大模型架构→微调对齐→量化部署→安全多模态的脉络，构建从理论到工程实战的完整知识体系。
+本知识包系统化转译 [Datawhale/base-llm](https://github.com/datawhalechina/base-llm) 开源教程，遵循"Base LLM is all you need"理念，从传统自然语言处理（NLP）基础出发，沿词向量→循环神经网络→Transformer→预训练模型→大模型架构→微调对齐→量化部署→安全多模态的脉络，构建从理论到工程实战的完整知识体系。
 
 ## 核心主张
 
@@ -128,7 +128,7 @@ examples:
 * **status**：`stable`——章节结构经 V 阶段校验与 `_sidebar.md` 一致。
 * **stale_after**：2027-08-23——base-llm 为活跃教程项目，部分章节（C16 安全工程）标注"建设中"，需定期重新评估。
 
-本知识束共收录 8 个概念文档 + 1 个示例登记 + 1 个信源登记，另含 concepts/examples/references 三个子目录索引和根 index.md、log.md。
+本知识包共收录 8 个概念文档 + 1 个示例登记 + 1 个信源登记，另含 concepts/examples/references 三个子目录索引和根 index.md、log.md。
 
 ```{toctree}
 :hidden:

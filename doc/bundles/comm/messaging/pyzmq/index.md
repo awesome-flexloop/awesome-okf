@@ -48,7 +48,7 @@ PyZMQ 是 ZeroMQ（高性能异步消息库）的 Python 绑定。它采用"薄�
 
 ## 事实基础
 
-本知识束基于 118 条源码事实（F-001~F-118）和 5 个架构洞察生成，事实清单见 [spec/facts.md](spec/facts.md)，洞察与知识地图见 [spec/insights.md](spec/insights.md)。
+本知识包基于 118 条源码事实（F-001~F-118）和 5 个架构洞察生成，事实清单见 [spec/facts.md](spec/facts.md)，洞察与知识地图见 [spec/insights.md](spec/insights.md)。
 
 ## 变更日志
 

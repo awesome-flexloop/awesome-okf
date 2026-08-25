@@ -7,7 +7,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 
 # 🤖 人工智能与大模型应用生态
 
-本域存放人工智能与大模型应用相关的知识束，覆盖多模态 AI 平台（AgnesAI/Coze/DeepSeek/TRAE/腾讯）、AI Agent 框架（ai-agent/PocketFlow）、LLM 应用框架（LangChain-AI）以及开源 AI 学习社区（Datawhale），构成从模型调用到 Agent 编排、从框架开发到学习实践的完整生态。
+本域存放人工智能与大模型应用相关的知识包，覆盖多模态 AI 平台（AgnesAI/Coze/DeepSeek/TRAE/腾讯）、AI Agent 框架（ai-agent/PocketFlow）、LLM 应用框架（LangChain-AI）以及开源 AI 学习社区（Datawhale），构成从模型调用到 Agent 编排、从框架开发到学习实践的完整生态。
 
 ## 域内分组导航
 

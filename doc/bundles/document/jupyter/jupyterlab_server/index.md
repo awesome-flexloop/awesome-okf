@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: bundle
 title: "jupyterlab_server"
-description: "JupyterLab 前端与 Jupyter Server 之间的服务端胶合层：JSON Schema 设置管理、工作区持久化、主题服务、国际化、扩展黑白名单与许可证报告。本知识束从源码出发，系统讲解 jupyterlab_server v2.28.0 的架构、API 和实战用法。"
+description: "JupyterLab 前端与 Jupyter Server 之间的服务端胶合层：JSON Schema 设置管理、工作区持久化、主题服务、国际化、扩展黑白名单与许可证报告。本知识包从源码出发，系统讲解 jupyterlab_server v2.28.0 的架构、API 和实战用法。"
 ---
 
 # jupyterlab_server

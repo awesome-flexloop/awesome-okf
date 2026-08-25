@@ -1,9 +1,9 @@
 # 变更日志 / Changelog
 
-## 2026-08-23 — OKF v0.2 知识束初始化
+## 2026-08-23 — OKF v0.2 知识包初始化
 
 ### 新增
-- 基于 Hello-Agents 项目 main 分支生成 OKF v0.2 知识束
+- 基于 Hello-Agents 项目 main 分支生成 OKF v0.2 知识包
 - 完成 R→I→E→V 全流程
 
 #### R 阶段（阅读）

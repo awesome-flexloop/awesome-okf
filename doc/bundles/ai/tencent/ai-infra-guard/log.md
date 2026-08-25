@@ -1,13 +1,13 @@
 ---
 type: Changelog
-title: AI-Infra-Guard 知识束变更日志
+title: AI-Infra-Guard 知识包变更日志
 ---
 
 # 变更日志
 
 ## 2026-08-23 — 初始版本
 
-基于 AI-Infra-Guard 源码（commit main 分支，2026-08 快照）生成 OKF v0.2 知识束。
+基于 AI-Infra-Guard 源码（commit main 分支，2026-08 快照）生成 OKF v0.2 知识包。
 
 ### 新增
 

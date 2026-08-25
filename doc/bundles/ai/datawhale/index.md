@@ -15,7 +15,7 @@ status: stable
 
 # 🐳 Datawhale 开源 AI 学习社区
 
-[Datawhale](https://github.com/datawhalechina) 是国内最大的开源 AI 学习社区之一，以"和鲸科技"为运营主体，汇聚了大量高校学生与工程师贡献者。本组将 `external/libs/ai/datawhalechina` 下收录的 18 个仓库系统化转译为 OKF v0.2 知识束，覆盖代码框架（推荐系统、多语言 Agent 平台）与教程书籍（LLM 全栈、RAG、Agent、向量数据库、机器学习理论等）两大类。
+[Datawhale](https://github.com/datawhalechina) 是国内最大的开源 AI 学习社区之一，以"和鲸科技"为运营主体，汇聚了大量高校学生与工程师贡献者。本组将 `external/libs/ai/datawhalechina` 下收录的 18 个仓库系统化转译为 OKF v0.2 知识包，覆盖代码框架（推荐系统、多语言 Agent 平台）与教程书籍（LLM 全栈、RAG、Agent、向量数据库、机器学习理论等）两大类。
 
 ## 推荐学习路径
 
@@ -44,18 +44,18 @@ status: stable
 
 ---
 
-## 知识束导航
+## 知识包导航
 
 ### 🏗️ 代码框架类（源码驱动）
 
-| 知识束 | 语言 | 一句话简介 |
+| 知识包 | 语言 | 一句话简介 |
 |--------|------|-----------|
 | [torch-rechub](torch-rechub/index.md) | Python/PyTorch | 推荐系统框架——30+ 模型（DSSM/DeepFM/DIN/MMoE 等）、CTR/Match/MTL 三类 Trainer、ONNX 导出 |
 | [deepagents](deepagents/index.md) | TS+Rust+Go | 多语言 Agent 平台 monorepo——libs/（acp/cli/code/evals/talon）+ openwiki |
 
 ### 📖 教程书籍类（文档驱动）
 
-| 知识束 | 主题 | 一句话简介 |
+| 知识包 | 主题 | 一句话简介 |
 |--------|------|-----------|
 | [base-llm](base-llm/index.md) | LLM 全栈 | 从 NLP 到 LLM——分词/Word2Vec/RNN/Transformer/BERT/GPT/LoRA/RLHF/量化/部署 |
 | [happy-llm](happy-llm/index.md) | 手写大模型 | 从零构建大模型——Transformer/PLM/LLaMA2 手写/GRPO/RAG/Agent |

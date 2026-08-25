@@ -22,7 +22,7 @@ sources:
 ## 特性亮点
 
 - 📚 **OKF 格式**：以开源知识格式（OKF）组织结构化知识文档
-- 🧩 **bundle 组织**：知识文档以 OKF bundle（知识束）为单位组织与索引
+- 🧩 **bundle 组织**：知识文档以 OKF bundle（知识包）为单位组织与索引
 - 🧭 **以 xuanspace 为基底**：内容来源于玄境项目，规范模板继承自 xuanspace
 - 🤖 **AI Agent 就绪**：内置 AGENTS.md 与 `.agents/` 规范目录，支持 AI 协作
 - 🔗 **相对路径引用**：文档交叉引用统一使用相对路径，便于跨仓库迁移
@@ -32,7 +32,7 @@ sources:
 ```
 awesome-okf-xs/
 ├── doc/                  # Sphinx 文档工程（源文件目录）
-│   ├── bundles/          # OKF bundle 文档（按技术生态分组的知识束）
+│   ├── bundles/          # OKF bundle 文档（按技术生态分组的知识包）
 │   │   ├── meta/         # 📐 规范与格式（OKF 规范本体）
 │   │   ├── python/       # 🐍 Python 语言核心
 │   │   ├── conda/        # 📦 Conda 包管理生态
@@ -67,17 +67,17 @@ awesome-okf-xs/
    git clone git@github.com:awesome-flexloop/awesome-okf.git
    ```
 
-2. 浏览文档：进入 `doc/bundles/` 查看已组织的知识束，或从 `doc/index.md` 开始
+2. 浏览文档：进入 `doc/bundles/` 查看已组织的知识包，或从 `doc/index.md` 开始
 
 3. AI 协作：阅读 [AGENTS.md](AGENTS.md) 了解智能体协作规范
 
-## 已收录知识束（Bundles）
+## 已收录知识包（Bundles）
 
 | Bundle | 路径 | 简介 |
 |---|---|---|
 | OKF 规范中文转译知识包 | [doc/bundles/meta/okf-spec/](doc/bundles/meta/okf-spec/) | OKF v0.2 规范中文转译知识包（15 概念 + 3 示例 + 1 信源），权威信源为 [GoogleCloudPlatform/knowledge-catalog](https://github.com/GoogleCloudPlatform/knowledge-catalog) 的 SPEC.md |
 
-> 📚 **完整知识束索引**：共 24 个知识束，按技术生态分为 6 组，详见 [doc/bundles/index.md](doc/bundles/index.md)。
+> 📚 **完整知识包索引**：共 24 个知识包，按技术生态分为 6 组，详见 [doc/bundles/index.md](doc/bundles/index.md)。
 
 ## 文档与资源
 

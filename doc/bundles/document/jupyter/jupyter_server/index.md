@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: bundle
 title: "jupyter_server"
-description: "Jupyter 后端核心服务：Tornado HTTP 服务器、认证授权、内核管理、内容管理、扩展系统与 REST/WebSocket API。本知识束从源码出发，系统讲解 Jupyter Server v2.21.0.dev0 的架构、API 和实战用法。"
+description: "Jupyter 后端核心服务：Tornado HTTP 服务器、认证授权、内核管理、内容管理、扩展系统与 REST/WebSocket API。本知识包从源码出发，系统讲解 Jupyter Server v2.21.0.dev0 的架构、API 和实战用法。"
 ---
 
 # jupyter_server

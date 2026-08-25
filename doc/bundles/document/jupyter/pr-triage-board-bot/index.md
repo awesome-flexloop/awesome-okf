@@ -177,9 +177,9 @@ flowchart TB
 - **GitHub App注册指南**：<https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/registering-a-github-app>
 - **GitHub Project V2 API文档**：<https://docs.github.com/en/graphql/reference/objects#projectv2>
 
-## 相关知识束
+## 相关知识包
 
-| 知识束 | 关系 |
+| 知识包 | 关系 |
 |--------|------|
 | [jupyter-docker-stacks](../jupyter-docker-stacks/index.md) | 同层：Jupyter Docker镜像部署方案 |
 | [cookiecutter-docker-stacks](../cookiecutter-docker-stacks/index.md) | 同层：Jupyter Docker镜像模板生成器 |

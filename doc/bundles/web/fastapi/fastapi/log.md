@@ -4,7 +4,7 @@
 
 ### 新增
 
-- 初始创建 FastAPI v0.141.1 OKF 知识束
+- 初始创建 FastAPI v0.141.1 OKF 知识包
 - 完成 R 阶段：158 条源码事实（F-001~F-158），覆盖 29 个核心模块
 - 完成 I 阶段：7 个架构洞察四元组（双层 AsyncExitStack、Param 继承 FieldInfo、Dependant 递归树、APIRouter 组合语义、OpenAPI 版本缓存、流式自动检测、Pydantic v2 兼容层）
 - 完成 E 阶段：27 个内容文档

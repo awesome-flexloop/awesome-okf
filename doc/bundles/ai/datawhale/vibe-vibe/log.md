@@ -1,12 +1,12 @@
 # 变更日志
 
-本文件记录 Vibe Vibe OKF 知识束的版本演进。
+本文件记录 Vibe Vibe OKF 知识包的版本演进。
 
 ## v0.1.0 — 2026-08-23
 
 ### 新增
 
-- 初始知识束生成，遵循精简 R→I→E→V 流程。
+- 初始知识包生成，遵循精简 R→I→E→V 流程。
 - **R 阶段**：阅读 README.md、docs/index.md、docs/Basic/index.md、docs/zh/index.md、docs/en/index.md、docs/public/llms.txt、docs/deployment/index.md、docs/.vitepress/config.mts、package.json、Dockerfile、docker-compose.yml，LS docs/ 目录，采集 18 组编号事实（F-001 ~ F-018）。
 - **I 阶段**：提炼 3 个架构洞察：
   1. 基础篇 v2 用"单一连续案例"替代"知识点章节"——教学设计从教程转向陪伴式项目

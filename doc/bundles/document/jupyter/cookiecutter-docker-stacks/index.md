@@ -159,9 +159,9 @@ flowchart LR
 - **Jupyter Docker Stacks主项目**：<https://github.com/jupyter/docker-stacks>
 - **Cookiecutter文档**：<https://cookiecutter.readthedocs.io/>
 
-## 相关知识束
+## 相关知识包
 
-| 知识束 | 关系 |
+| 知识包 | 关系 |
 |--------|------|
 | [jupyter-docker-stacks](../jupyter-docker-stacks/index.md) | 上游：本模板基于的官方Docker镜像集 |
 | [jupyter-notebook](../jupyter-notebook/index.md) | 同层：Jupyter Notebook应用层 |

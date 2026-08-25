@@ -5,7 +5,7 @@ title: CodeBuddy 产品矩阵事实清单
 
 # CodeBuddy 产品矩阵 Facts
 
-> 本文件包含从 CodeBuddy 官方网站六个公开页面提取的 79 条编号事实。每条事实标注信源（IDE 官网 / IDE 文档 / CLI / NPC / WorkBuddy / Security），作为本知识束唯一事实来源，不做演绎。
+> 本文件包含从 CodeBuddy 官方网站六个公开页面提取的 79 条编号事实。每条事实标注信源（IDE 官网 / IDE 文档 / CLI / NPC / WorkBuddy / Security），作为本知识包唯一事实来源，不做演绎。
 
 ## CodeBuddy IDE（产品官网）
 

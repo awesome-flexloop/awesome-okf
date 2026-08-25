@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: bundle
 title: "pytest-jupyter"
-description: "Jupyter 官方 pytest 测试插件集：通过分层插件架构提供环境隔离、内核管理、ServerApp生命周期、HTTP/WebSocket测试客户端等完整的Jupyter测试基础设施。本知识束从源码出发，系统讲解 pytest-jupyter v0.12.0 的架构、API和实战用法。"
+description: "Jupyter 官方 pytest 测试插件集：通过分层插件架构提供环境隔离、内核管理、ServerApp生命周期、HTTP/WebSocket测试客户端等完整的Jupyter测试基础设施。本知识包从源码出发，系统讲解 pytest-jupyter v0.12.0 的架构、API和实战用法。"
 ---
 
 # pytest-jupyter

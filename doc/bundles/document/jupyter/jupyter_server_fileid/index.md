@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: bundle
 title: "jupyter_server_fileid"
-description: "Jupyter Server 文件 ID 服务扩展：为文件分配稳定的 UUID 标识，解决文件重命名/移动后引用失效的问题。本知识束从源码出发，系统讲解 jupyter_server_fileid v0.9.3 的架构、API 和实战用法。"
+description: "Jupyter Server 文件 ID 服务扩展：为文件分配稳定的 UUID 标识，解决文件重命名/移动后引用失效的问题。本知识包从源码出发，系统讲解 jupyter_server_fileid v0.9.3 的架构、API 和实战用法。"
 ---
 
 # jupyter_server_fileid

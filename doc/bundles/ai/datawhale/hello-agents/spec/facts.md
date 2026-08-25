@@ -1,4 +1,4 @@
-# Facts: Hello-Agents 知识束事实记录
+# Facts: Hello-Agents 知识包事实记录
 
 > sources: https://github.com/datawhalechina/hello-agents
 

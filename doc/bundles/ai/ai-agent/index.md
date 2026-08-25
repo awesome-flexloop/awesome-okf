@@ -39,17 +39,17 @@ total_bundles: 21
 
 ---
 
-## 知识束导航
+## 知识包导航
 
 ### 🧱 跨项目基础
 
-| 知识束 | 文档数 | 一句话简介 |
+| 知识包 | 文档数 | 一句话简介 |
 |--------|--------|-----------|
 | [ai-agent-fundamentals](ai-agent-fundamentals/index.md) | 6+3+1=10 | Agent跨项目架构模式——6大核心模式对比（核心循环/Provider/插件/多Agent/记忆/MCP-ACP），4框架代码级对比，框架选型指南 |
 
 ### ⚙️ Tier 1：大型框架/运行时
 
-| 知识束 | 语言 | 文档数 | 一句话简介 |
+| 知识包 | 语言 | 文档数 | 一句话简介 |
 |--------|------|--------|-----------|
 | [hermes-agent](hermes-agent/index.md) | Python | 10+4+1=15 | 渐进式披露多Agent框架——Think-Act-Observe循环、ToolRegistry(100+工具)、34+模型Provider、8种记忆插件、MCP/ACP双协议、Gateway多平台网关(22+消息平台)、Cron调度 |
 | [veadk-python](veadk-python/index.md) | Python | 10+4+1=15 | 火山引擎Agent SDK——Agent/Runner双层架构、豆包/方舟原生集成、A2A/A2UI协议、RAG知识库(8种向量后端)、双层记忆、Sequential/Parallel/Loop/Supervisor组合模式、Tunnel内网桥接 |
@@ -59,14 +59,14 @@ total_bundles: 21
 
 ### 🔌 Tier 2：中型框架/库
 
-| 知识束 | 语言 | 文档数 | 一句话简介 |
+| 知识包 | 语言 | 文档数 | 一句话简介 |
 |--------|------|--------|-----------|
 | [cordis](cordis/index.md) | TypeScript | 7+3+1=11 | 可组合插件元框架——Context DI容器、Proxy代理构造、Fiber六状态生命周期、5种事件派发模式、Reflect元数据、Timer调度，hermes/zleap/deepseek-harness共同的架构底座 |
 | [second-me](second-me/index.md) | Python/TS | 7+3+1=11 | 个人AI数字分身——L0→L1→L2三层记忆HMM、LoRA微调(r=64/alpha=16)+DPO对齐、GGUF量化+llama.cpp本地推理、14步训练流水线、Flask API、Space多Agent策略 |
 
 ### 🎯 Tier 3：专项工具/应用/技能
 
-| 知识束 | 类型 | 文档数 | 一句话简介 |
+| 知识包 | 类型 | 文档数 | 一句话简介 |
 |--------|------|--------|-----------|
 | [agency-agents](agency-agents/index.md) | 角色库 | 4+1+1=6 | 270+专业Agent Persona库——17部门分类体系、Markdown模板规范、NEXUS 7阶段编排框架(Full/Sprint/Micro三模式)、16种工具集成适配、convert.sh多格式转换 |
 | [agency-agents-app](agency-agents-app/index.md) | 桌面应用 | 3+1+1=5 | Agency Agents桌面工作台——Tauri 2(Rust)+Svelte 5(Runes)、三源Catalog模型、五状态安装协调、35个Tauri命令、⌘K命令面板、Preset Teams策展 |
@@ -77,7 +77,7 @@ total_bundles: 21
 
 ### 💻 Tier 4：Coding Agent 源码解读
 
-| 知识束 | 语言 | 文档数 | 一句话简介 |
+| 知识包 | 语言 | 文档数 | 一句话简介 |
 |--------|------|--------|-----------|
 | [codewhale](codewhale/index.md) | Rust | 8+2+1=11 | CodeWhale Coding Agent——21 crate Cargo workspace、Fleet多Agent控制平面、Workflow双轨引擎(TOML+JS)、MCP安全三重防护、Skill四层所有权架构、ExecPolicy沙箱(Seatbelt/bwrap) |
 | [deepseek-reasonix](deepseek-reasonix/index.md) | Go/TS | 8+2+1=11 | DeepSeek Reasonix——ACP v1协议(JSON-RPC/Factory/inbox)、Agent运行循环(arbiter/governor/compaction)、Bot网关(QQ/飞书适配器)、Checkpoint恢复(fork/branch)、Fleet DAG调度、Wails桌面应用 |
@@ -105,11 +105,11 @@ total_bundles: 21
 
 ---
 
-> **信任声明**：本分组索引基于 21 个 AI Agent 开源项目源码逐模块分析生成，所有知识束均经 OKF 五阶段流程（R→I→E→V→C）验证。
+> **信任声明**：本分组索引基于 21 个 AI Agent 开源项目源码逐模块分析生成，所有知识包均经 OKF 五阶段流程（R→I→E→V→C）验证。
 > 
 > **生成时间**：2026-08-23 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：21 个知识束，共 213 个内容文档（140 概念 + 48 示例 + 25 信源），1500+ 条零推测事实，21 个 facts.md 信源底稿
+> **内容统计**：21 个知识包，共 213 个内容文档（140 概念 + 48 示例 + 25 信源），1500+ 条零推测事实，21 个 facts.md 信源底稿
 
 ```{toctree}
 :hidden:

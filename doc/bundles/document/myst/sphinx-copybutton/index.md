@@ -81,9 +81,9 @@ sphinx-copybutton/
 | `copybutton_exclude` | `".linenos"` | 排除元素选择器 |
 | `copybutton_image_svg` | `""` | 自定义按钮SVG |
 
-## 相关知识束
+## 相关知识包
 
-| 知识束 | 关系 |
+| 知识包 | 关系 |
 |--------|------|
 | [sphinx-book-theme](https://github.com/executablebooks/sphinx-book-theme) | Jupyter Book 主题——sphinx-copybutton 的主要使用场景之一 |
 | [sphinx-design](https://github.com/executablebooks/sphinx-design) | Sphinx 设计组件——配合使用提供更丰富的代码展示 |

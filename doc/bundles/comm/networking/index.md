@@ -40,7 +40,7 @@ description: "Python SSH/远程控制生态——从底层协议实现到高层�
 
 ## 推荐学习路径
 
-| 顺序 | 知识束 | 范式 | 一句话简介 |
+| 顺序 | 知识包 | 范式 | 一句话简介 |
 |------|--------|------|-----------|
 | 1 | [paramiko](paramiko/index.md) | 同步·基础 | 纯 Python SSH2 协议库——Transport 加密隧道、Channel 多路复用、SSHClient 高层门面、SFTPClient、密钥体系、端口转发、服务端 |
 | 2 | [fabric](fabric/index.md) | 同步·高层 | 基于 paramiko+invoke 的远程执行框架——Connection、Config、Group 并行、Remote Runner、文件传输、Tunnel 跳板机 |
@@ -63,9 +63,9 @@ description: "Python SSH/远程控制生态——从底层协议实现到高层�
 | NETCONF | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
 | 交互式 Shell | ✅ invoke_shell | ✅ | ✅ (PTY) | ✅ create_process | ✅ (核心能力) | ✅ send_input |
 
-## 知识束统计
+## 知识包统计
 
-| 知识束 | 概念 | 示例 | 信源 | 源码事实 | 版本 |
+| 知识包 | 概念 | 示例 | 信源 | 源码事实 | 版本 |
 |--------|------|------|------|---------|------|
 | [paramiko](paramiko/index.md) | 11 | 5 | 1 | 123 | 5.0.0 |
 | [fabric](fabric/index.md) | 9 | 4 | 1 | 92 | 4.0.0 |

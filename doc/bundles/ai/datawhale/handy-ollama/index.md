@@ -86,7 +86,7 @@ stale_after: "2027-08-23"
 
 ## 深度洞察
 
-本知识束的设计决策与核心洞察详见 [spec/insights.md](spec/insights.md)，包括：
+本知识包的设计决策与核心洞察详见 [spec/insights.md](spec/insights.md)，包括：
 
 1. **本地大模型部署的极简路径**——自动资源探测+GGUF量化+四平台统一，将 GPU 专属的 LLM 部署民主化到 CPU 消费级硬件
 2. **OpenAI 兼容层的生态枢纽价值**——Ollama 的护城河不是推理性能，而是作为本地 AI 基础设施让现有工具链即插即用

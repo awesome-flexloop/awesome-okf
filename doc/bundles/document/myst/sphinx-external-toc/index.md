@@ -72,9 +72,9 @@ sphinx-external-toc/
 | 学习曲线 | Sphinx 基础 | 需要学习 YAML 语法 |
 | 适合规模 | 小型项目 | 中大型文档站点 |
 
-## 相关知识束
+## 相关知识包
 
-| 知识束 | 关系 |
+| 知识包 | 关系 |
 |--------|------|
 | [sphinx-book-theme](https://github.com/executablebooks/sphinx-book-theme) | Jupyter Book 主题——sphinx-external-toc 的主要使用场景 |
 | [sphinx-copybutton](https://github.com/executablebooks/sphinx-copybutton) | 代码复制按钮——Executable Books 生态常用扩展 |

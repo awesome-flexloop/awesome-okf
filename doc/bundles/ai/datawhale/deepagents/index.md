@@ -5,7 +5,7 @@ bundle: deepagents
 description: |
   Deep Agents 是一个开源的、有主见的 Agent 框架，基于 LangChain 和 LangGraph 构建，
   提供开箱即用的长周期多步骤 Agent 能力，包括子 Agent、文件系统、上下文管理、Shell 访问、
-  持久化记忆、人在回路、技能和 MCP 工具支持。本知识束涵盖其 monorepo 架构、核心 SDK、
+  持久化记忆、人在回路、技能和 MCP 工具支持。本知识包涵盖其 monorepo 架构、核心 SDK、
   终端编码 Agent（dcode）、部署 CLI、ACP 协议集成、评估套件和 Talon 运行时宿主。
 sources:
   - https://github.com/datawhalechina/deepagents
@@ -92,9 +92,9 @@ examples:
     description: 配置并启动 Talon Telegram 通道 Agent
 ---
 
-# Deep Agents 知识束
+# Deep Agents 知识包
 
-Deep Agents 是一个开源的 Agent 框架（agent harness），构建在 LangChain 和 LangGraph 之上，为长周期、多步骤的 Agent 工作提供开箱即用的默认配置。本知识束系统梳理了 Deep Agents 项目的 monorepo 架构、核心 SDK 设计、各功能模块职责及其相互关系。
+Deep Agents 是一个开源的 Agent 框架（agent harness），构建在 LangChain 和 LangGraph 之上，为长周期、多步骤的 Agent 工作提供开箱即用的默认配置。本知识包系统梳理了 Deep Agents 项目的 monorepo 架构、核心 SDK 设计、各功能模块职责及其相互关系。
 
 ## 快速导航
 

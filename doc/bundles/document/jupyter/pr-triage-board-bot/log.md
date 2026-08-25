@@ -1,10 +1,10 @@
 ---
 okf_version: "0.2"
 type: Log
-title: "pr-triage-board-bot 知识束更新日志"
+title: "pr-triage-board-bot 知识包更新日志"
 ---
 
-# pr-triage-board-bot 知识束更新日志
+# pr-triage-board-bot 知识包更新日志
 
 ## 2026-08-22 — R/I 阶段完成（全量验证通过）
 

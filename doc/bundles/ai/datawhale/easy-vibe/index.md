@@ -1,8 +1,8 @@
 ---
-title: Easy-Vibe 知识束
+title: Easy-Vibe 知识包
 type: index
 bundle: easy-vibe
-description: Easy-Vibe 是 Datawhale 出品的 AI Vibe Coding 教程，以 VitePress 构建 10 语言文档站，采用三阶段渐进路径把零基础学习者带到可交付产品水平。本知识束梳理其 Vibe Coding 理念、多语言架构与部署工具链。
+description: Easy-Vibe 是 Datawhale 出品的 AI Vibe Coding 教程，以 VitePress 构建 10 语言文档站，采用三阶段渐进路径把零基础学习者带到可交付产品水平。本知识包梳理其 Vibe Coding 理念、多语言架构与部署工具链。
 concepts:
   - /datawhale/easy-vibe/concepts/01-vibe-coding-philosophy.md
   - /datawhale/easy-vibe/concepts/02-multilingual-docs-architecture.md
@@ -15,7 +15,7 @@ sources:
   - https://github.com/datawhalechina/easy-vibe
 ---
 
-# Easy-Vibe 知识束
+# Easy-Vibe 知识包
 
 Easy-Vibe 是 Datawhale（数据whale）开源的 AI Vibe Coding 实战教程，口号是"从零开始学 AI 编程，把想法真正做成产品"。它不是一个软件库，而是一个以 VitePress（Vue 3）构建的多语言文档站，通过三阶段渐进路径，引导零基础学习者从"用自然语言描述需求"走到"独立交付全栈与跨平台应用"。
 

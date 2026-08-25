@@ -1,8 +1,8 @@
 ---
-title: Vibe Vibe 知识束
+title: Vibe Vibe 知识包
 type: index
 bundle: vibe-vibe
-description: Vibe Vibe 是 Datawhale 出品的国内首个系统化 Vibe Coding 开源教程，以 VitePress 构建中英文双语文档站，通过"个人主页+数字分身"连续案例和四大板块（基础/进阶/实践/文章），引导零基础学习者从想法走到产品上线。本知识束梳理其 Vibe 开发理念、Basic 入门教学设计与多语言文档架构。
+description: Vibe Vibe 是 Datawhale 出品的国内首个系统化 Vibe Coding 开源教程，以 VitePress 构建中英文双语文档站，通过"个人主页+数字分身"连续案例和四大板块（基础/进阶/实践/文章），引导零基础学习者从想法走到产品上线。本知识包梳理其 Vibe 开发理念、Basic 入门教学设计与多语言文档架构。
 concepts:
   - /datawhale/vibe-vibe/concepts/01-vibe-coding-philosophy.md
   - /datawhale/vibe-vibe/concepts/02-basic-getting-started.md
@@ -15,7 +15,7 @@ sources:
   - https://github.com/datawhalechina/vibe-vibe
 ---
 
-# Vibe Vibe 知识束
+# Vibe Vibe 知识包
 
 Vibe Vibe 是 Datawhale 开源的 AI 辅助编程系统化教程，口号是"人人都能学会的 AI 编程（Vibe Coding）指南"。它以 VitePress 构建中英文双语静态文档站，通过四大板块引导零基础学习者从"我有一个想法"走到"我做出了一个产品"。
 

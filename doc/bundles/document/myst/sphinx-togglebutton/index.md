@@ -61,9 +61,9 @@ sphinx-togglebutton/
 | 3 | 打印友好设计 | beforeprint/afterprint 状态快照与恢复，确保打印输出完整 |
 | 4 | 内联 JS 配置注入 | 构建时将配置序列化为 JS 变量内联到 HTML，零运行时开销 |
 
-## 相关知识束
+## 相关知识包
 
-| 知识束 | 关系 |
+| 知识包 | 关系 |
 |--------|------|
 | [sphinx-tabs](https://github.com/executablebooks/sphinx-tabs) | 同生态标签页组件扩展 |
 | [sphinx-exercise](https://github.com/executablebooks/sphinx-exercise) | 同生态练习/答案指令扩展（答案折叠是典型应用场景） |

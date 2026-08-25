@@ -7,7 +7,7 @@ description: "Web 应用开发生态——高性能 ASGI Web 框架与 API 查�
 
 # 🌐 Web 开发生态
 
-本域存放 Web 应用开发相关的知识束，覆盖 FastAPI 高性能 ASGI Web 框架及其同生态项目，以及 GraphQL 查询语言的核心规范与生态，构成从 Web 服务构建到 API 查询语言的现代后端技术栈。
+本域存放 Web 应用开发相关的知识包，覆盖 FastAPI 高性能 ASGI Web 框架及其同生态项目，以及 GraphQL 查询语言的核心规范与生态，构成从 Web 服务构建到 API 查询语言的现代后端技术栈。
 
 ## 域内分组导航
 

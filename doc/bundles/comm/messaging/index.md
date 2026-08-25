@@ -2,7 +2,7 @@
 type: category
 title: "消息通信生态"
 okf_version: "0.2"
-description: "ZeroMQ 消息通信生态源码级中文教程——4个核心知识束，覆盖 C 核心库(libzmq)、C++ 绑定(cppzmq)、Python 绑定(pyzmq)、Python 分布式任务队列(dramatiq)"
+description: "ZeroMQ 消息通信生态源码级中文教程——4个核心知识包，覆盖 C 核心库(libzmq)、C++ 绑定(cppzmq)、Python 绑定(pyzmq)、Python 分布式任务队列(dramatiq)"
 total_bundles: 4
 status: stable
 ---
@@ -11,11 +11,11 @@ status: stable
 
 本知识包分组收录 ZeroMQ 消息通信生态及基于消息的分布式任务处理的系统化中文源码教程。内容涵盖 ZeroMQ 从 C 核心库到 C++/Python 语言绑定的完整技术栈，以及基于 Redis/RabbitMQ 的 Python 分布式任务队列 dramatiq——前者聚焦高性能异步消息传递的底层原理，后者聚焦消息驱动的任务分发与 worker 并发模型，共同构成"消息通信"从传输层到应用层的知识全景。
 
-所有知识束遵循 [OKF v0.2 规范](../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经 Grep 级源码验证。
+所有知识包遵循 [OKF v0.2 规范](../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经 Grep 级源码验证。
 
-## 📊 知识束概览
+## 📊 知识包概览
 
-| 层次 | 知识束 | 简介 | 文档数 |
+| 层次 | 知识包 | 简介 | 文档数 |
 |------|--------|------|--------|
 | 核心层 | [libzmq](libzmq/index.md) | ZeroMQ C++ 核心库——套接字抽象、消息模式、ZMTP协议、I/O线程、异步消息队列 | 24 |
 | 绑定层 | [cppzmq](cppzmq/index.md) | C++ header-only 绑定——RAII封装、类型安全、message_t/buffer抽象、poller、多部分消息 | 11 |
@@ -24,20 +24,20 @@ status: stable
 
 ## 核心层
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [libzmq](libzmq/index.md) | ZeroMQ C++ 核心库——套接字抽象、消息模式（PUB/SUB、REQ/REP、PUSH/PULL、ROUTER/DEALER）、ZMTP（ZeroMQ Message Transport Protocol）线协议、I/O 线程模型、异步消息队列、inproc/ipc/tcp 多传输 |
 
 ## 绑定层
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [cppzmq](cppzmq/index.md) | C++ header-only 绑定——RAII 封装（context_t/socket_t）、类型安全接口、message_t/buffer 抽象、poller 事件多路分解、多部分消息、错误异常转换 |
 | [pyzmq](pyzmq/index.md) | Python 绑定——Cython/CFFI 双后端、sugar 语法层（Socket 高级 API）、asyncio 集成（Poller/STREAM）、auth 认证（CURVE/ZAP）、eventloop/green 协程支持 |
 
 ## 应用/高层
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [dramatiq](dramatiq/index.md) | Python 分布式任务队列——Actor 装饰器模型、Broker 抽象（Redis/RabbitMQ 后端）、Worker 线程并发模型、Middleware 中间件链（限流/重试/计时）、消息编码与序列化 |
 

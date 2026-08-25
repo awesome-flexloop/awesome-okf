@@ -1,4 +1,4 @@
-# facts.md — base-llm 知识束事实清单
+# facts.md — base-llm 知识包事实清单
 
 > 来源：https://github.com/datawhalechina/base-llm
 > 采集时间：2026-08-23

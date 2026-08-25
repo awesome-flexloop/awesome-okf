@@ -1,7 +1,7 @@
 ---
 okf_version: "0.2"
 title: "nbformat"
-description: "Jupyter Notebook格式参考实现：.ipynb文件的读写、验证、版本转换与签名信任。本知识束从源码出发，系统讲解nbformat的架构、API和实战用法。"
+description: "Jupyter Notebook格式参考实现：.ipynb文件的读写、验证、版本转换与签名信任。本知识包从源码出发，系统讲解nbformat的架构、API和实战用法。"
 ---
 
 # nbformat

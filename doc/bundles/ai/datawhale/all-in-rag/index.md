@@ -93,7 +93,7 @@ stale_after: "2027-08-23"
 
 ## 深度洞察
 
-本知识束的设计决策与核心洞察详见 [spec/insights.md](spec/insights.md)，包括：
+本知识包的设计决策与核心洞察详见 [spec/insights.md](spec/insights.md)，包括：
 
 1. **RAG 全栈链路——从数据到生成的模块化工程**——数据→索引→检索→生成→评估的可独立优化链路，RAG 三元组精准定位瓶颈
 2. **检索与生成的解耦——RAG 的架构基石**——知识可更新、能力可组合、幻觉可控制，从 Naive 到 Modular 的解耦深化

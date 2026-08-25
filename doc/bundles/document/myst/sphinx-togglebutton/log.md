@@ -1,4 +1,4 @@
-# sphinx-togglebutton 知识束更新日志
+# sphinx-togglebutton 知识包更新日志
 
 ## 2026-08-23
 

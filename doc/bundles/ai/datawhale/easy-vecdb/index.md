@@ -32,7 +32,7 @@ generated: '2026-08-23'
 
 # EasyVecDB — 向量数据库原理与实践教程
 
-[EasyVecDB](https://github.com/datawhalechina/easy-vecdb) 是 Datawhale 社区出品的向量数据库系统性学习教程，覆盖从基础概念、算法原理到生产级应用部署的全流程。本知识束基于教程文档提炼，帮助开发者快速掌握向量检索核心技术。
+[EasyVecDB](https://github.com/datawhalechina/easy-vecdb) 是 Datawhale 社区出品的向量数据库系统性学习教程，覆盖从基础概念、算法原理到生产级应用部署的全流程。本知识包基于教程文档提炼，帮助开发者快速掌握向量检索核心技术。
 
 ## 概念文档（concepts/）
 

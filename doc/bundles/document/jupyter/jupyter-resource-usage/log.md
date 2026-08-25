@@ -1,10 +1,10 @@
 ---
 okf_version: "0.2"
 type: Log
-title: "jupyter-resource-usage 知识束更新日志"
+title: "jupyter-resource-usage 知识包更新日志"
 ---
 
-# jupyter-resource-usage 知识束更新日志
+# jupyter-resource-usage 知识包更新日志
 
 ## 2026-08-22 — R/I 阶段完成（全量验证通过）
 

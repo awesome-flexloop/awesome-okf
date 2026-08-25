@@ -7,7 +7,7 @@ description: "消息通信与远程控制生态——ZeroMQ 消息栈、分布�
 
 # 📡 通信与网络生态
 
-本域存放通信与网络相关的知识束，覆盖 ZeroMQ 消息通信生态（libzmq/cppzmq/pyzmq/dramatiq）与 Python SSH/远程控制生态，从底层传输协议、语言绑定到高层自动化框架，构成"消息传递 + 远程控制"的完整通信范式谱。
+本域存放通信与网络相关的知识包，覆盖 ZeroMQ 消息通信生态（libzmq/cppzmq/pyzmq/dramatiq）与 Python SSH/远程控制生态，从底层传输协议、语言绑定到高层自动化框架，构成"消息传递 + 远程控制"的完整通信范式谱。
 
 ## 域内分组导航
 

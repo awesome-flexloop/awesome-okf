@@ -10,7 +10,7 @@ sources:
 
 # members-visualization
 
-> 本知识束为**占位收录**，状态为 `draft`。
+> 本知识包为**占位收录**，状态为 `draft`。
 
 ## 说明
 

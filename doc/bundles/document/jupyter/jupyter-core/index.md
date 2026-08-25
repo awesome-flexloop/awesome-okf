@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: bundle
 title: "jupyter_core"
-description: "Jupyter 生态的核心基础库：跨平台路径管理、命令行调度、应用基类与工具函数。本知识束从源码出发，系统讲解 jupyter_core v5.9.1 的架构、API和实战用法。"
+description: "Jupyter 生态的核心基础库：跨平台路径管理、命令行调度、应用基类与工具函数。本知识包从源码出发，系统讲解 jupyter_core v5.9.1 的架构、API和实战用法。"
 ---
 
 # jupyter_core

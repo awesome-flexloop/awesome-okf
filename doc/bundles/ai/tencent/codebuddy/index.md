@@ -5,12 +5,12 @@ scope: codebuddy
 name: codebuddy
 version: "0.1.0"
 source: web
-description: "CodeBuddy 产品矩阵 OKF 知识束，覆盖 IDE、插件、CLI 三态一体的 AI 编程工具，以及 NPC 云端 AI 员工、WorkBuddy 在线助手、Security 安全审计三大延伸产品。"
+description: "CodeBuddy 产品矩阵 OKF 知识包，覆盖 IDE、插件、CLI 三态一体的 AI 编程工具，以及 NPC 云端 AI 员工、WorkBuddy 在线助手、Security 安全审计三大延伸产品。"
 ---
 
 # CodeBuddy 产品矩阵知识库
 
-CodeBuddy 是腾讯推出的 AI 编程产品矩阵，以"AI 驱动全栈研发"为核心，从本地开发工具延伸到云端自主 Agent、在线办公助手与代码安全审计。本知识束基于 CodeBuddy 六个官方公开页面的事实，系统梳理其产品形态、核心能力与实战流程。
+CodeBuddy 是腾讯推出的 AI 编程产品矩阵，以"AI 驱动全栈研发"为核心，从本地开发工具延伸到云端自主 Agent、在线办公助手与代码安全审计。本知识包基于 CodeBuddy 六个官方公开页面的事实，系统梳理其产品形态、核心能力与实战流程。
 
 CodeBuddy 的核心差异化在于"三态一体"——IDE（产设研一体桌面端）、插件（嵌入主流 IDE）、CLI（终端命令行）共享同一套 AI 引擎与高级能力（Plan 模式、Subagents、Skills、Hooks、MCP、记忆、规则），并在此基础上延伸出 NPC（云端自主 AI 员工）、WorkBuddy（在线办公助手）与 Security（AI 安全审计）三大场景化产品。
 
@@ -79,7 +79,7 @@ CodeBuddy 三态共享的高级能力（详见各概念文档）：
 
 ```
 codebuddy/
-├── index.md                    # 本文件（知识束根索引）
+├── index.md                    # 本文件（知识包根索引）
 ├── log.md                      # 变更日志
 ├── spec/
 │   ├── facts.md                # R 阶段：79 条编号事实
@@ -108,7 +108,7 @@ codebuddy/
 
 ## 信任与生命周期说明
 
-- **事实来源**：本知识束全部 79 条事实均来自 CodeBuddy 六个官方公开页面（IDE 官网、IDE 文档、CLI 官网、NPC 官网、WorkBuddy 官网、Security 官网），抓取日期为 2026-08-23，未引入外部推测或演绎。
+- **事实来源**：本知识包全部 79 条事实均来自 CodeBuddy 六个官方公开页面（IDE 官网、IDE 文档、CLI 官网、NPC 官网、WorkBuddy 官网、Security 官网），抓取日期为 2026-08-23，未引入外部推测或演绎。
 - **status 判定**：所有内容文档（6 概念 + 2 示例 + 6 信源）均标记为 `stable`，表示基于已抓取信源可直接消费。
 - **stale_after 解释**：统一设置为 `2027-02-23`（生成日后 6 个月）。CodeBuddy 产品矩阵处于快速迭代期（WorkBuddy 仍在公测，产品能力可能频繁更新），6 个月后应重新抓取官方页面核验事实时效性。
 - **核验链路**：`generated.at` 与 `verified.at` 均为 2026-08-23T00:00:00Z，由 `reference_agent/trae-solo` 生成、`process:seven-concepts-v` 过程核验。所有产品名称、版本号、URL 均直接引自官方页面。

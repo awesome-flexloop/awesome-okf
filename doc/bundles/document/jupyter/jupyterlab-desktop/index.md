@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: bundle
 title: "JupyterLab Desktop"
-description: "Jupyter 官方跨平台桌面应用（基于 Electron）：内置 Python 环境管理、多窗口多会话、Jupyter Server 自动启停、CLI 命令行工具。本知识束从源码出发，系统讲解 JupyterLab Desktop v4.6.x 的架构、核心机制与实战用法。"
+description: "Jupyter 官方跨平台桌面应用（基于 Electron）：内置 Python 环境管理、多窗口多会话、Jupyter Server 自动启停、CLI 命令行工具。本知识包从源码出发，系统讲解 JupyterLab Desktop v4.6.x 的架构、核心机制与实战用法。"
 ---
 
 # JupyterLab Desktop

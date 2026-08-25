@@ -1,9 +1,9 @@
-# fabric 知识束生成日志
+# fabric 知识包生成日志
 
 ## R 阶段（事实采集）
 
 - 读取任务简报：`.trae/specs/ssh-python-okf-wiki/fabric-task-brief.md`
-- 参考 OKF 范例：`bundles/networking/paramiko/`（同批次生成的 paramiko 知识束）
+- 参考 OKF 范例：`bundles/networking/paramiko/`（同批次生成的 paramiko 知识包）
 - 逐模块阅读 fabric v4.0.0 源码（`external/libs/fabric/fabric/`，commit ded51893f02c）：
   - `__init__.py`、`_version.py`
   - `connection.py`（1122 行，核心文件）

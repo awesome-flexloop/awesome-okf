@@ -47,7 +47,7 @@
 ```
 awesome-okf-xs/
 ├── doc/                # Sphinx 文档工程（源文件）
-│   ├── bundles/        # OKF bundle 文档（结构化知识束，核心内容区）
+│   ├── bundles/        # OKF bundle 文档（结构化知识包，核心内容区）
 │   ├── _static/        # 静态资源（CSS、图片等）
 │   ├── conf.py         # Sphinx 构建配置（含 frontmatter 日期兼容性钩子）
 │   └── index.md        # 文档首页

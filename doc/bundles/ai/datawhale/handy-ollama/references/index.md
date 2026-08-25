@@ -8,7 +8,7 @@ sources: https://github.com/datawhalechina/handy-ollama
 
 # 信源登记簿
 
-本目录登记 handy-ollama 知识束所有内容据以派生的源码文档信源。所有概念文档和示例文档的 `sources` 字段均指向对应的 GitHub 源码章节。信源基于 handy-ollama 仓库 `docs/` 目录下的 7 章 Markdown 文档，与 `docs/_sidebar.md` 章节导航完全一致。
+本目录登记 handy-ollama 知识包所有内容据以派生的源码文档信源。所有概念文档和示例文档的 `sources` 字段均指向对应的 GitHub 源码章节。信源基于 handy-ollama 仓库 `docs/` 目录下的 7 章 Markdown 文档，与 `docs/_sidebar.md` 章节导航完全一致。
 
 ## 章节目录
 

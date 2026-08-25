@@ -1,18 +1,18 @@
 ---
 okf_version: "0.2"
 type: bundles-index
-title: "知识束总索引"
-description: "awesome-okf-xs 知识束（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程"
+title: "知识包总索引"
+description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程"
 total_bundles: 248
 groups: 28
 domains: 10
 ---
 
-# 知识束总索引（Bundles Index）
+# 知识包总索引（Bundles Index）
 
-> **OKF (Open Knowledge Format)** 知识束是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识束包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
+> **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **248 个知识束**，按技术生态分为 **10 个技术域、28 个分组**。
+> 当前共 **248 个知识包**，按技术生态分为 **10 个技术域、28 个分组**。
 
 ***
 
@@ -50,7 +50,7 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    meta["📐 meta/okf-spec：了解 OKF 知识束格式规范（30分钟）"]
+    meta["📐 meta/okf-spec：了解 OKF 知识包格式规范（30分钟）"]
     py["🐍 python/cpython：理解 Python 解释器底层（选读核心章节）"]
     build["🔨 build/：掌握构建与包管理（copier 脚手架 - pyinvoke 自动化 - conda 环境 - cmake 构建）"]
     doc["📚 document/：掌握文档工程能力（sphinx 文档写作 - jupyter-book/myst 新一代工具链 - jupyter 交互计算）"]
@@ -71,7 +71,7 @@ flowchart LR
 
 | 分组                                     | 束数 | 说明                                                 |
 | -------------------------------------- | -- | -------------------------------------------------- |
-| [📐 规范与格式（okf-spec 锚点）](meta/index.md) | 1  | OKF v0.2 规范本体——目录结构、文档类型、交叉引用、术语、版本、信任与验证；阅读知识束前必读 |
+| [📐 规范与格式（okf-spec 锚点）](meta/index.md) | 1  | OKF v0.2 规范本体——目录结构、文档类型、交叉引用、术语、版本、信任与验证；阅读知识包前必读 |
 
 ### 🐍 [Python 语言核心](python/index.md) · 1 束 · 1 组
 

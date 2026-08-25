@@ -1,5 +1,5 @@
 ---
-title: Torch-RecHub 知识束
+title: Torch-RecHub 知识包
 type: index
 bundle: torch-rechub
 version: 0.8.0

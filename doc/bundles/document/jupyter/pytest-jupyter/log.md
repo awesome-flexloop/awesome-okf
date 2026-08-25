@@ -1,6 +1,6 @@
 # Changelog for pytest-jupyter OKF bundle
 
-本文件记录此OKF知识束的文档变更历史。
+本文件记录此OKF知识包的文档变更历史。
 
 ## 2026-08-22 — 初始版本（v0.1.0）
 
@@ -35,7 +35,7 @@
   - `references/index.md` — 信源索引
 
 - **根文档**：
-  - `index.md` — 知识束首页与导航
+  - `index.md` — 知识包首页与导航
   - `log.md` — 变更日志（本文件）
 
 ### Source Analysis

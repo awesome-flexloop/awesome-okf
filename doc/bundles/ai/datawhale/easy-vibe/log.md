@@ -1,12 +1,12 @@
 # 变更日志
 
-本文件记录 Easy-Vibe OKF 知识束的版本演进。
+本文件记录 Easy-Vibe OKF 知识包的版本演进。
 
 ## v0.1.0 — 2026-08-23
 
 ### 新增
 
-- 初始知识束生成，遵循精简 R→I→E→V 流程。
+- 初始知识包生成，遵循精简 R→I→E→V 流程。
 - **R 阶段**：阅读 README.md、AGENTS.md、CLAUDE.md、llms.txt、docs/index.md、docs/zh-cn/index.md、docs/welcome.md、docs/DEPLOYMENT.md、docs/zh-cn/guide/introduction.md、docs/.vitepress/config.mjs、docs/.vitepress/theme/index.js、docs/.vitepress/theme/components/WelcomeScreen.vue、scripts/build-locales.mjs、scripts/README.md、package.json、vercel.json、Dockerfile、.github/workflows/deploy.yml、.github/workflows/release-books.yml，采集 19 组编号事实（F-001 ~ F-019）。
 - **I 阶段**：提炼 3 个架构洞察：
   1. Vibe Coding 教育范式——"先做产品，再学技术"的路径反转

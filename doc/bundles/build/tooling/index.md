@@ -15,7 +15,7 @@ description: "不绑定特定生态、可独立服务任意项目的通用开发
 
 按 **项目脚手架 → 执行引擎 → 任务集合 → CI 集成** 的工具链顺序学习：
 
-| 顺序 | 知识束 | 一句话简介 |
+| 顺序 | 知识包 | 一句话简介 |
 |------|--------|-----------|
 | 1 | [ninja](ninja/index.md) | Ninja 极速构建系统——Node-Edge二分图依赖模型、关键路径并行调度、mtime增量构建、depfile头依赖追踪、dyndep动态依赖、CMake/Meson后端引擎 |
 | 2 | [copier](copier/index.md) | 项目模板渲染与更新——Jinja2 沙箱渲染、交互式问卷、Git 版本管理、三向合并更新、条件任务/迁移、Python API 集成 |

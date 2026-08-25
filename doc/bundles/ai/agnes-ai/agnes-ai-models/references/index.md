@@ -1,6 +1,6 @@
 # 信源登记簿（References）
 
-本目录是AgnesAI-Models API网关知识束的信源登记，所有concepts和examples文档中引用的事实均可追溯到此处的原始信源。
+本目录是AgnesAI-Models API网关知识包的信源登记，所有concepts和examples文档中引用的事实均可追溯到此处的原始信源。
 
 ## 信源清单
 

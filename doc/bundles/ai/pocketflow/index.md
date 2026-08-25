@@ -27,23 +27,23 @@ PocketFlow 是一个仅约100行核心代码的极简 LLM Agent 框架，由 The
 
 ---
 
-## 知识束导航
+## 知识包导航
 
 ### 📦 核心框架
 
-| 知识束 | 文档数 | 一句话简介 |
+| 知识包 | 文档数 | 一句话简介 |
 |--------|--------|-----------|
 | [pocketflow-core](pocketflow-core/index.md) | 6+6+1=13 | 核心API——12个类（BaseNode/Node/BatchNode/Flow/BatchFlow/AsyncNode族）、prep→exec→post三阶段生命周期、运算符DSL、重试降级、批量处理、异步并行 |
 
 ### 🧩 设计模式
 
-| 知识束 | 文档数 | 一句话简介 |
+| 知识包 | 文档数 | 一句话简介 |
 |--------|--------|-----------|
 | [pocketflow-patterns](pocketflow-patterns/index.md) | 6+1+1=8 | 6大设计模式——Agent循环（ReAct）、多智能体协作（Queue通信/Supervisor/Debate）、RAG（离线+在线双Flow）、MapReduce分治（BatchNode/嵌套BatchFlow）、Workflow/HITL（CLI/FastAPI/Gradio人机交互）、Tool Use（工具调用/MCP集成），覆盖40+ cookbook示例 |
 
 ### 🎬 实战教程
 
-| 知识束 | 类型 | 文档数 | 一句话简介 |
+| 知识包 | 类型 | 文档数 | 一句话简介 |
 |--------|------|--------|-----------|
 | [tutorial-codebase-knowledge](tutorial-codebase-knowledge/index.md) | 代码分析 | 2+7+1=10 | 代码库知识自动生成器——6节点流水线（FetchRepo→IdentifyAbstractions→AnalyzeRelationships→OrderChapters→WriteChapters→CombineTutorial），LLM驱动的代码分析与教程生成，支持GitHub和本地代码库 |
 | [tutorial-wan-video](tutorial-wan-video/index.md) | 视频生成 | 3+6+2=11 | 万相AI视频生成器——6节点流水线（GenerateScenes→GenerateScript→GenerateImage→GenerateAudio→AnimateVideo→Combine），自环迭代优化、批量图像/音频/视频生成、角色一致性策略 |

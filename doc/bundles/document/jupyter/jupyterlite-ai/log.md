@@ -1,10 +1,10 @@
 ---
 okf_version: "0.2"
 type: Log
-title: "jupyterlite-ai 知识束更新日志"
+title: "jupyterlite-ai 知识包更新日志"
 ---
 
-# jupyterlite-ai 知识束更新日志
+# jupyterlite-ai 知识包更新日志
 
 ## 2026-08-22 — R/I 阶段完成（全量验证通过）
 

@@ -1,8 +1,8 @@
 ---
-title: 钥匙书 Key-book 知识束
+title: 钥匙书 Key-book 知识包
 type: index
 bundle: key-book
-description: 周志华等《机器学习理论导引》伴读笔记《钥匙书》的知识束，系统梳理理论机器学习七大支柱——可学性、计算复杂度、泛化界、稳定性、一致性、收敛率、遗憾界，涵盖 PAC 学习、VC 维、Rademacher 复杂度、算法稳定性、Bayes 一致性、优化收敛率、在线学习遗憾界等核心理论。
+description: 周志华等《机器学习理论导引》伴读笔记《钥匙书》的知识包，系统梳理理论机器学习七大支柱——可学性、计算复杂度、泛化界、稳定性、一致性、收敛率、遗憾界，涵盖 PAC 学习、VC 维、Rademacher 复杂度、算法稳定性、Bayes 一致性、优化收敛率、在线学习遗憾界等核心理论。
 concepts:
   - /datawhale/key-book/concepts/learnability
   - /datawhale/key-book/concepts/computational-complexity
@@ -29,9 +29,9 @@ sources:
   - https://github.com/datawhalechina/key-book
 ---
 
-# 钥匙书 Key-book 知识束
+# 钥匙书 Key-book 知识包
 
-本知识束基于 Datawhale 开源项目 [《钥匙书 Key-book》](https://github.com/datawhalechina/key-book)，该项目是周志华、王魏、高尉、张利军所著《机器学习理论导引》（机械工业出版社，2020）的伴读笔记，提供概念解释、证明补充与案例分享。
+本知识包基于 Datawhale 开源项目 [《钥匙书 Key-book》](https://github.com/datawhalechina/key-book)，该项目是周志华、王魏、高尉、张利军所著《机器学习理论导引》（机械工业出版社，2020）的伴读笔记，提供概念解释、证明补充与案例分享。
 
 ## 七大理论支柱
 

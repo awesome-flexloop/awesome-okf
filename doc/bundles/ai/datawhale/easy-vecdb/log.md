@@ -1,11 +1,11 @@
 ---
 okf_version: "0.2"
 type: Log
-title: "easy-vecdb 知识束更新日志"
+title: "easy-vecdb 知识包更新日志"
 bundle: easy-vecdb
 ---
 
-# easy-vecdb 知识束更新日志
+# easy-vecdb 知识包更新日志
 
 ## 2026-08-23 — R/I/E/V 阶段完成
 
@@ -18,8 +18,8 @@ bundle: easy-vecdb
   3. 向量嵌入是检索质量的天花板
   4. 主流向量库选型的三维定位
   5. RAG 是向量数据库的杀手级应用
-- **E 阶段**：创建知识束完整结构：
-  - `index.md` — 知识束索引
+- **E 阶段**：创建知识包完整结构：
+  - `index.md` — 知识包索引
   - `concepts/` — 6 个概念文档（向量检索基础、ANN 算法、IVF/PQ、HNSW/LSH、Annoy、Faiss/Milvus）
   - `examples/` — 3 个实践示例（Mini Vector DB、Faiss RAG、Milvus 入门）
   - `references/` — 2 个信源登记（教程章节、源码结构）

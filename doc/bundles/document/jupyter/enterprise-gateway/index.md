@@ -1,7 +1,7 @@
 ---
 okf_version: "0.2"
 title: "enterprise-gateway"
-description: "Jupyter Enterprise Gateway：Jupyter内核的远程管理网关，支持YARN/Kubernetes/Docker/SSH等多种部署平台，提供多租户隔离、加密通信、高可用和负载均衡能力。本知识束从源码出发，系统讲解EG的架构、ProcessProxy核心抽象、内核启动流程、配置体系和实战部署。"
+description: "Jupyter Enterprise Gateway：Jupyter内核的远程管理网关，支持YARN/Kubernetes/Docker/SSH等多种部署平台，提供多租户隔离、加密通信、高可用和负载均衡能力。本知识包从源码出发，系统讲解EG的架构、ProcessProxy核心抽象、内核启动流程、配置体系和实战部署。"
 ---
 
 # Enterprise Gateway

@@ -8,12 +8,12 @@ status: draft
 
 ## 问题陈述
 
-TRAE Community（[github.com/trae-community](https://github.com/trae-community)）是 TRAE AI IDE 的官方社区组织，包含 12 个子项目，涵盖社区治理、Agent 配置、MCP 服务器、技能库、项目模板、演示作品展示、共创平台、学习资源、活动运营等多个方面。当前这些项目缺乏系统化的中文源码级教程，需要通过 source-code-to-okf-wiki 工作流生成 OKF v0.2 规范的知识束。
+TRAE Community（[github.com/trae-community](https://github.com/trae-community)）是 TRAE AI IDE 的官方社区组织，包含 12 个子项目，涵盖社区治理、Agent 配置、MCP 服务器、技能库、项目模板、演示作品展示、共创平台、学习资源、活动运营等多个方面。当前这些项目缺乏系统化的中文源码级教程，需要通过 source-code-to-okf-wiki 工作流生成 OKF v0.2 规范的知识包。
 
 ## 用户与目标
 
 - **用户**：希望了解 TRAE Community 生态架构、学习各子项目源码结构与设计模式的中文开发者
-- **目标**：为 trae-community 下全部 12 个子项目生成结构化 OKF 知识束，覆盖概念文档、实战示例、信源参考三层结构
+- **目标**：为 trae-community 下全部 12 个子项目生成结构化 OKF 知识包，覆盖概念文档、实战示例、信源参考三层结构
 - **非目标**：
   - 不修改 trae-community 源码
   - 不生成英文文档
@@ -27,7 +27,7 @@ TRAE Community（[github.com/trae-community](https://github.com/trae-community)�
 - 按子项目性质分组：核心系统、学习与演示、社区资源、模板脚手架
 - 更新 `bundles/index.md` 总索引，增加 trae 分组
 
-### FR-2：子项目知识束
+### FR-2：子项目知识包
 为 12 个子项目分别创建 OKF bundle，按项目复杂度分三个深度等级：
 
 **深度 L2（完整 R→I→E→V→C，代码项目）**：

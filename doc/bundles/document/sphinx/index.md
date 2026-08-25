@@ -15,13 +15,13 @@ Sphinx 是 Python 生态最强大的文档生成工具，支持 reStructuredText
 
 ### 核心引擎
 
-| 顺序 | 知识束 | 一句话简介 |
+| 顺序 | 知识包 | 一句话简介 |
 |------|--------|-----------|
 | 1 | [sphinx](sphinx/index.md) | Sphinx 文档生成器核心——Builder 体系、Doctree 文档树、Domain 领域模型、扩展接口、主题系统、多格式输出 |
 
 ### 功能扩展
 
-| 顺序 | 知识束 | 一句话简介 |
+| 顺序 | 知识包 | 一句话简介 |
 |------|--------|-----------|
 | 2 | [sphinx-argparse](sphinx-argparse/index.md) | CLI 自动文档扩展——自动从 argparse 提取命令行参数、生成 man page、嵌套子命令支持、Markdown 集成、命令索引 |
 | 3 | [sphinx-autobuild](sphinx-autobuild/index.md) | 实时预览热重载——文件监听、自动重建、WebSocket 热刷新、中间件注入、多项目/主题开发工作流 |
@@ -30,7 +30,7 @@ Sphinx 是 Python 生态最强大的文档生成工具，支持 reStructuredText
 
 ### 主题与渲染扩展
 
-| 顺序 | 知识束 | 一句话简介 |
+| 顺序 | 知识包 | 一句话简介 |
 |------|--------|-----------|
 | 6 | [alabaster](alabaster/index.md) | Sphinx 默认主题——极简架构（核心仅130行Python）、50+配置选项、5个组件化侧边栏模板、配置驱动样式体系、主题开发最佳范本 |
 | 7 | [sphinxcontrib-jsmath](sphinxcontrib-jsmath/index.md) | 数学公式渲染——JavaScript 客户端渲染、智能 JS 按需加载、公式编号与交叉引用、并行构建安全（核心仅88行） |
@@ -39,7 +39,7 @@ Sphinx 是 Python 生态最强大的文档生成工具，支持 reStructuredText
 
 ### 部署基础设施
 
-| 顺序 | 知识束 | 一句话简介 |
+| 顺序 | 知识包 | 一句话简介 |
 |------|--------|-----------|
 | 10 | [sphinx-docker-images](sphinx-docker-images/index.md) | Sphinx Docker 构建镜像——base/latexpdf/ci 三级镜像、LaTeX PDF 编译、CI 集成、自定义构建流程 |
 

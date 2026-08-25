@@ -89,7 +89,7 @@ stale_after: "2027-08-23"
 
 ## 深度洞察
 
-本知识束的设计决策与核心洞察详见 [spec/insights.md](spec/insights.md)，包括：
+本知识包的设计决策与核心洞察详见 [spec/insights.md](spec/insights.md)，包括：
 
 1. **手写实现驱动的双层学习路径**——先 PyTorch 手写建立心智模型，后 Transformers 框架建立工程能力
 2. **从 Transformer 到 LLaMA2 的架构演进主线**——RNN→Transformer→BERT/GPT→LLaMA2 的持续优化链

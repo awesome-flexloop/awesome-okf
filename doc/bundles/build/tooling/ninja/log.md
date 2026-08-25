@@ -1,13 +1,13 @@
 ---
 type: Log
-title: Ninja 知识束生成日志
+title: Ninja 知识包生成日志
 description: source-code-to-okf-wiki 工作流执行日志
 tags: [log, workflow, ninja]
 generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T00:00:00+08:00" }
 status: stable
 ---
 
-# Ninja 知识束生成日志
+# Ninja 知识包生成日志
 
 ## 工作流阶段
 
@@ -23,7 +23,7 @@ status: stable
 
 ```
 ninja/
-├── index.md                    # 知识束主页
+├── index.md                    # 知识包主页
 ├── log.md                      # 本文件
 ├── facts.md                    # R阶段：230+条零推测事实
 ├── insights.md                 # I阶段：5洞察+知识地图+4模式

@@ -50,11 +50,11 @@ description: LangChain-AI 开源 LLM 应用开发框架生态源码中文教程�
 └──────────────────────────────────────────────────────────────┘
 ```
 
-## 知识束导航
+## 知识包导航
 
 ### 核心框架（深度 bundle）
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [langchain](langchain/index.md) | LangChain 核心框架（Python）——Runnable 组合协议、Message/Tool 抽象、Prompt 分层、输出解析、回调、检索（langchain-core） |
 | [langgraph](langgraph/index.md) | LangGraph Agent 编排框架（Python）——StateGraph/节点/边、State 与 Schema、checkpoint 持久化、Stream、CLI |
@@ -63,7 +63,7 @@ description: LangChain-AI 开源 LLM 应用开发框架生态源码中文教程�
 
 ### 关键集成与可观测性
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [langchain-google](langchain-google/index.md) | Google GenAI/VertexAI 集成——ChatModel、Embeddings、provider 抽象与鉴权 |
 | [langchain-mongodb](langchain-mongodb/index.md) | MongoDB 集成——向量存储、Atlas Vector Search、集合索引与文档写入 |
@@ -72,7 +72,7 @@ description: LangChain-AI 开源 LLM 应用开发框架生态源码中文教程�
 
 ### Agent 框架与应用
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [deepagents](deepagents/index.md) | 深度研究 Agent 框架（Python，含 lca-deepagents 变体）——planning/sub-agent/todo/context 管理 |
 | [deepagentsjs](deepagentsjs/index.md) | 深度研究 Agent 框架（TypeScript）——JS 版实现与 deepagents 对应关系 |
@@ -85,7 +85,7 @@ description: LangChain-AI 开源 LLM 应用开发框架生态源码中文教程�
 
 ### 基础设施与文档（参考 bundle）
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [docs](docs/index.md) | LangChain 官方文档站——src/*.mdx 文档结构索引 |
 | [helm](helm/index.md) | Helm Chart 部署配置——Kubernetes 部署结构 |

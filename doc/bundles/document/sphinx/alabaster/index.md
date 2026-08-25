@@ -80,9 +80,9 @@ alabaster/
 | Jinja2 模板继承 | `{% extends "basic/layout.html" %}` | 继承父主题，通过 block 覆盖定制 |
 | 事件钩子 | `app.connect("html-page-context", ...)` | 在渲染前注入动态数据到模板上下文 |
 
-## 相关知识束
+## 相关知识包
 
-| 知识束 | 关系 |
+| 知识包 | 关系 |
 |--------|------|
 | [sphinx](/document/sphinx/index.md) | Sphinx 核心——主题系统的底层框架 |
 | [sphinx-autobuild](/document/sphinx/sphinx-autobuild/index.md) | 实时预览——开发主题时的热重载工具 |

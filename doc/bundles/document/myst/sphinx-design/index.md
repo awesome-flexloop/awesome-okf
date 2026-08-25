@@ -135,7 +135,7 @@ sources:
       完整的指令和配置参考。
 ```
 
-## 🔗 相关知识束
+## 🔗 相关知识包
 
 - [sphinx-copybutton](https://github.com/executablebooks/sphinx-copybutton) — 一键复制代码块按钮扩展
 - [sphinx-external-toc](https://github.com/executablebooks/sphinx-external-toc) — 外部 `_toc.yml` 站点导航扩展

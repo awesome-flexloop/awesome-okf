@@ -1,7 +1,7 @@
 ---
 type: Log
-title: Ψhē 数学形式化知识束变更日志
-description: psi-math 知识束生成与变更日志
+title: Ψhē 数学形式化知识包变更日志
+description: psi-math 知识包生成与变更日志
 tags: [psi, log, psi-math]
 generated: { by: "trae/source-code-to-okf-wiki", at: "2026-08-23T00:00:00Z" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-23T00:00:00Z" }
@@ -20,5 +20,5 @@ sources:
 
 ## 2026-08-23
 
-- **初始创建**：知识束骨架建立，references 信源文件已就位
+- **初始创建**：知识包骨架建立，references 信源文件已就位
 - **内容生成完成**：6概念+1示例（psi-math），索引文件已更新

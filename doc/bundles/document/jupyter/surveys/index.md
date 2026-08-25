@@ -6,7 +6,7 @@ description: "Jupyter/IPython社区调查数据集仓库系统教程：数据集
 
 # Jupyter Surveys
 
-> Jupyter/IPython社区调查数据集与分析资源仓库。收录2015-2023年6轮用户调查和可用性测试数据，包含原始CSV、Jupyter Notebook分析pipeline和MyST文档站点。本知识束从仓库源码出发，系统讲解数据集组织规范、文档构建方法和调查分析方法论。
+> Jupyter/IPython社区调查数据集与分析资源仓库。收录2015-2023年6轮用户调查和可用性测试数据，包含原始CSV、Jupyter Notebook分析pipeline和MyST文档站点。本知识包从仓库源码出发，系统讲解数据集组织规范、文档构建方法和调查分析方法论。
 
 ## 快速导航
 

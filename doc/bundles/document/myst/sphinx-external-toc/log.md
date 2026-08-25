@@ -1,4 +1,4 @@
-# sphinx-external-toc 知识束更新日志
+# sphinx-external-toc 知识包更新日志
 
 ## 2026-08-23
 

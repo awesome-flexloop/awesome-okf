@@ -40,11 +40,11 @@ total_bundles: 12
 └──────────────────────────────────────────────────────────────┘
 ```
 
-## 知识束导航
+## 知识包导航
 
 ### GPU Kernel 与计算原语
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [deep-gemm](deep-gemm/index.md) | 高性能 JIT GEMM 核函数库——FP8/FP4 量化、grouped GEMM（MoE）、MegaMoE 对称缓冲区、WGMMA/TMA/TCGen05 |
 | [flash-mla](flash-mla/index.md) | MLA 注意力解码内核——低秩 KV 压缩、paged KV cache、SplitKV 长序列、Hopper/Blackwell 双架构 |
@@ -52,7 +52,7 @@ total_bundles: 12
 
 ### 分布式训练与通信
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [deep-ep](deep-ep/index.md) | MoE 专家并行通信库——ElasticBuffer V2、NVSHMEM 后端、dispatch/combine、低延迟推理、JIT 内核 |
 | [dual-pipe](dual-pipe/index.md) | 双向流水线并行——8 步调度算法、DualPipeV V 型调度、WeightGradStore 零气泡、P2P 批量通信 |
@@ -60,13 +60,13 @@ total_bundles: 12
 
 ### 模型训练与推理系统
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [deep-spec](deep-spec/index.md) | 投机解码训练框架——DSpark（块级锚点+Markov 头）、Eagle3（TTT+融合损失）、FSDP+BF16 训练管线 |
 
 ### 应用模型与资源
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [deepseek-ocr](deepseek-ocr/index.md) | 文档 OCR 模型——vLLM/HF 双部署、图像/PDF 批量处理、ngram 重复抑制、deepencoder 视觉编码器 |
 | [deepseek-ocr2](deepseek-ocr2/index.md) | 文档 OCR 模型 V2——deepencoderv2 增强编码器、Qwen2 D2E 模块、GPU 加速图像处理 |

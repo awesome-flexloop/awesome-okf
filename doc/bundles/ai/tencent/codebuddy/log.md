@@ -11,7 +11,7 @@ version: "0.1.0"
 
 ### 新增
 
-- 初始 OKF v0.2 知识束生成
+- 初始 OKF v0.2 知识包生成
 - **spec/facts.md**：79 条编号事实（F-001 ~ F-079），覆盖 CodeBuddy IDE、IDE 文档、CLI、NPC、WorkBuddy、Security 六个官方信源
 - **spec/insights.md**：5 条核心架构洞察，每条包含陈述/证据/反常识/行动：
   1. 三态一体——IDE、插件、CLI 共享同一套 AI 核心能力
@@ -37,7 +37,7 @@ version: "0.1.0"
   - quick-start-cli.md（CLI 安装、初始化、诊断与核心功能）
   - ide-workflow.md（IDE 从需求到部署的产设研全流程）
 - **索引文件**：concepts/index.md、examples/index.md、references/index.md
-- **根 index.md**：知识束介绍、产品矩阵篇/核心能力篇/实战示例/信源登记簿分区导航、学习路径、信任与生命周期说明
+- **根 index.md**：知识包介绍、产品矩阵篇/核心能力篇/实战示例/信源登记簿分区导航、学习路径、信任与生命周期说明
 
 ### 数据来源
 

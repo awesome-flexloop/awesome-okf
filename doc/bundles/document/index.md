@@ -7,7 +7,7 @@ description: "技术文档工具链与交互式计算平台——从文档生成
 
 # 📚 文档工程与交互式计算生态
 
-本域存放现代技术文档与交互式计算相关的知识束——覆盖 Sphinx 文档生成引擎、MyST Markdown 与 Executable Books 生态、Jupyter Book 新一代文档工具链、KaTeX 数学排版库，以及 Jupyter 交互式计算平台，构成从"文档写作 → 数学排版 → 交互执行"的完整技术写作栈。
+本域存放现代技术文档与交互式计算相关的知识包——覆盖 Sphinx 文档生成引擎、MyST Markdown 与 Executable Books 生态、Jupyter Book 新一代文档工具链、KaTeX 数学排版库，以及 Jupyter 交互式计算平台，构成从"文档写作 → 数学排版 → 交互执行"的完整技术写作栈。
 
 ## 域内分组导航
 

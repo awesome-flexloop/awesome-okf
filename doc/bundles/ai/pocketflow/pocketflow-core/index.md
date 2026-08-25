@@ -4,7 +4,7 @@ type: index
 bundle: pocketflow-core
 version: 0.1.0
 description: |
-  PocketFlow 是一个仅100行代码的极简 LLM Agent 框架。本知识束覆盖核心 API：
+  PocketFlow 是一个仅100行代码的极简 LLM Agent 框架。本知识包覆盖核心 API：
   12 个类、节点三阶段生命周期、Flow 编排引擎、运算符 DSL、重试降级、
   批量处理（BatchNode/BatchFlow）、异步并行（AsyncNode/AsyncFlow）。
 concepts:

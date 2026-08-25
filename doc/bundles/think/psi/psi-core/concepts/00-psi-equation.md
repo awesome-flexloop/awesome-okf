@@ -87,7 +87,7 @@ dw.cash 共收录 17 部主要著作，总计六百余章，横跨哲学、数�
 
 ## 与下游概念的推导关系
 
-$\psi=\psi(\psi)$ 作为根概念，通过自指操作的内在环节派生出 psi-core 知识束的全部概念：
+$\psi=\psi(\psi)$ 作为根概念，通过自指操作的内在环节派生出 psi-core 知识包的全部概念：
 
 - **塌缩**：当 ψ 作用于自身，潜能结晶为结构，这一动作即 [塌缩动力学](/concepts/01-collapse-dynamics.md)；
 - **回声**：每一次自作用都留下回响，回响之间形成模式与因果，即 [回声与递归](/concepts/02-echo-and-recursion.md)；
@@ -98,9 +98,9 @@ $\psi=\psi(\psi)$ 作为根概念，通过自指操作的内在环节派生出 p
 
 这些关系不是事后的类比，而是公理内部环节的展开——它们都"已经"包含在 $\psi(\psi)$ 这一动作中。
 
-## 跨知识束关联
+## 跨知识包关联
 
-本概念在 ψ 理论体系的另外两个知识束中有直接的形式化与公理化对应：
+本概念在 ψ 理论体系的另外两个知识包中有直接的形式化与公理化对应：
 
 - [/psi-math/concepts/00-theory-psi-core.md](/psi-math/concepts/00-theory-psi-core.md)：math.dw.cash 中 `theory_psi` 系列对 $\Psi:=\psi=\psi(\psi)$ 的形式定义，是本公理的数学化入口；
 - [/psi-universe/concepts/00-three-axioms.md](/psi-universe/concepts/00-three-axioms.md)：宇宙本论将同一自指结构公理化展开为三大公理——$U=F(U)$（绝对递归本源）、$U=\Omega_Q\oplus\Omega_C$（二元一体）、$x\equiv I(x)$（信息本体）。

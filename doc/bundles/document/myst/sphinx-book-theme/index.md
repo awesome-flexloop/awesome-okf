@@ -1,6 +1,6 @@
 ---
 type: bundle
-title: sphinx-book-theme 知识束
+title: sphinx-book-theme 知识包
 description: sphinx-book-theme 中文 Wiki 教程——基于 pydata-sphinx-theme 的科学书籍式 Sphinx 主题，支持交互式计算按钮、边注/旁注、下载/全屏等功能
 okf_version: '0.2'
 tags:
@@ -24,7 +24,7 @@ sources:
 - src/sphinx_book_theme/
 ---
 
-# sphinx-book-theme 知识束
+# sphinx-book-theme 知识包
 
 sphinx-book-theme 是 Executable Books 团队开发的 Sphinx 主题，专为科学解释文档和书籍式文档设计。它在 pydata-sphinx-theme（PST）基础上提供了干净的三栏书籍布局、交互式计算启动按钮（Binder/Colab/JupyterHub/Thebe）、边注/旁注、下载/全屏等功能，是 Jupyter Book 的默认主题。
 

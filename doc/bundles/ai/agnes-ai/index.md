@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group-index
 title: "🤖 AgnesAI 大模型生态"
-description: "AgnesAI全模态AI平台OKF知识束索引——多模态大模型API、Agent框架、垂直研究项目"
+description: "AgnesAI全模态AI平台OKF知识包索引——多模态大模型API、Agent框架、垂直研究项目"
 total_bundles: 2
 completed_bundles: 2
 groups: "AgnesAI生态"
@@ -10,7 +10,7 @@ groups: "AgnesAI生态"
 
 # 🤖 AgnesAI 大模型生态
 
-> **Agnes AI** 是一家专注于全模态基础模型的前沿AI公司，提供文本对话、图像生成、视频生成、Agent工具调用等多模态AI能力，通过OpenAI兼容的统一API网关对外开放服务。本分组收录AgnesAI生态相关的OKF知识束。
+> **Agnes AI** 是一家专注于全模态基础模型的前沿AI公司，提供文本对话、图像生成、视频生成、Agent工具调用等多模态AI能力，通过OpenAI兼容的统一API网关对外开放服务。本分组收录AgnesAI生态相关的OKF知识包。
 
 ---
 
@@ -41,9 +41,9 @@ groups: "AgnesAI生态"
 
 ---
 
-## 知识束清单
+## 知识包清单
 
-| 知识束 | 状态 | 简介 |
+| 知识包 | 状态 | 简介 |
 |--------|------|------|
 | [agnes-ai-models](agnes-ai-models/index.md) | ✅ stable | AgnesAI统一API网关教程——OpenAI兼容接口、对话/图像/视频生成、工具调用、速率限制、错误处理、生产最佳实践。共17个文档（8概念+5示例+2信源+索引） |
 | [gode-agents](gode-agents/index.md) | ✅ stable | GodeAgents (codified-smolagents v1.14.0) 编码式多智能体推理框架教程——双智能体范式（ToolCallingAgent/CodeAgent）、工具系统、8种模型后端、AST安全Python执行器、多智能体协作。共35个文档（15概念+7示例+7信源+4索引+facts/insights） |
@@ -105,7 +105,7 @@ groups: "AgnesAI生态"
 
 ## 版本信息
 
-- 初始知识束生成日期：2026-08-22
+- 初始知识包生成日期：2026-08-22
 - 基于官方文档版本：2026.07.30
 - API Base URL：`https://apihub.agnes-ai.com/v1`
 - 官方站点：https://agnes-ai.com/（国际）/ https://agnes-ai.cn/（中国）

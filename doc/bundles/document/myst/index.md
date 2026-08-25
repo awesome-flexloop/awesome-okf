@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group
 title: "📖 MyST Markdown 与 Executable Books 生态"
-description: "Executable Books 组织开源项目源码级中文教程——19个知识束、225篇内容文档（151概念+43示例+31信源）、360个.md文件，覆盖 MyST Markdown 解析器、Sphinx 集成、Jupyter Notebook 支持、主题设计、UI 组件扩展与基础设施工具"
+description: "Executable Books 组织开源项目源码级中文教程——19个知识包、225篇内容文档（151概念+43示例+31信源）、360个.md文件，覆盖 MyST Markdown 解析器、Sphinx 集成、Jupyter Notebook 支持、主题设计、UI 组件扩展与基础设施工具"
 total_bundles: 19
 total_content_docs: 225
 total_md_files: 360
@@ -13,13 +13,13 @@ status: stable
 
 # 📖 MyST Markdown 与 Executable Books 生态
 
-[Executable Books](https://executablebooks.org) 是 [Jupyter Book](https://jupyterbook.org) 和 [MyST Markdown](https://mystmd.org) 等现代技术文档工具链的核心开源组织，致力于构建"可执行的书籍"——将 Markdown 文本、Jupyter Notebook 代码执行、交互式组件融为一体的下一代出版平台。本组知识束收录其 19 个核心项目的系统化中文源码教程，覆盖从 Markdown 解析到 Sphinx 扩展、从 Notebook 执行缓存到主题设计的完整技术栈。
+[Executable Books](https://executablebooks.org) 是 [Jupyter Book](https://jupyterbook.org) 和 [MyST Markdown](https://mystmd.org) 等现代技术文档工具链的核心开源组织，致力于构建"可执行的书籍"——将 Markdown 文本、Jupyter Notebook 代码执行、交互式组件融为一体的下一代出版平台。本组知识包收录其 19 个核心项目的系统化中文源码教程，覆盖从 Markdown 解析到 Sphinx 扩展、从 Notebook 执行缓存到主题设计的完整技术栈。
 
-所有知识束遵循 [OKF v0.2 规范](../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经 Grep 级源码验证。
+所有知识包遵循 [OKF v0.2 规范](../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经 Grep 级源码验证。
 
-## 📊 知识束概览
+## 📊 知识包概览
 
-| 层次 | 知识束 | 概念 | 示例 | 信源 | 内容文档 |
+| 层次 | 知识包 | 概念 | 示例 | 信源 | 内容文档 |
 |------|--------|------|------|------|---------|
 | **解析核心** | [markdown-it-py](markdown-it-py/index.md) | 18 | 3 | 2 | 23 |
 | **解析核心** | [mdurl](mdurl/index.md) | 4 | 1 | 1 | 6 |
@@ -40,13 +40,13 @@ status: stable
 | **基础设施** | [jupyter-cache](jupyter-cache/index.md) | 8 | 3 | 2 | 13 |
 | **基础设施** | [github-activity](github-activity/index.md) | 5 | 1 | 1 | 7 |
 | **基础设施** | [web-compile](web-compile/index.md) | 5 | 1 | 1 | 7 |
-| **合计** | **19 知识束** | **151** | **43** | **31** | **225** |
+| **合计** | **19 知识包** | **151** | **43** | **31** | **225** |
 
 > 注："内容文档"指 concepts/examples/references 目录下的实质性文档（不含各目录 index.md 导航页）。含导航索引、日志文件、spec 元数据共 **360 个 .md 文件**。
 
 ## MyST 解析核心层
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [markdown-it-py](markdown-it-py/index.md) | Python 版 markdown-it 解析器——CommonMark 合规的 Markdown 解析引擎，4 种解析预设（zero/commonmark/default/js-default）、Ruler 链式规则管理、Token 流架构、Core/Block/Inline 三链协作、插件系统 |
 | [mdurl](mdurl/index.md) | Markdown URL 工具库——URL 编解码（percent-encoding）、格式化、解析四大 API、UTF-16 Surrogates 处理、缓存优化 |
@@ -54,14 +54,14 @@ status: stable
 
 ## MyST Sphinx 集成层
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [MyST-Parser](MyST-Parser/index.md) | MyST Markdown 的 Sphinx 解析器——docutils+Sphinx 桥接、Markdown→docutils AST 转换、12+ 扩展语法开关（dollarmath/amsmath/deflist/colon_fence等）、配置系统、CLI 工具 |
 | [MyST-NB](MyST-NB/index.md) | MyST 对 Jupyter Notebook 的支持——Notebook 解析与执行、MIME 输出渲染（text/html/image/png/latex等）、Glue 跨单元格引用、ANSI 语法高亮、执行缓存集成 |
 
 ## 格式化与迁移工具层
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [mdformat-myst](mdformat-myst/index.md) | mdformat MyST 语法插件——角色/指令/块中断/目标/数学公式渲染、指令选项 YAML 自动格式化、双层转义机制 |
 | [mdformat-footnote](mdformat-footnote/index.md) | mdformat 脚注插件——脚注四分类算法（body_referenced/nested_only/fence_only/orphans）、依赖图构建、ID 重分配 |
@@ -71,14 +71,14 @@ status: stable
 
 ### 主题与导航
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [sphinx-book-theme](sphinx-book-theme/index.md) | Jupyter Book 主题——基于 PyData Sphinx Theme 的薄继承层、头部按钮系统、Margin 边注指令、全屏/TOC 隐藏/Thebe 交互、SCSS 样式体系 |
 | [sphinx-external-toc](sphinx-external-toc/index.md) | 外部目录扩展——`_toc.yml` 驱动站点导航、Sphinx toctree 桥接、多文档结构映射 |
 
 ### UI 组件
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [sphinx-design](sphinx-design/index.md) | 设计组件扩展——卡片(cards)/网格(grids)/标签页(tabs)/下拉(dropdowns)/徽章(badges)/按钮(buttons)等 UI 组件、CSS 类名系统 |
 | [sphinx-copybutton](sphinx-copybutton/index.md) | 代码块复制按钮——一键复制代码块内容、JS/CSS 静态资源注入、配置选项 |
@@ -87,14 +87,14 @@ status: stable
 
 ### 学术内容
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [sphinx-exercise](sphinx-exercise/index.md) | 练习环境——exercise/solution 指令、答案隐藏显示、编号管理 |
 | [sphinx-proof](sphinx-proof/index.md) | 数学证明环境——theorem/proof/lemma/corollary/definition 等定理类指令、自定义节点类型 |
 
 ## 基础设施工具层
 
-| 知识束 | 简介 |
+| 知识包 | 简介 |
 |--------|------|
 | [jupyter-cache](jupyter-cache/index.md) | Notebook 执行缓存——MyST-NB 的执行后端依赖、SQLite 数据库缓存层、Notebook 读取/执行/缓存命中、多项目隔离、CLI 管理工具 |
 | [github-activity](github-activity/index.md) | GitHub 活动 Changelog 生成器——CLI 工具、GitHub API 调用、按标签/PR/Issue 生成 Markdown 变更日志 |
