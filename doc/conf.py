@@ -37,6 +37,7 @@ _optional_extensions = [
     "sphinx.ext.graphviz",
     "sphinx_contributors",
     "sphinxext.opengraph",
+    "sphinxcontrib.mermaid",
 ]
 for _ext in _optional_extensions:
     if _has(_ext):
@@ -50,6 +51,9 @@ myst_enable_extensions = [
     "replacements",
     "substitution",
 ]
+# 将 ```mermaid 代码块映射为 sphinxcontrib-mermaid 指令，
+# 实现 Markdown 中直接书写 mermaid 图表的原生体验
+myst_fence_as_directive = ["mermaid"]
 myst_heading_anchors = 3
 myst_commonmark_only = False
 # 将文档 frontmatter title 注入为 H1，避免无 title 的文档从 H2 开始导致跳级
@@ -100,6 +104,20 @@ tippy_skip_urls = [
 
 copybutton_exclude = '.linenos, .gp'
 copybutton_selector = ":not(.prompt) > div.highlight pre"
+
+# --- sphinxcontrib-mermaid 配置 ------------------------------------------
+# 使用运行时 JS 渲染（CDN 加载 mermaid.min.js），零构建依赖；
+# 版本锁定以避免 CDN 更新导致的渲染不稳定
+mermaid_version = "11.4.1"
+# mermaid 初始化参数：使用默认主题，支持中文
+mermaid_init_js = """
+mermaid.initialize({
+  startOnLoad: true,
+  theme: 'default',
+  securityLevel: 'loose',
+  fontFamily: '"Noto Sans SC", "Microsoft YaHei", sans-serif',
+});
+"""
 
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3.14", None),

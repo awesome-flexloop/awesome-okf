@@ -22,4 +22,5 @@ doc = [
     "sphinx-sitemap",
     "sphinxext-opengraph",
     "sphinx-contributors",
+    "sphinxcontrib-mermaid>=0.9",
 ]
