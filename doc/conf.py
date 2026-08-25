@@ -166,7 +166,7 @@ html_theme_options = {
     "use_issues_button": True,
     "path_to_docs": "doc",
     "toc_title": "目录",
-    "show_navbar_depth": 1,
+    "show_navbar_depth": 10,
     "max_navbar_depth": 7,
     "collapse_navbar": False,
     "use_download_button": True,
