@@ -222,3 +222,7 @@ __marimo__/
 
 # temp
 .temp/
+_toc_test*/
+diag_*.py
+fix_toctree*.py
+scan_dup_*.py

@@ -204,7 +204,32 @@ def _quote_frontmatter_dates(app, docname, source):
         source[0] = text[: delims[0].end()] + quoted + text[delims[1].start():]
 
 
+def _dedupe_injected_h1(app, doctree):
+    """去除 myst_title_to_header 注入的重复 H1。
+
+    ``myst_title_to_header = True`` 会把 frontmatter title 注入为文档首个 H1；
+    若正文自带 H1，doctree 便有两个顶级 section：注入项仅含标题、无正文内容。
+    Sphinx TocTreeCollector 会为每个 section 生成一条 TOC 条目，第二条（正文
+    H1，携带全部子目录）的链接为 ``#anchor`` 形式；pydata/sphinx_book_theme
+    侧边栏会整体删除含 ``#anchor`` 的 li（连嵌套子 ul 一起 decompose），
+    导致侧边栏只剩一级导航——这是嵌套目录丢失的根因。
+
+    必须以 priority<500（小于 TocTreeCollector 的默认 500）注册，确保在
+    ``process_doc`` 构建 ``env.tocs`` 之前清理 doctree。
+    """
+    from docutils import nodes
+
+    sections = [n for n in doctree.children if isinstance(n, nodes.section)]
+    if len(sections) < 2:
+        return
+    first = sections[0]
+    # 注入 H1 的特征：该 section 只有标题、无任何正文子节点
+    if len(first.children) <= 1:
+        doctree.remove(first)
+
+
 def setup(app):
     app.connect("source-read", _quote_frontmatter_dates)
+    app.connect("doctree-read", _dedupe_injected_h1, priority=400)
 
 
