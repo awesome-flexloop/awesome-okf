@@ -77,6 +77,7 @@ sources:
 4. 离线 i.i.d. 到在线非平稳的范式转换
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/computational-complexity

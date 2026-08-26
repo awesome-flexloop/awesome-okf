@@ -41,6 +41,7 @@ status: stable
 - 示例中的 `%pip install` 命令在浏览器中执行，无需本地安装
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-first-deployment

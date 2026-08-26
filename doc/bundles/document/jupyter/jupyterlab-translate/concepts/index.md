@@ -39,6 +39,7 @@ status: stable
 | 11 | [双模式分发机制](/concepts/11-dual-mode-distribution.md) | 独立扩展包vs集中语言包、目录结构差异、打包配置对比 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

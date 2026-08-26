@@ -65,6 +65,7 @@ JupyterLab 是 Project Jupyter 的下一代基于 Web 的交互式开发环境�
 见 [log.md](log.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

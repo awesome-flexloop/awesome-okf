@@ -12,6 +12,7 @@
 - [文档与加载器](/ai/langchain-ai/langchain/concepts/document-loader) — Document、Blob、BaseLoader 懒加载与 BaseBlobParser
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 callback-system

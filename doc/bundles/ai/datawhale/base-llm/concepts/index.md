@@ -29,6 +29,7 @@
 * [大模型安全与多模态前沿](safety-multimodal.md) — LLM 安全全景（传统安全/对齐安全/系统安全）、威胁建模（STRIDE/攻击树）、提示注入/越狱/数据泄露/幻觉风险分析、多模态定义与分类、ViT 视觉 Transformer（Patch Embedding/分类标记）、CLIP 图文对比学习（双塔架构/零样本分类）、BLIP-2（Q-Former/桥接模块）、LLaVA（视觉指令微调）、原生统一架构、从零训练简化版 Omni 模型（seeker-omni 项目）。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 finetuning-alignment

@@ -44,6 +44,7 @@ status: active
 * [15. 故障排查与常见问题](15-troubleshooting.md) — 安装问题、翻译显示问题、构建问题、Crowdin同步问题、CI/CD问题的诊断与解决方案
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

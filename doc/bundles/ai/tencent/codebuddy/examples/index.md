@@ -13,6 +13,7 @@
 | IDE 产设研工作流 | [CodeBuddy IDE](/concepts/01-ide.md) | [IDE 官网](/references/ide.md)、[IDE 文档](/references/docs-intro.md) |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 ide-workflow

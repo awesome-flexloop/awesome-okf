@@ -101,6 +101,7 @@ plotly/
 - Plotly Express 依赖 numpy 和 narwhals（DataFrame 抽象层）
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

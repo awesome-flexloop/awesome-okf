@@ -20,6 +20,7 @@ stale_after: 2026-12-31
 * [双注册池、数据类型系统与apply快捷函数](registration-types.md) — `common/_registration.py`、`common/data_types.py`、`common/_apply_operation.py`、`common/tree_ensemble.py`、`common/shape_calculator.py`：双注册池（converter/shape_calculator）、导入副作用注册、DataType四层体系（标量/张量/序列/字典）、15种TensorType、三向类型猜测、74个apply快捷函数、树模型属性模板。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 convert-entry

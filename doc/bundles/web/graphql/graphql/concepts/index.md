@@ -24,6 +24,7 @@
 * [11-graphql-and-ai](11-graphql-and-ai.md) — GraphQL 与 AI：MCP、语义内省与 Agent
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-overview

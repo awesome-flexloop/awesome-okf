@@ -19,6 +19,7 @@
 * [高级模式](08-advanced-patterns.md) — FSM 有限状态机、run() 函数、超时处理、非阻塞读取、异步 expect、调试技巧。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

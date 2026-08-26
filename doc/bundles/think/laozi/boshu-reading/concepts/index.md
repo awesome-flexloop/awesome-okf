@@ -25,6 +25,7 @@
 | 04 | [核心异文选读](04-key-variants.md) | 6组最重要的哲学异文（大器免成/晚成、绝圣弃智/绝智弃辩等） |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-why-boshu

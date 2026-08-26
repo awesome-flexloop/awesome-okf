@@ -17,6 +17,7 @@ generated:
 | [Python 入口点参考](python-entrypoint-reference.md) | _jupyter_labextension_paths 函数约定、labextension 目录结构、pyproject.toml 配置、MANIFEST.in 规范 | packages/*/pyproject.toml, packages/*/jupyterlab_*/__init__.py |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 extension-config-reference

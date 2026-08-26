@@ -30,6 +30,7 @@
 - Jupyter Notebook（推荐交互式运行）
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-plotting

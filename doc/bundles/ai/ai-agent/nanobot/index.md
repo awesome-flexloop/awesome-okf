@@ -100,6 +100,7 @@ nanobot/
 | 测试 | pytest, pytest-asyncio, vitest, basedpyright (strict) |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

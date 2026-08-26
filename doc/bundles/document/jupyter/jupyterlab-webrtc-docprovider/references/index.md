@@ -25,6 +25,7 @@ stale_after: 2027-08-22
 | [readme-source.md](readme-source.md) | `README.md`, `CONTRIBUTING.md` | 用户文档、安装说明、配置指南、开发流程 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 icons-schema-source

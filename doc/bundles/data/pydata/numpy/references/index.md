@@ -10,6 +10,7 @@
 | [dtype与数值类型系统源码](dtype-source.md) | `_core/_dtype.py`、`_core/numerictypes.py` | kind字符映射、类型层次树、genericTypeRank、标志位常量、结构化dtype字符串表示 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 core-init

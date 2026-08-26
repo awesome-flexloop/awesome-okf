@@ -17,6 +17,7 @@ status: stable
 | 04 | [Hatch构建钩子配置](/examples/04-hatch-hook-integration.md) | 语言包和扩展的pyproject.toml完整配置、构建验证、常见问题 | Hatch构建钩子、运行时发现 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-basic-extension-i18n

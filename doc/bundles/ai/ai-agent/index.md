@@ -112,6 +112,7 @@ total_bundles: 21
 > **内容统计**：21 个知识包，共 213 个内容文档（140 概念 + 48 示例 + 25 信源），1500+ 条零推测事实，21 个 facts.md 信源底稿
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 ai-agent-fundamentals/index

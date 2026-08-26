@@ -4,6 +4,7 @@
 * [易经64卦](yijing-64-hexagrams.md) - 易经64卦与ψ塌缩动力学
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 hongloumeng-psi-reading

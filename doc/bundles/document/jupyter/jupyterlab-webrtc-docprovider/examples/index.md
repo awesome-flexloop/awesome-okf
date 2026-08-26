@@ -17,6 +17,7 @@ stale_after: 2027-08-22
 | [jupyterlite-integration.md](jupyterlite-integration.md) | JupyterLite静态站点集成 | ⭐⭐ 中级 | 无服务器Jupyter部署 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-collaboration

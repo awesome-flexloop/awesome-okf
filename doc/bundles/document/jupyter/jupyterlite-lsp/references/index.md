@@ -11,6 +11,7 @@
 | [构建系统源码引用](build-source.md) | dodo.py + package.json + lerna.json + .binder/environment.yml | doit 任务、构建脚本、开发环境依赖 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 build-source

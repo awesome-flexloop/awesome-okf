@@ -4,6 +4,7 @@
 - [内部模块](/ai/deepseek/dual-pipe/references/internal-modules) — 内部方法、通信模块和工具函数参考
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 api

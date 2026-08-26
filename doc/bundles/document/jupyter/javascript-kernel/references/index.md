@@ -14,6 +14,7 @@ generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T00:00:00+08:00
 - [架构洞察](../insights.md) — I 阶段提炼的 5 个核心架构洞察、反常识发现、知识地图
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 api-reference

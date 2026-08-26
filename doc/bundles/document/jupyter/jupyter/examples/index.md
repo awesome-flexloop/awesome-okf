@@ -24,6 +24,7 @@ status: active
 * [05. nbconvert 自动化转换与报告生成](05-nbconvert-automation.md) — HTML/PDF/Markdown/脚本转换、执行后转换、标签控制输出、Python API 编程式转换、papermill 参数化报告、CI/CD 集成、自定义模板。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-first-notebook

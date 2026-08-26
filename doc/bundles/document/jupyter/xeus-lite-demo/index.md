@@ -108,6 +108,7 @@ GitHub Actions (CI 构建)
 5. **扩展**：学习 [08-内容管理](concepts/08-content-and-notebooks.md) → [05-插件安装](examples/05-add-jupyterlite-plugins.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

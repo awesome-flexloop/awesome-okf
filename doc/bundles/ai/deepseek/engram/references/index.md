@@ -4,6 +4,7 @@
 - [配置策略与系统效率](/ai/deepseek/engram/references/configuration-and-efficiency) — Host 内存卸载、U 型缩放定律、27B 配置、作用机制
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 configuration-and-efficiency

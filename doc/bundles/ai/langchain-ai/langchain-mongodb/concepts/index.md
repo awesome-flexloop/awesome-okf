@@ -5,6 +5,7 @@
 - [缓存与聊天历史](/ai/langchain-ai/langchain-mongodb/concepts/chat-history-cache) — MongoDBCache、MongoDBAtlasSemanticCache、MongoDBChatMessageHistory 的设计与对比
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 chat-history-cache

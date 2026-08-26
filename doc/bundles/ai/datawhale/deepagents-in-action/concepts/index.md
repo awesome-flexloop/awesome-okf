@@ -8,6 +8,7 @@
 | [虚拟文件系统与 Context Engineering](./virtual-filesystem-context-engineering.md) | Deep Agents 上下文工程核心，FilesystemBackend 支撑内容落盘、Skills加载、长期记忆与权限控制 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 agent-harness

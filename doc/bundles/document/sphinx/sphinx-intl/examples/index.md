@@ -6,6 +6,7 @@
 * [Transifex 协作翻译](transifex-collaboration.md) — 使用 Transifex 云端平台进行多人协作翻译：CLI 安装、认证配置、资源注册、push/pull 工作流、CI/CD 集成。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-translation

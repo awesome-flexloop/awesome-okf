@@ -147,6 +147,7 @@ xeus/
 - [fps](../fps/index.md) — JupyterLite的FastAPI插件系统（JupyterLite核心插件框架）
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 examples/index

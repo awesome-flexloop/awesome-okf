@@ -5,6 +5,7 @@
 * [CPython 源码信源登记](cpython-source.md) — CPython 3.16.0a0 源码路径、版本信息、核心目录结构、关键文件清单。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 cpython-source

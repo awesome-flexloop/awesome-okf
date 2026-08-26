@@ -41,6 +41,7 @@ sources:
 - 两个 Demo 展示了平台接受多种项目形态：传统 Web App（命令行运行）和 AI 插件（自然语言安装）
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/00-introduction

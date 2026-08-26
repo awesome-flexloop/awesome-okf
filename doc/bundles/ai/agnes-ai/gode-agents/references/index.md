@@ -27,6 +27,7 @@
 | [../insights.md](../insights.md) | I 阶段产出：5 个核心架构洞察四元组与知识地图设计 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 agents-api

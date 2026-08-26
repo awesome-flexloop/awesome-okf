@@ -8,6 +8,7 @@
 - [05 - 国际化与并行安全](05-i18n-and-parallel.md) — gettext 消息目录、并行读写安全、mypy 严格类型检查、TYPE_CHECKING 条件导入。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

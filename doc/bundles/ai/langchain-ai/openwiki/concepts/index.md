@@ -5,6 +5,7 @@
 - [Auth 与 CLI 认证体系](/ai/langchain-ai/openwiki/concepts/auth-cli) — OAuth PKCE、动态客户端注册、token 刷新、ngrok 内网穿透
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 agent-system

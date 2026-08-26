@@ -50,6 +50,7 @@ Jupyter Book v2 CLI
 - [myst-exporters](../myst-exporters/index.md) — 底层多格式导出引擎
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

@@ -7,6 +7,7 @@
 - [03-外部 npm 包导入](03-external-packages.md) — ES Module import、canvas-confetti、dayjs、第三方库组合
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-first-sketch

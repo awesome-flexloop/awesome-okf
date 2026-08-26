@@ -9,6 +9,7 @@
 * [虚拟包检测与使用](virtual-packages.md) — 9 种内置虚拟包（__cuda/__glibc/__archspec 等）详解、环境变量覆盖机制、PackageRecord.virtual_package() 工厂方法、自定义虚拟包插件。对应概念：[三级包记录模型](../concepts/06-package-records.md)、[插件系统](../concepts/15-plugin-system.md)。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-env-create

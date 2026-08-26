@@ -11,6 +11,7 @@
 - [数据集README模板解析](dataset-readme-source.md) — 各数据集README的frontmatter格式、章节结构、列定义表格规范
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 analysis-utils-source

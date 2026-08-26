@@ -24,6 +24,7 @@ sources: https://github.com/datawhalechina/happy-llm
 * [第八章 大模型强化学习](chapter8-reinforcement-learning.md) — GRPO、OPD、Search-R1、ReTool Agentic RL。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 chapter1-nlp-basics

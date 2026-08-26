@@ -36,6 +36,7 @@ stale_after: 2026-12-31
 * [名称管理、元数据存储与废弃 API](07-name-metadata.md) — NameAuthority 命名治理与永不释放设计、MetadataStore 失效标记（invalidate/valid）、meta（临时分析）vs metadata_props（可序列化）双轨元数据、Input()→ir.val() 废弃迁移、Attr* 工厂函数。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-overall-architecture

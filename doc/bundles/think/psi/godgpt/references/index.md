@@ -4,6 +4,7 @@
 * [GodGPT官网](godgpt-website.md) - GodGPT官网
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 godgpt-legal

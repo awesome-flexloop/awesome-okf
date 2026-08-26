@@ -8,6 +8,7 @@
 | [extensions-cheatsheet.md](extensions-cheatsheet.md) | 18 个扩展语法的格式、配置项和使用示例速查表 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 extensions-cheatsheet

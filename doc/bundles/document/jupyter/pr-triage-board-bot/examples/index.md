@@ -9,6 +9,7 @@
 | [03](03-github-action-workflow.md) | GitHub Action部署workflow配置 | 单组织/多看板/限定仓库/dry run等多种workflow配置模板、Cron调度建议、监控告警 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-github-app-setup

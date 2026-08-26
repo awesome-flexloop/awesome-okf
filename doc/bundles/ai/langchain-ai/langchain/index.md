@@ -101,6 +101,7 @@ langchain/
 | `langchain` (classic) | 高层 Agent/Chain 实现（legacy） |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

@@ -19,6 +19,7 @@
 所有 API 名称、类名、方法签名、参数名均直接来自源码静态分析，未参考第三方文档。类标识符（`_c_classid`）、元类注册机制、Cython 扩展层均通过代码验证。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 file-init

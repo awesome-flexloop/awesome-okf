@@ -10,6 +10,7 @@
 - [07 - 沙箱与执行策略](/concepts/07-sandbox-execpolicy.md) — execpolicy 引擎、三层规则、Shell 展开防护、Seatbelt/bwrap
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

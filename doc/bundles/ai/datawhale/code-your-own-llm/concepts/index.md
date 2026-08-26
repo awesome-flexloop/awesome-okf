@@ -8,6 +8,7 @@
 | [文档写作规范体系](./documentation-standards.md) | AGENTS.md 定义的七大维度 Markdown 写作规范 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 documentation-standards

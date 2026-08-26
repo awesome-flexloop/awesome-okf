@@ -12,6 +12,7 @@
 - [lca-deepagents 变体](/ai/langchain-ai/deepagents/references/lca-variant) — LangChain Academy 课程材料仓库说明
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 acp-protocol

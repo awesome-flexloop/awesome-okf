@@ -11,6 +11,7 @@
 | [计算-通信重叠](event-overlap.md) | 使用 EventOverlap 实现通信与计算重叠的各种模式和最佳实践 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-moe

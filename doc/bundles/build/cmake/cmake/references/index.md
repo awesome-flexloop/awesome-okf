@@ -18,6 +18,7 @@ sources:
 * [ctest/cpack：集成工具链](ctest-cpack.md) — CTest（`Source/ctest.cxx`、`Source/CTest/`）和 CPack（`Source/cpack.cxx`、`Source/CPack/`）：add_test 注册、CTestTestfile.cmake 测试发现、Fixture 依赖排序、CDash HTTP 上报、install() 规则收集、TGZ/DEB/RPM/NSIS/DMG 多格式生成器工厂、CPackComponent 组件打包。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 cmake-class

@@ -55,6 +55,7 @@ Trae Templates 是 TRAE IDE 的社区维护项目模板集合，采用 MIT 许�
 6. 想贡献模板，阅读 [创建自定义模板](/examples/create-custom-template.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/00-introduction

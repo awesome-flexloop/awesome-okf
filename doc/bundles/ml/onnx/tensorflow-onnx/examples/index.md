@@ -20,6 +20,7 @@ stale_after: 2026-12-31
 * [自定义算子映射](custom-op-mapping.md) — 为 tf2onnx 不支持的 TF 算子编写自定义转换器：@tf_op 装饰器新 API（推荐，支持多 opset 版本）、custom_op_handlers 旧 API 兼容、命令行 --custom-ops 标记未知算子、自定义子图重写器（custom_rewriter）、Graph/Node API 速查与常见错误排查。对应概念：[装饰器驱动的版本化算子注册表](../concepts/02-versioned-opset-registry.md)、[内部 Graph API 设计](../concepts/04-graph-internal-api.md)、[图重写与模式匹配](../concepts/03-graph-rewriting.md)。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 custom-op-mapping

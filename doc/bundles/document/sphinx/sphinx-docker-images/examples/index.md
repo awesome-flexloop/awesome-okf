@@ -8,6 +8,7 @@
 | [04. CI 集成：GitHub Actions 构建文档](04-ci-integration.md) | 在 CI 中自动构建 HTML/PDF、部署到 GitHub Pages |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-basic-html-build

@@ -13,6 +13,7 @@
 * [会话管理与KernelSpec缓存源码](session-manager-source.md) — SessionManager内存会话、FileKernelSessionManager/WebhookKernelSessionManager持久化、KernelSpecCache文件监控缓存。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 app-entry-source

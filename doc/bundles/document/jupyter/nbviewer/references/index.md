@@ -28,6 +28,7 @@
 | [测试源码解析](tests-source.md) | tests/test_nbviewer.py冒烟测试：BeautifulSoup解析首页、参数化链接检查、无conftest.py、无重试助手、pytest直接请求https://nbviewer.org |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 app-source

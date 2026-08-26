@@ -30,6 +30,7 @@ sources:
 - **现任成员**：参考 [nominating-new-member.md](nominating-new-member.md)，当发现持续贡献的社区成员时主动提名
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 hosting-a-meeting

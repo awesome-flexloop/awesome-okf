@@ -7,6 +7,7 @@
 - [03 - 运行分析Notebook](03-run-analysis-notebook.md) — 本地或Binder上运行分析notebooks、环境配置与问题解决
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-build-docs-locally

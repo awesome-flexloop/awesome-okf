@@ -24,6 +24,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [⚡ PocketFlow 极简 LLM 应用框架](pocketflow/index.md) | 100 行代码的极简 LLM Agent 框架——节点+流程抽象、6 大设计模式、实战教程 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 agnes-ai/index

@@ -86,6 +86,7 @@ langsmith-cli/
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

@@ -21,6 +21,7 @@ stale_after: 2026-12-31
 * [自定义算子注册与使用示例](custom-operator.md) — 使用自定义 domain 构建自定义 op 节点、opset_import 包含自定义域、checker 对自定义 op 的行为（默认跳过/full_check失败）、手动 value_info 绕过方法、FunctionProto 局部函数与内联。对应概念：[算子定义与注册机制 OpSchema](../concepts/05-operator-schema.md)、[版本转换与函数内联](../concepts/13-version-converter-inliner.md)、[Opset版本机制与算子域](../concepts/04-opset-versioning.md)。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 build-linear-regression

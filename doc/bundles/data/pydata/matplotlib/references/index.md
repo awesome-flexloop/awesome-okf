@@ -52,6 +52,7 @@
 3. **交叉验证**：交叉检查 pyplot 函数与 Axes 方法的对应关系（如 `plt.plot` → `Axes.plot`）
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 artist-hierarchy

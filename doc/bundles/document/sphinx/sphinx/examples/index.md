@@ -11,6 +11,7 @@
 | [05-readthedocs-deployment.md](05-readthedocs-deployment.md) | 部署到Read the Docs全流程 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-first-extension

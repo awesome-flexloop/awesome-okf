@@ -114,6 +114,7 @@ langchain-ai/deepagents/
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

@@ -102,6 +102,7 @@ jupyter lab
 - [Jupyter Server文档](https://jupyter-server.readthedocs.io/)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

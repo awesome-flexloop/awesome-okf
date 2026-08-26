@@ -7,6 +7,7 @@
 - [Session 会话](session-session.md) — Session 依赖注入容器
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 build-build

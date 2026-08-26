@@ -39,6 +39,7 @@
 | [15-docutils-standalone.md](15-docutils-standalone.md) | Docutils 独立使用——脱离 Sphinx 的 Python API 和 CLI |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

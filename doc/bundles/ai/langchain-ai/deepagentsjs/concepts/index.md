@@ -5,6 +5,7 @@
 - [上下文与 Todo 管理](/ai/langchain-ai/deepagentsjs/concepts/context-todo) — 摘要卸载、后端抽象、filesValue 状态归约、内存/技能系统、权限控制
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 context-todo

@@ -5,6 +5,7 @@
 * [jupyter_server_terminals 源码信源登记](jupyter-server-terminals-source.md) — jupyter_server_terminals v0.5.4 源码路径、版本信息、核心模块清单与依赖关系。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 jupyter-server-terminals-source

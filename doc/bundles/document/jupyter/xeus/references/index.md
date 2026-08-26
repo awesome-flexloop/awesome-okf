@@ -23,6 +23,7 @@ status: stable
 | [metasource.md](metasource.md) | 项目元数据与依赖版本 | F-001~F-014 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 conda-env-source

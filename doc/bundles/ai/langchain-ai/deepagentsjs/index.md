@@ -131,6 +131,7 @@ deepagentsjs 在源码注释中明确声明保持与 Python 版 deepagents 的 1
 deepagentsjs 遵循"信任 LLM"模型。agent 可以执行其工具允许的任何操作。应在工具/沙箱级别强制执行边界，而非期望模型自我约束。文件系统权限通过 `permissions` 参数配置，支持基于 glob 的读写允许/拒绝规则。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

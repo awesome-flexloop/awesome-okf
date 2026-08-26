@@ -9,6 +9,7 @@
 * [打包安装验证模式](test-install-verification.md) — 使用 release.test_install 在临时 venv 中验证包安装、导入、类型检查，自定义增强验证流程。对应概念：[包发布生命周期](../concepts/05-packaging-release.md)、[工具函数](../concepts/07-utilities-watchers.md)。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-usage

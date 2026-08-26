@@ -19,6 +19,7 @@
 * [Agent 智能体](agent-intelligent-agent.md) — ReAct 范式、工具调用、多轮交互、自主规划。对应第七章。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 agent-intelligent-agent

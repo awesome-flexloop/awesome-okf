@@ -23,6 +23,7 @@
 | [04-advanced-features.md](04-advanced-features.md) | 高级功能——编号样式（数字/罗马/字母）、glob模式、外部链接、CLI工具、Jupyter Book集成 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

@@ -47,6 +47,7 @@ okf_version: "0.2"
 * **外部包边界**：harness-agent/gateway/memory/browser 是腾讯内部包，本文档只描述 Octop 如何调用它们的公共 API，不虚构其内部实现。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

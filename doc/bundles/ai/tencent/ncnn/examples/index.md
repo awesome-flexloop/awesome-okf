@@ -6,6 +6,7 @@
 * [启用 Vulkan GPU 推理](vulkan-inference.md) — create_gpu_instance、use_vulkan_compute、VkMat 全 GPU 路径、PipelineCache 持久化、CPU/GPU 混合执行。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 custom-layer

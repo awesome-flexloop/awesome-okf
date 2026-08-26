@@ -120,6 +120,7 @@ shared = {
 - 工具函数：[utils/](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/utils/)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/character-consistency

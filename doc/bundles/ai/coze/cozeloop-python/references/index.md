@@ -7,6 +7,7 @@
 - [传输层与配置参考](/references/transport-config.md) — HTTP 客户端、认证（PAT/JWT）、环境变量、批量上报四队列配置、超大数据上报、截断策略、客户端生命周期、异常体系
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 integrations

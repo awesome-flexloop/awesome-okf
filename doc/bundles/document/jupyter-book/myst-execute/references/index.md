@@ -6,6 +6,7 @@
 - [Thebe React 源码](thebe-react-src.md) — React hooks 和 Provider
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 myst-execute-src

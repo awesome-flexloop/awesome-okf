@@ -13,6 +13,7 @@ myst-syntax 概念文档按学习路径编号。
 - [08 高级指令](08-advanced-directives.md) — Mermaid/TOC/Raw/SI/化学式等
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-directive-role-basics

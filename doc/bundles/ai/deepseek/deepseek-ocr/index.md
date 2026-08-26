@@ -85,6 +85,7 @@ deepseek-ocr/
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

@@ -40,6 +40,7 @@ status: stable
 - [腾讯开源](https://opensource.tencent.com/) — 腾讯开源项目总览
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 codebuddy/index

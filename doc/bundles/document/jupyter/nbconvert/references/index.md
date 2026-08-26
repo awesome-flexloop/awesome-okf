@@ -110,6 +110,7 @@ LoggingConfigurable (traitlets)
 4. **CLI使用**：参考[NbConvertBase](nbconvert-base-source.md)配置体系
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 exporter-base-source

@@ -117,6 +117,7 @@ Deep Agents 是一个开源的 Agent 框架（agent harness），构建在 LangC
 | dcode 版本 | 0.1.59 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/acp-protocol

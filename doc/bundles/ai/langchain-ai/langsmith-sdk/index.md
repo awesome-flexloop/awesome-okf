@@ -79,6 +79,7 @@ langsmith-sdk/
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

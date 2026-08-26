@@ -43,6 +43,7 @@ trae-learning 是 TRAE Community 维护的 Vibecoding 进阶指南文档站，�
 | [文档站源码索引](/references/learning-source.md) | 项目信息、npm scripts、完整目录结构、VitePress 配置要点 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/00-introduction

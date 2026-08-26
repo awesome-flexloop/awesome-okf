@@ -6,6 +6,7 @@
 | [notebook-cheatsheet.md](notebook-cheatsheet.md) | MyST 文本 Notebook 语法速查——code-cell、glue、eval、cell metadata |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 mystnb-source

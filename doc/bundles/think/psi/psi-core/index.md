@@ -55,6 +55,7 @@ stale_after: 2027-08-23
 * [GodGPT 应用](/godgpt/index.md) — ψ 理论的 AI 灵性引导工程化落地
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

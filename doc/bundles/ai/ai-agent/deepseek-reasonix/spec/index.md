@@ -4,6 +4,7 @@
 - [insights.md](/spec/insights.md)——I 阶段产出的 5 个核心架构洞察（陈述/证据/反常识/行动）
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 facts

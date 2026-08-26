@@ -22,6 +22,7 @@
 * [项目实战](project-practice.md) — 第八章"尝尝咸淡"基础 RAG（FAISS+混合检索+查询路由）到第九章 Graph RAG（Neo4j+Milvus 双引擎+智能路由+多跳推理）的完整实战。对应第八、九章。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 data-preparation

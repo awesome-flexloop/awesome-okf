@@ -36,6 +36,7 @@
 | [12-custom-formats.md](12-custom-formats.md) | 自定义格式与扩展——自定义 Reader、渲染器、MIME 插件 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

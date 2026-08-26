@@ -7,6 +7,7 @@
 | [Rattler 源码结构参考](rattler-source.md) | 仓库目录结构、crates 分层布局、Python/JS 绑定目录、开发命令速查 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 rattler-source

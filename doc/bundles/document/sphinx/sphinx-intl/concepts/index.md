@@ -21,6 +21,7 @@
 * [08. 配置读取与 Python 兼容层](08-config-and-compat.md) — read_config 执行 conf.py、Tags 类、execfile_ Python 2/3 兼容、自动配置检测流程。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

@@ -4,6 +4,7 @@
 * [宇宙本论源码](universe-source.md) - XOR-SHIFT宇宙本论源码
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 three-axioms

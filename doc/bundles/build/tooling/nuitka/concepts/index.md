@@ -55,6 +55,7 @@ description: "Nuitka V4.1rc11 核心概念文档——按学习路径排列"
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

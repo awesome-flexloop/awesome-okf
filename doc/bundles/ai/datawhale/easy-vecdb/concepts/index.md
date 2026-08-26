@@ -24,6 +24,7 @@
 | [faiss-milvus-engineering.md](faiss-milvus-engineering.md) | Faiss 高性能检索库（GPU/索引/调优）、Milvus 分布式数据库（架构/API/AI应用） |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 ann-algorithms

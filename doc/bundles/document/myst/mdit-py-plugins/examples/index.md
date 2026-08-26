@@ -5,6 +5,7 @@
 - [插件配方集](plugin-cookbook.md) — 常见插件开发代码片段
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 custom-plugin

@@ -92,6 +92,7 @@ agnes-ai-models/
 **本知识包共收录 17 个内容文档（8个概念 + 5个示例 + 2个信源 + 2个子目录索引 + 根索引）。**
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

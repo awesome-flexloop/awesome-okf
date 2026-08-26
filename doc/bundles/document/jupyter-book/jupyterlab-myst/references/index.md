@@ -6,6 +6,7 @@
 - [执行组件源码](execution-components-src.md) — 内联表达式执行
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 cell-widget-src

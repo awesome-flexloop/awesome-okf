@@ -171,6 +171,7 @@ DeepSpec/
 | [DualPipe](/ai/deepseek/dual-pipe/) | DeepSeek 双向流水线并行调度算法 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

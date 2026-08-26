@@ -22,6 +22,7 @@
 * [09-导出、分享与工具栏集成](09-export-share.md) — ZIP/Wheel导出、链接分享、工具栏按钮、Run on Save、命令面板、侧边栏面板、AI辅助。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

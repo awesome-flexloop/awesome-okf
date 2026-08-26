@@ -9,6 +9,7 @@
 - [06 - Python SDK](./06-python-sdk.md) — openai-codex 包、同步/异步客户端、JSON-RPC 子进程通信、认证、沙箱控制
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

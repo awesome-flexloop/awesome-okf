@@ -17,6 +17,7 @@
 所有信源基于 Git commit `cf4958fcd20763a61ce4c7eeb1394f3c60e16cb0`（2026年8月）。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 app-source

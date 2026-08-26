@@ -10,6 +10,7 @@
 | 05 | [配置项参考](/concepts/05-configuration.md) | 全部配置项、numfig编号、i18n、CSS自定义 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

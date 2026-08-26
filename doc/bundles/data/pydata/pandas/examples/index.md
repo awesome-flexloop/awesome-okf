@@ -16,6 +16,7 @@
 4. **参考源码**：示例中涉及的 API 实现细节见 [references/](../references/core-init.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-dataframe-ops

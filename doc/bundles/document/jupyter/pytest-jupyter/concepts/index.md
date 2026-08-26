@@ -48,6 +48,7 @@
 简介 → 快速上手 → Core插件 → [基础测试示例](/examples/01-basic-core-test.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

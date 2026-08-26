@@ -37,6 +37,7 @@ title: SymPy 信源登记簿
 | [张量/统计/打印/代码生成/向量](tensor-stats-source.md) | `tensor/`, `stats/`, `printing/`, `codegen/`, `vector/`, `utilities/lambdify.py` | 索引张量、概率统计、多格式输出、代码生成、向量微积分 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 assumptions-source

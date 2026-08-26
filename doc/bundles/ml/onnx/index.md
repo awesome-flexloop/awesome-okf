@@ -122,6 +122,7 @@ status: stable
 - **frontmatter**：150个文件YAML元数据完整
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 onnx/index

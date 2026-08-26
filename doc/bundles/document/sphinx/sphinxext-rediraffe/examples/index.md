@@ -6,6 +6,7 @@
 - [自定义Jinja模板](custom-jinja-template.md) — 品牌化页面、SEO优化模板、调试模板、三层降级最佳实践
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 auto-redirect-writer

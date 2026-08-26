@@ -31,6 +31,7 @@
 | [09 - 国际化与高级主题](/concepts/09-internationalization.md) | 翻译系统、缓存清除、子主题开发、扩展协作、弃用功能 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

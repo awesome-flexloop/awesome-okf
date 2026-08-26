@@ -4,6 +4,7 @@
 * [theory_psi 文档](theory-psi-document.md) - theory_psi核心文档
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 math-dw-cash

@@ -87,6 +87,7 @@ examples:
 - 开源协议：CC BY-NC-SA 4.0（内容）/ MIT（代码）
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

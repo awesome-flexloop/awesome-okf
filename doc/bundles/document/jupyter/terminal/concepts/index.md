@@ -33,6 +33,7 @@
 - 信源文档提供了完整的API签名和源码映射，参见[信源参考](/references/index.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

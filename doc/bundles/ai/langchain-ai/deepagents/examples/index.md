@@ -7,6 +7,7 @@
 - [lca-deepagents 教学变体](/ai/langchain-ai/deepagents/examples/lca-variant) — Chinook Sales Assistant 综合示例，展示子代理、技能、内存、MCP 和人工审批的组合使用
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 lca-variant

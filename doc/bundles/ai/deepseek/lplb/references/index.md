@@ -5,6 +5,7 @@
 - [拓扑配置](/ai/deepseek/lplb/references/topology) — Cube/Hypercube/Ring/Torus 拓扑定义、r2o 矩阵约束、副本组布局
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 api

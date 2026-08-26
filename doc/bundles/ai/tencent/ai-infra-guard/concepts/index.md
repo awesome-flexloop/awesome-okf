@@ -13,6 +13,7 @@ AI-Infra-Guard 的核心概念解析，建议按顺序阅读。
 | 06 | [MCP 安全扫描](06-mcp-scan.md) | 三种传输协议、静态规则、LLM 动态测试 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-architecture

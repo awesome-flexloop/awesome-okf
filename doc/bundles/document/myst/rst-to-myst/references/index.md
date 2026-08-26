@@ -11,6 +11,7 @@
 | [命名空间 Mock 系统](source-namespace.md) | `rst_to_myst/namespace.py` | ApplicationNamespace、Sphinx扩展加载 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 source-cli

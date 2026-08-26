@@ -25,6 +25,7 @@ status: stable
 所有信源基于 JupyterLite Demo 仓库（https://github.com/jupyterlite/demo），核心版本 jupyterlite-core==0.8.0。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 config-source

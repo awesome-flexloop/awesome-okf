@@ -112,6 +112,7 @@ groups: "AgnesAI生态"
 - API平台：https://platform.agnes-ai.com/
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 agnes-ai-models/index

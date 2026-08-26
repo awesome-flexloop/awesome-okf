@@ -46,6 +46,7 @@ description: "Jupyter/IPython社区调查数据集仓库系统教程：数据集
 | 源码路径 | `external/libs/jupyter/surveys/` |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

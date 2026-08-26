@@ -145,6 +145,7 @@ sources:
 - **许可证**：详见项目 LICENSE 文件
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/00-introduction

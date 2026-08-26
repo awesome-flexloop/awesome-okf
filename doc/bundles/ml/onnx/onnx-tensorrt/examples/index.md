@@ -19,6 +19,7 @@ stale_after: 2026-12-31
 * [自定义插件处理不支持的算子](custom-plugin.md) — 为不支持的 ONNX 算子编写 TensorRT 自定义插件、注册 IPluginCreator、通过 FallbackPluginImporter 自动导入、构建版本兼容引擎。对应概念：[算子注册与插件扩展](../concepts/02-op-registration-plugin.md)、[错误处理与诊断](../concepts/04-error-diagnostics.md)、[权重内存模型](../concepts/03-weights-memory-model.md)。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 custom-plugin

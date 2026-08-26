@@ -65,6 +65,7 @@ okf_version: "0.2"
 * **覆盖范围**：覆盖 core/、assumptions/、calculus/、functions/、integrals/、simplify/、series/、solvers/、matrices/、polys/、logic/、ntheory/、sets/、stats/、concrete/、tensor/、printing/、parsing/、codegen/、utilities/、vector/ 共22个核心模块；排除 physics/、geometry/、plotting/、crypto/、holonomic/、liealgebras/、categories/、combinatorics/、diffgeom/、discrete/ 等领域专用模块。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

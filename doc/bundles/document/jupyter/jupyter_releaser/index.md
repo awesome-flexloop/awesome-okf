@@ -80,6 +80,7 @@ jupyter_releaser 的核心设计可以概括为：
 5. **Dry-Run 优先**：完整流程可在本地 Mock 环境中测试，不触碰真实服务
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

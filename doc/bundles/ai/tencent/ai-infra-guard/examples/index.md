@@ -9,6 +9,7 @@
 | [Docker 部署](docker-deploy.md) | 单机和分布式部署的 docker-compose 配置与环境变量说明 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 cli-scan

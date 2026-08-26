@@ -76,6 +76,7 @@ jupyter-chat/
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/architecture-overview

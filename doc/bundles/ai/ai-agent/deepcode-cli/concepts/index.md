@@ -7,6 +7,7 @@
 - [04 - CLI 命令与会话管理](/concepts/04-cli-commands.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

@@ -4,6 +4,7 @@
 - [DualPipeV 推理示例](/ai/deepseek/dual-pipe/examples/inference) — 使用 DualPipeV 进行 V 型双向流水线推理
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-training

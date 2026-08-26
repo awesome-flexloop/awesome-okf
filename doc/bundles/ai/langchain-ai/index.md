@@ -127,6 +127,7 @@ langchain (核心框架)
 - **许可证**：各项目采用 MIT 或其他开源许可（详见各 bundle）
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 langchain/index

@@ -15,6 +15,7 @@
 4. **多文件开发**：通过 [本地模块导入与CSS样式](04-local-import.md)，掌握生产级插件的组织方式
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-hello-world

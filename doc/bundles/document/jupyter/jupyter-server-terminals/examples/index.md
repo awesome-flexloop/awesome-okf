@@ -7,6 +7,7 @@
 * [配置自动清理与指定工作目录](culler-and-cwd.md) — 配置闲置终端自动回收（Culling）、创建终端时指定初始工作目录（cwd）的完整配置与验证示例。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-operations

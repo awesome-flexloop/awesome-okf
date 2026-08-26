@@ -103,6 +103,7 @@ chat-langchain/
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

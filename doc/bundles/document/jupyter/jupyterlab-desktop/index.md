@@ -72,6 +72,7 @@ JupyterLab Desktop 是基于 Electron 的跨平台桌面应用，将 JupyterLab 
 **推荐阅读顺序：** [简介](concepts/00-introduction.md) → [架构概览](concepts/01-architecture-overview.md) → [应用入口与生命周期](concepts/02-app-entry-lifecycle.md) → [会话窗口系统](concepts/03-session-window-system.md) → [Jupyter 服务器管理](concepts/04-server-management.md) → [Python 环境管理](concepts/05-python-env-management.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

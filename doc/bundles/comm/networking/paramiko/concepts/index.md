@@ -21,6 +21,7 @@
 * [高级模式](10-advanced-patterns.md) — ProxyCommand 跳板机、连接池、并发通道、日志调试、异常处理最佳实践。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

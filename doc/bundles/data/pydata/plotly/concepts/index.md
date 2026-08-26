@@ -27,6 +27,7 @@
 6. 需要可运行代码时参考 **examples/** 目录
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

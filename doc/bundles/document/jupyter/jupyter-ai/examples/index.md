@@ -23,6 +23,7 @@ Jupyter AI 实用示例，覆盖从快速上手到自定义开发的典型场景
 | [创建自定义 Persona](custom-persona.md) | 开发自定义 AI Persona 并通过 entry points 注册 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 custom-mcp-server

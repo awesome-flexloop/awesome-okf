@@ -34,6 +34,7 @@ jupyterlab-latex 的核心概念按阅读顺序排列，从入门到进阶逐层
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

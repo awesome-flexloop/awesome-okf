@@ -50,6 +50,7 @@ GodGPT应用知识包记录AI灵性引导应用GodGPT的产品定位、核心功
 * [XOR-SHIFT 宇宙本论](/psi-universe/index.md) — 信息场与意识理论的宇宙学背景
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

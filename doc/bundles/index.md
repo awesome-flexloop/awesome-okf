@@ -147,6 +147,7 @@ flowchart LR
 
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 ai/index

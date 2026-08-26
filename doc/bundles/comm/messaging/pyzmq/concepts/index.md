@@ -14,6 +14,7 @@ pyzmq 核心概念文档，按学习路径排列。
 | 07 | [生态模块：eventloop、green、devices、log 与 utils](07-ecosystem-eventloop-green-devices-log.md) | tornado 集成、gevent 适配、设备代理、PUBHandler 日志、jsonapi |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-architecture-dual-backend

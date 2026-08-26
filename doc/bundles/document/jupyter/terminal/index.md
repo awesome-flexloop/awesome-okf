@@ -136,6 +136,7 @@ npx static-handler --coi _output/
 5. **Python构建插件**：TerminalAddon在JupyterLite构建时自动复制cockle WASM文件，零配置部署
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

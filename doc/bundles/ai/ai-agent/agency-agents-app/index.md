@@ -51,6 +51,7 @@ Agency Agents App 是基于 Agency Agents 构建的原生桌面应用，采用 T
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/catalog-install-store

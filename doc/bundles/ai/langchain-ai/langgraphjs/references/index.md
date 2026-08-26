@@ -4,6 +4,7 @@
 - [Checkpoint 与流式 API](checkpoint-streaming) — 持久化、StreamMode、流式方法
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 checkpoint-streaming

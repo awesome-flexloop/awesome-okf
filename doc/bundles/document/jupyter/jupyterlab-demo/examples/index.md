@@ -30,6 +30,7 @@ Binder体验 → 本地搭建 → 自定义配置 → 添加内容 → 扩展开
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-launch-binder

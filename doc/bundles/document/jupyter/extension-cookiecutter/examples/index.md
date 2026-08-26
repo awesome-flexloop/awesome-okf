@@ -12,6 +12,7 @@
 - [03 添加可配置参数](03-configurable-extension.md) — 使用 traitlets 添加多种类型配置（Unicode/Integer/Bool/List/Dict/Float）、参数验证器、settings 传递、测试配置覆盖
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-basic-ping-extension

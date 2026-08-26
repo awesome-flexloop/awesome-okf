@@ -45,6 +45,7 @@ okf_version: "0.2"
 本知识包共收录 16 个内容文档（7 个概念 + 3 个示例 + 3 个信源登记 + 3 个子目录index + 根index + log）。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

@@ -17,6 +17,7 @@
 - [09 插件速查表](09-plugin-reference.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

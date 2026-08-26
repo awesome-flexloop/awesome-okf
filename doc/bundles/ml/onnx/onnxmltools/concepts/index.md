@@ -32,6 +32,7 @@ stale_after: 2026-12-31
 * [Pipeline转换、元数据传播与校验工具](06-pipeline-metadata.md) — 复合模型处理：SparkML/CoreML Pipeline转换、CoreML元数据自动提取（author/license/description）、模型I/O工具、命名合规校验、形状计算器校验工具。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-overall-architecture

@@ -59,6 +59,7 @@ Second Me 是构建个人AI数字分身的开源框架，核心创新是三层�
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/flask-api-server

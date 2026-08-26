@@ -16,6 +16,7 @@
 | 09 | [导入转换器](09-import-converters.md) | jats-to-myst、tex-to-myst 栈式解析器 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-exporter-architecture

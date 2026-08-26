@@ -22,6 +22,7 @@
 * [09-模块与导入系统](09-module-import.md) — _inittab 内置模块注册表、__builtins__、导入锁、sys.modules 缓存、C 扩展模块。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

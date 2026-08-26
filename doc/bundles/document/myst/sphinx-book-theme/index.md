@@ -110,6 +110,7 @@ Sphinx主题与扩展初始化时机不同，SBT通过 setup() 立即调用 + co
 - [I阶段洞察提炼](spec/insights.md) — 4个核心洞察与知识地图
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

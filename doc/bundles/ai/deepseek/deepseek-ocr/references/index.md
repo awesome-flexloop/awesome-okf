@@ -4,6 +4,7 @@
 - [推理配置与使用指南](/ai/deepseek/deepseek-ocr/references/inference-config) — 分辨率模式、vLLM 配置、HuggingFace 推理、Prompt 参考
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 api

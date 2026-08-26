@@ -43,6 +43,7 @@ trae-mcp 是 TRAE IDE 的社区维护 MCP（Model Context Protocol）服务器�
 | [MCP 协议文档与 CloudBase MCP 索引](/references/mcp-source.md) | MCP 官方文档、CloudBase 文档/源码/插件链接、仓库目录索引 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/00-introduction

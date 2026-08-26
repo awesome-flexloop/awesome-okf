@@ -51,6 +51,7 @@ status: stable
 - **理解架构**：按顺序阅读 02→03→04→05→06→07→08→09
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

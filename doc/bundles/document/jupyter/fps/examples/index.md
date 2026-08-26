@@ -24,6 +24,7 @@
 | [06-signals-usage.md](06-signals-usage.md) | Signal事件通知的回调与迭代器模式 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-first-app

@@ -7,6 +7,7 @@
 - [04 - 部署与基础设施](/concepts/04-deployment-infra.md) — SST 部署、Cloudflare + AWS、GitHub Action、数据湖
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

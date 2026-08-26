@@ -7,6 +7,7 @@
 | [Dash应用初始化](dash-app-init.md) | `dash/dash.py`、`dash/backends/__init__.py`、`dash/_configs.py`、`dash/_get_app.py`、`dash/_callback.py`、`dash/dependencies.py` | Dash类__init__流程、多后端选择（Flask/FastAPI/Quart）、layout设置、callback注册机制、配置系统与应用上下文 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 dash-app-init

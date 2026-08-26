@@ -18,6 +18,7 @@
 | [05-添加 JupyterLite 插件](05-add-jupyterlite-plugins.md) | 安装终端等插件，扩展 JupyterLite 功能 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-first-deployment

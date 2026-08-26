@@ -66,6 +66,7 @@ description: "Jupyter 生态的核心基础库：跨平台路径管理、命令�
 **推荐阅读顺序：** [简介](concepts/00-introduction.md) → [快速上手](concepts/01-getting-started.md) → [架构总览](concepts/02-architecture-overview.md) → [路径系统](concepts/03-path-system.md) → [命令行调度器](concepts/04-command-dispatcher.md) → [应用基类](concepts/05-application-base.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

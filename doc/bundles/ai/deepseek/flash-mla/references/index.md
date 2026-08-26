@@ -11,6 +11,7 @@
 | [kv-cache-layout](/ai/deepseek/flash-mla/references/kv-cache-layout) | FP8 KV cache 内存布局（V32/MODEL1 两种模式）、分页结构、反量化机制与索引格式 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 api

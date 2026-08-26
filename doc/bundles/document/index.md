@@ -20,6 +20,7 @@ description: "技术文档工具链与交互式计算平台——从文档生成
 | [📓 Jupyter 数据科学生态](jupyter/index.md) | Jupyter 交互式计算生态——协议、格式、应用与部署 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 sphinx/index

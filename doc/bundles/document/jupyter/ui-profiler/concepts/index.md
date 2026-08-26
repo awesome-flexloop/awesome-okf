@@ -41,6 +41,7 @@ stale_after: "2027-02-22"
 | 11 | (../concepts/11-server-extension.md | COOP/COEP/Document-Policy三个HTTP头、跨域隔离、禁用扩展、反向代理配置、COEP问题排查 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

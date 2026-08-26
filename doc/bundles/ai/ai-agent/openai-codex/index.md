@@ -134,6 +134,7 @@ openai-codex/
 Apache-2.0
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

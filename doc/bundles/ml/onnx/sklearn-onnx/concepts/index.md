@@ -31,6 +31,7 @@ stale_after: 2026-12-31
 * [Pipeline/FeatureUnion/ColumnTransformer处理、类型推断initial_types](05-pipeline-feature-union.md) — initial_types 类型声明与自动推断（guess_initial_types）、DataType 类型层次、ZipMap 注入机制（三种模式）、Pipeline 顺序串联（中间步骤自动 zipmap=False）、FeatureUnion 并行加权拼接、ColumnTransformer 列切片+条件合并+递归转换、final_types 输出覆盖。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-overall-architecture

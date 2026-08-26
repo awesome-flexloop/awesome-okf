@@ -12,6 +12,7 @@
 | [扩展注册信源](extension-source.md) | JupyterLab 插件注册、CDN 配置、KernelSpec | `packages/p5-kernel-extension/src/index.ts` |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 executor-source

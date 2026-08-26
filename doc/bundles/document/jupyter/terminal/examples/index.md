@@ -20,6 +20,7 @@
 - 自定义配置扩展 → [插件系统](/concepts/03-plugin-system.md)、[主题同步与设置](/concepts/07-theme-and-settings.md)、[构建系统与扩展开发](/concepts/08-build-and-extension.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-basic-terminal-usage

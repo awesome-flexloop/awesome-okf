@@ -21,6 +21,7 @@ stale_after: 2026-12-31
 * [_io.py/_metadata.py/_linked_list.py/_name_authority.py：IO、元数据、链表与命名](io-metadata.md) — `src/onnx_ir/_io.py`（~200行）load/save 与外部数据、`_metadata.py`（~50行）MetadataStore 失效标记、`_linked_list.py`（~280行）DoublyLinkedSet 双向链表、`_name_authority.py`（~70行）NameAuthority 自动唯一命名。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 core-entities

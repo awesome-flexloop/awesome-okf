@@ -8,6 +8,7 @@
 | [TS CLI 入口与命令委托](ts-cli-entry.md) | index.ts 的白标配置和命令注册、clirun.ts 执行器、各命令委托实现 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 python-entry

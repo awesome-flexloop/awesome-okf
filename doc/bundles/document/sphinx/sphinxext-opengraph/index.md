@@ -69,6 +69,7 @@ okf_version: "0.2"
 - [sphinxext-opengraph 源码信源登记](references/sphinxext-opengraph-source.md) — v0.13.0 源码路径、版本信息、核心模块清单、配置项与公开API完整列表
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

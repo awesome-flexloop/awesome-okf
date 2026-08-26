@@ -8,6 +8,7 @@
 * [ZFC坍缩](05-zfc-collapse.md) - ZFC坍缩与元数学批判
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-theory-psi-core

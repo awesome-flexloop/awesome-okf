@@ -7,6 +7,7 @@ Coze Studio 实践指南与操作示例。
 - [配置基础设施后端](/examples/configure-infrastructure.md) — 切换向量库、存储、嵌入、MQ 等可插拔组件
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 add-llm-model

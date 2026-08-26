@@ -17,6 +17,7 @@
 3. **认证 Handler 模式**是安全红线，任何在 Jupyter Server 中注册路由的扩展必须遵循
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 authenticated-api-handler

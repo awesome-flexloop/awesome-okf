@@ -92,6 +92,7 @@ related:
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/agent-core-loop-pattern

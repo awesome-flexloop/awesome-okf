@@ -81,6 +81,7 @@ sphinx-external-toc/
 | [MyST Parser](https://github.com/executablebooks/MyST-Parser) | MyST Markdown——Executable Books 生态核心 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

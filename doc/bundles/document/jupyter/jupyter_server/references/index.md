@@ -47,6 +47,7 @@ sources: []
 | 源码路径 | `external/libs/jupyter/jupyter_server/` |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 auth-source

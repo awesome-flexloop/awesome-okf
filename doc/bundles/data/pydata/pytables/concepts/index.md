@@ -33,6 +33,7 @@
 3. **API 速查**：跳转到 [references/](../references/) 查看具体的类和方法签名
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

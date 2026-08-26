@@ -98,6 +98,7 @@ Jupyter Book v2 与 MySTmd 是 Executable Books 组织推出的新一代技术�
 - **与旧版关系**：现有 [myst/](../myst/index.md) 分组覆盖旧版 Executable Books Python 生态（MyST-Parser/MyST-NB/markdown-it-py 等 Sphinx 扩展），本分组覆盖新一代 TypeScript 实现的 Jupyter Book v2 / MySTmd 引擎
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 mystmd/index

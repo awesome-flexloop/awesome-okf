@@ -127,6 +127,7 @@ pip install jupyter-resource-usage
 - 📋 **信源登记**：[references/index.md](references/index.md) — 事实来源
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

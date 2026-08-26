@@ -15,6 +15,7 @@
 - [示例文档](../examples/)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 source-code-map

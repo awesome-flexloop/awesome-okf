@@ -9,6 +9,7 @@
 * [Notebook批处理与信任管理](03-batch-processing-and-trust.md) — 批量遍历目录、标签管理、输出清除、NotebookNotary签名信任、合并Notebook。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-create-and-write

@@ -161,6 +161,7 @@ result = agent.run("搜索一下最新的AI研究进展")
 - **AgnesAI 分组**：[../index.md](../index.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

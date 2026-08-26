@@ -29,6 +29,7 @@ langchain_mongodb/
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 api

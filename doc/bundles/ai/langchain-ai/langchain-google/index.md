@@ -117,6 +117,7 @@ langchain-google/
 | langgraph | [/langchain-ai/langgraph/](/ai/langchain-ai/langgraph/) | LangChain 编排框架，可与 ChatGoogleGenerativeAI 组合构建 Agent |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

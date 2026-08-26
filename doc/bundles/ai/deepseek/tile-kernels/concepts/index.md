@@ -14,6 +14,7 @@
 | [autograd-integration](/ai/deepseek/tile-kernels/concepts/autograd-integration) | autograd.Function 封装模式、fuse_grad_acc、main_grad、partial buffer reduce |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 autograd-integration

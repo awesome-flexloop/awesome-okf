@@ -4,6 +4,7 @@
 - [Token 与 Options API 参考](token-options-api.md) — Token 类字段/方法、OptionsType 选项、预设对比、MarkdownIt 公共API签名速查
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 markdown-it-py-source

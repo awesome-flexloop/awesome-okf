@@ -106,6 +106,7 @@ Jupyter 是 Project Jupyter 的元包（metapackage），作为安装入口点�
 - 注意事项：jupyter/jupyter 本身是元包，不含 Python 源代码；核心实现分布在各子项目中
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

@@ -57,6 +57,7 @@ okf_version: "0.2"
 * **覆盖范围**：覆盖 myst-cli 的 init/build/start/clean 四大核心命令、Session 依赖注入容器、Redux Store 状态管理、双层缓存策略、模板系统、版本迁移机制、项目加载与TOC解析；覆盖 myst-directives 默认指令列表（28个）和 myst-roles 默认角色列表（25个）；未覆盖 myst-common 解析器内部实现、myst-transforms 详细转换逻辑、myst-templates 模板渲染细节。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

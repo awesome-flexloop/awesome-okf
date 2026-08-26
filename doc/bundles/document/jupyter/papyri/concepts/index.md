@@ -103,6 +103,7 @@ Papyri 概念文档按推荐阅读顺序排列。建议从 00 开始，依次阅
 - [示例文档索引](../examples/index.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

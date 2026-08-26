@@ -107,6 +107,7 @@ Hello-Agents 是一本理论与实战并重的智能体系统构建指南。教�
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/agent-framework-development

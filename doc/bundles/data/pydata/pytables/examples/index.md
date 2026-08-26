@@ -28,6 +28,7 @@ pip install tables numpy pandas
 - [参考文档](../references/) 中的 API 细节
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 hdf5-basics

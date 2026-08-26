@@ -128,6 +128,7 @@ function draw() {
 7. **构建发布**：阅读 [06-构建与打包](concepts/06-build-and-packaging.md) 了解双包发布流程
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

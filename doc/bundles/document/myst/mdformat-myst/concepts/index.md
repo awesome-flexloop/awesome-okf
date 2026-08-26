@@ -11,6 +11,7 @@
 | 04 | [转义机制与后处理器原理](04-escaping-and-postprocessors.md) | 自动转义 MyST 特殊字符的双层机制 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

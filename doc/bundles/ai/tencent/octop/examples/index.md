@@ -7,6 +7,7 @@
 * [ACP 集成：Zed 入站与 Runner 出站](acp-integration.md) — 配置 Octop 作为 ACP stdio 服务器接入 Zed、四个内置 runner 安装与配置、acp_runner 工具六种 action、权限处理、自定义 runner、双向集成架构、故障排查。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 acp-integration

@@ -23,6 +23,7 @@
 | `schema.json` | `jupyter_releaser/schema.json` | ~49 | 配置文件JSON Schema（skip/options/hooks） |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 actions-source

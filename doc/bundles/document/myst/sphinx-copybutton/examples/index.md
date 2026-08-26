@@ -8,6 +8,7 @@
 | [shell-prompts.md](shell-prompts.md) | 多语言REPL提示符配置——Bash/Python/IPython/PowerShell/数据库等场景，正则速查 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-setup

@@ -10,6 +10,7 @@
 - [ACP 协议](/ai/langchain-ai/deepagents/concepts/acp-protocol) — Agent Client Protocol 集成、编辑器对接、会话管理
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 acp-protocol

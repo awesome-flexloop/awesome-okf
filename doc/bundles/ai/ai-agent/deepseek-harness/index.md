@@ -72,6 +72,7 @@ DeepSeek Harness 是深度求索（DeepSeek）官方推出的智能体框架，�
 > **内容统计**：10 个概念 + 4 个示例 + 1 个信源 = 15 个内容文档
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/acp-agent-protocol

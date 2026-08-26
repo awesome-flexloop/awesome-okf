@@ -52,6 +52,7 @@
 | packaging | 版本比较 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 graph-obj-model

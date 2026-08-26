@@ -131,6 +131,7 @@ examples:
 本知识包共收录 8 个概念文档 + 1 个示例登记 + 1 个信源登记，另含 concepts/examples/references 三个子目录索引和根 index.md、log.md。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

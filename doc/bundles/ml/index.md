@@ -16,6 +16,7 @@ description: "机器学习模型互操作与部署生态——跨框架模型格
 | [🧠 ONNX 机器学习生态](onnx/index.md) | ONNX 开放神经网络交换格式生态——标准、IR、优化器、转换器、编译器与推理后端 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 onnx/index

@@ -26,6 +26,7 @@
 * [10-高级模式与 API 集成](10-advanced-patterns.md) — Python API（run_copy/run_update/Worker）、Phase 枚举、LazyDict 延迟字典、自定义 Jinja2 扩展、错误处理层次、文件权限跨平台同步、嵌入其他工具。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

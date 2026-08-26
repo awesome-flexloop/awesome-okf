@@ -63,6 +63,7 @@ helm rollback nbviewer
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-basic-config

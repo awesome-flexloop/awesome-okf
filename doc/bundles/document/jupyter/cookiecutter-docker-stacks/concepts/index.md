@@ -16,6 +16,7 @@
 | [09](09-best-practices.md) | 最佳实践 | Dockerfile编写、安全、性能、版本管理、测试、CI/CD |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

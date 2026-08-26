@@ -24,6 +24,7 @@
 - [源码信源](../references/)：查看核心源码文件的分析文档
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-basic-usage

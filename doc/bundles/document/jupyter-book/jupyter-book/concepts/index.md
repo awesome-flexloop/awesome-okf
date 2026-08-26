@@ -12,6 +12,7 @@
 | 05 | [从 v1 迁移](05-migration-from-v1.md) | _config.yml→myst.yml、Sphinx→myst-cli、指令兼容 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-v2-architecture

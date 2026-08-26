@@ -31,6 +31,7 @@ title: "sphinxcontrib-websupport 概念文档"
 * [09-搜索适配器](09-search-adapters.md) — BaseSearch 抽象接口、NullSearch（无搜索）、WhooshSearch（纯 Python 全文检索）、XapianSearch（高性能 C++ 引擎）、搜索索引构建与查询流程。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

@@ -90,6 +90,7 @@ alabaster/
 | [conda-docs](/build/conda/conda-docs/index.md) | 多项目文档——Sphinx 配置深度定制的实战案例 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

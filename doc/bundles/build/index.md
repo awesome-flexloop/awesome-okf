@@ -19,6 +19,7 @@ description: "构建、打包与开发工具链生态——环境与包管理、
 | [🔧 通用开发工具](tooling/index.md) | 不绑定特定生态、可独立服务任意项目的通用开发工具 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 conda/index

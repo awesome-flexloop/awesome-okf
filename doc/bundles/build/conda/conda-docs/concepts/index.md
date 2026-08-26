@@ -23,6 +23,7 @@ conda-docs 知识包的概念文档，按学习路径排列：
 * [许可证与商业使用边界](07-license.md) — BSD 3-Clause 条款、生态组件许可证差异、商业合规要点
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

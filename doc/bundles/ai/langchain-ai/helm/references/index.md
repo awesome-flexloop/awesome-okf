@@ -7,6 +7,7 @@
 * [Helm Chart 结构索引](/ai/langchain-ai/helm/references/chart-structure.md) — 5 个 Chart（langgraph-cloud/langgraph-dataplane/langsmith/langsmith-auth-proxy/langsmith-observability）的版本矩阵、镜像清单、模板文件映射、核心 values 配置段、探针模式、CI/CD 工具链与跨 Chart 共性模式。覆盖 F-001~F-085。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 chart-structure

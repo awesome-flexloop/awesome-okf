@@ -31,6 +31,7 @@
 | [official-docs.md](official-docs.md) | Sphinx官方文档关键页面URL索引 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 application-api

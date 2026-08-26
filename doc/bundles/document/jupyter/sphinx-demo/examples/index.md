@@ -28,6 +28,7 @@
 - **要嵌入可视化Notebook** → [04-Matplotlib笔记本](04-matplotlib-notebook.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-minimal-site

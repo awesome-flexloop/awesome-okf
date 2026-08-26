@@ -136,6 +136,7 @@ display(new IntSlider({ value: 50, min: 0, max: 100 }));
 - [Comlink 文档](https://github.com/GoogleChromeLabs/comlink)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

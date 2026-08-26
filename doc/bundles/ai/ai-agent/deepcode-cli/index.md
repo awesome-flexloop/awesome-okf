@@ -84,6 +84,7 @@ deepcode-cli/
 - **主页**：https://deepcode.vegamo.cn
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

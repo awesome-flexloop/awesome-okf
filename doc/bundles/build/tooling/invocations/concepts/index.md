@@ -29,6 +29,7 @@
 * [10-组合模式：组装任务集合](10-composition-patterns.md) — 三种导入方式、配置覆盖模式、跨 Collection 调用、创建自定义子集合、命名技巧。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

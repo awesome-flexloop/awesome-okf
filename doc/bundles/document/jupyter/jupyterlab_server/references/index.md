@@ -50,6 +50,7 @@ description: "jupyterlab_server 源码信源文档总目录"
 | `rest-api.yml` | ~200 | OpenAPI 3.0规范 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 app-source

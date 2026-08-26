@@ -33,6 +33,7 @@ sources:
 - [示例文档索引](../examples/index.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 cli-source

@@ -30,6 +30,7 @@
 * [OKF Knowledge Catalog CLI](tooling-knowledge-catalog.md) - Google Cloud Platform 官方维护的工具链仓库（knowledge-catalog），含 npm 包 @okf/okf、CLI 工具和规范源码。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 actor-convention

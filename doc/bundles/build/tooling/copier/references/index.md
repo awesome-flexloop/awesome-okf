@@ -5,6 +5,7 @@
 * [Copier 源码信源登记](copier-source.md) — Copier v9.17.2 源码路径、核心模块清单（18 个模块）、公开 API 导出列表、依赖关系、CLI 入口点说明。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 copier-source

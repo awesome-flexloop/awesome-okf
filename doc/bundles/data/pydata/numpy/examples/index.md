@@ -4,6 +4,7 @@
 * [广播实战](broadcasting-practice.md) — 外积计算、数据中心化与Z-score标准化、距离矩阵、网格函数评估、stride=0验证。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-array-ops

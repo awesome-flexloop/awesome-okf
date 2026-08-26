@@ -16,6 +16,7 @@ sources: https://github.com/datawhalechina/pumpkin-book
 * [BP 反向传播算法推导](bp-backpropagation.md) — 单隐层网络输出层与隐层梯度项推导，Sigmoid 导数性质与链式法则应用。对应南瓜书第5章。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 bp-backpropagation

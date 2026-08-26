@@ -6,6 +6,7 @@
 * [KaTeX 官网信源](/references/katex-website.md) — 官网 17 个公开页面登记：首页、Users、Versions、Node、Browser、API、CLI、Auto-render、Extensions & Libraries、Options、Security、Handling Errors、Font、Supported Functions、Support Table、Common Issues、Migration。每页含稳定 ID（如 `web-options`、`web-cli`）、URL、标题、用途与引用提示，是所有配置默认值、安装方式、安全指引的权威信源。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 katex-source

@@ -9,6 +9,7 @@
 | [examples-index.md](examples-index.md) | extension-examples仓库28个示例的索引表：名称、说明、难度、核心Token |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 core-api-tokens

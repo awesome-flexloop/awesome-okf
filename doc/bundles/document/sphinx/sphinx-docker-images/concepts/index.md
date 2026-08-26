@@ -24,6 +24,7 @@
 | [07. 自定义扩展与最佳实践](07-customization.md) | 创建自定义镜像、docker-compose、性能优化、常见问题 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

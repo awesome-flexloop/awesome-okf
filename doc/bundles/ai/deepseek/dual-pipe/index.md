@@ -89,6 +89,7 @@ loss, _ = model.step(
 - [DeepGEMM](/ai/deepseek/deep-gemm)：MoE 分组 GEMM 内核，为 DualPipe stage 内的计算提供高性能 GEMM
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

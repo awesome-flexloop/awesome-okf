@@ -10,6 +10,7 @@
 - [高级配置示例](advanced-config.md) — 版本化文档canonical URL、Twitter Cards、Article元数据、多语言站点等高级配置
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 advanced-config

@@ -54,6 +54,7 @@ Book to Skill 是将书籍/文档转化为 AI Agent 可执行技能的知识编�
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/dependency-management

@@ -9,6 +9,7 @@
 | [构建编排与导入器](build-orchestration.md) | myst-cli build 层多格式编排、jats-to-myst/tex-to-myst 入口 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 build-orchestration

@@ -24,6 +24,7 @@ stale_after: 2027-08-21
 | [makefile-ci-source.md](makefile-ci-source.md) | Makefile目标、变量、GitHub Actions工作流 | 构建与CI/CD |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 dockerfiles

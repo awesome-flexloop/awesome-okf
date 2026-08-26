@@ -50,6 +50,7 @@ sources:
 - [返回首页](../index.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

@@ -81,6 +81,7 @@ UI系统（06-08）
 - [Lumino 主页](../index.md) — 回到 Lumino bundle 首页
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

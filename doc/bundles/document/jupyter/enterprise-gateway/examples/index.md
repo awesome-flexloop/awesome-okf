@@ -9,6 +9,7 @@
 * [Kubernetes部署EG](03-kubernetes-deployment.md) — K8s集群部署EG完整指南，包含RBAC配置、Helm部署、手动YAML部署、内核Pod创建测试、生产环境建议。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-start-eg-locally

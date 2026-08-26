@@ -54,6 +54,7 @@ Agency Agents（The Agency）是一个包含约270个专业AI Agent Persona的�
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/agent-md-template

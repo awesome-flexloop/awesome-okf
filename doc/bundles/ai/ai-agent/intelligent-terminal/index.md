@@ -71,6 +71,7 @@ Intelligent Terminal 是 Windows Terminal 的原生 AI Agent 集成方案（Wind
 > **内容统计**：10 个概念 + 4 个示例 + 1 个信源 = 15 个内容文档
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/acp-json-rpc-protocol

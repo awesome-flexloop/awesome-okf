@@ -23,6 +23,7 @@ Easy-Vibe 把"用自然语言描述需求、由 AI 实现、人来决策与迭�
 3. 最后读 [部署与工具链](/ai/datawhale/easy-vibe/concepts/03-deployment-toolchain.md)，理解从源码到多形态产物的完整链路。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-vibe-coding-philosophy

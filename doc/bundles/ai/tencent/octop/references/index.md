@@ -10,6 +10,7 @@
 * [Harness 技术栈：外部包依赖与 PathLayout](harness-stack.md) — `pyproject.toml`、`src/octop/config.py`、`src/octop/infra/utils/paths.py`、`AGENTS.md`：orcakit-harness-agent/harness-gateway/harness-memory/harness-browser 四个外部包、OctopConfig/DatabaseConfig/TlsConfig/BackupConfig frozen dataclass、load_config 环境变量覆盖、PathLayout 文件系统布局（~/.octop/）、模块边界硬禁令、i18n/时区、前端技术栈。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 agent-manager

@@ -60,6 +60,7 @@ category: examples
 - Dockerfile 示例假设构建上下文在包含 Dockerfile 的目录中
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-basic-run

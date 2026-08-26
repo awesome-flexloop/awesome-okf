@@ -120,6 +120,7 @@ cd build/html && python -m http.server 8000
 6. **自动部署**：[09-CI/CD部署](concepts/09-ci-deployment.md)，配置GitHub Actions自动发布
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

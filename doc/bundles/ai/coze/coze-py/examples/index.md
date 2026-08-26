@@ -8,6 +8,7 @@
 - [OAuth PKCE 与设备码认证示例](/examples/oauth-pkce-auth.md) — PKCE 流程（含本地回调服务器）→ 设备码流程（轮询）→ Token 使用
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-chat

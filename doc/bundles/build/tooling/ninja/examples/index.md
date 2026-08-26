@@ -241,6 +241,7 @@ A: 推荐使用 WSL2（Windows Subsystem for Linux）获得完整的 Linux 环�
 - [Ninja 源码仓库](https://github.com/ninja-build/ninja)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-minimal-build

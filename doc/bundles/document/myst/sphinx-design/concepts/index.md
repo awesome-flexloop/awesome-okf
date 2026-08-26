@@ -14,6 +14,7 @@
 | 09 | [配置与自定义指令](/concepts/09-configuration.md) | 所有配置项详解、sd_custom_directives自定义指令 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

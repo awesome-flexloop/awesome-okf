@@ -28,6 +28,7 @@
 - [参考资料](../references/)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

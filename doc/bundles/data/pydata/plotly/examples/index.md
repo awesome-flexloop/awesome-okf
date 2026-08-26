@@ -28,6 +28,7 @@ pio.renderers.default = "png"       # 静态 PNG（需 kaleido）
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 interactive-charts

@@ -15,6 +15,7 @@ okf_version: "0.2"
 * [高级模式](08-advanced-patterns.md) — 回调读取、提示输入、结构化解析、异常处理、FFI 深入
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

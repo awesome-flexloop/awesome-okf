@@ -12,6 +12,7 @@ myst-execute 概念文档按学习路径编号。
 - [07 Thebe React 集成](07-thebe-react.md) — React hooks 和 Provider
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-execution-architecture

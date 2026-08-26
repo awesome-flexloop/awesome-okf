@@ -4,6 +4,7 @@
 - [集成分类](/ai/deepseek/awesome-deepseek-agent/concepts/integration-categories) — 四大工具分类（IDE插件/CLI工具/聊天客户端/Agent平台）及选择指南
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 integration-categories

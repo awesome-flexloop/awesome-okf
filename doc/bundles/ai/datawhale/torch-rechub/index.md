@@ -87,6 +87,7 @@ pip install torch-rechub[all]
 - 许可证：MIT
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/data-pipeline

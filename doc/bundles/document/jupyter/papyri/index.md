@@ -154,6 +154,7 @@ papyri gen my-lib.toml --upload
 - 本地/离线文档查看器
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

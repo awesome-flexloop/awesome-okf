@@ -26,6 +26,7 @@ status: stable
 - 示例05：需要理解FPS模块系统，建议阅读[FPS模块系统](../concepts/03-fps-module-system.md)和[插件开发指南](../concepts/12-plugin-development.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-basic-startup

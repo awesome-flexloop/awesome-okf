@@ -13,6 +13,7 @@
 | [plugin-architecture.md](plugin-architecture.md) | JupyterLab 插件架构与依赖关系 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 built-in-providers

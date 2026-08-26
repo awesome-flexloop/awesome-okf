@@ -122,6 +122,7 @@ JupyterLab Language Packs 是 Jupyter 官方维护的多语言翻译包 monorepo
 - 核心设计：**人类只做翻译，Bot 处理所有 Git/构建/发布操作**
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

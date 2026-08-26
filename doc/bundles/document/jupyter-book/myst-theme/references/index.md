@@ -5,6 +5,7 @@
 - [styles 目录源码](structure-styles-src.md) — CSS 变量系统、Tailwind 配置、CSS 模块
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 myst-to-react-providers-src

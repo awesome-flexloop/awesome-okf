@@ -27,6 +27,7 @@
 | [08-lockfile-customization.md](08-lockfile-customization.md) | Lockfile定制——pyodide-lock.json结构、PyodideLockAddon配置、UvPipCompile依赖解析、性能优化 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

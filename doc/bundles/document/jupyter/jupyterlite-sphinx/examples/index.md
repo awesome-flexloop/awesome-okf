@@ -23,6 +23,7 @@ Examples 提供可直接复制使用的完整代码示例，每个示例包含 c
 | [autodoc-integration](autodoc-integration.md) | 与 sphinx.ext.autodoc 集成，全局自动为 Examples 段添加交互按钮，运行时配置 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 autodoc-integration

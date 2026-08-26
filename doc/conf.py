@@ -167,7 +167,11 @@ html_theme_options = {
     "path_to_docs": "doc",
     "toc_title": "目录",
     "show_navbar_depth": 10,
-    "max_navbar_depth": 7,
+    # 侧边栏导航深度：域(L2)→分组(L3)→bundle(L4)。
+    # 全深度（6-7 级）会令每页内嵌约 5000 条导航（5640 页 × ~1MB ≈ 5-6GB），
+    # 超出 GitHub Pages 1GB 站点限制导致部署失败；bundle 深层页面经各 bundle
+    # 首页的手工导航表进入。
+    "max_navbar_depth": 4,
     "collapse_navbar": False,
     "use_download_button": True,
     "use_fullscreen_button": True,

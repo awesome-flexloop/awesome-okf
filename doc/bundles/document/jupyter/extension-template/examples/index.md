@@ -31,6 +31,7 @@
 6. `jupyter lab` 启动 JupyterLab
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-hello-world

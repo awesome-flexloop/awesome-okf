@@ -15,6 +15,7 @@
 | [Helm Chart配置源码](helm-config-source.md) | helm-chart/binderhub/ — values.yaml、binderhub_config.py、deployment/rbac/service/ingress/pdb模板、BinderSpawnerMixin |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 app-source

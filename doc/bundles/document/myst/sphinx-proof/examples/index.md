@@ -6,6 +6,7 @@
 | [自定义编号与配置](/examples/custom-numbering.md) | 中文编号、跨类型编号映射、简约主题、标题格式 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 custom-numbering

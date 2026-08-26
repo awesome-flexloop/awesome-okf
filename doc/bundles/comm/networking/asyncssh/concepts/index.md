@@ -14,6 +14,7 @@
 - [高级模式](11-advanced-patterns.md) — 并发连接、加密算法配置、后量子密钥交换、调试日志、异常处理。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

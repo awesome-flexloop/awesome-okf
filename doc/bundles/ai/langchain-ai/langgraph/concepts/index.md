@@ -10,6 +10,7 @@
 - [错误处理与中断](/ai/langchain-ai/langgraph/concepts/error-handling) — RetryPolicy、错误处理器、interrupt/resume、超时
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 channels

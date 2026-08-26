@@ -30,6 +30,7 @@ generated:
 4. **打包发布路径**：01 → 08（从 monorepo 构建到 wheel 发布）
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

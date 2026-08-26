@@ -116,6 +116,7 @@ codebuddy/
 - **内容敏感度**：本束内容全部来自公开发布的官方网页，属公开内容（Public），存放于 `bundles/` 公共规划区域。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

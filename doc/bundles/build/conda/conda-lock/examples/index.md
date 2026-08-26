@@ -16,6 +16,7 @@ sources:
 * [开发依赖与 category 过滤](dev-dependencies.md) — 使用 `category: dev/docs/test` 字段标记开发/文档/测试依赖，锁定时通过 `--dev-dependencies`/`--extras`、安装时通过 `--dev`/`--extras` 控制范围，理解 BFS 类别传播算法和 main 截断规则，支持 environment.yml 和 pyproject.toml 两种格式。对应概念：[依赖类别与传播](../concepts/14-categories-and-deps.md)、[锁文件 v1/v2 格式](../concepts/06-lockfile-formats.md)。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-lock-workflow

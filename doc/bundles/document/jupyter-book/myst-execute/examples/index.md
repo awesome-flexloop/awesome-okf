@@ -5,6 +5,7 @@
 - [Thebe Lite 无服务器执行](03-thebe-lite.md) — Pyodide 浏览器内执行
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-configure-notebook-execution

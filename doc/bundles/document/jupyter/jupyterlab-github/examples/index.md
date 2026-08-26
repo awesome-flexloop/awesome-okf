@@ -6,6 +6,7 @@
 | 02 | [配置认证：避免速率限制](02-setup-authentication.md) | 服务端 Access Token 配置（推荐）、客户端 Token 配置、GitHub Enterprise 部署、环境变量传递、验证方法 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-basic-browsing

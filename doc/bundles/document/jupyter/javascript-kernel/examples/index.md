@@ -16,6 +16,7 @@ generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T00:00:00+08:00
 - [06-异步编程与数据获取](06-async-data.md) — fetch API/POST/并行请求/错误处理、数据可视化、定时器轮询、WebSocket 实时通信、实时时钟
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-first-notebook

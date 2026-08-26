@@ -37,6 +37,7 @@ stale_after: 2026-12-31
 * [编译选项体系与性能调优](05-compiler-options.md) — O0-O3优化级别实质差异（tiling/SIMD/并行化条件）、目标三元组/架构/CPU配置、加速器插件（NNPA）、--Xopt/--Xllc/--mllvm LLVM选项透传、调试与剖析选项（print-ir/timing/instrument/bind-check）、三源选项优先级、外部工具链依赖、常用调优场景。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-overall-architecture

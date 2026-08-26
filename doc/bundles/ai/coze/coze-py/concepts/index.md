@@ -22,6 +22,7 @@
 - [09 分页模式与资源管理](/concepts/09-pagination-resources.md) — 三种分页器、文件、数据集、工作空间等
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-overview-architecture

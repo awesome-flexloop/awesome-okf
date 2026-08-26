@@ -38,6 +38,7 @@ okf_version: "0.2"
 本知识包共收录 11 个内容文档（7 个概念 + 2 个示例 + 2 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。R 阶段事实与 I 阶段洞察保留在 `spec/facts.md` 与 `spec/insights.md`。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

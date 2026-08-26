@@ -23,6 +23,7 @@
 * [12 编解码与帧格式](12-encoder-decoder.md) — v2_encoder/decoder 状态机、零拷贝、命令帧
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-overview

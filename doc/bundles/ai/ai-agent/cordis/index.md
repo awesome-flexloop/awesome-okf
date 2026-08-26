@@ -65,6 +65,7 @@ Cordis 是面向可组合插件应用的服务框架（TypeScript实现），核
 > **内容统计**：7 个概念 + 3 个示例 + 1 个信源 = 11 个内容文档
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/context-container

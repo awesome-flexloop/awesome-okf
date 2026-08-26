@@ -40,6 +40,7 @@
 6. **动手实践**：前往[实践示例](/examples/index.md)跟着教程构建完整站点
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

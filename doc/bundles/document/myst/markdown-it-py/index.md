@@ -135,6 +135,7 @@ mdit-py-plugins（扩展插件集） → markdown-it-py → mdurl（URL处理）
 见 [log.md](log.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

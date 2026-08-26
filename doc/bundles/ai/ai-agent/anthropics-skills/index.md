@@ -53,6 +53,7 @@ Anthropic Skills 是 Anthropic 官方发布的 Agent Skills 参考实现，定�
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/eval-benchmark-framework

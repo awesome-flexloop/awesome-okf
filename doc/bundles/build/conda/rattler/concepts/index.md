@@ -42,6 +42,7 @@
 | 13 | [锁文件与多语言绑定](13-lock-files-and-bindings.md) | LockFile格式、Python/JS绑定、CLI工具、包上传 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

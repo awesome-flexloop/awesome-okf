@@ -24,6 +24,7 @@ description: "不绑定特定生态、可独立服务任意项目的通用开发
 | 5 | [github-problem-matcher](github-problem-matcher/index.md) | GitHub Actions 错误注解——Problem Matcher JSON 模式、正则捕获组、测试验证、将编译器/linter 错误在 PR 中高亮显示 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 ninja/index

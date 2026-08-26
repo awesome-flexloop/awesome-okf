@@ -41,6 +41,7 @@ mystmd 概念文档按学习路径编号，建议按顺序阅读。
 | 11 | [CLI 工具链](11-cli-toolchain.md) | myst init/build/start/clean/templates、commander、Session、构建流程 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-overview

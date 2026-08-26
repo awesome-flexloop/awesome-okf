@@ -83,6 +83,7 @@ social-media-agent/
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

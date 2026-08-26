@@ -30,6 +30,7 @@ sphinx-argparse 的核心概念按学习路径排列，建议按顺序阅读。
 | [11 - conf.py 配置选项详解](11-configuration.md) | 全部sphinxarg_配置项、四种典型配置方案 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

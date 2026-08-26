@@ -29,6 +29,7 @@ python -m jupyterlab_server --ServerApp.token="" --ServerApp.password=""
 Python代码示例可以直接在Python解释器或Jupyter Notebook中运行。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-basic-usage

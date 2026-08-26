@@ -106,6 +106,7 @@ terraform/
 | LangSmith CLI | [/langchain-ai/langsmith-cli/](/ai/langchain-ai/langsmith-cli/) | 与部署的 LangSmith 实例交互的 CLI 工具 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 references/index

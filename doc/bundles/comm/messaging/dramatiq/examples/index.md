@@ -8,6 +8,7 @@
 | [重试与管道](retry-and-pipeline.md) | max_retries/throws 配置、pipeline 组合、Results 中间件获取结果、group 并行 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-actor-and-worker

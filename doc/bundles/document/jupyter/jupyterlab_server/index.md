@@ -80,6 +80,7 @@ description: "JupyterLab 前端与 Jupyter Server 之间的服务端胶合层：
 **推荐阅读顺序：** [简介](concepts/00-introduction.md) → [快速上手](concepts/01-getting-started.md) → [架构总览](concepts/02-architecture-overview.md) → [应用与配置](concepts/03-app-and-config.md) → [Handler与路由](concepts/04-handlers-and-routing.md) → [设置系统](concepts/05-settings-system.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

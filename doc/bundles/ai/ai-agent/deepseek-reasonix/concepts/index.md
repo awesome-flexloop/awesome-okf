@@ -18,6 +18,7 @@
 - [07 - Fleet 与 Subagent](/concepts/07-fleet-subagents.md)——并行调度、写路径声明、DAG 依赖
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

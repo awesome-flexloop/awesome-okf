@@ -11,6 +11,7 @@
 | [tuning](/ai/deepseek/deep-gemm/examples/tuning) | 性能调优指南，包括 SM/TC 配置、JIT 预热、性能测量、问题排查 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-gemm

@@ -8,6 +8,7 @@
 | [高级转换场景](advanced-conversion.md) | Sphinx指令、Front Matter、数学公式、自定义映射、配置文件、批量处理 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 advanced-conversion

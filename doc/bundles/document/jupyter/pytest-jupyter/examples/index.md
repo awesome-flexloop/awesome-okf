@@ -66,6 +66,7 @@ pytest_plugins = [
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-basic-core-test

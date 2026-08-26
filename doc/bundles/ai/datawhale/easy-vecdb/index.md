@@ -76,6 +76,7 @@ generated: '2026-08-23'
 - **RAG 是杀手级应用**：向量数据库因 LLM 崛起成为 AI 基础设施，RAG 串联全链路
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

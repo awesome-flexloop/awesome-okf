@@ -173,6 +173,7 @@ Hello, Ninja!
 - **Python 生成器库**：[ninja_syntax.py](https://github.com/ninja-build/ninja/blob/master/misc/ninja_syntax.py)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

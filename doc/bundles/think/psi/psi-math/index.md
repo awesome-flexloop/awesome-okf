@@ -51,6 +51,7 @@ stale_after: 2027-08-23
 * [GodGPT 应用](/godgpt/index.md) — 形式化理论的 AI 应用延伸
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

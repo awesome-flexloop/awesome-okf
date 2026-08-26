@@ -6,6 +6,7 @@
 * [跳板机隧道](tunnel-bastion.md) — gateway 跳板机连接、本地/远程端口转发、SSH config 多跳代理、数据库隧道。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-deploy

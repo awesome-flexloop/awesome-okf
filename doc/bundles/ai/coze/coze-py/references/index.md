@@ -9,6 +9,7 @@
 - [数据模型、分页与资源管理参考](/references/data-pagination.md) — CozeModel、DynamicStrEnum、NumberPaged/TokenPaged/LastIDPaged、Bot 模型/枚举、Conversation/Section、File、Dataset/Document/Photo、Workspace、Templates、Variables、Folders、Connectors
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 auth-model

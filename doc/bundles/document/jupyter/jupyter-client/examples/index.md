@@ -9,6 +9,7 @@
 | 03 | [多内核并行执行](03-multi-kernel-parallel.md) | MultiKernelManager/AsyncMultiKernelManager 多内核管理与并行执行 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-basic-execution

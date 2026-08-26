@@ -18,6 +18,7 @@ Coze Studio 核心架构与设计概念文档。
 - [部署与运维](/concepts/08-deployment-operations.md) — Docker Compose、Helm K8s、Makefile、数据库迁移
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-overview-ddd-architecture

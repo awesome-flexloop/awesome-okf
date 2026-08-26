@@ -32,6 +32,7 @@
 | `src/model.ts` | 前端数据模型 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 app-entry-source

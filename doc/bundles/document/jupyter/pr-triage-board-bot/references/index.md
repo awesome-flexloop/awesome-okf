@@ -12,6 +12,7 @@
 | [utils-source.md](utils-source.md) | 工具函数源码索引（memoize、getGraphQL、getCollaborators、getMergedPRCount缓存机制） |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 field-config-source

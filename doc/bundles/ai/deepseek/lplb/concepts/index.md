@@ -7,6 +7,7 @@
 - [EPLB 集成](/ai/deepseek/lplb/concepts/eplb-integration) — 静态重平衡与动态求解的分层协作、DeepEP 通信集成
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 eplb-integration

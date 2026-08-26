@@ -74,6 +74,7 @@ pnpm dev
 - [源码信源索引](../references/index.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-basic-gen

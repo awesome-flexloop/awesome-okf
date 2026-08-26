@@ -110,6 +110,7 @@ Jupyter Scheduler 是 JupyterLab 的官方作业调度扩展，支持 Notebook �
 ```
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 references/index

@@ -106,6 +106,7 @@ for event in coze.chat.stream(
 - [API 参考索引](/references/index.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

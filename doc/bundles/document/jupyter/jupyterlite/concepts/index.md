@@ -25,6 +25,7 @@
 5. **扩展开发**：[07-内核类型](07-kernel-types.md) → [08-扩展架构](08-extension-architecture.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

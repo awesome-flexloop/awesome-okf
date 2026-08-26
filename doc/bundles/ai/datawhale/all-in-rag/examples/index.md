@@ -23,6 +23,7 @@
 | 第九章 | `code/C9/` | Graph RAG 优化系统（详见上文） |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 c8-basic-rag

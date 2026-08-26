@@ -4,6 +4,7 @@
 - [N-gram 哈希与门控融合机制](/ai/deepseek/engram/concepts/ngram-hashing-and-gating) — 哈希寻址、多头嵌入、门控融合、短卷积、完整数据流
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 ngram-hashing-and-gating

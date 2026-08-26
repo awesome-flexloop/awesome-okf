@@ -19,6 +19,7 @@
 4. **办公用户**：04-workbuddy 了解在线助手能力
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-product-matrix

@@ -108,6 +108,7 @@ jupyter server --autoreload
 - [traitlets Documentation](https://traitlets.readthedocs.io)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/index

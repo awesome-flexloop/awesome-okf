@@ -42,6 +42,7 @@ status: stable
 | [fps-kernels-source.md](fps-kernels-source.md) | `plugins/kernels/src/fps_kernels/main.py` | KernelsModule 实现、内核生命周期管理、会话管理 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 app-source

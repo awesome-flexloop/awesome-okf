@@ -65,6 +65,7 @@ sources:
 所有概念文档的事实依据来自 [references/](../references/index.md) 目录中的原始信源文档。每个概念文档的 frontmatter `sources` 字段标注了其依据的信源。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

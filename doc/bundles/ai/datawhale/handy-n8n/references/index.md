@@ -28,6 +28,7 @@ sources: https://github.com/datawhalechina/handy-n8n
 * [C06 n8n 案例分享](c06-case-studies.md) — GitHub Trending 每日推送、GitHub Issue 飞书通知。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 c01-introduction

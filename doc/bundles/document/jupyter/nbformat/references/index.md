@@ -12,6 +12,7 @@
 * [版本转换converter源码](converter-source.md) — converter.py中convert()递归逐步转换逻辑、升级/降级路径、版本模块接口契约。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 converter-source

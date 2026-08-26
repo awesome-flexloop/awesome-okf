@@ -27,6 +27,7 @@
 | [08-plugin-architecture.md](08-plugin-architecture.md) | Entry-points插件发现、插件间解耦、Jupyverse实践 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

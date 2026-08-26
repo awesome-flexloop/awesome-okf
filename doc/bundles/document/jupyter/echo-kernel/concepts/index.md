@@ -21,6 +21,7 @@
 5. **动手实践**：前往[实践示例](/examples/index.md)跟着教程开发自己的内核
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

@@ -18,6 +18,7 @@ okf_version: "0.2"
 | 09 | [高级模式](09-advanced-patterns.md) | session_log、TextFSM、异常处理、并发连接 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

@@ -93,6 +93,7 @@ tags: [jupyter, jupyterhub, tljh, multi-user, devops, data-science]
 - **License**：3-Clause BSD
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 concepts/00-introduction

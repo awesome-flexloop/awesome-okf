@@ -7,6 +7,7 @@
 * [字节码剖析](bytecode-dissection.md) — 使用 dis 模块反汇编 Python 函数，理解 LOAD_FAST/CALL/RETURN_VALUE 等字节码指令的执行过程。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 bytecode-dissection

@@ -20,6 +20,7 @@
 - JupyterLite 核心参考：见 [jupyterlite bundle](/document/jupyter/jupyterlite/)
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 ci-workflow-source

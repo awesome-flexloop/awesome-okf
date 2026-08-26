@@ -5,6 +5,7 @@
 * [PyInvoke v3.0.3 源码信源登记](pyinvoke-source.md) — PyInvoke 版本信息、源码路径、18 个核心模块清单、公开 API 导出列表、CLI 入口点说明。信源包括 GitHub 仓库和官方文档。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 pyinvoke-source

@@ -17,6 +17,7 @@ description: "消息通信与远程控制生态——ZeroMQ 消息栈、分布�
 | [🌐 SSH 与远程控制](networking/index.md) | Python SSH/远程控制生态——paramiko/fabric/netmiko/asyncssh/pexpect/scrapli |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 messaging/index

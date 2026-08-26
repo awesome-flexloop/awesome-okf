@@ -10,6 +10,7 @@
 * [统一回归](07-unity-return.md) - 统一回归：万法归一
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-psi-equation

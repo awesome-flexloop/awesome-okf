@@ -40,6 +40,7 @@ jupyter server --ServerApp.token=mytoken --port=8888 --no-browser
 | WebSocket 内核通信 | [WebSocket 通信](../concepts/11-websocket-communication.md)、[内核管理](../concepts/08-kernel-management.md)、[异步编程模型](../concepts/14-async-programming.md) |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-basic-api-usage

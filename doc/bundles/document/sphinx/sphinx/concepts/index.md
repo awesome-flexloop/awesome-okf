@@ -54,6 +54,7 @@
 | [25-glossary.md](25-glossary.md) | 核心术语速查表 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

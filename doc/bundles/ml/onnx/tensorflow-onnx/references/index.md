@@ -20,6 +20,7 @@ stale_after: 2026-12-31
 * [算子版本化注册表：@tf_op 装饰器与 onnx_opset 目录](opset-mapping.md) — `tf2onnx/handler.py`（tf_op 装饰器类、_OPSETS 三维注册表、create_mapping 版本堆叠算法）、`tf2onnx/onnx_opset/`（13 个按类别分文件的算子处理器实现、DirectOp 模式）、`tf2onnx/tfonnx.py`（tensorflow_onnx_mapping 遍历映射、custom_op_handlers 兼容层）。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 convert-entry

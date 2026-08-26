@@ -11,6 +11,7 @@
 | 06 | [配置与设置系统](06-configuration.md) | 前端设置 Schema（baseUrl/accessToken/defaultRepo）、服务端 traitlets 配置、Token 优先级、GitHub Enterprise 支持 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

@@ -10,6 +10,7 @@
 | [benchmark](/ai/deepseek/flash-mla/examples/benchmark) | 性能基准测试指南，包括内置 benchmark 脚本使用、自定义性能测试、正确性验证 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-decoding

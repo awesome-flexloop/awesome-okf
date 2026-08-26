@@ -4,6 +4,7 @@
 * [多部分消息与 poller](multipart-poller.md) — send_multipart/recv_multipart、multipart_t 拼装拆解、active_poller_t 回调事件循环、poller_t<T> 强类型用户数据、RFC 50 编码。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 hello-world

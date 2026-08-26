@@ -53,6 +53,7 @@
 > **注意**：部署运维文档编号（D3-D8）与应用文档编号存在重叠，通过文件名后缀区分（如 `03-app-and-traitlets.md` vs `03-deployment-config.md`）。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

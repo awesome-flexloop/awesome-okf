@@ -4,6 +4,7 @@
 * [zmq_addon.hpp 文件参考](zmq-addon-hpp.md) — 扩展头文件 zmq_addon.hpp（859 行）的 multipart_t、自由函数、active_poller_t、poller_ref_t 签名与依赖条件，覆盖 F-051~F-056。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 zmq-addon-hpp

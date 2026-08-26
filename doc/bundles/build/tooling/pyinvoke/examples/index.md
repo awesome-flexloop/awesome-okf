@@ -9,6 +9,7 @@
 * [使用 MockContext 测试任务](testing-tasks.md) — 使用 MockContext 对 invoke 任务进行单元测试，验证命令调用和参数。对应概念：[Context 对象](../concepts/03-context-object.md)、[Task 基础](../concepts/02-task-basics.md)。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 basic-task

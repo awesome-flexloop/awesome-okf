@@ -20,6 +20,7 @@ CMake 是业界标准的跨平台构建系统生成器，支持 Unix Makefiles�
 | 1 | [cmake](cmake/index.md) | CMake 核心构建系统——门面模式两阶段执行、不可变状态快照、多生成器工厂、目标属性传播、find_package、策略系统、CTest/CPack 集成（基于 C++ 源码深度阅读） |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 cmake/index

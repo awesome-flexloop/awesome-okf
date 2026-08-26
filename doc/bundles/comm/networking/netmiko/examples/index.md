@@ -12,6 +12,7 @@ okf_version: "0.2"
 | [TextFSM 输出解析](output-parsing-textfsm.md) | use_textfsm、ntc-templates、TTP、Genie/pyATS 结构化输出 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 config-changes

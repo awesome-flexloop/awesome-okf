@@ -28,6 +28,7 @@ stale_after: "2027-08-22"
 | [infrastructure-history-source.md](infrastructure-history-source.md) | noxfile.py, README.md, docs/archive/governance.md, docs/_data/ | 文档构建基础设施（MyST+Nox）与BDFL历史 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 coc-source

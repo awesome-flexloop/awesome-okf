@@ -33,6 +33,7 @@ sources: https://github.com/datawhalechina/pumpkin-book
 * [聚类与降维](clustering-and-dimensionality-reduction.md) — 聚类性能度量、k-Means/DBSCAN/层次聚类；PCA主成分分析、KPCA核化降维、流形学习(Isomap/LLE)；特征选择三方法。
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 bayesian-and-ensemble-learning

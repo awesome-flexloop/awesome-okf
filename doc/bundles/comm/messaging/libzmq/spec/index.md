@@ -4,6 +4,7 @@
 * [insights.md](insights.md) — I 阶段提炼的 5 条架构洞察
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 facts

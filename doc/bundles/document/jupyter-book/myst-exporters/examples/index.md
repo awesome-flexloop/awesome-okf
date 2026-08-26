@@ -7,6 +7,7 @@
 | [LaTeX/JATS 导入](03-latex-import.md) | 从 JATS XML 学术论文和 LaTeX 文档导入为 MyST 并继续导出 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-multi-format-export

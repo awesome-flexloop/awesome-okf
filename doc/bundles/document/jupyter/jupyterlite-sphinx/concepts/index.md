@@ -31,6 +31,7 @@ Concepts 是 jupyterlite-sphinx 的系统性知识文档，按学习路径分三
 | [12-frontend-js](12-frontend-js.md) | 前端 JavaScript 函数、iframe 懒加载、移动端检测、ConfigLoader 运行时热配置 |
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 00-introduction

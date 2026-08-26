@@ -6,6 +6,7 @@
 - [迁移现有项目](04-migrate-project.md) — myst migrate 升级旧版配置
 
 ```{toctree}
+:hidden:
 :maxdepth: 7
 
 01-init-project
