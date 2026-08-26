@@ -6,7 +6,7 @@
 | [CLI命令参考](/references/cli-commands.md) | jcache全部命令、子命令和选项速查 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 cache-source
 cli-commands

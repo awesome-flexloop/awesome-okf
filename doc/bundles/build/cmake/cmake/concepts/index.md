@@ -28,7 +28,7 @@
 * [CPack 打包集成](cpack-integration.md) — install() 规则收集、TGZ/DEB/RPM/NSIS/DMG 多格式生成、组件化打包（COMPONENT）、CPackConfig.cmake 配置、cpack 命令行选项。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 build-type
 configure-generate

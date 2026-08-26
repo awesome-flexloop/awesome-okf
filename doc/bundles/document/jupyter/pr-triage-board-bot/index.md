@@ -192,7 +192,7 @@ flowchart TB
 pr-triage-board-bot 使用 [BSD 3-Clause License](https://github.com/yuvipanda/pr-triage-board-bot/blob/main/LICENSE)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

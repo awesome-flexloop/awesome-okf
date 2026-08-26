@@ -32,7 +32,7 @@
 | 构建插件 | `jupyterlite_terminal/add_on.py` | WASM文件复制post_build钩子 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 client-source
 exec-source

@@ -66,7 +66,7 @@ github-activity owner/repo --since v0.1.0 --until v0.2.0 --output CHANGELOG.md
 见 [log.md](/log.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

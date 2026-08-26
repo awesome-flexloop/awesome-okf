@@ -82,7 +82,7 @@ BSD-3-Clause（与 Jupyter 生态一致）
 
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

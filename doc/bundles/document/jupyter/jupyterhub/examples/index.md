@@ -16,7 +16,7 @@
 | [custom-spawner.md](custom-spawner.md) | 自定义 Spawner 开发：必须实现的方法、SSH Spawner 示例、状态持久化、SSE 进度事件 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 custom-authenticator
 custom-spawner

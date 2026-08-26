@@ -48,7 +48,7 @@
 | [14-advanced-features.md](14-advanced-features.md) | 高级特性——Managed Agents 多智能体协作、Hub 集成、CLI 命令行、GradioUI 界面 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

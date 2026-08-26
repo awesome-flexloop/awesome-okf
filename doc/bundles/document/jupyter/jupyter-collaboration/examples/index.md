@@ -22,7 +22,7 @@
 | JupyterHub部署配置 | [01-setup-config.md](01-setup-config.md) |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-setup-config
 02-custom-document-type

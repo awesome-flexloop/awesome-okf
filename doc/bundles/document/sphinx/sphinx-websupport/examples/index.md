@@ -14,7 +14,7 @@ title: "sphinxcontrib-websupport 实战示例"
 * [评论审核与提议修改工作流](comment-moderation-workflow.md) — moderation_callback 配置、版主审核队列、投票系统、proposal diff 展示、用户删除与更名的完整工作流演示。对应概念：[评论系统](../concepts/05-comment-system.md)、[物化路径评论树](../concepts/07-materialized-path.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-build-and-serve
 comment-moderation-workflow

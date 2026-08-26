@@ -78,7 +78,7 @@ npx vite
 - [Lumino 主页](../index.md) — 回到 Lumino bundle 首页
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-create-widget
 02-signal-communication

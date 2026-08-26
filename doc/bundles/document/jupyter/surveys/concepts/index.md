@@ -22,7 +22,7 @@
 - [09 - Binder可复现性](09-binder-reproducibility.md) — Binder配置、依赖管理、零配置运行notebook
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

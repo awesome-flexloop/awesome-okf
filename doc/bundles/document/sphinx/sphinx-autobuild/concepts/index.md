@@ -18,7 +18,7 @@
 - [07. 中间件注入机制](07-middleware-injection.md) — JavascriptInjectorMiddleware、ASGI 响应拦截、Content-Length 修正、Cache-Control 处理
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

@@ -25,7 +25,7 @@
 编号事实的完整列表见 [spec/facts.md](/spec/facts.md)，架构洞察见 [spec/insights.md](/spec/insights.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 cli
 docs-intro

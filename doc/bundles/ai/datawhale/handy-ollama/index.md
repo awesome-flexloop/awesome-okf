@@ -131,7 +131,7 @@ handy-ollama/
 > **生成时间**：2026-08-23 | **维护者**：OKF Wiki Bot
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

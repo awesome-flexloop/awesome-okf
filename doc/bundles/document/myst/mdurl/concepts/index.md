@@ -6,7 +6,7 @@
 - [03. URL 编码与解码](03-encode-and-decode.md) — encode()/decode() 函数、DEFAULT 与 COMPONENT 两种模式、查找表缓存机制、UTF-8 多字节处理
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-url-data-structure

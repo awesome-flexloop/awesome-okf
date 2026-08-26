@@ -4,7 +4,7 @@
 - [洞察](/spec/insights.md) — 4 条架构洞察（陈述/证据/反常识/行动）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 facts
 insights

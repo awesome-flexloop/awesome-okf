@@ -106,7 +106,7 @@ jupyter lab       # 终端 2：启动 JupyterLab
 - [Copier Documentation](https://copier.readthedocs.io)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

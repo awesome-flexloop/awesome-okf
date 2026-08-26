@@ -34,7 +34,7 @@ sources:
 - [返回首页](../index.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-basic-usage
 02-custom-app

@@ -24,7 +24,7 @@
 * [13 · 测试与高级特性](13-testing-advanced.md) — TestClient、dependency_overrides 测试替换、BackgroundTasks、Default/DefaultPlaceholder、frontend 静态前端
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-application

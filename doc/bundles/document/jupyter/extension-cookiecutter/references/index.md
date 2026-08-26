@@ -19,7 +19,7 @@
 - [CI/CD 工作流源码解析](ci-workflow-source.md) — 两套 CI 体系、矩阵构建、Jupyter Releaser、lint.sh 脚本
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 ci-workflow-source
 cookiecutter-json

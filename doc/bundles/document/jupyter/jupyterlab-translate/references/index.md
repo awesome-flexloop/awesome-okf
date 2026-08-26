@@ -31,7 +31,7 @@ status: stable
 3. **版本绑定**：所有文档绑定到v1.3.7版本，版本升级后需更新信源
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 api-source
 cli-source

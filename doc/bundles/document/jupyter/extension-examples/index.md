@@ -82,7 +82,7 @@ extension-examples/
 - [Lumino文档](https://lumino.readthedocs.io/)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

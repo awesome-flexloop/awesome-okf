@@ -4,7 +4,7 @@
 - [使用模式](/ai/deepseek/deepseek-ocr/concepts/usage-modes) — HuggingFace vs vLLM 两种部署方式对比、选择指南、关键配置参数
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 overview
 usage-modes

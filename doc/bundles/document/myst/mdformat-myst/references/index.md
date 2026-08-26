@@ -9,7 +9,7 @@
 | [指令格式化模块](source-directives.md) | `mdformat_myst/_directives.py` | fence渲染、YAML格式化、选项解析 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 source-directives
 source-init

@@ -21,7 +21,7 @@
 - [08-整体架构总结](08-architecture-summary.md) — 双模式架构全景、数据流图、设计决策、扩展点
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

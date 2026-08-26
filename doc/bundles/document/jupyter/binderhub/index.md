@@ -192,7 +192,7 @@ c.RateLimiter.period_seconds = 3600
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

@@ -82,7 +82,7 @@ okf_version: "0.2"
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

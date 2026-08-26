@@ -4,7 +4,7 @@
 - [PDF OCR](/ai/deepseek/deepseek-ocr/examples/pdf-ocr) — PDF 文档批量 OCR，官方脚本使用，自定义 PDF 处理流程，性能调优
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 image-ocr
 pdf-ocr

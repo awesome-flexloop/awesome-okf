@@ -8,7 +8,7 @@
 * [TinyAgent 智能体工具调用](agent-tinyagent.md) — 第七章 `Agent/`：核心推理循环、工具注册、ReAct 范式、Streamlit Web Demo。对应概念：[Agent 智能体](../concepts/agent-intelligent-agent.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 agent-tinyagent
 llama2-pretrain-sft

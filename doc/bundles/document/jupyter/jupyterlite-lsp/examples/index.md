@@ -6,7 +6,7 @@
 | [本地开发环境搭建](local-dev-setup.md) | 从零搭建开发环境（conda、Node.js、依赖安装）、构建流程、调试技巧与常见问题 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 add-custom-language-server
 local-dev-setup

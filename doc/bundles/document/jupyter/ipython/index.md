@@ -185,7 +185,7 @@ Out[4]: array([0.  , 0.25, 0.5 , 0.75, 1.  ])
 - **prompt_toolkit**：[prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) — 终端 UI 库
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

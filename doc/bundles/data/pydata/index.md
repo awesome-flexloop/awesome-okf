@@ -45,7 +45,7 @@ PyTables ──→ NumPy ←── pandas ←── matplotlib
 7. **数据存储**：NumPy → PyTables（HDF5 → Table → 压缩索引）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 numpy/index
 sympy/index

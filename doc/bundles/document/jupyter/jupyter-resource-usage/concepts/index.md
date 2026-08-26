@@ -55,7 +55,7 @@ sources: []
 5. **二次开发**：02 → 03 → 05 → 11
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-installation

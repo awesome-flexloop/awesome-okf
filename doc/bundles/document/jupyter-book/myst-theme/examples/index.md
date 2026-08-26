@@ -4,7 +4,7 @@
 - [使用 Article 主题发布论文](02-use-article-theme.md) — 学术论文 frontmatter、多格式导出、PDF 发布
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-customize-book-theme
 02-use-article-theme

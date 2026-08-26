@@ -48,7 +48,7 @@
 3. **JupyterLite 用户**：重点阅读 01-quick-start 和 08-jupyterlite-deployment
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-quick-start
 02-configure-provider

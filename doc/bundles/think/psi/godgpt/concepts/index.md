@@ -6,7 +6,7 @@
 * [隐私与法律](03-privacy-legal.md) - 隐私与法律框架
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-divine-intelligence
 01-core-features

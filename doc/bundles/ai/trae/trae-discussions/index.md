@@ -40,7 +40,7 @@ sources:
 - Quick Links 指向的治理文档（CONTRIBUTING.md / CODE_OF_CONDUCT.md）位于 GitHub Organization 的 `.github` 仓库中，不在本仓库内
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/00-introduction
 concepts/01-discussion-categories

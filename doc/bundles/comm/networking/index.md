@@ -76,7 +76,7 @@ description: "Python SSH/远程控制生态——从底层协议实现到高层�
 | **合计** | **60** | **25** | **6** | **725** | — |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 paramiko/index
 fabric/index

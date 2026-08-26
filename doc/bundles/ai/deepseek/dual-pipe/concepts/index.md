@@ -8,7 +8,7 @@
 - [自定义模块集成](/ai/deepseek/dual-pipe/concepts/custom-module-integration) — 如何编写 PipelineStage、overlapped_forward_backward 接口、WeightGradStore 集成
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 communication-pattern
 custom-module-integration

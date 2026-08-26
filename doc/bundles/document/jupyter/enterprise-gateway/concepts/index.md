@@ -24,7 +24,7 @@
 * [安全认证与高可用](11-security-and-ha.md) — Token认证、CORS配置、SSL/TLS双向认证、用户授权与模拟、负载均衡算法、standalone/replication HA模式。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

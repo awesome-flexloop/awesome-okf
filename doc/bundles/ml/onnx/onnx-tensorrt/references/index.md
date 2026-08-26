@@ -19,7 +19,7 @@ stale_after: 2026-12-31
 * [核心工具类：ShapedWeights/OnnxAttrs/TensorOrWeights/WeightsContext/BFloat16/Status](core-utilities.md) — `ShapedWeights.hpp/cpp`（非拥有权重视图）、`OnnxAttrs.hpp/cpp`（节点属性访问）、`TensorOrWeights.hpp`（ITensor*/ShapedWeights 变体）、`WeightsContext.hpp`（权重内存所有权管理）、`bfloat16.hpp/cpp`（BF16 手工位操作）、`Status.hpp`（错误状态）、`errorHelpers.hpp`（异常宏）、`ImporterContext.hpp`（中央解析上下文）：TensorOrWeights 三态变体、OnnxAttrs 模板特化 get<T>()、WeightsContext mmap 外部权重、BFloat16 round-to-even 舍入、Status 15 种 ErrorCode。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 core-utilities
 parser-api

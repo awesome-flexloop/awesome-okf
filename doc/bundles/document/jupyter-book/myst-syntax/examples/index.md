@@ -5,7 +5,7 @@
 - [高级语法实战](03-advanced-syntax.md) — Mermaid、数学、嵌入、UI 扩展
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-common-directives
 02-citations-references

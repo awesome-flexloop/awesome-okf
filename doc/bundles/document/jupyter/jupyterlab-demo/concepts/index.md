@@ -32,7 +32,7 @@
 | [08-extension-demo.md](08-extension-demo.md) | 插件架构与扩展生态——Everything is a Plugin的设计哲学 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-repo-structure

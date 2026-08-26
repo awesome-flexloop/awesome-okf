@@ -27,7 +27,7 @@
 | [08-内容目录与 Notebook](08-content-and-notebooks.md) | content/ 目录管理、Notebook 和数据文件组织 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-xeus-jupyterlite

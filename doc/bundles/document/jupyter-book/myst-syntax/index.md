@@ -54,7 +54,7 @@ okf_version: "0.2"
 * **覆盖范围**：覆盖 myst-directives 的全部 28 个默认指令（admonition/code/code-cell/figure/image/table/list-table/csv-table/math/mermaid/include/embed/bibliography/glossary/toc/index/genindex/div/aside/dropdown/iframe/raw/rawLatex/rawTypst/blockquote/mdast/mystdemo/widget）和 myst-roles 的全部 20 个默认角色（span/abbr/chem/cite/delete/math/ref/doc/download/index/term/si/eval/smallcaps/subscript/superscript/underline/keyboard/rawLatex/rawTypst）；未覆盖 mdastDirective/mystdemoDirective/widgetDirective(anywidget) 的详细内部实现（属于特定用途/实验性功能）。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

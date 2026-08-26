@@ -53,7 +53,7 @@ Trae Skills 是 TRAE IDE 的社区维护 Agent Skills 集合，采用 MIT 许可
 4. 参考 [编写自定义 Skill](/concepts/07-write-skill.md) 深入学习高级模式
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/00-introduction
 concepts/01-skill-format

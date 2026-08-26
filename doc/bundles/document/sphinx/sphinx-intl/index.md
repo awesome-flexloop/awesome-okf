@@ -89,7 +89,7 @@ sphinx-intl 是 Sphinx 文档生态的国际化（i18n）翻译辅助工具，�
 - 代码规模：7 个 Python 文件，约 600 行核心代码
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

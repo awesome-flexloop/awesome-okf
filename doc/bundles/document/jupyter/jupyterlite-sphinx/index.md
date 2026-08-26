@@ -67,7 +67,7 @@ stale_after: 2027-02-22
 - **建议搭配**：sphinx.ext.autodoc + numpydoc/napoleon（自动为 docstring 示例添加交互）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

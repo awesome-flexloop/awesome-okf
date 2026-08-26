@@ -84,7 +84,7 @@ description: "JupyterLab LaTeX 编辑扩展——为 .tex 文件提供实时编�
 **推荐阅读顺序：** [简介](concepts/00-introduction.md) → [安装与快速上手](concepts/01-getting-started.md) → [架构总览](concepts/02-architecture-overview.md) → [LaTeX 编译流程](concepts/03-latex-compilation.md) → [PDF 查看器](concepts/04-pdf-viewer.md) → [SyncTeX 双向同步](concepts/05-synctex-sync.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

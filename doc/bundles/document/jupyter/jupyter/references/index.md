@@ -22,7 +22,7 @@ status: active
 * [Jupyter Protocol 规范](https://jupyter-client.readthedocs.io/en/latest/messaging.html)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 jupyter-metasource
 ```

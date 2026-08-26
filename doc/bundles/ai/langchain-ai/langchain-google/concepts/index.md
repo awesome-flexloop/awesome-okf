@@ -5,7 +5,7 @@
 - [嵌入模型与 Vertex AI](/ai/langchain-ai/langchain-google/concepts/embeddings-vertex) — GoogleGenerativeAIEmbeddings 双后端、批处理、task_type、VertexAIEmbeddings 弃用与 Vector Search
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 chat-models
 embeddings-vertex

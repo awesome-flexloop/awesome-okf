@@ -67,7 +67,7 @@ description: "Jupyter Server 文件 ID 服务扩展：为文件分配稳定的 U
 **推荐阅读顺序：** [简介](concepts/00-introduction.md) → [快速上手](concepts/01-getting-started.md) → [架构总览](concepts/02-architecture-overview.md) → [抽象基类与核心 API](concepts/03-file-id-manager.md) → [双管理器对比](concepts/04-arbitrary-vs-local.md) → [事件驱动同步](concepts/05-event-sync-mechanism.md) → [REST API 端点](concepts/06-http-api.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

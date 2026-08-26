@@ -28,7 +28,7 @@
 | `pyproject.toml` | Python 包配置、Hatchling 构建、hatch-jupyter-builder 集成 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 browser-ts-source
 contents-ts-source

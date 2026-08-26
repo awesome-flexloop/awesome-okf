@@ -68,7 +68,7 @@ Agent Learning Hub 是 Datawhale 出品的 AI Agent 学习路线图。项目的�
 - 维护者：[陈思州](https://github.com/jjyaoao)（Datawhale 成员）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

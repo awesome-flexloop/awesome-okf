@@ -57,7 +57,7 @@ mdformat document.md
 - [架构洞察](/spec/insights.md) - I阶段核心洞察四元组与知识地图
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

@@ -33,7 +33,7 @@ sources: []
 - ✅ 多租户环境配置
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-basic-usage
 ```

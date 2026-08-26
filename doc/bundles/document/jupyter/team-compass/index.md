@@ -139,7 +139,7 @@ team-compass/
 - **许可证说明**：原始文档遵循 Jupyter 项目许可证（3-Clause BSD），本 bundle OKF 格式
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

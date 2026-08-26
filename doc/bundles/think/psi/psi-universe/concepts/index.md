@@ -8,7 +8,7 @@
 * [信息场](05-information-field.md) - 信息场与意识理论
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-three-axioms
 01-flip-xor-shift

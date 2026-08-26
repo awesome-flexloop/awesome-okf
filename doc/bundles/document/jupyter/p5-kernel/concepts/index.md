@@ -19,7 +19,7 @@
 - [06-构建与打包](06-build-and-packaging.md) — TypeScript 构建、p5-docs 生成、hatchling Python 包、双发布
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-architecture-overview

@@ -8,7 +8,7 @@
 | [insights.md](insights.md) | I 阶段架构洞察：5 个核心洞察四元组与知识地图 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 facts
 insights

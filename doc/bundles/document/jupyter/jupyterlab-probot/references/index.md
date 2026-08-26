@@ -28,7 +28,7 @@ description: jupyterlab-probot 源码参考文档导航
 
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 config-schema-source
 index-ts-source

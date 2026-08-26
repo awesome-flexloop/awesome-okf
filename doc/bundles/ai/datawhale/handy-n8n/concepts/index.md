@@ -17,7 +17,7 @@
 * [高级实战](advanced-practice.md) — 子工作流、Error Trigger 错误处理、社区节点、TypeScript 自定义节点开发、GitHub 实战案例。对应 C04-C06。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 advanced-practice
 ai-api-integration

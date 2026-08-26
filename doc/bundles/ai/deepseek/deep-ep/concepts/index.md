@@ -14,7 +14,7 @@
 | [JIT 编译系统](jit-compilation.md) | 运行时 CUDA 内核编译原理、CRTP 启动器框架、内核缓存机制 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 dispatch-combine
 elastic-vs-legacy

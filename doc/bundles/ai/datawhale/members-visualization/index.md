@@ -28,7 +28,7 @@ sources:
 - GitHub: <https://github.com/datawhalechina/members-visualization>
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

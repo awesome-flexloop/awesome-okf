@@ -13,7 +13,7 @@
 | [hopper-blackwell-kernels](/ai/deepseek/flash-mla/concepts/hopper-blackwell-kernels) | Hopper (SM90) WGMMA+TMA+DSM 与 Blackwell (SM100) tmem+UTCMMA+UTCCP 内核设计差异 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 hopper-blackwell-kernels
 kv-cache-quantization

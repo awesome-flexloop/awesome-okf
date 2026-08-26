@@ -8,7 +8,7 @@ pyzmq 完整可运行示例。
 | [asyncio-pushpull.md](asyncio-pushpull.md) | asyncio PUSH/PULL | zmq.asyncio.Context、await send/recv、asyncio.Poller、gather 并发 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 asyncio-pushpull
 sync-pubsub

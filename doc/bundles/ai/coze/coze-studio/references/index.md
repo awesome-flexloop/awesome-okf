@@ -8,7 +8,7 @@ Coze Studio 详细技术参考文档。
 - [部署与基础设施参考](/references/deployment-infrastructure.md) — 11 Docker 服务、270+ 环境变量、可插拔选项、Helm Chart
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 backend-architecture
 deployment-infrastructure

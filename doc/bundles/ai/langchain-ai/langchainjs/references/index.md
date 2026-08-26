@@ -5,7 +5,7 @@
 - [Agent 与 Middleware API](/ai/langchain-ai/langchainjs/references/agents-middleware) — createAgent、ReactAgent、AgentMiddleware、createAgentState 与状态注解
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 agents-middleware
 core-runnable

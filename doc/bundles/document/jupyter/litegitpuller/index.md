@@ -121,7 +121,7 @@ URL参数 → activate() → Provider选择 → Puller.clone()
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

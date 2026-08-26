@@ -6,7 +6,7 @@
 * [REPL 交互控制](repl-control.md) — 使用 REPLWrapper 控制 Python/Bash/数据库 REPL。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 ftp-interaction
 password-prompts

@@ -4,7 +4,7 @@
 * [搭建类 conda-docs 的多项目文档门户](doc-portal-template.md) — 可复用的 Sphinx+ReadTheDocs 多项目文档门户模板
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 doc-portal-template
 local-build

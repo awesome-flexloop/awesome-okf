@@ -79,7 +79,7 @@ PocketFlow 是一个极简的 LLM Agent 框架，核心代码仅约 100 行。�
 - 测试：[tests/](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow/tests/)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/async-parallel
 concepts/batch-processing

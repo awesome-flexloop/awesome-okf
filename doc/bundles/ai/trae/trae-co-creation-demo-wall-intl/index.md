@@ -162,7 +162,7 @@ next.config.ts 注释从"减小Docker镜像"变为"避免Vercel Lambda限制"、
 - **部署平台**：Vercel（推荐）/ Docker（兼容）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/00-introduction
 concepts/01-edge-config-cache

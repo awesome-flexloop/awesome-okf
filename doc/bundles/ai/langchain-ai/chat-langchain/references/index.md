@@ -4,7 +4,7 @@
 - [Identity 合约参考](/ai/langchain-ai/chat-langchain/references/identity-contract) — identity.py 的多区域 Supabase introspection、guest provider、validated_token ingress、actor scoping
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 agent-entrypoint
 identity-contract

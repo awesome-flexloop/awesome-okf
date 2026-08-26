@@ -23,7 +23,7 @@
 | [05-tab-completion.md](05-tab-completion.md) | 自定义 Tab 补全、命令状态监听、终端尺寸同步和主题切换 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-basic-shell
 02-using-commands

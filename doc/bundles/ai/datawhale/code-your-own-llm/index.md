@@ -56,7 +56,7 @@ Code Your Own LLM 是 Datawhale 出品的全栈式大语言模型参考指南，
 - 开源协议：CC BY-NC-SA 4.0
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

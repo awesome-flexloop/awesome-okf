@@ -16,7 +16,7 @@ sources:
 * [内容哈希算法 (content_hash.py)](content-hash.md) — SHA-256 内容哈希计算流程（channels JSON + 排序 specs + 虚拟包哈希）、确定性 JSON 序列化（sort_keys=True）、backwards_compatible_content_hashes() 多哈希向后兼容集合、已知设计缺陷说明（issue #432）。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 cli-entry
 content-hash

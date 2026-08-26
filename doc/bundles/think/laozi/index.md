@@ -13,7 +13,7 @@
 位于SpecWeave主仓库（非awesome-okf-xs子模块）的[laozi-lineage](../../../SpecWeave/bundles/laozi-lineage/)知识包，提供《老子》传本源流谱系的学术性梳理，包含8种传本、2个考古语境、4组关键异文、2种校勘方法论。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 boshu-reading/index
 ```

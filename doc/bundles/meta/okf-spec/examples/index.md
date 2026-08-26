@@ -6,7 +6,7 @@
 * [SaaS 指标知识包快速入门](saas-metrics-quickstart.md) - 来自 okf.md/quickstart 的"5分钟创建你的第一个 OKF 知识包"教程，包含 MRR/Churn/CAC/LTV 四个 SaaS 指标的完整知识包示例。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concept-resource-bound
 concept-unbound

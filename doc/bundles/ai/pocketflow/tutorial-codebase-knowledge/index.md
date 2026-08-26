@@ -94,7 +94,7 @@ python main.py --repo https://github.com/pallets/flask --language Chinese
   - [crawl_local_files.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/crawl_local_files.py)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/code-analysis-workflow
 concepts/pipeline-architecture

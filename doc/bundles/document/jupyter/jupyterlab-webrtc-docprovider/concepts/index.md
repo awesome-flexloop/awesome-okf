@@ -51,7 +51,7 @@ stale_after: 2027-08-22
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

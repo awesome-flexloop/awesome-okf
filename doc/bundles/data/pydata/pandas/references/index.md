@@ -53,7 +53,7 @@
 - **C 扩展目录**: `pandas/_libs/`（.pyx 文件需编译为 .so/.pyd）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 core-init
 ```

@@ -63,7 +63,7 @@ Easy-Vibe 把 **Vibe Coding**（用自然语言编程）作为 AI 时代的编�
 详见 [log.md](/ai/datawhale/easy-vibe/log.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

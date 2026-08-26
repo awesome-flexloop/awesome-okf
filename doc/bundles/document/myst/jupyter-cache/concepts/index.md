@@ -12,7 +12,7 @@
 | 07 | [配置项参考](/concepts/07-configuration.md) | 缓存路径、大小限制、执行配置、数据库配置 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

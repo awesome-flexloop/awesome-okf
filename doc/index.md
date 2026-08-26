@@ -13,14 +13,14 @@ title: Awesome OKF for Xuanspace 文档首页
 
 ```{toctree}
 :caption: 项目文档
-:hidden:
+:maxdepth: 7
 
 readme
 ```
 
 ```{toctree}
 :caption: 知识包库
-:maxdepth: -1
+:maxdepth: 7
 
 bundles/index
 ```

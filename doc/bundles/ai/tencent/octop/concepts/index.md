@@ -11,7 +11,7 @@
 * [06 - CLI 命令体系](06-cli-commands.md) — _LazyCLI Click Group 延迟加载、COMMANDS 注册表 20 子命令、全局选项（--user/--agent/--json/-v）、Windows UTF-8 兼容、Offline/Embedded/External 三层传输、octop run 选项与自签名证书、CLI 状态文件 cli_state.json。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-architecture
 01-server-lifecycle

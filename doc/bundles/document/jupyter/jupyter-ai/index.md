@@ -128,7 +128,7 @@ jupyter lab
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 examples/index
 references/index

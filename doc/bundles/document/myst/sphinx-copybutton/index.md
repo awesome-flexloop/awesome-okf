@@ -90,7 +90,7 @@ sphinx-copybutton/
 | [MyST Parser](https://github.com/executablebooks/MyST-Parser) | MyST Markdown 解析器——Executable Books 生态核心 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

@@ -17,7 +17,7 @@
 * [07-线性代数与随机数](07-linear-algebra.md) — dot/matmul/einsum张量运算、linalg子包（分解/求逆/特征值/SVD）、FFT、random模块。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-ndarray

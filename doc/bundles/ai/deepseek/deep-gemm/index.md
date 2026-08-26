@@ -104,7 +104,7 @@ deep_gemm.fp8_gemm_nt((a_fp8, a_sf), (b_fp8, b_sf), d)
 | [TileLang Kernels](/ai/deepseek/tile-kernels/) | TileLang 编写的核函数库（如 SwiGLU+weight 到 FP8 的融合算子），作为 DeepGEMM 的补充 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

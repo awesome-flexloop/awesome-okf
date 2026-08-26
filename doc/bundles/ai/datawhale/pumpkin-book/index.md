@@ -128,7 +128,7 @@ stale_after: "2027-08-23"
 - **配套视频**：https://www.bilibili.com/video/BV1Mh411e7VU
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

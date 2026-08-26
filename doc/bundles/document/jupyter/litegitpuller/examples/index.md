@@ -50,7 +50,7 @@
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-basic-github
 02-gitlab-repo

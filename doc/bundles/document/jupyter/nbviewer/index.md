@@ -219,7 +219,7 @@ helm rollback nbviewer <REVISION>
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

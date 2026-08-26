@@ -26,7 +26,7 @@
 - **扩展生命周期**：以 `index.ts` 的 `activate()` 函数为入口
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 git-py-source
 handlers-py-source

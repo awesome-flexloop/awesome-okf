@@ -48,7 +48,7 @@ description: "ψ=ψ(ψ) 自指递归理论体系——哲学、数学、宇宙�
 - [GodGPT隐私政策与服务条款](godgpt/references/godgpt-legal.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 psi-core/index
 psi-math/index

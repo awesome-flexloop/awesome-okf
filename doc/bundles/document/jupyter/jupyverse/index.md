@@ -132,7 +132,7 @@ jupyverse
 | `jupyverse[test]` | 测试依赖（pytest, httpx 等） |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

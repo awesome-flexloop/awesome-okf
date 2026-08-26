@@ -156,6 +156,15 @@ figcaption {
     display: none !important;
 }
 
+/* 隐藏文章正文中内联渲染的 toctree 列表（侧边栏导航不受影响）
+   因为各 index.md 页面已有手工制作的导航表格，避免重复显示 */
+.bd-article .toctree-wrapper,
+.bd-main .toctree-wrapper,
+.bd-content .toctree-wrapper,
+main .toctree-wrapper {
+    display: none !important;
+}
+
 /* 小屏手机 */
 @media (max-width: 480px) {
     body {

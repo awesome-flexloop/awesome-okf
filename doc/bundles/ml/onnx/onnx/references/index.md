@@ -25,7 +25,7 @@ stale_after: 2026-12-31
 * [compose.py/parser.py/printer.py/version_converter.py/inliner.py：图组合、解析打印、版本转换与内联](compose-parser-printer.md) — `onnx/compose.py`、`onnx/parser.py`/`parser.cc`、`onnx/printer.py`、`onnx/version_converter.py`、`onnx/inliner.py`：merge_models 前提条件、add_prefix 前缀策略与子图递归、parse_model/parse_graph/parse_function/parse_node、to_text 打印、convert_version 跨版本转换、inline_local_functions 递归内联、inline_selected_functions 选择性内联。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 checker
 compose-parser-printer

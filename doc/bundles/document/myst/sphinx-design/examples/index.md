@@ -6,7 +6,7 @@
 | [卡片与交互组件示例](/examples/cards-and-components.md) | 完整卡片/轮播/FAQ折叠/多语言Tab/徽章按钮/文章信息等10个综合示例 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 cards-and-components
 grid-layouts

@@ -53,7 +53,7 @@ I Have ADHD 是专为 ADHD（注意力缺陷多动障碍）用户设计的 AI �
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/multi-platform-integration
 concepts/session-hooks-mechanism

@@ -20,7 +20,7 @@ stale_after: 2026-12-31
 * [序列化到 Protobuf 与反序列化](serialize-protobuf.md) — load/save 完整流程、to_proto/from_proto 多态转换、TensorProtoTensor 零拷贝策略、ExternalTensor mmap 按需加载、外部数据分片保存、文本格式转换、大模型内存优化、完整 roundtrip 验证。对应概念：[序列化/反序列化](../concepts/05-serde.md)、[张量体系](../concepts/02-tensor-protocol.md)、[IR 整体架构](../concepts/00-overall-architecture.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 build-graph
 graph-traversal

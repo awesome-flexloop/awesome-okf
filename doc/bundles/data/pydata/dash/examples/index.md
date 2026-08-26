@@ -16,7 +16,7 @@
 6. **回调链**：dcc.Interval实时更新 + 回调串联（图表→统计自动更新）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 first-dash-app
 ```

@@ -8,7 +8,7 @@
 - [Pregel 执行引擎](pregel-execution) — 超步调度、任务、中断、流式
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 annotation
 channels

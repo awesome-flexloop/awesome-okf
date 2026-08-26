@@ -27,7 +27,7 @@ stale_after: 2026-12-31
 * [错误处理与诊断：15 种 ErrorCode、异常+错误列表双轨、子图分区报告](04-error-diagnostics.md) — OnnxTrtException 异常模型、ONNXTRT_TRY/CATCH 边界宏设计、Status/IParserError 丰富上下文、ValueOrStatus 返回值模式、supportsModelV2 子图分区算法、DLA 能力验证模式、常见错误排查路径。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-overall-architecture
 01-parsing-pipeline

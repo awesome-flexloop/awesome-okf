@@ -108,7 +108,7 @@ stale_after: 2027-08-23
 - **frontmatter**：63个文件YAML元数据完整
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 coze-py/index
 coze-studio/index

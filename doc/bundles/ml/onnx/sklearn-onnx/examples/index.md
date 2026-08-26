@@ -20,7 +20,7 @@ stale_after: 2026-12-31
 * [自定义转换器开发：两种模式对比](custom-converter.md) — 实现 ThresholdApplier 自定义估计器的 ONNX 导出，对比传统三件套（parser+shape_calculator+converter 手写）和 OnnxOperatorMixin 代数API（一个 to_onnx_operator 方法搞定）两种模式，Pipeline 中嵌入自定义转换器，常见错误调试。对应概念：[转换器注册](../concepts/03-converter-registration.md)、[OnnxOperator代数API](../concepts/04-onnx-operator-algebra.md)、[整体架构](../concepts/00-overall-architecture.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 classifier-conversion
 custom-converter

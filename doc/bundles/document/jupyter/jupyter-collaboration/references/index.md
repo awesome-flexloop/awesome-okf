@@ -30,7 +30,7 @@
 | yprovider-ts | yprovider.ts | WebSocketProvider, RtcContentProvider, SharedModelFactory |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 app-source
 handlers-source

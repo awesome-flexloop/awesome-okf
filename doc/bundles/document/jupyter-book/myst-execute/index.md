@@ -60,7 +60,7 @@ okf_version: "0.2"
 * **核验链路**：`generated` 记录原始生成时刻（2026-08-23）；`verified: true`，所有类名、函数名、参数名均通过源码 Read 工具验证。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

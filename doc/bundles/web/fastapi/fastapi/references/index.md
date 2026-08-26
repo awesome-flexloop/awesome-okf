@@ -12,7 +12,7 @@
 | [responses-encoders.md](responses-encoders.md) | 响应与编码：响应类再导出、jsonable_encoder、UploadFile、DefaultPlaceholder、SSE、BackgroundTasks、_compat 兼容层 | F-095 ~ F-098, F-107 ~ F-137, F-152 ~ F-156 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 applications
 dependencies

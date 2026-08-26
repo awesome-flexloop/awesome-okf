@@ -13,7 +13,7 @@
 - [04-自定义Publisher示例](04-custom-publisher.md) — 实现S3Publisher，将构建产物上传到云存储CDN
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-cli-build
 02-run-binderlite

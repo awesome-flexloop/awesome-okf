@@ -14,7 +14,7 @@ myst-cli 概念文档按学习路径编号。
 - [09 Store 状态管理](09-store-state.md) — Redux 风格状态管理
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-cli-architecture
 01-build-pipeline

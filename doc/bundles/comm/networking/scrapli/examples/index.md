@@ -10,7 +10,7 @@ okf_version: "0.2"
 * [自定义平台定义与高级用法](custom-driver.md) — 自定义 YAML、LoadedDefinition、回调读取、会话录制
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 async-parallel
 basic-connect

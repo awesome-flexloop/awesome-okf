@@ -25,7 +25,7 @@
 | 06 | [文档构建基础设施](06-doc-infrastructure.md) | Sphinx+MyST技术栈、构建时贡献者表格自动生成、RTD自动部署 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-team-membership

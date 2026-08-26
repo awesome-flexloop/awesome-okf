@@ -35,7 +35,7 @@ pytest_jupyter/__init__.py (导入jupyter_core的所有内容)
    - Server测试方向：[Tornado异步测试](pytest-tornasync-source.md) → [Server插件](jupyter-server-source.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 echo-kernel-source
 init-source

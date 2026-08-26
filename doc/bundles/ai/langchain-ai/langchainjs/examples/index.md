@@ -4,7 +4,7 @@
 - [创建 ReAct Agent](/ai/langchain-ai/langchainjs/examples/react-agent) — 工具定义、Middleware、结构化输出与流式传输
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 lcel-chain
 react-agent

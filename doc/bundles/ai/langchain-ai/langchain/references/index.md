@@ -6,7 +6,7 @@
 - [回调、追踪与检索源码信源](/ai/langchain-ai/langchain/references/runnables-callbacks) — BaseCallbackHandler、CallbackManager、BaseTracer、BaseRetriever、VectorStore
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 core-abstractions
 messages-tools

@@ -5,7 +5,7 @@
 | [源码路径映射](/references/activity-source.md) | 核心文件、PR分类表、CLI命令 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 activity-source
 ```

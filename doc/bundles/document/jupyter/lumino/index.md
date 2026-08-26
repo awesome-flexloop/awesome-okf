@@ -124,7 +124,7 @@ Lumino 的设计遵循以下原则：
 - [JupyterLab](https://github.com/jupyterlab/jupyterlab) — Lumino 的最大应用案例
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

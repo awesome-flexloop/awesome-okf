@@ -7,7 +7,7 @@
 | [03-dry-run-testing.md](03-dry-run-testing.md) | Dry-run本地测试完整流程和常见问题排查 | 进阶 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-basic-release-workflow
 02-custom-hooks-config

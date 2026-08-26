@@ -10,7 +10,7 @@ jupyterlab-myst 概念文档按学习路径编号。
 - [05 语法与安全](05-syntax-security.md) — MyST 语法支持和安全限制
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-architecture-plugins
 01-myst-rendering-pipeline

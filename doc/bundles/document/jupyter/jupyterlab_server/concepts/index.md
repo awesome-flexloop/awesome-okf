@@ -39,7 +39,7 @@ description: "jupyterlab_server 核心概念文档索引"
 00 → 02 → 03 → [app-source.md](../references/app-source.md) → [config-source.md](../references/config-source.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

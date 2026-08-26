@@ -5,7 +5,7 @@
 - [常见问题排查](troubleshooting.md) — ExtensionError、JS不加载、LaTeX原始代码显示、MathJax冲突、增量构建问题。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-usage
 equation-numbering

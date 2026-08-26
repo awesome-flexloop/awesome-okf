@@ -6,7 +6,7 @@
 - [Scheduler 与 Reconcile](/ai/langchain-ai/open-swe/concepts/scheduler-reconcile) — cron 扇出、陈旧运行清理、baby-sit CI 监控状态机
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 agent-architecture
 dispatch-review-cycle

@@ -169,7 +169,7 @@ import regex
 先 mock 缺失模块（让import不报错），再 patch 运行时配置（matplotlib backend），最后子类化替换不兼容行为。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

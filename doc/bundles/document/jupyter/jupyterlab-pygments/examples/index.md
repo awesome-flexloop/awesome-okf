@@ -16,7 +16,7 @@
 - [教程首页](../index.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-customize-style
 02-pygments-highlight

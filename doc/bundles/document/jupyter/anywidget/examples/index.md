@@ -17,7 +17,7 @@ stale_after: 2027-08-23
 | [Vite集成与HMR](vite-integration.md) | Vite配置、热更新、框架集成 | 04, 05 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 counter-widget
 two-way-binding

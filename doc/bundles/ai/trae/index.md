@@ -127,7 +127,7 @@ awesome-trae/00-introduction → trae-co-creation-projects/00-introduction
 - **方法论**：七概念方法论（R→I→E→V→C）+ source-code-to-okf-wiki 工作流
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 trae-co-creation-demo-wall/index
 trae-co-creation-demo-wall-intl/index

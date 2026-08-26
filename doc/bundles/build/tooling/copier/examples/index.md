@@ -11,7 +11,7 @@
 * [Python API 使用](python-api-usage.md) — `run_copy()`/`run_update()`/`run_recopy()` 便捷函数、Worker 类精细控制、错误处理、自定义 CLI 工具构建、批量生成项目。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-template
 conditional-rendering

@@ -126,7 +126,7 @@ langchainjs/
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

@@ -5,7 +5,7 @@
 - [LLM-as-Judge](/ai/langchain-ai/openevals/concepts/llm-as-judge) — 评分模式、prompt 格式化、judge 后端、结构化输出与多模态支持
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 exact-evaluators
 llm-as-judge

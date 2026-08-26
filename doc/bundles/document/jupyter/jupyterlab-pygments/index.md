@@ -71,7 +71,7 @@ jupyterlab_pygments 虽然代码量极小（不到200行Python + 17行TypeScript
 **推荐阅读顺序：** [简介](concepts/00-introduction.md) → [快速上手](concepts/01-getting-started.md) → [双桥架构](concepts/02-dual-bridge-architecture.md) → [JupyterStyle类](concepts/03-jupyter-style-class.md) → [CSS生成流水线](concepts/04-css-generation-pipeline.md) → [构建系统](concepts/05-build-and-extension.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

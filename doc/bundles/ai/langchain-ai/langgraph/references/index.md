@@ -5,7 +5,7 @@
 - [检查点与持久化 API](/ai/langchain-ai/langgraph/references/checkpoint-persistence) — BaseCheckpointSaver、Checkpoint、序列化协议、BaseStore、Runtime
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 channels-pregel
 checkpoint-persistence

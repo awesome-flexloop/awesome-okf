@@ -12,7 +12,7 @@
 | [web-source.md](web-source.md) | `src/fps/web/fastapi.py` + `src/fps/web/server.py` | FastAPIModule、ServerModule |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 cli-source
 config-source

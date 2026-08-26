@@ -20,7 +20,7 @@ stale_after: 2026-12-31
 * [Python API、命令行 API 与 C API](python-c-api.md) — `__init__.py`（optimize 函数签名、大模型回退路径）、`cpp2py_export.cc`（nanobind 绑定）、`onnxoptimizer_main.py`（CLI 参数与流程）、`model_util.h/cc`（loadModel/saveModel、外部数据处理）、`c_api/onnxoptimizer_c_api.h`（纯 C API 及已知拼写错误）、`pass_util.h`（pass 开发工具函数）、`data_type.h`（FP16/BF16/复数类型）、`examples/onnx_optimizer_exec.cpp`（C++ 示例）：覆盖 F-006~F-015、F-054~F-060。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 pass-base
 pass-manager

@@ -14,7 +14,7 @@
 | [mystmd-cli-source.md](mystmd-cli-source.md) | `mystmd/src/` (index.ts, build.ts), `citation-js-utils/src/index.ts`, `markdown-it-myst/src/index.ts` | CLI命令, CitationRenderer, markdown-it-myst 插件导出 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 myst-common-source
 myst-config-source

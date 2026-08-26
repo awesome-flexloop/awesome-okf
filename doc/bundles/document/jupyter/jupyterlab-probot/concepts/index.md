@@ -28,7 +28,7 @@ description: jupyterlab-probot 核心概念文档导航
 
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

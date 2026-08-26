@@ -5,7 +5,7 @@
 * [进程登记：seven-concepts-v（对抗审查）](processes/seven-concepts-v.md) - 本 bundle `verified.by` 所用自动化进程的定义与复核路径，确立 machine-confirmed 信任层级。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 processes/seven-concepts-v
 okf-annotated-v01

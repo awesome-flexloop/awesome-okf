@@ -6,7 +6,7 @@
 - [扩展指令源码](extended-directives.md) — include/embed/mermaid/toc/raw
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 core-directives
 directive-spec

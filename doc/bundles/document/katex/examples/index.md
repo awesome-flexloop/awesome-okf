@@ -12,7 +12,7 @@
 * [命令行渲染示例](/examples/cli-render.md) — npx katex 从 stdin 到 stdout、--input/--output/--display-mode/--macro/--macro-file/--no-throw-on-error、批量处理。对应概念：[命令行接口](/concepts/16-command-line.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 auto-render-usage
 basic-render

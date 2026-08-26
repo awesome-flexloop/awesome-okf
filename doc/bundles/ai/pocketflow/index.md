@@ -71,7 +71,7 @@ PocketFlow 是一个仅约100行核心代码的极简 LLM Agent 框架，由 The
 > **生成时间**：2026-08-23 | **维护者**：OKF Wiki Bot
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 pocketflow-core/index
 pocketflow-patterns/index

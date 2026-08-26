@@ -32,7 +32,7 @@ sources:
 | [conf-py-source.md](conf-py-source.md) | docs/conf.py + .readthedocs.yml + requirements.txt + gen_contributors.py | Sphinx 构建系统、ReadTheDocs 配置、自动化脚本 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 becoming-member-source
 conf-py-source

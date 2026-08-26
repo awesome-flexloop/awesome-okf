@@ -33,7 +33,7 @@
 所有示例代码均基于官方examples目录下的代码扩展和注释，确保可运行性。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 agent-workflow
 chat-completion

@@ -6,7 +6,7 @@
 * [inproc 线程间零拷贝通信](inproc-zero-copy.md) — 多线程 inproc，演示 msg_t 引用计数零拷贝传递
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 inproc-zero-copy
 pub-sub-filtering

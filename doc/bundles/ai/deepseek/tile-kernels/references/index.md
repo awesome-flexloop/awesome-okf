@@ -12,7 +12,7 @@
 | [mhc-kernels](/ai/deepseek/tile-kernels/references/mhc-kernels) | MHC 与 Engram 核函数详细参考，Multi-Head Compute、Engram门控、转置、配置工具 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 api
 mhc-kernels

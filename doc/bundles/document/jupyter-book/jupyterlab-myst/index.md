@@ -71,7 +71,7 @@ jupyterlab-myst 是 IDE 内的编辑增强工具，让作者在编写 Notebook �
 * **核验链路**：`generated` 记录原始生成时刻（2026-08-23）；`verified: true`，所有类名、函数名、插件 ID、参数名均通过源码 Read 工具验证。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

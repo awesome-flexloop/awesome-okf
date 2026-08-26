@@ -8,7 +8,7 @@
 * [帮助支持页面 help-support.rst 源码解析](help-support-rst.md) — 社区渠道、付费支持、feedstock、邮件列表
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 conf-py
 contributing-rst

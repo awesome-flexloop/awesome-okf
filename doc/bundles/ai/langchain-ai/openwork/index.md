@@ -69,7 +69,7 @@ openwork/
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 references/index

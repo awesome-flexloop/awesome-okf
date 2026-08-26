@@ -40,7 +40,7 @@ description: "Jupyter Notebook格式参考实现：.ipynb文件的读写、验�
 | 源码路径 | `external/libs/jupyter/nbformat/nbformat/` |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

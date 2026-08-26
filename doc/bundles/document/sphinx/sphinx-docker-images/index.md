@@ -94,7 +94,7 @@ sphinx-docker-images 是 [Sphinx](https://www.sphinx-doc.org/) 官方维护的 D
 - **基础镜像**：python:slim（sphinx/latexpdf）、ubuntu:24.04（ci）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

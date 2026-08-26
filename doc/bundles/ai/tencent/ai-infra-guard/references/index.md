@@ -11,7 +11,7 @@
 | [data-rules.md](data-rules.md) | `data/fingerprints/`、`data/vuln/`、`data/mcp/`、`data/eval/` | YAML/JSON 数据格式、DSL 语法、规模统计 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 data-rules
 go-server

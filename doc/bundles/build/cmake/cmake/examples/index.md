@@ -7,7 +7,7 @@
 * [跨平台构建与 find_package](cross-platform.md) — Linux/macOS/Windows 三平台适配、find_package Config/Module 模式使用、平台特定源文件和链接库、工具链文件交叉编译、GNUInstallDirs、BUILD_INTERFACE/INSTALL_INTERFACE 路径分离。对应概念：[查找模块机制 (find_package)](../concepts/find-module.md)、[多生成器工厂模式](../concepts/generator-pattern.md)、[构建类型与多配置](../concepts/build-type.md)、[工具链检测与语言启用](../concepts/toolchain-detection.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-project
 cross-platform

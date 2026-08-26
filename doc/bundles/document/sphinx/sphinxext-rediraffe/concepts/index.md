@@ -10,7 +10,7 @@
 - [路径处理与跨平台兼容](07-path-and-cross-platform.md) — Windows/POSIX路径转换、dirhtml目录URL处理、增量JSON记录、冲突检测
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

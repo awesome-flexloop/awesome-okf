@@ -5,7 +5,7 @@
 - [编写插件](simple-plugin.md) — 开发简单的块级/行内规则插件
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-usage
 custom-rendering

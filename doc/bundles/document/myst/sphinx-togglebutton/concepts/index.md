@@ -17,7 +17,7 @@
 | [03-configuration.md](03-configuration.md) | 配置项参考——选择器、提示文本、打印行为、配置传递机制 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

@@ -85,7 +85,7 @@ nuitka/
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 code-generation-api
 main-control-entry

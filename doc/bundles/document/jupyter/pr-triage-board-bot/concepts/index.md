@@ -15,7 +15,7 @@
 | [08](08-cli-and-action.md) | CLI与GitHub Action集成 | commander参数设计、composite action编排、私钥安全处理、SWC+tsc构建系统、CI/CD流水线、本地与Action部署对比 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

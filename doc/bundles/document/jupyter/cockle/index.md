@@ -145,7 +145,7 @@ await shell.input('ls -la\n');
 - **Coincident**：[WebReflection/coincident](https://github.com/WebReflection/coincident)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

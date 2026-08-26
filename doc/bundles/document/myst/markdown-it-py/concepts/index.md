@@ -25,7 +25,7 @@
 - [17 JS 兼容与 Python 扩展](17-migration-and-compatibility.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

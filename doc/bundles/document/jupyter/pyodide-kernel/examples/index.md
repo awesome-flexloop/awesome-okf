@@ -15,7 +15,7 @@
 | [custom-wheels.md](custom-wheels.md) | 添加自定义Wheel包——pypi/目录自动索引、CLI/配置文件方式、含依赖包处理、纯Python vs WASM wheel、离线部署最佳实践 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-install-config
 custom-wheels

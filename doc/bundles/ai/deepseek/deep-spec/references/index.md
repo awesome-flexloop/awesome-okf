@@ -11,7 +11,7 @@
 | [eval-api](/ai/deepseek/deep-spec/references/eval-api) | 评估管线 API 参考，包括 BaseEvaluator、DSpark/Eagle3 评估器、verify_draft_tokens、generate_decoding_sample 回调框架、9个评测任务、采样工具 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 eval-api
 model-api

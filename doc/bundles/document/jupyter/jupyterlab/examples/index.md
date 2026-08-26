@@ -16,7 +16,7 @@
 - [参考资料](../references/)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-minimal-extension
 02-custom-file-type

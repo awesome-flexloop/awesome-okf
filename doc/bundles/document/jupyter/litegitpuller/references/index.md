@@ -22,7 +22,7 @@
 - **仓库**: https://github.com/jupyterlite/litegitpuller
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 build-config-source
 gitpuller-ts-source

@@ -7,7 +7,7 @@
 - [自定义 Span 追踪与高级场景](/examples/custom-span-tracing.md) — 父子嵌套→跨线程传播→跨服务 header 传播→Baggage 使用→异常处理→多模态上报→条件追踪→动态标签
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 custom-span-tracing
 openai-integration

@@ -29,7 +29,7 @@
 | 10 | [转换选项详解](10-configuration-options.md) | 所有转换选项的作用和使用场景 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-cli-usage

@@ -68,7 +68,7 @@ PostgreSQL、Redis、MongoDB 均支持 `external.enabled` 切换：内置模式�
 本知识包为参考型 bundle，不包含 concepts/ 和 examples/ 目录。共收录 1 个信源登记文档，另含 spec/ 子目录（facts.md + insights.md）、references/index.md 与根 index.md、log.md。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 references/index
 spec/facts

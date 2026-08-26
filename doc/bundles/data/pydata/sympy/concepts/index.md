@@ -44,7 +44,7 @@ title: SymPy 概念文档索引
 4. **源码溯源**：阅读 [references/](../references/) 中的信源文档
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-expression-tree

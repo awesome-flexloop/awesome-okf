@@ -77,7 +77,7 @@ okf_version: "0.2"
 - Python asyncio（使用Python绑定时）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

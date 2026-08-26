@@ -15,7 +15,7 @@
 - 遇到异文时：参考 [02-异文对照实操](02-variant-walkthrough.md) 的五步法处理其他异文
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-first-chapters
 02-variant-walkthrough

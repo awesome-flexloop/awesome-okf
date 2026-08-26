@@ -9,7 +9,7 @@
 | 04 | [标签分类配置](/concepts/04-configuration.md) | 自定义分类规则、JSON配置文件 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

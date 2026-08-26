@@ -98,7 +98,7 @@ JupyterLite Demo 采用极简的「三件套」部署模式：
 7. **定制站点**：阅读 [06-部署流水线](concepts/06-deployment-github-pages.md) 和 [07-自定义指南](concepts/07-customization-guide.md)，跟着 [07-构建自定义站点](examples/07-custom-demo-site.md) 打造自己的站点
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

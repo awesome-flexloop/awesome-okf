@@ -24,7 +24,7 @@ description: jupyterlab-probot 实用示例导航
 
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-local-setup
 02-custom-config

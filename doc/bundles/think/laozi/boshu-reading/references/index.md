@@ -17,7 +17,7 @@
 - 关联的 laozi-lineage bundle（学术性版本源流）通过 lineage-cross-ref.md 交叉引用
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 core-manuscripts
 historical-commentaries

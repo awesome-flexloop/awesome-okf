@@ -142,7 +142,7 @@ sources:
 - [myst 系列](https://github.com/executablebooks/MyST-Parser) — MyST Markdown 生态与 Executable Books 工具链
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

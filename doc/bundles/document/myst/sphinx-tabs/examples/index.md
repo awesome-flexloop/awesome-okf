@@ -7,7 +7,7 @@
 | [分组标签同步与配置](/examples/group-tabs-sync.md) | group-tab 跨页同步、配置项示例、主题兼容 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-tabs
 code-tabs

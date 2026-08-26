@@ -21,7 +21,7 @@ sources: https://github.com/datawhalechina/handy-ollama
 * [第七章 应用案例](chapter7-applications.md) — `docs/C7/`：AI Copilot 编程助手、Dify 接入本地模型、LangChain/LlamaIndex RAG、LangChain/LlamaIndex Agent、DeepSeek R1+RAG 七个实战案例。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 chapter1-introduction
 chapter2-installation

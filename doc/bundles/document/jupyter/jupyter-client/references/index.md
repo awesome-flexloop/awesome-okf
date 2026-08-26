@@ -11,7 +11,7 @@
 | [channels-connect-source.md](channels-connect-source.md) | `jupyter_client/channels.py` + `connect.py` | 通道实现、连接文件管理、Socket创建、心跳监控 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 channels-connect-source
 client-source

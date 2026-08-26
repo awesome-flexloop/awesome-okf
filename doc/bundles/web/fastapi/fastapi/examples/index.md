@@ -7,7 +7,7 @@
 * [05 · 中间件与测试](05-middleware-testing.md) — CORS/GZip 配置、自定义中间件、TestClient 测试、BackgroundTasks 后台任务
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-basic-crud-api
 02-dependency-injection

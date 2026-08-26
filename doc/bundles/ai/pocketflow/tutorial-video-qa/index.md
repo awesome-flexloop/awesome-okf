@@ -84,7 +84,7 @@ PocketFlow-Tutorial-Video-Generator/
 - 工具函数：[utils/call_llm.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Video-Generator/utils/call_llm.py)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/linear-qa-pipeline
 concepts/llm-integration-pattern

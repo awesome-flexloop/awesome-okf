@@ -5,7 +5,7 @@
 - [RAG 检索增强生成](/ai/langchain-ai/langchain/examples/rag-retrieval) — Document、InMemoryVectorStore、DeterministicFakeEmbedding 与 as_retriever 构建端到端 RAG 链
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-lcel-chain
 rag-retrieval

@@ -11,7 +11,7 @@
 | [mhc-usage](/ai/deepseek/tile-kernels/examples/mhc-usage) | MHC Multi-Head Compute 使用，mhc_pre/mhc_post 训练/推理流程、LM Head、原子Op、多层重计算 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-quant
 mhc-usage

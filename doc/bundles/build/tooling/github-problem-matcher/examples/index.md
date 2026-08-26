@@ -6,7 +6,7 @@
 * [自定义 Problem Matcher](custom-matcher.md) — 为 pylint/ruff/eslint/pytest 创建自定义 matcher 的完整教程、正则编写技巧、社区已有 matcher 索引。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-usage
 custom-matcher

@@ -8,7 +8,7 @@
 * [CMakeLists.txt — 构建系统](build-system.md) — 版本定义、NCNN_VULKAN/OPENMP/INT8/PYTHON/BF16/WEIGHT_QUANT/BATCH/PIXEL/RUNTIME_CPU/SIMPLEVK 等构建选项、平台分支。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 allocator
 build-system

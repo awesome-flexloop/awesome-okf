@@ -12,7 +12,7 @@
 | [runtime-config](/ai/deepseek/deep-gemm/references/runtime-config) | 运行时配置（SM 数量、TC 利用率、PDL、编译维度、Block 对齐、环境变量） |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 api
 jit-system

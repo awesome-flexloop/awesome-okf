@@ -5,7 +5,7 @@
 - [内联表达式工作流](03-inline-expression-workflow.md) — 变量输出和动态内容
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-using-jupyterlab-myst
 02-integrating-with-myst

@@ -55,7 +55,7 @@ PyZMQ 是 ZeroMQ（高性能异步消息库）的 Python 绑定。它采用"薄�
 详见 [log.md](log.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

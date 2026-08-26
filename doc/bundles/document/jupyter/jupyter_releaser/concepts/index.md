@@ -29,7 +29,7 @@
 | [10-authentication.md](10-authentication.md) | GitHub Token、PyPI OIDC Trusted Publishing、npm Token | 09 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

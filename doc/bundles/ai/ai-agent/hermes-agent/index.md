@@ -73,7 +73,7 @@ Hermes Agent 是一个渐进式披露（Progressive Disclosure）的多Agent框�
 > **内容统计**：10 个概念 + 4 个示例 + 1 个信源 = 15 个内容文档
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/acp-adapter
 concepts/agent-core-loop

@@ -69,7 +69,7 @@
 - [官方文档](https://jupyterlite-ai.readthedocs.io/)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-architecture-overview

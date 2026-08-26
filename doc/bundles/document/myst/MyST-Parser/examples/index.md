@@ -11,7 +11,7 @@
 | [05-standalone-cli.md](05-standalone-cli.md) | CLI 工具独立使用——myst-docutils-* 命令、Python API、批量转换 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-basic-setup
 02-enable-extensions

@@ -39,7 +39,7 @@ stale_after: 2026-12-31
 * [版本转换与函数内联](13-version-converter-inliner.md) — convert_version跨版本adapter机制、OpSchema函数体vs模型局部函数、inline_local_functions递归内联、inline_selected_functions选择性内联（白名单/黑名单模式）、inline_schema_functions控制、函数调用循环检测。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-overall-architecture
 01-protobuf-ir

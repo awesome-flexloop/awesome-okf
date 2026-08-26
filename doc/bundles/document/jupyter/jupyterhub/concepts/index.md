@@ -21,7 +21,7 @@
 | [handlers.md](handlers.md) | HTTP 请求处理：BaseHandler、页面处理器、API 处理器、认证中间件 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 architecture-overview
 authenticator

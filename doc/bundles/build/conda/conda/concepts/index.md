@@ -36,7 +36,7 @@
 * [17-公开 Python API](17-public-api.md) — Solver/SubdirData/PackageCacheData/PrefixData 四个 API 类、_internal 委托模式、reload() 强制刷新、Beta API 声明。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

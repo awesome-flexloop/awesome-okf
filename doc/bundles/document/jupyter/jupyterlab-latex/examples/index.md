@@ -10,7 +10,7 @@ jupyterlab-latex 的实践示例，从基础操作到故障排查。
 | 04 | [故障排查](04-troubleshooting.md) | 安装、编译、SyncTeX、PDF 显示、性能问题的诊断与解决 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-basic-usage
 02-synctex-workflow

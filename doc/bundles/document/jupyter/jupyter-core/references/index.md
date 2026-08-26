@@ -86,7 +86,7 @@ sources:
 - [教程首页](../index.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 application-source
 command-source

@@ -4,7 +4,7 @@
 - [核心数据结构](/ai/langchain-ai/langsmith-cli/references/data-structures) — Client、Options、FilterFlags、Config/Profile/OAuth 等关键类型定义
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 commands
 data-structures

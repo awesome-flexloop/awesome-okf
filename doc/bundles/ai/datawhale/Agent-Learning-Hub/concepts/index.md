@@ -8,7 +8,7 @@
 | [核心资源分类](./resource-curation.md) | 官方指南、项目地图、Skills/协议、现代系统、论文等九大资源分类体系 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 agent-learning-roadmap
 resource-curation

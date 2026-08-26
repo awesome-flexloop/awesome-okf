@@ -13,7 +13,7 @@
 | [示例 Notebook](demo-notebook-source.md) | `content/demo.ipynb` | xeus-python + ipycanvas 笑脸绘制示例 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 build-env-source
 demo-notebook-source

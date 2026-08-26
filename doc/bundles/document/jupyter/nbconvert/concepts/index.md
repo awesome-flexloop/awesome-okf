@@ -84,7 +84,7 @@ generated: { by: "reference_agent/trae-cn", at: "2026-08-22T10:00:00Z" }
 - **示例代码**：[examples/index.md](../examples/index.md) - 可运行的Python示例
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

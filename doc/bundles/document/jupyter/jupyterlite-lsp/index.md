@@ -43,7 +43,7 @@ jupyterlite-lsp 为 [JupyterLite](https://jupyterlite.rtfd.io)（浏览器端 Ju
 源码级引用文档，直接对应到源文件。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

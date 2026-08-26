@@ -9,7 +9,7 @@
 * [06 multipart 高层抽象](06-multipart.md) — recv_multipart/send_multipart 迭代器接口、multipart_t 容器、encode/decode（RFC 50）、选型建议。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-overview
 01-context

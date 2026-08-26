@@ -20,7 +20,7 @@ sources:
 - [包依赖关系与 API 速查表](package-api-map.md) — 分层依赖图、核心接口签名、Widget 生命周期消息序列
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 lumino-source
 package-api-map

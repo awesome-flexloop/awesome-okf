@@ -38,7 +38,7 @@ status: active
 * [12. 安装与环境管理](12-installation.md) — pip/conda/mamba 安装方法、虚拟环境与 Jupyter 的关系、多 Kernel 工作流、ipykernel install 命令、常见安装问题排查、升级与验证。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-what-is-jupyter

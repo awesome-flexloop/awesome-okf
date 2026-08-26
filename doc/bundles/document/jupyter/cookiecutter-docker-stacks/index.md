@@ -173,7 +173,7 @@ flowchart LR
 cookiecutter-docker-stacks 使用 [BSD 3-Clause License](https://github.com/jupyter/cookiecutter-docker-stacks/blob/main/LICENSE.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

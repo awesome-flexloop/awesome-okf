@@ -89,7 +89,7 @@ description: "Jupyter 官方 pytest 测试插件集：通过分层插件架构�
 **推荐阅读顺序：** [简介](concepts/00-introduction.md) → [快速上手](concepts/01-getting-started.md) → [架构总览](concepts/02-architecture-overview.md) → [Core插件](concepts/03-core-plugin.md) → [Server插件](concepts/05-server-plugin.md) → [Fixture工厂模式](concepts/08-fixture-factories.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

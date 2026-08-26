@@ -91,7 +91,7 @@ stale_after: 2027-08-22
 | [构建生成器集成](10-build-generators.md) | [Manifest解析器 API](../references/parser-source.md) |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

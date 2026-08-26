@@ -6,7 +6,7 @@
 | [交互式计算书籍配置](/examples/interactive-book.md) | Binder/Colab/JupyterHub/Thebe/JupyterLite多平台启动按钮配置 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-book-setup
 interactive-book

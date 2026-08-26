@@ -16,7 +16,7 @@
 - [插件注册机制](/concepts/02-plugin-registration.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-install-and-use
 02-custom-kernel-tutorial

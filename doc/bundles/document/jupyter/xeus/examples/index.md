@@ -25,7 +25,7 @@ status: stable
 - 阅读 [双Worker通信模式](../concepts/03-dual-worker-modes.md) 理解部署时的跨域隔离配置
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 advanced-deploy
 basic-deploy

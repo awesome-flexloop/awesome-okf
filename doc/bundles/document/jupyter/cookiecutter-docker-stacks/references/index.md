@@ -9,7 +9,7 @@
 | [tests-source.md](tests-source.md) | 测试框架源码索引（TrackedContainer类、pytest fixtures、默认测试用例） |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 template-files
 tests-source

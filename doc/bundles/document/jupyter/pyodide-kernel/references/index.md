@@ -11,7 +11,7 @@
 | [extension-source.md](extension-source.md) | `packages/pyodide-kernel-extension/src/` | JupyterLab扩展插件注册、Kernel Spec定义、插件设置Schema |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 addon-source
 extension-source

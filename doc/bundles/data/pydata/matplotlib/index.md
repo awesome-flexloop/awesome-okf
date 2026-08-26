@@ -55,7 +55,7 @@ okf_version: "0.2"
 * **核验链路**：`generated.at` 记录原始生成时刻（2026-08-22T15:00:00Z）；`verified.at` 记录过程核验事件（2026-08-22T15:30:00Z），所有类名、函数名、参数名、行号均通过源码 Grep 和类定义头部读取验证。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

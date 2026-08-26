@@ -19,7 +19,7 @@
 - **需要man page**：参考"Man Page与命令索引"配置man page输出和命令索引
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-usage
 content-enhancement

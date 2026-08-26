@@ -52,7 +52,7 @@ XOR-SHIFT宇宙本论知识包基于三大公理和FLIP/XOR/SHIFT基本操作，
 * [GodGPT 应用](/godgpt/index.md) — 意识与信息场理论的 AI 实践
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

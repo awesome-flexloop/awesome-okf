@@ -10,7 +10,7 @@
 - [Document 与 Embedding](/ai/langchain-ai/langchainjs/concepts/document-embedding) — 文档数据模型、向量化抽象与 RAG 基础
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 document-embedding
 message-system

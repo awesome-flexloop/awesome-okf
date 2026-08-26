@@ -103,7 +103,7 @@ jupyter lite serve
 7. **扩展开发**：学习 [07-内核类型](concepts/07-kernel-types.md) 和 [08-扩展架构](concepts/08-extension-architecture.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

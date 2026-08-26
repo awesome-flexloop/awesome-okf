@@ -4,7 +4,7 @@
 - [使用模式与 v1 对比](/ai/deepseek/deepseek-ocr2/concepts/usage-modes) — HuggingFace/vLLM 部署要点、v1→v2 迁移指南、参数差异
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 overview
 usage-modes

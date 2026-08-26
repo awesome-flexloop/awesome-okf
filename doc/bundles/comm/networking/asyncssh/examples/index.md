@@ -6,7 +6,7 @@
 - [端口转发隧道](port-forward-tunnel.md) — 本地/远程转发、SOCKS 代理、UNIX socket、数据库隧道。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 async-command
 parallel-connections

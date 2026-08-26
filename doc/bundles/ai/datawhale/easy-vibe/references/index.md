@@ -14,7 +14,7 @@ Easy-Vibe 官方 GitHub 仓库（datawhalechina/easy-vibe），包含 README、A
 - 本地路径：`external/libs/ai/datawhalechina/easy-vibe`
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 source-repo
 ```

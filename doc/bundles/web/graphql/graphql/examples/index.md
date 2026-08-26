@@ -8,7 +8,7 @@
 * [python-server](python-server.md) — Python 服务端实战（graphql-core）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-query
 error-handling

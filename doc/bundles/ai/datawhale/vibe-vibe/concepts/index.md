@@ -9,7 +9,7 @@
 | [多语言文档架构](/ai/datawhale/vibe-vibe/concepts/03-multilingual-docs-architecture.md) | 中英文双语三层架构、VitePress 原生多语言、交互组件体系 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-vibe-coding-philosophy
 02-basic-getting-started

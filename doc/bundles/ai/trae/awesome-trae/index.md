@@ -39,7 +39,7 @@ sources:
 - 维护中英双语 README（README.md + README_zh.md），贡献需同步更新
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/00-introduction
 concepts/01-contribution-guide

@@ -9,7 +9,7 @@
 | [脚注重排序逻辑](source-reorder.md) | `mdformat_footnote/_reorder.py` | 分类、依赖图、排序、ID重分配 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 source-init
 source-plugin

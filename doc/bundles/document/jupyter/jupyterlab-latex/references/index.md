@@ -14,7 +14,7 @@
 | 8 | [命令执行 util.py](util-py-source.md) | `jupyterlab_latex/util.py` (62行) | 跨平台子进程（Windows同步/Unix异步） |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 build-py-source
 config-py-source

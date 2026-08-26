@@ -75,7 +75,7 @@ description: "JupyterLab GitHub 浏览器扩展——通过 Contents.IDrive 接�
 **推荐阅读顺序：** [简介](concepts/00-introduction.md) → [安装与快速上手](concepts/01-getting-started.md) → [架构总览](concepts/02-architecture-overview.md) → [GitHubDrive 虚拟文件系统](concepts/03-github-drive.md) → [浏览器 UI](concepts/04-browser-ui.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

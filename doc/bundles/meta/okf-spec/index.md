@@ -59,7 +59,7 @@ okf_version: "0.2"
 本知识包共收录 27 个内容文档（20 个概念 + 4 个示例 + 3 个信源/进程登记），另含 4 个子目录 index.md 与根 index.md、log.md。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

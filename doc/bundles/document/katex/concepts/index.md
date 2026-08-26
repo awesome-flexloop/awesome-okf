@@ -51,7 +51,7 @@
 * [生态与版本](/concepts/23-ecosystem-and-versions.md) — Users 列表、Versions 版本说明、官方扩展入口、第三方库索引（React/Vue/Angular/Android/iOS/Rust/Ruby/小程序等）。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

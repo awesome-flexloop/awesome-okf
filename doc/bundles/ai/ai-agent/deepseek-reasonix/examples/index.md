@@ -4,7 +4,7 @@
 - [02 - Bot 网关配置](/examples/02-bot-gateway.md)——QQ/飞书接入、会话隔离、队列模式、白名单、审批
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-basic-usage
 02-bot-gateway

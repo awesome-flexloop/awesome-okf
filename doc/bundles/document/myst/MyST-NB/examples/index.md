@@ -11,7 +11,7 @@
 | [05-cli-standalone.md](05-cli-standalone.md) | CLI 工具独立使用——mystnb-* 命令、Python API、批量转换 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-basic-setup
 02-execution-config

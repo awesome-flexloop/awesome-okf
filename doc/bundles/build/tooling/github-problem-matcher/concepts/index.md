@@ -15,7 +15,7 @@
 * [05-测试 Problem Matcher](05-testing.md) — test_matcher.js 逐行解析、零框架测试方法、如何为自定义 matcher 编写单元测试。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

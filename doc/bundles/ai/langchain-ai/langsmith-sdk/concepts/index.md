@@ -6,7 +6,7 @@
 - [评测运行器](/ai/langchain-ai/langsmith-sdk/concepts/evaluation.md) — evaluate、_ExperimentManager、RunEvaluator、StringEvaluator 与 feedback 写入
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 evaluation
 overview

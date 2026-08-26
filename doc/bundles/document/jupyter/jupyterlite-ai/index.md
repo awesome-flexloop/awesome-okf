@@ -133,7 +133,7 @@ jupyter lab
 BSD 3-Clause License
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

@@ -63,7 +63,7 @@ tiny-universe 是 Datawhale 发起的开源学习项目，以"白盒"为导向�
 - [模块路线图示例](/ai/datawhale/tiny-universe/examples/module-roadmap)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/tiny-agent
 concepts/tiny-diffusion

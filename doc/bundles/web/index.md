@@ -17,7 +17,7 @@ description: "Web 应用开发生态——高性能 ASGI Web 框架与 API 查�
 | [📡 GraphQL 核心规范与生态](graphql/index.md) | GraphQL 查询语言系统化中文教程——语法、Schema 类型系统、验证执行管线、内省系统 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 fastapi/index
 graphql/index

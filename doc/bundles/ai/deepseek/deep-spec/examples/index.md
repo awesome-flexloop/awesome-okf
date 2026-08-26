@@ -10,7 +10,7 @@
 | [evaluation](/ai/deepseek/deep-spec/examples/evaluation) | 投机解码评估使用方法，包括基础评估命令、9个评测任务、指标解读、置信度校准与早停、Python API 调用 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 evaluation
 training-dspark

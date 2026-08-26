@@ -40,7 +40,7 @@ sources:
 - 提供 2 个 Issue 模板：Agent Request（新 Agent 请求）和 Bug Report（问题反馈）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/00-introduction
 concepts/01-agent-structure

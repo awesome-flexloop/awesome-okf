@@ -42,7 +42,7 @@ OpenCode 是一个开源的终端 AI 编码代理，基于 Bun + Turbo + SST 技
 - [变更日志](/log.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

@@ -42,7 +42,7 @@
 5. **防御性设计**：懒构建模式的"仅入口请求触发昂贵操作"思想可推广到任何懒加载/懒计算场景
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 content-provider-chain
 double-redirect-canonicalization

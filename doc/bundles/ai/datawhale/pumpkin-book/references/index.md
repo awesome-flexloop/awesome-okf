@@ -31,7 +31,7 @@ sources: https://github.com/datawhalechina/pumpkin-book
 * [勘误表](errata.md) — 纸质版各印次（第2版第6次印刷至第1版第4次印刷）的公式与文字勘误汇总。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 ch1-2-foundations
 ch12-16-advanced

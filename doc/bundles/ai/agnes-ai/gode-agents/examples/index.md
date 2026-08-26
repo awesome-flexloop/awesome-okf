@@ -30,7 +30,7 @@
 | [07-multi-agent-collab.md](07-multi-agent-collab.md) | 多智能体协作——Managed Agents 注册、子 Agent 自动调用、GradioUI 可视化 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-first-agent
 02-code-agent-basic

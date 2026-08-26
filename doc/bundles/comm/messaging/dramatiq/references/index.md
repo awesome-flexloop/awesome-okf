@@ -10,7 +10,7 @@
 | [异常类层次结构](error-hierarchy.md) | DramatiqError/BrokerError/Retry/DecodeError 等异常的继承关系与触发场景 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 built-in-middleware
 error-hierarchy

@@ -114,7 +114,7 @@ fps hello:Hello
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

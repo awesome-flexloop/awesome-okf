@@ -24,7 +24,7 @@
 * [11-高级模式](11-advanced-patterns.md) — 自定义 Program/Executor/Runner、MockContext 测试、嵌入使用。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

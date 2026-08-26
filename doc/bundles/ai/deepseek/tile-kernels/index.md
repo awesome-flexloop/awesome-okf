@@ -137,7 +137,7 @@ tile_kernels/
 | [TileLang](https://github.com/tile-ai/tilelang) | TileKernels 使用的 Python DSL 编译器和 JIT 运行时 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

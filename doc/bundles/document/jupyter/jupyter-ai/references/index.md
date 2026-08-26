@@ -11,7 +11,7 @@
 | [Entry Points 参考](entry-points-reference.md) | 插件分组、注册格式、版本约束、开发环境 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 config-reference
 entry-points-reference

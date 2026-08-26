@@ -44,7 +44,7 @@ jupyter-renderers 是 JupyterLab 官方维护的 MIME 渲染器扩展集合，�
 | [Python 入口点参考](references/python-entrypoint-reference.md) | _jupyter_labextension_paths、labextension 目录结构、pyproject.toml 配置 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

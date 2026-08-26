@@ -35,7 +35,7 @@
 | [11-worker-communication.md](11-worker-communication.md) | Comlink 与 Coincident 两种 Worker 通信模式的对比和选择策略 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

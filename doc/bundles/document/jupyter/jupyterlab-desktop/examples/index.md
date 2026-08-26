@@ -17,7 +17,7 @@
 - [返回首页](../index.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 cli-usage-examples
 python-env-examples

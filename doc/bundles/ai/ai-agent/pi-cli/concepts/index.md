@@ -7,7 +7,7 @@
 - [04 - 内置 Prompt 模板](/concepts/04-builtin-prompts.md) — cl/is/pr/sa/wr 五个 slash command prompt
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-monorepo-architecture

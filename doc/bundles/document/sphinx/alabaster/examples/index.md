@@ -7,7 +7,7 @@
 | [custom-css-and-branding.md](custom-css-and-branding.md) | CSS 品牌化——品牌配色、自定义字体、深色模式、布局调整 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-setup
 custom-css-and-branding

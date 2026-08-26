@@ -33,7 +33,7 @@
 | 09 | [终端支持](09-terminal-support.md) | Cockle WASM终端、预安装包（git/vim/nano等）、命令别名、Git环境变量、终端限制 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

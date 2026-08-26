@@ -9,7 +9,7 @@
 | [03](03-advanced-testing.md) | 高级测试编写 | 包验证、环境检查、HTTP端点测试、日志检查等7种测试模式 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-basic-custom-image
 02-gpu-image

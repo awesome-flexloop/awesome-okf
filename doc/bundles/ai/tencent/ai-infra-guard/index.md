@@ -65,7 +65,7 @@ AI-Infra-Guard 是腾讯朱雀实验室开源的 AI 基础设施安全检测工�
 见 [log.md](/log.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

@@ -5,7 +5,7 @@
 - [API 客户端架构](/ai/langchain-ai/langsmith-cli/concepts/api-client) — langsmith-go SDK 封装、v1/v2 透明切换、OAuth 认证与原始 HTTP
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 api-client
 cli-commands

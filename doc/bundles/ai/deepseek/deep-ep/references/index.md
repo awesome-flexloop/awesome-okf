@@ -13,7 +13,7 @@
 | [事件系统](events.md) | EventOverlap/EventHandle：计算-通信重叠、流同步、钩子机制 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 api
 buffer-elastic

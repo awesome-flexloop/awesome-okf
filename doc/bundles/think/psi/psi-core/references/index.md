@@ -4,7 +4,7 @@
 * [dw.cash 文档](dw-cash-docs.md) - dw.cash Ψhē理论文档站
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 alltheory-source
 dw-cash-docs

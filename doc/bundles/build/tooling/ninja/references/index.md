@@ -51,7 +51,7 @@ stale_after: 2027-08-22
 | [主入口 API](main-source.md) | `src/ninja.cc` | NinjaMain、Options、Tool 函数、Status、Clean、GraphViz |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 build-source
 eval-source

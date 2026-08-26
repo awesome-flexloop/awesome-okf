@@ -23,7 +23,7 @@
 * [深入实战](10-advanced-patterns.md) — 动态导入import_item、Sentinel哨兵、深拷贝优化原理、自定义验证relax模式、遍历修改Notebook、常见陷阱。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

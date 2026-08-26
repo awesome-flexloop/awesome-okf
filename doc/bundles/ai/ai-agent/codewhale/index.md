@@ -151,7 +151,7 @@ codewhale/
 - **关键文件**：Cargo.toml、21 个 crate 的 Cargo.toml 和 src/、docs/ 目录下的官方文档
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

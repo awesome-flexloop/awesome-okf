@@ -16,7 +16,7 @@ sources:
 * [插件钩子规范 (hookspec)](plugin-hookspec.md) — Conda 插件系统的 Pluggy hookspec 定义：`CondaSpecs` 类声明所有插件扩展点，包括 `conda_solvers`（求解器注册）和 `conda_subcommands`（子命令注册）等钩子，以及 `_hookspec`/`hookimpl` 装饰器标记。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 cli-main
 plugin-hookspec

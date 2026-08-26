@@ -88,7 +88,7 @@ tags: ["jupyter", "notebook", "python", "typescript", "jupyterlab"]
 - [notebook_shim包](https://github.com/jupyter/notebook_shim)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/00-introduction
 concepts/01-architecture-overview

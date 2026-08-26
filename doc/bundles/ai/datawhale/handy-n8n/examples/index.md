@@ -16,7 +16,7 @@
 * [自定义高德地图天气节点](custom-amap-node.md) — C05 实践：TypeScript 声明式节点开发全流程，含节点类、鉴权类、routing 配置、npm link 本地调试。对应概念：[高级实战](../concepts/advanced-practice.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 custom-amap-node
 github-issue-notify

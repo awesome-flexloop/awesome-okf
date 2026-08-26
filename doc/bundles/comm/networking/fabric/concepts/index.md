@@ -19,7 +19,7 @@
 * [高级模式](08-advanced-patterns.md) — Executor 按主机分组、ConnectionCall、OpenSSHAuthStrategy、MockRemote 测试工具。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

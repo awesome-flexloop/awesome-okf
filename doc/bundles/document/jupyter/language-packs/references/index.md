@@ -31,7 +31,7 @@ status: active
 * [gettext-format-source.md](gettext-format-source.md) — Gettext POT/PO/MO 文件格式分析信源
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 crowdin-config-source
 gettext-format-source

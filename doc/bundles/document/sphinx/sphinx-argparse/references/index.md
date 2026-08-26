@@ -15,7 +15,7 @@
 - **PyPI**：[sphinx-argparse](https://pypi.org/project/sphinx-argparse/)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 sphinx-argparse-source
 ```

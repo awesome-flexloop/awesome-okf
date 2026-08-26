@@ -27,7 +27,7 @@ basic-compilation
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-compilation
 module-mode

@@ -33,7 +33,7 @@ external/libs/jupyter/extension-template/
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 ci-workflows-source
 copier-config

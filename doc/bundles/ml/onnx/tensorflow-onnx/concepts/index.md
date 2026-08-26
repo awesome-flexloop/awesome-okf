@@ -35,7 +35,7 @@ stale_after: 2026-12-31
 * [NHWC/NCHW 布局转换、数据类型系统与 Target 适配](06-data-layout-types.md) — TF NHWC 与 ONNX NCHW 布局差异、inputs_as_nchw 自动转置、TF dtype→ONNX dtype 映射、动态形状处理、opset 广播语义差异、rs5/rs6/caffe2/tensorrt/nhwc 平台适配。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-overall-architecture
 01-conversion-pipeline

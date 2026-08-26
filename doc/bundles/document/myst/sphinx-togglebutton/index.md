@@ -70,7 +70,7 @@ sphinx-togglebutton/
 | [sphinx-design](https://github.com/executablebooks/sphinx-design) | 更丰富的 UI 组件库（含 dropdown 指令） |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

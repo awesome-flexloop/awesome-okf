@@ -119,7 +119,7 @@ status: stable
 - **验证结果**：API 验证全部通过（libzmq 90+ API、cppzmq 30+、pyzmq 30+、dramatiq 30+ 经 Grep 源码验证）、链接零断链
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 libzmq/index
 cppzmq/index

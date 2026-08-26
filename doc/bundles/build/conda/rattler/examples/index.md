@@ -28,7 +28,7 @@
 - `py-rattler` 包（`pip install py-rattler` 或 `conda install -c conda-forge py-rattler`）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-solve-install
 repodata-fetch-cache

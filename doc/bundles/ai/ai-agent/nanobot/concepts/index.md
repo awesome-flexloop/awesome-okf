@@ -8,7 +8,7 @@
 - [05 - 多接口架构](/concepts/05-multi-interface.md) — CLI、TUI（Bun+TypeScript）、WebUI（React）三端实现
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-architecture

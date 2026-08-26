@@ -190,7 +190,7 @@ examples/custom-macros    （了解Options）→ 10-settings-options
 - **官方网站**：https://katex.org
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

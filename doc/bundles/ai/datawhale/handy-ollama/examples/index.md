@@ -18,7 +18,7 @@ bundle: /datawhale/handy-ollama
 * [搭建本地 RAG 应用](local-rag-application.md) — 使用 LangChain + Ollama + FAISS 构建本地文档问答 RAG 应用，涵盖文档加载、文本分块、Ollama Embedding、向量检索、Prompt 组装和 LLM 生成全链路。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 custom-model-modelfile
 local-rag-application

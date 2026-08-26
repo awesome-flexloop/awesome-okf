@@ -144,7 +144,7 @@ with tb.open_file('data.h5', mode='w', title='My data') as f:
 - 分析源码路径：`tables/`
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

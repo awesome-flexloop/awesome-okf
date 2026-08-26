@@ -13,7 +13,7 @@
 * [semantic-introspection-rfc](semantic-introspection-rfc.md) — 语义内省 RFC
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 mcp-server-source
 semantic-introspection-rfc

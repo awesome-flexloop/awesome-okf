@@ -25,7 +25,7 @@
 - [12 打包发布](12-packaging-release.md) — 手动发布、Jupyter Releaser、conda-forge
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

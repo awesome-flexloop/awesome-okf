@@ -43,7 +43,7 @@ jupyter lab
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-hello-world
 02-commands-palette

@@ -25,7 +25,7 @@
 | [06-customization-advanced.md](06-customization-advanced.md) | 高级定制——custom.css、自定义 Pygments、二次开发主题 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

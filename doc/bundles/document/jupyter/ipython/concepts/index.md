@@ -42,7 +42,7 @@
 | [13-terminal-frontend.md](13-terminal-frontend.md) | TerminalInteractiveShell 终端增强、prompt_toolkit 集成、pt_inputhooks GUI 事件循环、embed() 嵌入 API |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

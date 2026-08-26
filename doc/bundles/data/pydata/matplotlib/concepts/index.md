@@ -41,7 +41,7 @@ examples/basic-plotting.md（动手实践）
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-artist-hierarchy

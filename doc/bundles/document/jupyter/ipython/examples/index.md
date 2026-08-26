@@ -24,7 +24,7 @@
 | [06-event-hooks.md](06-event-hooks.md) | 注册事件回调（计时/日志）、自定义钩子（编辑器/剪贴板）、embed() 嵌入式调试 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-basic-usage
 02-using-magics

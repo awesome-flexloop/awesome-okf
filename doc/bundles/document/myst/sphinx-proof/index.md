@@ -76,7 +76,7 @@ extensions = ['sphinx_proof']
 见 [log.md](/log.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

@@ -4,7 +4,7 @@
 - [推理配置与使用指南](/ai/deepseek/deepseek-ocr2/references/inference-config) — 分辨率模式、vLLM/HF 配置、v1 到 v2 迁移指南
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 api
 inference-config

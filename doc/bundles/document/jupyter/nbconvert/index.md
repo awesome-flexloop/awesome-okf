@@ -200,7 +200,7 @@ Notebook (.ipynb)
 *本文档由OKF v0.2格式生成，通过source-code-to-okf-wiki技能从源码自动萃取*
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

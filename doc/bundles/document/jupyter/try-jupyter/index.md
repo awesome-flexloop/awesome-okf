@@ -158,7 +158,7 @@ pixi run python -m http.server 8000 --directory dist
 | sqlite.ipynb | SQLite | SQL查询演示 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

@@ -126,7 +126,7 @@ Sphinx 是 Python 生态最主流的文档生成器，最初为 Python 官方文
 - Markdown支持：MyST-Parser ≥4.0（第三方扩展）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

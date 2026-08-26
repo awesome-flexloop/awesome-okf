@@ -121,7 +121,7 @@ jupyter-client/
 所有概念文档和示例代码的内容均基于源码分析，信源登记见 [references/](references/index.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

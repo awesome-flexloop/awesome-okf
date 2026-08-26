@@ -15,7 +15,7 @@
 | [frontend-source.md](frontend-source.md) | src/App.jsx + src/detectors.js + webpack.config.js | 前端React应用、URL解析器、Webpack配置 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 binderlite-run-source
 cache-source

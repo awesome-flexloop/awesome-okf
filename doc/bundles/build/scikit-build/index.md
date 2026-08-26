@@ -48,7 +48,7 @@ okf_version: "0.2"
 本知识包共收录 18 个内容文档（13 个概念 + 3 个示例 + 2 个信源参考），另含 spec/ 目录下的 facts.md 与 insights.md（R/I 阶段中间产出）和根 index.md。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/00-introduction
 concepts/01-pep517-build-backend

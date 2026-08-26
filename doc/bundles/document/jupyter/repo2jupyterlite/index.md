@@ -172,7 +172,7 @@ CLI模式:                          BinderLite模式:
 7. **ContentProvider责任链**：按顺序检测URL匹配，易于扩展新的数据源类型
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

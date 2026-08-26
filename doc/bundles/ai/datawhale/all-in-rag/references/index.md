@@ -28,7 +28,7 @@
 * [第十章 项目实战二（选修篇）](chapter10-project-two.md) — 规划中。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 chapter1-rag-intro
 chapter10-project-two

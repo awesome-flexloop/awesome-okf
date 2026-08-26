@@ -31,7 +31,7 @@ sources: []
 - 文档：https://jupyter-server.github.io/jupyter-resource-usage/
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 source-code
 ```

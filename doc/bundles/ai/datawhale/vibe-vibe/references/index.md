@@ -7,7 +7,7 @@
 | [官方仓库](/ai/datawhale/vibe-vibe/references/source-repo.md) | GitHub 仓库基本信息、关键文件索引、目录速览 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 source-repo
 ```

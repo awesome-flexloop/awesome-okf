@@ -42,7 +42,7 @@ sources:
 * [15-跨平台锁定策略](15-cross-platform-locking.md) — DEFAULT_PLATFORMS、CONDA_SUBDIR 覆盖、platform selectors 与 markers 双重过滤、fake python binary 防 libmamba 失败、多平台锁文件结构、平台映射表、跨平台安装自动选择。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

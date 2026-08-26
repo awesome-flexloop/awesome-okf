@@ -22,7 +22,7 @@ Easy-Vibe 仓库的 `examples/` 目录还附带 4 个 Vibe Coding 练习项目�
 这些项目展示了"一份 prompt.txt + 参考图 → AI 生成完整应用"的 Vibe Coding 实践模式。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-local-dev-quickstart
 ```

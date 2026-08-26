@@ -17,7 +17,7 @@ description: "理论思想与哲学体系——自指递归理论、宇宙本论
 | [📜 老子（Laozi）知识包](laozi/index.md) | 《老子》（《道德经》）相关知识包——帛书《老子》阅读教程 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 psi/index
 laozi/index

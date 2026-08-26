@@ -13,7 +13,7 @@
 | [gen-contributors-source.md](gen-contributors-source.md) | docs/scripts/gen_contributors.py, docs/_static/custom.css | YAML→HTML贡献者表格自动生成脚本逻辑、CSS样式定义 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 becoming-member-source
 conf-py-source

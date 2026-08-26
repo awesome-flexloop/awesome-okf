@@ -39,7 +39,7 @@ Pi 是一个自扩展编码代理项目，采用多包 monorepo 架构。本 wik
 见 [log.md](/log.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

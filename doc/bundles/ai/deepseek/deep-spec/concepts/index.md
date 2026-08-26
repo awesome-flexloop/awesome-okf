@@ -13,7 +13,7 @@
 | [training-pipeline](/ai/deepseek/deep-spec/concepts/training-pipeline) | FSDP 分片策略、BF16Optimizer 混合精度、CUDAPrefetcher、目标隐状态缓存格式、StatelessResumableDistributedSampler、原子 Checkpoint 管理 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 dspark-model
 eagle3-model

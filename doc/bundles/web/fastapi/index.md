@@ -18,7 +18,7 @@ description: "FastAPI 高性能 ASGI Web 框架及其同生态项目的源码级
 | 1 | [fastapi](fastapi/index.md) | FastAPI 核心框架——类型注解驱动、依赖注入树、APIRouter 组合、OpenAPI 自动生成、SSE/JSONL 流式、双层 AsyncExitStack 生命周期（14概念+5示例+8信源，共27文档） |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 fastapi/index
 ```

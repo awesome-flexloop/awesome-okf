@@ -7,7 +7,7 @@
 * [交互式 Shell](interactive-shell.md) — invoke_shell 终端会话、实时收发、全屏程序、终端大小调整。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-connection
 execute-commands

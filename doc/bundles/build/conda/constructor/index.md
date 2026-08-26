@@ -86,7 +86,7 @@ constructor 的设计体现了以下架构原则：
 6. **模板方法**：Jinja2 模板分离 Python 逻辑与脚本内容（header.sh/main.nsi.tmpl）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/00-introduction
 concepts/01-getting-started

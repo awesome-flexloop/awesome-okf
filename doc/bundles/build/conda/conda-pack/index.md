@@ -91,7 +91,7 @@ references/ 源码索引 → 05-打包流程 → 07-归档格式 → 08-CLI接�
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 examples/index
 references/index

@@ -43,7 +43,7 @@ examples:
 - [示例代码](examples/) — 完整可运行示例
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/agent-loop
 concepts/map-reduce

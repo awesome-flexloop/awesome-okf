@@ -8,7 +8,7 @@
 | [source-code-map.md](source-code-map.md) | `src/` 目录 | 代码项目结构、核心模块与文件职责（ANN 算法/Cre_milvus/图RAG 等） |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 docs-chapters
 source-code-map

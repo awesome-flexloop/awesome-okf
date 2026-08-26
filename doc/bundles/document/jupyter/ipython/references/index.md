@@ -26,7 +26,7 @@
 | [history-completer-source.md](history-completer-source.md) | HistoryManager 历史管理（SQLite 后端、HistorySavingThread 异步保存线程、HistoryAccessor 读取接口、DummyDB 空实现）、IPCompleter 补全系统（Jedi 补全、字典键补全、MatcherAPIv2 协议、Completion/CompletionContext/SimpleCompletion 类型）、AliasManager 别名管理（Alias 类、默认别名 cat/cp/mv/rm/mkdir、AliasError 异常） |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 app-source
 display-source

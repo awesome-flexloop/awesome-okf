@@ -7,7 +7,7 @@
 | [门控练习包裹内容](/examples/gated-exercises.md) | exercise-start/end 包裹任意内容、不缩进 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-exercise
 gated-exercises

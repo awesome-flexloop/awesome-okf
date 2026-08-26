@@ -4,7 +4,7 @@
 - [02 - Python SDK 使用](./02-python-sdk.md) — pip 安装、同步/异步客户端、线程管理、流式进度、认证、沙箱控制、错误处理
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-basic-usage
 02-python-sdk

@@ -171,7 +171,7 @@ DeepEP 是 DeepSeek 混合并行训练栈的通信基石：
 | `EP_NUM_MAX_LOCAL_RANKS` | `16` | 最大本地 rank 数（CPU buffer VA 空间计算用） |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

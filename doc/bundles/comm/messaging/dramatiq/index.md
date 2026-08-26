@@ -55,7 +55,7 @@ okf_version: "0.2"
 - 文档当前验证状态为 `v-pending`（待独立 V 阶段验证）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

@@ -6,7 +6,7 @@
 - [多项目并行开发](multi-project-setup.md) — 同时运行多个预览实例：--port=0 自动分配端口、后台运行、启动脚本、进程管理
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-usage
 custom-pre-post-build

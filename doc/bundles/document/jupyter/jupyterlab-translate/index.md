@@ -162,7 +162,7 @@ jupyterlab-translate/
 - [Crowdin翻译平台](https://crowdin.com/project/jupyterlab)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

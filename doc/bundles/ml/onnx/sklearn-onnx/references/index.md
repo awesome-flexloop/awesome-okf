@@ -15,7 +15,7 @@ sources:
 * [注册机制（register_converter）与 OnnxOperator 代数 API](registration-algebra.md) — `common/_registration.py`、`_supported_operators.py`、`operator_converters/__init__.py`、`algebra/onnx_ops.py`、`algebra/onnx_operator.py`、`algebra/onnx_operator_mixin.py`：双池设计与RegisteredConverter、别名命名规则与别名合并、update_registered_converter一站式注册、ClassFactory动态类生成、OnnxOperator延迟求值AST与add_to递归展开、OnnxOperatorMixin三件套自动桥接。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 convert-api
 registration-algebra

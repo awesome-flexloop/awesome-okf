@@ -13,7 +13,7 @@
 | [CI/CD工作流](ci-source.md) | `.github/workflows/deploy.yml`、`.github/workflows/rtd-preview.yml`、`.readthedocs.yml` | GitHub Pages部署流水线、RTD PR预览、ReadTheDocs构建 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 ci-source
 config-source

@@ -7,7 +7,7 @@
 | [CI集成与缓存策略](/examples/ci-integration.md) | GitHub Actions/GitLab CI配置、缓存持久化 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-usage
 ci-integration

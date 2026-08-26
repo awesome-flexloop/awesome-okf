@@ -27,7 +27,7 @@
 - [返回首页](../index.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 app-source
 cli-source

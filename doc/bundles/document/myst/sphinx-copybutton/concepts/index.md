@@ -23,7 +23,7 @@
 | [04-customization.md](04-customization.md) | 自定义CSS样式、SVG图标、选择器、本地化支持 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

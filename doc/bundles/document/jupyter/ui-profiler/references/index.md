@@ -23,7 +23,7 @@ stale_after: "2027-02-22"
 | [dramaturg-source.md](dramaturg-source.md) | Dramaturg浏览器自动化层的源码分析（waitForSelector/waitForLayout/click/hover/fill等） |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 api-tokens
 benchmarks-source

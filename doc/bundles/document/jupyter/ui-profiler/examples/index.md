@@ -27,7 +27,7 @@ stale_after: "2027-02-22"
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-first-benchmark
 01-css-profiling

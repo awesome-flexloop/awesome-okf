@@ -10,7 +10,7 @@
 | 03 | [脚注排序逻辑与分类机制](03-footnote-reordering.md) | 四分类、依赖图、重排序和ID重分配算法 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-plugin-configuration

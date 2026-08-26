@@ -9,7 +9,7 @@
 | 04 | [CI集成](/concepts/04-ci-integration.md) | GitHub Actions、pre-commit、tox/nox集成 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

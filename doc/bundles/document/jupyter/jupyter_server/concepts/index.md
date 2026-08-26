@@ -65,7 +65,7 @@ Jupyter Server 核心概念文档共 16 篇，按学习路径分为四个阶段�
 高级主题：11 → 12 → 13 → 14 → 15
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

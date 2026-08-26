@@ -9,7 +9,7 @@
 * [options_t：套接字选项完整索引](options.md) — src/options.hpp 的全字段类型/默认值/选项常量
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 command
 ctx

@@ -3,7 +3,7 @@
 - [源码信源索引](/references/source.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 source
 ```

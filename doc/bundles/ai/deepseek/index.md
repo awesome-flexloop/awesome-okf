@@ -109,7 +109,7 @@ deep-spec (投机解码草稿模型训练评估)
 - **许可证**：各项目采用 MIT 或其他开源许可（详见各 bundle）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 deep-gemm/index
 flash-mla/index

@@ -15,7 +15,7 @@
 | 08 | [CLI 与 Watcher](08-cli-and-watcher.md) | 多进程 fork、信号处理、watchdog 热重载、Canteen 共享内存 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-overall-architecture
 01-actor-decorator

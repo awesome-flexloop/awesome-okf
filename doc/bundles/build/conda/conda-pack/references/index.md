@@ -10,7 +10,7 @@
 * [cli.py 与辅助模块](cli-source.md) — `conda_pack/cli.py`（CLI入口，约183行）、`conda_pack/compat.py`（跨平台兼容，约45行）、`conda_pack/_progress.py`（进度条，约99行）。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 cli-source
 core-source

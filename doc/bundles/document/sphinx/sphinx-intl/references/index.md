@@ -10,7 +10,7 @@
 * [transifex.py Transifex 集成 API 参考](transifex-api.md) — Transifex CLI 检测、资源名规范化、tx add 命令模板、配置文件生成。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-api
 catalog-api

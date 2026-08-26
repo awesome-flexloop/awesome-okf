@@ -38,7 +38,7 @@
 4. **扩展开发者**：03 → 06 → 05 → 10（重点看插件注册、Diff Provider扩展、API调用、命令注册）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

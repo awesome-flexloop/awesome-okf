@@ -57,7 +57,7 @@ myst-exporters
 - [架构洞察](spec/insights.md) — 核心架构洞察与知识地图
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

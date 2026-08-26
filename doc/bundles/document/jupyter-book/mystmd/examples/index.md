@@ -24,7 +24,7 @@
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-basic-parsing
 02-custom-transform

@@ -13,7 +13,7 @@
 | [orm-source.md](orm-source.md) | ORM 数据模型：SQLAlchemy 实体类、列定义、关系映射、外键策略、自定义列类型 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 app-source
 auth-source

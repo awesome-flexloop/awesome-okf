@@ -10,7 +10,7 @@
 | 05 | [配置项参考](/concepts/05-configuration.md) | 主题、标题格式、字体粗细、CSS自定义 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

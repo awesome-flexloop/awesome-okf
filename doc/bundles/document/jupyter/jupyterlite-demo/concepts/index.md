@@ -43,7 +43,7 @@ status: stable
 4. 进阶定制 → [06-部署流水线](06-deployment-github-pages.md) → [07-自定义指南](07-customization-guide.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-demo-overview

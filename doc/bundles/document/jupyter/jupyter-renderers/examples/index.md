@@ -23,7 +23,7 @@ generated:
 - 参考 [References - IRenderMime API](../references/rendermime-interfaces-api.md) 查阅接口定义
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-custom-mime-renderer
 02-custom-latex-typesetter

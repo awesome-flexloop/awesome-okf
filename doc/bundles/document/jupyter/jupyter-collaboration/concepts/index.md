@@ -42,7 +42,7 @@ graph LR
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-architecture-overview

@@ -142,7 +142,7 @@ URL参数 (?room=&username=&usercolor=)
 - [JupyterLab](https://github.com/jupyterlab/jupyterlab) — Jupyter 前端
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

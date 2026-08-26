@@ -17,7 +17,7 @@
 3. 参考 [添加新Notebook](03-add-notebook.md)，实践贡献内容
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-local-build
 02-custom-kernel

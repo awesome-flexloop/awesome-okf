@@ -14,7 +14,7 @@
 | [performance-optimization](/ai/deepseek/deep-gemm/concepts/performance-optimization) | TMA、WGMMA/TCGen05、PDL、Thread Block Cluster、SM 控制、Swizzle、Pipeline |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 fp8-gemm
 grouped-gemm

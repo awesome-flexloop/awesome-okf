@@ -26,7 +26,7 @@
 | [config-source.md](config-source.md) | Environment、Aliases、History、Termios、cockle-config.json 格式参考 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 buffered-io-source
 builtin-source

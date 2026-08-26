@@ -91,7 +91,7 @@ Jupyter 是数据科学与交互式计算的核心平台，从底层的 ZeroMQ �
 | 8 | [papyri](papyri/index.md) | Python docstring→IR文档生成器——RST解析为类型化中间表示（IR），三端架构（Python gen/TypeScript ingest/Astro viewer），跨包交叉引用，CBOR确定性打包，交互式文档浏览，支持NumPy/SciPy等科学计算库（Python 3.13+） |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 jupyter/index
 jupyter_server/index

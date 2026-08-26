@@ -82,7 +82,7 @@ cache.execute_all_notebooks()
 见 [log.md](/log.md)。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

@@ -106,7 +106,7 @@ jupyter lite serve
 5. **构建配置**：TypeScript编译 + JupyterLab builder + hatchling Python打包的完整配置
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

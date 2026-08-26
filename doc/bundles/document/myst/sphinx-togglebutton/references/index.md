@@ -7,7 +7,7 @@
 | [togglebutton-source.md](togglebutton-source.md) | 核心源文件路径映射、setup() 函数与 Toggle 指令代码参考 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 togglebutton-source
 ```

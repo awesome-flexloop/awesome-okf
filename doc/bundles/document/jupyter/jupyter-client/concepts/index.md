@@ -31,7 +31,7 @@
 | 12 | [CLI工具与应用](12-cli-and-applications.md) | jupyter-kernelspec/run/kernel 三个CLI入口 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

@@ -14,7 +14,7 @@
 | [ci-workflow-source.md](ci-workflow-source.md) | .github/workflows/*.yml, jupyter_notebook_config.py | CI工作流与Jupyter配置 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 binder-config-source
 build-py-source

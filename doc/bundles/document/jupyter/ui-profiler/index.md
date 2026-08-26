@@ -114,7 +114,7 @@ jupyterlab-ui-profiler 是 JupyterLab 官方维护的 UI 性能基准测试扩�
 | JS函数级Profiling | `window.Profiler` API | Chrome/Edge 94+ | 函数级CPU采样，火焰图可视化 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

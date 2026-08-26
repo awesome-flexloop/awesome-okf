@@ -12,7 +12,7 @@
 | 05 | [无障碍设计](/concepts/05-accessibility.md) | WAI-ARIA 实现、键盘导航、语义化 HTML |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

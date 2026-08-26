@@ -78,7 +78,7 @@ helm rollback binderhub <revision> -n <namespace>
 ```
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-basic-config
 02-custom-provider

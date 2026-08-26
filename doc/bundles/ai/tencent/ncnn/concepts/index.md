@@ -24,7 +24,7 @@ ncnn 核心架构概念，共 12 篇，按依赖顺序组织。
 * [11 量化与低精度推理](11-quantization.md) — int8 量化、fp16/bf16 存储、elemsize=1/2、权重量化 int4/int6/int8、quantize/dequantize/requantize。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-overall-architecture
 01-net-extractor

@@ -12,7 +12,7 @@
 | 04 | [Pyodide内核文件系统](04-pyodide-filesystem.md) | DriveFS挂载点、文件读写、注意事项、JS互操作 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-quickstart-deploy
 02-site-configuration

@@ -41,7 +41,7 @@ sources:
 - 提供中英双语 Markdown Issue 模板（project-submission.md / project-submission-zh.md）
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/00-introduction
 concepts/01-project-submission

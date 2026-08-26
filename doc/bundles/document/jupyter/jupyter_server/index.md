@@ -84,7 +84,7 @@ description: "Jupyter 后端核心服务：Tornado HTTP 服务器、认证授权
 **推荐阅读顺序：** [简介](concepts/00-introduction.md) → [快速上手](concepts/01-getting-started.md) → [架构总览](concepts/02-architecture-overview.md) → [ServerApp 生命周期](concepts/03-serverapp-lifecycle.md) → [Handler 体系](concepts/04-handler-hierarchy.md) → [认证授权](concepts/05-auth-system.md) → [配置管理](concepts/06-config-management.md) → [内容管理](concepts/07-contents-service.md) → [内核管理](concepts/08-kernel-management.md)
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

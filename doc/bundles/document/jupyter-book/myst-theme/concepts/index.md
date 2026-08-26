@@ -20,7 +20,7 @@ myst-theme 概念文档按学习路径编号，建议按顺序阅读。
 - [07 Remix 路由与 SSR 架构](07-remix-routing.md) — 文件路由、loader/action、SSR 管线
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-theme-architecture
 01-css-variables-theming

@@ -32,7 +32,7 @@ stale_after: 2026-12-31
 * [自定义 Pass 开发方法](06-custom-pass.md) — PredicateBasedPass vs FullGraphBasedPass选择决策树、patternMatchPredicate编写模式、runTransform节点操作规范、tryReplacingAllUsesWith保护机制、pass_util工具函数库、子图递归处理、opset版本兼容、注册新pass方法。
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-overall-architecture
 01-pass-system

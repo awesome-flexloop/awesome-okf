@@ -129,7 +129,7 @@ openevals/
 | 多轮模拟 | `multiturn` | EvaluatorResult[] | 非确定 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

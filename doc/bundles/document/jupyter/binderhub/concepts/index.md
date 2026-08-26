@@ -26,7 +26,7 @@
 | 12 | [安全认证与构建令牌](12-security-auth.md) | JWT build_token机制（HS256/aud/exp/origin）、HubOAuth认证、IP黑名单网络检查、CORS配置、User-Agent Bot拦截 |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

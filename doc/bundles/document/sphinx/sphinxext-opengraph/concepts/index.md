@@ -22,7 +22,7 @@
 - [自定义Meta标签与扩展协作](09-custom-meta-tags.md) — 通过ogp_custom_meta_tags添加Twitter Cards、Article元数据，以及与其他扩展的协作注意事项
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

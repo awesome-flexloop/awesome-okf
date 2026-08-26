@@ -20,7 +20,7 @@ generated: { by: "agent:source-code-to-okf-wiki", at: "2026-08-22T00:00:00+08:00
 - [09-常见问题与限制](09-faq-limitations.md) — 模式选择、Magic Imports 问题、DOM 限制、调试技巧、与 IPython 差异
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-introduction
 01-getting-started

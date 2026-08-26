@@ -3,7 +3,7 @@
 - [图结构参考](/ai/langchain-ai/social-media-agent/references/graphs) — 14 个 LangGraph 图的注册信息、节点组成、状态字段与流转逻辑
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 graphs
 ```

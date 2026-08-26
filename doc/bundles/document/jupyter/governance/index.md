@@ -125,7 +125,7 @@ governance/
 - **许可证说明**：原始文档 CC0，本 bundle OKF 格式
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 references/index

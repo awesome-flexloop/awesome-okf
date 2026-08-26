@@ -20,7 +20,7 @@ stale_after: 2027-08-23
 | 05 | [多框架桥接](05-framework-bridges.md) | 03 | React/Svelte/Vue集成、TypeScript类型、model proxy |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 00-overall-architecture
 01-widget-lifecycle

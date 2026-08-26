@@ -175,7 +175,7 @@ status: stable
 - **frontmatter**：360 个文件 YAML 元数据完整合规
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 markdown-it-py/index
 mdurl/index

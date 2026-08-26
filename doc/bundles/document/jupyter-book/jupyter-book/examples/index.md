@@ -6,7 +6,7 @@
 | [构建与发布](02-build-publish.md) | 多格式导出配置、执行笔记本代码、部署 GitHub Pages、出版级 PDF |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 01-create-book
 02-build-publish

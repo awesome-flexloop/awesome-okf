@@ -4,7 +4,7 @@
 - [拓扑感知配置](/ai/deepseek/lplb/examples/topology-config) — Cube/Hypercube/Ring/Torus 拓扑使用、自定义拓扑编写、DeepEP 集成配置
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 basic-planning
 topology-config

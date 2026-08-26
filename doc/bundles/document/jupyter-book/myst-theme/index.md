@@ -57,7 +57,7 @@ myst-theme
 - [架构洞察](spec/insights.md) — 5 个核心洞察与完整知识地图
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

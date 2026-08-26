@@ -58,7 +58,7 @@ description: "Jupyter Enterprise Gateway：Jupyter内核的远程管理网关，
 | 源码路径 | `external/libs/jupyter/enterprise_gateway/` |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 concepts/index
 examples/index

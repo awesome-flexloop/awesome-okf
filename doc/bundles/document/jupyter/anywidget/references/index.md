@@ -22,7 +22,7 @@ stale_after: 2027-08-23
 | [framework-bridges](framework-bridges.md) | 多前端框架桥接 | packages/types, packages/react, packages/svelte, packages/vue |
 
 ```{toctree}
-:hidden:
+:maxdepth: 7
 
 descriptor
 esm-protocol
