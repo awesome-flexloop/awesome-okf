@@ -3,8 +3,8 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程"
-total_bundles: 259
-groups: 29
+total_bundles: 263
+groups: 30
 domains: 11
 ---
 
@@ -12,7 +12,7 @@ domains: 11
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **259 个知识包**，按技术生态分为 **11 个技术域、29 个分组**。
+> 当前共 **263 个知识包**，按技术生态分为 **11 个技术域、30 个分组**。
 
 ***
 
@@ -28,6 +28,7 @@ flowchart TD
     ml["🧠 ml/ 机器学习模型生态：ONNX 标准/转换器/编译器"]
     comm["📡 comm/ 通信与网络生态：ZeroMQ 消息栈 · SSH 远程控制"]
     ai["🤖 ai/ 人工智能与大模型应用生态：agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow"]
+    viz["📐 viz/ 数学可视化与创意编程：3b1b ManimGL · 视频场景 · 字幕工具链 · React官网"]
     web["🌐 web/ Web 开发生态：fastapi · graphql"]
     containers["📦 containers/ 容器生态：OCI运行时 · 存储驱动 · Podman工具链 · AI容器配方"]
     think["💭 think/ 思想与理论：psi · laozi"]
@@ -39,12 +40,17 @@ flowchart TD
     doc --> ml
     data --> comm
     data --> containers
+    data -->|"数据可视化基础"| viz
+    py -->|"Python渲染引擎"| viz
     ml --> ai
     ml --> containers
     comm --> ai
     containers --> ai
     ai --> web
     ai --> think
+    ai -->|"AI辅助内容生成"| viz
+    viz -->|"前端官网发布"| web
+    viz -->|"数学思想传播"| think
 ```
 
 ***
@@ -63,15 +69,16 @@ flowchart LR
     ml["🧠 ml/：ONNX 机器学习模型生态（模型交换格式·转换器·编译器·推理后端）"]
     containers["📦 containers/：容器生态（OCI运行时 · Podman工具链 · 存储驱动 · AI容器）"]
     ai["🤖 ai/：人工智能与大模型应用（agnes-ai 大模型API - ai-agent Agent框架 - langchain-ai LLM应用框架 - datawhale 学习社区）"]
+    viz["📐 viz/：数学可视化与创意编程（ManimGL动画引擎 - 视频场景 - 字幕工具链 - React官网）"]
     web["🌐 web/：Web 开发生态（fastapi · graphql）"]
     comm["📡 comm/：通信与网络生态（ZeroMQ 消息 · SSH 远程控制）"]
     think["💭 think/：思想与理论（psi · laozi 选读）"]
-    meta --> py --> build --> doc --> data --> ml --> containers --> ai --> web --> comm --> think
+    meta --> py --> build --> doc --> data --> ml --> containers --> ai --> viz --> web --> comm --> think
 ```
 
 ***
 
-## 十域分组导航
+## 十一域分组导航
 
 ### 📐 [规范与格式](meta/index.md) · 1 束 · 1 组
 
@@ -157,6 +164,12 @@ flowchart LR
 | [Ψhē 理论体系](think/psi/index.md)          | 4  | ψ=ψ(ψ) 自指递归理论体系——哲学、数学、宇宙学、意识研究与 AI 应用 |
 | [📜 老子（Laozi）知识包](think/laozi/index.md) | 1  | 《老子》（《道德经》）相关知识包——帛书《老子》阅读教程           |
 
+### 📐 [数学可视化与创意编程](viz/index.md) · 4 束 · 1 组
+
+| 分组 | 束数 | 说明 |
+|------|------|------|
+| [🔵 3Blue1Brown 生态](viz/3b1b/index.md) | 4 | ManimGL数学动画引擎、视频场景源码、字幕自动化工具链、React Router v7官网前端架构 |
+
 
 ```{toctree}
 :hidden:
@@ -172,5 +185,6 @@ meta/index
 ml/index
 python/index
 think/index
+viz/index
 web/index
 ```
