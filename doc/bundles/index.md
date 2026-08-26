@@ -3,16 +3,16 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程"
-total_bundles: 248
-groups: 28
-domains: 10
+total_bundles: 259
+groups: 29
+domains: 11
 ---
 
 # 知识包总索引（Bundles Index）
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **248 个知识包**，按技术生态分为 **10 个技术域、28 个分组**。
+> 当前共 **259 个知识包**，按技术生态分为 **11 个技术域、29 个分组**。
 
 ***
 
@@ -29,15 +29,20 @@ flowchart TD
     comm["📡 comm/ 通信与网络生态：ZeroMQ 消息栈 · SSH 远程控制"]
     ai["🤖 ai/ 人工智能与大模型应用生态：agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow"]
     web["🌐 web/ Web 开发生态：fastapi · graphql"]
+    containers["📦 containers/ 容器生态：OCI运行时 · 存储驱动 · Podman工具链 · AI容器配方"]
     think["💭 think/ 思想与理论：psi · laozi"]
     meta -->|"规范约束"| py
     py -->|"语言底座"| build
     build --> doc
     build --> data
+    build --> containers
     doc --> ml
     data --> comm
+    data --> containers
     ml --> ai
+    ml --> containers
     comm --> ai
+    containers --> ai
     ai --> web
     ai --> think
 ```
@@ -56,11 +61,12 @@ flowchart LR
     doc["📚 document/：掌握文档工程能力（sphinx 文档写作 - jupyter-book/myst 新一代工具链 - jupyter 交互计算）"]
     data["📊 data/：pydata 科学计算全栈（NumPy-pandas-matplotlib/plotly-Dash-PyTables）"]
     ml["🧠 ml/：ONNX 机器学习模型生态（模型交换格式·转换器·编译器·推理后端）"]
+    containers["📦 containers/：容器生态（OCI运行时 · Podman工具链 · 存储驱动 · AI容器）"]
     ai["🤖 ai/：人工智能与大模型应用（agnes-ai 大模型API - ai-agent Agent框架 - langchain-ai LLM应用框架 - datawhale 学习社区）"]
     web["🌐 web/：Web 开发生态（fastapi · graphql）"]
     comm["📡 comm/：通信与网络生态（ZeroMQ 消息 · SSH 远程控制）"]
     think["💭 think/：思想与理论（psi · laozi 选读）"]
-    meta --> py --> build --> doc --> data --> ml --> ai --> web --> comm --> think
+    meta --> py --> build --> doc --> data --> ml --> containers --> ai --> web --> comm --> think
 ```
 
 ***
@@ -110,6 +116,12 @@ flowchart LR
 | ---------------------------------- | -- | ---------------------------------------------------------------------------------------------------- |
 | [🧠 ONNX 机器学习生态](ml/onnx/index.md) | 8  | ONNX 标准/IR-Python/优化器/onnxmltools/sklearn-onnx/tf2onnx/onnx-mlir/onnx-tensorrt——跨框架模型交换、转换器、编译器、推理后端 |
 
+### 📦 [容器生态](containers/index.md) · 11 束 · 1 组
+
+| 分组                                       | 束数 | 说明                                                                 |
+| ---------------------------------------- | -- | ------------------------------------------------------------------ |
+| [📦 容器运行时与工具链](containers/index.md) | 11 | conmon/conmon-rs OCI 监控 · fuse-overlayfs 存储驱动 · libocispec 规范库 · podman-py/compose Python/Compose 绑定 · olot/omlmd OCI 模型打包 · qm 虚拟机管理 · toolbox 开发环境 · ai-lab-recipes AI 容器配方 |
+
 ### 🤖 [人工智能与大模型应用生态](ai/index.md) · 95 束 · 9 组
 
 | 分组                                                     | 束数 | 说明                                                          |
@@ -153,6 +165,7 @@ flowchart LR
 ai/index
 build/index
 comm/index
+containers/index
 data/index
 document/index
 meta/index
