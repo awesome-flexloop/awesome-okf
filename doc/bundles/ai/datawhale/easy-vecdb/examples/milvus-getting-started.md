@@ -311,6 +311,6 @@ results = client.search(
 
 ## 延伸阅读
 
-- [Faiss 与 Milvus 工程实践](/ai/datawhale/easy-vecdb/concepts/faiss-milvus-engineering.md) — Milvus 架构与核心概念详解
-- [IVF 与 PQ 量化](/ai/datawhale/easy-vecdb/concepts/ivf-pq-quantization.md) — IVF_PQ 索引原理
-- [基于 Faiss 的 RAG 实战](/ai/datawhale/easy-vecdb/examples/rag-with-faiss.md) — 使用 Milvus 构建 RAG 系统
+- [Faiss 与 Milvus 工程实践](../concepts/faiss-milvus-engineering.md) — Milvus 架构与核心概念详解
+- [IVF 与 PQ 量化](../concepts/ivf-pq-quantization.md) — IVF_PQ 索引原理
+- [基于 Faiss 的 RAG 实战](rag-with-faiss.md) — 使用 Milvus 构建 RAG 系统

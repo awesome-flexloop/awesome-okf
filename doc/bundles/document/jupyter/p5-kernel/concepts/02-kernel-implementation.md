@@ -165,6 +165,6 @@ await context.execute(this._bootstrap);
 
 ## 相关概念
 
-- [P5Executor 与渲染机制](/concepts/03-executor-and-rendering.md)
-- [%show 魔法命令详解](/concepts/04-magic-commands.md)
-- [架构概览](/concepts/01-architecture-overview.md)
+- [P5Executor 与渲染机制](03-executor-and-rendering.md)
+- [%show 魔法命令详解](04-magic-commands.md)
+- [架构概览](01-architecture-overview.md)

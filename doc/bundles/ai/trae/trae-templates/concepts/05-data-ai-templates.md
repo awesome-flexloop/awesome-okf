@@ -213,11 +213,11 @@ data-ai 模板与 backend-service 的 fastapi-service 有区别：
 
 ## 相关概念
 
-- [五维分面分类体系](/concepts/01-template-classification.md)
-- [后端服务模板](/concepts/03-backend-templates.md)
-- [工具与 DevOps 模板](/concepts/06-tools-devops-templates.md)
-- [AGENTS.md 开发契约](/concepts/07-agents-contract.md)
+- [五维分面分类体系](01-template-classification.md)
+- [后端服务模板](03-backend-templates.md)
+- [工具与 DevOps 模板](06-tools-devops-templates.md)
+- [AGENTS.md 开发契约](07-agents-contract.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/templates-source.md)
+- [源码信源索引](../references/templates-source.md)

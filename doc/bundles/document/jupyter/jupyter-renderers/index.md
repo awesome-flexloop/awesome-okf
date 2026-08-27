@@ -10,7 +10,7 @@ generated:
 
 # jupyter-renderers 教程
 
-> 学习源码：[external/libs/jupyter/jupyter-renderers](../../../../external/libs/jupyter/jupyter-renderers/)
+> 学习源码：external/libs/jupyter/jupyter-renderers
 
 jupyter-renderers 是 JupyterLab 官方维护的 MIME 渲染器扩展集合，包含 FASTA 生物序列、GeoJSON 地理数据、KaTeX/MathJax2 数学公式、Vega/Vega-Lite 可视化五个扩展包。本教程从源码出发，系统性地讲解 MIME 渲染器和应用扩展的开发模式。
 

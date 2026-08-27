@@ -98,10 +98,10 @@ Deep Agents 是一个开源的 Agent 框架（agent harness），构建在 LangC
 
 ## 快速导航
 
-- **架构入门**：阅读[三层架构](/ai/datawhale/deepagents/concepts/core-sdk)理解 Deep Agents、LangChain、LangGraph 的分层关系。
-- **包结构**：阅读[monorepo架构](/ai/datawhale/deepagents/concepts/monorepo-architecture)了解七个独立版本化包的职责边界。
-- **终端产品**：阅读[Code终端编码Agent](/ai/datawhale/deepagents/concepts/code-module)了解 `dcode` 的客户端/服务器设计。
-- **评估体系**：阅读[Evals评估套件](/ai/datawhale/deepagents/concepts/evals-suite)了解真实 LLM 评估与 Harbor 集成。
+- **架构入门**：阅读三层架构理解 Deep Agents、LangChain、LangGraph 的分层关系。
+- **包结构**：阅读monorepo架构了解七个独立版本化包的职责边界。
+- **终端产品**：阅读Code终端编码Agent了解 `dcode` 的客户端/服务器设计。
+- **评估体系**：阅读Evals评估套件了解真实 LLM 评估与 Harbor 集成。
 
 ## 项目概要
 

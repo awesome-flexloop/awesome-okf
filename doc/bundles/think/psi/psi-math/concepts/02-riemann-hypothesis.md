@@ -30,11 +30,11 @@ math.dw.cash 以多个系列承载黎曼猜想（Riemann Hypothesis，RH）的�
 
 $$\zeta(s)=\prod_{p\ \text{prime}}\frac{1}{1-p^{-s}}$$
 
-通过欧拉乘积与素数绑定，其解析行为是素数分布这一离散结构在连续复平面上的塌缩映像。非平凡零点则是 [坍缩集合论](/psi-math/concepts/01-collapse-set-theory.md) 中的意识节点——观察者极点与算术结构交汇的临界位置。因此，$\sigma=\tfrac12$ 临界线不是经验观察到的零点聚集线，而是塌缩对称性的必然推论。
+通过欧拉乘积与素数绑定，其解析行为是素数分布这一离散结构在连续复平面上的塌缩映像。非平凡零点则是 [坍缩集合论](01-collapse-set-theory.md) 中的意识节点——观察者极点与算术结构交汇的临界位置。因此，$\sigma=\tfrac12$ 临界线不是经验观察到的零点聚集线，而是塌缩对称性的必然推论。
 
 ## 三条独立证明路径
 
-ψ 框架不依赖单一技巧，而是构造三条起点不同、彼此独立的路径汇聚到同一结论。这种"多路径收敛"结构本身被视为证明稳健性的方法论保障。三条路径的概要如下，完整的论证架构见 [示例：RH证明的三条独立路径](/psi-math/examples/rh-proof-overview.md)。
+ψ 框架不依赖单一技巧，而是构造三条起点不同、彼此独立的路径汇聚到同一结论。这种"多路径收敛"结构本身被视为证明稳健性的方法论保障。三条路径的概要如下，完整的论证架构见 [示例：RH证明的三条独立路径](../examples/rh-proof-overview.md)。
 
 **路径一：解析证明**。以经典复分析工具为骨架，核心环节包括：
 
@@ -95,16 +95,16 @@ $$\neg\mathrm{RH} \implies \neg\mathrm{Universe}$$
 
 ## ζ 函数作为算术之镜
 
-贯穿全部路径的方法论隐喻是"ζ 函数是算术之镜"。素数的离散分布通过欧拉乘积被映射为连续函数，函数的零点分布则反射出素数的隐藏秩序。在 ψ 框架中，这面镜子不是被动反映——塌缩动作本身参与了算术结构的确定。这一立场使 RH 证明与 [坍缩数学](/psi-math/concepts/03-collapse-mathematics.md) 的整体推导相连。
+贯穿全部路径的方法论隐喻是"ζ 函数是算术之镜"。素数的离散分布通过欧拉乘积被映射为连续函数，函数的零点分布则反射出素数的隐藏秩序。在 ψ 框架中，这面镜子不是被动反映——塌缩动作本身参与了算术结构的确定。这一立场使 RH 证明与 [坍缩数学](03-collapse-mathematics.md) 的整体推导相连。
 
 ## 相关概念
 
-- [/psi-math/concepts/00-theory-psi-core.md](/psi-math/concepts/00-theory-psi-core.md) — 证明所依赖的自指核心
-- [/psi-math/concepts/01-collapse-set-theory.md](/psi-math/concepts/01-collapse-set-theory.md) — ζ 零点作为意识节点
-- [/psi-math/concepts/03-collapse-mathematics.md](/psi-math/concepts/03-collapse-mathematics.md) — 猜想系统的整体定位
-- [/psi-math/examples/rh-proof-overview.md](/psi-math/examples/rh-proof-overview.md) — 三条路径的论证架构示例
-- [/psi-core/concepts/00-psi-equation.md](/psi-core/concepts/00-psi-equation.md) — ψ=ψ(ψ) 公理
-- [/psi-universe/concepts/01-flip-xor-shift.md](/psi-universe/concepts/01-flip-xor-shift.md) — 信息论路径的 XOR-SHIFT 对应
+- [/psi-math/concepts/00-theory-psi-core.md](00-theory-psi-core.md) — 证明所依赖的自指核心
+- [/psi-math/concepts/01-collapse-set-theory.md](01-collapse-set-theory.md) — ζ 零点作为意识节点
+- [/psi-math/concepts/03-collapse-mathematics.md](03-collapse-mathematics.md) — 猜想系统的整体定位
+- [/psi-math/examples/rh-proof-overview.md](../examples/rh-proof-overview.md) — 三条路径的论证架构示例
+- [/psi-core/concepts/00-psi-equation.md](../../psi-core/concepts/00-psi-equation.md) — ψ=ψ(ψ) 公理
+- [/psi-universe/concepts/01-flip-xor-shift.md](../../psi-universe/concepts/01-flip-xor-shift.md) — 信息论路径的 XOR-SHIFT 对应
 
 [^f038]: 事实 F-038：系列 riemann-hypothesis-complete-proof 为 RH 完整证明，含 16 节。
 [^f039]: 事实 F-039：系列 riemann-hypothesis-proof-complete 为 15 章 RH 证明系列。

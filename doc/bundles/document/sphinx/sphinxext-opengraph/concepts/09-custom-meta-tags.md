@@ -233,8 +233,8 @@ ogp_custom_meta_tags = [
 
 ## 相关概念
 
-- [核心标签生成流程](/concepts/03-tag-generation.md)
-- [配置选项全解](/concepts/02-configuration.md)
-- [页面级覆盖机制](/concepts/06-per-page-overrides.md)
-- [高级配置示例](/examples/advanced-config.md)
-- [sphinxext-opengraph 源码信源登记](/references/sphinxext-opengraph-source.md)
+- [核心标签生成流程](03-tag-generation.md)
+- [配置选项全解](02-configuration.md)
+- [页面级覆盖机制](06-per-page-overrides.md)
+- [高级配置示例](../examples/advanced-config.md)
+- [sphinxext-opengraph 源码信源登记](../references/sphinxext-opengraph-source.md)

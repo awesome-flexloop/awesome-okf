@@ -233,7 +233,7 @@ EXTRACT_INVOICE_PROMPT = """请从这张发票图片中提取以下信息，以 
 只返回 JSON，不要其他解释。数值字段使用数字类型，不要用字符串。"""
 ```
 
-配合 JSON 模式使用效果最佳（参见 [高级技巧 - JSON 模式](/cookbooks/concepts/04-advanced-techniques.md)）。
+配合 JSON 模式使用效果最佳（参见 [高级技巧 - JSON 模式](04-advanced-techniques.md)）。
 
 ### 提高 OCR 准确率的 Cookbook 经验
 
@@ -348,7 +348,7 @@ def process_pdf(pdf_path: str) -> list[str]:
 ### PDF 处理的最佳实践
 
 1. **DPI 选择**：200 DPI 是性价比最高的选择——150 可能模糊，300 太占 token
-2. **长 PDF 处理**：超过 20 页的 PDF 建议先做 RAG（参见 [RAG 模式](/cookbooks/concepts/03-rag-patterns.md)），不要把所有页面塞到一次请求里
+2. **长 PDF 处理**：超过 20 页的 PDF 建议先做 RAG（参见 [RAG 模式](03-rag-patterns.md)），不要把所有页面塞到一次请求里
 3. **混合方案**：对于有文字层的 PDF，先用 `PyMuPDF` 直接提取文字层，只把扫描页/图片页用 Vision 处理，效果更好更省 token
 4. **表格处理**：PDF 中的表格用 Vision 比直接提取文字层效果好——Claude 能理解表格的视觉结构
 
@@ -445,8 +445,8 @@ Vision 是比较"贵"的能力，Cookbook 中的成本控制经验：
 
 ## 相关概念
 
-- [Cookbook 导览](/cookbooks/concepts/00-overview.md) — 回到 Cookbooks 总览
-- [工具调用模式](/cookbooks/concepts/01-tool-use-patterns.md) — 多模态 + 工具调用的组合模式
-- [RAG 与知识检索模式](/cookbooks/concepts/03-rag-patterns.md) — PDF 处理后续做 RAG 的完整流程
-- [高级技巧 - JSON 模式](/cookbooks/concepts/04-advanced-techniques.md) — 结构化输出配合 Vision 提取表单
-- [Python SDK - 视觉与文件处理](/python-sdk/concepts/05-vision-files.md) — Vision API 的底层 SDK 参考
+- [Cookbook 导览](00-overview.md) — 回到 Cookbooks 总览
+- [工具调用模式](01-tool-use-patterns.md) — 多模态 + 工具调用的组合模式
+- [RAG 与知识检索模式](03-rag-patterns.md) — PDF 处理后续做 RAG 的完整流程
+- [高级技巧 - JSON 模式](04-advanced-techniques.md) — 结构化输出配合 Vision 提取表单
+- [Python SDK - 视觉与文件处理](../../python-sdk/concepts/05-vision-files.md) — Vision API 的底层 SDK 参考

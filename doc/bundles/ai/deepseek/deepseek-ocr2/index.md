@@ -66,24 +66,24 @@ res = model.infer(
 
 | 项目 | 路径 | 关系 |
 |---|---|---|
-| DeepSeek-OCR v1 | [/deepseek/deepseek-ocr/](/ai/deepseek/deepseek-ocr/) | 前代版本，基于 CLIP 双编码器架构 |
+| DeepSeek-OCR v1 | [/deepseek/deepseek-ocr/](../deepseek-ocr/index.md) | 前代版本，基于 CLIP 双编码器架构 |
 
 ## 文档导航
 
 ### 核心概念
 
-- [总览](/ai/deepseek/deepseek-ocr2/concepts/overview) — Visual Causal Flow 架构、Qwen2-D2E 设计、与 v1 的详细对比
-- [使用模式与 v1 对比](/ai/deepseek/deepseek-ocr2/concepts/usage-modes) — HF/vLLM 部署、v1→v2 迁移指南
+- 总览 — Visual Causal Flow 架构、Qwen2-D2E 设计、与 v1 的详细对比
+- 使用模式与 v1 对比 — HF/vLLM 部署、v1→v2 迁移指南
 
 ### API 参考
 
-- [API 参考](/ai/deepseek/deepseek-ocr2/references/api) — DeepseekOCR2ForCausalLM、CustomQwen2Decoder、处理器类
-- [推理配置](/ai/deepseek/deepseek-ocr2/references/inference-config) — 分辨率模式、vLLM/HF 配置、迁移要点
+- API 参考 — DeepseekOCR2ForCausalLM、CustomQwen2Decoder、处理器类
+- 推理配置 — 分辨率模式、vLLM/HF 配置、迁移要点
 
 ### 使用示例
 
-- [图片 OCR](/ai/deepseek/deepseek-ocr2/examples/image-ocr) — HF/vLLM 图片推理代码
-- [PDF OCR](/ai/deepseek/deepseek-ocr2/examples/pdf-ocr) — PDF 批量推理
+- 图片 OCR — HF/vLLM 图片推理代码
+- PDF OCR — PDF 批量推理
 
 ## 目录结构
 

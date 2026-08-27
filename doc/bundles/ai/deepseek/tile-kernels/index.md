@@ -56,33 +56,33 @@ description: TileKernels - DeepSeek 基于 TileLang DSL 的 CUDA 核函数库文
 
 ## 文档导航
 
-### 📘 核心概念 [concepts/](/ai/deepseek/tile-kernels/concepts/)
+### 📘 核心概念 [concepts/](concepts/index.md)
 
 | 文档 | 内容 |
 |---|---|
-| [概述](/ai/deepseek/tile-kernels/concepts/overview) | 架构总览、功能模块、包结构、与 DeepGEMM/DeepEP 的协同 |
-| [FP8/FP4 量化与反量化](/ai/deepseek/tile-kernels/concepts/fp8-quantization) | 低精度格式、量化粒度（per-token/block/channel）、缩放因子布局、SwiGLU 融合量化 |
-| [MoE 核函数流水线](/ai/deepseek/tile-kernels/concepts/moe-kernels) | 完整 MoE 前向流水线、top2-sum gate、fused mapping、expand/reduce、warp 原语 |
-| [MHC Multi-Head Compute](/ai/deepseek/tile-kernels/concepts/mhc-multi-head-compute) | DeepSeek-V4 MHC 结构、多头残差、Sinkhorn 归一化、训练/推理双路径、梯度融合 |
-| [TileLang DSL 编程模式](/ai/deepseek/tile-kernels/concepts/tilelang-dsl-patterns) | @tilelang.jit、T.prim_func、T.Kernel、T.Parallel、共享内存、warp 原语、宏复用、Pass 配置 |
-| [Autograd 集成模式](/ai/deepseek/tile-kernels/concepts/autograd-integration) | autograd.Function 封装、fuse_grad_acc、main_grad、partial buffer reduce |
+| 概述 | 架构总览、功能模块、包结构、与 DeepGEMM/DeepEP 的协同 |
+| FP8/FP4 量化与反量化 | 低精度格式、量化粒度（per-token/block/channel）、缩放因子布局、SwiGLU 融合量化 |
+| MoE 核函数流水线 | 完整 MoE 前向流水线、top2-sum gate、fused mapping、expand/reduce、warp 原语 |
+| MHC Multi-Head Compute | DeepSeek-V4 MHC 结构、多头残差、Sinkhorn 归一化、训练/推理双路径、梯度融合 |
+| TileLang DSL 编程模式 | @tilelang.jit、T.prim_func、T.Kernel、T.Parallel、共享内存、warp 原语、宏复用、Pass 配置 |
+| Autograd 集成模式 | autograd.Function 封装、fuse_grad_acc、main_grad、partial buffer reduce |
 
-### 📗 API 参考 [references/](/ai/deepseek/tile-kernels/references/)
+### 📗 API 参考 [references/](references/index.md)
 
 | 文档 | 内容 |
 |---|---|
-| [公共 API](/ai/deepseek/tile-kernels/references/api) | 配置管理、量化、MoE、MHC、Engram、转置、数据类完整 API 签名 |
-| [量化核函数](/ai/deepseek/tile-kernels/references/quant-kernels) | FP8/FP4/E5M6 cast、SwiGLU 融合、反量化、量化配置体系、缩放因子布局 |
-| [MoE 核函数](/ai/deepseek/tile-kernels/references/moe-kernels) | topk gate、fused mapping、expand/reduce、辅助算子、与 DeepGEMM/DeepEP 协同 |
-| [MHC/Engram/转置](/ai/deepseek/tile-kernels/references/mhc-kernels) | MHC 全套算子、Engram 门控/哈希/梯度、转置、配置工具函数 |
+| 公共 API | 配置管理、量化、MoE、MHC、Engram、转置、数据类完整 API 签名 |
+| 量化核函数 | FP8/FP4/E5M6 cast、SwiGLU 融合、反量化、量化配置体系、缩放因子布局 |
+| MoE 核函数 | topk gate、fused mapping、expand/reduce、辅助算子、与 DeepGEMM/DeepEP 协同 |
+| MHC/Engram/转置 | MHC 全套算子、Engram 门控/哈希/梯度、转置、配置工具函数 |
 
-### 📙 代码示例 [examples/](/ai/deepseek/tile-kernels/examples/)
+### 📙 代码示例 [examples/](examples/index.md)
 
 | 示例 | 内容 |
 |---|---|
-| [FP8 量化基础](/ai/deepseek/tile-kernels/examples/basic-quant) | Per-token/block/channel 量化、FP4/E5M6、SwiGLU 融合、精度对比 |
-| [MoE 前向计算](/ai/deepseek/tile-kernels/examples/moe-forward) | 完整 MoE 流水线：gate → mapping → expand → expert compute → reduce |
-| [MHC 使用](/ai/deepseek/tile-kernels/examples/mhc-usage) | MHC 初始化、mhc_pre/mhc_post 训练/推理、LM Head、多层重计算 |
+| FP8 量化基础 | Per-token/block/channel 量化、FP4/E5M6、SwiGLU 融合、精度对比 |
+| MoE 前向计算 | 完整 MoE 流水线：gate → mapping → expand → expert compute → reduce |
+| MHC 使用 | MHC 初始化、mhc_pre/mhc_post 训练/推理、LM Head、多层重计算 |
 
 ---
 
@@ -132,8 +132,8 @@ tile_kernels/
 
 | 项目 | 关系 |
 |---|---|
-| [DeepGEMM](/ai/deepseek/deep-gemm/) | DeepSeek 高性能 C++ JIT GEMM 库，负责核心矩阵乘法；TileKernels 为其提供量化、MoE dispatch/combine 等补充算子 |
-| [DeepEP](/ai/deepseek/deep-ep/) | DeepSeek 专家并行通信库，负责跨节点 all-to-all 通信；TileKernels 负责本地 dispatch/combine |
+| [DeepGEMM](../deep-gemm/index.md) | DeepSeek 高性能 C++ JIT GEMM 库，负责核心矩阵乘法；TileKernels 为其提供量化、MoE dispatch/combine 等补充算子 |
+| [DeepEP](../deep-ep/index.md) | DeepSeek 专家并行通信库，负责跨节点 all-to-all 通信；TileKernels 负责本地 dispatch/combine |
 | [TileLang](https://github.com/tile-ai/tilelang) | TileKernels 使用的 Python DSL 编译器和 JIT 运行时 |
 
 ```{toctree}

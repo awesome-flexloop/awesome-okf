@@ -84,36 +84,36 @@ qmctl cp file qm:/tmp/      # 复制文件到 QM
 
 ## 文档导航
 
-### [概念文档 Concepts](/bundles/containers/qm/concepts/index.md)
+### [概念文档 Concepts](concepts/index.md)
 
 按学习路径排列的核心概念：
 
 | 主题 | 说明 |
 |------|------|
-| [QM 定位与 ASIL 汽车功能安全场景](/bundles/containers/qm/concepts/00-introduction.md) | 项目介绍、ASIL 安全等级、解决的问题、核心隔离技术概览 |
-| [嵌套隔离架构](/bundles/containers/qm/concepts/01-nested-architecture.md) | 主机→QM容器→systemd→Podman→嵌套容器四层架构详解、Rootfs 管理、Quadlet 配置层级 |
-| [三级 OOM 策略与 SELinux 隔离](/bundles/containers/qm/concepts/02-oom-selinux.md) | 三级 oom_score_adj 策略、SELinux qm_t 域、Capabilities 权限边界、自定义 OOM 配置 |
-| [子系统扩展（kvm/wayland/ros2）](/bundles/containers/qm/concepts/03-subsystems.md) | KVM 虚拟化、Wayland 图形、ROS2 机器人、音频视频、OCI Hooks 架构详解 |
-| [BlueChi 多节点管理](/bundles/containers/qm/concepts/04-bluechi.md) | BlueChi 确定性服务控制器、多节点架构、QM 节点命名规则、汽车 ECU 场景 |
+| [QM 定位与 ASIL 汽车功能安全场景](concepts/00-introduction.md) | 项目介绍、ASIL 安全等级、解决的问题、核心隔离技术概览 |
+| [嵌套隔离架构](concepts/01-nested-architecture.md) | 主机→QM容器→systemd→Podman→嵌套容器四层架构详解、Rootfs 管理、Quadlet 配置层级 |
+| [三级 OOM 策略与 SELinux 隔离](concepts/02-oom-selinux.md) | 三级 oom_score_adj 策略、SELinux qm_t 域、Capabilities 权限边界、自定义 OOM 配置 |
+| [子系统扩展（kvm/wayland/ros2）](concepts/03-subsystems.md) | KVM 虚拟化、Wayland 图形、ROS2 机器人、音频视频、OCI Hooks 架构详解 |
+| [BlueChi 多节点管理](concepts/04-bluechi.md) | BlueChi 确定性服务控制器、多节点架构、QM 节点命名规则、汽车 ECU 场景 |
 
-### [示例文档 Examples](/bundles/containers/qm/examples/index.md)
+### [示例文档 Examples](examples/index.md)
 
 可直接复制使用的实战示例：
 
 | 示例 | 说明 |
 |------|------|
-| [创建 QM 虚拟机环境](/bundles/containers/qm/examples/01-vm-setup.md) | QEMU/KVM 虚拟机中安装 AutoSD、部署 QM、验证环境、使用 qmctl 的完整步骤 |
-| [KVM 子系统使用](/bundles/containers/qm/examples/02-kvm-subsystem.md) | KVM 子系统安装、嵌套虚拟化配置、运行 QEMU 虚拟机、libvirt 管理、性能对比 |
+| [创建 QM 虚拟机环境](examples/01-vm-setup.md) | QEMU/KVM 虚拟机中安装 AutoSD、部署 QM、验证环境、使用 qmctl 的完整步骤 |
+| [KVM 子系统使用](examples/02-kvm-subsystem.md) | KVM 子系统安装、嵌套虚拟化配置、运行 QEMU 虚拟机、libvirt 管理、性能对比 |
 
-### [信源 References](/bundles/containers/qm/references/index.md)
+### [信源 References](references/index.md)
 
 所有文档内容的可验证信源：
 
 | 信源 | 内容 |
 |------|------|
-| [readme-source.md](/bundles/containers/qm/references/readme-source.md) | 官方 README.md 和 qm.8.md man 手册：安装、SELinux、BlueChi、OOM 策略 |
-| [qmctl-source.md](/bundles/containers/qm/references/qmctl-source.md) | qmctl CLI 工具：show/exec/execin/cp 命令、Python 实现、辅助 Shell 脚本 |
-| [subsystem-source.md](/bundles/containers/qm/references/subsystem-source.md) | 子系统模块：kvm/wayland/ros2/sound/video 结构、OCI Hooks、RPM 打包 |
+| [readme-source.md](references/readme-source.md) | 官方 README.md 和 qm.8.md man 手册：安装、SELinux、BlueChi、OOM 策略 |
+| [qmctl-source.md](references/qmctl-source.md) | qmctl CLI 工具：show/exec/execin/cp 命令、Python 实现、辅助 Shell 脚本 |
+| [subsystem-source.md](references/subsystem-source.md) | 子系统模块：kvm/wayland/ros2/sound/video 结构、OCI Hooks、RPM 打包 |
 
 ## 项目结构
 
@@ -192,7 +192,7 @@ QM 通过 `oom_score_adj` 实现内存压力下的进程优先级保护：
 
 ## 更新日志
 
-完整变更记录见 [log.md](/bundles/containers/qm/log.md)。
+完整变更记录见 [log.md](log.md)。
 
 ```{toctree}
 :hidden:

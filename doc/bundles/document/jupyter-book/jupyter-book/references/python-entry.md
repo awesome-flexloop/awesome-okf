@@ -66,5 +66,5 @@ py/jupyter_book/
 
 ## 相关概念
 
-- [01-python-entry-nodeenv](/concepts/01-python-entry-nodeenv.md)：Python 入口与 nodeenv 详解
-- [00-v2-architecture](/concepts/00-v2-architecture.md)：Jupyter Book v2 双层架构
+- [01-python-entry-nodeenv](../concepts/01-python-entry-nodeenv.md)：Python 入口与 nodeenv 详解
+- [00-v2-architecture](../concepts/00-v2-architecture.md)：Jupyter Book v2 双层架构

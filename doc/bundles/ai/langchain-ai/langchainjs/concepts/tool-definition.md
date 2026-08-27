@@ -265,6 +265,6 @@ type ServerTool = Record<string, unknown>;
 
 ## 相关文档
 
-- [消息系统](/ai/langchain-ai/langchainjs/concepts/message-system) — ToolMessage 与 ToolCall
-- [ReAct Agent](/ai/langchain-ai/langchainjs/concepts/react-agent) — 工具在 Agent 循环中的调用
-- [Message 与 Tool API](/ai/langchain-ai/langchainjs/references/messages-tools) — 完整 API 参考
+- 消息系统 — ToolMessage 与 ToolCall
+- ReAct Agent — 工具在 Agent 循环中的调用
+- Message 与 Tool API — 完整 API 参考

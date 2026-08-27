@@ -271,6 +271,6 @@ class SimpleDirective(Directive):
 
 ## 相关参考
 
-- [扩展开发指南](/concepts/07-extension-dev.md) — 扩展基础
-- [组件注册表](/concepts/06-registry.md) — add_node和add_directive
-- [03-事件处理模式](03-event-handlers.md) — 结合事件使用指令
+- 扩展开发指南 — 扩展基础
+- [组件注册表](../concepts/06-registry.md) — add_node和add_directive
+- 03-事件处理模式 — 结合事件使用指令

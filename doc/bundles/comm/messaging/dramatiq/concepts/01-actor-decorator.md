@@ -97,9 +97,9 @@ MyTask.send(42)
 
 ## 相关概念
 
-- [整体架构](/concepts/00-overall-architecture.md)：Actor 在五大组件中的位置
-- [Broker 抽象基类](/concepts/02-broker-abstraction.md)：Actor 通过 broker.declare_actor 注册
-- [Message 与序列化](/concepts/04-message-and-serialization.md)：send 构造的不可变消息结构
-- [Middleware 中间件管道](/concepts/05-middleware-pipeline.md)：actor options 如何被 middleware 消费
-- [内置中间件详解](/references/built-in-middleware.md)：各 middleware 支持的 actor_options
-- [异常类层次结构](/references/error-hierarchy.md)：ActorNotFound 等异常
+- [整体架构](00-overall-architecture.md)：Actor 在五大组件中的位置
+- [Broker 抽象基类](02-broker-abstraction.md)：Actor 通过 broker.declare_actor 注册
+- [Message 与序列化](04-message-and-serialization.md)：send 构造的不可变消息结构
+- [Middleware 中间件管道](05-middleware-pipeline.md)：actor options 如何被 middleware 消费
+- [内置中间件详解](../references/built-in-middleware.md)：各 middleware 支持的 actor_options
+- [异常类层次结构](../references/error-hierarchy.md)：ActorNotFound 等异常

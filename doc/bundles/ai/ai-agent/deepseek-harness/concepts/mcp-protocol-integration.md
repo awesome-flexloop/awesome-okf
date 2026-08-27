@@ -321,6 +321,6 @@ export type McpResult<Structured extends JsonValue = JsonValue> = {
 
 | 文件 | 核心内容 |
 |------|---------|
-| [packages/mcp/mcp-client/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/mcp/mcp-client/src/index.ts) | 插件定义（name/inject/Config）、命名空间管理、连接启动、activate 阻塞 |
-| [packages/mcp/mcp-client/src/tools.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/mcp/mcp-client/src/tools.ts) | `publicToolName()`、`syncTools()` 两阶段同步、`createExecutor()`、`extractText()`、`McpResult` |
-| [packages/mcp/mcp-client/src/connection.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/mcp/mcp-client/src/connection.ts) | 连接监督器、重连策略、`startConnection()`、`ReconnectConfig` |
+| packages/mcp/mcp-client/src/index.ts | 插件定义（name/inject/Config）、命名空间管理、连接启动、activate 阻塞 |
+| packages/mcp/mcp-client/src/tools.ts | `publicToolName()`、`syncTools()` 两阶段同步、`createExecutor()`、`extractText()`、`McpResult` |
+| packages/mcp/mcp-client/src/connection.ts | 连接监督器、重连策略、`startConnection()`、`ReconnectConfig` |

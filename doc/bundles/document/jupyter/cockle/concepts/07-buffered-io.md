@@ -496,9 +496,9 @@ class MainIOWithBuffer implements IMainIO {
 
 ## 相关概念
 
-- [05 - IO 系统](/concepts/05-io-system.md)：基础 IO 抽象、终端 IO、管道
-- [06 - 文件系统](/concepts/06-filesystem.md)：FileInput/FileOutput 的实现
-- [11 - Worker 通信机制](/concepts/11-worker-communication.md)：Comlink/Coincident 与 IO 的关系
-- [10 - WASM 与 JavaScript 命令](/concepts/10-wasm-js-commands.md)：WASM命令为何需要同步stdin
-- [09 - 外部命令](/concepts/09-external-commands.md)：外部命令的IO环境
-- [缓冲IO参考](/references/buffered-io-source.md)：IMainIO/IWorkerIO 完整接口定义
+- [05 - IO 系统](05-io-system.md)：基础 IO 抽象、终端 IO、管道
+- [06 - 文件系统](06-filesystem.md)：FileInput/FileOutput 的实现
+- [11 - Worker 通信机制](11-worker-communication.md)：Comlink/Coincident 与 IO 的关系
+- [10 - WASM 与 JavaScript 命令](10-wasm-js-commands.md)：WASM命令为何需要同步stdin
+- [09 - 外部命令](09-external-commands.md)：外部命令的IO环境
+- [缓冲IO参考](../references/buffered-io-source.md)：IMainIO/IWorkerIO 完整接口定义

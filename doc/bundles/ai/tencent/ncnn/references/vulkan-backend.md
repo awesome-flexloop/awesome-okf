@@ -170,5 +170,5 @@ private:
 
 ## 相关概念
 
-- [06 Vulkan GPU 后端](/concepts/06-vulkan-gpu.md)
-- [04 内存分配器](/concepts/04-allocator.md)
+- [06 Vulkan GPU 后端](../concepts/06-vulkan-gpu.md)
+- [04 内存分配器](../concepts/04-allocator.md)

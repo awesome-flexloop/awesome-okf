@@ -232,7 +232,7 @@ print(result)
 
 ## 相关概念
 
-- [mdurl 简介](/concepts/00-introduction.md)
-- [URL 数据结构](/concepts/01-url-data-structure.md)
-- [URL 解析与格式化](/concepts/02-parse-and-format.md)
-- [URL 编码与解码](/concepts/03-encode-and-decode.md)
+- [mdurl 简介](../concepts/00-introduction.md)
+- [URL 数据结构](../concepts/01-url-data-structure.md)
+- [URL 解析与格式化](../concepts/02-parse-and-format.md)
+- [URL 编码与解码](../concepts/03-encode-and-decode.md)

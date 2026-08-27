@@ -274,7 +274,7 @@ class RunControl:
 
 ## 相关概念
 
-- [检查点机制](/ai/langchain-ai/langgraph/concepts/checkpointing) — 持久化、时间旅行与状态恢复
-- [Pregel 引擎](/ai/langchain-ai/langgraph/concepts/pregel-engine) — 检查点在执行循环中的角色
-- [通道系统](/ai/langchain-ai/langgraph/concepts/channels) — DeltaChannel 增量检查点
-- [错误处理](/ai/langchain-ai/langgraph/concepts/error-handling) — RunControl 协作排空
+- 检查点机制 — 持久化、时间旅行与状态恢复
+- Pregel 引擎 — 检查点在执行循环中的角色
+- 通道系统 — DeltaChannel 增量检查点
+- 错误处理 — RunControl 协作排空

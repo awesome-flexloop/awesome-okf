@@ -49,7 +49,7 @@ Nuitka节点IR在CPython AST基础上增加了：
 
 ## 元类：NodeCheckMetaClass
 
-Nuitka使用自定义元类[NodeCheckMetaClass](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/nodes/NodeBase.py)来自动处理节点类的注册和方法生成。元类在**类定义时**（而非实例化时）自动执行以下操作：
+Nuitka使用自定义元类NodeCheckMetaClass来自动处理节点类的注册和方法生成。元类在**类定义时**（而非实例化时）自动执行以下操作：
 
 ### 1. Kind自动注册
 

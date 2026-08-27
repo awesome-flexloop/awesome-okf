@@ -79,7 +79,7 @@ $$\tau = 0.98995,\qquad n = 2,\qquad \text{误差} < 0.05\%$$
 3. **第 9–10 章**：现实校准点 $\tau=0.98995,n=2$ 与误差分析；
 4. **第 11–12 章**：常数间关系网络、对物理统一的推论。
 
-这一结构使 Codex 既是常数推导集，也是 [坍缩数学](/psi-math/concepts/03-collapse-mathematics.md) 数值/几何系统向物理域的延伸。
+这一结构使 Codex 既是常数推导集，也是 [坍缩数学](03-collapse-mathematics.md) 数值/几何系统向物理域的延伸。
 
 ## 方法论定位
 
@@ -93,11 +93,11 @@ $$\tau = 0.98995,\qquad n = 2,\qquad \text{误差} < 0.05\%$$
 
 ## 相关概念
 
-- [/psi-math/concepts/00-theory-psi-core.md](/psi-math/concepts/00-theory-psi-core.md) — 常数推导的现实定义 R:=Collapse(ψ)
-- [/psi-math/concepts/03-collapse-mathematics.md](/psi-math/concepts/03-collapse-mathematics.md) — 数值与几何系统基础
-- [/psi-core/concepts/05-reality-crystallization.md](/psi-core/concepts/05-reality-crystallization.md) — 物理量作为塌缩固化的叙事
-- [/psi-math/concepts/02-riemann-hypothesis.md](/psi-math/concepts/02-riemann-hypothesis.md) — 自指不动点的数学范例
-- [/psi-universe/concepts/01-flip-xor-shift.md](/psi-universe/concepts/01-flip-xor-shift.md) — 信息本体论下的物理对应
+- [/psi-math/concepts/00-theory-psi-core.md](00-theory-psi-core.md) — 常数推导的现实定义 R:=Collapse(ψ)
+- [/psi-math/concepts/03-collapse-mathematics.md](03-collapse-mathematics.md) — 数值与几何系统基础
+- [/psi-core/concepts/05-reality-crystallization.md](../../psi-core/concepts/05-reality-crystallization.md) — 物理量作为塌缩固化的叙事
+- [/psi-math/concepts/02-riemann-hypothesis.md](02-riemann-hypothesis.md) — 自指不动点的数学范例
+- [/psi-universe/concepts/01-flip-xor-shift.md](../../psi-universe/concepts/01-flip-xor-shift.md) — 信息本体论下的物理对应
 
 [^f041]: 事实 F-041：系列 psi-collapse-constants-codex 含 12 章，涉及物理常数推导。
 [^f049]: 事实 F-049：math.dw.cash 记录现实校准点 τ=0.98995、n=2，误差小于 0.05%。

@@ -17,7 +17,7 @@ sources:
 
 # 函数库（初等函数与特殊函数）源码信源
 
-SymPy 的 `functions` 模块是数学函数的统一入口，分为三大子模块：`elementary`（初等函数）、`special`（特殊函数）、`combinatorial`（组合函数）。所有具体函数类均继承自 `Function`（→ `Application` → `Expr` → `Basic`），通过 `@classmethod eval()` 实现自动求值，通过 `_eval_rewrite_as_<target>()` 支持 `rewrite()` 方法，通过 `_eval_expand_<hint>()` 支持 `expand()` 方法。[^F-050][^F-088]
+SymPy 的 `functions` 模块是数学函数的统一入口，分为三大子模块：`elementary`（初等函数）、`special`（特殊函数）、`combinatorial`（组合函数）。所有具体函数类均继承自 `Function`（→ `Application` → `Expr` → `Basic`），通过 `@classmethod eval()` 实现自动求值，通过 `_eval_rewrite_as_<target>()` 支持 `rewrite()` 方法，通过 `_eval_expand_<hint>()` 支持 `expand()` 方法。[^F-050] [^F-088]
 
 ## 模块架构
 
@@ -56,7 +56,7 @@ flowchart TD
 
 ## 函数类继承机制
 
-所有 SymPy 数学函数类共享以下核心机制（以 `sin` 为例）：[^F-050][^F-048]
+所有 SymPy 数学函数类共享以下核心机制（以 `sin` 为例）：[^F-050] [^F-048]
 
 ```python
 from sympy import sin, cos, exp, Symbol, pi, I, S
@@ -334,7 +334,7 @@ Si(0)               # → 0
 
 ### 2.2 Gamma 与 Beta 函数（gamma_functions.py, beta_functions.py）
 
-Gamma 函数是阶乘在实数域的推广，是许多特殊函数关系的核心。[^F-092][^F-093]
+Gamma 函数是阶乘在实数域的推广，是许多特殊函数关系的核心。[^F-092] [^F-093]
 
 | 函数 | 数学记号 | 说明 |
 |------|----------|------|
@@ -608,7 +608,7 @@ primepi(10)          # → 4 (2,3,5,7)
 
 ## 四、函数操作通用范式
 
-所有函数类继承自 `Function`，统一遵循以下调用约定和方法体系：[^F-050][^F-009][^F-010]
+所有函数类继承自 `Function`，统一遵循以下调用约定和方法体系：[^F-050] [^F-009] [^F-010]
 
 ```python
 from sympy import Function, Symbol, sin, cos, exp
@@ -657,14 +657,14 @@ exp(x + y).expand()        # → exp(x)*exp(y)  (注意: 需要 log=True 等参�
 
 ## 脚注
 
-[^F-009]: Basic.rewrite 方法机制，参见 [core/basic.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/basic.py#L2062)
-[^F-010]: Basic.simplify 委托机制，参见 [core/basic.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/basic.py#L2031)
-[^F-048]: FunctionClass 元类，参见 [core/function.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L156)
-[^F-050]: Function 基类，参见 [core/function.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L383)
-[^F-088]: functions 模块三分区结构，参见 [functions/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/functions/__init__.py)
-[^F-089]: 三角函数/指数/双曲函数导出清单，参见 [functions/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/functions/__init__.py#L20-L25)
-[^F-090]: 复数/整数/杂项函数导出清单，参见 [functions/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/functions/__init__.py#L15-L28)
-[^F-091]: Piecewise 导出清单，参见 [functions/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/functions/__init__.py#L27-L28)
-[^F-092]: 特殊函数导出清单，参见 [functions/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/functions/__init__.py#L29-L52)
-[^F-093]: Beta 函数和其他特殊函数，参见 [functions/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/functions/__init__.py#L48-L52)
-[^F-094]: 组合函数导出清单，参见 [functions/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/functions/__init__.py#L9-L14)
+[^F-009]: Basic.rewrite 方法机制，参见 core/basic.py
+[^F-010]: Basic.simplify 委托机制，参见 core/basic.py
+[^F-048]: FunctionClass 元类，参见 core/function.py
+[^F-050]: Function 基类，参见 core/function.py
+[^F-088]: functions 模块三分区结构，参见 functions/__init__.py
+[^F-089]: 三角函数/指数/双曲函数导出清单，参见 functions/__init__.py
+[^F-090]: 复数/整数/杂项函数导出清单，参见 functions/__init__.py
+[^F-091]: Piecewise 导出清单，参见 functions/__init__.py
+[^F-092]: 特殊函数导出清单，参见 functions/__init__.py
+[^F-093]: Beta 函数和其他特殊函数，参见 functions/__init__.py
+[^F-094]: 组合函数导出清单，参见 functions/__init__.py

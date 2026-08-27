@@ -152,6 +152,6 @@ A ← B ← C (原线程)
 
 ## 相关概念
 
-- [Channels 通道体系](channels) — checkpoint 序列化的是通道状态
-- [Pregel 执行引擎](pregel-execution) — 超步边界触发 checkpoint
-- [Checkpoint 与流式 API 参考](/ai/langchain-ai/langgraphjs/references/checkpoint-streaming)
+- [Channels 通道体系](channels.md) — checkpoint 序列化的是通道状态
+- [Pregel 执行引擎](pregel-execution.md) — 超步边界触发 checkpoint
+- Checkpoint 与流式 API 参考

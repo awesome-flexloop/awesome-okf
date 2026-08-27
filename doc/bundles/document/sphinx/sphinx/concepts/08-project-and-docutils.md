@@ -25,7 +25,7 @@ Sphinx 构建在 docutils 库之上。docutils 提供了 reStructuredText 解析
 
 ## Project 类
 
-`Project` 类（定义在 [sphinx/project.py](file:///d:/spaces/SpecWeave/external/libs/docs/sphinx/sphinx/project.py)）负责源文件的发现、索引和路径转换 [F-031]。
+`Project` 类（定义在 sphinx/project.py）负责源文件的发现、索引和路径转换 [F-031]。
 
 ### 核心属性
 

@@ -339,8 +339,8 @@ Gemma4 版本的 Eagle3 模型有以下差异：
 
 ## 九、相关链接
 
-- [/deepseek/deep-spec/concepts/overview](/ai/deepseek/deep-spec/concepts/overview) — DeepSpec 整体概述
-- [/deepseek/deep-spec/concepts/speculative-decoding-training](/ai/deepseek/deep-spec/concepts/speculative-decoding-training) — 投机解码训练方法论
-- [/deepseek/deep-spec/concepts/dspark-model](/ai/deepseek/deep-spec/concepts/dspark-model) — DSpark 架构对比
-- [/deepseek/deep-spec/references/model-api](/ai/deepseek/deep-spec/references/model-api) — 模型 API 参考（FusedLogSoftmaxLoss、模型类完整签名）
-- [/deepseek/deep-spec/concepts/training-pipeline](/ai/deepseek/deep-spec/concepts/training-pipeline) — 训练管线详解
+- /deepseek/deep-spec/concepts/overview — DeepSpec 整体概述
+- /deepseek/deep-spec/concepts/speculative-decoding-training — 投机解码训练方法论
+- /deepseek/deep-spec/concepts/dspark-model — DSpark 架构对比
+- /deepseek/deep-spec/references/model-api — 模型 API 参考（FusedLogSoftmaxLoss、模型类完整签名）
+- /deepseek/deep-spec/concepts/training-pipeline — 训练管线详解

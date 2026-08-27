@@ -112,7 +112,7 @@ $$\mathrm{FLIP} \subset \mathrm{XOR} \subset \mathrm{SHIFT}$$
 
 ## 相关概念
 
-- [三大公理 — 宇宙的递归本源](/concepts/00-three-axioms.md)
-- [REC递归与元操作符 — 从操作到操作的操作](/concepts/02-recursion-meta-operator.md)
-- [维度谱系 D0-D∞ — 从操作到超高维](/concepts/03-dimension-spectrum.md)
-- [/psi-core/concepts/02-echo-and-recursion.md](/psi-core/concepts/02-echo-and-recursion.md)
+- [三大公理 — 宇宙的递归本源](00-three-axioms.md)
+- [REC递归与元操作符 — 从操作到操作的操作](02-recursion-meta-operator.md)
+- [维度谱系 D0-D∞ — 从操作到超高维](03-dimension-spectrum.md)
+- [/psi-core/concepts/02-echo-and-recursion.md](../../psi-core/concepts/02-echo-and-recursion.md)

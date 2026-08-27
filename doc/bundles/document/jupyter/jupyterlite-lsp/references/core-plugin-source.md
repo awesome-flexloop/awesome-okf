@@ -171,7 +171,7 @@ Session 从 `mock-socket` 导入 `Client as WebSocketClient, Server as WebSocket
 
 ## 相关概念
 
-- [三插件体系](/concepts/03-plugin-system.md)
-- [IJSONRPCLanguageServer 接口](/concepts/04-language-server-interface.md)
-- [Mock-Socket 桥接机制](/concepts/05-mock-socket-bridge.md)
-- [Hack 源码引用](/references/hacks-source.md)
+- [三插件体系](../concepts/03-plugin-system.md)
+- [IJSONRPCLanguageServer 接口](../concepts/04-language-server-interface.md)
+- [Mock-Socket 桥接机制](../concepts/05-mock-socket-bridge.md)
+- [Hack 源码引用](hacks-source.md)

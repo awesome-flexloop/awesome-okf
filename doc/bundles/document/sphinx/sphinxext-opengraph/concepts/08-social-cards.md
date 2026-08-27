@@ -300,8 +300,8 @@ docs/script/generate_social_card_previews.py
 
 ## 相关概念
 
-- [页面图片处理逻辑](/concepts/05-image-handling.md)
-- [配置选项全解](/concepts/02-configuration.md)
-- [核心标签生成流程](/concepts/03-tag-generation.md)
-- [社交卡片配置示例](/examples/social-cards-example.md)
-- [sphinxext-opengraph 源码信源登记](/references/sphinxext-opengraph-source.md)
+- [页面图片处理逻辑](05-image-handling.md)
+- [配置选项全解](02-configuration.md)
+- [核心标签生成流程](03-tag-generation.md)
+- [社交卡片配置示例](../examples/social-cards-example.md)
+- [sphinxext-opengraph 源码信源登记](../references/sphinxext-opengraph-source.md)

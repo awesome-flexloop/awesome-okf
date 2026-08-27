@@ -131,6 +131,6 @@ sources:
 
 ## 相关概念
 
-- [德经在前的阅读策略](/concepts/02-de-before-dao.md)
-- [核心异文选读](/concepts/04-key-variants.md)
-- [为什么读帛书本](/concepts/00-why-boshu.md)
+- [德经在前的阅读策略](../concepts/02-de-before-dao.md)
+- [核心异文选读](../concepts/04-key-variants.md)
+- [为什么读帛书本](../concepts/00-why-boshu.md)

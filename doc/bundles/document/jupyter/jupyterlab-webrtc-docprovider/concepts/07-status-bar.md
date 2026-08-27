@@ -255,6 +255,6 @@ commands.addCommand(CommandIds.disable, {
 
 ## 相关概念
 
-- [4个JupyterLab插件架构](/concepts/06-plugin-system.md)
-- [WebRtcManager配置管理](/concepts/03-webrtc-manager.md)
-- [架构总览](/concepts/02-architecture-overview.md)
+- [4个JupyterLab插件架构](06-plugin-system.md)
+- [WebRtcManager配置管理](03-webrtc-manager.md)
+- [架构总览](02-architecture-overview.md)

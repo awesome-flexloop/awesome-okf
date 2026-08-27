@@ -18,7 +18,7 @@ sources:
 
 # 坍缩集合论（CST）— 后ZFC框架
 
-坍缩集合论（Collapse Set Theory，CST）是 math.dw.cash 提出的一套后 ZFC 集合论框架[^f047]。它以 [theory_psi 的自指核心](/psi-math/concepts/00-theory-psi-core.md) $\psi=\psi(\psi)$ 为公理起点，试图克服经典集合论在自指与观察者问题上的盲区，并将黎曼 ζ 函数及其零点纳入形式体系。
+坍缩集合论（Collapse Set Theory，CST）是 math.dw.cash 提出的一套后 ZFC 集合论框架[^f047]。它以 [theory_psi 的自指核心](00-theory-psi-core.md) $\psi=\psi(\psi)$ 为公理起点，试图克服经典集合论在自指与观察者问题上的盲区，并将黎曼 ζ 函数及其零点纳入形式体系。
 
 > 本文所涉公理体系、定理与解读均为 Ψhē 理论体系内部主张，未经同行评审，不构成数学界公认结论。
 
@@ -76,18 +76,18 @@ $$\zeta(s)=\sum_{n=1}^{\infty}\frac{1}{n^s}$$
 
 安置在塌缩框架中。理论主张，ζ 函数是算术结构经塌缩后的"镜子"：素数分布的潜在信息在解析延拓中凝结为函数形态，其非平凡零点则是塌缩的临界位置。
 
-在 CST 解读中，ζ 的非平凡零点被刻画为**意识节点**（consciousness nodes）——观察者极点与算术结构在临界线上交汇的位置。每个零点标记一次主客未分的塌缩事件。由此，黎曼猜想关于零点实部均为 $\tfrac12$ 的断言，在 CST 中不再只是解析命题，而被转化为关于塌缩临界位置对称性的陈述。这一转化是 [RH 多路径证明](/psi-math/concepts/02-riemann-hypothesis.md) 的框架前提。
+在 CST 解读中，ζ 的非平凡零点被刻画为**意识节点**（consciousness nodes）——观察者极点与算术结构在临界线上交汇的位置。每个零点标记一次主客未分的塌缩事件。由此，黎曼猜想关于零点实部均为 $\tfrac12$ 的断言，在 CST 中不再只是解析命题，而被转化为关于塌缩临界位置对称性的陈述。这一转化是 [RH 多路径证明](02-riemann-hypothesis.md) 的框架前提。
 
 ## 与 ZFC 的关系
 
-CST 不宣称 ZFC 为假，而将其视为 CST 在"观察者被抑制"退化条件下的极限情形。当塌缩的观察者环节被取为无差别的背景、自指被层级公理切断时，CST 退化为经典集合论的工作方式。理论据此论证：ZFC 是 CST 的一个有用但不完整的投影，而非数学基础的终点。对 ZFC 的逐章解构见 [ZFC 坍缩](/psi-math/concepts/05-zfc-collapse.md)。
+CST 不宣称 ZFC 为假，而将其视为 CST 在"观察者被抑制"退化条件下的极限情形。当塌缩的观察者环节被取为无差别的背景、自指被层级公理切断时，CST 退化为经典集合论的工作方式。理论据此论证：ZFC 是 CST 的一个有用但不完整的投影，而非数学基础的终点。对 ZFC 的逐章解构见 [ZFC 坍缩](05-zfc-collapse.md)。
 
 ## 相关概念
 
-- [/psi-math/concepts/00-theory-psi-core.md](/psi-math/concepts/00-theory-psi-core.md) — 自指塌缩的最小核心
-- [/psi-math/concepts/02-riemann-hypothesis.md](/psi-math/concepts/02-riemann-hypothesis.md) — ζ 零点作为 RH 证明对象
-- [/psi-math/concepts/05-zfc-collapse.md](/psi-math/concepts/05-zfc-collapse.md) — ZFC 的元数学批判
-- [/psi-math/concepts/03-collapse-mathematics.md](/psi-math/concepts/03-collapse-mathematics.md) — 坍缩数学十大系统
-- [/psi-core/concepts/00-psi-equation.md](/psi-core/concepts/00-psi-equation.md) — ψ=ψ(ψ) 的本体论阐释
+- [/psi-math/concepts/00-theory-psi-core.md](00-theory-psi-core.md) — 自指塌缩的最小核心
+- [/psi-math/concepts/02-riemann-hypothesis.md](02-riemann-hypothesis.md) — ζ 零点作为 RH 证明对象
+- [/psi-math/concepts/05-zfc-collapse.md](05-zfc-collapse.md) — ZFC 的元数学批判
+- [/psi-math/concepts/03-collapse-mathematics.md](03-collapse-mathematics.md) — 坍缩数学十大系统
+- [/psi-core/concepts/00-psi-equation.md](../../psi-core/concepts/00-psi-equation.md) — ψ=ψ(ψ) 的本体论阐释
 
 [^f047]: 事实 F-047：math.dw.cash 提出坍缩集合论（CST）作为后 ZFC 框架。

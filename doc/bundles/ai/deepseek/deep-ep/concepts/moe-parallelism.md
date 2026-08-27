@@ -30,7 +30,7 @@ MoE 层的前向传播包含三个步骤：
 - `topk_idx`：形状 `[num_tokens, num_topk]`，类型 `deep_ep.topk_idx_t`（默认 int64），存储每个 token 选中的专家索引，`-1` 表示无选择（填充位）
 - `topk_weights`：形状 `[num_tokens, num_topk]`，类型 `float32`，存储对应专家的 gating 权重
 
-路由决策通常由 [LPLB](/ai/deepseek/lplb)（负载均衡器）生成，以确保专家间的负载均衡。
+路由决策通常由 [LPLB](../../lplb/index.md)（负载均衡器）生成，以确保专家间的负载均衡。
 
 ## 专家并行策略
 
@@ -91,7 +91,7 @@ V2 的 combine 支持 `allow_multiple_reduction` 控制：
 ### EP + PP（流水线并行）
 
 流水线并行将模型按层分布到多个 GPU 上：
-- 使用 [DualPipe](/ai/deepseek/dual-pipe) 实现双向流水线
+- 使用 [DualPipe](../../dual-pipe/index.md) 实现双向流水线
 - ElasticBuffer 的 `pp_send()`/`pp_recv()` 提供 PP 通信原语
 - PP 和 EP 共享同一 ElasticBuffer 实例，减少内存开销
 
@@ -127,7 +127,7 @@ max_tokens_per_expert = (num_tokens / num_experts) * capacity_factor * top_k
 `expert_alignment` 参数控制每个专家接收 token 数的对齐粒度：
 - 默认 1：不对齐
 - 设置为 2 的幂（如 128/256）：每个专家接收的 token 数向上对齐到该值
-- 对齐后便于使用 [DeepGEMM](/ai/deepseek/deep-gemm) 等分组 GEMM 内核（需要规整的形状）
+- 对齐后便于使用 [DeepGEMM](../../deep-gemm/index.md) 等分组 GEMM 内核（需要规整的形状）
 
 ## V2 增强的 EP 特性
 
@@ -172,14 +172,14 @@ DeepSeek-V4/R1 引入的 Engram 机制利用 EP 通信基础设施实现远程 K
 - `engram_fetch()` 通过 RDMA 从远程 CPU 内存拉取需要的 KV 条目
 - 这本质上是 EP 通信的扩展应用，复用了 ElasticBuffer 的 RDMA 能力
 
-详见 [ElasticBuffer API](/ai/deepseek/deep-ep/references/buffer-elastic#engram远程-kv-缓存)。
+详见 ElasticBuffer API。
 
 ## 相关参考
 
 - [Dispatch/Combine 流程](dispatch-combine.md)
 - [低延迟模式](low-latency-mode.md)
-- [基础 MoE 示例](/ai/deepseek/deep-ep/examples/basic-moe)
-- [ElasticBuffer API](/ai/deepseek/deep-ep/references/buffer-elastic)
-- [LPLB](/ai/deepseek/lplb) — 专家负载均衡器
-- [DeepGEMM](/ai/deepseek/deep-gemm) — MoE 分组 GEMM 内核
-- [DualPipe](/ai/deepseek/dual-pipe) — 与 EP 组合的流水线并行
+- 基础 MoE 示例
+- ElasticBuffer API
+- [LPLB](../../lplb/index.md) — 专家负载均衡器
+- [DeepGEMM](../../deep-gemm/index.md) — MoE 分组 GEMM 内核
+- [DualPipe](../../dual-pipe/index.md) — 与 EP 组合的流水线并行

@@ -22,7 +22,7 @@ Jupyter 是数据科学与交互式计算的核心平台，从底层的 ZeroMQ �
 
 | 顺序 | 知识包 | 一句话简介 |
 |------|--------|-----------|
-| 1 | [jupyter-client](jupyter-client/README.md) | Jupyter 协议客户端——ZMQ 五通道通信（Shell/IO/Stdin/Control/HB）、内核生命周期管理、会话与消息签名、KernelManager/AsyncKernelManager、多内核并行（v8.9.1，协议 v5.4） |
+| 1 | [jupyter-client](jupyter-client/index.md) | Jupyter 协议客户端——ZMQ 五通道通信（Shell/IO/Stdin/Control/HB）、内核生命周期管理、会话与消息签名、KernelManager/AsyncKernelManager、多内核并行（v8.9.1，协议 v5.4） |
 
 ### 服务层：后端核心服务
 

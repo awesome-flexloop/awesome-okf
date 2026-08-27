@@ -320,7 +320,7 @@ messages.append({"role": "user", "content": tool_results})
 
 ## 流式工具调用处理
 
-在流式模式下处理工具调用需要累积 `input_json_delta` 片段，这在 [03-streaming.md](/python-sdk/concepts/03-streaming.md) 中有详细讲解。核心要点：
+在流式模式下处理工具调用需要累积 `input_json_delta` 片段，这在 [03-streaming.md](03-streaming.md) 中有详细讲解。核心要点：
 
 1. 监听 `content_block_start` 事件，当 `content_block.type == "tool_use"` 时，记录工具名称和 ID，并初始化一个空字符串用于累积 JSON
 2. 在 `content_block_delta` 事件中，如果是 `input_json_delta`，将 `partial_json` 追加到累积字符串
@@ -379,9 +379,9 @@ SDK 还提供了 `ToolRunner`（在 `lib.tools` 模块中），可以自动处�
 
 | 工具类型 | 说明 | 参考文档 |
 |---------|------|---------|
-| Memory Tool | 长期记忆存储，让 Claude 记住跨对话的信息 | [08-beta-agents.md](/python-sdk/concepts/08-beta-agents.md) |
-| MCP（Model Context Protocol） | 标准化的工具协议，支持接入外部工具服务 | [工具系统与 Beta API 参考](/python-sdk/references/tools-beta.md) |
-| Agent Toolset | 托管智能体的工具集，包含多种预置能力 | [08-beta-agents.md](/python-sdk/concepts/08-beta-agents.md) |
+| Memory Tool | 长期记忆存储，让 Claude 记住跨对话的信息 | [08-beta-agents.md](08-beta-agents.md) |
+| MCP（Model Context Protocol） | 标准化的工具协议，支持接入外部工具服务 | [工具系统与 Beta API 参考](../references/tools-beta.md) |
+| Agent Toolset | 托管智能体的工具集，包含多种预置能力 | [08-beta-agents.md](08-beta-agents.md) |
 
 这些工具通过 `client.beta` 命名空间访问，属于实验性功能，使用时会自动添加对应的 `anthropic-beta` 请求头。
 
@@ -421,8 +421,8 @@ tool_results.append({
 
 ## 相关概念
 
-- [Messages API 基础](/python-sdk/concepts/02-messages-basics.md) — 理解消息格式、content 块结构和 stop_reason 含义
-- [流式处理](/python-sdk/concepts/03-streaming.md) — 学习如何在流式模式下累积和处理工具调用的 JSON 增量
-- [Beta Agents 体系](/python-sdk/concepts/08-beta-agents.md) — 深入了解内置 Memory 工具、MCP 和托管智能体
-- [工具调用示例](/python-sdk/examples/03-tool-use.md) — 完整可运行的天气查询助手示例代码
-- [Anthropic Python SDK 工具系统与 Beta API 参考](/python-sdk/references/tools-beta.md) — beta_tool 装饰器、BetaToolRunner、Beta 命名空间的完整 API 参考
+- [Messages API 基础](02-messages-basics.md) — 理解消息格式、content 块结构和 stop_reason 含义
+- [流式处理](03-streaming.md) — 学习如何在流式模式下累积和处理工具调用的 JSON 增量
+- [Beta Agents 体系](08-beta-agents.md) — 深入了解内置 Memory 工具、MCP 和托管智能体
+- [工具调用示例](../examples/03-tool-use.md) — 完整可运行的天气查询助手示例代码
+- [Anthropic Python SDK 工具系统与 Beta API 参考](../references/tools-beta.md) — beta_tool 装饰器、BetaToolRunner、Beta 命名空间的完整 API 参考

@@ -33,7 +33,7 @@ sources:
 
 ## 六层递归深度
 
-红楼梦解读将主要人物置于六层递归光谱上（详见 [元递归](/concepts/06-meta-recursion.md)）：
+红楼梦解读将主要人物置于六层递归光谱上（详见 [元递归](../concepts/06-meta-recursion.md)）：
 
 $$\psi^0 \rightarrow \psi^1 \rightarrow \psi^2 \rightarrow \psi^3 \rightarrow \psi(\psi) \rightarrow \psi^\infty$$
 
@@ -98,10 +98,10 @@ $$\psi^0 \rightarrow \psi^1 \rightarrow \psi^2 \rightarrow \psi^3 \rightarrow \p
 
 ## 相关概念
 
-- [ψ = ψ(ψ) — 自指递归的终极方程](/concepts/00-psi-equation.md)
-- [元递归 — 递归的递归，意识的自我意识](/concepts/06-meta-recursion.md)
-- [现实结晶 — 可能性塌缩为实在](/concepts/05-reality-crystallization.md)
-- [观察者形成 — 意识在递归中觉醒](/concepts/03-observer-formation.md)
-- [统一回归 — 万法归一，一归何处](/concepts/07-unity-return.md)
+- [ψ = ψ(ψ) — 自指递归的终极方程](../concepts/00-psi-equation.md)
+- [元递归 — 递归的递归，意识的自我意识](../concepts/06-meta-recursion.md)
+- [现实结晶 — 可能性塌缩为实在](../concepts/05-reality-crystallization.md)
+- [观察者形成 — 意识在递归中觉醒](../concepts/03-observer-formation.md)
+- [统一回归 — 万法归一，一归何处](../concepts/07-unity-return.md)
 
 [^1]: dw.cash 收录 hongloumeng 著作，含 40 章分 8 部（事实 F-025）；六层递归深度模型与 Λ/Ξ/Ω 算子对应元递归概念（F-032）。

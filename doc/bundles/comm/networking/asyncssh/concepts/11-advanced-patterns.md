@@ -330,10 +330,10 @@ conn = await asyncssh.connect('alias-in-config',
 
 ## 相关概念
 
-- [异步连接详解](/concepts/02-async-connection.md) —— connect() 参数全览
-- [端口转发](/concepts/09-port-forwarding.md) —— 转发详解
-- [服务端开发](/concepts/10-server.md) —— 服务端配置
-- [实战示例：并行连接](/examples/parallel-connections.md)
+- [异步连接详解](02-async-connection.md) —— connect() 参数全览
+- [端口转发](09-port-forwarding.md) —— 转发详解
+- [服务端开发](10-server.md) —— 服务端配置
+- [实战示例：并行连接](../examples/parallel-connections.md)
 - [paramiko 高级模式](../../paramiko/concepts/10-advanced-patterns.md)（同步模式对比）
 
-[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](/references/asyncssh-source.md)。
+[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](../references/asyncssh-source.md)。

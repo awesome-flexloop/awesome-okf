@@ -84,7 +84,7 @@ README 底部的 Quick Links 将分散在不同位置的社区资源串联起来
 
 ## 相关链接
 
-- [讨论分类与使用指南](/concepts/01-discussion-categories.md)
-- [社区礼仪与有效提问](/concepts/02-community-etiquette.md)
-- [发起讨论示例](/examples/start-discussion.md)
-- [社区讨论仓库资源索引](/references/discussions-source.md)
+- [讨论分类与使用指南](01-discussion-categories.md)
+- [社区礼仪与有效提问](02-community-etiquette.md)
+- [发起讨论示例](../examples/start-discussion.md)
+- [社区讨论仓库资源索引](../references/discussions-source.md)

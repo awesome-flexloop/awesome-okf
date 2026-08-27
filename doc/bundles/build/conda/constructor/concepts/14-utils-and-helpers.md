@@ -312,6 +312,6 @@ python -m constructor._schema
 
 ## 下一步
 
-- [03-construct.yaml 配置规范](../03-construct-yaml-schema.md)：了解 Schema 校验中使用的 Pydantic 模型
-- [12-构建输出产物](../12-build-outputs.md)：了解 hash_files 在 build_outputs 中的应用
-- [08-Preconda Payload 准备](../08-preconda-payload.md)：了解 yaml_to_string 在 .condarc 生成中的应用
+- 03-construct.yaml 配置规范：了解 Schema 校验中使用的 Pydantic 模型
+- 12-构建输出产物：了解 hash_files 在 build_outputs 中的应用
+- 08-Preconda Payload 准备：了解 yaml_to_string 在 .condarc 生成中的应用

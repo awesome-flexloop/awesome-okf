@@ -317,6 +317,6 @@ systemctl restart qm.service
 
 ## 相关概念
 
-- [嵌套隔离架构](/bundles/containers/qm/concepts/01-nested-architecture.md)：了解子系统如何作为嵌套容器运行在 QM 内
-- [KVM 子系统使用](/bundles/containers/qm/examples/02-kvm-subsystem.md)：KVM 子系统的实战使用示例
-- [创建 QM 虚拟机环境](/bundles/containers/qm/examples/01-vm-setup.md)：在虚拟机中测试包含子系统的 QM 环境
+- [嵌套隔离架构](01-nested-architecture.md)：了解子系统如何作为嵌套容器运行在 QM 内
+- [KVM 子系统使用](../examples/02-kvm-subsystem.md)：KVM 子系统的实战使用示例
+- [创建 QM 虚拟机环境](../examples/01-vm-setup.md)：在虚拟机中测试包含子系统的 QM 环境

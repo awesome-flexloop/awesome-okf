@@ -192,6 +192,6 @@ export EP_JIT_PRINT_COMPILER_COMMAND=1  # 打印 NVCC 编译命令
 
 ## 相关参考
 
-- [ElasticBuffer API](/ai/deepseek/deep-ep/references/buffer-elastic)
-- [JIT 编译概念](/ai/deepseek/deep-ep/concepts/jit-compilation)
-- [公开 API 概览](/ai/deepseek/deep-ep/references/api)
+- ElasticBuffer API
+- JIT 编译概念
+- 公开 API 概览

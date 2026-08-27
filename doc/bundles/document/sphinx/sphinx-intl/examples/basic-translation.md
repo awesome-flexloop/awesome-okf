@@ -300,7 +300,7 @@ PO 文件就是按文档拆分的（因为设置了 `gettext_compact = False`）
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [翻译工作流原理](/concepts/03-translation-workflow.md)
-- [CLI 命令体系详解](/concepts/02-cli-commands.md)
+- [5分钟快速上手](../concepts/01-getting-started.md)
+- [翻译工作流原理](../concepts/03-translation-workflow.md)
+- [CLI 命令体系详解](../concepts/02-cli-commands.md)
 - [Transifex 协作翻译示例](transifex-collaboration.md)

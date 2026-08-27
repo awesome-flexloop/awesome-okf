@@ -187,7 +187,7 @@ http://localhost:8000/render/gh-username/repo/abc1234.../lab/index.html
 
 ## 相关概念
 
-- [03-BinderLite Web应用](/concepts/03-binderlite-web.md)
-- [05-Publisher存储系统](/concepts/05-publisher-system.md)
-- [06-构建流程与缓存策略](/concepts/06-build-process.md)
-- [08-整体架构总结](/concepts/08-architecture-summary.md)
+- [03-BinderLite Web应用](../concepts/03-binderlite-web.md)
+- [05-Publisher存储系统](../concepts/05-publisher-system.md)
+- [06-构建流程与缓存策略](../concepts/06-build-process.md)
+- [08-整体架构总结](../concepts/08-architecture-summary.md)

@@ -326,6 +326,6 @@ Jupyter 内核（ipykernel）环境中的异步行为略有不同：
 
 ## 相关概念
 
-- [代码执行管线](/concepts/05-execution-pipeline.md)
-- [Shell 生命周期](/concepts/03-shell-lifecycle.md)
-- [魔法命令系统](/concepts/04-magic-system.md)
+- [代码执行管线](05-execution-pipeline.md)
+- [Shell 生命周期](03-shell-lifecycle.md)
+- [魔法命令系统](04-magic-system.md)

@@ -112,7 +112,7 @@ sources:
 
 ## 相关概念
 
-- [四大版本系统](/concepts/01-four-systems.md)
-- [为什么读帛书本](/concepts/00-why-boshu.md)
-- [核心异文选读](/concepts/04-key-variants.md)
-- [开篇对照阅读示例](/examples/01-first-chapters.md)
+- [四大版本系统](01-four-systems.md)
+- [为什么读帛书本](00-why-boshu.md)
+- [核心异文选读](04-key-variants.md)
+- [开篇对照阅读示例](../examples/01-first-chapters.md)

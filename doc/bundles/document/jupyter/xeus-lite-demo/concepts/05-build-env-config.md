@@ -158,4 +158,4 @@ A: 每个插件都会增加静态文件大小。建议只安装必要的插件�
 - [双环境模型](02-dual-environment.md) — 理解构建环境与运行时环境的区别
 - [运行时环境配置](04-runtime-env-config.md) — 用户包环境配置
 - [CI/CD 流水线](06-cicd-pipeline.md) — GitHub Actions 工作原理
-- [添加 JupyterLite 插件](/examples/05-add-jupyterlite-plugins.md) — 插件安装实操
+- [添加 JupyterLite 插件](../examples/05-add-jupyterlite-plugins.md) — 插件安装实操

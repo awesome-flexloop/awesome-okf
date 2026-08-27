@@ -24,9 +24,9 @@ sources:
 
 ## 概述
 
-KaTeX 官网 [Supported Functions](https://katex.org/docs/supported) 页面按逻辑分组列出 KaTeX 支持的 TeX 函数，共 **14 个 H2 分类**[^web-supported]。本文档说明各分类的内容范围、使用要点和安全注意事项，作为查找命令的导航；完整的函数清单以官网页面为准，字母序索引见 [支持表](/concepts/20-support-table.md)。
+KaTeX 官网 [Supported Functions](https://katex.org/docs/supported) 页面按逻辑分组列出 KaTeX 支持的 TeX 函数，共 **14 个 H2 分类**[^web-supported]。本文档说明各分类的内容范围、使用要点和安全注意事项，作为查找命令的导航；完整的函数清单以官网页面为准，字母序索引见 [支持表](20-support-table.md)。
 
-从源码视角看，这些函数的实现位于 `src/functions/` 目录（共 43 个 .ts 文件），通过 `defineFunction` 注册到全局表中[^src]。注册表机制详见 [函数注册表](/concepts/08-function-registry.md)。
+从源码视角看，这些函数的实现位于 `src/functions/` 目录（共 43 个 .ts 文件），通过 `defineFunction` 注册到全局表中[^src]。注册表机制详见 [函数注册表](08-function-registry.md)。
 
 ## 分类体系
 
@@ -56,7 +56,7 @@ KaTeX 支持多种数学环境[^web-supported]：
 - **cases**：`cases`（分段函数）
 - **数组**：`array`
 
-> **注意**：KaTeX 不支持 LaTeX 的 `align` 环境（因为 LaTeX 不在数学模式中支持 `align`），应使用数学模式中的 `aligned` 环境[^facts]。详见 [常见问题](/concepts/21-common-issues.md)。
+> **注意**：KaTeX 不支持 LaTeX 的 `align` 环境（因为 LaTeX 不在数学模式中支持 `align`），应使用数学模式中的 `aligned` 环境[^facts]。详见 [常见问题](21-common-issues.md)。
 
 ### 4. HTML（HTML 扩展）
 
@@ -73,7 +73,7 @@ KaTeX 提供非标准的 HTML 扩展命令，可直接生成 HTML 属性和元�
 2. 完全信任输入需传 `trust: true`；推荐使用 trust 函数仅启用部分命令或 URL
 3. `\html` 前缀命令（`\htmlClass` 等）是非标准扩展，还需放宽 `strict` 选项中的 `htmlExtension` 设置[^web-supported]
 
-trust 控制的七类命令及 context 结构详见 [安全与错误处理](/concepts/18-security-and-errors.md#trust)。
+trust 控制的七类命令及 context 结构详见 [安全与错误处理](18-security-and-errors.md#trust)。
 
 ### 5. Letters and Unicode（字母与 Unicode）
 
@@ -113,7 +113,7 @@ KaTeX 对 Unicode 字符的支持策略[^web-supported]：
 - 展开控制：`\expandafter`、`\noexpand`、`\relax`
 - 参数占位符：`#1`~`#9`，`##` 转义为 `#`
 
-宏也可通过 `settings.macros` 选项或 `__defineMacro` API 注册。宏系统的完整说明见 [宏系统](/concepts/09-macro-system.md)；持久宏的安全边界见 [安全与错误处理](/concepts/18-security-and-errors.md)。
+宏也可通过 `settings.macros` 选项或 `__defineMacro` API 注册。宏系统的完整说明见 [宏系统](09-macro-system.md)；持久宏的安全边界见 [安全与错误处理](18-security-and-errors.md)。
 
 ### 9. Operators（运算符）
 
@@ -171,7 +171,7 @@ KaTeX 支持所有 TeX 单位，用于 `\kern`、`\rule`、`\hspace` 等命令�
 - **相对单位**：`em`、`ex`、`mu`（数学单位，1mu = 1/18 em）
 - **绝对单位**：`pt`、`pc`、`in`、`cm`、`mm`、`bp`、`dd`、`cc`、`sp`
 
-绝对单位相对于默认 TeX 字号 10pt 缩放，例如 `\kern1cm` 等价于 `\kern2.845275em`。完整的单位换算说明见 [字体与单位](/concepts/17-fonts-and-units.md#tex-单位与绝对长度)。
+绝对单位相对于默认 TeX 字号 10pt 缩放，例如 `\kern1cm` 等价于 `\kern2.845275em`。完整的单位换算说明见 [字体与单位](17-fonts-and-units.md#tex-单位与绝对长度)。
 
 ## 源码对应关系
 
@@ -189,18 +189,18 @@ KaTeX 支持所有 TeX 单位，用于 `\kern`、`\rule`、`\hspace` 等命令�
 ## 查阅建议
 
 1. **知道分类，浏览命令**：在本文档或官网 Supported Functions 页面按分类查找
-2. **知道形状，不知名称**：使用字母序的 [支持表](/concepts/20-support-table.md)，或使用 [Detexify](https://detexify.kirelabs.org/classify.html) 手写识别
+2. **知道形状，不知名称**：使用字母序的 [支持表](20-support-table.md)，或使用 [Detexify](https://detexify.kirelabs.org/classify.html) 手写识别
 3. **确认是否支持**：查阅 [Support Table](https://katex.org/docs/support_table)，该页面同时列出支持和不支持的函数
 4. **深入实现**：根据命令名称在 `src/functions/` 目录找到对应源文件
 
 ## 相关概念
 
-- [支持表](/concepts/20-support-table.md) — 字母序支持表与 Detexify 工具
-- [函数注册表](/concepts/08-function-registry.md) — defineFunction 机制与 FunctionSpec
-- [宏系统](/concepts/09-macro-system.md) — 宏定义与展开机制
-- [配置系统](/concepts/10-settings-options.md) — strict、trust、colorIsTextColor 等选项
-- [安全与错误处理](/concepts/18-security-and-errors.md) — HTML 扩展的 trust 安全要求
-- [常见问题](/concepts/21-common-issues.md) — align vs aligned、MathJax 差异等
+- [支持表](20-support-table.md) — 字母序支持表与 Detexify 工具
+- [函数注册表](08-function-registry.md) — defineFunction 机制与 FunctionSpec
+- [宏系统](09-macro-system.md) — 宏定义与展开机制
+- [配置系统](10-settings-options.md) — strict、trust、colorIsTextColor 等选项
+- [安全与错误处理](18-security-and-errors.md) — HTML 扩展的 trust 安全要求
+- [常见问题](21-common-issues.md) — align vs aligned、MathJax 差异等
 
 [^web-supported]: 官网 Supported Functions 页面，https://katex.org/docs/supported
 [^web-options]: 官网 Options 页面，https://katex.org/docs/options

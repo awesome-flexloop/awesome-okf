@@ -293,4 +293,4 @@ Dependabot PR需要人工审查和合并。
 - [Helm部署流程](06-helm-deploy-process.md)
 - [版本更新机制](05-version-update.md)
 - [测试与密钥管理](08-testing-and-secrets.md)
-- [CI/CD信源](/references/cicd-source.md)
+- [CI/CD信源](../references/cicd-source.md)

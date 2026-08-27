@@ -139,6 +139,6 @@ ocilayout/
 
 ## 相关概念
 
-- [olot 定位与 ModelCar 标准](/bundles/containers/olot/concepts/00-introduction.md)：项目整体介绍
-- [后端抽象层](/bundles/containers/olot/concepts/02-backends.md)：镜像拉取推送的后端实现
-- [命令行基本使用](/bundles/containers/olot/examples/01-cli-usage.md)：CLI 操作示例
+- [olot 定位与 ModelCar 标准](00-introduction.md)：项目整体介绍
+- [后端抽象层](02-backends.md)：镜像拉取推送的后端实现
+- [命令行基本使用](../examples/01-cli-usage.md)：CLI 操作示例

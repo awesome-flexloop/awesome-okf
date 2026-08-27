@@ -16,7 +16,7 @@ sources:
 
 ## 概述
 
-[myst.yml](../../../../../../external/libs/jupyter/surveys/docs/myst.yml) 是MyST Markdown文档引擎的站点配置文件，定义了项目元数据、插件、目录结构和主题选项。该文件位于`docs/`目录下，是文档站点的核心配置。
+myst.yml 是MyST Markdown文档引擎的站点配置文件，定义了项目元数据、插件、目录结构和主题选项。该文件位于`docs/`目录下，是文档站点的核心配置。
 
 ## 完整配置结构
 

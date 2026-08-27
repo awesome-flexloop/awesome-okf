@@ -136,8 +136,8 @@ SDK 包含 `py.typed` 文件（PEP 561），完全支持 mypy、pyright 等静�
 
 ## 相关概念
 
-- [认证体系](/concepts/01-auth-system.md) — 理解 Token/JWT/OAuth 四种认证方式的选择和使用
-- [客户端初始化](/concepts/02-client-init.md) — 配置 base_url、超时、自定义 http_client、日志
-- [对话与流式](/concepts/03-chat-streaming.md) — SSE 流式对话的核心机制
-- [WebSocket 实时通信](/concepts/07-websockets-realtime.md) — 实时对话与音频的 WebSocket 通道
-- [Coze 客户端入口与基础设施参考](/references/coze-client.md) — 配置常量、异常体系、HTTP 层 API
+- [认证体系](01-auth-system.md) — 理解 Token/JWT/OAuth 四种认证方式的选择和使用
+- [客户端初始化](02-client-init.md) — 配置 base_url、超时、自定义 http_client、日志
+- [对话与流式](03-chat-streaming.md) — SSE 流式对话的核心机制
+- [WebSocket 实时通信](07-websockets-realtime.md) — 实时对话与音频的 WebSocket 通道
+- [Coze 客户端入口与基础设施参考](../references/coze-client.md) — 配置常量、异常体系、HTTP 层 API

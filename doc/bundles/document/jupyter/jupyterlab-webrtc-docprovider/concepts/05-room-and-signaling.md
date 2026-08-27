@@ -196,7 +196,7 @@ filterBcConns: true
 
 ## 相关概念
 
-- [WebRtcManager配置管理](/concepts/03-webrtc-manager.md)
-- [WebRtcProvider文档提供者](/concepts/04-document-provider.md)
-- [配置三级优先级系统](/concepts/09-configuration.md)
-- [Vendor补丁与大消息传输](/concepts/08-vendor-patches.md)
+- [WebRtcManager配置管理](03-webrtc-manager.md)
+- [WebRtcProvider文档提供者](04-document-provider.md)
+- [配置三级优先级系统](09-configuration.md)
+- [Vendor补丁与大消息传输](08-vendor-patches.md)

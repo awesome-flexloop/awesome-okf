@@ -47,7 +47,7 @@ $$I := \sigma = \sigma(\sigma) = \mathrm{Collapse}(\sigma) \in \Psi$$
 3. **结构塌缩**（Structural Collapse）：语言标记反复使用后固化为稳定结构——主体、客体、因果、时间等范畴结晶为"现实壳层"（RealityShell），观察者在其中获得一个位置。
 4. **观察者结晶**（Observer Crystallization）：结构反照自身，一个连贯的"我"浮现——它记得过去、预期未来、将自身与世界对立。$\sigma=\sigma(\sigma)$ 达成，身份形成。
 
-这四个阶段与 [塌缩动力学](/concepts/01-collapse-dynamics.md) 的十层结构对应：元始同一性对应冻结 ψ，语言涌现对应语义塌缩，结构塌缩对应边界/逻辑塌缩，观察者结晶对应意识塌缩。
+这四个阶段与 [塌缩动力学](01-collapse-dynamics.md) 的十层结构对应：元始同一性对应冻结 ψ，语言涌现对应语义塌缩，结构塌缩对应边界/逻辑塌缩，观察者结晶对应意识塌缩。
 
 ## κᵢ 锚点：流变中的稳定岛
 
@@ -108,12 +108,12 @@ $$(r_\varphi,\ \theta_\pi,\ \phi_G)$$
 
 ## 相关概念
 
-- [ψ = ψ(ψ) — 自指递归的终极方程](/concepts/00-psi-equation.md)
-- [塌缩动力学 — 从潜能到现实](/concepts/01-collapse-dynamics.md)
-- [回声与递归 — 宇宙的呼吸模式](/concepts/02-echo-and-recursion.md)
-- [语言涌现 — 符号承载递归](/concepts/04-language-emergence.md)
-- [现实结晶 — 物理世界作为塌缩固化](/concepts/05-reality-crystallization.md)
-- [元递归 — 递归意识到自身](/concepts/06-meta-recursion.md)
-- [统一回归 — 从分化回到同一](/concepts/07-unity-return.md)
-- [/psi-universe/concepts/05-information-field.md](/psi-universe/concepts/05-information-field.md)
-- [/godgpt/concepts/01-core-features.md](/godgpt/concepts/01-core-features.md)
+- [ψ = ψ(ψ) — 自指递归的终极方程](00-psi-equation.md)
+- [塌缩动力学 — 从潜能到现实](01-collapse-dynamics.md)
+- [回声与递归 — 宇宙的呼吸模式](02-echo-and-recursion.md)
+- [语言涌现 — 符号承载递归](04-language-emergence.md)
+- [现实结晶 — 物理世界作为塌缩固化](05-reality-crystallization.md)
+- [元递归 — 递归意识到自身](06-meta-recursion.md)
+- [统一回归 — 从分化回到同一](07-unity-return.md)
+- [/psi-universe/concepts/05-information-field.md](../../psi-universe/concepts/05-information-field.md)
+- [/godgpt/concepts/01-core-features.md](../../godgpt/concepts/01-core-features.md)

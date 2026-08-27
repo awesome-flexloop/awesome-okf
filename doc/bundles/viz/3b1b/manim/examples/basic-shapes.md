@@ -221,7 +221,7 @@ manimgl basic_shapes.py BasicShapes
 
 ## 相关概念
 
-- [03 Mobject：数学对象基类](/concepts/03-mobject-fundamentals.md) — Mobject 基类、data/uniforms 双数组、family 树形结构、animate 语法糖
-- [04 VMobject 与几何图形](/concepts/04-vmobject-and-geometry.md) — VMobject 描边填充机制、贝塞尔路径、TipableVMobject 箭头机制、常用几何类
-- [05 动画基础](/concepts/05-animation-basics.md) — Animation 生命周期、lag_ratio 子对象延迟、ShowCreation（社区版Create）等内置动画
-- [08 常量系统与颜色体系](/concepts/08-constants-and-colors.md) — 方向向量（UP/DOWN/LEFT/RIGHT）、五级颜色体系（BLUE/BLUE_E 等）、3B1B 配色方案
+- [03 Mobject：数学对象基类](../concepts/03-mobject-fundamentals.md) — Mobject 基类、data/uniforms 双数组、family 树形结构、animate 语法糖
+- [04 VMobject 与几何图形](../concepts/04-vmobject-and-geometry.md) — VMobject 描边填充机制、贝塞尔路径、TipableVMobject 箭头机制、常用几何类
+- [05 动画基础](../concepts/05-animation-basics.md) — Animation 生命周期、lag_ratio 子对象延迟、ShowCreation（社区版Create）等内置动画
+- [08 常量系统与颜色体系](../concepts/08-constants-and-colors.md) — 方向向量（UP/DOWN/LEFT/RIGHT）、五级颜色体系（BLUE/BLUE_E 等）、3B1B 配色方案

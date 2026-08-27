@@ -260,9 +260,9 @@ pub enum InitialHistory {
 
 ## 相关概念
 
-- [CodeWhale 简介](/concepts/00-introduction.md) — 项目概述与功能特性
-- [Agent 核心运行时](/concepts/02-agent-core.md) — Thread/Session 和 Engine 架构
-- [工具系统](/concepts/04-tool-system.md) — ToolRegistry 和工具调度
-- [MCP 协议集成](/concepts/03-mcp-protocol.md) — MCP 服务器配置和工具代理
-- [沙箱与执行策略](/concepts/07-sandbox-execpolicy.md) — 权限模式和安全控制
-- [Fleet 工作流示例](/examples/02-fleet-workflow.md) — 多 Agent 编排和 Workflow
+- [CodeWhale 简介](../concepts/00-introduction.md) — 项目概述与功能特性
+- [Agent 核心运行时](../concepts/02-agent-core.md) — Thread/Session 和 Engine 架构
+- [工具系统](../concepts/04-tool-system.md) — ToolRegistry 和工具调度
+- [MCP 协议集成](../concepts/03-mcp-protocol.md) — MCP 服务器配置和工具代理
+- [沙箱与执行策略](../concepts/07-sandbox-execpolicy.md) — 权限模式和安全控制
+- [Fleet 工作流示例](02-fleet-workflow.md) — 多 Agent 编排和 Workflow

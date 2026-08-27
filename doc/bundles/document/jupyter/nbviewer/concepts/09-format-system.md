@@ -80,5 +80,5 @@ sources:
 
 ## 相关文档
 
-- [Notebook渲染管线](/concepts/06-render-pipeline.md)
-- [Handler继承体系](/concepts/04-handler-hierarchy.md)
+- [Notebook渲染管线](06-render-pipeline.md)
+- [Handler继承体系](04-handler-hierarchy.md)

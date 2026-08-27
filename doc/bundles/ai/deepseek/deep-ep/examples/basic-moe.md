@@ -235,7 +235,7 @@ if __name__ == '__main__':
 - `topk_idx`：top-k 专家索引 `[num_tokens, top_k]`，类型为 `deep_ep.topk_idx_t`
 - `topk_weights`：gating 权重 `[num_tokens, top_k]`，float32
 - `num_experts`：全局专家总数
-- `expert_alignment`：专家 token 对齐粒度，建议设为 128 的倍数以兼容 [DeepGEMM](/ai/deepseek/deep-gemm) 分组 GEMM
+- `expert_alignment`：专家 token 对齐粒度，建议设为 128 的倍数以兼容 [DeepGEMM](../../deep-gemm/index.md) 分组 GEMM
 
 ### 专家计算
 
@@ -251,8 +251,8 @@ if __name__ == '__main__':
 
 ## 相关参考
 
-- [ElasticBuffer API](/ai/deepseek/deep-ep/references/buffer-elastic)
-- [Dispatch/Combine 流程](/ai/deepseek/deep-ep/concepts/dispatch-combine)
-- [MoE 专家并行](/ai/deepseek/deep-ep/concepts/moe-parallelism)
+- ElasticBuffer API
+- Dispatch/Combine 流程
+- MoE 专家并行
 - [计算-通信重叠示例](event-overlap.md)
 - [ElasticBuffer 使用示例](elastic-buffer.md)

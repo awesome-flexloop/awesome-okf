@@ -244,7 +244,7 @@ CI 只执行3个 Notebook（Data、Fasta、R），覆盖三个关键维度：
 
 ## 相关概念
 
-- [演示能力维度与多内核支持](/concepts/04-demo-capabilities.md)
-- [数据文件与多格式查看器](/concepts/06-data-files.md)
-- [工作区布局与交互体验](/concepts/07-workspace-layout.md)
-- [实战：在 Binder 启动 JupyterLab 演示](/examples/01-launch-binder.md)
+- [演示能力维度与多内核支持](04-demo-capabilities.md)
+- [数据文件与多格式查看器](06-data-files.md)
+- [工作区布局与交互体验](07-workspace-layout.md)
+- [实战：在 Binder 启动 JupyterLab 演示](../examples/01-launch-binder.md)

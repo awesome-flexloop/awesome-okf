@@ -276,7 +276,7 @@ nil gate 表示无门控——每个调用都运行。`SetGate` 支持运行时�
 
 ## 相关概念
 
-- [项目架构](/concepts/01-project-architecture.md)——boot 如何组装 Agent
-- [ACP 协议](/concepts/03-acp-protocol.md)——ACP 如何驱动 Agent.Run
-- [Checkpoint 与恢复](/concepts/06-checkpoint-recovery.md)——Session 持久化和回滚
-- [Fleet 与 Subagent](/concepts/07-fleet-subagents.md)——scheduler 和并行 agent
+- [项目架构](01-project-architecture.md)——boot 如何组装 Agent
+- [ACP 协议](03-acp-protocol.md)——ACP 如何驱动 Agent.Run
+- [Checkpoint 与恢复](06-checkpoint-recovery.md)——Session 持久化和回滚
+- [Fleet 与 Subagent](07-fleet-subagents.md)——scheduler 和并行 agent

@@ -380,10 +380,10 @@ python bytecode_dissection.py
 
 ## 相关概念
 
-* [字节码执行（§7）](/concepts/07-bytecode-execution.md)
-* [编译器流水线（§8）](/concepts/08-compiler-pipeline.md)
-* [解释器与栈帧（§6）](/concepts/06-interpreter-frame.md)
-* [对象模型（§2）](/concepts/02-object-model.md)
-* [CPython 源码信源登记](/references/cpython-source.md)
+* [字节码执行（§7）](../concepts/07-bytecode-execution.md)
+* [编译器流水线（§8）](../concepts/08-compiler-pipeline.md)
+* [解释器与栈帧（§6）](../concepts/06-interpreter-frame.md)
+* [对象模型（§2）](../concepts/02-object-model.md)
+* [CPython 源码信源登记](../references/cpython-source.md)
 
-[^cpython-source]: CPython 3.16.0a0 源码，字节码定义于 `Include/opcode.h`、`Include/opcode_ids.h`，解释主循环位于 `Python/ceval.c`（`_PyEval_EvalFrameDefault`），指令语义定义于 `Python/bytecodes.c`，反汇编器为标准库 `Lib/dis.py`，见本 bundle 信源登记 [references/cpython-source.md](/references/cpython-source.md)。
+[^cpython-source]: CPython 3.16.0a0 源码，字节码定义于 `Include/opcode.h`、`Include/opcode_ids.h`，解释主循环位于 `Python/ceval.c`（`_PyEval_EvalFrameDefault`），指令语义定义于 `Python/bytecodes.c`，反汇编器为标准库 `Lib/dis.py`，见本 bundle 信源登记 [references/cpython-source.md](../references/cpython-source.md)。

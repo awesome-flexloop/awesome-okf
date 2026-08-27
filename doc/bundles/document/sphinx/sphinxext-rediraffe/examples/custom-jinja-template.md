@@ -303,6 +303,6 @@ cat _build/html/old-page.html
 
 ## 相关概念
 
-- [Jinja2模板系统](/concepts/06-jinja-templates.md)
-- [配置项详解](/concepts/04-configuration.md)
-- [基础重定向配置](/examples/basic-redirects.md)
+- [Jinja2模板系统](../concepts/06-jinja-templates.md)
+- [配置项详解](../concepts/04-configuration.md)
+- [基础重定向配置](basic-redirects.md)

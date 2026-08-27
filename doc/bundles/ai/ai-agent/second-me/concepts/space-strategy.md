@@ -837,14 +837,14 @@ class ChatService:
 
 | 文件 | 职责 |
 |------|------|
-| [strategies/base.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/strategies/base.py) | Space 策略基类、模板方法、消息格式化 |
-| [strategies/host_strategies.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/strategies/host_strategies.py) | 主持人开场/总结策略 |
-| [strategies/participant_strategy.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/strategies/participant_strategy.py) | 参与者讨论策略 |
-| [context/context_manager.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/context/context_manager.py) | 讨论上下文管理器（轮次/消息/状态） |
-| [context/factory.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/context/factory.py) | 上下文管理器工厂 |
-| [services/discussion_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/services/discussion_service.py) | 讨论流程编排、策略链使用、跨实例客户端 |
-| [space_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/space_service.py) | Space CRUD、异步讨论线程、分享功能 |
-| [space_routes.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/space_routes.py) | Space REST API 路由 |
-| [kernel2/services/prompt_builder.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/kernel2/services/prompt_builder.py) | 策略基类、基础/角色/知识增强策略 |
-| [kernel2/services/chat_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/kernel2/services/chat_service.py) | 聊天服务、策略链构建、流式响应处理 |
-| [kernel2/services/message_builder.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/kernel2/services/message_builder.py) | 多轮消息构建、策略链实例化 |
+| strategies/base.py | Space 策略基类、模板方法、消息格式化 |
+| strategies/host_strategies.py | 主持人开场/总结策略 |
+| strategies/participant_strategy.py | 参与者讨论策略 |
+| context/context_manager.py | 讨论上下文管理器（轮次/消息/状态） |
+| context/factory.py | 上下文管理器工厂 |
+| services/discussion_service.py | 讨论流程编排、策略链使用、跨实例客户端 |
+| space_service.py | Space CRUD、异步讨论线程、分享功能 |
+| space_routes.py | Space REST API 路由 |
+| kernel2/services/prompt_builder.py | 策略基类、基础/角色/知识增强策略 |
+| kernel2/services/chat_service.py | 聊天服务、策略链构建、流式响应处理 |
+| kernel2/services/message_builder.py | 多轮消息构建、策略链实例化 |

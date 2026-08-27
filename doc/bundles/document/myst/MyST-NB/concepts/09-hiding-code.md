@@ -195,4 +195,4 @@ nb_merge_streams = True
 - [渲染与 MIME 类型](06-render-and-mime.md)
 - [配置系统](04-config-system.md)
 - [MyST Notebook 文件格式](02-notebook-format.md)
-- [代码隐藏实战示例](/examples/04-hiding-code.md)
+- [代码隐藏实战示例](../examples/04-hiding-code.md)

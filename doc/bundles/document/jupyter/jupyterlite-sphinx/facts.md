@@ -78,7 +78,7 @@ sources:
 - F-043: _try_examples.py:63 — 忽略 `.. plot::` 和 `.. only::` 指令下的内容
 - F-044: _try_examples.py:186-225 — _process_latex 将 `:math:\`...\`` 转换为 `$...$`，`.. math::` 块转换为 `$$ ... $$`
 - F-045: _try_examples.py:228-269 — _process_literal_blocks 将 RST `::` 字面量块转换为 Markdown 代码围栏（```）
-- F-046: _try_examples.py:155-171 — _convert_links 将 Sphinx 风格链接（`text <url>`_）转换为 Markdown 链接（[text](url)）
+- F-046: _try_examples.py:155-171 — _convert_links 将 Sphinx 风格链接（`text <url>`_）转换为 Markdown 链接（text）
 - F-047: _try_examples.py:174-183 — _strip_ref_identifiers 移除 Sphinx 交叉引用标识符（[R4c2dbc17006a-1]_ → [1]_）
 - F-048: _try_examples.py:334-416 — insert_try_examples_directive 在 autodoc 处理后的 docstring 中自动插入 `.. try_examples::` 指令，支持 `.. disable_try_examples` 注释禁用，识别 numpydoc 和 sphinx.ext.napoleon 两种格式的 Examples 节
 - F-049: jupyterlite_sphinx.py:987-1010 — 当 global_enable_try_examples 为 True 时，自动连接 source-read（.py 文件）和 autodoc-process-docstring 事件处理

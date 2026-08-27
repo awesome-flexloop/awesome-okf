@@ -368,10 +368,10 @@ declare module '@jupyter/chat' {
 
 ## 相关概念
 
-- [消息生命周期](/concepts/message-lifecycle.md)
-- [模型层架构](/concepts/model-architecture.md)
-- [扩展点系统](/concepts/extension-points.md)
-- [核心类型参考](/references/api-types.md)
+- [消息生命周期](message-lifecycle.md)
+- [模型层架构](model-architecture.md)
+- [扩展点系统](extension-points.md)
+- [核心类型参考](../references/api-types.md)
 
 [^chat-widget.tsx]: ChatWidget 前端组件源码
 [^input-model-ts]: input-model.ts

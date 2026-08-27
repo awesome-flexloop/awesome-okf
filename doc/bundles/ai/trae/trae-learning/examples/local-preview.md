@@ -97,7 +97,7 @@ Push 后自动触发 `.github/workflows/deploy.yml`：
 
 ## 相关链接
 
-- [GitHub Pages 部署](/concepts/05-deploy-pages.md)
-- [VitePress 站点架构](/concepts/01-vitepress-setup.md)
-- [自定义主题开发](/concepts/02-custom-theme.md)
-- [添加新教程文档示例](/examples/add-tutorial.md)
+- [GitHub Pages 部署](../concepts/05-deploy-pages.md)
+- [VitePress 站点架构](../concepts/01-vitepress-setup.md)
+- [自定义主题开发](../concepts/02-custom-theme.md)
+- [添加新教程文档示例](add-tutorial.md)

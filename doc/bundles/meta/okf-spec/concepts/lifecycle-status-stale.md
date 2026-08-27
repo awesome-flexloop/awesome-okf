@@ -37,8 +37,8 @@ stale_after: 2026-09-23   # absolute date; content is stale on/after this day
 
 ## 相关概念
 
-- [溯源与信源（sources）](./provenance-sources.md)
-- [信任：generated 与 verified 及信任层级](./trust-generated-verified.md)
-- [参与者约定](./actor-convention.md)
+- [溯源与信源（sources）](provenance-sources.md)
+- [信任：generated 与 verified 及信任层级](trust-generated-verified.md)
+- [参与者约定](actor-convention.md)
 
-[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](/references/okf-spec.md)。
+[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](../references/okf-spec.md)。

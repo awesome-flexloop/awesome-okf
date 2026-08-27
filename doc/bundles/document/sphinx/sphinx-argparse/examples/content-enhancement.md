@@ -354,6 +354,6 @@ def build_parser():
 
 ## 相关概念
 
-- [嵌套内容增强系统](/concepts/06-nested-content-enhancement.md)
-- [Markdown 支持](/concepts/07-markdown-support.md)
-- [基础用法完整示例](/examples/basic-usage.md)
+- [嵌套内容增强系统](../concepts/06-nested-content-enhancement.md)
+- [Markdown 支持](../concepts/07-markdown-support.md)
+- [基础用法完整示例](basic-usage.md)

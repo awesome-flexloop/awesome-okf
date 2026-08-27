@@ -15,7 +15,7 @@ related:
 
 ## 输入文章
 
-输入文件为 [examples/neural_networks.md](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/examples/neural_networks.md)，内容是关于神经网络的两段简介：
+输入文件为 examples/neural_networks.md，内容是关于神经网络的两段简介：
 
 ```markdown
 ## What are Neural Networks
@@ -142,5 +142,5 @@ LLM 规划了 7 个场景，遵循"Mia 困惑 → Ding Ding Dog 解释 → Mia �
 
 ## 源码位置
 
-- 示例文章：[examples/neural_networks.md](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/examples/neural_networks.md)
-- 示例输出：[examples/](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/examples/)（含 7 组 png/mp3/mp4 和 final.mp4）
+- 示例文章：examples/neural_networks.md
+- 示例输出：examples/（含 7 组 png/mp3/mp4 和 final.mp4）

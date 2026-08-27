@@ -112,7 +112,7 @@ KaTeX CLI 共提供 18 个选项（含 `--version` 与 `--help`）。
 | `-s, --max-size <n>` | `maxSize` | `Infinity` |
 | `-e, --max-expand <n>` | `maxExpand` | `1000` |
 
-> 注意：`-S, --strict` 是布尔开关，传入即开启 true/error 模式，对应 Options 的 `strict: true`；不传时使用 Options 默认值 `"warn"`。Settings 选项的完整说明见 [配置系统](/concepts/10-settings-options.md)。
+> 注意：`-S, --strict` 是布尔开关，传入即开启 true/error 模式，对应 Options 的 `strict: true`；不传时使用 Options 默认值 `"warn"`。Settings 选项的完整说明见 [配置系统](10-settings-options.md)。
 
 ## 宏文件
 
@@ -166,9 +166,9 @@ npx katex --max-expand 1000 --max-size 50 -i untrusted.tex -o output.html
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [安装与运行时](/concepts/15-installation-and-runtime.md)
-- [配置系统](/concepts/10-settings-options.md)
-- [宏系统](/concepts/09-macro-system.md)
-- [安全与错误处理](/concepts/18-security-and-errors.md)
-- [CLI 渲染示例](/examples/cli-render.md)
+- [快速开始](01-getting-started.md)
+- [安装与运行时](15-installation-and-runtime.md)
+- [配置系统](10-settings-options.md)
+- [宏系统](09-macro-system.md)
+- [安全与错误处理](18-security-and-errors.md)
+- [CLI 渲染示例](../examples/cli-render.md)

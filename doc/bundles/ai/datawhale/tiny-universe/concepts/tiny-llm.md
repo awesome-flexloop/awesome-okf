@@ -64,10 +64,10 @@ TinyLLM 位于"模型训练层"，是 TinyTransformer（基础组件）的自然
 
 - 基础组件：TinyTransformer（手工搭建 Transformer）
 - 结构解剖：Qwen-Blog（深入 Qwen2 内部，含 GQA、RoPE、Attention Mask）
-- 生成模型并列：[TinyDiffusion](/ai/datawhale/tiny-universe/concepts/tiny-diffusion)（图像生成）
-- 应用层：[TinyRAG](/ai/datawhale/tiny-universe/concepts/tiny-rag)、[TinyAgent](/ai/datawhale/tiny-universe/concepts/tiny-agent)
+- 生成模型并列：TinyDiffusion（图像生成）
+- 应用层：TinyRAG、TinyAgent
 
 ## 延伸
 
-- 方法论根源：[白盒构建理念](/ai/datawhale/tiny-universe/concepts/white-box-philosophy)
-- 生成模型对照：[TinyDiffusion](/ai/datawhale/tiny-universe/concepts/tiny-diffusion)
+- 方法论根源：白盒构建理念
+- 生成模型对照：TinyDiffusion

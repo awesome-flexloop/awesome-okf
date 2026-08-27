@@ -212,10 +212,10 @@ child.sendline('quit')
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [spawn 类详解](/concepts/02-spawn-class.md)
-- [expect 模式匹配](/concepts/03-expect-patterns.md)
-- [跨平台 spawn 变体](/concepts/06-cross-platform-spawn.md)
-- [密码提示处理](/examples/password-prompts.md)
+- [5分钟快速上手](../concepts/01-getting-started.md)
+- [spawn 类详解](../concepts/02-spawn-class.md)
+- [expect 模式匹配](../concepts/03-expect-patterns.md)
+- [跨平台 spawn 变体](../concepts/06-cross-platform-spawn.md)
+- [密码提示处理](password-prompts.md)
 
-[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](/references/pexpect-source.md)。
+[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](../references/pexpect-source.md)。

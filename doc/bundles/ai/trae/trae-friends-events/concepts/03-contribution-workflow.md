@@ -93,8 +93,8 @@ OPERATION_GUIDE.md 提供了 3 个即用型 Trae AI Prompt 示例，让不熟悉
 
 ## 相关链接
 
-- [Trae Friends 活动仓库简介](/concepts/00-introduction.md)
-- [CSV+Python 轻量 CMS 模式](/concepts/01-csv-cms-pattern.md)
-- [活动数据格式](/concepts/02-event-data-format.md)
-- [添加新活动示例](/examples/add-event.md)
-- [运行更新脚本示例](/examples/run-update-script.md)
+- [Trae Friends 活动仓库简介](00-introduction.md)
+- [CSV+Python 轻量 CMS 模式](01-csv-cms-pattern.md)
+- [活动数据格式](02-event-data-format.md)
+- [添加新活动示例](../examples/add-event.md)
+- [运行更新脚本示例](../examples/run-update-script.md)

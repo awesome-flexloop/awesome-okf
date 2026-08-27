@@ -113,8 +113,8 @@ MCP 配置为 JSON 格式，顶层结构如下：
 
 ## 相关链接
 
-- [MCP 三层模型](/concepts/01-mcp-architecture.md)
-- [CloudBase MCP](/concepts/03-cloudbase-mcp.md)
-- [MCP 开发入门](/concepts/05-mcp-development.md)
-- [配置 MCP 服务器示例](/examples/configure-mcp.md)
-- [CloudBase MCP 使用示例](/examples/use-cloudbase-mcp.md)
+- [MCP 三层模型](01-mcp-architecture.md)
+- [CloudBase MCP](03-cloudbase-mcp.md)
+- [MCP 开发入门](05-mcp-development.md)
+- [配置 MCP 服务器示例](../examples/configure-mcp.md)
+- [CloudBase MCP 使用示例](../examples/use-cloudbase-mcp.md)

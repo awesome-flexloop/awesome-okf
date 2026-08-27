@@ -510,9 +510,9 @@ Cookbook 提供了内容审核的模式：输入和输出都需要审核，确�
 
 ## 相关概念
 
-- [Cookbook 导览](/cookbooks/concepts/00-overview.md) — 回到 Cookbooks 总览
-- [工具调用模式](/cookbooks/concepts/01-tool-use-patterns.md) — Sub-agents 的工具编排基础
-- [RAG 与知识检索模式](/cookbooks/concepts/03-rag-patterns.md) — Prompt Caching 对 RAG 系统收益最大
-- [Python SDK - Beta Agents](/python-sdk/concepts/08-beta-agents.md) — SDK 层面的 Agents 体系
-- [Python SDK - Streaming](/python-sdk/concepts/03-streaming.md) — Extended Thinking 和流式输出结合使用
-- [食谱完整索引](/cookbooks/references/recipe-index.md) — 查找具体高级技巧的食谱
+- [Cookbook 导览](00-overview.md) — 回到 Cookbooks 总览
+- [工具调用模式](01-tool-use-patterns.md) — Sub-agents 的工具编排基础
+- [RAG 与知识检索模式](03-rag-patterns.md) — Prompt Caching 对 RAG 系统收益最大
+- [Python SDK - Beta Agents](../../python-sdk/concepts/08-beta-agents.md) — SDK 层面的 Agents 体系
+- [Python SDK - Streaming](../../python-sdk/concepts/03-streaming.md) — Extended Thinking 和流式输出结合使用
+- [食谱完整索引](../references/recipe-index.md) — 查找具体高级技巧的食谱

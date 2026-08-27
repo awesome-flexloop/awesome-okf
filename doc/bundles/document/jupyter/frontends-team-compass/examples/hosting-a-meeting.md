@@ -197,6 +197,6 @@ sources:
 
 ## 相关概念
 
-- [双周会议制度](/concepts/02-meetings.md) — 两个周会的时间和定位
-- [会议主持指南](/concepts/05-host-guide.md) — 主持人的完整职责规范
-- [成员行为指南](/concepts/04-member-guide.md) — 沟通渠道和包容文化
+- [双周会议制度](../concepts/02-meetings.md) — 两个周会的时间和定位
+- [会议主持指南](../concepts/05-host-guide.md) — 主持人的完整职责规范
+- [成员行为指南](../concepts/04-member-guide.md) — 沟通渠道和包容文化

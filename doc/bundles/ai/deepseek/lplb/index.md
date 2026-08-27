@@ -29,8 +29,8 @@ description: LPLB（Linear-Programming-based Load Balancer）——DeepSeek 开�
 
 | 组件 | 路径 | 关系 |
 |---|---|---|
-| DeepEP | [/deepseek/deep-ep/](/ai/deepseek/deep-ep/) | EP 通信库，提供高效 all-to-all 和 NVSHMEM 通信原语 |
-| DeepGEMM | [/deepseek/deep-gemm/](/ai/deepseek/deep-gemm/) | MoE grouped GEMM 计算内核，LPLB 均衡直接影响其尾延迟 |
+| DeepEP | [/deepseek/deep-ep/](../deep-ep/index.md) | EP 通信库，提供高效 all-to-all 和 NVSHMEM 通信原语 |
+| DeepGEMM | [/deepseek/deep-gemm/](../deep-gemm/index.md) | MoE grouped GEMM 计算内核，LPLB 均衡直接影响其尾延迟 |
 
 ## 快速开始
 
@@ -62,22 +62,22 @@ mapped_idx = planner.run(idx, avail_counter)
 
 ### 核心概念
 
-- [总览](/ai/deepseek/lplb/concepts/overview) — LPLB 是什么、解决什么问题、核心机制
-- [负载均衡问题建模](/ai/deepseek/lplb/concepts/load-balancing-problem) — MoE 负载不均衡的数学形式化与 LP 模型
-- [LP 求解器设计](/ai/deepseek/lplb/concepts/lp-solver-design) — GPU 端内点法、cuSolverDx 集成、JIT 编译架构
-- [拓扑感知路由](/ai/deepseek/lplb/concepts/topology-aware-routing) — 拓扑矩阵语义、预定义拓扑、副本组布局
-- [EPLB 集成](/ai/deepseek/lplb/concepts/eplb-integration) — 静态重平衡与动态求解的分层协作
+- 总览 — LPLB 是什么、解决什么问题、核心机制
+- 负载均衡问题建模 — MoE 负载不均衡的数学形式化与 LP 模型
+- LP 求解器设计 — GPU 端内点法、cuSolverDx 集成、JIT 编译架构
+- 拓扑感知路由 — 拓扑矩阵语义、预定义拓扑、副本组布局
+- EPLB 集成 — 静态重平衡与动态求解的分层协作
 
 ### API 参考
 
-- [API 参考](/ai/deepseek/lplb/references/api) — Planner 类、EPLB 函数、CompiledSolver 接口
-- [LP 求解器](/ai/deepseek/lplb/references/lp-solver) — CUDA 内核、JIT 编译流程、NVSHMEM 通信
-- [拓扑配置](/ai/deepseek/lplb/references/topology) — r2o 矩阵约束、内置拓扑、副本组机制
+- API 参考 — Planner 类、EPLB 函数、CompiledSolver 接口
+- LP 求解器 — CUDA 内核、JIT 编译流程、NVSHMEM 通信
+- 拓扑配置 — r2o 矩阵约束、内置拓扑、副本组机制
 
 ### 使用示例
 
-- [基础专家复制规划](/ai/deepseek/lplb/examples/basic-planning) — 创建 Planner、分步执行、验证均衡效果
-- [拓扑感知配置](/ai/deepseek/lplb/examples/topology-config) — 各种拓扑使用、自定义拓扑、DeepEP 集成
+- 基础专家复制规划 — 创建 Planner、分步执行、验证均衡效果
+- 拓扑感知配置 — 各种拓扑使用、自定义拓扑、DeepEP 集成
 
 ## 目录结构
 

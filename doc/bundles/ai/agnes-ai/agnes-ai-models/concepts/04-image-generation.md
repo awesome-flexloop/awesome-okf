@@ -171,7 +171,7 @@ response = client.images.edit(
 
 ## 相关概念
 
-- [对话补全API](/concepts/03-chat-completions.md)
-- [视频生成API](/concepts/05-video-generation.md)
-- [速率限制与配额](/concepts/06-rate-limits.md)
-- [图像生成示例](/examples/image-generation.md)
+- [对话补全API](03-chat-completions.md)
+- [视频生成API](05-video-generation.md)
+- [速率限制与配额](06-rate-limits.md)
+- [图像生成示例](../examples/image-generation.md)

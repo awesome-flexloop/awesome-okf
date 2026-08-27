@@ -254,6 +254,6 @@ async def test_kernel_communication(jp_start_kernel):
 ---
 
 **下一步阅读：**
-- [Echo内核深入](/concepts/07-echo-kernel.md) — EchoKernel的完整实现细节和扩展方式
-- [Tornado异步支持](/concepts/06-tornasync-plugin.md) — HTTP测试基础设施
-- [Server插件详解](/concepts/05-server-plugin.md) — 完整Server测试栈（含client能力）
+- [Echo内核深入](07-echo-kernel.md) — EchoKernel的完整实现细节和扩展方式
+- [Tornado异步支持](06-tornasync-plugin.md) — HTTP测试基础设施
+- [Server插件详解](05-server-plugin.md) — 完整Server测试栈（含client能力）

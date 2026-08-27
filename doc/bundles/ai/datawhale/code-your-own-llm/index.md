@@ -24,16 +24,16 @@ Code Your Own LLM 是 Datawhale 出品的全栈式大语言模型参考指南，
 
 ### 核心概念
 
-- [全栈式 LLM 学习路径](/ai/datawhale/code-your-own-llm/concepts/fullstack-learning-path.md)——12 章+附录的端到端学习路径编排，覆盖数据、分词、架构、预训练、微调、推理、评估、安全全生命周期
-- [文档写作规范体系](/ai/datawhale/code-your-own-llm/concepts/documentation-standards.md)——AGENTS.md 定义的七大维度写作规范，包括结构、内容、图像、表格、代码、公式、参考文献
+- [全栈式 LLM 学习路径](concepts/fullstack-learning-path.md)——12 章+附录的端到端学习路径编排，覆盖数据、分词、架构、预训练、微调、推理、评估、安全全生命周期
+- [文档写作规范体系](concepts/documentation-standards.md)——AGENTS.md 定义的七大维度写作规范，包括结构、内容、图像、表格、代码、公式、参考文献
 
 ### 示例
 
-- [示例索引](/ai/datawhale/code-your-own-llm/examples/index.md)——代码示例随各章文档发布，遵循 Google Python Style Guide
+- [示例索引](examples/index.md)——代码示例随各章文档发布，遵循 Google Python Style Guide
 
 ### 信源
 
-- [GitHub 仓库信源](/ai/datawhale/code-your-own-llm/references/readme-source.md)——项目官方仓库地址、章节状态与致谢项目
+- [GitHub 仓库信源](references/readme-source.md)——项目官方仓库地址、章节状态与致谢项目
 
 ## 快速上手
 

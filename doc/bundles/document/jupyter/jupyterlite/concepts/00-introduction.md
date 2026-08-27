@@ -84,8 +84,8 @@ JupyterLite 是一个**完全运行在浏览器中的 Jupyter 发行版**。它�
 
 ## 相关概念
 
-- [整体架构](/concepts/01-architecture-overview.md)
-- [内核系统](/concepts/02-kernel-system.md)
-- [内容管理与文件系统](/concepts/03-contents-and-filesystem.md)
-- [Service Worker桥接](/concepts/04-service-worker-bridge.md)
-- [浏览器存储](/concepts/05-browser-storage.md)
+- [整体架构](01-architecture-overview.md)
+- [内核系统](02-kernel-system.md)
+- [内容管理与文件系统](03-contents-and-filesystem.md)
+- [Service Worker桥接](04-service-worker-bridge.md)
+- [浏览器存储](05-browser-storage.md)

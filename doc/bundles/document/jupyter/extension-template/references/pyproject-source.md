@@ -165,7 +165,7 @@ W002 警告（wheel 包含顶层模块）被忽略，因为 Jupyter 扩展通过
 
 ## 相关概念
 
-- [双包构建系统](/concepts/05-build-system.md)
-- [服务端扩展开发](/concepts/07-server-extension.md)
-- [打包与发布](/concepts/13-packaging-release.md)
-- [package.json 模板解析](/references/package-json-source.md)
+- [双包构建系统](../concepts/05-build-system.md)
+- [服务端扩展开发](../concepts/07-server-extension.md)
+- [打包与发布](../concepts/13-packaging-release.md)
+- [package.json 模板解析](package-json-source.md)

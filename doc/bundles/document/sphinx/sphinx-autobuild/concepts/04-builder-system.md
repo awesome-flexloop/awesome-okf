@@ -175,9 +175,9 @@ with ProcessPoolExecutor() as pool:
 
 ## 相关概念
 
-- [架构概览](/concepts/02-architecture-overview.md)
-- [CLI 入口与参数解析](/concepts/03-cli-and-entrypoint.md)
-- [文件监听与过滤](/concepts/05-file-watching.md)
-- [服务器与热重载](/concepts/06-server-and-hotreload.md)
-- [自定义前后置命令示例](/examples/custom-pre-post-build.md)
-- [sphinx-autobuild 源码信源登记](/references/sphinx-autobuild-source.md)
+- [架构概览](02-architecture-overview.md)
+- [CLI 入口与参数解析](03-cli-and-entrypoint.md)
+- [文件监听与过滤](05-file-watching.md)
+- [服务器与热重载](06-server-and-hotreload.md)
+- [自定义前后置命令示例](../examples/custom-pre-post-build.md)
+- [sphinx-autobuild 源码信源登记](../references/sphinx-autobuild-source.md)

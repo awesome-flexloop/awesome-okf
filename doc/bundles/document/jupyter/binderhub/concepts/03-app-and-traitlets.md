@@ -14,7 +14,7 @@ sources:
 
 ## 概述
 
-`BinderHub` 是 BinderHub 项目的核心应用入口类，定义在 [app.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py) 中。它继承自 `traitlets.config.Application`，采用 Jupyter 生态系统标准的 traitlets 配置框架，提供声明式配置管理、命令行接口、Tornado Web 应用初始化与生命周期管理。整个 BinderHub 服务从这个类的实例化开始，通过 `initialize()` 方法完成所有子系统的装配，最终由 `start()` 方法启动 HTTP 服务器并进入事件循环。
+`BinderHub` 是 BinderHub 项目的核心应用入口类，定义在 app.py 中。它继承自 `traitlets.config.Application`，采用 Jupyter 生态系统标准的 traitlets 配置框架，提供声明式配置管理、命令行接口、Tornado Web 应用初始化与生命周期管理。整个 BinderHub 服务从这个类的实例化开始，通过 `initialize()` 方法完成所有子系统的装配，最终由 `start()` 方法启动 HTTP 服务器并进入事件循环。
 
 ## 类继承关系
 
@@ -76,7 +76,7 @@ if __name__ == "__main__":
     main()
 ```
 
-`launch_instance()` 是 `Application` 基类提供的类方法，负责解析命令行参数、实例化应用、调用 `initialize()` 和 `start()` 完成启动。此外，[__main__.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/__main__.py) 也提供了 `python -m binderhub` 的入口。
+`launch_instance()` 是 `Application` 基类提供的类方法，负责解析命令行参数、实例化应用、调用 `initialize()` 和 `start()` 完成启动。此外，__main__.py 也提供了 `python -m binderhub` 的入口。
 
 ## 核心 Traitlets 配置项
 
@@ -335,7 +335,7 @@ jinja_env = Environment(loader=loader, **jinja_options)
 1. **PrefixLoader**：支持通过 `templates/` 前缀显式引用内置基础模板；
 2. **FileSystemLoader**：搜索自定义模板路径和内置模板路径，自定义路径优先，实现模板覆盖。
 
-内置模板目录为 `<binderhub>/templates/`，包含 [page.html](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/templates/page.html) 基础页面模板。
+内置模板目录为 `<binderhub>/templates/`，包含 page.html 基础页面模板。
 
 ### 6. 核心组件实例化
 
@@ -371,7 +371,7 @@ for schema_file in glob(os.path.join(HERE, "event-schemas", "*.json")):
         self.event_log.register_schema(json.load(f))
 ```
 
-自动加载 [event-schemas/](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/event-schemas/) 目录下的所有 JSON Schema 文件并注册。内置的 [launch.json](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/event-schemas/launch.json) 定义了 `binderhub.jupyter.org/launch` 事件的 schema。
+自动加载 event-schemas/ 目录下的所有 JSON Schema 文件并注册。内置的 launch.json 定义了 `binderhub.jupyter.org/launch` 事件的 schema。
 
 #### 配额检查器 (LaunchQuota)
 
@@ -589,10 +589,10 @@ def _build_config_deprecated(self, change):
 
 ## 关键源码引用
 
-- 类定义：[binderhub/app.py:76-1176](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L76-L1176)
-- CLI aliases/flags：[binderhub/app.py:83-95](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L83-L95)
-- initialize() 方法：[binderhub/app.py:897-1134](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L897-L1134)
-- start() 方法：[binderhub/app.py:1160-1170](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L1160-L1170)
-- 路由表定义：[binderhub/app.py:1023-1133](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L1023-L1133)
-- Jinja2 加载器配置：[binderhub/app.py:926-944](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L926-L944)
-- 废弃配置映射表：[binderhub/app.py:852-871](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L852-L871)
+- 类定义：binderhub/app.py:76-1176
+- CLI aliases/flags：binderhub/app.py:83-95
+- initialize() 方法：binderhub/app.py:897-1134
+- start() 方法：binderhub/app.py:1160-1170
+- 路由表定义：binderhub/app.py:1023-1133
+- Jinja2 加载器配置：binderhub/app.py:926-944
+- 废弃配置映射表：binderhub/app.py:852-871

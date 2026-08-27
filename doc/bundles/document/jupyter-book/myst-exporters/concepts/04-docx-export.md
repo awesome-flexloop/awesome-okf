@@ -176,6 +176,6 @@ writeFileSync('output.docx', buffer);
 
 ## 相关概念
 
-- [00-exporter-architecture](/concepts/00-exporter-architecture.md)：统一导出架构
-- [01-html-export](/concepts/01-html-export.md)：HTML 导出（对比文本格式）
-- [01-multi-format-export](/examples/01-multi-format-export.md)：多格式到处示例
+- [00-exporter-architecture](00-exporter-architecture.md)：统一导出架构
+- [01-html-export](01-html-export.md)：HTML 导出（对比文本格式）
+- [01-multi-format-export](../examples/01-multi-format-export.md)：多格式到处示例

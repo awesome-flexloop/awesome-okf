@@ -260,7 +260,7 @@ Jupyter Book TS 层有三种委托模式：
 
 ## 相关概念
 
-- [00-v2-architecture](/concepts/00-v2-architecture.md)：v2 双层架构
-- [01-python-entry-nodeenv](/concepts/01-python-entry-nodeenv.md)：Python 入口
-- [03-myst-cli-relationship](/concepts/03-myst-cli-relationship.md)：与 myst-cli 的关系
-- [01-create-book](/examples/01-create-book.md)：创建 Jupyter Book 示例
+- [00-v2-architecture](00-v2-architecture.md)：v2 双层架构
+- [01-python-entry-nodeenv](01-python-entry-nodeenv.md)：Python 入口
+- [03-myst-cli-relationship](03-myst-cli-relationship.md)：与 myst-cli 的关系
+- [01-create-book](../examples/01-create-book.md)：创建 Jupyter Book 示例

@@ -334,9 +334,9 @@ query GetItem($id: ID!, $limit: Int = 10) {
 - `$id` 是 `ID!` 类型（非空，必须提供）；
 - `$limit` 是 `Int` 类型，默认值为 `10`。
 
-变量类型引用的语法（NamedType、ListType、NonNullType）将在 [Schema 与类型系统入门](/concepts/02-schema-and-types.md) 中详细介绍。
+变量类型引用的语法（NamedType、ListType、NonNullType）将在 [Schema 与类型系统入门](02-schema-and-types.md) 中详细介绍。
 
 ## 相关概念
 
-- [GraphQL 概览与五大设计原则](/concepts/00-overview.md) — 了解 GraphQL 的设计哲学与三阶段管线
-- [Schema 与类型系统入门](/concepts/02-schema-and-types.md) — 学习类型系统如何定义查询所基于的契约
+- [GraphQL 概览与五大设计原则](00-overview.md) — 了解 GraphQL 的设计哲学与三阶段管线
+- [Schema 与类型系统入门](02-schema-and-types.md) — 学习类型系统如何定义查询所基于的契约

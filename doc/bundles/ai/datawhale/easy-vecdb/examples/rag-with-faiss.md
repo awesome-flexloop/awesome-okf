@@ -257,6 +257,6 @@ print(f"\n回答:\n{answer}")
 
 ## 延伸阅读
 
-- [Faiss 与 Milvus 工程实践](/ai/datawhale/easy-vecdb/concepts/faiss-milvus-engineering.md) — FAISS 索引类型详解
-- [向量检索基础](/ai/datawhale/easy-vecdb/concepts/vector-retrieval-basics.md) — 嵌入模型和相似度度量
-- [Milvus 快速入门](/ai/datawhale/easy-vecdb/examples/milvus-getting-started.md) — 使用分布式向量数据库构建 RAG
+- [Faiss 与 Milvus 工程实践](../concepts/faiss-milvus-engineering.md) — FAISS 索引类型详解
+- [向量检索基础](../concepts/vector-retrieval-basics.md) — 嵌入模型和相似度度量
+- [Milvus 快速入门](milvus-getting-started.md) — 使用分布式向量数据库构建 RAG

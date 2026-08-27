@@ -141,6 +141,6 @@ result = rst_to_myst(rst_text, conversions={"mypackage.mydirective": "eval_rst"}
 
 ## 相关概念
 
-- [三阶段转换流水线架构](/concepts/03-conversion-pipeline.md)
-- [LosslessRSTParser 与自定义 Transform](/concepts/04-lossless-parser.md)
-- [mdformat 渲染集成与自定义渲染器](/concepts/07-mdformat-integration.md)
+- [三阶段转换流水线架构](03-conversion-pipeline.md)
+- [LosslessRSTParser 与自定义 Transform](04-lossless-parser.md)
+- [mdformat 渲染集成与自定义渲染器](07-mdformat-integration.md)

@@ -317,11 +317,11 @@ transport = paramiko.ServiceRequestingTransport(sock)
 
 ## 相关概念
 
-- [SSHClient 详解](/concepts/02-ssh-client.md)
-- [Channel 通道](/concepts/04-channel.md)
-- [认证体系](/concepts/05-authentication.md)
-- [密钥与主机密钥](/concepts/06-keys-and-hostkeys.md)
-- [端口转发](/concepts/08-port-forwarding.md)
-- [服务端开发](/concepts/09-server.md)
+- [SSHClient 详解](02-ssh-client.md)
+- [Channel 通道](04-channel.md)
+- [认证体系](05-authentication.md)
+- [密钥与主机密钥](06-keys-and-hostkeys.md)
+- [端口转发](08-port-forwarding.md)
+- [服务端开发](09-server.md)
 
-[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](/references/paramiko-source.md)。
+[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](../references/paramiko-source.md)。

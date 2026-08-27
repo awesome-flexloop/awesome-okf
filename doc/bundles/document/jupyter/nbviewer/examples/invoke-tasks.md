@@ -150,6 +150,6 @@ Fastly的版本管理是内置的——每次修改都在新版本上编辑，�
 
 ## 相关文档
 
-- [Fastly CDN管理](/concepts/07-fastly-cdn.md)
-- [Invoke任务信源](/references/tasks-source.md)
+- [Fastly CDN管理](../concepts/07-fastly-cdn.md)
+- [Invoke任务信源](../references/tasks-source.md)
 - [本地部署调试](local-debug.md)

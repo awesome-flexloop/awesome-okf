@@ -152,20 +152,20 @@ tools-devops 下的模板（docker-compose、editor-config、gitignore）可以�
 
 tools-devops 分类的存在本身就是分面分类灵活性的体现——它不是"项目模板"，但因为"复制即用"的使用方式而被纳入。superpowers-trae-init 作为 AI 工作流配置包，是唯一一个不是代码起点而是行为起点的模板。
 
-详见 [AGENTS.md 开发契约](/concepts/07-agents-contract.md)。
+详见 [AGENTS.md 开发契约](07-agents-contract.md)。
 
 ## 相关概念
 
-- [Trae Templates 简介](/concepts/00-introduction.md)
-- [Web 前端模板](/concepts/02-web-frontend-templates.md)
-- [后端服务模板](/concepts/03-backend-templates.md)
-- [移动端和桌面端模板](/concepts/04-mobile-desktop-templates.md)
-- [数据与 AI 模板](/concepts/05-data-ai-templates.md)
-- [工具与 DevOps 模板](/concepts/06-tools-devops-templates.md)
-- [AGENTS.md 开发契约](/concepts/07-agents-contract.md)
+- [Trae Templates 简介](00-introduction.md)
+- [Web 前端模板](02-web-frontend-templates.md)
+- [后端服务模板](03-backend-templates.md)
+- [移动端和桌面端模板](04-mobile-desktop-templates.md)
+- [数据与 AI 模板](05-data-ai-templates.md)
+- [工具与 DevOps 模板](06-tools-devops-templates.md)
+- [AGENTS.md 开发契约](07-agents-contract.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/templates-source.md)
-- [使用 Next.js 模板创建项目](/examples/use-nextjs-template.md)
-- [创建自定义模板](/examples/create-custom-template.md)
+- [源码信源索引](../references/templates-source.md)
+- [使用 Next.js 模板创建项目](../examples/use-nextjs-template.md)
+- [创建自定义模板](../examples/create-custom-template.md)

@@ -180,6 +180,6 @@ pip install -e ".[test]"
 
 ## 相关概念
 
-- [Cookiecutter 模板引擎基础](/concepts/02-cookiecutter-basics.md)
-- [项目结构详解](/concepts/03-project-structure.md)
-- [ExtensionApp 开发](/concepts/04-extension-app.md)
+- [Cookiecutter 模板引擎基础](02-cookiecutter-basics.md)
+- [项目结构详解](03-project-structure.md)
+- [ExtensionApp 开发](04-extension-app.md)

@@ -227,7 +227,7 @@ Copier 生成项目时会创建 `.copier-answers.yml`（在 `{{_copier_conf.answ
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [四种扩展类型对比](/concepts/03-four-extension-types.md)
-- [生成项目结构详解](/concepts/04-project-structure.md)
-- [Copier 配置参数参考](/references/copier-config.md)
+- [快速开始](01-getting-started.md)
+- [四种扩展类型对比](03-four-extension-types.md)
+- [生成项目结构详解](04-project-structure.md)
+- [Copier 配置参数参考](../references/copier-config.md)

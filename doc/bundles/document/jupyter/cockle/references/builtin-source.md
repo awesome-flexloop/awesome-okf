@@ -86,7 +86,7 @@ export { WhichCommand } from './which_command';
 - **alias**：定义或显示命令别名。不带参数时列出当前所有别名；带参数时设置别名，格式为 `alias name=value`
 - **unalias**：删除已定义的别名，格式为 `unalias name`
 
-别名在分词阶段被递归展开（详见[解析器源码参考](/references/parser-source.md)中的别名展开机制）。
+别名在分词阶段被递归展开（详见[解析器源码参考](parser-source.md)中的别名展开机制）。
 
 ### cd — 切换工作目录
 
@@ -186,7 +186,7 @@ Cockle 运行时配置管理命令，支持：
 内置命令的完整执行路径：
 
 1. 用户输入命令行字符串
-2. [解析器](/references/parser-source.md)分词并构建 AST
+2. [解析器](parser-source.md)分词并构建 AST
 3. Shell 遍历 AST 节点，为每个 CommandNode 查找命令
 4. `CommandRegistry.get(name)` 返回对应的 BuiltinCommand 实例
 5. Shell 构建 IRunContext（包含 IO、环境变量、文件系统等上下文）
@@ -209,7 +209,7 @@ class MyCommand extends BuiltinCommand {
 
 ## 相关概念
 
-- [命令系统源码参考](/references/command-source.md)：BuiltinCommand 基类与 CommandRegistry 注册机制
-- [配置与环境源码参考](/references/config-source.md)：环境变量、历史记录、退出码常量
-- [解析器源码参考](/references/parser-source.md)：别名展开在分词阶段的处理
-- [Worker 通信源码参考](/references/worker-source.md)：命令在 Worker 中的执行环境
+- [命令系统源码参考](command-source.md)：BuiltinCommand 基类与 CommandRegistry 注册机制
+- [配置与环境源码参考](config-source.md)：环境变量、历史记录、退出码常量
+- [解析器源码参考](parser-source.md)：别名展开在分词阶段的处理
+- [Worker 通信源码参考](worker-source.md)：命令在 Worker 中的执行环境

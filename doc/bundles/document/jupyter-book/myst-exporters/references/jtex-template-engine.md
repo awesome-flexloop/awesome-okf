@@ -120,7 +120,7 @@ function renderTemplate(
 
 ## 相关概念
 
-- [08-jtex-template-engine](/concepts/08-jtex-template-engine.md)：jtex 模板引擎概念文档
-- [02-latex-export](/concepts/02-latex-export.md)：LaTeX 导出流程
-- [07-typst-export](/concepts/07-typst-export.md)：Typst 导出流程
-- [02-custom-jtex-template](/examples/02-custom-jtex-template.md)：自定义 jtex 模板示例
+- [08-jtex-template-engine](../concepts/08-jtex-template-engine.md)：jtex 模板引擎概念文档
+- [02-latex-export](../concepts/02-latex-export.md)：LaTeX 导出流程
+- [07-typst-export](../concepts/07-typst-export.md)：Typst 导出流程
+- [02-custom-jtex-template](../examples/02-custom-jtex-template.md)：自定义 jtex 模板示例

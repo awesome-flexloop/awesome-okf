@@ -86,7 +86,7 @@ deepagentsjs 通过**约定优于配置**的方式，将这些能力以确定性
 - **CompositeBackend**：按路径前缀组合多个后端
 - **LangSmithSandbox / LocalShellBackend**：远程沙箱执行环境
 
-详见 [上下文与 Todo 管理](/ai/langchain-ai/deepagentsjs/concepts/context-todo)。
+详见 上下文与 Todo 管理。
 
 ## 子代理系统
 
@@ -97,7 +97,7 @@ deepagentsjs 支持四类子代理：
 3. **CompiledSubAgent**：预编译的 ReactAgent/Runnable 实例
 4. **AsyncSubAgent**：运行在远程 Agent Protocol 服务器上的后台任务
 
-通用子代理（`general-purpose`）默认自动添加，拥有与主代理相同的工具和技能。详见 [子代理与规划](/ai/langchain-ai/deepagentsjs/concepts/subagent-planning)。
+通用子代理（`general-purpose`）默认自动添加，拥有与主代理相同的工具和技能。详见 子代理与规划。
 
 ## 快速入口
 
@@ -113,7 +113,7 @@ const result = await agent.invoke({
 });
 ```
 
-详见 [基础 Agent 示例](/ai/langchain-ai/deepagentsjs/examples/basic-agent) 和 [API 参考](/ai/langchain-ai/deepagentsjs/references/api)。
+详见 基础 Agent 示例 和 API 参考。
 
 ## 运行时入口
 
@@ -125,7 +125,7 @@ const result = await agent.invoke({
 
 ## 进一步阅读
 
-- [子代理与规划](/ai/langchain-ai/deepagentsjs/concepts/subagent-planning)
-- [上下文与 Todo 管理](/ai/langchain-ai/deepagentsjs/concepts/context-todo)
-- [API 参考](/ai/langchain-ai/deepagentsjs/references/api)
-- [基础 Agent 示例](/ai/langchain-ai/deepagentsjs/examples/basic-agent)
+- 子代理与规划
+- 上下文与 Todo 管理
+- API 参考
+- 基础 Agent 示例

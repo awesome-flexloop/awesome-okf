@@ -1,6 +1,6 @@
 # 示例
 
-- [01 - 基本使用](/examples/01-basic-usage.md)
+- [01 - 基本使用](01-basic-usage.md)
 
 ```{toctree}
 :hidden:

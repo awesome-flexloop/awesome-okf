@@ -195,8 +195,8 @@ def node(state):
 
 ## 相关概念
 
-- [通道系统](/ai/langchain-ai/langgraph/concepts/channels) — 状态键如何映射到通道
-- [Pregel 引擎](/ai/langchain-ai/langgraph/concepts/pregel-engine) — 编译后的执行模型
-- [检查点机制](/ai/langchain-ai/langgraph/concepts/checkpointing) — 持久化与恢复
-- [错误处理](/ai/langchain-ai/langgraph/concepts/error-handling) — 重试与错误处理器
-- [API 参考](/ai/langchain-ai/langgraph/references/graph-state) — StateGraph 完整 API
+- 通道系统 — 状态键如何映射到通道
+- Pregel 引擎 — 编译后的执行模型
+- 检查点机制 — 持久化与恢复
+- 错误处理 — 重试与错误处理器
+- API 参考 — StateGraph 完整 API

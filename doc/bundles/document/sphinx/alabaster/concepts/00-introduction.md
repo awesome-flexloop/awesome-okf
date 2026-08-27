@@ -56,6 +56,6 @@ Alabaster 本身没有第三方 Python 依赖（除了 Sphinx），安装 Sphinx
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [主题架构四要素](/concepts/02-theme-architecture.md)
-- [Sphinx 核心主题系统](/concepts/../sphinx/concepts/13-theme-system.md)
+- [快速开始](01-getting-started.md)
+- [主题架构四要素](02-theme-architecture.md)
+- [Sphinx 核心主题系统](../../sphinx/concepts/13-theme-system.md)

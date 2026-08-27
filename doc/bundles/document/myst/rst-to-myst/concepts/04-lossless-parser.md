@@ -156,6 +156,6 @@ class IndirectHyperlinks(Transform):
 
 ## 相关概念
 
-- [三阶段转换流水线架构](/concepts/03-conversion-pipeline.md)
-- [MarkdownItRenderer 与 AST→Token 遍历](/concepts/06-token-rendering.md)
-- [指令转换机制与 directives.yml 映射](/concepts/05-directive-conversion.md)
+- [三阶段转换流水线架构](03-conversion-pipeline.md)
+- [MarkdownItRenderer 与 AST→Token 遍历](06-token-rendering.md)
+- [指令转换机制与 directives.yml 映射](05-directive-conversion.md)

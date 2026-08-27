@@ -257,8 +257,8 @@ Per-tile 是一个良好的平衡点：128 个值一组能捕捉局部值范围�
 
 ## 八、相关链接
 
-- [/deepseek/flash-mla/concepts/mla-decoding](/ai/deepseek/flash-mla/concepts/mla-decoding) — MLA 解码算法原理
-- [/deepseek/flash-mla/concepts/hopper-blackwell-kernels](/ai/deepseek/flash-mla/concepts/hopper-blackwell-kernels) — Hopper/Blackwell 内核设计
-- [/deepseek/flash-mla/references/kv-cache-layout](/ai/deepseek/flash-mla/references/kv-cache-layout) — KV cache 内存布局详解
-- [/deepseek/flash-mla/references/kernel-architecture](/ai/deepseek/flash-mla/references/kernel-architecture) — 内核架构详解（反量化实现）
-- [/deepseek/deep-gemm/concepts/fp8-gemm](/ai/deepseek/deep-gemm/concepts/fp8-gemm) — DeepGEMM FP8 GEMM 量化方案
+- /deepseek/flash-mla/concepts/mla-decoding — MLA 解码算法原理
+- /deepseek/flash-mla/concepts/hopper-blackwell-kernels — Hopper/Blackwell 内核设计
+- /deepseek/flash-mla/references/kv-cache-layout — KV cache 内存布局详解
+- /deepseek/flash-mla/references/kernel-architecture — 内核架构详解（反量化实现）
+- /deepseek/deep-gemm/concepts/fp8-gemm — DeepGEMM FP8 GEMM 量化方案

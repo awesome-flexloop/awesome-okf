@@ -49,18 +49,18 @@ stale_after: 2027-08-27
 
 ### 与 Python SDK 配合
 提示词最终要通过代码调用：
-- [Python SDK 概览](/python-sdk/concepts/00-overview.md) — SDK 安装与初始化
-- [消息基础](/python-sdk/concepts/02-messages-basics.md) — Messages API 基本用法（提示词放在哪里）
-- [工具使用](/python-sdk/concepts/04-tool-use.md) — Function Calling 完整代码教程
+- [Python SDK 概览](../python-sdk/concepts/00-overview.md) — SDK 安装与初始化
+- [消息基础](../python-sdk/concepts/02-messages-basics.md) — Messages API 基本用法（提示词放在哪里）
+- [工具使用](../python-sdk/concepts/04-tool-use.md) — Function Calling 完整代码教程
 
 ### 与 Cookbook 配合
 学习实战模式：
-- [工具使用模式](/cookbooks/concepts/01-tool-use-patterns.md) — 工具调用的常见设计模式
-- [RAG 模式](/cookbooks/concepts/03-rag-patterns.md) — 检索增强生成的提示词与架构
-- [高级技巧](/cookbooks/concepts/04-advanced-techniques.md) — 更多高级提示词模式
+- [工具使用模式](../cookbooks/concepts/01-tool-use-patterns.md) — 工具调用的常见设计模式
+- [RAG 模式](../cookbooks/concepts/03-rag-patterns.md) — 检索增强生成的提示词与架构
+- [高级技巧](../cookbooks/concepts/04-advanced-techniques.md) — 更多高级提示词模式
 
 ### 相关产品
-- [Claude Code Wiki](/claude-code/) — Anthropic 终端编码Agent，观察提示词工程在产品中的应用
+- [Claude Code Wiki](../claude-code/index.md) — Anthropic 终端编码Agent，观察提示词工程在产品中的应用
 
 ## 更新日志
 

@@ -163,17 +163,17 @@ SSHClient 默认按以下顺序尝试认证：
 
 ## 下一步
 
-- 了解 [SSHClient 详解](/concepts/02-ssh-client.md) 掌握完整 API
-- 深入 [Transport 底层传输](/concepts/03-transport.md) 理解协议机制
-- 学习 [SFTP 文件传输](/concepts/07-sftp.md) 掌握文件操作
-- 查看 [基础连接示例](/examples/basic-connection.md) 获取更多代码
+- 了解 [SSHClient 详解](02-ssh-client.md) 掌握完整 API
+- 深入 [Transport 底层传输](03-transport.md) 理解协议机制
+- 学习 [SFTP 文件传输](07-sftp.md) 掌握文件操作
+- 查看 [基础连接示例](../examples/basic-connection.md) 获取更多代码
 
 ## 相关概念
 
-- [paramiko 简介](/concepts/00-introduction.md)
-- [SSHClient 详解](/concepts/02-ssh-client.md)
-- [认证体系](/concepts/05-authentication.md)
-- [SFTP 文件传输](/concepts/07-sftp.md)
-- [基础连接示例](/examples/basic-connection.md)
+- [paramiko 简介](00-introduction.md)
+- [SSHClient 详解](02-ssh-client.md)
+- [认证体系](05-authentication.md)
+- [SFTP 文件传输](07-sftp.md)
+- [基础连接示例](../examples/basic-connection.md)
 
-[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](/references/paramiko-source.md)。
+[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](../references/paramiko-source.md)。

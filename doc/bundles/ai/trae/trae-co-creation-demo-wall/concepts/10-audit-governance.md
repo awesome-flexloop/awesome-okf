@@ -143,8 +143,8 @@ Edge Runtime 下跳过封禁检查（Prisma 无法在 Edge 运行，已知权衡
 
 ## 相关概念
 
-- [认证系统](/concepts/04-auth-system.md)
-- [数据模型设计](/concepts/03-data-model.md)
-- [字典系统](/concepts/11-dictionary-system.md)
-- [API 路由设计](/concepts/06-api-routes.md)
-- [点赞与统计](/concepts/14-like-system.md)
+- [认证系统](04-auth-system.md)
+- [数据模型设计](03-data-model.md)
+- [字典系统](11-dictionary-system.md)
+- [API 路由设计](06-api-routes.md)
+- [点赞与统计](14-like-system.md)

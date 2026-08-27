@@ -226,8 +226,8 @@ sphinx-autobuild \
 
 ## 相关概念
 
-- [架构概览](/concepts/02-architecture-overview.md)
-- [服务器与热重载](/concepts/06-server-and-hotreload.md)
-- [构建系统](/concepts/04-builder-system.md)
-- [主题开发工作流](/examples/theme-development.md)
-- [sphinx-autobuild 源码信源登记](/references/sphinx-autobuild-source.md)
+- [架构概览](02-architecture-overview.md)
+- [服务器与热重载](06-server-and-hotreload.md)
+- [构建系统](04-builder-system.md)
+- [主题开发工作流](../examples/theme-development.md)
+- [sphinx-autobuild 源码信源登记](../references/sphinx-autobuild-source.md)

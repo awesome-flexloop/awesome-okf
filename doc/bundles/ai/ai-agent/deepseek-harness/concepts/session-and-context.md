@@ -549,11 +549,11 @@ interface CompactionResult {
 
 ## 源码链接
 
-- Session 类与 SessionStore：[index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/session/src/index.ts)
-- 事件类型与 SessionHeader：[types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/session/src/types.ts)
-- Surface 投影层：[surface.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/session/src/surface.ts)
-- Scope 核心：[index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/scope/src/index.ts)
-- ScopedLayers 存储：[store.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/scope/src/store.ts)
-- Compaction 抽象服务：[index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/compaction/compaction/src/index.ts)
-- Compaction 类型与事件：[types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/compaction/compaction/src/types.ts)
-- BasicCompactionEngine 实现：[index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/compaction/compaction-basic/src/index.ts)
+- Session 类与 SessionStore：index.ts
+- 事件类型与 SessionHeader：types.ts
+- Surface 投影层：surface.ts
+- Scope 核心：index.ts
+- ScopedLayers 存储：store.ts
+- Compaction 抽象服务：index.ts
+- Compaction 类型与事件：types.ts
+- BasicCompactionEngine 实现：index.ts

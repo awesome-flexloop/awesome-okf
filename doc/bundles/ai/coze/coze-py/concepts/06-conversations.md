@@ -215,8 +215,8 @@ for event in coze.chat.stream(
 
 ## 相关概念
 
-- [对话与流式处理](/concepts/03-chat-streaming.md) — chat.stream() 中 conversation_id 的使用
-- [Bot 管理](/concepts/04-bot-management.md) — 会话关联的 Bot
-- [分页模式与资源管理](/concepts/09-pagination-resources.md) — 会话列表的分页遍历
-- [基础对话示例](/examples/basic-chat.md) — 多轮对话示例
-- [数据模型、分页与资源管理参考](/references/data-pagination.md) — Conversation/Section 模型的完整 API
+- [对话与流式处理](03-chat-streaming.md) — chat.stream() 中 conversation_id 的使用
+- [Bot 管理](04-bot-management.md) — 会话关联的 Bot
+- [分页模式与资源管理](09-pagination-resources.md) — 会话列表的分页遍历
+- [基础对话示例](../examples/basic-chat.md) — 多轮对话示例
+- [数据模型、分页与资源管理参考](../references/data-pagination.md) — Conversation/Section 模型的完整 API

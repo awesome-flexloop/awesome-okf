@@ -627,8 +627,8 @@ response = client.messages.create(
 
 ## 相关概念
 
-- [Messages API 基础](/python-sdk/concepts/02-messages-basics.md) — 理解消息格式和 stop_reason
-- [工具调用（Function Calling）概念](/python-sdk/concepts/04-tool-use.md) — 工具调用原理、JSON Schema 编写指南、ToolRunner 使用
+- [Messages API 基础](../concepts/02-messages-basics.md) — 理解消息格式和 stop_reason
+- [工具调用（Function Calling）概念](../concepts/04-tool-use.md) — 工具调用原理、JSON Schema 编写指南、ToolRunner 使用
 - [流式对话](02-streaming-chat.md) — 结合流式输出和工具调用实现更好的用户体验
 - [视觉理解](04-vision.md) — 下一个示例：多模态输入（图片）
-- [Anthropic Python SDK 工具系统与 Beta API 参考](/python-sdk/references/tools-beta.md) — @beta_tool 装饰器、ToolRunner 完整 API 参考
+- [Anthropic Python SDK 工具系统与 Beta API 参考](../references/tools-beta.md) — @beta_tool 装饰器、ToolRunner 完整 API 参考

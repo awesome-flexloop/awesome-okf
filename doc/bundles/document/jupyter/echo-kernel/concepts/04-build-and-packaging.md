@@ -273,8 +273,8 @@ npm publish --access public
 
 ## 相关概念
 
-- [Echo Kernel简介](/concepts/00-introduction.md)
-- [JupyterLite内核架构](/concepts/01-kernel-architecture.md)
-- [插件注册机制](/concepts/02-plugin-registration.md)
-- [EchoKernel实现详解](/concepts/03-echokernel-implementation.md)
-- [自定义内核开发](/examples/02-custom-kernel-tutorial.md)
+- [Echo Kernel简介](00-introduction.md)
+- [JupyterLite内核架构](01-kernel-architecture.md)
+- [插件注册机制](02-plugin-registration.md)
+- [EchoKernel实现详解](03-echokernel-implementation.md)
+- [自定义内核开发](../examples/02-custom-kernel-tutorial.md)

@@ -355,6 +355,6 @@ x*(x*(x + 3) + 3) + 1
 - 前置概念：[符号与数字](02-symbols-numbers.md) 了解域系统中的数字表示
 - 关联概念：[方程求解](08-solvers.md) 了解 solve 如何利用多项式算法
 - 关联概念：[矩阵运算](09-matrices.md) 了解特征多项式与 Poly 的联系
-- 源码信源：[polys-algebra-source](/references/polys-algebra-source.md) 提供完整 API 参考
+- 源码信源：[polys-algebra-source](../references/polys-algebra-source.md) 提供完整 API 参考
 
 [^polys-source]: polys/__init__.py — 多项式模块入口；polys/polytools.py — Poly 类定义与多项式运算函数

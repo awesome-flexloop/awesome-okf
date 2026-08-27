@@ -448,7 +448,7 @@ manimgl updaters_interaction.py UpdatersInteraction -w --hd
 
 ## 相关概念
 
-- [10 更新器与交互式动画](/concepts/10-updaters-and-interactivity.md) — add_updater/always/f_always 详解、ValueTracker 用法、鼠标状态 self.mouse_point、embed 断点、interact 交互循环
-- [03 Mobject：数学对象基类](/concepts/03-mobject-fundamentals.md) — animate 语法糖、Mobject 方法（shift/scale/rotate/move_to/set_fill/become）、family 机制
-- [05 动画基础](/concepts/05-animation-basics.md) — Animation 与 Updater 的区别、play/wait 机制、there_and_back 等 rate_func
-- [01 第一个 Scene：Hello World](/concepts/01-hello-world.md) — Scene 生命周期、update_frame/update_mobjects 帧更新循环
+- [10 更新器与交互式动画](../concepts/10-updaters-and-interactivity.md) — add_updater/always/f_always 详解、ValueTracker 用法、鼠标状态 self.mouse_point、embed 断点、interact 交互循环
+- [03 Mobject：数学对象基类](../concepts/03-mobject-fundamentals.md) — animate 语法糖、Mobject 方法（shift/scale/rotate/move_to/set_fill/become）、family 机制
+- [05 动画基础](../concepts/05-animation-basics.md) — Animation 与 Updater 的区别、play/wait 机制、there_and_back 等 rate_func
+- [01 第一个 Scene：Hello World](../concepts/01-hello-world.md) — Scene 生命周期、update_frame/update_mobjects 帧更新循环

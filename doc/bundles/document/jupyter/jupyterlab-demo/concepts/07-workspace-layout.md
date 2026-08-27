@@ -266,7 +266,7 @@ JupyterLab 工作区存储在：
 
 ## 相关概念
 
-- [Binder 环境配置三要素](/concepts/02-binder-config.md)
-- [演示能力维度与多内核支持](/concepts/04-demo-capabilities.md)
-- [插件架构与扩展生态](/concepts/08-extension-demo.md)
-- [实战：添加自己的演示内容](/examples/04-add-demo-content.md)
+- [Binder 环境配置三要素](02-binder-config.md)
+- [演示能力维度与多内核支持](04-demo-capabilities.md)
+- [插件架构与扩展生态](08-extension-demo.md)
+- [实战：添加自己的演示内容](../examples/04-add-demo-content.md)

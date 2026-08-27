@@ -282,6 +282,6 @@ execute:
 
 ## 相关文档
 
-- [00-execution-architecture.md](/concepts/00-execution-architecture.md)：执行架构总览
-- [01-myst-execute-kernel.md](/concepts/01-myst-execute-kernel.md)：内核管理机制
-- [02-execution-cache.md](/concepts/02-execution-cache.md)：缓存系统详解
+- [00-execution-architecture.md](../concepts/00-execution-architecture.md)：执行架构总览
+- [01-myst-execute-kernel.md](../concepts/01-myst-execute-kernel.md)：内核管理机制
+- [02-execution-cache.md](../concepts/02-execution-cache.md)：缓存系统详解

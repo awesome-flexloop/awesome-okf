@@ -106,7 +106,7 @@ if __name__ == "__main__":
 
 ### 步骤 1：AIAgent 初始化
 
-`AIAgent` 类定义于 [run_agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/run_agent.py#L412-L418)，其 `__init__` 接受 60+ 个参数，但绝大多数有合理默认值。核心参数说明：
+`AIAgent` 类定义于 run_agent.py，其 `__init__` 接受 60+ 个参数，但绝大多数有合理默认值。核心参数说明：
 
 | 参数 | 说明 | 默认值 |
 |------|------|--------|
@@ -119,7 +119,7 @@ if __name__ == "__main__":
 | `max_tokens` | 单次 LLM 调用最大输出 token | `None` |
 | `session_id` | 会话标识符，用于记忆持久化 | 自动生成 UUID |
 
-初始化时，`AIAgent.__init__` 是一个转发器（F-013），将所有参数委托给 [agent/agent_init.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/agent_init.py) 中的 `init_agent()` 函数完成实际初始化，包括：
+初始化时，`AIAgent.__init__` 是一个转发器（F-013），将所有参数委托给 agent/agent_init.py 中的 `init_agent()` 函数完成实际初始化，包括：
 1. Provider 自动检测与 Transport 适配
 2. 凭证池解析（credential_pool）
 3. 工具发现与注册（通过 `ToolRegistry`）

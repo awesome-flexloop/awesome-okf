@@ -13,7 +13,7 @@ OpenWiki 的 agent 层基于 [DeepAgents](https://github.com/langchain-ai/deepag
 
 ## 两级 API 架构
 
-Agent 层暴露两个层级的 API（见 [API 参考](/ai/langchain-ai/openwiki/references/api)）：
+Agent 层暴露两个层级的 API（见 API 参考）：
 
 ### `runOpenWikiAgent`（高层运行边界）
 
@@ -158,6 +158,6 @@ Agent 以 LangGraph stream 模式运行（`streamMode: ["messages", "tools"]`，
 
 ## 进一步阅读
 
-- [总览](/ai/langchain-ai/openwiki/concepts/overview)
-- [Auth 与 CLI 认证体系](/ai/langchain-ai/openwiki/concepts/auth-cli)
-- [API 参考](/ai/langchain-ai/openwiki/references/api)
+- 总览
+- Auth 与 CLI 认证体系
+- API 参考

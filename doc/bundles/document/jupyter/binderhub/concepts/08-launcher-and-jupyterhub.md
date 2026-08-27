@@ -14,7 +14,7 @@ sources:
 
 ## 概述
 
-BinderHub 的启动系统定义在 [launcher.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/launcher.py) 和 [binderspawner_mixin.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/binderspawner_mixin.py) 中。`Launcher` 类负责通过 JupyterHub REST API 为每个构建好的镜像创建临时用户（或使用已认证用户）并启动 Notebook 服务器；`BinderSpawnerMixin` 是一个混入类，将标准 JupyterHub Spawner（如 KubeSpawner）转换为 BinderHub 专用 Spawner，处理镜像注入、Token 传递和 CORS 配置。
+BinderHub 的启动系统定义在 launcher.py 和 binderspawner_mixin.py 中。`Launcher` 类负责通过 JupyterHub REST API 为每个构建好的镜像创建临时用户（或使用已认证用户）并启动 Notebook 服务器；`BinderSpawnerMixin` 是一个混入类，将标准 JupyterHub Spawner（如 KubeSpawner）转换为 BinderHub 专用 Spawner，处理镜像注入、Token 传递和 CORS 配置。
 
 整个启动流程涉及 HTTP 认证头设置、用户创建冲突处理、指数退避重试、Server-Sent Events (SSE) 进度流消费、超时控制和服务器 URL 构造等多个环节。
 
@@ -34,7 +34,7 @@ SUFFIX_LENGTH = 8
 
 ## Launcher 类
 
-`Launcher`（[launcher.py:37-359](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/launcher.py#L37-L359)）继承自 `LoggingConfigurable`，封装了与 JupyterHub API 交互的完整逻辑。
+`Launcher`（launcher.py:37-359）继承自 `LoggingConfigurable`，封装了与 JupyterHub API 交互的完整逻辑。
 
 ### 核心 Traitlets 属性
 
@@ -63,7 +63,7 @@ def _default_hub_url_local(self):
 
 ### api_request()：Hub API 请求与重试逻辑
 
-`api_request()` 方法（[launcher.py:98-133](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/launcher.py#L98-L133)）是所有 Hub API 调用的底层方法，实现了认证头注入和指数退避重试。
+`api_request()` 方法（launcher.py:98-133）是所有 Hub API 调用的底层方法，实现了认证头注入和指数退避重试。
 
 ```python
 async def api_request(self, url, *args, **kwargs):
@@ -125,7 +125,7 @@ async def get_user_data(self, username):
 
 ### unique_name_from_repo()：从仓库URL生成唯一用户名
 
-`unique_name_from_repo()` 方法（[launcher.py:143-169](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/launcher.py#L143-L169)）将 Git 仓库 URL 转换为安全的 JupyterHub 用户名。
+`unique_name_from_repo()` 方法（launcher.py:143-169）将 Git 仓库 URL 转换为安全的 JupyterHub 用户名。
 
 ```python
 def unique_name_from_repo(self, repo_url):
@@ -167,7 +167,7 @@ def unique_name_from_repo(self, repo_url):
 
 ### launch()：完整启动流程
 
-`launch()` 方法（[launcher.py:171-359](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/launcher.py#L171-L359)）是启动服务器的核心入口，实现了一个10步流程。
+`launch()` 方法（launcher.py:171-359）是启动服务器的核心入口，实现了一个10步流程。
 
 #### 方法签名
 
@@ -465,7 +465,7 @@ return data
 
 ## BinderSpawnerMixin：Binder Spawner 混入类
 
-`BinderSpawnerMixin`（[binderspawner_mixin.py:24-117](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/binderspawner_mixin.py#L24-L117)）是一个 `Configurable` 混入类，将任意容器 Spawner（如 KubeSpawner、DockerSpawner）转换为 BinderHub 专用 Spawner。
+`BinderSpawnerMixin`（binderspawner_mixin.py:24-117）是一个 `Configurable` 混入类，将任意容器 Spawner（如 KubeSpawner、DockerSpawner）转换为 BinderHub 专用 Spawner。
 
 > **重要说明**：此类的源代码在 `binderhub/binderspawner_mixin.py` 中定义，但通过 CI 脚本 `ci/check_embedded_chart_code.py` 自动复制到 Helm Chart 的 `values.yaml` 的 `jupyterhub.hub.extraConfig.0-binderspawnermixin` 字段中，在 JupyterHub Pod 启动时动态注入执行。BinderHub 自身并不直接使用此代码，它作为分发机制随 BinderHub 一起提供给 JupyterHub。
 
@@ -578,7 +578,7 @@ def get_env(self):
 
 ## Launcher 在 BinderHub 应用中的初始化
 
-在 [app.py:950-956](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L950-L956) 中，Launcher 在应用初始化时被创建：
+在 app.py:950-956 中，Launcher 在应用初始化时被创建：
 
 ```python
 self.launcher = Launcher(
@@ -594,7 +594,7 @@ self.launcher = Launcher(
 
 ## BuildHandler 中的启动调用链
 
-在 [builder.py:734-852](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L734-L852) 中，`BuildHandler.launch()` 方法调用 Launcher 并实现了额外的重试逻辑：
+在 builder.py:734-852 中，`BuildHandler.launch()` 方法调用 Launcher 并实现了额外的重试逻辑：
 
 ```python
 launcher = self.settings["launcher"]
@@ -643,12 +643,12 @@ BuildHandler 层的重试与 Launcher.api_request() 的重试形成两层保护�
 
 ## 关键源码引用
 
-- Launcher 类定义：[launcher.py:37-359](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/launcher.py#L37-L359)
-- 模块常量与正则：[launcher.py:28-34](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/launcher.py#L28-L34)
-- api_request() 重试逻辑：[launcher.py:98-133](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/launcher.py#L98-L133)
-- unique_name_from_repo()：[launcher.py:143-169](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/launcher.py#L143-L169)
-- launch() 完整流程：[launcher.py:171-359](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/launcher.py#L171-L359)
-- BinderSpawnerMixin 类：[binderspawner_mixin.py:24-117](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/binderspawner_mixin.py#L24-L117)
-- get_args() NotebookApp/ServerApp 双兼容：[binderspawner_mixin.py:67-92](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/binderspawner_mixin.py#L67-L92)
-- Launcher 初始化：[app.py:950-956](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L950-L956)
-- BuildHandler.launch() 调用链：[builder.py:734-852](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L734-L852)
+- Launcher 类定义：launcher.py:37-359
+- 模块常量与正则：launcher.py:28-34
+- api_request() 重试逻辑：launcher.py:98-133
+- unique_name_from_repo()：launcher.py:143-169
+- launch() 完整流程：launcher.py:171-359
+- BinderSpawnerMixin 类：binderspawner_mixin.py:24-117
+- get_args() NotebookApp/ServerApp 双兼容：binderspawner_mixin.py:67-92
+- Launcher 初始化：app.py:950-956
+- BuildHandler.launch() 调用链：builder.py:734-852

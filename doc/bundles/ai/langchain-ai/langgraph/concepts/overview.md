@@ -70,7 +70,7 @@ graph.invoke({"count": 0})  # {'count': 1}
 2. **Execute**：并行执行所有触发节点，写入暂存不可见
 3. **Update**：将所有写入应用到通道，推进版本号
 
-详见 [Pregel 引擎](/ai/langchain-ai/langgraph/concepts/pregel-engine)。
+详见 Pregel 引擎。
 
 ### 通道系统
 
@@ -80,7 +80,7 @@ graph.invoke({"count": 0})  # {'count': 1}
 - 有 reducer 的键 → `BinaryOperatorAggregate`（用函数聚合）
 - 特殊通道 → `Topic`、`EphemeralValue`、`NamedBarrierValue` 等
 
-详见 [通道系统](/ai/langchain-ai/langgraph/concepts/channels)。
+详见 通道系统。
 
 ### 检查点
 
@@ -90,7 +90,7 @@ graph.invoke({"count": 0})  # {'count': 1}
 - **时间旅行**：回退到历史检查点重新执行
 - **持久化记忆**：跨对话保持状态
 
-详见 [检查点机制](/ai/langchain-ai/langgraph/concepts/checkpointing)。
+详见 检查点机制。
 
 ## 关键能力
 
@@ -109,7 +109,7 @@ def human_node(state):
 graph.invoke(Command(resume="确认通过"), config)
 ```
 
-详见 [错误处理与中断](/ai/langchain-ai/langgraph/concepts/error-handling)。
+详见 错误处理与中断。
 
 ### 动态扇出（Map-Reduce）
 
@@ -126,7 +126,7 @@ def fan_out(state):
 
 支持七种流模式：`values`（完整状态）、`updates`（增量更新）、`messages`（token 流）、`custom`（自定义数据）、`checkpoints`、`tasks`、`debug`。
 
-详见 [流式处理](/ai/langchain-ai/langgraph/concepts/streaming)。
+详见 流式处理。
 
 ### 消息状态
 
@@ -139,7 +139,7 @@ from langgraph.graph import MessagesState
 #     messages: Annotated[list[AnyMessage], add_messages]
 ```
 
-详见 [消息图](/ai/langchain-ai/langgraph/concepts/message-graph)。
+详见 消息图。
 
 ## 架构概览
 
@@ -174,10 +174,10 @@ langgraph/
 
 ## 进一步阅读
 
-- [状态图](/ai/langchain-ai/langgraph/concepts/state-graph) — StateGraph 的使用模式
-- [通道系统](/ai/langchain-ai/langgraph/concepts/channels) — 通道类型与 reducer
-- [Pregel 引擎](/ai/langchain-ai/langgraph/concepts/pregel-engine) — BSP 执行模型
-- [检查点机制](/ai/langchain-ai/langgraph/concepts/checkpointing) — 持久化与恢复
-- [消息图](/ai/langchain-ai/langgraph/concepts/message-graph) — 聊天应用构建
-- [流式处理](/ai/langchain-ai/langgraph/concepts/streaming) — 流模式详解
-- [错误处理](/ai/langchain-ai/langgraph/concepts/error-handling) — 重试、中断与恢复
+- 状态图 — StateGraph 的使用模式
+- 通道系统 — 通道类型与 reducer
+- Pregel 引擎 — BSP 执行模型
+- 检查点机制 — 持久化与恢复
+- 消息图 — 聊天应用构建
+- 流式处理 — 流模式详解
+- 错误处理 — 重试、中断与恢复

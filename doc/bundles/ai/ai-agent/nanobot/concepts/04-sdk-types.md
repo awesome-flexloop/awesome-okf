@@ -291,7 +291,7 @@ def __getattr__(name: str) -> Any:
 
 ## 相关概念
 
-- [Agent 运行时](/concepts/02-agent-runtime.md)
-- [消息总线](/concepts/03-bus-messaging.md)
-- [整体架构](/concepts/01-architecture.md)
-- [多接口架构](/concepts/05-multi-interface.md)
+- [Agent 运行时](02-agent-runtime.md)
+- [消息总线](03-bus-messaging.md)
+- [整体架构](01-architecture.md)
+- [多接口架构](05-multi-interface.md)

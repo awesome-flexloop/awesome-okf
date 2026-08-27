@@ -248,10 +248,10 @@ interface IPyodideWorkerKernel {
 
 ## 下一步
 
-- [消息桥接机制](/concepts/07-message-bridge.md) — Python↔JS 的回调机制
-- [Python 兼容性层](/concepts/06-python-compatibility.md) — IPython 在 WASM 中的适配
-- [架构总览](/concepts/02-architecture-overview.md) — 返回架构总览
+- [消息桥接机制](07-message-bridge.md) — Python↔JS 的回调机制
+- [Python 兼容性层](06-python-compatibility.md) — IPython 在 WASM 中的适配
+- [架构总览](02-architecture-overview.md) — 返回架构总览
 
 ## 源码参考
 
-- [TypeScript Kernel 源码](/references/kernel-ts-source.md)
+- [TypeScript Kernel 源码](../references/kernel-ts-source.md)

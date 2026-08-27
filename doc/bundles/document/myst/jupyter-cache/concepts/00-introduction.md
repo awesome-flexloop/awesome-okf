@@ -73,6 +73,6 @@ jupyter-cache 通过内容哈希缓存机制解决这个问题：**只有代码�
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [缓存架构设计](/concepts/02-architecture.md)
-- [CLI 命令参考](/concepts/05-cli-reference.md)
+- [快速开始](01-getting-started.md)
+- [缓存架构设计](02-architecture.md)
+- [CLI 命令参考](05-cli-reference.md)

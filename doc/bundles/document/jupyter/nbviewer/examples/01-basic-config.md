@@ -272,7 +272,7 @@ c.Application.log_level = "INFO"
 
 ## 相关文档
 
-- [快速开始](/concepts/01-getting-started.md)：完整CLI参数列表
-- [部署指南](/concepts/13-deployment.md)：Docker和Nginx部署
-- [应用类与traitlets配置](/concepts/03-app-and-traitlets.md)：配置机制详解
-- [Docker部署示例](/examples/04-docker-deploy.md)：容器化部署
+- [快速开始](../concepts/01-getting-started.md)：完整CLI参数列表
+- [部署指南](../concepts/13-deployment.md)：Docker和Nginx部署
+- [应用类与traitlets配置](../concepts/03-app-and-traitlets.md)：配置机制详解
+- [Docker部署示例](04-docker-deploy.md)：容器化部署

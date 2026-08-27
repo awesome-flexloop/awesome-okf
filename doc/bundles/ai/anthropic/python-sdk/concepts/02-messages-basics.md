@@ -305,7 +305,7 @@ else:
 | Web 聊天界面（实时打字效果） | 流式 |
 | 长文本生成（减少感知等待时间） | 流式 |
 
-流式模式的具体用法将在 [03-streaming.md](/python-sdk/concepts/03-streaming.md) 中详细讲解。入门阶段使用非流式即可，简单直接。
+流式模式的具体用法将在 [03-streaming.md](03-streaming.md) 中详细讲解。入门阶段使用非流式即可，简单直接。
 
 ## 可选参数预览
 
@@ -313,8 +313,8 @@ else:
 
 | 参数 | 用途 | 对应概念文档 |
 |------|------|-------------|
-| `stream` | 启用流式响应 | [03-streaming.md](/python-sdk/concepts/03-streaming.md) |
-| `tools`/`tool_choice` | 定义工具和工具选择策略 | [04-tool-use.md](/python-sdk/concepts/04-tool-use.md) |
+| `stream` | 启用流式响应 | [03-streaming.md](03-streaming.md) |
+| `tools`/`tool_choice` | 定义工具和工具选择策略 | [04-tool-use.md](04-tool-use.md) |
 | `thinking` | Extended Thinking 思考模式 | 示例文档 |
 | `stop_sequences` | 自定义停止序列 | API 参考 |
 | `metadata` | 请求元数据（如 user_id） | API 参考 |
@@ -332,8 +332,8 @@ else:
 
 ## 相关概念
 
-- [客户端初始化与配置](/python-sdk/concepts/01-client-init.md) — 学习如何正确初始化客户端
-- [流式处理](/python-sdk/concepts/03-streaming.md) — 实时流式输出的两种使用方式
-- [工具调用（Function Calling）](/python-sdk/concepts/04-tool-use.md) — 让 Claude 调用函数获取外部数据
-- [Anthropic Python SDK 消息 API 与流式处理参考](/python-sdk/references/messages-api.md) — `messages.create` 所有参数的完整 API 参考
-- [Anthropic Python SDK 类型系统与异常体系参考](/python-sdk/references/types-errors.md) — 错误处理的完整异常类列表
+- [客户端初始化与配置](01-client-init.md) — 学习如何正确初始化客户端
+- [流式处理](03-streaming.md) — 实时流式输出的两种使用方式
+- [工具调用（Function Calling）](04-tool-use.md) — 让 Claude 调用函数获取外部数据
+- [Anthropic Python SDK 消息 API 与流式处理参考](../references/messages-api.md) — `messages.create` 所有参数的完整 API 参考
+- [Anthropic Python SDK 类型系统与异常体系参考](../references/types-errors.md) — 错误处理的完整异常类列表

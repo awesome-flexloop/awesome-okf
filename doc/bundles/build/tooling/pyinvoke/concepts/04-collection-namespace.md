@@ -474,10 +474,10 @@ data = ns.serialized()
 
 ## 相关概念
 
-- [Task 基础](/concepts/02-task-basics.md)
-- [Context 对象](/concepts/03-context-object.md)
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [PyInvoke 简介](/concepts/00-introduction.md)
-- [PyInvoke 源码信源登记](/references/pyinvoke-source.md)
+- [Task 基础](02-task-basics.md)
+- [Context 对象](03-context-object.md)
+- [5分钟快速上手](01-getting-started.md)
+- [PyInvoke 简介](00-introduction.md)
+- [PyInvoke 源码信源登记](../references/pyinvoke-source.md)
 
-[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](/references/pyinvoke-source.md)；Collection 类定义于 `invoke/collection.py`。
+[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](../references/pyinvoke-source.md)；Collection 类定义于 `invoke/collection.py`。

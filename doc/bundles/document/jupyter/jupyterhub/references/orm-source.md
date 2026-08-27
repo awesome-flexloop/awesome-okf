@@ -37,7 +37,7 @@ ORM 模块基于 SQLAlchemy 定义 JupyterHub 进程星座（constellation of pr
 
 | 变量 | 位置 | 说明 |
 |------|------|------|
-| `utcnow` | [orm.py#L52](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L52) | `partial(utcnow, with_tz=False)` — 无时区 UTC 时间工厂，用于测试 mock |
+| `utcnow` | orm.py#L52 | `partial(utcnow, with_tz=False)` — 无时区 UTC 时间工厂，用于测试 mock |
 
 ---
 
@@ -45,7 +45,7 @@ ORM 模块基于 SQLAlchemy 定义 JupyterHub 进程星座（constellation of pr
 
 ### JSONDict {#JSONDict}
 
-**位置**：[orm.py#L55-L94](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L55-L94)
+**位置**：orm.py#L55-L94
 
 继承 `sqlalchemy.types.TypeDecorator`，将不可变 Python 结构序列化为 JSON 字符串存储（底层 `Text` 列）。支持 bytes 类型的透明编解码。
 
@@ -60,7 +60,7 @@ ORM 模块基于 SQLAlchemy 定义 JupyterHub 进程星座（constellation of pr
 
 ### JSONList {#JSONList}
 
-**位置**：[orm.py#L97-L124](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L97-L124)
+**位置**：orm.py#L97-L124
 
 继承 `JSONDict`，专用于列表类型列。支持 list/tuple/set 赋值，set 序列化为有序列表（sorted）。
 
@@ -75,7 +75,7 @@ ORM 模块基于 SQLAlchemy 定义 JupyterHub 进程星座（constellation of pr
 
 ## 元数据与基类
 
-**位置**：[orm.py#L127-L138](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L127-L138)
+**位置**：orm.py#L127-L138
 
 ```python
 meta = MetaData(
@@ -117,10 +117,10 @@ Base (declarative_base)
 
 | 表名 | 位置 | 列 | 说明 |
 |------|------|-----|------|
-| `user_role_map` | [L173-L187](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L173-L187) | `user_id` (FK→users.id, CASCADE, PK), `role_id` (FK→roles.id, CASCADE, PK), `managed_by_auth` (Boolean, default False) | 用户-角色多对多 |
+| `user_role_map` | L173-L187 | `user_id` (FK→users.id, CASCADE, PK), `role_id` (FK→roles.id, CASCADE, PK), `managed_by_auth` (Boolean, default False) | 用户-角色多对多 |
 | `group_role_map` | 同上 | `group_id` (FK→groups.id, CASCADE, PK), `role_id`, `managed_by_auth` | 用户组-角色多对多 |
 | `service_role_map` | 同上 | `service_id` (FK→services.id, CASCADE, PK), `role_id`, `managed_by_auth` | 服务-角色多对多 |
-| `user_group_map` | [L223-L228](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L223-L228) | `user_id` (FK→users.id, CASCADE, PK), `group_id` (FK→groups.id, CASCADE, PK) | 用户-用户组多对多 |
+| `user_group_map` | L223-L228 | `user_id` (FK→users.id, CASCADE, PK), `group_id` (FK→groups.id, CASCADE, PK) | 用户-用户组多对多 |
 
 > 三个 `*_role_map` 表通过循环 `for entity in ('user', 'group', 'service')` 动态创建，对应的映射类通过 `type()` 动态生成并存入 `_role_associations` 字典。
 
@@ -128,7 +128,7 @@ Base (declarative_base)
 
 ## Server 模型
 
-**位置**：[orm.py#L141-L160](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L141-L160)
+**位置**：orm.py#L141-L160
 
 表名：`servers`，记录服务器的基本连接和 Cookie 信息。
 
@@ -160,7 +160,7 @@ Base (declarative_base)
 
 ## Role 模型
 
-**位置**：[orm.py#L194-L219](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L194-L219)
+**位置**：orm.py#L194-L219
 
 表名：`roles`，用户/服务/用户组的角色定义，RBAC 权限模型核心。
 
@@ -186,14 +186,14 @@ Base (declarative_base)
 
 | 方法 | 签名 | 位置 | 说明 |
 |------|------|------|------|
-| `__repr__` | `__repr__(self)` | [L211-L212](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L211-L212) | 返回 `<Role name (description) - scopes: [...]>` |
-| `find` | `find(cls, db, name)` classmethod | [L214-L219](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L214-L219) | 按名称查找角色，返回 None 或 Role 实例 |
+| `__repr__` | `__repr__(self)` | L211-L212 | 返回 `<Role name (description) - scopes: [...]>` |
+| `find` | `find(cls, db, name)` classmethod | L214-L219 | 按名称查找角色，返回 None 或 Role 实例 |
 
 ---
 
 ## Group 模型
 
-**位置**：[orm.py#L231-L261](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L231-L261)
+**位置**：orm.py#L231-L261
 
 表名：`groups`，用户组定义。
 
@@ -223,14 +223,14 @@ Base (declarative_base)
 
 | 方法 | 签名 | 位置 | 说明 |
 |------|------|------|------|
-| `__repr__` | `__repr__(self)` | [L253-L254](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L253-L254) | 返回 `<Group name>` |
-| `find` | `find(cls, db, name)` classmethod | [L256-L261](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L256-L261) | 按名称查找组 |
+| `__repr__` | `__repr__(self)` | L253-L254 | 返回 `<Group name>` |
+| `find` | `find(cls, db, name)` classmethod | L256-L261 | 按名称查找组 |
 
 ---
 
 ## User 模型
 
-**位置**：[orm.py#L264-L386](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L264-L386)
+**位置**：orm.py#L264-L386
 
 表名：`users`，核心用户表。每个用户可拥有多个单用户 notebook 服务器、API Token、Cookie 会话、OAuth 授权码等。
 
@@ -273,15 +273,15 @@ Base (declarative_base)
 
 | 方法 | 签名 | 位置 | 说明 |
 |------|------|------|------|
-| `__repr__` | `__repr__(self)` | [L371-L372](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L371-L372) | 返回 `<User(name running/total running)>` 格式，显示运行中/总 Spawner 数 |
-| `new_api_token` | `new_api_token(self, token=None, **kwargs)` | [L374-L379](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L374-L379) | 创建新 API Token；`token` 参数给定则加载已有 token |
-| `find` | `find(cls, db, name)` classmethod | [L381-L386](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L381-L386) | 按用户名查找用户 |
+| `__repr__` | `__repr__(self)` | L371-L372 | 返回 `<User(name running/total running)>` 格式，显示运行中/总 Spawner 数 |
+| `new_api_token` | `new_api_token(self, token=None, **kwargs)` | L374-L379 | 创建新 API Token；`token` 参数给定则加载已有 token |
+| `find` | `find(cls, db, name)` classmethod | L381-L386 | 按用户名查找用户 |
 
 ---
 
 ## Spawner 模型
 
-**位置**：[orm.py#L389-L446](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L389-L446)
+**位置**：orm.py#L389-L446
 
 表名：`spawners`，记录单个 Spawner 实例的持久化状态。支持每个用户多个命名服务器。
 
@@ -324,7 +324,7 @@ Base (declarative_base)
 
 ## Service 模型
 
-**位置**：[orm.py#L449-L500](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py#L449-L500)（前 500 行范围内）
+**位置**：orm.py#L449-L500（前 500 行范围内）
 
 表名：`services`，JupyterHub 托管服务。Service 类似没有 Spawner 的 User，可以拥有 API Token 访问 Hub API，可选配代理 HTTP 端点。
 

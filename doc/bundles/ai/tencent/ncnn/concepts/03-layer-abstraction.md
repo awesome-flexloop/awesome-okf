@@ -136,4 +136,4 @@ net.register_custom_layer("MyLayer", MyLayer_layer_creator);
 - [06 Vulkan GPU 后端](06-vulkan-gpu.md)
 - [08 ParamDict 与 ModelBin](08-paramdict-modelbin.md)
 - [09 层注册表与自定义层](09-layer-registry.md)
-- [自定义 Layer 示例](/examples/custom-layer.md)
+- [自定义 Layer 示例](../examples/custom-layer.md)

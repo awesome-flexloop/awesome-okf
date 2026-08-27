@@ -333,17 +333,17 @@ CLI 参数解析后，非退出命令会调用 `SessionConfig.createFromArgs(cli
 
 ## 相关信源
 
-- [CLI 信源](/references/cli-source.md)
-- [Main 信源](/references/main-source.md)
-- [Settings 信源](/references/settings-source.md)
+- [CLI 信源](../references/cli-source.md)
+- [Main 信源](../references/main-source.md)
+- [Settings 信源](../references/settings-source.md)
 
 ## 下一篇
 
-- [事件与IPC系统](/concepts/08-event-ipc-system.md)
+- [事件与IPC系统](08-event-ipc-system.md)
 
 ## 相关概念
 
-- [Python 环境管理](/concepts/05-python-env-management.md) — jlab env 子命令底层调用环境发现、创建和激活逻辑
-- [设置与配置系统](/concepts/06-settings-config.md) — jlab config 子命令读写 UserSettings/WorkspaceSettings
-- [应用入口与生命周期](/concepts/02-app-entry-lifecycle.md) — CLI 参数在启动序列的 processArgs 阶段解析
-- [CLI 命令使用示例](/examples/cli-usage-examples.md) — 常见 CLI 操作场景的实际示例
+- [Python 环境管理](05-python-env-management.md) — jlab env 子命令底层调用环境发现、创建和激活逻辑
+- [设置与配置系统](06-settings-config.md) — jlab config 子命令读写 UserSettings/WorkspaceSettings
+- [应用入口与生命周期](02-app-entry-lifecycle.md) — CLI 参数在启动序列的 processArgs 阶段解析
+- [CLI 命令使用示例](../examples/cli-usage-examples.md) — 常见 CLI 操作场景的实际示例

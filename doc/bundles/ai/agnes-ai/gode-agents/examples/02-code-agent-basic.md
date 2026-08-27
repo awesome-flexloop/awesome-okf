@@ -297,9 +297,9 @@ LLM 生成代码 → parse_code_blobs() 提取代码块 → PythonExecutor 执�
 
 ## 相关链接
 
-- [代码执行智能体](/concepts/06-code-agent.md) — CodeAgent 的设计原理和代码执行流程
-- [Python 执行器](/concepts/11-python-executor.md) — LocalPythonExecutor 的沙箱机制和安全设计
-- [工具调用智能体](/concepts/05-tool-calling-agent.md) — ToolCallingAgent 与 CodeAgent 的对比
-- [智能体类型总览](/concepts/10-agent-types.md) — 不同 Agent 类型的选择指南
-- [Agents API 参考](/references/agents-api.md) — CodeAgent 的完整构造参数
-- [Executor API 参考](/references/executor-api.md) — PythonExecutor 的 API 文档
+- [代码执行智能体](../concepts/06-code-agent.md) — CodeAgent 的设计原理和代码执行流程
+- [Python 执行器](../concepts/11-python-executor.md) — LocalPythonExecutor 的沙箱机制和安全设计
+- [工具调用智能体](../concepts/05-tool-calling-agent.md) — ToolCallingAgent 与 CodeAgent 的对比
+- [智能体类型总览](../concepts/10-agent-types.md) — 不同 Agent 类型的选择指南
+- [Agents API 参考](../references/agents-api.md) — CodeAgent 的完整构造参数
+- [Executor API 参考](../references/executor-api.md) — PythonExecutor 的 API 文档

@@ -295,8 +295,8 @@ TerminalIPythonApp.start()
 
 ## 相关概念
 
-- [IPython 简介](/concepts/00-introduction.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [Shell 生命周期](/concepts/03-shell-lifecycle.md)
-- [终端前端与 GUI 集成](/concepts/13-terminal-frontend.md)
-- [信源参考 - 应用层](/references/app-source.md)
+- [IPython 简介](00-introduction.md)
+- [架构总览](02-architecture-overview.md)
+- [Shell 生命周期](03-shell-lifecycle.md)
+- [终端前端与 GUI 集成](13-terminal-frontend.md)
+- [信源参考 - 应用层](../references/app-source.md)

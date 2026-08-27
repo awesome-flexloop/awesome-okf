@@ -262,9 +262,9 @@ Field lists是单行的，值中不能换行。如果需要长描述，保持在
 
 ## 相关概念
 
-- [页面级覆盖机制](/concepts/06-per-page-overrides.md)
-- [核心标签生成流程](/concepts/03-tag-generation.md)
-- [配置选项全解](/concepts/02-configuration.md)
-- [基础配置示例](/examples/basic-setup.md)
-- [高级配置示例](/examples/advanced-config.md)
-- [sphinxext-opengraph 源码信源登记](/references/sphinxext-opengraph-source.md)
+- [页面级覆盖机制](../concepts/06-per-page-overrides.md)
+- [核心标签生成流程](../concepts/03-tag-generation.md)
+- [配置选项全解](../concepts/02-configuration.md)
+- [基础配置示例](basic-setup.md)
+- [高级配置示例](advanced-config.md)
+- [sphinxext-opengraph 源码信源登记](../references/sphinxext-opengraph-source.md)

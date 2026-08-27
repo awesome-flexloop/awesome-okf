@@ -61,7 +61,7 @@ LPLB 工作流程分三阶段：
 - **Torus**：二维环面，多节点全局均衡
 - **Ring**：简单环形，用于验证
 
-详见 [拓扑感知路由](/ai/deepseek/lplb/concepts/topology-aware-routing)。
+详见 拓扑感知路由。
 
 ### GPU 端 LP 求解
 
@@ -69,7 +69,7 @@ LPLB 工作流程分三阶段：
 - 内点法（5 步迭代）使用 cuSolverDx Cholesky 分解和 cuBLASDx 矩阵乘法，在单 SM block 共享内存中完成。
 - 节点内约 100µs 完成一次求解。
 
-详见 [LP 求解器设计](/ai/deepseek/lplb/concepts/lp-solver-design)。
+详见 LP 求解器设计。
 
 ### 加权哈希路由
 
@@ -80,14 +80,14 @@ LP 得到分配比例后，token 通过确定性加权哈希分配到原始专�
 - **EPLB（静态层）**：定期根据历史负载重排专家、复制热专家，决定"哪些专家需要副本"。
 - **LPLB（动态层）**：每个 batch 实时求解 LP，决定"当前 batch 的 token 如何在原始和副本间分配"。
 
-两者互补：EPLB 处理慢时间尺度的结构性不均衡，LPLB 处理快时间尺度的 per-batch 波动。详见 [EPLB 集成](/ai/deepseek/lplb/concepts/eplb-integration)。
+两者互补：EPLB 处理慢时间尺度的结构性不均衡，LPLB 处理快时间尺度的 per-batch 波动。详见 EPLB 集成。
 
 ## 与 Deep 生态的关系
 
 | 组件 | 路径 | 关系 |
 |---|---|---|
-| DeepEP | [/deepseek/deep-ep/](/ai/deepseek/deep-ep/) | EP 通信库，提供 all-to-all 和 NVSHMEM 通信。LPLB 复用其通信缓冲区优化 workload 同步。 |
-| DeepGEMM | [/deepseek/deep-gemm/](/ai/deepseek/deep-gemm/) | MoE grouped GEMM 计算库。LPLB 的均衡直接影响 DeepGEMM 尾延迟。 |
+| DeepEP | [/deepseek/deep-ep/](../../deep-ep/index.md) | EP 通信库，提供 all-to-all 和 NVSHMEM 通信。LPLB 复用其通信缓冲区优化 workload 同步。 |
+| DeepGEMM | [/deepseek/deep-gemm/](../../deep-gemm/index.md) | MoE grouped GEMM 计算库。LPLB 的均衡直接影响 DeepGEMM 尾延迟。 |
 
 ## 架构概览
 
@@ -119,7 +119,7 @@ avail_counter = torch.zeros((), dtype=torch.int32, device='cuda')
 redirected_indices = planner.run(indices, avail_counter)
 ```
 
-详见 [API 参考](/ai/deepseek/lplb/references/api) 和 [基础规划示例](/ai/deepseek/lplb/examples/basic-planning)。
+详见 API 参考 和 基础规划示例。
 
 ## 已知限制
 
@@ -130,7 +130,7 @@ redirected_indices = planner.run(indices, avail_counter)
 
 ## 进一步阅读
 
-- [负载均衡问题建模](/ai/deepseek/lplb/concepts/load-balancing-problem)
-- [LP 求解器设计](/ai/deepseek/lplb/concepts/lp-solver-design)
-- [拓扑感知路由](/ai/deepseek/lplb/concepts/topology-aware-routing)
-- [EPLB 集成](/ai/deepseek/lplb/concepts/eplb-integration)
+- 负载均衡问题建模
+- LP 求解器设计
+- 拓扑感知路由
+- EPLB 集成

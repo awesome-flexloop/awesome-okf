@@ -178,8 +178,8 @@ myst_url_schemes = {
 
 ## 相关概念
 
-- [MyST 语法概览](/concepts/02-myst-syntax-overview.md)
-- [解析器与渲染器](/concepts/06-parser-and-renderer.md)
-- [配置系统](/concepts/04-config-system.md)
-- [Sphinx 集成机制](/concepts/11-sphinx-integration.md)
-- [交叉引用实战](/examples/04-cross-references.md)
+- [MyST 语法概览](02-myst-syntax-overview.md)
+- [解析器与渲染器](06-parser-and-renderer.md)
+- [配置系统](04-config-system.md)
+- [Sphinx 集成机制](11-sphinx-integration.md)
+- [交叉引用实战](../examples/04-cross-references.md)

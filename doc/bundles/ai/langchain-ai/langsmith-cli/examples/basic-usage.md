@@ -218,6 +218,6 @@ langsmith trace export ./traces --project my-app \
 
 ## 进一步阅读
 
-- [命令参考](/ai/langchain-ai/langsmith-cli/references/commands) — 完整命令与标志文档
-- [CLI 命令体系](/ai/langchain-ai/langsmith-cli/concepts/cli-commands) — 过滤器、分页、输出机制
-- [API 客户端架构](/ai/langchain-ai/langsmith-cli/concepts/api-client) — v1/v2 适配与认证细节
+- 命令参考 — 完整命令与标志文档
+- CLI 命令体系 — 过滤器、分页、输出机制
+- API 客户端架构 — v1/v2 适配与认证细节

@@ -279,7 +279,7 @@ jupyterlab-demo 仓库本身就是对这个承诺的证明：
 
 ## 相关概念
 
-- [项目定位与设计理念](/concepts/00-introduction.md)
-- [演示能力维度与多内核支持](/concepts/04-demo-capabilities.md)
-- [工作区布局与交互体验设计](/concepts/07-workspace-layout.md)
-- [实战：添加自己的演示内容](/examples/04-add-demo-content.md)
+- [项目定位与设计理念](00-introduction.md)
+- [演示能力维度与多内核支持](04-demo-capabilities.md)
+- [工作区布局与交互体验设计](07-workspace-layout.md)
+- [实战：添加自己的演示内容](../examples/04-add-demo-content.md)

@@ -238,10 +238,10 @@ Config 的加载遵循特定的生命周期顺序：
 
 ## 相关概念
 
-- [Context 对象](/concepts/03-context-object.md)
-- [Collection 与命名空间](/concepts/04-collection-namespace.md)
-- [Runner 系统](/concepts/06-runners.md)
-- [CLI 与 Program 类](/concepts/07-cli-program.md)
-- [PyInvoke 源码信源登记](/references/pyinvoke-source.md)
+- [Context 对象](03-context-object.md)
+- [Collection 与命名空间](04-collection-namespace.md)
+- [Runner 系统](06-runners.md)
+- [CLI 与 Program 类](07-cli-program.md)
+- [PyInvoke 源码信源登记](../references/pyinvoke-source.md)
 
-[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](/references/pyinvoke-source.md)；Config 类与 DataProxy 定义于 `invoke/config.py`，Environment 类定义于 `invoke/env.py`。
+[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](../references/pyinvoke-source.md)；Config 类与 DataProxy 定义于 `invoke/config.py`，Environment 类定义于 `invoke/env.py`。

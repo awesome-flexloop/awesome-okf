@@ -86,6 +86,6 @@ sources:
 
 ## 相关概念
 
-- [如何使用历代注本](/concepts/05-using-commentaries.md)
-- [四大版本系统](/concepts/01-four-systems.md)
-- [核心异文选读](/concepts/04-key-variants.md)
+- [如何使用历代注本](../concepts/05-using-commentaries.md)
+- [四大版本系统](../concepts/01-four-systems.md)
+- [核心异文选读](../concepts/04-key-variants.md)

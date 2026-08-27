@@ -280,4 +280,4 @@ struct pool_header {
 - [对象模型：PyObject 与 PyVarObject](02-object-model.md) — Python 对象的底层结构基础
 - [类型系统与 PyTypeObject](03-type-system.md) — 类型对象中的 `tp_alloc`/`tp_dealloc` 方法套件
 - [垃圾回收器](05-garbage-collector.md) — 引用计数的补充，处理循环引用
-- [CPython 源码信源登记](/references/cpython-source.md) — 关键文件路径索引
+- [CPython 源码信源登记](../references/cpython-source.md) — 关键文件路径索引

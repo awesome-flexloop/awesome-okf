@@ -284,8 +284,8 @@ html_theme_options = {
 
 ## 相关概念
 
-- [主题概述](/concepts/00-introduction.md)
-- [主题架构与PST继承](/concepts/02-theme-architecture.md)
-- [头部按钮系统](/concepts/04-header-buttons.md)
-- [Margin指令与边注旁注](/concepts/05-margin-sidenotes.md)
-- [源码路径映射与配置速查](/references/sbt-source.md)
+- [主题概述](00-introduction.md)
+- [主题架构与PST继承](02-theme-architecture.md)
+- [头部按钮系统](04-header-buttons.md)
+- [Margin指令与边注旁注](05-margin-sidenotes.md)
+- [源码路径映射与配置速查](../references/sbt-source.md)

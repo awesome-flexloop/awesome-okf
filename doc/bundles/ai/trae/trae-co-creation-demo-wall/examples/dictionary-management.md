@@ -154,7 +154,7 @@ API 返回时根据 lang 参数选择标签，lang 参数未命中对应语言�
 
 ## 相关内容
 
-- [字典系统](/concepts/11-dictionary-system.md)
-- [数据模型设计](/concepts/03-data-model.md)
-- [审核与治理](/concepts/10-audit-governance.md)
-- [管理员审核示例](/examples/admin-review.md)
+- [字典系统](../concepts/11-dictionary-system.md)
+- [数据模型设计](../concepts/03-data-model.md)
+- [审核与治理](../concepts/10-audit-governance.md)
+- [管理员审核示例](admin-review.md)

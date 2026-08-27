@@ -147,15 +147,15 @@ A: 检查是否使用了epub构建器——epub构建器会被跳过（`app.buil
 
 完成快速上手后，你可能想了解：
 
-- [配置选项全解](/concepts/02-configuration.md) — 了解所有11个配置项的作用
-- [核心标签生成流程](/concepts/03-tag-generation.md) — 理解标签生成的内部逻辑
-- [社交卡片生成](/concepts/08-social-cards.md) — 自定义社交媒体预览图
-- [页面级覆盖](/concepts/06-per-page-overrides.md) — 为特定页面定制OGP标签
+- [配置选项全解](02-configuration.md) — 了解所有11个配置项的作用
+- [核心标签生成流程](03-tag-generation.md) — 理解标签生成的内部逻辑
+- [社交卡片生成](08-social-cards.md) — 自定义社交媒体预览图
+- [页面级覆盖](06-per-page-overrides.md) — 为特定页面定制OGP标签
 
 ## 相关概念
 
-- [配置选项全解](/concepts/02-configuration.md)
-- [核心标签生成流程](/concepts/03-tag-generation.md)
-- [页面描述自动提取](/concepts/04-description-extraction.md)
-- [基础配置示例](/examples/basic-setup.md)
-- [sphinxext-opengraph 源码信源登记](/references/sphinxext-opengraph-source.md)
+- [配置选项全解](02-configuration.md)
+- [核心标签生成流程](03-tag-generation.md)
+- [页面描述自动提取](04-description-extraction.md)
+- [基础配置示例](../examples/basic-setup.md)
+- [sphinxext-opengraph 源码信源登记](../references/sphinxext-opengraph-source.md)

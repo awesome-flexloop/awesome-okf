@@ -265,11 +265,11 @@ c.ServerApp.terminado_settings = {
 
 ## 相关概念
 
-- [TerminalManager 终端管理器](/concepts/03-terminal-manager.md)
-- [Shell 配置与平台差异](/concepts/06-shell-configuration.md)
-- [REST API 处理器](/concepts/04-rest-api.md)
-- [基础终端操作](/examples/basic-operations.md)
-- [WebSocket 实时通信](/examples/websocket-interaction.md)
-- [jupyter_server_terminals 源码信源登记](/references/jupyter-server-terminals-source.md)
+- [TerminalManager 终端管理器](../concepts/03-terminal-manager.md)
+- [Shell 配置与平台差异](../concepts/06-shell-configuration.md)
+- [REST API 处理器](../concepts/04-rest-api.md)
+- [基础终端操作](basic-operations.md)
+- [WebSocket 实时通信](websocket-interaction.md)
+- [jupyter_server_terminals 源码信源登记](../references/jupyter-server-terminals-source.md)
 
-[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](/references/jupyter-server-terminals-source.md)。
+[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](../references/jupyter-server-terminals-source.md)。

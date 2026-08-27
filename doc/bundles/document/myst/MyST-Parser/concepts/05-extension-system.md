@@ -234,8 +234,8 @@ linkify → linkify-it-py（可选依赖，缺失时自动禁用并警告）
 
 ## 相关概念
 
-- [MyST 语法概览](/concepts/02-myst-syntax-overview.md)
-- [配置系统](/concepts/04-config-system.md)
-- [指令与角色](/concepts/07-directives-and-roles.md)
-- [数学公式与 MathJax](/concepts/13-math-and-mathjax.md)
-- [扩展语法速查](/references/extensions-cheatsheet.md)
+- [MyST 语法概览](02-myst-syntax-overview.md)
+- [配置系统](04-config-system.md)
+- [指令与角色](07-directives-and-roles.md)
+- [数学公式与 MathJax](13-math-and-mathjax.md)
+- [扩展语法速查](../references/extensions-cheatsheet.md)

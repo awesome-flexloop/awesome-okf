@@ -93,6 +93,6 @@ log_request()定制请求日志：
 
 ## 相关文档
 
-- [缓存系统](/concepts/07-caching-system.md)
-- [部署指南](/concepts/13-deployment.md)
-- [GitHub客户端](/concepts/10-github-client.md)
+- [缓存系统](07-caching-system.md)
+- [部署指南](13-deployment.md)
+- [GitHub客户端](10-github-client.md)

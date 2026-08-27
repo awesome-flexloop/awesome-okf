@@ -137,6 +137,6 @@ agent = create_deepagent(model=..., state_schema=MyState)
 
 ## 相关概念
 
-- [中间件栈](/ai/langchain-ai/deepagents/references/middleware-stack) — 了解中间件排序和自定义规则
-- [后端系统](/ai/langchain-ai/deepagents/references/backends) — 了解可插拔存储后端
-- [规划与子代理](/ai/langchain-ai/deepagents/concepts/planning-subagents) — 了解子代理架构
+- 中间件栈 — 了解中间件排序和自定义规则
+- 后端系统 — 了解可插拔存储后端
+- 规划与子代理 — 了解子代理架构

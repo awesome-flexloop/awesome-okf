@@ -70,7 +70,7 @@ graph_objs/
 
 ## 核心类层级
 
-所有图对象类最终继承自 [basedatatypes.py](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/basedatatypes.py) 中定义的基类：
+所有图对象类最终继承自 basedatatypes.py 中定义的基类：
 
 ```
 BaseFigure (L401)
@@ -95,7 +95,7 @@ BasePlotlyType (L4312)                # 所有 trace/layout/frame 层级对象�
 
 ### BaseFigure（顶层容器）
 
-[BaseFigure](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/basedatatypes.py#L401) 是 Figure 和 FigureWidget 的基类，管理三大核心组件：
+BaseFigure 是 Figure 和 FigureWidget 的基类，管理三大核心组件：
 
 - **`_data_objs`**：Trace 对象元组（通过 `_data_validator.validate_coerce()` 从输入数据构造）
 - **`layout`**：Layout 对象实例
@@ -118,7 +118,7 @@ BasePlotlyType (L4312)                # 所有 trace/layout/frame 层级对象�
 
 ### BasePlotlyType（属性节点基类）
 
-[BasePlotlyType](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/basedatatypes.py#L4312) 是 trace/layout 层级所有对象的基类，核心机制：
+BasePlotlyType 是 trace/layout 层级所有对象的基类，核心机制：
 
 - **`_valid_props`**：该对象支持的合法属性名集合（由代码生成器填充）
 - **`_compound_props`**：子对象字典（复合属性，如 `marker`、`line`、`hoverlabel`）
@@ -135,7 +135,7 @@ BasePlotlyType (L4312)                # 所有 trace/layout/frame 层级对象�
 
 ### BaseTraceType（Trace 基类）
 
-[BaseTraceType](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/basedatatypes.py#L6010) 为所有图表系列类型的基类，额外提供：
+BaseTraceType 为所有图表系列类型的基类，额外提供：
 
 - **事件回调系统**：`on_hover()`、`on_unhover()`、`on_click()`、`on_selection()`、`on_deselect()` 注册回调函数
 - **`uid` 属性**：每个 Trace 的唯一标识符
@@ -143,7 +143,7 @@ BasePlotlyType (L4312)                # 所有 trace/layout/frame 层级对象�
 
 ### BaseLayoutType（Layout 基类）
 
-[BaseLayoutType](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/basedatatypes.py#L5755) 管理布局配置，支持动态子图属性：
+BaseLayoutType 管理布局配置，支持动态子图属性：
 
 - **`_subplotid_prop_names`**：可编号子图属性名列表（`xaxis`, `yaxis`, `scene`, `geo`, `polar`, `mapbox`, `map`, `ternary`, `smith`, `coloraxis`, `legend`）
 - **`_subplotid_prop_re`**：正则匹配如 `xaxis2`、`scene3` 的动态属性
@@ -208,7 +208,7 @@ fig.update_layout(title_font_size=14)       # title.font.size
 fig.data[0].update(marker_color="blue")     # marker.color
 ```
 
-路径解析由 [_str_to_dict_path_full()](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/basedatatypes.py#L50) 完成，将 `foo.bar[0].baz` 拆分为 `("foo", "bar", 0, "baz")` 的元组路径。
+路径解析由 _str_to_dict_path_full() 完成，将 `foo.bar[0].baz` 拆分为 `("foo", "bar", 0, "baz")` 的元组路径。
 
 特殊保护属性（含下划线的真实属性名如 `error_x`、`paper_bgcolor`）通过 `_valid_underscore_properties` 映射为连字符形式 `error-x`，避免被错误拆分。
 

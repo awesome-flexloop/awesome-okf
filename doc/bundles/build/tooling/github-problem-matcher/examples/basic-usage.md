@@ -162,7 +162,7 @@ github-problem-matcher 的正则模式匹配 `.rst` 文件路径（`\\.rst`）�
 - 宽松模式要求 `(/.*\\.rst)`，**只匹配 `.rst` 文件**
 - 兜底模式要求 `(.*\\.rst)`，**只匹配 `.rst` 文件**
 
-对于 MyST 项目，Sphinx 的警告格式仍然是 `file.md:line: SEVERITY: message`，严格模式可以正常捕获。如果需要更好的 `.md` 支持，建议创建自定义 matcher（参见 [自定义 Problem Matcher 示例](/examples/custom-matcher.md)）。
+对于 MyST 项目，Sphinx 的警告格式仍然是 `file.md:line: SEVERITY: message`，严格模式可以正常捕获。如果需要更好的 `.md` 支持，建议创建自定义 matcher（参见 [自定义 Problem Matcher 示例](custom-matcher.md)）。
 
 ## 条件性启用 Matcher
 
@@ -217,11 +217,11 @@ github-problem-matcher 的正则模式匹配 `.rst` 文件路径（`\\.rst`）�
 
 如果非警告行被错误匹配：
 1. 检查该行的格式是否恰好匹配某条正则（如代码示例中出现 `file.rst:42: text` 格式）
-2. 考虑创建自定义 matcher，使用更严格的正则（参考 [自定义 Problem Matcher 示例](/examples/custom-matcher.md)）
+2. 考虑创建自定义 matcher，使用更严格的正则（参考 [自定义 Problem Matcher 示例](custom-matcher.md)）
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [Action 结构解析](/concepts/02-action-structure.md)
-- [三种正则模式详解](/concepts/04-regex-patterns.md)
-- [自定义 Problem Matcher 示例](/examples/custom-matcher.md)
+- [5分钟快速上手](../concepts/01-getting-started.md)
+- [Action 结构解析](../concepts/02-action-structure.md)
+- [三种正则模式详解](../concepts/04-regex-patterns.md)
+- [自定义 Problem Matcher 示例](custom-matcher.md)

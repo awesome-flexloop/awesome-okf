@@ -25,4 +25,4 @@ Monorepo 设置、命令参考和开发流程文档。
 
 ## 相关概念
 
-- [Monorepo 架构](/ai/datawhale/deepagents/concepts/monorepo-architecture)
+- Monorepo 架构

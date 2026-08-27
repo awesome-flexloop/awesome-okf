@@ -238,6 +238,6 @@ error: timed out waiting for the condition
 
 ## 相关文档
 
-- [Helm部署流程](/concepts/06-helm-deploy-process.md)
-- [快速上手](/concepts/01-getting-started.md)
+- [Helm部署流程](../concepts/06-helm-deploy-process.md)
+- [快速上手](../concepts/01-getting-started.md)
 - [Invoke任务使用](invoke-tasks.md)

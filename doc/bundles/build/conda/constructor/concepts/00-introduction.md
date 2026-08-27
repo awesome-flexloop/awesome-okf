@@ -47,7 +47,7 @@ constructor 为不同操作系统生成不同格式的安装程序：
 | Linux   | `.sh`（Shell 自解压脚本） | Dockerfile + Docker 镜像 | `sh`, `docker` |
 | macOS   | `.sh` + `.pkg` | — | `sh`, `pkg` |
 | Windows | `.exe`（NSIS GUI） | `.msi`（WiX/Briefcase，实验性） | `exe`, `msi` |
-| 跨平台 | 可通过 `--platform` 交叉构建 | — | 见 [04-安装程序类型](./04-installer-types.md) |
+| 跨平台 | 可通过 `--platform` 交叉构建 | — | 见 [04-安装程序类型](04-installer-types.md) |
 
 ## 核心特性
 
@@ -84,5 +84,5 @@ constructor 为不同操作系统生成不同格式的安装程序：
 
 ## 下一步
 
-- [01-快速上手](./01-getting-started.md)：安装 constructor，编写第一个 construct.yaml，构建安装程序。
-- [02-架构总览](./02-architecture-overview.md)：了解 constructor 的模块分层和核心构建流程。
+- [01-快速上手](01-getting-started.md)：安装 constructor，编写第一个 construct.yaml，构建安装程序。
+- [02-架构总览](02-architecture-overview.md)：了解 constructor 的模块分层和核心构建流程。

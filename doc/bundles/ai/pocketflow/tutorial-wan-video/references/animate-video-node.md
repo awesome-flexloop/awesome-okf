@@ -140,4 +140,4 @@ audio >> animate    # 从 GenerateAudioNode 进入
 
 ## 源码位置
 
-[nodes.py#L210-L236](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/nodes.py#L210-L236)
+nodes.py#L210-L236

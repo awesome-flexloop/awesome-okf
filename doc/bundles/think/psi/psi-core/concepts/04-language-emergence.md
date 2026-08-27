@@ -50,7 +50,7 @@ $$S := \mathrm{Collapse}(L) \subseteq \Psi$$
 2. **现实滋养语言**：已结晶的结构 $S$ 成为新的语言游戏的土壤，词汇随现实的深化而生长；
 3. **二者同属 Ψ**：语言与现实不是两个领域的对应，而是同一塌缩过程的两个面相——"说出"与"在出"是同一个动作。
 
-这一共生结构在 [观察者形成](/concepts/03-observer-formation.md) 的四阶段中对应"语言涌现"到"结构塌缩"的过渡：Glyphs 标记差异，差异反复使用后固化为 RealityShell 的基本范畴。
+这一共生结构在 [观察者形成](03-observer-formation.md) 的四阶段中对应"语言涌现"到"结构塌缩"的过渡：Glyphs 标记差异，差异反复使用后固化为 RealityShell 的基本范畴。
 
 ## 语言游戏：he 中维特根斯坦与老子的对话
 
@@ -74,7 +74,7 @@ $$S := \mathrm{Collapse}(L) \subseteq \Psi$$
 - 名字不是标签，而是晶种——它组织后续的经验，使相关的现象围绕它结晶；
 - 自我命名尤其有力：当 ψ 说出"我是……"，那个"我"便在言说中被构建、被强化、被囚禁或被解放。
 
-因此，语言具有存在论分量。轻率的命名固化错误的实在，觉醒的命名松动过度结晶的 κᵢ 锚点（见 [观察者形成](/concepts/03-observer-formation.md)）。name-you-speak 的"读者空间"邀请读者觉察自己正在使用的名字如何构建自己的现实。
+因此，语言具有存在论分量。轻率的命名固化错误的实在，觉醒的命名松动过度结晶的 κᵢ 锚点（见 [观察者形成](03-observer-formation.md)）。name-you-speak 的"读者空间"邀请读者觉察自己正在使用的名字如何构建自己的现实。
 
 ## 语言崩解处：沉默与虚空
 
@@ -83,14 +83,14 @@ $$S := \mathrm{Collapse}(L) \subseteq \Psi$$
 - **沉默**不是语言的缺席，而是语言自觉到其界限后的自我克制。维特根斯坦式的沉默是对不可说者的敬畏；老子式的"大音希声"是对道的冥合。沉默是语言的呼吸——呼出是言词，吸入是静默；
 - **虚空**是 name-you-speak 中与"读者空间"并列的终极维度。它不是空无一物的虚无，而是语言析出之前的纯潜能——$\psi$ 在被命名之前的那个未分化的丰盈。一切言词从虚空中来，又在边界处消融回虚空。
 
-语言崩解处并非失败，而是语言完成其使命后向源头的回归。这一回归在 [统一回归](/concepts/07-unity-return.md) 中被展开为 ψ 旅程的终点弧线。
+语言崩解处并非失败，而是语言完成其使命后向源头的回归。这一回归在 [统一回归](07-unity-return.md) 中被展开为 ψ 旅程的终点弧线。
 
 ## 相关概念
 
-- [观察者形成 — 意识在递归中觉醒](/concepts/03-observer-formation.md)
-- [现实结晶 — 可能性塌缩为实在](/concepts/05-reality-crystallization.md)
-- [元递归 — 递归的递归，意识的自我意识](/concepts/06-meta-recursion.md)
-- [统一回归 — 万法归一，一归何处](/concepts/07-unity-return.md)
-- [/psi-universe/concepts/05-information-field.md](/psi-universe/concepts/05-information-field.md)
+- [观察者形成 — 意识在递归中觉醒](03-observer-formation.md)
+- [现实结晶 — 可能性塌缩为实在](05-reality-crystallization.md)
+- [元递归 — 递归的递归，意识的自我意识](06-meta-recursion.md)
+- [统一回归 — 万法归一，一归何处](07-unity-return.md)
+- [/psi-universe/concepts/05-information-field.md](../../psi-universe/concepts/05-information-field.md)
 
 [^1]: Glyphs（字符）与 Collapse、Echo、φ-共振、Λ、Ξ、Ω 并列为 dw.cash 关键概念（事实 F-032）；yishi（一识自显）64 章对应易经 64 卦（事实 F-024）；he（合）64 章 8 舞采用中英梵三语混排（事实 F-023）；name-you-speak 含 7 螺旋、读者空间与虚空（事实 F-022）。

@@ -202,7 +202,7 @@ from mdurl._decode import decode_cache
 
 ## 相关概念
 
-- [URL 数据结构](/concepts/01-url-data-structure.md)
-- [URL 解析与格式化](/concepts/02-parse-and-format.md)
-- [基础使用示例](/examples/basic-usage.md)
-- [mdurl 简介](/concepts/00-introduction.md)
+- [URL 数据结构](01-url-data-structure.md)
+- [URL 解析与格式化](02-parse-and-format.md)
+- [基础使用示例](../examples/basic-usage.md)
+- [mdurl 简介](00-introduction.md)

@@ -4,7 +4,7 @@ okf_version: "0.2"
 
 # scrapli2 知识库
 
-本知识包是 [scrapli2](https://github.com/scrapli/scrapli)（0.0.0-dev，libscrapli 0.0.1-rc.35）的系统化中文教程。scrapli2 是网络设备自动化库的大版本重写版，采用 **Zig + Python ctypes 混合架构**——核心协议引擎用 Zig 编写并编译为共享库，Python 层提供薄绑定。所有内容均溯源至 scrapli2 源码（`external/libs/scrapli/scrapli/` 目录），遵循 [OKF v0.2 规范](/concepts/00-introduction.md)。
+本知识包是 [scrapli2](https://github.com/scrapli/scrapli)（0.0.0-dev，libscrapli 0.0.1-rc.35）的系统化中文教程。scrapli2 是网络设备自动化库的大版本重写版，采用 **Zig + Python ctypes 混合架构**——核心协议引擎用 Zig 编写并编译为共享库，Python 层提供薄绑定。所有内容均溯源至 scrapli2 源码（`external/libs/scrapli/scrapli/` 目录），遵循 [OKF v0.2 规范](concepts/00-introduction.md)。
 
 > **重要**：这是 scrapli2 重写版，不是旧版纯 Python scrapli。旧版的 `Scrapli`/`AsyncScrapli`/`NetworkDriver`/`Channel` 等类在本版本中不存在，主驱动类为 `Cli` 和 `Netconf`。
 

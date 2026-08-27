@@ -118,6 +118,6 @@ export interface IApplication {
 
 ## 相关概念
 
-- [会话窗口系统](/concepts/03-session-window-system.md)
-- [Jupyter 服务器管理](/concepts/04-server-management.md)
-- [事件与IPC系统](/concepts/08-event-ipc-system.md)
+- [会话窗口系统](../concepts/03-session-window-system.md)
+- [Jupyter 服务器管理](../concepts/04-server-management.md)
+- [事件与IPC系统](../concepts/08-event-ipc-system.md)

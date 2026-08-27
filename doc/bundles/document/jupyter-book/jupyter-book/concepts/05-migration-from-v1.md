@@ -247,6 +247,6 @@ v2 的 PDF 导出路径：
 
 ## 相关概念
 
-- [00-v2-architecture](/concepts/00-v2-architecture.md)：v2 双层架构
-- [03-myst-cli-relationship](/concepts/03-myst-cli-relationship.md)：与 myst-cli 的关系
-- [02-build-publish](/examples/02-build-publish.md)：构建与发布示例
+- [00-v2-architecture](00-v2-architecture.md)：v2 双层架构
+- [03-myst-cli-relationship](03-myst-cli-relationship.md)：与 myst-cli 的关系
+- [02-build-publish](../examples/02-build-publish.md)：构建与发布示例

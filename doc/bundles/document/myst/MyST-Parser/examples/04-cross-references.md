@@ -193,6 +193,6 @@ api/reference
 
 ## 相关概念
 
-- [交叉引用](/concepts/08-cross-references.md)
-- [MyST 语法概览](/concepts/02-myst-syntax-overview.md)
-- [指令与角色](/concepts/07-directives-and-roles.md)
+- [交叉引用](../concepts/08-cross-references.md)
+- [MyST 语法概览](../concepts/02-myst-syntax-overview.md)
+- [指令与角色](../concepts/07-directives-and-roles.md)

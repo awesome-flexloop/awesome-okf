@@ -170,5 +170,5 @@ func ExtractRun(run, includeMetadata, includeIO, includeFeedback) map[string]any
 
 ## 相关参考
 
-- [命令参考](/ai/langchain-ai/langsmith-cli/references/commands) — 全部命令与标志
-- [API 客户端架构](/ai/langchain-ai/langsmith-cli/concepts/api-client) — v1/v2 适配机制
+- 命令参考 — 全部命令与标志
+- API 客户端架构 — v1/v2 适配机制

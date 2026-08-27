@@ -243,12 +243,12 @@ flowchart LR
 
 ## 相关概念
 
-- [02 应用框架与 Shell 布局](/concepts/02-application-shell.md)
-- [03 插件系统与依赖注入](/concepts/03-plugin-system.md)
-- [04 服务层与后端通信](/concepts/04-service-layer.md)
-- [07 扩展生态系统](/concepts/07-extension-ecosystem.md)
+- [02 应用框架与 Shell 布局](02-application-shell.md)
+- [03 插件系统与依赖注入](03-plugin-system.md)
+- [04 服务层与后端通信](04-service-layer.md)
+- [07 扩展生态系统](07-extension-ecosystem.md)
 
 ## 相关示例
 
-- [01 最小扩展：Hello World 插件](/examples/01-minimal-extension.md)
-- [02 自定义文件类型查看器](/examples/02-custom-file-type.md)
+- [01 最小扩展：Hello World 插件](../examples/01-minimal-extension.md)
+- [02 自定义文件类型查看器](../examples/02-custom-file-type.md)

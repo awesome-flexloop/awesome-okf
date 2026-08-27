@@ -316,4 +316,4 @@ copier copy -n --trust ./template ./output
 * [CLI 命令参考](../concepts/08-cli-reference.md)
 * [项目更新工作流示例](update-workflow.md)
 
-[^copier-src]: Copier 源码，见本 bundle 信源登记 [references/copier-source.md](/references/copier-source.md)。
+[^copier-src]: Copier 源码，见本 bundle 信源登记 [references/copier-source.md](../references/copier-source.md)。

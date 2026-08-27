@@ -142,7 +142,7 @@ sources:
 
 ## 相关概念
 
-- [00 官网技术栈总览](/concepts/00-website-overview.md)
-- [01 项目结构与目录组织](/concepts/01-project-structure.md)
-- [02 路由与 SSG 预渲染](/concepts/02-routing-and-pages.md)
-- [完整技术栈清单](/references/tech-stack.md)
+- [00 官网技术栈总览](../concepts/00-website-overview.md)
+- [01 项目结构与目录组织](../concepts/01-project-structure.md)
+- [02 路由与 SSG 预渲染](../concepts/02-routing-and-pages.md)
+- [完整技术栈清单](tech-stack.md)

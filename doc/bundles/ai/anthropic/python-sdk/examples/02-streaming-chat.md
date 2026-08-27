@@ -394,7 +394,7 @@ messages.append({"role": "assistant", "content": assistant_reply})  # 仍然需�
 
 ## 相关概念
 
-- [Messages API 基础](/python-sdk/concepts/02-messages-basics.md) — 理解非流式模式作为对比基础
+- [Messages API 基础](../concepts/02-messages-basics.md) — 理解非流式模式作为对比基础
 - [基础对话](01-basic-chat.md) — 前一个示例：非流式对话入门
 - [工具调用实战](03-tool-use.md) — 下一个示例：流式与工具调用结合
-- [Anthropic Python SDK 消息 API 与流式处理参考](/python-sdk/references/messages-api.md) — 流式类和事件类型的完整 API 参考
+- [Anthropic Python SDK 消息 API 与流式处理参考](../references/messages-api.md) — 流式类和事件类型的完整 API 参考

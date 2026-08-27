@@ -432,7 +432,7 @@ jupyter-book build --jats
 
 ## 相关概念
 
-- [00-v2-architecture](/concepts/00-v2-architecture.md)：v2 双层架构
-- [02-ts-cli-commands](/concepts/02-ts-cli-commands.md)：CLI 命令详解
-- [04-template-system](/concepts/04-template-system.md)：模板系统
-- [01-create-book](/examples/01-create-book.md)：创建第一本书
+- [00-v2-architecture](../concepts/00-v2-architecture.md)：v2 双层架构
+- [02-ts-cli-commands](../concepts/02-ts-cli-commands.md)：CLI 命令详解
+- [04-template-system](../concepts/04-template-system.md)：模板系统
+- [01-create-book](01-create-book.md)：创建第一本书

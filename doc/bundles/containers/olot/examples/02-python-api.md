@@ -385,6 +385,6 @@ def safe_package_model(ocilayout: Path, model_files: list[Path]) -> bool:
 
 ## 相关概念
 
-- [Python API 编程](/bundles/containers/olot/concepts/03-python-api.md)：完整的 API 参数文档
-- [后端抽象层](/bundles/containers/olot/concepts/02-backends.md)：后端选择与对比
-- [命令行基本使用](/bundles/containers/olot/examples/01-cli-usage.md)：CLI 版本的同一流程
+- [Python API 编程](../concepts/03-python-api.md)：完整的 API 参数文档
+- [后端抽象层](../concepts/02-backends.md)：后端选择与对比
+- [命令行基本使用](01-cli-usage.md)：CLI 版本的同一流程

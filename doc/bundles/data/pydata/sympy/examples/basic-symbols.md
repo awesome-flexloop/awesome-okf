@@ -89,7 +89,7 @@ x_pos = Symbol('x', positive=True)
 x_real == x_pos                # -> False
 ```
 
-> 相关参考：[symbols() 与 var() 函数](/references/numbers-symbols-source.md) | [假设系统](../concepts/05-assumptions.md)
+> 相关参考：[symbols() 与 var() 函数](../references/numbers-symbols-source.md) | [假设系统](../concepts/05-assumptions.md)
 
 ## 3. 预定义符号与常量
 
@@ -126,7 +126,7 @@ from sympy.abc import x as abc_x
 abc_x.is_real is None          # -> True（无假设，不确定是否为实数）
 ```
 
-> 相关参考：[S 单例注册表](/references/core-init.md) | [abc 预定义符号](/references/numbers-symbols-source.md)
+> 相关参考：[S 单例注册表](../references/core-init.md) | [abc 预定义符号](../references/numbers-symbols-source.md)
 
 ## 4. 构建表达式
 
@@ -204,7 +204,7 @@ expr = x + sin(y)
 # -> [x + sin(y), x, sin(y), y]
 ```
 
-> 相关参考：[Basic/Expr 核心类体系](/references/basic-source.md)
+> 相关参考：[Basic/Expr 核心类体系](../references/basic-source.md)
 
 ## 6. 替换操作
 
@@ -241,7 +241,7 @@ expr = x**2 + y
 expr.subs(x, y).subs(y, 1)     # -> 2
 ```
 
-> 相关参考：[subs 方法三种调用形式](/references/basic-source.md)
+> 相关参考：[subs 方法三种调用形式](../references/basic-source.md)
 
 ## 7. 数值求值
 
@@ -282,7 +282,7 @@ Rational(1,10) + Rational(2,10) # -> 3/10（精确）
 0.1 + 0.2                      # -> 0.30000000000000004（浮点误差）
 ```
 
-> 相关参考：[EvalfMixin 数值求值](/references/core-init.md) | [evalf 体系](/references/sympify-function-source.md)
+> 相关参考：[EvalfMixin 数值求值](../references/core-init.md) | [evalf 体系](../references/sympify-function-source.md)
 
 ## 8. 类型转换
 
@@ -334,7 +334,7 @@ except SympifyError:
     print("strict 模式拒绝 Python int")  # -> 会打印
 ```
 
-> 相关参考：[sympify() 转换规则](/references/sympify-function-source.md)
+> 相关参考：[sympify() 转换规则](../references/sympify-function-source.md)
 
 ## 9. 基本化简
 
@@ -382,7 +382,7 @@ a_p, b_p = symbols('a b', positive=True)
 powsimp(a_p**x * a_p**y)      # -> a**(x + y)（同底合并）
 ```
 
-> 相关参考：[化简策略体系](/references/simplify-source.md) | [化简概念](../concepts/06-simplification.md)
+> 相关参考：[化简策略体系](../references/simplify-source.md) | [化简概念](../concepts/06-simplification.md)
 
 ## 10. 关系运算
 
@@ -426,8 +426,8 @@ expr.subs(x, 4)                 # -> False
 And(x > 0, x < 1)              # -> (x > 0) & (x < 1)
 ```
 
-> 相关参考：[Relational 类层次](/references/sympify-function-source.md)
+> 相关参考：[Relational 类层次](../references/sympify-function-source.md)
 
 ---
 
-**小结**：掌握符号创建（`symbols`/`var`/`abc`）、表达式构建（Python 运算符）、结构查看（`args`/`func`/`srepr`/`free_symbols`）、替换（`subs`/`xreplace`）、数值求值（`evalf`/`n`/`N`）、类型转换（`sympify`/`S`/`Rational`）、化简（`simplify`/`expand`/`factor`/`cancel`）和关系运算（`Eq`/`Gt`/`Lt`），你已经具备了 SymPy 的核心操作能力。下一步可学习 [微积分实战](./calculus-examples.md) 和 [方程求解与矩阵实战](./solving-equations.md)。
+**小结**：掌握符号创建（`symbols`/`var`/`abc`）、表达式构建（Python 运算符）、结构查看（`args`/`func`/`srepr`/`free_symbols`）、替换（`subs`/`xreplace`）、数值求值（`evalf`/`n`/`N`）、类型转换（`sympify`/`S`/`Rational`）、化简（`simplify`/`expand`/`factor`/`cancel`）和关系运算（`Eq`/`Gt`/`Lt`），你已经具备了 SymPy 的核心操作能力。下一步可学习 [微积分实战](calculus-examples.md) 和 [方程求解与矩阵实战](solving-equations.md)。

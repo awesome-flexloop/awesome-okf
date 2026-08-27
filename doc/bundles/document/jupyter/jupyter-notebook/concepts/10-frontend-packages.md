@@ -107,7 +107,7 @@ namespace CommandIDs {
 }
 ```
 
-> **信源**: [application-extension/src/index.ts:L92-137](/references/00-source-registry.md#S-009)（F-038）
+> **信源**: [application-extension/src/index.ts:L92-137](../references/00-source-registry.md#S-009)（F-038）
 
 ### 3. notebook-extension（Notebook专属功能包）
 
@@ -312,4 +312,4 @@ packages/<package-name>/
 
 ## 下一步
 
-- → [v6到v7迁移指南](./11-migration-guide.md) 从Notebook 6迁移到7的完整指南
+- → [v6到v7迁移指南](11-migration-guide.md) 从Notebook 6迁移到7的完整指南

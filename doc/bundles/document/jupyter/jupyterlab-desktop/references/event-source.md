@@ -144,5 +144,5 @@ type SyncEventHandlerMain = (event: Electron.IpcMainEvent, ...args: any[]) => an
 
 ## 相关概念
 
-- [事件与IPC系统](/concepts/08-event-ipc-system.md)
-- [会话窗口系统](/concepts/03-session-window-system.md)
+- [事件与IPC系统](../concepts/08-event-ipc-system.md)
+- [会话窗口系统](../concepts/03-session-window-system.md)

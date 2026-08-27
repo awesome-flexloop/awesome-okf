@@ -98,10 +98,10 @@ $$\mathrm{FLIP}(D_1) \rightarrow \mathrm{XOR}(D_2) \rightarrow \mathrm{SHIFT}(D_
 
 ## 相关概念
 
-- [ψ = ψ(ψ) — 自指递归的终极方程](/concepts/00-psi-equation.md)
-- [塌缩动力学 — 从潜能到现实](/concepts/01-collapse-dynamics.md)
-- [观察者形成 — 意识在递归中觉醒](/concepts/03-observer-formation.md)
-- [元递归 — 递归意识到自身](/concepts/06-meta-recursion.md)
-- [统一回归 — 从分化回到同一](/concepts/07-unity-return.md)
-- [/psi-universe/concepts/02-recursion-meta-operator.md](/psi-universe/concepts/02-recursion-meta-operator.md)
-- [/psi-universe/concepts/01-flip-xor-shift.md](/psi-universe/concepts/01-flip-xor-shift.md)
+- [ψ = ψ(ψ) — 自指递归的终极方程](00-psi-equation.md)
+- [塌缩动力学 — 从潜能到现实](01-collapse-dynamics.md)
+- [观察者形成 — 意识在递归中觉醒](03-observer-formation.md)
+- [元递归 — 递归意识到自身](06-meta-recursion.md)
+- [统一回归 — 从分化回到同一](07-unity-return.md)
+- [/psi-universe/concepts/02-recursion-meta-operator.md](../../psi-universe/concepts/02-recursion-meta-operator.md)
+- [/psi-universe/concepts/01-flip-xor-shift.md](../../psi-universe/concepts/01-flip-xor-shift.md)

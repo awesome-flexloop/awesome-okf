@@ -193,9 +193,9 @@ docs["build"](docs_c, nitpick=True)  # 用独立 context 调用子集合任务
 
 ## 相关概念
 
-- [快速上手](/concepts/01-getting-started.md)
-- [工具函数与文件监控](/concepts/07-utilities-watchers.md)
-- [组合模式：组装自己的任务集合](/concepts/10-composition-patterns.md)
-- [多站点文档构建示例](/examples/multi-site-docs.md)
+- [快速上手](01-getting-started.md)
+- [工具函数与文件监控](07-utilities-watchers.md)
+- [组合模式：组装自己的任务集合](10-composition-patterns.md)
+- [多站点文档构建示例](../examples/multi-site-docs.md)
 
-[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](/references/invocations-source.md)。
+[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](../references/invocations-source.md)。

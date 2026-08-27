@@ -96,6 +96,6 @@ dropdown 组件使用 HTML5 原生 `<details>/<summary>` 标签实现折叠，�
 
 ## 相关概念
 
-- [快速上手](/concepts/01-getting-started.md) — 安装与最小配置
-- [扩展架构](/concepts/02-extension-architecture.md) — 两阶段渲染与组件注册机制
-- [设计系统与CSS类](/concepts/03-design-system.md) — `sd-` 前缀CSS体系详解
+- [快速上手](01-getting-started.md) — 安装与最小配置
+- [扩展架构](02-extension-architecture.md) — 两阶段渲染与组件注册机制
+- [设计系统与CSS类](03-design-system.md) — `sd-` 前缀CSS体系详解

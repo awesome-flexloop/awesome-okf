@@ -217,6 +217,6 @@ setup(
 
 ## 相关概念
 
-- [项目结构详解](/concepts/03-project-structure.md)
-- [构建系统详解](/concepts/08-build-system.md)
-- [pyproject.toml 模板字段解析](/references/pyproject-source.md)
+- [项目结构详解](03-project-structure.md)
+- [构建系统详解](08-build-system.md)
+- [pyproject.toml 模板字段解析](../references/pyproject-source.md)

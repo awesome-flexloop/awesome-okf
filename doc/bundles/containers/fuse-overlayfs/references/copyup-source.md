@@ -14,7 +14,7 @@ sources:
 
 # Copy-up 机制 API 参考
 
-> 信源文件：[copyup.rs](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/src/copyup.rs)
+> 信源文件：copyup.rs
 
 本文档记录 fuse-overlayfs 的 copy-up（拷贝上推）机制 API。Copy-up 是 OverlayFS 的核心操作：当首次修改下层（lower）只读文件时，将其完整复制到上层（upper）可写层，后续修改作用于上层副本。
 

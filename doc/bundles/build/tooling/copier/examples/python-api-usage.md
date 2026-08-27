@@ -398,4 +398,4 @@ Phase 可用于自定义 Jinja2 扩展中判断当前上下文，或在任务脚
 * [安全与信任机制](../concepts/09-security-and-safety.md)
 * [错误体系](../concepts/10-advanced-patterns.md#错误处理)
 
-[^copier-src]: Copier 源码，见本 bundle 信源登记 [references/copier-source.md](/references/copier-source.md)。
+[^copier-src]: Copier 源码，见本 bundle 信源登记 [references/copier-source.md](../references/copier-source.md)。

@@ -33,8 +33,8 @@ TileKernels 的设计目标是作为 DeepSeek 推理/训练栈中 GEMM 核函数
 DeepEP（通信） ←→ TileKernels（路由/dispatch/combine/量化） ←→ DeepGEMM（矩阵乘）
 ```
 
-- **[DeepGEMM](/ai/deepseek/deep-gemm/)**：C++ JIT GEMM 核函数库，负责核心矩阵乘法
-- **[DeepEP](/ai/deepseek/deep-ep/)**：专家并行通信库，负责跨节点 all-to-all
+- **[DeepGEMM](../../deep-gemm/index.md)**：C++ JIT GEMM 核函数库，负责核心矩阵乘法
+- **[DeepEP](../../deep-ep/index.md)**：专家并行通信库，负责跨节点 all-to-all
 - **TileKernels**：TileLang DSL 编写的非 GEMM 算子，负责量化、路由、本地 dispatch/combine、MHC 等
 
 ---
@@ -257,6 +257,6 @@ tile_kernels/
 
 | 项目 | 关系 |
 |---|---|
-| [DeepGEMM](/ai/deepseek/deep-gemm/) | DeepSeek 高性能 C++ JIT GEMM 库，TileKernels 为其提供量化、MoE dispatch/combine 等补充算子 |
-| [DeepEP](/ai/deepseek/deep-ep/) | DeepSeek 专家并行通信库，处理跨节点 all-to-all，TileKernels 处理本地 dispatch/combine |
+| [DeepGEMM](../../deep-gemm/index.md) | DeepSeek 高性能 C++ JIT GEMM 库，TileKernels 为其提供量化、MoE dispatch/combine 等补充算子 |
+| [DeepEP](../../deep-ep/index.md) | DeepSeek 专家并行通信库，处理跨节点 all-to-all，TileKernels 处理本地 dispatch/combine |
 | TileLang | TileKernels 使用的 DSL 编译器和 JIT 运行时 |

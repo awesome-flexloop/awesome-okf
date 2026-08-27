@@ -22,11 +22,11 @@ sources:
 
 ## 概述
 
-[helm-chart/binderhub/](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/) 是 BinderHub 的 Helm Chart，定义了在 Kubernetes 集群上部署 BinderHub 所需的全部 Kubernetes 资源。本文档解析 Chart 结构、values.yaml 配置项以及运行时配置加载逻辑。
+helm-chart/binderhub/ 是 BinderHub 的 Helm Chart，定义了在 Kubernetes 集群上部署 BinderHub 所需的全部 Kubernetes 资源。本文档解析 Chart 结构、values.yaml 配置项以及运行时配置加载逻辑。
 
 ## Chart.yaml：Chart 元数据与依赖
 
-[Chart.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/Chart.yaml) 定义了 Helm Chart 的基本信息和依赖关系：
+Chart.yaml 定义了 Helm Chart 的基本信息和依赖关系：
 
 ```yaml
 apiVersion: v2
@@ -52,7 +52,7 @@ dependencies:
 
 ## values.yaml：配置项详解
 
-[values.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/values.yaml) 包含所有可配置的部署参数。
+values.yaml 包含所有可配置的部署参数。
 
 ### 1. 镜像配置（image）
 
@@ -441,7 +441,7 @@ ConfigMap 将 `files/binderhub_config.py` 和 `extraConfig` 组合为配置文�
 
 ## files/binderhub_config.py：运行时配置加载
 
-[binderhub_config.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/files/binderhub_config.py) 是一个 Jinja2 模板，在 Helm install/upgrade 时渲染为 Python 配置文件，被 BinderHub 启动时加载。
+binderhub_config.py 是一个 Jinja2 模板，在 Helm install/upgrade 时渲染为 Python 配置文件，被 BinderHub 启动时加载。
 
 ### 核心配置逻辑
 

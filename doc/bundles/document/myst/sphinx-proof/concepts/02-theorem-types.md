@@ -162,7 +162,7 @@ duplicate theorem label 'th-main', other instance in other_doc
 
 ## 相关概念
 
-- [证明指令](/concepts/03-proof-directive.md)
-- [交叉引用与编号映射](/concepts/04-cross-references.md)
-- [配置项参考](/concepts/05-configuration.md)
-- [数学定理排版示例](/examples/math-theorems.md)
+- [证明指令](03-proof-directive.md)
+- [交叉引用与编号映射](04-cross-references.md)
+- [配置项参考](05-configuration.md)
+- [数学定理排版示例](../examples/math-theorems.md)

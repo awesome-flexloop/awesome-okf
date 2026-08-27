@@ -186,7 +186,7 @@ messages: Annotated[list, DeltaChannel(reducer)]
 
 ## 相关概念
 
-- [状态图](/ai/langchain-ai/langgraph/concepts/state-graph) — Schema 如何映射到通道
-- [Pregel 引擎](/ai/langchain-ai/langgraph/concepts/pregel-engine) — 通道在超步中的生命周期
-- [检查点机制](/ai/langchain-ai/langgraph/concepts/checkpointing) — DeltaChannel 的持久化优化
-- [API 参考](/ai/langchain-ai/langgraph/references/channels-pregel) — 通道完整 API
+- 状态图 — Schema 如何映射到通道
+- Pregel 引擎 — 通道在超步中的生命周期
+- 检查点机制 — DeltaChannel 的持久化优化
+- API 参考 — 通道完整 API

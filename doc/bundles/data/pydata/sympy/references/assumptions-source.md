@@ -20,11 +20,11 @@ sources:
 
 # 假设推理系统源码信源
 
-SymPy 拥有两套并行的假设系统：核心层 `is_*` 属性系统（构造时确定，快速但有限）和 `sympy.assumptions` 新假设系统（基于 SAT 求解，灵活但较慢）。`ask()` 函数在给定假设下查询命题真值，`Q` 对象提供谓词构造器，`refine()` 利用假设化简表达式，CNF/SAT 模块提供底层逻辑推理能力。[^F-076][^F-077][^F-078]
+SymPy 拥有两套并行的假设系统：核心层 `is_*` 属性系统（构造时确定，快速但有限）和 `sympy.assumptions` 新假设系统（基于 SAT 求解，灵活但较慢）。`ask()` 函数在给定假设下查询命题真值，`Q` 对象提供谓词构造器，`refine()` 利用假设化简表达式，CNF/SAT 模块提供底层逻辑推理能力。[^F-076] [^F-077] [^F-078]
 
 ## 新旧假设系统双轨设计
 
-SymPy 的假设推理采用"双轨制"设计，两套系统各司其职：[^F-012][^F-077]
+SymPy 的假设推理采用"双轨制"设计，两套系统各司其职：[^F-012] [^F-077]
 
 | 特性 | 旧系统（核心 is_* 属性） | 新系统（sympy.assumptions） |
 |------|--------------------------|----------------------------|
@@ -39,7 +39,7 @@ SymPy 的假设推理采用"双轨制"设计，两套系统各司其职：[^F-01
 
 ### 核心 is_* 属性系统
 
-`Basic` 类在 [core/basic.py:229-258](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/basic.py#L229-L258) 声明了一组 `is_*` 类属性，初始值为 `False` 或 `None`，子类在构造时通过 `_prepare_class_assumptions(cls)` 初始化默认假设。[^F-012]
+`Basic` 类在 core/basic.py:229-258 声明了一组 `is_*` 类属性，初始值为 `False` 或 `None`，子类在构造时通过 `_prepare_class_assumptions(cls)` 初始化默认假设。[^F-012]
 
 ```python
 from sympy import Symbol, Integer, pi
@@ -67,7 +67,7 @@ y.is_positive       # None（无假设信息）
 
 ## ask() 查询函数
 
-`ask()` 定义于 [assumptions/ask.py:406](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/assumptions/ask.py#L406)，是新假设系统的核心查询入口。[^F-077]
+`ask()` 定义于 assumptions/ask.py:406，是新假设系统的核心查询入口。[^F-077]
 
 ### 函数签名
 
@@ -118,7 +118,7 @@ ask(Q.real(x + 1), Q.real(x))       # True
 
 ## Q 谓词对象
 
-`Q` 是 `AssumptionKeys` 类（[assumptions/ask.py:20](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/assumptions/ask.py#L20)）的单例实例，通过 `@memoize_property` 装饰器提供谓词键。每个属性访问返回对应的 `Predicate` 实例，用于构造 `AppliedPredicate` 命题。[^F-078]
+`Q` 是 `AssumptionKeys` 类（assumptions/ask.py:20）的单例实例，通过 `@memoize_property` 装饰器提供谓词键。每个属性访问返回对应的 `Predicate` 实例，用于构造 `AppliedPredicate` 命题。[^F-078]
 
 ### 集合论谓词
 
@@ -244,11 +244,11 @@ negative → extended_negative
 
 ## CNF 合取范式
 
-CNF（Conjunctive Normal Form，合取范式）是 SAT 求解的基础表示形式。SymPy 在 [assumptions/cnf.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/assumptions/cnf.py) 中实现了完整的 CNF 编码系统。[^F-080][^F-081]
+CNF（Conjunctive Normal Form，合取范式）是 SAT 求解的基础表示形式。SymPy 在 assumptions/cnf.py 中实现了完整的 CNF 编码系统。[^F-080] [^F-081]
 
 ### Literal 类
 
-`Literal` 定义于 [cnf.py:16](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/assumptions/cnf.py#L16)，是 CNF 的最小元素，表示一个可能被否定的布尔原子。[^F-081]
+`Literal` 定义于 cnf.py:16，是 CNF 的最小元素，表示一个可能被否定的布尔原子。[^F-081]
 
 ```python
 class Literal:
@@ -277,7 +277,7 @@ neg_lit.is_Not                   # True
 
 ### CNF 类
 
-`CNF` 定义于 [cnf.py:271](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/assumptions/cnf.py#L271)，表示布尔表达式的合取范式，由子句（clause）集合组成，每个子句是 `Literal` 对象的 `frozenset`（文字的析取）。[^F-080]
+`CNF` 定义于 cnf.py:271，表示布尔表达式的合取范式，由子句（clause）集合组成，每个子句是 `Literal` 对象的 `frozenset`（文字的析取）。[^F-080]
 
 CNF 的核心方法：
 
@@ -302,7 +302,7 @@ cnf = CNF.to_CNF(expr)
 
 ### EncodedCNF 类
 
-`EncodedCNF` 定义于 [cnf.py:383](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/assumptions/cnf.py#L383)，是 CNF 的编码表示，将每个布尔变量映射为整数，用于 SAT 求解器高效处理。[^F-080]
+`EncodedCNF` 定义于 cnf.py:383，是 CNF 的编码表示，将每个布尔变量映射为整数，用于 SAT 求解器高效处理。[^F-080]
 
 ```python
 class EncodedCNF:
@@ -318,7 +318,7 @@ EncodedCNF 是连接 SymPy 逻辑系统与底层 SAT 求解器的桥梁：SymPy 
 
 ## satisfiable() SAT 求解函数
 
-`satisfiable()` 从 `sympy.logic.inference` 导入（在 [ask.py:10](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/assumptions/ask.py#L10)），是 SymPy 的布尔可满足性求解器。它接受一个 CNF 编码的布尔公式，返回满足赋值（字典）或 `False`（不可满足）。
+`satisfiable()` 从 `sympy.logic.inference` 导入（在 ask.py:10），是 SymPy 的布尔可满足性求解器。它接受一个 CNF 编码的布尔公式，返回满足赋值（字典）或 `False`（不可满足）。
 
 `ask.py` 模块开头导入：
 ```python
@@ -328,7 +328,7 @@ from sympy.logic.boolalg import And
 
 ### satask() SAT 推理函数
 
-`satask()` 定义于 [assumptions/satask.py:18](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/assumptions/satask.py#L18)，使用 SAT 算法评估命题在假设下的布尔值。[^F-082]
+`satask()` 定义于 assumptions/satask.py:18，使用 SAT 算法评估命题在假设下的布尔值。[^F-082]
 
 ```python
 def satask(proposition, assumptions=True, use_known_facts=True, iterations=oo):
@@ -349,7 +349,7 @@ def satask(proposition, assumptions=True, use_known_facts=True, iterations=oo):
 
 ## refine() 表达式细化
 
-`refine()` 定义于 [assumptions/refine.py:21](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/assumptions/refine.py#L21)，利用假设条件化简表达式。与 `simplify()` 不同，`refine()` 只在给定假设下进行等价变换，不做结构上的"盲目化简"。[^F-079]
+`refine()` 定义于 assumptions/refine.py:21，利用假设条件化简表达式。与 `simplify()` 不同，`refine()` 只在给定假设下进行等价变换，不做结构上的"盲目化简"。[^F-079]
 
 ### 函数签名
 
@@ -397,7 +397,7 @@ refine(Abs(x - y), Q.positive(x - y))  # x - y
 
 ### refine 的实现机制
 
-`refine()` 内部通过 `Basic.refine(assumption)` 方法（[core/basic.py:2036](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/basic.py#L2036)）递归调用各类型的 `_eval_refine(assumptions)` 钩子方法。`Abs`、`sign`、`sqrt`、`re`、`im`、`conjugate` 等类都定义了各自的细化规则。[^F-011]
+`refine()` 内部通过 `Basic.refine(assumption)` 方法（core/basic.py:2036）递归调用各类型的 `_eval_refine(assumptions)` 钩子方法。`Abs`、`sign`、`sqrt`、`re`、`im`、`conjugate` 等类都定义了各自的细化规则。[^F-011]
 
 ## 假设上下文管理
 
@@ -422,7 +422,7 @@ print(ask(Q.positive(x)))       # None（退出上下文后失效）
 
 ## 模块导出
 
-[assumptions/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/assumptions/__init__.py) 导出的公开 API：[^F-076]
+assumptions/__init__.py 导出的公开 API：[^F-076]
 
 | 导出符号 | 来源 | 说明 |
 |----------|------|------|

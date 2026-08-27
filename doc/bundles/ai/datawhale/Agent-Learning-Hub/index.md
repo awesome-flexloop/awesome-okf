@@ -24,16 +24,16 @@ Agent Learning Hub 是 Datawhale 出品的 AI Agent 学习路线图。项目的�
 
 ### 核心概念
 
-- [Agent 学习路线图](/ai/datawhale/Agent-Learning-Hub/concepts/agent-learning-roadmap.md)——9 阶段递进式 Learning Todo List（Stage 0-8）与 11 级 Project Ladder，每阶段配有 checklist、推荐阅读和可交付产出物
-- [核心资源分类](/ai/datawhale/Agent-Learning-Hub/concepts/resource-curation.md)——官方指南、项目地图、Skills/协议、现代 Agent 系统、论文、GitHub 仓库等九大资源分类体系
+- [Agent 学习路线图](concepts/agent-learning-roadmap.md)——9 阶段递进式 Learning Todo List（Stage 0-8）与 11 级 Project Ladder，每阶段配有 checklist、推荐阅读和可交付产出物
+- [核心资源分类](concepts/resource-curation.md)——官方指南、项目地图、Skills/协议、现代 Agent 系统、论文、GitHub 仓库等九大资源分类体系
 
 ### 示例
 
-- [示例索引](/ai/datawhale/Agent-Learning-Hub/examples/index.md)——阶段产出物与项目阶梯实践指引（本项目为路线图类项目，不含可运行源代码）
+- [示例索引](examples/index.md)——阶段产出物与项目阶梯实践指引（本项目为路线图类项目，不含可运行源代码）
 
 ### 信源
 
-- [GitHub 仓库信源](/ai/datawhale/Agent-Learning-Hub/references/source-repo.md)——项目官方仓库地址、README.md 与 index.html 文件结构说明
+- [GitHub 仓库信源](references/source-repo.md)——项目官方仓库地址、README.md 与 index.html 文件结构说明
 
 ## 快速上手
 

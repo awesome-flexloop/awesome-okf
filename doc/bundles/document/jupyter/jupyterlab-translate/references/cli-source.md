@@ -59,6 +59,6 @@ sources:
 
 ## 相关概念
 
-- [CLI命令参考](/concepts/03-cli-commands.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [API层源码映射](/references/api-source.md)
+- [CLI命令参考](../concepts/03-cli-commands.md)
+- [架构总览](../concepts/02-architecture-overview.md)
+- [API层源码映射](api-source.md)

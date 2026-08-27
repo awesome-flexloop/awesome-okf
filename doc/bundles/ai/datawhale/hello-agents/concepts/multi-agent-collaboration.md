@@ -96,7 +96,7 @@ sources:
 - **MCP协议**让Agent团队共享工具和资源访问能力
 - **ANP协议**支持大规模Agent网络中的服务发现
 
-详见[通信协议](/ai/datawhale/hello-agents/concepts/communication-protocols)概念文档。
+详见通信协议概念文档。
 
 ## 综合案例中的多Agent
 
@@ -107,7 +107,7 @@ sources:
 
 ## 相关阅读
 
-- [第六章 框架开发实践](/ai/datawhale/hello-agents/references/chapter06-framework-practice)
-- [通信协议](/ai/datawhale/hello-agents/concepts/communication-protocols)
-- [智能体范式与ReAct](/ai/datawhale/hello-agents/concepts/agent-paradigms-react)
-- [上下文工程](/ai/datawhale/hello-agents/concepts/context-engineering)
+- 第六章 框架开发实践
+- 通信协议
+- 智能体范式与ReAct
+- 上下文工程

@@ -223,6 +223,6 @@ Dependabot 每周检查两类依赖更新：
 
 ## 相关概念
 
-- [CI/CD 工作流详解](/concepts/09-ci-workflows.md)
-- [构建系统详解](/concepts/08-build-system.md)
-- [代码质量工具](/concepts/11-code-quality.md)
+- [CI/CD 工作流详解](../concepts/09-ci-workflows.md)
+- [构建系统详解](../concepts/08-build-system.md)
+- [代码质量工具](../concepts/11-code-quality.md)

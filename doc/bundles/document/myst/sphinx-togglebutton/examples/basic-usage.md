@@ -124,6 +124,6 @@ togglebutton_open_on_print = True
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [toggle 指令详解](/concepts/02-toggle-directive.md)
-- [配置项参考](/concepts/03-configuration.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [toggle 指令详解](../concepts/02-toggle-directive.md)
+- [配置项参考](../concepts/03-configuration.md)

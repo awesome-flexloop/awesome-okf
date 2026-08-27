@@ -192,8 +192,8 @@ processor.use(liftMystDirectivesAndRolesPlugin);
 
 ## 相关概念
 
-- [MyST 解析器](/concepts/02-myst-parser.md)
-- [MDAST 转换管线](/concepts/03-myst-transforms.md)
-- [公共类型系统](/concepts/04-myst-common-types.md)
-- [自定义指令示例](/examples/05-custom-directive.md)
-- [编写自定义 Transform](/examples/02-custom-transform.md)
+- [MyST 解析器](02-myst-parser.md)
+- [MDAST 转换管线](03-myst-transforms.md)
+- [公共类型系统](04-myst-common-types.md)
+- [自定义指令示例](../examples/05-custom-directive.md)
+- [编写自定义 Transform](../examples/02-custom-transform.md)

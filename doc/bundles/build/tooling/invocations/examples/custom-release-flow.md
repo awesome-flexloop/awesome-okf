@@ -151,8 +151,8 @@ release.push(c, dry_run=dry_run)
 
 ## 相关概念
 
-- [包发布生命周期](/concepts/05-packaging-release.md)
-- [终端交互工具](/concepts/07-utilities-watchers.md)
-- [组合模式：组装自己的任务集合](/concepts/10-composition-patterns.md)
+- [包发布生命周期](../concepts/05-packaging-release.md)
+- [终端交互工具](../concepts/07-utilities-watchers.md)
+- [组合模式：组装自己的任务集合](../concepts/10-composition-patterns.md)
 
-[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](/references/invocations-source.md)。
+[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](../references/invocations-source.md)。

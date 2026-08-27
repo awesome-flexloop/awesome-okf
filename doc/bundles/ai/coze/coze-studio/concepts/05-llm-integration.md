@@ -113,7 +113,7 @@ MODEL_BASE_URL_0=http://host.docker.internal:11434/v1
 
 ## 相关概念
 
-- [整体架构概览](/concepts/00-overview-ddd-architecture.md)
-- [可插拔基础设施](/concepts/04-pluggable-infrastructure.md)
-- [添加 LLM 模型示例](/examples/add-llm-model.md)
-- [部署与运维](/concepts/08-deployment-operations.md)
+- [整体架构概览](00-overview-ddd-architecture.md)
+- [可插拔基础设施](04-pluggable-infrastructure.md)
+- [添加 LLM 模型示例](../examples/add-llm-model.md)
+- [部署与运维](08-deployment-operations.md)

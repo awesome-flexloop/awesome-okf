@@ -297,8 +297,8 @@ ip.magics_manager.magics['line']  # 查看所有行魔法
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [代码执行管线](/concepts/05-execution-pipeline.md)
-- [Shell 生命周期](/concepts/03-shell-lifecycle.md)
-- [魔法系统](/concepts/04-magic-system.md)
-- [MagicsManager API 参考](/references/magic-source.md)
+- [架构总览](../concepts/02-architecture-overview.md)
+- [代码执行管线](../concepts/05-execution-pipeline.md)
+- [Shell 生命周期](../concepts/03-shell-lifecycle.md)
+- [魔法系统](../concepts/04-magic-system.md)
+- [MagicsManager API 参考](magic-source.md)

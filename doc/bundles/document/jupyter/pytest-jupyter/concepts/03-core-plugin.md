@@ -188,6 +188,6 @@ def test_environ(jp_environ):
 ---
 
 **下一步阅读：**
-- [Client插件详解](/concepts/04-client-plugin.md) — 内核启动、ZMQ管理、echo kernel使用
-- [Tornado异步支持](/concepts/06-tornasync-plugin.md) — HTTP服务器/客户端测试基础设施
-- [Server插件详解](/concepts/05-server-plugin.md) — 完整的Jupyter Server测试栈
+- [Client插件详解](04-client-plugin.md) — 内核启动、ZMQ管理、echo kernel使用
+- [Tornado异步支持](06-tornasync-plugin.md) — HTTP服务器/客户端测试基础设施
+- [Server插件详解](05-server-plugin.md) — 完整的Jupyter Server测试栈

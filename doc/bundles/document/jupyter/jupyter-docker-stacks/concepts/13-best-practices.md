@@ -300,4 +300,4 @@ JupyterHub部署时使用`start-singleuser.py`（start-notebook.py自动检测JU
 - [用户与权限模型](09-user-permissions.md)
 - [启动生命周期](07-startup-lifecycle.md)
 - [自定义镜像示例](../examples/02-custom-image.md)
-- [常用配方示例](../examples/05-common-recipes.md)
+- 常用配方示例

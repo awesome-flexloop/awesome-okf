@@ -112,7 +112,7 @@ CI 镜像选择 `ubuntu:24.04` 而非 `python:slim`（基于 Debian），原因�
 
 ## 相关概念
 
-- [Base 镜像详解](/concepts/03-base-image.md)：base 镜像的逐层构建细节
-- [LaTeX/PDF 镜像详解](/concepts/04-latexpdf-image.md)：TeXLive 包选择与中文 PDF 支持
-- [CI 镜像详解](/concepts/05-ci-image.md)：CI 测试环境的特殊配置
-- [自定义镜像扩展](/concepts/07-customization.md)：基于官方镜像创建自定义镜像
+- [Base 镜像详解](03-base-image.md)：base 镜像的逐层构建细节
+- [LaTeX/PDF 镜像详解](04-latexpdf-image.md)：TeXLive 包选择与中文 PDF 支持
+- [CI 镜像详解](05-ci-image.md)：CI 测试环境的特殊配置
+- [自定义镜像扩展](07-customization.md)：基于官方镜像创建自定义镜像

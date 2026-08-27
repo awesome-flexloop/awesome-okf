@@ -20,7 +20,7 @@ Lumino 的布局系统负责将子 Widget 排列在父 Widget 的 DOM 节点内�
 
 ## Layout 抽象基类
 
-[Layout](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/layout.ts#L37) 是所有布局的抽象基类：
+Layout 是所有布局的抽象基类：
 
 ```typescript
 abstract class Layout implements Iterable<Widget>, IDisposable {
@@ -81,7 +81,7 @@ processParentMessage(msg: Message): void {
 
 ## LayoutItem：布局计算单元
 
-[LayoutItem](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/layout.ts#L614) 是布局系统中的工作单元，它包装一个 Widget，负责计算和应用位置尺寸：
+LayoutItem 是布局系统中的工作单元，它包装一个 Widget，负责计算和应用位置尺寸：
 
 ```typescript
 class LayoutItem implements IDisposable {
@@ -143,11 +143,11 @@ Lumino 提供了多种内置布局，满足不同 UI 需求：
 
 ### PanelLayout：最简单的布局
 
-[PanelLayout](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/panellayout.ts) 是最基础的布局，将子 Widget 直接附加到父节点，不做任何位置计算（依赖子 Widget 自身的 CSS 布局）。适用于简单容器。
+PanelLayout 是最基础的布局，将子 Widget 直接附加到父节点，不做任何位置计算（依赖子 Widget 自身的 CSS 布局）。适用于简单容器。
 
 ### BoxLayout：盒子布局
 
-[BoxLayout](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/boxlayout.ts) 实现水平或垂直方向的弹性盒子布局，类似 CSS flexbox：
+BoxLayout 实现水平或垂直方向的弹性盒子布局，类似 CSS flexbox：
 
 ```typescript
 class BoxLayout extends PanelLayout {
@@ -163,7 +163,7 @@ class BoxLayout extends PanelLayout {
 }
 ```
 
-BoxLayout 配合 [BoxEngine](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/boxengine.ts) 算法计算弹性分配：
+BoxLayout 配合 BoxEngine 算法计算弹性分配：
 - 每个子 Widget 有 minSize、maxSize、stretch（拉伸因子）
 - BoxEngine 根据可用空间和 stretch 因子分配尺寸
 - 类似 CSS flex-grow/flex-shrink，但更精确
@@ -181,7 +181,7 @@ BoxPanel.setStretch(mainContent, 1);     // 拉伸填充剩余空间
 
 ### SplitLayout：可拖拽分割布局
 
-[SplitLayout](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/splitlayout.ts) 在 BoxLayout 基础上增加了可拖拽分割条（handle），用户可以通过拖拽调整各面板大小：
+SplitLayout 在 BoxLayout 基础上增加了可拖拽分割条（handle），用户可以通过拖拽调整各面板大小：
 
 ```typescript
 class SplitLayout extends BoxLayout {
@@ -200,7 +200,7 @@ class SplitPanel extends Panel {
 
 ### StackedLayout：堆叠布局
 
-[StackedLayout](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/stackedlayout.ts) 将所有子 Widget 堆叠在同一区域，只显示当前选中的一个：
+StackedLayout 将所有子 Widget 堆叠在同一区域，只显示当前选中的一个：
 
 ```typescript
 class StackedLayout extends Layout {
@@ -214,7 +214,7 @@ class StackedLayout extends Layout {
 
 ### DockLayout：停靠布局（IDE 核心）
 
-[DockLayout](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/docklayout.ts) 是 Lumino 最复杂的布局引擎，实现了类似 VS Code/JupyterLab 的 IDE 风格停靠面板：
+DockLayout 是 Lumino 最复杂的布局引擎，实现了类似 VS Code/JupyterLab 的 IDE 风格停靠面板：
 
 - **标签组**：多个 Widget 可以放在同一区域通过标签切换
 - **分割**：可以水平/垂直分割区域
@@ -254,15 +254,15 @@ DockLayout 使用**树结构**表示布局：
 
 ### AccordionLayout：手风琴布局
 
-[AccordionLayout](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/accordionlayout.ts) 实现可折叠的手风琴面板，同一时间可以展开一个或多个区域。
+AccordionLayout 实现可折叠的手风琴面板，同一时间可以展开一个或多个区域。
 
 ### GridLayout：网格布局
 
-[GridLayout](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/gridlayout.ts) 类似 CSS Grid，支持行列网格放置子 Widget。
+GridLayout 类似 CSS Grid，支持行列网格放置子 Widget。
 
 ### SingletonLayout：单组件布局
 
-[SingletonLayout](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/singletonlayout.ts) 只容纳一个 Widget，适用于一次只显示一个内容的容器。
+SingletonLayout 只容纳一个 Widget，适用于一次只显示一个内容的容器。
 
 ## 面板 Widget（Panel）
 

@@ -383,8 +383,8 @@ def unload_ipython_extension(ip):
 
 ## 相关概念
 
-- [扩展系统](/concepts/09-extension-system.md)
-- [魔法命令系统](/concepts/04-magic-system.md)
-- [Shell 生命周期](/concepts/03-shell-lifecycle.md)
-- [自定义魔法开发](/concepts/11-custom-magics.md)
-- [信源参考 - 事件与钩子](/references/events-hooks-source.md)
+- [扩展系统](09-extension-system.md)
+- [魔法命令系统](04-magic-system.md)
+- [Shell 生命周期](03-shell-lifecycle.md)
+- [自定义魔法开发](11-custom-magics.md)
+- [信源参考 - 事件与钩子](../references/events-hooks-source.md)

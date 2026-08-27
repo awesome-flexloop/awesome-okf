@@ -819,10 +819,10 @@ ip.set_hook('clipboard_get', chain)
 
 ## 相关概念
 
-- [事件与钩子](/concepts/10-events-hooks.md)
-- [扩展系统](/concepts/09-extension-system.md)
-- [Shell 生命周期](/concepts/03-shell-lifecycle.md)
-- [魔法命令系统](/concepts/04-magic-system.md)
-- [自定义魔法开发](/concepts/11-custom-magics.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [信源参考 - 事件与钩子](/references/events-hooks-source.md)
+- [事件与钩子](../concepts/10-events-hooks.md)
+- [扩展系统](../concepts/09-extension-system.md)
+- [Shell 生命周期](../concepts/03-shell-lifecycle.md)
+- [魔法命令系统](../concepts/04-magic-system.md)
+- [自定义魔法开发](../concepts/11-custom-magics.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [信源参考 - 事件与钩子](../references/events-hooks-source.md)

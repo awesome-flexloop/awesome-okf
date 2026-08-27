@@ -99,5 +99,5 @@ NumPy 支持通过 C API 注册自定义 dtype（如 pandas 的 DatetimeTZDtype�
 ## 相关概念
 
 - [NumPy 简介](00-introduction.md)
-- [ndarray 数据模型](01-ndarray-model.md)
-- [ufunc 通用函数](03-ufunc-system.md)
+- ndarray 数据模型
+- ufunc 通用函数

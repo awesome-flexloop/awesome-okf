@@ -723,7 +723,7 @@ class InvalidAliasError(AliasError):
 
 ## 相关概念
 
-- **[InteractiveShell](./interactiveshell-source.md)**：Shell 中 history_manager/completer/alias_manager 的初始化
-- **[魔法命令系统](./magic-source.md)**：%hist/%history、%alias/%unalias、%rep 等历史相关魔法
-- **[显示系统](./display-source.md)**：DisplayHook 中输出缓存和 _oh 更新逻辑
-- **[输入转换](./inputtransformer-source.md)**：输入历史中 raw vs parsed 的区别
+- **[InteractiveShell](interactiveshell-source.md)**：Shell 中 history_manager/completer/alias_manager 的初始化
+- **[魔法命令系统](magic-source.md)**：%hist/%history、%alias/%unalias、%rep 等历史相关魔法
+- **[显示系统](display-source.md)**：DisplayHook 中输出缓存和 _oh 更新逻辑
+- **[输入转换](inputtransformer-source.md)**：输入历史中 raw vs parsed 的区别

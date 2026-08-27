@@ -55,11 +55,11 @@ LangGraphJS 的代码库严格分为四层，自底向上：
 
 | 概念 | 一句话说明 |
 |---|---|
-| [StateGraph](state-graph) | 有状态工作流构建器，节点+边+条件边 |
-| [Annotation](annotation) | 状态字段声明 DSL，编译为通道 |
-| [Channels](channels) | 状态存储与更新原语 |
-| [Checkpointing](checkpointing) | 状态持久化、恢复、时间旅行 |
-| [Pregel 执行引擎](pregel-execution) | 超步调度、消息传递、并行执行 |
+| [StateGraph](state-graph.md) | 有状态工作流构建器，节点+边+条件边 |
+| [Annotation](annotation.md) | 状态字段声明 DSL，编译为通道 |
+| [Channels](channels.md) | 状态存储与更新原语 |
+| [Checkpointing](checkpointing.md) | 状态持久化、恢复、时间旅行 |
+| [Pregel 执行引擎](pregel-execution.md) | 超步调度、消息传递、并行执行 |
 
 ## 设计哲学
 
@@ -71,6 +71,6 @@ LangGraphJS 的代码库严格分为四层，自底向上：
 
 ## 下一步
 
-- 阅读[状态图与工作流](state-graph)了解如何构建第一个图
-- 深入[Annotation 状态定义](annotation)理解状态建模
-- 理解[Pregel 执行引擎](pregel-execution)掌握运行时机制
+- 阅读[状态图与工作流](state-graph.md)了解如何构建第一个图
+- 深入[Annotation 状态定义](annotation.md)理解状态建模
+- 理解[Pregel 执行引擎](pregel-execution.md)掌握运行时机制

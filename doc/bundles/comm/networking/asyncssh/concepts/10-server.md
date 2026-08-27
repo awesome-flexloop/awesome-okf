@@ -312,10 +312,10 @@ await asyncssh.create_server(
 
 ## 相关概念
 
-- [认证体系](/concepts/05-authentication.md) —— 服务端认证回调详解
-- [密钥与证书](/concepts/06-keys-certificates.md) —— 主机密钥生成与证书
-- [SFTP 文件传输](/concepts/07-sftp.md) —— SFTPServer VFS
-- [端口转发](/concepts/09-port-forwarding.md) —— 转发权限控制
+- [认证体系](05-authentication.md) —— 服务端认证回调详解
+- [密钥与证书](06-keys-certificates.md) —— 主机密钥生成与证书
+- [SFTP 文件传输](07-sftp.md) —— SFTPServer VFS
+- [端口转发](09-port-forwarding.md) —— 转发权限控制
 - [paramiko 服务端开发](../../paramiko/concepts/09-server.md)（同步服务端对比）
 
-[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](/references/asyncssh-source.md)。
+[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](../references/asyncssh-source.md)。

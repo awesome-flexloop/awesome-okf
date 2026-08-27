@@ -46,7 +46,7 @@ CPython 仓库根目录包含以下核心子目录：
 | 文件 | 内容 |
 |------|------|
 | `Python.h` | C API 总入口，按序引入所有公共头 |
-| `object.h` | [PyObject](/concepts/02-object-model.md)、[PyVarObject](/concepts/02-object-model.md) 结构体与对象宏 |
+| `object.h` | [PyObject](02-object-model.md)、[PyVarObject](02-object-model.md) 结构体与对象宏 |
 | `objimpl.h` | 对象内存分配 API（`PyObject_New`、`PyObject_Free` 等） |
 | `refcount.h` | 引用计数宏（`Py_INCREF`、`Py_DECREF`、`Py_CLEAR`） |
 | `pymem.h` | 底层内存分配 API（`PyMem_Malloc`、`PyMem_Free`） |
@@ -63,7 +63,7 @@ CPython 仓库根目录包含以下核心子目录：
 
 `Include/cpython/` 子目录包含 **CPython 实现细节**头文件，不属于稳定 ABI，在次要版本之间可能发生不兼容变更。这些头文件提供了比公共 API 更深入的结构体访问能力，但 C 扩展开发者应意识到使用这些头文件意味着版本绑定。
 
-关键文件包括 `Include/cpython/object.h`（[PyTypeObject](/concepts/03-type-system.md) 完整结构体定义、`PyHeapTypeObject`）、`Include/cpython/ceval.h`（评估器内部接口）、`Include/cpython/pystate.h`（解释器/线程状态内部接口）等。
+关键文件包括 `Include/cpython/object.h`（[PyTypeObject](03-type-system.md) 完整结构体定义、`PyHeapTypeObject`）、`Include/cpython/ceval.h`（评估器内部接口）、`Include/cpython/pystate.h`（解释器/线程状态内部接口）等。
 
 `Include/object.h` 文件末尾通过以下机制引入实现细节头：
 
@@ -290,9 +290,9 @@ CPython 仓库中有些文件是**自动生成**的，不应手动编辑：
 
 ## 相关概念
 
-- [CPython 简介](/concepts/00-introduction.md) — 项目概览与学习路径
-- [对象模型：PyObject 与 PyVarObject](/concepts/02-object-model.md) — 一切 Python 值的底层结构
-- [类型系统与 PyTypeObject](/concepts/03-type-system.md) — 类型对象的结构与方法套件
-- [CPython 源码信源登记](/references/cpython-source.md) — 源码路径、版本信息、关键文件完整清单
+- [CPython 简介](00-introduction.md) — 项目概览与学习路径
+- [对象模型：PyObject 与 PyVarObject](02-object-model.md) — 一切 Python 值的底层结构
+- [类型系统与 PyTypeObject](03-type-system.md) — 类型对象的结构与方法套件
+- [CPython 源码信源登记](../references/cpython-source.md) — 源码路径、版本信息、关键文件完整清单
 
-[^cpython-source]: CPython 源码信源，见 [cpython-source.md](/references/cpython-source.md)。
+[^cpython-source]: CPython 源码信源，见 [cpython-source.md](../references/cpython-source.md)。

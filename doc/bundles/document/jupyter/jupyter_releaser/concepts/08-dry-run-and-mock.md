@@ -211,4 +211,4 @@ print(f"Mock server running at {get_mock_github_url()}")
 
 - [Python与npm双生态发布](06-python-npm-dual.md)
 - [GitHub Actions集成](09-github-actions.md)
-- [示例：Dry-Run本地测试](/examples/03-dry-run-testing.md)
+- [示例：Dry-Run本地测试](../examples/03-dry-run-testing.md)

@@ -56,6 +56,6 @@ sources:
 
 ## 相关概念
 
-- [简介](/concepts/00-introduction.md)
-- [练习指令详解](/concepts/02-exercise-directive.md)
-- [解答指令详解](/concepts/03-solution-directive.md)
+- [简介](../concepts/00-introduction.md)
+- [练习指令详解](../concepts/02-exercise-directive.md)
+- [解答指令详解](../concepts/03-solution-directive.md)

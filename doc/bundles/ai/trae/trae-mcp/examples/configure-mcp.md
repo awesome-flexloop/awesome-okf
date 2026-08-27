@@ -87,7 +87,7 @@ sources:
 
 ## 相关链接
 
-- [MCP 配置格式](/concepts/02-mcp-configuration.md)
-- [MCP 三层模型](/concepts/01-mcp-architecture.md)
-- [CloudBase MCP 使用示例](/examples/use-cloudbase-mcp.md)
-- [构建简单 MCP 服务器示例](/examples/build-simple-mcp.md)
+- [MCP 配置格式](../concepts/02-mcp-configuration.md)
+- [MCP 三层模型](../concepts/01-mcp-architecture.md)
+- [CloudBase MCP 使用示例](use-cloudbase-mcp.md)
+- [构建简单 MCP 服务器示例](build-simple-mcp.md)

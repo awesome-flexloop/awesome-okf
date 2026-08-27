@@ -142,8 +142,8 @@ ns = Collection(all_checks, blacken, lint, typecheck)
 
 ## 相关概念
 
-- [快速上手](/concepts/01-getting-started.md)
-- [Pytest 测试任务](/concepts/03-testing-pytest.md)
-- [组合模式：组装自己的任务集合](/concepts/10-composition-patterns.md)
+- [快速上手](01-getting-started.md)
+- [Pytest 测试任务](03-testing-pytest.md)
+- [组合模式：组装自己的任务集合](10-composition-patterns.md)
 
-[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](/references/invocations-source.md)。
+[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](../references/invocations-source.md)。

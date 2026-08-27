@@ -158,7 +158,7 @@ class VertexAIEmbeddings(BaseModel, Embeddings):
 
 ## 进一步阅读
 
-- [总览](/ai/langchain-ai/langchain-google/concepts/overview)
-- [聊天模型架构](/ai/langchain-ai/langchain-google/concepts/chat-models)
-- [API 参考](/ai/langchain-ai/langchain-google/references/api)
-- [基础使用示例](/ai/langchain-ai/langchain-google/examples/basic-usage)
+- 总览
+- 聊天模型架构
+- API 参考
+- 基础使用示例

@@ -47,6 +47,6 @@ sphinx-exercise 是 Executable Books 生态中的教育类 Sphinx 扩展，为�
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [练习指令详解](/concepts/02-exercise-directive.md)
-- [解答指令详解](/concepts/03-solution-directive.md)
+- [快速开始](01-getting-started.md)
+- [练习指令详解](02-exercise-directive.md)
+- [解答指令详解](03-solution-directive.md)

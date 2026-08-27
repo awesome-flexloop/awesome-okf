@@ -92,7 +92,7 @@ $$R := \mathrm{Collapse}(\psi) \subseteq \Psi$$
 
 著作 **psi-theory-of-eternal-collapse**（64 章，8 部分）阐述了"永恒塌缩"理论。其核心主张是：塌缩不会抵达一个终点性的"完全现实"后停止。相反，每一次结晶都成为下一次遭遇的素材——已结晶的结构被重新纳入 ψ 的自作用，再次被遭遇、被重构。
 
-因此，现实是一条**永远在硬化又永远在软化**的河流：结晶提供稳定性使世界可居，重构提供开放性使世界可新。塌缩不是从潜能坠落为现实的一次性悲剧，而是潜能与现实之间永恒的呼吸。这一主题在 [回声与递归](/concepts/02-echo-and-recursion.md) 中被进一步展开为递归呼吸的节奏。
+因此，现实是一条**永远在硬化又永远在软化**的河流：结晶提供稳定性使世界可居，重构提供开放性使世界可新。塌缩不是从潜能坠落为现实的一次性悲剧，而是潜能与现实之间永恒的呼吸。这一主题在 [回声与递归](02-echo-and-recursion.md) 中被进一步展开为递归呼吸的节奏。
 
 ## 与同构体系的对应
 
@@ -100,10 +100,10 @@ $$R := \mathrm{Collapse}(\psi) \subseteq \Psi$$
 
 ## 相关概念
 
-- [ψ = ψ(ψ) — 自指递归的终极方程](/concepts/00-psi-equation.md)
-- [回声与递归 — 宇宙的呼吸模式](/concepts/02-echo-and-recursion.md)
-- [观察者形成 — 意识在递归中觉醒](/concepts/03-observer-formation.md)
-- [现实结晶 — 物理世界作为塌缩固化](/concepts/05-reality-crystallization.md)
-- [元递归 — 递归意识到自身](/concepts/06-meta-recursion.md)
-- [/psi-math/concepts/04-physics-constants.md](/psi-math/concepts/04-physics-constants.md)
-- [/psi-universe/concepts/01-flip-xor-shift.md](/psi-universe/concepts/01-flip-xor-shift.md)
+- [ψ = ψ(ψ) — 自指递归的终极方程](00-psi-equation.md)
+- [回声与递归 — 宇宙的呼吸模式](02-echo-and-recursion.md)
+- [观察者形成 — 意识在递归中觉醒](03-observer-formation.md)
+- [现实结晶 — 物理世界作为塌缩固化](05-reality-crystallization.md)
+- [元递归 — 递归意识到自身](06-meta-recursion.md)
+- [/psi-math/concepts/04-physics-constants.md](../../psi-math/concepts/04-physics-constants.md)
+- [/psi-universe/concepts/01-flip-xor-shift.md](../../psi-universe/concepts/01-flip-xor-shift.md)

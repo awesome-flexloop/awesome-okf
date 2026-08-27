@@ -98,7 +98,7 @@ class YChat(YBaseDoc, BaseChatModel):
 - **事件分发**：`_ymessages.observe()` 监听 YArray 变化，转换为 `ChatMessageEvent` 分发给观察者
 - **时间同步**：客户端创建消息时设 `raw_time=true`，服务器在 `_on_messages_change()` 中校正为服务器时间
 
-详见 [Yjs CRDT 同步机制](/concepts/crdt-sync.md)。
+详见 [Yjs CRDT 同步机制](crdt-sync.md)。
 
 ## WebSocket 模式
 
@@ -214,10 +214,10 @@ class BaseChatModel(ABC):
 
 ## 相关概念
 
-- [Yjs CRDT 同步机制](/concepts/crdt-sync.md)
-- [消息生命周期](/concepts/message-lifecycle.md)
-- [ChatManager 生命周期管理](/concepts/chat-manager.md)
-- [生命周期事件](/concepts/lifecycle-events.md)
+- [Yjs CRDT 同步机制](crdt-sync.md)
+- [消息生命周期](message-lifecycle.md)
+- [ChatManager 生命周期管理](chat-manager.md)
+- [生命周期事件](lifecycle-events.md)
 
 [^factory-ts]: factory.ts
 [^init-py]: jupyterlite_echo_kernel/__init__.py

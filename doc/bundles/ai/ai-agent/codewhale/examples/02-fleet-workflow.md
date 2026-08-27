@@ -457,8 +457,8 @@ pub(crate) fn clamp(member: PermissionCeiling, session: PermissionCeiling) -> Se
 
 ## 相关概念
 
-- [Fleet 多 Agent](/concepts/05-fleet-subagents.md) — Fleet 控制平面和权限 clamp 模型
-- [Agent 核心运行时](/concepts/02-agent-core.md) — Runtime 和 Engine 架构
-- [工具系统](/concepts/04-tool-system.md) — 子 agent 工具注册表继承
-- [沙箱与执行策略](/concepts/07-sandbox-execpolicy.md) — Worktree 隔离和权限控制
-- [基本使用示例](/examples/01-basic-usage.md) — 安装和基础配置
+- [Fleet 多 Agent](../concepts/05-fleet-subagents.md) — Fleet 控制平面和权限 clamp 模型
+- [Agent 核心运行时](../concepts/02-agent-core.md) — Runtime 和 Engine 架构
+- [工具系统](../concepts/04-tool-system.md) — 子 agent 工具注册表继承
+- [沙箱与执行策略](../concepts/07-sandbox-execpolicy.md) — Worktree 隔离和权限控制
+- [基本使用示例](01-basic-usage.md) — 安装和基础配置

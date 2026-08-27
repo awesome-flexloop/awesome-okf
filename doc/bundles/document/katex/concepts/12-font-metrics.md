@@ -224,7 +224,7 @@ BROWSERSLIST="Chrome 68" pnpm build
 2. **字体目录**（`fonts/`）必须与 CSS 文件位于同级目录，否则 `url("fonts/...")` 解析失败
 3. **构建工具**（webpack/rollup + Sass + Browserslist）决定打包哪些字体格式、字体文件输出位置，以及是否转译以兼容目标浏览器
 
-因此，自托管时只需保持 `katex.min.css` 与 `fonts/` 目录的相对位置不变即可；使用打包工具时，需确保 loader 正确处理字体文件并输出到对应路径。更多自托管与字体加载策略见 [字体与单位](/concepts/17-fonts-and-units.md)。
+因此，自托管时只需保持 `katex.min.css` 与 `fonts/` 目录的相对位置不变即可；使用打包工具时，需确保 loader 正确处理字体文件并输出到对应路径。更多自托管与字体加载策略见 [字体与单位](17-fonts-and-units.md)。
 
 [^web-font]: 官网 Font 页面，https://katex.org/docs/font
 
@@ -265,6 +265,6 @@ katex.render(expr, el, {
 
 ## 相关概念
 
-- [样式系统](/concepts/11-style-system.md)
-- [渲染管线](/concepts/06-render-pipeline.md)
-- [虚拟DOM树](/concepts/07-dom-tree.md)
+- [样式系统](11-style-system.md)
+- [渲染管线](06-render-pipeline.md)
+- [虚拟DOM树](07-dom-tree.md)

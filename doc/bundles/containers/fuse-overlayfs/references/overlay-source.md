@@ -14,7 +14,7 @@ sources:
 
 # OverlayFs 核心文件系统 API 参考
 
-> 信源文件：[overlay.rs](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/src/overlay.rs)
+> 信源文件：overlay.rs
 
 本文档记录 fuse-overlayfs 核心文件系统实现的 API，包括 `OverlayFs` 结构体、内部状态 `OverlayInner`、以及 FUSE `Filesystem` trait 的实现。
 

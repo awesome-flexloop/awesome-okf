@@ -206,10 +206,10 @@ make setup_es_index
 
 ## 相关概念
 
-- [整体架构概览](/concepts/00-overview-ddd-architecture.md)
-- [可插拔基础设施](/concepts/04-pluggable-infrastructure.md)
-- [LLM 模型集成](/concepts/05-llm-integration.md)
-- [Docker 快速入门](/examples/docker-quickstart.md)
-- [配置基础设施](/examples/configure-infrastructure.md)
-- [添加 LLM 模型](/examples/add-llm-model.md)
-- [部署与基础设施参考](/references/deployment-infrastructure.md)
+- [整体架构概览](00-overview-ddd-architecture.md)
+- [可插拔基础设施](04-pluggable-infrastructure.md)
+- [LLM 模型集成](05-llm-integration.md)
+- [Docker 快速入门](../examples/docker-quickstart.md)
+- [配置基础设施](../examples/configure-infrastructure.md)
+- [添加 LLM 模型](../examples/add-llm-model.md)
+- [部署与基础设施参考](../references/deployment-infrastructure.md)

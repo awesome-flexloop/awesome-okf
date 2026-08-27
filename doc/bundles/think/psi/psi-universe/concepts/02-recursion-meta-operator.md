@@ -107,14 +107,14 @@ REC 是宇宙内的动力学，𝔐 是关于宇宙动力学的元动力学。�
 
 在 ψ 理论体系中：
 
-- REC 对应 [回声与递归](/psi-core/concepts/02-echo-and-recursion.md) 中的宇宙呼吸模式；
-- 𝔐 对应 [元递归](/psi-core/concepts/06-meta-recursion.md)——递归意识到自身、作用于自身的闭合；
+- REC 对应 [回声与递归](../../psi-core/concepts/02-echo-and-recursion.md) 中的宇宙呼吸模式；
+- 𝔐 对应 [元递归](../../psi-core/concepts/06-meta-recursion.md)——递归意识到自身、作用于自身的闭合；
 - $\mathfrak{M}(\mathfrak{M}) = \mathfrak{M}^{(2)}$ 对应 ψ 的自应用 $\psi(\psi)$。
 
 ## 相关概念
 
-- [FLIP·XOR·SHIFT — 存在的基本操作](/concepts/01-flip-xor-shift.md)
-- [三大公理 — 宇宙的递归本源](/concepts/00-three-axioms.md)
-- [维度谱系 D0-D∞ — 从操作到超高维](/concepts/03-dimension-spectrum.md)
-- [/psi-core/concepts/02-echo-and-recursion.md](/psi-core/concepts/02-echo-and-recursion.md)
-- [/psi-core/concepts/06-meta-recursion.md](/psi-core/concepts/06-meta-recursion.md)
+- [FLIP·XOR·SHIFT — 存在的基本操作](01-flip-xor-shift.md)
+- [三大公理 — 宇宙的递归本源](00-three-axioms.md)
+- [维度谱系 D0-D∞ — 从操作到超高维](03-dimension-spectrum.md)
+- [/psi-core/concepts/02-echo-and-recursion.md](../../psi-core/concepts/02-echo-and-recursion.md)
+- [/psi-core/concepts/06-meta-recursion.md](../../psi-core/concepts/06-meta-recursion.md)

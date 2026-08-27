@@ -89,15 +89,15 @@ Lumino 的前身是 **PhosphorJS**，由 Jupyter 团队接手维护后更名为 
 
 9. [插件化应用框架](09-plugin-application.md) — Application、Token、PluginRegistry、服务发现
 10. [高级组件与 DataGrid](10-advanced-widgets.md) — DockPanel/TabBar/Menu/CommandPalette/DataGrid
-11. [算法工具与数据结构](11-algorithm-collections.md) — ArrayExt、LinkedList、Poll/RateLimiter、AttachedProperty
+11. 算法工具与数据结构 — ArrayExt、LinkedList、Poll/RateLimiter、AttachedProperty
 
 ### 实战示例
 
-- [创建你的第一个 Widget](../examples/01-hello-widget.md)
-- [信号与事件通信](../examples/02-signals-events.md)
+- 创建你的第一个 Widget
+- 信号与事件通信
 - [布局基础](../examples/03-layout-basics.md)
-- [命令与快捷键](../examples/04-commands-keybindings.md)
-- [DockPanel 高级布局](../examples/05-dock-panel.md)
+- 命令与快捷键
+- DockPanel 高级布局
 
 ## 前置知识
 

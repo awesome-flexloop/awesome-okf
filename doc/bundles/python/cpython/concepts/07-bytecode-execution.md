@@ -346,5 +346,5 @@ entry_frame.f_code = NULL;
 
 - [解释器帧与执行栈](06-interpreter-frame.md) — 字节码执行的运行时环境，理解 _PyInterpreterFrame 是理解执行引擎的前提
 - [编译器流水线](08-compiler-pipeline.md) — 字节码是编译器流水线的最终产物，执行引擎消费这些字节码
-- [垃圾回收器](05-garbage-collection.md) — 解释器在执行过程中通过 _Py_HandlePending 调度 GC
-- [CPython 源码信源登记](/references/cpython-source.md) — `Python/ceval.c`、`Include/opcode_ids.h`、`Include/internal/pycore_code.h` 的路径索引
+- [垃圾回收器](05-garbage-collector.md) — 解释器在执行过程中通过 _Py_HandlePending 调度 GC
+- [CPython 源码信源登记](../references/cpython-source.md) — `Python/ceval.c`、`Include/opcode_ids.h`、`Include/internal/pycore_code.h` 的路径索引

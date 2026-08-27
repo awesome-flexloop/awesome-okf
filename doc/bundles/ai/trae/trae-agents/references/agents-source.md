@@ -121,7 +121,7 @@ Agent 可勾选的 5 项内置工具：
 
 ## 相关链接
 
-- [TRAE Agents 仓库定位与"文档即配置"模式](/concepts/00-introduction.md)
-- [Agent 目录结构与模板规范](/concepts/01-agent-structure.md)
-- [Git Commit Generator 参考实现分析](/concepts/02-git-commit-agent.md)
-- [创建自定义 Agent 示例](/examples/create-agent.md)
+- [TRAE Agents 仓库定位与"文档即配置"模式](../concepts/00-introduction.md)
+- [Agent 目录结构与模板规范](../concepts/01-agent-structure.md)
+- [Git Commit Generator 参考实现分析](../concepts/02-git-commit-agent.md)
+- [创建自定义 Agent 示例](../examples/create-agent.md)

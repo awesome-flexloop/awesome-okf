@@ -335,6 +335,6 @@ def my_resource_factory(some_dependency, tmp_path, jp_asyncio_loop):
 ---
 
 **下一步阅读：**
-- [Server插件详解](/concepts/05-server-plugin.md) — 看jp_configurable_serverapp和jp_fetch/jp_ws_fetch如何在实际中使用
-- [示例：Server API测试](/examples/03-server-api-test.md) — 工厂fixtures的实战代码
-- [示例：自定义Server配置](/examples/04-custom-server-config.md) — 如何通过fixture覆盖来自定义ServerApp
+- [Server插件详解](05-server-plugin.md) — 看jp_configurable_serverapp和jp_fetch/jp_ws_fetch如何在实际中使用
+- [示例：Server API测试](../examples/03-server-api-test.md) — 工厂fixtures的实战代码
+- [示例：自定义Server配置](../examples/04-custom-server-config.md) — 如何通过fixture覆盖来自定义ServerApp

@@ -495,7 +495,7 @@ Use ■ as dividers between major sections.
 
 ## 相关概念
 
-- [输出风格技能模式](../concepts/output-style-skill.md)
-- [Session Hook 机制](../concepts/session-hooks.md)
+- 输出风格技能模式
+- Session Hook 机制
 - [跨平台技能集成](../concepts/multi-platform-integration.md)
-- [渐进式加载与 Always-on 模式](../concepts/always-on-vs-on-demand.md)
+- 渐进式加载与 Always-on 模式

@@ -397,7 +397,7 @@ except AnthropicError as e:
 
 ## 相关概念
 
-- [工具调用（Function Calling）](/python-sdk/concepts/04-tool-use.md) — Beta Agents 能力的基础，理解 @beta_tool 装饰器和 ToolRunner
-- [多云后端部署](/python-sdk/concepts/07-multi-cloud.md) — Bedrock/Vertex 多云客户端同样支持 Beta API
-- [中间件、扩展与错误处理](/python-sdk/concepts/09-middleware-extended.md) — Beta API 调用同样需要完善的错误处理和中间件
-- [Anthropic Python SDK 工具系统与 Beta API 参考](/python-sdk/references/tools-beta.md) — Beta 资源类和方法的完整 API 手册
+- [工具调用（Function Calling）](04-tool-use.md) — Beta Agents 能力的基础，理解 @beta_tool 装饰器和 ToolRunner
+- [多云后端部署](07-multi-cloud.md) — Bedrock/Vertex 多云客户端同样支持 Beta API
+- [中间件、扩展与错误处理](09-middleware-extended.md) — Beta API 调用同样需要完善的错误处理和中间件
+- [Anthropic Python SDK 工具系统与 Beta API 参考](../references/tools-beta.md) — Beta 资源类和方法的完整 API 手册

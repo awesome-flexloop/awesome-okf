@@ -84,11 +84,11 @@ UCB 用置信上界自然平衡二者；Thompson Sampling 通过后验采样实�
 
 ## 与其他概念的关系
 
-- [收敛率](/ai/datawhale/key-book/concepts/convergence-rate)：离线 $O(1/\sqrt{T})$ 收敛率与在线 $O(\sqrt{T})$ 遗憾是同一数学结构的两面
-- [稳定性](/ai/datawhale/key-book/concepts/stability)：在线学习要求可塑性（适应新数据），与稳定性（对扰动不敏感）存在张力
-- [可学性](/ai/datawhale/key-book/concepts/learnability)：遗憾界放弃 i.i.d. 假设，是 PAC 框架在非平稳环境的推广
+- 收敛率：离线 $O(1/\sqrt{T})$ 收敛率与在线 $O(\sqrt{T})$ 遗憾是同一数学结构的两面
+- 稳定性：在线学习要求可塑性（适应新数据），与稳定性（对扰动不敏感）存在张力
+- 可学性：遗憾界放弃 i.i.d. 假设，是 PAC 框架在非平稳环境的推广
 
 ## 参见
 
-- [第 8 章：遗憾界](/ai/datawhale/key-book/references/chapter8)
-- [UCB 多臂赌博机案例](/ai/datawhale/key-book/examples/ucb-bandit)
+- 第 8 章：遗憾界
+- UCB 多臂赌博机案例

@@ -132,8 +132,8 @@ jupyterlab-translate compile-pack <language-packs-dir> jupyterlab -l zh_CN
 
 ## 相关概念
 
-- [JupyterLab Translate 简介](/concepts/00-introduction.md)
-- [CLI命令参考](/concepts/03-cli-commands.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [双模式分发机制](/concepts/11-dual-mode-distribution.md)
-- [基础扩展示例](/examples/01-basic-extension-i18n.md)
+- [JupyterLab Translate 简介](00-introduction.md)
+- [CLI命令参考](03-cli-commands.md)
+- [架构总览](02-architecture-overview.md)
+- [双模式分发机制](11-dual-mode-distribution.md)
+- [基础扩展示例](../examples/01-basic-extension-i18n.md)

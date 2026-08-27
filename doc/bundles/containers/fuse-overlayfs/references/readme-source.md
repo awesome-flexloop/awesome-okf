@@ -23,7 +23,7 @@ sources:
 
 # README 与项目元信息参考
 
-> 信源文件：[README.md](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/README.md)、[Cargo.toml](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/Cargo.toml)、[Makefile](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/Makefile)、[fuse-overlayfs.1.md](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/fuse-overlayfs.1.md)
+> 信源文件：README.md、Cargo.toml、Makefile、fuse-overlayfs.1.md
 
 本文档记录 fuse-overlayfs 项目的基本定位、版本依赖、编译安装方法与命令行概览。
 

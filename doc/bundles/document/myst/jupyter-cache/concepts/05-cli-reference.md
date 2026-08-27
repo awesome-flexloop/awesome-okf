@@ -247,8 +247,8 @@ jcache cache remove 3
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [缓存架构设计](/concepts/02-architecture.md)
-- [配置项参考](/concepts/07-configuration.md)
-- [CLI命令参考](/references/cli-commands.md)
-- [基本使用示例](/examples/basic-usage.md)
+- [快速开始](01-getting-started.md)
+- [缓存架构设计](02-architecture.md)
+- [配置项参考](07-configuration.md)
+- [CLI命令参考](../references/cli-commands.md)
+- [基本使用示例](../examples/basic-usage.md)

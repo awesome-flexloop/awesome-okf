@@ -246,7 +246,7 @@ curl http://remote:8888/v1.41/containers/json
 
 ## 相关概念
 
-- [远程API](/concepts/11-remote-api.md)
-- [架构概述](/concepts/02-architecture-overview.md)
-- [CLI结构](/concepts/06-cli-structure.md)
-- [生态系统](/concepts/14-ecosystem.md)
+- [远程API](../concepts/11-remote-api.md)
+- [架构概述](../concepts/02-architecture-overview.md)
+- [CLI结构](../concepts/06-cli-structure.md)
+- [生态系统](../concepts/14-ecosystem.md)

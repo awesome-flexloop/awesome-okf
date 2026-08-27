@@ -12,8 +12,8 @@
 ## 前置知识
 
 在阅读示例前，建议先了解：
-- [JupyterLite内核架构基础](/concepts/01-kernel-architecture.md)
-- [插件注册机制](/concepts/02-plugin-registration.md)
+- [JupyterLite内核架构基础](../concepts/01-kernel-architecture.md)
+- [插件注册机制](../concepts/02-plugin-registration.md)
 
 ```{toctree}
 :hidden:

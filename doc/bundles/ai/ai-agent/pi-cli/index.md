@@ -15,28 +15,28 @@ Pi 是一个自扩展编码代理项目，采用多包 monorepo 架构。本 wik
 
 ### 概念文档
 
-- [项目简介](/concepts/00-introduction.md)
-- [Monorepo 架构](/concepts/01-monorepo-architecture.md)
-- [AI 包详解](/concepts/02-ai-package.md)
-- [TUI 终端 UI 系统](/concepts/03-tui-system.md)
-- [内置 Prompt 模板](/concepts/04-builtin-prompts.md)
+- [项目简介](concepts/00-introduction.md)
+- [Monorepo 架构](concepts/01-monorepo-architecture.md)
+- [AI 包详解](concepts/02-ai-package.md)
+- [TUI 终端 UI 系统](concepts/03-tui-system.md)
+- [内置 Prompt 模板](concepts/04-builtin-prompts.md)
 
 ### 示例
 
-- [CLI 安装与基本使用](/examples/01-basic-usage.md)
+- [CLI 安装与基本使用](examples/01-basic-usage.md)
 
 ### 参考
 
-- [源码信源索引](/references/source.md)
+- [源码信源索引](references/source.md)
 
 ### 规范
 
-- [事实清单 (Facts)](/spec/facts.md) — 51条带精确引用的源码事实
-- [洞察 (Insights)](/spec/insights.md) — 5条核心架构洞察
+- [事实清单 (Facts)](spec/facts.md) — 51条带精确引用的源码事实
+- [洞察 (Insights)](spec/insights.md) — 5条核心架构洞察
 
 ## 变更记录
 
-见 [log.md](/log.md)。
+见 [log.md](log.md)。
 
 ```{toctree}
 :hidden:

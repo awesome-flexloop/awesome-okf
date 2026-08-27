@@ -32,7 +32,7 @@ status: active
 
 # Nuitka SCons构建后端 API 参考
 
-> 源码路径：[nuitka/build/](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/build/)
+> 源码路径：nuitka/build/
 
 ## 架构概述
 

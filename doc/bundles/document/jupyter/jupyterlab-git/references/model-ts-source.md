@@ -191,8 +191,8 @@ export { GitExtension, getDiffProvider } from './model';
 
 ## 相关概念
 
-- [插件入口](/references/index-ts-source.md)
-- [REST API通信机制](/concepts/05-rest-api-and-communication.md)
-- [轮询与信号系统](/concepts/09-polling-and-signals.md)
-- [可插拔Diff系统](/concepts/06-diff-provider-system.md)
-- [UI组件与Widget](/concepts/07-ui-components-and-widgets.md)
+- [插件入口](index-ts-source.md)
+- [REST API通信机制](../concepts/05-rest-api-and-communication.md)
+- [轮询与信号系统](../concepts/09-polling-and-signals.md)
+- [可插拔Diff系统](../concepts/06-diff-provider-system.md)
+- [UI组件与Widget](../concepts/07-ui-components-and-widgets.md)

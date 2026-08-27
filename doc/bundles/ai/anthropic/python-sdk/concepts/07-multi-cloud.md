@@ -352,8 +352,8 @@ message = client.messages.create(
 
 ## 相关概念
 
-- [客户端初始化与配置](/python-sdk/concepts/01-client-init.md) — 学习客户端通用的超时、重试、中间件配置
-- [Beta: Agents、Memory与Skills](/python-sdk/concepts/08-beta-agents.md) — 多云客户端同样支持 Beta API 功能
-- [中间件、扩展与错误处理](/python-sdk/concepts/09-middleware-extended.md) — 多云客户端同样支持中间件和响应装饰模式
-- [Anthropic Python SDK 多云后端认证参考](/python-sdk/references/multi-cloud.md) — 多云客户端类和参数的完整 API 手册
-- [Anthropic Python SDK 客户端入口与基础设施参考](/python-sdk/references/sdk-client.md) — 核心客户端的完整配置参数
+- [客户端初始化与配置](01-client-init.md) — 学习客户端通用的超时、重试、中间件配置
+- [Beta: Agents、Memory与Skills](08-beta-agents.md) — 多云客户端同样支持 Beta API 功能
+- [中间件、扩展与错误处理](09-middleware-extended.md) — 多云客户端同样支持中间件和响应装饰模式
+- [Anthropic Python SDK 多云后端认证参考](../references/multi-cloud.md) — 多云客户端类和参数的完整 API 手册
+- [Anthropic Python SDK 客户端入口与基础设施参考](../references/sdk-client.md) — 核心客户端的完整配置参数

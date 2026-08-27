@@ -143,7 +143,7 @@ A: y-webrtc 会自动重连。刷新页面可以重新建立连接。
 
 ## 相关概念
 
-- [安装与快速开始](/concepts/01-getting-started.md)
-- [房间ID与信令机制](/concepts/05-room-and-signaling.md)
-- [配置三级优先级系统](/concepts/09-configuration.md)
-- [自定义信令服务器部署](/examples/custom-signaling-server.md)
+- [安装与快速开始](../concepts/01-getting-started.md)
+- [房间ID与信令机制](../concepts/05-room-and-signaling.md)
+- [配置三级优先级系统](../concepts/09-configuration.md)
+- [自定义信令服务器部署](custom-signaling-server.md)

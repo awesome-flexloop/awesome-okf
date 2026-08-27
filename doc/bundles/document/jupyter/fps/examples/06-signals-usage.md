@@ -223,6 +223,6 @@ run(main)
 
 ## 相关概念
 
-- [信号系统](/concepts/06-signal-system.md)
-- [上下文与共享值](/concepts/03-context-sharing.md)
+- [信号系统](../concepts/06-signal-system.md)
+- [上下文与共享值](../concepts/03-context-sharing.md)
 - [独立使用Context](05-standalone-context.md)

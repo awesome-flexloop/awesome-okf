@@ -74,6 +74,6 @@ jupyterlite-lsp/
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [YAML/JSON 语言服务器](/concepts/06-yaml-server.md)
+- [快速开始](01-getting-started.md)
+- [架构总览](02-architecture-overview.md)
+- [YAML/JSON 语言服务器](06-yaml-server.md)

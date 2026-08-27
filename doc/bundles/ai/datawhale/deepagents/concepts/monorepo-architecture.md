@@ -95,8 +95,8 @@ Deep Agents 仓库采用 **monorepo 结构**，所有 Python 包位于 `libs/` �
 
 ## 与其他概念的关系
 
-- [核心SDK与三层架构](/ai/datawhale/deepagents/concepts/core-sdk) 是 monorepo 中 `deepagents` 包的内部设计。
-- [Code终端编码Agent](/ai/datawhale/deepagents/concepts/code-module) 精确钉住核心 SDK 版本，是最大的消费者。
-- [CLI部署工具](/ai/datawhale/deepagents/concepts/cli-toolchain) 和 [ACP协议集成](/ai/datawhale/deepagents/concepts/acp-protocol) 是横向扩展包。
-- [Evals评估套件](/ai/datawhale/deepagents/concepts/evals-suite) 验证 SDK 和 Code 的行为质量。
-- [Talon运行时宿主](/ai/datawhale/deepagents/concepts/talon-runtime) 依赖 deepagents 和 deepagents-code。
+- 核心SDK与三层架构 是 monorepo 中 `deepagents` 包的内部设计。
+- Code终端编码Agent 精确钉住核心 SDK 版本，是最大的消费者。
+- CLI部署工具 和 ACP协议集成 是横向扩展包。
+- Evals评估套件 验证 SDK 和 Code 的行为质量。
+- Talon运行时宿主 依赖 deepagents 和 deepagents-code。

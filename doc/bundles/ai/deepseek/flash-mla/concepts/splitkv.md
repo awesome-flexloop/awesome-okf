@@ -224,7 +224,7 @@ SplitKV 对解码性能的影响因场景而异：
 
 ## 七、相关链接
 
-- [/deepseek/flash-mla/concepts/mla-decoding](/ai/deepseek/flash-mla/concepts/mla-decoding) — MLA 解码算法原理
-- [/deepseek/flash-mla/concepts/hopper-blackwell-kernels](/ai/deepseek/flash-mla/concepts/hopper-blackwell-kernels) — Hopper/Blackwell 硬件特性利用
-- [/deepseek/flash-mla/references/kernel-architecture](/ai/deepseek/flash-mla/references/kernel-architecture) — 内核架构详解（调度参数、num_sm_parts 计算）
-- [/deepseek/flash-mla/references/api](/ai/deepseek/flash-mla/references/api) — FlashMLASchedMeta API 参考
+- /deepseek/flash-mla/concepts/mla-decoding — MLA 解码算法原理
+- /deepseek/flash-mla/concepts/hopper-blackwell-kernels — Hopper/Blackwell 硬件特性利用
+- /deepseek/flash-mla/references/kernel-architecture — 内核架构详解（调度参数、num_sm_parts 计算）
+- /deepseek/flash-mla/references/api — FlashMLASchedMeta API 参考

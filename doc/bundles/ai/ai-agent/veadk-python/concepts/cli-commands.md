@@ -47,7 +47,7 @@ veadk-python 提供完整的命令行工具集 `veadk`，基于 Python Click 框
 
 ## 入口点与注册机制
 
-[veadk/cli/cli.py:L64-L92](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli.py#L64-L92)
+veadk/cli/cli.py:L64-L92
 
 ```python
 @click.group()
@@ -82,7 +82,7 @@ CLI 启动时先执行 `_bootstrap_serve_provider()`（F-056），检测命令�
 
 ### `veadk init`：项目初始化向导
 
-[veadk/cli/cli_init.py:L27-L80](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_init.py#L27-L80)
+veadk/cli/cli_init.py:L27-L80
 
 交互式向导，引导用户配置 VeFaaS 应用名称、API Gateway 设置、部署模式和认证方式。
 
@@ -104,7 +104,7 @@ veadk init
 
 ### `veadk create`：创建 Agent 模板
 
-[veadk/cli/cli_create.py:L20-L46](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_create.py#L20-L46)
+veadk/cli/cli_create.py:L20-L46
 
 在当前目录创建标准 Agent 项目结构，生成三个核心文件：
 
@@ -132,7 +132,7 @@ root_agent = Agent(
 
 ### `veadk web`：本地 Web 调试服务器
 
-[veadk/cli/cli_web.py:L100-L157](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_web.py#L100-L157)
+veadk/cli/cli_web.py:L100-L157
 
 启动本地 Web 服务器，基于 Google ADK Web Server 并添加 VeADK 增强——记忆集成、OAuth2 认证、工作流 Agent 检测。
 
@@ -161,7 +161,7 @@ veadk web --oauth2-user-pool my-pool --oauth2-user-pool-client my-client
 
 ### `veadk deploy`：部署到 VeFaaS
 
-[veadk/cli/cli_deploy.py:L23-L80](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_deploy.py#L23-L80)
+veadk/cli/cli_deploy.py:L23-L80
 
 将 Agent 部署到火山引擎 VeFaaS（函数计算）平台，支持配置 API Gateway、记忆后端、认证方式。
 
@@ -203,7 +203,7 @@ veadk deploy --vefaas-app-name my-agent --short-term-memory-backend mysql
 
 ### `veadk kb add`：知识库管理
 
-[veadk/cli/cli_kb.py:L21-L60](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_kb.py#L21-L60)
+veadk/cli/cli_kb.py:L21-L60
 
 命令行方式向知识库添加文档，支持 4 种后端。
 
@@ -246,7 +246,7 @@ veadk kb add --backend opensearch --app_name my_app --path ./manual.pdf
 
 ### `veadk rl_group`：强化学习训练
 
-`rl_group` 是一个 Click 命令组，包含强化学习相关子命令（RLHF、RLAIF 等）。模板位于 [cli/templates/rl/](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/templates/rl/) 目录，支持 Ark 和 Lightning 两种训练后端。
+`rl_group` 是一个 Click 命令组，包含强化学习相关子命令（RLHF、RLAIF 等）。模板位于 cli/templates/rl/ 目录，支持 Ark 和 Lightning 两种训练后端。
 
 ### `veadk clean`：清理缓存
 
@@ -268,21 +268,21 @@ Agent 测试框架相关命令，支持自动化测试和质量验证。
 
 | 命令 | 类别 | 核心功能 | 关键文件 |
 |------|------|---------|---------|
-| `init` | 项目初始化 | 交互式配置向导 | [cli_init.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_init.py) |
-| `create` | 项目初始化 | 创建 Agent 模板文件 | [cli_create.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_create.py) |
-| `web` | 开发调试 | 本地 Web 服务器（OAuth2、记忆集成） | [cli_web.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_web.py) |
-| `prompt` | 开发调试 | Prompt Pilot 提示词管理 | [cli_prompt.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_prompt.py) |
-| `deploy` | 部署运维 | 部署到 VeFaaS 平台 | [cli_deploy.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_deploy.py) |
-| `frontend`/`studio` | 部署运维 | 前端/Studio 可视化环境 | [cli_frontend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_frontend.py) |
-| `pipeline` | 部署运维 | CI/CD 流水线管理 | [cli_pipeline.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_pipeline.py) |
-| `update` | 部署运维 | 版本更新 | [cli_update.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_update.py) |
-| `clean` | 部署运维 | 清理缓存和构建产物 | [cli_clean.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_clean.py) |
-| `kb add` | 数据知识 | 向知识库添加文档 | [cli_kb.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_kb.py) |
-| `eval` | 评估训练 | Agent 性能评估 | [cli_eval.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_eval.py) |
-| `uploadevalset` | 评估训练 | 上传评估数据集 | [cli_uploadevalset.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_uploadevalset.py) |
-| `rl_group` | 评估训练 | 强化学习训练 | [cli_rl.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_rl.py) |
-| `harness` | 评估训练 | 自动化测试框架 | [cli_harness.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_harness.py) |
-| `agentkit` | 扩展 | AgentKit 沙箱/会话管理 | [cli_agentkit.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_agentkit.py) |
+| `init` | 项目初始化 | 交互式配置向导 | cli_init.py |
+| `create` | 项目初始化 | 创建 Agent 模板文件 | cli_create.py |
+| `web` | 开发调试 | 本地 Web 服务器（OAuth2、记忆集成） | cli_web.py |
+| `prompt` | 开发调试 | Prompt Pilot 提示词管理 | cli_prompt.py |
+| `deploy` | 部署运维 | 部署到 VeFaaS 平台 | cli_deploy.py |
+| `frontend`/`studio` | 部署运维 | 前端/Studio 可视化环境 | cli_frontend.py |
+| `pipeline` | 部署运维 | CI/CD 流水线管理 | cli_pipeline.py |
+| `update` | 部署运维 | 版本更新 | cli_update.py |
+| `clean` | 部署运维 | 清理缓存和构建产物 | cli_clean.py |
+| `kb add` | 数据知识 | 向知识库添加文档 | cli_kb.py |
+| `eval` | 评估训练 | Agent 性能评估 | cli_eval.py |
+| `uploadevalset` | 评估训练 | 上传评估数据集 | cli_uploadevalset.py |
+| `rl_group` | 评估训练 | 强化学习训练 | cli_rl.py |
+| `harness` | 评估训练 | 自动化测试框架 | cli_harness.py |
+| `agentkit` | 扩展 | AgentKit 沙箱/会话管理 | cli_agentkit.py |
 
 ## 典型工作流
 
@@ -305,13 +305,13 @@ flowchart TD
 
 | 文件 | 职责 |
 |------|------|
-| [veadk/cli/cli.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli.py) | CLI 入口、Click Group 定义、命令注册、Provider 自举 |
-| [veadk/version.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/version.py) | VERSION 版本号 |
-| [veadk/cli/cli_init.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_init.py) | init 命令——交互式项目初始化向导 |
-| [veadk/cli/cli_create.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_create.py) | create 命令——创建 Agent 模板文件 |
-| [veadk/cli/cli_web.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_web.py) | web 命令——本地 Web 服务器（OAuth2、记忆集成） |
-| [veadk/cli/cli_deploy.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_deploy.py) | deploy 命令——VeFaaS 部署 |
-| [veadk/cli/cli_kb.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_kb.py) | kb 命令组——知识库管理 |
+| veadk/cli/cli.py | CLI 入口、Click Group 定义、命令注册、Provider 自举 |
+| veadk/version.py | VERSION 版本号 |
+| veadk/cli/cli_init.py | init 命令——交互式项目初始化向导 |
+| veadk/cli/cli_create.py | create 命令——创建 Agent 模板文件 |
+| veadk/cli/cli_web.py | web 命令——本地 Web 服务器（OAuth2、记忆集成） |
+| veadk/cli/cli_deploy.py | deploy 命令——VeFaaS 部署 |
+| veadk/cli/cli_kb.py | kb 命令组——知识库管理 |
 
 ## 相关概念
 

@@ -22,7 +22,7 @@ sources:
 
 ## TrackedContainer 类
 
-**文件**：[tests/utils/tracked_container.py](external/libs/jupyter/cookiecutter-docker-stacks/%7B%7Bcookiecutter.stack_name%7D%7D/tests/utils/tracked_container.py)
+**文件**：tests/utils/tracked_container.py
 
 ### 类签名
 
@@ -74,7 +74,7 @@ default_kwargs = {"detach": True, "tty": True}
 
 ## pytest Fixtures
 
-**文件**：[tests/conftest.py](external/libs/jupyter/cookiecutter-docker-stacks/%7B%7Bcookiecutter.stack_name%7D%7D/tests/conftest.py)
+**文件**：tests/conftest.py
 
 | Fixture | Scope | 返回类型 | 说明 |
 |---------|-------|---------|------|
@@ -102,7 +102,7 @@ with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as s:
 
 ## 默认测试用例
 
-**文件**：[tests/test_notebook.py](external/libs/jupyter/cookiecutter-docker-stacks/%7B%7Bcookiecutter.stack_name%7D%7D/tests/test_notebook.py)
+**文件**：tests/test_notebook.py
 
 ### test_secured_server
 

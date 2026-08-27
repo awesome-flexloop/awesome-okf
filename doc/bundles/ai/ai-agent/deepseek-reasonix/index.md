@@ -28,25 +28,25 @@ DeepSeek-Reasonix 是 DeepSeek 开源的 Go 语言 AI 编码 Agent，支持 ACP 
 
 | # | 文档 | 说明 |
 |---|------|------|
-| 00 | [Reasonix 简介](/concepts/00-introduction.md) | 项目概述、四种接入方式、技术栈 |
-| 01 | [项目架构](/concepts/01-project-architecture.md) | 包分层、cmd 入口、boot 启动组装 |
-| 02 | [Agent 运行循环](/concepts/02-agent-run-loop.md) | 核心循环、采样恢复、arbiter、governor、compaction |
-| 03 | [ACP 协议](/concepts/03-acp-protocol.md) | NDJSON JSON-RPC、能力协商、Factory、inbox |
-| 04 | [Bot 网关](/concepts/04-bot-gateway.md) | QQ/飞书适配器、会话隔离、消息渲染 |
-| 05 | [CLI 与 TUI](/concepts/05-cli-tui.md) | 命令系统、Bubble Tea TUI、MCP/插件 |
-| 06 | [Checkpoint 与恢复](/concepts/06-checkpoint-recovery.md) | blob 存储、事务回滚、fork/branch |
-| 07 | [Fleet 与 Subagent](/concepts/07-fleet-subagents.md) | 并行调度、写路径声明、DAG 依赖 |
+| 00 | [Reasonix 简介](concepts/00-introduction.md) | 项目概述、四种接入方式、技术栈 |
+| 01 | [项目架构](concepts/01-project-architecture.md) | 包分层、cmd 入口、boot 启动组装 |
+| 02 | [Agent 运行循环](concepts/02-agent-run-loop.md) | 核心循环、采样恢复、arbiter、governor、compaction |
+| 03 | [ACP 协议](concepts/03-acp-protocol.md) | NDJSON JSON-RPC、能力协商、Factory、inbox |
+| 04 | [Bot 网关](concepts/04-bot-gateway.md) | QQ/飞书适配器、会话隔离、消息渲染 |
+| 05 | [CLI 与 TUI](concepts/05-cli-tui.md) | 命令系统、Bubble Tea TUI、MCP/插件 |
+| 06 | [Checkpoint 与恢复](concepts/06-checkpoint-recovery.md) | blob 存储、事务回滚、fork/branch |
+| 07 | [Fleet 与 Subagent](concepts/07-fleet-subagents.md) | 并行调度、写路径声明、DAG 依赖 |
 
 ### 示例
 
-- [基础使用](/examples/01-basic-usage.md)——安装、配置、CLI/TUI 基本对话
-- [Bot 网关配置](/examples/02-bot-gateway.md)——QQ/飞书接入、会话隔离、审批
+- [基础使用](examples/01-basic-usage.md)——安装、配置、CLI/TUI 基本对话
+- [Bot 网关配置](examples/02-bot-gateway.md)——QQ/飞书接入、会话隔离、审批
 
 ### 信源与规格
 
-- [源码信源索引](/references/source.md)——按包索引的关键文件，关联事实编号
-- [事实清单](/spec/facts.md)——107 条编号事实（F-001 至 F-107）
-- [架构洞察](/spec/insights.md)——5 个核心洞察（陈述/证据/反常识/行动）
+- [源码信源索引](references/source.md)——按包索引的关键文件，关联事实编号
+- [事实清单](spec/facts.md)——107 条编号事实（F-001 至 F-107）
+- [架构洞察](spec/insights.md)——5 个核心洞察（陈述/证据/反常识/行动）
 
 ## 核心架构速览
 
@@ -77,7 +77,7 @@ DeepSeek-Reasonix 是 DeepSeek 开源的 Go 语言 AI 编码 Agent，支持 ACP 
 
 ## 变更日志
 
-见 [log.md](/log.md)。
+见 [log.md](log.md)。
 
 ```{toctree}
 :hidden:

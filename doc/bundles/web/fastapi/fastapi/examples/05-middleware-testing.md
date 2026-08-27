@@ -318,8 +318,8 @@ pytest test_main.py -v
 
 ## 相关概念
 
-- [中间件与 CORS](/concepts/10-middleware-cors.md)
-- [异常处理与校验错误](/concepts/11-exception-handling.md)
-- [测试与高级并发](/concepts/13-testing-advanced.md)
-- [FastAPI 应用类](/concepts/01-application.md)
-- [依赖注入系统](/concepts/04-dependency-injection.md)
+- [中间件与 CORS](../concepts/10-middleware-cors.md)
+- [异常处理与校验错误](../concepts/11-exception-handling.md)
+- [测试与高级并发](../concepts/13-testing-advanced.md)
+- [FastAPI 应用类](../concepts/01-application.md)
+- [依赖注入系统](../concepts/04-dependency-injection.md)

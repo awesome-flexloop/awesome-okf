@@ -83,7 +83,7 @@ description: Deep Agents 总览——opinionated agent harness 的定位、三�
 
 将任务委派给拥有隔离上下文窗口的代理。子代理只看到父代理传入的任务描述，返回一条最终报告。支持三种形态：声明式 `SubAgent`、预编译 `CompiledSubAgent`、远程 `AsyncSubAgent`。
 
-详见 [规划与子代理](/ai/langchain-ai/deepagents/concepts/planning-subagents)。
+详见 规划与子代理。
 
 ### 文件系统（Filesystem）
 
@@ -155,7 +155,7 @@ Deep Agents 仓库是一个 monorepo，包含多个包：
 
 ## 相关概念
 
-- [规划与子代理](/ai/langchain-ai/deepagents/concepts/planning-subagents) — 子代理架构详解
-- [Todo 与上下文管理](/ai/langchain-ai/deepagents/concepts/todo-context) — 摘要、技能、内存
-- [ACP 协议](/ai/langchain-ai/deepagents/concepts/acp-protocol) — 编辑器集成
-- [核心 API](/ai/langchain-ai/deepagents/references/api) — API 参考
+- 规划与子代理 — 子代理架构详解
+- Todo 与上下文管理 — 摘要、技能、内存
+- ACP 协议 — 编辑器集成
+- 核心 API — API 参考

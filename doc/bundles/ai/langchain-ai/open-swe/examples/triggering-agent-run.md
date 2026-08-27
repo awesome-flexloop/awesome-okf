@@ -9,7 +9,7 @@ description: 触发 Agent 运行示例——通过 dispatch_agent_run 持久化�
 
 # 触发 Agent 运行与评审循环
 
-本示例演示 Open SWE 的核心运行链路：从外部触发器通过 `dispatch_agent_run` 启动一个持久化运行，到 reviewer 产出 findings，再到 reconcile 安全网清理。示例中的所有 API 调用均来自源码（参见 [架构参考](/ai/langchain-ai/open-swe/references/architecture)）。
+本示例演示 Open SWE 的核心运行链路：从外部触发器通过 `dispatch_agent_run` 启动一个持久化运行，到 reviewer 产出 findings，再到 reconcile 安全网清理。示例中的所有 API 调用均来自源码（参见 架构参考）。
 
 ## 前置条件
 
@@ -206,6 +206,6 @@ export RUN_COMPLETE_WEBHOOK_SECRET="some-long-random-secret"
 
 ## 相关概念
 
-- [Dispatch-Review 循环](/ai/langchain-ai/open-swe/concepts/dispatch-review-cycle) — durable dispatch 与 findings 模型
-- [Scheduler 与 Reconcile](/ai/langchain-ai/open-swe/concepts/scheduler-reconcile) — cron 扇出与 baby-sit 状态机
-- [Agent 架构](/ai/langchain-ai/open-swe/concepts/agent-architecture) — 图工厂与 middleware
+- Dispatch-Review 循环 — durable dispatch 与 findings 模型
+- Scheduler 与 Reconcile — cron 扇出与 baby-sit 状态机
+- Agent 架构 — 图工厂与 middleware

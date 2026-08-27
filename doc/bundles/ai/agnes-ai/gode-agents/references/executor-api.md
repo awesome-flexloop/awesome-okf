@@ -431,7 +431,7 @@ def evaluate_ast(node, state, operations_counter)
 
 ## 相关概念
 
-- [代码执行智能体](/concepts/code-agent.md) — CodeAgent如何使用PythonExecutor
-- [代码安全沙箱](/concepts/code-sandbox.md) — 执行安全机制与导入控制
-- [智能体API参考](/references/agents-api.md) — CodeAgent.create_python_executor方法
-- [工具API参考](/references/tools-api.md) — get_tools_definition_code工具注入
+- 代码执行智能体 — CodeAgent如何使用PythonExecutor
+- 代码安全沙箱 — 执行安全机制与导入控制
+- [智能体API参考](agents-api.md) — CodeAgent.create_python_executor方法
+- [工具API参考](tools-api.md) — get_tools_definition_code工具注入

@@ -117,6 +117,6 @@ Deep Agents 遵循"信任 LLM"模型：Agent 可以做其工具允许的任何�
 
 ## 与其他概念的关系
 
-- [Monorepo 架构](/ai/datawhale/deepagents/concepts/monorepo-architecture) 描述了 SDK 包在仓库中的位置。
-- [Code终端编码Agent](/ai/datawhale/deepagents/concepts/code-module) 在 SDK 之上构建编码特定的中间件/工具/审批栈。
-- [ACP协议集成](/ai/datawhale/deepagents/concepts/acp-protocol) 将编译后的 Agent 图适配为 ACP 服务器。
+- Monorepo 架构 描述了 SDK 包在仓库中的位置。
+- Code终端编码Agent 在 SDK 之上构建编码特定的中间件/工具/审批栈。
+- ACP协议集成 将编译后的 Agent 图适配为 ACP 服务器。

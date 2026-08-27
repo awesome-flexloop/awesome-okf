@@ -204,8 +204,8 @@ JupyterLite 的文件存储分为三层：
 
 ## 相关概念
 
-- [内核系统](/concepts/02-kernel-system.md)
-- [内容管理与文件系统](/concepts/03-contents-and-filesystem.md)
-- [Service Worker桥接](/concepts/04-service-worker-bridge.md)
-- [浏览器存储](/concepts/05-browser-storage.md)
-- [Python构建系统](/concepts/06-build-system.md)
+- [内核系统](02-kernel-system.md)
+- [内容管理与文件系统](03-contents-and-filesystem.md)
+- [Service Worker桥接](04-service-worker-bridge.md)
+- [浏览器存储](05-browser-storage.md)
+- [Python构建系统](06-build-system.md)

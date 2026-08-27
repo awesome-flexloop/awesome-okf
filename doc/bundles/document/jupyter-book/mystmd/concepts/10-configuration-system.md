@@ -327,7 +327,7 @@ site:
 
 ## 相关概念
 
-- [Frontmatter 元数据系统](/concepts/08-frontmatter.md)
-- [错误处理与规则 ID](/concepts/05-error-handling.md)
-- [统一插件架构](/concepts/01-unified-plugin-architecture.md)
-- [CLI 工具链](/concepts/11-cli-toolchain.md)
+- [Frontmatter 元数据系统](08-frontmatter.md)
+- [错误处理与规则 ID](05-error-handling.md)
+- [统一插件架构](01-unified-plugin-architecture.md)
+- [CLI 工具链](11-cli-toolchain.md)

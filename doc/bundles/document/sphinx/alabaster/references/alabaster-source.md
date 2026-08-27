@@ -80,7 +80,7 @@ alabaster = "alabaster"
 
 ## 相关概念
 
-- [主题架构四要素](/concepts/02-theme-architecture.md)
-- [setup 函数与注册机制](/concepts/03-setup-and-registration.md)
-- [主题配置选项体系](/concepts/04-theme-options.md)
-- [侧边栏组件化设计](/concepts/05-sidebar-components.md)
+- [主题架构四要素](../concepts/02-theme-architecture.md)
+- [setup 函数与注册机制](../concepts/03-setup-and-registration.md)
+- [主题配置选项体系](../concepts/04-theme-options.md)
+- [侧边栏组件化设计](../concepts/05-sidebar-components.md)

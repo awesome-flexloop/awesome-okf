@@ -222,10 +222,10 @@ cp -r skills/weather-report .trae/skills/
 
 ## 相关概念
 
-- [脚本辅助型技能](/concepts/04-script-assisted-skills.md)
-- [编写自定义 Skill](/concepts/07-write-skill.md)
-- [创建第一个 Skill](/examples/create-first-skill.md)
+- [脚本辅助型技能](../concepts/04-script-assisted-skills.md)
+- [编写自定义 Skill](../concepts/07-write-skill.md)
+- [创建第一个 Skill](create-first-skill.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/skills-source.md)
+- [源码信源索引](../references/skills-source.md)

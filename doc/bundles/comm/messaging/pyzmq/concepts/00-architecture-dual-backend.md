@@ -240,9 +240,9 @@ pyzmq 把 ABI 稳定性和性能敏感面压缩到最小的后端层（约 15 �
 
 ## 相关概念
 
-- [Context 生命周期](/concepts/01-context-lifecycle.md) — sugar.Context 如何在后端基类上叠加生命周期管理
-- [Socket sugar 语法层](/concepts/02-socket-sugar.md) — sugar.Socket 的 send/recv/序列化/监控
-- [Frame 与消息](/concepts/03-frame-message.md) — Frame 的 zero-copy 与 COPY_THRESHOLD 实践
-- [异步与 asyncio](/concepts/05-async-future-asyncio.md) — 异步后端如何通过子类覆写实现
-- [CFFI 后端内部](/references/cffi-internals.md) — CFFI 后端的完整实现细节
-- [常量枚举参考](/references/constants-enums.md) — public_api 中常量的完整定义
+- [Context 生命周期](01-context-lifecycle.md) — sugar.Context 如何在后端基类上叠加生命周期管理
+- [Socket sugar 语法层](02-socket-sugar.md) — sugar.Socket 的 send/recv/序列化/监控
+- [Frame 与消息](03-frame-message.md) — Frame 的 zero-copy 与 COPY_THRESHOLD 实践
+- [异步与 asyncio](05-async-future-asyncio.md) — 异步后端如何通过子类覆写实现
+- [CFFI 后端内部](../references/cffi-internals.md) — CFFI 后端的完整实现细节
+- [常量枚举参考](../references/constants-enums.md) — public_api 中常量的完整定义

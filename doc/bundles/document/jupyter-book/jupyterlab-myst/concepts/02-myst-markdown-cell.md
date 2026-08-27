@@ -219,6 +219,6 @@ MySTMarkdownCell 没有显式的 dispose 覆写。父类 MarkdownCell 的 dispos
 
 ## 相关概念
 
-- [00-architecture-plugins.md](/concepts/00-architecture-plugins.md)：插件架构
-- [01-myst-rendering-pipeline.md](/concepts/01-myst-rendering-pipeline.md)：解析渲染管道
-- [03-inline-expressions.md](/concepts/03-inline-expressions.md)：内联表达式执行
+- [00-architecture-plugins.md](00-architecture-plugins.md)：插件架构
+- [01-myst-rendering-pipeline.md](01-myst-rendering-pipeline.md)：解析渲染管道
+- [03-inline-expressions.md](03-inline-expressions.md)：内联表达式执行

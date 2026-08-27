@@ -135,7 +135,7 @@ const graph = builder.compile({
 
 ## 相关概念
 
-- [Annotation 状态定义](annotation) — 如何声明状态结构
-- [Channels 通道体系](channels) — 状态更新语义
-- [Pregel 执行引擎](pregel-execution) — 超步调度与并行
-- [Graph 核心 API 参考](/ai/langchain-ai/langgraphjs/references/graph-core)
+- [Annotation 状态定义](annotation.md) — 如何声明状态结构
+- [Channels 通道体系](channels.md) — 状态更新语义
+- [Pregel 执行引擎](pregel-execution.md) — 超步调度与并行
+- Graph 核心 API 参考

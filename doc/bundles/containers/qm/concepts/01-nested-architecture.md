@@ -211,7 +211,7 @@ systemctl restart qm.service
 
 ## 相关概念
 
-- [QM 定位与 ASIL 汽车功能安全场景](/bundles/containers/qm/concepts/00-introduction.md)：了解 QM 解决的核心问题
-- [三级 OOM 策略与 SELinux 隔离](/bundles/containers/qm/concepts/02-oom-selinux.md)：了解内存和访问控制隔离
-- [子系统扩展](/bundles/containers/qm/concepts/03-subsystems.md)：了解预构建的子系统容器
-- [BlueChi 多节点管理](/bundles/containers/qm/concepts/04-bluechi.md)：了解 QM 内的 BlueChi agent
+- [QM 定位与 ASIL 汽车功能安全场景](00-introduction.md)：了解 QM 解决的核心问题
+- [三级 OOM 策略与 SELinux 隔离](02-oom-selinux.md)：了解内存和访问控制隔离
+- [子系统扩展](03-subsystems.md)：了解预构建的子系统容器
+- [BlueChi 多节点管理](04-bluechi.md)：了解 QM 内的 BlueChi agent

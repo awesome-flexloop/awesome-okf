@@ -389,7 +389,7 @@ self.play(
 
 ## 相关概念
 
-- [00 Videos 仓库总览与入门](/concepts/00-videos-overview.md)
-- [03 视频Scene代码结构与叙事模式](/concepts/03-video-structure-pattern.md)
-- [05 代表性系列项目结构解析](/concepts/05-series-projects.md)
-- [ManimGL 知识包：交互模式与调试](/viz/3b1b/manim/index.md)
+- [00 Videos 仓库总览与入门](00-videos-overview.md)
+- [03 视频Scene代码结构与叙事模式](03-video-structure-pattern.md)
+- [05 代表性系列项目结构解析](05-series-projects.md)
+- [ManimGL 知识包：交互模式与调试](../../manim/index.md)

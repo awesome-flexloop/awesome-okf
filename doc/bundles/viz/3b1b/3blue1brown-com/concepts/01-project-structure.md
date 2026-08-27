@@ -199,7 +199,7 @@ app/pages/
 | **内容** | MathJax、Markdownify、Heading、TableOfContents、Footnote、Quote、PiCreature |
 | **交互** | Interactive、Question、FreeResponse、Carousel、ShowPartial、Celebrate |
 
-完整组件索引见 [核心组件路径索引](/references/component-index.md)。
+完整组件索引见 [核心组件路径索引](../references/component-index.md)。
 
 ## 关键配置文件职责
 
@@ -288,7 +288,7 @@ React Router 框架模式的配置文件（F-039 ~ F-041）：
 
 ## 相关概念
 
-- [00 官网技术栈总览](/concepts/00-website-overview.md)
-- [02 路由与 SSG 预渲染](/concepts/02-routing-and-pages.md)
-- [完整技术栈清单](/references/tech-stack.md)
-- [核心组件路径索引](/references/component-index.md)
+- [00 官网技术栈总览](00-website-overview.md)
+- [02 路由与 SSG 预渲染](02-routing-and-pages.md)
+- [完整技术栈清单](../references/tech-stack.md)
+- [核心组件路径索引](../references/component-index.md)

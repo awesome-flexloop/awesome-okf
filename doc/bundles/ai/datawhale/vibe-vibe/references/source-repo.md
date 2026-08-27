@@ -115,5 +115,5 @@ vibe-vibe/
 ## 采集说明
 
 - 本信源于 2026-08-23 基于工作区副本采集（Alpha v0.0.4）。
-- 事实清单见 [/datawhale/vibe-vibe/spec/facts.md](/ai/datawhale/vibe-vibe/spec/facts.md)。
-- 架构洞察见 [/datawhale/vibe-vibe/spec/insights.md](/ai/datawhale/vibe-vibe/spec/insights.md)。
+- 事实清单见 [/datawhale/vibe-vibe/spec/facts.md](../spec/facts.md)。
+- 架构洞察见 [/datawhale/vibe-vibe/spec/insights.md](../spec/insights.md)。

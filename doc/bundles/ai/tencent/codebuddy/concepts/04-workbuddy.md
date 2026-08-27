@@ -99,8 +99,8 @@ WorkBuddy 在 CodeBuddy 产品矩阵中扮演"在线通用入口"角色：
 
 ## 相关概念
 
-- [产品矩阵总览](/concepts/00-product-matrix.md) — WorkBuddy 在矩阵中的定位
-- [CodeBuddy IDE](/concepts/01-ide.md) — 顶部导航关联的专业开发工具
-- [CLI](/concepts/02-cli.md) — 顶部导航关联的终端工具
-- [NPC 云端 AI 员工](/concepts/03-npc.md) — CI/CD 与 Skill 生态的协同
-- [IDE 工作流示例](/examples/ide-workflow.md) — 专业开发工作流参考
+- [产品矩阵总览](00-product-matrix.md) — WorkBuddy 在矩阵中的定位
+- [CodeBuddy IDE](01-ide.md) — 顶部导航关联的专业开发工具
+- [CLI](02-cli.md) — 顶部导航关联的终端工具
+- [NPC 云端 AI 员工](03-npc.md) — CI/CD 与 Skill 生态的协同
+- [IDE 工作流示例](../examples/ide-workflow.md) — 专业开发工作流参考

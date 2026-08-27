@@ -288,6 +288,6 @@ print(answer)
 
 ## 相关阅读
 
-- [API 参考](/ai/langchain-ai/langchain-mongodb/references/api)
-- [向量存储架构](/ai/langchain-ai/langchain-mongodb/concepts/vector-store)
-- [缓存与聊天历史](/ai/langchain-ai/langchain-mongodb/concepts/chat-history-cache)
+- API 参考
+- 向量存储架构
+- 缓存与聊天历史

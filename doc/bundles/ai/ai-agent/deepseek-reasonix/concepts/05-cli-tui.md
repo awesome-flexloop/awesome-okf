@@ -180,8 +180,8 @@ LDFLAGS := -s -w \
 
 ## 相关概念
 
-- [项目架构](/concepts/01-project-architecture.md)——CLI 如何调用 boot.BuildRuntime
-- [ACP 协议](/concepts/03-acp-protocol.md)——`reasonix acp` 子命令
-- [Bot 网关](/concepts/04-bot-gateway.md)——`reasonix bot` 子命令
-- [Fleet 与 Subagent](/concepts/07-fleet-subagents.md)——subagent profile 和 task 工具
-- [基础使用示例](/examples/01-basic-usage.md)——安装和基本对话
+- [项目架构](01-project-architecture.md)——CLI 如何调用 boot.BuildRuntime
+- [ACP 协议](03-acp-protocol.md)——`reasonix acp` 子命令
+- [Bot 网关](04-bot-gateway.md)——`reasonix bot` 子命令
+- [Fleet 与 Subagent](07-fleet-subagents.md)——subagent profile 和 task 工具
+- [基础使用示例](../examples/01-basic-usage.md)——安装和基本对话

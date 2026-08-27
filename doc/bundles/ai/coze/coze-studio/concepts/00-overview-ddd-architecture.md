@@ -137,7 +137,7 @@ Coze Studio 支持两种主要部署方式：
 
 ## 相关概念
 
-- [DDD 分层详解](/concepts/01-ddd-layers.md)
-- [Thrift IDL 与代码生成](/concepts/02-thrift-idl-codegen.md)
-- [认证与中间件](/concepts/03-auth-middleware.md)
-- [可插拔基础设施](/concepts/04-pluggable-infrastructure.md)
+- [DDD 分层详解](01-ddd-layers.md)
+- [Thrift IDL 与代码生成](02-thrift-idl-codegen.md)
+- [认证与中间件](03-auth-middleware.md)
+- [可插拔基础设施](04-pluggable-infrastructure.md)

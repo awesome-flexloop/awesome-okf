@@ -14,11 +14,11 @@ sources:
 
 ## 概述
 
-BinderHub 的安全体系在 [base.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/base.py) 中定义基础框架，在 [app.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py) 中配置安全相关 traitlets，在 [main.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/main.py) 中实现 JWT Build Token 的签发，在 [builder.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py) 中实现请求级安全检查。安全机制包括：IP 黑名单、JWT Build Token 验证、User-Agent Bot 检测、速率限制、CORS 配置、HubOAuth 认证集成和 API-only 模式。
+BinderHub 的安全体系在 base.py 中定义基础框架，在 app.py 中配置安全相关 traitlets，在 main.py 中实现 JWT Build Token 的签发，在 builder.py 中实现请求级安全检查。安全机制包括：IP 黑名单、JWT Build Token 验证、User-Agent Bot 检测、速率限制、CORS 配置、HubOAuth 认证集成和 API-only 模式。
 
 ## BaseHandler：安全基础处理器
 
-`BaseHandler`（[base.py:16-210](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/base.py#L16-L210)）继承自 `HubOAuthenticated` 和 `web.RequestHandler`，是所有 BinderHub 请求处理器的基类。`HubOAuthenticated` 是 JupyterHub 提供的混入类，为 HubOAuth 认证提供 `@authenticated` 装饰器和 `get_current_user()` 支持。
+`BaseHandler`（base.py:16-210）继承自 `HubOAuthenticated` 和 `web.RequestHandler`，是所有 BinderHub 请求处理器的基类。`HubOAuthenticated` 是 JupyterHub 提供的混入类，为 HubOAuth 认证提供 `@authenticated` 装饰器和 `get_current_user()` 支持。
 
 ### 类继承关系
 
@@ -70,7 +70,7 @@ skip_check_request_ip = False
 | `VersionHandler` | 同上，版本检查不应被IP阻断 |
 | `MetricsHandler` | Prometheus 抓取可能来自集群内IP |
 
-参考：[health.py:132](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/health.py#L132)、[base.py:220](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/base.py#L220)。
+参考：health.py:132、base.py:220。
 
 ### check_request_ip()：IP 黑名单检查
 
@@ -94,7 +94,7 @@ def check_request_ip(self):
 检查流程：
 1. 如果 handler 设置了 `skip_check_request_ip` 或未配置 `ban_networks`，直接返回；
 2. 获取请求的客户端 IP（`request.remote_ip`，经过 xheaders 信任代理处理）；
-3. 使用 `ip_in_networks()` 函数（[utils.py:171-186](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/utils.py#L171-L186)）检查 IP 是否属于任何被封禁的 CIDR 网络段；
+3. 使用 `ip_in_networks()` 函数（utils.py:171-186）检查 IP 是否属于任何被封禁的 CIDR 网络段；
 4. 匹配时记录 WARNING 日志（含IP、网络、原因消息）并返回 403 Forbidden。
 
 `ban_networks` 在 app.py 中通过 `@validate` 装饰器自动将 CIDR 字符串转换为 `IPv4Network`/`IPv6Network` 对象：
@@ -307,7 +307,7 @@ def options(self, *args, **kwargs):
 
 ## JWT Build Token 签发
 
-Build Token 由 [main.py:63-80](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/main.py#L63-L80) 中的 `RepoLaunchUIHandler.get()` 方法签发：
+Build Token 由 main.py:63-80 中的 `RepoLaunchUIHandler.get()` 方法签发：
 
 ```python
 @authenticated
@@ -342,7 +342,7 @@ JWT Payload 包含三个声明：
 
 ### build_token_secret 密钥管理
 
-在 [app.py:741-765](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L741-L765) 中：
+在 app.py:741-765 中：
 
 ```python
 build_token_secret = Union(
@@ -400,7 +400,7 @@ build_token_check_origin = Bool(
 
 ## Bot 检测：User-Agent 黑名单
 
-在 [builder.py:306-313](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L306-L313)（BuildHandler.prepare()）中实现：
+在 builder.py:306-313（BuildHandler.prepare()）中实现：
 
 ```python
 block_build_user_agents = self.settings.get("block_build_user_agents", [])
@@ -412,7 +412,7 @@ for pattern in block_build_user_agents:
         raise HTTPError(403, "Bots not allowed")
 ```
 
-默认阻止的 User-Agent 模式在 [app.py:320-325](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L320-L325) 中定义：
+默认阻止的 User-Agent 模式在 app.py:320-325 中定义：
 
 ```python
 block_build_user_agents = List(
@@ -474,7 +474,7 @@ if c.BinderHub.auth_enabled:
 
 ### OAuth 回调端点
 
-在 [app.py:1126-1133](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L1126-L1133) 中注册：
+在 app.py:1126-1133 中注册：
 
 ```python
 if self.auth_enabled:
@@ -696,21 +696,21 @@ c.BinderHub.hub_url_local = "http://proxy-public/hub/"  # 集群内部地址
 
 ## 关键源码引用
 
-- BaseHandler 类：[base.py:16-210](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/base.py#L16-L210)
-- check_request_ip()：[base.py:31-47](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/base.py#L31-L47)
-- token_origin()：[base.py:49-63](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/base.py#L49-L63)
-- check_build_token() JWT验证：[base.py:65-98](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/base.py#L65-L98)
-- check_rate_limit()：[base.py:100-130](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/base.py#L100-L130)
-- get_current_user()：[base.py:132-135](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/base.py#L132-L135)
-- Build Token签发：[main.py:63-80](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/main.py#L63-L80)
-- build_token_secret配置：[app.py:741-765](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L741-L765)
-- block_build_user_agents配置：[app.py:318-336](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L318-L336)
-- ban_networks配置与验证：[app.py:778-796](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L778-L796)
-- enable_api_only_mode：[app.py:838-850](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L838-L850)
-- Bot检测与Accept检查：[builder.py:299-319](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L299-L319)
-- build_only参数处理：[builder.py:246-263](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L246-L263)
-- OAuth回调注册：[app.py:1126-1133](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L1126-L1133)
-- HubOAuth初始化：[base.py:19-22](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/base.py#L19-L22)
-- CORS头设置：[app.py:1018-1021](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L1018-L1021)
-- BUILDS_REJECTED指标定义：[builder.py:58-63](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L58-L63)
-- ip_in_networks()工具函数：[utils.py:171-186](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/utils.py#L171-L186)
+- BaseHandler 类：base.py:16-210
+- check_request_ip()：base.py:31-47
+- token_origin()：base.py:49-63
+- check_build_token() JWT验证：base.py:65-98
+- check_rate_limit()：base.py:100-130
+- get_current_user()：base.py:132-135
+- Build Token签发：main.py:63-80
+- build_token_secret配置：app.py:741-765
+- block_build_user_agents配置：app.py:318-336
+- ban_networks配置与验证：app.py:778-796
+- enable_api_only_mode：app.py:838-850
+- Bot检测与Accept检查：builder.py:299-319
+- build_only参数处理：builder.py:246-263
+- OAuth回调注册：app.py:1126-1133
+- HubOAuth初始化：base.py:19-22
+- CORS头设置：app.py:1018-1021
+- BUILDS_REJECTED指标定义：builder.py:58-63
+- ip_in_networks()工具函数：utils.py:171-186

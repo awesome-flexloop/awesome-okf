@@ -14,11 +14,11 @@ sources:
 
 ## 概述
 
-BinderHub 的构建系统定义在 [build.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py) 和 [build_local.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build_local.py) 中，负责将 Git 仓库代码通过 [repo2docker](https://github.com/jupyterhub/repo2docker) 构建为可运行的 Docker 镜像。构建系统采用抽象基类 + 具体实现的插件架构，核心抽象是 `BuildExecutor`，生产环境使用 `KubernetesBuildExecutor`（在 Kubernetes Pod 中运行 repo2docker），本地开发可使用 `LocalRepo2dockerBuild`（直接调用本地 repo2docker 进程）。此外还有 `FakeBuild` 用于纯 UI 开发，以及 `KubernetesCleaner` 负责定期清理过期构建 Pod。
+BinderHub 的构建系统定义在 build.py 和 build_local.py 中，负责将 Git 仓库代码通过 [repo2docker](https://github.com/jupyterhub/repo2docker) 构建为可运行的 Docker 镜像。构建系统采用抽象基类 + 具体实现的插件架构，核心抽象是 `BuildExecutor`，生产环境使用 `KubernetesBuildExecutor`（在 Kubernetes Pod 中运行 repo2docker），本地开发可使用 `LocalRepo2dockerBuild`（直接调用本地 repo2docker 进程）。此外还有 `FakeBuild` 用于纯 UI 开发，以及 `KubernetesCleaner` 负责定期清理过期构建 Pod。
 
 ## ProgressEvent：构建进度事件模型
 
-`ProgressEvent` 类（[build.py:26-54](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L26-L54)）是构建系统中所有进度事件的统一数据结构。
+`ProgressEvent` 类（build.py:26-54）是构建系统中所有进度事件的统一数据结构。
 
 ```python
 class ProgressEvent:
@@ -69,7 +69,7 @@ def progress(self, kind: ProgressEvent.Kind, payload: str):
 
 ## BuildExecutor：构建执行器抽象基类
 
-`BuildExecutor`（[build.py:57-222](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L57-L222)）继承自 `traitlets.config.LoggingConfigurable`，是所有构建执行器的抽象基类。
+`BuildExecutor`（build.py:57-222）继承自 `traitlets.config.LoggingConfigurable`，是所有构建执行器的抽象基类。
 
 ### 核心 Traitlets 属性
 
@@ -158,7 +158,7 @@ def stop(self):
 
 ## KubernetesBuildExecutor：Kubernetes 构建执行器
 
-`KubernetesBuildExecutor`（[build.py:225-733](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L225-L733)）是生产环境使用的构建执行器，它通过 Kubernetes API 创建一个运行 repo2docker 的 Pod 来执行镜像构建。
+`KubernetesBuildExecutor`（build.py:225-733）是生产环境使用的构建执行器，它通过 Kubernetes API 创建一个运行 repo2docker 的 Pod 来执行镜像构建。
 
 ### 类继承关系
 
@@ -210,7 +210,7 @@ c.KubernetesBuildExecutor.resources = {
 
 ### 节点亲和性策略
 
-`get_affinity()` 方法（[build.py:391-455](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L391-L455)）实现了两种调度策略：
+`get_affinity()` 方法（build.py:391-455）实现了两种调度策略：
 
 #### 1. 粘性构建（sticky_builds=True）
 
@@ -268,7 +268,7 @@ affinity = client.V1Affinity(
 
 ### 卷挂载配置
 
-`get_builder_volumes()` 方法（[build.py:457-495](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L457-L495)）配置 Pod 的存储卷：
+`get_builder_volumes()` 方法（build.py:457-495）配置 Pod 的存储卷：
 
 1. **Docker Socket 挂载**（docker_host 不为 None 时）：将宿主机的 Docker socket 挂载到容器内 `/var/run/docker.sock`，实现 Docker-outside-of-Docker 构建。
 
@@ -313,7 +313,7 @@ if not self.registry_credentials and self.push_secret:
 
 ### submit() 方法：构建 Pod 创建
 
-`submit()` 方法（[build.py:509-677](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L509-L677)）是构建执行的核心入口。
+`submit()` 方法（build.py:509-677）是构建执行的核心入口。
 
 #### Pod 定义构建
 
@@ -460,7 +460,7 @@ Watch 流每 30 秒超时一次以避免长时间连接挂起，超时后自动�
 
 ### stream_logs() 方法：日志流式处理
 
-`stream_logs()` 方法（[build.py:679-715](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L679-L715)）在 Pod 进入 Running 状态后启动，通过 Kubernetes API 跟随 Pod 日志输出。
+`stream_logs()` 方法（build.py:679-715）在 Pod 进入 Running 状态后启动，通过 Kubernetes API 跟随 Pod 日志输出。
 
 ```python
 def stream_logs(self):
@@ -517,7 +517,7 @@ def cleanup(self):
 
 ## KubernetesCleaner：构建 Pod 定期清理器
 
-`KubernetesCleaner`（[build.py:736-821](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L736-L821)）负责定期清理已完成和超时的构建 Pod。
+`KubernetesCleaner`（build.py:736-821）负责定期清理已完成和超时的构建 Pod。
 
 ### 属性配置
 
@@ -566,11 +566,11 @@ def cleanup(self):
 
 ## LocalRepo2dockerBuild：本地开发构建器
 
-`LocalRepo2dockerBuild` 定义在 [build_local.py:107-179](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build_local.py#L107-L179)，用于本地开发环境，直接在本地机器上调用 repo2docker 命令。
+`LocalRepo2dockerBuild` 定义在 build_local.py:107-179，用于本地开发环境，直接在本地机器上调用 repo2docker 命令。
 
 ### _execute_cmd() 辅助函数
 
-由于 BinderHub 运行在异步 Tornado 环境中，但 subprocess 调用是同步的，`_execute_cmd()`（[build_local.py:45-104](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build_local.py#L45-L104)）使用独立线程 + 队列模式实现可中断的子进程输出捕获：
+由于 BinderHub 运行在异步 Tornado 环境中，但 subprocess 调用是同步的，`_execute_cmd()`（build_local.py:45-104）使用独立线程 + 队列模式实现可中断的子进程输出捕获：
 
 ```python
 def _execute_cmd(cmd, capture=False, break_callback=None, **kwargs):
@@ -637,7 +637,7 @@ def submit(self):
 
 ## FakeBuild：无构建基础设施的 UI 开发
 
-`FakeBuild`（[build.py:824-877](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L824-L877)）是一个模拟构建器，用于在没有 Kubernetes/Docker 的环境下开发前端 UI：
+`FakeBuild`（build.py:824-877）是一个模拟构建器，用于在没有 Kubernetes/Docker 的环境下开发前端 UI：
 
 ```python
 class FakeBuild(BuildExecutor):
@@ -703,12 +703,12 @@ BuildHandler.get()
 
 ## 关键源码引用
 
-- ProgressEvent 类：[build.py:26-54](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L26-L54)
-- BuildExecutor 基类：[build.py:57-222](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L57-L222)
-- KubernetesBuildExecutor：[build.py:225-733](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L225-L733)
-- submit() 方法：[build.py:509-677](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L509-L677)
-- stream_logs() 方法：[build.py:679-715](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L679-L715)
-- cleanup() 方法：[build.py:717-733](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L717-L733)
-- KubernetesCleaner：[build.py:736-821](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L736-L821)
-- LocalRepo2dockerBuild：[build_local.py:107-179](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build_local.py#L107-L179)
-- FakeBuild：[build.py:824-877](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py#L824-L877)
+- ProgressEvent 类：build.py:26-54
+- BuildExecutor 基类：build.py:57-222
+- KubernetesBuildExecutor：build.py:225-733
+- submit() 方法：build.py:509-677
+- stream_logs() 方法：build.py:679-715
+- cleanup() 方法：build.py:717-733
+- KubernetesCleaner：build.py:736-821
+- LocalRepo2dockerBuild：build_local.py:107-179
+- FakeBuild：build.py:824-877

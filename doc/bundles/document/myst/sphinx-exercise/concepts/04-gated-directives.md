@@ -114,6 +114,6 @@ env.sphinx_exercise_gated_registry[docname] = {
 
 ## 相关概念
 
-- [练习指令详解](/concepts/02-exercise-directive.md)
-- [解答指令详解](/concepts/03-solution-directive.md)
-- [门控练习示例](/examples/gated-exercises.md)
+- [练习指令详解](02-exercise-directive.md)
+- [解答指令详解](03-solution-directive.md)
+- [门控练习示例](../examples/gated-exercises.md)

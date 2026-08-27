@@ -133,4 +133,4 @@ AsyncFlow 可以混合编排 AsyncNode 和普通 Node：异步节点调用 `_run
 
 ## 源码位置
 
-[pocketflow/\_\_init\_\_.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow/pocketflow/__init__.py)
+pocketflow/\_\_init\_\_.py

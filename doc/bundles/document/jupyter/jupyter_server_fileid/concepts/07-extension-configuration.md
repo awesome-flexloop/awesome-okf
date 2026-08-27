@@ -285,4 +285,4 @@ c.MyFileIdManager.db_journal_mode = "WAL"
 - [抽象基类与核心 API](03-file-id-manager.md) — 抽象方法详细说明
 - [双管理器对比](04-arbitrary-vs-local.md) — 两种内置实现差异
 - [CLI 工具与数据库](08-cli-and-database.md) — DB 管理与 CLI
-- [自定义管理器示例](../examples/02-custom-manager.md) — 完整自定义实现示例
+- 自定义管理器示例 — 完整自定义实现示例

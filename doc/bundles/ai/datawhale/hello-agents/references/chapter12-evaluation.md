@@ -104,5 +104,5 @@ SFT基线评估 → GRPO奖励信号 → 迭代数据增强 → 持续监控回�
 8个脚本：BFCL快速开始/自定义评估/完整运行、GAIA快速开始/最佳实践、数据生成完整流程/LLM评判
 
 ## 相关概念
-- [评估方法](/ai/datawhale/hello-agents/concepts/evaluation-methods)
-- [Agentic-RL](/ai/datawhale/hello-agents/concepts/agentic-rl)
+- 评估方法
+- Agentic-RL

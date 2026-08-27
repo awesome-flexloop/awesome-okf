@@ -208,7 +208,7 @@ MyST-NB 文档推荐配合以下主题使用：
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [Sphinx 集成机制](/concepts/10-sphinx-integration.md)
-- [配置系统](/concepts/04-config-system.md)
-- [MyST Notebook 文件格式](/concepts/02-notebook-format.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [Sphinx 集成机制](../concepts/10-sphinx-integration.md)
+- [配置系统](../concepts/04-config-system.md)
+- [MyST Notebook 文件格式](../concepts/02-notebook-format.md)

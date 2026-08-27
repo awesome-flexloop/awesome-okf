@@ -352,6 +352,6 @@ c.JupyterHub.proxy_class = "mypackage.MyCustomProxy"
 - [Spawner 机制](spawner.md) — Spawner 启动服务器后，Hub 调用 Proxy.add_route 注册路由
 - [Authenticator 认证系统](authenticator.md) — 认证器与 Proxy 的协作关系
 - [ORM 数据模型](orm.md) — 路由状态与数据库的一致性检查
-- [JupyterHub 多用户部署](/concepts/11-jupyterhub.md) — Proxy 在 JupyterHub 四大子系统中的定位
+- JupyterHub 多用户部署 — Proxy 在 JupyterHub 四大子系统中的定位
 
 [^proxy-source]: JupyterHub Proxy 源码参考

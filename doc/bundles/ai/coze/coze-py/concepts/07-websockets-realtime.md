@@ -242,7 +242,7 @@ Opus 适合网络传输，PCM 适合直接播放或本地处理。
 
 ## 相关概念
 
-- [对话与流式处理](/concepts/03-chat-streaming.md) — HTTP+SSE 对话方案
-- [音频与语音](/concepts/08-audio-voice.md) — HTTP 音频 API（TTS/ASR/房间/直播）
-- [WebSocket 语音对话示例](/examples/websocket-voice-chat.md) — 完整的实时语音对话代码
-- [WebSocket 实时通信与音频参考](/references/websockets-audio.md) — 所有 WS 客户端和事件的完整 API
+- [对话与流式处理](03-chat-streaming.md) — HTTP+SSE 对话方案
+- [音频与语音](08-audio-voice.md) — HTTP 音频 API（TTS/ASR/房间/直播）
+- [WebSocket 语音对话示例](../examples/websocket-voice-chat.md) — 完整的实时语音对话代码
+- [WebSocket 实时通信与音频参考](../references/websockets-audio.md) — 所有 WS 客户端和事件的完整 API

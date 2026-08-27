@@ -70,7 +70,7 @@ agent = Agent(
 
 ### `build_a2ui_toolset`：工具集工厂
 
-[veadk/a2ui/toolset.py:L238-L265](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2ui/toolset.py#L238-L265)
+veadk/a2ui/toolset.py:L238-L265
 
 ```python
 def build_a2ui_toolset(
@@ -89,7 +89,7 @@ def build_a2ui_toolset(
 
 ### Catalog 解析逻辑（`_resolve_catalog`）
 
-[veadk/a2ui/toolset.py:L206-L235](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2ui/toolset.py#L206-L235)
+veadk/a2ui/toolset.py:L206-L235
 
 `A2UICatalogLike` 支持 5 种输入形式（F-060）：
 
@@ -107,7 +107,7 @@ def build_a2ui_toolset(
 
 核心工具方法，由 LLM 调用来发送 UI 组件。VeADK 提供了 Fallback 实现以兼容不同版本的 a2ui-agent-sdk：
 
-[veadk/a2ui/toolset.py:L109-L172](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2ui/toolset.py#L109-L172)
+veadk/a2ui/toolset.py:L109-L172
 
 ```python
 class _SendA2uiJsonToClientTool(base_tool.BaseTool):
@@ -156,7 +156,7 @@ sequenceDiagram
 
 Catalog 是 A2UI 的核心概念，定义了 Agent 可用的 UI 组件集合（名称、属性、嵌套规则），同时作为 LLM 的指令和前端的验证器。
 
-[veadk/a2ui/catalog.py:L48-L56](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2ui/catalog.py#L48-L56)
+veadk/a2ui/catalog.py:L48-L56
 
 ```python
 DEFAULT_A2UI_VERSION = "0.9"
@@ -167,7 +167,7 @@ BuiltCatalog = Tuple["A2uiCatalog", str]  # (catalog, examples_str)
 
 ### Basic Catalog：内置基础组件
 
-[veadk/a2ui/catalog.py:L107-L134](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2ui/catalog.py#L107-L134)
+veadk/a2ui/catalog.py:L107-L134
 
 ```python
 def get_basic_catalog(
@@ -180,7 +180,7 @@ def get_basic_catalog(
 
 ### load_catalog：从文件加载
 
-[veadk/a2ui/catalog.py:L64-L94](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2ui/catalog.py#L64-L94)
+veadk/a2ui/catalog.py:L64-L94
 
 ```python
 def load_catalog(
@@ -197,7 +197,7 @@ def load_catalog(
 
 ### BaseA2UICatalog：企业自定义扩展点
 
-[veadk/a2ui/catalog.py:L137-L177](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2ui/catalog.py#L137-L177)
+veadk/a2ui/catalog.py:L137-L177
 
 企业可通过继承 `BaseA2UICatalog` 注册自有 UI 组件：
 
@@ -249,9 +249,9 @@ pip install veadk-python[a2ui]
 
 | 文件 | 职责 |
 |------|------|
-| [veadk/a2ui/\_\_init\_\_.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2ui/__init__.py) | 模块导出：BaseA2UICatalog、get_basic_catalog、load_catalog、build_a2ui_toolset |
-| [veadk/a2ui/toolset.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2ui/toolset.py) | A2UI 工具集构建、send_a2ui_json_to_client 工具、Fallback 兼容层、Catalog 解析 |
-| [veadk/a2ui/catalog.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2ui/catalog.py) | Catalog 加载、Basic Catalog、BaseA2UICatalog 扩展点 |
+| veadk/a2ui/\_\_init\_\_.py | 模块导出：BaseA2UICatalog、get_basic_catalog、load_catalog、build_a2ui_toolset |
+| veadk/a2ui/toolset.py | A2UI 工具集构建、send_a2ui_json_to_client 工具、Fallback 兼容层、Catalog 解析 |
+| veadk/a2ui/catalog.py | Catalog 加载、Basic Catalog、BaseA2UICatalog 扩展点 |
 
 ## 相关概念
 

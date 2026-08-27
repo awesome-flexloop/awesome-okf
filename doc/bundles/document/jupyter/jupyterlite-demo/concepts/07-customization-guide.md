@@ -233,8 +233,8 @@ jupyter lite build --lite-dir ./my-config --contents content --output-dir dist
 
 ## 相关概念
 
-- [站点配置详解](/concepts/02-site-configuration.md)
-- [Pyodide 生态库与 %pip 安装](/concepts/05-pyodide-libraries.md)
-- [GitHub Pages 部署流水线](/concepts/06-deployment-github-pages.md)
-- [从零部署实战](/examples/01-first-deployment.md)
-- [自定义 Demo 站点实战](/examples/07-custom-demo-site.md)
+- [站点配置详解](02-site-configuration.md)
+- [Pyodide 生态库与 %pip 安装](05-pyodide-libraries.md)
+- [GitHub Pages 部署流水线](06-deployment-github-pages.md)
+- [从零部署实战](../examples/01-first-deployment.md)
+- [自定义 Demo 站点实战](../examples/07-custom-demo-site.md)

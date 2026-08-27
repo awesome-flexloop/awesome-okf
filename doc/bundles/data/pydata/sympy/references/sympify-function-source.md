@@ -20,11 +20,11 @@ sources:
 
 # sympify转换与Function函数体系源码信源
 
-SymPy 中所有对象通过 `sympify()` 进入符号体系，函数类以元类 `FunctionClass` 驱动构造，数值求值由 `EvalfMixin` 提供 `evalf()`/`n()`/`N()` 统一接口，关系运算通过 `Relational` 类层次实现 `==`、`!=`、`<`、`>`、`<=`、`>=` 六类比较。[^F-045][^F-048][^F-058][^F-061]
+SymPy 中所有对象通过 `sympify()` 进入符号体系，函数类以元类 `FunctionClass` 驱动构造，数值求值由 `EvalfMixin` 提供 `evalf()`/`n()`/`N()` 统一接口，关系运算通过 `Relational` 类层次实现 `==`、`!=`、`<`、`>`、`<=`、`>=` 六类比较。[^F-045] [^F-048] [^F-058] [^F-061]
 
 ## sympify() 类型转换函数
 
-`sympify()` 定义于 [core/sympify.py:124](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/sympify.py#L124)，是 SymPy 的类型入口，将任意 Python 对象转换为 SymPy 内部类型。[^F-045]
+`sympify()` 定义于 core/sympify.py:124，是 SymPy 的类型入口，将任意 Python 对象转换为 SymPy 内部类型。[^F-045]
 
 ### 函数签名
 
@@ -52,7 +52,7 @@ def sympify(a, locals=None, convert_xor=True, strict=False, rational=False,
 | `Basic` 子类 | 原样返回 | 已是 SymPy 对象则直接返回 |
 | 自定义类型 | 查 `converter` 字典 | 通过注册的转换函数转换 |
 
-**converter 字典**定义于 [core/sympify.py:41](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/sympify.py#L41)，类型为 `dict[type[Any], Callable[[Any], Basic]]`，用户可注册自定义类型转换。`_sympy_converter` 是内部转换器，`_external_converter` 是 `converter` 的别名。[^F-046]
+**converter 字典**定义于 core/sympify.py:41，类型为 `dict[type[Any], Callable[[Any], Basic]]`，用户可注册自定义类型转换。`_sympy_converter` 是内部转换器，`_external_converter` 是 `converter` 的别名。[^F-046]
 
 ```python
 from sympy import sympify, Integer, Rational, Float
@@ -86,14 +86,14 @@ sympify(MyType(42))  # Integer(42)
 
 | 异常类 | 基类 | 定义位置 | 说明 |
 |--------|------|----------|------|
-| `SympifyError` | `ValueError` | [sympify.py:27](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/sympify.py#L27) | 转换失败时抛出 |
-| `CantSympify` | — | [sympify.py:49](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/sympify.py#L49) | 混入类，禁止其实例被 sympify |
+| `SympifyError` | `ValueError` | sympify.py:27 | 转换失败时抛出 |
+| `CantSympify` | — | sympify.py:49 | 混入类，禁止其实例被 sympify |
 
-`_sympify(a)` 函数（[sympify.py:514](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/sympify.py#L514)）是严格版本的内部 sympify，失败时抛出 `TypeError`。[^F-047]
+`_sympify(a)` 函数（sympify.py:514）是严格版本的内部 sympify，失败时抛出 `TypeError`。[^F-047]
 
 ## parse_expr() 字符串解析
 
-`parse_expr()` 定义于 [parsing/sympy_parser.py:913](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/parsing/sympy_parser.py#L913)，将字符串解析为 SymPy 表达式，支持隐式乘法、阶乘等扩展语法。
+`parse_expr()` 定义于 parsing/sympy_parser.py:913，将字符串解析为 SymPy 表达式，支持隐式乘法、阶乘等扩展语法。
 
 ```python
 def parse_expr(s: str, local_dict=None,
@@ -135,7 +135,7 @@ parse_expr("f(x)", local_dict={"f": f, "x": Symbol('x')})  # f(x)
 
 ## 函数类继承体系
 
-SymPy 中存在三类函数：已定义函数（如 `sin`、`exp`）、未定义函数（`Function('f')` 创建）、匿名函数（`Lambda`）。[^F-048][^F-049][^F-050]
+SymPy 中存在三类函数：已定义函数（如 `sin`、`exp`）、未定义函数（`Function('f')` 创建）、匿名函数（`Lambda`）。[^F-048] [^F-049] [^F-050]
 
 ```mermaid
 classDiagram
@@ -212,21 +212,21 @@ classDiagram
 
 ### FunctionClass 元类
 
-`FunctionClass` 定义于 [core/function.py:156](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L156)，继承自 `type`，是所有函数类的元类。[^F-048]
+`FunctionClass` 定义于 core/function.py:156，继承自 `type`，是所有函数类的元类。[^F-048]
 
 核心职责：
 - **nargs 规范化**：`__init__` 中处理 `nargs` 参数，支持整数、元组、`None`（任意参数数），最终存为 `_nargs` 元组
-- **nargs 属性**（[L228](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L228)）：返回 `FiniteSet` 或 `S.Naturals0`（任意数量）
+- **nargs 属性**（L228）：返回 `FiniteSet` 或 `S.Naturals0`（任意数量）
 - **eval 校验**：子类若定义 `eval` 必须标记为 `@classmethod`，否则抛出 `TypeError`
 - **__repr__**：返回类名
 
 ### Application 类
 
-`Application` 定义于 [core/function.py:282](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L282)，继承自 `Basic`，使用 `metaclass=FunctionClass`，是已应用函数（即带参数的函数调用如 `f(x)`）的基类，设置 `is_Function = True`。[^F-049]
+`Application` 定义于 core/function.py:282，继承自 `Basic`，使用 `metaclass=FunctionClass`，是已应用函数（即带参数的函数调用如 `f(x)`）的基类，设置 `is_Function = True`。[^F-049]
 
 ### Function 类
 
-`Function` 定义于 [core/function.py:383](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L383)，继承自 `Application` 和 `Expr`，`is_Function = True`。它有双重身份：[^F-050]
+`Function` 定义于 core/function.py:383，继承自 `Application` 和 `Expr`，`is_Function = True`。它有双重身份：[^F-050]
 
 1. **基类**：所有数学函数（`sin`、`cos`、`exp` 等）的基类
 2. **构造器**：`Function('f')` 创建未定义函数类
@@ -260,18 +260,18 @@ f_real = Function('f', real=True)
 f_real(x).is_real  # True
 ```
 
-**__new__ 中的 eval 模式**：`Function.__new__`（[L446](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L446)）处理逻辑：
+**__new__ 中的 eval 模式**：`Function.__new__`（L446）处理逻辑：
 - 若 `cls is Function`，委托给 `UndefinedFunction(*args, **options)` 创建未定义函数类
 - 否则调用 `cls._new_(*args, **options)` 进行常规构造
 - `_new_` 方法验证 `nargs`，若参数全为浮点数则自动 `evalf()`
 
 ### DefinedFunction 类
 
-`DefinedFunction` 定义于 [core/function.py:823](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L823)，继承自 `Function`，是 `sin`、`cos`、`exp` 等已定义函数的基类，重写 `__new__` 直接调用 `_new_`，不经过 `UndefinedFunction` 分支。
+`DefinedFunction` 定义于 core/function.py:823，继承自 `Function`，是 `sin`、`cos`、`exp` 等已定义函数的基类，重写 `__new__` 直接调用 `_new_`，不经过 `UndefinedFunction` 分支。
 
 ### AppliedUndef 类
 
-`AppliedUndef` 定义于 [core/function.py:831](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L831)，继承自 `Function`，表示未定义函数的应用实例（如 `f(x)`）。[^F-051]
+`AppliedUndef` 定义于 core/function.py:831，继承自 `Function`，表示未定义函数的应用实例（如 `f(x)`）。[^F-051]
 
 核心属性：
 - `is_number = False`：未定义函数应用不是数值
@@ -293,7 +293,7 @@ expr.is_number        # False
 
 ### UndefinedFunction 类
 
-`UndefinedFunction` 定义于 [core/function.py:887](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L887)，继承自 `FunctionClass`（注意：是元类！），是 `Function('f')` 返回值的实际类型。[^F-052]
+`UndefinedFunction` 定义于 core/function.py:887，继承自 `FunctionClass`（注意：是元类！），是 `Function('f')` 返回值的实际类型。[^F-052]
 
 核心机制：
 - `__new__(mcl, name, bases=(AppliedUndef,), __dict__=None, **kwargs)`：动态创建以 `AppliedUndef` 为基类的新类
@@ -304,7 +304,7 @@ expr.is_number        # False
 
 ### WildFunction 类
 
-`WildFunction` 定义于 [core/function.py:971](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L971)，继承自 `Function` 和 `AtomicExpr`，用于模式匹配中的函数通配符。[^F-053]
+`WildFunction` 定义于 core/function.py:971，继承自 `Function` 和 `AtomicExpr`，用于模式匹配中的函数通配符。[^F-053]
 
 ```python
 from sympy import WildFunction, Function, cos, symbols
@@ -326,7 +326,7 @@ f(x, y).match(F2)    # {F_: f(x, y)}
 
 ## Derivative 类
 
-`Derivative` 定义于 [core/function.py:1050](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L1050)，继承自 `Expr`，`is_Derivative = True`，表示未求值的导数。[^F-054]
+`Derivative` 定义于 core/function.py:1050，继承自 `Expr`，`is_Derivative = True`，表示未求值的导数。[^F-054]
 
 ```python
 from sympy import Derivative, Function, diff, symbols, sin
@@ -351,7 +351,7 @@ Derivative(f(x)**2, f(x), evaluate=True)  # 2*f(x)
 
 ### diff() 函数
 
-`diff()` 定义于 [core/function.py:2495](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L2495)，是统一的求导入口：若对象有 `.diff()` 方法则调用它，否则委托给 `_derivative_dispatch` 创建 `Derivative` 对象（或 `ArrayDerivative` 用于数组/矩阵）。[^F-057]
+`diff()` 定义于 core/function.py:2495，是统一的求导入口：若对象有 `.diff()` 方法则调用它，否则委托给 `_derivative_dispatch` 创建 `Derivative` 对象（或 `ArrayDerivative` 用于数组/矩阵）。[^F-057]
 
 ```python
 from sympy import diff, sin, cos, Function
@@ -365,7 +365,7 @@ diff(sin(x), x, evaluate=False)  # Derivative(sin(x), x)（不求值）
 
 ## Lambda 匿名函数
 
-`Lambda` 定义于 [core/function.py:1953](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L1953)，继承自 `Expr`，`is_Function = True`，表示匿名函数。[^F-055]
+`Lambda` 定义于 core/function.py:1953，继承自 `Expr`，`is_Function = True`，表示匿名函数。[^F-055]
 
 ```python
 class Lambda(Expr):
@@ -414,11 +414,11 @@ Lambda((x, y), x + y).curry()
 # Lambda(x, Lambda(y, x + y))
 ```
 
-异常类：`BadSignatureError`（签名无效）和 `BadArgumentsError`（参数数不匹配）分别定义于 [function.py:114](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L114) 和 [L119](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L119)。
+异常类：`BadSignatureError`（签名无效）和 `BadArgumentsError`（参数数不匹配）分别定义于 function.py:114 和 L119。
 
 ## Subs 类
 
-`Subs` 定义于 [core/function.py:2150](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L2150)，继承自 `Expr`，表示表达式中未求值的替换。[^F-056]
+`Subs` 定义于 core/function.py:2150，继承自 `Expr`，表示表达式中未求值的替换。[^F-056]
 
 构造签名：`Subs(expr, variables, point)`，其中 `variables` 是变量或变量元组，`point` 是对应求值点。
 
@@ -447,7 +447,7 @@ _.subs(f, sin).doit() == cos(0)  # True
 
 ### EvalfMixin 类
 
-`EvalfMixin` 定义于 [core/evalf.py:1564](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/evalf.py#L1564)，是混入类，为 `Expr` 和 `Relational` 提供数值求值能力。[^F-058]
+`EvalfMixin` 定义于 core/evalf.py:1564，是混入类，为 `Expr` 和 `Relational` 提供数值求值能力。[^F-058]
 
 ```python
 class EvalfMixin:
@@ -495,19 +495,19 @@ N(1e-4, chop=1e-4)    # 0
 
 ### N() 模块级函数
 
-`N(x, n=15, **options)` 定义于 [core/evalf.py:1737](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/evalf.py#L1737)，等价于 `sympify(x, rational=True).evalf(n, **options)`。[^F-059]
+`N(x, n=15, **options)` 定义于 core/evalf.py:1737，等价于 `sympify(x, rational=True).evalf(n, **options)`。[^F-059]
 
 ### 底层 evalf() 引擎
 
-模块级函数 `evalf(x, prec, options)` 定义于 [core/evalf.py:1459](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/evalf.py#L1459)，是底层数值求值引擎，接受**二进制**精度 `prec`（而非十进制位数 `n`）。`_create_evalf_table()` 在模块导入时注册各类表达式的 evalf 处理函数。[^F-060]
+模块级函数 `evalf(x, prec, options)` 定义于 core/evalf.py:1459，是底层数值求值引擎，接受**二进制**精度 `prec`（而非十进制位数 `n`）。`_create_evalf_table()` 在模块导入时注册各类表达式的 evalf 处理函数。[^F-060]
 
-异常类 `PrecisionExhausted` 定义于 [evalf.py:64](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/evalf.py#L64)，继承自 `ArithmeticError`，在 `strict=True` 且精度不足时抛出。
+异常类 `PrecisionExhausted` 定义于 evalf.py:64，继承自 `ArithmeticError`，在 `strict=True` 且精度不足时抛出。
 
 ## Relational 关系运算
 
 ### 类继承层次
 
-`Relational` 定义于 [core/relational.py:74](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/relational.py#L74)，继承自 `Boolean` 和 `EvalfMixin`，`is_Relational = True`，是所有关系运算的基类。[^F-061][^F-062]
+`Relational` 定义于 core/relational.py:74，继承自 `Boolean` 和 `EvalfMixin`，`is_Relational = True`，是所有关系运算的基类。[^F-061] [^F-062]
 
 ```mermaid
 classDiagram
@@ -558,14 +558,14 @@ classDiagram
 
 | 运算符 | 类名 | 别名 | 符号 | 定义位置 |
 |--------|------|------|------|----------|
-| `==` | `Equality` | `Eq` | `==` | [relational.py:558](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/relational.py#L558) |
-| `!=` | `Unequality` | `Ne` | `!=` | [relational.py:761](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/relational.py#L761) |
-| `>=` | `GreaterThan` | `Ge` | `>=` | [relational.py:940](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/relational.py#L940) |
-| `<=` | `LessThan` | `Le` | `<=` | [relational.py:1181](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/relational.py#L1181) |
-| `>` | `StrictGreaterThan` | `Gt` | `>` | [relational.py:1198](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/relational.py#L1198) |
-| `<` | `StrictLessThan` | `Lt` | `<` | [relational.py:1216](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/relational.py#L1216) |
+| `==` | `Equality` | `Eq` | `==` | relational.py:558 |
+| `!=` | `Unequality` | `Ne` | `!=` | relational.py:761 |
+| `>=` | `GreaterThan` | `Ge` | `>=` | relational.py:940 |
+| `<=` | `LessThan` | `Le` | `<=` | relational.py:1181 |
+| `>` | `StrictGreaterThan` | `Gt` | `>` | relational.py:1198 |
+| `<` | `StrictLessThan` | `Lt` | `<` | relational.py:1216 |
 
-`Rel` 是 `Relational` 的别名（[relational.py:555](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/relational.py#L555)）。注意：Python 的 `==` 运算符在 SymPy 中创建 `Eq` 对象（结构性相等比较使用 `.equals()` 方法或 `is`）。[^F-062]
+`Rel` 是 `Relational` 的别名（relational.py:555）。注意：Python 的 `==` 运算符在 SymPy 中创建 `Eq` 对象（结构性相等比较使用 `.equals()` 方法或 `is`）。[^F-062]
 
 ### 构造与分派
 
@@ -603,7 +603,7 @@ eq.rhs                    # 1
 
 ### 模块导出
 
-`__all__`（[relational.py:28-32](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/relational.py#L28-L32)）导出：`Rel`、`Eq`、`Ne`、`Lt`、`Le`、`Gt`、`Ge`（短别名）和 `Relational`、`Equality`、`Unequality`、`StrictLessThan`、`LessThan`、`StrictGreaterThan`、`GreaterThan`（全称类名）。
+`__all__`（relational.py:28-32）导出：`Rel`、`Eq`、`Ne`、`Lt`、`Le`、`Gt`、`Ge`（短别名）和 `Relational`、`Equality`、`Unequality`、`StrictLessThan`、`LessThan`、`StrictGreaterThan`、`GreaterThan`（全称类名）。
 
 ## 其他公开函数
 
@@ -611,20 +611,20 @@ eq.rhs                    # 1
 
 | 函数 | 定义位置 | 说明 |
 |------|----------|------|
-| `arity(cls)` | [L125](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L125) | 返回函数的元数（参数个数） |
-| `expand(e, ...)` | [L2565](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L2565) | 通用展开函数，支持多种 hint |
-| `expand_mul(expr, deep)` | [L2915](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L2915) | 乘法展开 |
-| `expand_multinomial(expr, deep)` | [L2933](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L2933) | 多项式展开 |
-| `expand_log(expr, deep, force, factor)` | [L2951](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L2951) | 对数展开 |
-| `expand_func(expr, deep)` | [L2996](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L2996) | 函数展开 |
-| `expand_trig(expr, deep)` | [L3014](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L3014) | 三角展开 |
-| `expand_complex(expr, deep)` | [L3032](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L3032) | 复数分离展开 |
-| `expand_power_base(expr, deep, force)` | [L3056](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L3056) | 幂底数展开 |
-| `expand_power_exp(expr, deep)` | [L3141](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L3141) | 幂指数展开 |
-| `count_ops(expr, visual)` | [L3168](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L3168) | 计数操作数 |
-| `nfloat(expr, n, exponent, dkeys)` | [L3384](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L3384) | 将数值系数转为 Float |
+| `arity(cls)` | L125 | 返回函数的元数（参数个数） |
+| `expand(e, ...)` | L2565 | 通用展开函数，支持多种 hint |
+| `expand_mul(expr, deep)` | L2915 | 乘法展开 |
+| `expand_multinomial(expr, deep)` | L2933 | 多项式展开 |
+| `expand_log(expr, deep, force, factor)` | L2951 | 对数展开 |
+| `expand_func(expr, deep)` | L2996 | 函数展开 |
+| `expand_trig(expr, deep)` | L3014 | 三角展开 |
+| `expand_complex(expr, deep)` | L3032 | 复数分离展开 |
+| `expand_power_base(expr, deep, force)` | L3056 | 幂底数展开 |
+| `expand_power_exp(expr, deep)` | L3141 | 幂指数展开 |
+| `count_ops(expr, visual)` | L3168 | 计数操作数 |
+| `nfloat(expr, n, exponent, dkeys)` | L3384 | 将数值系数转为 Float |
 
-异常类汇总：`PoleError`（[L104](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L104)）、`ArgumentIndexError`（[L108](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L108)）、`BadSignatureError`（[L114](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L114)）、`BadArgumentsError`（[L119](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L119)）。
+异常类汇总：`PoleError`（L104）、`ArgumentIndexError`（L108）、`BadSignatureError`（L114）、`BadArgumentsError`（L119）。
 
 ```python
 from sympy import (expand, expand_mul, expand_log, expand_trig,

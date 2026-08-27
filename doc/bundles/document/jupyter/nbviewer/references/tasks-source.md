@@ -223,5 +223,5 @@ Fastly CDN后端同步逻辑：
 ## 相关信源
 
 - [部署配置文件源码](config-source.md)
-- [Helm部署流程](/concepts/06-helm-deploy-process.md)
-- [Fastly CDN管理](/concepts/07-fastly-cdn.md)
+- [Helm部署流程](../concepts/06-helm-deploy-process.md)
+- [Fastly CDN管理](../concepts/07-fastly-cdn.md)

@@ -628,8 +628,8 @@ Extended Thinking 与工具调用可以完美结合：
 
 ## 相关概念
 
-- [Messages API 基础](/python-sdk/concepts/02-messages-basics.md) — 理解消息格式和内容块结构
+- [Messages API 基础](../concepts/02-messages-basics.md) — 理解消息格式和内容块结构
 - [流式对话](02-streaming-chat.md) — 学习流式响应的事件处理（thinking 流式同样基于此机制）
 - [工具调用实战](03-tool-use.md) — 工具调用基础，可与 thinking 结合
 - [基础对话](01-basic-chat.md) — messages.create 基础参数回顾
-- [Anthropic Python SDK 消息 API 与流式处理参考](/python-sdk/references/messages-api.md) — thinking 参数的 API 参考
+- [Anthropic Python SDK 消息 API 与流式处理参考](../references/messages-api.md) — thinking 参数的 API 参考

@@ -37,7 +37,7 @@ generated:
 
 ## IRenderMime.IRenderer
 
-所有 MIME 渲染器 Widget 必须实现的接口，继承自 Lumino Widget 的渲染能力。[^fasta-index][^geojson-index][^vega3-index]
+所有 MIME 渲染器 Widget 必须实现的接口，继承自 Lumino Widget 的渲染能力。[^fasta-index] [^geojson-index] [^vega3-index]
 
 ```typescript
 interface IRenderer {
@@ -197,7 +197,7 @@ interface IRendererOptions {
 
 ## IRenderMime.ILatexTypesetter
 
-数学公式排版接口，由 KaTeX 和 MathJax2 扩展提供。[^katex-index][^mathjax2-typesetter]
+数学公式排版接口，由 KaTeX 和 MathJax2 扩展提供。[^katex-index] [^mathjax2-typesetter]
 
 ```typescript
 interface ILatexTypesetter {

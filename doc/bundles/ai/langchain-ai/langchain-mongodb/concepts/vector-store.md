@@ -246,7 +246,7 @@ LangChain 层面使用字符串 ID，MongoDB 内部使用 ObjectId：
 
 ## 相关阅读
 
-- [总览](/ai/langchain-ai/langchain-mongodb/concepts/overview)
-- [缓存与聊天历史](/ai/langchain-ai/langchain-mongodb/concepts/chat-history-cache)
-- [API 参考 — MongoDBAtlasVectorSearch](/ai/langchain-ai/langchain-mongodb/references/api)
-- [基础使用示例](/ai/langchain-ai/langchain-mongodb/examples/basic-usage)
+- 总览
+- 缓存与聊天历史
+- API 参考 — MongoDBAtlasVectorSearch
+- 基础使用示例

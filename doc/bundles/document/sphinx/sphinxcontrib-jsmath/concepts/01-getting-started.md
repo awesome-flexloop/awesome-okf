@@ -148,7 +148,7 @@ sphinxcontrib-jsmath 本身只提供一个配置项 `jsmath_path`。其他数学
 
 ## 相关概念
 
-- [sphinxcontrib-jsmath 简介](/concepts/00-introduction.md)
-- [扩展注册与 setup 函数](/concepts/02-setup-and-registration.md)
-- [基础使用示例](/examples/basic-usage.md)
-- [常见问题排查](/examples/troubleshooting.md)
+- [sphinxcontrib-jsmath 简介](00-introduction.md)
+- [扩展注册与 setup 函数](02-setup-and-registration.md)
+- [基础使用示例](../examples/basic-usage.md)
+- [常见问题排查](../examples/troubleshooting.md)

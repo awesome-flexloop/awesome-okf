@@ -190,7 +190,7 @@ Docutils 独立模式适合：
 
 ## 相关概念
 
-- [CLI 工具](/concepts/10-cli-tools.md)
-- [解析器与渲染器](/concepts/06-parser-and-renderer.md)
-- [Sphinx 集成机制](/concepts/11-sphinx-integration.md)
-- [CLI 工具实战示例](/examples/05-standalone-cli.md)
+- [CLI 工具](10-cli-tools.md)
+- [解析器与渲染器](06-parser-and-renderer.md)
+- [Sphinx 集成机制](11-sphinx-integration.md)
+- [CLI 工具实战示例](../examples/05-standalone-cli.md)

@@ -210,5 +210,5 @@ preconda 完成 write_files 后，各平台模块（shar/winexe/osxpkg/briefcase
 
 ## 下一步
 
-- [09-平台安装器实现](./09-platform-installers.md)：了解各平台模块如何将 payload 打包为最终安装程序
-- [12-构建输出产物](./12-build-outputs.md)：了解 build_outputs 生成的 hash/licenses/lockfile 等附属产物
+- [09-平台安装器实现](09-platform-installers.md)：了解各平台模块如何将 payload 打包为最终安装程序
+- [12-构建输出产物](12-build-outputs.md)：了解 build_outputs 生成的 hash/licenses/lockfile 等附属产物

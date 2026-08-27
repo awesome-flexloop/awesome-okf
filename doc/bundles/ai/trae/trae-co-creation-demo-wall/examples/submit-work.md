@@ -155,8 +155,8 @@ curl -X POST http://localhost:3000/api/submit \
 
 ## 相关内容
 
-- [作品提交流程](/concepts/13-form-submission.md)
-- [富文本编辑器](/concepts/08-rich-text-editor.md)
-- [COS 对象存储](/concepts/09-cos-storage.md)
-- [审核与治理](/concepts/10-audit-governance.md)
-- [管理员审核示例](/examples/admin-review.md)
+- [作品提交流程](../concepts/13-form-submission.md)
+- [富文本编辑器](../concepts/08-rich-text-editor.md)
+- [COS 对象存储](../concepts/09-cos-storage.md)
+- [审核与治理](../concepts/10-audit-governance.md)
+- [管理员审核示例](admin-review.md)

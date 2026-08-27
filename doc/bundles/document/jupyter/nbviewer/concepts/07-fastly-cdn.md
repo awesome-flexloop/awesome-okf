@@ -235,5 +235,5 @@ README中提到：
 ## 相关文档
 
 - [Helm部署流程](06-helm-deploy-process.md)
-- [Invoke任务使用示例](/examples/invoke-tasks.md)
+- [Invoke任务使用示例](../examples/invoke-tasks.md)
 - [部署配置详解](03-deployment-config.md#configcdnyaml空文件说明)

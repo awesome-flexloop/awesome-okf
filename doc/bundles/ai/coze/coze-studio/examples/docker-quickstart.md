@@ -61,7 +61,7 @@ cd coze-studio
 cp docker/.env.example docker/.env
 ```
 
-`.env.example` 包含 270+ 配置项，首次体验使用默认配置即可。如需配置外部 LLM 模型，请参考 [添加 LLM 模型](/examples/add-llm-model.md)。
+`.env.example` 包含 270+ 配置项，首次体验使用默认配置即可。如需配置外部 LLM 模型，请参考 [添加 LLM 模型](add-llm-model.md)。
 
 如需配置管理员邮箱白名单（限制注册），编辑 `.env`：
 
@@ -180,7 +180,7 @@ make clean
 
 ## 相关文档
 
-- [部署与运维](/concepts/08-deployment-operations.md)
-- [添加 LLM 模型](/examples/add-llm-model.md)
-- [配置基础设施](/examples/configure-infrastructure.md)
-- [部署与基础设施参考](/references/deployment-infrastructure.md)
+- [部署与运维](../concepts/08-deployment-operations.md)
+- [添加 LLM 模型](add-llm-model.md)
+- [配置基础设施](configure-infrastructure.md)
+- [部署与基础设施参考](../references/deployment-infrastructure.md)

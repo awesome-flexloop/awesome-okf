@@ -35,56 +35,56 @@ OpenAI Codex CLI 是一个在本地运行的编码智能体（coding agent），
 
 | 编号 | 文档 | 说明 |
 |------|------|------|
-| 00 | [简介](./concepts/00-introduction.md) | 定位、三语言架构、功能特性、安装 |
-| 01 | [工作区架构](./concepts/01-workspace-architecture.md) | pnpm + Cargo + Python monorepo，Bazel 构建 |
-| 02 | [Rust 核心与 TUI](./concepts/02-rust-core-tui.md) | codex-core、事件驱动 TUI、线程管理、终端渲染 |
-| 03 | [Node.js CLI 入口](./concepts/03-nodejs-cli.md) | bin/codex.js 启动器、平台检测、信号转发 |
-| 04 | [沙箱执行模型](./concepts/04-sandbox-execution.md) | 平台沙箱、execpolicy、SafetyCheck 三层防御 |
-| 05 | [Skills 与 AGENTS.md](./concepts/05-skills-agents-md.md) | 文件即上下文的约定优于配置 |
-| 06 | [Python SDK](./concepts/06-python-sdk.md) | 同步/异步客户端、JSON-RPC、认证、沙箱 |
+| 00 | [简介](concepts/00-introduction.md) | 定位、三语言架构、功能特性、安装 |
+| 01 | [工作区架构](concepts/01-workspace-architecture.md) | pnpm + Cargo + Python monorepo，Bazel 构建 |
+| 02 | [Rust 核心与 TUI](concepts/02-rust-core-tui.md) | codex-core、事件驱动 TUI、线程管理、终端渲染 |
+| 03 | [Node.js CLI 入口](concepts/03-nodejs-cli.md) | bin/codex.js 启动器、平台检测、信号转发 |
+| 04 | [沙箱执行模型](concepts/04-sandbox-execution.md) | 平台沙箱、execpolicy、SafetyCheck 三层防御 |
+| 05 | [Skills 与 AGENTS.md](concepts/05-skills-agents-md.md) | 文件即上下文的约定优于配置 |
+| 06 | [Python SDK](concepts/06-python-sdk.md) | 同步/异步客户端、JSON-RPC、认证、沙箱 |
 
 ### 示例（Examples）
 
 | 编号 | 文档 | 说明 |
 |------|------|------|
-| 01 | [CLI 基本使用](./examples/01-basic-usage.md) | 安装、TUI、exec、会话管理、配置、MCP |
-| 02 | [Python SDK 使用](./examples/02-python-sdk.md) | pip 安装、线程管理、流式进度、错误处理 |
+| 01 | [CLI 基本使用](examples/01-basic-usage.md) | 安装、TUI、exec、会话管理、配置、MCP |
+| 02 | [Python SDK 使用](examples/02-python-sdk.md) | pip 安装、线程管理、流式进度、错误处理 |
 
 ### 参考（References）
 
 | 文档 | 说明 |
 |------|------|
-| [source.md](./references/source.md) | 源码文件索引，按组件分类，标注事实 ID |
+| [source.md](references/source.md) | 源码文件索引，按组件分类，标注事实 ID |
 
 ### 规格（Spec）
 
 | 文档 | 说明 |
 |------|------|
-| [facts.md](./spec/facts.md) | 82 条编号事实，每条引用文件路径和行号 |
-| [insights.md](./spec/insights.md) | 5 个架构级核心洞察（陈述/证据/反常识/行动） |
+| [facts.md](spec/facts.md) | 82 条编号事实，每条引用文件路径和行号 |
+| [insights.md](spec/insights.md) | 5 个架构级核心洞察（陈述/证据/反常识/行动） |
 
 ## 学习路径
 
 ### 路径一：快速了解（30 分钟）
 
-1. 阅读 [00 简介](./concepts/00-introduction.md)
-2. 浏览 [CLI 基本使用](./examples/01-basic-usage.md)
-3. 查看 [facts.md](./spec/facts.md) 中的事实概览
+1. 阅读 [00 简介](concepts/00-introduction.md)
+2. 浏览 [CLI 基本使用](examples/01-basic-usage.md)
+3. 查看 [facts.md](spec/facts.md) 中的事实概览
 
 ### 路径二：架构深入（2 小时）
 
-1. [01 工作区架构](./concepts/01-workspace-architecture.md) — 理解三语言分层
-2. [02 Rust 核心与 TUI](./concepts/02-rust-core-tui.md) — 深入核心实现
-3. [04 沙箱执行模型](./concepts/04-sandbox-execution.md) — 理解安全模型
-4. 阅读 [insights.md](./spec/insights.md) — 5 个架构洞察
-5. 查阅 [source.md](./references/source.md) — 定位源码文件
+1. [01 工作区架构](concepts/01-workspace-architecture.md) — 理解三语言分层
+2. [02 Rust 核心与 TUI](concepts/02-rust-core-tui.md) — 深入核心实现
+3. [04 沙箱执行模型](concepts/04-sandbox-execution.md) — 理解安全模型
+4. 阅读 [insights.md](spec/insights.md) — 5 个架构洞察
+5. 查阅 [source.md](references/source.md) — 定位源码文件
 
 ### 路径三：集成开发（1 小时）
 
-1. [03 Node.js CLI 入口](./concepts/03-nodejs-cli.md) — 理解分发机制
-2. [06 Python SDK](./concepts/06-python-sdk.md) — 程序化集成
-3. [Python SDK 示例](./examples/02-python-sdk.md) — 实际代码
-4. [05 Skills 与 AGENTS.md](./concepts/05-skills-agents-md.md) — 扩展 agent 能力
+1. [03 Node.js CLI 入口](concepts/03-nodejs-cli.md) — 理解分发机制
+2. [06 Python SDK](concepts/06-python-sdk.md) — 程序化集成
+3. [Python SDK 示例](examples/02-python-sdk.md) — 实际代码
+4. [05 Skills 与 AGENTS.md](concepts/05-skills-agents-md.md) — 扩展 agent 能力
 
 ## 目录结构
 

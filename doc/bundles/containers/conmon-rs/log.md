@@ -13,8 +13,8 @@ status: stable
 
 | 阶段 | 状态 | 产出 |
 |------|------|------|
-| R（事实采集） | ✅ 已预完成 | [facts-conmon-rs.md](../../../../.trae/specs/containers-okf-wiki/facts-conmon-rs.md) — 15 条零推测事实 |
-| I（洞察提炼） | ✅ 已预完成 | [insights.md](../../../../.trae/specs/containers-okf-wiki/insights.md) — 4 个核心洞察（conmon-rs部分）+ 知识地图 |
+| R（事实采集） | ✅ 已预完成 | facts-conmon-rs.md — 15 条零推测事实 |
+| I（洞察提炼） | ✅ 已预完成 | insights.md — 4 个核心洞察（conmon-rs部分）+ 知识地图 |
 | E（批量生成） | ✅ 完成 | 1 index + 4 concepts + 2 examples + 2 references + log = 10 文件 |
 | V（验证） | ✅ 完成 | frontmatter 合规检查、交叉链接路径验证、目录结构验证 |
 

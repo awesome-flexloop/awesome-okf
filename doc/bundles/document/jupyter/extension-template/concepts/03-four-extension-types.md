@@ -228,8 +228,8 @@ export default plugin;
 
 ## 相关概念
 
-- [前端扩展开发](/concepts/06-frontend-extension.md)
-- [服务端扩展开发](/concepts/07-server-extension.md)
-- [MIME 渲染器开发](/concepts/08-mime-renderer.md)
-- [主题扩展开发](/concepts/09-theme-extension.md)
-- [生成项目结构详解](/concepts/04-project-structure.md)
+- [前端扩展开发](06-frontend-extension.md)
+- [服务端扩展开发](07-server-extension.md)
+- [MIME 渲染器开发](08-mime-renderer.md)
+- [主题扩展开发](09-theme-extension.md)
+- [生成项目结构详解](04-project-structure.md)

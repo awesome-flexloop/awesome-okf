@@ -211,7 +211,7 @@ window._JUPYTERLAB[moduleName]?.get('./extension')
 
 ## 相关概念
 
-- [模块解析系统](/concepts/04-module-resolution.md)
-- [联邦扩展与共享模块](/concepts/07-federated-extensions.md)
-- [样式处理与CSS隔离](/concepts/08-style-handling.md)
-- [插件加载流程](/concepts/05-plugin-loader.md)
+- [模块解析系统](../concepts/04-module-resolution.md)
+- [联邦扩展与共享模块](../concepts/07-federated-extensions.md)
+- [样式处理与CSS隔离](../concepts/08-style-handling.md)
+- [插件加载流程](../concepts/05-plugin-loader.md)

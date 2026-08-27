@@ -205,9 +205,9 @@ Handler 按功能分组：仓库操作、远程操作、分支标签、文件暂
 
 ## 相关概念
 
-- [jupyterlab-git 简介](/concepts/00-introduction.md)
-- [安装与快速上手](/concepts/01-getting-started.md)
-- [插件系统与五个Plugin](/concepts/03-extension-plugin-system.md)
-- [GitExtension核心模型](/concepts/04-git-extension-model.md)
-- [REST API通信机制](/concepts/05-rest-api-and-communication.md)
-- [可插拔Diff系统](/concepts/06-diff-provider-system.md)
+- [jupyterlab-git 简介](00-introduction.md)
+- [安装与快速上手](01-getting-started.md)
+- [插件系统与五个Plugin](03-extension-plugin-system.md)
+- [GitExtension核心模型](04-git-extension-model.md)
+- [REST API通信机制](05-rest-api-and-communication.md)
+- [可插拔Diff系统](06-diff-provider-system.md)

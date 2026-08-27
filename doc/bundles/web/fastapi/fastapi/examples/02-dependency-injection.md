@@ -292,7 +292,7 @@ curl -X POST http://127.0.0.1:8000/articles/ \
 
 ## 相关概念
 
-- [依赖注入系统](/concepts/04-dependency-injection.md)
-- [参数声明与类型系统](/concepts/05-parameter-declaration.md)
-- [路由系统与请求处理管线](/concepts/02-routing-system.md)
-- [FastAPI 应用类](/concepts/01-application.md)
+- [依赖注入系统](../concepts/04-dependency-injection.md)
+- [参数声明与类型系统](../concepts/05-parameter-declaration.md)
+- [路由系统与请求处理管线](../concepts/02-routing-system.md)
+- [FastAPI 应用类](../concepts/01-application.md)

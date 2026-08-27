@@ -240,7 +240,7 @@ const (
 
 ## 相关概念
 
-- [四种任务类型](/concepts/01-task-types.md)
-- [Go/Python 桥接](/concepts/05-python-bridge.md)
-- [数据文件格式](/references/data-rules.md)
-- [Python 子系统信源](/references/python-subsystems.md)
+- [四种任务类型](01-task-types.md)
+- [Go/Python 桥接](05-python-bridge.md)
+- [数据文件格式](../references/data-rules.md)
+- [Python 子系统信源](../references/python-subsystems.md)

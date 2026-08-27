@@ -39,7 +39,7 @@ awesome-trae 将 TRAE 生态资源分为 8 个一级分类，每个分类下设�
 - **Games & Interactive**：游戏和交互式体验
 - **AI Applications**：AI 驱动的应用程序
 
-> ⚠️ **事实记录**：当前所有子类条目均为占位示例，等待社区贡献。更丰富的项目展示请参见 [trae-demos](../trae-demos/index.md) 仓库。
+> ⚠️ **事实记录**：当前所有子类条目均为占位示例，等待社区贡献。更丰富的项目展示请参见 [trae-demos](../../trae-demos/index.md) 仓库。
 
 ## 三、Custom Agents（自定义智能体）
 
@@ -50,7 +50,7 @@ TRAE 自定义 Agent 配置，分 4 个子类：
 - **Testing Helpers**：测试辅助类 Agent
 - **Workflow Agents**：工作流自动化 Agent
 
-> ⚠️ **事实记录**：当前所有子类条目均为占位示例。完整的 Agent 配置集合请参见 [trae-agents](../trae-agents/index.md) 仓库。
+> ⚠️ **事实记录**：当前所有子类条目均为占位示例。完整的 Agent 配置集合请参见 [trae-agents](../../trae-agents/index.md) 仓库。
 
 ## 四、Tools & Extensions（工具与扩展）
 
@@ -118,7 +118,7 @@ TRAE 社区入口：
 
 ## 相关链接
 
-- [Awesome List 定位与双层分类](/concepts/00-introduction.md)
-- [贡献指南与权重评分](/concepts/01-contribution-guide.md)
-- [添加资源条目示例](/examples/add-resource.md)
-- [Awesome TRAE 仓库资源索引](/references/awesome-source.md)
+- [Awesome List 定位与双层分类](00-introduction.md)
+- [贡献指南与权重评分](01-contribution-guide.md)
+- [添加资源条目示例](../examples/add-resource.md)
+- [Awesome TRAE 仓库资源索引](../references/awesome-source.md)

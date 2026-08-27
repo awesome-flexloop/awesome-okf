@@ -110,7 +110,7 @@ EC（最高决策机构）──┬──委派──→ SSC（软件决策）
 
 ## 相关概念
 
-- [执行委员会（EC）](/concepts/03-executive-council.md)
-- [选举与投票机制](/concepts/10-elections-and-voting.md)
-- [决策制定流程](/concepts/09-decision-making.md)
-- [常设委员会与工作组](/concepts/07-committees-and-working-groups.md)
+- [执行委员会（EC）](03-executive-council.md)
+- [选举与投票机制](10-elections-and-voting.md)
+- [决策制定流程](09-decision-making.md)
+- [常设委员会与工作组](07-committees-and-working-groups.md)

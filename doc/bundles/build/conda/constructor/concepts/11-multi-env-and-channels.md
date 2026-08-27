@@ -313,5 +313,5 @@ virtual_specs:
 
 ## 下一步
 
-- [06-FCP 依赖求解与包下载](../06-fcp-fetch-and-solve.md)：了解多环境在 FCP 中的处理细节
-- [13-签名与安全](../13-signing-and-security.md)：了解 frozen 环境保护机制
+- 06-FCP 依赖求解与包下载：了解多环境在 FCP 中的处理细节
+- 13-签名与安全：了解 frozen 环境保护机制

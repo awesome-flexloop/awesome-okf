@@ -100,6 +100,6 @@ hide_solutions = False  # 默认值
 
 ## 相关概念
 
-- [简介](/concepts/00-introduction.md)
-- [练习指令详解](/concepts/02-exercise-directive.md)
-- [基础练习示例](/examples/basic-exercise.md)
+- [简介](00-introduction.md)
+- [练习指令详解](02-exercise-directive.md)
+- [基础练习示例](../examples/basic-exercise.md)

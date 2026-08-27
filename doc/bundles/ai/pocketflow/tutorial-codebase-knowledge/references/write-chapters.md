@@ -15,7 +15,7 @@ source: nodes.py
 class WriteChapters(BatchNode):
 ```
 
-源码位置：[nodes.py#L537-L750](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py#L537-L750)
+源码位置：nodes.py#L537-L750
 
 ## 生命周期方法
 
@@ -132,4 +132,4 @@ post(shared, prep_res, [chapter1_md, ..., chapterN_md])
 
 ## 源码位置
 
-[nodes.py#L537-L750](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py#L537-L750)
+nodes.py#L537-L750

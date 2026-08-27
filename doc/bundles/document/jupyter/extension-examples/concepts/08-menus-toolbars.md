@@ -281,7 +281,7 @@ InputDialog提供多种输入方式：
 
 ## 相关概念
 
-- [命令系统](/concepts/04-commands.md)
-- [命令面板与Launcher](/concepts/07-palette-launcher.md)
-- [通知系统与日志](/concepts/10-notifications-logging.md)
-- [核心API与Token参考](/references/core-api-tokens.md)
+- [命令系统](04-commands.md)
+- [命令面板与Launcher](07-palette-launcher.md)
+- [通知系统与日志](10-notifications-logging.md)
+- [核心API与Token参考](../references/core-api-tokens.md)

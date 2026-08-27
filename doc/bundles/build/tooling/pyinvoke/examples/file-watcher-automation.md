@@ -377,4 +377,4 @@ def secure_setup(c):
 * [Context 对象（§3）](../concepts/03-context-object.md)
 * [终端与 IO（§10）](../concepts/10-terminals-io.md)
 
-[^pyinvoke-src]: PyInvoke 源码，见本 bundle 信源登记 [references/pyinvoke-source.md](/references/pyinvoke-source.md)。
+[^pyinvoke-src]: PyInvoke 源码，见本 bundle 信源登记 [references/pyinvoke-source.md](../references/pyinvoke-source.md)。

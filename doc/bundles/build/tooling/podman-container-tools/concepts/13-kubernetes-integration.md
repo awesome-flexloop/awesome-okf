@@ -242,7 +242,7 @@ kubectl apply -f webapp.yaml
 
 ## 相关概念
 
-- [Pod一等公民](/concepts/05-pod-first-class.md) — Pod是Podman原生一等公民，与kube play Pod直接映射
-- [systemd集成与Quadlet](/concepts/12-systemd-quadlet.md) — .kube单元类型通过Quadlet管理kube play服务开机自启
-- [容器操作命令](/concepts/07-container-commands.md) — podman run本地调试与kube generate导出
-- [容器工具生态全景](/concepts/14-ecosystem.md) — CRI-O等Kubernetes容器运行时与Podman的关系
+- [Pod一等公民](05-pod-first-class.md) — Pod是Podman原生一等公民，与kube play Pod直接映射
+- [systemd集成与Quadlet](12-systemd-quadlet.md) — .kube单元类型通过Quadlet管理kube play服务开机自启
+- [容器操作命令](07-container-commands.md) — podman run本地调试与kube generate导出
+- [容器工具生态全景](14-ecosystem.md) — CRI-O等Kubernetes容器运行时与Podman的关系

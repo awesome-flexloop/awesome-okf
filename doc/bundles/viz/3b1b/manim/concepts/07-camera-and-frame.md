@@ -81,7 +81,7 @@ FrameStream 的核心设计是保持 **一帧延迟**（behind=1）（F-079）�
 
 这种流水线设计避免了 GPU 等待 CPU 读取完成的空闲时间，是 ManimGL 流畅实时预览的关键之一。FrameStream 维护 `waiting` 列表记录待读取的缓冲区和 `asked` 计数器追踪状态。
 
-FrameStream 的异步机制与 Renderer 的 Bundling 优化共同构成 GPU 渲染三级优化体系（洞察 I-05），详见 [09 GPU 渲染管线](/concepts/09-rendering-pipeline.md)。
+FrameStream 的异步机制与 Renderer 的 Bundling 优化共同构成 GPU 渲染三级优化体系（洞察 I-05），详见 [09 GPU 渲染管线](09-rendering-pipeline.md)。
 
 ## CameraFrame：作为 Mobject 的相机
 
@@ -400,8 +400,8 @@ self.play(self.frame.animate.scale(1/0.3), run_time=0.8, rate_func=overshoot)
 
 ## 相关概念
 
-- [03 Mobject：数学对象基类](/concepts/03-mobject-fundamentals.md)
-- [05 动画基础](/concepts/05-animation-basics.md)
-- [06 Transform 深度解析](/concepts/06-transform-deep-dive.md)
-- [08 常量系统与颜色体系](/concepts/08-constants-and-colors.md)
-- [09 GPU 渲染管线](/concepts/09-rendering-pipeline.md)
+- [03 Mobject：数学对象基类](03-mobject-fundamentals.md)
+- [05 动画基础](05-animation-basics.md)
+- [06 Transform 深度解析](06-transform-deep-dive.md)
+- [08 常量系统与颜色体系](08-constants-and-colors.md)
+- [09 GPU 渲染管线](09-rendering-pipeline.md)

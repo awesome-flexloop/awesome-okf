@@ -45,5 +45,5 @@ mdformat-myst 实现了两个后处理器：
 
 ## 相关概念
 
-- [MyST 语法支持](/concepts/02-myst-syntax-support.md)
-- [插件架构](/concepts/01-plugin-architecture.md)
+- [MyST 语法支持](02-myst-syntax-support.md)
+- [插件架构](01-plugin-architecture.md)

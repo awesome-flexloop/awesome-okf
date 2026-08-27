@@ -141,7 +141,7 @@ ANN 通过构建精巧的索引结构，避免遍历全部向量，将搜索复�
 
 ## 延伸阅读
 
-- [IVF 与 PQ 量化](/ai/datawhale/easy-vecdb/concepts/ivf-pq-quantization.md) — 深入理解空间划分与向量压缩
-- [HNSW 与 LSH](/ai/datawhale/easy-vecdb/concepts/hnsw-lsh.md) — 图索引与哈希索引的原理
-- [Annoy 实践](/ai/datawhale/easy-vecdb/concepts/annoy-practice.md) — 轻量级 ANN 库的使用
-- [Faiss 与 Milvus 工程实践](/ai/datawhale/easy-vecdb/concepts/faiss-milvus-engineering.md) — 工业级向量检索引擎
+- [IVF 与 PQ 量化](ivf-pq-quantization.md) — 深入理解空间划分与向量压缩
+- [HNSW 与 LSH](hnsw-lsh.md) — 图索引与哈希索引的原理
+- [Annoy 实践](annoy-practice.md) — 轻量级 ANN 库的使用
+- [Faiss 与 Milvus 工程实践](faiss-milvus-engineering.md) — 工业级向量检索引擎

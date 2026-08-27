@@ -17,8 +17,8 @@ sources:
 
 ## 前置知识
 
-- [命令系统](/concepts/04-commands.md)
-- [命令面板与Launcher](/concepts/07-palette-launcher.md)
+- [命令系统](../concepts/04-commands.md)
+- [命令面板与Launcher](../concepts/07-palette-launcher.md)
 
 ## 完整代码
 
@@ -156,6 +156,6 @@ A: 运行 `jlpm install` 确保依赖安装完整。
 
 ## 相关概念
 
-- [命令系统](/concepts/04-commands.md)
-- [命令面板与Launcher](/concepts/07-palette-launcher.md)
-- [菜单与工具栏](/concepts/08-menus-toolbars.md)
+- [命令系统](../concepts/04-commands.md)
+- [命令面板与Launcher](../concepts/07-palette-launcher.md)
+- [菜单与工具栏](../concepts/08-menus-toolbars.md)

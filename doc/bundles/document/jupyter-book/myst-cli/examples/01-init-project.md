@@ -207,6 +207,6 @@ project:
 
 ## 下一步
 
-- [构建站点](/examples/02-build-site.md)
-- [启动开发服务器](/examples/03-dev-server.md)
-- [CLI 架构](/concepts/00-cli-architecture.md)
+- [构建站点](02-build-site.md)
+- [启动开发服务器](03-dev-server.md)
+- [CLI 架构](../concepts/00-cli-architecture.md)

@@ -1020,8 +1020,8 @@ result2 = await runner.run(agent, "Explain Python decorators")
 
 ## 相关概念
 
-- [Agent 核心循环模式](/concepts/01-agent-loop.md)
-- [工具系统](/concepts/02-tool-system.md)
-- [插件化架构模式](/concepts/08-plugin-architecture.md)
-- [多智能体编排](/concepts/04-multi-agent.md)
-- [模型 Provider 抽象](/concepts/05-provider-abstraction.md)
+- Agent 核心循环模式
+- 工具系统
+- 插件化架构模式
+- 多智能体编排
+- 模型 Provider 抽象

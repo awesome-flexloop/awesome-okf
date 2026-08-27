@@ -408,8 +408,8 @@ useEffect(() => {
 
 ## 相关文档
 
-- [03-thebe-core-api.md](/concepts/03-thebe-core-api.md)：核心 API 详解
-- [04-thebe-configuration.md](/concepts/04-thebe-configuration.md)：所有配置选项
-- [05-thebe-binder.md](/concepts/05-thebe-binder.md)：Binder 连接机制
-- [07-thebe-react.md](/concepts/07-thebe-react.md)：React Provider 和 Hook 详解
-- [03-thebe-lite.md](/examples/03-thebe-lite.md)：JupyterLite 无服务器模式
+- [03-thebe-core-api.md](../concepts/03-thebe-core-api.md)：核心 API 详解
+- [04-thebe-configuration.md](../concepts/04-thebe-configuration.md)：所有配置选项
+- [05-thebe-binder.md](../concepts/05-thebe-binder.md)：Binder 连接机制
+- [07-thebe-react.md](../concepts/07-thebe-react.md)：React Provider 和 Hook 详解
+- [03-thebe-lite.md](03-thebe-lite.md)：JupyterLite 无服务器模式

@@ -98,8 +98,8 @@ Jupyter 的工作不仅仅是写代码。行为准则事件响应、多元公平
 
 ## 相关概念
 
-- [三主体治理模型](/concepts/01-governance-model.md)
-- [执行委员会（EC）](/concepts/03-executive-council.md)
-- [软件指导委员会（SSC）](/concepts/04-software-steering-council.md)
-- [行为准则与执行机制](/concepts/13-code-of-conduct.md)
-- [决策制定流程](/concepts/09-decision-making.md)
+- [三主体治理模型](01-governance-model.md)
+- [执行委员会（EC）](03-executive-council.md)
+- [软件指导委员会（SSC）](04-software-steering-council.md)
+- [行为准则与执行机制](13-code-of-conduct.md)
+- [决策制定流程](09-decision-making.md)

@@ -73,5 +73,5 @@ sources:
 
 ## 相关概念
 
-- [插件解剖结构](/references/plugin-anatomy.md)
-- [核心API与Token](/references/core-api-tokens.md)
+- [插件解剖结构](plugin-anatomy.md)
+- [核心API与Token](core-api-tokens.md)

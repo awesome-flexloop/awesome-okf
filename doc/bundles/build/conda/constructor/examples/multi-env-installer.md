@@ -315,5 +315,5 @@ constructor . --dry-run
 
 ## 下一步
 
-- [Docker 镜像构建](./docker-installer.md)：将环境打包为 Docker 镜像
-- [签名安装程序](./signed-installer.md)：为发布版本添加代码签名
+- [Docker 镜像构建](docker-installer.md)：将环境打包为 Docker 镜像
+- [签名安装程序](signed-installer.md)：为发布版本添加代码签名

@@ -155,12 +155,12 @@ JupyterLab 插件之间有三种主要通信方式：
 
 ## 相关概念
 
-- [00 概述与知识地图](/concepts/00-introduction.md)
-- [01 整体架构概览](/concepts/01-architecture-overview.md)
-- [02 应用框架与 Shell 布局](/concepts/02-application-shell.md)
-- [04 服务层与后端通信](/concepts/04-service-layer.md)
-- [05 文档注册与 Widget 工厂](/concepts/05-document-widget-system.md)
-- [06 Notebook 与 Cell 架构](/concepts/06-notebook-cells.md)
-- [07 扩展生态系统](/concepts/07-extension-ecosystem.md)
-- [08 构建系统与运行模式](/concepts/08-build-and-modes.md)
-- [09 关键子系统](/concepts/09-key-subsystems.md)
+- [00 概述与知识地图](00-introduction.md)
+- [01 整体架构概览](01-architecture-overview.md)
+- [02 应用框架与 Shell 布局](02-application-shell.md)
+- [04 服务层与后端通信](04-service-layer.md)
+- [05 文档注册与 Widget 工厂](05-document-widget-system.md)
+- [06 Notebook 与 Cell 架构](06-notebook-cells.md)
+- [07 扩展生态系统](07-extension-ecosystem.md)
+- [08 构建系统与运行模式](08-build-and-modes.md)
+- [09 关键子系统](09-key-subsystems.md)

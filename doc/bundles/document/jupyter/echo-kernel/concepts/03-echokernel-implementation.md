@@ -259,7 +259,7 @@ this.stream({ name: 'stderr', text: 'Warning message\n' });
 
 ## 相关概念
 
-- [Echo Kernel简介](/concepts/00-introduction.md)
-- [JupyterLite内核架构](/concepts/01-kernel-architecture.md)
-- [插件注册机制](/concepts/02-plugin-registration.md)
-- [构建与打包](/concepts/04-build-and-packaging.md)
+- [Echo Kernel简介](00-introduction.md)
+- [JupyterLite内核架构](01-kernel-architecture.md)
+- [插件注册机制](02-plugin-registration.md)
+- [构建与打包](04-build-and-packaging.md)

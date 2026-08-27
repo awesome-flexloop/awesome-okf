@@ -82,7 +82,7 @@ Jupyter Server 团队举行每周一次的团队会议，作为同步项目进�
 
 ### 对成员的期望
 
-根据[成员指南](/concepts/04-member-guide.md)，活跃成员应"同步或异步地积极参与团队会议"。这意味着：
+根据[成员指南](04-member-guide.md)，活跃成员应"同步或异步地积极参与团队会议"。这意味着：
 - 不强制每次都实时参加
 - 但应通过异步方式保持知情和参与
 - 会议信息应定期关注
@@ -105,6 +105,6 @@ Jupyter Server 团队举行每周一次的团队会议，作为同步项目进�
 
 ## 相关概念
 
-- [成员指南与PR合并原则](/concepts/04-member-guide.md)
-- [决策机制](/concepts/03-decision-making.md)
-- [文档构建基础设施](/concepts/06-doc-infrastructure.md)
+- [成员指南与PR合并原则](04-member-guide.md)
+- [决策机制](03-decision-making.md)
+- [文档构建基础设施](06-doc-infrastructure.md)

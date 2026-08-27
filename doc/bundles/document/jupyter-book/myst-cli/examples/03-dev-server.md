@@ -177,6 +177,6 @@ myst start --execute
 
 ## 相关命令
 
-- [构建站点](/examples/02-build-site.md)
-- [初始化项目](/examples/01-init-project.md)
-- [Start 开发服务器架构](/concepts/02-start-dev-server.md)
+- [构建站点](02-build-site.md)
+- [初始化项目](01-init-project.md)
+- [Start 开发服务器架构](../concepts/02-start-dev-server.md)

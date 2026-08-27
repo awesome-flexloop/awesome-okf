@@ -185,7 +185,7 @@ assert enriched.invoke(3) == {"doubled": 6}  # RunnablePassthrough 透传 + assi
 
 ## 相关概念
 
-- [总览](/ai/langchain-ai/langchain/concepts/overview) —— Runnable 在整体架构中的位置
-- [消息类型](/ai/langchain-ai/langchain/concepts/message-types) —— 模型输入输出数据结构
-- [工具抽象](/ai/langchain-ai/langchain/concepts/tool-abstraction) —— BaseTool 本身也是 RunnableSerializable
-- [回调系统](/ai/langchain-ai/langchain/concepts/callback-system) —— 配置中 callbacks 的处理机制
+- 总览 —— Runnable 在整体架构中的位置
+- 消息类型 —— 模型输入输出数据结构
+- 工具抽象 —— BaseTool 本身也是 RunnableSerializable
+- 回调系统 —— 配置中 callbacks 的处理机制

@@ -314,7 +314,7 @@ jupyter lite build --contents content --output-dir dist --apps lab
 
 ## 相关概念
 
-- [自定义 Demo 站点指南](/concepts/07-customization-guide.md)
-- [GitHub Pages 部署流水线](/concepts/06-deployment-github-pages.md)
-- [站点配置详解](/concepts/02-site-configuration.md)
-- [从零部署到 GitHub Pages](/examples/01-first-deployment.md)
+- [自定义 Demo 站点指南](../concepts/07-customization-guide.md)
+- [GitHub Pages 部署流水线](../concepts/06-deployment-github-pages.md)
+- [站点配置详解](../concepts/02-site-configuration.md)
+- [从零部署到 GitHub Pages](01-first-deployment.md)

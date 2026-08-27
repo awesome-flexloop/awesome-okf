@@ -402,8 +402,8 @@ class ImplBase {
 
 ## 七、相关链接
 
-- [/deepseek/flash-mla/references/api](/ai/deepseek/flash-mla/references/api) — Python API 参考
-- [/deepseek/flash-mla/references/kv-cache-layout](/ai/deepseek/flash-mla/references/kv-cache-layout) — FP8 KV cache 布局详解
-- [/deepseek/flash-mla/concepts/hopper-blackwell-kernels](/ai/deepseek/flash-mla/concepts/hopper-blackwell-kernels) — Hopper/Blackwell 硬件特性与内核设计
-- [/deepseek/flash-mla/concepts/splitkv](/ai/deepseek/flash-mla/concepts/splitkv) — SplitKV 调度与执行流程
-- [/deepseek/deep-gemm/](/ai/deepseek/deep-gemm/) — DeepGEMM 高性能 GEMM 核函数库
+- /deepseek/flash-mla/references/api — Python API 参考
+- /deepseek/flash-mla/references/kv-cache-layout — FP8 KV cache 布局详解
+- /deepseek/flash-mla/concepts/hopper-blackwell-kernels — Hopper/Blackwell 硬件特性与内核设计
+- /deepseek/flash-mla/concepts/splitkv — SplitKV 调度与执行流程
+- [/deepseek/deep-gemm/](../../deep-gemm/index.md) — DeepGEMM 高性能 GEMM 核函数库

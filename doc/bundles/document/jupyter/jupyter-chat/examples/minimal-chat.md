@@ -185,6 +185,6 @@ widgetConfig.config = { sendWithShiftEnter: true };
 
 ## 下一步
 
-- [自定义扩展示例](/examples/custom-extension.md)：添加自定义工具栏按钮、消息渲染
-- [Bot 集成示例](/examples/bot-integration.md)：实现自动回复的聊天机器人
-- [扩展点系统](/concepts/extension-points.md)：了解所有扩展机制
+- [自定义扩展示例](custom-extension.md)：添加自定义工具栏按钮、消息渲染
+- [Bot 集成示例](bot-integration.md)：实现自动回复的聊天机器人
+- [扩展点系统](../concepts/extension-points.md)：了解所有扩展机制

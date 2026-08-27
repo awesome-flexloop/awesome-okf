@@ -122,7 +122,7 @@ app.connect("builder-inited", override_mathjax)
 
 ## 相关概念
 
-- [MyST-Parser 简介](/concepts/00-introduction.md)
-- [三阶段解析管线](/concepts/03-architecture-pipeline.md)
-- [配置系统](/concepts/04-config-system.md)
-- [Sphinx 集成机制](/concepts/11-sphinx-integration.md)
+- [MyST-Parser 简介](../concepts/00-introduction.md)
+- [三阶段解析管线](../concepts/03-architecture-pipeline.md)
+- [配置系统](../concepts/04-config-system.md)
+- [Sphinx 集成机制](../concepts/11-sphinx-integration.md)

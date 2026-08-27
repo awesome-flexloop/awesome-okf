@@ -50,55 +50,55 @@ CodeWhale 将一个约 68 万行的 Rust 编码 Agent 拆分为 21 个职责单�
 
 | 文档 | 说明 |
 |------|------|
-| [CodeWhale 简介](/concepts/00-introduction.md) | 项目定位、功能特性、安装方式 |
-| [工作区架构](/concepts/01-workspace-architecture.md) | 21 个 crate 的 Cargo workspace、依赖关系图、核心分层 |
-| [Agent 核心](/concepts/02-agent-core.md) | Runtime、Thread/Session 分离、Engine、JobManager |
-| [MCP 协议](/concepts/03-mcp-protocol.md) | MCP 服务器生命周期、工具代理、JSON-RPC stdio |
-| [工具系统](/concepts/04-tool-system.md) | ToolRegistry、ToolHandler、并行调度、参数验证 |
-| [Fleet 多 Agent](/concepts/05-fleet-subagents.md) | Fleet 控制平面、角色分类、权限 clamp |
-| [技能与 Hooks](/concepts/06-skills-hooks.md) | Skills 四层架构、Hooks 事件、插件系统 |
-| [沙箱与执行策略](/concepts/07-sandbox-execpolicy.md) | 执行策略引擎、Shell 安全防护、OS 沙箱 |
+| [CodeWhale 简介](concepts/00-introduction.md) | 项目定位、功能特性、安装方式 |
+| [工作区架构](concepts/01-workspace-architecture.md) | 21 个 crate 的 Cargo workspace、依赖关系图、核心分层 |
+| [Agent 核心](concepts/02-agent-core.md) | Runtime、Thread/Session 分离、Engine、JobManager |
+| [MCP 协议](concepts/03-mcp-protocol.md) | MCP 服务器生命周期、工具代理、JSON-RPC stdio |
+| [工具系统](concepts/04-tool-system.md) | ToolRegistry、ToolHandler、并行调度、参数验证 |
+| [Fleet 多 Agent](concepts/05-fleet-subagents.md) | Fleet 控制平面、角色分类、权限 clamp |
+| [技能与 Hooks](concepts/06-skills-hooks.md) | Skills 四层架构、Hooks 事件、插件系统 |
+| [沙箱与执行策略](concepts/07-sandbox-execpolicy.md) | 执行策略引擎、Shell 安全防护、OS 沙箱 |
 
 ### 示例
 
 | 示例 | 说明 |
 |------|------|
-| [基本使用](/examples/01-basic-usage.md) | 安装、配置、基本对话、模式切换 |
-| [Fleet 与 Workflow](/examples/02-fleet-workflow.md) | Fleet profile、CLI、TOML/JS Workflow、agent 委派 |
+| [基本使用](examples/01-basic-usage.md) | 安装、配置、基本对话、模式切换 |
+| [Fleet 与 Workflow](examples/02-fleet-workflow.md) | Fleet profile、CLI、TOML/JS Workflow、agent 委派 |
 
 ### 参考
 
 | 参考 | 说明 |
 |------|------|
-| [源文件索引](/references/source.md) | 按 crate 组织的关键源文件清单 |
+| [源文件索引](references/source.md) | 按 crate 组织的关键源文件清单 |
 
 ### 规格
 
 | 文件 | 说明 |
 |------|------|
-| [事实清单 (F-001~F-110)](/spec/facts.md) | 110 条带源文件引用的编号事实 |
-| [核心洞察](/spec/insights.md) | 5 条核心架构洞察（陈述/证据/反常识/行动） |
+| [事实清单 (F-001~F-110)](spec/facts.md) | 110 条带源文件引用的编号事实 |
+| [核心洞察](spec/insights.md) | 5 条核心架构洞察（陈述/证据/反常识/行动） |
 
 ## 学习路径
 
 ### 路径一：新用户入门
 
-1. [CodeWhale 简介](/concepts/00-introduction.md) — 了解项目是什么
-2. [基本使用示例](/examples/01-basic-usage.md) — 安装并开始对话
-3. [沙箱与执行策略](/concepts/07-sandbox-execpolicy.md) — 理解安全模型
+1. [CodeWhale 简介](concepts/00-introduction.md) — 了解项目是什么
+2. [基本使用示例](examples/01-basic-usage.md) — 安装并开始对话
+3. [沙箱与执行策略](concepts/07-sandbox-execpolicy.md) — 理解安全模型
 
 ### 路径二：架构理解
 
-1. [工作区架构](/concepts/01-workspace-architecture.md) — 21 个 crate 如何组织
-2. [Agent 核心](/concepts/02-agent-core.md) — Runtime、Engine、Session
-3. [工具系统](/concepts/04-tool-system.md) — 工具注册、分发和并发
-4. [MCP 协议](/concepts/03-mcp-protocol.md) — 外部工具集成
+1. [工作区架构](concepts/01-workspace-architecture.md) — 21 个 crate 如何组织
+2. [Agent 核心](concepts/02-agent-core.md) — Runtime、Engine、Session
+3. [工具系统](concepts/04-tool-system.md) — 工具注册、分发和并发
+4. [MCP 协议](concepts/03-mcp-protocol.md) — 外部工具集成
 
 ### 路径三：多 Agent 与工作流
 
-1. [Fleet 多 Agent](/concepts/05-fleet-subagents.md) — 角色、权限 clamp
-2. [Fleet 与 Workflow 示例](/examples/02-fleet-workflow.md) — 实际配置和脚本
-3. [技能与 Hooks](/concepts/06-skills-hooks.md) — 扩展和自动化
+1. [Fleet 多 Agent](concepts/05-fleet-subagents.md) — 角色、权限 clamp
+2. [Fleet 与 Workflow 示例](examples/02-fleet-workflow.md) — 实际配置和脚本
+3. [技能与 Hooks](concepts/06-skills-hooks.md) — 扩展和自动化
 
 ## 目录结构
 

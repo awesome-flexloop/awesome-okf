@@ -266,9 +266,9 @@ sequenceDiagram
 
 ## 相关概念
 
-- [配置参考](/concepts/09-configuration.md)
-- [自定义节点类层次](/concepts/11-node-hierarchy.md)
-- [前端 JavaScript 交互机制](/concepts/12-frontend-js.md)
-- [指令系统总览](/concepts/03-directive-overview.md)
-- [核心模块源码](/references/main-source.md)
-- [配置项完整速查表](/references/config-reference.md)
+- [配置参考](09-configuration.md)
+- [自定义节点类层次](11-node-hierarchy.md)
+- [前端 JavaScript 交互机制](12-frontend-js.md)
+- [指令系统总览](03-directive-overview.md)
+- [核心模块源码](../references/main-source.md)
+- [配置项完整速查表](../references/config-reference.md)

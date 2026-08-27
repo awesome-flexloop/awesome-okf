@@ -212,9 +212,9 @@ Schema条目的occurrences格式为 `(ref_path, json_pointer_path)`，例如：
 
 ## 相关概念
 
-- [翻译目录管理](/concepts/05-catalog-management.md)
-- [Jed JSON翻译格式](/concepts/06-json-jed-format.md)
-- [Schema国际化选择器](/concepts/09-schema-i18n-selectors.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [核心工具源码映射](/references/utils-source.md)
-- [常量与配置映射](/references/constants-config.md)
+- [翻译目录管理](05-catalog-management.md)
+- [Jed JSON翻译格式](06-json-jed-format.md)
+- [Schema国际化选择器](09-schema-i18n-selectors.md)
+- [快速开始](01-getting-started.md)
+- [核心工具源码映射](../references/utils-source.md)
+- [常量与配置映射](../references/constants-config.md)

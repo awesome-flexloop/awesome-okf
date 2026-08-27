@@ -151,6 +151,6 @@ sources:
 
 ## 相关概念
 
-- [核心异文选读](/concepts/04-key-variants.md)
-- [避讳字与通假字](/concepts/03-taboo-characters.md)
-- [如何使用历代注本](/concepts/05-using-commentaries.md)
+- [核心异文选读](../concepts/04-key-variants.md)
+- [避讳字与通假字](../concepts/03-taboo-characters.md)
+- [如何使用历代注本](../concepts/05-using-commentaries.md)

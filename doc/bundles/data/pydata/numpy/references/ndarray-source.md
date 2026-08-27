@@ -164,6 +164,6 @@ array_function_dispatch = functools.partial(
 
 ## 相关概念
 
-- [ndarray多维数组](/concepts/01-ndarray.md)
-- [数组创建](/concepts/06-array-creation.md)
-- [索引与切片](/concepts/05-indexing.md)
+- [ndarray多维数组](../concepts/01-ndarray.md)
+- [数组创建](../concepts/06-array-creation.md)
+- [索引与切片](../concepts/05-indexing.md)

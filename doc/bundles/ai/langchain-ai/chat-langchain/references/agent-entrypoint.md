@@ -119,6 +119,6 @@ model_fallback_middleware  # ModelFallbackMiddleware("openai:gpt-5.4-nano", "ant
 
 ## 相关文档
 
-- [Identity 合约参考](/ai/langchain-ai/chat-langchain/references/identity-contract)
-- [架构总览](/ai/langchain-ai/chat-langchain/concepts/overview)
-- [事实清单](/ai/langchain-ai/chat-langchain/spec/facts)
+- Identity 合约参考
+- 架构总览
+- 事实清单

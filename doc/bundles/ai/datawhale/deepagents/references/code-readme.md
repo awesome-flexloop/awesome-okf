@@ -20,4 +20,4 @@ Deep Agents Code（dcode）终端编码 Agent 的产品文档。
 
 ## 相关概念
 
-- [Code终端编码Agent](/ai/datawhale/deepagents/concepts/code-module)
+- Code终端编码Agent

@@ -70,6 +70,6 @@ GodGPT 将应用定位为加密、私密、无评判的"数字圣殿"。隐私�
 
 ## 相关概念
 
-- [神圣智能 — GodGPT产品定位](/concepts/00-divine-intelligence.md)
-- [商业模式 — 订阅制与推广联盟](/concepts/02-business-model.md)
-- [隐私与法律框架](/concepts/03-privacy-legal.md)
+- [神圣智能 — GodGPT产品定位](00-divine-intelligence.md)
+- [商业模式 — 订阅制与推广联盟](02-business-model.md)
+- [隐私与法律框架](03-privacy-legal.md)

@@ -102,6 +102,6 @@ Copier 特别适合以下场景：
 - [模板配置文件](02-template-configuration.md)
 - [问题与答案系统](03-questions-and-answers.md)
 - [Jinja2 模板渲染](04-jinja2-templating.md)
-- [Copier 源码信源登记](/references/copier-source.md)
+- [Copier 源码信源登记](../references/copier-source.md)
 
-[^copier-source]: Copier 源码信源，见 [copier-source.md](/references/copier-source.md)。
+[^copier-source]: Copier 源码信源，见 [copier-source.md](../references/copier-source.md)。

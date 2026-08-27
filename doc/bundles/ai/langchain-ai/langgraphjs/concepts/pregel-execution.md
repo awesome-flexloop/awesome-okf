@@ -165,6 +165,6 @@ const workflow = entrypoint({ name: "wf", checkpointer }, async (input) => {
 
 ## 相关概念
 
-- [状态图与工作流](state-graph) — 声明式构建 Pregel 程序
-- [Channels 通道体系](channels) — 节点通信的媒介
-- [Checkpoint 持久化](checkpointing) — 超步边界的状态保存
+- [状态图与工作流](state-graph.md) — 声明式构建 Pregel 程序
+- [Channels 通道体系](channels.md) — 节点通信的媒介
+- [Checkpoint 持久化](checkpointing.md) — 超步边界的状态保存

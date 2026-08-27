@@ -50,11 +50,11 @@ layout = html.Div([
 ])
 ```
 
-这些组件包的实际实现是通过 Python 代码生成器从 React 组件的 PropTypes 自动生成的（[development/](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/development/) 目录中的 `_py_components_generation.py`），在安装时作为独立包分发（`dash-core-components`、`dash-html-components`、`dash-table`）。
+这些组件包的实际实现是通过 Python 代码生成器从 React 组件的 PropTypes 自动生成的（development/ 目录中的 `_py_components_generation.py`），在安装时作为独立包分发（`dash-core-components`、`dash-html-components`、`dash-table`）。
 
 ## Component 基类
 
-所有组件都继承自 `Component` 类（[base_component.py:110](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/development/base_component.py#L110)），使用 `ComponentMeta` 元类（[base_component.py:60](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/development/base_component.py#L60)）自动注册到 `ComponentRegistry`。
+所有组件都继承自 `Component` 类（base_component.py:110），使用 `ComponentMeta` 元类（base_component.py:60）自动注册到 `ComponentRegistry`。
 
 ### 类属性
 
@@ -71,7 +71,7 @@ class MyComponent(Component):
 
 ### 构造函数
 
-`__init__` 接收 `**kwargs`，每个 kwarg 对应一个组件属性（[base_component.py:158-234](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/development/base_component.py#L158-L234)）：
+`__init__` 接收 `**kwargs`，每个 kwarg 对应一个组件属性（base_component.py:158-234）：
 
 ```python
 def __init__(self, **kwargs):
@@ -108,7 +108,7 @@ def __init__(self, **kwargs):
 
 ### 自动 ID 生成
 
-如果组件未指定 `id` 但被用于回调的依赖中，框架自动生成 UUID（[base_component.py:236-267](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/development/base_component.py#L236-L267)）：
+如果组件未指定 `id` 但被用于回调的依赖中，框架自动生成 UUID（base_component.py:236-267）：
 
 ```python
 def _set_random_id(self):
@@ -123,7 +123,7 @@ def _set_random_id(self):
 
 ### to_plotly_json() 序列化
 
-组件序列化为 JSON 的核心方法（[base_component.py:269-294](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/development/base_component.py#L269-L294)）：
+组件序列化为 JSON 的核心方法（base_component.py:269-294）：
 
 ```python
 def to_plotly_json(self):
@@ -150,7 +150,7 @@ def to_plotly_json(self):
 
 ### 组件树操作
 
-Component 类实现了类似字典的接口，支持按 ID 递归查找、替换、删除子组件（[base_component.py:298-360](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/development/base_component.py#L298-L360)）：
+Component 类实现了类似字典的接口，支持按 ID 递归查找、替换、删除子组件（base_component.py:298-360）：
 
 - `component["child-id"]`：递归查找 ID 为 `child-id` 的子组件
 - `component["child-id"] = new_component`：替换子组件
@@ -174,7 +174,7 @@ REQUIRED = _REQUIRED()
 
 ## ComponentRegistry 组件注册表
 
-`ComponentRegistry`（[base_component.py:38-57](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/development/base_component.py#L38-L57)）是全局组件元数据注册表：
+`ComponentRegistry`（base_component.py:38-57）是全局组件元数据注册表：
 
 ```python
 class ComponentRegistry:
@@ -185,7 +185,7 @@ class ComponentRegistry:
 
 ### 自动注册机制
 
-`ComponentMeta.__new__`（[base_component.py:63-90](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/development/base_component.py#L63-L90)）在每个 Component 子类创建时自动：
+`ComponentMeta.__new__`（base_component.py:63-90）在每个 Component 子类创建时自动：
 
 1. 将组件所在模块添加到 `registry`
 2. 记录 `_namespace` 到包名的映射
@@ -248,7 +248,7 @@ html 组件直接对应 HTML 属性，如 `html.A(href="...", target="_blank")`�
 
 ## MCP（Model Context Protocol）工具集成
 
-Dash 4.x 内置了 MCP 服务器支持（[dash/mcp/](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/mcp/)），使 Dash 应用可以作为 MCP 工具被 AI 助手调用。
+Dash 4.x 内置了 MCP 服务器支持（dash/mcp/），使 Dash 应用可以作为 MCP 工具被 AI 助手调用。
 
 ### 启用 MCP
 
@@ -323,7 +323,7 @@ def query_data(query):
 
 ## 组件开发与代码生成
 
-[development/](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/development/) 目录包含从 React 组件自动生成 Python/R/Julia 组件类的工具：
+development/ 目录包含从 React 组件自动生成 Python/R/Julia 组件类的工具：
 
 - `component_generator.py`：组件生成器主逻辑
 - `_py_components_generation.py`：Python 代码生成

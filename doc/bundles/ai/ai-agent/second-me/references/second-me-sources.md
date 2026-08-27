@@ -29,7 +29,7 @@ sources:
 | 版本 | **0.1.0**（前端 package.json 标注） |
 | 描述 | 开源本地 AI 自我（AI Self）原型——基于分层记忆建模（HMM）与 Me-Alignment 算法，在本地训练和托管个人 AI 分身，并支持跨 Second Me 网络互联协作 |
 | 维护者 | Mindverse（mindverse） |
-| 许可证 | 详见 [LICENSE](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/LICENSE) 文件 |
+| 许可证 | 详见 LICENSE 文件 |
 | 官方主页 | <https://home.second.me/> |
 | 源码仓库 | <https://github.com/mindverse/Second-Me> |
 | 论文 | AI-native Memory ([arXiv:2406.18312](https://arxiv.org/abs/2406.18312))、AI-native Memory 2.0 ([arXiv:2503.08102](https://arxiv.org/abs/2503.08102)) |
@@ -131,63 +131,63 @@ Second-Me 的核心创新是**分层记忆建模（Hierarchical Memory Modeling,
 
 | 文件 | 内容 |
 |------|------|
-| [lpm_kernel/app.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/app.py) | Flask 应用工厂 `create_app()`，初始化数据库、CORS、文件服务，注册所有 Blueprint，监听 0.0.0.0:8000 |
-| [lpm_kernel/configs/config.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/configs/config.py) | `Config` 单例类（`__new__` 实现），从 `.env` 加载配置，含 `DatabaseConfig` 子配置，管理 ChromaDB/服务URL等 |
-| [docker-compose.yml](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/docker-compose.yml) | CPU 版 Docker 编排，后端端口 8002，前端端口 3000 |
-| [docker-compose-gpu.yml](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/docker-compose-gpu.yml) | GPU 版 Docker 编排，支持 CUDA 加速 |
+| lpm_kernel/app.py | Flask 应用工厂 `create_app()`，初始化数据库、CORS、文件服务，注册所有 Blueprint，监听 0.0.0.0:8000 |
+| lpm_kernel/configs/config.py | `Config` 单例类（`__new__` 实现），从 `.env` 加载配置，含 `DatabaseConfig` 子配置，管理 ChromaDB/服务URL等 |
+| docker-compose.yml | CPU 版 Docker 编排，后端端口 8002，前端端口 3000 |
+| docker-compose-gpu.yml | GPU 版 Docker 编排，支持 CUDA 加速 |
 
 ### L0 层 — 原始记忆处理
 
 | 文件 | 内容 |
 |------|------|
-| [lpm_kernel/L0/models.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L0/models.py) | 5 个 dataclass：`FileInfo`、`DocumentType`（枚举）、`BioInfo`、`InsighterInput`（含 `from_dict` 工厂）、`SummarizerInput`（含 `from_dict` 工厂） |
-| [lpm_kernel/L0/l0_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L0/l0_generator.py) | `L0Generator` 类：`insighter()` 按 DataType 分派到 `_insighter_image/audio/doc` 三方法；`summarizer()` 支持串行细粒度摘要和采样全文摘要两种策略；使用 tiktoken cl100k_base 编码 |
-| [lpm_kernel/L0/prompt.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L0/prompt.py) | L0 层 prompt 模板集合（image/audio/document 的 parser/overview/breakdown 模板） |
+| lpm_kernel/L0/models.py | 5 个 dataclass：`FileInfo`、`DocumentType`（枚举）、`BioInfo`、`InsighterInput`（含 `from_dict` 工厂）、`SummarizerInput`（含 `from_dict` 工厂） |
+| lpm_kernel/L0/l0_generator.py | `L0Generator` 类：`insighter()` 按 DataType 分派到 `_insighter_image/audio/doc` 三方法；`summarizer()` 支持串行细粒度摘要和采样全文摘要两种策略；使用 tiktoken cl100k_base 编码 |
+| lpm_kernel/L0/prompt.py | L0 层 prompt 模板集合（image/audio/document 的 parser/overview/breakdown 模板） |
 
 ### L1 层 — 身份洞察
 
 | 文件 | 内容 |
 |------|------|
-| [lpm_kernel/L1/bio.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/bio.py) | 核心数据结构：`Chunk`、`Note`（含多种to_str方法）、`Cluster`（均值中心+DISTANCE_RATE=0.8剪枝）、`ShadeInfo`（双视角+ShadeTimeline）、`Bio`（双视角传记+属性/侧面列表）、`UserInfo`（时间窗口划分记忆） |
-| [lpm_kernel/L1/l1_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/l1_generator.py) | `L1Generator` 类，组合 `ShadeGenerator`/`ShadeMerger`/`StatusBioGenerator`/`TopicsGenerator` 四子生成器 |
-| [lpm_kernel/L1/shade_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/shade_generator.py) | Shade（人格侧面）生成器 |
-| [lpm_kernel/L1/status_bio_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/status_bio_generator.py) | 状态传记生成器（短期身份描述） |
-| [lpm_kernel/L1/topics_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/topics_generator.py) | 主题提取生成器 |
+| lpm_kernel/L1/bio.py | 核心数据结构：`Chunk`、`Note`（含多种to_str方法）、`Cluster`（均值中心+DISTANCE_RATE=0.8剪枝）、`ShadeInfo`（双视角+ShadeTimeline）、`Bio`（双视角传记+属性/侧面列表）、`UserInfo`（时间窗口划分记忆） |
+| lpm_kernel/L1/l1_generator.py | `L1Generator` 类，组合 `ShadeGenerator`/`ShadeMerger`/`StatusBioGenerator`/`TopicsGenerator` 四子生成器 |
+| lpm_kernel/L1/shade_generator.py | Shade（人格侧面）生成器 |
+| lpm_kernel/L1/status_bio_generator.py | 状态传记生成器（短期身份描述） |
+| lpm_kernel/L1/topics_generator.py | 主题提取生成器 |
 
 ### L2 层 — 模型训练与对齐
 
 | 文件 | 内容 |
 |------|------|
-| [lpm_kernel/L2/l2_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/l2_generator.py) | `L2Generator` 类，编排 data_preprocess 和 gen_subjective_data（偏好/多样性/自我QA/图索引四类数据） |
-| [lpm_kernel/L2/data.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/data.py) | `L2DataProcessor` 类，`__call__` 方法按类型分 subjective/objective notes，导入四类数据生成器 |
-| [lpm_kernel/L2/train.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/train.py) | SFT 训练主文件，使用 SFTTrainer+LoraConfig(r=64,alpha=16,dropout=0.1)，自定义 LogTqdm 和 DebugCallback |
-| [lpm_kernel/L2/merge_lora_weights.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/merge_lora_weights.py) | `merge_lora_weights()` 函数：PeftModel.from_pretrained + merge_and_unload()，自动检测 CUDA |
-| [lpm_kernel/L2/dpo/dpo_train.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/dpo/dpo_train.py) | DPO 训练：DPOTrainer+DPOConfig，数据格式 prompt/chosen/rejected，支持 LoRA |
-| [lpm_kernel/L2/convert_hf_to_gguf.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/convert_hf_to_gguf.py) | HuggingFace 模型转 GGUF 格式（f16量化） |
-| [lpm_kernel/L2/memory_manager.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/memory_manager.py) | GPU 内存管理工具，训练后清理显存 |
+| lpm_kernel/L2/l2_generator.py | `L2Generator` 类，编排 data_preprocess 和 gen_subjective_data（偏好/多样性/自我QA/图索引四类数据） |
+| lpm_kernel/L2/data.py | `L2DataProcessor` 类，`__call__` 方法按类型分 subjective/objective notes，导入四类数据生成器 |
+| lpm_kernel/L2/train.py | SFT 训练主文件，使用 SFTTrainer+LoraConfig(r=64,alpha=16,dropout=0.1)，自定义 LogTqdm 和 DebugCallback |
+| lpm_kernel/L2/merge_lora_weights.py | `merge_lora_weights()` 函数：PeftModel.from_pretrained + merge_and_unload()，自动检测 CUDA |
+| lpm_kernel/L2/dpo/dpo_train.py | DPO 训练：DPOTrainer+DPOConfig，数据格式 prompt/chosen/rejected，支持 LoRA |
+| lpm_kernel/L2/convert_hf_to_gguf.py | HuggingFace 模型转 GGUF 格式（f16量化） |
+| lpm_kernel/L2/memory_manager.py | GPU 内存管理工具，训练后清理显存 |
 
 ### API 服务层
 
 | 文件 | 内容 |
 |------|------|
-| [lpm_kernel/api/__init__.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/__init__.py) | `init_routes(app)` 注册全部 13 个 Flask Blueprint |
-| [lpm_kernel/api/domains/trainprocess/trainprocess_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/trainprocess/trainprocess_service.py) | `TrainProcessService` 单例，编排 14 步训练流水线，支持断点续训、进度监控、资源清理 |
-| [lpm_kernel/api/domains/trainprocess/process_step.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/trainprocess/process_step.py) | `ProcessStep` 枚举，定义 14 个训练步骤及有序排列 |
-| [lpm_kernel/api/domains/kernel2/services/chat_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/kernel2/services/chat_service.py) | 聊天服务，调用本地 llama-server，支持流式/非流式响应 |
-| [lpm_kernel/api/domains/kernel2/services/prompt_builder.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/kernel2/services/prompt_builder.py) | Prompt 构建责任链：BasePromptStrategy→ContextEnhancedStrategy→RoleBasedStrategy→KnowledgeEnhancedStrategy |
-| [lpm_kernel/api/domains/space/space_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/space_service.py) | Space 领域服务层，组合 SpaceRepository+DiscussionService |
-| [lpm_kernel/api/domains/space/services/discussion_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/services/discussion_service.py) | `DiscussionService`：固定3轮讨论，host opening→participant轮次→host summary |
-| [lpm_kernel/api/services/local_llm_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/services/local_llm_service.py) | 本地 llama-server 进程管理（启动/停止/状态检测/流式响应转发） |
-| [lpm_kernel/file_data/document_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/file_data/document_service.py) | 文档 CRUD、L0 分析、embedding 处理编排 |
+| lpm_kernel/api/__init__.py | `init_routes(app)` 注册全部 13 个 Flask Blueprint |
+| lpm_kernel/api/domains/trainprocess/trainprocess_service.py | `TrainProcessService` 单例，编排 14 步训练流水线，支持断点续训、进度监控、资源清理 |
+| lpm_kernel/api/domains/trainprocess/process_step.py | `ProcessStep` 枚举，定义 14 个训练步骤及有序排列 |
+| lpm_kernel/api/domains/kernel2/services/chat_service.py | 聊天服务，调用本地 llama-server，支持流式/非流式响应 |
+| lpm_kernel/api/domains/kernel2/services/prompt_builder.py | Prompt 构建责任链：BasePromptStrategy→ContextEnhancedStrategy→RoleBasedStrategy→KnowledgeEnhancedStrategy |
+| lpm_kernel/api/domains/space/space_service.py | Space 领域服务层，组合 SpaceRepository+DiscussionService |
+| lpm_kernel/api/domains/space/services/discussion_service.py | `DiscussionService`：固定3轮讨论，host opening→participant轮次→host summary |
+| lpm_kernel/api/services/local_llm_service.py | 本地 llama-server 进程管理（启动/停止/状态检测/流式响应转发） |
+| lpm_kernel/file_data/document_service.py | 文档 CRUD、L0 分析、embedding 处理编排 |
 
 ### 前端关键文件
 
 | 文件 | 内容 |
 |------|------|
-| [lpm_frontend/src/service/train.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_frontend/src/service/train.ts) | 训练 API 封装，定义 5 个训练阶段类型（StageName） |
-| [lpm_frontend/src/service/memory.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_frontend/src/service/memory.ts) | 记忆文件 API，定义 `MemoryFile` 接口（含四状态枚举） |
-| [lpm_frontend/src/service/space.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_frontend/src/service/space.ts) | Space API 封装，定义 SpaceInfo/SpaceMessage 接口 |
-| [lpm_frontend/src/hooks/useSSE.tsx](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_frontend/src/hooks/useSSE.tsx) | Server-Sent Events 自定义 Hook |
+| lpm_frontend/src/service/train.ts | 训练 API 封装，定义 5 个训练阶段类型（StageName） |
+| lpm_frontend/src/service/memory.ts | 记忆文件 API，定义 `MemoryFile` 接口（含四状态枚举） |
+| lpm_frontend/src/service/space.ts | Space API 封装，定义 SpaceInfo/SpaceMessage 接口 |
+| lpm_frontend/src/hooks/useSSE.tsx | Server-Sent Events 自定义 Hook |
 
 ## 核心类与数据模型索引
 
@@ -195,76 +195,76 @@ Second-Me 的核心创新是**分层记忆建模（Hierarchical Memory Modeling,
 
 | 类名 | 定义位置 | 核心字段 | 说明 |
 |------|---------|---------|------|
-| `FileInfo` | [L0/models.py:L6-L13](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L0/models.py#L6-L13) | data_type, filename, content, file_content | 文件信息封装 |
-| `DocumentType` | [L0/models.py:L16-L37](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L0/models.py#L16-L37) | DOCUMENT, TEXT | 文档类型枚举，含 `from_mime_type()` |
-| `BioInfo` | [L0/models.py:L40-L46](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L0/models.py#L40-L46) | global_bio, status_bio, about_me | 用户传记信息 |
-| `InsighterInput` | [L0/models.py:L49-L78](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L0/models.py#L49-L78) | file_info, bio_info | 洞察输入（含 `from_dict`） |
-| `SummarizerInput` | [L0/models.py:L81-L106](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L0/models.py#L81-L106) | file_info, insight | 摘要输入（含 `from_dict`） |
-| `L0Generator` | [L0/l0_generator.py:L32-L857](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L0/l0_generator.py#L32-L857) | preferred_language, client, tokenizer | L0 主生成器，insighter+summarizer |
+| `FileInfo` | L0/models.py:L6-L13 | data_type, filename, content, file_content | 文件信息封装 |
+| `DocumentType` | L0/models.py:L16-L37 | DOCUMENT, TEXT | 文档类型枚举，含 `from_mime_type()` |
+| `BioInfo` | L0/models.py:L40-L46 | global_bio, status_bio, about_me | 用户传记信息 |
+| `InsighterInput` | L0/models.py:L49-L78 | file_info, bio_info | 洞察输入（含 `from_dict`） |
+| `SummarizerInput` | L0/models.py:L81-L106 | file_info, insight | 摘要输入（含 `from_dict`） |
+| `L0Generator` | L0/l0_generator.py:L32-L857 | preferred_language, client, tokenizer | L0 主生成器，insighter+summarizer |
 
 ### L1 层数据模型
 
 | 类名 | 定义位置 | 核心字段 | 说明 |
 |------|---------|---------|------|
-| `Chunk` | [L1/bio.py:L72-L130](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/bio.py#L72-L130) | id, document_id, content, embedding, tags, topic | 文档分块（embedding为numpy数组） |
-| `Note` | [L1/bio.py:L133-L274](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/bio.py#L133-L274) | id, content, embedding, chunks, title, summary, insight, tags, topic, memory_type | 记忆笔记，含多种to_str方法 |
-| `Cluster` | [L1/bio.py:L289-L349](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/bio.py#L289-L349) | cluster_id, memory_list, cluster_center, size, merge_list | 记忆簇，均值中心+离群剪枝 |
-| `ShadeInfo` | [L1/bio.py:L351-L496](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/bio.py#L351-L496) | id, name, aspect, icon, desc/content(third/second_view), timelines, confidence_level | 人格侧面（双视角+时间线） |
-| `ShadeTimeline` | [L1/bio.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/bio.py) | refMemoryId, createTime, descSecondView/ThirdView | Shade内嵌时间线条目 |
-| `Bio` | [L1/bio.py:L531-L597](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/bio.py#L531-L597) | content/summary(third/second_view), attribute_list, shades_list | L1核心输出：用户传记 |
-| `UserInfo` | [L1/bio.py:L680-L786](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/bio.py#L680-L786) | notes, todos, chats, memories(recent/earlier) | 用户信息聚合，时间窗口划分 |
-| `L1Generator` | [L1/l1_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/l1_generator.py) | shade_generator, shade_merger, status_bio_generator, topics_generator | L1主生成器 |
+| `Chunk` | L1/bio.py:L72-L130 | id, document_id, content, embedding, tags, topic | 文档分块（embedding为numpy数组） |
+| `Note` | L1/bio.py:L133-L274 | id, content, embedding, chunks, title, summary, insight, tags, topic, memory_type | 记忆笔记，含多种to_str方法 |
+| `Cluster` | L1/bio.py:L289-L349 | cluster_id, memory_list, cluster_center, size, merge_list | 记忆簇，均值中心+离群剪枝 |
+| `ShadeInfo` | L1/bio.py:L351-L496 | id, name, aspect, icon, desc/content(third/second_view), timelines, confidence_level | 人格侧面（双视角+时间线） |
+| `ShadeTimeline` | L1/bio.py | refMemoryId, createTime, descSecondView/ThirdView | Shade内嵌时间线条目 |
+| `Bio` | L1/bio.py:L531-L597 | content/summary(third/second_view), attribute_list, shades_list | L1核心输出：用户传记 |
+| `UserInfo` | L1/bio.py:L680-L786 | notes, todos, chats, memories(recent/earlier) | 用户信息聚合，时间窗口划分 |
+| `L1Generator` | L1/l1_generator.py | shade_generator, shade_merger, status_bio_generator, topics_generator | L1主生成器 |
 
 ### L2 层核心类
 
 | 类名 | 定义位置 | 核心方法 | 说明 |
 |------|---------|---------|------|
-| `L2Generator` | [L2/l2_generator.py:L21-L80](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/l2_generator.py#L21-L80) | data_preprocess(), gen_subjective_data(), gen_preference_data(), gen_selfqa_data(), gen_diversity_data() | L2数据生成编排器 |
-| `L2DataProcessor` | [L2/data.py:L39-L80](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/data.py#L39-L80) | `__call__()`, split_notes_by_type() | 笔记分类与数据预处理 |
-| `ModelArguments` | [L2/train.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/train.py) | model_name_or_path, lora_alpha=16, lora_r=64, lora_dropout=0.1, lora_target_modules | LoRA训练参数dataclass |
-| `TrainProcessService` | [api/domains/trainprocess/trainprocess_service.py:L38-L1109](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/trainprocess/trainprocess_service.py#L38-L1109) | 14个step方法, start_process(), _prepare_l2_data() | 训练流水线单例服务 |
+| `L2Generator` | L2/l2_generator.py:L21-L80 | data_preprocess(), gen_subjective_data(), gen_preference_data(), gen_selfqa_data(), gen_diversity_data() | L2数据生成编排器 |
+| `L2DataProcessor` | L2/data.py:L39-L80 | `__call__()`, split_notes_by_type() | 笔记分类与数据预处理 |
+| `ModelArguments` | L2/train.py | model_name_or_path, lora_alpha=16, lora_r=64, lora_dropout=0.1, lora_target_modules | LoRA训练参数dataclass |
+| `TrainProcessService` | api/domains/trainprocess/trainprocess_service.py:L38-L1109 | 14个step方法, start_process(), _prepare_l2_data() | 训练流水线单例服务 |
 
 ### SQLAlchemy ORM 模型（数据库表）
 
 | 模型类 | 表名 | 定义位置 | 核心字段 |
 |--------|------|---------|---------|
-| `DocumentModel` | `document` | [file_data/models.py:L48-L73](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/file_data/models.py#L48-L73) | id, name, title, mime_type, raw_content, insight(JSON), summary(JSON), keywords(JSON), extract_status, embedding_status |
-| `ChunkModel` | `chunk` | [file_data/models.py:L23-L45](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/file_data/models.py#L23-L45) | id, document_id(FK), content, has_embedding, tags(JSON), topic |
-| `L1Version` | `l1_versions` | [models/l1.py:L10-L22](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/models/l1.py#L10-L22) | version(PK), create_time, status, description |
-| `L1Bio` | `l1_bios` | [models/l1.py:L25-L37](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/models/l1.py#L25-L37) | id, version(FK), content, content_third_view, summary, summary_third_view |
-| `L1Shade` | `l1_shades` | [models/l1.py:L40-L55](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/models/l1.py#L40-L55) | id, version(FK), name, aspect, icon, desc/content(third/second_view) |
-| `L1Cluster` | `l1_clusters` | [models/l1.py:L58-L69](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/models/l1.py#L58-L69) | id, version(FK), cluster_id, memory_ids(JSON), cluster_center(JSON) |
-| `L1ChunkTopic` | `l1_chunk_topics` | [models/l1.py:L72-L83](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/models/l1.py#L72-L83) | id, version(FK), chunk_id, topic, tags(JSON) |
-| `Space` | `spaces` | [models/space.py:L9-L24](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/models/space.py#L9-L24) | id(UUID), title, objective, participants(JSON), host, status, conclusion |
-| `SpaceMessage` | `space_messages` | [models/space.py:L26-L40](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/models/space.py#L26-L40) | id, space_id(FK), sender_endpoint, content, message_type, round, role |
-| `Memory` | `memories` | [models/memory.py:L8-L51](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/models/memory.py#L8-L51) | id(UUID), name, size, type, path, meta_data(JSON), document_id |
-| `Load` | `loads` | [models/load.py:L8-L69](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/models/load.py#L8-L69) | id(UUID), name, description, email, avatar_data, instance_id, instance_password, status |
-| `StatusBiography` | `status_biography` | [models/status_biography.py:L5-L18](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/models/status_biography.py#L5-L18) | id, content, content_third_view, summary, summary_third_view |
-| `UserLLMConfig` | `user_llm_configs` | [api/models/user_llm_config.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/models/user_llm_config.py) | provider_type, chat/embedding endpoint+key+model, thinking model config |
+| `DocumentModel` | `document` | file_data/models.py:L48-L73 | id, name, title, mime_type, raw_content, insight(JSON), summary(JSON), keywords(JSON), extract_status, embedding_status |
+| `ChunkModel` | `chunk` | file_data/models.py:L23-L45 | id, document_id(FK), content, has_embedding, tags(JSON), topic |
+| `L1Version` | `l1_versions` | models/l1.py:L10-L22 | version(PK), create_time, status, description |
+| `L1Bio` | `l1_bios` | models/l1.py:L25-L37 | id, version(FK), content, content_third_view, summary, summary_third_view |
+| `L1Shade` | `l1_shades` | models/l1.py:L40-L55 | id, version(FK), name, aspect, icon, desc/content(third/second_view) |
+| `L1Cluster` | `l1_clusters` | models/l1.py:L58-L69 | id, version(FK), cluster_id, memory_ids(JSON), cluster_center(JSON) |
+| `L1ChunkTopic` | `l1_chunk_topics` | models/l1.py:L72-L83 | id, version(FK), chunk_id, topic, tags(JSON) |
+| `Space` | `spaces` | models/space.py:L9-L24 | id(UUID), title, objective, participants(JSON), host, status, conclusion |
+| `SpaceMessage` | `space_messages` | models/space.py:L26-L40 | id, space_id(FK), sender_endpoint, content, message_type, round, role |
+| `Memory` | `memories` | models/memory.py:L8-L51 | id(UUID), name, size, type, path, meta_data(JSON), document_id |
+| `Load` | `loads` | models/load.py:L8-L69 | id(UUID), name, description, email, avatar_data, instance_id, instance_password, status |
+| `StatusBiography` | `status_biography` | models/status_biography.py:L5-L18 | id, content, content_third_view, summary, summary_third_view |
+| `UserLLMConfig` | `user_llm_configs` | api/models/user_llm_config.py | provider_type, chat/embedding endpoint+key+model, thinking model config |
 
 ### Pydantic DTO 模型
 
 | 类名 | 定义位置 | 用途 |
 |------|---------|------|
-| `CreateSpaceDTO` | [space_dto.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/space_dto.py) | Space 创建请求校验（含URL校验器） |
-| `SpaceDTO` | [space_dto.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/space_dto.py) | Space 响应（4状态常量：INITIALIZED/DISCUSSING/INTERRUPTED/FINISHED） |
-| `SpaceMessageDTO` | [space_dto.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/space_dto.py) | 消息响应（含from_db/to_dict） |
-| `ChatRequest` | [kernel2/dto/chat_dto.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/kernel2/dto/chat_dto.py) | OpenAI兼容聊天请求（messages/stream/temperature/max_tokens等） |
-| `CreateRoleRequest`/`UpdateRoleRequest`/`ShareRoleRequest` | [kernel2/dto/role_dto.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/kernel2/dto/role_dto.py) | 角色CRUD请求 |
-| `UpdateUserLLMConfigDTO` | [api/dto/user_llm_config_dto.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/dto/user_llm_config_dto.py) | LLM配置更新请求 |
+| `CreateSpaceDTO` | space_dto.py | Space 创建请求校验（含URL校验器） |
+| `SpaceDTO` | space_dto.py | Space 响应（4状态常量：INITIALIZED/DISCUSSING/INTERRUPTED/FINISHED） |
+| `SpaceMessageDTO` | space_dto.py | 消息响应（含from_db/to_dict） |
+| `ChatRequest` | kernel2/dto/chat_dto.py | OpenAI兼容聊天请求（messages/stream/temperature/max_tokens等） |
+| `CreateRoleRequest`/`UpdateRoleRequest`/`ShareRoleRequest` | kernel2/dto/role_dto.py | 角色CRUD请求 |
+| `UpdateUserLLMConfigDTO` | api/dto/user_llm_config_dto.py | LLM配置更新请求 |
 
 ### 服务类（核心业务逻辑）
 
 | 类名 | 定义位置 | 职责 |
 |------|---------|------|
-| `TrainProcessService` | [trainprocess_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/trainprocess/trainprocess_service.py) | **单例**，编排14步训练流水线，断点续训+进度监控 |
-| `DiscussionService` | [discussion_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/services/discussion_service.py) | Space多AI讨论编排（固定3轮） |
-| `SpaceService` | [space_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/space_service.py) | Space CRUD + 讨论启动 |
-| `ChatService` | [chat_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/kernel2/services/chat_service.py) | 聊天请求处理，调用llama-server |
-| `LocalLLMService` | [local_llm_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/services/local_llm_service.py) | 本地llama-server进程生命周期管理 |
-| `DocumentService` | [document_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/file_data/document_service.py) | 文档CRUD+L0分析+embedding |
-| `LoadService` | [load_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/loads/load_service.py) | 用户Load（身份）管理 |
-| `UserLLMConfigService` | [user_llm_config_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/services/user_llm_config_service.py) | LLM配置管理 |
+| `TrainProcessService` | trainprocess_service.py | **单例**，编排14步训练流水线，断点续训+进度监控 |
+| `DiscussionService` | discussion_service.py | Space多AI讨论编排（固定3轮） |
+| `SpaceService` | space_service.py | Space CRUD + 讨论启动 |
+| `ChatService` | chat_service.py | 聊天请求处理，调用llama-server |
+| `LocalLLMService` | local_llm_service.py | 本地llama-server进程生命周期管理 |
+| `DocumentService` | document_service.py | 文档CRUD+L0分析+embedding |
+| `LoadService` | load_service.py | 用户Load（身份）管理 |
+| `UserLLMConfigService` | user_llm_config_service.py | LLM配置管理 |
 
 ## L0→L1→L2 训练流水线映射
 
@@ -296,13 +296,13 @@ Second-Me 的核心创新是**分层记忆建模（Hierarchical Memory Modeling,
 - `use_cuda`：是否使用CUDA
 - `is_cot`：是否启用Chain-of-Thought
 
-**LoRA 默认配置**（[L2/train.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/train.py)）：
+**LoRA 默认配置**（L2/train.py）：
 - `lora_r = 64`，`lora_alpha = 16`，`lora_dropout = 0.1`
 - target_modules: q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj
 
 ## API 路由列表
 
-所有路由通过 [lpm_kernel/api/__init__.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/__init__.py) 中的 `init_routes()` 注册，共 13 个 Blueprint。
+所有路由通过 lpm_kernel/api/__init__.py 中的 `init_routes()` 注册，共 13 个 Blueprint。
 
 ### Health（健康检查）— `health_bp`
 

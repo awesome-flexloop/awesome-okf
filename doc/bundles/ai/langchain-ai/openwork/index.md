@@ -42,16 +42,16 @@ openwork
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/openwork/concepts/overview) — openwork 是什么、解决什么问题、核心机制与架构
+- 总览 — openwork 是什么、解决什么问题、核心机制与架构
 
 ### 参考资料
 
-- [信源登记](/ai/langchain-ai/openwork/references/source-registry) — 源码文件清单、版本与溯源映射
+- 信源登记 — 源码文件清单、版本与溯源映射
 
 ### 规格文档
 
-- [事实清单](/ai/langchain-ai/openwork/spec/facts) — 从源码提取的 26 条可验证事实
-- [深度洞察](/ai/langchain-ai/openwork/spec/insights) — 架构设计决策与安全模型分析
+- 事实清单 — 从源码提取的 26 条可验证事实
+- 深度洞察 — 架构设计决策与安全模型分析
 
 ## 目录结构
 

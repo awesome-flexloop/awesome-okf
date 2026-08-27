@@ -134,6 +134,6 @@ manimgl scene.py MyScene -w --config_file my_config.yml
 
 ## 相关概念
 
-- [00 ManimGL 简介与整体架构](/concepts/00-introduction.md)
-- [02 配置系统](/concepts/02-configuration.md)
-- [ManimGL 源码结构与核心模块索引](/references/manimgl-source-code.md)
+- [00 ManimGL 简介与整体架构](../concepts/00-introduction.md)
+- [02 配置系统](../concepts/02-configuration.md)
+- [ManimGL 源码结构与核心模块索引](manimgl-source-code.md)

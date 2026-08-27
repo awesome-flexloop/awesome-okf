@@ -290,8 +290,8 @@ flowchart TD
 
 ## 相关概念
 
-- [构建流程详解](/concepts/10-build-process.md)
-- [自定义节点类层次](/concepts/11-node-hierarchy.md)
-- [try_examples 指令——交互式文档示例](/concepts/08-try-examples-directive.md)
-- [配置参考](/concepts/09-configuration.md)
-- [前端JS源码](/references/js-source.md)
+- [构建流程详解](10-build-process.md)
+- [自定义节点类层次](11-node-hierarchy.md)
+- [try_examples 指令——交互式文档示例](08-try-examples-directive.md)
+- [配置参考](09-configuration.md)
+- [前端JS源码](../references/js-source.md)

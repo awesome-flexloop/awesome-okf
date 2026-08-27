@@ -27,24 +27,24 @@ caption-ops 不是一个企业级字幕框架，而是一个**面向个人工作
 
 按学习路径组织的 5 篇核心概念文档：
 
-* [00 caption-ops 工具集总览](/concepts/00-caption-ops-overview.md) — 工具集定位、3Blue1Brown背景、Unix哲学设计、五阶段管线概览、目录结构、依赖概览、本地可用vs云端功能区分
-* [01 音频转录：faster-whisper本地/API双模式](/concepts/01-transcription.md) — Whisper转录原理、词级时间戳的核心作用、本地faster-whisper模型配置（CPU int8量化）、OpenAI API使用、自动回退机制、转录产物说明
-* [02 多语言翻译：DeepL/Google/GPT多后端](/concepts/02-translation.md) — 翻译策略路由（DeepL优先→Google回退）、19种目标语言列表、GPT-4o上下文感知翻译、句子缩写、批量翻译、翻译JSON格式
-* [03 SRT操作：时间轴与智能分段](/concepts/03-srt-operations.md) — SRT格式读写、时间格式化/解析、write_srt智能分段算法（字符数限制、标点/空格优先切割、线性插值）、Levenshtein模糊对齐、retime时间偏移工具
-* [04 完整管线：从视频到多语言字幕](/concepts/04-pipeline-workflow.md) — 端到端工作流详解、中间产物（word_timings/sentence_timings/transcript）作用、8个CLI脚本用法、YouTube OAuth上传、批量处理配额休眠、人工审核同步流程、贡献者追踪
+* [00 caption-ops 工具集总览](concepts/00-caption-ops-overview.md) — 工具集定位、3Blue1Brown背景、Unix哲学设计、五阶段管线概览、目录结构、依赖概览、本地可用vs云端功能区分
+* [01 音频转录：faster-whisper本地/API双模式](concepts/01-transcription.md) — Whisper转录原理、词级时间戳的核心作用、本地faster-whisper模型配置（CPU int8量化）、OpenAI API使用、自动回退机制、转录产物说明
+* [02 多语言翻译：DeepL/Google/GPT多后端](concepts/02-translation.md) — 翻译策略路由（DeepL优先→Google回退）、19种目标语言列表、GPT-4o上下文感知翻译、句子缩写、批量翻译、翻译JSON格式
+* [03 SRT操作：时间轴与智能分段](concepts/03-srt-operations.md) — SRT格式读写、时间格式化/解析、write_srt智能分段算法（字符数限制、标点/空格优先切割、线性插值）、Levenshtein模糊对齐、retime时间偏移工具
+* [04 完整管线：从视频到多语言字幕](concepts/04-pipeline-workflow.md) — 端到端工作流详解、中间产物（word_timings/sentence_timings/transcript）作用、8个CLI脚本用法、YouTube OAuth上传、批量处理配额休眠、人工审核同步流程、贡献者追踪
 
 ## 实战示例（examples/）
 
 1 篇从零开始的实战示例：
 
-* [端到端字幕生成完整流程](/examples/end-to-end-workflow.md) — 完整演示YouTube音频下载→本地faster-whisper转录→人工审核修正→翻译到中文/其他语言→生成SRT文件→时间轴调整质量检查的全流程，诚实标注API密钥依赖，给出纯本地离线转录方案
+* [端到端字幕生成完整流程](examples/end-to-end-workflow.md) — 完整演示YouTube音频下载→本地faster-whisper转录→人工审核修正→翻译到中文/其他语言→生成SRT文件→时间轴调整质量检查的全流程，诚实标注API密钥依赖，给出纯本地离线转录方案
 
 ## 信源登记簿（references/）
 
 2 篇源码溯源与工具速查文档：
 
-* [Caption Ops CLI 脚本参数速查表](/references/scripts-reference.md) — 8个scripts/命令行脚本+根目录独立工具的完整参数、默认值、核心功能、典型用法示例，按功能分组速查
-* [依赖安装与 API 配置说明](/references/dependencies.md) — 10个本地可运行Python包列表、4类外部API服务环境变量配置、本地可用vs需要API密钥功能对照表、安装步骤与注意事项
+* [Caption Ops CLI 脚本参数速查表](references/scripts-reference.md) — 8个scripts/命令行脚本+根目录独立工具的完整参数、默认值、核心功能、典型用法示例，按功能分组速查
+* [依赖安装与 API 配置说明](references/dependencies.md) — 10个本地可运行Python包列表、4类外部API服务环境变量配置、本地可用vs需要API密钥功能对照表、安装步骤与注意事项
 
 ## 信任与生命周期说明
 

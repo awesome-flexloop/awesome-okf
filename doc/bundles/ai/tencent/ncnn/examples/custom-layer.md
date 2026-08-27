@@ -200,7 +200,7 @@ net.load_model("model.bin")
 
 ## 相关概念
 
-- [03 Layer 抽象层](/concepts/03-layer-abstraction.md)
-- [09 层注册表与自定义层](/concepts/09-layer-registry.md)
-- [08 ParamDict 与 ModelBin](/concepts/08-paramdict-modelbin.md)
-- [01 Net 与 Extractor 推理流程](/concepts/01-net-extractor.md)
+- [03 Layer 抽象层](../concepts/03-layer-abstraction.md)
+- [09 层注册表与自定义层](../concepts/09-layer-registry.md)
+- [08 ParamDict 与 ModelBin](../concepts/08-paramdict-modelbin.md)
+- [01 Net 与 Extractor 推理流程](../concepts/01-net-extractor.md)

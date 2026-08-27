@@ -131,10 +131,10 @@ sources:
 
 ## 相关示例
 
-- [基础标签页](/examples/basic-tabs.md)
-- [分组标签同步](/examples/group-tabs-sync.md)
+- [基础标签页](basic-tabs.md)
+- [分组标签同步](group-tabs-sync.md)
 
 ## 相关概念
 
-- [分组标签与代码标签](/concepts/03-group-and-code-tabs.md)
-- [快速开始](/concepts/01-getting-started.md)
+- [分组标签与代码标签](../concepts/03-group-and-code-tabs.md)
+- [快速开始](../concepts/01-getting-started.md)

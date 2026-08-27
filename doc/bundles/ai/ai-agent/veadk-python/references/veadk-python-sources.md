@@ -123,129 +123,129 @@ external/libs/models/ai/veadk-python/veadk/
 
 | 文件 | 内容 |
 |------|------|
-| [veadk/\_\_init\_\_.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/__init__.py) | 包入口，延迟加载 `Agent` 和 `Runner`，导出 `__all__ = ["Agent", "Runner", "VERSION"]` |
-| [veadk/version.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/version.py) | 版本号获取，通过 `importlib.metadata.version("veadk-python")` 读取安装时版本 |
-| [veadk/consts.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/consts.py) | 全局常量：默认 Agent 名、模型名、API Base、Embedding 配置、BytePlus 适配 |
-| [veadk/config.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/config.py) | 全局配置聚合 `VeADKConfig`、环境变量加载（.env + config.yaml）、`getenv()` 函数、全局 `settings` 实例 |
-| [veadk/types.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/types.py) | 公共类型定义：`MediaMessage`、`AgentRunConfig`、`RealtimeVoiceConnectConfig` |
-| [pyproject.toml](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/pyproject.toml) | 项目构建配置、依赖声明、CLI 入口点、包发现规则、setuptools-scm 版本配置 |
+| veadk/\_\_init\_\_.py | 包入口，延迟加载 `Agent` 和 `Runner`，导出 `__all__ = ["Agent", "Runner", "VERSION"]` |
+| veadk/version.py | 版本号获取，通过 `importlib.metadata.version("veadk-python")` 读取安装时版本 |
+| veadk/consts.py | 全局常量：默认 Agent 名、模型名、API Base、Embedding 配置、BytePlus 适配 |
+| veadk/config.py | 全局配置聚合 `VeADKConfig`、环境变量加载（.env + config.yaml）、`getenv()` 函数、全局 `settings` 实例 |
+| veadk/types.py | 公共类型定义：`MediaMessage`、`AgentRunConfig`、`RealtimeVoiceConnectConfig` |
+| pyproject.toml | 项目构建配置、依赖声明、CLI 入口点、包发现规则、setuptools-scm 版本配置 |
 
 ### Agent 核心
 
 | 文件 | 内容 |
 |------|------|
-| [veadk/agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py) | **核心文件**：`class Agent(LlmAgent)` 定义，包含全部字段、`model_post_init` 初始化逻辑（模型创建、工具挂载、记忆集成、回调注册）、`_llm_flow` 流选择、`_run_async_impl` 运行时委托、`update_model()` 方法，以及模块级 patch（tracer/asyncio/mcp） |
-| [veadk/runner.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/runner.py) | **核心文件**：`class Runner(ADKRunner)` 定义，消息转换 `_convert_messages`、TOS 上传 `_upload_image_to_tos`、消息拦截装饰器 `intercept_new_message`、`run()` 异步执行入口、tracing 导出、评估集保存、长期记忆持久化 |
-| [veadk/agent_builder.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent_builder.py) | `AgentBuilder` 类，从 YAML 配置构建 Agent，通过 `AGENT_TYPES` 字典映射类型名 |
+| veadk/agent.py | **核心文件**：`class Agent(LlmAgent)` 定义，包含全部字段、`model_post_init` 初始化逻辑（模型创建、工具挂载、记忆集成、回调注册）、`_llm_flow` 流选择、`_run_async_impl` 运行时委托、`update_model()` 方法，以及模块级 patch（tracer/asyncio/mcp） |
+| veadk/runner.py | **核心文件**：`class Runner(ADKRunner)` 定义，消息转换 `_convert_messages`、TOS 上传 `_upload_image_to_tos`、消息拦截装饰器 `intercept_new_message`、`run()` 异步执行入口、tracing 导出、评估集保存、长期记忆持久化 |
+| veadk/agent_builder.py | `AgentBuilder` 类，从 YAML 配置构建 Agent，通过 `AGENT_TYPES` 字典映射类型名 |
 
 ### Agent 组合类型
 
 | 文件 | 内容 |
 |------|------|
-| [veadk/agents/sequential_agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/sequential_agent.py) | `class SequentialAgent(GoogleADKSequentialAgent)`，顺序执行子 Agent |
-| [veadk/agents/parallel_agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/parallel_agent.py) | `class ParallelAgent(GoogleADKParallelAgent)`，并行执行子 Agent |
-| [veadk/agents/loop_agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/loop_agent.py) | `class LoopAgent(GoogleADKLoopAgent)`，循环执行子 Agent |
-| [veadk/agents/supervise_agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/supervise_agent.py) | Supervisor 模式：`build_supervisor()` 创建监督 Agent、`generate_advice()` 生成建议 |
+| veadk/agents/sequential_agent.py | `class SequentialAgent(GoogleADKSequentialAgent)`，顺序执行子 Agent |
+| veadk/agents/parallel_agent.py | `class ParallelAgent(GoogleADKParallelAgent)`，并行执行子 Agent |
+| veadk/agents/loop_agent.py | `class LoopAgent(GoogleADKLoopAgent)`，循环执行子 Agent |
+| veadk/agents/supervise_agent.py | Supervisor 模式：`build_supervisor()` 创建监督 Agent、`generate_advice()` 生成建议 |
 
 ### 记忆系统
 
 | 文件 | 内容 |
 |------|------|
-| [veadk/memory/short_term_memory.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/short_term_memory.py) | `class ShortTermMemory(BaseModel)`，支持 local/mysql/sqlite/postgresql/database 五种后端，自动创建 SessionService |
-| [veadk/memory/long_term_memory.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory.py) | `class LongTermMemory(BaseMemoryService, BaseModel)`，支持 local/opensearch/redis/viking/mem0/openviking/tos_context 后端，提供会话持久化与语义检索 |
-| [veadk/memory/save_session_callback.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/save_session_callback.py) | 会话保存回调，auto_save_session 功能实现 |
-| [veadk/memory/types.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/types.py) | 记忆相关类型：`MemoryProfile` |
+| veadk/memory/short_term_memory.py | `class ShortTermMemory(BaseModel)`，支持 local/mysql/sqlite/postgresql/database 五种后端，自动创建 SessionService |
+| veadk/memory/long_term_memory.py | `class LongTermMemory(BaseMemoryService, BaseModel)`，支持 local/opensearch/redis/viking/mem0/openviking/tos_context 后端，提供会话持久化与语义检索 |
+| veadk/memory/save_session_callback.py | 会话保存回调，auto_save_session 功能实现 |
+| veadk/memory/types.py | 记忆相关类型：`MemoryProfile` |
 
 ### 模型层
 
 | 文件 | 内容 |
 |------|------|
-| [veadk/models/ark_llm.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/models/ark_llm.py) | `class ArkLlm(Gemini)`，通过火山引擎 Ark Responses API 调用模型，支持 streaming、fallback 模型链、响应缓存 |
-| [veadk/models/ark_embedding.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/models/ark_embedding.py) | Ark Embedding 模型封装 |
+| veadk/models/ark_llm.py | `class ArkLlm(Gemini)`，通过火山引擎 Ark Responses API 调用模型，支持 streaming、fallback 模型链、响应缓存 |
+| veadk/models/ark_embedding.py | Ark Embedding 模型封装 |
 
 ### 工具系统
 
 | 文件 | 内容 |
 |------|------|
-| [veadk/tools/\_\_init\_\_.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/__init__.py) | 内置工具注册表 `_BUILTIN_TOOLS`（延迟加载）、`get_builtin_tool()`、`list_builtin_tools()` |
-| [veadk/tools/builtin_tools/web_search.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/web_search.py) | 网页搜索工具 |
-| [veadk/tools/builtin_tools/web_fetch.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/web_fetch.py) | 网页内容抓取工具 |
-| [veadk/tools/builtin_tools/run_code.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/run_code.py) | 代码执行工具（沙箱） |
-| [veadk/tools/builtin_tools/ppt_generate.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/ppt_generate.py) | PPT 生成工具 |
-| [veadk/tools/builtin_tools/image_generate.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/image_generate.py) | 图片生成工具（豆包 Seedream） |
-| [veadk/tools/builtin_tools/video_generate.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/video_generate.py) | 视频生成工具（豆包 Seedance） |
-| [veadk/tools/builtin_tools/tts.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/tts.py) | 文本转语音工具 |
-| [veadk/tools/builtin_tools/load_knowledgebase.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/load_knowledgebase.py) | 知识库加载工具 |
-| [veadk/tools/builtin_tools/mcp_router.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/mcp_router.py) | MCP Router 工具集（通过 HTTP 连接远程 MCP 服务） |
-| [veadk/tools/builtin_tools/agent_authorization.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/agent_authorization.py) | Agent 授权检查工具（enable_authz） |
+| veadk/tools/\_\_init\_\_.py | 内置工具注册表 `_BUILTIN_TOOLS`（延迟加载）、`get_builtin_tool()`、`list_builtin_tools()` |
+| veadk/tools/builtin_tools/web_search.py | 网页搜索工具 |
+| veadk/tools/builtin_tools/web_fetch.py | 网页内容抓取工具 |
+| veadk/tools/builtin_tools/run_code.py | 代码执行工具（沙箱） |
+| veadk/tools/builtin_tools/ppt_generate.py | PPT 生成工具 |
+| veadk/tools/builtin_tools/image_generate.py | 图片生成工具（豆包 Seedream） |
+| veadk/tools/builtin_tools/video_generate.py | 视频生成工具（豆包 Seedance） |
+| veadk/tools/builtin_tools/tts.py | 文本转语音工具 |
+| veadk/tools/builtin_tools/load_knowledgebase.py | 知识库加载工具 |
+| veadk/tools/builtin_tools/mcp_router.py | MCP Router 工具集（通过 HTTP 连接远程 MCP 服务） |
+| veadk/tools/builtin_tools/agent_authorization.py | Agent 授权检查工具（enable_authz） |
 
 ### 知识库与技能
 
 | 文件 | 内容 |
 |------|------|
-| [veadk/knowledgebase/knowledgebase.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/knowledgebase.py) | `class KnowledgeBase(BaseModel)`，支持多种向量后端，提供文档添加/检索/Profile 生成 |
-| [veadk/knowledgebase/types.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/types.py) | 知识库数据类型（KnowledgebaseEntry 等） |
-| [veadk/skills/skill.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/skills/skill.py) | `class Skill(BaseModel)`，技能元数据定义（name/description/path/checklist 等） |
-| [veadk/skills/registry.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/skills/registry.py) | 技能注册表管理 |
+| veadk/knowledgebase/knowledgebase.py | `class KnowledgeBase(BaseModel)`，支持多种向量后端，提供文档添加/检索/Profile 生成 |
+| veadk/knowledgebase/types.py | 知识库数据类型（KnowledgebaseEntry 等） |
+| veadk/skills/skill.py | `class Skill(BaseModel)`，技能元数据定义（name/description/path/checklist 等） |
+| veadk/skills/registry.py | 技能注册表管理 |
 
 ### CLI 命令行
 
 | 文件 | 内容 |
 |------|------|
-| [veadk/cli/cli.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli.py) | CLI 主入口（Click Group），注册所有子命令（deploy/init/create/web/frontend/studio/pipeline/eval/kb 等） |
-| [veadk/cli/cli_create.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_create.py) | `veadk create` 命令：创建 Agent 项目 |
-| [veadk/cli/cli_web.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_web.py) | `veadk web` 命令：启动 Web 服务 |
-| [veadk/cli/cli_deploy.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_deploy.py) | `veadk deploy` 命令：部署 Agent |
-| [veadk/cli/cli_init.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli_init.py) | `veadk init` 命令：初始化项目配置 |
+| veadk/cli/cli.py | CLI 主入口（Click Group），注册所有子命令（deploy/init/create/web/frontend/studio/pipeline/eval/kb 等） |
+| veadk/cli/cli_create.py | `veadk create` 命令：创建 Agent 项目 |
+| veadk/cli/cli_web.py | `veadk web` 命令：启动 Web 服务 |
+| veadk/cli/cli_deploy.py | `veadk deploy` 命令：部署 Agent |
+| veadk/cli/cli_init.py | `veadk init` 命令：初始化项目配置 |
 
 ### A2A / A2UI / Tunnel
 
 | 文件 | 内容 |
 |------|------|
-| [veadk/a2a/ve_a2a_server.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/ve_a2a_server.py) | A2A 协议服务端实现 |
-| [veadk/a2a/remote_ve_agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/remote_ve_agent.py) | 远程 VeAgent（A2A 客户端代理） |
-| [veadk/a2a/registry_client.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/registry_client.py) | A2A Agent 注册中心客户端 |
-| [veadk/a2ui/toolset.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2ui/toolset.py) | A2UI 工具集：`build_a2ui_toolset()`、`_FallbackSendA2uiToClientToolset` |
-| [veadk/a2ui/catalog.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2ui/catalog.py) | A2UI 组件目录管理 |
-| [veadk/tunnel/toolset.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/toolset.py) | MCP 隧道工具集：`TunnelToolset`，动态发现本地 MCP 服务器并创建代理 |
-| [veadk/tunnel/registry.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/registry.py) | 隧道注册中心：`TunnelRegistry`、`get_registry()` |
-| [veadk/tunnel/server.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/server.py) | 隧道本地服务器：`LocalServer` |
+| veadk/a2a/ve_a2a_server.py | A2A 协议服务端实现 |
+| veadk/a2a/remote_ve_agent.py | 远程 VeAgent（A2A 客户端代理） |
+| veadk/a2a/registry_client.py | A2A Agent 注册中心客户端 |
+| veadk/a2ui/toolset.py | A2UI 工具集：`build_a2ui_toolset()`、`_FallbackSendA2uiToClientToolset` |
+| veadk/a2ui/catalog.py | A2UI 组件目录管理 |
+| veadk/tunnel/toolset.py | MCP 隧道工具集：`TunnelToolset`，动态发现本地 MCP 服务器并创建代理 |
+| veadk/tunnel/registry.py | 隧道注册中心：`TunnelRegistry`、`get_registry()` |
+| veadk/tunnel/server.py | 隧道本地服务器：`LocalServer` |
 
 ### 配置子系统
 
 | 文件 | 内容 |
 |------|------|
-| [veadk/configs/model_configs.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/configs/model_configs.py) | `class ModelConfig(BaseSettings)`，模型配置（name/provider/api_base/api_key），支持环境变量前缀 `MODEL_AGENT_` |
-| [veadk/configs/database_configs.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/configs/database_configs.py) | 数据库配置：TOS/OpenSearch/MySQL/Redis/Milvus/Viking |
-| [veadk/configs/tracing_configs.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/configs/tracing_configs.py) | 追踪配置：OpenTelemetry/APMPlus/Cozeloop/TLS/Prometheus |
-| [veadk/configs/auth_configs.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/configs/auth_configs.py) | 认证配置：VeIdentity |
-| [veadk/configs/tool_configs.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/configs/tool_configs.py) | 工具配置、PromptPilot 配置 |
+| veadk/configs/model_configs.py | `class ModelConfig(BaseSettings)`，模型配置（name/provider/api_base/api_key），支持环境变量前缀 `MODEL_AGENT_` |
+| veadk/configs/database_configs.py | 数据库配置：TOS/OpenSearch/MySQL/Redis/Milvus/Viking |
+| veadk/configs/tracing_configs.py | 追踪配置：OpenTelemetry/APMPlus/Cozeloop/TLS/Prometheus |
+| veadk/configs/auth_configs.py | 认证配置：VeIdentity |
+| veadk/configs/tool_configs.py | 工具配置、PromptPilot 配置 |
 
 ### 运行时与处理器
 
 | 文件 | 内容 |
 |------|------|
-| [veadk/runtime/base_runtime.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/runtime/base_runtime.py) | 运行时抽象基类 |
-| [veadk/runtime/codex/runtime.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/runtime/codex/runtime.py) | Codex 运行时后端 |
-| [veadk/runtime/piagent/runtime.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/runtime/piagent/runtime.py) | PiAgent 运行时后端 |
-| [veadk/processors/base_run_processor.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/processors/base_run_processor.py) | `BaseRunProcessor`（抽象）与 `NoOpRunProcessor`（空实现） |
+| veadk/runtime/base_runtime.py | 运行时抽象基类 |
+| veadk/runtime/codex/runtime.py | Codex 运行时后端 |
+| veadk/runtime/piagent/runtime.py | PiAgent 运行时后端 |
+| veadk/processors/base_run_processor.py | `BaseRunProcessor`（抽象）与 `NoOpRunProcessor`（空实现） |
 
 ### 提示词与评估
 
 | 文件 | 内容 |
 |------|------|
-| [veadk/prompts/agent_default_prompt.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/prompts/agent_default_prompt.py) | 默认系统提示词 `DEFAULT_INSTRUCTION` 和 `DEFAULT_DESCRIPTION` |
-| [veadk/prompts/prompt_manager.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/prompts/prompt_manager.py) | `BasePromptManager` 提示词管理器 |
-| [veadk/evaluation/eval_set_recorder.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/evaluation/eval_set_recorder.py) | `EvalSetRecorder` 评估集录制器 |
+| veadk/prompts/agent_default_prompt.py | 默认系统提示词 `DEFAULT_INSTRUCTION` 和 `DEFAULT_DESCRIPTION` |
+| veadk/prompts/prompt_manager.py | `BasePromptManager` 提示词管理器 |
+| veadk/evaluation/eval_set_recorder.py | `EvalSetRecorder` 评估集录制器 |
 
 ### 工具函数
 
 | 文件 | 内容 |
 |------|------|
-| [veadk/utils/logger.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/utils/logger.py) | 日志工具 `get_logger()` |
-| [veadk/utils/misc.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/utils/misc.py) | 杂项工具：`getenv()`、`set_envs()`、`formatted_timestamp()`、`read_file_to_bytes()` |
-| [veadk/utils/patches.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/utils/patches.py) | Monkey patches：`patch_tracer()`、`patch_asyncio()`、`patch_mcp_session_retry()` |
-| [veadk/utils/adk_compat.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/utils/adk_compat.py) | Google ADK 版本兼容层 |
+| veadk/utils/logger.py | 日志工具 `get_logger()` |
+| veadk/utils/misc.py | 杂项工具：`getenv()`、`set_envs()`、`formatted_timestamp()`、`read_file_to_bytes()` |
+| veadk/utils/patches.py | Monkey patches：`patch_tracer()`、`patch_asyncio()`、`patch_mcp_session_retry()` |
+| veadk/utils/adk_compat.py | Google ADK 版本兼容层 |
 
 ## 核心类/函数索引
 
@@ -253,9 +253,9 @@ external/libs/models/ai/veadk-python/veadk/
 
 | 名称 | 类型 | 定义位置 | 说明 |
 |------|------|---------|------|
-| `Agent` | class | [veadk/agent.py:L72](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L72) | 核心 Agent 类，继承 `google.adk.agents.LlmAgent` |
-| `Runner` | class | [veadk/runner.py:L329](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/runner.py#L329) | 执行引擎，继承 `google.adk.runners.Runner` |
-| `VERSION` | str | [veadk/version.py:L21](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/version.py#L21) | 版本号字符串 |
+| `Agent` | class | veadk/agent.py:L72 | 核心 Agent 类，继承 `google.adk.agents.LlmAgent` |
+| `Runner` | class | veadk/runner.py:L329 | 执行引擎，继承 `google.adk.runners.Runner` |
+| `VERSION` | str | veadk/version.py:L21 | 版本号字符串 |
 
 ### Agent 类
 
@@ -299,50 +299,50 @@ external/libs/models/ai/veadk-python/veadk/
 
 | 类名 | 继承 | 默认名称 | 文件位置 |
 |------|------|---------|---------|
-| `SequentialAgent` | `google.adk.agents.SequentialAgent` | `"veSequentialAgent"` | [veadk/agents/sequential_agent.py:L31](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/sequential_agent.py#L31) |
-| `ParallelAgent` | `google.adk.agents.ParallelAgent` | `"veParallelAgent"` | [veadk/agents/parallel_agent.py:L31](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/parallel_agent.py#L31) |
-| `LoopAgent` | `google.adk.agents.LoopAgent` | `"veLoopAgent"` | [veadk/agents/loop_agent.py:L31](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/loop_agent.py#L31) |
+| `SequentialAgent` | `google.adk.agents.SequentialAgent` | `"veSequentialAgent"` | veadk/agents/sequential_agent.py:L31 |
+| `ParallelAgent` | `google.adk.agents.ParallelAgent` | `"veParallelAgent"` | veadk/agents/parallel_agent.py:L31 |
+| `LoopAgent` | `google.adk.agents.LoopAgent` | `"veLoopAgent"` | veadk/agents/loop_agent.py:L31 |
 
 ### 记忆类
 
 | 类名 | 继承 | 支持后端 | 文件位置 |
 |------|------|---------|---------|
-| `ShortTermMemory` | `BaseModel` | local(InMemory)、mysql、sqlite、postgresql、database(→sqlite) | [veadk/memory/short_term_memory.py:L57](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/short_term_memory.py#L57) |
-| `LongTermMemory` | `BaseMemoryService, BaseModel` | local、opensearch、redis、viking、mem0、openviking、tos_context | [veadk/memory/long_term_memory.py:L98](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory.py#L98) |
+| `ShortTermMemory` | `BaseModel` | local(InMemory)、mysql、sqlite、postgresql、database(→sqlite) | veadk/memory/short_term_memory.py:L57 |
+| `LongTermMemory` | `BaseMemoryService, BaseModel` | local、opensearch、redis、viking、mem0、openviking、tos_context | veadk/memory/long_term_memory.py:L98 |
 
 ### 模型类
 
 | 类名 | 继承 | 说明 | 文件位置 |
 |------|------|------|---------|
-| `ArkLlm` | `google.adk.models.Gemini` | 火山引擎 Ark Responses API 模型，支持 streaming/fallback/缓存 | [veadk/models/ark_llm.py:L703](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/models/ark_llm.py#L703) |
-| `ModelConfig` | `BaseSettings` | 模型配置（环境变量前缀 MODEL_AGENT_） | [veadk/configs/model_configs.py:L31](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/configs/model_configs.py#L31) |
+| `ArkLlm` | `google.adk.models.Gemini` | 火山引擎 Ark Responses API 模型，支持 streaming/fallback/缓存 | veadk/models/ark_llm.py:L703 |
+| `ModelConfig` | `BaseSettings` | 模型配置（环境变量前缀 MODEL_AGENT_） | veadk/configs/model_configs.py:L31 |
 
 ### 配置与类型
 
 | 名称 | 类型 | 说明 | 文件位置 |
 |------|------|------|---------|
-| `VeADKConfig` | class | 全局配置聚合（model/tool/tracing/database/auth/realtime） | [veadk/config.py:L64](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/config.py#L64) |
-| `settings` | VeADKConfig | 全局配置单例 | [veadk/config.py:L146](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/config.py#L146) |
-| `MediaMessage` | class | 媒体消息（text + media 路径） | [veadk/types.py:L25](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/types.py#L25) |
-| `AgentRunConfig` | class | VeFaaS 运行配置 | [veadk/types.py:L33](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/types.py#L33) |
-| `KnowledgeBase` | class | 知识库 RAG | [veadk/knowledgebase/knowledgebase.py:L92](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/knowledgebase.py#L92) |
-| `Skill` | class | 技能元数据 | [veadk/skills/skill.py:L19](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/skills/skill.py#L19) |
+| `VeADKConfig` | class | 全局配置聚合（model/tool/tracing/database/auth/realtime） | veadk/config.py:L64 |
+| `settings` | VeADKConfig | 全局配置单例 | veadk/config.py:L146 |
+| `MediaMessage` | class | 媒体消息（text + media 路径） | veadk/types.py:L25 |
+| `AgentRunConfig` | class | VeFaaS 运行配置 | veadk/types.py:L33 |
+| `KnowledgeBase` | class | 知识库 RAG | veadk/knowledgebase/knowledgebase.py:L92 |
+| `Skill` | class | 技能元数据 | veadk/skills/skill.py:L19 |
 
 ### 处理器与工具
 
 | 名称 | 类型 | 说明 | 文件位置 |
 |------|------|------|---------|
-| `BaseRunProcessor` | ABC | 运行时处理器抽象基类（process_run 抽象方法） | [veadk/processors/base_run_processor.py:L27](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/processors/base_run_processor.py#L27) |
-| `NoOpRunProcessor` | class | 空运行时处理器（恒等装饰器） | [veadk/processors/base_run_processor.py:L91](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/processors/base_run_processor.py#L91) |
-| `get_builtin_tool(name)` | function | 按名称获取内置工具 | [veadk/tools/\_\_init\_\_.py:L49](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/__init__.py#L49) |
-| `list_builtin_tools()` | function | 列出所有内置工具名称 | [veadk/tools/\_\_init\_\_.py:L60](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/__init__.py#L60) |
-| `TunnelToolset` | class | MCP 隧道工具集 | [veadk/tunnel/toolset.py:L53](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/toolset.py#L53) |
+| `BaseRunProcessor` | ABC | 运行时处理器抽象基类（process_run 抽象方法） | veadk/processors/base_run_processor.py:L27 |
+| `NoOpRunProcessor` | class | 空运行时处理器（恒等装饰器） | veadk/processors/base_run_processor.py:L91 |
+| `get_builtin_tool(name)` | function | 按名称获取内置工具 | veadk/tools/\_\_init\_\_.py:L49 |
+| `list_builtin_tools()` | function | 列出所有内置工具名称 | veadk/tools/\_\_init\_\_.py:L60 |
+| `TunnelToolset` | class | MCP 隧道工具集 | veadk/tunnel/toolset.py:L53 |
 
 ### CLI 入口
 
 | 命令 | 定义位置 | 功能 |
 |------|---------|------|
-| `veadk` (group) | [veadk/cli/cli.py:L64](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/cli/cli.py#L64) | CLI 主入口 |
+| `veadk` (group) | veadk/cli/cli.py:L64 | CLI 主入口 |
 | `veadk create` | cli_create.py | 创建 Agent 项目 |
 | `veadk init` | cli_init.py | 初始化配置 |
 | `veadk deploy` | cli_deploy.py | 部署 Agent |

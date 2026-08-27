@@ -64,6 +64,6 @@ export default [plugin, statusPlugin, factoryPlugin, retroStatusPlugin];
 
 ## 相关概念
 
-- [WebRtcManager配置管理](/concepts/03-webrtc-manager.md)
-- [4个JupyterLab插件架构](/concepts/06-plugin-system.md)
-- [状态栏UI与RetroLab适配](/concepts/07-status-bar.md)
+- [WebRtcManager配置管理](../concepts/03-webrtc-manager.md)
+- [4个JupyterLab插件架构](../concepts/06-plugin-system.md)
+- [状态栏UI与RetroLab适配](../concepts/07-status-bar.md)

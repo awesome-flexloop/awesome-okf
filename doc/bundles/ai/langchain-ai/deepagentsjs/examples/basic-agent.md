@@ -332,6 +332,6 @@ const result = await agent.invoke({
 5. **子代理技能隔离**：自定义子代理默认不继承主代理的 skills，只有 general-purpose 子代理继承。
 
 相关参考：
-- [API 参考](/ai/langchain-ai/deepagentsjs/references/api)
-- [总览](/ai/langchain-ai/deepagentsjs/concepts/overview)
-- [子代理与规划](/ai/langchain-ai/deepagentsjs/concepts/subagent-planning)
+- API 参考
+- 总览
+- 子代理与规划

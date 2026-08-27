@@ -180,5 +180,5 @@ url2 = create_tutorial_link(
 
 ## 相关概念
 
-- [URL参数完整参考](/concepts/06-url-parameters.md) — urlpath 参数详解
-- [扩展插件机制](/concepts/05-extension-plugin.md) — filebrowser:open-path 命令调用
+- [URL参数完整参考](../concepts/06-url-parameters.md) — urlpath 参数详解
+- [扩展插件机制](../concepts/05-extension-plugin.md) — filebrowser:open-path 命令调用

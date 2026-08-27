@@ -73,5 +73,5 @@ sources:
 - 两者互补：RAG检索结果可存入记忆，记忆也可增强RAG查询
 
 ## 相关概念
-- [记忆系统](/ai/datawhale/hello-agents/concepts/memory-systems)
-- [上下文工程](/ai/datawhale/hello-agents/concepts/context-engineering)
+- 记忆系统
+- 上下文工程

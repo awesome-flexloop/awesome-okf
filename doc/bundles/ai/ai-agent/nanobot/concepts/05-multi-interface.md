@@ -467,7 +467,7 @@ def start_webui_dev_server(*, target_url, browser_url, ...):
 
 ## 相关概念
 
-- [nanobot 简介](/concepts/00-introduction.md)
-- [整体架构](/concepts/01-architecture.md)
-- [消息总线与事件驱动](/concepts/03-bus-messaging.md)
-- [SDK 类型系统](/concepts/04-sdk-types.md)
+- [nanobot 简介](00-introduction.md)
+- [整体架构](01-architecture.md)
+- [消息总线与事件驱动](03-bus-messaging.md)
+- [SDK 类型系统](04-sdk-types.md)

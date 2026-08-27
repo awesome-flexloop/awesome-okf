@@ -221,9 +221,9 @@ rediraffe 的代码量极小（单文件485行）但功能完整，得益于几�
 
 ## 相关概念
 
-- [重定向图模型](/concepts/03-redirect-graph.md)
-- [配置项详解](/concepts/04-configuration.md)
-- [Builder体系详解](/concepts/05-builders.md)
-- [Jinja2模板系统](/concepts/06-jinja-templates.md)
-- [路径处理与跨平台兼容](/concepts/07-path-and-cross-platform.md)
-- [sphinxext-rediraffe 源码信源登记](/references/rediraffe-source.md)
+- [重定向图模型](03-redirect-graph.md)
+- [配置项详解](04-configuration.md)
+- [Builder体系详解](05-builders.md)
+- [Jinja2模板系统](06-jinja-templates.md)
+- [路径处理与跨平台兼容](07-path-and-cross-platform.md)
+- [sphinxext-rediraffe 源码信源登记](../references/rediraffe-source.md)

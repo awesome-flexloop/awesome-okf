@@ -218,7 +218,7 @@ graph = builder.compile(transformers=[MyTransformer()])
 
 ## 相关概念
 
-- [Pregel 引擎](/ai/langchain-ai/langgraph/concepts/pregel-engine) — 流在超步中的产出时机
-- [消息图](/ai/langchain-ai/langgraph/concepts/message-graph) — messages 流模式与 token 输出
-- [状态图](/ai/langchain-ai/langgraph/concepts/state-graph) — stream_mode 参数传递
-- [API 参考](/ai/langchain-ai/langgraph/references/graph-state) — stream 方法签名
+- Pregel 引擎 — 流在超步中的产出时机
+- 消息图 — messages 流模式与 token 输出
+- 状态图 — stream_mode 参数传递
+- API 参考 — stream 方法签名

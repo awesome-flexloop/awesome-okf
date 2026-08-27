@@ -231,4 +231,4 @@ deploy.sh执行成功后：
 - [CI/CD与自动化](04-cicd-and-automation.md)
 - [部署配置详解](03-deployment-config.md)
 - [Fastly CDN管理](07-fastly-cdn.md)
-- [本地调试示例](/examples/local-debug.md)
+- [本地调试示例](../examples/local-debug.md)

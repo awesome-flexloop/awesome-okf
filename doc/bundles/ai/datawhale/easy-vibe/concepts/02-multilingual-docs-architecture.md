@@ -136,5 +136,5 @@ const base = process.env.BASE || (isVercel || isEdgeOne ? '/' : '/easy-vibe/')
 
 ## 相关概念
 
-- [Vibe Coding 理念](/ai/datawhale/easy-vibe/concepts/01-vibe-coding-philosophy.md)：多语言站点承载的教学内容与三阶段路径。
-- [部署与工具链](/ai/datawhale/easy-vibe/concepts/03-deployment-toolchain.md)：多语言产物如何部署到 Vercel、GitHub Pages、魔搭 Docker，以及电子书发布流水线。
+- [Vibe Coding 理念](01-vibe-coding-philosophy.md)：多语言站点承载的教学内容与三阶段路径。
+- [部署与工具链](03-deployment-toolchain.md)：多语言产物如何部署到 Vercel、GitHub Pages、魔搭 Docker，以及电子书发布流水线。

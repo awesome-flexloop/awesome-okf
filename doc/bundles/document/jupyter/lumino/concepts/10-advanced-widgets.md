@@ -24,7 +24,7 @@ sources:
 
 ## TabBar：标签栏
 
-[TabBar](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/tabbar.ts) 是渲染标签的水平/垂直条，通常与 StackedPanel 配合使用构成 TabPanel。
+TabBar 是渲染标签的水平/垂直条，通常与 StackedPanel 配合使用构成 TabPanel。
 
 ```typescript
 class TabBar<T extends Widget = Widget> extends Widget {
@@ -60,7 +60,7 @@ TabBar 使用 VirtualDOM 渲染标签内部，支持自定义渲染器（IRender
 
 ## TabPanel：标签面板
 
-[TabPanel](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/tabpanel.ts) 将 TabBar 和 StackedPanel 组合为一个完整的标签面板：
+TabPanel 将 TabBar 和 StackedPanel 组合为一个完整的标签面板：
 
 ```typescript
 class TabPanel extends Widget {
@@ -93,7 +93,7 @@ Widget.attach(tabPanel, document.body);
 
 ## Menu：菜单系统
 
-[Menu](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/menu.ts) 实现下拉菜单/弹出菜单，基于 CommandRegistry：
+Menu 实现下拉菜单/弹出菜单，基于 CommandRegistry：
 
 ```typescript
 class Menu extends Widget {
@@ -140,7 +140,7 @@ fileMenu.open(buttonRect.left, buttonRect.bottom);
 
 ### MenuBar：菜单栏
 
-[MenuBar](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/menubar.ts) 是水平菜单栏，用于应用程序顶部的文件/编辑/视图等菜单：
+MenuBar 是水平菜单栏，用于应用程序顶部的文件/编辑/视图等菜单：
 
 ```typescript
 class MenuBar extends Widget {
@@ -159,7 +159,7 @@ class MenuBar extends Widget {
 
 ### ContextMenu：右键菜单
 
-[ContextMenu](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/contextmenu.ts) 集成在 Application 中，根据 CSS 选择器匹配可用的菜单项：
+ContextMenu 集成在 Application 中，根据 CSS 选择器匹配可用的菜单项：
 
 ```typescript
 class ContextMenu {
@@ -189,7 +189,7 @@ app.contextMenu.addItem({
 
 ## DockPanel：停靠面板
 
-[DockPanel](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/dockpanel.ts) 是 Lumino 最强大的容器 Widget，封装了 DockLayout：
+DockPanel 是 Lumino 最强大的容器 Widget，封装了 DockLayout：
 
 ```typescript
 class DockPanel extends Widget {
@@ -241,7 +241,7 @@ dock.addWidget(console, { mode: 'split-bottom', ref: notebook });
 
 ## DragDrop：拖拽系统
 
-[@lumino/dragdrop](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/dragdrop/src/index.ts) 提供底层拖拽支持：
+@lumino/dragdrop 提供底层拖拽支持：
 
 ```typescript
 namespace Drag {
@@ -273,7 +273,7 @@ DockPanel 和 SplitPanel 的拖拽交互都基于此模块。MimeData 是一个 
 
 ## DataGrid：高性能数据表格
 
-[@lumino/datagrid](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/datagrid/src) 是一个高性能的虚拟滚动数据表格组件，专为展示大规模数据设计：
+@lumino/datagrid 是一个高性能的虚拟滚动数据表格组件，专为展示大规模数据设计：
 
 ```typescript
 class DataGrid extends Widget {
@@ -379,7 +379,7 @@ class CustomRenderer extends CellRenderer {
 
 ## Polling：轮询机制
 
-[@lumino/polling](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/polling/src) 提供了可暂停、可调整频率的轮询器，用于定时刷新数据：
+@lumino/polling 提供了可暂停、可调整频率的轮询器，用于定时刷新数据：
 
 ```typescript
 class Poll<T, U> {
@@ -395,7 +395,7 @@ class Poll<T, U> {
 
 ## Properties：附加属性
 
-[@lumino/properties](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/properties/src/index.ts) 提供 AttachedProperty 模式，允许在不修改对象类定义的情况下附加属性：
+@lumino/properties 提供 AttachedProperty 模式，允许在不修改对象类定义的情况下附加属性：
 
 ```typescript
 class AttachedProperty<T, U> {

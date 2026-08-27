@@ -134,13 +134,13 @@ await piplite.install("numpy")
 
 ## 下一步
 
-- 阅读 [03-sphinx-conf](/concepts/03-sphinx-conf.md) 了解更多配置选项
-- 阅读 [06-try-examples](/concepts/06-try-examples.md) 为 docstring 示例添加"Try it online"按钮
-- 参考 [/examples/01-minimal-site.md](/examples/01-minimal-site.md) 查看完整的最小站点配置
+- 阅读 [03-sphinx-conf](03-sphinx-conf.md) 了解更多配置选项
+- 阅读 [06-try-examples](06-try-examples.md) 为 docstring 示例添加"Try it online"按钮
+- 参考 [/examples/01-minimal-site.md](../examples/01-minimal-site.md) 查看完整的最小站点配置
 
 ## 相关内容
 
-- [00-introduction](/concepts/00-introduction.md)
-- [03-sphinx-conf](/concepts/03-sphinx-conf.md)
-- [/examples/01-minimal-site.md](/examples/01-minimal-site.md)
-- [/examples/02-pyodide-setup.md](/examples/02-pyodide-setup.md)
+- [00-introduction](00-introduction.md)
+- [03-sphinx-conf](03-sphinx-conf.md)
+- [/examples/01-minimal-site.md](../examples/01-minimal-site.md)
+- [/examples/02-pyodide-setup.md](../examples/02-pyodide-setup.md)

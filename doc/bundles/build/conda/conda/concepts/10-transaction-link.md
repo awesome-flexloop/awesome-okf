@@ -223,5 +223,5 @@ ActionGroup 用于进度报告和显示——每个包的链接/卸载操作显�
 
 ## 相关概念
 
-- [Solver 求解器与 SAT 算法](./09-solver-and-resolve.md)：`solve_for_transaction()` 输出 UnlinkLinkTransaction
-- [环境管理与 History](./11-environments-history.md)：事务通过 UpdateHistoryAction 和 RegisterEnvironmentLocationAction 维护环境元数据
+- [Solver 求解器与 SAT 算法](09-solver-and-resolve.md)：`solve_for_transaction()` 输出 UnlinkLinkTransaction
+- [环境管理与 History](11-environments-history.md)：事务通过 UpdateHistoryAction 和 RegisterEnvironmentLocationAction 维护环境元数据

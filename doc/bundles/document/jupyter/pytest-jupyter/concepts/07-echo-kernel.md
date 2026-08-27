@@ -297,6 +297,6 @@ class CountingKernelApp(EchoKernelApp):
 ---
 
 **下一步阅读：**
-- [Client插件详解](/concepts/04-client-plugin.md) — 如何使用jp_start_kernel启动内核
-- [Fixture工厂模式](/concepts/08-fixture-factories.md) — 工厂fixtures的设计模式
-- [示例：内核测试](/examples/02-kernel-testing.md) — 更多内核测试代码示例
+- [Client插件详解](04-client-plugin.md) — 如何使用jp_start_kernel启动内核
+- [Fixture工厂模式](08-fixture-factories.md) — 工厂fixtures的设计模式
+- [示例：内核测试](../examples/02-kernel-testing.md) — 更多内核测试代码示例

@@ -365,6 +365,6 @@ spctl --assess --type install MyApp-1.0-MacOSX-x86_64.pkg
 
 ## 下一步
 
-- [自定义品牌安装程序](./custom-installer.md)：构建待签名的安装程序
-- [基础 Miniconda 风格安装程序](./basic-miniconda.md)：入门示例
+- [自定义品牌安装程序](custom-installer.md)：构建待签名的安装程序
+- [基础 Miniconda 风格安装程序](basic-miniconda.md)：入门示例
 - [13-签名与安全](../concepts/13-signing-and-security.md)：签名机制的底层实现

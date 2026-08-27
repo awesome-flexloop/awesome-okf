@@ -263,17 +263,17 @@ registry.environmentListUpdated.connect(() => {
 
 ## 相关信源
 
-- [Event 信源](/references/event-source.md)
-- [App 信源](/references/app-source.md)
+- [Event 信源](../references/event-source.md)
+- [App 信源](../references/app-source.md)
 
 ## 下一篇
 
-- [安全与导航策略](/concepts/09-security-navigation.md)
-- [多窗口与会话管理](/concepts/10-multi-window-multisession.md)
+- [安全与导航策略](09-security-navigation.md)
+- [多窗口与会话管理](10-multi-window-multisession.md)
 
 ## 相关概念
 
-- [架构概览](/concepts/01-architecture-overview.md) — EventManager 在核心模块架构中的位置
-- [安全与导航策略](/concepts/09-security-navigation.md) — GetServerInfo 事件的 origin 校验安全机制
-- [会话窗口系统](/concepts/03-session-window-system.md) — 窗口事件（焦点/关闭/最大化等）通过 IPC 传递
-- [设置与配置系统](/concepts/06-settings-config.md) — 设置变更通过 IPC 事件（SetTheme/SetSettings 等）同步到渲染进程
+- [架构概览](01-architecture-overview.md) — EventManager 在核心模块架构中的位置
+- [安全与导航策略](09-security-navigation.md) — GetServerInfo 事件的 origin 校验安全机制
+- [会话窗口系统](03-session-window-system.md) — 窗口事件（焦点/关闭/最大化等）通过 IPC 传递
+- [设置与配置系统](06-settings-config.md) — 设置变更通过 IPC 事件（SetTheme/SetSettings 等）同步到渲染进程

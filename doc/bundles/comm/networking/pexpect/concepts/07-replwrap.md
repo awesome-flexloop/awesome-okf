@@ -287,10 +287,10 @@ for cmd in commands:
 
 ## 相关概念
 
-- [spawn 类详解](/concepts/02-spawn-class.md)
-- [expect 模式匹配](/concepts/03-expect-patterns.md)
-- [pxssh SSH 自动化](/concepts/05-pxssh.md)
-- [REPL 交互控制示例](/examples/repl-control.md)
-- [高级模式](/concepts/08-advanced-patterns.md)
+- [spawn 类详解](02-spawn-class.md)
+- [expect 模式匹配](03-expect-patterns.md)
+- [pxssh SSH 自动化](05-pxssh.md)
+- [REPL 交互控制示例](../examples/repl-control.md)
+- [高级模式](08-advanced-patterns.md)
 
-[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](/references/pexpect-source.md)。
+[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](../references/pexpect-source.md)。

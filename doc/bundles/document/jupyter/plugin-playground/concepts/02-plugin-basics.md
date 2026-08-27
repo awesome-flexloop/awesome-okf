@@ -238,8 +238,8 @@ export default plugin;
 
 ## 相关概念
 
-- [整体架构与数据流](/concepts/01-architecture-overview.md)
-- [TypeScript 转译机制](/concepts/03-typescript-transpilation.md)
-- [插件加载流程](/concepts/05-plugin-loader.md)
-- [Token 依赖注入系统](/concepts/06-token-system.md)
-- [Hello World 示例](/examples/01-hello-world.md)
+- [整体架构与数据流](01-architecture-overview.md)
+- [TypeScript 转译机制](03-typescript-transpilation.md)
+- [插件加载流程](05-plugin-loader.md)
+- [Token 依赖注入系统](06-token-system.md)
+- [Hello World 示例](../examples/01-hello-world.md)

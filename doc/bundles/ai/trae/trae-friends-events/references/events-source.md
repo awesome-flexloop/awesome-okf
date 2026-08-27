@@ -80,9 +80,9 @@ trae-friends-events/
 
 ## 相关链接
 
-- [Trae Friends 活动仓库简介](/concepts/00-introduction.md)
-- [CSV+Python 轻量 CMS 模式](/concepts/01-csv-cms-pattern.md)
-- [活动数据格式](/concepts/02-event-data-format.md)
-- [贡献流程](/concepts/03-contribution-workflow.md)
-- [添加新活动示例](/examples/add-event.md)
-- [运行更新脚本示例](/examples/run-update-script.md)
+- [Trae Friends 活动仓库简介](../concepts/00-introduction.md)
+- [CSV+Python 轻量 CMS 模式](../concepts/01-csv-cms-pattern.md)
+- [活动数据格式](../concepts/02-event-data-format.md)
+- [贡献流程](../concepts/03-contribution-workflow.md)
+- [添加新活动示例](../examples/add-event.md)
+- [运行更新脚本示例](../examples/run-update-script.md)

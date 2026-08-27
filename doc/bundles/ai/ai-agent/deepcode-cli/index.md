@@ -27,15 +27,15 @@ deepcode-cli（`@vegamo/deepcode-monorepo` v0.2.1）是一个终端 AI 编程助
 
 | 分类 | 文档 | 说明 |
 |------|------|------|
-| 概念 | [项目简介](/concepts/00-introduction.md) | 概述、功能特性、安装配置 |
-| 概念 | [三包 monorepo 架构](/concepts/01-architecture.md) | cli/core/vscode-ide-companion 包结构与依赖关系 |
-| 概念 | [权限系统](/concepts/02-permission-system.md) | 10 种权限作用域、allow/deny/ask 策略、合并优先级 |
-| 概念 | [MCP 集成](/concepts/03-mcp-integration.md) | MCP 客户端、工具命名空间、JSON-RPC 通信、状态管理 |
-| 概念 | [CLI 命令与会话管理](/concepts/04-cli-commands.md) | 命令行参数、斜杠命令、TUI 快捷键、会话存储 |
-| 示例 | [基本使用](/examples/01-basic-usage.md) | 从安装到 MCP 配置的完整上手流程 |
-| 参考 | [源码信源索引](/references/source.md) | 关键源文件清单及支持的事实 ID |
-| 规范 | [事实清单](/spec/facts.md) | R 阶段：59 条带行号引用的事实 |
-| 规范 | [核心洞察](/spec/insights.md) | I 阶段：4 条架构洞察与反常识发现 |
+| 概念 | [项目简介](concepts/00-introduction.md) | 概述、功能特性、安装配置 |
+| 概念 | [三包 monorepo 架构](concepts/01-architecture.md) | cli/core/vscode-ide-companion 包结构与依赖关系 |
+| 概念 | [权限系统](concepts/02-permission-system.md) | 10 种权限作用域、allow/deny/ask 策略、合并优先级 |
+| 概念 | [MCP 集成](concepts/03-mcp-integration.md) | MCP 客户端、工具命名空间、JSON-RPC 通信、状态管理 |
+| 概念 | [CLI 命令与会话管理](concepts/04-cli-commands.md) | 命令行参数、斜杠命令、TUI 快捷键、会话存储 |
+| 示例 | [基本使用](examples/01-basic-usage.md) | 从安装到 MCP 配置的完整上手流程 |
+| 参考 | [源码信源索引](references/source.md) | 关键源文件清单及支持的事实 ID |
+| 规范 | [事实清单](spec/facts.md) | R 阶段：59 条带行号引用的事实 |
+| 规范 | [核心洞察](spec/insights.md) | I 阶段：4 条架构洞察与反常识发现 |
 
 ## 目录结构
 

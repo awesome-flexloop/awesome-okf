@@ -209,6 +209,6 @@ myst-to-jats（导出）和 jats-to-myst（导入）共享对称的架构设计�
 
 ## 相关概念
 
-- [00-exporter-architecture](/concepts/00-exporter-architecture.md)：统一导出架构
-- [09-import-converters](/concepts/09-import-converters.md)：JATS 导入（jats-to-myst）
-- [03-latex-import](/examples/03-latex-import.md)：LaTeX 导入示例
+- [00-exporter-architecture](00-exporter-architecture.md)：统一导出架构
+- [09-import-converters](09-import-converters.md)：JATS 导入（jats-to-myst）
+- [03-latex-import](../examples/03-latex-import.md)：LaTeX 导入示例

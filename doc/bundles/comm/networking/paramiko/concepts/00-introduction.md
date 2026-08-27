@@ -97,10 +97,10 @@ paramiko 的主要模块构成：
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [SSHClient 详解](/concepts/02-ssh-client.md)
-- [Transport 底层传输](/concepts/03-transport.md)
-- [认证体系](/concepts/05-authentication.md)
-- [paramiko 源码信源登记](/references/paramiko-source.md)
+- [5分钟快速上手](01-getting-started.md)
+- [SSHClient 详解](02-ssh-client.md)
+- [Transport 底层传输](03-transport.md)
+- [认证体系](05-authentication.md)
+- [paramiko 源码信源登记](../references/paramiko-source.md)
 
-[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](/references/paramiko-source.md)。
+[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](../references/paramiko-source.md)。

@@ -38,11 +38,11 @@ sources:
 
 # Dash应用初始化源码分析（dash.py Dash类__init__）
 
-`Dash` 类是 Dash 框架的核心入口，定义在 [dash.py](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py) 第 229 行。它继承自 `ObsoleteChecker`（用于检查废弃参数），同时作为 WSGI/ASGI 应用被 Web 服务器调用。
+`Dash` 类是 Dash 框架的核心入口，定义在 dash.py 第 229 行。它继承自 `ObsoleteChecker`（用于检查废弃参数），同时作为 WSGI/ASGI 应用被 Web 服务器调用。
 
 ## 1. __init__ 初始化流程
 
-`Dash.__init__` 方法定义在 [dash.py:446-704](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L446-L704)，包含以下关键步骤：
+`Dash.__init__` 方法定义在 dash.py:446-704，包含以下关键步骤：
 
 ### 1.1 参数校验与废弃检查
 
@@ -90,7 +90,7 @@ else:
     self.backend = backend_cls(self.server)
 ```
 
-后端选择逻辑在 [backends/__init__.py:14-29](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/backends/__init__.py#L14-L29) 中实现，通过 `_backend_imports` 映射表动态导入：
+后端选择逻辑在 backends/__init__.py:14-29 中实现，通过 `_backend_imports` 映射表动态导入：
 
 | 后端名称 | 模块 | 类名 |
 |---------|------|------|
@@ -98,7 +98,7 @@ else:
 | `fastapi` | `dash.backends._fastapi` | `FastAPIDashServer` |
 | `quart` | `dash.backends._quart` | `QuartDashServer` |
 
-`get_server_type()` 函数通过 `isinstance` 检测服务器类型（[backends/__init__.py:62-69](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/backends/__init__.py#L62-L69)），自动推断 Flask/Quart/FastAPI 实例。
+`get_server_type()` 函数通过 `isinstance` 检测服务器类型（backends/__init__.py:62-69），自动推断 Flask/Quart/FastAPI 实例。
 
 ### 1.4 路径前缀配置
 
@@ -108,7 +108,7 @@ base_prefix, routes_prefix, requests_prefix = pathname_configs(
 )
 ```
 
-由 [_configs.py:62-126](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_configs.py#L62-L126) 的 `pathname_configs()` 函数处理三种路径前缀：
+由 _configs.py:62-126 的 `pathname_configs()` 函数处理三种路径前缀：
 
 - `url_base_pathname`：应用根路径前缀（如 `/my-app/`），会同时设置 routes 和 requests 前缀
 - `routes_pathname_prefix`：后端 API 路由前缀，必须以 `/` 开头和结尾
@@ -133,7 +133,7 @@ self.config.finalize("Invalid config key...")
 
 1. **只读保护**：`name`、`assets_folder`、`serve_locally` 等构造期设置后不可修改
 2. **最终化**：`finalize()` 后不允许添加新键，防止拼写错误
-3. **环境变量合并**：通过 [_configs.py:48-59](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_configs.py#L48-L59) 的 `get_combined_config()` 实现参数 > 环境变量 > 默认值的优先级
+3. **环境变量合并**：通过 _configs.py:48-59 的 `get_combined_config()` 实现参数 > 环境变量 > 默认值的优先级
 
 配置完成后，全局模块引用被设置：
 ```python
@@ -187,7 +187,7 @@ MCP 服务器集成在 `dash/mcp/` 目录下，通过 `enable_mcp=True` 或环�
 self._setup_hooks()
 ```
 
-`_setup_hooks()` 方法（[dash.py:708-738](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L708-L738)）：
+`_setup_hooks()` 方法（dash.py:708-738）：
 1. 创建 `HooksManager` 实例
 2. 调用 `register_setuptools()` 加载通过 setuptools entry points 注册的 hooks
 3. 执行所有 `setup` hooks
@@ -204,7 +204,7 @@ if server:
     self.init_app()
 ```
 
-当 `server` 参数为 `True` 或服务器实例时，调用 `init_app()`（[dash.py:740-797](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L740-L797)）：
+当 `server` 参数为 `True` 或服务器实例时，调用 `init_app()`（dash.py:740-797）：
 
 1. 配置路径前缀可写性（允许 init_app 时修改）
 2. 注册 assets 静态文件蓝图
@@ -219,7 +219,7 @@ if server:
 
 ### 1.11 路由注册
 
-`_setup_routes()` 方法（[dash.py:814-864](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L814-L864)）注册以下核心端点：
+`_setup_routes()` 方法（dash.py:814-864）注册以下核心端点：
 
 | 路由 | 方法 | 用途 |
 |------|------|------|
@@ -234,7 +234,7 @@ WebSocket 回调通过 `backend.serve_websocket_callback(self)` 在支持的后�
 
 ## 2. Layout 设置机制
 
-Layout 通过 property 访问（[dash.py:911-942](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L911-L942)）：
+Layout 通过 property 访问（dash.py:911-942）：
 
 ```python
 @app.callback(...)  # 不直接在这里，是 app.layout = ...
@@ -277,14 +277,14 @@ def callback(self, *_args, **_kwargs) -> Callable[..., Any]:
     )
 ```
 
-`app.callback` 委托给 [_callback.py:74-269](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_callback.py#L74-L269) 的 `callback()` 函数。支持两种注册方式：
+`app.callback` 委托给 _callback.py:74-269 的 `callback()` 函数。支持两种注册方式：
 
 1. **`@app.callback`**：绑定到特定 app 实例
 2. **`@dash.callback`**（模块级）：使用全局 `GLOBAL_CALLBACK_MAP`/`GLOBAL_CALLBACK_LIST`，在 `_setup_server` 时合并到 app
 
 ### 3.2 回调参数解析
 
-[_callback.py](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_callback.py) 中的 `register_callback()` 调用 `handle_grouped_callback_args()`（[dependencies.py:332-363](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dependencies.py#L332-L363)）解析参数：
+_callback.py 中的 `register_callback()` 调用 `handle_grouped_callback_args()`（dependencies.py:332-363）解析参数：
 
 1. 从位置参数和关键字参数中提取 `Output`、`Input`、`State`
 2. 支持分组语法（list/tuple/dict 形式的依赖声明）
@@ -293,7 +293,7 @@ def callback(self, *_args, **_kwargs) -> Callable[..., Any]:
 
 ### 3.3 回调注册数据结构
 
-`insert_callback()` 函数（[_callback.py:298-374](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_callback.py#L298-L374)）创建两条记录：
+`insert_callback()` 函数（_callback.py:298-374）创建两条记录：
 
 **callback_spec（加入 _callback_list）**：
 ```python
@@ -326,7 +326,7 @@ callback_map[callback_id] = {
 
 ### 3.4 全局回调合并
 
-在首次请求时（`_setup_server`，[dash.py:1730-1752](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L1730-L1752)），模块级 `@dash.callback` 注册的回调被合并到 app：
+在首次请求时（`_setup_server`，dash.py:1730-1752），模块级 `@dash.callback` 注册的回调被合并到 app：
 
 ```python
 for k in list(_callback.GLOBAL_CALLBACK_MAP):
@@ -338,7 +338,7 @@ self._callback_list.extend(_callback.GLOBAL_CALLBACK_LIST)
 
 ## 4. _get_app.py 应用上下文
 
-[_get_app.py](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_get_app.py) 提供跨模块获取 app 实例的能力，解决多页面应用中的循环导入问题：
+_get_app.py 提供跨模块获取 app 实例的能力，解决多页面应用中的循环导入问题：
 
 ```python
 APP: Optional[Any] = None                                    # 模块级全局引用
@@ -363,7 +363,7 @@ def get_app():
 
 ## 5. _configs.py 配置系统
 
-[_configs.py](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_configs.py) 实现三层配置合并：
+_configs.py 实现三层配置合并：
 
 ### 5.1 环境变量加载
 

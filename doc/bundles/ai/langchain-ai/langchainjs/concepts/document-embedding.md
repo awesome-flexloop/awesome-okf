@@ -199,6 +199,6 @@ const results = await vectorStore.similaritySearch("LangChain 是什么？", 2);
 
 ## 相关文档
 
-- [总览](/ai/langchain-ai/langchainjs/concepts/overview)
-- [Runnable 接口](/ai/langchain-ai/langchainjs/concepts/runnable-interface) — VectorStore 也是 Runnable
-- [消息系统](/ai/langchain-ai/langchainjs/concepts/message-system) — Document 内容进入 Prompt 后的消息表示
+- 总览
+- Runnable 接口 — VectorStore 也是 Runnable
+- 消息系统 — Document 内容进入 Prompt 后的消息表示

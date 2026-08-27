@@ -302,7 +302,7 @@ fetched_data, fetched_sf = wait_fn()
 
 ## 8. 流水线并行（PP）Send/Recv
 
-与 [DualPipe](/ai/deepseek/dual-pipe) 配合使用，实现 EP+PP 混合并行：
+与 [DualPipe](../../dual-pipe/index.md) 配合使用，实现 EP+PP 混合并行：
 
 ```python
 # 计算 PP 缓冲区大小
@@ -387,8 +387,8 @@ buffer.destroy()  # 显式释放 C++ 资源
 
 ## 相关参考
 
-- [ElasticBuffer API](/ai/deepseek/deep-ep/references/buffer-elastic)
+- ElasticBuffer API
 - [基础 MoE 示例](basic-moe.md)
 - [计算-通信重叠示例](event-overlap.md)
-- [架构概述](/ai/deepseek/deep-ep/concepts/overview)
-- [Dispatch/Combine 流程](/ai/deepseek/deep-ep/concepts/dispatch-combine)
+- 架构概述
+- Dispatch/Combine 流程

@@ -213,9 +213,9 @@ def generate_decoding_sample(
 
 ## 六、相关链接
 
-- [/deepseek/deep-spec/concepts/overview](/ai/deepseek/deep-spec/concepts/overview) — DeepSpec 整体概述
-- [/deepseek/deep-spec/concepts/dspark-model](/ai/deepseek/deep-spec/concepts/dspark-model) — DSpark 模型架构详解
-- [/deepseek/deep-spec/concepts/eagle3-model](/ai/deepseek/deep-spec/concepts/eagle3-model) — Eagle3 模型架构详解
-- [/deepseek/deep-spec/concepts/training-pipeline](/ai/deepseek/deep-spec/concepts/training-pipeline) — 训练管线详解
-- [/deepseek/deep-spec/references/eval-api](/ai/deepseek/deep-spec/references/eval-api) — 评估 API 参考
-- [/deepseek/deep-spec/examples/evaluation](/ai/deepseek/deep-spec/examples/evaluation) — 评估使用示例
+- /deepseek/deep-spec/concepts/overview — DeepSpec 整体概述
+- /deepseek/deep-spec/concepts/dspark-model — DSpark 模型架构详解
+- /deepseek/deep-spec/concepts/eagle3-model — Eagle3 模型架构详解
+- /deepseek/deep-spec/concepts/training-pipeline — 训练管线详解
+- /deepseek/deep-spec/references/eval-api — 评估 API 参考
+- /deepseek/deep-spec/examples/evaluation — 评估使用示例

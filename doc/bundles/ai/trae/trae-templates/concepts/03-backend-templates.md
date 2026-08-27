@@ -227,12 +227,12 @@ cargo run    # 127.0.0.1:8080
 
 ## 相关概念
 
-- [五维分面分类体系](/concepts/01-template-classification.md)
-- [Web 前端模板](/concepts/02-web-frontend-templates.md)
-- [移动端和桌面端模板](/concepts/04-mobile-desktop-templates.md)
-- [数据与 AI 模板](/concepts/05-data-ai-templates.md)
-- [AGENTS.md 开发契约](/concepts/07-agents-contract.md)
+- [五维分面分类体系](01-template-classification.md)
+- [Web 前端模板](02-web-frontend-templates.md)
+- [移动端和桌面端模板](04-mobile-desktop-templates.md)
+- [数据与 AI 模板](05-data-ai-templates.md)
+- [AGENTS.md 开发契约](07-agents-contract.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/templates-source.md)
+- [源码信源索引](../references/templates-source.md)

@@ -151,10 +151,10 @@ serverapp.web_app.settings['terminals_available']  # True/False
 
 ## 相关概念
 
-- [jupyter_server_terminals 简介](/concepts/00-introduction.md)
-- [TerminalsExtensionApp 扩展应用](/concepts/02-extension-app.md)
-- [TerminalManager 终端管理器](/concepts/03-terminal-manager.md)
-- [REST API 处理器](/concepts/04-rest-api.md)
-- [基础终端操作示例](/examples/basic-operations.md)
+- [jupyter_server_terminals 简介](00-introduction.md)
+- [TerminalsExtensionApp 扩展应用](02-extension-app.md)
+- [TerminalManager 终端管理器](03-terminal-manager.md)
+- [REST API 处理器](04-rest-api.md)
+- [基础终端操作示例](../examples/basic-operations.md)
 
-[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](/references/jupyter-server-terminals-source.md)。
+[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](../references/jupyter-server-terminals-source.md)。

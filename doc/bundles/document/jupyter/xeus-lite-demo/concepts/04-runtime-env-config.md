@@ -162,5 +162,5 @@ dependencies:
 - [双环境模型](02-dual-environment.md) — 理解两个环境文件的区别
 - [构建环境配置](05-build-env-config.md) — 构建工具链配置
 - [多语言内核支持](07-kernel-options.md) — 各内核详细说明
-- [Python 科学计算环境](/examples/02-numpy-matplotlib.md) — NumPy/Matplotlib 配置示例
-- [R 内核配置](/examples/03-r-kernel.md) — R 语言配置示例
+- [Python 科学计算环境](../examples/02-numpy-matplotlib.md) — NumPy/Matplotlib 配置示例
+- [R 内核配置](../examples/03-r-kernel.md) — R 语言配置示例

@@ -93,6 +93,6 @@ Jupyter 生态中有两个官方扩展模板，它们针对不同的扩展类型
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [Cookiecutter 模板引擎基础](/concepts/02-cookiecutter-basics.md)
-- [生成的项目结构](/concepts/03-project-structure.md)
+- [快速开始](01-getting-started.md)
+- [Cookiecutter 模板引擎基础](02-cookiecutter-basics.md)
+- [生成的项目结构](03-project-structure.md)

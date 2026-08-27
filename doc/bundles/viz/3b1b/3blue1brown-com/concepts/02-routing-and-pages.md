@@ -410,7 +410,7 @@ Next.js 是一个"全功能 batteries-included 框架"，默认假设你需要 S
 
 ## 相关概念
 
-- [00 官网技术栈总览](/concepts/00-website-overview.md)
-- [01 项目结构与目录组织](/concepts/01-project-structure.md)
-- [完整技术栈清单](/references/tech-stack.md)
-- [核心组件路径索引](/references/component-index.md)
+- [00 官网技术栈总览](00-website-overview.md)
+- [01 项目结构与目录组织](01-project-structure.md)
+- [完整技术栈清单](../references/tech-stack.md)
+- [核心组件路径索引](../references/component-index.md)

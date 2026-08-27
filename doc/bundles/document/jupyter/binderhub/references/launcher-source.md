@@ -19,7 +19,7 @@ sources:
 
 ## 概述
 
-[launcher.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/launcher.py) 实现了 BinderHub 与 JupyterHub 的集成逻辑。核心类 `JupyterHubLauncher` 负责通过 JupyterHub API 创建/查找用户、启动服务器并返回访问 URL。
+launcher.py 实现了 BinderHub 与 JupyterHub 的集成逻辑。核心类 `JupyterHubLauncher` 负责通过 JupyterHub API 创建/查找用户、启动服务器并返回访问 URL。
 
 ## JupyterHubLauncher 类
 
@@ -450,7 +450,7 @@ async def delete_server(self, username, server_name):
 
 ## BinderSpawnerMixin
 
-[binderspawner_mixin.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/binderspawner_mixin.py) 提供了 Spawner 混入类，由 JupyterHub 侧的 Spawner 使用。
+binderspawner_mixin.py 提供了 Spawner 混入类，由 JupyterHub 侧的 Spawner 使用。
 
 ### BinderSpawnerMixin 类（第 15-172 行）
 
@@ -514,7 +514,7 @@ def get_env(self):
 
 ## HubOAuth 认证
 
-HubOAuth 在 [base.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/base.py) 中定义，用于 BinderHub 与 JupyterHub 之间的 OAuth 认证。
+HubOAuth 在 base.py 中定义，用于 BinderHub 与 JupyterHub 之间的 OAuth 认证。
 
 ### HubOAuth 类关键方法
 

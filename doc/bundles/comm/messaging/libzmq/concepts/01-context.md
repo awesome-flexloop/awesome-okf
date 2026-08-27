@@ -267,8 +267,8 @@ zmq_ctx_term (context);      // 等待清理完成
 
 ## 相关概念
 
-- [套接字基类](/concepts/02-socket-base.md) — socket_base_t 的模板方法模式和 x-钩子
-- [命令传递与邮箱](/concepts/08-command-mailbox.md) — mailbox_t、signaler_t、22 种命令类型
-- [I/O 线程与多路复用](/concepts/07-io-thread-poller.md) — io_thread 主循环、poller 抽象、io_object
-- [管道与流控](/concepts/04-pipe.md) — pipepair、HWM/LWM 流控机制
-- [传输层](/concepts/10-transport.md) — TCP connecter/listener、inproc 直连
+- [套接字基类](02-socket-base.md) — socket_base_t 的模板方法模式和 x-钩子
+- [命令传递与邮箱](08-command-mailbox.md) — mailbox_t、signaler_t、22 种命令类型
+- [I/O 线程与多路复用](07-io-thread-poller.md) — io_thread 主循环、poller 抽象、io_object
+- [管道与流控](04-pipe.md) — pipepair、HWM/LWM 流控机制
+- [传输层](10-transport.md) — TCP connecter/listener、inproc 直连

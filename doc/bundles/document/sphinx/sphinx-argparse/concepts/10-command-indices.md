@@ -219,6 +219,6 @@ sphinxarg_full_subcommand_name = True
 
 ## 相关概念
 
-- [Commands 域与交叉引用](/concepts/09-domain-crossref.md)
-- [配置选项详解](/concepts/11-configuration.md)
-- [基础用法完整示例](/examples/basic-usage.md)
+- [Commands 域与交叉引用](09-domain-crossref.md)
+- [配置选项详解](11-configuration.md)
+- [基础用法完整示例](../examples/basic-usage.md)

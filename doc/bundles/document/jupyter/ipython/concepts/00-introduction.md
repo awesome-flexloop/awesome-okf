@@ -220,7 +220,7 @@ from IPython import embed_kernel  # [F-012]
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [魔法命令系统](/concepts/04-magic-system.md)
-- [信源参考索引](/references/index.md)
+- [快速开始](01-getting-started.md)
+- [架构总览](02-architecture-overview.md)
+- [魔法命令系统](04-magic-system.md)
+- [信源参考索引](../references/index.md)

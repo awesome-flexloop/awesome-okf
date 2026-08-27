@@ -149,17 +149,17 @@ eventKey 格式：
 
 ## 相关概念
 
-- [SKILL.md 格式规范](/concepts/01-skill-format.md)
-- [技能分类与模板模式](/concepts/02-skill-categories.md)
-- [纯 Prompt 型技能](/concepts/03-prompt-only-skills.md)
-- [脚本辅助型技能](/concepts/04-script-assisted-skills.md)
-- [Workflow 编排型技能](/concepts/05-workflow-skills.md)
-- [社区积分机制](/concepts/06-community-points.md)
-- [编写自定义 Skill](/concepts/07-write-skill.md)
+- [SKILL.md 格式规范](../concepts/01-skill-format.md)
+- [技能分类与模板模式](../concepts/02-skill-categories.md)
+- [纯 Prompt 型技能](../concepts/03-prompt-only-skills.md)
+- [脚本辅助型技能](../concepts/04-script-assisted-skills.md)
+- [Workflow 编排型技能](../concepts/05-workflow-skills.md)
+- [社区积分机制](../concepts/06-community-points.md)
+- [编写自定义 Skill](../concepts/07-write-skill.md)
 
 ## 相关示例
 
-- [创建第一个 Skill](/examples/create-first-skill.md)
-- [带 Python 脚本的 Skill 示例](/examples/skill-with-python-script.md)
-- [触发条件设计示例](/examples/trigger-condition-design.md)
-- [社区积分贡献示例](/examples/points-contribution.md)
+- [创建第一个 Skill](../examples/create-first-skill.md)
+- [带 Python 脚本的 Skill 示例](../examples/skill-with-python-script.md)
+- [触发条件设计示例](../examples/trigger-condition-design.md)
+- [社区积分贡献示例](../examples/points-contribution.md)

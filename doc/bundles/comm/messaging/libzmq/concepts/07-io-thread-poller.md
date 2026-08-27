@@ -263,8 +263,8 @@ class yqueue_t {
 
 ## 相关概念
 
-- [上下文与基础设施](/concepts/01-context.md) — ctx 创建和管理 I/O 线程池
-- [命令传递与邮箱](/concepts/08-command-mailbox.md) — mailbox_t 的完整实现、mailbox_safe_t 条件变量
-- [管道与流控](/concepts/04-pipe.md) — ypipe 在 pipe 中的使用
-- [会话与连接生命周期](/concepts/05-session.md) — session 和 engine 作为 io_object 注册 fd
-- [ZMTP 协议引擎](/concepts/06-zmtp-engine.md) — stream_engine_base 使用 poller 进行网络读写
+- [上下文与基础设施](01-context.md) — ctx 创建和管理 I/O 线程池
+- [命令传递与邮箱](08-command-mailbox.md) — mailbox_t 的完整实现、mailbox_safe_t 条件变量
+- [管道与流控](04-pipe.md) — ypipe 在 pipe 中的使用
+- [会话与连接生命周期](05-session.md) — session 和 engine 作为 io_object 注册 fd
+- [ZMTP 协议引擎](06-zmtp-engine.md) — stream_engine_base 使用 poller 进行网络读写

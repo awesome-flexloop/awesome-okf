@@ -53,7 +53,7 @@ jupyter-renderers/
 
 ## Lerna 配置
 
-[lerna.json](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyter-renderers/lerna.json) 配置：[^lerna]
+lerna.json 配置：[^lerna]
 
 ```json
 {
@@ -73,7 +73,7 @@ jupyter-renderers/
 
 ## Yarn Workspaces
 
-根 [package.json](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyter-renderers/package.json) 通过 `"workspaces": ["packages/*"]` 声明所有子包。[^root-pkg] Yarn 会：
+根 package.json 通过 `"workspaces": ["packages/*"]` 声明所有子包。[^root-pkg] Yarn 会：
 
 1. 将所有子包的公共依赖提升（hoist）到根 `node_modules/`
 2. 在包间创建符号链接，支持跨包引用
@@ -171,7 +171,7 @@ jupyter lab
 
 构建后的 wheel 包安装时，JupyterLab 自动从 `share/jupyter/labextensions/` 目录发现预构建扩展，无需 Node.js 环境。
 
-详见 [Python 入口点与打包参考](/references/python-entrypoint-reference.md)。
+详见 [Python 入口点与打包参考](../references/python-entrypoint-reference.md)。
 
 ## 发布流程
 
@@ -213,10 +213,10 @@ twine upload dist/*
 
 ## 相关概念
 
-- [MIME 渲染器开发模式](/concepts/02-mime-renderer-pattern.md)
-- [扩展类型：MIME 渲染器 vs 应用扩展](/concepts/03-extension-types.md)
-- [Python 入口点与打包参考](/references/python-entrypoint-reference.md)
-- [package.json 扩展配置参考](/references/extension-config-reference.md)
+- [MIME 渲染器开发模式](02-mime-renderer-pattern.md)
+- [扩展类型：MIME 渲染器 vs 应用扩展](03-extension-types.md)
+- [Python 入口点与打包参考](../references/python-entrypoint-reference.md)
+- [package.json 扩展配置参考](../references/extension-config-reference.md)
 
 [^fasta-pkg]: fasta-extension/package.json
 [^lerna]: lerna.json

@@ -160,17 +160,17 @@ notepad "$env:LOCALAPPDATA\IntelligentTerminal\prompts\terminal-agent.md"
 
 1. **定位配置文件**：根据安装方式（Packaged/Portable）选择正确的 settings.json 路径。Packaged 版本位于 `%LOCALAPPDATA%\Packages\` 下的应用数据目录，Portable 版本位于 `%LOCALAPPDATA%\Programs\IntelligentTerminal\settings\`。
 
-2. **`agentCliPath` 字段**：这是核心配置项，指定启动 ACP Agent 的完整命令行。内置 Agent 通过 [`AgentProfile`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/agent_registry.rs#L31-L81) 结构体定义，包含 ACP 启动标志、模型标志、认证流程等元数据。
+2. **`agentCliPath` 字段**：这是核心配置项，指定启动 ACP Agent 的完整命令行。内置 Agent 通过 `AgentProfile` 结构体定义，包含 ACP 启动标志、模型标志、认证流程等元数据。
 
-3. **内置 Agent 解析**：[`lookup_profile()`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/agent_registry.rs#L210-L225) 函数会自动从命令行中提取 Agent ID，剥离路径和扩展名（`.exe`/`.cmd`/`.bat`），然后匹配到对应的 `AgentProfile`。
+3. **内置 Agent 解析**：`lookup_profile()` 函数会自动从命令行中提取 Agent ID，剥离路径和扩展名（`.exe`/`.cmd`/`.bat`），然后匹配到对应的 `AgentProfile`。
 
-4. **ACP 命令构建**：[`build_acp_command()`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/agent_registry.rs#L321-L343) 根据 Agent ID 和模型参数构建完整的 ACP 启动命令。对于不支持原生 ACP 的 Agent（如 Claude、Codex），会自动使用 npx 适配器命令。
+4. **ACP 命令构建**：`build_acp_command()` 根据 Agent ID 和模型参数构建完整的 ACP 启动命令。对于不支持原生 ACP 的 Agent（如 Claude、Codex），会自动使用 npx 适配器命令。
 
-5. **`delegateAgentCliPath` 字段**：配置委托模式的 Agent CLI。委托模式通过 [`strip_acp_flags_for_delegate()`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/agent_registry.rs#L354-L379) 自动剥离 ACP 特有标志，保留模型参数。
+5. **`delegateAgentCliPath` 字段**：配置委托模式的 Agent CLI。委托模式通过 `strip_acp_flags_for_delegate()` 自动剥离 ACP 特有标志，保留模型参数。
 
-6. **命令行参数优先级**：CLI 参数（`--agent`、`--agent-id`、`--acp-model` 等）优先级高于 settings.json 配置。[`Cli`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/cli/args.rs#L10-L205) 结构体定义了所有可用参数。
+6. **命令行参数优先级**：CLI 参数（`--agent`、`--agent-id`、`--acp-model` 等）优先级高于 settings.json 配置。`Cli` 结构体定义了所有可用参数。
 
-7. **WSL Agent 支持**：通过 `--agent-source wsl --agent-wsl-distro <name>` 可在 WSL 发行版中运行 Agent。[`AgentSource`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/agent_source.rs#L16-L22) 枚举支持 Host 和 Wsl 两种执行环境，CWD 会自动转换为 POSIX 路径。
+7. **WSL Agent 支持**：通过 `--agent-source wsl --agent-wsl-distro <name>` 可在 WSL 发行版中运行 Agent。`AgentSource` 枚举支持 Host 和 Wsl 两种执行环境，CWD 会自动转换为 POSIX 路径。
 
 8. **运行时提示热加载**：`terminal-agent.md` 在每次提示提交时重新加载，无需重启 Terminal 即可修改 Agent 的行为指令。
 
@@ -201,5 +201,5 @@ wta probe-models --agent "copilot --acp --stdio"
 - **适配器版本钉扎**：Codex 的 npx 适配器使用 `@1.1.4` 版本钉扎，未钉扎版本可能因上游更新导致启动失败。
 - **npx 首次启动延迟**：Claude/Codex 通过 npx 启动适配器，首次运行需要下载 npm 包，可能有 10-60 秒延迟。
 - **委托模式不使用 ACP**：委托 Agent 在独立终端标签页中以交互模式运行，不通过 ACP 协议通信，因此不需要 ACP 标志。
-- **PATH 解析**：WTA 通过 [`resolve_bare_agent_name()`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/agent_registry.rs#L422-L447) 在 PATH 中搜索 Agent 可执行文件，搜索顺序为 `.exe` → `.cmd`。如果 Agent 不在 PATH 中，需使用完整路径。
+- **PATH 解析**：WTA 通过 `resolve_bare_agent_name()` 在 PATH 中搜索 Agent 可执行文件，搜索顺序为 `.exe` → `.cmd`。如果 Agent 不在 PATH 中，需使用完整路径。
 - **自定义 Agent**：settings.json 中可以使用任意命令行作为 `agentCliPath`，但只有注册在 `KNOWN_AGENTS` 中的 Agent 才有完整的 Profile 支持（模型选择、认证提示等）。未注册的命令使用默认 Profile。

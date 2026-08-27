@@ -114,11 +114,11 @@ sphinx-demo 采用的方案是构建两个独立站点，通过版本切换器�
 3. conf.py 中 `defaultKernelName` 设为 `"XPython"`
 4. CI 中需安装 micromamba
 
-完整示例见 [/examples/02-pyodide-setup.md](/examples/02-pyodide-setup.md) 和 [/examples/03-xeus-setup.md](/examples/03-xeus-setup.md)。
+完整示例见 [/examples/02-pyodide-setup.md](../examples/02-pyodide-setup.md) 和 [/examples/03-xeus-setup.md](../examples/03-xeus-setup.md)。
 
 ## 相关内容
 
-- [03-sphinx-conf](/concepts/03-sphinx-conf.md)
-- [09-ci-deployment](/concepts/09-ci-deployment.md)
-- [/examples/02-pyodide-setup.md](/examples/02-pyodide-setup.md)
-- [/examples/03-xeus-setup.md](/examples/03-xeus-setup.md)
+- [03-sphinx-conf](03-sphinx-conf.md)
+- [09-ci-deployment](09-ci-deployment.md)
+- [/examples/02-pyodide-setup.md](../examples/02-pyodide-setup.md)
+- [/examples/03-xeus-setup.md](../examples/03-xeus-setup.md)

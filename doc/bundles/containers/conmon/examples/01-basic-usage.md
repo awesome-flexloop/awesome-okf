@@ -343,6 +343,6 @@ conmon -c my-container-id ...
 
 ## 相关概念
 
-- [进程生命周期管理](/bundles/containers/conmon/concepts/01-process-lifecycle.md) — 理解为什么 conmon 启动后立即返回
-- [事件循环与信号处理](/bundles/containers/conmon/concepts/02-event-loop.md) — 理解 conmon 如何在后台监控容器
+- [进程生命周期管理](../concepts/01-process-lifecycle.md) — 理解为什么 conmon 启动后立即返回
+- [事件循环与信号处理](../concepts/02-event-loop.md) — 理解 conmon 如何在后台监控容器
 - [与Podman/CRI-O集成](02-integration.md) — 了解实际场景中 Podman 如何调用 conmon

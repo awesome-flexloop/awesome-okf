@@ -116,7 +116,7 @@ print(get_model_list())
 
 ## 相关概念
 
-- [10 Python 绑定](/concepts/10-python-binding.md)
-- [01 Net 与 Extractor 推理流程](/concepts/01-net-extractor.md)
-- [02 Mat 张量系统](/concepts/02-mat-tensor-system.md)
-- [06 Vulkan GPU 后端](/concepts/06-vulkan-gpu.md)
+- [10 Python 绑定](../concepts/10-python-binding.md)
+- [01 Net 与 Extractor 推理流程](../concepts/01-net-extractor.md)
+- [02 Mat 张量系统](../concepts/02-mat-tensor-system.md)
+- [06 Vulkan GPU 后端](../concepts/06-vulkan-gpu.md)

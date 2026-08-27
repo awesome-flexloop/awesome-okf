@@ -80,8 +80,8 @@ Docker 构建时通过 ARG 传入 COS 环境变量：
 
 ## 相关概念
 
-- [作品提交流程](/concepts/13-form-submission.md)
-- [API 路由设计](/concepts/06-api-routes.md)
-- [富文本编辑器](/concepts/08-rich-text-editor.md)
-- [Docker 部署](/concepts/15-docker-deployment.md)
-- [COS 文件上传示例](/examples/cos-file-upload.md)
+- [作品提交流程](13-form-submission.md)
+- [API 路由设计](06-api-routes.md)
+- [富文本编辑器](08-rich-text-editor.md)
+- [Docker 部署](15-docker-deployment.md)
+- [COS 文件上传示例](../examples/cos-file-upload.md)

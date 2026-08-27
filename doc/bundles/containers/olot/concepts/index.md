@@ -6,10 +6,10 @@
 
 | 序号 | 文件 | 主题 | 难度 | 前置知识 |
 |------|------|------|------|---------|
-| 00 | [00-introduction.md](/bundles/containers/olot/concepts/00-introduction.md) | olot 定位与 ModelCar 标准 | ⭐ 入门 | 无 |
-| 01 | [01-oci-layers.md](/bundles/containers/olot/concepts/01-oci-layers.md) | OCI 层操作与四元组注解 | ⭐⭐ 中级 | OCI 基本概念 |
-| 02 | [02-backends.md](/bundles/containers/olot/concepts/02-backends.md) | 后端抽象层（skopeo/oras） | ⭐⭐ 中级 | 容器 registry 概念 |
-| 03 | [03-python-api.md](/bundles/containers/olot/concepts/03-python-api.md) | Python API 编程 | ⭐⭐⭐ 进阶 | Python 编程基础 |
+| 00 | [00-introduction.md](00-introduction.md) | olot 定位与 ModelCar 标准 | ⭐ 入门 | 无 |
+| 01 | [01-oci-layers.md](01-oci-layers.md) | OCI 层操作与四元组注解 | ⭐⭐ 中级 | OCI 基本概念 |
+| 02 | [02-backends.md](02-backends.md) | 后端抽象层（skopeo/oras） | ⭐⭐ 中级 | 容器 registry 概念 |
+| 03 | [03-python-api.md](03-python-api.md) | Python API 编程 | ⭐⭐⭐ 进阶 | Python 编程基础 |
 
 ## 建议学习路径
 

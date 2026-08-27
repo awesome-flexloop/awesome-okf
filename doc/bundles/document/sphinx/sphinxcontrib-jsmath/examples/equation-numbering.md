@@ -269,7 +269,7 @@ sphinxcontrib-jsmath 在 `html_visit_displaymath` 中调用此函数获取编号
 
 ## 相关概念
 
-- [数学节点访问者](/concepts/03-math-node-visitors.md)
-- [智能JS加载机制](/concepts/04-smart-js-loading.md)
-- [基础使用示例](/examples/basic-usage.md)
-- [常见问题排查](/examples/troubleshooting.md)
+- [数学节点访问者](../concepts/03-math-node-visitors.md)
+- [智能JS加载机制](../concepts/04-smart-js-loading.md)
+- [基础使用示例](basic-usage.md)
+- [常见问题排查](troubleshooting.md)

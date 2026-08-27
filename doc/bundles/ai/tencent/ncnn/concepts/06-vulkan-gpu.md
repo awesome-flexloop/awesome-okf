@@ -124,4 +124,4 @@ cache.save_cache("pipeline.cache");
 - [03 Layer 抽象层](03-layer-abstraction.md)
 - [04 内存分配器](04-allocator.md)
 - [05 Option 推理配置](05-option-config.md)
-- [Vulkan GPU 推理示例](/examples/vulkan-inference.md)
+- [Vulkan GPU 推理示例](../examples/vulkan-inference.md)

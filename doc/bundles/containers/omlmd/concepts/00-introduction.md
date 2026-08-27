@@ -115,6 +115,6 @@ omlmd.push("localhost:8080/my-model:v1", "model.joblib",
 
 ## 进一步阅读
 
-- [ModelMetadata 双格式](/containers/omlmd/concepts/01-model-metadata) — 元数据结构与序列化机制
-- [Helper 类与 Listener 模式](/containers/omlmd/concepts/02-helpers-listener) — 高层 API 与事件监听
-- [OMLMDRegistry 扩展](/containers/omlmd/concepts/03-registry) — oras-py 扩展实现
+- ModelMetadata 双格式 — 元数据结构与序列化机制
+- Helper 类与 Listener 模式 — 高层 API 与事件监听
+- OMLMDRegistry 扩展 — oras-py 扩展实现

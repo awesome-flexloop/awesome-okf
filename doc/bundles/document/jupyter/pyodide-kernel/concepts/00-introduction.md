@@ -110,10 +110,10 @@ jupyterlite-pyodide-kernel/
 
 ## 下一步
 
-- [快速开始](/concepts/01-getting-started.md) — 安装和基本配置
-- [架构总览](/concepts/02-architecture-overview.md) — 理解整体架构设计
+- [快速开始](01-getting-started.md) — 安装和基本配置
+- [架构总览](02-architecture-overview.md) — 理解整体架构设计
 
 ## 源码参考
 
-- [Python Addon 源码](/references/addon-source.md)
-- [JupyterLab Extension 源码](/references/extension-source.md)
+- [Python Addon 源码](../references/addon-source.md)
+- [JupyterLab Extension 源码](../references/extension-source.md)

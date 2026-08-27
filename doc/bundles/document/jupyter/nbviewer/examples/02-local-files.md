@@ -212,6 +212,6 @@ c.Application.log_level = "INFO"
 
 ## 相关文档
 
-- [速率限制与安全机制](/concepts/11-rate-limit-security.md)：本地文件安全检查详解
-- [部署指南](/concepts/13-deployment.md)：生产部署建议
-- [基本配置示例](/examples/01-basic-config.md)：通用配置
+- [速率限制与安全机制](../concepts/11-rate-limit-security.md)：本地文件安全检查详解
+- [部署指南](../concepts/13-deployment.md)：生产部署建议
+- [基本配置示例](01-basic-config.md)：通用配置

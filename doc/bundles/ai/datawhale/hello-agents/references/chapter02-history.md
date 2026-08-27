@@ -52,5 +52,5 @@ sources:
 符号主义（知识获取瓶颈）→ 反应式（缺乏规划）→ 分布式（协调复杂）→ RL（样本效率低）→ LLM Agent（幻觉+可靠性）
 
 ## 相关概念
-- [智能体范式与ReAct](/ai/datawhale/hello-agents/concepts/agent-paradigms-react)
-- [Agentic-RL](/ai/datawhale/hello-agents/concepts/agentic-rl)
+- 智能体范式与ReAct
+- Agentic-RL

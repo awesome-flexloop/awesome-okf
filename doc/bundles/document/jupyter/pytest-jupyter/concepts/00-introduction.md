@@ -124,6 +124,6 @@ pytest-jupyter 采用分层插件设计，每层在基础层之上增加更多�
 ---
 
 **下一步阅读：**
-- [5分钟快速上手](/concepts/01-getting-started.md) — 安装插件、配置conftest、编写第一个测试
-- [架构总览](/concepts/02-architecture-overview.md) — 理解fixture依赖链、插件加载机制、设计哲学
-- [Core插件详解](/concepts/03-core-plugin.md) — 深入环境隔离和异步测试基础设施
+- [5分钟快速上手](01-getting-started.md) — 安装插件、配置conftest、编写第一个测试
+- [架构总览](02-architecture-overview.md) — 理解fixture依赖链、插件加载机制、设计哲学
+- [Core插件详解](03-core-plugin.md) — 深入环境隔离和异步测试基础设施

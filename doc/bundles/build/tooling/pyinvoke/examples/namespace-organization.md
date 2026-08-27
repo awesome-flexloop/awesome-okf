@@ -387,4 +387,4 @@ ns.add_collection(test_ns)
 * [Task 基础（§2）](../concepts/02-task-basics.md)
 * [任务加载机制（§1）](../concepts/01-getting-started.md)
 
-[^pyinvoke-src]: PyInvoke 源码，见本 bundle 信源登记 [references/pyinvoke-source.md](/references/pyinvoke-source.md)。
+[^pyinvoke-src]: PyInvoke 源码，见本 bundle 信源登记 [references/pyinvoke-source.md](../references/pyinvoke-source.md)。

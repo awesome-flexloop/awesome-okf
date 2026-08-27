@@ -122,7 +122,7 @@ for snapshot in history:
 
 ## 相关概念
 
-- [状态图](/ai/langchain-ai/langgraph/concepts/state-graph) — StateGraph 构建 API
-- [消息图](/ai/langchain-ai/langgraph/concepts/message-graph) — MessagesState 与 add_messages
-- [错误处理](/ai/langchain-ai/langgraph/concepts/error-handling) — interrupt 与 RetryPolicy
-- [检查点](/ai/langchain-ai/langgraph/concepts/checkpointing) — InMemorySaver 与状态历史
+- 状态图 — StateGraph 构建 API
+- 消息图 — MessagesState 与 add_messages
+- 错误处理 — interrupt 与 RetryPolicy
+- 检查点 — InMemorySaver 与状态历史

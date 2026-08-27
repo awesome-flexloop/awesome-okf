@@ -186,6 +186,6 @@ A: 正常现象，numpy + pandas + matplotlib 增加了约 20-30MB 的 WASM 下�
 
 ## 相关概念
 
-- [运行时环境配置](/concepts/04-runtime-env-config.md) — environment.yml 配置详解
-- [多语言内核支持](/concepts/07-kernel-options.md) — 其他语言内核配置
+- [运行时环境配置](../concepts/04-runtime-env-config.md) — environment.yml 配置详解
+- [多语言内核支持](../concepts/07-kernel-options.md) — 其他语言内核配置
 - [R 内核配置](03-r-kernel.md) — 如果需要 R 语言环境

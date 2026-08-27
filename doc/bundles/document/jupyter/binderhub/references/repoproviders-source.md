@@ -16,7 +16,7 @@ sources:
 
 ## 概述
 
-[repoproviders.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py) 实现了 BinderHub 的仓库提供器（RepoProvider）体系。RepoProvider 负责解析不同来源的代码仓库规范（spec），将其解析为可克隆的 Git URL 和确定的 commit SHA，并提供构建用的唯一 slug。
+repoproviders.py 实现了 BinderHub 的仓库提供器（RepoProvider）体系。RepoProvider 负责解析不同来源的代码仓库规范（spec），将其解析为可克隆的 Git URL 和确定的 commit SHA，并提供构建用的唯一 slug。
 
 ## 常量和辅助函数
 

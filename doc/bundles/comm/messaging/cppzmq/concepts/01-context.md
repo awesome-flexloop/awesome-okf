@@ -62,6 +62,6 @@ b = std::move(a2);                 // 先 close(b) 再 swap
 
 ## 相关概念
 
-- [02 socket_t](/concepts/02-socket.md)：socket 必须由 context 创建
-- [04 错误处理](/concepts/04-error-handling.md)：ETERM 与 error_t
-- [信源：zmq.hpp](/references/zmq-hpp.md)
+- [02 socket_t](02-socket.md)：socket 必须由 context 创建
+- [04 错误处理](04-error-handling.md)：ETERM 与 error_t
+- [信源：zmq.hpp](../references/zmq-hpp.md)

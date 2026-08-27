@@ -427,7 +427,7 @@ ExternalOutput 采用缓冲设计是因为：
 - **Comlink 模式**：使用 `Comlink.wrap(worker)` 创建代理，通过 `proxy()` 传递回调函数。外部命令调用是标准的 RPC（远程过程调用）。
 - **Coincident 模式**：直接在 `worker.proxy` 对象上赋值回调，外部命令调用通过共享代理直接执行，延迟更低。
 
-详见 [11 - Worker 通信机制](/concepts/11-worker-communication.md)。
+详见 [11 - Worker 通信机制](11-worker-communication.md)。
 
 ## 自定义 Tab 补全
 
@@ -647,10 +647,10 @@ const shell = new CockleShell({
 
 ## 相关概念
 
-- [03 - 命令系统](/concepts/03-command-system.md)：CommandRegistry 和 CommandRunner 架构
-- [08 - 内置命令详解](/concepts/08-builtin-commands.md)：Worker 内的 TypeScript 命令
-- [10 - WASM 与 JavaScript 命令](/concepts/10-wasm-js-commands.md)：动态加载的 WASM/JS 命令
-- [11 - Worker 通信机制](/concepts/11-worker-communication.md)：Comlink/Coincident 如何桥接跨线程调用
-- [07 - 缓冲 IO 系统](/concepts/07-buffered-io.md)：外部命令的 stdin 如何同步读取
-- [Shell API 参考](/references/shell-api.md)：Shell 构造函数完整选项
-- [命令系统参考](/references/command-source.md)：CommandRegistry 和 Runner 完整接口
+- [03 - 命令系统](03-command-system.md)：CommandRegistry 和 CommandRunner 架构
+- [08 - 内置命令详解](08-builtin-commands.md)：Worker 内的 TypeScript 命令
+- [10 - WASM 与 JavaScript 命令](10-wasm-js-commands.md)：动态加载的 WASM/JS 命令
+- [11 - Worker 通信机制](11-worker-communication.md)：Comlink/Coincident 如何桥接跨线程调用
+- [07 - 缓冲 IO 系统](07-buffered-io.md)：外部命令的 stdin 如何同步读取
+- [Shell API 参考](../references/shell-api.md)：Shell 构造函数完整选项
+- [命令系统参考](../references/command-source.md)：CommandRegistry 和 Runner 完整接口

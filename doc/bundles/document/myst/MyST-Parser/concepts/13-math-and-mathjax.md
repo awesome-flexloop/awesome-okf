@@ -136,7 +136,7 @@ dollarmath 插件将数学公式解析为 markdown-it Token，渲染器生成 do
 
 ## 相关概念
 
-- [扩展语法系统](/concepts/05-extension-system.md)
-- [配置系统](/concepts/04-config-system.md)
-- [Sphinx 集成机制](/concepts/11-sphinx-integration.md)
-- [启用扩展实战](/examples/02-enable-extensions.md)
+- [扩展语法系统](05-extension-system.md)
+- [配置系统](04-config-system.md)
+- [Sphinx 集成机制](11-sphinx-integration.md)
+- [启用扩展实战](../examples/02-enable-extensions.md)

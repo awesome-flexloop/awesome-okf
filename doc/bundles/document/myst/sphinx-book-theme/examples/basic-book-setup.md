@@ -241,7 +241,7 @@ Margin指令可以放置任意内容，包括**加粗文字**、列表：
 
 ## 相关概念
 
-- [安装与基础配置](/concepts/01-getting-started.md)
-- [配置系统详解](/concepts/03-configuration.md)
-- [Margin指令与边注旁注](/concepts/05-margin-sidenotes.md)
-- [交互式计算书籍配置](/examples/interactive-book.md)
+- [安装与基础配置](../concepts/01-getting-started.md)
+- [配置系统详解](../concepts/03-configuration.md)
+- [Margin指令与边注旁注](../concepts/05-margin-sidenotes.md)
+- [交互式计算书籍配置](interactive-book.md)

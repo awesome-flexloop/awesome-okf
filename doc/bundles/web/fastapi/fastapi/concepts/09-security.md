@@ -262,8 +262,8 @@ def get_authorization_scheme_param(
 
 ## 相关概念
 
-- [依赖注入系统](/concepts/04-dependency-injection.md)
-- [OpenAPI 文档生成](/concepts/08-openapi-generation.md)
-- [参数声明系统](/concepts/05-parameter-declaration.md)
-- [异常处理与校验错误](/concepts/11-exception-handling.md)
-- [FastAPI 应用类与生命周期](/concepts/01-application.md)
+- [依赖注入系统](04-dependency-injection.md)
+- [OpenAPI 文档生成](08-openapi-generation.md)
+- [参数声明系统](05-parameter-declaration.md)
+- [异常处理与校验错误](11-exception-handling.md)
+- [FastAPI 应用类与生命周期](01-application.md)

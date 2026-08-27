@@ -392,7 +392,7 @@ ACP 与 SDK JSON-RPC 协议（`sdk-jsonrpc-server`）是两个独立的自动化
 
 | 文件 | 核心内容 |
 |------|---------|
-| [packages/acp/acp/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/acp/acp/src/index.ts) | ACP 插件完整实现（makeAgent、事件桥接、quiesce、参数验证） |
-| [packages/acp/acp/src/codec.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/acp/acp/src/codec.ts) | ACP prompt 编解码、stop reason 映射、内容类型检测 |
-| [packages/sdk/protocol/src/types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/sdk/protocol/src/types.ts) | SDK 协议类型（InitializeParams、SessionPromptParams、4 种通知） |
-| [packages/sdk/server/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/sdk/server/src/index.ts) | SDK JSON-RPC 服务端插件（shutdown→flush→dispose→exit 阶梯） |
+| packages/acp/acp/src/index.ts | ACP 插件完整实现（makeAgent、事件桥接、quiesce、参数验证） |
+| packages/acp/acp/src/codec.ts | ACP prompt 编解码、stop reason 映射、内容类型检测 |
+| packages/sdk/protocol/src/types.ts | SDK 协议类型（InitializeParams、SessionPromptParams、4 种通知） |
+| packages/sdk/server/src/index.ts | SDK JSON-RPC 服务端插件（shutdown→flush→dispose→exit 阶梯） |

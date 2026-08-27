@@ -230,7 +230,7 @@ rootless 模式下绑定挂载主机目录可能遇到权限问题，建议数�
 
 ## 相关概念
 
-- [快速上手与 Compose Spec 兼容](/concepts/00-introduction.md)
-- [rootless 模式下的网络与卷](/concepts/02-rootless.md)
-- [Compose 文件常见模式](/concepts/03-compose-patterns.md)
-- [多容器应用编排](/examples/02-multi-container.md)
+- [快速上手与 Compose Spec 兼容](../concepts/00-introduction.md)
+- [rootless 模式下的网络与卷](../concepts/02-rootless.md)
+- [Compose 文件常见模式](../concepts/03-compose-patterns.md)
+- [多容器应用编排](02-multi-container.md)

@@ -168,7 +168,7 @@ D: [G, M, N]                    (每个 expert 的 dW)
                    └──────────────────┘
 ```
 
-DeepGEMM 的 **MegaMoE** 模式将上述流程（dispatch + GEMM1 + SwiGLU + GEMM2 + combine）完全融合为单个核函数，通过对称环形缓冲区实现零拷贝通信。参见 [/deepseek/deep-gemm/concepts/moe-operations](/ai/deepseek/deep-gemm/concepts/moe-operations)。
+DeepGEMM 的 **MegaMoE** 模式将上述流程（dispatch + GEMM1 + SwiGLU + GEMM2 + combine）完全融合为单个核函数，通过对称环形缓冲区实现零拷贝通信。参见 /deepseek/deep-gemm/concepts/moe-operations。
 
 ---
 
@@ -223,8 +223,8 @@ fp8_gemm_nt(..., compiled_dims="nk")  # 或 "mn"
 
 ## 七、相关链接
 
-- [/deepseek/deep-gemm/concepts/fp8-gemm](/ai/deepseek/deep-gemm/concepts/fp8-gemm) — FP8/FP4 量化与缩放因子
-- [/deepseek/deep-gemm/concepts/moe-operations](/ai/deepseek/deep-gemm/concepts/moe-operations) — MegaMoE 融合核
-- [/deepseek/deep-gemm/concepts/performance-optimization](/ai/deepseek/deep-gemm/concepts/performance-optimization) — TMA/WGMMA 性能优化
-- [/deepseek/deep-gemm/references/api](/ai/deepseek/deep-gemm/references/api) — 分组 GEMM API 参考
-- [/deepseek/deep-ep/](/ai/deepseek/deep-ep/) — DeepEP 专家并行通信库
+- /deepseek/deep-gemm/concepts/fp8-gemm — FP8/FP4 量化与缩放因子
+- /deepseek/deep-gemm/concepts/moe-operations — MegaMoE 融合核
+- /deepseek/deep-gemm/concepts/performance-optimization — TMA/WGMMA 性能优化
+- /deepseek/deep-gemm/references/api — 分组 GEMM API 参考
+- [/deepseek/deep-ep/](../../deep-ep/index.md) — DeepEP 专家并行通信库

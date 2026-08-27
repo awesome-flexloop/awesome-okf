@@ -78,5 +78,5 @@ PBRFT（Preference-Based RL Fine-Tuning）优化单轮对话质量，Agentic RL�
 8个脚本+加速配置：数据加载→奖励函数→LoRA配置→SFT训练→GRPO训练→完整pipeline→评估→分布式训练
 
 ## 相关概念
-- [Agentic-RL](/ai/datawhale/hello-agents/concepts/agentic-rl)
-- [评估方法](/ai/datawhale/hello-agents/concepts/evaluation-methods)
+- Agentic-RL
+- 评估方法

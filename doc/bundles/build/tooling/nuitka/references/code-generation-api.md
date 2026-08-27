@@ -68,7 +68,7 @@ status: active
 
 # Nuitka C代码生成 API 参考
 
-> 源码路径：[nuitka/code_generation/](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/code_generation/)
+> 源码路径：nuitka/code_generation/
 
 ## Context 类层次
 

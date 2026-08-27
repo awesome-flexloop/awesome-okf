@@ -212,7 +212,7 @@ MCP 配置嵌套在 `mcp.servers` 下：
 
 ## 相关概念
 
-- [OpenCode 简介](/concepts/00-introduction.md)
-- [架构概览](/concepts/01-architecture.md)
-- [会话与工具](/concepts/03-session-tools.md)
-- [部署与基础设施](/concepts/04-deployment-infra.md)
+- [OpenCode 简介](00-introduction.md)
+- [架构概览](01-architecture.md)
+- [会话与工具](03-session-tools.md)
+- [部署与基础设施](04-deployment-infra.md)

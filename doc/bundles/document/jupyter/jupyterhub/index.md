@@ -64,7 +64,7 @@ JupyterHub 是 Jupyter 生态的多用户服务器管理平台，为每个用户
 2. 按照[快速入门示例](examples/quickstart.md)启动第一个 JupyterHub 实例
 3. 通过[认证系统](concepts/authenticator.md)和[Spawner 机制](concepts/spawner.md)理解核心扩展点
 4. 参考[自定义 Authenticator](examples/custom-authenticator.md)或[自定义 Spawner](examples/custom-spawner.md)进行二次开发
-5. 查阅[源码参考](references/)获取精确的 API 签名和配置项
+5. 查阅[源码参考](references/index.md)获取精确的 API 签名和配置项
 
 ## 源码结构
 

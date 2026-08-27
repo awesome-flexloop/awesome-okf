@@ -204,6 +204,6 @@ description: Social Media Agent 图结构参考——14 个 LangGraph 图的注�
 
 ## 相关文档
 
-- [总览](/ai/langchain-ai/social-media-agent/concepts/overview)
-- [事实清单](/ai/langchain-ai/social-media-agent/spec/facts)
-- [深度洞察](/ai/langchain-ai/social-media-agent/spec/insights)
+- 总览
+- 事实清单
+- 深度洞察

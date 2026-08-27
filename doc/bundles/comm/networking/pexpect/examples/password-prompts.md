@@ -255,9 +255,9 @@ s.login('host', 'user', password)
 
 ## 相关概念
 
-- [发送与交互](/concepts/04-send-interact.md)
-- [pxssh SSH 自动化](/concepts/05-pxssh.md)
-- [SSH 自动登录](/examples/ssh-login-automation.md)
-- [spawn 类详解](/concepts/02-spawn-class.md)
+- [发送与交互](../concepts/04-send-interact.md)
+- [pxssh SSH 自动化](../concepts/05-pxssh.md)
+- [SSH 自动登录](ssh-login-automation.md)
+- [spawn 类详解](../concepts/02-spawn-class.md)
 
-[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](/references/pexpect-source.md)。
+[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](../references/pexpect-source.md)。

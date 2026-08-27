@@ -161,7 +161,7 @@ class ExampleDocWidget extends DocumentWidget<Widget, ExampleDoc> {
 }
 ```
 
-更完整的实现包含内部Widget处理DOM渲染和事件监听，与model通过Signal连接（见[信号与事件通信](/concepts/06-signals.md)）。
+更完整的实现包含内部Widget处理DOM渲染和事件监听，与model通过Signal连接（见[信号与事件通信](06-signals.md)）。
 
 ## WidgetFactory
 
@@ -256,8 +256,8 @@ const extension: JupyterFrontEndPlugin<void> = {
 
 ## 相关概念
 
-- [Widget与Shell布局](/concepts/05-widgets-shell.md)
-- [信号与事件通信](/concepts/06-signals.md)
-- [设置与状态持久化](/concepts/09-settings-state.md)
-- [插件基础与依赖注入](/concepts/03-plugin-basics.md)
-- [核心API与Token参考](/references/core-api-tokens.md)
+- [Widget与Shell布局](05-widgets-shell.md)
+- [信号与事件通信](06-signals.md)
+- [设置与状态持久化](09-settings-state.md)
+- [插件基础与依赖注入](03-plugin-basics.md)
+- [核心API与Token参考](../references/core-api-tokens.md)

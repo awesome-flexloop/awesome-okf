@@ -260,8 +260,8 @@ git add redirects.txt
 
 ## 相关概念
 
-- [架构概览](/concepts/02-architecture-overview.md)
-- [配置项详解](/concepts/04-configuration.md)
-- [路径处理与跨平台兼容](/concepts/07-path-and-cross-platform.md)
-- [CI Diff检查集成示例](/examples/diff-checker-ci.md)
-- [自动重定向写入示例](/examples/auto-redirect-writer.md)
+- [架构概览](02-architecture-overview.md)
+- [配置项详解](04-configuration.md)
+- [路径处理与跨平台兼容](07-path-and-cross-platform.md)
+- [CI Diff检查集成示例](../examples/diff-checker-ci.md)
+- [自动重定向写入示例](../examples/auto-redirect-writer.md)

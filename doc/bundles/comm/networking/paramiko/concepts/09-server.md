@@ -384,10 +384,10 @@ class MySubsystemHandler(paramiko.SubsystemHandler):
 
 ## 相关概念
 
-- [Transport 底层传输](/concepts/03-transport.md)
-- [Channel 通道](/concepts/04-channel.md)
-- [SFTP 文件传输](/concepts/07-sftp.md)
-- [认证体系](/concepts/05-authentication.md)
-- [高级模式](/concepts/10-advanced-patterns.md)
+- [Transport 底层传输](03-transport.md)
+- [Channel 通道](04-channel.md)
+- [SFTP 文件传输](07-sftp.md)
+- [认证体系](05-authentication.md)
+- [高级模式](10-advanced-patterns.md)
 
-[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](/references/paramiko-source.md)。
+[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](../references/paramiko-source.md)。

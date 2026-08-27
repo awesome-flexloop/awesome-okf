@@ -245,7 +245,7 @@ InlineExpression 组件的渲染逻辑：
 
 ## 相关概念
 
-- [00-architecture-plugins.md](/concepts/00-architecture-plugins.md)：插件架构（executor 插件）
-- [01-myst-rendering-pipeline.md](/concepts/01-myst-rendering-pipeline.md)：解析管道（inlineExpression 节点）
-- [02-myst-markdown-cell.md](/concepts/02-myst-markdown-cell.md)：单元格生命周期（metadata 变更处理）
-- [01-using-jupyterlab-myst.md](/examples/01-using-jupyterlab-myst.md)：使用示例
+- [00-architecture-plugins.md](00-architecture-plugins.md)：插件架构（executor 插件）
+- [01-myst-rendering-pipeline.md](01-myst-rendering-pipeline.md)：解析管道（inlineExpression 节点）
+- [02-myst-markdown-cell.md](02-myst-markdown-cell.md)：单元格生命周期（metadata 变更处理）
+- [01-using-jupyterlab-myst.md](../examples/01-using-jupyterlab-myst.md)：使用示例

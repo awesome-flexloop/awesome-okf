@@ -139,7 +139,7 @@ def setup_file_watcher(path, use_polling=False, include_patterns=None, exclude_p
 
 ## 相关概念
 
-- [整体架构](/concepts/00-overall-architecture.md)：CLI 启动的多进程模型
-- [Worker 线程模型](/concepts/03-worker-threading-model.md)：Worker 进程内的线程编排
-- [Broker 抽象基类](/concepts/02-broker-abstraction.md)：worker_process 中 import_broker 与 emit_after
-- [Middleware 中间件管道](/concepts/05-middleware-pipeline.md)：middleware.forks 与 after_process_boot 钩子
+- [整体架构](00-overall-architecture.md)：CLI 启动的多进程模型
+- [Worker 线程模型](03-worker-threading-model.md)：Worker 进程内的线程编排
+- [Broker 抽象基类](02-broker-abstraction.md)：worker_process 中 import_broker 与 emit_after
+- [Middleware 中间件管道](05-middleware-pipeline.md)：middleware.forks 与 after_process_boot 钩子

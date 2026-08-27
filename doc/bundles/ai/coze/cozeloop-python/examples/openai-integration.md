@@ -324,6 +324,6 @@ if __name__ == "__main__":
 
 ## 下一步
 
-- 学习 [@observe 装饰器和自定义 Span 追踪](/examples/custom-span-tracing.md)处理更复杂的场景
-- 了解 [LLM 埋点模式](/concepts/02-llm-instrumentation.md)对比三种埋点方式
-- 查看 [框架集成参考](/references/integrations.md)了解 LangChain 等更多框架的集成方式
+- 学习 [@observe 装饰器和自定义 Span 追踪](custom-span-tracing.md)处理更复杂的场景
+- 了解 [LLM 埋点模式](../concepts/02-llm-instrumentation.md)对比三种埋点方式
+- 查看 [框架集成参考](../references/integrations.md)了解 LangChain 等更多框架的集成方式

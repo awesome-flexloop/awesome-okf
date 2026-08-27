@@ -135,7 +135,7 @@ governance/
 
 ## 相关概念
 
-- [Jupyter Governance 仓库简介](/concepts/00-introduction.md)
-- [从 BDFL 到分布式治理的历史演进](/concepts/02-history-and-evolution.md)
-- [选举与投票机制](/concepts/10-elections-and-voting.md)
-- [软件子项目体系](/concepts/06-software-subprojects.md)
+- [Jupyter Governance 仓库简介](00-introduction.md)
+- [从 BDFL 到分布式治理的历史演进](02-history-and-evolution.md)
+- [选举与投票机制](10-elections-and-voting.md)
+- [软件子项目体系](06-software-subprojects.md)

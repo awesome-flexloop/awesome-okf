@@ -41,7 +41,7 @@ status: active
 
 ## 不动点迭代框架
 
-核心循环在[MainControl.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/MainControl.py)和[Optimization.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/optimizations/Optimization.py)中：
+核心循环在MainControl.py和Optimization.py中：
 
 ```python
 def optimizeModules(main_module):
@@ -96,7 +96,7 @@ class TagSet:
 
 ## OptimizationVisitor
 
-[OptimizationVisitor](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/optimizations/Optimization.py)是优化阶段的核心visitor，采用"访问-计算-替换"模式遍历IR树。
+OptimizationVisitor是优化阶段的核心visitor，采用"访问-计算-替换"模式遍历IR树。
 
 对于每个节点，它调用：
 - 表达式：`node.computeExpression(trace_collection)` → 返回(新节点, 是否改变, 终止标记)
@@ -183,7 +183,7 @@ def f(x):
 # 优化后: x = 14
 ```
 
-[ConstantFolding.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/optimizations/ConstantFolding.py)使用Python自身的`simulator()`方法在编译时求值常量表达式。支持：
+ConstantFolding.py使用Python自身的`simulator()`方法在编译时求值常量表达式。支持：
 - 算术运算：`1 + 2`, `"a" + "b"`, `3 * 7`
 - 比较运算：`1 < 2`, `"a" == "b"`
 - 内置函数：`len("abc")`, `abs(-5)`, `int("42")`
@@ -218,7 +218,7 @@ def f(x):
 
 ### 4. 内置函数特化
 
-[BuiltinOptimizations.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/optimizations/BuiltinOptimizations.py)为内置函数提供快速路径：
+BuiltinOptimizations.py为内置函数提供快速路径：
 
 | 内置函数 | 优化 |
 |---------|------|
@@ -241,7 +241,7 @@ def f(x):
 # x = 1 + 2 → 3
 ```
 
-[Inlining.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/optimizations/Inlining.py)根据函数体大小和调用频率决定是否内联。内联后可能触发更多常量折叠。
+Inlining.py根据函数体大小和调用频率决定是否内联。内联后可能触发更多常量折叠。
 
 ### 6. 逃逸分析
 
@@ -266,7 +266,7 @@ def f(x):
 
 ### 9. 字节码降级（BytecodeDemotion）
 
-[BytecodeDemotion.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/optimizations/BytecodeDemotion.py)将"不值得编译"的模块降级为字节码模式：
+BytecodeDemotion.py将"不值得编译"的模块降级为字节码模式：
 - 纯数据模块（只有赋值，没有函数/类）
 - 启动时执行的配置模块
 - 几乎不影响运行时性能的模块

@@ -307,10 +307,10 @@ def execute_tool_calls(tool_calls):
 
 ## 相关示例
 
-- [Python对话补全示例](/examples/chat-completion.md)
-- [OpenAI兼容客户端配置](/examples/openai-compatible.md)
+- [Python对话补全示例](chat-completion.md)
+- [OpenAI兼容客户端配置](openai-compatible.md)
 
 ## 相关概念
 
-- [对话补全 API](/concepts/03-chat-completions.md) — 工具调用参数详解
-- [错误处理与调试](/concepts/07-error-handling.md)
+- [对话补全 API](../concepts/03-chat-completions.md) — 工具调用参数详解
+- [错误处理与调试](../concepts/07-error-handling.md)

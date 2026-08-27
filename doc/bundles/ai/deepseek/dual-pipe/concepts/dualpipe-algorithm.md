@@ -113,4 +113,4 @@ GPU3(s3):          F0 B1    W
 
 所有 P2P 通信操作通过 `comm_ops` 列表累积，最后由 `_commit_and_wait_comm()` 调用 `dist.batch_isend_irecv()` 批量执行。这确保所有 isend/irecv 操作同时启动，由 NCCL/NVLink 硬件并行处理。
 
-详见 [P2P 通信模式](/ai/deepseek/dual-pipe/concepts/communication-pattern)。
+详见 P2P 通信模式。

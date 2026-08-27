@@ -118,8 +118,8 @@ CLI 与 IDE、插件共享同一套高级 AI 功能（F-018），包括 Plan 模
 
 ## 相关概念
 
-- [产品矩阵总览](/concepts/00-product-matrix.md) — CLI 在三态一体中的定位
-- [CodeBuddy IDE](/concepts/01-ide.md) — 与 CLI 共享高级能力的桌面端
-- [NPC 云端 AI 员工](/concepts/03-npc.md) — 云端 Agent 与本地 CLI Sub-agents 的对比
-- [CLI 快速入门](/examples/quick-start-cli.md) — 安装、初始化与常用命令实战
-- [IDE 工作流示例](/examples/ide-workflow.md) — 跨形态协同的工作流
+- [产品矩阵总览](00-product-matrix.md) — CLI 在三态一体中的定位
+- [CodeBuddy IDE](01-ide.md) — 与 CLI 共享高级能力的桌面端
+- [NPC 云端 AI 员工](03-npc.md) — 云端 Agent 与本地 CLI Sub-agents 的对比
+- [CLI 快速入门](../examples/quick-start-cli.md) — 安装、初始化与常用命令实战
+- [IDE 工作流示例](../examples/ide-workflow.md) — 跨形态协同的工作流

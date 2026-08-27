@@ -249,4 +249,4 @@ ProcessProxy通过 `traitlets.import_item(class_name)` 动态加载 [F-089]，�
 3. `poll()`/`wait()`/`send_signal()`/`kill()`/`terminate()`：进程生命周期管理
 4. `get_process_info()`/`load_process_info()`：HA持久化支持（可选）
 
-具体示例参见 [编写自定义ProcessProxy](/examples/02-custom-process-proxy.md)。
+具体示例参见 [编写自定义ProcessProxy](../examples/02-custom-process-proxy.md)。

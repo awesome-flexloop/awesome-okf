@@ -325,9 +325,9 @@ socket.options
 
 ## 相关概念
 
-- [套接字基类](/concepts/02-socket-base.md) — socket 构造时接收 options，xsetsockopt 处理模式特定选项
-- [上下文与基础设施](/concepts/01-context.md) — 上下文级别选项
-- [管道与流控](/concepts/04-pipe.md) — HWM 选项在 pipe 层实现
-- [ZMTP 协议引擎](/concepts/06-zmtp-engine.md) — 心跳和安全机制选项
-- [消息模式实现](/concepts/11-patterns.md) — CONFLATE/MANDATORY 等模式特定选项
-- [传输层](/concepts/10-transport.md) — reconnect/buffer 等网络选项
+- [套接字基类](02-socket-base.md) — socket 构造时接收 options，xsetsockopt 处理模式特定选项
+- [上下文与基础设施](01-context.md) — 上下文级别选项
+- [管道与流控](04-pipe.md) — HWM 选项在 pipe 层实现
+- [ZMTP 协议引擎](06-zmtp-engine.md) — 心跳和安全机制选项
+- [消息模式实现](11-patterns.md) — CONFLATE/MANDATORY 等模式特定选项
+- [传输层](10-transport.md) — reconnect/buffer 等网络选项

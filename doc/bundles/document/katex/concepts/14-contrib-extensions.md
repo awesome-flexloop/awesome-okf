@@ -22,13 +22,13 @@ sources:
 
 | 扩展 | 功能 |
 |------|------|
-| auto-render | 自动扫描DOM中的数学分隔符并渲染（详见[自动渲染扩展](/concepts/13-auto-render.md)） |
+| auto-render | 自动扫描DOM中的数学分隔符并渲染（详见[自动渲染扩展](13-auto-render.md)） |
 | copy-tex | 复制KaTeX渲染结果时输出LaTeX源码而非Unicode字符 |
 | mhchem | 化学方程式和化学式排版（`\ce{...}`命令） |
 | render-a11y-string | 生成公式的可读文本字符串（无障碍辅助） |
 | mathtex-script-type | 自动渲染 `<script type="math/tex">` 标签中的公式 |
 
-> **范围说明**：`contrib/` 目录共 5 个扩展（见上表）。官网 Extensions & Libraries 页面列出 4 个官方扩展（auto-render、copy-tex、mathtex-script-type、mhchem），render-a11y-string 同样存在于 `contrib/` 目录[^web-libs]。第三方库（React/Vue/Angular/Android/iOS/Rust/Ruby/微信小程序等）的索引见 [生态与版本](/concepts/23-ecosystem-and-versions.md)，不在本文档范围内。
+> **范围说明**：`contrib/` 目录共 5 个扩展（见上表）。官网 Extensions & Libraries 页面列出 4 个官方扩展（auto-render、copy-tex、mathtex-script-type、mhchem），render-a11y-string 同样存在于 `contrib/` 目录[^web-libs]。第三方库（React/Vue/Angular/Android/iOS/Rust/Ruby/微信小程序等）的索引见 [生态与版本](23-ecosystem-and-versions.md)，不在本文档范围内。
 
 [^web-libs]: 官网 Extensions & Libraries 页面，https://katex.org/docs/libs
 
@@ -205,11 +205,11 @@ contrib 扩展的共同特点：
 | 微信小程序 | @rojer/katex-mini |
 | AsciiMath | asciimath2tex（先转 LaTeX 再渲染） |
 
-完整的第三方库索引和版本生态说明见 [生态与版本](/concepts/23-ecosystem-and-versions.md)。
+完整的第三方库索引和版本生态说明见 [生态与版本](23-ecosystem-and-versions.md)。
 
 ## 相关概念
 
-- [自动渲染扩展](/concepts/13-auto-render.md)
-- [函数注册表](/concepts/08-function-registry.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [生态与版本](/concepts/23-ecosystem-and-versions.md)
+- [自动渲染扩展](13-auto-render.md)
+- [函数注册表](08-function-registry.md)
+- [快速开始](01-getting-started.md)
+- [生态与版本](23-ecosystem-and-versions.md)

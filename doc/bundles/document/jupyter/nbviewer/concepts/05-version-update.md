@@ -248,4 +248,4 @@ gh pr create --title "Update nbviewer version" --body "Manual update"
 
 - [CI/CD与自动化](04-cicd-and-automation.md)
 - [Helm部署流程](06-helm-deploy-process.md)
-- [手动升级示例](/examples/manual-upgrade.md)
+- [手动升级示例](../examples/manual-upgrade.md)

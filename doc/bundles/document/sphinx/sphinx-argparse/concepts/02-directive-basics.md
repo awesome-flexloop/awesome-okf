@@ -140,7 +140,7 @@ def build_parser(parser):
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [指令选项全解](/concepts/03-directive-options.md)
-- [子命令与路径导航](/concepts/05-nested-subcommands.md)
-- [基础用法完整示例](/examples/basic-usage.md)（包含外部脚本文件文档化方法）
+- [5分钟快速上手](01-getting-started.md)
+- [指令选项全解](03-directive-options.md)
+- [子命令与路径导航](05-nested-subcommands.md)
+- [基础用法完整示例](../examples/basic-usage.md)（包含外部脚本文件文档化方法）

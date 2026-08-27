@@ -24,75 +24,75 @@ sources:
 
 | 文档 | 内容 |
 |------|------|
-| [KaTeX 简介](/concepts/00-introduction.md) | KaTeX 是什么、核心特点、版本许可、能力边界 |
-| [快速开始](/concepts/01-getting-started.md) | 安装、CDN、核心API（render/renderToString）、配置选项、第一个示例 |
+| [KaTeX 简介](concepts/00-introduction.md) | KaTeX 是什么、核心特点、版本许可、能力边界 |
+| [快速开始](concepts/01-getting-started.md) | 安装、CDN、核心API（render/renderToString）、配置选项、第一个示例 |
 
 ### 核心架构
 
 | 文档 | 内容 |
 |------|------|
-| [架构总览](/concepts/02-architecture-overview.md) | 三层消化管模型（Lexer→MacroExpander→Parser）、注册表驱动设计、双输出无障碍 |
-| [词法分析器（Lexer）](/concepts/03-lexer.md) | 正则分词、Token结构、catcodes、\verb特殊处理 |
-| [宏展开器（MacroExpander）](/concepts/04-macro-expander.md) | Token栈、展开循环、参数消费、Namespace分组作用域 |
-| [解析器（Parser）](/concepts/05-parser.md) | 递归下降解析、atom/上下标处理、函数调度、模式切换 |
-| [渲染管线](/concepts/06-render-pipeline.md) | buildTree/buildHTML/buildMathML、HTML+MathML双输出、displayWrap |
-| [虚拟DOM树](/concepts/07-dom-tree.md) | Span/Anchor/SymbolNode/SvgNode、toNode/toMarkup双输出 |
+| [架构总览](concepts/02-architecture-overview.md) | 三层消化管模型（Lexer→MacroExpander→Parser）、注册表驱动设计、双输出无障碍 |
+| [词法分析器（Lexer）](concepts/03-lexer.md) | 正则分词、Token结构、catcodes、\verb特殊处理 |
+| [宏展开器（MacroExpander）](concepts/04-macro-expander.md) | Token栈、展开循环、参数消费、Namespace分组作用域 |
+| [解析器（Parser）](concepts/05-parser.md) | 递归下降解析、atom/上下标处理、函数调度、模式切换 |
+| [渲染管线](concepts/06-render-pipeline.md) | buildTree/buildHTML/buildMathML、HTML+MathML双输出、displayWrap |
+| [虚拟DOM树](concepts/07-dom-tree.md) | Span/Anchor/SymbolNode/SvgNode、toNode/toMarkup双输出 |
 
 ### 扩展机制
 
 | 文档 | 内容 |
 |------|------|
-| [函数注册表](/concepts/08-function-registry.md) | defineFunction三要素（handler/htmlBuilder/mathmlBuilder）、FunctionSpec、参数类型 |
-| [宏系统](/concepts/09-macro-system.md) | 内置宏、自定义宏（settings.macros/__defineMacro）、\newcommand/\def |
-| [配置系统](/concepts/10-settings-options.md) | Settings/Options双层配置、strict/trust模式、不可变状态传递 |
-| [样式系统](/concepts/11-style-system.md) | 8种TeX样式、sup/sub/fracNum/fracDen转换、数学原子类、间距规则 |
-| [字体与度量](/concepts/12-font-metrics.md) | 字体族组织、fontMetrics、Unicode支持、字号系统 |
+| [函数注册表](concepts/08-function-registry.md) | defineFunction三要素（handler/htmlBuilder/mathmlBuilder）、FunctionSpec、参数类型 |
+| [宏系统](concepts/09-macro-system.md) | 内置宏、自定义宏（settings.macros/__defineMacro）、\newcommand/\def |
+| [配置系统](concepts/10-settings-options.md) | Settings/Options双层配置、strict/trust模式、不可变状态传递 |
+| [样式系统](concepts/11-style-system.md) | 8种TeX样式、sup/sub/fracNum/fracDen转换、数学原子类、间距规则 |
+| [字体与度量](concepts/12-font-metrics.md) | 字体族组织、fontMetrics、Unicode支持、字号系统 |
 
 ### 扩展模块
 
 | 文档 | 内容 |
 |------|------|
-| [自动渲染扩展](/concepts/13-auto-render.md) | auto-render扩展、renderMathInElement()、分隔符配置 |
-| [贡献扩展模块](/concepts/14-contrib-extensions.md) | copy-tex、mhchem、render-a11y-string、mathtex-script-type |
+| [自动渲染扩展](concepts/13-auto-render.md) | auto-render扩展、renderMathInElement()、分隔符配置 |
+| [贡献扩展模块](concepts/14-contrib-extensions.md) | copy-tex、mhchem、render-a11y-string、mathtex-script-type |
 
 ### 安装与运行
 
 | 文档 | 内容 |
 |------|------|
-| [安装与运行时](/concepts/15-installation-and-runtime.md) | 浏览器CDN/自托管、Node/npm/pnpm/Deno、ESM/CJS、CSS与字体路径、源码构建 |
-| [命令行接口](/concepts/16-command-line.md) | CLI输入输出、18个选项、与Settings映射、宏文件 |
-| [字体与单位](/concepts/17-fonts-and-units.md) | font-display策略、TeX单位换算、字体自托管、1.21em缩放 |
+| [安装与运行时](concepts/15-installation-and-runtime.md) | 浏览器CDN/自托管、Node/npm/pnpm/Deno、ESM/CJS、CSS与字体路径、源码构建 |
+| [命令行接口](concepts/16-command-line.md) | CLI输入输出、18个选项、与Settings映射、宏文件 |
+| [字体与单位](concepts/17-fonts-and-units.md) | font-display策略、TeX单位换算、字体自托管、1.21em缩放 |
 
 ### 安全与参考
 
 | 文档 | 内容 |
 |------|------|
-| [安全与错误处理](/concepts/18-security-and-errors.md) | maxSize/maxExpand/trust三层防御、HTML消毒、ParseError、错误消息转义 |
-| [支持的函数](/concepts/19-supported-functions.md) | 官网14个分类的TeX函数体系、HTML扩展安全要求 |
-| [支持表](/concepts/20-support-table.md) | 字母序支持表、Detexify手写识别、源码溯源 |
-| [常见问题](/concepts/21-common-issues.md) | DOCTYPE/quirks mode、智能引号、align vs aligned、MathJax差异、CSS排障 |
-| [版本迁移](/concepts/22-migration.md) | v0.13-v0.18迁移要点：CSS类名前缀、API变更、路径调整 |
-| [生态与版本](/concepts/23-ecosystem-and-versions.md) | Users列表、版本说明、第三方库索引（React/Vue/Angular/移动端等） |
+| [安全与错误处理](concepts/18-security-and-errors.md) | maxSize/maxExpand/trust三层防御、HTML消毒、ParseError、错误消息转义 |
+| [支持的函数](concepts/19-supported-functions.md) | 官网14个分类的TeX函数体系、HTML扩展安全要求 |
+| [支持表](concepts/20-support-table.md) | 字母序支持表、Detexify手写识别、源码溯源 |
+| [常见问题](concepts/21-common-issues.md) | DOCTYPE/quirks mode、智能引号、align vs aligned、MathJax差异、CSS排障 |
+| [版本迁移](concepts/22-migration.md) | v0.13-v0.18迁移要点：CSS类名前缀、API变更、路径调整 |
+| [生态与版本](concepts/23-ecosystem-and-versions.md) | Users列表、版本说明、第三方库索引（React/Vue/Angular/移动端等） |
 
 ### 示例
 
 | 文档 | 内容 |
 |------|------|
-| [基础渲染示例](/examples/basic-render.md) | render/renderToString用法、行内/显示模式、常见公式（分数/积分/矩阵/希腊字母） |
-| [自定义宏示例](/examples/custom-macros.md) | settings.macros别名、带参数宏、函数宏、全局宏注册、物理/数学宏集合 |
-| [自定义扩展示例](/examples/custom-extension.md) | __defineFunction添加新命令、\circled/\eval/\checkbox实战 |
-| [自动渲染使用示例](/examples/auto-render-usage.md) | 分隔符配置、忽略元素、preProcess预处理、动态内容/AJAX处理、Markdown结合 |
-| [错误处理示例](/examples/error-handling.md) | throwOnError/errorColor、strict模式、ParseError、trust安全、安全封装函数 |
-| [Node.js 服务端渲染示例](/examples/node-ssr.md) | Node.js（CJS/ESM）与 Deno 中 renderToString、CSS/字体引入、HTML 页面组装、mhchem 扩展、预渲染缓存 |
-| [安全与信任配置示例](/examples/security-trust.md) | 不可信输入配置、trust 函数策略、maxSize/maxExpand 防御、错误消息 HTML 转义、输出消毒白名单、持久宏隔离 |
-| [命令行渲染示例](/examples/cli-render.md) | npx katex 从 stdin 到 stdout、--input/--output/--display-mode/--macro/--macro-file/--no-throw-on-error、批量处理 |
+| [基础渲染示例](examples/basic-render.md) | render/renderToString用法、行内/显示模式、常见公式（分数/积分/矩阵/希腊字母） |
+| [自定义宏示例](examples/custom-macros.md) | settings.macros别名、带参数宏、函数宏、全局宏注册、物理/数学宏集合 |
+| [自定义扩展示例](examples/custom-extension.md) | __defineFunction添加新命令、\circled/\eval/\checkbox实战 |
+| [自动渲染使用示例](examples/auto-render-usage.md) | 分隔符配置、忽略元素、preProcess预处理、动态内容/AJAX处理、Markdown结合 |
+| [错误处理示例](examples/error-handling.md) | throwOnError/errorColor、strict模式、ParseError、trust安全、安全封装函数 |
+| [Node.js 服务端渲染示例](examples/node-ssr.md) | Node.js（CJS/ESM）与 Deno 中 renderToString、CSS/字体引入、HTML 页面组装、mhchem 扩展、预渲染缓存 |
+| [安全与信任配置示例](examples/security-trust.md) | 不可信输入配置、trust 函数策略、maxSize/maxExpand 防御、错误消息 HTML 转义、输出消毒白名单、持久宏隔离 |
+| [命令行渲染示例](examples/cli-render.md) | npx katex 从 stdin 到 stdout、--input/--output/--display-mode/--macro/--macro-file/--no-throw-on-error、批量处理 |
 
 ### 参考信源
 
 | 文档 | 内容 |
 |------|------|
-| [KaTeX 源码信源](/references/katex-source.md) | v0.18.4 源码核心文件索引，含官网页面对应关系 |
-| [KaTeX 官网信源](/references/katex-website.md) | 官网 17 个页面登记：稳定 ID、URL、标题、用途与引用提示 |
+| [KaTeX 源码信源](references/katex-source.md) | v0.18.4 源码核心文件索引，含官网页面对应关系 |
+| [KaTeX 官网信源](references/katex-website.md) | 官网 17 个页面登记：稳定 ID、URL、标题、用途与引用提示 |
 
 ## 学习路径推荐
 

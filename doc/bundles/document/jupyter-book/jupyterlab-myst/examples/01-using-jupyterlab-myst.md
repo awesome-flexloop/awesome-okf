@@ -277,7 +277,7 @@ jupyterlab-myst 也支持 JupyterLab 的 Markdown Viewer（打开独立 .md 文�
 
 ## 相关文档
 
-- [02-integrating-with-myst.md](/examples/02-integrating-with-myst.md)：与 MyST 构建流程集成
-- [03-inline-expression-workflow.md](/examples/03-inline-expression-workflow.md)：内联表达式高级工作流
-- [00-architecture-plugins.md](/concepts/00-architecture-plugins.md)：插件架构详解
-- [05-syntax-security.md](/concepts/05-syntax-security.md)：完整语法特性列表
+- [02-integrating-with-myst.md](02-integrating-with-myst.md)：与 MyST 构建流程集成
+- [03-inline-expression-workflow.md](03-inline-expression-workflow.md)：内联表达式高级工作流
+- [00-architecture-plugins.md](../concepts/00-architecture-plugins.md)：插件架构详解
+- [05-syntax-security.md](../concepts/05-syntax-security.md)：完整语法特性列表

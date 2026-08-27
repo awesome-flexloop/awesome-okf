@@ -120,9 +120,9 @@ videos仓库代码跨越2015-2026年，存在四组主要API演变（F-073）：
 
 ## 相关概念
 
-- [00 Videos仓库总览与环境准备](/concepts/00-videos-overview.md)
-- [01 PiCreature角色系统详解](/concepts/01-picreature-characters.md)
-- [02 自定义Scene基类体系](/concepts/02-custom-scenes.md)
-- [03 视频代码结构与叙事模式](/concepts/03-video-structure-pattern.md)
-- [05 代表性系列项目结构解析](/concepts/05-series-projects.md)
-- [代表性视频系列目录导航](/references/representative-series.md)
+- [00 Videos仓库总览与环境准备](../concepts/00-videos-overview.md)
+- [01 PiCreature角色系统详解](../concepts/01-picreature-characters.md)
+- [02 自定义Scene基类体系](../concepts/02-custom-scenes.md)
+- [03 视频代码结构与叙事模式](../concepts/03-video-structure-pattern.md)
+- [05 代表性系列项目结构解析](../concepts/05-series-projects.md)
+- [代表性视频系列目录导航](representative-series.md)

@@ -222,4 +222,4 @@ $ inv deploy --name production --components api --components worker
 * [Context 对象（§3）](../concepts/03-context-object.md)
 * [执行模型（§8）](../concepts/08-execution-model.md)
 
-[^pyinvoke-src]: PyInvoke 源码，见本 bundle 信源登记 [references/pyinvoke-source.md](/references/pyinvoke-source.md)。
+[^pyinvoke-src]: PyInvoke 源码，见本 bundle 信源登记 [references/pyinvoke-source.md](../references/pyinvoke-source.md)。

@@ -182,8 +182,8 @@ html_meta:
 
 ## 相关概念
 
-- [MyST-Parser 简介](/concepts/00-introduction.md)
-- [扩展语法系统](/concepts/05-extension-system.md)
-- [指令与角色](/concepts/07-directives-and-roles.md)
-- [交叉引用](/concepts/08-cross-references.md)
-- [YAML Frontmatter](/concepts/12-frontmatter.md)
+- [MyST-Parser 简介](00-introduction.md)
+- [扩展语法系统](05-extension-system.md)
+- [指令与角色](07-directives-and-roles.md)
+- [交叉引用](08-cross-references.md)
+- [YAML Frontmatter](12-frontmatter.md)

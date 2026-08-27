@@ -103,6 +103,6 @@ docker run --rm -v "$(pwd):/docs" ghcr.io/sphinx-doc/sphinx-latexpdf sphinx-buil
 
 ## 相关概念
 
-- [三镜像架构解析](/concepts/02-image-architecture.md)：理解三个镜像的分工
-- [Base 镜像详解](/concepts/03-base-image.md)：了解基础镜像的具体构成
-- [基础 HTML 构建示例](/examples/01-basic-html-build.md)：更详细的构建示例
+- [三镜像架构解析](02-image-architecture.md)：理解三个镜像的分工
+- [Base 镜像详解](03-base-image.md)：了解基础镜像的具体构成
+- [基础 HTML 构建示例](../examples/01-basic-html-build.md)：更详细的构建示例

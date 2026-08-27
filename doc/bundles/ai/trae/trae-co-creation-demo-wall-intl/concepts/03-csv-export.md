@@ -175,6 +175,6 @@ const filename = `works_export_${timestamp}.csv`;
 
 ## 相关概念
 
-- [Demo Wall Intl 简介](/concepts/00-introduction.md)
-- [GDPR合规审计留存](/concepts/04-gdpr-audit-retention.md)
-- [CSV数据导出示例](/examples/csv-export-usage.md)
+- [Demo Wall Intl 简介](00-introduction.md)
+- [GDPR合规审计留存](04-gdpr-audit-retention.md)
+- [CSV数据导出示例](../examples/csv-export-usage.md)

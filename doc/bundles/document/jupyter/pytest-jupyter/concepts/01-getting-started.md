@@ -201,6 +201,6 @@ pip install "pytest-jupyter[server]"
 ---
 
 **下一步阅读：**
-- [架构总览](/concepts/02-architecture-overview.md) — 深入理解插件加载机制、fixture依赖链和设计哲学
-- [Core插件详解](/concepts/03-core-plugin.md) — 环境隔离和异步测试基础设施
-- [Server插件详解](/concepts/05-server-plugin.md) — Jupyter Server测试全攻略
+- [架构总览](02-architecture-overview.md) — 深入理解插件加载机制、fixture依赖链和设计哲学
+- [Core插件详解](03-core-plugin.md) — 环境隔离和异步测试基础设施
+- [Server插件详解](05-server-plugin.md) — Jupyter Server测试全攻略

@@ -274,7 +274,7 @@ console.log('[x] All tests passed!');
 
 ## 相关概念
 
-- [三种正则模式详解](/concepts/04-regex-patterns.md)
-- [Problem Matcher JSON 格式](/concepts/03-matcher-json.md)
-- [自定义 Problem Matcher 示例](/examples/custom-matcher.md)
-- [源码信源登记](/references/github-problem-matcher-source.md)
+- [三种正则模式详解](04-regex-patterns.md)
+- [Problem Matcher JSON 格式](03-matcher-json.md)
+- [自定义 Problem Matcher 示例](../examples/custom-matcher.md)
+- [源码信源登记](../references/github-problem-matcher-source.md)

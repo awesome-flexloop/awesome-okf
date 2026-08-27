@@ -48,7 +48,7 @@ project 参数存在 → Vertex AI
 默认 Gemini Developer API
 ```
 
-一旦后端确定，`_initialize_client` validator 创建统一的 `google.genai.Client` 实例，后续所有调用（`client.models.generate_content`、`client.models.embed_content`）都不感知后端差异。详见 [聊天模型](/ai/langchain-ai/langchain-google/concepts/chat-models)。
+一旦后端确定，`_initialize_client` validator 创建统一的 `google.genai.Client` 实例，后续所有调用（`client.models.generate_content`、`client.models.embed_content`）都不感知后端差异。详见 聊天模型。
 
 ## 三包关系与演进方向
 
@@ -91,7 +91,7 @@ project 参数存在 → Vertex AI
 | Vertex AI | 服务账号 | `credentials` 参数传入 `google.oauth2.service_account.Credentials` |
 | Vertex AI | API key | `vertexai=True` + `project` + API key（通过环境变量传给 SDK） |
 
-`google.auth` 库的查找顺序：`GOOGLE_APPLICATION_CREDENTIALS` 环境变量 → 系统级凭证。详见 [嵌入模型与 Vertex AI](/ai/langchain-ai/langchain-google/concepts/embeddings-vertex)。
+`google.auth` 库的查找顺序：`GOOGLE_APPLICATION_CREDENTIALS` 环境变量 → 系统级凭证。详见 嵌入模型与 Vertex AI。
 
 ## 架构概览
 
@@ -149,7 +149,7 @@ llm = ChatGoogleGenerativeAI(
 )
 ```
 
-更多用法见 [基础使用示例](/ai/langchain-ai/langchain-google/examples/basic-usage)。
+更多用法见 基础使用示例。
 
 ## 已知限制与注意事项
 
@@ -161,7 +161,7 @@ llm = ChatGoogleGenerativeAI(
 
 ## 进一步阅读
 
-- [聊天模型架构](/ai/langchain-ai/langchain-google/concepts/chat-models) — ChatGoogleGenerativeAI 内部流程、工具调用、结构化输出、错误分类
-- [嵌入模型与 Vertex AI](/ai/langchain-ai/langchain-google/concepts/embeddings-vertex) — GoogleGenerativeAIEmbeddings、VertexAIEmbeddings、批处理、task_type
-- [API 参考](/ai/langchain-ai/langchain-google/references/api) — 核心类与方法签名
-- [基础使用示例](/ai/langchain-ai/langchain-google/examples/basic-usage) — 聊天、嵌入、工具调用、Vertex AI 配置
+- 聊天模型架构 — ChatGoogleGenerativeAI 内部流程、工具调用、结构化输出、错误分类
+- 嵌入模型与 Vertex AI — GoogleGenerativeAIEmbeddings、VertexAIEmbeddings、批处理、task_type
+- API 参考 — 核心类与方法签名
+- 基础使用示例 — 聊天、嵌入、工具调用、Vertex AI 配置

@@ -169,8 +169,8 @@ domain = cast(MathDomain, env.get_domain('math'))
 
 ## 相关概念
 
-- [扩展注册与 setup 函数](/concepts/02-setup-and-registration.md)
-- [数学节点访问者](/concepts/03-math-node-visitors.md)
-- [国际化与并行安全](/concepts/05-i18n-and-parallel.md)
-- [常见问题排查](/examples/troubleshooting.md)
-- [源码信源登记](/references/jsmath-source.md)
+- [扩展注册与 setup 函数](02-setup-and-registration.md)
+- [数学节点访问者](03-math-node-visitors.md)
+- [国际化与并行安全](05-i18n-and-parallel.md)
+- [常见问题排查](../examples/troubleshooting.md)
+- [源码信源登记](../references/jsmath-source.md)

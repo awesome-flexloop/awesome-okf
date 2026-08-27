@@ -432,4 +432,4 @@ np.trace(a)         # 迹（对角线之和）
 - [ufunc通用函数](03-ufunc.md) — matmul/vecdot等是特殊ufunc
 - [广播规则](04-broadcasting.md) — matmul和线性代数中的广播行为
 - [索引与切片](05-indexing.md) — 矩阵操作中的索引技巧
-- [NumPy ufunc通用函数系统源码](/references/ufunc-source.md) — 源码信源
+- [NumPy ufunc通用函数系统源码](../references/ufunc-source.md) — 源码信源

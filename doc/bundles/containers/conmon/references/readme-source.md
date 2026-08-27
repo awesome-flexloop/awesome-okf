@@ -14,7 +14,7 @@ sources:
 
 # README 项目说明信源
 
-> 信源文件：[README.md](file:///d:/spaces/SpecWeave/external/dao/action/Containers/conmon/README.md)
+> 信源文件：README.md
 
 本文档记录 conmon 项目 README.md 中描述的项目定位、核心功能、构建依赖和安装方式。
 

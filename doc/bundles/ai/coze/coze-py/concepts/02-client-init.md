@@ -214,8 +214,8 @@ coze = Coze(
 
 ## 相关概念
 
-- [整体架构概览](/concepts/00-overview-architecture.md) — 理解双轨设计和懒加载模式
-- [认证体系](/concepts/01-auth-system.md) — 认证方式的选择和配置
-- [对话与流式](/concepts/03-chat-streaming.md) — 初始化后如何发起对话
-- [基础对话示例](/examples/basic-chat.md) — 完整的初始化+对话示例
-- [Coze 客户端入口与基础设施参考](/references/coze-client.md) — 配置常量和工具函数的完整 API
+- [整体架构概览](00-overview-architecture.md) — 理解双轨设计和懒加载模式
+- [认证体系](01-auth-system.md) — 认证方式的选择和配置
+- [对话与流式](03-chat-streaming.md) — 初始化后如何发起对话
+- [基础对话示例](../examples/basic-chat.md) — 完整的初始化+对话示例
+- [Coze 客户端入口与基础设施参考](../references/coze-client.md) — 配置常量和工具函数的完整 API

@@ -225,6 +225,6 @@ tab-item 支持 `:name:` 选项创建锚点，tab-set 会保留 `nodes.target`�
 
 ## 相关概念
 
-- [扩展架构与两阶段渲染](/concepts/02-extension-architecture.md) — PostTransform 机制详解
-- [快速上手](/concepts/01-getting-started.md) — 配置 tab 持久化
-- [图标系统](/concepts/08-icons-article-info.md) — dropdown icon 选项使用的 octicon 图标
+- [扩展架构与两阶段渲染](02-extension-architecture.md) — PostTransform 机制详解
+- [快速上手](01-getting-started.md) — 配置 tab 持久化
+- [图标系统](08-icons-article-info.md) — dropdown icon 选项使用的 octicon 图标

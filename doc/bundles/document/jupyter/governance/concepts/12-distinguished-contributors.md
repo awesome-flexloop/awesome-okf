@@ -66,6 +66,6 @@ DC 享有以下权利：
 
 ## 相关概念
 
-- [三主体治理模型](/concepts/01-governance-model.md)
-- [执行委员会（EC）](/concepts/03-executive-council.md)
-- [选举与投票机制](/concepts/10-elections-and-voting.md)
+- [三主体治理模型](01-governance-model.md)
+- [执行委员会（EC）](03-executive-council.md)
+- [选举与投票机制](10-elections-and-voting.md)

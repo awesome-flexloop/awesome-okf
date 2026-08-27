@@ -70,7 +70,7 @@ tools-devops 分类下的 `superpowers-trae-init` 不是传统意义上的"项�
 
 它被纳入模板库是因为其使用方式与项目模板一致——**复制即用**（复制 `.trae/` 目录到项目根即可生效）。
 
-详见 [AGENTS.md 开发契约](/concepts/07-agents-contract.md)。
+详见 [AGENTS.md 开发契约](07-agents-contract.md)。
 
 ## 模板设计原则
 
@@ -119,15 +119,15 @@ tools-devops 分类下的 `superpowers-trae-init` 不是传统意义上的"项�
 
 ## 相关概念
 
-- [五维分面分类体系](/concepts/01-template-classification.md)
-- [Web 前端模板](/concepts/02-web-frontend-templates.md)
-- [后端服务模板](/concepts/03-backend-templates.md)
-- [移动端和桌面端模板](/concepts/04-mobile-desktop-templates.md)
-- [数据与 AI 模板](/concepts/05-data-ai-templates.md)
-- [工具与 DevOps 模板](/concepts/06-tools-devops-templates.md)
-- [AGENTS.md 开发契约](/concepts/07-agents-contract.md)
+- [五维分面分类体系](01-template-classification.md)
+- [Web 前端模板](02-web-frontend-templates.md)
+- [后端服务模板](03-backend-templates.md)
+- [移动端和桌面端模板](04-mobile-desktop-templates.md)
+- [数据与 AI 模板](05-data-ai-templates.md)
+- [工具与 DevOps 模板](06-tools-devops-templates.md)
+- [AGENTS.md 开发契约](07-agents-contract.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/templates-source.md)
-- [使用 Next.js 模板创建项目](/examples/use-nextjs-template.md)
+- [源码信源索引](../references/templates-source.md)
+- [使用 Next.js 模板创建项目](../examples/use-nextjs-template.md)

@@ -197,6 +197,6 @@ AIMessage (content)    → 最终回答（无 tool_calls）
 
 ## 相关文档
 
-- [工具定义](/ai/langchain-ai/langchainjs/concepts/tool-definition) — 工具如何生成 ToolMessage
-- [ReAct Agent](/ai/langchain-ai/langchainjs/concepts/react-agent) — 消息在 Agent 循环中的流转
-- [Message 与 Tool API](/ai/langchain-ai/langchainjs/references/messages-tools) — 完整 API 参考
+- 工具定义 — 工具如何生成 ToolMessage
+- ReAct Agent — 消息在 Agent 循环中的流转
+- Message 与 Tool API — 完整 API 参考

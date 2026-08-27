@@ -42,28 +42,28 @@ Vibe Vibe 践行 Andrej Karpathy 于 2025 年提出的 **Vibe Coding** 理念—
 
 ## 概念文档
 
-- [Vibe 开发理念](/ai/datawhale/vibe-vibe/concepts/01-vibe-coding-philosophy.md) — Vibe Coding 的起源与定义、从 Coder 到 Commander 的角色转变、AI 创造工作流、MVP 思维、AI 助教路由表（llms.txt）。
-- [Basic 入门教学设计](/ai/datawhale/vibe-vibe/concepts/02-basic-getting-started.md) — 基础篇 v2 的"个人主页+数字分身"单一连续案例、7 个交付里程碑、独立 vibe coder 定位、与旧版结构对比。
-- [多语言文档架构](/ai/datawhale/vibe-vibe/concepts/03-multilingual-docs-architecture.md) — 中英文双语的三层架构（内容层/配置层/重定向层）、VitePress 稳定版原生多语言、LocaleSwitch 组件、100+ 交互组件体系。
+- [Vibe 开发理念](concepts/01-vibe-coding-philosophy.md) — Vibe Coding 的起源与定义、从 Coder 到 Commander 的角色转变、AI 创造工作流、MVP 思维、AI 助教路由表（llms.txt）。
+- [Basic 入门教学设计](concepts/02-basic-getting-started.md) — 基础篇 v2 的"个人主页+数字分身"单一连续案例、7 个交付里程碑、独立 vibe coder 定位、与旧版结构对比。
+- [多语言文档架构](concepts/03-multilingual-docs-architecture.md) — 中英文双语的三层架构（内容层/配置层/重定向层）、VitePress 稳定版原生多语言、LocaleSwitch 组件、100+ 交互组件体系。
 
 ## 示例
 
-- [Docker 私有化部署示例](/ai/datawhale/vibe-vibe/examples/01-docker-deploy.md) — 通过 docker-compose 一条命令启动本地 Vibe Vibe 站点，演示端口映射、健康检查与离线运行特性。
+- [Docker 私有化部署示例](examples/01-docker-deploy.md) — 通过 docker-compose 一条命令启动本地 Vibe Vibe 站点，演示端口映射、健康检查与离线运行特性。
 
 ## 信源
 
-- [官方仓库信源登记](/ai/datawhale/vibe-vibe/references/source-repo.md) — 仓库基本信息、关键文件索引、目录速览。
+- [官方仓库信源登记](references/source-repo.md) — 仓库基本信息、关键文件索引、目录速览。
 
 ## 学习建议
 
-1. **先理解理念**：从 [Vibe 开发理念](/ai/datawhale/vibe-vibe/concepts/01-vibe-coding-philosophy.md) 开始，理解"从 Coder 到 Commander"的角色转变与 AI 创造工作流。
-2. **再看教学设计**：读 [Basic 入门教学设计](/ai/datawhale/vibe-vibe/concepts/02-basic-getting-started.md)，理解基础篇为何用单一连续案例替代知识点章节。
-3. **了解工程架构**：关注多语言文档站的实现方式时，读[多语言文档架构](/ai/datawhale/vibe-vibe/concepts/03-multilingual-docs-architecture.md)。
-4. **动手部署**：按 [Docker 部署示例](/ai/datawhale/vibe-vibe/examples/01-docker-deploy.md) 在本地启动站点，亲身体验双语切换与交互组件。
+1. **先理解理念**：从 [Vibe 开发理念](concepts/01-vibe-coding-philosophy.md) 开始，理解"从 Coder 到 Commander"的角色转变与 AI 创造工作流。
+2. **再看教学设计**：读 [Basic 入门教学设计](concepts/02-basic-getting-started.md)，理解基础篇为何用单一连续案例替代知识点章节。
+3. **了解工程架构**：关注多语言文档站的实现方式时，读[多语言文档架构](concepts/03-multilingual-docs-architecture.md)。
+4. **动手部署**：按 [Docker 部署示例](examples/01-docker-deploy.md) 在本地启动站点，亲身体验双语切换与交互组件。
 
 ## 变更记录
 
-详见 [log.md](/ai/datawhale/vibe-vibe/log.md)。
+详见 [log.md](log.md)。
 
 ```{toctree}
 :hidden:

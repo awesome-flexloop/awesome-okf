@@ -504,7 +504,7 @@ npm publish --access public
 
 ## 相关概念
 
-- [JupyterLite内核架构](/concepts/01-kernel-architecture.md)
-- [插件注册机制](/concepts/02-plugin-registration.md)
-- [EchoKernel实现详解](/concepts/03-echokernel-implementation.md)
-- [构建与打包](/concepts/04-build-and-packaging.md)
+- [JupyterLite内核架构](../concepts/01-kernel-architecture.md)
+- [插件注册机制](../concepts/02-plugin-registration.md)
+- [EchoKernel实现详解](../concepts/03-echokernel-implementation.md)
+- [构建与打包](../concepts/04-build-and-packaging.md)

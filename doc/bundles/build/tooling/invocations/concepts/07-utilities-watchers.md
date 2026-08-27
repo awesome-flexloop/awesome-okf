@@ -196,9 +196,9 @@ Invocations 的工具函数体现了一个重要设计模式：**工具函数与
 
 ## 相关概念
 
-- [Sphinx 文档管理](/concepts/04-docs-sphinx.md)（watch_docs 使用 watch）
-- [Pytest 测试任务](/concepts/03-testing-pytest.md)（watch_tests 使用 watch）
-- [文件监控自动测试示例](/examples/file-watch-auto-test.md)
-- [组合模式：组装自己的任务集合](/concepts/10-composition-patterns.md)
+- [Sphinx 文档管理](04-docs-sphinx.md)（watch_docs 使用 watch）
+- [Pytest 测试任务](03-testing-pytest.md)（watch_tests 使用 watch）
+- [文件监控自动测试示例](../examples/file-watch-auto-test.md)
+- [组合模式：组装自己的任务集合](10-composition-patterns.md)
 
-[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](/references/invocations-source.md)。
+[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](../references/invocations-source.md)。

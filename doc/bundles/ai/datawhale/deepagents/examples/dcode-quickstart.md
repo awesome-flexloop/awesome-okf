@@ -63,4 +63,4 @@ dcode -r <thread_id>
 
 ## 相关概念
 
-- [Code终端编码Agent](/ai/datawhale/deepagents/concepts/code-module)
+- Code终端编码Agent

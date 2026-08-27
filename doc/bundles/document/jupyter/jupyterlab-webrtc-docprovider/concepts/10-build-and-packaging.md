@@ -259,6 +259,6 @@ jlpm watch
 
 ## 相关概念
 
-- [Vendor补丁与大消息传输](/concepts/08-vendor-patches.md)
-- [安装与快速开始](/concepts/01-getting-started.md)
-- [架构总览](/concepts/02-architecture-overview.md)
+- [Vendor补丁与大消息传输](08-vendor-patches.md)
+- [安装与快速开始](01-getting-started.md)
+- [架构总览](02-architecture-overview.md)

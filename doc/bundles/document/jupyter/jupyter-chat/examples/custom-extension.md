@@ -263,7 +263,7 @@ const configPlugin: JupyterFrontEndPlugin<void> = {
 
 ## 相关概念
 
-- [扩展点系统](/concepts/extension-points.md)
-- [组件层次结构](/concepts/component-hierarchy.md)
-- [模型层架构](/concepts/model-architecture.md)
-- [Token 与命令参考](/references/api-tokens.md)
+- [扩展点系统](../concepts/extension-points.md)
+- [组件层次结构](../concepts/component-hierarchy.md)
+- [模型层架构](../concepts/model-architecture.md)
+- [Token 与命令参考](../references/api-tokens.md)

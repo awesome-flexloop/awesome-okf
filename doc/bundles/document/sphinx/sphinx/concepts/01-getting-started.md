@@ -74,7 +74,7 @@ sphinx-quickstart docs --no-sep -p "My Project" -a "Author Name" -v "0.1" -l en
 sphinx-build -b html <sourcedir> <outdir>
 ```
 
-参数说明（对应 [F-005](/spec/facts.md) Sphinx.__init__ 参数）：
+参数说明（对应 [F-005](../spec/facts.md) Sphinx.__init__ 参数）：
 
 | 参数 | 说明 | 对应Sphinx参数 |
 |------|------|------|
@@ -124,7 +124,7 @@ make html SPHINXOPTS="-E -j 4"  # 带参数
 
 ## 配置文件 conf.py
 
-`conf.py` 是 Sphinx 项目的核心配置文件（见 [F-032](/spec/facts.md)），它本身是一个 Python 文件，在 Sphinx 初始化时被执行。
+`conf.py` 是 Sphinx 项目的核心配置文件（见 [F-032](../spec/facts.md)），它本身是一个 Python 文件，在 Sphinx 初始化时被执行。
 
 ### 基本配置项
 
@@ -155,7 +155,7 @@ language = 'en'
 
 ### conf.py 作为扩展
 
-`conf.py` 本身可以作为一个 Sphinx 扩展——如果定义了 `setup(app)` 函数，Sphinx 会自动调用它（见 [F-014](/spec/facts.md) 初始化流程中config.setup的处理）：
+`conf.py` 本身可以作为一个 Sphinx 扩展——如果定义了 `setup(app)` 函数，Sphinx 会自动调用它（见 [F-014](../spec/facts.md) 初始化流程中config.setup的处理）：
 
 ```python
 def setup(app):
@@ -210,6 +210,6 @@ To install My Project::
 ## 相关概念
 
 - [00-简介](00-introduction.md) — Sphinx是什么
-- [02-应用类](02-application.md) — Sphinx初始化流程详解
-- [03-配置系统](03-config-system.md) — conf.py配置系统深入
-- [07-扩展开发](07-extension-dev.md) — 编写自定义扩展
+- 02-应用类 — Sphinx初始化流程详解
+- 03-配置系统 — conf.py配置系统深入
+- 07-扩展开发 — 编写自定义扩展

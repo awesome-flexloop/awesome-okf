@@ -228,5 +228,5 @@ jupyter notebook --allow-root
 
 ## 下一步
 
-- [开发前端扩展](./01-frontend-extension.md) 学习如何创建Notebook插件
-- [开发服务端扩展](./02-server-extension.md) 学习如何添加自定义API
+- [开发前端扩展](01-frontend-extension.md) 学习如何创建Notebook插件
+- [开发服务端扩展](02-server-extension.md) 学习如何添加自定义API

@@ -29,7 +29,7 @@ Plotly 的所有图表都由一个 `Figure` 对象表示。理解 Figure 的数�
 
 ## Figure 顶层容器
 
-[Figure](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/graph_objs/_figure.py#L7) 继承自 [BaseFigure](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/basedatatypes.py#L401)，构造函数签名为：
+Figure 继承自 BaseFigure，构造函数签名为：
 
 ```python
 Figure(data=None, layout=None, frames=None, skip_invalid=False, **kwargs)
@@ -120,7 +120,7 @@ fig.update_traces(line_dash="dash", selector=dict(name="线2"))
 
 ## layout：布局配置
 
-`layout` 是一个 [Layout](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/graph_objs/_layout.py#L8) 对象，控制图表的全局外观：
+`layout` 是一个 Layout 对象，控制图表的全局外观：
 
 ```python
 fig.layout.title = "销售趋势"
@@ -197,7 +197,7 @@ Scatter
 
 ## 魔术方法：动态属性访问
 
-Plotly.py 通过 Python 魔法方法提供了灵活的属性访问方式。[BasePlotlyType](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/basedatatypes.py#L4312) 和 [BaseFigure](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/basedatatypes.py#L401) 重写了以下方法：
+Plotly.py 通过 Python 魔法方法提供了灵活的属性访问方式。BasePlotlyType 和 BaseFigure 重写了以下方法：
 
 ### `__getitem__` / `__setitem__`（字典式访问）
 

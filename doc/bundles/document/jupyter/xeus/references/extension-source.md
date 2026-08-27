@@ -15,7 +15,7 @@ sources:
 
 ## 插件概览
 
-定义在 [index.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/xeus/packages/xeus-extension/src/index.ts)。
+定义在 index.ts。
 
 三个核心JupyterLab插件：
 

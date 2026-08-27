@@ -412,6 +412,6 @@ rm -f ~/qm-vm/qm-vm.qcow2
 
 完成 QM 虚拟机环境搭建后，建议继续阅读：
 
-- [嵌套隔离架构](/bundles/containers/qm/concepts/01-nested-architecture.md)：深入了解 QM 架构
-- [三级 OOM 策略与 SELinux 隔离](/bundles/containers/qm/concepts/02-oom-selinux.md)：测试内存和安全隔离
-- [KVM 子系统使用](/bundles/containers/qm/examples/02-kvm-subsystem.md)：在 QM 中使用 KVM（需要嵌套虚拟化）
+- [嵌套隔离架构](../concepts/01-nested-architecture.md)：深入了解 QM 架构
+- [三级 OOM 策略与 SELinux 隔离](../concepts/02-oom-selinux.md)：测试内存和安全隔离
+- [KVM 子系统使用](02-kvm-subsystem.md)：在 QM 中使用 KVM（需要嵌套虚拟化）

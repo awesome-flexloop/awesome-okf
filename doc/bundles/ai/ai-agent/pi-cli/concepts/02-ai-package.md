@@ -311,6 +311,6 @@ if (model && hasApi(model, "anthropic-messages")) {
 
 ## 相关概念
 
-- [Monorepo 架构](./01-monorepo-architecture.md)
-- [TUI 系统](./03-tui-system.md)
+- [Monorepo 架构](01-monorepo-architecture.md)
+- [TUI 系统](03-tui-system.md)
 - [基础使用示例](../examples/01-basic-usage.md)

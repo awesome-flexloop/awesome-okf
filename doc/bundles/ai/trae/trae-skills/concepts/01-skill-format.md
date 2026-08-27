@@ -93,7 +93,7 @@ Description 章节应简明扼要地说明技能的核心功能。建议包含�
 
 ### Usage Scenario 章节
 
-这是触发条件设计的关键章节（详见 [触发条件设计示例](/examples/trigger-condition-design.md)）。好的触发条件包含三个要素：
+这是触发条件设计的关键章节（详见 [触发条件设计示例](../examples/trigger-condition-design.md)）。好的触发条件包含三个要素：
 
 1. **正面触发词**：穷举用户可能使用的关键词
    - `daily-hot-news`："今日热搜""新闻热榜""今天有什么热点""全网热搜""热门新闻""今日新闻""热榜"
@@ -159,15 +159,15 @@ kz-article-deep-analysis 提供了技能版本管理的范例：
 
 ## 相关概念
 
-- [Trae Skills 简介](/concepts/00-introduction.md)
-- [技能分类与模板模式](/concepts/02-skill-categories.md)
-- [纯 Prompt 型技能](/concepts/03-prompt-only-skills.md)
-- [脚本辅助型技能](/concepts/04-script-assisted-skills.md)
-- [Workflow 编排型技能](/concepts/05-workflow-skills.md)
-- [编写自定义 Skill](/concepts/07-write-skill.md)
+- [Trae Skills 简介](00-introduction.md)
+- [技能分类与模板模式](02-skill-categories.md)
+- [纯 Prompt 型技能](03-prompt-only-skills.md)
+- [脚本辅助型技能](04-script-assisted-skills.md)
+- [Workflow 编排型技能](05-workflow-skills.md)
+- [编写自定义 Skill](07-write-skill.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/skills-source.md)
-- [触发条件设计示例](/examples/trigger-condition-design.md)
-- [创建第一个 Skill](/examples/create-first-skill.md)
+- [源码信源索引](../references/skills-source.md)
+- [触发条件设计示例](../examples/trigger-condition-design.md)
+- [创建第一个 Skill](../examples/create-first-skill.md)

@@ -16,7 +16,7 @@ sources:
 
 ## TermSocket 类
 
-终端的实时 I/O 通信通过 WebSocket 实现，处理器 `TermSocket` 定义在 [handlers.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyter_server_terminals/jupyter_server_terminals/handlers.py) 中：
+终端的实时 I/O 通信通过 WebSocket 实现，处理器 `TermSocket` 定义在 handlers.py 中：
 
 ```python
 from terminado.websocket import TermSocket as BaseTermSocket
@@ -238,10 +238,10 @@ while True:
 
 ## 相关概念
 
-- [REST API 处理器](/concepts/04-rest-api.md)
-- [TerminalManager 终端管理器](/concepts/03-terminal-manager.md)
-- [TerminalsExtensionApp 扩展应用](/concepts/02-extension-app.md)
-- [WebSocket 实时通信示例](/examples/websocket-interaction.md)
-- [jupyter_server_terminals 源码信源登记](/references/jupyter-server-terminals-source.md)
+- [REST API 处理器](04-rest-api.md)
+- [TerminalManager 终端管理器](03-terminal-manager.md)
+- [TerminalsExtensionApp 扩展应用](02-extension-app.md)
+- [WebSocket 实时通信示例](../examples/websocket-interaction.md)
+- [jupyter_server_terminals 源码信源登记](../references/jupyter-server-terminals-source.md)
 
-[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](/references/jupyter-server-terminals-source.md)。
+[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](../references/jupyter-server-terminals-source.md)。

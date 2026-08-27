@@ -45,7 +45,7 @@ sources:
 
 ## 与 EC 的共享职责
 
-与 EC 双重批准事项：治理模型变更、新子项目创建/移除（详见 [执行委员会](/concepts/03-executive-council.md)）。
+与 EC 双重批准事项：治理模型变更、新子项目创建/移除（详见 [执行委员会](03-executive-council.md)）。
 
 ## 成员构成
 
@@ -87,8 +87,8 @@ SSC 的日常运营信息在其 [Team Compass](https://github.com/jupyter/softwa
 
 ## 相关概念
 
-- [三主体治理模型](/concepts/01-governance-model.md)
-- [执行委员会（EC）](/concepts/03-executive-council.md)
-- [软件子项目体系](/concepts/06-software-subprojects.md)
-- [决策制定流程](/concepts/09-decision-making.md)
-- [新子项目准入与孵化](/concepts/11-new-subprojects.md)
+- [三主体治理模型](01-governance-model.md)
+- [执行委员会（EC）](03-executive-council.md)
+- [软件子项目体系](06-software-subprojects.md)
+- [决策制定流程](09-decision-making.md)
+- [新子项目准入与孵化](11-new-subprojects.md)

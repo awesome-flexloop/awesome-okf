@@ -246,7 +246,7 @@ def bounce(t):
 self.play(circle.animate.shift(UP), rate_func=bounce)
 ```
 
-各种缓动函数的曲线图和可视化效果详见 [/references/rate-functions-gallery.md](/references/rate-functions-gallery.md)。
+各种缓动函数的曲线图和可视化效果详见 [/references/rate-functions-gallery.md](../references/rate-functions-gallery.md)。
 
 ## self.play() 调用机制
 
@@ -307,7 +307,7 @@ self.play(
 - `ApplyMethod`：应用方法调用
 - `ApplyFunction`：应用函数变换
 
-Transform 系列动画的详细机制见 [06 Transform 深度解析](/concepts/06-transform-deep-dive.md)。
+Transform 系列动画的详细机制见 [06 Transform 深度解析](06-transform-deep-dive.md)。
 
 ### composition 模块：组合动画
 - `LaggedStart`：延迟启动（配合 lag_ratio）
@@ -345,8 +345,8 @@ self.play(
 
 ## 相关概念
 
-- [03 Mobject：数学对象基类](/concepts/03-mobject-fundamentals.md)
-- [04 VMobject 与几何图形](/concepts/04-vmobject-and-geometry.md)
-- [06 Transform 深度解析](/concepts/06-transform-deep-dive.md)
-- [缓动函数可视化参考](/references/rate-functions-gallery.md)
-- [09 GPU 渲染管线](/concepts/09-rendering-pipeline.md)
+- [03 Mobject：数学对象基类](03-mobject-fundamentals.md)
+- [04 VMobject 与几何图形](04-vmobject-and-geometry.md)
+- [06 Transform 深度解析](06-transform-deep-dive.md)
+- [缓动函数可视化参考](../references/rate-functions-gallery.md)
+- [09 GPU 渲染管线](09-rendering-pipeline.md)

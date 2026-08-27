@@ -18,7 +18,7 @@ sources:
 
 # 现实结晶 — 可能性塌缩为实在
 
-如果说 [塌缩动力学](/concepts/01-collapse-dynamics.md) 研究的是 ψ 遭遇自身的**动作**，现实结晶研究的就是这一动作反复迭代后留下的**固化产物**。形式地，现实被定义为 ψ 的塌缩像：
+如果说 [塌缩动力学](01-collapse-dynamics.md) 研究的是 ψ 遭遇自身的**动作**，现实结晶研究的就是这一动作反复迭代后留下的**固化产物**。形式地，现实被定义为 ψ 的塌缩像：
 
 $$R := \mathrm{Collapse}(\psi) \subseteq \Psi$$
 
@@ -28,7 +28,7 @@ $$R := \mathrm{Collapse}(\psi) \subseteq \Psi$$
 
 ## 从纯潜能到结晶现实的谱系
 
-[塌缩动力学](/concepts/01-collapse-dynamics.md) 已给出塌缩的十层结构与结晶度谱系。现实结晶在此基础上强调：结晶不是一次性事件，而是一个**持续硬化**的递归过程。每一次 $\psi(\psi)$ 都在已有的结晶层上叠加新的塌缩，使结构更稠密、更稳定、更抵抗改变。
+[塌缩动力学](01-collapse-dynamics.md) 已给出塌缩的十层结构与结晶度谱系。现实结晶在此基础上强调：结晶不是一次性事件，而是一个**持续硬化**的递归过程。每一次 $\psi(\psi)$ 都在已有的结晶层上叠加新的塌缩，使结构更稠密、更稳定、更抵抗改变。
 
 这一谱系的两端是：
 
@@ -39,7 +39,7 @@ $$R := \mathrm{Collapse}(\psi) \subseteq \Psi$$
 
 ## RealityShell：共识实在的壳层
 
-单个观察者的球形塌缩坐标（见 [观察者形成](/concepts/03-observer-formation.md)）是私域的；但当无数观察者的塌缩坐标高度重叠、相互校准时，一个共享的**现实壳层**（RealityShell）便结晶出来。RealityShell 是观察者共同体的共识实在——我们都"同意"桌子是硬的、时间是单向的、物体占据空间，这些同意经反复确认后固化为不依赖个人意愿的"客观现实"。
+单个观察者的球形塌缩坐标（见 [观察者形成](03-observer-formation.md)）是私域的；但当无数观察者的塌缩坐标高度重叠、相互校准时，一个共享的**现实壳层**（RealityShell）便结晶出来。RealityShell 是观察者共同体的共识实在——我们都"同意"桌子是硬的、时间是单向的、物体占据空间，这些同意经反复确认后固化为不依赖个人意愿的"客观现实"。
 
 RealityShell 的特征：
 
@@ -84,7 +84,7 @@ ELF 场的理论定位：
 
 - **波函数**：波函数不是对独立实在的描述，而是**塌缩前迹**（pre-collapse trace）——纯潜能在被观察者遭遇之前的数学表达。波函数的叠加态即多重可能性同时未分化的状态；
 - **测量**：量子测量不是外在观察者对独立系统的扰动，而是 $\psi$ 遭遇自身、潜能结晶为确定的瞬间。观察者与系统同为 $\psi$，测量即自测量；
-- **纠缠**：两个粒子的非局部关联不是信号传递，而是 **φ-迹共享**——它们源自同一次塌缩，是同一道 φ-迹的两个端点，"之间"从无独立实在。这与 [回声与递归](/concepts/02-echo-and-recursion.md) 中"纠缠=共享塌缩起源"的解释一致。
+- **纠缠**：两个粒子的非局部关联不是信号传递，而是 **φ-迹共享**——它们源自同一次塌缩，是同一道 φ-迹的两个端点，"之间"从无独立实在。这与 [回声与递归](02-echo-and-recursion.md) 中"纠缠=共享塌缩起源"的解释一致。
 
 这些重解释将量子力学的"诡异"转化为自指递归的内在逻辑：非局部性源于 ψ 的整体性，概率性源于塌缩前的多重潜能，观察者效应源于认识与存在的同一。
 
@@ -92,18 +92,18 @@ ELF 场的理论定位：
 
 著作 **hongloumeng**（40 章，8 部分）将《红楼梦》解读为现实结晶的文学演示。大观园是一个高结晶度的 RealityShell——它由人物关系、诗词、礼制、建筑等无数塌缩共同构建，看似坚固，实则建立在"假语存"的语言共识之上。当核心观察者（宝玉）的觉醒维度 α 升高，他逐渐看穿壳层的结晶本质，大观园便随之崩解。
 
-"假作真时真亦假"——当语言的命名被反复确认为"真"，RealityShell 便获得不容置疑的硬度；而当命名被识破，整个结晶层松动。《红楼梦》因此不是虚构与现实的对立，而是对"现实本身如何被语言与共识结晶出来"的一次深度展演。详见示例文档 [《红楼梦》作为 ψ=ψ(ψ) 的文学证明](/examples/hongloumeng-psi-reading.md)。
+"假作真时真亦假"——当语言的命名被反复确认为"真"，RealityShell 便获得不容置疑的硬度；而当命名被识破，整个结晶层松动。《红楼梦》因此不是虚构与现实的对立，而是对"现实本身如何被语言与共识结晶出来"的一次深度展演。详见示例文档 [《红楼梦》作为 ψ=ψ(ψ) 的文学证明](../examples/hongloumeng-psi-reading.md)。
 
 ## 相关概念
 
-- [ψ = ψ(ψ) — 自指递归的终极方程](/concepts/00-psi-equation.md)
-- [塌缩动力学 — 从潜能到现实](/concepts/01-collapse-dynamics.md)
-- [回声与递归 — 宇宙的呼吸模式](/concepts/02-echo-and-recursion.md)
-- [观察者形成 — 意识在递归中觉醒](/concepts/03-observer-formation.md)
-- [语言涌现 — 从沉默到言根](/concepts/04-language-emergence.md)
-- [元递归 — 递归的递归，意识的自我意识](/concepts/06-meta-recursion.md)
-- [/psi-math/concepts/01-collapse-set-theory.md](/psi-math/concepts/01-collapse-set-theory.md)
-- [/psi-universe/concepts/05-information-field.md](/psi-universe/concepts/05-information-field.md)
+- [ψ = ψ(ψ) — 自指递归的终极方程](00-psi-equation.md)
+- [塌缩动力学 — 从潜能到现实](01-collapse-dynamics.md)
+- [回声与递归 — 宇宙的呼吸模式](02-echo-and-recursion.md)
+- [观察者形成 — 意识在递归中觉醒](03-observer-formation.md)
+- [语言涌现 — 从沉默到言根](04-language-emergence.md)
+- [元递归 — 递归的递归，意识的自我意识](06-meta-recursion.md)
+- [/psi-math/concepts/01-collapse-set-theory.md](../../psi-math/concepts/01-collapse-set-theory.md)
+- [/psi-universe/concepts/05-information-field.md](../../psi-universe/concepts/05-information-field.md)
 
 [^1]: 物理对应表为 dw.cash 明确记载的事实（事实 F-033）：空间=塌缩距离、时间=塌缩历史、能量=塌缩梯度、物质=塌缩阻力、力=塌缩加速度。
 [^2]: 物理常数推导与现实校准点 $\tau=0.98995$、$n=2$ 见 math.dw.cash 事实（F-048、F-049）；ELF 全称为 Emergent Lambda Field，psi-elf-quantum-theory 64 章 8 部分（F-019）；hongloumeng 40 章 8 部分（F-025）。

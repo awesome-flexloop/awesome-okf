@@ -252,6 +252,6 @@ grid 指令会验证直接子元素是否为 grid-item（通过 `is_component(it
 
 ## 相关概念
 
-- [设计系统与CSS类名体系](/concepts/03-design-system.md) — 间距、响应式、flex 类名详解
-- [卡片组件](/concepts/05-cards.md) — 卡片选项和分隔语法详解
-- [sphinx-design 简介](/concepts/00-introduction.md) — 项目概览
+- [设计系统与CSS类名体系](03-design-system.md) — 间距、响应式、flex 类名详解
+- [卡片组件](05-cards.md) — 卡片选项和分隔语法详解
+- [sphinx-design 简介](00-introduction.md) — 项目概览

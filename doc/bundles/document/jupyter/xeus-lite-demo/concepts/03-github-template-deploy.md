@@ -124,4 +124,4 @@ jupyter lite serve --contents content
 - [xeus-lite-demo 简介](00-introduction.md) — 了解项目全貌
 - [CI/CD 流水线](06-cicd-pipeline.md) — 深入理解 GitHub Actions 工作流
 - [运行时环境配置](04-runtime-env-config.md) — 如何配置 environment.yml
-- [创建第一个部署](/examples/01-first-deployment.md) — 图文实操指南
+- [创建第一个部署](../examples/01-first-deployment.md) — 图文实操指南

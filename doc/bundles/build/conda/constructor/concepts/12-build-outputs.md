@@ -239,5 +239,5 @@ Schema 中的 `BuildOutputs` 枚举与 `OUTPUT_HANDLERS` 字典通过 `checks()`
 
 ## 下一步
 
-- [14-工具集与辅助函数](../14-utils-and-helpers.md)：了解 hash_files、yaml 处理等工具函数
-- [06-FCP 依赖求解与包下载](../06-fcp-fetch-and-solve.md)：了解 build_outputs 数据来源（_records/_all_pkg_records）
+- 14-工具集与辅助函数：了解 hash_files、yaml 处理等工具函数
+- 06-FCP 依赖求解与包下载：了解 build_outputs 数据来源（_records/_all_pkg_records）

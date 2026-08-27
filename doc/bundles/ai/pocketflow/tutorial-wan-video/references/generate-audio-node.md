@@ -67,7 +67,7 @@ class GenerateAudioNode(BatchNode):
 
 ## 角色语音配置
 
-语音参数定义在 [utils/audio.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/utils/audio.py)：
+语音参数定义在 utils/audio.py：
 
 ```python
 VOICE_MAP = {
@@ -117,4 +117,4 @@ image >> audio    # 从 GenerateImageNode 进入
 
 ## 源码位置
 
-[nodes.py#L190-L205](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/nodes.py#L190-L205)
+nodes.py#L190-L205

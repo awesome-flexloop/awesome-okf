@@ -40,23 +40,23 @@ description: Open SWE——基于 LangGraph 与 Deep Agents 的开源多图编�
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/open-swe/concepts/overview) — Open SWE 是什么、五个图、核心运行机制
-- [Agent 架构](/ai/langchain-ai/open-swe/concepts/agent-architecture) — 图工厂、无状态 Agent、模型优先级、middleware 洋葱圈
-- [Dispatch-Review 循环](/ai/langchain-ai/open-swe/concepts/dispatch-review-cycle) — durable dispatch、findings 模型、GitHub thread 协调
-- [Scheduler 与 Reconcile](/ai/langchain-ai/open-swe/concepts/scheduler-reconcile) — cron 扇出、陈旧运行清理、baby-sit 状态机
+- 总览 — Open SWE 是什么、五个图、核心运行机制
+- Agent 架构 — 图工厂、无状态 Agent、模型优先级、middleware 洋葱圈
+- Dispatch-Review 循环 — durable dispatch、findings 模型、GitHub thread 协调
+- Scheduler 与 Reconcile — cron 扇出、陈旧运行清理、baby-sit 状态机
 
 ### 参考
 
-- [架构参考](/ai/langchain-ai/open-swe/references/architecture) — 图入口、工厂签名、常量、工具集、Finding 模型、FastAPI 装配
+- 架构参考 — 图入口、工厂签名、常量、工具集、Finding 模型、FastAPI 装配
 
 ### 示例
 
-- [触发 Agent 运行与评审循环](/ai/langchain-ai/open-swe/examples/triggering-agent-run) — dispatch_agent_run、reviewer 评审、scheduler 任务、baby-sit、webhook 配置
+- 触发 Agent 运行与评审循环 — dispatch_agent_run、reviewer 评审、scheduler 任务、baby-sit、webhook 配置
 
 ### 溯源
 
-- [事实清单](/ai/langchain-ai/open-swe/spec/facts) — 70 条带文件路径与行号的编号事实
-- [架构洞察](/ai/langchain-ai/open-swe/spec/insights) — 4 个核心架构洞察
+- 事实清单 — 70 条带文件路径与行号的编号事实
+- 架构洞察 — 4 个核心架构洞察
 
 ## 目录结构
 

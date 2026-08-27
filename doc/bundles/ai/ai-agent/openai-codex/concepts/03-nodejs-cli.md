@@ -170,7 +170,7 @@ npm 包的发布策略是"瘦主包 + 胖平台包"：
 
 ## 相关概念
 
-- [Rust 核心与 TUI](./02-rust-core-tui.md)
-- [工作区架构](./01-workspace-architecture.md)
-- [简介](./00-introduction.md)
-- [Python SDK](./06-python-sdk.md)
+- [Rust 核心与 TUI](02-rust-core-tui.md)
+- [工作区架构](01-workspace-architecture.md)
+- [简介](00-introduction.md)
+- [Python SDK](06-python-sdk.md)

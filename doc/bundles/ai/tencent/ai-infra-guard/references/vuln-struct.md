@@ -148,6 +148,6 @@ references:
 
 ## 相关概念
 
-- [CVE 漏洞匹配](/concepts/03-vuln-matching.md)
-- [指纹规则 DSL](/concepts/02-fingerprint-dsl.md)
-- [扫描引擎信源](/references/scan-engine.md)
+- [CVE 漏洞匹配](../concepts/03-vuln-matching.md)
+- [指纹规则 DSL](../concepts/02-fingerprint-dsl.md)
+- [扫描引擎信源](scan-engine.md)

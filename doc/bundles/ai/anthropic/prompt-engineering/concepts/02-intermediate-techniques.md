@@ -440,4 +440,4 @@ Claude 可能会错误地说 9.11 大（因为 11 > 9，混淆了小数位比较
 
 - [基础结构（入门Ch1-3）](01-basic-structure.md) — 回到基础
 - [高级模式（Ch8-9）](03-advanced-patterns.md) — 学习防幻觉和复杂提示词构建
-- [Python SDK 消息基础](/python-sdk/concepts/02-messages-basics.md) — 了解如何在API中组织messages
+- [Python SDK 消息基础](../../python-sdk/concepts/02-messages-basics.md) — 了解如何在API中组织messages

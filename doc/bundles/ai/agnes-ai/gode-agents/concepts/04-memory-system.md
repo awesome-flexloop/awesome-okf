@@ -347,10 +347,10 @@ GodeAgents 的记忆**没有自动摘要、没有滑动窗口、没有向量检�
 
 ## 相关链接
 
-- [简介：编码式多智能体推理](/concepts/00-introduction.md) — 框架概述
-- [快速开始](/concepts/01-getting-started.md) — 安装与第一个Agent
-- [架构总览](/concepts/02-architecture-overview.md) — 模块依赖与组件关系
-- [MultiStepAgent：核心推理循环](/concepts/03-multi-step-agent.md) — Agent如何在循环中使用记忆
-- [Memory API 参考](/references/memory-api.md) — MemoryStep、AgentMemory、ToolCall完整API
-- [Agents API 参考](/references/agents-api.md) — write_memory_to_messages()方法说明
-- [Models API 参考](/references/models-api.md) — ChatMessage和MessageRole定义
+- [简介：编码式多智能体推理](00-introduction.md) — 框架概述
+- [快速开始](01-getting-started.md) — 安装与第一个Agent
+- [架构总览](02-architecture-overview.md) — 模块依赖与组件关系
+- [MultiStepAgent：核心推理循环](03-multi-step-agent.md) — Agent如何在循环中使用记忆
+- [Memory API 参考](../references/memory-api.md) — MemoryStep、AgentMemory、ToolCall完整API
+- [Agents API 参考](../references/agents-api.md) — write_memory_to_messages()方法说明
+- [Models API 参考](../references/models-api.md) — ChatMessage和MessageRole定义

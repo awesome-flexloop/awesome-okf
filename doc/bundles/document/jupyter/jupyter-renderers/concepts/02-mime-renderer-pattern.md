@@ -56,7 +56,7 @@ jupyter-renderers 中的3个 MIME 渲染器（fasta、geojson、vega3）遵循�
 
 渲染器首先声明支持的 MIME 类型和文件扩展名。
 
-**简单模式（单 MIME 类型）**——GeoJSON 和 Vega3 使用常量：[^geojson-index][^vega3-index]
+**简单模式（单 MIME 类型）**——GeoJSON 和 Vega3 使用常量：[^geojson-index] [^vega3-index]
 
 ```typescript
 // GeoJSON: 单一 MIME 类型
@@ -374,12 +374,12 @@ export default extension;
 
 ## 相关概念
 
-- [扩展类型：MIME 渲染器 vs 应用扩展](/concepts/03-extension-types.md)
-- [FASTA 生物序列渲染器](/concepts/04-fasta-renderer.md)
-- [GeoJSON 地理数据渲染器](/concepts/05-geojson-renderer.md)
-- [Vega/Vega-Lite 可视化渲染器](/concepts/07-vega-renderer.md)
-- [IRenderMime 核心 API 参考](/references/rendermime-interfaces-api.md)
-- [创建自定义 MIME 渲染器](/examples/01-custom-mime-renderer.md)
+- [扩展类型：MIME 渲染器 vs 应用扩展](03-extension-types.md)
+- [FASTA 生物序列渲染器](04-fasta-renderer.md)
+- [GeoJSON 地理数据渲染器](05-geojson-renderer.md)
+- [Vega/Vega-Lite 可视化渲染器](07-vega-renderer.md)
+- [IRenderMime 核心 API 参考](../references/rendermime-interfaces-api.md)
+- [创建自定义 MIME 渲染器](../examples/01-custom-mime-renderer.md)
 
 [^fasta-index]: fasta-extension/src/index.ts
 [^geojson-index]: geojson-extension/src/index.ts

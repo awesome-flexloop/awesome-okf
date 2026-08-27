@@ -108,7 +108,7 @@ katex.render(expr, element, {
 });
 ```
 
-> **安全提示**：持久宏（`\gdef`/`\global\let`）可改变 KaTeX 行为（如重定义标准命令），应仅在共同信任的多个元素间使用，不应跨多用户消息启用。详见 [宏系统](/concepts/09-macro-system.md)。
+> **安全提示**：持久宏（`\gdef`/`\global\let`）可改变 KaTeX 行为（如重定义标准命令），应仅在共同信任的多个元素间使用，不应跨多用户消息启用。详见 [宏系统](09-macro-system.md)。
 
 ## HTML 消毒
 
@@ -232,10 +232,10 @@ katex.render(untrustedExpr, element, {
 
 ## 相关概念
 
-- [配置系统](/concepts/10-settings-options.md) — strict、trust、maxSize、maxExpand 等选项的完整参考
-- [宏系统](/concepts/09-macro-system.md) — 持久宏机制与 macros 对象共享安全
-- [错误处理示例](/examples/error-handling.md) — 可复制的错误处理代码
-- [自动渲染扩展](/concepts/13-auto-render.md) — errorCallback 钩子与宏持久化
+- [配置系统](10-settings-options.md) — strict、trust、maxSize、maxExpand 等选项的完整参考
+- [宏系统](09-macro-system.md) — 持久宏机制与 macros 对象共享安全
+- [错误处理示例](../examples/error-handling.md) — 可复制的错误处理代码
+- [自动渲染扩展](13-auto-render.md) — errorCallback 钩子与宏持久化
 
 [^web-security]: 官网 Security 页面，https://katex.org/docs/security
 [^web-error]: 官网 Handling Errors 页面，https://katex.org/docs/error

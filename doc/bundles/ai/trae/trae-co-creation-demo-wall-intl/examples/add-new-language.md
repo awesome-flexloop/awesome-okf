@@ -249,7 +249,7 @@ npx tsx scripts/add-thai-translations.ts
 
 ## 步骤四：确认中间件自动覆盖
 
-如果已按 [5语言国际化](/concepts/02-multi-language.md) 中的修复方案修改了 middleware.ts（使用动态正则），则添加 th-TH 后**无需修改中间件**：
+如果已按 [5语言国际化](../concepts/02-multi-language.md) 中的修复方案修改了 middleware.ts（使用动态正则），则添加 th-TH 后**无需修改中间件**：
 
 ```typescript
 // src/middleware.ts —— 修复后，自动覆盖所有在 routing.locales 中定义的语言
@@ -375,6 +375,6 @@ A: 常见原因：
 
 ## 相关内容
 
-- [5语言国际化](/concepts/02-multi-language.md)
-- [5语言配置与翻译扩展示例](/examples/multi-language-setup.md)
-- [Vercel Edge Config缓存](/concepts/01-edge-config-cache.md)
+- [5语言国际化](../concepts/02-multi-language.md)
+- [5语言配置与翻译扩展示例](multi-language-setup.md)
+- [Vercel Edge Config缓存](../concepts/01-edge-config-cache.md)

@@ -248,7 +248,7 @@ KaTeX 对 `\def` 的支持有限（主要支持基本形式），复杂 TeX 模�
 
 ## 相关概念
 
-- [宏展开器（MacroExpander）](/concepts/04-macro-expander.md)
-- [函数注册表](/concepts/08-function-registry.md)
-- [配置系统](/concepts/10-settings-options.md)
-- [自定义宏示例](/examples/custom-macros.md)
+- [宏展开器（MacroExpander）](04-macro-expander.md)
+- [函数注册表](08-function-registry.md)
+- [配置系统](10-settings-options.md)
+- [自定义宏示例](../examples/custom-macros.md)

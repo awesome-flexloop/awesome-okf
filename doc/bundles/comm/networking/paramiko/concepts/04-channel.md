@@ -297,10 +297,10 @@ chan.out_window_size
 
 ## 相关概念
 
-- [Transport 底层传输](/concepts/03-transport.md)
-- [SSHClient 详解](/concepts/02-ssh-client.md)
-- [认证体系](/concepts/05-authentication.md)
-- [端口转发](/concepts/08-port-forwarding.md)
-- [交互式 Shell 示例](/examples/interactive-shell.md)
+- [Transport 底层传输](03-transport.md)
+- [SSHClient 详解](02-ssh-client.md)
+- [认证体系](05-authentication.md)
+- [端口转发](08-port-forwarding.md)
+- [交互式 Shell 示例](../examples/interactive-shell.md)
 
-[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](/references/paramiko-source.md)。
+[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](../references/paramiko-source.md)。

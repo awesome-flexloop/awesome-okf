@@ -16,7 +16,7 @@ sources:
 
 ## 概述
 
-`BinderHub` 是 BinderHub 项目的核心应用主类，定义在 [app.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py) 第 76 行。该类继承自 `traitlets.config.Application`，负责整个 BinderHub 服务的配置加载、组件初始化、Tornado Web 应用构建以及服务生命周期管理。
+`BinderHub` 是 BinderHub 项目的核心应用主类，定义在 app.py 第 76 行。该类继承自 `traitlets.config.Application`，负责整个 BinderHub 服务的配置加载、组件初始化、Tornado Web 应用构建以及服务生命周期管理。
 
 ## 类继承体系
 

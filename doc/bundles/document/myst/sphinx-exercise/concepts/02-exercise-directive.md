@@ -145,7 +145,7 @@ numfig_format = {"exercise": "习题 %s"}
 
 ## 相关概念
 
-- [解答指令详解](/concepts/03-solution-directive.md)
-- [门控指令](/concepts/04-gated-directives.md)
-- [配置项参考](/concepts/05-configuration.md)
-- [基础练习示例](/examples/basic-exercise.md)
+- [解答指令详解](03-solution-directive.md)
+- [门控指令](04-gated-directives.md)
+- [配置项参考](05-configuration.md)
+- [基础练习示例](../examples/basic-exercise.md)

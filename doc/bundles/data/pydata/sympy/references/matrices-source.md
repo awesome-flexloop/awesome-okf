@@ -21,7 +21,7 @@ SymPy 的矩阵系统位于 `sympy.matrices` 包，分为**显式矩阵**（dens
 
 ## 模块导出总览
 
-[matrices/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/matrices/__init__.py) 导出的公开 API 分为五类：[^matrices-init]
+matrices/__init__.py 导出的公开 API 分为五类：[^matrices-init]
 
 | 类别 | 导出符号 |
 |---|---|
@@ -94,11 +94,11 @@ classDiagram
     MatrixBase <|-- ImmutableSparseMatrix
 ```
 
-**别名链**：`Matrix = MutableMatrix = MutableDenseMatrix`（[dense.py:143-144](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/matrices/dense.py#L143)），`SparseMatrix = MutableSparseMatrix`（[__init__.py:26](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/matrices/__init__.py#L26)），`ImmutableMatrix = ImmutableDenseMatrix`（[__init__.py:25](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/matrices/__init__.py#L25)）。[^matrices-init][^dense-source]
+**别名链**：`Matrix = MutableMatrix = MutableDenseMatrix`（dense.py:143-144），`SparseMatrix = MutableSparseMatrix`（__init__.py:26），`ImmutableMatrix = ImmutableDenseMatrix`（__init__.py:25）。[^matrices-init] [^dense-source]
 
 ## Matrix 类（MutableDenseMatrix）
 
-`MutableDenseMatrix` 定义于 [dense.py:123](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/matrices/dense.py#L123)，多重继承自 `DenseMatrix` 和 `MutableRepMatrix`。`Matrix` 是其别名，是用户最常使用的矩阵类。[^dense-source]
+`MutableDenseMatrix` 定义于 dense.py:123，多重继承自 `DenseMatrix` 和 `MutableRepMatrix`。`Matrix` 是其别名，是用户最常使用的矩阵类。[^dense-source]
 
 ### 构造方式
 
@@ -157,11 +157,11 @@ Matrix([
 [3, 5]])
 ```
 
-`simplify()` 方法在 `MutableDenseMatrix` 上为原地操作（返回 `None`），与不可变矩阵的化简返回新矩阵行为不同。（[dense.py:128](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/matrices/dense.py#L128)）[^dense-source]
+`simplify()` 方法在 `MutableDenseMatrix` 上为原地操作（返回 `None`），与不可变矩阵的化简返回新矩阵行为不同。（dense.py:128）[^dense-source]
 
 ## MatrixBase 公共基类
 
-`MatrixBase` 定义于 [matrixbase.py:127](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/matrices/matrixbase.py#L127)，继承自 `Printable`，是所有显式矩阵类的抽象基类，定义了完整的矩阵运算 API。[^matrixbase-source]
+`MatrixBase` 定义于 matrixbase.py:127，继承自 `Printable`，是所有显式矩阵类的抽象基类，定义了完整的矩阵运算 API。[^matrixbase-source]
 
 ### 基本属性
 
@@ -274,7 +274,7 @@ sqrt(30)
 | `LDLdecomposition(hermitian=True)` | L5446 | `(L, D)` | LDL 分解 |
 | `Hessenberg` | - | - | Hessenberg 形式（通过 `M.hessenberg_form()` 等） |
 
-注：SVD 分解可通过 `M.singular_values()` 方法获得。[^dense-source][^matrixbase-source]
+注：SVD 分解可通过 `M.singular_values()` 方法获得。[^dense-source] [^matrixbase-source]
 
 ```python
 >>> from sympy import Matrix
@@ -328,7 +328,7 @@ Matrix([
 
 ### Jacobian 矩阵
 
-`jacobian(X)` 方法（[matrixbase.py:3823](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/matrices/matrixbase.py#L3823)）计算向量值函数对变量列表的 Jacobian 矩阵：[^matrixbase-source]
+`jacobian(X)` 方法（matrixbase.py:3823）计算向量值函数对变量列表的 Jacobian 矩阵：[^matrixbase-source]
 
 ```python
 >>> from sympy import Matrix, symbols
@@ -356,7 +356,7 @@ Matrix([
 {(0, 0): 1, (1, 1): 2, (2, 2): 3}
 ```
 
-稀疏矩阵也支持 `solve()`（默认 LDL 方法，[sparse.py:420](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/matrices/sparse.py#L420)）、`cholesky()`、`LDLdecomposition()` 等运算。
+稀疏矩阵也支持 `solve()`（默认 LDL 方法，sparse.py:420）、`cholesky()`、`LDLdecomposition()` 等运算。
 
 ## 矩阵创建函数
 

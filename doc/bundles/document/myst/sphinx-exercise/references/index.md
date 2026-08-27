@@ -2,7 +2,7 @@
 
 | 文档 | 内容 |
 |------|------|
-| [源码路径映射](/references/exercise-source.md) | 核心源文件、6个指令、事件连接顺序 |
+| [源码路径映射](exercise-source.md) | 核心源文件、6个指令、事件连接顺序 |
 
 ```{toctree}
 :hidden:

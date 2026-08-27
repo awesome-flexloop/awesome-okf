@@ -99,5 +99,5 @@ Provider Profile 控制模型构造阶段的行为，通过 `register_provider_p
 
 ## 相关概念
 
-- [核心 API](/ai/langchain-ai/deepagents/references/api) — `create_deep_agent()` 如何使用 profile
-- [中间件栈](/ai/langchain-ai/deepagents/references/middleware-stack) — profile 如何影响中间件排序和排除
+- 核心 API — `create_deep_agent()` 如何使用 profile
+- 中间件栈 — profile 如何影响中间件排序和排除

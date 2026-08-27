@@ -90,7 +90,7 @@ SSC 任期以 `YYYY/MM-YYYY/MM` 格式记录：
 
 ### 自动生成展示
 
-团队成员页面的 HTML 表格不是手动编写的，而是在文档构建时由 [`gen_contributors.py`](/references/gen-contributors-source.md) 脚本自动生成：
+团队成员页面的 HTML 表格不是手动编写的，而是在文档构建时由 [`gen_contributors.py`](../references/gen-contributors-source.md) 脚本自动生成：
 
 1. 读取 YAML 数据
 2. 从 GitHub 获取成员头像（`https://github.com/{handle}.png?size=200`）
@@ -106,7 +106,7 @@ SSC 任期以 `YYYY/MM-YYYY/MM` 格式记录：
 
 ## 相关概念
 
-- [成为团队成员](/concepts/02-becoming-member.md)
-- [决策机制](/concepts/03-decision-making.md)
-- [成员指南与PR合并原则](/concepts/04-member-guide.md)
-- [文档构建基础设施](/concepts/06-doc-infrastructure.md)
+- [成为团队成员](02-becoming-member.md)
+- [决策机制](03-decision-making.md)
+- [成员指南与PR合并原则](04-member-guide.md)
+- [文档构建基础设施](06-doc-infrastructure.md)

@@ -74,7 +74,7 @@ IDE 基于 VSCode 架构构建，因此天然支持插件市场与远程 SSH 开
 
 ## 相关概念
 
-- [产品矩阵总览](/concepts/00-product-matrix.md) — CodeBuddy 三态一体产品矩阵
-- [CodeBuddy IDE](/concepts/01-ide.md) — IDE 产设研一体能力详解
-- [CLI](/concepts/02-cli.md) — 终端原生 AI 编程工具
-- [IDE 工作流示例](/examples/ide-workflow.md) — 从自然语言到部署的实战流程
+- [产品矩阵总览](../concepts/00-product-matrix.md) — CodeBuddy 三态一体产品矩阵
+- [CodeBuddy IDE](../concepts/01-ide.md) — IDE 产设研一体能力详解
+- [CLI](../concepts/02-cli.md) — 终端原生 AI 编程工具
+- [IDE 工作流示例](../examples/ide-workflow.md) — 从自然语言到部署的实战流程

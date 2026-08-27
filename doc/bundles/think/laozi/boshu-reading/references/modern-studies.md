@@ -55,6 +55,6 @@ sources:
 
 ## 相关概念
 
-- [为什么读帛书本](/concepts/00-why-boshu.md)
-- [如何使用历代注本](/concepts/05-using-commentaries.md)
-- [资料库使用指南](/concepts/06-collection-usage.md)
+- [为什么读帛书本](../concepts/00-why-boshu.md)
+- [如何使用历代注本](../concepts/05-using-commentaries.md)
+- [资料库使用指南](../concepts/06-collection-usage.md)

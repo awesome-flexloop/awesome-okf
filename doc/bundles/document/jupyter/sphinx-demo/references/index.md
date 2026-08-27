@@ -16,8 +16,8 @@
 
 ## 相关信源
 
-- 扩展实现源码参考：见 [jupyterlite-sphinx bundle](/document/jupyter/jupyterlite-sphinx/)（同目录下）
-- JupyterLite 核心参考：见 [jupyterlite bundle](/document/jupyter/jupyterlite/)
+- 扩展实现源码参考：见 [jupyterlite-sphinx bundle](../../jupyterlite-sphinx/index.md)（同目录下）
+- JupyterLite 核心参考：见 [jupyterlite bundle](../../jupyterlite/index.md)
 
 ```{toctree}
 :hidden:

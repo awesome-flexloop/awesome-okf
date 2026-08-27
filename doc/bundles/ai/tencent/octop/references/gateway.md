@@ -203,6 +203,6 @@ async def push_text(self, channel_type, channel_id, subject, text):
 
 ## 相关概念
 
-- [/concepts/03-gateway-channels.md](/concepts/03-gateway-channels.md)
-- [/concepts/01-server-lifecycle.md](/concepts/01-server-lifecycle.md)
-- [/concepts/02-agent-runtime.md](/concepts/02-agent-runtime.md)
+- [/concepts/03-gateway-channels.md](../concepts/03-gateway-channels.md)
+- [/concepts/01-server-lifecycle.md](../concepts/01-server-lifecycle.md)
+- [/concepts/02-agent-runtime.md](../concepts/02-agent-runtime.md)

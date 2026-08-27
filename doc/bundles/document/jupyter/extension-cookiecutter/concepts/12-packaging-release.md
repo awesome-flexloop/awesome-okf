@@ -228,6 +228,6 @@ jupyter server  # 启动后测试端点
 
 ## 相关概念
 
-- [CI/CD 工作流](/concepts/09-ci-workflows.md)
-- [构建系统详解](/concepts/08-build-system.md)
-- [快速开始](/concepts/01-getting-started.md)
+- [CI/CD 工作流](09-ci-workflows.md)
+- [构建系统详解](08-build-system.md)
+- [快速开始](01-getting-started.md)

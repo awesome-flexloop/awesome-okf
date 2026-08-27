@@ -254,8 +254,8 @@ dispose(): void {
 
 ## 相关概念
 
-- [命令系统](/concepts/04-commands.md)
-- [Widget与Shell布局](/concepts/05-widgets-shell.md)
-- [信号与事件通信](/concepts/06-signals.md)
-- [服务端扩展](/concepts/13-server-extension.md)
-- [核心API与Token参考](/references/core-api-tokens.md)
+- [命令系统](04-commands.md)
+- [Widget与Shell布局](05-widgets-shell.md)
+- [信号与事件通信](06-signals.md)
+- [服务端扩展](13-server-extension.md)
+- [核心API与Token参考](../references/core-api-tokens.md)

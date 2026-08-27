@@ -366,6 +366,6 @@ print(result["score"])
 
 ## 进一步阅读
 
-- [精确评测器概念](/ai/langchain-ai/openevals/concepts/exact-evaluators) — 各确定性评测器的实现细节
-- [LLM-as-Judge 概念](/ai/langchain-ai/openevals/concepts/llm-as-judge) — 评分模式、prompt 格式化与 judge 后端
-- [API 参考](/ai/langchain-ai/openevals/references/api) — 完整函数签名
+- 精确评测器概念 — 各确定性评测器的实现细节
+- LLM-as-Judge 概念 — 评分模式、prompt 格式化与 judge 后端
+- API 参考 — 完整函数签名

@@ -334,7 +334,7 @@ config = load_default_config()
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [Shell 生命周期](/concepts/03-shell-lifecycle.md)
-- [InteractiveShell API 参考](/references/interactiveshell-source.md)
-- [扩展系统 API 参考](/references/extension-source.md)
+- [架构总览](../concepts/02-architecture-overview.md)
+- [Shell 生命周期](../concepts/03-shell-lifecycle.md)
+- [InteractiveShell API 参考](interactiveshell-source.md)
+- [扩展系统 API 参考](extension-source.md)

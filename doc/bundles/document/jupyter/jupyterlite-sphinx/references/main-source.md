@@ -127,8 +127,8 @@ sources:
 
 ## 相关概念
 
-- [节点类层次](/concepts/11-node-hierarchy.md)
-- [构建流程详解](/concepts/10-build-process.md)
-- [配置参考](/concepts/09-configuration.md)
-- [_try_examples 模块源码](/references/try-examples-source.md)
-- [前端 JS 源码](/references/js-source.md)
+- [节点类层次](../concepts/11-node-hierarchy.md)
+- [构建流程详解](../concepts/10-build-process.md)
+- [配置参考](../concepts/09-configuration.md)
+- [_try_examples 模块源码](try-examples-source.md)
+- [前端 JS 源码](js-source.md)

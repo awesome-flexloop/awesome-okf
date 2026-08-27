@@ -163,7 +163,7 @@ async function getDicts(lang: string) {
 
 ## 相关概念
 
-- [Demo Wall Intl 简介](/concepts/00-introduction.md)
-- [Vercel部署](/concepts/05-vercel-deployment.md)
-- [Edge Config缓存同步示例](/examples/edge-config-sync.md)
-- [Vercel部署配置示例](/examples/setup-vercel-deployment.md)
+- [Demo Wall Intl 简介](00-introduction.md)
+- [Vercel部署](05-vercel-deployment.md)
+- [Edge Config缓存同步示例](../examples/edge-config-sync.md)
+- [Vercel部署配置示例](../examples/setup-vercel-deployment.md)

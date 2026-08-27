@@ -28,7 +28,7 @@ EventsService 是 Cordis 的事件总线，提供了远超传统 EventEmitter �
 
 ## 五种 Dispatch 模式
 
-[events.ts:L89-L126](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/events.ts#L89-L126)
+events.ts:L89-L126
 
 ```mermaid
 graph TB
@@ -107,7 +107,7 @@ bail(...args: any[]) {
 
 ### isBailed 判定
 
-[events.ts:L6-L8](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/events.ts#L6-L8)
+events.ts:L6-L8
 
 ```typescript
 export function isBailed(value: any) {
@@ -170,7 +170,7 @@ waterfall(...args: any[]) {
 
 ### _resolve() — 事件上下文解析
 
-[events.ts:L72-L81](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/events.ts#L72-L81)
+events.ts:L72-L81
 
 ```typescript
 private _resolve(type: string, args: any[]) {
@@ -230,7 +230,7 @@ export interface EventOptions {
 
 ## 监听器注册
 
-[events.ts:L128-L166](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/events.ts#L128-L166)
+events.ts:L128-L166
 
 ### on() — 注册监听器
 
@@ -304,7 +304,7 @@ unregister(hooks: Hook[], callback: any) {
 
 EventsService 构造函数中对 `internal/listener` 和 `internal/update` 事件做了特殊处理：
 
-[events.ts:L54-L69](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/events.ts#L54-L69)
+events.ts:L54-L69
 
 ```typescript
 constructor(private ctx: Context) {
@@ -338,7 +338,7 @@ constructor(private ctx: Context) {
 
 Cordis 核心定义了 8 个内部事件，框架自身的很多机制（服务发现、状态通知、属性拦截）都通过这些事件实现：
 
-[events.ts:L169-L178](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/events.ts#L169-L178)
+events.ts:L169-L178
 
 ```typescript
 export interface Events {
@@ -368,7 +368,7 @@ export interface Events {
 
 在 `ReflectService.handler.get` 中，当访问未定义的属性时，通过 waterfall 模式的 `internal/get` 事件允许插件拦截属性访问：
 
-[reflect.ts:L80-L94](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts#L80-L94)
+reflect.ts:L80-L94
 
 ```typescript
 return ctx.events.waterfall('internal/get', ctx, prop, error, () => {
@@ -394,7 +394,7 @@ return ctx.events.waterfall('internal/get', ctx, prop, error, () => {
 
 类似地，属性设置也通过 waterfall 模式可被拦截：
 
-[reflect.ts:L118-L120](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts#L118-L120)
+reflect.ts:L118-L120
 
 ```typescript
 return ctx.events.waterfall('internal/set', ctx, prop, value, error, () => {
@@ -502,8 +502,8 @@ function isBailed(value: any): boolean
 
 | 文件 | 内容 |
 |------|------|
-| [events.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/events.ts) | EventsService 完整实现、5 种 dispatch 模式、8 个内部事件、Hook/EventOptions 定义 |
-| [reflect.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts#L62-L133) | Proxy handler 中通过 waterfall 派发 internal/get 和 internal/set |
-| [fiber.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L355-L369) | Fiber 状态变更时 emit internal/status |
-| [service.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/service.ts#L37-L39) | Service 默认的 [symbols.filter] 实现 |
-| [context.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/context.ts#L23-L24) | Context.filter/effect 静态 symbol |
+| events.ts | EventsService 完整实现、5 种 dispatch 模式、8 个内部事件、Hook/EventOptions 定义 |
+| reflect.ts | Proxy handler 中通过 waterfall 派发 internal/get 和 internal/set |
+| fiber.ts | Fiber 状态变更时 emit internal/status |
+| service.ts | Service 默认的 [symbols.filter] 实现 |
+| context.ts | Context.filter/effect 静态 symbol |

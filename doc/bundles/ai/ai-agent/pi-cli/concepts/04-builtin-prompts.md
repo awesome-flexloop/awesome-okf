@@ -152,6 +152,6 @@ sources:
 
 ## 相关概念
 
-- [Pi AI CLI 简介](./00-introduction.md)
-- [Monorepo 架构](./01-monorepo-architecture.md)
+- [Pi AI CLI 简介](00-introduction.md)
+- [Monorepo 架构](01-monorepo-architecture.md)
 - [基础使用示例](../examples/01-basic-usage.md)

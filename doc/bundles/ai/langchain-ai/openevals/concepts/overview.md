@@ -53,7 +53,7 @@ LLM 应用的输出是非确定性的自然语言，传统软件测试的精确�
 └──────────┴───────────┴───────────┴──────────────┘
 ```
 
-所有评测器遵循统一协议：接收 `{ inputs, outputs, referenceOutputs, ... }`，返回 `EvaluatorResult`（含 `key`、`score`、`comment`、`metadata`）。详见 [评测器协议洞察](/ai/langchain-ai/openevals/spec/insights)。
+所有评测器遵循统一协议：接收 `{ inputs, outputs, referenceOutputs, ... }`，返回 `EvaluatorResult`（含 `key`、`score`、`comment`、`metadata`）。详见 评测器协议洞察。
 
 ## 评测器分类
 
@@ -66,7 +66,7 @@ LLM 应用的输出是非确定性的自然语言，传统软件测试的精确�
 | 嵌入相似度 | `createEmbeddingSimilarityEvaluator` | — | cosine / dot_product |
 | JSON 匹配 | `createJsonMatchEvaluator` | — | deepEqual + 可选 LLM rubric |
 
-详见 [精确评测器](/ai/langchain-ai/openevals/concepts/exact-evaluators)。
+详见 精确评测器。
 
 ### LLM-as-Judge 评测器
 
@@ -77,7 +77,7 @@ LLM 应用的输出是非确定性的自然语言，传统软件测试的精确�
 | 轨迹评判 | `createTrajectoryLLMAsJudge` | `create_trajectory_llm_as_judge` / `_async` | Agent 轨迹评估 |
 | JSON 评判 | `createJsonMatchEvaluator`（rubric 模式） | — | 结构化字段语义评判 |
 
-详见 [LLM-as-Judge](/ai/langchain-ai/openevals/concepts/llm-as-judge)。
+详见 LLM-as-Judge。
 
 ### 轨迹匹配评测器
 
@@ -124,7 +124,7 @@ JS (js/src/)              Python (python/openevals/)
 └── trajectory/ ↔───────└── trajectory/
 ```
 
-主要差异：Python 提供同步/异步双版本，JS 统一为 async；Python 支持 Pydantic/TypedDict schema，JS 支持 Zod schema。详见 [双语言架构洞察](/ai/langchain-ai/openevals/spec/insights)。
+主要差异：Python 提供同步/异步双版本，JS 统一为 async；Python 支持 Pydantic/TypedDict schema，JS 支持 Zod schema。详见 双语言架构洞察。
 
 ## 快速开始
 
@@ -167,10 +167,10 @@ evaluator = create_llm_as_judge(
 result = evaluator(outputs="The sky is blue.")
 ```
 
-详见 [基础评测示例](/ai/langchain-ai/openevals/examples/basic-evaluation) 和 [API 参考](/ai/langchain-ai/openevals/references/api)。
+详见 基础评测示例 和 API 参考。
 
 ## 进一步阅读
 
-- [精确评测器](/ai/langchain-ai/openevals/concepts/exact-evaluators) — exactMatch、Levenshtein、嵌入相似度、JSON 匹配的实现机制
-- [LLM-as-Judge](/ai/langchain-ai/openevals/concepts/llm-as-judge) — 评分模式、prompt 格式化、judge 后端、结构化输出
-- [API 参考](/ai/langchain-ai/openevals/references/api) — 全部公共函数签名与参数说明
+- 精确评测器 — exactMatch、Levenshtein、嵌入相似度、JSON 匹配的实现机制
+- LLM-as-Judge — 评分模式、prompt 格式化、judge 后端、结构化输出
+- API 参考 — 全部公共函数签名与参数说明

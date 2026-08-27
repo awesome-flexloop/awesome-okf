@@ -145,9 +145,9 @@ result = message.get_result(backend=backend, block=True, timeout=5000)
 
 ## 相关概念
 
-- [整体架构](/concepts/00-overall-architecture.md)：Results 是可选中间件
-- [Broker 抽象基类](/concepts/02-broker-abstraction.md)：broker.get_results_backend() 查找 Results 中间件
-- [Message 与序列化](/concepts/04-message-and-serialization.md)：Message.get_result 从 broker 获取 backend
-- [Middleware 中间件管道](/concepts/05-middleware-pipeline.md)：Results 作为中间件接入洋葱模型
-- [Encoder 编码层](/concepts/06-encoder.md)：ResultBackend 使用 Encoder 序列化结果
-- [异常类层次结构](/references/error-hierarchy.md)：ResultMissing/ResultTimeout/ResultFailure
+- [整体架构](00-overall-architecture.md)：Results 是可选中间件
+- [Broker 抽象基类](02-broker-abstraction.md)：broker.get_results_backend() 查找 Results 中间件
+- [Message 与序列化](04-message-and-serialization.md)：Message.get_result 从 broker 获取 backend
+- [Middleware 中间件管道](05-middleware-pipeline.md)：Results 作为中间件接入洋葱模型
+- [Encoder 编码层](06-encoder.md)：ResultBackend 使用 Encoder 序列化结果
+- [异常类层次结构](../references/error-hierarchy.md)：ResultMissing/ResultTimeout/ResultFailure

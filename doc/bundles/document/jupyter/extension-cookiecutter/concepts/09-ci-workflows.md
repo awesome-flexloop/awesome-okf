@@ -244,11 +244,11 @@ Jupyter Releaser 还自动处理：
 - PyPI 上传
 - CHANGELOG 更新
 
-详细发布步骤参见 [RELEASE.md](/concepts/12-packaging-release.md)。
+详细发布步骤参见 [RELEASE.md](12-packaging-release.md)。
 
 ## 相关概念
 
-- [打包发布指南](/concepts/12-packaging-release.md)
-- [代码质量工具](/concepts/11-code-quality.md)
-- [构建系统详解](/concepts/08-build-system.md)
-- [CI/CD 工作流源码解析](/references/ci-workflow-source.md)
+- [打包发布指南](12-packaging-release.md)
+- [代码质量工具](11-code-quality.md)
+- [构建系统详解](08-build-system.md)
+- [CI/CD 工作流源码解析](../references/ci-workflow-source.md)

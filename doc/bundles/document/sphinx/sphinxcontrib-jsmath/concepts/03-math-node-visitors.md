@@ -255,8 +255,8 @@ else:
 
 ## 相关概念
 
-- [扩展注册与 setup 函数](/concepts/02-setup-and-registration.md)
-- [智能JS加载机制](/concepts/04-smart-js-loading.md)
-- [基础使用示例](/examples/basic-usage.md)
-- [公式编号与引用](/examples/equation-numbering.md)
-- [源码信源登记](/references/jsmath-source.md)
+- [扩展注册与 setup 函数](02-setup-and-registration.md)
+- [智能JS加载机制](04-smart-js-loading.md)
+- [基础使用示例](../examples/basic-usage.md)
+- [公式编号与引用](../examples/equation-numbering.md)
+- [源码信源登记](../references/jsmath-source.md)

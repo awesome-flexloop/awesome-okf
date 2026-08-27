@@ -239,8 +239,8 @@ async def async_chat(bot_id: str, user_id: str, question: str):
 
 ## 相关概念
 
-- [对话与流式处理](/concepts/03-chat-streaming.md) — SSE 流式对话的机制详解
-- [认证体系](/concepts/01-auth-system.md) — TokenAuth 和其他认证方式
-- [客户端初始化](/concepts/02-client-init.md) — 客户端配置选项
-- [会话管理](/concepts/06-conversations.md) — 多轮对话的会话管理
-- [工作流执行示例](/examples/workflow-execution.md) — 工作流流式调用
+- [对话与流式处理](../concepts/03-chat-streaming.md) — SSE 流式对话的机制详解
+- [认证体系](../concepts/01-auth-system.md) — TokenAuth 和其他认证方式
+- [客户端初始化](../concepts/02-client-init.md) — 客户端配置选项
+- [会话管理](../concepts/06-conversations.md) — 多轮对话的会话管理
+- [工作流执行示例](workflow-execution.md) — 工作流流式调用

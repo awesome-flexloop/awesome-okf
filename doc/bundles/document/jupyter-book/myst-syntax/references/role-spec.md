@@ -20,7 +20,7 @@ sources:
 
 ## defaultRoles 导出
 
-[roles/index.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-roles/src/index.ts#L1-L60) 导出 `defaultRoles` 数组，包含 20 个预定义角色：
+roles/index.ts 导出 `defaultRoles` 数组，包含 20 个预定义角色：
 
 ```ts
 export const defaultRoles = [
@@ -49,7 +49,7 @@ export const defaultRoles = [
 
 ## 通用角色选项
 
-[roles/utils.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-roles/src/utils.ts#L1-L50) 提供角色通用选项工具：
+roles/utils.ts 提供角色通用选项工具：
 
 ### commonRoleOptions()
 
@@ -76,7 +76,7 @@ export function addCommonRoleOptions(data: RoleData, node: GenericNode) {
 
 ## Cite 角色详解
 
-[roles/cite.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-roles/src/cite.ts#L1-L74) 实现了最复杂的角色，支持 BibTeX/biblatex 风格引用：
+roles/cite.ts 实现了最复杂的角色，支持 BibTeX/biblatex 风格引用：
 
 ### 别名列表（18个）
 
@@ -119,7 +119,7 @@ const [, prefix, l, suffix] = c.match(groups) ?? ['', '', c];
 
 ## Ref 角色详解
 
-[roles/reference.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-roles/src/reference.ts#L1-L22)：
+roles/reference.ts：
 
 ```ts
 const REF_PATTERN = /^(.+?)<([^<>]+)>$/;  // 'Labeled Reference <ref>'

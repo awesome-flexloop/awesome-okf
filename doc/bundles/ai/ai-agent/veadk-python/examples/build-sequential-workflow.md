@@ -27,7 +27,7 @@ sources:
 - Python ≥ 3.10
 - 已安装 veadk-python（`pip install veadk-python`）
 - 拥有一个兼容 OpenAI Chat Completions API 的模型服务
-- 理解 [Agent 与 Runner 概念](/concepts/agent-and-runner.md) 和 [组合 Agent 概念](/concepts/composite-agents.md)
+- 理解 [Agent 与 Runner 概念](../concepts/agent-and-runner.md) 和 [组合 Agent 概念](../concepts/composite-agents.md)
 
 ## 完整代码示例
 

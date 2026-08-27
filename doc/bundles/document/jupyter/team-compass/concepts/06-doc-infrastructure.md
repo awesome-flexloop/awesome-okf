@@ -184,5 +184,5 @@ sphinx-build -b html docs docs/_build/html
 
 ## 相关概念
 
-- [Jupyter Server Team Compass 仓库简介](/concepts/00-introduction.md)
-- [团队成员体系](/concepts/01-team-membership.md)
+- [Jupyter Server Team Compass 仓库简介](00-introduction.md)
+- [团队成员体系](01-team-membership.md)

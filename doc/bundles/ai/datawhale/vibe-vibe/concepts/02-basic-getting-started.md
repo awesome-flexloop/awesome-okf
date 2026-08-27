@@ -91,8 +91,8 @@ sources:
 
 `docs/Basic/index.md` 为不同状态的学习者提供两个入口：
 
-- **想先搞清楚自己是否适合这条路线**：从[第 0 章：开始前](/Basic/00-preface/)开始
-- **已经迫不及待想做出第一个版本**：看完第 0 章后直接进入[第 1 章：第一个版本](/Basic/01-awakening/)
+- **想先搞清楚自己是否适合这条路线**：从第 0 章：开始前开始
+- **已经迫不及待想做出第一个版本**：看完第 0 章后直接进入第 1 章：第一个版本
 
 ## 配套资源
 
@@ -105,5 +105,5 @@ sources:
 
 ## 相关概念
 
-- [Vibe 开发理念](/ai/datawhale/vibe-vibe/concepts/01-vibe-coding-philosophy.md)：基础篇教学设计所依据的 Vibe Coding 理念与 MVP 思维。
-- [多语言文档架构](/ai/datawhale/vibe-vibe/concepts/03-multilingual-docs-architecture.md)：基础篇内容如何通过中英文双语文档站交付。
+- [Vibe 开发理念](01-vibe-coding-philosophy.md)：基础篇教学设计所依据的 Vibe Coding 理念与 MVP 思维。
+- [多语言文档架构](03-multilingual-docs-architecture.md)：基础篇内容如何通过中英文双语文档站交付。

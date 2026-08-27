@@ -205,10 +205,10 @@ c.ServerApp.terminals_enabled = False
 
 ## 相关概念
 
-- [TerminalsExtensionApp 扩展应用](/concepts/02-extension-app.md)
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [TerminalManager 终端管理器](/concepts/03-terminal-manager.md)
-- [配置自动清理与指定工作目录](/examples/culler-and-cwd.md)
-- [jupyter_server_terminals 源码信源登记](/references/jupyter-server-terminals-source.md)
+- [TerminalsExtensionApp 扩展应用](02-extension-app.md)
+- [5分钟快速上手](01-getting-started.md)
+- [TerminalManager 终端管理器](03-terminal-manager.md)
+- [配置自动清理与指定工作目录](../examples/culler-and-cwd.md)
+- [jupyter_server_terminals 源码信源登记](../references/jupyter-server-terminals-source.md)
 
-[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](/references/jupyter-server-terminals-source.md)。
+[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](../references/jupyter-server-terminals-source.md)。

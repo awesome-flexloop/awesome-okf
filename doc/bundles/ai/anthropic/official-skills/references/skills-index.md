@@ -100,8 +100,8 @@ theme-factory Skill 提供以下 10 个开箱即用的主题：
 
 ## 相关资源
 
-- [Skills 生态概览](/official-skills/concepts/00-overview.md) — 了解 Skills 的基本概念和触发机制
-- [SKILL.md 格式规范](/official-skills/concepts/01-skill-format.md) — 如果你想创建自己的自定义 Skill
-- [Skill Creator 工具详解](/official-skills/concepts/02-skill-creator.md) — 使用官方元技能创建高质量 Skills
-- [Claude API Skill 详解](/official-skills/concepts/03-claude-api-skill.md) — claude-api Skill 的详细使用指南
-- [Claude Code 插件体系](/claude-code/concepts/01-plugin-system.md) — 了解 Skills 在插件生态中的位置
+- [Skills 生态概览](../concepts/00-overview.md) — 了解 Skills 的基本概念和触发机制
+- [SKILL.md 格式规范](../concepts/01-skill-format.md) — 如果你想创建自己的自定义 Skill
+- [Skill Creator 工具详解](../concepts/02-skill-creator.md) — 使用官方元技能创建高质量 Skills
+- [Claude API Skill 详解](../concepts/03-claude-api-skill.md) — claude-api Skill 的详细使用指南
+- [Claude Code 插件体系](../../claude-code/concepts/01-plugin-system.md) — 了解 Skills 在插件生态中的位置

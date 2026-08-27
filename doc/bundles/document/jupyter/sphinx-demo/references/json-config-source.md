@@ -119,6 +119,6 @@ sources:
 
 ## 相关概念
 
-- [05-config-files](/concepts/05-config-files.md)
-- [03-sphinx-conf](/concepts/03-sphinx-conf.md)
-- [/references/conf-py-source.md](/references/conf-py-source.md)
+- [05-config-files](../concepts/05-config-files.md)
+- [03-sphinx-conf](../concepts/03-sphinx-conf.md)
+- [/references/conf-py-source.md](conf-py-source.md)

@@ -175,17 +175,17 @@ async function deleteTerminal(name) {
 
 ## 注意事项
 
-1. **先创建后连接**：REST API 只负责终端的生命周期管理，实际的终端 I/O 需要通过 WebSocket 连接（参见 [WebSocket 实时通信示例](/examples/websocket-interaction.md)）
+1. **先创建后连接**：REST API 只负责终端的生命周期管理，实际的终端 I/O 需要通过 WebSocket 连接（参见 [WebSocket 实时通信示例](websocket-interaction.md)）
 2. **认证**：所有 API 请求都需要有效认证（token 或 cookie），测试环境可用 `--ServerApp.token=''` 禁用认证（仅限本地开发）
 3. **幂等性**：GET 和 DELETE 操作是幂等的；POST 创建终端每次调用都会创建新终端
 4. **异步删除**：DELETE 返回 204 后，终端进程可能还在清理中，立即重建同名终端可能需要短暂等待
 
 ## 相关概念
 
-- [REST API 处理器](/concepts/04-rest-api.md)
-- [TerminalManager 终端管理器](/concepts/03-terminal-manager.md)
-- [WebSocket 实时通信示例](/examples/websocket-interaction.md)
-- [配置自动清理与指定工作目录](/examples/culler-and-cwd.md)
-- [jupyter_server_terminals 源码信源登记](/references/jupyter-server-terminals-source.md)
+- [REST API 处理器](../concepts/04-rest-api.md)
+- [TerminalManager 终端管理器](../concepts/03-terminal-manager.md)
+- [WebSocket 实时通信示例](websocket-interaction.md)
+- [配置自动清理与指定工作目录](culler-and-cwd.md)
+- [jupyter_server_terminals 源码信源登记](../references/jupyter-server-terminals-source.md)
 
-[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](/references/jupyter-server-terminals-source.md)。
+[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](../references/jupyter-server-terminals-source.md)。

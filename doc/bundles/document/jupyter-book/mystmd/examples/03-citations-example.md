@@ -281,6 +281,6 @@ citeNodes.forEach(cite => {
 
 ## 下一步
 
-- 了解 [目标与引用系统](/concepts/07-targets-references.md)中交叉引用的处理流程
-- 了解 [MDAST 转换管线](/concepts/03-myst-transforms.md)中 transformCitations 的位置
-- 学习 [自定义角色](/examples/04-custom-role.md)创建自定义引用角色
+- 了解 [目标与引用系统](../concepts/07-targets-references.md)中交叉引用的处理流程
+- 了解 [MDAST 转换管线](../concepts/03-myst-transforms.md)中 transformCitations 的位置
+- 学习 [自定义角色](04-custom-role.md)创建自定义引用角色

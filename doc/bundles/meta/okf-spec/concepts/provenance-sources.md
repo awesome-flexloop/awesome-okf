@@ -64,8 +64,8 @@ The `events_` table is sharded daily as `events_YYYYMMDD`.[^ga4-schema]
 
 ## 相关概念
 
-- [信任：generated 与 verified 及信任层级](./trust-generated-verified.md)
-- [生命周期：status 与 stale_after](./lifecycle-status-stale.md)
-- [参与者约定](./actor-convention.md)
+- [信任：generated 与 verified 及信任层级](trust-generated-verified.md)
+- [生命周期：status 与 stale_after](lifecycle-status-stale.md)
+- [参与者约定](actor-convention.md)
 
-[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](/references/okf-spec.md)。
+[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](../references/okf-spec.md)。

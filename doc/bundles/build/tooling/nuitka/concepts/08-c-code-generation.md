@@ -39,7 +39,7 @@ status: active
 
 ## 生成主控
 
-[generateModuleCode()](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/code_generation/CodeGeneration.py)是模块级代码生成入口：
+generateModuleCode()是模块级代码生成入口：
 
 ```python
 def generateModuleCode(module, output_filename, context):

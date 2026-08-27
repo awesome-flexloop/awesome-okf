@@ -64,7 +64,7 @@ Podman/CRI-O
 
 ### 第一次 fork：脱离父进程
 
-**源码位置**：[conmon-source.md](/bundles/containers/conmon/references/conmon-source.md) 第3节
+**源码位置**：[conmon-source.md](../references/conmon-source.md) 第3节
 
 ```c
 if (!opt_sync) {

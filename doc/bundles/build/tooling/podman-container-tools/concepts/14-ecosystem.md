@@ -221,7 +221,7 @@ Podman、Buildah、Skopeo 共享 community 仓库治理文档的优势：
 
 ## 相关概念
 
-- [Podman简介](/concepts/00-introduction.md) — Podman在容器工具生态中的定位
-- [官方镜像构建](/concepts/15-image-build.md) — image_build目录AIO/Podman/Buildah/Skopeo镜像构建详解
-- [自动化与Machine OS](/concepts/16-automation-ci.md) — automation/CI自动化与podman-machine-os镜像构建系统
-- [systemd集成与Quadlet](/concepts/12-systemd-quadlet.md) — CRI-O作为K8s运行时与Podman的关系
+- [Podman简介](00-introduction.md) — Podman在容器工具生态中的定位
+- [官方镜像构建](15-image-build.md) — image_build目录AIO/Podman/Buildah/Skopeo镜像构建详解
+- [自动化与Machine OS](16-automation-ci.md) — automation/CI自动化与podman-machine-os镜像构建系统
+- [systemd集成与Quadlet](12-systemd-quadlet.md) — CRI-O作为K8s运行时与Podman的关系

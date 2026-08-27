@@ -201,10 +201,10 @@ gettext-extract --config <config.json>
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [字符串提取流水线](/concepts/04-extraction-pipeline.md)
-- [翻译目录管理](/concepts/05-catalog-management.md)
-- [Hatch构建钩子集成](/concepts/07-hatch-build-hook.md)
-- [Crowdin贡献者集成](/concepts/10-contributors-crowdin.md)
-- [双模式分发机制](/concepts/11-dual-mode-distribution.md)
-- [CLI源码映射](/references/cli-source.md)
+- [快速开始](01-getting-started.md)
+- [字符串提取流水线](04-extraction-pipeline.md)
+- [翻译目录管理](05-catalog-management.md)
+- [Hatch构建钩子集成](07-hatch-build-hook.md)
+- [Crowdin贡献者集成](10-contributors-crowdin.md)
+- [双模式分发机制](11-dual-mode-distribution.md)
+- [CLI源码映射](../references/cli-source.md)

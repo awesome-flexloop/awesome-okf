@@ -20,7 +20,7 @@ sources:
 
 # Alabaster — Sphinx 默认主题
 
-Alabaster 是 [Sphinx](/document/sphinx/index.md) 文档生成器的默认 HTML 主题，以视觉简洁、响应式布局、50+ 配置选项著称。它从 Sphinx 1.3 开始成为安装时依赖并设为默认主题，被 Requests、Fabric、Paramiko、Invoke 等知名 Python 项目使用。
+Alabaster 是 [Sphinx](../index.md) 文档生成器的默认 HTML 主题，以视觉简洁、响应式布局、50+ 配置选项著称。它从 Sphinx 1.3 开始成为安装时依赖并设为默认主题，被 Requests、Fabric、Paramiko、Invoke 等知名 Python 项目使用。
 
 > **核心特点**：核心代码仅 **2 个 Python 文件（~130 行）** + **5 个 Jinja2 模板**，是学习 Sphinx 主题开发的最小可行范本。
 
@@ -84,10 +84,10 @@ alabaster/
 
 | 知识包 | 关系 |
 |--------|------|
-| [sphinx](/document/sphinx/index.md) | Sphinx 核心——主题系统的底层框架 |
-| [sphinx-autobuild](/document/sphinx/sphinx-autobuild/index.md) | 实时预览——开发主题时的热重载工具 |
-| [sphinx-docker-images](/document/sphinx/sphinx-docker-images/index.md) | Docker 构建——CI/CD 环境下构建文档 |
-| [conda-docs](/build/conda/conda-docs/index.md) | 多项目文档——Sphinx 配置深度定制的实战案例 |
+| [sphinx](../index.md) | Sphinx 核心——主题系统的底层框架 |
+| [sphinx-autobuild](../sphinx-autobuild/index.md) | 实时预览——开发主题时的热重载工具 |
+| [sphinx-docker-images](../sphinx-docker-images/index.md) | Docker 构建——CI/CD 环境下构建文档 |
+| [conda-docs](../../../build/conda/conda-docs/index.md) | 多项目文档——Sphinx 配置深度定制的实战案例 |
 
 ```{toctree}
 :hidden:

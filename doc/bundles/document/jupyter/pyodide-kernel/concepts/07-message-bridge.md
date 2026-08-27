@@ -405,11 +405,11 @@ interface WorkerMessage {
 
 ## 下一步
 
-- [Worker 通信模式](/concepts/03-worker-communication.md) — Comlink/Coincident 下 send_response 的差异
-- [Python 兼容性层](/concepts/06-python-compatibility.md) — LiteStream/LiteDisplayPublisher 的实现
-- [架构总览](/concepts/02-architecture-overview.md)
+- [Worker 通信模式](03-worker-communication.md) — Comlink/Coincident 下 send_response 的差异
+- [Python 兼容性层](06-python-compatibility.md) — LiteStream/LiteDisplayPublisher 的实现
+- [架构总览](02-architecture-overview.md)
 
 ## 源码参考
 
-- [TypeScript Kernel 源码](/references/kernel-ts-source.md)
-- [浏览器端 Python Kernel 源码](/references/kernel-py-source.md)
+- [TypeScript Kernel 源码](../references/kernel-ts-source.md)
+- [浏览器端 Python Kernel 源码](../references/kernel-py-source.md)

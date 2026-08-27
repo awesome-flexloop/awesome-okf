@@ -11,7 +11,7 @@ sources:
 
 > 来源：`docs/chapter3.md`（源文件 H1 标题为"复杂性分析"，catalog 导航标题为"复杂度"），编辑：王茂霖、李一飞、詹好、赵志民
 
-本章量化假设空间的有效复杂度，是[计算复杂度](/ai/datawhale/key-book/concepts/computational-complexity)概念的主体章节，为第 4 章泛化界提供关键工具。
+本章量化假设空间的有效复杂度，是计算复杂度概念的主体章节，为第 4 章泛化界提供关键工具。
 
 ## 内容概要
 
@@ -64,9 +64,9 @@ $$\Re_m(\mathcal{H}) = \mathbb{E}_{S,\sigma}\left[\sup_{h\in\mathcal{H}}\frac{1}
 
 ## 理论定位
 
-本章解决了无限假设空间的"可数性"问题：VC 维通过增长函数将无限空间投影到有限样本上的有限对分数，Rademacher 复杂度进一步利用数据分布。这些度量是 Sauer 引理、对称化技巧和泛化界的基础，决定了从"能表示"到"能学会"的样本量门槛。参见 [线性分类器 VC 维案例](/ai/datawhale/key-book/examples/vc-dimension-linear)。
+本章解决了无限假设空间的"可数性"问题：VC 维通过增长函数将无限空间投影到有限样本上的有限对分数，Rademacher 复杂度进一步利用数据分布。这些度量是 Sauer 引理、对称化技巧和泛化界的基础，决定了从"能表示"到"能学会"的样本量门槛。参见 线性分类器 VC 维案例。
 
 ## 参见
 
-- [第 2 章：可学性](/ai/datawhale/key-book/references/chapter2)：复杂度是 PAC 样本复杂度的决定因素
-- [第 4 章：泛化界](/ai/datawhale/key-book/references/chapter4)：VC 维/Rademacher 复杂度直接代入泛化界
+- 第 2 章：可学性：复杂度是 PAC 样本复杂度的决定因素
+- 第 4 章：泛化界：VC 维/Rademacher 复杂度直接代入泛化界

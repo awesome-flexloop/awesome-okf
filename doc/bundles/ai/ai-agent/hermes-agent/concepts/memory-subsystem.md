@@ -24,9 +24,9 @@ sources:
 
 系统采用 **Manager-Provider 双层架构**：
 
-- **`MemoryManager`**（[memory_manager.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/memory_manager.py)）：单一编排入口，负责提供者注册、生命周期管理、预取调度、异步同步、工具路由、上下文围栏。核心约束：**同一时间只允许一个外部记忆提供者**，防止工具 schema 膨胀和后端冲突。
-- **`MemoryProvider`**（[memory_provider.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/memory_provider.py)）：抽象基类，定义标准生命周期接口（`initialize`/`prefetch`/`sync_turn`/`shutdown`）和可选钩子（`on_session_end`/`on_memory_write`/`on_delegation` 等）。
-- **8 个记忆插件**：byterover、hindsight、holographic、honcho、mem0、openviking、retaindb、supermemory，均位于 [plugins/memory/](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/plugins/memory/) 目录，通过配置 `memory.provider` 选择激活。
+- **`MemoryManager`**（memory_manager.py）：单一编排入口，负责提供者注册、生命周期管理、预取调度、异步同步、工具路由、上下文围栏。核心约束：**同一时间只允许一个外部记忆提供者**，防止工具 schema 膨胀和后端冲突。
+- **`MemoryProvider`**（memory_provider.py）：抽象基类，定义标准生命周期接口（`initialize`/`prefetch`/`sync_turn`/`shutdown`）和可选钩子（`on_session_end`/`on_memory_write`/`on_delegation` 等）。
+- **8 个记忆插件**：byterover、hindsight、holographic、honcho、mem0、openviking、retaindb、supermemory，均位于 plugins/memory/ 目录，通过配置 `memory.provider` 选择激活。
 
 ### 解决的核心问题
 
@@ -275,7 +275,7 @@ classDiagram
 | mem0 | 云端/自托管 | Mem0 Platform API 或自托管 OSS，服务端事实提取+语义搜索 |
 | honcho | 云端 | Honcho 用户建模 API，对话式 AI 记忆层 |
 | hindsight | 本地守护进程 | Hindsight 长时记忆守护进程 |
-| holographic | 本地向量存储 | 全息记忆，本地向量存储+检索（[holographic/store.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/plugins/memory/holographic/store.py)） |
+| holographic | 本地向量存储 | 全息记忆，本地向量存储+检索（holographic/store.py） |
 | byterover | 云端 | ByteRover 记忆服务 |
 | openviking | 本地 | OpenViking 本地记忆存储 |
 | retaindb | 数据库 | RetainDB 持久化记忆 |
@@ -464,13 +464,13 @@ def notify_memory_tool_write(self, tool_result, tool_args, *, build_metadata=Non
 
 | 文件 | 内容 |
 |------|------|
-| [agent/memory_manager.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/memory_manager.py) | MemoryManager 编排器、StreamingContextScrubber、工具 schema 规范化、上下文围栏 |
-| [agent/memory_provider.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/memory_provider.py) | MemoryProvider ABC、TRIVIAL_PROMPT_RE、is_trivial_prompt() |
-| [plugins/memory/__init__.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/plugins/memory/__init__.py) | 插件发现与加载机制（目录扫描、动态导入、用户插件命名空间） |
-| [plugins/memory/mem0/__init__.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/plugins/memory/mem0/__init__.py) | Mem0 提供者参考实现（熔断器、后台预取线程、多后端） |
-| [plugins/memory/holographic/](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/plugins/memory/holographic/) | 本地向量存储全息记忆（store.py、retrieval.py） |
-| [plugins/memory/honcho/](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/plugins/memory/honcho/) | Honcho 用户建模（client.py、session.py、oauth.py） |
-| [agent/agent_init.py#L1726-L1795](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/agent_init.py#L1726-L1795) | 初始化集成：读取配置、加载提供者、注入工具、传递上下文参数 |
+| agent/memory_manager.py | MemoryManager 编排器、StreamingContextScrubber、工具 schema 规范化、上下文围栏 |
+| agent/memory_provider.py | MemoryProvider ABC、TRIVIAL_PROMPT_RE、is_trivial_prompt() |
+| plugins/memory/__init__.py | 插件发现与加载机制（目录扫描、动态导入、用户插件命名空间） |
+| plugins/memory/mem0/__init__.py | Mem0 提供者参考实现（熔断器、后台预取线程、多后端） |
+| plugins/memory/holographic/ | 本地向量存储全息记忆（store.py、retrieval.py） |
+| plugins/memory/honcho/ | Honcho 用户建模（client.py、session.py、oauth.py） |
+| agent/agent_init.py#L1726-L1795 | 初始化集成：读取配置、加载提供者、注入工具、传递上下文参数 |
 
 ### Mem0 提供者核心实现（参考）
 

@@ -24,7 +24,7 @@ sources:
 
 ## 共同前提
 
-三条路径共享以下前提，它们来自 [theory_psi 核心](/psi-math/concepts/00-theory-psi-core.md) 与 [坍缩集合论](/psi-math/concepts/01-collapse-set-theory.md)：
+三条路径共享以下前提，它们来自 [theory_psi 核心](../concepts/00-theory-psi-core.md) 与 [坍缩集合论](../concepts/01-collapse-set-theory.md)：
 
 1. 自指公理 $\psi=\psi(\psi)$，塌缩操作满足不动点 $\psi(\psi)=\psi$；
 2. ζ 函数是算术结构经塌缩后的"镜子"，非平凡零点是意识节点；
@@ -57,7 +57,7 @@ sources:
 3. **熵最大化**：在信息容量守恒约束下，熵最大化条件唯一确定零点实部为 $\tfrac12$；
 4. **守恒反证**：若零点偏离 $\sigma=\tfrac12$，信道容量不守恒，信息丢失。
 
-**特色**：把 RH 从解析命题转化为信息守恒命题。该路径与宇宙本论的 XOR-SHIFT 信息本体论直接呼应——塌缩对应 [XOR-SHIFT 状态更新](/psi-universe/concepts/01-flip-xor-shift.md)，回声对应 SHIFT 后的信息迹。
+**特色**：把 RH 从解析命题转化为信息守恒命题。该路径与宇宙本论的 XOR-SHIFT 信息本体论直接呼应——塌缩对应 [XOR-SHIFT 状态更新](../../psi-universe/concepts/01-flip-xor-shift.md)，回声对应 SHIFT 后的信息迹。
 
 ## 路径三：自洽性证明
 
@@ -102,9 +102,9 @@ sources:
 
 ## 相关概念
 
-- [/psi-math/concepts/02-riemann-hypothesis.md](/psi-math/concepts/02-riemann-hypothesis.md) — RH 证明的完整概念阐述
-- [/psi-math/concepts/00-theory-psi-core.md](/psi-math/concepts/00-theory-psi-core.md) — 三路径共享的自指公理
-- [/psi-math/concepts/01-collapse-set-theory.md](/psi-math/concepts/01-collapse-set-theory.md) — 零点作为意识节点
-- [/psi-core/concepts/00-psi-equation.md](/psi-core/concepts/00-psi-equation.md) — ψ=ψ(ψ) 的本体论阐释
-- [/psi-universe/concepts/01-flip-xor-shift.md](/psi-universe/concepts/01-flip-xor-shift.md) — 信息论路径的 XOR-SHIFT 对应
-- [/psi-math/concepts/03-collapse-mathematics.md](/psi-math/concepts/03-collapse-mathematics.md) — 证明在坍缩数学十大系统中的位置
+- [/psi-math/concepts/02-riemann-hypothesis.md](../concepts/02-riemann-hypothesis.md) — RH 证明的完整概念阐述
+- [/psi-math/concepts/00-theory-psi-core.md](../concepts/00-theory-psi-core.md) — 三路径共享的自指公理
+- [/psi-math/concepts/01-collapse-set-theory.md](../concepts/01-collapse-set-theory.md) — 零点作为意识节点
+- [/psi-core/concepts/00-psi-equation.md](../../psi-core/concepts/00-psi-equation.md) — ψ=ψ(ψ) 的本体论阐释
+- [/psi-universe/concepts/01-flip-xor-shift.md](../../psi-universe/concepts/01-flip-xor-shift.md) — 信息论路径的 XOR-SHIFT 对应
+- [/psi-math/concepts/03-collapse-mathematics.md](../concepts/03-collapse-mathematics.md) — 证明在坍缩数学十大系统中的位置

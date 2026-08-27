@@ -195,7 +195,7 @@ Py_DECREF(tmp_result_1);
 
 ## TempVariable 管理
 
-[TempVariable](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/variables/TempVariable.py)是C代码生成中使用最频繁的变量类型。Context对象维护临时变量池：
+TempVariable是C代码生成中使用最频繁的变量类型。Context对象维护临时变量池：
 
 ### 分配与释放
 

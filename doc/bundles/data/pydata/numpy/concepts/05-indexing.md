@@ -315,4 +315,4 @@ np.put(a, [0, 4, 8], [100, 500, 900])
 
 - [ndarray多维数组](01-ndarray.md) — 视图与副本的内存行为
 - [广播规则](04-broadcasting.md) — 索引中的newaxis与广播
-- [基础数组操作](/examples/basic-array-ops.md) — 索引实践
+- [基础数组操作](../examples/basic-array-ops.md) — 索引实践

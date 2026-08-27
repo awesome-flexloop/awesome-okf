@@ -217,8 +217,8 @@ Session 初始化
 
 ## 相关概念
 
-- [MyST 解析器](/concepts/02-myst-parser.md)
-- [MDAST 转换管线](/concepts/03-myst-transforms.md)
-- [配置系统](/concepts/10-configuration-system.md)
-- [Frontmatter 元数据](/concepts/08-frontmatter.md)
-- [基本解析示例](/examples/00-basic-parsing.md)
+- [MyST 解析器](02-myst-parser.md)
+- [MDAST 转换管线](03-myst-transforms.md)
+- [配置系统](10-configuration-system.md)
+- [Frontmatter 元数据](08-frontmatter.md)
+- [基本解析示例](../examples/00-basic-parsing.md)

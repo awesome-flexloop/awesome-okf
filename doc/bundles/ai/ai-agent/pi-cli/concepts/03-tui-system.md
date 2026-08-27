@@ -251,5 +251,5 @@ export {
 ## 相关概念
 
 - [AI 包（packages/ai）](./02-ai-package.md)
-- [Monorepo 架构](./01-monorepo-architecture.md)
-- [内置 Prompts](./04-builtin-prompts.md)
+- [Monorepo 架构](01-monorepo-architecture.md)
+- [内置 Prompts](04-builtin-prompts.md)

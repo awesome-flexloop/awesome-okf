@@ -202,8 +202,8 @@ class GitSettingsHandler(APIHandler):
 
 ## 相关概念
 
-- [Python Git执行引擎](/references/git-py-source.md)
-- [服务端扩展入口](/references/init-py-source.md)
-- [REST API通信机制](/concepts/05-rest-api-and-communication.md)
-- [服务端Git执行引擎](/concepts/08-server-git-execution.md)
-- [配置系统](/concepts/11-configuration-and-settings.md)
+- [Python Git执行引擎](git-py-source.md)
+- [服务端扩展入口](init-py-source.md)
+- [REST API通信机制](../concepts/05-rest-api-and-communication.md)
+- [服务端Git执行引擎](../concepts/08-server-git-execution.md)
+- [配置系统](../concepts/11-configuration-and-settings.md)

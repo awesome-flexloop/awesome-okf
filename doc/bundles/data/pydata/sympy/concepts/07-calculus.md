@@ -19,7 +19,7 @@ sources:
 
 # 微积分
 
-SymPy 的微积分系统以三类惰性对象为核心：`Derivative`（未求值微分）、`Integral`（未求值积分）、`Limit`（未求值极限），通过 `.doit()` 触发实际计算。`diff()` 提供微分入口，`integrate()` 是顶层积分入口，内部按策略链依次尝试 manualintegrate、meijerint、heurisch、risch、ratint 等算法。极限计算采用 Gruntz 算法（基于渐近级数展开）。此外，`series()` 提供泰勒/洛朗级数展开，积分变换模块支持 Laplace、Fourier、Mellin、Hankel 等变换，calculus 模块提供奇点分析、单调性判定、凸性检测、极值求解、有限差分等实用工具。[^F-054][^F-095][^F-096][^F-083]
+SymPy 的微积分系统以三类惰性对象为核心：`Derivative`（未求值微分）、`Integral`（未求值积分）、`Limit`（未求值极限），通过 `.doit()` 触发实际计算。`diff()` 提供微分入口，`integrate()` 是顶层积分入口，内部按策略链依次尝试 manualintegrate、meijerint、heurisch、risch、ratint 等算法。极限计算采用 Gruntz 算法（基于渐近级数展开）。此外，`series()` 提供泰勒/洛朗级数展开，积分变换模块支持 Laplace、Fourier、Mellin、Hankel 等变换，calculus 模块提供奇点分析、单调性判定、凸性检测、极值求解、有限差分等实用工具。[^F-054] [^F-095] [^F-096] [^F-083]
 
 ## 微积分操作总览
 
@@ -224,7 +224,7 @@ Integral(x**x, x)
 
 ### 2.3 积分算法策略链
 
-`integrate()` 内部按策略链依次尝试多种积分方法：[^F-097][^F-098][^F-099][^F-100]
+`integrate()` 内部按策略链依次尝试多种积分方法：[^F-097] [^F-098] [^F-099] [^F-100]
 
 | 方法 | 模块 | 适用场景 | 特点 |
 |------|------|----------|------|
@@ -542,8 +542,8 @@ x**4/4 + x**2 + x
 - 前置概念：[表达式化简](06-simplification.md) 了解 diff/integrate 结果的化简策略
 - 前置概念：[函数体系](04-function-basics.md) 了解 _eval_derivative/_eval_nseries 钩子
 - 后续概念：[方程求解](08-solvers.md) 了解 dsolve 微分方程求解
-- 源码信源：[calculus-integrals-source](/references/calculus-integrals-source.md) 提供积分算法链与变换的完整 API
-- 源码信源：[series-solvers-source](/references/series-solvers-source.md) 提供级数展开与极限的完整参考
+- 源码信源：[calculus-integrals-source](../references/calculus-integrals-source.md) 提供积分算法链与变换的完整 API
+- 源码信源：[series-solvers-source](../references/series-solvers-source.md) 提供级数展开与极限的完整参考
 
 [^F-054]: facts.md F-054 — Derivative 类与 diff 函数
 [^F-083]: facts.md F-083 — calculus 模块导出（奇点/单调性/凸性/极值/有限差分）

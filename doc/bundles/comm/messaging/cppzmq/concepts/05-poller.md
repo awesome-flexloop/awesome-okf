@@ -107,6 +107,6 @@ while (true) {
 
 ## 相关概念
 
-- [02 socket_t](/concepts/02-socket.md)：socket_ref
-- [06 multipart](/concepts/06-multipart.md)：多部分消息常与 poller 配合
-- [信源：zmq.hpp](/references/zmq-hpp.md) · [信源：zmq_addon.hpp](/references/zmq-addon-hpp.md)
+- [02 socket_t](02-socket.md)：socket_ref
+- [06 multipart](06-multipart.md)：多部分消息常与 poller 配合
+- [信源：zmq.hpp](../references/zmq-hpp.md) · [信源：zmq_addon.hpp](../references/zmq-addon-hpp.md)

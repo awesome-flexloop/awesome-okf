@@ -183,7 +183,7 @@ Baby-sit 不自己诊断失败——它检测到新失败后，通过 `dispatch_
 
 ## 相关概念
 
-- [Dispatch-Review 循环](/ai/langchain-ai/open-swe/concepts/dispatch-review-cycle) — durable dispatch 契约与 completion webhook
-- [Agent 架构](/ai/langchain-ai/open-swe/concepts/agent-architecture) — 图工厂与 middleware
-- [总览](/ai/langchain-ai/open-swe/concepts/overview)
-- [架构参考](/ai/langchain-ai/open-swe/references/architecture) — scheduler 与 baby-sit 常量
+- Dispatch-Review 循环 — durable dispatch 契约与 completion webhook
+- Agent 架构 — 图工厂与 middleware
+- 总览
+- 架构参考 — scheduler 与 baby-sit 常量

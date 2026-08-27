@@ -350,6 +350,6 @@ from langchain_google_vertexai import create_context_cache
 
 ## 进一步阅读
 
-- [聊天模型架构](/ai/langchain-ai/langchain-google/concepts/chat-models)
-- [嵌入模型与 Vertex AI](/ai/langchain-ai/langchain-google/concepts/embeddings-vertex)
-- [基础使用示例](/ai/langchain-ai/langchain-google/examples/basic-usage)
+- 聊天模型架构
+- 嵌入模型与 Vertex AI
+- 基础使用示例

@@ -29,19 +29,19 @@ sources:
 
 # 微积分与积分系统源码信源
 
-SymPy 的微积分系统以 `Derivative` 表示未求值微分、`Integral` 表示未求值积分、`Limit` 表示未求值极限，通过 `doit()` 触发实际计算。`integrate()` 是顶层积分入口，内部按策略链依次尝试 manualintegrate、meijerint、heurisch、risch、ratint 等算法。积分变换模块提供 Laplace、Fourier、Mellin、Hankel、Sine、Cosine 变换。calculus 模块提供有限差分、奇点分析、欧拉-拉格朗日方程、函数性质判断（单调性、凸性、极值）等工具。[^F-054][^F-095][^F-096][^F-083]
+SymPy 的微积分系统以 `Derivative` 表示未求值微分、`Integral` 表示未求值积分、`Limit` 表示未求值极限，通过 `doit()` 触发实际计算。`integrate()` 是顶层积分入口，内部按策略链依次尝试 manualintegrate、meijerint、heurisch、risch、ratint 等算法。积分变换模块提供 Laplace、Fourier、Mellin、Hankel、Sine、Cosine 变换。calculus 模块提供有限差分、奇点分析、欧拉-拉格朗日方程、函数性质判断（单调性、凸性、极值）等工具。[^F-054] [^F-095] [^F-096] [^F-083]
 
 ## Derivative 微分
 
-`Derivative` 类定义于 [core/function.py:1050](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L1050)，继承自 `Expr`，`is_Derivative = True`，表示未求值的导数。其详细用法已在 [sympify-function-source.md](sympify-function-source.md) 中描述，本节聚焦微积分视角。[^F-054]
+`Derivative` 类定义于 core/function.py:1050，继承自 `Expr`，`is_Derivative = True`，表示未求值的导数。其详细用法已在 [sympify-function-source.md](sympify-function-source.md) 中描述，本节聚焦微积分视角。[^F-054]
 
 ### 求导入口
 
 | 入口 | 定义位置 | 说明 |
 |------|----------|------|
-| `diff(f, *symbols, **kwargs)` | [function.py:2495](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L2495) | 模块级函数，统一入口 |
-| `Expr.diff(*symbols, **assumptions)` | [expr.py:3627](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/expr.py#L3627) | 表达式方法 |
-| `Derivative(expr, *variables, **kwargs)` | [function.py:1264](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L1264) | 未求值导数类 |
+| `diff(f, *symbols, **kwargs)` | function.py:2495 | 模块级函数，统一入口 |
+| `Expr.diff(*symbols, **assumptions)` | expr.py:3627 | 表达式方法 |
+| `Derivative(expr, *variables, **kwargs)` | function.py:1264 | 未求值导数类 |
 
 ```python
 from sympy import diff, Derivative, Function, sin, cos, sqrt, symbols
@@ -80,7 +80,7 @@ Derivative(f(x)**2, f(x), evaluate=True)  # 2*f(x)
 
 ### Integral 类
 
-`Integral` 定义于 [integrals/integrals.py:41](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/integrals.py#L41)，继承自 `AddWithLimits`，`__slots__ = ()`，表示未求值的积分。[^F-096]
+`Integral` 定义于 integrals/integrals.py:41，继承自 `AddWithLimits`，`__slots__ = ()`，表示未求值的积分。[^F-096]
 
 ```python
 class Integral(AddWithLimits):
@@ -120,7 +120,7 @@ i.as_dummy()               # Integral(_0, (_0, x))
 
 ### integrate() 函数
 
-`integrate()` 定义于 [integrals/integrals.py:1412](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/integrals.py#L1412)，是顶层积分入口函数。[^F-096]
+`integrate()` 定义于 integrals/integrals.py:1412，是顶层积分入口函数。[^F-096]
 
 ```python
 def integrate(function, *symbols, meijerg=None, conds='piecewise',
@@ -194,14 +194,14 @@ integrate(x*sin(x), x, manual=True)   # -x*cos(x) + sin(x)
 
 ### heurisch：启发式 Risch 算法
 
-`heurisch()` 定义于 [integrals/heurisch.py:296](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/heurisch.py#L296)，实现启发式 Risch-Norman 积分算法。[^F-097]
+`heurisch()` 定义于 integrals/heurisch.py:296，实现启发式 Risch-Norman 积分算法。[^F-097]
 
 ```python
 def heurisch(f, x, rewrite=False, hints=None, mappings=None, retries=3,
              degree_offset=0, ...):
 ```
 
-核心思想：将积分问题转化为求解未知系数的线性方程组。假设被积函数的原函数是一组基函数（由被积函数的超越部分通过导数/除法生成）的线性组合，通过待定系数法求解。`heurisch_wrapper`（[L110](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/heurisch.py#L110)）是外层包装，处理分段结果和特殊情况。
+核心思想：将积分问题转化为求解未知系数的线性方程组。假设被积函数的原函数是一组基函数（由被积函数的超越部分通过导数/除法生成）的线性组合，通过待定系数法求解。`heurisch_wrapper`（L110）是外层包装，处理分段结果和特殊情况。
 
 ```python
 from sympy.integrals.heurisch import heurisch
@@ -213,7 +213,7 @@ heurisch(sin(x)*exp(x), x)  # exp(x)*sin(x)/2 - exp(x)*cos(x)/2
 
 ### Risch 算法
 
-`risch_integrate()` 定义于 [integrals/risch.py:1807](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/risch.py#L1807)，实现 Risch 算法——初等函数积分的**判定过程**（decision procedure）。[^F-098]
+`risch_integrate()` 定义于 integrals/risch.py:1807，实现 Risch 算法——初等函数积分的**判定过程**（decision procedure）。[^F-098]
 
 ```python
 def risch_integrate(f, x, extension=None, handle_first='log',
@@ -239,13 +239,13 @@ risch_integrate(x*exp(x), x)      # (x - 1)*exp(x)
 
 ### Meijer G 函数积分
 
-Meijer G 积分模块定义了三个核心函数（[meijerint.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/meijerint.py)）：[^F-099]
+Meijer G 积分模块定义了三个核心函数（meijerint.py）：[^F-099]
 
 | 函数 | 定义位置 | 说明 |
 |------|----------|------|
-| `meijerint_indefinite(f, x)` | [L1653](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/meijerint.py#L1653) | 不定积分（G 函数形式） |
-| `meijerint_definite(f, x, a, b)` | [L1781](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/meijerint.py#L1781) | 定积分（从 a 到 b） |
-| `meijerint_inversion(f, x, t)` | [L2081](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/meijerint.py#L2081) | 逆 Laplace 变换（Mellin 反演） |
+| `meijerint_indefinite(f, x)` | L1653 | 不定积分（G 函数形式） |
+| `meijerint_definite(f, x, a, b)` | L1781 | 定积分（从 a 到 b） |
+| `meijerint_inversion(f, x, t)` | L2081 | 逆 Laplace 变换（Mellin 反演） |
 
 Meijer G 函数方法的核心思路：将被积函数表示为 Meijer G 函数（`meijerg`），利用 G 函数的卷积定理和积分公式计算积分。特别擅长：
 - 零到无穷的定积分（Laplace/Mellin 变换类型）
@@ -267,7 +267,7 @@ meijerint_definite(besselj(0, x)*exp(-x), x, 0, oo)
 
 ### manualintegrate：手动积分
 
-`manualintegrate` 模块（[integrals/manualintegrate.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/manualintegrate.py)）实现类人积分步骤，适用于教学场景。定义了 `IntegralInfo` NamedTuple（[L1092](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/manualintegrate.py#L1092)）包含 `integrand: Expr` 和 `symbol: Symbol` 字段。[^F-100]
+`manualintegrate` 模块（integrals/manualintegrate.py）实现类人积分步骤，适用于教学场景。定义了 `IntegralInfo` NamedTuple（L1092）包含 `integrand: Expr` 和 `symbol: Symbol` 字段。[^F-100]
 
 ```python
 from sympy import integrate, sin
@@ -283,7 +283,7 @@ integrate(x**2*sin(x), x, manual=True)  # -x**2*cos(x) + 2*x*sin(x) + 2*cos(x)
 
 ### limit() 函数
 
-`limit()` 定义于 [series/limits.py:16](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/series/limits.py#L16)，计算函数在某点的极限。
+`limit()` 定义于 series/limits.py:16，计算函数在某点的极限。
 
 ```python
 def limit(e, z, z0, dir="+"):
@@ -321,7 +321,7 @@ sin(x).limit(x, 0)               # 0
 
 ### Limit 类
 
-`Limit` 定义于 [series/limits.py:130](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/series/limits.py#L130)，继承自 `Expr`，表示未求值的极限。`limit(e, z, z0, dir)` 等价于 `Limit(e, z, z0, dir).doit(deep=False)`。
+`Limit` 定义于 series/limits.py:130，继承自 `Expr`，表示未求值的极限。`limit(e, z, z0, dir)` 等价于 `Limit(e, z, z0, dir).doit(deep=False)`。
 
 ```python
 from sympy import Limit, sin
@@ -337,7 +337,7 @@ SymPy 极限计算优先尝试快速启发式（简单情况如 `x`、`1/x`、`x
 
 ## 积分变换
 
-积分变换模块 [integrals/transforms.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/transforms.py) 提供多种积分变换及其逆变换。基类 `IntegralTransform`（[L61](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/transforms.py#L61)）继承自 `Function`，所有具体变换类均由此派生。[^F-095][^F-100]
+积分变换模块 integrals/transforms.py 提供多种积分变换及其逆变换。基类 `IntegralTransform`（L61）继承自 `Function`，所有具体变换类均由此派生。[^F-095] [^F-100]
 
 ### 变换类层次
 
@@ -430,7 +430,7 @@ cosine_transform(exp(-a*x), x, k, noconds=True)
 
 | 符号 | 定义位置 | 说明 |
 |------|----------|------|
-| `IntegralTransformError` | [transforms.py:41](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/transforms.py#L41) | 变换计算失败时抛出，继承 `NotImplementedError` |
+| `IntegralTransformError` | transforms.py:41 | 变换计算失败时抛出，继承 `NotImplementedError` |
 | `laplace_correspondence` | `__init__.py` 导出 | Laplace 变换对应表 |
 | `laplace_initial_conds` | `__init__.py` 导出 | Laplace 变换初始条件 |
 
@@ -438,13 +438,13 @@ cosine_transform(exp(-a*x), x, k, noconds=True)
 
 ## calculus 模块工具集
 
-[calculus/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/calculus/__init__.py) 导出微积分实用工具函数。[^F-083]
+calculus/__init__.py 导出微积分实用工具函数。[^F-083]
 
 ### 有限差分
 
 | 函数 | 定义位置 | 说明 |
 |------|----------|------|
-| `finite_diff_weights(order, x_list, x0=S.One)` | [finite_diff.py:30](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/calculus/finite_diff.py#L30) | 计算 0~order 阶有限差分权重 |
+| `finite_diff_weights(order, x_list, x0=S.One)` | finite_diff.py:30 | 计算 0~order 阶有限差分权重 |
 | `apply_finite_diff(order, x_list, y_list, x0=S.One)` | finite_diff.py | 应用有限差分求导数近似 |
 | `differentiate_finite(expr, *symbols, **kwargs)` | finite_diff.py | 用有限差分近似微分 |
 
@@ -462,7 +462,7 @@ w = finite_diff_weights(1, [-1, 0, 1], 0)
 
 | 函数 | 定义位置 | 说明 |
 |------|----------|------|
-| `singularities(expression, symbol, domain=None)` | [singularities.py:41](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/calculus/singularities.py#L41) | 返回奇点集合 |
+| `singularities(expression, symbol, domain=None)` | singularities.py:41 | 返回奇点集合 |
 | `is_increasing(f, symbol, interval=S.Reals)` | singularities.py | 单调递增判定 |
 | `is_strictly_increasing(f, symbol, interval=S.Reals)` | singularities.py | 严格递增判定 |
 | `is_decreasing(f, symbol, interval=S.Reals)` | singularities.py | 单调递减判定 |
@@ -483,13 +483,13 @@ is_decreasing(-x**2, x)         # None（先增后减）
 
 | 函数 | 定义位置 | 说明 |
 |------|----------|------|
-| `continuous_domain(f, symbol, domain)` | [util.py:31](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/calculus/util.py#L31) | 返回连续域 |
-| `periodicity(f, symbol, check=False)` | [util.py:401](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/calculus/util.py#L401) | 返回周期（非周期返回 `None`） |
-| `not_empty_in(finset_intersection, *syms)` | [util.py:289](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/calculus/util.py#L289) | 检查集合交集非空 |
-| `is_convex(f, *syms, domain=S.Reals)` | [util.py:680](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/calculus/util.py#L680) | 凸性判定 |
-| `stationary_points(f, symbol, domain=S.Reals)` | [util.py:753](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/calculus/util.py#L753) | 驻点（临界点） |
-| `maximum(f, symbol, domain=S.Reals)` | [util.py:805](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/calculus/util.py#L805) | 最大值 |
-| `minimum(f, symbol, domain=S.Reals)` | [util.py:852](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/calculus/util.py#L852) | 最小值 |
+| `continuous_domain(f, symbol, domain)` | util.py:31 | 返回连续域 |
+| `periodicity(f, symbol, check=False)` | util.py:401 | 返回周期（非周期返回 `None`） |
+| `not_empty_in(finset_intersection, *syms)` | util.py:289 | 检查集合交集非空 |
+| `is_convex(f, *syms, domain=S.Reals)` | util.py:680 | 凸性判定 |
+| `stationary_points(f, symbol, domain=S.Reals)` | util.py:753 | 驻点（临界点） |
+| `maximum(f, symbol, domain=S.Reals)` | util.py:805 | 最大值 |
+| `minimum(f, symbol, domain=S.Reals)` | util.py:852 | 最小值 |
 
 > **注意**：`continuous_domain` 未在 `calculus/__init__.py` 中导出，需通过 `sympy.calculus.util.continuous_domain` 访问。
 
@@ -519,7 +519,7 @@ is_convex(-x**2, x)               # False
 
 ### 欧拉-拉格朗日方程
 
-`euler_equations(L, funcs=(), vars=())` 定义于 [calculus/euler.py:15](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/calculus/euler.py#L15)，用于变分法中求解欧拉-拉格朗日方程。[^F-086]
+`euler_equations(L, funcs=(), vars=())` 定义于 calculus/euler.py:15，用于变分法中求解欧拉-拉格朗日方程。[^F-086]
 
 ```python
 from sympy.calculus import euler_equations
@@ -536,7 +536,7 @@ euler_equations(L, f(x), x)
 
 ### AccumBounds：累积极限界
 
-`AccumulationBounds`（别名 `AccumBounds`）定义于 [calculus/accumulationbounds.py:15](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/calculus/accumulationbounds.py#L15)，继承自 `Expr`，表示表达式在极限过程中的累积极限界。[^F-087]
+`AccumulationBounds`（别名 `AccumBounds`）定义于 calculus/accumulationbounds.py:15，继承自 `Expr`，表示表达式在极限过程中的累积极限界。[^F-087]
 
 当极限不存在但表达式在区间内振荡时，返回 `AccumBounds` 而非具体值：
 
@@ -555,7 +555,7 @@ AccumBounds(-1, 1) + AccumBounds(0, 2)  # AccumBounds(-1, 3)
 
 ### integrals 模块导出
 
-[integrals/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/integrals/__init__.py) 导出：[^F-095]
+integrals/__init__.py 导出：[^F-095]
 
 | 类别 | 符号 |
 |------|------|
@@ -570,7 +570,7 @@ AccumBounds(-1, 1) + AccumBounds(0, 2)  # AccumBounds(-1, 3)
 
 ### calculus 模块导出
 
-[calculus/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/calculus/__init__.py) 导出：[^F-083]
+calculus/__init__.py 导出：[^F-083]
 
 | 类别 | 符号 |
 |------|------|

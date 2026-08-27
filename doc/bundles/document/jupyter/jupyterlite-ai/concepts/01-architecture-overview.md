@@ -152,4 +152,4 @@ const myPlugin: JupyterFrontEndPlugin<void> = {
 - [Provider 模型管理](03-provider-system.md)
 - [Tool 工具系统](04-tool-system.md)
 - [Agent 执行引擎](05-agent-engine.md)
-- [插件架构参考](/references/plugin-architecture.md)
+- [插件架构参考](../references/plugin-architecture.md)

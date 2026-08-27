@@ -241,7 +241,7 @@ jupyter-cache 使用 `importlib.metadata.entry_points()`（或 `pkg_resources`�
 
 ## 相关概念
 
-- [Notebook执行与插件](/concepts/04-notebook-execution.md)
-- [缓存API详解](/concepts/03-cache-api.md)
-- [配置项参考](/concepts/07-configuration.md)
-- [Python API示例](/examples/python-api.md)
+- [Notebook执行与插件](04-notebook-execution.md)
+- [缓存API详解](03-cache-api.md)
+- [配置项参考](07-configuration.md)
+- [Python API示例](../examples/python-api.md)

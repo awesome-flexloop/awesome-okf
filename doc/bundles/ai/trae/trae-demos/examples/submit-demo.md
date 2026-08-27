@@ -133,7 +133,7 @@ sources:
 
 ## 相关链接
 
-- [TRAE Demos 定位与期数制组织](/concepts/00-introduction.md)
-- [Demo Markdown 文档格式](/concepts/01-demo-format.md)
-- [投稿流程与多场景 Issue 模板](/concepts/02-contribution-process.md)
-- [TRAE Demos 仓库资源索引](/references/demos-source.md)
+- [TRAE Demos 定位与期数制组织](../concepts/00-introduction.md)
+- [Demo Markdown 文档格式](../concepts/01-demo-format.md)
+- [投稿流程与多场景 Issue 模板](../concepts/02-contribution-process.md)
+- [TRAE Demos 仓库资源索引](../references/demos-source.md)

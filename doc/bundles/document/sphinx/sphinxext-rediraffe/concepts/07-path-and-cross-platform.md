@@ -290,7 +290,7 @@ build_redirect_from.parent.mkdir(parents=True, exist_ok=True)
 
 ## 相关概念
 
-- [架构概览](/concepts/02-architecture-overview.md)
-- [Builder体系详解](/concepts/05-builders.md)
-- [Jinja2模板系统](/concepts/06-jinja-templates.md)
-- [基础重定向示例](/examples/basic-redirects.md)
+- [架构概览](02-architecture-overview.md)
+- [Builder体系详解](05-builders.md)
+- [Jinja2模板系统](06-jinja-templates.md)
+- [基础重定向示例](../examples/basic-redirects.md)

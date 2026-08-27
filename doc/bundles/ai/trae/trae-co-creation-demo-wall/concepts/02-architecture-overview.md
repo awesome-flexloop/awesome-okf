@@ -171,7 +171,7 @@ WorkBase (核心表)
     ├── viewCount, likeCount, lastAuditAt
 ```
 
-所有子表对 WorkBase 设置 `on delete: Cascade` 级联删除（F-034~F-037）。详见 [数据模型设计](/concepts/03-data-model.md)。
+所有子表对 WorkBase 设置 `on delete: Cascade` 级联删除（F-034~F-037）。详见 [数据模型设计](03-data-model.md)。
 
 ## 三层数据流
 
@@ -187,7 +187,7 @@ WorkBase (核心表)
 
 Provider 嵌套顺序：SessionProvider → QueryProvider → NextIntlClientProvider → SiteLayout（F-118）。
 
-详见 [CRUD 数据层](/concepts/07-crud-layer.md)。
+详见 [CRUD 数据层](07-crud-layer.md)。
 
 ## 认证 + 审核 + 日志治理闭环
 
@@ -210,7 +210,7 @@ Provider 嵌套顺序：SessionProvider → QueryProvider → NextIntlClientProv
 - **WorkAuditLog**：审核状态变更链（F-039）
 - 日志写入封装在 `lib/audit-log.ts`，统一 IP/UA 提取、BigInt 安全序列化、try-catch 不抛异常（F-102）
 
-详见 [认证系统](/concepts/04-auth-system.md)、[审核与治理](/concepts/10-audit-governance.md)。
+详见 [认证系统](04-auth-system.md)、[审核与治理](10-audit-governance.md)。
 
 ## 请求处理流程
 
@@ -258,16 +258,16 @@ Provider 嵌套顺序：SessionProvider → QueryProvider → NextIntlClientProv
 - **entrypoint.sh**：支持 `RUN_DB_INIT=true` 仅初始化模式和 `START_SERVER=true` 启动模式（F-137）
 - **Nginx**：反向代理到 app:3000，提供静态文件服务（F-138, F-140）
 
-详见 [Docker 部署](/concepts/15-docker-deployment.md)。
+详见 [Docker 部署](15-docker-deployment.md)。
 
 ## 相关概念
 
-- [项目简介](/concepts/00-introduction.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [数据模型设计](/concepts/03-data-model.md)
-- [认证系统](/concepts/04-auth-system.md)
-- [国际化路由](/concepts/05-i18n-routing.md)
-- [API 路由设计](/concepts/06-api-routes.md)
-- [CRUD 数据层](/concepts/07-crud-layer.md)
-- [审核与治理](/concepts/10-audit-governance.md)
-- [Docker 部署](/concepts/15-docker-deployment.md)
+- [项目简介](00-introduction.md)
+- [快速开始](01-getting-started.md)
+- [数据模型设计](03-data-model.md)
+- [认证系统](04-auth-system.md)
+- [国际化路由](05-i18n-routing.md)
+- [API 路由设计](06-api-routes.md)
+- [CRUD 数据层](07-crud-layer.md)
+- [审核与治理](10-audit-governance.md)
+- [Docker 部署](15-docker-deployment.md)

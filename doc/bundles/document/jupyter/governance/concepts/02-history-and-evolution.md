@@ -82,7 +82,7 @@ Jupyter 的治理转型在开源史上具有重要意义：
 
 ## 相关概念
 
-- [三主体治理模型总览](/concepts/01-governance-model.md)
-- [执行委员会详解](/concepts/03-executive-council.md)
-- [理事会联盟与选举人团](/concepts/08-union-of-councils.md)
-- [选举与投票机制](/concepts/10-elections-and-voting.md)
+- [三主体治理模型总览](01-governance-model.md)
+- [执行委员会详解](03-executive-council.md)
+- [理事会联盟与选举人团](08-union-of-councils.md)
+- [选举与投票机制](10-elections-and-voting.md)

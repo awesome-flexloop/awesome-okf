@@ -75,7 +75,7 @@ class Toggle(Directive):
 
 ## 相关概念
 
-- [简介](/concepts/00-introduction.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [toggle 指令详解](/concepts/02-toggle-directive.md)
-- [配置项参考](/concepts/03-configuration.md)
+- [简介](../concepts/00-introduction.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [toggle 指令详解](../concepts/02-toggle-directive.md)
+- [配置项参考](../concepts/03-configuration.md)

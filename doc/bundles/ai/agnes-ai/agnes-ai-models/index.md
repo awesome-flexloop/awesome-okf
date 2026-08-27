@@ -16,7 +16,7 @@ sources:
 
 # AgnesAI 模型API网关知识库
 
-本知识包是 [Agnes AI](https://agnes-ai.com/) 多模态大模型API网关的系统化中文教程，基于官方公开文档（版本 `2026.07.30`）和官方示例代码生成，覆盖从快速入门到生产环境部署的完整知识体系。所有内容均溯源至AgnesAI官方文档与示例，遵循 [OKF v0.2 规范](/concepts/00-introduction.md)。
+本知识包是 [Agnes AI](https://agnes-ai.com/) 多模态大模型API网关的系统化中文教程，基于官方公开文档（版本 `2026.07.30`）和官方示例代码生成，覆盖从快速入门到生产环境部署的完整知识体系。所有内容均溯源至AgnesAI官方文档与示例，遵循 [OKF v0.2 规范](concepts/00-introduction.md)。
 
 > AgnesAI是一家专注于全模态基础模型的AI公司，通过统一的OpenAI兼容API网关提供文本对话、图像生成、视频生成、Agent工具调用等能力。
 
@@ -35,20 +35,20 @@ agnes-ai-models/
 
 ## 🚀 入门篇（concepts/）
 
-* [Agnes AI 简介](/concepts/00-introduction.md) — 平台定位、模型家族概览、核心能力、区域站点、版本说明。
-* [5分钟快速开始](/concepts/01-getting-started.md) — 环境准备、依赖安装、第一个API调用（Python + curl双版本）、模型选择建议。
-* [API认证与安全](/concepts/02-api-authentication.md) — Bearer Token认证机制、API密钥管理最佳实践、安全红线、401错误排查。
+* [Agnes AI 简介](concepts/00-introduction.md) — 平台定位、模型家族概览、核心能力、区域站点、版本说明。
+* [5分钟快速开始](concepts/01-getting-started.md) — 环境准备、依赖安装、第一个API调用（Python + curl双版本）、模型选择建议。
+* [API认证与安全](concepts/02-api-authentication.md) — Bearer Token认证机制、API密钥管理最佳实践、安全红线、401错误排查。
 
 ## 🎯 核心API篇（concepts/）
 
-* [对话补全 API](/concepts/03-chat-completions.md) — `/v1/chat/completions`接口完整说明：消息格式、流式输出、工具调用、图像理解、关键参数。
-* [图像生成 API](/concepts/04-image-generation.md) — 文生图、图生图、尺寸选择、URL/Base64输出、提示词最佳实践。
-* [视频生成 API](/concepts/05-video-generation.md) — 异步任务机制、文生视频、图生视频、轮询策略、配额说明。
+* [对话补全 API](concepts/03-chat-completions.md) — `/v1/chat/completions`接口完整说明：消息格式、流式输出、工具调用、图像理解、关键参数。
+* [图像生成 API](concepts/04-image-generation.md) — 文生图、图生图、尺寸选择、URL/Base64输出、提示词最佳实践。
+* [视频生成 API](concepts/05-video-generation.md) — 异步任务机制、文生视频、图生视频、轮询策略、配额说明。
 
 ## ⚙️ 生产环境篇（concepts/）
 
-* [速率限制与配额](/concepts/06-rate-limits.md) — RPM速率限制详解、订阅计划对比、429错误处理、指数退避重试、令牌桶限流实现。
-* [错误处理与调试](/concepts/07-error-handling.md) — HTTP状态码速查表、4xx/5xx错误排查、通用重试装饰器、调试技巧、常见问题诊断表。
+* [速率限制与配额](concepts/06-rate-limits.md) — RPM速率限制详解、订阅计划对比、429错误处理、指数退避重试、令牌桶限流实现。
+* [错误处理与调试](concepts/07-error-handling.md) — HTTP状态码速查表、4xx/5xx错误排查、通用重试装饰器、调试技巧、常见问题诊断表。
 
 ---
 
@@ -56,20 +56,20 @@ agnes-ai-models/
 
 | 示例 | 难度 | 核心能力 |
 |------|------|---------|
-| [OpenAI兼容客户端配置](/examples/openai-compatible.md) | ⭐入门 | 最小配置、无缝迁移、多服务商切换封装 |
-| [Python对话补全示例](/examples/chat-completion.md) | ⭐入门 | 非流式调用、响应结构解析、多轮对话、System Prompt |
-| [图像生成示例](/examples/image-generation.md) | ⭐⭐基础 | 文生图、URL/Base64输出、图片下载、批量生成 |
-| [视频生成示例](/examples/video-generation.md) | ⭐⭐⭐进阶 | 异步任务提交、轮询等待、健壮重试、视频下载 |
-| [Agent工具调用工作流](/examples/agent-workflow.md) | ⭐⭐⭐⭐高级 | Function Calling完整流程、多工具、并行调用、生产级注意事项 |
+| [OpenAI兼容客户端配置](examples/openai-compatible.md) | ⭐入门 | 最小配置、无缝迁移、多服务商切换封装 |
+| [Python对话补全示例](examples/chat-completion.md) | ⭐入门 | 非流式调用、响应结构解析、多轮对话、System Prompt |
+| [图像生成示例](examples/image-generation.md) | ⭐⭐基础 | 文生图、URL/Base64输出、图片下载、批量生成 |
+| [视频生成示例](examples/video-generation.md) | ⭐⭐⭐进阶 | 异步任务提交、轮询等待、健壮重试、视频下载 |
+| [Agent工具调用工作流](examples/agent-workflow.md) | ⭐⭐⭐⭐高级 | Function Calling完整流程、多工具、并行调用、生产级注意事项 |
 
 ---
 
 ## 📋 信源登记簿（references/）
 
-* [README信源](/references/readme.md) — 官方README中提取的F-001~F-015事实清单
-* [模型目录信源](/references/model-catalog.md) — MODEL_CATALOG中提取的F-016~F-038事实清单
+* [README信源](references/readme.md) — 官方README中提取的F-001~F-015事实清单
+* [模型目录信源](references/model-catalog.md) — MODEL_CATALOG中提取的F-016~F-038事实清单
 
-所有事实编号索引见 [references/index.md](/references/index.md)。
+所有事实编号索引见 [references/index.md](references/index.md)。
 
 ---
 

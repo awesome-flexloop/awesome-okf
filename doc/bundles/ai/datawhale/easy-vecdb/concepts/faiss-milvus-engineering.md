@@ -316,7 +316,7 @@ Milvus 在 RAG 架构中扮演知识检索引擎角色：
 
 ## 延伸阅读
 
-- [IVF 与 PQ 量化](/ai/datawhale/easy-vecdb/concepts/ivf-pq-quantization.md) — Faiss/Milvus 核心索引的算法原理
-- [HNSW 与 LSH](/ai/datawhale/easy-vecdb/concepts/hnsw-lsh.md) — 图索引与哈希索引
-- [Annoy 实践](/ai/datawhale/easy-vecdb/concepts/annoy-practice.md) — 轻量级替代方案
-- [Milvus 快速入门](/ai/datawhale/easy-vecdb/examples/milvus-getting-started.md) — 动手实践
+- [IVF 与 PQ 量化](ivf-pq-quantization.md) — Faiss/Milvus 核心索引的算法原理
+- [HNSW 与 LSH](hnsw-lsh.md) — 图索引与哈希索引
+- [Annoy 实践](annoy-practice.md) — 轻量级替代方案
+- [Milvus 快速入门](../examples/milvus-getting-started.md) — 动手实践

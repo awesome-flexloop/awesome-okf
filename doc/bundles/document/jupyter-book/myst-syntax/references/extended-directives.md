@@ -34,7 +34,7 @@ sources:
 
 ## Include 指令
 
-[include.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/include.ts#L1-L190)
+include.ts
 
 ### 别名与选项
 
@@ -89,7 +89,7 @@ const include: Include = {
 
 ## Embed 指令
 
-[embed.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/embed.ts#L1-L40)
+embed.ts
 
 ```ts
 run(data) {
@@ -108,7 +108,7 @@ run(data) {
 
 ## Mermaid 指令
 
-[mermaid.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/mermaid.ts#L1-L21)
+mermaid.ts
 
 ```ts
 run(data) {
@@ -123,7 +123,7 @@ run(data) {
 
 ## TOC 指令
 
-[toc.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/toc.ts#L1-L61)
+toc.ts
 
 ### 别名
 
@@ -153,7 +153,7 @@ const toc = {
 
 ## Raw 指令
 
-[raw.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/raw.ts#L1-L74)
+raw.ts
 
 三个 raw 相关指令：
 
@@ -174,7 +174,7 @@ raw:latex 和 raw:typst 是格式特定的快捷方式，无需指定参数。
 
 ## Image 指令
 
-[image.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/image.ts#L1-L58)
+image.ts
 
 - arg：图片路径（必填，String）
 - 选项：width(w)、height(h)、alt、align（默认center）、title
@@ -185,7 +185,7 @@ raw:latex 和 raw:typst 是格式特定的快捷方式，无需指定参数。
 
 ## Iframe 指令
 
-[iframe.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/iframe.ts#L1-L65)
+iframe.ts
 
 - arg：URL（必填）
 - 选项：width、align、title（可访问性）、placeholder（静态导出占位图）
@@ -195,7 +195,7 @@ raw:latex 和 raw:typst 是格式特定的快捷方式，无需指定参数。
 
 ## Aside 指令
 
-[aside.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/aside.ts#L1-L37)
+aside.ts
 
 - 别名：margin、sidebar、topic
 - arg：可选标题（作为 admonitionTitle 放在最前面）
@@ -210,7 +210,7 @@ return [{ type: 'aside', kind, children }];
 
 ## Dropdown 指令
 
-[dropdown.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/dropdown.ts#L1-L44)
+dropdown.ts
 
 - arg：标题（myst）→ 放入 summary 子节点
 - body：MyST 内容（必填）

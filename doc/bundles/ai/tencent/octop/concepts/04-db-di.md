@@ -268,6 +268,6 @@ API 可见的实体表（agents、channels、threads 等）使用：
 
 ## 相关概念
 
-- [/concepts/00-architecture.md](/concepts/00-architecture.md)
-- [/concepts/01-server-lifecycle.md](/concepts/01-server-lifecycle.md)
-- [/concepts/02-agent-runtime.md](/concepts/02-agent-runtime.md)
+- [/concepts/00-architecture.md](00-architecture.md)
+- [/concepts/01-server-lifecycle.md](01-server-lifecycle.md)
+- [/concepts/02-agent-runtime.md](02-agent-runtime.md)

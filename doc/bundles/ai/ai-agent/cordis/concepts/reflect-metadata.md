@@ -27,7 +27,7 @@ ReflectService 是 Cordis 的元编程核心，承担了三个关键职责：**C
 
 ## ReflectService.handler — Proxy 拦截器
 
-[reflect.ts:L62-L133](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts#L62-L133)
+reflect.ts:L62-L133
 
 `ReflectService.handler` 是 Context Proxy 的核心，拦截 get、set、has 三种操作。
 
@@ -175,7 +175,7 @@ has: (target, prop) => {
 
 ## 服务声明：provide()
 
-[reflect.ts:L175-L203](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts#L175-L203)
+reflect.ts:L175-L203
 
 `provide()` 在当前 fiber 上注册一个服务提供者，是 Service 构造函数的底层机制。
 
@@ -268,7 +268,7 @@ export namespace Property {
 
 ## 计算属性：accessor()
 
-[reflect.ts:L229-L237](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts#L229-L237)
+reflect.ts:L229-L237
 
 ```typescript
 accessor(name: string, options: Omit<Property.Accessor, 'type'>) {
@@ -298,7 +298,7 @@ mixin 内部就是通过 accessor 实现的。
 
 ## 方法混入：mixin()
 
-[reflect.ts:L239-L265](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts#L239-L265)
+reflect.ts:L239-L265
 
 `mixin()` 将服务的方法/属性混合到 Context 上，是 Cordis 实现"ctx.plugin() 直接调用"等便捷 API 的底层机制。
 
@@ -351,7 +351,7 @@ this.mixin('events', ['on', 'once', 'parallel', 'emit', 'serial', 'bail', 'water
 
 ## 服务变更通知：notify()
 
-[reflect.ts:L205-L227](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts#L205-L227)
+reflect.ts:L205-L227
 
 ```typescript
 notify(names: string[], filter = (ctx: Context, name: string) =>
@@ -389,7 +389,7 @@ Traceable 是 Cordis 的核心元编程机制，确保服务方法调用时 `thi
 
 ### Tracker 接口
 
-[utils.ts:L41-L45](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts#L41-L45)
+utils.ts:L41-L45
 
 ```typescript
 export interface Tracker {
@@ -401,7 +401,7 @@ export interface Tracker {
 
 ### createTraceable()
 
-[utils.ts:L157-L212](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts#L157-L212)
+utils.ts:L157-L212
 
 ```typescript
 function createTraceable(ctx: Context, value: any, tracker: Tracker) {
@@ -457,7 +457,7 @@ Traceable proxy 的 get 拦截器做了以下事情：
 
 ### getTraceable()
 
-[utils.ts:L110-L118](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts#L110-L118)
+utils.ts:L110-L118
 
 ```typescript
 export function getTraceable<T>(ctx: Context, value: T): T {
@@ -475,7 +475,7 @@ export function getTraceable<T>(ctx: Context, value: T): T {
 
 Shadow 机制解决了一个关键问题：服务方法中 `this.ctx` 应指向服务注册时的 Context，而不是调用方的 Context。
 
-[utils.ts:L141-L155](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts#L141-L155)
+utils.ts:L141-L155
 
 ```typescript
 function createShadow(ctx: Context, target: any, property: string | undefined, receiver: any) {
@@ -492,7 +492,7 @@ function createShadow(ctx: Context, target: any, property: string | undefined, r
 
 ### reflect.bind() — 回调绑定
 
-[reflect.ts:L271-L280](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts#L271-L280)
+reflect.ts:L271-L280
 
 ```typescript
 bind<T extends Function>(callback: T) {
@@ -511,7 +511,7 @@ bind<T extends Function>(callback: T) {
 
 ## Callable Service
 
-[utils.ts:L219-L226](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts#L219-L226)
+utils.ts:L219-L226
 
 ```typescript
 export function createCallable(name: string, proto: {}, tracker: Tracker) {
@@ -528,7 +528,7 @@ Callable Service 通过 `joinPrototype` 将服务原型与 Function.prototype �
 
 ### joinPrototype — 原型链合并
 
-[utils.ts:L88-L95](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts#L88-L95)
+utils.ts:L88-L95
 
 ```typescript
 export function joinPrototype(proto1: {}, proto2: {}) {
@@ -545,7 +545,7 @@ export function joinPrototype(proto1: {}, proto2: {}) {
 
 ## withProps — Proxy 合并
 
-[utils.ts:L120-L132](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts#L120-L132)
+utils.ts:L120-L132
 
 ```typescript
 export function withProps(target: any, props?: {}) {
@@ -567,7 +567,7 @@ export function withProps(target: any, props?: {}) {
 
 ## 错误增强
 
-[reflect.ts:L20-L25](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts#L20-L25)
+reflect.ts:L20-L25
 
 ```typescript
 function enhanceError(error: Error) {
@@ -583,7 +583,7 @@ function enhanceError(error: Error) {
 
 ## Symbols 总览
 
-[utils.ts:L47-L71](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts#L47-L71)
+utils.ts:L47-L71
 
 Reflect 系统使用 17 个全局 Symbol（`Symbol.for('cordis.xxx')`）：
 
@@ -656,8 +656,8 @@ interface Tracker {
 
 | 文件 | 内容 |
 |------|------|
-| [reflect.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts) | ReflectService 完整实现、handler Proxy、provide/accessor/mixin/notify/bind |
-| [utils.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts) | createTraceable/createShadow/createCallable、withProps、joinPrototype、Tracker 接口、symbols 定义 |
-| [context.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/context.ts) | Context 构造函数中创建 Proxy 使用 ReflectService.handler |
-| [service.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/service.ts) | Service 构造函数调用 reflect.provide、createCallable 创建可调用服务 |
-| [events.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/events.ts) | EventsService 中 reflect.bind 包装监听器 |
+| reflect.ts | ReflectService 完整实现、handler Proxy、provide/accessor/mixin/notify/bind |
+| utils.ts | createTraceable/createShadow/createCallable、withProps、joinPrototype、Tracker 接口、symbols 定义 |
+| context.ts | Context 构造函数中创建 Proxy 使用 ReflectService.handler |
+| service.ts | Service 构造函数调用 reflect.provide、createCallable 创建可调用服务 |
+| events.ts | EventsService 中 reflect.bind 包装监听器 |

@@ -23,11 +23,11 @@ sources:
 
 hermes-agent 通过统一的命令行入口 `hermes` 提供所有用户交互功能。CLI 基于 argparse 构建子命令体系，默认子命令是 `chat`（交互式聊天），同时支持网关模式（`--gateway`）、ACP 模式（`acp`）、cron 管理、模型配置、会话管理、记忆配置、MCP 服务器管理等众多子命令。
 
-主入口位于 [hermes_cli/main.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/hermes_cli/main.py) 的 `main()` 函数（L11234），它负责进程标题设置、Windows UTF-8 stdio 配置、陈旧字节码清理、中断安装自恢复，然后构建 argparse 解析器并分派到对应子命令处理函数。
+主入口位于 hermes_cli/main.py 的 `main()` 函数（L11234），它负责进程标题设置、Windows UTF-8 stdio 配置、陈旧字节码清理、中断安装自恢复，然后构建 argparse 解析器并分派到对应子命令处理函数。
 
 除 CLI 外，hermes-agent 还提供两个打包应用：
-- **Desktop**（[apps/desktop/](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/apps/desktop/)）：基于 Electron 的桌面 GUI 应用
-- **Bootstrap Installer**（[apps/bootstrap-installer/](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/apps/bootstrap-installer/)）：基于 Tauri 的初始安装引导程序
+- **Desktop**（apps/desktop/）：基于 Electron 的桌面 GUI 应用
+- **Bootstrap Installer**（apps/bootstrap-installer/）：基于 Tauri 的初始安装引导程序
 
 ### 解决的核心问题
 
@@ -221,8 +221,8 @@ classDiagram
 
 | 应用 | 技术栈 | 入口 | 说明 |
 |------|--------|------|------|
-| Desktop | Electron + React + TypeScript | [apps/desktop/electron/main.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/apps/desktop/electron/main.ts) | 全功能桌面 GUI，多窗口会话，内置终端 |
-| Bootstrap Installer | Tauri (Rust + React/TS) | [apps/bootstrap-installer/src-tauri/src/main.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/apps/bootstrap-installer/src-tauri/src/main.rs) | 首次安装向导，下载运行时，环境检测 |
+| Desktop | Electron + React + TypeScript | apps/desktop/electron/main.ts | 全功能桌面 GUI，多窗口会话，内置终端 |
+| Bootstrap Installer | Tauri (Rust + React/TS) | apps/bootstrap-installer/src-tauri/src/main.rs | 首次安装向导，下载运行时，环境检测 |
 
 Desktop 应用通过子进程运行 hermes-core，使用 IPC 通信：
 - `backend-child.ts`：管理 hermes 子进程生命周期
@@ -307,9 +307,9 @@ sequenceDiagram
 
 | 函数 | 文件位置 | 说明 |
 |------|----------|------|
-| `main()` | [hermes_cli/main.py#L11234](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/hermes_cli/main.py#L11234) | CLI 主入口 |
-| `cmd_chat(args)` | [hermes_cli/main.py#L2531](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/hermes_cli/main.py#L2531) | 交互式聊天处理函数 |
-| `build_top_level_parser()` | [hermes_cli/_parser.py#L90](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/hermes_cli/_parser.py#L90) | 构建 argparse 解析器 |
+| `main()` | hermes_cli/main.py#L11234 | CLI 主入口 |
+| `cmd_chat(args)` | hermes_cli/main.py#L2531 | 交互式聊天处理函数 |
+| `build_top_level_parser()` | hermes_cli/_parser.py#L90 | 构建 argparse 解析器 |
 
 ### 主要子命令处理函数（注册到 subparsers）
 
@@ -372,16 +372,16 @@ def cmd_chat(args):
 
 | 文件 | 内容 |
 |------|------|
-| [hermes_cli/main.py#L11234-L11340](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/hermes_cli/main.py#L11234-L11340) | `main()` 入口函数 |
-| [hermes_cli/main.py#L2531-](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/hermes_cli/main.py#L2531) | `cmd_chat()` 聊天处理 |
-| [hermes_cli/_parser.py#L298-](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/hermes_cli/_parser.py#L298) | chat 子命令参数定义 |
-| [hermes_cli/config.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/hermes_cli/config.py) | 配置加载/保存/访问 |
-| [hermes_cli/fallback_config.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/hermes_cli/fallback_config.py) | 多路径配置回退链 |
-| [hermes_cli/profiles.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/hermes_cli/profiles.py) | 配置档案管理 |
-| [run_agent.py#L412-](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/run_agent.py#L412) | AIAgent 类（CLI 实例化的核心对象） |
-| [apps/desktop/electron/main.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/apps/desktop/electron/main.ts) | Electron 主进程入口 |
-| [apps/desktop/electron/backend-child.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/apps/desktop/electron/backend-child.ts) | 子进程管理（spawn hermes-core） |
-| [apps/bootstrap-installer/src-tauri/src/main.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/apps/bootstrap-installer/src-tauri/src/main.rs) | Tauri 安装器入口 |
+| hermes_cli/main.py#L11234-L11340 | `main()` 入口函数 |
+| hermes_cli/main.py#L2531- | `cmd_chat()` 聊天处理 |
+| hermes_cli/_parser.py#L298- | chat 子命令参数定义 |
+| hermes_cli/config.py | 配置加载/保存/访问 |
+| hermes_cli/fallback_config.py | 多路径配置回退链 |
+| hermes_cli/profiles.py | 配置档案管理 |
+| run_agent.py#L412- | AIAgent 类（CLI 实例化的核心对象） |
+| apps/desktop/electron/main.ts | Electron 主进程入口 |
+| apps/desktop/electron/backend-child.ts | 子进程管理（spawn hermes-core） |
+| apps/bootstrap-installer/src-tauri/src/main.rs | Tauri 安装器入口 |
 
 ## 相关 Concepts
 

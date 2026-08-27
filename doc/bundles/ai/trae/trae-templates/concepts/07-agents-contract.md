@@ -178,7 +178,7 @@ superpowers-trae-init 的技能安装在项目级，因为它们定义的是项�
 5. **添加项目特定规则**：在 `.trae/rules/` 下创建新的规则文件
 6. **新开会话验证**：确保 TRAE 加载了规则并按约束执行
 
-简单项目可以不使用完整 superpowers，仅在项目根目录放置 `AGENTS.md` 文件，定义最核心的约束即可。详见 [AGENTS.md 配置示例](/examples/agents-md-config.md)。
+简单项目可以不使用完整 superpowers，仅在项目根目录放置 `AGENTS.md` 文件，定义最核心的约束即可。详见 [AGENTS.md 配置示例](../examples/agents-md-config.md)。
 
 ## 为什么 AGENTS.md 重要
 
@@ -190,12 +190,12 @@ superpowers-trae-init 的技能安装在项目级，因为它们定义的是项�
 
 ## 相关概念
 
-- [工具与 DevOps 模板](/concepts/06-tools-devops-templates.md)
-- [五维分面分类体系](/concepts/01-template-classification.md)
-- [Trae Templates 简介](/concepts/00-introduction.md)
+- [工具与 DevOps 模板](06-tools-devops-templates.md)
+- [五维分面分类体系](01-template-classification.md)
+- [Trae Templates 简介](00-introduction.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/templates-source.md)
-- [使用 superpowers-trae-init 初始化环境](/examples/use-superpowers-init.md)
-- [AGENTS.md 配置示例](/examples/agents-md-config.md)
+- [源码信源索引](../references/templates-source.md)
+- [使用 superpowers-trae-init 初始化环境](../examples/use-superpowers-init.md)
+- [AGENTS.md 配置示例](../examples/agents-md-config.md)

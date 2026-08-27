@@ -23,13 +23,13 @@ sources:
 
 # 张量、统计、打印与代码生成、向量系统源码信源
 
-本文档覆盖 SymPy 中五个关联模块：`sympy.tensor`（索引表示与 N 维数组）、`sympy.stats`（概率统计）、`sympy.printing`（多格式输出）、`sympy.codegen`（代码生成 AST）、`sympy.vector`（向量微积分），以及工具函数 `lambdify`。[^tensor-init][^stats-init][^printing-init][^codegen-init][^vector-init]
+本文档覆盖 SymPy 中五个关联模块：`sympy.tensor`（索引表示与 N 维数组）、`sympy.stats`（概率统计）、`sympy.printing`（多格式输出）、`sympy.codegen`（代码生成 AST）、`sympy.vector`（向量微积分），以及工具函数 `lambdify`。[^tensor-init] [^stats-init] [^printing-init] [^codegen-init] [^vector-init]
 
 ## 一、张量模块（sympy.tensor）
 
 ### 模块导出
 
-[tensor/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/tensor/__init__.py) 导出：[^tensor-init]
+tensor/__init__.py 导出：[^tensor-init]
 
 | 类别 | 符号 |
 |---|---|
@@ -45,9 +45,9 @@ sources:
 
 | 类 | 文件/行号 | 说明 |
 |---|---|---|
-| `IndexedBase` | [indexed.py:363](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/tensor/indexed.py#L363) | 索引对象的基类（张量名），继承 `Expr`，带形状参数 |
-| `Idx` | [indexed.py:581](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/tensor/indexed.py#L581) | 索引符号，支持范围声明 |
-| `Indexed` | [indexed.py:125](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/tensor/indexed.py#L125) | 索引后的张量分量，继承 `Expr` |
+| `IndexedBase` | indexed.py:363 | 索引对象的基类（张量名），继承 `Expr`，带形状参数 |
+| `Idx` | indexed.py:581 | 索引符号，支持范围声明 |
+| `Indexed` | indexed.py:125 | 索引后的张量分量，继承 `Expr` |
 
 ```python
 >>> from sympy import IndexedBase, Idx, symbols
@@ -143,7 +143,7 @@ classDiagram
 
 ### 模块导出
 
-[stats/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/stats/__init__.py) 导出概率统计的完整 API：[^stats-init]
+stats/__init__.py 导出概率统计的完整 API：[^stats-init]
 
 | 类别 | 符号 |
 |---|---|
@@ -242,7 +242,7 @@ exp(-5)
 
 ### 模块导出
 
-[printing/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/printing/__init__.py) 导出多格式打印/输出函数：[^printing-init]
+printing/__init__.py 导出多格式打印/输出函数：[^printing-init]
 
 | 格式 | 函数/类 | 说明 |
 |---|---|---|
@@ -316,7 +316,7 @@ exp(-5)
 
 ### 模块导出
 
-[codegen/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/codegen/__init__.py) 导出跨语言的 AST 节点基类：[^codegen-init]
+codegen/__init__.py 导出跨语言的 AST 节点基类：[^codegen-init]
 
 | AST 节点 | 行号 | 说明 |
 |---|---|---|
@@ -427,7 +427,7 @@ double f(double x) {
 
 ### 模块导出
 
-[vector/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/vector/__init__.py) 导出向量微积分系统：[^vector-init]
+vector/__init__.py 导出向量微积分系统：[^vector-init]
 
 | 类别 | 符号 |
 |---|---|
@@ -534,7 +534,7 @@ True  # div = 0
 
 ## 六、lambdify 工具
 
-`lambdify()` 函数定义于 [utilities/lambdify.py:213](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/utilities/lambdify.py#L213)，将 SymPy 表达式转换为可数值求值的 Python lambda 函数，支持 NumPy/SciPy/math 等后端：
+`lambdify()` 函数定义于 utilities/lambdify.py:213，将 SymPy 表达式转换为可数值求值的 Python lambda 函数，支持 NumPy/SciPy/math 等后端：
 
 ```python
 lambdify(args, expr, modules=None, printer=None, use_imps=True,

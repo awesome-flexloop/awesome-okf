@@ -144,7 +144,7 @@ AGNES_API_KEY=your_api_key_here
 
 ## 相关概念
 
-- [5分钟快速开始](/concepts/01-getting-started.md)
-- [对话补全API](/concepts/03-chat-completions.md)
-- [速率限制与配额](/concepts/06-rate-limits.md)
-- [错误处理与重试](/concepts/07-error-handling.md)
+- [5分钟快速开始](01-getting-started.md)
+- [对话补全API](03-chat-completions.md)
+- [速率限制与配额](06-rate-limits.md)
+- [错误处理与重试](07-error-handling.md)

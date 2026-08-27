@@ -139,6 +139,6 @@ curl -X POST http://localhost:3000/api/profile/change-password \
 
 ## 相关内容
 
-- [认证系统](/concepts/04-auth-system.md)
-- [国际化路由](/concepts/05-i18n-routing.md)
-- [开发环境搭建示例](/examples/setup-dev-environment.md)
+- [认证系统](../concepts/04-auth-system.md)
+- [国际化路由](../concepts/05-i18n-routing.md)
+- [开发环境搭建示例](setup-dev-environment.md)

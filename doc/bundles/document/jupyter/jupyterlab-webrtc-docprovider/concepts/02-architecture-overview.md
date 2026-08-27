@@ -144,8 +144,8 @@ WebRtcStatus (extends VDomRenderer<Model>)
 
 ## 相关概念
 
-- [项目介绍](/concepts/00-introduction.md)
-- [安装与快速开始](/concepts/01-getting-started.md)
-- [WebRtcManager配置管理](/concepts/03-webrtc-manager.md)
-- [WebRtcProvider文档提供者](/concepts/04-document-provider.md)
-- [4个JupyterLab插件详解](/concepts/06-plugin-system.md)
+- [项目介绍](00-introduction.md)
+- [安装与快速开始](01-getting-started.md)
+- [WebRtcManager配置管理](03-webrtc-manager.md)
+- [WebRtcProvider文档提供者](04-document-provider.md)
+- [4个JupyterLab插件详解](06-plugin-system.md)

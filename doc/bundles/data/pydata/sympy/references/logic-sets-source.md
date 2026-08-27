@@ -23,13 +23,13 @@ sources:
 
 # 逻辑与集合系统源码信源
 
-SymPy 的离散数学基础由四个模块组成：`sympy.logic`（布尔逻辑与 SAT 求解）、`sympy.sets`（集合论）、`sympy.ntheory`（数论）、`sympy.concrete`（求和/乘积符号）。这些模块为代数化简、假设推理、定理证明提供底层支撑。[^logic-init][^sets-init][^ntheory-init][^concrete-init]
+SymPy 的离散数学基础由四个模块组成：`sympy.logic`（布尔逻辑与 SAT 求解）、`sympy.sets`（集合论）、`sympy.ntheory`（数论）、`sympy.concrete`（求和/乘积符号）。这些模块为代数化简、假设推理、定理证明提供底层支撑。[^logic-init] [^sets-init] [^ntheory-init] [^concrete-init]
 
 ## 逻辑模块（sympy.logic）
 
 ### 模块导出
 
-[logic/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/logic/__init__.py) 导出：[^logic-init]
+logic/__init__.py 导出：[^logic-init]
 
 | 类别 | 符号 |
 |---|---|
@@ -88,7 +88,7 @@ classDiagram
     BooleanFunction <|-- ITE
 ```
 
-所有布尔函数类定义于 [boolalg.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/logic/boolalg.py)：[^boolalg-source]
+所有布尔函数类定义于 boolalg.py：[^boolalg-source]
 
 | 类 | 行号 | 语义 |
 |---|---|---|
@@ -155,7 +155,7 @@ A
 
 ### SAT 求解器
 
-`satisfiable(expr, algorithm='dpll2', all_models=False)` 函数定义于 [logic/inference.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/logic/inference.py)，实现 DPLL SAT 求解算法：[^logic-init]
+`satisfiable(expr, algorithm='dpll2', all_models=False)` 函数定义于 logic/inference.py，实现 DPLL SAT 求解算法：[^logic-init]
 
 - 若公式可满足，返回满足它的一个赋值字典（或所有模型的生成器）
 - 若不可满足，返回 `False`
@@ -181,7 +181,7 @@ True
 
 ### 模块导出
 
-[sets/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/sets/__init__.py) 导出：[^sets-init]
+sets/__init__.py 导出：[^sets-init]
 
 | 类别 | 符号 |
 |---|---|
@@ -356,7 +356,7 @@ Range(0, 10, 1)
 
 ### 模块导出
 
-[ntheory/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/ntheory/__init__.py) 导出的公开 API 分为以下类别：[^ntheory-init]
+ntheory/__init__.py 导出的公开 API 分为以下类别：[^ntheory-init]
 
 | 类别 | 符号 |
 |---|---|
@@ -482,7 +482,7 @@ False
 
 ### 模块导出
 
-[concrete/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/concrete/__init__.py) 导出：[^concrete-init]
+concrete/__init__.py 导出：[^concrete-init]
 
 | 符号 | 来源 | 说明 |
 |---|---|---|

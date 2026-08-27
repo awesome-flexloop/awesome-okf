@@ -181,7 +181,7 @@ Current parser has no child element with name: instlal (path: mytool)
 
 ## 相关概念
 
-- [Parser 数据提取模型](/concepts/04-parser-data-model.md)
-- [嵌套内容增强](/concepts/06-nested-content-enhancement.md)
-- [配置选项详解](/concepts/11-configuration.md)
-- [子命令文档化示例](/examples/subcommand-docs.md)
+- [Parser 数据提取模型](04-parser-data-model.md)
+- [嵌套内容增强](06-nested-content-enhancement.md)
+- [配置选项详解](11-configuration.md)
+- [子命令文档化示例](../examples/subcommand-docs.md)

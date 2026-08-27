@@ -37,7 +37,7 @@ Chat LangChain 后端由两个 MDA 编译器自动发现的顶层文件定义：
 
 两者互不导入，由 MDA 编译器在构建 bundle 时各自发现并组合。
 
-详见 [架构总览](/ai/langchain-ai/chat-langchain/concepts/overview)。
+详见 架构总览。
 
 ## 快速开始
 
@@ -72,17 +72,17 @@ mda deploy .
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/chat-langchain/concepts/overview) — 双入口架构、agent.py 与 identity.py 的角色分工、中间件管道
+- 总览 — 双入口架构、agent.py 与 identity.py 的角色分工、中间件管道
 
 ### 技术参考
 
-- [Agent 入口参考](/ai/langchain-ai/chat-langchain/references/agent-entrypoint) — define_deep_agent 配置、工具集、六层中间件、模型弹性
-- [Identity 合约参考](/ai/langchain-ai/chat-langchain/references/identity-contract) — 多区域 Supabase introspection、guest provider、actor scoping
+- Agent 入口参考 — define_deep_agent 配置、工具集、六层中间件、模型弹性
+- Identity 合约参考 — 多区域 Supabase introspection、guest provider、actor scoping
 
 ### 事实与洞察
 
-- [事实清单](/ai/langchain-ai/chat-langchain/spec/facts) — 26 条源码事实验证（含文件路径行号）
-- [深度洞察](/ai/langchain-ai/chat-langchain/spec/insights) — 双文件合约机制、中间件分层防御与模型弹性策略
+- 事实清单 — 26 条源码事实验证（含文件路径行号）
+- 深度洞察 — 双文件合约机制、中间件分层防御与模型弹性策略
 
 ## 目录结构
 

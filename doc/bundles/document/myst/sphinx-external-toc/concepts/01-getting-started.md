@@ -203,12 +203,12 @@ A: 如果根文档不是 `index`，sphinx-external-toc 会在 `build-finished` �
 
 ## 下一步
 
-- [_toc.yml 语法详解](/concepts/02-toc-yaml-syntax.md)——学习完整的 YAML 语法
-- [扩展工作机制](/concepts/03-extension-mechanism.md)——理解扩展如何替换 Sphinx 内置 toctree
-- [基础 _toc.yml 示例](/examples/basic-toc.md)——多种格式的完整示例
+- [_toc.yml 语法详解](02-toc-yaml-syntax.md)——学习完整的 YAML 语法
+- [扩展工作机制](03-extension-mechanism.md)——理解扩展如何替换 Sphinx 内置 toctree
+- [基础 _toc.yml 示例](../examples/basic-toc.md)——多种格式的完整示例
 
 ## 相关概念
 
-- [sphinx-external-toc 简介](/concepts/00-introduction.md)
-- [_toc.yml 语法详解](/concepts/02-toc-yaml-syntax.md)
-- [高级功能](/concepts/04-advanced-features.md)
+- [sphinx-external-toc 简介](00-introduction.md)
+- [_toc.yml 语法详解](02-toc-yaml-syntax.md)
+- [高级功能](04-advanced-features.md)

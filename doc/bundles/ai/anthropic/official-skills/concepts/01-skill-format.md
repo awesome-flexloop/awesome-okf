@@ -327,7 +327,7 @@ my-plugin/
 }
 ```
 
-> 🔗 插件体系详见 [/claude-code/concepts/01-plugin-system.md](/claude-code/concepts/01-plugin-system.md)
+> 🔗 插件体系详见 [/claude-code/concepts/01-plugin-system.md](../../claude-code/concepts/01-plugin-system.md)
 
 ### 发布检查清单
 
@@ -359,5 +359,5 @@ my-plugin/
 - [Skills 生态概览](00-overview.md) — Skills 的基本概念和生态定位
 - [Skill Creator 工具详解](02-skill-creator.md) — 使用官方元技能辅助创建高质量 Skills
 - [Claude API Skill 详解](03-claude-api-skill.md) — 官方 claude-api Skill 的实际案例参考
-- [全部 Skills 索引](/official-skills/references/skills-index.md) — 19 个官方 Skills 的完整清单，可作为格式参考
-- [Claude Code 插件体系](/claude-code/concepts/01-plugin-system.md) — Skills 如何融入插件分发体系
+- [全部 Skills 索引](../references/skills-index.md) — 19 个官方 Skills 的完整清单，可作为格式参考
+- [Claude Code 插件体系](../../claude-code/concepts/01-plugin-system.md) — Skills 如何融入插件分发体系

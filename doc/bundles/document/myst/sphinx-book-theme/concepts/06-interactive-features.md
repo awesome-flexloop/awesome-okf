@@ -205,7 +205,7 @@ sbRunWhenDOMLoaded(fixSidebarToggle);  // 宽屏侧边栏修复
 
 ## 相关概念
 
-- [头部按钮系统](/concepts/04-header-buttons.md)
-- [Margin指令与边注旁注](/concepts/05-margin-sidenotes.md)
-- [样式定制与第三方扩展适配](/concepts/08-customization.md)
-- [交互式计算书籍配置示例](/examples/interactive-book.md)
+- [头部按钮系统](04-header-buttons.md)
+- [Margin指令与边注旁注](05-margin-sidenotes.md)
+- [样式定制与第三方扩展适配](08-customization.md)
+- [交互式计算书籍配置示例](../examples/interactive-book.md)

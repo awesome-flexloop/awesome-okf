@@ -309,7 +309,7 @@ PUSH/PULL 是对称的——bind/connect 的顺序不影响最终拓扑。可以
 
 ## 延伸阅读
 
-- [消息模式实现](/concepts/11-patterns.md) — fq_t/lb_t 算法详解
-- [管道与流控](/concepts/04-pipe.md) — HWM/LWM 背压机制
-- [套接字基类](/concepts/02-socket-base.md) — send/recv 骨架和 x-钩子
-- [ROUTER/DEALER 异步请求-回复](/examples/router-dealer-async.md) — 需要可靠请求-回复时使用
+- [消息模式实现](../concepts/11-patterns.md) — fq_t/lb_t 算法详解
+- [管道与流控](../concepts/04-pipe.md) — HWM/LWM 背压机制
+- [套接字基类](../concepts/02-socket-base.md) — send/recv 骨架和 x-钩子
+- [ROUTER/DEALER 异步请求-回复](router-dealer-async.md) — 需要可靠请求-回复时使用

@@ -291,7 +291,7 @@ def format_handlers(formats, urlspecs, **handler_settings):
 
 ## 相关文档
 
-- [Handlers源码分析](/references/handlers-source.md)：完整源码分析
-- [Notebook渲染管线](/concepts/06-render-pipeline.md)：finish_notebook详解
-- [缓存系统](/concepts/07-caching-system.md)：缓存后端和@cached机制
-- [Provider插件系统](/concepts/05-provider-plugin-system.md)：Provider路由注册
+- [Handlers源码分析](../references/handlers-source.md)：完整源码分析
+- [Notebook渲染管线](06-render-pipeline.md)：finish_notebook详解
+- [缓存系统](07-caching-system.md)：缓存后端和@cached机制
+- [Provider插件系统](05-provider-plugin-system.md)：Provider路由注册

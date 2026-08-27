@@ -96,7 +96,7 @@ print(f"API Key前缀: {api_key[:8]}..." if api_key else "API Key未加载！")
 **原因**：触发速率限制或配额耗尽。
 
 **处理方式**：
-1. 使用指数退避算法重试（参考[速率限制文档](/concepts/06-rate-limits.md)）
+1. 使用指数退避算法重试（参考[速率限制文档](06-rate-limits.md)）
 2. 检查Retry-After响应头
 3. 降低并发请求数
 4. 检查账户配额是否已耗尽
@@ -231,6 +231,6 @@ nslookup apihub.agnes-ai.com
 
 ## 相关概念
 
-- [API认证与安全](/concepts/02-api-authentication.md)
-- [速率限制与配额](/concepts/06-rate-limits.md)
-- [对话补全API](/concepts/03-chat-completions.md)
+- [API认证与安全](02-api-authentication.md)
+- [速率限制与配额](06-rate-limits.md)
+- [对话补全API](03-chat-completions.md)

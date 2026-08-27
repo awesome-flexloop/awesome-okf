@@ -226,5 +226,5 @@ for course in courses:
 
 ## 相关概念
 
-- [URL参数完整参考](/concepts/06-url-parameters.md) — uploadpath 参数详解
-- [GitPuller 抽象基类](/concepts/03-gitpuller-base.md) — createTree 目录创建逻辑
+- [URL参数完整参考](../concepts/06-url-parameters.md) — uploadpath 参数详解
+- [GitPuller 抽象基类](../concepts/03-gitpuller-base.md) — createTree 目录创建逻辑

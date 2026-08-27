@@ -234,10 +234,10 @@ tags.update({k: v for k, v in fields.items() if k.startswith('og:')})
 
 ## 相关概念
 
-- [配置选项全解](/concepts/02-configuration.md)
-- [页面描述自动提取](/concepts/04-description-extraction.md)
-- [页面图片处理逻辑](/concepts/05-image-handling.md)
-- [页面级覆盖机制](/concepts/06-per-page-overrides.md)
-- [社交卡片生成](/concepts/08-social-cards.md)
-- [ReadTheDocs 自动检测](/concepts/07-readthedocs-integration.md)
-- [sphinxext-opengraph 源码信源登记](/references/sphinxext-opengraph-source.md)
+- [配置选项全解](02-configuration.md)
+- [页面描述自动提取](04-description-extraction.md)
+- [页面图片处理逻辑](05-image-handling.md)
+- [页面级覆盖机制](06-per-page-overrides.md)
+- [社交卡片生成](08-social-cards.md)
+- [ReadTheDocs 自动检测](07-readthedocs-integration.md)
+- [sphinxext-opengraph 源码信源登记](../references/sphinxext-opengraph-source.md)

@@ -11,7 +11,7 @@ sources:
 
 > 来源：`docs/chapter6.md`，编辑：赵志民、王茂霖、詹好
 
-本章研究训练数据趋于无穷时分类器是否收敛到 Bayes 最优，是[一致性](/ai/datawhale/key-book/concepts/consistency)概念的主体章节。
+本章研究训练数据趋于无穷时分类器是否收敛到 Bayes 最优，是一致性概念的主体章节。
 
 ## 内容概要
 
@@ -78,5 +78,5 @@ $$\lim_{n\to\infty}\mathbb{P}((Diam(\Omega)-0)\geq\epsilon)=0$$
 
 ## 参见
 
-- [第 7 章：收敛率](/ai/datawhale/key-book/references/chapter7)：一致性只回答"是否收敛"，收敛率回答"多快"
-- [附录](/ai/datawhale/key-book/references/appendix)：凸函数、Jensen 不等式等数学基础
+- 第 7 章：收敛率：一致性只回答"是否收敛"，收敛率回答"多快"
+- 附录：凸函数、Jensen 不等式等数学基础

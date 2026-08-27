@@ -201,6 +201,6 @@ extension-template 集成了 [Jupyter Releaser](https://github.com/jupyter-serve
 
 ## 相关概念
 
-- [三层测试策略](/concepts/11-testing-strategy.md)
-- [打包与发布](/concepts/13-packaging-release.md)
-- [CI/CD 工作流源码解析](/references/ci-workflows-source.md)
+- [三层测试策略](11-testing-strategy.md)
+- [打包与发布](13-packaging-release.md)
+- [CI/CD 工作流源码解析](../references/ci-workflows-source.md)

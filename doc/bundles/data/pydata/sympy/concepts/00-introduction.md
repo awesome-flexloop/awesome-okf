@@ -55,7 +55,7 @@ SymPy 是一个用纯 Python 实现的开源计算机代数系统（CAS），遵
 
 ### 环境要求
 
-根据 [core-init](/references/core-init.md) 中的源码分析，SymPy 要求：
+根据 [core-init](../references/core-init.md) 中的源码分析，SymPy 要求：
 
 - **Python 版本**：≥ 3.9
 - **强制依赖**：mpmath（任意精度浮点运算）
@@ -248,8 +248,8 @@ array([0.00000000e+00, 1.00000000e+00, 1.22464680e-16])
 
 ## 延伸阅读
 
-- 源码信源：[core-init](/references/core-init.md) 提供顶层 API 的完整导出清单
-- 源码信源：[basic-source](/references/basic-source.md) 深入 `Basic`/`Expr` 类层次实现
+- 源码信源：[core-init](../references/core-init.md) 提供顶层 API 的完整导出清单
+- 源码信源：[basic-source](../references/basic-source.md) 深入 `Basic`/`Expr` 类层次实现
 - 后续概念：[表达式树模型](01-expression-tree.md) 是理解 SymPy 内部机制的基础
 
 [^F-069]: facts.md F-069 — 顶层 __init__.py 环境检查与依赖要求

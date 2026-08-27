@@ -164,8 +164,8 @@ Notebook 嵌入演示
 
 ## 相关概念
 
-- [jupyterlite 指令详解](/concepts/04-jupyterlite-directive.md)
-- [notebooklite 指令详解](/concepts/05-notebooklite-directive.md)
-- [构建流程](/concepts/10-build-process.md)
-- [配置参考](/references/config-reference.md)
-- [核心模块源码](/references/main-source.md)
+- [jupyterlite 指令详解](../concepts/04-jupyterlite-directive.md)
+- [notebooklite 指令详解](../concepts/05-notebooklite-directive.md)
+- [构建流程](../concepts/10-build-process.md)
+- [配置参考](../references/config-reference.md)
+- [核心模块源码](../references/main-source.md)

@@ -4,12 +4,12 @@
 
 | 信源 ID | 文件 | 标题 | 对应事实 |
 |---------|------|------|----------|
-| ide-official | [ide.md](/references/ide.md) | CodeBuddy IDE 产品官网 | F-001 ~ F-008 |
-| docs-intro | [docs-intro.md](/references/docs-intro.md) | CodeBuddy IDE 文档介绍 | F-009 ~ F-025 |
-| cli-official | [cli.md](/references/cli.md) | CodeBuddy CLI 产品官网 | F-026 ~ F-038 |
-| npc-official | [npc.md](/references/npc.md) | CodeBuddy NPC 产品官网 | F-039 ~ F-051 |
-| workbuddy-official | [workbuddy.md](/references/workbuddy.md) | WorkBuddy 在线 AI 助手 | F-052 ~ F-060 |
-| security-official | [security.md](/references/security.md) | CodeBuddy Security 安全审计平台 | F-061 ~ F-079 |
+| ide-official | [ide.md](ide.md) | CodeBuddy IDE 产品官网 | F-001 ~ F-008 |
+| docs-intro | [docs-intro.md](docs-intro.md) | CodeBuddy IDE 文档介绍 | F-009 ~ F-025 |
+| cli-official | [cli.md](cli.md) | CodeBuddy CLI 产品官网 | F-026 ~ F-038 |
+| npc-official | [npc.md](npc.md) | CodeBuddy NPC 产品官网 | F-039 ~ F-051 |
+| workbuddy-official | [workbuddy.md](workbuddy.md) | WorkBuddy 在线 AI 助手 | F-052 ~ F-060 |
+| security-official | [security.md](security.md) | CodeBuddy Security 安全审计平台 | F-061 ~ F-079 |
 
 ## 信源使用说明
 
@@ -22,7 +22,7 @@
 
 ## 事实清单
 
-编号事实的完整列表见 [spec/facts.md](/spec/facts.md)，架构洞察见 [spec/insights.md](/spec/insights.md)。
+编号事实的完整列表见 [spec/facts.md](../spec/facts.md)，架构洞察见 [spec/insights.md](../spec/insights.md)。
 
 ```{toctree}
 :hidden:

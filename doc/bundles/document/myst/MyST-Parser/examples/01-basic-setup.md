@@ -165,6 +165,6 @@ sphinx-autobuild . _build/html
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [Sphinx 集成机制](/concepts/11-sphinx-integration.md)
-- [配置系统](/concepts/04-config-system.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [Sphinx 集成机制](../concepts/11-sphinx-integration.md)
+- [配置系统](../concepts/04-config-system.md)

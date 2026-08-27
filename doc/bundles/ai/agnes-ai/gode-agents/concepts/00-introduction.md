@@ -219,10 +219,10 @@ A: 不需要。框架在 `_setup_tools()` 中通过 `self.tools.setdefault("fina
 
 ## 相关链接
 
-- [快速开始](/concepts/01-getting-started.md) — 安装、配置、第一个 Agent
-- [架构总览](/concepts/02-architecture-overview.md) — 模块依赖、组件详解、执行流程
-- [MultiStepAgent：核心推理循环](/concepts/03-multi-step-agent.md) — run 循环、step 抽象、规划机制
-- [记忆系统：步骤序列](/concepts/04-memory-system.md) — MemoryStep 体系、消息序列化
-- [Agents API 参考](/references/agents-api.md) — 完整 API 文档
-- [Models API 参考](/references/models-api.md) — 模型后端配置
-- [Tools API 参考](/references/tools-api.md) — 工具定义与内置工具
+- [快速开始](01-getting-started.md) — 安装、配置、第一个 Agent
+- [架构总览](02-architecture-overview.md) — 模块依赖、组件详解、执行流程
+- [MultiStepAgent：核心推理循环](03-multi-step-agent.md) — run 循环、step 抽象、规划机制
+- [记忆系统：步骤序列](04-memory-system.md) — MemoryStep 体系、消息序列化
+- [Agents API 参考](../references/agents-api.md) — 完整 API 文档
+- [Models API 参考](../references/models-api.md) — 模型后端配置
+- [Tools API 参考](../references/tools-api.md) — 工具定义与内置工具

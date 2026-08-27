@@ -169,11 +169,11 @@ jupyterlite_overrides = "config/overrides.json"
 
 ## 完整字段参考
 
-所有 JSON 配置文件的完整字段列表见 [/references/json-config-source.md](/references/json-config-source.md)。
+所有 JSON 配置文件的完整字段列表见 [/references/json-config-source.md](../references/json-config-source.md)。
 
 ## 相关内容
 
-- [03-sphinx-conf](/concepts/03-sphinx-conf.md)
-- [06-try-examples](/concepts/06-try-examples.md)
-- [10-disabling-examples](/concepts/10-disabling-examples.md)
-- [/references/json-config-source.md](/references/json-config-source.md)
+- [03-sphinx-conf](03-sphinx-conf.md)
+- [06-try-examples](06-try-examples.md)
+- [10-disabling-examples](10-disabling-examples.md)
+- [/references/json-config-source.md](../references/json-config-source.md)

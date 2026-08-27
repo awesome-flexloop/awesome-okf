@@ -162,8 +162,8 @@ components/
 
 ## 相关概念
 
-- [主题概述](/concepts/00-introduction.md)
-- [安装与基础配置](/concepts/01-getting-started.md)
-- [配置系统详解](/concepts/03-configuration.md)
-- [头部按钮系统](/concepts/04-header-buttons.md)
-- [布局与模板定制](/concepts/07-layout-and-templates.md)
+- [主题概述](00-introduction.md)
+- [安装与基础配置](01-getting-started.md)
+- [配置系统详解](03-configuration.md)
+- [头部按钮系统](04-header-buttons.md)
+- [布局与模板定制](07-layout-and-templates.md)

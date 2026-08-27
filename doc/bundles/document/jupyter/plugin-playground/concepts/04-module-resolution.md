@@ -230,9 +230,9 @@ ImportResolver 实现了CSS样式的事务管理，支持回滚和提交：
 
 ## 相关概念
 
-- [整体架构与数据流](/concepts/01-architecture-overview.md)
-- [插件加载流程](/concepts/05-plugin-loader.md)
-- [Token 依赖注入系统](/concepts/06-token-system.md)
-- [联邦扩展与共享模块](/concepts/07-federated-extensions.md)
-- [样式处理与CSS隔离](/concepts/08-style-handling.md)
-- [ImportResolver API 参考](/references/resolver-api.md)
+- [整体架构与数据流](01-architecture-overview.md)
+- [插件加载流程](05-plugin-loader.md)
+- [Token 依赖注入系统](06-token-system.md)
+- [联邦扩展与共享模块](07-federated-extensions.md)
+- [样式处理与CSS隔离](08-style-handling.md)
+- [ImportResolver API 参考](../references/resolver-api.md)

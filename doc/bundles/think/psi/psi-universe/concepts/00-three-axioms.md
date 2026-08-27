@@ -100,9 +100,9 @@ D10 宇宙本体论的六条核心定理（递归自参照恒等式、量子-经
 
 ## 相关概念
 
-- [FLIP·XOR·SHIFT — 存在的基本操作](/concepts/01-flip-xor-shift.md)
-- [REC递归与元操作符 — 从操作到操作的操作](/concepts/02-recursion-meta-operator.md)
-- [维度谱系 D0-D∞ — 从操作到超高维](/concepts/03-dimension-spectrum.md)
-- [宇宙本体论（D10）— 中心理论](/concepts/04-cosmic-ontology.md)
-- [信息场与意识理论 — 物质-意识二元一体](/concepts/05-information-field.md)
-- [/psi-core/concepts/00-psi-equation.md](/psi-core/concepts/00-psi-equation.md)
+- [FLIP·XOR·SHIFT — 存在的基本操作](01-flip-xor-shift.md)
+- [REC递归与元操作符 — 从操作到操作的操作](02-recursion-meta-operator.md)
+- [维度谱系 D0-D∞ — 从操作到超高维](03-dimension-spectrum.md)
+- [宇宙本体论（D10）— 中心理论](04-cosmic-ontology.md)
+- [信息场与意识理论 — 物质-意识二元一体](05-information-field.md)
+- [/psi-core/concepts/00-psi-equation.md](../../psi-core/concepts/00-psi-equation.md)

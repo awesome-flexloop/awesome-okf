@@ -178,7 +178,7 @@ Execution requires permission confirmation, which is unavailable in --exec mode.
 
 ## 相关概念
 
-- [项目简介](/concepts/00-introduction.md)
-- [三包 monorepo 架构](/concepts/01-architecture.md)
-- [MCP 集成](/concepts/03-mcp-integration.md)
-- [CLI 命令与会话管理](/concepts/04-cli-commands.md)
+- [项目简介](00-introduction.md)
+- [三包 monorepo 架构](01-architecture.md)
+- [MCP 集成](03-mcp-integration.md)
+- [CLI 命令与会话管理](04-cli-commands.md)

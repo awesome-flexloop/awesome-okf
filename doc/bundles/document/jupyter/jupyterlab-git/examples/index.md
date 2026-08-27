@@ -20,8 +20,8 @@
 
 ## 相关资源
 
-- [概念文档](../concepts/)：深入了解 jupyterlab-git 的架构、API 和内部机制
-- [源码信源](../references/)：查看核心源码文件的分析文档
+- [概念文档](../concepts/index.md)：深入了解 jupyterlab-git 的架构、API 和内部机制
+- [源码信源](../references/index.md)：查看核心源码文件的分析文档
 
 ```{toctree}
 :hidden:

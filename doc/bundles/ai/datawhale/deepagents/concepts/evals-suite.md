@@ -178,6 +178,6 @@ CI 工作流包括 `evals.yml`、`harbor.yml`、`unified_evals.yml`。
 
 ## 与其他概念的关系
 
-- [核心SDK与三层架构](/ai/datawhale/deepagents/concepts/core-sdk) 是被评估的对象。
-- [Code终端编码Agent](/ai/datawhale/deepagents/concepts/code-module) 的编码能力通过评估套件验证。
-- [Monorepo 架构](/ai/datawhale/deepagents/concepts/monorepo-architecture) 描述了 evals 包在仓库中的位置。
+- 核心SDK与三层架构 是被评估的对象。
+- Code终端编码Agent 的编码能力通过评估套件验证。
+- Monorepo 架构 描述了 evals 包在仓库中的位置。

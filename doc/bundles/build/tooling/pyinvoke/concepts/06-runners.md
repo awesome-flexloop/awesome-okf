@@ -278,10 +278,10 @@ Runner 执行过程中可能抛出的异常：
 
 ## 相关概念
 
-- [Context 对象](/concepts/03-context-object.md)
-- [配置系统](/concepts/05-configuration.md)
-- [StreamWatcher 自动响应](/concepts/09-watchers.md)
-- [终端与 IO](/concepts/10-terminals-io.md)
-- [PyInvoke 源码信源登记](/references/pyinvoke-source.md)
+- [Context 对象](03-context-object.md)
+- [配置系统](05-configuration.md)
+- [StreamWatcher 自动响应](09-watchers.md)
+- [终端与 IO](10-terminals-io.md)
+- [PyInvoke 源码信源登记](../references/pyinvoke-source.md)
 
-[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](/references/pyinvoke-source.md)；Runner/Local/Result/Promise 定义于 `invoke/runners.py`。
+[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](../references/pyinvoke-source.md)；Runner/Local/Result/Promise 定义于 `invoke/runners.py`。

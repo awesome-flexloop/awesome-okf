@@ -143,7 +143,7 @@ myst-docutils-html5 --myst-suppress-warnings=myst.xref_missing input.md
 
 ## 相关概念
 
-- [配置系统](/concepts/04-config-system.md)
-- [解析器与渲染器](/concepts/06-parser-and-renderer.md)
-- [交叉引用](/concepts/08-cross-references.md)
-- [CLI 工具](/concepts/10-cli-tools.md)
+- [配置系统](04-config-system.md)
+- [解析器与渲染器](06-parser-and-renderer.md)
+- [交叉引用](08-cross-references.md)
+- [CLI 工具](10-cli-tools.md)

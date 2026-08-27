@@ -91,6 +91,6 @@ mdformat-myst
 
 ## 相关概念
 
-- [MyST 语法支持](/concepts/02-myst-syntax-support.md)
-- [指令选项 YAML 格式化](/concepts/03-directive-formatting.md)
-- [转义机制与后处理器](/concepts/04-escaping-and-postprocessors.md)
+- [MyST 语法支持](02-myst-syntax-support.md)
+- [指令选项 YAML 格式化](03-directive-formatting.md)
+- [转义机制与后处理器](04-escaping-and-postprocessors.md)

@@ -391,10 +391,10 @@ print(result.stdout)
 
 ## 相关概念
 
-- [Task 基础](/concepts/02-task-basics.md)
-- [Collection 与命名空间](/concepts/04-collection-namespace.md)
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [PyInvoke 简介](/concepts/00-introduction.md)
-- [PyInvoke 源码信源登记](/references/pyinvoke-source.md)
+- [Task 基础](02-task-basics.md)
+- [Collection 与命名空间](04-collection-namespace.md)
+- [5分钟快速上手](01-getting-started.md)
+- [PyInvoke 简介](00-introduction.md)
+- [PyInvoke 源码信源登记](../references/pyinvoke-source.md)
 
-[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](/references/pyinvoke-source.md)；Context 类定义于 `invoke/context.py`，Runner 类定义于 `invoke/runners.py`。
+[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](../references/pyinvoke-source.md)；Context 类定义于 `invoke/context.py`，Runner 类定义于 `invoke/runners.py`。

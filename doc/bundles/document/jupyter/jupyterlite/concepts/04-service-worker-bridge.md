@@ -115,7 +115,7 @@ Service Worker 还负责缓存静态资源以支持离线使用。典型策略�
 
 ## 相关概念
 
-- [整体架构](/concepts/01-architecture-overview.md)
-- [内容管理与文件系统](/concepts/03-contents-and-filesystem.md)
-- [浏览器存储](/concepts/05-browser-storage.md)
-- [内核系统](/concepts/02-kernel-system.md)
+- [整体架构](01-architecture-overview.md)
+- [内容管理与文件系统](03-contents-and-filesystem.md)
+- [浏览器存储](05-browser-storage.md)
+- [内核系统](02-kernel-system.md)

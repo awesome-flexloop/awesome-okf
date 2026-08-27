@@ -19,17 +19,17 @@ sources:
 
 ## 概念篇（concepts/）
 
-- [Awesome List 定位与双层分类](/concepts/00-introduction.md) — awesome-trae 作为生态索引枢纽的定位、8 大类双层分类架构、跨仓库 hub 模式、双语维护策略。
-- [贡献指南与权重评分审核机制](/concepts/01-contribution-guide.md) — 4 项 Must Have 准入标准、6 类提交类别、审核时间线、4 维权重评分体系（Relevance 30% + Quality 30% + Documentation 20% + Impact 20%）。
-- [资源分类体系详解](/concepts/02-resource-categories.md) — 8 大分类（Official/Projects/Agents/Tools/Tutorials/Templates/Learning/Community）的子类划分、收录范围和当前状态。
+- [Awesome List 定位与双层分类](concepts/00-introduction.md) — awesome-trae 作为生态索引枢纽的定位、8 大类双层分类架构、跨仓库 hub 模式、双语维护策略。
+- [贡献指南与权重评分审核机制](concepts/01-contribution-guide.md) — 4 项 Must Have 准入标准、6 类提交类别、审核时间线、4 维权重评分体系（Relevance 30% + Quality 30% + Documentation 20% + Impact 20%）。
+- [资源分类体系详解](concepts/02-resource-categories.md) — 8 大分类（Official/Projects/Agents/Tools/Tutorials/Templates/Learning/Community）的子类划分、收录范围和当前状态。
 
 ## 示例篇（examples/）
 
-- [添加资源条目示例](/examples/add-resource.md) — 完整 PR 提交流程：自检准入→确定分类→双语更新→PR 描述模板→等待审核，含条目格式规范和常见拒绝原因。
+- [添加资源条目示例](examples/add-resource.md) — 完整 PR 提交流程：自检准入→确定分类→双语更新→PR 描述模板→等待审核，含条目格式规范和常见拒绝原因。
 
 ## 信源登记簿（references/）
 
-- [Awesome TRAE 仓库资源索引](/references/awesome-source.md) — 仓库基本信息、文件结构、8 大分类状态表、跨仓库引用映射、审核权重速查表。
+- [Awesome TRAE 仓库资源索引](references/awesome-source.md) — 仓库基本信息、文件结构、8 大分类状态表、跨仓库引用映射、审核权重速查表。
 
 ## 关键事实
 

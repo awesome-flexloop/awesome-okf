@@ -377,7 +377,7 @@ def uri_rewrites(rewrites=[]):
 
 ## 相关文档
 
-- [Provider插件系统](/concepts/05-provider-plugin-system.md)：Provider加载机制详解
-- [Handler继承体系](/concepts/04-handler-hierarchy.md)：RenderingHandler基类详解
-- [URI重写机制](/concepts/08-uri-rewrite.md)：重写规则管道
-- [Provider源码分析](/references/providers-source.md)：内置Provider完整源码分析
+- [Provider插件系统](05-provider-plugin-system.md)：Provider加载机制详解
+- [Handler继承体系](04-handler-hierarchy.md)：RenderingHandler基类详解
+- [URI重写机制](08-uri-rewrite.md)：重写规则管道
+- [Provider源码分析](../references/providers-source.md)：内置Provider完整源码分析

@@ -272,10 +272,10 @@ ns.configure({
 
 ## 相关概念
 
-- [Sphinx 文档管理](/concepts/04-docs-sphinx.md)
-- [依赖 Vendorize 管理](/concepts/08-vendorize.md)
-- [终端交互工具](/concepts/07-utilities-watchers.md)
-- [自定义发布流程示例](/examples/custom-release-flow.md)
-- [打包安装验证示例](/examples/test-install-verification.md)
+- [Sphinx 文档管理](04-docs-sphinx.md)
+- [依赖 Vendorize 管理](08-vendorize.md)
+- [终端交互工具](07-utilities-watchers.md)
+- [自定义发布流程示例](../examples/custom-release-flow.md)
+- [打包安装验证示例](../examples/test-install-verification.md)
 
-[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](/references/invocations-source.md)。
+[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](../references/invocations-source.md)。

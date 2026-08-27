@@ -277,7 +277,7 @@ HeadlessShellPool创建的shell与交互式终端共享全局配置：
 
 ## 相关概念
 
-- [示例：执行shell命令](/examples/02-execute-shell-command.md)：execute-shell的完整用法
-- [示例：复用shell会话](/examples/03-reusable-shell-session.md)：持久化shell模式
+- [示例：执行shell命令](../examples/02-execute-shell-command.md)：execute-shell的完整用法
+- [示例：复用shell会话](../examples/03-reusable-shell-session.md)：持久化shell模式
 - [Shell与Worker机制](04-shell-and-worker.md)：shell底层实现
-- [无头命令执行API信源](/references/exec-source.md)：完整类型定义
+- [无头命令执行API信源](../references/exec-source.md)：完整类型定义

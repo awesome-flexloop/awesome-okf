@@ -256,6 +256,6 @@ npx http-server -p 8080 --cors
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [架构概览](/concepts/02-architecture-overview.md)
-- [Shell API 参考](/references/shell-api.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [架构概览](../concepts/02-architecture-overview.md)
+- [Shell API 参考](../references/shell-api.md)

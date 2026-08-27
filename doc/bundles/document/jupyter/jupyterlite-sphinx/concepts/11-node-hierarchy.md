@@ -339,11 +339,11 @@ jupyterlite-sphinx 的节点体系体现了几个值得注意的设计决策：
 
 ## 相关概念
 
-- [构建流程详解](/concepts/10-build-process.md)
-- [前端 JavaScript 交互机制](/concepts/12-frontend-js.md)
-- [指令系统总览](/concepts/03-directive-overview.md)
-- [jupyterlite 指令——嵌入 JupyterLab](/concepts/04-jupyterlite-directive.md)
-- [notebooklite 指令——嵌入经典 Notebook](/concepts/05-notebooklite-directive.md)
-- [replite 指令——嵌入交互式 REPL](/concepts/06-replite-directive.md)
-- [voici 指令——嵌入 Voici 仪表板](/concepts/07-voici-directive.md)
-- [核心模块源码](/references/main-source.md)
+- [构建流程详解](10-build-process.md)
+- [前端 JavaScript 交互机制](12-frontend-js.md)
+- [指令系统总览](03-directive-overview.md)
+- [jupyterlite 指令——嵌入 JupyterLab](04-jupyterlite-directive.md)
+- [notebooklite 指令——嵌入经典 Notebook](05-notebooklite-directive.md)
+- [replite 指令——嵌入交互式 REPL](06-replite-directive.md)
+- [voici 指令——嵌入 Voici 仪表板](07-voici-directive.md)
+- [核心模块源码](../references/main-source.md)

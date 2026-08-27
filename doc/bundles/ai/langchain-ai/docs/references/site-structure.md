@@ -335,7 +335,7 @@ pipeline/
 
 ## 交叉引用
 
-- 事实采集：[spec/facts.md](/ai/langchain-ai/docs/spec/facts.md)
-- 架构洞察：[spec/insights.md](/ai/langchain-ai/docs/spec/insights.md)
+- 事实采集：[spec/facts.md](../spec/facts.md)
+- 架构洞察：[spec/insights.md](../spec/insights.md)
 - 外部站点：[docs.langchain.com](https://docs.langchain.com)
 - API 参考：[reference.langchain.com](https://reference.langchain.com)

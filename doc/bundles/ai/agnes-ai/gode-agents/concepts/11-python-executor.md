@@ -543,8 +543,8 @@ LocalPythonExecutor 使用 `compile` + `exec` 执行代码，而 `evaluate_ast` 
 
 ## 相关链接
 
-- [CodeAgent：代码执行范式](/concepts/06-code-agent.md) — CodeAgent如何使用PythonExecutor
-- [工具系统：@tool装饰器与Tool基类](/concepts/07-tool-system.md) — get_tools_definition_code与send_tools
-- [AgentType 多模态类型系统](/concepts/10-agent-types.md) — 多模态数据在执行器中的传递
-- [监控与日志](/concepts/13-monitoring-logging.md) — 执行日志与错误处理
-- [Executor API 参考](/references/executor-api.md) — 执行器完整API
+- [CodeAgent：代码执行范式](06-code-agent.md) — CodeAgent如何使用PythonExecutor
+- [工具系统：@tool装饰器与Tool基类](07-tool-system.md) — get_tools_definition_code与send_tools
+- [AgentType 多模态类型系统](10-agent-types.md) — 多模态数据在执行器中的传递
+- [监控与日志](13-monitoring-logging.md) — 执行日志与错误处理
+- [Executor API 参考](../references/executor-api.md) — 执行器完整API

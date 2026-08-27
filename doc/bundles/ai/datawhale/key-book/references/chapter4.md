@@ -11,7 +11,7 @@ sources:
 
 > 来源：`docs/chapter4.md`，编辑：赵志民、李一飞、王茂霖、詹好
 
-本章系统推导有限和无限假设空间的泛化误差界，是[泛化界](/ai/datawhale/key-book/concepts/generalization-bound)概念的主体章节。
+本章系统推导有限和无限假设空间的泛化误差界，是泛化界概念的主体章节。
 
 ## 内容概要
 
@@ -79,5 +79,5 @@ $$\mathbb{P}\left(|R(h)-\hat{R}(h)|>\sqrt{\frac{8d\ln\frac{2em}{d}+8\ln\frac{4}{
 
 ## 参见
 
-- [第 3 章：复杂性分析](/ai/datawhale/key-book/references/chapter3)：VC 维与 Rademacher 复杂度的定义
-- [第 5 章：稳定性](/ai/datawhale/key-book/references/chapter5)：算法依赖的替代泛化保证
+- 第 3 章：复杂性分析：VC 维与 Rademacher 复杂度的定义
+- 第 5 章：稳定性：算法依赖的替代泛化保证

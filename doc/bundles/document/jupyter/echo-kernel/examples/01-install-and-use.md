@@ -190,5 +190,5 @@ A: 是的。JupyterLite支持同时安装多个内核（Pyodide、Xeus、Echo等
 
 ## 相关概念
 
-- [插件注册机制](/concepts/02-plugin-registration.md)
-- [构建与打包](/concepts/04-build-and-packaging.md)
+- [插件注册机制](../concepts/02-plugin-registration.md)
+- [构建与打包](../concepts/04-build-and-packaging.md)

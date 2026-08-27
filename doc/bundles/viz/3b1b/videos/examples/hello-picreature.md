@@ -350,6 +350,6 @@ manimgl hello_simple_char.py HelloSimpleCharacter
 
 ## 相关概念
 
-- [01 PiCreature 角色系统详解](/concepts/01-picreature-characters.md) — PiCreature类结构、mode表情状态机、视线追踪、眨眼机制、says/thinks对话气泡
-- [02 自定义 Scene 基类](/concepts/02-custom-scenes.md) — PiCreatureScene自动眨眼与视线追踪、TeacherStudentsScene教室场景
-- [ManimGL：基础图形绘制](/viz/3b1b/manim/examples/basic-shapes.md) — VGroup组合、颜色填充描边、arrange布局等ManimGL基础用法
+- [01 PiCreature 角色系统详解](../concepts/01-picreature-characters.md) — PiCreature类结构、mode表情状态机、视线追踪、眨眼机制、says/thinks对话气泡
+- [02 自定义 Scene 基类](../concepts/02-custom-scenes.md) — PiCreatureScene自动眨眼与视线追踪、TeacherStudentsScene教室场景
+- [ManimGL：基础图形绘制](../../manim/examples/basic-shapes.md) — VGroup组合、颜色填充描边、arrange布局等ManimGL基础用法

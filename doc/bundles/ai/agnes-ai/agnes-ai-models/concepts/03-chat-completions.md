@@ -150,7 +150,7 @@ response = client.chat.completions.create(
 )
 ```
 
-模型返回工具调用时，需要执行工具并将结果返回给模型，形成完整的Agent工作流。完整示例见 [Agent工作流示例](/examples/agent-workflow.md)。
+模型返回工具调用时，需要执行工具并将结果返回给模型，形成完整的Agent工作流。完整示例见 [Agent工作流示例](../examples/agent-workflow.md)。
 
 > 事实溯源：F-008、README.md L105
 
@@ -184,8 +184,8 @@ messages=[
 
 ## 相关概念
 
-- [5分钟快速开始](/concepts/01-getting-started.md)
-- [API认证与安全](/concepts/02-api-authentication.md)
-- [图像生成API](/concepts/04-image-generation.md)
-- [视频生成API](/concepts/05-video-generation.md)
-- [Python对话示例](/examples/chat-completion.md)
+- [5分钟快速开始](01-getting-started.md)
+- [API认证与安全](02-api-authentication.md)
+- [图像生成API](04-image-generation.md)
+- [视频生成API](05-video-generation.md)
+- [Python对话示例](../examples/chat-completion.md)

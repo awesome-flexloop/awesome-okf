@@ -213,6 +213,6 @@ x = np.linspace(0, 2*np.pi, 100)
 
 ## 相关内容
 
-- [06-try-examples](/concepts/06-try-examples.md)
-- [05-config-files](/concepts/05-config-files.md)
-- [/examples/04-matplotlib-notebook.md](/examples/04-matplotlib-notebook.md)
+- [06-try-examples](06-try-examples.md)
+- [05-config-files](05-config-files.md)
+- [/examples/04-matplotlib-notebook.md](../examples/04-matplotlib-notebook.md)

@@ -62,5 +62,5 @@ TinyRAG 位于"增强系统层"，上承模型基础（TinyTransformer、TinyLLM
 ## 延伸
 
 - 图结构进阶：TinyGraphRAG（主体模块第 8 项）
-- 工具调用延伸：[TinyAgent](/ai/datawhale/tiny-universe/concepts/tiny-agent)
-- 方法论根源：[白盒构建理念](/ai/datawhale/tiny-universe/concepts/white-box-philosophy)
+- 工具调用延伸：TinyAgent
+- 方法论根源：白盒构建理念

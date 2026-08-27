@@ -75,8 +75,8 @@ PocketFlow 是一个极简的 LLM Agent 框架，核心代码仅约 100 行。�
 
 ## 源码
 
-- 核心：[pocketflow/\_\_init\_\_.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow/pocketflow/__init__.py)
-- 测试：[tests/](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow/tests/)
+- 核心：pocketflow/\_\_init\_\_.py
+- 测试：tests/
 
 ```{toctree}
 :hidden:

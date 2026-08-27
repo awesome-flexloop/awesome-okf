@@ -15,11 +15,11 @@ sources:
 
 # 可认证计算（Attested Computations）
 
-可认证计算（Attested Computation）概念不仅承载一个值*意味着什么*，还承载一种受认可的*计算*它的方式，从而消费者能够确认智能体运行的是受认可的计算，而非自行临场发挥的计算。[^okf-spec] 溯源（§5.1，见 [溯源与信源](./provenance-sources.md)）回答"这条主张从何而来"；认证回答"这个数字是否正是按我们声明必须采用的方式产生的"。OKF 记录计算本身及其核验手段；它自身不执行任何东西。
+可认证计算（Attested Computation）概念不仅承载一个值*意味着什么*，还承载一种受认可的*计算*它的方式，从而消费者能够确认智能体运行的是受认可的计算，而非自行临场发挥的计算。[^okf-spec] 溯源（§5.1，见 [溯源与信源](provenance-sources.md)）回答"这条主张从何而来"；认证回答"这个数字是否正是按我们声明必须采用的方式产生的"。OKF 记录计算本身及其核验手段；它自身不执行任何东西。
 
 ## 计算作为独立概念（§10.1）
 
-一套受认可的计算是一个独立的 `type: Attested Computation` 概念。需要该值的概念（一个 `Metric`、一个 `BigQuery Table`）用普通 markdown 链接（§6）指到它（链接语法见 [交叉链接与路径](./cross-linking-paths.md)）。三条动机支撑这种独立概念：
+一套受认可的计算是一个独立的 `type: Attested Computation` 概念。需要该值的概念（一个 `Metric`、一个 `BigQuery Table`）用普通 markdown 链接（§6）指到它（链接语法见 [交叉链接与路径](cross-linking-paths.md)）。三条动机支撑这种独立概念：
 
 - **`runtime` 定义了 `parameters` 的含义。** 一个参数是 SQL 绑定变量、dbt var 还是 Python 实参，取决于运行时。把 `runtime` 与 `parameters` 放在同一个 frontmatter 中，使绑定语义不言自明。
 - **一套计算，多个消费者。** 同一套计算可以为指标、仪表盘概念和报告共同背书；作为一个概念，它被引用一次、复用多次。
@@ -27,11 +27,11 @@ sources:
 
 ## 契约字段（§10.2）
 
-契约即概念的顶层 frontmatter。除溯源、信任与生命周期字段族（§5，见 [溯源与信源](./provenance-sources.md) 与 [信任：generated 与 verified](./trust-generated-verified.md)）外，可认证计算概念还携带：
+契约即概念的顶层 frontmatter。除溯源、信任与生命周期字段族（§5，见 [溯源与信源](provenance-sources.md) 与 [信任：generated 与 verified](trust-generated-verified.md)）外，可认证计算概念还携带：
 
 - `runtime`：此类型**必填**（REQUIRED）。唯一说明如何运行计算的字段，因此也说明执行器与认证器如何解读它，以及 `parameters` 的含义为何。示例值：`bigquery`、`postgres`、`dbt`、`python`、`Looker`。
 - `parameters`：一个带类型、带名字的"洞"的列表，供智能体填写。每条：`{ name, type, required }`。绑定语义遵循 `runtime`。
-- `computation`：可选。指向存放计算的文件路径（§6.2，见 [交叉链接与路径](./cross-linking-paths.md)），用于替代内联正文围栏（见下文"计算本身"）。缺省 ⇒ 正文 `# Computation` 围栏即计算本身。
+- `computation`：可选。指向存放计算的文件路径（§6.2，见 [交叉链接与路径](cross-linking-paths.md)），用于替代内联正文围栏（见下文"计算本身"）。缺省 ⇒ 正文 `# Computation` 围栏即计算本身。
 - `executor`：计算如何运行。`resource` 指明运行指令或代码；运行器（一个智能体，或确定性消费者代码）遵循它。`receipt` 声明一次运行必须返回的字段，即认证器所检查的证据（例如一个 BigQuery 的 `job_id` 与该作业实际执行的 SQL）。
 - `attester`：确定性检查。`resource` 指明代码（无 LLM），它接收回执并返回裁决。它被设计为在消费者侧运行。
 
@@ -123,7 +123,7 @@ computed by [the revenue computation](../computations/revenue.md).
 
 ## 核验（verification）对比认证（attestation）（§10.6）
 
-`verified`（§5.2，见 [信任：generated 与 verified](./trust-generated-verified.md)）与认证是两回事，二者并存：[^okf-spec]
+`verified`（§5.2，见 [信任：generated 与 verified](trust-generated-verified.md)）与认证是两回事，二者并存：[^okf-spec]
 
 - `verified` 确认*定义*仍符合策略。它是文档级、慢速、且记录在 bundle 中的。
 - 认证确认某一次*运行*以受认可的方式产生了该值。它是逐次调用、运行时、且不存储在 bundle 中的。
@@ -132,8 +132,8 @@ computed by [the revenue computation](../computations/revenue.md).
 
 ## 相关概念
 
-- [信任：generated 与 verified](./trust-generated-verified.md)
-- [交叉链接与路径](./cross-linking-paths.md)
-- [溯源与信源](./provenance-sources.md)
+- [信任：generated 与 verified](trust-generated-verified.md)
+- [交叉链接与路径](cross-linking-paths.md)
+- [溯源与信源](provenance-sources.md)
 
-[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](/references/okf-spec.md)。
+[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](../references/okf-spec.md)。

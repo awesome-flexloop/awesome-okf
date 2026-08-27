@@ -105,5 +105,5 @@ code-your-own-llm 将文档质量视为项目成熟度的核心指标。项目�
 
 ## 相关概念
 
-- [全栈式 LLM 学习路径](./fullstack-learning-path.md)——规范所服务的 12 章教学内容
+- [全栈式 LLM 学习路径](fullstack-learning-path.md)——规范所服务的 12 章教学内容
 - [信源登记](../references/readme-source.md)——AGENTS.md 所在的官方仓库

@@ -16,7 +16,7 @@ sources:
 
 ## 概述
 
-MCP（Model Context Protocol）是 Anthropic 推出的开放协议，允许 AI 模型通过标准化接口与外部工具、数据源和服务交互。hermes-agent 在 [tools/mcp_tool.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py) 中实现了完整的 MCP 客户端，将 MCP 服务器暴露的工具、资源、提示词动态桥接到 hermes 自身的 ToolRegistry 中，使 Agent 能像使用内置工具一样调用 MCP 工具。
+MCP（Model Context Protocol）是 Anthropic 推出的开放协议，允许 AI 模型通过标准化接口与外部工具、数据源和服务交互。hermes-agent 在 tools/mcp_tool.py 中实现了完整的 MCP 客户端，将 MCP 服务器暴露的工具、资源、提示词动态桥接到 hermes 自身的 ToolRegistry 中，使 Agent 能像使用内置工具一样调用 MCP 工具。
 
 核心能力：
 - **三种传输方式**：stdio（本地子进程）、SSE（Server-Sent Events）、HTTP（Streamable HTTP）
@@ -321,22 +321,22 @@ def _render_mcp_resource_block(block, server_name=""):
 
 | 函数 | 文件位置 | 说明 |
 |------|----------|------|
-| `register_mcp_servers(servers)` | [tools/mcp_tool.py#L6631](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py#L6631) | 连接 MCP 服务器并注册工具（幂等） |
-| `_load_mcp_config()` | [tools/mcp_tool.py#L4985](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py#L4985) | 从 config.yaml 加载 mcp_servers 配置 |
-| `discover_mcp_tools()` | [tools/mcp_tool.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py) | Agent 启动时的工具发现入口 |
-| `_resolve_stdio_command(command, env)` | [tools/mcp_tool.py#L702](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py#L702) | 解析 stdio 命令为绝对路径 |
-| `_build_safe_env(user_env)` | [tools/mcp_tool.py#L493](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py#L493) | 构建安全的子进程环境变量 |
-| `_wrap_command_with_watchdog(command, args)` | [tools/mcp_tool.py#L749](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py#L749) | 为子进程添加看门狗防孤儿 |
-| `_filter_suspicious_mcp_servers(servers)` | [tools/mcp_tool.py#L4958](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py#L4958) | 过滤可疑服务器配置 |
-| `_validate_remote_mcp_url(name, url)` | [tools/mcp_tool.py#L1106](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py#L1106) | 验证远程 MCP URL 合法性 |
-| `_resolve_client_cert(name, config)` | [tools/mcp_tool.py#L1158](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py#L1158) | 解析 TLS 客户端证书 |
-| `_resolve_identity_header(name, config)` | [tools/mcp_tool.py#L1231](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py#L1231) | 解析身份认证头 |
-| `_render_mcp_resource_block(block, server_name)` | [tools/mcp_tool.py#L923](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py#L923) | 渲染 MCP 资源块为 hermes 格式 |
-| `_cache_mcp_image_block(block)` | [tools/mcp_tool.py#L791](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py#L791) | 缓存 MCP 图片到本地文件 |
-| `_cache_mcp_audio_block(block)` | [tools/mcp_tool.py#L883](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py#L883) | 缓存 MCP 音频到本地文件 |
-| `_paginate_full_list(list_method, items_attr, server_name)` | [tools/mcp_tool.py#L661](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py#L661) | 分页获取完整工具/资源列表 |
-| `_kill_orphaned_mcp_children()` | [tools/mcp_tool.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py) | 清理孤儿 MCP 子进程（cron tick 调用） |
-| `_classify_mcp_failure(exc)` | [tools/mcp_tool.py#L1072](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py#L1072) | 分类 MCP 失败类型（用于重连/冷却决策） |
+| `register_mcp_servers(servers)` | tools/mcp_tool.py#L6631 | 连接 MCP 服务器并注册工具（幂等） |
+| `_load_mcp_config()` | tools/mcp_tool.py#L4985 | 从 config.yaml 加载 mcp_servers 配置 |
+| `discover_mcp_tools()` | tools/mcp_tool.py | Agent 启动时的工具发现入口 |
+| `_resolve_stdio_command(command, env)` | tools/mcp_tool.py#L702 | 解析 stdio 命令为绝对路径 |
+| `_build_safe_env(user_env)` | tools/mcp_tool.py#L493 | 构建安全的子进程环境变量 |
+| `_wrap_command_with_watchdog(command, args)` | tools/mcp_tool.py#L749 | 为子进程添加看门狗防孤儿 |
+| `_filter_suspicious_mcp_servers(servers)` | tools/mcp_tool.py#L4958 | 过滤可疑服务器配置 |
+| `_validate_remote_mcp_url(name, url)` | tools/mcp_tool.py#L1106 | 验证远程 MCP URL 合法性 |
+| `_resolve_client_cert(name, config)` | tools/mcp_tool.py#L1158 | 解析 TLS 客户端证书 |
+| `_resolve_identity_header(name, config)` | tools/mcp_tool.py#L1231 | 解析身份认证头 |
+| `_render_mcp_resource_block(block, server_name)` | tools/mcp_tool.py#L923 | 渲染 MCP 资源块为 hermes 格式 |
+| `_cache_mcp_image_block(block)` | tools/mcp_tool.py#L791 | 缓存 MCP 图片到本地文件 |
+| `_cache_mcp_audio_block(block)` | tools/mcp_tool.py#L883 | 缓存 MCP 音频到本地文件 |
+| `_paginate_full_list(list_method, items_attr, server_name)` | tools/mcp_tool.py#L661 | 分页获取完整工具/资源列表 |
+| `_kill_orphaned_mcp_children()` | tools/mcp_tool.py | 清理孤儿 MCP 子进程（cron tick 调用） |
+| `_classify_mcp_failure(exc)` | tools/mcp_tool.py#L1072 | 分类 MCP 失败类型（用于重连/冷却决策） |
 
 ### MCP 工具定义示例
 
@@ -370,10 +370,10 @@ hermes mcp logs <name>                # 查看服务器 stderr 日志
 
 | 文件 | 内容 |
 |------|------|
-| [tools/mcp_tool.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py) | MCP 客户端核心实现（连接、注册、调用、安全、资源） |
-| [tools/mcp_schema_cache.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_schema_cache.py) | Schema 磁盘缓存（懒加载支持） |
-| [hermes_cli/mcp_config.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/hermes_cli/mcp_config.py) | MCP CLI 配置管理子命令 |
-| [tools/registry.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/registry.py) | ToolRegistry（MCP 工具注册目标） |
+| tools/mcp_tool.py | MCP 客户端核心实现（连接、注册、调用、安全、资源） |
+| tools/mcp_schema_cache.py | Schema 磁盘缓存（懒加载支持） |
+| hermes_cli/mcp_config.py | MCP CLI 配置管理子命令 |
+| tools/registry.py | ToolRegistry（MCP 工具注册目标） |
 
 ## 相关 Concepts
 

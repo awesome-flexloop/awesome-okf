@@ -219,6 +219,6 @@ copier update --ask "db_*"
 - [Worker 与生命周期](05-worker-and-lifecycle.md)
 - [CLI 命令参考](08-cli-reference.md)
 - [VCS 集成与版本管理](06-vcs-integration.md)
-- [Copier 源码信源登记](/references/copier-source.md)
+- [Copier 源码信源登记](../references/copier-source.md)
 
-[^copier-source]: Copier 源码信源，见 [copier-source.md](/references/copier-source.md)。
+[^copier-source]: Copier 源码信源，见 [copier-source.md](../references/copier-source.md)。

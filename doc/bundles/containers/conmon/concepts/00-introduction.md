@@ -63,7 +63,7 @@ conmon 就是为解决这些问题而存在的"最小守护进程"——它不�
 
 ## 核心职责
 
-根据 [README 信源](/bundles/containers/conmon/references/readme-source.md) 和源码实现，conmon 在容器运行期间承担以下职责：
+根据 [README 信源](../references/readme-source.md) 和源码实现，conmon 在容器运行期间承担以下职责：
 
 ### 1. 守护进程化与进程隔离
 

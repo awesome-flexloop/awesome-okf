@@ -94,7 +94,7 @@ zmq::proxy_steerable(frontend, backend, capture, control);
 
 ## 相关概念
 
-- [01 context_t](/concepts/01-context.md)
-- [03 message 与 buffer](/concepts/03-message-and-buffer.md)
-- [04 错误处理](/concepts/04-error-handling.md)
-- [信源：zmq.hpp](/references/zmq-hpp.md)
+- [01 context_t](01-context.md)
+- [03 message 与 buffer](03-message-and-buffer.md)
+- [04 错误处理](04-error-handling.md)
+- [信源：zmq.hpp](../references/zmq-hpp.md)

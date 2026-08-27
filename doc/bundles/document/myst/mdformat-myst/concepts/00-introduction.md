@@ -72,5 +72,5 @@ mdformat-myst 支持格式化以下 MyST 语法元素：
 
 ## 相关概念
 
-- [插件架构](/concepts/01-plugin-architecture.md)
-- [MyST 语法支持](/concepts/02-myst-syntax-support.md)
+- [插件架构](01-plugin-architecture.md)
+- [MyST 语法支持](02-myst-syntax-support.md)

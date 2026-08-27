@@ -56,4 +56,4 @@ sources:
 
 README 在"项目意义"中指出，成熟生态使学习者"机械地使用工具包而无法从原理出发进行自由的魔改"。白盒构建通过手写实现消除这一 gap——手写过一次 RAG 的检索-拼接-生成循环，比调用十次 `RetrievalQA.from_chain_type` 更能理解 RAG 的瓶颈与改进方向。
 
-这一理念在 [TinyDiffusion](/ai/datawhale/tiny-universe/concepts/tiny-diffusion)、[TinyRAG](/ai/datawhale/tiny-universe/concepts/tiny-rag)、[TinyAgent](/ai/datawhale/tiny-universe/concepts/tiny-agent)、[TinyLLM](/ai/datawhale/tiny-universe/concepts/tiny-llm) 等概念中均有具体体现。
+这一理念在 TinyDiffusion、TinyRAG、TinyAgent、TinyLLM 等概念中均有具体体现。

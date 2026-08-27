@@ -123,6 +123,6 @@ export interface IOptions extends IDocumentProviderFactory.IOptions {
 
 ## 相关概念
 
-- [WebRtcManager配置管理](/concepts/03-webrtc-manager.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [房间ID与信令机制](/concepts/05-room-and-signaling.md)
+- [WebRtcManager配置管理](../concepts/03-webrtc-manager.md)
+- [架构总览](../concepts/02-architecture-overview.md)
+- [房间ID与信令机制](../concepts/05-room-and-signaling.md)

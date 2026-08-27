@@ -26,7 +26,7 @@ source: utils/
 def call_llm(prompt: str, use_cache: bool = True) -> str:
 ```
 
-源码位置：[utils/call_llm.py#L128-L158](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/call_llm.py#L128-L158)
+源码位置：utils/call_llm.py#L128-L158
 
 统一的 LLM 调用接口，支持多提供商（Google Gemini / OpenAI 兼容 API）和本地 JSON 缓存。
 
@@ -62,7 +62,7 @@ def call_llm(prompt: str, use_cache: bool = True) -> str:
 def get_llm_provider():
 ```
 
-源码位置：[utils/call_llm.py#L46-L51](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/call_llm.py#L46-L51)
+源码位置：utils/call_llm.py#L46-L51
 
 检测 LLM 提供商：优先读取 `LLM_PROVIDER` 环境变量；若未设置但存在 `GEMINI_PROJECT_ID` 或 `GEMINI_API_KEY`，默认返回 `"GEMINI"`。
 
@@ -72,7 +72,7 @@ def get_llm_provider():
 def _call_llm_gemini(prompt: str) -> str:
 ```
 
-源码位置：[utils/call_llm.py#L161-L177](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/call_llm.py#L161-L177)
+源码位置：utils/call_llm.py#L161-L177
 
 调用 Google Gemini API。支持两种认证方式：
 - Vertex AI：设置 `GEMINI_PROJECT_ID`（可选 `GEMINI_LOCATION`，默认 `us-central1`）
@@ -86,7 +86,7 @@ def _call_llm_gemini(prompt: str) -> str:
 def _call_llm_provider(prompt: str) -> str:
 ```
 
-源码位置：[utils/call_llm.py#L54-L125](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/call_llm.py#L54-L125)
+源码位置：utils/call_llm.py#L54-L125
 
 调用 OpenAI 兼容 API（支持 Ollama、xAI 等）。通过环境变量配置：
 - `LLM_PROVIDER`：提供商名称（如 `"OLLAMA"`、`"XAI"`）
@@ -98,7 +98,7 @@ def _call_llm_provider(prompt: str) -> str:
 
 #### load_cache() / save_cache(cache)
 
-源码位置：[utils/call_llm.py#L29-L43](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/call_llm.py#L29-L43)
+源码位置：utils/call_llm.py#L29-L43
 
 从/向 `llm_cache.json` 读取/写入缓存 JSON 文件。加载失败时返回空字典，保存失败时记录警告。
 
@@ -117,7 +117,7 @@ def crawl_github_files(
 ):
 ```
 
-源码位置：[utils/crawl_github_files.py#L11-L343](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/crawl_github_files.py#L11-L343)
+源码位置：utils/crawl_github_files.py#L11-L343
 
 从 GitHub 仓库抓取文件内容，支持 HTTPS URL 和 SSH URL 两种方式。
 
@@ -185,7 +185,7 @@ def crawl_local_files(
 ):
 ```
 
-源码位置：[utils/crawl_local_files.py#L6-L129](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/crawl_local_files.py#L6-L129)
+源码位置：utils/crawl_local_files.py#L6-L129
 
 遍历本地目录抓取文件内容，自动尊重 `.gitignore` 规则。
 
@@ -225,7 +225,7 @@ def crawl_local_files(
 def get_content_for_indices(files_data, indices):
 ```
 
-源码位置：[nodes.py#L11-L19](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py#L11-L19)
+源码位置：nodes.py#L11-L19
 
 模块级辅助函数（定义在 nodes.py 中，不属于任何类），根据文件索引列表从 files_data 中提取对应文件内容。
 
@@ -251,7 +251,7 @@ def get_content_for_indices(files_data, indices):
 def create_tutorial_flow():
 ```
 
-源码位置：[flow.py#L12-L33](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/flow.py#L12-L33)
+源码位置：flow.py#L12-L33
 
 创建并返回完整的代码库教程生成流程（Flow 对象）。
 
@@ -286,7 +286,7 @@ fetch_repo >> identify_abstractions >> analyze_relationships >> order_chapters >
 def main():
 ```
 
-源码位置：[main.py#L39-L108](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/main.py#L39-L108)
+源码位置：main.py#L39-L108
 
 命令行入口函数，解析命令行参数、初始化 shared 字典、创建并运行流程。
 
@@ -308,14 +308,14 @@ def main():
 
 ### 默认文件模式
 
-**DEFAULT_INCLUDE_PATTERNS**（[main.py#L10-L14](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/main.py#L10-L14)）：
+**DEFAULT_INCLUDE_PATTERNS**（main.py#L10-L14）：
 ```
 *.py, *.js, *.jsx, *.ts, *.tsx, *.go, *.java, *.pyi, *.pyx,
 *.c, *.cc, *.cpp, *.h, *.md, *.rst, *Dockerfile,
 *Makefile, *.yaml, *.yml
 ```
 
-**DEFAULT_EXCLUDE_PATTERNS**（[main.py#L16-L36](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/main.py#L16-L36)）：
+**DEFAULT_EXCLUDE_PATTERNS**（main.py#L16-L36）：
 ```
 assets/*, data/*, images/*, public/*, static/*, temp/*,
 *docs/*, *venv/*, *.venv/*, *test*, *tests/*, *examples/*,
@@ -332,8 +332,8 @@ main() 函数初始化的 shared 字典包含以下键：
 
 ### 源码位置
 
-- [main.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/main.py)
-- [flow.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/flow.py)
-- [utils/call_llm.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/call_llm.py)
-- [utils/crawl_github_files.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/crawl_github_files.py)
-- [utils/crawl_local_files.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/crawl_local_files.py)
+- main.py
+- flow.py
+- utils/call_llm.py
+- utils/crawl_github_files.py
+- utils/crawl_local_files.py

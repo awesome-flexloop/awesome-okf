@@ -99,5 +99,5 @@ sources:
 
 ## 相关概念
 
-- [mdformat 渲染集成与自定义渲染器](/concepts/07-mdformat-integration.md)
-- [指令转换机制与 directives.yml 映射](/concepts/05-directive-conversion.md)
+- [mdformat 渲染集成与自定义渲染器](../concepts/07-mdformat-integration.md)
+- [指令转换机制与 directives.yml 映射](../concepts/05-directive-conversion.md)

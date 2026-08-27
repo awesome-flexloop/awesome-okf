@@ -191,9 +191,9 @@ output = output * exp(lse) / (exp(lse) + exp(attn_sink))
 
 ## 六、相关链接
 
-- [/deepseek/flash-mla/concepts/overview](/ai/deepseek/flash-mla/concepts/overview) — FlashMLA 整体概述
-- [/deepseek/flash-mla/concepts/splitkv](/ai/deepseek/flash-mla/concepts/splitkv) — SplitKV 长序列技术
-- [/deepseek/flash-mla/concepts/kv-cache-quantization](/ai/deepseek/flash-mla/concepts/kv-cache-quantization) — FP8 KV cache 量化
-- [/deepseek/flash-mla/concepts/hopper-blackwell-kernels](/ai/deepseek/flash-mla/concepts/hopper-blackwell-kernels) — Hopper/Blackwell 内核设计
-- [/deepseek/flash-mla/references/api](/ai/deepseek/flash-mla/references/api) — Python API 参考
-- [/deepseek/flash-mla/examples/basic-decoding](/ai/deepseek/flash-mla/examples/basic-decoding) — 基础解码使用示例
+- /deepseek/flash-mla/concepts/overview — FlashMLA 整体概述
+- /deepseek/flash-mla/concepts/splitkv — SplitKV 长序列技术
+- /deepseek/flash-mla/concepts/kv-cache-quantization — FP8 KV cache 量化
+- /deepseek/flash-mla/concepts/hopper-blackwell-kernels — Hopper/Blackwell 内核设计
+- /deepseek/flash-mla/references/api — Python API 参考
+- /deepseek/flash-mla/examples/basic-decoding — 基础解码使用示例

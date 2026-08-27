@@ -78,6 +78,6 @@ sources:
 
 ## 相关概念
 
-- [简介](/concepts/00-introduction.md)
-- [缓存架构设计](/concepts/02-architecture.md)
-- [缓存API详解](/concepts/03-cache-api.md)
+- [简介](../concepts/00-introduction.md)
+- [缓存架构设计](../concepts/02-architecture.md)
+- [缓存API详解](../concepts/03-cache-api.md)

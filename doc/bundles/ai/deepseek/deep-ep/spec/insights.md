@@ -6,7 +6,7 @@
 
 ### 1.1 V1 Buffer：NVSHMEM 中心化的三模式设计
 
-V1 `Buffer`（[deep_ep/buffers/legacy.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/DeepEP/deep_ep/buffers/legacy.py)）基于 NVSHMEM 构建，将通信场景分为三种模式：
+V1 `Buffer`（deep_ep/buffers/legacy.py）基于 NVSHMEM 构建，将通信场景分为三种模式：
 - **节点内高吞吐（intranode）**：纯 NVLink，IPC 句柄交换 + P2P 读写
 - **节点间高吞吐（internode）**：RDMA + NVLink 分层，通过 NVSHMEM team 实现
 - **低延迟模式（low-latency）**：IBGDA（InfiniBand GPU Direct Async）+ 用户态 QP 直接读写，绕过 CPU 参与
@@ -15,7 +15,7 @@ V1 `Buffer`（[deep_ep/buffers/legacy.py](file:///d:/spaces/SpecWeave/external/l
 
 ### 1.2 V2 ElasticBuffer：NCCL 对称内存 + 统一架构
 
-V2 `ElasticBuffer`（[deep_ep/buffers/elastic.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/DeepEP/deep_ep/buffers/elastic.py)）是一次根本性的架构重写：
+V2 `ElasticBuffer`（deep_ep/buffers/elastic.py）是一次根本性的架构重写：
 
 **核心转变**：从 NVSHMEM 对称内存迁移到 NCCL 对称内存（`NCCLSymmetricMemoryContext`）。这一转变的原因包括：
 1. **NCCL 生态集成**：DeepEP 可以直接复用 PyTorch 已有的 NCCL 通信器（通过 `EP_REUSE_NCCL_COMM` 环境变量控制，默认启用），避免 NVSHMEM 与 NCCL 共存的资源冲突
@@ -161,9 +161,9 @@ DeepEP 在 DeepSeek 训练/推理栈中的定位：
 
 | 组件 | 职责 | 与 DeepEP 的关系 |
 |------|------|-----------------|
-| [DeepGEMM](/ai/deepseek/deep-gemm) | MoE 分组 GEMM 内核 | 在 dispatch 之后、combine 之前执行专家计算 |
-| [LPLB](/ai/deepseek/lplb) | 专家负载均衡器 | 决定 top-k 路由，输出 `topk_idx` 给 dispatch |
-| [DualPipe](/ai/deepseek/dual-pipe) | 双向流水线并行 | EP + PP 混合并行，ElasticBuffer 提供 PP send/recv |
+| [DeepGEMM](../../deep-gemm/index.md) | MoE 分组 GEMM 内核 | 在 dispatch 之后、combine 之前执行专家计算 |
+| [LPLB](../../lplb/index.md) | 专家负载均衡器 | 决定 top-k 路由，输出 `topk_idx` 给 dispatch |
+| [DualPipe](../../dual-pipe/index.md) | 双向流水线并行 | EP + PP 混合并行，ElasticBuffer 提供 PP send/recv |
 | DeepEP | EP 通信 | dispatch/combine/Engram/PP/AGRS 统一通信层 |
 
 DeepEP 的 ElasticBuffer 不仅服务于 EP dispatch/combine，还通过 PP send/recv 和 AGRS 统一了流水线并行和序列并行的通信需求，成为 DeepSeek 混合并行训练的通信基石。

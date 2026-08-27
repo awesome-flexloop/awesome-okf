@@ -174,13 +174,13 @@ shell: sh
 
 ## 为什么没有输入参数
 
-注意 `action.yml` 中没有 `inputs` 字段。这意味着这个 Action 不接受任何配置参数——它总是注册同一个 `sphinx_matcher.json` 文件。如果需要自定义匹配行为，你需要创建自己的 Problem Matcher（参见 [自定义 Problem Matcher 示例](/examples/custom-matcher.md)）。
+注意 `action.yml` 中没有 `inputs` 字段。这意味着这个 Action 不接受任何配置参数——它总是注册同一个 `sphinx_matcher.json` 文件。如果需要自定义匹配行为，你需要创建自己的 Problem Matcher（参见 [自定义 Problem Matcher 示例](../examples/custom-matcher.md)）。
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [Problem Matcher JSON 格式](/concepts/03-matcher-json.md)
-- [三种正则模式详解](/concepts/04-regex-patterns.md)
-- [测试 Problem Matcher](/concepts/05-testing.md)
-- [自定义 Problem Matcher 示例](/examples/custom-matcher.md)
-- [源码信源登记](/references/github-problem-matcher-source.md)
+- [5分钟快速上手](01-getting-started.md)
+- [Problem Matcher JSON 格式](03-matcher-json.md)
+- [三种正则模式详解](04-regex-patterns.md)
+- [测试 Problem Matcher](05-testing.md)
+- [自定义 Problem Matcher 示例](../examples/custom-matcher.md)
+- [源码信源登记](../references/github-problem-matcher-source.md)

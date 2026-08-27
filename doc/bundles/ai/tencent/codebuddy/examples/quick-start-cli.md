@@ -186,14 +186,14 @@ CLI 按 Token 消耗计费（F-038）。全代码库分析、多 Sub-agents 并�
 
 ## 下一步
 
-- 阅读 [CLI 概念文档](/concepts/02-cli.md) 深入了解分层记忆与 Sub-agents 架构
-- 阅读 [IDE 工作流示例](/examples/ide-workflow.md) 了解产设研一体的完整流程
-- 阅读 [NPC 概念](/concepts/03-npc.md) 了解云端自主 Agent 如何基于同样的核心能力交付完整 PR
+- 阅读 [CLI 概念文档](../concepts/02-cli.md) 深入了解分层记忆与 Sub-agents 架构
+- 阅读 [IDE 工作流示例](ide-workflow.md) 了解产设研一体的完整流程
+- 阅读 [NPC 概念](../concepts/03-npc.md) 了解云端自主 Agent 如何基于同样的核心能力交付完整 PR
 
 ## 相关概念
 
-- [CLI](/concepts/02-cli.md) — CLI 架构与分层记忆详解
-- [CodeBuddy IDE](/concepts/01-ide.md) — 与 CLI 共享高级能力的桌面端
-- [产品矩阵总览](/concepts/00-product-matrix.md) — CLI 在三态一体中的定位
-- [NPC 云端 AI 员工](/concepts/03-npc.md) — 本地 Sub-agents 的云端延伸
-- [IDE 工作流示例](/examples/ide-workflow.md) — 产设研一体工作流实战
+- [CLI](../concepts/02-cli.md) — CLI 架构与分层记忆详解
+- [CodeBuddy IDE](../concepts/01-ide.md) — 与 CLI 共享高级能力的桌面端
+- [产品矩阵总览](../concepts/00-product-matrix.md) — CLI 在三态一体中的定位
+- [NPC 云端 AI 员工](../concepts/03-npc.md) — 本地 Sub-agents 的云端延伸
+- [IDE 工作流示例](ide-workflow.md) — 产设研一体工作流实战

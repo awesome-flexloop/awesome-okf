@@ -102,5 +102,5 @@ Claude Code 被单独列为研究对象，推荐按"官方文档→复刻项目�
 
 ## 相关概念
 
-- [Agent 学习路线图](./agent-learning-roadmap.md)——这些资源如何嵌入 9 阶段学习路径和 11 级项目阶梯
+- [Agent 学习路线图](agent-learning-roadmap.md)——这些资源如何嵌入 9 阶段学习路径和 11 级项目阶梯
 - [信源登记](../references/source-repo.md)——项目 GitHub 仓库与文件结构说明

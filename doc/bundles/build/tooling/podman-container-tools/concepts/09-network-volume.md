@@ -492,8 +492,8 @@ tmpfs 挂载存储在内存中，容器停止后数据丢失，适合存储敏�
 
 ## 相关概念
 
-- [容器基础](/concepts/04-container-basics.md) — Linux 命名空间隔离与 NetNS/MountNS 详解
-- [Pod一等公民](/concepts/05-pod-first-class.md) — Pod内容器共享网络命名空间机制
-- [容器操作命令](/concepts/07-container-commands.md) — run/create 命令的网络与挂载标志
-- [Runtime运行时](/concepts/03-runtime.md) — Runtime网络栈与存储初始化
-- [架构概览](/concepts/02-architecture-overview.md) — netavark网络后端与containers/storage存储层
+- [容器基础](04-container-basics.md) — Linux 命名空间隔离与 NetNS/MountNS 详解
+- [Pod一等公民](05-pod-first-class.md) — Pod内容器共享网络命名空间机制
+- [容器操作命令](07-container-commands.md) — run/create 命令的网络与挂载标志
+- [Runtime运行时](03-runtime.md) — Runtime网络栈与存储初始化
+- [架构概览](02-architecture-overview.md) — netavark网络后端与containers/storage存储层

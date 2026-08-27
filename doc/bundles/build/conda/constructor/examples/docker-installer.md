@@ -320,5 +320,5 @@ docker buildx build --platform linux/amd64,linux/arm64 \
 
 ## 下一步
 
-- [基础 Miniconda 风格安装程序](./basic-miniconda.md)：了解基础配置
-- [签名安装程序](./signed-installer.md)：注意 Docker 镜像不需要代码签名，但内容信任（cosign）可在容器层面添加
+- [基础 Miniconda 风格安装程序](basic-miniconda.md)：了解基础配置
+- [签名安装程序](signed-installer.md)：注意 Docker 镜像不需要代码签名，但内容信任（cosign）可在容器层面添加

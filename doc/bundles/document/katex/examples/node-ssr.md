@@ -258,7 +258,7 @@ const formulas = [
 const htmlBlocks = renderArticle(formulas);
 ```
 
-> **安全注意**：共享 `macros` 对象仅适用于可信内容。处理多用户输入时，必须为每条消息创建独立的 `macros` 对象。详见[安全信任示例](/examples/security-trust.md)。
+> **安全注意**：共享 `macros` 对象仅适用于可信内容。处理多用户输入时，必须为每条消息创建独立的 `macros` 对象。详见[安全信任示例](security-trust.md)。
 
 ## 预渲染缓存
 
@@ -339,11 +339,11 @@ const html = katex.renderToString(String.raw`\frac{a}{b} + \sqrt{c}`, {
 
 ## 相关内容
 
-- [安装与运行时](/concepts/15-installation-and-runtime.md)
-- [命令行接口](/concepts/16-command-line.md)
-- [基础渲染示例](/examples/basic-render.md)
-- [错误处理示例](/examples/error-handling.md)
-- [安全信任示例](/examples/security-trust.md)
+- [安装与运行时](../concepts/15-installation-and-runtime.md)
+- [命令行接口](../concepts/16-command-line.md)
+- [基础渲染示例](basic-render.md)
+- [错误处理示例](error-handling.md)
+- [安全信任示例](security-trust.md)
 
 [^web-node]: 官网 Node.js 页面，https://katex.org/docs/node
 [^web-api]: 官网 API 页面，https://katex.org/docs/api

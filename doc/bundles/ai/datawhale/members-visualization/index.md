@@ -18,10 +18,10 @@ sources:
 
 ## 目录导航
 
-- [概念](./concepts/index.md)
-- [示例](./examples/index.md)
-- [参考](./references/index.md)
-- [变更日志](./log.md)
+- [概念](concepts/index.md)
+- [示例](examples/index.md)
+- [参考](references/index.md)
+- [变更日志](log.md)
 
 ## 来源
 

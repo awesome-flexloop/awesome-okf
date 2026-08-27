@@ -426,8 +426,8 @@ def load_ipython_extension(ip):
 
 ## 相关概念
 
-- [自定义魔法开发](/concepts/11-custom-magics.md)
-- [代码执行管线](/concepts/05-execution-pipeline.md)
-- [输入转换与特殊语法](/concepts/07-input-transform.md)
-- [扩展系统](/concepts/09-extension-system.md)
-- [信源参考 - 魔法系统](/references/magic-source.md)
+- [自定义魔法开发](11-custom-magics.md)
+- [代码执行管线](05-execution-pipeline.md)
+- [输入转换与特殊语法](07-input-transform.md)
+- [扩展系统](09-extension-system.md)
+- [信源参考 - 魔法系统](../references/magic-source.md)

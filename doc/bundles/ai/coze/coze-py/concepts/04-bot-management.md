@@ -70,7 +70,7 @@ for page in coze.bots.list(space_id="your_workspace_id").iter_pages():
         print(f"  - {bot.bot_name}")
 ```
 
-`NumberPaged` 分页器支持两种迭代方式：直接 `for bot in page` 遍历所有项目（自动翻页），或 `for page in page.iter_pages()` 逐页处理。详见[分页模式与资源管理](/concepts/09-pagination-resources.md)。
+`NumberPaged` 分页器支持两种迭代方式：直接 `for bot in page` 遍历所有项目（自动翻页），或 `for page in page.iter_pages()` 逐页处理。详见[分页模式与资源管理](09-pagination-resources.md)。
 
 ## 创建 Bot
 
@@ -205,9 +205,9 @@ for ws in coze.workspaces.list():
 
 ## 相关概念
 
-- [整体架构概览](/concepts/00-overview-architecture.md) — SDK 整体结构
-- [对话与流式处理](/concepts/03-chat-streaming.md) — 与 Bot 对话的核心机制
-- [工作流](/concepts/05-workflows.md) — 绑定到 Bot 的工作流
-- [分页模式与资源管理](/concepts/09-pagination-resources.md) — 分页器使用
-- [工作空间模型](/concepts/09-pagination-resources.md#工作空间workspaces) — Workspace 管理
-- [数据模型、分页与资源管理参考](/references/data-pagination.md) — Bot 模型和枚举的完整 API
+- [整体架构概览](00-overview-architecture.md) — SDK 整体结构
+- [对话与流式处理](03-chat-streaming.md) — 与 Bot 对话的核心机制
+- [工作流](05-workflows.md) — 绑定到 Bot 的工作流
+- [分页模式与资源管理](09-pagination-resources.md) — 分页器使用
+- [工作空间模型](09-pagination-resources.md#工作空间workspaces) — Workspace 管理
+- [数据模型、分页与资源管理参考](../references/data-pagination.md) — Bot 模型和枚举的完整 API

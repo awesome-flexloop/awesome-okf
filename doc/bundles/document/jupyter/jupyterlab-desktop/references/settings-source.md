@@ -191,5 +191,5 @@ function resolveWorkingDirectory(workingDirectory: string, resetIfInvalid: boole
 
 ## 相关概念
 
-- [设置与配置系统](/concepts/06-settings-config.md)
-- [Python 环境管理](/concepts/05-python-env-management.md)
+- [设置与配置系统](../concepts/06-settings-config.md)
+- [Python 环境管理](../concepts/05-python-env-management.md)

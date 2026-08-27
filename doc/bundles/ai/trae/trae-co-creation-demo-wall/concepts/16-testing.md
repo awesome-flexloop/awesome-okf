@@ -78,5 +78,5 @@ intl 版本有 test/ 目录，包含 filter-options-sort.test.ts 测试文件，
 
 ## 相关概念
 
-- [Docker 部署](/concepts/15-docker-deployment.md)
-- [快速开始](/concepts/01-getting-started.md)
+- [Docker 部署](15-docker-deployment.md)
+- [快速开始](01-getting-started.md)

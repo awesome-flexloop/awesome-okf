@@ -444,4 +444,4 @@ stale_after: 2027-08-27
 
 - [中级技巧（Ch4-7）](02-intermediate-techniques.md) — 回到中级技巧
 - [进阶：链式提示与工具增强（附录）](04-beyond-standard.md) — 学习超越单轮提示的高级模式
-- [Cookbook RAG 模式](/cookbooks/concepts/03-rag-patterns.md) — 检索增强生成，用真实数据防幻觉
+- [Cookbook RAG 模式](../../cookbooks/concepts/03-rag-patterns.md) — 检索增强生成，用真实数据防幻觉

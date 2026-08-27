@@ -16,7 +16,7 @@ sources:
 
 ## 概述
 
-[deploy.yml](../../../../../../external/libs/jupyter/surveys/.github/workflows/deploy.yml) 是Jupyter Surveys的CI/CD流水线，定义在`.github/workflows/deploy.yml`中。工作流在push到master分支时自动构建MyST文档并部署到GitHub Pages。
+deploy.yml 是Jupyter Surveys的CI/CD流水线，定义在`.github/workflows/deploy.yml`中。工作流在push到master分支时自动构建MyST文档并部署到GitHub Pages。
 
 ## 完整工作流结构
 

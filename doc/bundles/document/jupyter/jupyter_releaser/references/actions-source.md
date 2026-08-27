@@ -106,6 +106,6 @@ sources:
 
 ## 相关概念
 
-- [发布流水线详解](/concepts/05-release-pipeline.md)
-- [GitHub Actions集成](/concepts/09-github-actions.md)
-- [架构总览](/concepts/02-architecture-overview.md)
+- [发布流水线详解](../concepts/05-release-pipeline.md)
+- [GitHub Actions集成](../concepts/09-github-actions.md)
+- [架构总览](../concepts/02-architecture-overview.md)

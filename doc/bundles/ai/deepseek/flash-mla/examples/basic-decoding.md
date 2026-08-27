@@ -408,8 +408,8 @@ def sparse_prefill_example():
 
 ## 六、相关链接
 
-- [/deepseek/flash-mla/concepts/overview](/ai/deepseek/flash-mla/concepts/overview) — FlashMLA 概述
-- [/deepseek/flash-mla/concepts/mla-decoding](/ai/deepseek/flash-mla/concepts/mla-decoding) — MLA 解码算法
-- [/deepseek/flash-mla/references/api](/ai/deepseek/flash-mla/references/api) — Python API 完整参考
-- [/deepseek/flash-mla/references/kv-cache-layout](/ai/deepseek/flash-mla/references/kv-cache-layout) — FP8 KV cache 布局
-- [/deepseek/flash-mla/examples/benchmark](/ai/deepseek/flash-mla/examples/benchmark) — 性能基准测试指南
+- /deepseek/flash-mla/concepts/overview — FlashMLA 概述
+- /deepseek/flash-mla/concepts/mla-decoding — MLA 解码算法
+- /deepseek/flash-mla/references/api — Python API 完整参考
+- /deepseek/flash-mla/references/kv-cache-layout — FP8 KV cache 布局
+- /deepseek/flash-mla/examples/benchmark — 性能基准测试指南

@@ -246,10 +246,10 @@ inv dev             # 启动开发服务器（自动先安装依赖）
 
 ## 相关概念
 
-- [PyInvoke 简介](/concepts/00-introduction.md)
-- [Task 基础](/concepts/02-task-basics.md)
-- [Context 对象](/concepts/03-context-object.md)
-- [Collection 与命名空间](/concepts/04-collection-namespace.md)
-- [PyInvoke 源码信源登记](/references/pyinvoke-source.md)
+- [PyInvoke 简介](00-introduction.md)
+- [Task 基础](02-task-basics.md)
+- [Context 对象](03-context-object.md)
+- [Collection 与命名空间](04-collection-namespace.md)
+- [PyInvoke 源码信源登记](../references/pyinvoke-source.md)
 
-[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](/references/pyinvoke-source.md)。
+[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](../references/pyinvoke-source.md)。

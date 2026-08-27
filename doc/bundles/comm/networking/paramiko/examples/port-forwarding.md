@@ -335,9 +335,9 @@ with paramiko.SSHClient() as client:
 
 ## 相关概念
 
-- [端口转发](/concepts/08-port-forwarding.md)
-- [Transport 底层传输](/concepts/03-transport.md)
-- [Channel 通道](/concepts/04-channel.md)
-- [高级模式](/concepts/10-advanced-patterns.md)
+- [端口转发](../concepts/08-port-forwarding.md)
+- [Transport 底层传输](../concepts/03-transport.md)
+- [Channel 通道](../concepts/04-channel.md)
+- [高级模式](../concepts/10-advanced-patterns.md)
 
-[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](/references/paramiko-source.md)。
+[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](../references/paramiko-source.md)。

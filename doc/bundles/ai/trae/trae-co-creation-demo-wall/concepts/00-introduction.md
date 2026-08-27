@@ -89,8 +89,8 @@ sources:
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [数据模型设计](/concepts/03-data-model.md)
-- [认证系统](/concepts/04-auth-system.md)
-- [国际化路由](/concepts/05-i18n-routing.md)
+- [快速开始](01-getting-started.md)
+- [架构总览](02-architecture-overview.md)
+- [数据模型设计](03-data-model.md)
+- [认证系统](04-auth-system.md)
+- [国际化路由](05-i18n-routing.md)

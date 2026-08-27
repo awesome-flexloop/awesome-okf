@@ -92,7 +92,7 @@ find_source_files默认查找的扩展名：`.ts`, `.tsx`, `.py`
 
 ## 相关概念
 
-- [字符串提取流水线](/concepts/04-extraction-pipeline.md)
-- [翻译目录管理](/concepts/05-catalog-management.md)
-- [Schema国际化选择器](/concepts/09-schema-i18n-selectors.md)
-- [格式转换源码映射](/references/converters-source.md)
+- [字符串提取流水线](../concepts/04-extraction-pipeline.md)
+- [翻译目录管理](../concepts/05-catalog-management.md)
+- [Schema国际化选择器](../concepts/09-schema-i18n-selectors.md)
+- [格式转换源码映射](converters-source.md)

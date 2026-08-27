@@ -138,12 +138,12 @@ app.add_directive("retrolite", NotebookLiteDirective)
 
 - 仅需让读者运行和阅读单个 Notebook → 使用 `notebooklite`
 - 需要读者进行自由探索、创建新文件、使用终端 → 使用 `jupyterlite`
-- 嵌入短小代码片段即时运行 → 使用 [replite 指令](/concepts/06-replite-directive.md)
+- 嵌入短小代码片段即时运行 → 使用 [replite 指令](06-replite-directive.md)
 
 ## 相关概念
 
-- [指令系统总览](/concepts/03-directive-overview.md)
-- [jupyterlite 指令——嵌入 JupyterLab](/concepts/04-jupyterlite-directive.md)
-- [replite 指令——嵌入交互式 REPL](/concepts/06-replite-directive.md)
-- [配置参考](/concepts/09-configuration.md)
-- [核心模块源码](/references/main-source.md)
+- [指令系统总览](03-directive-overview.md)
+- [jupyterlite 指令——嵌入 JupyterLab](04-jupyterlite-directive.md)
+- [replite 指令——嵌入交互式 REPL](06-replite-directive.md)
+- [配置参考](09-configuration.md)
+- [核心模块源码](../references/main-source.md)

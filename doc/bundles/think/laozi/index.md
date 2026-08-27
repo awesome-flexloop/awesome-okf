@@ -6,11 +6,11 @@
 
 | 知识包 | 定位 | 说明 |
 |--------|------|------|
-| [boshu-reading/](boshu-reading/) | 帛书《老子》阅读教程 | 面向普通读者的实践性阅读指南，含版本对照、异文选读、注本选用、通读计划 |
+| [boshu-reading/](boshu-reading/index.md) | 帛书《老子》阅读教程 | 面向普通读者的实践性阅读指南，含版本对照、异文选读、注本选用、通读计划 |
 
 ## 关联知识包
 
-位于SpecWeave主仓库（非awesome-okf-xs子模块）的[laozi-lineage](../../../SpecWeave/bundles/laozi-lineage/)知识包，提供《老子》传本源流谱系的学术性梳理，包含8种传本、2个考古语境、4组关键异文、2种校勘方法论。
+位于SpecWeave主仓库（非awesome-okf-xs子模块）的laozi-lineage知识包，提供《老子》传本源流谱系的学术性梳理，包含8种传本、2个考古语境、4组关键异文、2种校勘方法论。
 
 ```{toctree}
 :hidden:

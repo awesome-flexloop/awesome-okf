@@ -38,7 +38,7 @@ sources:
 
 ### 依赖声明三要素
 
-[dependencies.py](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dependencies.py) 定义了三种依赖类型，都继承自 `DashDependency` 基类（[dependencies.py:40](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dependencies.py#L40)）：
+dependencies.py 定义了三种依赖类型，都继承自 `DashDependency` 基类（dependencies.py:40）：
 
 | 类 | 作用 | 是否触发回调 | 支持的通配符 |
 |----|------|-------------|-------------|
@@ -75,7 +75,7 @@ def update_output(value):
 
 ### @callback 装饰器
 
-Dash 支持两种装饰器（[_callback.py:74](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_callback.py#L74)）：
+Dash 支持两种装饰器（_callback.py:74）：
 
 1. **`@app.callback(...)`**：绑定到特定 app 实例
 2. **`@dash.callback(...)`**（v2.0+）：模块级注册，在首次请求时自动合并到 app
@@ -86,7 +86,7 @@ Dash 支持两种装饰器（[_callback.py:74](file:///d:/spaces/SpecWeave/exter
 
 ### 参数解析
 
-`handle_grouped_callback_args()`（[dependencies.py:332-363](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dependencies.py#L332-L363)）负责解析回调参数：
+`handle_grouped_callback_args()`（dependencies.py:332-363）负责解析回调参数：
 
 1. 支持老式语法（`Output(...)` 列表、`Input(...)` 列表、`State(...)` 列表分开传递）
 2. 支持新式分组语法（直接按顺序传递，自动区分 Output/Input/State）
@@ -102,7 +102,7 @@ Dash 支持两种装饰器（[_callback.py:74](file:///d:/spaces/SpecWeave/exter
 
 ### 回调注册数据结构
 
-注册后的回调存储在两个数据结构中（[_callback.py:330-374](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_callback.py#L330-L374)）：
+注册后的回调存储在两个数据结构中（_callback.py:330-374）：
 
 **callback_map（dict）**——后端调度使用：
 ```python
@@ -149,7 +149,7 @@ callback_map["my-output.children"] = {
 }
 ```
 
-后端处理流程（[dash.py:1601-1700](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L1601-L1700)）：
+后端处理流程（dash.py:1601-1700）：
 
 1. **`_initialize_context(body)`**：初始化全局上下文 `g`，包含 `input_values`、`state_values`、`triggered_inputs` 等
 2. **`_prepare_callback(g, body)`**：从 `callback_map` 查找回调函数，准备参数分组
@@ -159,7 +159,7 @@ callback_map["my-output.children"] = {
 
 ### 回调上下文（callback_context）
 
-[_callback_context.py](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_callback_context.py) 提供 `CallbackContext` 类，通过 `dash.callback_context`（或别名 `dash.ctx`）访问：
+_callback_context.py 提供 `CallbackContext` 类，通过 `dash.callback_context`（或别名 `dash.ctx`）访问：
 
 ```python
 from dash import callback_context, ctx
@@ -184,7 +184,7 @@ def update(btn1, btn2):
     ctx.response.set_cookie("key", "value")
 ```
 
-上下文使用 Python 的 `contextvars.ContextVar`（[_callback_context.py:13-16](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_callback_context.py#L13-L16)）实现，支持异步回调中的正确隔离。
+上下文使用 Python 的 `contextvars.ContextVar`（_callback_context.py:13-16）实现，支持异步回调中的正确隔离。
 
 ### 参数分组
 
@@ -308,7 +308,7 @@ def update(x):
     return str(x), "正数"
 ```
 
-`no_update` 是 `NoUpdate` 类的单例实例（[dash.py:216](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L216)），比 `PreventUpdate` 更灵活（支持部分更新）。
+`no_update` 是 `NoUpdate` 类的单例实例（dash.py:216），比 `PreventUpdate` 更灵活（支持部分更新）。
 
 ### set_props 侧边更新
 
@@ -322,7 +322,7 @@ def on_click(n):
     set_props("alert", {"is_open": True, "children": "操作成功！"})
 ```
 
-`set_props` 更新的属性会通过响应中的 `sideUpdate` 字段返回给前端（[_callback.py:377-382](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_callback.py#L377-L382)）。
+`set_props` 更新的属性会通过响应中的 `sideUpdate` 字段返回给前端（_callback.py:377-382）。
 
 ## 回调链与依赖图
 
@@ -370,7 +370,7 @@ def sum_all(values):
     return f"总和: {sum(float(v or 0) for v in values)}"
 ```
 
-通配符含义（[dependencies.py:13-27](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dependencies.py#L13-L27)）：
+通配符含义（dependencies.py:13-27）：
 - `MATCH`：匹配相同 key-value 的组件
 - `ALL`：匹配所有满足其他 key 条件的组件，值作为列表传递
 - `ALLSMALLER`：匹配 index 小于当前组件的所有同类型组件
@@ -434,7 +434,7 @@ def update(n_clicks, set_progress):
     return "完成！"
 ```
 
-背景回调关键参数（[_callback.py:76-93](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_callback.py#L76-L93)）：
+背景回调关键参数（_callback.py:76-93）：
 
 | 参数 | 说明 |
 |------|------|
@@ -452,7 +452,7 @@ def update(n_clicks, set_progress):
 
 ## WebSocket 回调
 
-Dash 4.x 支持 WebSocket 长连接回调（`websocket=True`），适用于实时数据推送场景。后端通过 `DashWebsocketCallback`（[backends/ws.py](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/backends/ws.py)）管理 WebSocket 连接。
+Dash 4.x 支持 WebSocket 长连接回调（`websocket=True`），适用于实时数据推送场景。后端通过 `DashWebsocketCallback`（backends/ws.py）管理 WebSocket 连接。
 
 ## API 端点回调
 

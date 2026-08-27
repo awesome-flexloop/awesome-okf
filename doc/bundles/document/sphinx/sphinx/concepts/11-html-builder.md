@@ -15,7 +15,7 @@ sources:
 
 # HTML 构建器详解
 
-StandaloneHTMLBuilder（定义在 [sphinx/builders/html/__init__.py](file:///d:/spaces/SpecWeave/external/libs/docs/sphinx/sphinx/builders/html/__init__.py)）是 Sphinx 最核心的 Builder，也是默认构建器（`-b html`）。它为每个源文件生成独立的 HTML 页面，配合主题系统提供美观的文档网站体验。
+StandaloneHTMLBuilder（定义在 sphinx/builders/html/__init__.py）是 Sphinx 最核心的 Builder，也是默认构建器（`-b html`）。它为每个源文件生成独立的 HTML 页面，配合主题系统提供美观的文档网站体验。
 
 ## HTMLBuilder 特性
 

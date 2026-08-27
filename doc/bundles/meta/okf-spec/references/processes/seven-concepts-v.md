@@ -38,10 +38,10 @@ sources:
 |------|------|------|
 | 2026-08-21 | `bundles/okf-spec` 全 bundle（19 个含 status 文档） | 对抗审查通过；P1（信任元数据真实化）与 P2（溯源自包含）修正已落地，见 `log.md` |
 
-> **说明**：`verified` 表征"文档经本进程确认"这一事件（machine-confirmed）。内容本身的语义正确性仍以其 `sources` 指向的 [references/okf-spec.md](okf-spec.md) 为权威信源。
+> **说明**：`verified` 表征"文档经本进程确认"这一事件（machine-confirmed）。内容本身的语义正确性仍以其 `sources` 指向的 [references/okf-spec.md](../okf-spec.md) 为权威信源。
 
 ## 相关概念
 
-- [可认证计算之 verification 与 attestation 之别](../concepts/attested-computations.md)
+- [可认证计算之 verification 与 attestation 之别](../../concepts/attested-computations.md)
 
-[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](/references/okf-spec.md)。
+[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](../okf-spec.md)。

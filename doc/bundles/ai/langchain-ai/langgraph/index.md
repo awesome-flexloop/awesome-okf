@@ -70,30 +70,30 @@ def node_b(state): return {"values": [3, 4]}
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/langgraph/concepts/overview) — LangGraph 是什么、三层架构、关键能力
-- [状态图](/ai/langchain-ai/langgraph/concepts/state-graph) — StateSchema、节点/边/条件边、编译、Command 原语
-- [通道系统](/ai/langchain-ai/langgraph/concepts/channels) — BaseChannel 抽象与六种内建通道
-- [Pregel 引擎](/ai/langchain-ai/langgraph/concepts/pregel-engine) — BSP 超步模型、版本向量调度、循环终止
-- [检查点机制](/ai/langchain-ai/langgraph/concepts/checkpointing) — 持久化、时间旅行、DeltaChannel 增量检查点
-- [消息图](/ai/langchain-ai/langgraph/concepts/message-graph) — MessagesState、add_messages、消息合并删除
-- [流式处理](/ai/langchain-ai/langgraph/concepts/streaming) — 七种流模式、StreamWriter、v2 流部分
-- [错误处理与中断](/ai/langchain-ai/langgraph/concepts/error-handling) — RetryPolicy、error_handler、interrupt/resume、超时
+- 总览 — LangGraph 是什么、三层架构、关键能力
+- 状态图 — StateSchema、节点/边/条件边、编译、Command 原语
+- 通道系统 — BaseChannel 抽象与六种内建通道
+- Pregel 引擎 — BSP 超步模型、版本向量调度、循环终止
+- 检查点机制 — 持久化、时间旅行、DeltaChannel 增量检查点
+- 消息图 — MessagesState、add_messages、消息合并删除
+- 流式处理 — 七种流模式、StreamWriter、v2 流部分
+- 错误处理与中断 — RetryPolicy、error_handler、interrupt/resume、超时
 
 ### API 参考
 
-- [StateGraph API](/ai/langchain-ai/langgraph/references/graph-state) — 图构建器、节点/边/分支、编译与执行
-- [通道与 Pregel API](/ai/langchain-ai/langgraph/references/channels-pregel) — BaseChannel 层次、Pregel/PregelNode/NodeBuilder
-- [检查点与持久化 API](/ai/langchain-ai/langgraph/references/checkpoint-persistence) — BaseCheckpointSaver、SerializerProtocol、BaseStore、Runtime
+- StateGraph API — 图构建器、节点/边/分支、编译与执行
+- 通道与 Pregel API — BaseChannel 层次、Pregel/PregelNode/NodeBuilder
+- 检查点与持久化 API — BaseCheckpointSaver、SerializerProtocol、BaseStore、Runtime
 
 ### 使用示例
 
-- [基础聊天 Agent](/ai/langchain-ai/langgraph/examples/basic-agent) — 检查点 + interrupt/resume 人机协同
-- [Map-Reduce 并行处理](/ai/langchain-ai/langgraph/examples/map-reduce) — Send 动态扇出 + reducer 聚合
+- 基础聊天 Agent — 检查点 + interrupt/resume 人机协同
+- Map-Reduce 并行处理 — Send 动态扇出 + reducer 聚合
 
 ### 设计洞察
 
-- [事实清单](/ai/langchain-ai/langgraph/spec/facts) — 从源码提取的 128 条编号事实
-- [架构洞察](/ai/langchain-ai/langgraph/spec/insights) — Channel/Actor 模型、BSP 超步、版本向量、统一控制流、中断协议、错误处理三层架构
+- 事实清单 — 从源码提取的 128 条编号事实
+- 架构洞察 — Channel/Actor 模型、BSP 超步、版本向量、统一控制流、中断协议、错误处理三层架构
 
 ## 目录结构
 

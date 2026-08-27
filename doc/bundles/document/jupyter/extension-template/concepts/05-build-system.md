@@ -226,8 +226,8 @@ jupyter-builder develop . --overwrite
 
 ## 相关概念
 
-- [项目结构详解](/concepts/04-project-structure.md)
-- [前端扩展开发](/concepts/06-frontend-extension.md)
-- [打包与发布](/concepts/13-packaging-release.md)
-- [pyproject.toml 模板解析](/references/pyproject-source.md)
-- [package.json 模板解析](/references/package-json-source.md)
+- [项目结构详解](04-project-structure.md)
+- [前端扩展开发](06-frontend-extension.md)
+- [打包与发布](13-packaging-release.md)
+- [pyproject.toml 模板解析](../references/pyproject-source.md)
+- [package.json 模板解析](../references/package-json-source.md)

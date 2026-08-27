@@ -333,9 +333,9 @@ ToolCallingAgent 依赖模型的原生 function calling 能力（通过 `tools_t
 
 ## 相关链接
 
-- [MultiStepAgent：核心推理循环](/concepts/03-multi-step-agent.md) — 父类的run循环和step抽象
-- [CodeAgent：代码执行范式](/concepts/06-code-agent.md) — 另一种智能体范式（CodeAct）
-- [工具系统：@tool装饰器与Tool基类](/concepts/07-tool-system.md) — 如何开发自定义工具
-- [内置工具详解](/concepts/08-builtin-tools.md) — 默认工具的功能与用法
-- [Agents API 参考](/references/agents-api.md) — ToolCallingAgent完整API
-- [Models API 参考](/references/models-api.md) — 模型function calling接口
+- [MultiStepAgent：核心推理循环](03-multi-step-agent.md) — 父类的run循环和step抽象
+- [CodeAgent：代码执行范式](06-code-agent.md) — 另一种智能体范式（CodeAct）
+- [工具系统：@tool装饰器与Tool基类](07-tool-system.md) — 如何开发自定义工具
+- [内置工具详解](08-builtin-tools.md) — 默认工具的功能与用法
+- [Agents API 参考](../references/agents-api.md) — ToolCallingAgent完整API
+- [Models API 参考](../references/models-api.md) — 模型function calling接口

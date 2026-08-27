@@ -238,7 +238,7 @@ reasonix acp --model deepseek-pro
 
 ## 相关概念
 
-- [项目架构](/concepts/01-project-architecture.md)——boot.BuildRuntime 如何被 Factory 使用
-- [Agent 运行循环](/concepts/02-agent-run-loop.md)——ACP session/prompt 驱动的核心循环
-- [CLI 与 TUI](/concepts/05-cli-tui.md)——CLI 的 acp 子命令
-- [Bot 网关](/concepts/04-bot-gateway.md)——另一种前端传输方式
+- [项目架构](01-project-architecture.md)——boot.BuildRuntime 如何被 Factory 使用
+- [Agent 运行循环](02-agent-run-loop.md)——ACP session/prompt 驱动的核心循环
+- [CLI 与 TUI](05-cli-tui.md)——CLI 的 acp 子命令
+- [Bot 网关](04-bot-gateway.md)——另一种前端传输方式

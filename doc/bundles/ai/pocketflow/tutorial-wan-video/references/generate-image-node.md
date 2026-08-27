@@ -127,4 +127,4 @@ script - "done" >> image  # 从 GenerateScriptNode 的 "done" 动作进入
 
 ## 源码位置
 
-[nodes.py#L161-L185](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/nodes.py#L161-L185)
+nodes.py#L161-L185

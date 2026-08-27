@@ -17,9 +17,9 @@ sources:
 
 # 02 自定义文件类型查看器
 
-在 [示例 01](/examples/01-minimal-extension.md) 中我们注册了一条命令。本例更进一步：让 JupyterLab 能够"打开"一种全新的文件格式 `.xyz`，双击文件时显示一个自定义查看器。这是 JupyterLab 文档系统的标准扩展模式——注册文件类型、实现内容 Widget、实现 WidgetFactory、把工厂注册到 DocumentRegistry（F-053）。
+在 [示例 01](01-minimal-extension.md) 中我们注册了一条命令。本例更进一步：让 JupyterLab 能够"打开"一种全新的文件格式 `.xyz`，双击文件时显示一个自定义查看器。这是 JupyterLab 文档系统的标准扩展模式——注册文件类型、实现内容 Widget、实现 WidgetFactory、把工厂注册到 DocumentRegistry（F-053）。
 
-> **前置条件**：已完成 [示例 01](/examples/01-minimal-extension.md) 的项目脚手架（package.json、tsconfig.json），了解 `JupyterFrontEndPlugin`、`activate` 函数和 Token 注入。建议先阅读 [05 文档注册与 Widget 工厂](/concepts/05-document-widget-system.md)。
+> **前置条件**：已完成 [示例 01](01-minimal-extension.md) 的项目脚手架（package.json、tsconfig.json），了解 `JupyterFrontEndPlugin`、`activate` 函数和 Token 注入。建议先阅读 [05 文档注册与 Widget 工厂](../concepts/05-document-widget-system.md)。
 
 ## 目标
 
@@ -333,10 +333,10 @@ docRegistry.addWidgetExtension('XYZ Viewer', new MyToolbarExtension());
 
 ## 相关概念
 
-- [05 文档注册与 Widget 工厂](/concepts/05-document-widget-system.md)
-- [03 插件系统与依赖注入](/concepts/03-plugin-system.md)
-- [09 关键子系统](/concepts/09-key-subsystems.md)
+- [05 文档注册与 Widget 工厂](../concepts/05-document-widget-system.md)
+- [03 插件系统与依赖注入](../concepts/03-plugin-system.md)
+- [09 关键子系统](../concepts/09-key-subsystems.md)
 
 ## 相关示例
 
-- [01 最小扩展：Hello World 插件](/examples/01-minimal-extension.md)
+- [01 最小扩展：Hello World 插件](01-minimal-extension.md)

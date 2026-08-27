@@ -95,5 +95,5 @@ JSON Schema Draft-07，定义用户可配置的设置项：
 
 ## 相关概念
 
-- [配置三级优先级系统](/concepts/09-configuration.md)
-- [构建与打包系统](/concepts/10-build-and-packaging.md)
+- [配置三级优先级系统](../concepts/09-configuration.md)
+- [构建与打包系统](../concepts/10-build-and-packaging.md)

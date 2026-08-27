@@ -245,6 +245,6 @@ sys.path.insert(0, os.path.abspath("."))
 
 ## 下一步
 
-- 阅读 [/concepts/03-sphinx-conf.md](/concepts/03-sphinx-conf.md) 了解更多配置选项
-- 查看 [/examples/02-pyodide-setup.md](/examples/02-pyodide-setup.md) 学习完整 Pyodide 配置
-- 阅读 [/concepts/06-try-examples.md](/concepts/06-try-examples.md) 深入了解交互示例
+- 阅读 [/concepts/03-sphinx-conf.md](../concepts/03-sphinx-conf.md) 了解更多配置选项
+- 查看 [/examples/02-pyodide-setup.md](02-pyodide-setup.md) 学习完整 Pyodide 配置
+- 阅读 [/concepts/06-try-examples.md](../concepts/06-try-examples.md) 深入了解交互示例

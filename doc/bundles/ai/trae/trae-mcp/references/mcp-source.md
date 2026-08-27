@@ -47,7 +47,7 @@ sources:
 
 ## 相关链接
 
-- [MCP 简介](/concepts/00-introduction.md)
-- [MCP 三层模型](/concepts/01-mcp-architecture.md)
-- [CloudBase MCP](/concepts/03-cloudbase-mcp.md)
-- [配置 MCP 服务器示例](/examples/configure-mcp.md)
+- [MCP 简介](../concepts/00-introduction.md)
+- [MCP 三层模型](../concepts/01-mcp-architecture.md)
+- [CloudBase MCP](../concepts/03-cloudbase-mcp.md)
+- [配置 MCP 服务器示例](../examples/configure-mcp.md)

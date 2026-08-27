@@ -245,19 +245,19 @@ bash scripts/eval/eval.sh \
 ## 九、相关链接
 
 ### 核心概念
-- [/deepseek/deep-spec/concepts/speculative-decoding-training](/ai/deepseek/deep-spec/concepts/speculative-decoding-training) — 投机解码训练方法论
-- [/deepseek/deep-spec/concepts/dspark-model](/ai/deepseek/deep-spec/concepts/dspark-model) — DSpark 架构详解
-- [/deepseek/deep-spec/concepts/eagle3-model](/ai/deepseek/deep-spec/concepts/eagle3-model) — Eagle3 架构详解
-- [/deepseek/deep-spec/concepts/training-pipeline](/ai/deepseek/deep-spec/concepts/training-pipeline) — 训练管线详解
+- /deepseek/deep-spec/concepts/speculative-decoding-training — 投机解码训练方法论
+- /deepseek/deep-spec/concepts/dspark-model — DSpark 架构详解
+- /deepseek/deep-spec/concepts/eagle3-model — Eagle3 架构详解
+- /deepseek/deep-spec/concepts/training-pipeline — 训练管线详解
 
 ### API 参考
-- [/deepseek/deep-spec/references/training-api](/ai/deepseek/deep-spec/references/training-api) — 训练 API 参考
-- [/deepseek/deep-spec/references/model-api](/ai/deepseek/deep-spec/references/model-api) — 模型 API 参考
-- [/deepseek/deep-spec/references/eval-api](/ai/deepseek/deep-spec/references/eval-api) — 评估 API 参考
+- /deepseek/deep-spec/references/training-api — 训练 API 参考
+- /deepseek/deep-spec/references/model-api — 模型 API 参考
+- /deepseek/deep-spec/references/eval-api — 评估 API 参考
 
 ### 代码示例
-- [/deepseek/deep-spec/examples/training-dspark](/ai/deepseek/deep-spec/examples/training-dspark) — DSpark 训练示例
-- [/deepseek/deep-spec/examples/evaluation](/ai/deepseek/deep-spec/examples/evaluation) — 评估使用示例
+- /deepseek/deep-spec/examples/training-dspark — DSpark 训练示例
+- /deepseek/deep-spec/examples/evaluation — 评估使用示例
 
 ### 相关项目
-- [/deepseek/flash-mla/](/ai/deepseek/flash-mla/) — FlashMLA 高效 MLA 注意力解码核函数，可用于加速目标模型的验证前向
+- [/deepseek/flash-mla/](../../flash-mla/index.md) — FlashMLA 高效 MLA 注意力解码核函数，可用于加速目标模型的验证前向

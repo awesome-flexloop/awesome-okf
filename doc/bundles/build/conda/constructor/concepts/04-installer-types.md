@@ -207,5 +207,5 @@ constructor . --platform win-64 --conda-exe /path/to/conda.exe
 
 ## 下一步
 
-- [05-CLI 命令行入口](./05-cli-and-entrypoint.md)：了解如何通过命令行控制安装程序构建
-- [09-平台安装器实现](./09-platform-installers.md)：深入各平台模块的实现细节
+- [05-CLI 命令行入口](05-cli-and-entrypoint.md)：了解如何通过命令行控制安装程序构建
+- [09-平台安装器实现](09-platform-installers.md)：深入各平台模块的实现细节

@@ -19,8 +19,8 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 这不是"过度设计"，而是对读写频率和数据关系的精准切分。
 
 **行动**：
-- **先看** [schema.prisma](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/prisma/schema.prisma#L124-L240) 中 WorkBase→WorkStatistic 的五个 model，理解外键关系和级联策略；
-- **再看** [submit/route.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/app/api/submit/route.ts) 的事务创建逻辑，理解五表如何在一次事务中原子性创建；
+- **先看** schema.prisma 中 WorkBase→WorkStatistic 的五个 model，理解外键关系和级联策略；
+- **再看** submit/route.ts 的事务创建逻辑，理解五表如何在一次事务中原子性创建；
 - **扩展点**：若需新增作品属性（如视频链接、附件），判断归属表：高频列表字段→WorkBase，大文本/低频字段→WorkDetail，集合型→新建子表，计数型→WorkStatistic；
 - **常见误区**：不要在 WorkBase 上加入大文本字段（如 story），会拖慢列表查询；不要在 WorkStatistic 上加入业务字段，它是纯状态+计数器表。
 
@@ -39,8 +39,8 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 但角色（Role）选择了硬编码三级（root/admin/common）而非字典，因为角色与代码权限检查强耦合（isAdmin() 直接判断字符串），动态化会导致安全漏洞。
 
 **行动**：
-- **先看** [prisma/seed.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/prisma/seed.ts#L32-L74) 中 6 个系统字典的初始化，理解 dictCode 和 itemValue 的设计；
-- **再看** [dictionaries/route.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/app/api/dictionaries/route.ts) 的 CRUD 逻辑和 [lib/ban.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/lib/ban.ts) 如何复用字典实现封禁/域名屏蔽；
+- **先看** prisma/seed.ts 中 6 个系统字典的初始化，理解 dictCode 和 itemValue 的设计；
+- **再看** dictionaries/route.ts 的 CRUD 逻辑和 lib/ban.ts 如何复用字典实现封禁/域名屏蔽；
 - **扩展点**：新增业务分类时，先决定是否需要运营动态配置——是则走字典表，否则用 enum/常量；注意 labelI18n 需要同步维护多语言翻译；
 - **常见误区**：不要把需要代码逻辑判断的"类型"做成字典（如角色），字典适合"展示型/筛选型"分类；不要忘记字典项的 sortOrder 和 status 字段控制。
 
@@ -59,8 +59,8 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 但这个选择的收益是：URL 本身携带语言信息，SEO 友好、分享链接自带语言、next-intl 官方推荐方案、与 Next.js App Router 深度集成。更反直觉的是根 layout 不渲染 html/body——这是为了让 [language]/layout 能设置 `<html lang={locale}>`，这是 per-locale SEO 和 accessibility 的必要做法。
 
 **行动**：
-- **先看** [middleware.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/middleware.ts) 理解三层中间件的执行顺序和 matcher 配置；
-- **再看** [lib/language/](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/lib/language/) 下的 routing.ts/request.ts/navigation.ts 三件套，以及 [[language]/layout.tsx](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/app/%5Blanguage%5D/layout.tsx) 的 Provider 嵌套；
+- **先看** middleware.ts 理解三层中间件的执行顺序和 matcher 配置；
+- **再看** lib/language/ 下的 routing.ts/request.ts/navigation.ts 三件套，以及 [[language]/layout.tsx](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/app/%5Blanguage%5D/layout.tsx) 的 Provider 嵌套；
 - **扩展点**：新增语言需要：在 routing.ts 添加 locale、创建翻译 JSON 文件、注意 isProtectedRoute 正则要同步更新（intl 版暴露了遗漏问题 F-160）；
 - **常见误区**：不要在根 layout.tsx 里渲染 html/body 标签；不要在 API 路由上走 i18n 中间件；不要忘记翻译文件缺失时的 fallback 处理。
 
@@ -78,8 +78,8 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 3. **staleTime 为什么是 2 分钟？** 这是数据新鲜度与性能的权衡——2 分钟内用户切换筛选条件不会重复请求，后台刷新保证最终一致性。
 
 **行动**：
-- **先看** [lib/prisma.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/lib/prisma.ts) 单例模式和 [lib/works-store.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/lib/works-store.ts) zustand 缓存设计；
-- **再看** [lib/use-works.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/lib/use-works.ts) react-query Hook 和 [app/api/works/route.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/app/api/works/route.ts) 服务端查询逻辑；
+- **先看** lib/prisma.ts 单例模式和 lib/works-store.ts zustand 缓存设计；
+- **再看** lib/use-works.ts react-query Hook 和 app/api/works/route.ts 服务端查询逻辑；
 - **扩展点**：新增数据实体时，按三层添加：Prisma model → API Route（zod 校验+事务+sanitize）→ react-query Hook（或 zustand store 用于跨页面命令式缓存）；
 - **常见误区**：不要在客户端组件直接 import prisma；不要用 zustand 存储服务端持久化数据（它是缓存不是数据源）；不要忘记 Provider 嵌套顺序（QueryClientProvider 必须包裹使用 react-query 的组件）。
 
@@ -97,8 +97,8 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 3. **为什么标签关联用"删后重建"而不是增量更新？** 更新作品标签时先删 WorkTagRelation 再重建，虽然简单粗暴，但避免了复杂的 diff 逻辑，且标签数量有限（1-5 个），性能影响可忽略。
 
 **行动**：
-- **先看** [lib/rich-text.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/lib/rich-text.ts) 白名单配置和 [app/api/file/route.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/app/api/file/route.ts) COS 上传逻辑；
-- **再看** [submit/submission-form.tsx](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/app/%5Blanguage%5D/submit/submission-form.tsx) 和 4 个 Step 组件理解多步表单流程，以及 [app/api/submit/route.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/app/api/submit/route.ts) 的事务+自动审核逻辑；
+- **先看** lib/rich-text.ts 白名单配置和 app/api/file/route.ts COS 上传逻辑；
+- **再看** submit/submission-form.tsx 和 4 个 Step 组件理解多步表单流程，以及 app/api/submit/route.ts 的事务+自动审核逻辑；
 - **扩展点**：新增富文本格式（如表格、图片内嵌）需要同步更新 RICH_TEXT_SANITIZE_OPTIONS 白名单；换用其他对象存储（S3/OSS）只需替换 cos.ts 实现；
 - **常见误区**：永远不要信任前端提交的 HTML，服务端 sanitize 是必须的；不要放宽 a 标签的协议白名单（javascript: 是 XSS 入口）；COS 密钥必须通过环境变量注入，不能硬编码。
 
@@ -116,8 +116,8 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 3. **为什么 Redis 是可选的？** docker-compose 包含 redis 服务，但应用代码中并未看到 Redis 作为缓存/会话存储的使用——它可能是为 NextAuth 速率限制或未来功能预留的基础设施。
 
 **行动**：
-- **先看** [Dockerfile](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/Dockerfile) 三阶段构建和 [entrypoint.sh](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/entrypoint.sh) 启动逻辑；
-- **再看** [docker-compose.yml](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/docker-compose.yml) 五服务编排和 [nginx.conf](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/nginx.conf) 反向代理配置；
+- **先看** Dockerfile 三阶段构建和 entrypoint.sh 启动逻辑；
+- **再看** docker-compose.yml 五服务编排和 nginx.conf 反向代理配置；
 - **扩展点**：生产部署使用 docker-compose.prod.yml；2C8G 低配服务器使用 docker-compose.2c8g.yml；需要负载均衡时使用 nginx-lb.conf 或 nginx-lb-2.conf；
 - **常见误区**：构建时不要传入真实 DATABASE_URL（构建不需要数据库连接，用占位符即可）；app-init 必须在 app 之前完成（depends_on + healthcheck）；不要在 runner 阶段复制 devDependencies。
 
@@ -136,8 +136,8 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 4. **Edge Runtime 下不做封禁检查？** jwt callback 明确标注 Edge Runtime 下跳过（因为 Prisma 无法在 Edge 运行），这是一个已知的安全权衡：Edge 部署下封禁生效有延迟。
 
 **行动**：
-- **先看** [lib/audit-log.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/lib/audit-log.ts) 日志工具的 IP 提取、BigInt 序列化、不抛异常设计；
-- **再看** [lib/ban.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/lib/ban.ts) 封禁机制的字典复用和 60 秒缓存，以及 [lib/auth-nextauth.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/lib/auth-nextauth.ts) 的双重封禁检查；
+- **先看** lib/audit-log.ts 日志工具的 IP 提取、BigInt 序列化、不抛异常设计；
+- **再看** lib/ban.ts 封禁机制的字典复用和 60 秒缓存，以及 lib/auth-nextauth.ts 的双重封禁检查；
 - **扩展点**：新增需要审计的操作时，调用 writeOperationLog 并传入 module/action/targetType/targetId；新增审核动作需要同步写 WorkAuditLog 记录状态变更；
 - **常见误区**：审计日志写入必须用 try-catch 包裹（不能因日志失败阻断主流程）；禁止封禁 admin/root 用户（F-083）；不要依赖前端传递的 IP/UA，必须从服务端 Request headers 获取。
 

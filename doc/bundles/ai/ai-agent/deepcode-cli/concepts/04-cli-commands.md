@@ -257,7 +257,7 @@ const SESSION_ID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-
 
 ## 相关概念
 
-- [项目简介](/concepts/00-introduction.md)
-- [三包 monorepo 架构](/concepts/01-architecture.md)
-- [权限系统](/concepts/02-permission-system.md)
-- [MCP 集成](/concepts/03-mcp-integration.md)
+- [项目简介](00-introduction.md)
+- [三包 monorepo 架构](01-architecture.md)
+- [权限系统](02-permission-system.md)
+- [MCP 集成](03-mcp-integration.md)

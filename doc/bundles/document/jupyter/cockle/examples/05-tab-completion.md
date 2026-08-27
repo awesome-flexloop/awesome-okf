@@ -697,5 +697,5 @@ darkModeMedia.addEventListener('change', (e) => {
 ## 相关概念
 
 - [IO 系统](/concepts/05-io-system.md)
-- [外部命令](/concepts/09-external-commands.md)
-- [Shell API 参考](/references/shell-api.md)
+- [外部命令](../concepts/09-external-commands.md)
+- [Shell API 参考](../references/shell-api.md)

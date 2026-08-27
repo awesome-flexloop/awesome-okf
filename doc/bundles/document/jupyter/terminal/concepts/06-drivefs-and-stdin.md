@@ -267,5 +267,5 @@ cat /drive/months.txt | grep ember
 
 - [Shell与Worker机制](04-shell-and-worker.md)：Worker初始化和通信细节
 - [插件系统](03-plugin-system.md)：contentsPlugin和serviceWorkerPlugin职责
-- [示例：基础终端使用](/examples/01-basic-terminal-usage.md)：终端内文件操作示例
-- [Shell与Worker源码信源](/references/shell-source.md)：DriveFS完整实现
+- [示例：基础终端使用](../examples/01-basic-terminal-usage.md)：终端内文件操作示例
+- [Shell与Worker源码信源](../references/shell-source.md)：DriveFS完整实现

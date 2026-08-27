@@ -103,6 +103,6 @@ Agentic RL不仅仅是技术细节差异，而是思维方式的根本转变：
 
 ## 相关阅读
 
-- [第十一章 Agentic-RL](/ai/datawhale/hello-agents/references/chapter11-agentic-rl)
-- [智能体范式与ReAct](/ai/datawhale/hello-agents/concepts/agent-paradigms-react)
-- [评估方法](/ai/datawhale/hello-agents/concepts/evaluation-methods)
+- 第十一章 Agentic-RL
+- 智能体范式与ReAct
+- 评估方法

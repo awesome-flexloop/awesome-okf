@@ -104,6 +104,6 @@ RAG系统专注于外部知识的获取和利用，与记忆系统互补：
 
 ## 相关阅读
 
-- [第八章 记忆与检索](/ai/datawhale/hello-agents/references/chapter08-memory-retrieval)
-- [上下文工程](/ai/datawhale/hello-agents/concepts/context-engineering)
-- [Agent框架开发](/ai/datawhale/hello-agents/concepts/agent-framework-development)
+- 第八章 记忆与检索
+- 上下文工程
+- Agent框架开发

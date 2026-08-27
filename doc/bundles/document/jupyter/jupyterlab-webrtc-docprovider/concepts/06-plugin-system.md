@@ -227,7 +227,7 @@ export default [plugin, statusPlugin, factoryPlugin, retroStatusPlugin];
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [WebRtcManager配置管理](/concepts/03-webrtc-manager.md)
-- [状态栏UI与RetroLab适配](/concepts/07-status-bar.md)
-- [配置三级优先级系统](/concepts/09-configuration.md)
+- [架构总览](02-architecture-overview.md)
+- [WebRtcManager配置管理](03-webrtc-manager.md)
+- [状态栏UI与RetroLab适配](07-status-bar.md)
+- [配置三级优先级系统](09-configuration.md)

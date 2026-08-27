@@ -239,7 +239,7 @@ rediraffe_redirects = 'redirects.txt'
 
 ## 相关概念
 
-- [架构概览](/concepts/02-architecture-overview.md)
-- [配置项详解](/concepts/04-configuration.md)
-- [基础重定向示例](/examples/basic-redirects.md)
-- [sphinxext-rediraffe 源码信源登记](/references/rediraffe-source.md)
+- [架构概览](02-architecture-overview.md)
+- [配置项详解](04-configuration.md)
+- [基础重定向示例](../examples/basic-redirects.md)
+- [sphinxext-rediraffe 源码信源登记](../references/rediraffe-source.md)

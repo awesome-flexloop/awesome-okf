@@ -205,13 +205,13 @@ Drop 会删除指定的 stash 条目而不应用其更改。用于丢弃不再�
 
 ## 相关示例
 
-- [基础使用示例](/examples/01-basic-usage.md)
-- [分支管理与合并工作流](/examples/02-branch-merge-workflow.md)
+- [基础使用示例](01-basic-usage.md)
+- [分支管理与合并工作流](02-branch-merge-workflow.md)
 
 ## 相关概念
 
-- [可插拔Diff系统](/concepts/06-diff-provider-system.md)
-- [GitExtension核心模型](/concepts/04-git-extension-model.md)
-- [Stash与高级操作](/concepts/12-stash-and-advanced.md)
-- [插件入口与Diff Provider注册](/concepts/03-extension-plugin-system.md)
-- [UI组件与Widget体系](/concepts/07-ui-components-and-widgets.md)
+- [可插拔Diff系统](../concepts/06-diff-provider-system.md)
+- [GitExtension核心模型](../concepts/04-git-extension-model.md)
+- [Stash与高级操作](../concepts/12-stash-and-advanced.md)
+- [插件入口与Diff Provider注册](../concepts/03-extension-plugin-system.md)
+- [UI组件与Widget体系](../concepts/07-ui-components-and-widgets.md)

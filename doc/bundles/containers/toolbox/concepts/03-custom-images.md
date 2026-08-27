@@ -388,7 +388,7 @@ RUN dnf config-manager --add-repo https://developer.download.nvidia.com/compute/
 
 ## 相关概念
 
-- [/concepts/00-introduction.md](/concepts/00-introduction.md)
-- [/concepts/01-pass-through.md](/concepts/01-pass-through.md)
-- [/concepts/02-workflow.md](/concepts/02-workflow.md)
-- [/examples/02-custom-image.md](/examples/02-custom-image.md)
+- [/concepts/00-introduction.md](00-introduction.md)
+- [/concepts/01-pass-through.md](01-pass-through.md)
+- [/concepts/02-workflow.md](02-workflow.md)
+- [/examples/02-custom-image.md](../examples/02-custom-image.md)

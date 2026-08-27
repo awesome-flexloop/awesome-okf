@@ -145,4 +145,4 @@ ncnn_net_register_custom_layer_by_type(net, "MyLayer", creator, destroyer, userd
 - [03 Layer 抽象层](03-layer-abstraction.md)
 - [01 Net 与 Extractor 推理流程](01-net-extractor.md)
 - [08 ParamDict 与 ModelBin](08-paramdict-modelbin.md)
-- [自定义 Layer 示例](/examples/custom-layer.md)
+- [自定义 Layer 示例](../examples/custom-layer.md)

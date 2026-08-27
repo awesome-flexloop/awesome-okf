@@ -499,8 +499,8 @@ Tool 类有一个可选的 `requirements` 属性（`to_dict()` 中包含），�
 
 ## 相关链接
 
-- [ToolCallingAgent：函数调用范式](/concepts/05-tool-calling-agent.md) — 工具如何通过function calling被调用
-- [CodeAgent：代码执行范式](/concepts/06-code-agent.md) — 工具如何注入到Python命名空间
-- [内置工具详解](/concepts/08-builtin-tools.md) — 框架提供的默认工具实现
-- [模型抽象层与多后端](/concepts/09-model-layer.md) — get_tool_json_schema与模型对接
-- [Tools API 参考](/references/tools-api.md) — Tool基类及所有子类完整API
+- [ToolCallingAgent：函数调用范式](05-tool-calling-agent.md) — 工具如何通过function calling被调用
+- [CodeAgent：代码执行范式](06-code-agent.md) — 工具如何注入到Python命名空间
+- [内置工具详解](08-builtin-tools.md) — 框架提供的默认工具实现
+- [模型抽象层与多后端](09-model-layer.md) — get_tool_json_schema与模型对接
+- [Tools API 参考](../references/tools-api.md) — Tool基类及所有子类完整API

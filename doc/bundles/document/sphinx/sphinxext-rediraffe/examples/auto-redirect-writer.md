@@ -258,7 +258,7 @@ def abs_path_in_src_dir_w_src_suffix(filename):
 
 ## 相关概念
 
-- [Builder体系详解](/concepts/05-builders.md)
-- [配置项详解](/concepts/04-configuration.md)
-- [CI Diff检查集成](/examples/diff-checker-ci.md)
-- [基础重定向配置](/examples/basic-redirects.md)
+- [Builder体系详解](../concepts/05-builders.md)
+- [配置项详解](../concepts/04-configuration.md)
+- [CI Diff检查集成](diff-checker-ci.md)
+- [基础重定向配置](basic-redirects.md)

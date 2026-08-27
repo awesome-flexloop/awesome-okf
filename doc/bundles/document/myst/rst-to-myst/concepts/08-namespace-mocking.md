@@ -148,6 +148,6 @@ CLI 的 `directives list/show` 和 `roles list/show` 子命令通过 `compile_na
 
 ## 相关概念
 
-- [三阶段转换流水线架构](/concepts/03-conversion-pipeline.md)
-- [LosslessRSTParser 与自定义 Transform](/concepts/04-lossless-parser.md)
-- [Python API 使用指南](/concepts/02-python-api.md)
+- [三阶段转换流水线架构](03-conversion-pipeline.md)
+- [LosslessRSTParser 与自定义 Transform](04-lossless-parser.md)
+- [Python API 使用指南](02-python-api.md)

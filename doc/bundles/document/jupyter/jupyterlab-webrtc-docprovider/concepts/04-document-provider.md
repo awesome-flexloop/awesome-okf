@@ -199,7 +199,7 @@ peerCount = WebRTC 连接数 + BroadcastChannel 连接数（同浏览器标签�
 
 ## 相关概念
 
-- [WebRtcManager配置管理](/concepts/03-webrtc-manager.md)
-- [房间ID哈希与信令机制](/concepts/05-room-and-signaling.md)
-- [Vendor补丁与大消息传输](/concepts/08-vendor-patches.md)
-- [架构总览](/concepts/02-architecture-overview.md)
+- [WebRtcManager配置管理](03-webrtc-manager.md)
+- [房间ID哈希与信令机制](05-room-and-signaling.md)
+- [Vendor补丁与大消息传输](08-vendor-patches.md)
+- [架构总览](02-architecture-overview.md)

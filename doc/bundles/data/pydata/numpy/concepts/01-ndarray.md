@@ -316,4 +316,4 @@ np.linspace(0, 1, 5)  # [0., 0.25, 0.5, 0.75, 1.]
 - [ufunc通用函数](03-ufunc.md) — 对ndarray执行向量化运算
 - [广播规则](04-broadcasting.md) — 不同形状数组的运算规则
 - [索引与切片](05-indexing.md) — 访问和修改数组元素
-- [NumPy ndarray与数组创建API源码](/references/ndarray-source.md) — 源码信源
+- [NumPy ndarray与数组创建API源码](../references/ndarray-source.md) — 源码信源

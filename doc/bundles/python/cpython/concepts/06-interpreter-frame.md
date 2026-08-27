@@ -289,4 +289,4 @@ localsplus                            Stackbase                 stackpointer
 - [垃圾回收器](05-garbage-collector.md) — GC 需要遍历帧栈以标记栈上引用的对象
 - [字节码执行引擎](07-bytecode-execution.md) — 解释主循环如何操作帧和操作数栈
 - [对象模型：PyObject 与 PyVarObject](02-object-model.md) — `_PyStackRef` 和 `PyObject` 的关系
-- [CPython 源码信源登记](/references/cpython-source.md) — 帧相关关键文件索引
+- [CPython 源码信源登记](../references/cpython-source.md) — 帧相关关键文件索引

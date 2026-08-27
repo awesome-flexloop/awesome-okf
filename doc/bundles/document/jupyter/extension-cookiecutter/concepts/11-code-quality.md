@@ -261,6 +261,6 @@ Jupyter 生态选择这些工具的理由：
 
 ## 相关概念
 
-- [CI/CD 工作流](/concepts/09-ci-workflows.md)
-- [构建系统详解](/concepts/08-build-system.md)
-- [pyproject.toml 字段全解析](/references/pyproject-source.md)
+- [CI/CD 工作流](09-ci-workflows.md)
+- [构建系统详解](08-build-system.md)
+- [pyproject.toml 字段全解析](../references/pyproject-source.md)

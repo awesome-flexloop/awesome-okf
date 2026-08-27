@@ -93,7 +93,7 @@ class Aliases {
 
 核心方法是 **getRecursive(value)**：在分词阶段用于别名递归展开。当别名值本身引用另一个别名时，该方法递归解析直到得到最终的命令字符串，防止无限递归。
 
-别名展开机制详见[解析器源码参考](/references/parser-source.md)。
+别名展开机制详见[解析器源码参考](parser-source.md)。
 
 ## History 类
 
@@ -253,7 +253,7 @@ namespace ansi {
 
 ## 相关概念
 
-- [内置命令源码参考](/references/builtin-source.md)：export/unset/cockle-config 等操作环境变量的命令
-- [命令系统源码参考](/references/command-source.md)：CommandModuleLoader 从配置加载命令包
-- [Worker 通信源码参考](/references/worker-source.md)：Worker 端环境初始化与 Termios 跨线程同步
-- [缓冲 IO 源码参考](/references/buffered-io-source.md)：stdin 后端切换与环境配置的关联
+- [内置命令源码参考](builtin-source.md)：export/unset/cockle-config 等操作环境变量的命令
+- [命令系统源码参考](command-source.md)：CommandModuleLoader 从配置加载命令包
+- [Worker 通信源码参考](worker-source.md)：Worker 端环境初始化与 Termios 跨线程同步
+- [缓冲 IO 源码参考](buffered-io-source.md)：stdin 后端切换与环境配置的关联

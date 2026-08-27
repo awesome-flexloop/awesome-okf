@@ -235,7 +235,7 @@ new WebRtcManager(options)
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [WebRtcProvider文档提供者](/concepts/04-document-provider.md)
-- [配置三级优先级系统](/concepts/09-configuration.md)
-- [房间ID哈希与信令机制](/concepts/05-room-and-signaling.md)
+- [架构总览](02-architecture-overview.md)
+- [WebRtcProvider文档提供者](04-document-provider.md)
+- [配置三级优先级系统](09-configuration.md)
+- [房间ID哈希与信令机制](05-room-and-signaling.md)

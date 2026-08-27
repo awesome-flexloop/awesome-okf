@@ -113,8 +113,8 @@ python -m http.server 8000
 
 ## 相关概念
 
-- [jupyterlite 指令详解](/concepts/04-jupyterlite-directive.md)
-- [指令系统总览](/concepts/03-directive-overview.md)
-- [配置参考](/references/config-reference.md)
-- [快速开始](/concepts/02-quick-start.md)
-- [构建流程](/concepts/10-build-process.md)
+- [jupyterlite 指令详解](../concepts/04-jupyterlite-directive.md)
+- [指令系统总览](../concepts/03-directive-overview.md)
+- [配置参考](../references/config-reference.md)
+- [快速开始](../concepts/02-quick-start.md)
+- [构建流程](../concepts/10-build-process.md)

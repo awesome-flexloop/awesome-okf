@@ -202,6 +202,6 @@ python convert.py ./markdown ./html
 
 ## 相关概念
 
-- [CLI 工具](/concepts/10-cli-tools.md)
-- [Docutils 独立使用](/concepts/15-docutils-standalone.md)
-- [快速开始](/concepts/01-getting-started.md)
+- [CLI 工具](../concepts/10-cli-tools.md)
+- [Docutils 独立使用](../concepts/15-docutils-standalone.md)
+- [快速开始](../concepts/01-getting-started.md)

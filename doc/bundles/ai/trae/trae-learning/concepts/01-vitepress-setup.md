@@ -119,13 +119,13 @@ trae-learning/
 
 ## 主题扩展机制
 
-自定义主题通过 `.vitepress/theme/index.js` 实现，继承 VitePress DefaultTheme 并注册全局组件。详见[自定义主题开发](/concepts/02-custom-theme.md)。
+自定义主题通过 `.vitepress/theme/index.js` 实现，继承 VitePress DefaultTheme 并注册全局组件。详见[自定义主题开发](02-custom-theme.md)。
 
 ## 相关链接
 
-- [Trae Learning 学习站简介](/concepts/00-introduction.md)
-- [自定义主题开发](/concepts/02-custom-theme.md)
-- [Guide 基础教程](/concepts/03-guide-content.md)
-- [GitHub Pages 部署](/concepts/05-deploy-pages.md)
-- [本地预览与构建示例](/examples/local-preview.md)
-- [文档站源码索引](/references/learning-source.md)
+- [Trae Learning 学习站简介](00-introduction.md)
+- [自定义主题开发](02-custom-theme.md)
+- [Guide 基础教程](03-guide-content.md)
+- [GitHub Pages 部署](05-deploy-pages.md)
+- [本地预览与构建示例](../examples/local-preview.md)
+- [文档站源码索引](../references/learning-source.md)

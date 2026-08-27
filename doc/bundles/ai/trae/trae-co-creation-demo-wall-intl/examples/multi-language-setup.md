@@ -419,5 +419,5 @@ export default async function HomePage({ params }: { params: { locale: string } 
 
 ## 相关内容
 
-- [5语言国际化](/concepts/02-multi-language.md)
-- [添加新语言完整步骤](/examples/add-new-language.md)
+- [5语言国际化](../concepts/02-multi-language.md)
+- [添加新语言完整步骤](add-new-language.md)

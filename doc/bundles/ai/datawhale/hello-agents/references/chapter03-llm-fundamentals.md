@@ -64,5 +64,5 @@ sources:
 - OpenAI兼容API调用方式
 
 ## 相关概念
-- [智能体范式与ReAct](/ai/datawhale/hello-agents/concepts/agent-paradigms-react)
-- [上下文工程](/ai/datawhale/hello-agents/concepts/context-engineering)
+- 智能体范式与ReAct
+- 上下文工程

@@ -138,6 +138,6 @@ podman-compose 更适合追求轻量、安全、原生 rootless 体验的场景�
 
 ## 相关概念
 
-- [快速上手与 Compose Spec 兼容](/concepts/00-introduction.md)
-- [rootless 模式下的网络与卷](/concepts/02-rootless.md)
-- [Compose 文件常见模式](/concepts/03-compose-patterns.md)
+- [快速上手与 Compose Spec 兼容](00-introduction.md)
+- [rootless 模式下的网络与卷](02-rootless.md)
+- [Compose 文件常见模式](03-compose-patterns.md)

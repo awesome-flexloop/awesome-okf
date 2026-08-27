@@ -39,6 +39,6 @@ okf_version: "0.2"
 
 ## 相关概念
 
-- [知识包结构](./bundle-structure.md)
+- [知识包结构](bundle-structure.md)
 
-[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](/references/okf-spec.md)。
+[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](../references/okf-spec.md)。

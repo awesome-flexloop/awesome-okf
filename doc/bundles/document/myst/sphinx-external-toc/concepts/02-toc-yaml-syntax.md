@@ -279,7 +279,7 @@ subtrees:
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [扩展工作机制](/concepts/03-extension-mechanism.md)
-- [高级功能](/concepts/04-advanced-features.md)
-- [基础 _toc.yml 示例](/examples/basic-toc.md)
+- [快速开始](01-getting-started.md)
+- [扩展工作机制](03-extension-mechanism.md)
+- [高级功能](04-advanced-features.md)
+- [基础 _toc.yml 示例](../examples/basic-toc.md)

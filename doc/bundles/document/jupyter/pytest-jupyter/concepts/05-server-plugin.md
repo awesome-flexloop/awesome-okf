@@ -435,6 +435,6 @@ async def test_auth(jp_serverapp, jp_server_authorizer, jp_fetch):
 ---
 
 **下一步阅读：**
-- [Tornado异步支持](/concepts/06-tornasync-plugin.md) — HTTP服务器/客户端底层实现
-- [Echo内核深入](/concepts/07-echo-kernel.md) — 测试内核实现与扩展
-- [Fixture工厂模式](/concepts/08-fixture-factories.md) — 可配置fixtures的设计模式
+- [Tornado异步支持](06-tornasync-plugin.md) — HTTP服务器/客户端底层实现
+- [Echo内核深入](07-echo-kernel.md) — 测试内核实现与扩展
+- [Fixture工厂模式](08-fixture-factories.md) — 可配置fixtures的设计模式

@@ -199,6 +199,6 @@ fps --config config.json --help-all
 
 ## 相关概念
 
-- [配置系统](/concepts/05-configuration-system.md)
-- [插件架构](/concepts/08-plugin-architecture.md)
+- [配置系统](../concepts/05-configuration-system.md)
+- [插件架构](../concepts/08-plugin-architecture.md)
 - [可插拔Web服务器](03-web-server.md)

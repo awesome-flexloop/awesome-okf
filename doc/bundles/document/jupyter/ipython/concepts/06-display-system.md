@@ -360,7 +360,7 @@ captured.show()  # 重新显示捕获的内容
 
 ## 相关概念
 
-- [代码执行管线](/concepts/05-execution-pipeline.md)
-- [魔法命令系统](/concepts/04-magic-system.md)
-- [事件与钩子](/concepts/10-events-hooks.md)
-- [信源参考 - 显示系统](/references/display-source.md)
+- [代码执行管线](05-execution-pipeline.md)
+- [魔法命令系统](04-magic-system.md)
+- [事件与钩子](10-events-hooks.md)
+- [信源参考 - 显示系统](../references/display-source.md)

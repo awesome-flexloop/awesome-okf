@@ -196,7 +196,7 @@ podman kube down nginx-redis-pod.yaml
 
 ## 相关概念
 
-- [Pod一等公民](/concepts/05-pod-first-class.md)
-- [Kubernetes集成](/concepts/13-kubernetes-integration.md)
-- [容器基础](/concepts/04-container-basics.md)
-- [网络与数据卷](/concepts/09-network-volume.md)
+- [Pod一等公民](../concepts/05-pod-first-class.md)
+- [Kubernetes集成](../concepts/13-kubernetes-integration.md)
+- [容器基础](../concepts/04-container-basics.md)
+- [网络与数据卷](../concepts/09-network-volume.md)

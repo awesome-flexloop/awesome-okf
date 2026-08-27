@@ -294,7 +294,7 @@ class GeometryExample(Scene):
 
 ## 相关概念
 
-- [03 Mobject：数学对象基类](/concepts/03-mobject-fundamentals.md)
-- [05 动画基础](/concepts/05-animation-basics.md)
-- [06 Transform 深度解析](/concepts/06-transform-deep-dive.md)
-- [08 常量系统与颜色体系](/concepts/08-constants-and-colors.md)
+- [03 Mobject：数学对象基类](03-mobject-fundamentals.md)
+- [05 动画基础](05-animation-basics.md)
+- [06 Transform 深度解析](06-transform-deep-dive.md)
+- [08 常量系统与颜色体系](08-constants-and-colors.md)

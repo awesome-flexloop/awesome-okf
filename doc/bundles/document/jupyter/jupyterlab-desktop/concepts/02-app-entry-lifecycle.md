@@ -143,7 +143,7 @@ macOS 上通过 Finder/Launchpad 启动的 GUI 应用不继承 shell 的 PATH �
 
 ### 7. JupyterApplication 初始化
 
-详见 [架构概览](/concepts/01-architecture-overview.md#启动数据流)。
+详见 [架构概览](01-architecture-overview.md#启动数据流)。
 
 ## 应用启动模式（startup）
 
@@ -182,18 +182,18 @@ macOS 上双击 `.ipynb` 文件或拖拽文件到 Dock 图标时触发 `app.on('
 
 ## 相关信源
 
-- [main.ts 信源](/references/main-source.md)
-- [app.ts 信源](/references/app-source.md)
-- [config 信源](/references/config-source.md)
+- [main.ts 信源](../references/main-source.md)
+- [app.ts 信源](../references/app-source.md)
+- [config 信源](../references/config-source.md)
 
 ## 下一篇
 
-- [会话窗口系统](/concepts/03-session-window-system.md)
-- [Jupyter 服务器管理](/concepts/04-server-management.md)
+- [会话窗口系统](03-session-window-system.md)
+- [Jupyter 服务器管理](04-server-management.md)
 
 ## 相关概念
 
-- [架构概览](/concepts/01-architecture-overview.md) — 理解核心模块依赖与启动数据流
-- [会话窗口系统](/concepts/03-session-window-system.md) — 窗口创建与生命周期管理
-- [Jupyter 服务器管理](/concepts/04-server-management.md) — 服务器进程的启动与 Factory 预创建机制
-- [CLI 命令系统](/concepts/07-cli-system.md) — 启动参数解析与 env/config 等子命令
+- [架构概览](01-architecture-overview.md) — 理解核心模块依赖与启动数据流
+- [会话窗口系统](03-session-window-system.md) — 窗口创建与生命周期管理
+- [Jupyter 服务器管理](04-server-management.md) — 服务器进程的启动与 Factory 预创建机制
+- [CLI 命令系统](07-cli-system.md) — 启动参数解析与 env/config 等子命令

@@ -105,7 +105,7 @@ FASTA 格式是生物信息学的标准序列格式，jupyterlab-fasta 扩展提
 - 多序列比对视图
 - 序列搜索和高亮
 
-FASTA 扩展的故事在演示中被反复引用（见 [演示能力维度](/concepts/04-demo-capabilities.md)）——"有人在 SciPy 上说需要FASTA支持，我们几十行代码几小时就做了一个扩展"。这是 JupyterLab 扩展性的活广告。
+FASTA 扩展的故事在演示中被反复引用（见 [演示能力维度](04-demo-capabilities.md)）——"有人在 SciPy 上说需要FASTA支持，我们几十行代码几小时就做了一个扩展"。这是 JupyterLab 扩展性的活广告。
 
 ## 图片与多媒体
 
@@ -203,6 +203,6 @@ data/ 目录中的文件来自多个来源，各自遵循不同的许可证。LI
 
 ## 相关概念
 
-- [演示能力维度与多内核支持](/concepts/04-demo-capabilities.md)
-- [Notebook 示例解析](/concepts/05-notebook-examples.md)
-- [插件架构与扩展生态](/concepts/08-extension-demo.md)
+- [演示能力维度与多内核支持](04-demo-capabilities.md)
+- [Notebook 示例解析](05-notebook-examples.md)
+- [插件架构与扩展生态](08-extension-demo.md)

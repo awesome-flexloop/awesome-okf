@@ -86,7 +86,7 @@ Jupyter Server Team Compass 的决策机制嵌套在 Jupyter 三层治理模型�
 
 ## 相关概念
 
-- [团队成员体系](/concepts/01-team-membership.md)
-- [成为团队成员](/concepts/02-becoming-member.md)
-- [成员指南与PR合并原则](/concepts/04-member-guide.md)
-- [周会制度](/concepts/05-weekly-meetings.md)
+- [团队成员体系](01-team-membership.md)
+- [成为团队成员](02-becoming-member.md)
+- [成员指南与PR合并原则](04-member-guide.md)
+- [周会制度](05-weekly-meetings.md)

@@ -76,8 +76,8 @@ README 中列出 4 种参与方式（均通过飞书表单/文档降低门槛）
 
 ## 相关链接
 
-- [CSV+Python 轻量 CMS 模式](/concepts/01-csv-cms-pattern.md)
-- [活动数据格式](/concepts/02-event-data-format.md)
-- [贡献流程](/concepts/03-contribution-workflow.md)
-- [添加新活动示例](/examples/add-event.md)
-- [活动数据和脚本索引](/references/events-source.md)
+- [CSV+Python 轻量 CMS 模式](01-csv-cms-pattern.md)
+- [活动数据格式](02-event-data-format.md)
+- [贡献流程](03-contribution-workflow.md)
+- [添加新活动示例](../examples/add-event.md)
+- [活动数据和脚本索引](../references/events-source.md)

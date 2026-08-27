@@ -65,14 +65,14 @@ $$\mathbb{E}_{D,z}\left[|\ell(\mathfrak{L}_D,z) - \ell(\mathfrak{L}_{D^{\setminu
 
 1. **顺序无关性**：假设输出与训练集顺序无关。SGD 等在线算法因顺序影响输出，不适用经典稳定性框架。
 2. **分布一致性**：假设训练分布与真实分布一致。数据/概念漂移场景下稳定性要求可能不成立。
-3. **稳定性 vs 可塑性**：在线学习需要算法适应新数据（可塑性），与稳定性目标存在根本张力，需用[遗憾界](/ai/datawhale/key-book/concepts/regret-bound)分析。
+3. **稳定性 vs 可塑性**：在线学习需要算法适应新数据（可塑性），与稳定性目标存在根本张力，需用遗憾界分析。
 
 ## 与其他概念的关系
 
-- [泛化界](/ai/datawhale/key-book/concepts/generalization-bound)：稳定性提供算法依赖的泛化保证，是 VC 维方法的替代
-- [可学性](/ai/datawhale/key-book/concepts/learnability)：定理 5.4 建立稳定性与不可知 PAC 可学性的等价
-- [遗憾界](/ai/datawhale/key-book/concepts/regret-bound)：在线学习中稳定性与可塑性的张力由遗憾分析平衡
+- 泛化界：稳定性提供算法依赖的泛化保证，是 VC 维方法的替代
+- 可学性：定理 5.4 建立稳定性与不可知 PAC 可学性的等价
+- 遗憾界：在线学习中稳定性与可塑性的张力由遗憾分析平衡
 
 ## 参见
 
-- [第 5 章：稳定性](/ai/datawhale/key-book/references/chapter5)
+- 第 5 章：稳定性

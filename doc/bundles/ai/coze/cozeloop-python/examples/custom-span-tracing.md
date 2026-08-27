@@ -542,6 +542,6 @@ def business_function(data):
 
 ## 下一步
 
-- 学习 [上下文传播](/concepts/03-context-propagation.md)深入理解传播机制
-- 查看 [Tracing API 参考](/references/tracing-api.md)了解完整 Span 接口
-- 阅读 [配置与批量上报](/concepts/04-configuration-batching.md)了解性能调优
+- 学习 [上下文传播](../concepts/03-context-propagation.md)深入理解传播机制
+- 查看 [Tracing API 参考](../references/tracing-api.md)了解完整 Span 接口
+- 阅读 [配置与批量上报](../concepts/04-configuration-batching.md)了解性能调优

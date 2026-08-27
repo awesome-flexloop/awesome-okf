@@ -154,4 +154,4 @@ dependencies:
 - [运行时环境配置](04-runtime-env-config.md) — environment.yml 详细配置方法
 - [构建环境配置](05-build-env-config.md) — build-environment.yml 详细配置方法
 - [多语言内核支持](07-kernel-options.md) — 配置 Python/R/C++ 内核
-- [添加 JupyterLite 插件](/examples/05-add-jupyterlite-plugins.md) — 插件安装示例
+- [添加 JupyterLite 插件](../examples/05-add-jupyterlite-plugins.md) — 插件安装示例

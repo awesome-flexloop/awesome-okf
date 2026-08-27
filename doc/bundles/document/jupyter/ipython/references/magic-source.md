@@ -429,7 +429,7 @@ ip.magics_manager.register_lazy(
 
 ## 相关概念
 
-- [魔法系统](/concepts/04-magic-system.md)
-- [代码执行管线](/concepts/05-execution-pipeline.md)
-- [InteractiveShell API 参考](/references/interactiveshell-source.md)
-- [扩展系统 API 参考](/references/extension-source.md)
+- [魔法系统](../concepts/04-magic-system.md)
+- [代码执行管线](../concepts/05-execution-pipeline.md)
+- [InteractiveShell API 参考](interactiveshell-source.md)
+- [扩展系统 API 参考](extension-source.md)

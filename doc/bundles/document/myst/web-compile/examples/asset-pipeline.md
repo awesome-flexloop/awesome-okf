@@ -296,7 +296,7 @@ build-backend = "setuptools.build_meta"
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [三种编译类型](/concepts/02-compilation-types.md)
-- [配置文件详解](/concepts/03-configuration.md)
-- [CI集成](/concepts/04-ci-integration.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [三种编译类型](../concepts/02-compilation-types.md)
+- [配置文件详解](../concepts/03-configuration.md)
+- [CI集成](../concepts/04-ci-integration.md)

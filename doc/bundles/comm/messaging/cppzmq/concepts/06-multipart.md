@@ -107,7 +107,7 @@ zmq::multipart_t restored = zmq::multipart_t::decode(packed);
 
 ## 相关概念
 
-- [03 message 与 buffer](/concepts/03-message-and-buffer.md)
-- [05 poller](/concepts/05-poller.md)
-- [示例：multipart-poller](/examples/multipart-poller.md)
-- [信源：zmq_addon.hpp](/references/zmq-addon-hpp.md)
+- [03 message 与 buffer](03-message-and-buffer.md)
+- [05 poller](05-poller.md)
+- [示例：multipart-poller](../examples/multipart-poller.md)
+- [信源：zmq_addon.hpp](../references/zmq-addon-hpp.md)

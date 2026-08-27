@@ -103,6 +103,6 @@ HelloAgents框架实现的上下文构建器，将上下文管理抽象为四步
 
 ## 相关阅读
 
-- [第九章 上下文工程](/ai/datawhale/hello-agents/references/chapter09-context-engineering)
-- [记忆系统](/ai/datawhale/hello-agents/concepts/memory-systems)
-- [Agent框架开发](/ai/datawhale/hello-agents/concepts/agent-framework-development)
+- 第九章 上下文工程
+- 记忆系统
+- Agent框架开发

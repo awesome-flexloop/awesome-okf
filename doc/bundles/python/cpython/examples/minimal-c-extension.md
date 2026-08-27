@@ -342,10 +342,10 @@ spam_divide(PyObject* self, PyObject* args, PyObject* kwargs)
 
 ## 相关概念
 
-* [对象模型（§2）](/concepts/02-object-model.md)
-* [类型系统（§3）](/concepts/03-type-system.md)
-* [引用计数（§4）](/concepts/04-reference-counting.md)
-* [模块导入（§9）](/concepts/09-module-import.md)
-* [CPython 源码信源登记](/references/cpython-source.md)
+* [对象模型（§2）](../concepts/02-object-model.md)
+* [类型系统（§3）](../concepts/03-type-system.md)
+* [引用计数（§4）](../concepts/04-reference-counting.md)
+* [模块导入（§9）](../concepts/09-module-import.md)
+* [CPython 源码信源登记](../references/cpython-source.md)
 
-[^cpython-source]: CPython 3.16.0a0 源码，核心头文件为 `Include/Python.h`、`Include/moduleobject.h`、`Include/modsupport.h`（PyArg_ParseTuple 等），见本 bundle 信源登记 [references/cpython-source.md](/references/cpython-source.md)。
+[^cpython-source]: CPython 3.16.0a0 源码，核心头文件为 `Include/Python.h`、`Include/moduleobject.h`、`Include/modsupport.h`（PyArg_ParseTuple 等），见本 bundle 信源登记 [references/cpython-source.md](../references/cpython-source.md)。

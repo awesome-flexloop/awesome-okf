@@ -368,13 +368,13 @@ katex.render(
 
 ## 相关内容
 
-- [宏系统](/concepts/09-macro-system.md)
-- [宏展开器](/concepts/04-macro-expander.md)
-- [函数注册表](/concepts/08-function-registry.md)
-- [配置选项](/concepts/10-settings-options.md)
-- [安全信任示例](/examples/security-trust.md)
-- [基础渲染示例](/examples/basic-render.md)
-- [自定义扩展示例](/examples/custom-extension.md)
+- [宏系统](../concepts/09-macro-system.md)
+- [宏展开器](../concepts/04-macro-expander.md)
+- [函数注册表](../concepts/08-function-registry.md)
+- [配置选项](../concepts/10-settings-options.md)
+- [安全信任示例](security-trust.md)
+- [基础渲染示例](basic-render.md)
+- [自定义扩展示例](custom-extension.md)
 
 [^web-api]: 官网 API 页面，https://katex.org/docs/api
 [^web-options]: 官网 Options 页面，https://katex.org/docs/options

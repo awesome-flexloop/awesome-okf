@@ -139,7 +139,7 @@ model.with_structured_output(
 
 所有错误类同时继承 `ChatGoogleGenerativeAIError`，保证 `except ChatGoogleGenerativeAIError` 的旧代码仍能捕获（向后兼容）。`GoogleContextOverflowError` 通过错误消息字符串匹配（"exceeds the maximum number of tokens allowed" / "token limit"）而非状态码识别，使 `SummarizationMiddleware` 能专门处理。
 
-详见 [深度洞察 §3](/ai/langchain-ai/langchain-google/spec/insights)。
+详见 深度洞察 §3。
 
 ## 模型行为差异处理
 
@@ -155,7 +155,7 @@ model.with_structured_output(
 
 ## 进一步阅读
 
-- [总览](/ai/langchain-ai/langchain-google/concepts/overview)
-- [嵌入模型与 Vertex AI](/ai/langchain-ai/langchain-google/concepts/embeddings-vertex)
-- [API 参考](/ai/langchain-ai/langchain-google/references/api)
-- [基础使用示例](/ai/langchain-ai/langchain-google/examples/basic-usage)
+- 总览
+- 嵌入模型与 Vertex AI
+- API 参考
+- 基础使用示例

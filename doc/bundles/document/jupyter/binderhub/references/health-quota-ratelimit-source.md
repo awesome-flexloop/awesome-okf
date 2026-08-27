@@ -32,12 +32,12 @@ sources:
 ## 概述
 
 本文档解析 BinderHub 的支撑模块：
-- [health.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/health.py)：健康检查端点和 Pod 配额检查
-- [quota.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/quota.py)：启动配额管理
-- [ratelimit.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/ratelimit.py)：请求限流
-- [metrics.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/metrics.py)：Prometheus 指标端点
-- [events.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/events.py)：结构化事件日志
-- [utils.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/utils.py)：工具函数
+- health.py：健康检查端点和 Pod 配额检查
+- quota.py：启动配额管理
+- ratelimit.py：请求限流
+- metrics.py：Prometheus 指标端点
+- events.py：结构化事件日志
+- utils.py：工具函数
 
 ## health.py：健康检查
 
@@ -568,7 +568,7 @@ launch_schema = {
 
 ## utils.py：工具函数
 
-[utils.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/utils.py) 提供通用工具函数。
+utils.py 提供通用工具函数。
 
 ### 核心工具函数
 

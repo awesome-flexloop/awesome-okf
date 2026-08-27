@@ -262,7 +262,7 @@ else:
 
 Anthropic 官方维护了 13 个插件，覆盖开发工作流、安全质量、学习风格、开发工具等场景。这些插件经过官方测试和维护，质量有保障。
 
-完整清单见 [官方插件索引](/claude-code/references/plugins-index.md)。
+完整清单见 [官方插件索引](../references/plugins-index.md)。
 
 ### 社区插件
 
@@ -274,6 +274,6 @@ Anthropic 官方维护了 13 个插件，覆盖开发工作流、安全质量、
 
 ## 相关概念
 
-- [Claude Code 概览](/claude-code/concepts/00-overview.md) — 了解 Claude Code 基础
-- [官方插件索引](/claude-code/references/plugins-index.md) — 13 个官方插件完整清单
-- [基本使用示例：安装插件](/claude-code/examples/basic-usage.md#安装插件) — 插件安装操作示例
+- [Claude Code 概览](00-overview.md) — 了解 Claude Code 基础
+- [官方插件索引](../references/plugins-index.md) — 13 个官方插件完整清单
+- [基本使用示例：安装插件](../examples/basic-usage.md#安装插件) — 插件安装操作示例

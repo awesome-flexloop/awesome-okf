@@ -137,8 +137,8 @@ stale_after: 2027-08-27
 AI Agent（自主执行任务）
 ```
 
-- **工具调用（Tool Use）**：提示词告诉模型"有哪些工具可用、何时使用、如何解析结果"，详见 [Python SDK 工具使用](/python-sdk/concepts/04-tool-use.md)
-- **RAG（检索增强生成）**：提示词中注入检索到的上下文，让模型基于外部知识回答，详见 [Cookbook RAG 模式](/cookbooks/concepts/03-rag-patterns.md)
+- **工具调用（Tool Use）**：提示词告诉模型"有哪些工具可用、何时使用、如何解析结果"，详见 [Python SDK 工具使用](../../python-sdk/concepts/04-tool-use.md)
+- **RAG（检索增强生成）**：提示词中注入检索到的上下文，让模型基于外部知识回答，详见 [Cookbook RAG 模式](../../cookbooks/concepts/03-rag-patterns.md)
 - **AI Agent**：本质是"提示词 + 工具调用 + 规划循环 + 记忆"的组合
 
 ## 环境准备
@@ -173,7 +173,7 @@ print(message.content[0].text)
 
 > 本教程使用 Claude Haiku 模型教学——它快速、便宜，非常适合学习和迭代提示词。实际生产中可以根据需求切换到 Sonnet 或 Opus。
 
-详见 [Python SDK 快速开始](/python-sdk/concepts/00-overview.md)。
+详见 [Python SDK 快速开始](../../python-sdk/concepts/00-overview.md)。
 
 ### 3. 直接在 Console 测试
 
@@ -190,4 +190,4 @@ print(message.content[0].text)
 
 - [基础结构（入门Ch1-3）](01-basic-structure.md) — 开始你的第一个提示词
 - [中级技巧（Ch4-7）](02-intermediate-techniques.md) — 掌握结构化提示
-- [Python SDK 概览](/python-sdk/concepts/00-overview.md) — 用代码调用 Claude
+- [Python SDK 概览](../../python-sdk/concepts/00-overview.md) — 用代码调用 Claude

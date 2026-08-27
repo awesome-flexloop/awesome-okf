@@ -215,7 +215,7 @@ const reply = await chatChain.invoke({
 
 ## 相关文档
 
-- [Runnable 接口概念](/ai/langchain-ai/langchainjs/concepts/runnable-interface)
-- [提示模板概念](/ai/langchain-ai/langchainjs/concepts/prompt-templates)
-- [Runnable 核心 API](/ai/langchain-ai/langchainjs/references/core-runnable)
-- [创建 ReAct Agent 示例](/ai/langchain-ai/langchainjs/examples/react-agent)
+- Runnable 接口概念
+- 提示模板概念
+- Runnable 核心 API
+- 创建 ReAct Agent 示例

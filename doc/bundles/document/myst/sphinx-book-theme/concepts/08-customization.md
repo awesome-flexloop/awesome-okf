@@ -220,7 +220,7 @@ SBT支持全宽（full-width）内容，某些元素可以打破内容区宽度�
 
 ## 相关概念
 
-- [主题架构与PST继承](/concepts/02-theme-architecture.md)
-- [布局与模板定制](/concepts/07-layout-and-templates.md)
-- [交互功能详解](/concepts/06-interactive-features.md)
-- [Margin指令与边注旁注](/concepts/05-margin-sidenotes.md)
+- [主题架构与PST继承](02-theme-architecture.md)
+- [布局与模板定制](07-layout-and-templates.md)
+- [交互功能详解](06-interactive-features.md)
+- [Margin指令与边注旁注](05-margin-sidenotes.md)

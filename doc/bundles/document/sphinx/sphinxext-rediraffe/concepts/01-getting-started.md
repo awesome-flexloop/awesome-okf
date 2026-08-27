@@ -155,8 +155,8 @@ A: 不可以。重定向路径必须是相对于Sphinx源目录的相对路径�
 
 ## 相关概念
 
-- [sphinxext-rediraffe 简介](/concepts/00-introduction.md)
-- [架构概览](/concepts/02-architecture-overview.md)
-- [重定向图模型](/concepts/03-redirect-graph.md)
-- [配置项详解](/concepts/04-configuration.md)
-- [基础重定向示例](/examples/basic-redirects.md)
+- [sphinxext-rediraffe 简介](00-introduction.md)
+- [架构概览](02-architecture-overview.md)
+- [重定向图模型](03-redirect-graph.md)
+- [配置项详解](04-configuration.md)
+- [基础重定向示例](../examples/basic-redirects.md)

@@ -15,7 +15,7 @@ sources:
 
 ## XeusAddon 类
 
-继承自 `jupyterlite.addons.federated_extension_addon.FederatedExtensionAddon`，定义在 [add_on.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/xeus/jupyterlite_xeus/add_on.py)。
+继承自 `jupyterlite.addons.federated_extension_addon.FederatedExtensionAddon`，定义在 add_on.py。
 
 ### 配置项（Traitlets）
 

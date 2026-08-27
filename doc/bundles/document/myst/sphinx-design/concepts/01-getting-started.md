@@ -211,6 +211,6 @@ html_css_files = ["custom.css"]
 
 ## 相关概念
 
-- [sphinx-design 简介](/concepts/00-introduction.md) — 项目定位与特性概览
-- [扩展架构](/concepts/02-extension-architecture.md) — 组件注册与两阶段渲染
-- [网格布局系统](/concepts/04-grids.md) — 响应式网格详解
+- [sphinx-design 简介](00-introduction.md) — 项目定位与特性概览
+- [扩展架构](02-extension-architecture.md) — 组件注册与两阶段渲染
+- [网格布局系统](04-grids.md) — 响应式网格详解

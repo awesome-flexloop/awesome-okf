@@ -602,8 +602,8 @@ metrics = flush()
 
 ## 九、相关链接
 
-- [/deepseek/deep-spec/concepts/overview](/ai/deepseek/deep-spec/concepts/overview) — DeepSpec 整体概述
-- [/deepseek/deep-spec/concepts/dspark-model](/ai/deepseek/deep-spec/concepts/dspark-model) — DSpark 模型架构
-- [/deepseek/deep-spec/concepts/eagle3-model](/ai/deepseek/deep-spec/concepts/eagle3-model) — Eagle3 模型架构
-- [/deepseek/deep-spec/references/training-api](/ai/deepseek/deep-spec/references/training-api) — 训练 API 完整参考
-- [/deepseek/deep-spec/examples/training-dspark](/ai/deepseek/deep-spec/examples/training-dspark) — DSpark 训练示例
+- /deepseek/deep-spec/concepts/overview — DeepSpec 整体概述
+- /deepseek/deep-spec/concepts/dspark-model — DSpark 模型架构
+- /deepseek/deep-spec/concepts/eagle3-model — Eagle3 模型架构
+- /deepseek/deep-spec/references/training-api — 训练 API 完整参考
+- /deepseek/deep-spec/examples/training-dspark — DSpark 训练示例

@@ -174,8 +174,8 @@ jobs:
 
 ## 相关概念
 
-- [Action 结构解析](/concepts/02-action-structure.md)
-- [Problem Matcher JSON 格式](/concepts/03-matcher-json.md)
-- [三种正则模式详解](/concepts/04-regex-patterns.md)
-- [基础使用示例](/examples/basic-usage.md)
-- [源码信源登记](/references/github-problem-matcher-source.md)
+- [Action 结构解析](02-action-structure.md)
+- [Problem Matcher JSON 格式](03-matcher-json.md)
+- [三种正则模式详解](04-regex-patterns.md)
+- [基础使用示例](../examples/basic-usage.md)
+- [源码信源登记](../references/github-problem-matcher-source.md)

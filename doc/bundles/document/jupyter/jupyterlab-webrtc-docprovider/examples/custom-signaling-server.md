@@ -228,7 +228,7 @@ Settings → Settings Editor → WebRTC Sharing → Signaling URLs
 
 ## 相关概念
 
-- [房间ID与信令机制](/concepts/05-room-and-signaling.md)
-- [配置三级优先级系统](/concepts/09-configuration.md)
-- [基本协作使用](/examples/basic-collaboration.md)
-- [JupyterLite集成配置](/examples/jupyterlite-integration.md)
+- [房间ID与信令机制](../concepts/05-room-and-signaling.md)
+- [配置三级优先级系统](../concepts/09-configuration.md)
+- [基本协作使用](basic-collaboration.md)
+- [JupyterLite集成配置](jupyterlite-integration.md)

@@ -53,7 +53,7 @@ Node (metaclass=MetaNode)
 
 ## MetaNode 元类与自动注册
 
-所有 Node 子类通过 `MetaNode` 元类（[node.py:56](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/node.py#L56)）自动完成注册：
+所有 Node 子类通过 `MetaNode` 元类（node.py:56）自动完成注册：
 
 1. **class_name_dict 注册**：将类名（如 `'Group'`、`'Table'`）映射到类对象
 2. **class_id_dict 注册**：将 `_c_classid` 属性（如 `'GROUP'`、`'TABLE'`、`'ARRAY'`）映射到类对象
@@ -72,7 +72,7 @@ Node (metaclass=MetaNode)
 
 ## Node 基类
 
-`Node`（[node.py:99](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/node.py#L99)）是所有节点的抽象基类，不能直接实例化。
+`Node`（node.py:99）是所有节点的抽象基类，不能直接实例化。
 
 ### 位置相关属性（_v_ 前缀）
 
@@ -101,7 +101,7 @@ Node (metaclass=MetaNode)
 
 ## Group（分组）
 
-`Group`（[group.py:39](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/group.py#L39)）是容器节点，类似 Unix 文件系统目录，可以包含其他 Group、Leaf 和 Link。
+`Group`（group.py:39）是容器节点，类似 Unix 文件系统目录，可以包含其他 Group、Leaf 和 Link。
 
 ### 核心属性
 
@@ -138,7 +138,7 @@ table = h5file.get_node("/detector/events")  # 编程方式
 
 ## Leaf（叶子节点）
 
-`Leaf`（[leaf.py](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/leaf.py)）是所有存储实际数据的节点的基类。Leaf 不能包含子节点。
+`Leaf`（leaf.py）是所有存储实际数据的节点的基类。Leaf 不能包含子节点。
 
 ### 核心属性
 
@@ -158,7 +158,7 @@ table = h5file.get_node("/detector/events")  # 编程方式
 
 ### ChunkInfo
 
-`ChunkInfo`（[leaf.py:119](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/leaf.py#L119)）是 NamedTuple，描述单个数据块的存储信息：
+`ChunkInfo`（leaf.py:119）是 NamedTuple，描述单个数据块的存储信息：
 
 | 字段 | 说明 |
 |------|------|
@@ -171,7 +171,7 @@ table = h5file.get_node("/detector/events")  # 编程方式
 
 ### Array — 基本数组
 
-`Array`（[array.py:41](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/array.py#L41)）是最简单的数组类型：
+`Array`（array.py:41）是最简单的数组类型：
 - **不分块**（non-chunked），不支持压缩
 - 创建时一次性写入完整数据，之后不可修改大小
 - 无内部 I/O 缓冲区，写入操作立即落盘
@@ -180,7 +180,7 @@ table = h5file.get_node("/detector/events")  # 编程方式
 
 ### CArray — 分块数组
 
-`CArray`（[carray.py:25](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/carray.py#L25)）继承自 Array：
+`CArray`（carray.py:25）继承自 Array：
 - **分块布局**，支持压缩过滤器
 - 大小固定不可扩展
 - 支持通过索引读写数据
@@ -188,7 +188,7 @@ table = h5file.get_node("/detector/events")  # 编程方式
 
 ### EArray — 可扩展数组
 
-`EArray`（[earray.py:27](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/earray.py#L27)）继承自 CArray：
+`EArray`（earray.py:27）继承自 CArray：
 - 支持沿**单一维度**（可扩展维度，`extdim=0`）追加数据
 - 创建时该维度 shape 必须设为 `0`
 - 通过 `append(sequence)` 方法在末尾添加数据
@@ -196,7 +196,7 @@ table = h5file.get_node("/detector/events")  # 编程方式
 
 ### VLArray — 变长数组
 
-`VLArray`（[vlarray.py:41](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/vlarray.py#L41)）存储可变长度行：
+`VLArray`（vlarray.py:41）存储可变长度行：
 - 每行可以包含**不同数量**的同类型原子元素
 - 读取行范围时始终返回 Python 列表
 - 支持 ObjectAtom、VLStringAtom、VLUnicodeAtom 等特殊类型
@@ -204,7 +204,7 @@ table = h5file.get_node("/detector/events")  # 编程方式
 
 ## Table — 结构化表
 
-`Table`（[table.py:383](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/table.py#L383)）继承自 `tableextension.Table` 和 `Leaf`，存储异构结构化数据：
+`Table`（table.py:383）继承自 `tableextension.Table` 和 `Leaf`，存储异构结构化数据：
 - 一维行序列，每行包含多个命名字段（列）
 - 字段支持嵌套（任意深度）
 - 支持行追加、条件查询、索引、排序
@@ -212,7 +212,7 @@ table = h5file.get_node("/detector/events")  # 编程方式
 
 ## 路径系统（path.py）
 
-[path.py](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/path.py) 提供节点路径操作工具函数。
+path.py 提供节点路径操作工具函数。
 
 ### 路径规则
 
@@ -247,7 +247,7 @@ table = h5file.get_node("/detector/events")  # 编程方式
 
 ## 链接（link.py）
 
-[link.py](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/link.py) 实现了两种链接节点。链接不支持 HDF5 属性。
+link.py 实现了两种链接节点。链接不支持 HDF5 属性。
 
 ### SoftLink（软链接）
 

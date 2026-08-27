@@ -149,6 +149,6 @@ class LiteDisplayHook(DisplayHook):
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [Python 兼容性层](/concepts/06-python-compatibility.md)
-- [消息桥接机制](/concepts/07-message-bridge.md)
+- [架构总览](../concepts/02-architecture-overview.md)
+- [Python 兼容性层](../concepts/06-python-compatibility.md)
+- [消息桥接机制](../concepts/07-message-bridge.md)

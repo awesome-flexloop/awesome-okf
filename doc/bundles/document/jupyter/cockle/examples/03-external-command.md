@@ -437,6 +437,6 @@ async function rawModeCommand(context: IExternalRunContext): Promise<number> {
 
 ## 相关概念
 
-- [外部命令](/concepts/09-external-commands.md)
-- [命令系统](/concepts/03-command-system.md)
-- [Shell API 参考](/references/shell-api.md)
+- [外部命令](../concepts/09-external-commands.md)
+- [命令系统](../concepts/03-command-system.md)
+- [Shell API 参考](../references/shell-api.md)

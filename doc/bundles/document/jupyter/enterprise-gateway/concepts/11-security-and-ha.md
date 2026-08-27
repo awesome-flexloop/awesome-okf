@@ -50,7 +50,7 @@ Token为空（默认）时不启用认证。
 
 > 注意：EG使用的Token前缀是 `"token "`，不是 `"Bearer "`。
 
-Token认证由 [TokenAuthorizationMixin](/references/config-mixin-source.md) 在每个请求的 `prepare()` 方法中执行，在所有其他Handler逻辑之前拦截未认证请求。
+Token认证由 [TokenAuthorizationMixin](../references/config-mixin-source.md) 在每个请求的 `prepare()` 方法中执行，在所有其他Handler逻辑之前拦截未认证请求。
 
 ## CORS跨域配置 [F-034]
 
@@ -72,7 +72,7 @@ export EG_ALLOW_HEADERS="Authorization,Content-Type"
 export EG_ALLOW_METHODS="GET,POST,DELETE,OPTIONS"
 ```
 
-CORS头由 [CORSMixin](/references/config-mixin-source.md) 在 `set_default_headers()` 中自动设置 [F-052]。
+CORS头由 [CORSMixin](../references/config-mixin-source.md) 在 `set_default_headers()` 中自动设置 [F-052]。
 
 ### CORS预检请求
 

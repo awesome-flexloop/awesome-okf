@@ -29,7 +29,7 @@ KaTeX 官网提供两个互补的函数参考页面：
 - [Supported Functions](https://katex.org/docs/supported)：按**类型/逻辑分组**排序，适合浏览和系统学习
 - [Support Table](https://katex.org/docs/support_table)：按**字母顺序**排序，适合已知命令名称快速查找
 
-本文档说明 Support Table 页面的结构、阅读方式、与源码的溯源关系，以及 Detexify 手写识别工具的使用。按类型分类的函数清单见 [支持的函数](/concepts/19-supported-functions.md)。
+本文档说明 Support Table 页面的结构、阅读方式、与源码的溯源关系，以及 Detexify 手写识别工具的使用。按类型分类的函数清单见 [支持的函数](19-supported-functions.md)。
 
 ## 支持表结构
 
@@ -80,13 +80,13 @@ Detexify 是第三方工具，覆盖标准 LaTeX 符号；识别出的命令需�
 - 算符族：`op.ts`（处理 `\sum`、`\int`、`\lim` 等大算符和函数名）
 - 符号命令：各符号相关文件
 
-每个函数定义包含 `handler`（解析逻辑）、`htmlBuilder`（HTML 渲染）和 `mathmlBuilder`（MathML 渲染），详见 [函数注册表](/concepts/08-function-registry.md)。
+每个函数定义包含 `handler`（解析逻辑）、`htmlBuilder`（HTML 渲染）和 `mathmlBuilder`（MathML 渲染），详见 [函数注册表](08-function-registry.md)。
 
 ### 2. 宏定义（src/macros.ts）
 
 部分命令通过宏而非 `\DeclareMathSymbol` 定义[^facts]，位于 `src/macros.ts`。这些命令在展开时可能展开为多个 token，并受 `\expandafter` 和 `\noexpand` 影响。
 
-宏定义的命令与函数实现的命令在行为上存在差异：宏在 MacroExpander（gullet）层展开，函数在 Parser（stomach）层执行。理解这一区别对调试宏相关问题很重要，详见 [宏展开器](/concepts/04-macro-expander.md)。
+宏定义的命令与函数实现的命令在行为上存在差异：宏在 MacroExpander（gullet）层展开，函数在 Parser（stomach）层执行。理解这一区别对调试宏相关问题很重要，详见 [宏展开器](04-macro-expander.md)。
 
 ### 3. 符号注册（src/symbols.ts）
 
@@ -119,15 +119,15 @@ Support Table 条目
 1. **迁移现有 LaTeX 文档**：先在 Support Table 中逐一检查所用命令是否被 KaTeX 支持，对不支持的命令寻找替代方案
 2. **编写新公式**：通过 Supported Functions 页面按分类浏览可用命令，或通过 Support Table 确认具体命令
 3. **调试渲染问题**：遇到意外渲染结果时，从 Support Table 确认命令语义，再从源码溯源理解实现行为
-4. **自定义扩展**：了解命令的实现方式（函数 vs 宏 vs 符号），确定自定义扩展应在哪一层介入（详见 [TeX 消化管隐喻](/concepts/02-architecture-overview.md)）
+4. **自定义扩展**：了解命令的实现方式（函数 vs 宏 vs 符号），确定自定义扩展应在哪一层介入（详见 [TeX 消化管隐喻](02-architecture-overview.md)）
 
 ## 相关概念
 
-- [支持的函数](/concepts/19-supported-functions.md) — 按 14 个分类整理的函数清单
-- [函数注册表](/concepts/08-function-registry.md) — defineFunction 机制与 FunctionSpec
-- [宏系统](/concepts/09-macro-system.md) — 宏定义与展开机制
-- [架构总览](/concepts/02-architecture-overview.md) — TeX 消化管三层模型
-- [KaTeX 源码信源](/references/katex-source.md) — 源码文件完整索引
+- [支持的函数](19-supported-functions.md) — 按 14 个分类整理的函数清单
+- [函数注册表](08-function-registry.md) — defineFunction 机制与 FunctionSpec
+- [宏系统](09-macro-system.md) — 宏定义与展开机制
+- [架构总览](02-architecture-overview.md) — TeX 消化管三层模型
+- [KaTeX 源码信源](../references/katex-source.md) — 源码文件完整索引
 
 [^web-support-table]: 官网 Support Table 页面，https://katex.org/docs/support_table
 [^web-supported]: 官网 Supported Functions 页面，https://katex.org/docs/supported

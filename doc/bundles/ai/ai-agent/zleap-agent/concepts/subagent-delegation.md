@@ -25,7 +25,7 @@ source:
 
 Zleap-Agent 的"子 Agent 委派"并非传统意义上的多 Agent 进程架构，而是一种基于 **Workspace（工作空间）切换** 的 OS 隐喻委派模型。框架将 Agent 系统类比为操作系统：`main` 空间是"桌面"，负责与用户对话和路由；每个 workspace 是一个"应用窗口"，拥有独立的工具集、上下文、权限、记录和产出物。当当前空间无法完成某类任务时，通过 `switchWorkspace` 工具将任务委派给目标空间，目标空间完成后通过 carry-back 机制将结果回传。
 
-这一模式的核心入口是 [Kernel](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/agent/src/kernel/kernel.ts#L28-L81) 类。Kernel 是"空间入口内核"，每次对话首先进入常驻的 `main` 空间，由 main 空间的模型自主决定是否通过 `switchWorkspace(space, task, message)` 路由到工作空间。Kernel 不再预先选择工作空间——它只运行 main 空间，并携带身份、记忆策略和召回信息。
+这一模式的核心入口是 Kernel 类。Kernel 是"空间入口内核"，每次对话首先进入常驻的 `main` 空间，由 main 空间的模型自主决定是否通过 `switchWorkspace(space, task, message)` 路由到工作空间。Kernel 不再预先选择工作空间——它只运行 main 空间，并携带身份、记忆策略和召回信息。
 
 ```typescript
 // Kernel.dispatch — 所有回复先进入 main 空间
@@ -152,7 +152,7 @@ sequenceDiagram
 
 ## Turn Loop 执行模型
 
-工作空间的核心执行引擎是 [runWorkspaceTurn](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/agent/src/workspaces/turnLoop.ts#L469-L1205) 函数，实现了完整的模型推理→工具调用→结果回传循环：
+工作空间的核心执行引擎是 runWorkspaceTurn 函数，实现了完整的模型推理→工具调用→结果回传循环：
 
 ```typescript
 export type TurnLoopOptions = {
@@ -347,9 +347,9 @@ flowchart TB
 
 | 文件 | 关键内容 |
 |------|---------|
-| [turnLoop.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/agent/src/workspaces/turnLoop.ts) | Turn Loop 引擎、控制工具定义、carry-back 机制、并行执行、Cache 工具 |
-| [kernel.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/agent/src/kernel/kernel.ts#L28-L81) | Kernel 类、main 空间 dispatch、身份与记忆注入 |
-| [core/types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/types.ts) | WorkspaceHandoffRequest、WorkspaceResult、WorkspaceResultStatus 类型定义 |
+| turnLoop.ts | Turn Loop 引擎、控制工具定义、carry-back 机制、并行执行、Cache 工具 |
+| kernel.ts | Kernel 类、main 空间 dispatch、身份与记忆注入 |
+| core/types.ts | WorkspaceHandoffRequest、WorkspaceResult、WorkspaceResultStatus 类型定义 |
 
 ## 小结
 

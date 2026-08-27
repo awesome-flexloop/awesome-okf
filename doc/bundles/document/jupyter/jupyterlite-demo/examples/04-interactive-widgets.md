@@ -228,7 +228,7 @@ btn
 
 ## 相关概念
 
-- [Pyodide 生态库与 %pip 安装](/concepts/05-pyodide-libraries.md)
-- [Python 内核基础使用](/examples/02-python-basics.md)
-- [数据可视化实战](/examples/03-data-visualization.md)
-- [交互式地图实战](/examples/05-interactive-maps.md)
+- [Pyodide 生态库与 %pip 安装](../concepts/05-pyodide-libraries.md)
+- [Python 内核基础使用](02-python-basics.md)
+- [数据可视化实战](03-data-visualization.md)
+- [交互式地图实战](05-interactive-maps.md)

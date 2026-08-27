@@ -69,9 +69,9 @@ Agent Learning Hub 的核心价值在于提供了一条**可执行的 AI Agent �
 - **新手**：从 Stage 0 开始，按顺序完成每个 checklist 项
 - **有 LLM 经验者**：从 Stage 2 或 Stage 3 切入，重点补 agent loop、工具调用、评测和工程化
 - **做项目者**：直接参考 Project Ladder，每档做一个可运行作品
-- **找资料者**：浏览 [核心资源分类](./resource-curation.md)，优先读官方文档和经典论文
+- **找资料者**：浏览 [核心资源分类](resource-curation.md)，优先读官方文档和经典论文
 
 ## 相关概念
 
-- [核心资源分类](./resource-curation.md)——路线图各阶段引用的官方指南、开源项目、论文和博客的分类体系
+- [核心资源分类](resource-curation.md)——路线图各阶段引用的官方指南、开源项目、论文和博客的分类体系
 - [信源登记](../references/source-repo.md)——项目 GitHub 仓库与文件结构说明

@@ -315,6 +315,6 @@ squish_rate_func ─────────────────────
 
 ## 相关概念
 
-- [00 ManimGL 简介与整体架构](/concepts/00-introduction.md)
-- [05 动画基础](/concepts/05-animation-basics.md)
-- [ManimGL 源码结构与核心模块索引](/references/manimgl-source-code.md)
+- [00 ManimGL 简介与整体架构](../concepts/00-introduction.md)
+- [05 动画基础](../concepts/05-animation-basics.md)
+- [ManimGL 源码结构与核心模块索引](manimgl-source-code.md)

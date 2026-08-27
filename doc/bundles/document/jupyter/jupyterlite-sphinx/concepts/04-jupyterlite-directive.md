@@ -129,13 +129,13 @@ SphinxDirective
 - **完整编程环境**：需要文件浏览器、多文件编辑、终端等完整 IDE 功能
 - **Notebook 集合**：不指定参数时，读者可以在 JupyterLab 文件浏览器中访问所有提供的 Notebook 文件
 
-如果只需要展示单个 Notebook 且不需要完整 IDE 功能，可以考虑使用界面更简洁的 [notebooklite 指令](/concepts/05-notebooklite-directive.md)；如果只需要短小的交互式代码片段，[replite 指令](/concepts/06-replite-directive.md) 更轻量。
+如果只需要展示单个 Notebook 且不需要完整 IDE 功能，可以考虑使用界面更简洁的 [notebooklite 指令](05-notebooklite-directive.md)；如果只需要短小的交互式代码片段，[replite 指令](06-replite-directive.md) 更轻量。
 
 ## 相关概念
 
-- [指令系统总览](/concepts/03-directive-overview.md)
-- [notebooklite 指令——嵌入经典 Notebook](/concepts/05-notebooklite-directive.md)
-- [replite 指令——嵌入交互式 REPL](/concepts/06-replite-directive.md)
-- [voici 指令——嵌入 Voici 仪表板](/concepts/07-voici-directive.md)
-- [配置参考](/concepts/09-configuration.md)
-- [核心模块源码](/references/main-source.md)
+- [指令系统总览](03-directive-overview.md)
+- [notebooklite 指令——嵌入经典 Notebook](05-notebooklite-directive.md)
+- [replite 指令——嵌入交互式 REPL](06-replite-directive.md)
+- [voici 指令——嵌入 Voici 仪表板](07-voici-directive.md)
+- [配置参考](09-configuration.md)
+- [核心模块源码](../references/main-source.md)

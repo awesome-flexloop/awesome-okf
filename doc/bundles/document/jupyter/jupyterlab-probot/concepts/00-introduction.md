@@ -59,7 +59,7 @@ sources:
 
 ## 在 Jupyter 生态中的位置
 
-jupyterlab-probot 属于 Jupyter 社区的 **自动化运维工具层**，与 [pr-triage-board-bot](../pr-triage-board-bot/index.md) 类似但职责不同：
+jupyterlab-probot 属于 Jupyter 社区的 **自动化运维工具层**，与 [pr-triage-board-bot](../../pr-triage-board-bot/index.md) 类似但职责不同：
 
 - **pr-triage-board-bot**：面向 PR 看板管理，使用 Project V2 GraphQL API，按 7 个维度分类 PR
 - **jupyterlab-probot**：面向日常维护自动化，处理 Issue 标签、PR Binder 链接、CI 去重和重启命令

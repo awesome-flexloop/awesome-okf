@@ -142,5 +142,5 @@ BUILD_HEAP_MB=8192 npm run build
 
 ## 相关概念
 
-- [部署与工具链](/ai/datawhale/easy-vibe/concepts/03-deployment-toolchain.md)：完整的构建脚本、三平台部署、电子书发布流水线。
-- [多语言文档站架构](/ai/datawhale/easy-vibe/concepts/02-multilingual-docs-architecture.md)：build-locales.mjs 的顺序构建、文件锁、base 自适应机制。
+- [部署与工具链](../concepts/03-deployment-toolchain.md)：完整的构建脚本、三平台部署、电子书发布流水线。
+- [多语言文档站架构](../concepts/02-multilingual-docs-architecture.md)：build-locales.mjs 的顺序构建、文件锁、base 自适应机制。

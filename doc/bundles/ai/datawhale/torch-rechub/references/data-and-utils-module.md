@@ -117,11 +117,11 @@ related:
 
 ## utils/onnx_export.py
 
-详见 [服务与 ONNX 模块源码登记](/ai/datawhale/torch-rechub/references/serving-and-onnx-module)。
+详见 服务与 ONNX 模块源码登记。
 
 ## utils/quantization.py
 
-详见 [服务与 ONNX 模块源码登记](/ai/datawhale/torch-rechub/references/serving-and-onnx-module)。
+详见 服务与 ONNX 模块源码登记。
 
 ## types.py
 

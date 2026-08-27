@@ -4,7 +4,7 @@
 
 ## 信源清单
 
-### [source-repo.md](/ai/datawhale/easy-vibe/references/source-repo.md)
+### [source-repo.md](source-repo.md)
 
 Easy-Vibe 官方 GitHub 仓库（datawhalechina/easy-vibe），包含 README、AGENTS.md、CLAUDE.md、llms.txt、VitePress 配置、构建脚本、部署配置与全部文档内容。
 

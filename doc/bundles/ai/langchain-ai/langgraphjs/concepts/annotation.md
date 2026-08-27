@@ -15,7 +15,7 @@ sources:
 
 # Annotation 状态定义
 
-`Annotation` 是 LangGraphJS 中声明图状态结构的 DSL。它将每个状态字段映射为一个[通道](channels)实例，决定该字段的更新语义、默认值和类型。
+`Annotation` 是 LangGraphJS 中声明图状态结构的 DSL。它将每个状态字段映射为一个[通道](channels.md)实例，决定该字段的更新语义、默认值和类型。
 
 ## 基本用法
 
@@ -147,6 +147,6 @@ Annotation 本质是**通道的工厂声明**：
 
 ## 相关概念
 
-- [Channels 通道体系](channels) — 通道的完整类型与语义
-- [状态图与工作流](state-graph) — 使用状态构建图
-- [Graph 核心 API 参考](/ai/langchain-ai/langgraphjs/references/graph-core)
+- [Channels 通道体系](channels.md) — 通道的完整类型与语义
+- [状态图与工作流](state-graph.md) — 使用状态构建图
+- Graph 核心 API 参考

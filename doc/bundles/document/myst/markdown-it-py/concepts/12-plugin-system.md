@@ -221,4 +221,4 @@ md.use(my_plugin, prefix="note-", css_class="my-note")
 ## 下一步
 
 - [mdit-py-plugins 项目](https://github.com/executablebooks/mdit-py-plugins) 文档
-- [简单插件示例](/examples/simple-plugin.md)
+- [简单插件示例](../examples/simple-plugin.md)

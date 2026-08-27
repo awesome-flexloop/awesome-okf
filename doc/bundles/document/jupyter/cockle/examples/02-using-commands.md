@@ -195,7 +195,7 @@ const shell = new Shell({
 });
 ```
 
-此外，`cockle-config.json` 配置文件中也可以定义全局别名（详见 [/examples/04-custom-config.md](/examples/04-custom-config.md)）。
+此外，`cockle-config.json` 配置文件中也可以定义全局别名（详见 [/examples/04-custom-config.md](04-custom-config.md)）。
 
 ## 环境变量示例
 
@@ -400,7 +400,7 @@ Cockle 的内置命令（builtin commands）包括：`alias`、`cd`、`clear`、
 
 ## 相关概念
 
-- [命令解析管线](/concepts/04-parsing-pipeline.md)
-- [IO 系统](/concepts/05-io-system.md)
-- [内置命令详解](/concepts/08-builtin-commands.md)
-- [命令系统](/concepts/03-command-system.md)
+- [命令解析管线](../concepts/04-parsing-pipeline.md)
+- [IO 系统](../concepts/05-io-system.md)
+- [内置命令详解](../concepts/08-builtin-commands.md)
+- [命令系统](../concepts/03-command-system.md)

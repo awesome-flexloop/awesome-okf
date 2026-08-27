@@ -121,6 +121,6 @@ Toolbx 的关键设计哲学是**透传优于隔离**——开发环境需要访
 
 ## 相关概念
 
-- [/concepts/01-pass-through.md](/concepts/01-pass-through.md)
-- [/concepts/02-workflow.md](/concepts/02-workflow.md)
-- [/examples/01-first-toolbox.md](/examples/01-first-toolbox.md)
+- [/concepts/01-pass-through.md](01-pass-through.md)
+- [/concepts/02-workflow.md](02-workflow.md)
+- [/examples/01-first-toolbox.md](../examples/01-first-toolbox.md)

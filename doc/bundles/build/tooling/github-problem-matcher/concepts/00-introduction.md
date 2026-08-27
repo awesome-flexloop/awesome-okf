@@ -69,8 +69,8 @@ github-problem-matcher 适用于以下场景：
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [Action 结构解析](/concepts/02-action-structure.md)
-- [Problem Matcher JSON 格式](/concepts/03-matcher-json.md)
-- [三种正则模式详解](/concepts/04-regex-patterns.md)
-- [源码信源登记](/references/github-problem-matcher-source.md)
+- [5分钟快速上手](01-getting-started.md)
+- [Action 结构解析](02-action-structure.md)
+- [Problem Matcher JSON 格式](03-matcher-json.md)
+- [三种正则模式详解](04-regex-patterns.md)
+- [源码信源登记](../references/github-problem-matcher-source.md)

@@ -118,8 +118,8 @@ Jupyter 所有治理机构（EC、SSC、各子项目 Council、常设委员会�
 
 ## 相关概念
 
-- [三主体治理模型](/concepts/01-governance-model.md)
-- [执行委员会（EC）](/concepts/03-executive-council.md)
-- [软件指导委员会（SSC）](/concepts/04-software-steering-council.md)
-- [选举与投票机制](/concepts/10-elections-and-voting.md)
-- [常设委员会与工作组](/concepts/07-committees-and-working-groups.md)
+- [三主体治理模型](01-governance-model.md)
+- [执行委员会（EC）](03-executive-council.md)
+- [软件指导委员会（SSC）](04-software-steering-council.md)
+- [选举与投票机制](10-elections-and-voting.md)
+- [常设委员会与工作组](07-committees-and-working-groups.md)

@@ -189,7 +189,7 @@ JupyterLab 扩展的安装元数据：
 
 ## 相关概念
 
-- [双包构建系统](/concepts/05-build-system.md)
-- [前端扩展开发](/concepts/06-frontend-extension.md)
-- [四种扩展类型对比](/concepts/03-four-extension-types.md)
-- [三层测试策略](/concepts/11-testing-strategy.md)
+- [双包构建系统](05-build-system.md)
+- [前端扩展开发](06-frontend-extension.md)
+- [四种扩展类型对比](03-four-extension-types.md)
+- [三层测试策略](11-testing-strategy.md)

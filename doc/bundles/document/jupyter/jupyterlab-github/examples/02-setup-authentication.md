@@ -195,6 +195,6 @@ A: 在 GitHub Settings → Developer settings → Personal access tokens 中找�
 ---
 
 **相关概念**：
-- [配置与设置系统](/concepts/06-configuration.md) — 所有配置项完整参考
-- [服务端代理与认证](/concepts/05-server-proxy.md) — Token 处理机制详解
+- [配置与设置系统](../concepts/06-configuration.md) — 所有配置项完整参考
+- [服务端代理与认证](../concepts/05-server-proxy.md) — Token 处理机制详解
 - [基础浏览示例](01-basic-browsing.md) — 配置后的基本使用流程

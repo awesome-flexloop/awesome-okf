@@ -359,10 +359,10 @@ void ApplyThemeColors(const winrt::Windows::UI::Xaml::Media::Brush& background,
 
 | 文件 | 关键内容 |
 |------|---------|
-| [AgentPaneContent.idl](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/AgentPaneContent.idl) | XAML 控件接口定义 |
-| [AgentPaneContent.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/AgentPaneContent.h) | AutofixState枚举、状态字段、事件声明 |
-| [AgentPaneContent.cpp](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/AgentPaneContent.cpp) | Logo匹配、UpdateAgentStatus、ApplyAutofixState |
-| [AgentPaneDragStash.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/AgentPaneDragStash.h) | 跨窗口拖拽桥接 |
-| [Tab.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/Tab.h#L105-L123) | StashAgentPane/RestoreStashedAgentPane |
-| [CommandPalette.cpp](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/CommandPalette.cpp#L902) | `?prompt` 委托分发 |
-| [AgentIcons/](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/CascadiaPackage/AgentIcons/) | SVG Logo 资源 |
+| AgentPaneContent.idl | XAML 控件接口定义 |
+| AgentPaneContent.h | AutofixState枚举、状态字段、事件声明 |
+| AgentPaneContent.cpp | Logo匹配、UpdateAgentStatus、ApplyAutofixState |
+| AgentPaneDragStash.h | 跨窗口拖拽桥接 |
+| Tab.h | StashAgentPane/RestoreStashedAgentPane |
+| CommandPalette.cpp | `?prompt` 委托分发 |
+| AgentIcons/ | SVG Logo 资源 |

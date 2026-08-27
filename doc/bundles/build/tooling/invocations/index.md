@@ -4,7 +4,7 @@ okf_version: "0.2"
 
 # Invocations 知识库
 
-本知识包是 [Invocations](https://invocations.readthedocs.io/)（PyInvoke 的官方最佳实践任务集合库）的系统化中文教程，基于源码深度阅读生成，覆盖从快速上手到高级组合的完整知识体系。所有内容均溯源至 Invocations v4.1.0 源码（`external/libs/pyinvoke/invocations/` 目录），遵循 [OKF v0.2 规范](/concepts/00-introduction.md)。
+本知识包是 [Invocations](https://invocations.readthedocs.io/)（PyInvoke 的官方最佳实践任务集合库）的系统化中文教程，基于源码深度阅读生成，覆盖从快速上手到高级组合的完整知识体系。所有内容均溯源至 Invocations v4.1.0 源码（`external/libs/pyinvoke/invocations/` 目录），遵循 [OKF v0.2 规范](concepts/00-introduction.md)。
 
 ## 入门与基础（concepts/）
 

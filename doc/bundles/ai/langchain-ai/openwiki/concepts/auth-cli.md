@@ -238,7 +238,7 @@ openwiki auth slack
 
 ## 进一步阅读
 
-- [总览](/ai/langchain-ai/openwiki/concepts/overview)
-- [Agent 系统](/ai/langchain-ai/openwiki/concepts/agent-system)
-- [OAuth 认证与 ngrok 示例](/ai/langchain-ai/openwiki/examples/oauth-ngrok)
-- [配置与环境变量参考](/ai/langchain-ai/openwiki/references/env-config)
+- 总览
+- Agent 系统
+- OAuth 认证与 ngrok 示例
+- 配置与环境变量参考

@@ -178,10 +178,10 @@ CLI crate 使用 mimalloc 作为全局分配器，并在 Unix 上使用 `PR_SET_
 
 ## 相关概念
 
-- [CodeWhale 简介](/concepts/00-introduction.md) — 项目概述与安装
-- [Agent 核心运行时](/concepts/02-agent-core.md) — Runtime、Engine、Thread/Session 详解
-- [MCP 协议集成](/concepts/03-mcp-protocol.md) — MCP crate 架构
-- [工具系统](/concepts/04-tool-system.md) — tools crate 与 ToolRegistry
-- [Fleet 多 Agent](/concepts/05-fleet-subagents.md) — Fleet 控制平面与 workflow 集成
-- [技能与 Hooks](/concepts/06-skills-hooks.md) — hooks crate 与技能系统
-- [沙箱与执行策略](/concepts/07-sandbox-execpolicy.md) — execpolicy crate 与安全层
+- [CodeWhale 简介](00-introduction.md) — 项目概述与安装
+- [Agent 核心运行时](02-agent-core.md) — Runtime、Engine、Thread/Session 详解
+- [MCP 协议集成](03-mcp-protocol.md) — MCP crate 架构
+- [工具系统](04-tool-system.md) — tools crate 与 ToolRegistry
+- [Fleet 多 Agent](05-fleet-subagents.md) — Fleet 控制平面与 workflow 集成
+- [技能与 Hooks](06-skills-hooks.md) — hooks crate 与技能系统
+- [沙箱与执行策略](07-sandbox-execpolicy.md) — execpolicy crate 与安全层

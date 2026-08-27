@@ -98,7 +98,7 @@ ScriptExporter，Content-Type为text/plain，始终可用，输出可执行脚�
 
 ## 相关文档
 
-- [渲染与缓存源码分析](/references/render-cache-source.md)
-- [输出格式系统](/concepts/09-format-system.md)
-- [缓存系统](/concepts/07-caching-system.md)
-- [Handler继承体系](/concepts/04-handler-hierarchy.md)
+- [渲染与缓存源码分析](../references/render-cache-source.md)
+- [输出格式系统](09-format-system.md)
+- [缓存系统](07-caching-system.md)
+- [Handler继承体系](04-handler-hierarchy.md)

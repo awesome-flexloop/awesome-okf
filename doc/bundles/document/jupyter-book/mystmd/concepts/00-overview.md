@@ -142,7 +142,7 @@ MySTmd 的扩展点通过三种 Spec 类型定义：
 
 ## 相关概念
 
-- [统一插件架构](/concepts/01-unified-plugin-architecture.md)
-- [MyST 解析器](/concepts/02-myst-parser.md)
-- [MDAST 转换管线](/concepts/03-myst-transforms.md)
-- [公共类型系统](/concepts/04-myst-common-types.md)
+- [统一插件架构](01-unified-plugin-architecture.md)
+- [MyST 解析器](02-myst-parser.md)
+- [MDAST 转换管线](03-myst-transforms.md)
+- [公共类型系统](04-myst-common-types.md)

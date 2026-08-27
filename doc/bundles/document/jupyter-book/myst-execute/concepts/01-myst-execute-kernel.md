@@ -190,6 +190,6 @@ manager.ts 提供两个函数管理本地 Jupyter Server：
 
 ## 相关概念
 
-- [00-execution-architecture.md](/concepts/00-execution-architecture.md)：构建时 vs 运行时执行全景
-- [02-execution-cache.md](/concepts/02-execution-cache.md)：执行缓存机制
-- [01-configure-notebook-execution.md](/examples/01-configure-notebook-execution.md)：配置 kernelspec 和执行选项
+- [00-execution-architecture.md](00-execution-architecture.md)：构建时 vs 运行时执行全景
+- [02-execution-cache.md](02-execution-cache.md)：执行缓存机制
+- [01-configure-notebook-execution.md](../examples/01-configure-notebook-execution.md)：配置 kernelspec 和执行选项

@@ -19,17 +19,17 @@ sources:
 
 ## 概念篇（concepts/）
 
-- [共创项目仓库定位与协作核心理念](/concepts/00-introduction.md) — 协作编程展示平台定位（vs trae-demos 项目展示）、"共创"定义拓展（团队协作/结对编程/AI 结对编程）、Issue 表单驱动低门槛投稿、接受从想法到生产的所有项目阶段。
-- [项目提交流程与 Issue 表单字段](/concepts/01-project-submission.md) — Issue 驱动投稿（无需 Fork/PR/Markdown）、中英双语 Markdown 模板、4 类必填信息字段（项目信息/描述/协作细节/技术细节）、个人项目投稿指南、Collaboration Details 核心字段填写要点。
-- [审核标准与 Collaboration 权重差异化](/concepts/02-review-criteria.md) — 6 大项目分类（Web/Tools/AI/Libraries/Learning/Other）、4 项 Must Have 准入（含"展示有意义的协作"独有要求）、4 维权重（TRAE Usage 40% + Collaboration 30% + Code Quality 20% + Documentation 10%）、人机协作审核标准扩展、不同项目阶段的审核侧重。
+- [共创项目仓库定位与协作核心理念](concepts/00-introduction.md) — 协作编程展示平台定位（vs trae-demos 项目展示）、"共创"定义拓展（团队协作/结对编程/AI 结对编程）、Issue 表单驱动低门槛投稿、接受从想法到生产的所有项目阶段。
+- [项目提交流程与 Issue 表单字段](concepts/01-project-submission.md) — Issue 驱动投稿（无需 Fork/PR/Markdown）、中英双语 Markdown 模板、4 类必填信息字段（项目信息/描述/协作细节/技术细节）、个人项目投稿指南、Collaboration Details 核心字段填写要点。
+- [审核标准与 Collaboration 权重差异化](concepts/02-review-criteria.md) — 6 大项目分类（Web/Tools/AI/Libraries/Learning/Other）、4 项 Must Have 准入（含"展示有意义的协作"独有要求）、4 维权重（TRAE Usage 40% + Collaboration 30% + Code Quality 20% + Documentation 10%）、人机协作审核标准扩展、不同项目阶段的审核侧重。
 
 ## 示例篇（examples/）
 
-- [提交共创项目示例](/examples/submit-project.md) — 个人项目（trae-todo CLI 工具，AI 结对编程）和团队项目两种场景的完整投稿演示，含 Issue 表单填写示例、Collaboration 字段写作要点、常见问题解答。
+- [提交共创项目示例](examples/submit-project.md) — 个人项目（trae-todo CLI 工具，AI 结对编程）和团队项目两种场景的完整投稿演示，含 Issue 表单填写示例、Collaboration 字段写作要点、常见问题解答。
 
 ## 信源登记簿（references/）
 
-- [共创项目仓库资源索引](/references/co-creation-source.md) — 仓库基本信息、目录结构、6 分类速查表、Must Have 标准、审核权重对比表、投稿 4 类信息字段映射。
+- [共创项目仓库资源索引](references/co-creation-source.md) — 仓库基本信息、目录结构、6 分类速查表、Must Have 标准、审核权重对比表、投稿 4 类信息字段映射。
 
 ## 关键事实
 

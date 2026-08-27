@@ -130,7 +130,7 @@ export type AvatarRunAssembly = {
 
 ## 统一规范化器
 
-[normalizeAvatarRunInput](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/avatar/src/runAssembly.ts#L36-L47) 是所有渠道的最终规范化入口：
+normalizeAvatarRunInput 是所有渠道的最终规范化入口：
 
 ```typescript
 export class AvatarRunInputError extends Error {
@@ -170,7 +170,7 @@ export function normalizeAvatarRunInput(input: AvatarRunInput): AvatarRunAssembl
 
 ### Gateway 渠道（inboundRun）
 
-[buildInboundRunInput](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/avatar/src/inboundRun.ts#L12-L20) 处理来自 IM 网关的入站消息：
+buildInboundRunInput 处理来自 IM 网关的入站消息：
 
 ```typescript
 export type InboundRunInput = {
@@ -201,7 +201,7 @@ export function buildInboundRunInput(input: InboundRunInput): AvatarRunAssembly 
 
 ### Scheduled Task 渠道（scheduledRun）
 
-[buildScheduledRunInput](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/avatar/src/scheduledRun.ts#L12-L21) 处理定时任务触发：
+buildScheduledRunInput 处理定时任务触发：
 
 ```typescript
 export type ScheduledRunInput = {
@@ -233,7 +233,7 @@ export function buildScheduledRunInput(input: ScheduledRunInput): AvatarRunAssem
 
 ### Web Chat 渠道（webChatRun）
 
-[buildWebChatRunInput](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/avatar/src/webChatRun.ts#L13-L22) 处理 Web UI 聊天：
+buildWebChatRunInput 处理 Web UI 聊天：
 
 ```typescript
 export type WebChatRunInput = {
@@ -403,11 +403,11 @@ export type { WebChatRunInput } from './webChatRun.js';
 
 | 文件 | 关键内容 |
 |------|---------|
-| [runAssembly.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/avatar/src/runAssembly.ts) | 核心类型定义、normalizeAvatarRunInput、AvatarRunInputError、字段清理工具 |
-| [inboundRun.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/avatar/src/inboundRun.ts) | Gateway 渠道构建器、eventId→messageId 映射 |
-| [scheduledRun.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/avatar/src/scheduledRun.ts) | 定时任务构建器、permissionMode=trusted |
-| [webChatRun.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/avatar/src/webChatRun.ts) | Web 聊天构建器、conversationId 支持 |
-| [index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/avatar/src/index.ts) | 包导出清单 |
+| runAssembly.ts | 核心类型定义、normalizeAvatarRunInput、AvatarRunInputError、字段清理工具 |
+| inboundRun.ts | Gateway 渠道构建器、eventId→messageId 映射 |
+| scheduledRun.ts | 定时任务构建器、permissionMode=trusted |
+| webChatRun.ts | Web 聊天构建器、conversationId 支持 |
+| index.ts | 包导出清单 |
 
 ## 小结
 

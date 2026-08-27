@@ -144,7 +144,7 @@ for await (const [mode, chunk] of agent.stream(inputs, {
 
 ## 相关概念
 
-- [状态图与工作流](/ai/langchain-ai/langgraphjs/concepts/state-graph)
-- [Annotation 状态定义](/ai/langchain-ai/langgraphjs/concepts/annotation)
-- [Checkpoint 持久化](/ai/langchain-ai/langgraphjs/concepts/checkpointing)
-- [Pregel 执行引擎](/ai/langchain-ai/langgraphjs/concepts/pregel-execution)
+- 状态图与工作流
+- Annotation 状态定义
+- Checkpoint 持久化
+- Pregel 执行引擎

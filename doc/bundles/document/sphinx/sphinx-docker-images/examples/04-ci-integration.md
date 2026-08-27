@@ -227,6 +227,6 @@ docker run --rm -v "${{ github.workspace }}/docs:/docs" \
 
 ## 相关概念
 
-- [构建流水线详解](/concepts/06-build-pipeline.md)：官方镜像的 CI/CD 设计
-- [CI 测试镜像详解](/concepts/05-ci-image.md)：docker-ci 镜像的用途
-- [自定义镜像扩展](/examples/03-custom-image.md)：为 CI 创建专用自定义镜像
+- [构建流水线详解](../concepts/06-build-pipeline.md)：官方镜像的 CI/CD 设计
+- [CI 测试镜像详解](../concepts/05-ci-image.md)：docker-ci 镜像的用途
+- [自定义镜像扩展](03-custom-image.md)：为 CI 创建专用自定义镜像

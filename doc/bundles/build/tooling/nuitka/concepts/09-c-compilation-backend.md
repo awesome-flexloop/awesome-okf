@@ -41,7 +41,7 @@ Nuitka选择SCons而非直接调用gcc/clang/MSVC，原因：
 
 ## SconsInterface：子进程隔离
 
-[SconsInterface.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/build/SconsInterface.py)在独立子进程中运行SCons：
+SconsInterface.py在独立子进程中运行SCons：
 
 ```python
 def runScons(source_dir, scons_args, quiet=False):
@@ -67,7 +67,7 @@ def runScons(source_dir, scons_args, quiet=False):
 
 ## 编译器检测与配置
 
-[SconsCompilerSettings.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/build/SconsCompilerSettings.py)在SCons启动后检测系统C编译器：
+SconsCompilerSettings.py在SCons启动后检测系统C编译器：
 
 ### 编译器选择优先级
 
@@ -114,7 +114,7 @@ Nuitka编译的C代码需要链接CPython：
 
 ## static_src：Nuitka C运行时
 
-[build/static_src/](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/build/static_src/)包含100+个C源文件，构成Nuitka的运行时支持库。这些文件不是"生成的"，而是Nuitka项目手写的C代码，提供编译后程序所需的基础功能。
+build/static_src/包含100+个C源文件，构成Nuitka的运行时支持库。这些文件不是"生成的"，而是Nuitka项目手写的C代码，提供编译后程序所需的基础功能。
 
 ### 核心文件
 
@@ -223,7 +223,7 @@ SconsBackend.py (SConscript)
 3. PATH中自动查找ccache/sccache/clcache
 4. 找到则在编译命令前添加缓存工具前缀
 
-Nuitka还有自己的构建缓存（[BuildCache.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/build/BuildCache.py)），缓存整个编译结果（基于源文件哈希），对于未改变的模块跳过编译。
+Nuitka还有自己的构建缓存（BuildCache.py），缓存整个编译结果（基于源文件哈希），对于未改变的模块跳过编译。
 
 ## 跨平台差异处理
 

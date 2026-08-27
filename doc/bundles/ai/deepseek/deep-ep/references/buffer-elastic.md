@@ -463,8 +463,8 @@ buffer.all_gather(
 
 ## 相关参考
 
-- [公开 API 概览](/ai/deepseek/deep-ep/references/api)
-- [Buffer (Legacy) API](/ai/deepseek/deep-ep/references/buffer-legacy)
-- [事件系统](/ai/deepseek/deep-ep/references/events)
-- [Dispatch/Combine 概念](/ai/deepseek/deep-ep/concepts/dispatch-combine)
-- [Elastic vs Legacy 对比](/ai/deepseek/deep-ep/concepts/elastic-vs-legacy)
+- 公开 API 概览
+- Buffer (Legacy) API
+- 事件系统
+- Dispatch/Combine 概念
+- Elastic vs Legacy 对比

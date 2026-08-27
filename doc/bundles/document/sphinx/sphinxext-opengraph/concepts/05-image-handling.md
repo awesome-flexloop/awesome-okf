@@ -139,7 +139,7 @@ if (not (image_url or ogp_use_first_image)
 
 社交卡片的alt文本优先使用field lists的 `:og:image:alt:`，否则使用页面描述。
 
-详见[社交卡片生成](/concepts/08-social-cards.md)章节。
+详见[社交卡片生成](08-social-cards.md)章节。
 
 ## 相对路径解析
 
@@ -227,10 +227,10 @@ flowchart TD
 
 ## 相关概念
 
-- [核心标签生成流程](/concepts/03-tag-generation.md)
-- [配置选项全解](/concepts/02-configuration.md)
-- [社交卡片生成](/concepts/08-social-cards.md)
-- [页面级覆盖机制](/concepts/06-per-page-overrides.md)
-- [基础配置示例](/examples/basic-setup.md)
-- [社交卡片配置示例](/examples/social-cards-example.md)
-- [sphinxext-opengraph 源码信源登记](/references/sphinxext-opengraph-source.md)
+- [核心标签生成流程](03-tag-generation.md)
+- [配置选项全解](02-configuration.md)
+- [社交卡片生成](08-social-cards.md)
+- [页面级覆盖机制](06-per-page-overrides.md)
+- [基础配置示例](../examples/basic-setup.md)
+- [社交卡片配置示例](../examples/social-cards-example.md)
+- [sphinxext-opengraph 源码信源登记](../references/sphinxext-opengraph-source.md)

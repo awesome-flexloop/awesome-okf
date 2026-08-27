@@ -11,7 +11,7 @@ sources:
 
 > 来源：`docs/chapter7.md`，编辑：赵志民
 
-本章分析优化算法逼近最优解的速度，是[收敛率](/ai/datawhale/key-book/concepts/convergence-rate)概念的主体章节，涵盖确定性与随机优化。
+本章分析优化算法逼近最优解的速度，是收敛率概念的主体章节，涵盖确定性与随机优化。
 
 ## 内容概要
 
@@ -73,10 +73,10 @@ $$\mathbb{P}\left(\max_{i\leq k}S_i>t,\ V_k^2\leq v\right)\leq\exp\left(-\frac{t
 
 ## 理论定位
 
-本章从"是否收敛"（[一致性](/ai/datawhale/key-book/concepts/consistency)）进入"多快收敛"。凸性/强凸性决定收敛率阶（次线性 vs 线性），光滑性决定步长上界。鞅差 Bernstein 不等式是随机优化的关键工具，将第 1 章的集中不等式从独立随机变量推广到条件依赖序列。
+本章从"是否收敛"（一致性）进入"多快收敛"。凸性/强凸性决定收敛率阶（次线性 vs 线性），光滑性决定步长上界。鞅差 Bernstein 不等式是随机优化的关键工具，将第 1 章的集中不等式从独立随机变量推广到条件依赖序列。
 
 ## 参见
 
-- [第 6 章：一致性](/ai/datawhale/key-book/references/chapter6)：渐近收敛的定性分析
-- [第 8 章：遗憾界](/ai/datawhale/key-book/references/chapter8)：在线 $O(\sqrt{T})$ 遗憾与离线 $O(1/\sqrt{T})$ 收敛率数学同源
-- [附录](/ai/datawhale/key-book/references/appendix)：强凸函数、光滑性、凸优化定义
+- 第 6 章：一致性：渐近收敛的定性分析
+- 第 8 章：遗憾界：在线 $O(\sqrt{T})$ 遗憾与离线 $O(1/\sqrt{T})$ 收敛率数学同源
+- 附录：强凸函数、光滑性、凸优化定义

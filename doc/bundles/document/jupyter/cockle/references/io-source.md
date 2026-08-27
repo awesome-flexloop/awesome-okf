@@ -285,7 +285,7 @@ Shell 实现根据解析器生成的 AST 中的 RedirectNode 和 PipeNode，自�
 
 ## 相关概念
 
-- [命令系统源码参考](/references/command-source.md)：命令运行器中的 IRunContext 包含 IO 引用
-- [缓冲 IO 源码参考](/references/buffered-io-source.md)：SAB 和 Service Worker 两种跨线程 IO 后端
-- [解析器源码参考](/references/parser-source.md)：重定向和管道节点的 AST 结构
-- [Worker 通信源码参考](/references/worker-source.md)：Worker 端 IO 与主线程的协调
+- [命令系统源码参考](command-source.md)：命令运行器中的 IRunContext 包含 IO 引用
+- [缓冲 IO 源码参考](buffered-io-source.md)：SAB 和 Service Worker 两种跨线程 IO 后端
+- [解析器源码参考](parser-source.md)：重定向和管道节点的 AST 结构
+- [Worker 通信源码参考](worker-source.md)：Worker 端 IO 与主线程的协调

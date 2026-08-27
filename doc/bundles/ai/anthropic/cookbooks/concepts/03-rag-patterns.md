@@ -470,7 +470,7 @@ def fetch_webpage(url: str) -> str:
     return soup.get_text(separator="\n", strip=True)
 ```
 
-这些数据源可以作为 RAG 的"工具"——Claude 在需要最新信息时调用（参见 [工具调用模式](/cookbooks/concepts/01-tool-use-patterns.md)），而不是预先索引所有内容。
+这些数据源可以作为 RAG 的"工具"——Claude 在需要最新信息时调用（参见 [工具调用模式](01-tool-use-patterns.md)），而不是预先索引所有内容。
 
 ## 常见 RAG 问题与解决方案
 
@@ -484,9 +484,9 @@ def fetch_webpage(url: str) -> str:
 
 ## 相关概念
 
-- [Cookbook 导览](/cookbooks/concepts/00-overview.md) — 回到 Cookbooks 总览
-- [工具调用模式](/cookbooks/concepts/01-tool-use-patterns.md) — RAG 检索作为工具被 Agent 调用
-- [多模态模式](/cookbooks/concepts/02-multimodal-patterns.md) — PDF/图片文档做 RAG 的前置处理
-- [高级技巧 - Prompt Caching](/cookbooks/concepts/04-advanced-techniques.md) — RAG 系统提示缓存降低成本
-- [高级技巧 - Evals](/cookbooks/concepts/04-advanced-techniques.md) — RAG 系统的自动化评估框架
-- [食谱完整索引](/cookbooks/references/recipe-index.md) — 查找具体 RAG 食谱
+- [Cookbook 导览](00-overview.md) — 回到 Cookbooks 总览
+- [工具调用模式](01-tool-use-patterns.md) — RAG 检索作为工具被 Agent 调用
+- [多模态模式](02-multimodal-patterns.md) — PDF/图片文档做 RAG 的前置处理
+- [高级技巧 - Prompt Caching](04-advanced-techniques.md) — RAG 系统提示缓存降低成本
+- [高级技巧 - Evals](04-advanced-techniques.md) — RAG 系统的自动化评估框架
+- [食谱完整索引](../references/recipe-index.md) — 查找具体 RAG 食谱

@@ -280,6 +280,6 @@ sphinx-intl 的 `normalize_resource_name()` 已自动处理大部分情况，但
 
 ## 相关概念
 
-- [Transifex 平台集成](/concepts/07-transifex-integration.md)
+- [Transifex 平台集成](../concepts/07-transifex-integration.md)
 - [基本翻译全流程](basic-translation.md)
-- [CLI 命令体系详解](/concepts/02-cli-commands.md)
+- [CLI 命令体系详解](../concepts/02-cli-commands.md)

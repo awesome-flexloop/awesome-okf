@@ -161,7 +161,7 @@ size_t FNVHash(const char* data, size_t size, size_t start) {
 | 命令哈希 | BuildLog 中记录命令哈希，检测命令行变化 |
 | 依赖键 | DepsLog 中哈希路径作为键 |
 
-Ninja 新版本也引入了 rapidhash（[src/third_party/rapidhash/rapidhash.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/third_party/rapidhash/rapidhash.h)）作为更快的哈希选项，emhash 作为高性能哈希表实现。
+Ninja 新版本也引入了 rapidhash（src/third_party/rapidhash/rapidhash.h）作为更快的哈希选项，emhash 作为高性能哈希表实现。
 
 ## 路径规范化：PathCanonicalize
 

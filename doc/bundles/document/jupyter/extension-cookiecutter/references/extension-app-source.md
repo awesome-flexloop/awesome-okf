@@ -175,7 +175,7 @@ ExtensionApp 的完整生命周期方法包括：
 
 ## 相关概念
 
-- [ExtensionApp 开发指南](/concepts/04-extension-app.md)
-- [API Handler 开发指南](/concepts/05-api-handlers.md)
-- [PingHandler 源码解析](/references/handler-source.md)
-- [测试源码解析](/references/test-source.md)
+- [ExtensionApp 开发指南](../concepts/04-extension-app.md)
+- [API Handler 开发指南](../concepts/05-api-handlers.md)
+- [PingHandler 源码解析](handler-source.md)
+- [测试源码解析](test-source.md)

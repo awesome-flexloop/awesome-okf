@@ -254,7 +254,7 @@ graph LR
 - [Agent核心循环](agent-core-loop-pattern.md) — 工具调用在主循环中的位置
 
 **跨项目参考**：
-- 🔬 hermes-agent: [工具装饰器实现](external/libs/models/ai/hermes-agent/tools/)
-- 🔬 cordis: [Context Service机制](external/libs/models/ai/cordis/packages/cordis/src/context.ts)
-- 🔬 deepseek-harness: [工具注册表](external/libs/models/ai/deepseek-harness/packages/harness/src/tools/)
-- 🔬 intelligent-terminal: [原生终端工具绑定](external/libs/models/ai/intelligent-terminal/src/helper/)
+- 🔬 hermes-agent: 工具装饰器实现
+- 🔬 cordis: Context Service机制
+- 🔬 deepseek-harness: 工具注册表
+- 🔬 intelligent-terminal: 原生终端工具绑定

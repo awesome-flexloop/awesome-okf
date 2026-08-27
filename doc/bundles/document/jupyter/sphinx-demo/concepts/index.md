@@ -37,7 +37,7 @@
 3. **内核选型**：[04-Pyodide vs Xeus](04-kernel-comparison.md)
 4. **交互功能**：[06-TryExamples](06-try-examples.md) → [07-NotebookLite](07-notebook-embedding.md) → [10-禁用控制](10-disabling-examples.md)
 5. **高级主题**：[08-样式定制](08-customization.md) → [09-CI/CD部署](09-ci-deployment.md)
-6. **动手实践**：前往[实践示例](/examples/index.md)跟着教程构建完整站点
+6. **动手实践**：前往[实践示例](../examples/index.md)跟着教程构建完整站点
 
 ```{toctree}
 :hidden:

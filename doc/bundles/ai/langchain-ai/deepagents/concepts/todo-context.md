@@ -199,6 +199,6 @@ class DeepAgentState(AgentState):
 
 ## 相关概念
 
-- [规划与子代理](/ai/langchain-ai/deepagents/concepts/planning-subagents) — 子代理状态隔离机制
-- [后端系统](/ai/langchain-ai/deepagents/references/backends) — 摘要卸载和技能加载依赖的存储抽象
-- [中间件栈](/ai/langchain-ai/deepagents/references/middleware-stack) — 摘要/技能/内存中间件在栈中的位置
+- 规划与子代理 — 子代理状态隔离机制
+- 后端系统 — 摘要卸载和技能加载依赖的存储抽象
+- 中间件栈 — 摘要/技能/内存中间件在栈中的位置

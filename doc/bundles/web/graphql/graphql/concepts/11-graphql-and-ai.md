@@ -528,8 +528,8 @@ GraphQL AI Working Group（AI WG）对所有人开放，在 GitHub 上协作（h
 
 ## 相关概念
 
-- [内省系统：GraphQL 的自描述机制](/concepts/08-introspection.md) — __schema/__type 内省是 MCP 自动工具发现和语义内省的基础（洞察5）
-- [Python 生态：客户端与服务端实践](/concepts/10-python-ecosystem.md) — MCP 服务器基于 graphql-core 构建，test_graphql_server 提供真实数据源
-- [片段、变量作用域与 Schema Coordinates](/concepts/09-fragments-and-advanced-syntax.md) — Schema Coordinates 是 __search 和 __definitions 的坐标语法基础
-- [验证管线与规则体系](/concepts/05-validation.md) — GraphQL 执行前验证使 LLM 获得命名错误并自我修正
-- [GraphQL 概览与五大设计原则](/concepts/00-overview.md) — 自描述（Self-describing）原则是 AI 集成的设计基石
+- [内省系统：GraphQL 的自描述机制](08-introspection.md) — __schema/__type 内省是 MCP 自动工具发现和语义内省的基础（洞察5）
+- [Python 生态：客户端与服务端实践](10-python-ecosystem.md) — MCP 服务器基于 graphql-core 构建，test_graphql_server 提供真实数据源
+- [片段、变量作用域与 Schema Coordinates](09-fragments-and-advanced-syntax.md) — Schema Coordinates 是 __search 和 __definitions 的坐标语法基础
+- [验证管线与规则体系](05-validation.md) — GraphQL 执行前验证使 LLM 获得命名错误并自我修正
+- [GraphQL 概览与五大设计原则](00-overview.md) — 自描述（Self-describing）原则是 AI 集成的设计基石

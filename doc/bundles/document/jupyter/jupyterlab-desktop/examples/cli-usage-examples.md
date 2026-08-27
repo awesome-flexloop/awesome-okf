@@ -295,6 +295,6 @@ jlab .
 
 ## 相关概念
 
-- [CLI 命令系统](/concepts/07-cli-system.md) — jlab 命令完整用法与子命令参考
-- [Python 环境管理](/concepts/05-python-env-management.md) — jlab env 子命令底层环境发现与管理机制
-- [设置与配置系统](/concepts/06-settings-config.md) — jlab config 子命令读写的配置层级与持久化机制
+- [CLI 命令系统](../concepts/07-cli-system.md) — jlab 命令完整用法与子命令参考
+- [Python 环境管理](../concepts/05-python-env-management.md) — jlab env 子命令底层环境发现与管理机制
+- [设置与配置系统](../concepts/06-settings-config.md) — jlab config 子命令读写的配置层级与持久化机制

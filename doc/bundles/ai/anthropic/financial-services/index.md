@@ -53,9 +53,9 @@ stale_after: 2027-08-27
 
 | 相关 bundle | 链接 | 关系说明 |
 |------------|------|---------|
-| **Anthropic 官方 Skills 库** | [/official-skills/concepts/00-overview.md](/official-skills/concepts/00-overview.md) | Financial Services 的 Skills 机制基于官方 Skills 规范构建，是通用 Skills 在金融垂直领域的专业化封装 |
-| **Claude Code Wiki** | [/claude-code/concepts/01-plugin-system.md](/claude-code/concepts/01-plugin-system.md) | Claude Cowork 和 Claude Code CLI 插件安装遵循 Claude Code 插件体系规范 |
-| **Python SDK Wiki** | [/python-sdk/concepts/08-beta-agents.md](/python-sdk/concepts/08-beta-agents.md) | Managed Agents API 模式通过 Python SDK 的 `/v1/agents` Beta API 实现无头部署 |
+| **Anthropic 官方 Skills 库** | [/official-skills/concepts/00-overview.md](../official-skills/concepts/00-overview.md) | Financial Services 的 Skills 机制基于官方 Skills 规范构建，是通用 Skills 在金融垂直领域的专业化封装 |
+| **Claude Code Wiki** | [/claude-code/concepts/01-plugin-system.md](../claude-code/concepts/01-plugin-system.md) | Claude Cowork 和 Claude Code CLI 插件安装遵循 Claude Code 插件体系规范 |
+| **Python SDK Wiki** | [/python-sdk/concepts/08-beta-agents.md](../python-sdk/concepts/08-beta-agents.md) | Managed Agents API 模式通过 Python SDK 的 `/v1/agents` Beta API 实现无头部署 |
 
 ## 重要免责声明
 

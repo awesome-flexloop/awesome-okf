@@ -185,8 +185,8 @@ await mutex.runExclusive(async () => {
 
 ## 相关概念
 
-- [整体架构](/concepts/01-architecture-overview.md)
-- [内容管理与文件系统](/concepts/03-contents-and-filesystem.md)
-- [Service Worker桥接](/concepts/04-service-worker-bridge.md)
-- [浏览器存储](/concepts/05-browser-storage.md)
-- [内核系统信源](/references/kernel-source.md)
+- [整体架构](01-architecture-overview.md)
+- [内容管理与文件系统](03-contents-and-filesystem.md)
+- [Service Worker桥接](04-service-worker-bridge.md)
+- [浏览器存储](05-browser-storage.md)
+- [内核系统信源](../references/kernel-source.md)

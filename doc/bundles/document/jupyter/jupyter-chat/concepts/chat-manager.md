@@ -286,9 +286,9 @@ def emit_event(self, path: str, action: ChatEventAction,
 
 ## 相关概念
 
-- [生命周期事件](/concepts/lifecycle-events.md)
-- [双传输架构](/concepts/dual-transport.md)
-- [Yjs CRDT 同步机制](/concepts/crdt-sync.md)
+- [生命周期事件](lifecycle-events.md)
+- [双传输架构](dual-transport.md)
+- [Yjs CRDT 同步机制](crdt-sync.md)
 
 [^__init__.py]: __init__.py 初始化模块
 [^chat-manager-py]: chat_manager.py

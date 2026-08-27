@@ -128,7 +128,7 @@ sources:
 
 ## 相关概念
 
-- [四大版本系统](/concepts/01-four-systems.md)
-- [核心异文选读](/concepts/04-key-variants.md)
-- [出土原典信源](/references/core-manuscripts.md)
-- [避讳断代法](../../../../../../bundles/laozi-lineage/methodology/taboo-character-dating.md)（laozi-lineage）
+- [四大版本系统](01-four-systems.md)
+- [核心异文选读](04-key-variants.md)
+- [出土原典信源](../references/core-manuscripts.md)
+- 避讳断代法（laozi-lineage）

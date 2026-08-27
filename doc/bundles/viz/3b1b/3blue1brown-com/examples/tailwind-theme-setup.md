@@ -788,7 +788,7 @@ Tailwind v4 的 CSS-first 模式的强大之处在于：**你已经知道的所�
 
 ## 相关概念
 
-- [05 Tailwind v4 CSS-first 样式系统](/concepts/05-styling-with-tailwind4.md) — Tailwind v4 核心概念、@theme/@custom-variant/@utility 详解、oklch 颜色理论、暗模式策略
-- [06 构建系统、包管理与静态部署](/concepts/06-build-and-deploy.md) — Vite 插件链、Tailwind 插件位置、构建配置
-- [04 核心组件与状态管理](/concepts/04-components-and-state.md) — Jotai 状态管理、暗模式原子实现
-- [创建带数学公式的 MDX 页面](/examples/minimal-mdx-page.md) — 内容创作示例
+- [05 Tailwind v4 CSS-first 样式系统](../concepts/05-styling-with-tailwind4.md) — Tailwind v4 核心概念、@theme/@custom-variant/@utility 详解、oklch 颜色理论、暗模式策略
+- [06 构建系统、包管理与静态部署](../concepts/06-build-and-deploy.md) — Vite 插件链、Tailwind 插件位置、构建配置
+- [04 核心组件与状态管理](../concepts/04-components-and-state.md) — Jotai 状态管理、暗模式原子实现
+- [创建带数学公式的 MDX 页面](minimal-mdx-page.md) — 内容创作示例

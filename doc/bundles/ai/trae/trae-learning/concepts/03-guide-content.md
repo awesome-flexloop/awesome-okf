@@ -85,7 +85,7 @@ Guide 部分建议按顺序阅读（what-is-vibecoding → flow-and-efficiency �
 
 ## 相关链接
 
-- [Trae Learning 学习站简介](/concepts/00-introduction.md)
-- [Tutorials 实战教程](/concepts/04-tutorial-content.md)
-- [VitePress 站点架构](/concepts/01-vitepress-setup.md)
-- [添加新教程文档示例](/examples/add-tutorial.md)
+- [Trae Learning 学习站简介](00-introduction.md)
+- [Tutorials 实战教程](04-tutorial-content.md)
+- [VitePress 站点架构](01-vitepress-setup.md)
+- [添加新教程文档示例](../examples/add-tutorial.md)

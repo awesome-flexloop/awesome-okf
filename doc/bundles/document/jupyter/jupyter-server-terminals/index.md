@@ -4,7 +4,7 @@ okf_version: "0.2"
 
 # jupyter_server_terminals 知识库
 
-本知识包是 [jupyter_server_terminals](https://github.com/jupyter-server/jupyter_server_terminals)（Jupyter Server 终端扩展 v0.5.4）的系统化中文教程，基于源码深度阅读生成，覆盖从快速上手到架构理解的完整知识体系。所有内容均溯源至 jupyter_server_terminals 源码，遵循 [OKF v0.2 规范](/references/jupyter-server-terminals-source.md)。
+本知识包是 [jupyter_server_terminals](https://github.com/jupyter-server/jupyter_server_terminals)（Jupyter Server 终端扩展 v0.5.4）的系统化中文教程，基于源码深度阅读生成，覆盖从快速上手到架构理解的完整知识体系。所有内容均溯源至 jupyter_server_terminals 源码，遵循 [OKF v0.2 规范](references/jupyter-server-terminals-source.md)。
 
 jupyter_server_terminals 为 JupyterLab、Notebook 等前端提供浏览器内的交互式系统终端能力，是 Jupyter 生态的核心组件之一。
 

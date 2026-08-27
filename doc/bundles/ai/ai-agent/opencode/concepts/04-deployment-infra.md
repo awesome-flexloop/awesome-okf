@@ -269,7 +269,7 @@ Webhook 端点处理 25+ 事件类型，包括 checkout、invoice、customer、s
 
 ## 相关概念
 
-- [OpenCode 简介](/concepts/00-introduction.md)
-- [架构概览](/concepts/01-architecture.md)
-- [配置系统](/concepts/02-config-system.md)
-- [会话与工具](/concepts/03-session-tools.md)
+- [OpenCode 简介](00-introduction.md)
+- [架构概览](01-architecture.md)
+- [配置系统](02-config-system.md)
+- [会话与工具](03-session-tools.md)

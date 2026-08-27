@@ -290,9 +290,9 @@ python -m http.server 8000
 
 ## 相关概念
 
-- [TryExamples 指令详解](/concepts/08-try-examples-directive.md)
-- [_try_examples 模块源码](/references/try-examples-source.md)
-- [TryExamples 基础用法](/examples/try-examples-basic.md)
-- [配置参考](/references/config-reference.md)
-- [核心模块源码](/references/main-source.md)
-- [指令系统总览](/concepts/03-directive-overview.md)
+- [TryExamples 指令详解](../concepts/08-try-examples-directive.md)
+- [_try_examples 模块源码](../references/try-examples-source.md)
+- [TryExamples 基础用法](try-examples-basic.md)
+- [配置参考](../references/config-reference.md)
+- [核心模块源码](../references/main-source.md)
+- [指令系统总览](../concepts/03-directive-overview.md)

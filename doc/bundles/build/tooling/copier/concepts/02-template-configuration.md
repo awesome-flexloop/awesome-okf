@@ -317,6 +317,6 @@ _tasks:
 - [Jinja2 模板渲染](04-jinja2-templating.md)
 - [Worker 与生命周期](05-worker-and-lifecycle.md)
 - [任务与迁移](07-tasks-and-migrations.md)
-- [Copier 源码信源登记](/references/copier-source.md)
+- [Copier 源码信源登记](../references/copier-source.md)
 
-[^copier-source]: Copier 源码信源，见 [copier-source.md](/references/copier-source.md)。
+[^copier-source]: Copier 源码信源，见 [copier-source.md](../references/copier-source.md)。

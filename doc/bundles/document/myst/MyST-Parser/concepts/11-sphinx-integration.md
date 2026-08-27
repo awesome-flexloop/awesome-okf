@@ -169,9 +169,9 @@ MyST-Parser 标记为 `parallel_read_safe=True`，支持 Sphinx 的并行读取�
 
 ## 相关概念
 
-- [MyST-Parser 简介](/concepts/00-introduction.md)
-- [三阶段解析管线](/concepts/03-architecture-pipeline.md)
-- [配置系统](/concepts/04-config-system.md)
-- [解析器与渲染器](/concepts/06-parser-and-renderer.md)
-- [数学公式与 MathJax](/concepts/13-math-and-mathjax.md)
-- [基础配置示例](/examples/01-basic-setup.md)
+- [MyST-Parser 简介](00-introduction.md)
+- [三阶段解析管线](03-architecture-pipeline.md)
+- [配置系统](04-config-system.md)
+- [解析器与渲染器](06-parser-and-renderer.md)
+- [数学公式与 MathJax](13-math-and-mathjax.md)
+- [基础配置示例](../examples/01-basic-setup.md)

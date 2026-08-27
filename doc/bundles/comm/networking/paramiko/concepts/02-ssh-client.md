@@ -278,11 +278,11 @@ client.set_log_channel("myapp.ssh")
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [Transport 底层传输](/concepts/03-transport.md)
-- [Channel 通道](/concepts/04-channel.md)
-- [认证体系](/concepts/05-authentication.md)
-- [SFTP 文件传输](/concepts/07-sftp.md)
-- [基础连接示例](/examples/basic-connection.md)
+- [5分钟快速上手](01-getting-started.md)
+- [Transport 底层传输](03-transport.md)
+- [Channel 通道](04-channel.md)
+- [认证体系](05-authentication.md)
+- [SFTP 文件传输](07-sftp.md)
+- [基础连接示例](../examples/basic-connection.md)
 
-[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](/references/paramiko-source.md)。
+[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](../references/paramiko-source.md)。

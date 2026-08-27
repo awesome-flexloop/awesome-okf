@@ -138,7 +138,7 @@ code-tab 内置完整的 Pygments lexer 映射表（`LEXER_MAP`），通过遍�
 
 ## 相关概念
 
-- [四个指令详解](/concepts/02-directives.md)
-- [配置项参考](/concepts/04-configuration.md)
-- [多语言代码示例](/examples/code-tabs.md)
-- [分组同步配置示例](/examples/group-tabs-sync.md)
+- [四个指令详解](02-directives.md)
+- [配置项参考](04-configuration.md)
+- [多语言代码示例](../examples/code-tabs.md)
+- [分组同步配置示例](../examples/group-tabs-sync.md)

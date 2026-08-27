@@ -252,7 +252,7 @@ import_from_string("my_package.sub:Class.NestedClass")
 
 ## 相关概念
 
-- [安装与快速开始](/concepts/01-getting-started.md)
-- [模块系统](/concepts/02-module-system.md)
-- [插件架构](/concepts/08-plugin-architecture.md)
-- [声明式配置应用](/examples/04-declarative-config.md)
+- [安装与快速开始](01-getting-started.md)
+- [模块系统](02-module-system.md)
+- [插件架构](08-plugin-architecture.md)
+- [声明式配置应用](../examples/04-declarative-config.md)

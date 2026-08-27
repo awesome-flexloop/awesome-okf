@@ -154,6 +154,6 @@ mimerenderer 类型测试：
 
 ## 相关概念
 
-- [三层测试策略](/concepts/11-testing-strategy.md)
-- [CI/CD 工作流详解](/concepts/12-ci-workflows.md)
-- [打包与发布](/concepts/13-packaging-release.md)
+- [三层测试策略](../concepts/11-testing-strategy.md)
+- [CI/CD 工作流详解](../concepts/12-ci-workflows.md)
+- [打包与发布](../concepts/13-packaging-release.md)

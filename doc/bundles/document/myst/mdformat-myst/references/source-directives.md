@@ -63,4 +63,4 @@ ruamel.yaml 配置为：
 
 ## 相关概念
 
-- [指令选项 YAML 格式化](/concepts/03-directive-formatting.md)
+- [指令选项 YAML 格式化](../concepts/03-directive-formatting.md)

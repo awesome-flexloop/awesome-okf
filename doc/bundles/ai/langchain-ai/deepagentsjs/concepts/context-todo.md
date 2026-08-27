@@ -211,6 +211,6 @@ Todo/规划功能通过 langchain 的 `todoListMiddleware` 提供，在 state �
 
 ## 相关阅读
 
-- [总览](/ai/langchain-ai/deepagentsjs/concepts/overview)
-- [子代理与规划](/ai/langchain-ai/deepagentsjs/concepts/subagent-planning)
-- [API 参考](/ai/langchain-ai/deepagentsjs/references/api)
+- 总览
+- 子代理与规划
+- API 参考

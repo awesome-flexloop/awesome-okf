@@ -112,8 +112,8 @@ Jupyter 治理的核心设计原则是**委派与自治**：
 
 ## 相关概念
 
-- [执行委员会详解](/concepts/03-executive-council.md)
-- [软件指导委员会详解](/concepts/04-software-steering-council.md)
-- [Jupyter 基金会](/concepts/05-jupyter-foundation.md)
-- [决策制定流程](/concepts/09-decision-making.md)
-- [从 BDFL 到分布式治理](/concepts/02-history-and-evolution.md)
+- [执行委员会详解](03-executive-council.md)
+- [软件指导委员会详解](04-software-steering-council.md)
+- [Jupyter 基金会](05-jupyter-foundation.md)
+- [决策制定流程](09-decision-making.md)
+- [从 BDFL 到分布式治理](02-history-and-evolution.md)

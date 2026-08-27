@@ -108,5 +108,5 @@ app ready
 
 ## 相关概念
 
-- [安全与导航策略](/concepts/09-security-navigation.md)
-- [会话窗口系统](/concepts/03-session-window-system.md)
+- [安全与导航策略](../concepts/09-security-navigation.md)
+- [会话窗口系统](../concepts/03-session-window-system.md)

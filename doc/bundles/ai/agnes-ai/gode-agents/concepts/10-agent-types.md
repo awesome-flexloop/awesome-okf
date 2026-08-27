@@ -364,8 +364,8 @@ task = AgentImage(img)
 
 ## 相关链接
 
-- [工具系统：@tool装饰器与Tool基类](/concepts/07-tool-system.md) — Tool.__call__中sanitize_inputs_outputs触发类型转换
-- [CodeAgent：代码执行范式](/concepts/06-code-agent.md) — 代码执行中多模态数据如何传递
-- [记忆系统：步骤序列](/concepts/04-memory-system.md) — AgentType在记忆步骤中的存储
-- [Python 执行器与安全沙箱](/concepts/11-python-executor.md) — 执行器中对象的序列化与传递
-- [Utils API 参考](/references/utils-api.md) — AgentType及转换函数完整API
+- [工具系统：@tool装饰器与Tool基类](07-tool-system.md) — Tool.__call__中sanitize_inputs_outputs触发类型转换
+- [CodeAgent：代码执行范式](06-code-agent.md) — 代码执行中多模态数据如何传递
+- [记忆系统：步骤序列](04-memory-system.md) — AgentType在记忆步骤中的存储
+- [Python 执行器与安全沙箱](11-python-executor.md) — 执行器中对象的序列化与传递
+- [Utils API 参考](../references/utils-api.md) — AgentType及转换函数完整API

@@ -32,7 +32,7 @@ Dash 是由 [Plotly](https://plotly.com) 公司开发的开源 Python Web 应用
 
 | 属性 | 值 |
 |------|-----|
-| **版本** | 4.4.1（定义在 [version.py](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/version.py)） |
+| **版本** | 4.4.1（定义在 version.py） |
 | **许可证** | MIT |
 | **开发公司** | Plotly Technologies Inc. |
 | **前端技术** | React + dash-renderer（自定义渲染器） |
@@ -62,17 +62,17 @@ Dash 采用类似 Excel 电子表格的响应式编程范式：
 
 ### 多后端架构
 
-Dash 4.x 引入了多后端支持（[backends/](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/backends/) 目录），不再强依赖 Flask：
+Dash 4.x 引入了多后端支持（backends/ 目录），不再强依赖 Flask：
 
 - **Flask**：默认后端，WSGI 同步，成熟稳定
 - **FastAPI**：ASGI 异步，高性能，支持自动 API 文档
 - **Quart**：ASGI 异步，Flask 的异步版本，API 兼容
 
-后端通过抽象基类 `BaseDashServer`（[base_server.py](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/backends/base_server.py)）统一接口，包括 `RequestAdapter` 和 `ResponseAdapter` 来归一化不同框架的请求/响应对象。
+后端通过抽象基类 `BaseDashServer`（base_server.py）统一接口，包括 `RequestAdapter` 和 `ResponseAdapter` 来归一化不同框架的请求/响应对象。
 
 ## 公开 API 概览
 
-[__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/__init__.py) 导出的核心 API：
+__init__.py 导出的核心 API：
 
 ```python
 from dash import (

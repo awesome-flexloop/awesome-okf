@@ -18,7 +18,7 @@ sources:
 
 ## 前置知识
 
-理解三种配置操作（详见 [build.py 与 talks.yml 配置化组装系统](/concepts/03-build-system.md)）：
+理解三种配置操作（详见 [build.py 与 talks.yml 配置化组装系统](../concepts/03-build-system.md)）：
 
 | 操作 | YAML 键 | 用途 |
 |------|---------|------|
@@ -231,6 +231,6 @@ A: `.gitignore` 已经配置了忽略演讲目录。手动清理：`rm -rf inter
 
 ## 相关概念
 
-- [build.py 与 talks.yml 配置化组装系统](/concepts/03-build-system.md)
-- [Binder 环境配置三要素](/concepts/02-binder-config.md)
-- [本地搭建演示环境](/examples/03-local-setup.md)
+- [build.py 与 talks.yml 配置化组装系统](../concepts/03-build-system.md)
+- [Binder 环境配置三要素](../concepts/02-binder-config.md)
+- [本地搭建演示环境](03-local-setup.md)

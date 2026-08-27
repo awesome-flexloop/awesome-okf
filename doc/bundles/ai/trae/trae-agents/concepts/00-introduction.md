@@ -84,7 +84,7 @@ README 中描述了用户使用 Agent 的标准流程：
 
 ## 相关链接
 
-- [Agent 目录结构与模板规范](/concepts/01-agent-structure.md)
-- [Git Commit Generator 参考实现分析](/concepts/02-git-commit-agent.md)
-- [创建自定义 Agent 示例](/examples/create-agent.md)
-- [TRAE Agents 仓库资源索引](/references/agents-source.md)
+- [Agent 目录结构与模板规范](01-agent-structure.md)
+- [Git Commit Generator 参考实现分析](02-git-commit-agent.md)
+- [创建自定义 Agent 示例](../examples/create-agent.md)
+- [TRAE Agents 仓库资源索引](../references/agents-source.md)

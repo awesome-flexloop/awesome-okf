@@ -303,8 +303,8 @@ sequenceDiagram
 
 | 文件 | 关键内容 |
 |------|---------|
-| [SharedWta.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/SharedWta.h) | SharedWta 单例声明、引用计数API、_degraded锁存 |
-| [SharedWta.cpp](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/SharedWta.cpp) | _SpawnLocked实现、CREATE_SUSPENDED、Job Object、崩溃回调 |
-| [master/mod.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/master/mod.rs) | wta-master ACP多路复用器实现 |
-| [helper/mod.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/helper/mod.rs) | wta-helper TUI运行时 |
-| [Multi-window-agent-pane.md](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/doc/specs/Multi-window-agent-pane.md) | 双进程架构设计文档 |
+| SharedWta.h | SharedWta 单例声明、引用计数API、_degraded锁存 |
+| SharedWta.cpp | _SpawnLocked实现、CREATE_SUSPENDED、Job Object、崩溃回调 |
+| master/mod.rs | wta-master ACP多路复用器实现 |
+| helper/mod.rs | wta-helper TUI运行时 |
+| Multi-window-agent-pane.md | 双进程架构设计文档 |

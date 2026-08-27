@@ -657,7 +657,7 @@ export function ErrorBoundary() {
 
 ## 相关概念
 
-- [00 官网技术栈总览](/concepts/00-website-overview.md)
-- [03 MDX内容系统与数学渲染](/concepts/03-mdx-content-system.md)
-- [05 Tailwind v4 CSS-first 样式系统](/concepts/05-styling-with-tailwind4.md)
-- [核心组件路径索引](/references/component-index.md)
+- [00 官网技术栈总览](00-website-overview.md)
+- [03 MDX内容系统与数学渲染](03-mdx-content-system.md)
+- [05 Tailwind v4 CSS-first 样式系统](05-styling-with-tailwind4.md)
+- [核心组件路径索引](../references/component-index.md)

@@ -52,7 +52,7 @@ sources:
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [CLI命令参考](/concepts/03-cli-commands.md)
-- [核心工具源码映射](/references/utils-source.md)
-- [格式转换源码映射](/references/converters-source.md)
+- [架构总览](../concepts/02-architecture-overview.md)
+- [CLI命令参考](../concepts/03-cli-commands.md)
+- [核心工具源码映射](utils-source.md)
+- [格式转换源码映射](converters-source.md)

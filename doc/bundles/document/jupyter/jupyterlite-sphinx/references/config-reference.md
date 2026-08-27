@@ -85,6 +85,6 @@ sources:
 
 ## 相关概念
 
-- [配置详解](/concepts/09-configuration.md)
-- [构建流程详解](/concepts/10-build-process.md)
-- [各指令文档](/concepts/03-directive-overview.md)
+- [配置详解](../concepts/09-configuration.md)
+- [构建流程详解](../concepts/10-build-process.md)
+- [各指令文档](../concepts/03-directive-overview.md)

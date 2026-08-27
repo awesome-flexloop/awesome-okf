@@ -14,7 +14,7 @@ sources:
 
 # Binder 与 Jupyter 服务器连接
 
-ThebeServer 支持三种后端连接模式：通过 BinderHub 远程构建、直连已运行的 Jupyter Server、以及 JupyterLite 浏览器内内核。本文档重点介绍 Binder 连接和直连模式，JupyterLite 模式详见 [06-thebe-lite-pyodide.md](/concepts/06-thebe-lite-pyodide.md)。
+ThebeServer 支持三种后端连接模式：通过 BinderHub 远程构建、直连已运行的 Jupyter Server、以及 JupyterLite 浏览器内内核。本文档重点介绍 Binder 连接和直连模式，JupyterLite 模式详见 [06-thebe-lite-pyodide.md](06-thebe-lite-pyodide.md)。
 
 ## Binder 连接流程
 
@@ -292,7 +292,7 @@ server.dispose();
 
 ## 相关概念
 
-- [03-thebe-core-api.md](/concepts/03-thebe-core-api.md)：核心 API 对象层次
-- [04-thebe-configuration.md](/concepts/04-thebe-configuration.md)：BinderOptions 和 ServerSettings 配置
-- [06-thebe-lite-pyodide.md](/concepts/06-thebe-lite-pyodide.md)：JupyterLite 无服务器模式
-- [02-thebe-interactive.md](/examples/02-thebe-interactive.md)：Binder 和直连示例
+- [03-thebe-core-api.md](03-thebe-core-api.md)：核心 API 对象层次
+- [04-thebe-configuration.md](04-thebe-configuration.md)：BinderOptions 和 ServerSettings 配置
+- [06-thebe-lite-pyodide.md](06-thebe-lite-pyodide.md)：JupyterLite 无服务器模式
+- [02-thebe-interactive.md](../examples/02-thebe-interactive.md)：Binder 和直连示例

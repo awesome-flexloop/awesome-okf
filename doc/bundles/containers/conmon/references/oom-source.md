@@ -17,7 +17,7 @@ sources:
 
 # OOM 分数调整信源
 
-> 信源文件：[oom.c](file:///d:/spaces/SpecWeave/external/dao/action/Containers/conmon/src/oom.c)、[oom.h](file:///d:/spaces/SpecWeave/external/dao/action/Containers/conmon/src/oom.h)
+> 信源文件：oom.c、oom.h
 
 本文档记录 conmon 的 OOM（Out of Memory）自我保护机制，通过调整 `/proc/self/oom_score_adj` 确保监控进程自身不会在内存压力下被 OOM killer 优先杀死。
 

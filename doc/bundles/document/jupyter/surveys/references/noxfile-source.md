@@ -16,7 +16,7 @@ sources:
 
 ## 概述
 
-[noxfile.py](../../../../../../external/libs/jupyter/surveys/noxfile.py) 是Jupyter Surveys仓库的文档构建自动化脚本，使用Nox（Python任务运行器）定义了两个session：`docs`（构建文档）和`docs-live`（实时预览）。
+noxfile.py 是Jupyter Surveys仓库的文档构建自动化脚本，使用Nox（Python任务运行器）定义了两个session：`docs`（构建文档）和`docs-live`（实时预览）。
 
 ## 源码核心
 

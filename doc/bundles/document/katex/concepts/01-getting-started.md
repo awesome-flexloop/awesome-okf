@@ -53,7 +53,7 @@ Deno 可直接从 CDN 导入 ESM：
 import katex from "https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.mjs";
 ```
 
-> 完整安装说明（自托管、Browserslist 构建、字体目录配置、从源码构建等）见 [安装与运行时](/concepts/15-installation-and-runtime.md)。
+> 完整安装说明（自托管、Browserslist 构建、字体目录配置、从源码构建等）见 [安装与运行时](15-installation-and-runtime.md)。
 
 ### 使用 CDN（浏览器直接引入）
 
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         onload="renderMathInElement(document.body);"></script>
 ```
 
-auto-render 的默认分隔符和配置见 [自动渲染扩展](/concepts/13-auto-render.md)。
+auto-render 的默认分隔符和配置见 [自动渲染扩展](13-auto-render.md)。
 
 ## 核心 API
 
@@ -111,7 +111,7 @@ katex.render("c = \\pm\\sqrt{a^2 + b^2}", element, {
 **参数**：
 - `expression: string` — LaTeX 数学表达式字符串
 - `element: HTMLElement` — 渲染结果将作为子节点添加到此元素
-- `options?: SettingsOptions` — 可选配置对象，详见 [配置系统](/concepts/10-settings-options.md)
+- `options?: SettingsOptions` — 可选配置对象，详见 [配置系统](10-settings-options.md)
 
 ### katex.renderToString(expression, options?)
 
@@ -206,7 +206,7 @@ katex.render("\\invalid", element, {
 });
 ```
 
-> **安全提示**：KaTeX 抛出的错误消息可能包含未转义的 LaTeX 源码。将错误消息渲染到 HTML 前，必须将 `&`、`<`、`>` 替换为 `&amp;`、`&lt;`、`&gt;`，否则可能导致 `<script>` 注入攻击。详见 [安全与错误处理](/concepts/18-security-and-errors.md)。
+> **安全提示**：KaTeX 抛出的错误消息可能包含未转义的 LaTeX 源码。将错误消息渲染到 HTML 前，必须将 `&`、`<`、`>` 替换为 `&amp;`、`&lt;`、`&gt;`，否则可能导致 `<script>` 注入攻击。详见 [安全与错误处理](18-security-and-errors.md)。
 
 ## 持久宏（Persistent Macros）
 
@@ -219,11 +219,11 @@ katex.render("\\gdef\\RR{\\mathbb{R}}", element1, { macros });
 katex.render("\\RR^n", element2, { macros });
 ```
 
-**安全警告**：持久宏可改变 KaTeX 行为（如重定义标准命令），应仅在共同信任的多个元素间使用。处理不可信输入时，必须为每条消息/每个用户创建独立的 `macros` 对象，不应跨多用户消息共享。详见 [宏系统](/concepts/09-macro-system.md) 和 [安全与错误处理](/concepts/18-security-and-errors.md)。
+**安全警告**：持久宏可改变 KaTeX 行为（如重定义标准命令），应仅在共同信任的多个元素间使用。处理不可信输入时，必须为每条消息/每个用户创建独立的 `macros` 对象，不应跨多用户消息共享。详见 [宏系统](09-macro-system.md) 和 [安全与错误处理](18-security-and-errors.md)。
 
 ## 常用配置选项
 
-完整选项说明见 [配置系统](/concepts/10-settings-options.md)。
+完整选项说明见 [配置系统](10-settings-options.md)。
 
 | 选项 | 类型 | 默认值 | 说明 |
 |------|------|--------|------|
@@ -240,10 +240,10 @@ katex.render("\\RR^n", element2, { macros });
 
 ## 相关概念
 
-- [KaTeX 简介](/concepts/00-introduction.md)
-- [安装与运行时](/concepts/15-installation-and-runtime.md)
-- [配置系统](/concepts/10-settings-options.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [命令行接口](/concepts/16-command-line.md)
-- [基础渲染示例](/examples/basic-render.md)
-- [错误处理示例](/examples/error-handling.md)
+- [KaTeX 简介](00-introduction.md)
+- [安装与运行时](15-installation-and-runtime.md)
+- [配置系统](10-settings-options.md)
+- [架构总览](02-architecture-overview.md)
+- [命令行接口](16-command-line.md)
+- [基础渲染示例](../examples/basic-render.md)
+- [错误处理示例](../examples/error-handling.md)

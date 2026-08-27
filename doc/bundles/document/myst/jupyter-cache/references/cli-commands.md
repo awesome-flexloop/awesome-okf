@@ -73,5 +73,5 @@ jupyter-cache 提供 `jcache` 命令行工具，分为四个子命令组。
 
 ## 相关概念
 
-- [CLI 快速入门](/concepts/05-cli-reference.md)
-- [基本使用示例](/examples/basic-usage.md)
+- [CLI 快速入门](../concepts/05-cli-reference.md)
+- [基本使用示例](../examples/basic-usage.md)

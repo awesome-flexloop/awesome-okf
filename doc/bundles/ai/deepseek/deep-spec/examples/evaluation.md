@@ -341,7 +341,7 @@ Step 2:
 
 ## 十二、相关链接
 
-- [/deepseek/deep-spec/concepts/speculative-decoding-training](/ai/deepseek/deep-spec/concepts/speculative-decoding-training) — 投机解码原理详解
-- [/deepseek/deep-spec/references/eval-api](/ai/deepseek/deep-spec/references/eval-api) — 评估 API 完整参考
-- [/deepseek/deep-spec/examples/training-dspark](/ai/deepseek/deep-spec/examples/training-dspark) — 模型训练示例
-- [/deepseek/flash-mla/](/ai/deepseek/flash-mla/) — FlashMLA 注意力核函数，可加速目标模型验证前向
+- /deepseek/deep-spec/concepts/speculative-decoding-training — 投机解码原理详解
+- /deepseek/deep-spec/references/eval-api — 评估 API 完整参考
+- /deepseek/deep-spec/examples/training-dspark — 模型训练示例
+- [/deepseek/flash-mla/](../../flash-mla/index.md) — FlashMLA 注意力核函数，可加速目标模型验证前向

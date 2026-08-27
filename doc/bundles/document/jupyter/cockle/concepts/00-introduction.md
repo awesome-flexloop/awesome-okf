@@ -154,6 +154,6 @@ Cockle 的独特优势在于：它是唯一一个同时提供完整 Shell 语义
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [命令系统](/concepts/03-command-system.md)
+- [快速开始](01-getting-started.md)
+- [架构总览](02-architecture-overview.md)
+- [命令系统](03-command-system.md)

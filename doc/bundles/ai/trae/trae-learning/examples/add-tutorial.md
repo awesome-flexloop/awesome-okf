@@ -111,7 +111,7 @@ npm run docs:preview
 
 ## 相关链接
 
-- [Tutorials 实战教程](/concepts/04-tutorial-content.md)
-- [Guide 基础教程](/concepts/03-guide-content.md)
-- [VitePress 站点架构](/concepts/01-vitepress-setup.md)
-- [本地预览与构建示例](/examples/local-preview.md)
+- [Tutorials 实战教程](../concepts/04-tutorial-content.md)
+- [Guide 基础教程](../concepts/03-guide-content.md)
+- [VitePress 站点架构](../concepts/01-vitepress-setup.md)
+- [本地预览与构建示例](local-preview.md)

@@ -213,12 +213,12 @@ print(message.content[0].text)
 ### references/ — API 参考文档
 
 按模块组织的完整 API 手册，包含所有类、方法、参数、返回值的详细说明：
-- [sdk-client.md](/python-sdk/references/sdk-client.md)：客户端与基础设施
-- [messages-api.md](/python-sdk/references/messages-api.md)：消息与流式
-- [tools-beta.md](/python-sdk/references/tools-beta.md)：工具与 Beta
-- [multi-cloud.md](/python-sdk/references/multi-cloud.md)：多云后端
-- [types-errors.md](/python-sdk/references/types-errors.md)：类型与异常
-- [source.md](/python-sdk/references/source.md)：源码结构
+- [sdk-client.md](../references/sdk-client.md)：客户端与基础设施
+- [messages-api.md](../references/messages-api.md)：消息与流式
+- [tools-beta.md](../references/tools-beta.md)：工具与 Beta
+- [multi-cloud.md](../references/multi-cloud.md)：多云后端
+- [types-errors.md](../references/types-errors.md)：类型与异常
+- [source.md](../references/source.md)：源码结构
 
 ### examples/ — 可运行示例
 
@@ -229,15 +229,15 @@ print(message.content[0].text)
 推荐按以下顺序学习：
 
 1. **本文（00-overview）**：建立全局认知，理解架构分层和核心能力
-2. **[01-client-init.md](/python-sdk/concepts/01-client-init.md)**：学习如何正确初始化和配置客户端
-3. **[02-messages-basics.md](/python-sdk/concepts/02-messages-basics.md)**：掌握 Messages API 的基础用法
+2. **[01-client-init.md](01-client-init.md)**：学习如何正确初始化和配置客户端
+3. **[02-messages-basics.md](02-messages-basics.md)**：掌握 Messages API 的基础用法
 4. 核心篇：流式、工具调用、视觉、分页
 5. 高级篇：多云、Beta、中间件
 
 ## 相关概念
 
-- [客户端初始化与配置](/python-sdk/concepts/01-client-init.md) — 学习如何正确配置 Anthropic 客户端
-- [Messages API 基础](/python-sdk/concepts/02-messages-basics.md) — Claude 核心对话接口详解
-- [流式处理](/python-sdk/concepts/03-streaming.md) — 学习流式输出的两种使用方式
-- [Anthropic Python SDK 客户端入口与基础设施参考](/python-sdk/references/sdk-client.md) — 客户端完整 API 手册
-- [Anthropic Python SDK 源码版本与目录结构参考](/python-sdk/references/source.md) — 深入理解源码组织方式
+- [客户端初始化与配置](01-client-init.md) — 学习如何正确配置 Anthropic 客户端
+- [Messages API 基础](02-messages-basics.md) — Claude 核心对话接口详解
+- [流式处理](03-streaming.md) — 学习流式输出的两种使用方式
+- [Anthropic Python SDK 客户端入口与基础设施参考](../references/sdk-client.md) — 客户端完整 API 手册
+- [Anthropic Python SDK 源码版本与目录结构参考](../references/source.md) — 深入理解源码组织方式

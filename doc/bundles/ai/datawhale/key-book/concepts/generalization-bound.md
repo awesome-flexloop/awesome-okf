@@ -67,10 +67,10 @@ SVM 的 $\rho$-间隔损失函数是 $1/\rho$-Lipschitz 的，结合 Rademacher 
 
 ## 与其他概念的关系
 
-- [可学性](/ai/datawhale/key-book/concepts/learnability)：PAC 可学性本质是泛化界的直接推论
-- [计算复杂度](/ai/datawhale/key-book/concepts/computational-complexity)：泛化界的阶由 VC 维/Rademacher 复杂度决定
-- [稳定性](/ai/datawhale/key-book/concepts/stability)：提供不依赖假设空间复杂度的替代泛化保证
+- 可学性：PAC 可学性本质是泛化界的直接推论
+- 计算复杂度：泛化界的阶由 VC 维/Rademacher 复杂度决定
+- 稳定性：提供不依赖假设空间复杂度的替代泛化保证
 
 ## 参见
 
-- [第 4 章：泛化界](/ai/datawhale/key-book/references/chapter4)
+- 第 4 章：泛化界

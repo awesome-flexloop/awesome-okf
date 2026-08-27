@@ -239,80 +239,80 @@ deepseek-harness 是一个高度模块化的 TypeScript monorepo，采用 **Cord
 
 | 文件 | 内容 |
 |------|------|
-| [package.json](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/package.json#L1-L182) | 根工作区配置，定义所有脚本命令（build/test/lint/gen-*/verify-*）和 devDependencies |
-| [pnpm-workspace.yaml](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/pnpm-workspace.yaml#L1-L72) | pnpm 工作区 glob、overrides、allowBuilds 白名单、patchedDependencies |
+| package.json | 根工作区配置，定义所有脚本命令（build/test/lint/gen-*/verify-*）和 devDependencies |
+| pnpm-workspace.yaml | pnpm 工作区 glob、overrides、allowBuilds 白名单、patchedDependencies |
 
 ### Core — Agent 核心
 
 | 文件 | 内容 |
 |------|------|
-| [packages/core/agent/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/agent/src/index.ts#L1-L705) | `AgentRegistry` Cordis Service（agent 创建/注册/生命周期），Context 声明合并（`ctx.agents`/`ctx.agent`），`CreateAgentOptions`/`AgentSetup` 接口 |
-| [packages/core/agent/src/runtime-types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/agent/src/runtime-types.ts#L1-L292) | `Agent` 接口、`AgentOptions` 接口、`AgentStatus` 类型枚举，Events 声明合并（agent/error、agent/inbox/claimed） |
-| [packages/core/agent/src/inbox.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/agent/src/inbox.ts#L1-L220) | `Inbox` 类（消息队列管理：append/prepend/replace/remove/splice） |
-| [packages/core/agent/src/dispatch.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/agent/src/dispatch.ts#L1-L176) | `AgentSubjectEvent`/`AgentEventDispatch` 接口，`agentEvents`/`agentCarrier`/`emitAgentEvent` 事件总线 |
-| [packages/core/agent/src/types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/agent/src/types.ts#L1-L27) | `InboxTarget` 类型，`SessionEventMap` 声明合并（agent/inbox/spliced 事件） |
+| packages/core/agent/src/index.ts | `AgentRegistry` Cordis Service（agent 创建/注册/生命周期），Context 声明合并（`ctx.agents`/`ctx.agent`），`CreateAgentOptions`/`AgentSetup` 接口 |
+| packages/core/agent/src/runtime-types.ts | `Agent` 接口、`AgentOptions` 接口、`AgentStatus` 类型枚举，Events 声明合并（agent/error、agent/inbox/claimed） |
+| packages/core/agent/src/inbox.ts | `Inbox` 类（消息队列管理：append/prepend/replace/remove/splice） |
+| packages/core/agent/src/dispatch.ts | `AgentSubjectEvent`/`AgentEventDispatch` 接口，`agentEvents`/`agentCarrier`/`emitAgentEvent` 事件总线 |
+| packages/core/agent/src/types.ts | `InboxTarget` 类型，`SessionEventMap` 声明合并（agent/inbox/spliced 事件） |
 
 ### Core — 工具系统
 
 | 文件 | 内容 |
 |------|------|
-| [packages/core/tools/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/tools/src/index.ts#L1-L1188) | `ToolRuntime` Cordis Service（工具注册/执行/呈现管道：pre/guard/around/post/result），工具命名空间作用域 |
-| [packages/core/tools/src/schema.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/tools/src/schema.ts#L1-L617) | `defineTool` 函数、`validateArgs` 函数、`ValueSchemaSpec`/`ParameterSchemaSpec` 接口（工具参数 Schema 描述） |
-| [packages/core/tools/src/code-mode.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/tools/src/code-mode.ts#L1-L673) | `createRunCodeTool` 函数（Code Mode 执行器），`RUN_CODE_NAME` 常量，SDK section 渲染器映射（TypeScript/Python） |
-| [packages/core/tools/src/types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/tools/src/types.ts#L1-L58) | `CodeDispatchStartEventData`/`CodeDispatchEventData` 接口，SessionEventMap 扩展（tool/code-dispatch 事件） |
+| packages/core/tools/src/index.ts | `ToolRuntime` Cordis Service（工具注册/执行/呈现管道：pre/guard/around/post/result），工具命名空间作用域 |
+| packages/core/tools/src/schema.ts | `defineTool` 函数、`validateArgs` 函数、`ValueSchemaSpec`/`ParameterSchemaSpec` 接口（工具参数 Schema 描述） |
+| packages/core/tools/src/code-mode.ts | `createRunCodeTool` 函数（Code Mode 执行器），`RUN_CODE_NAME` 常量，SDK section 渲染器映射（TypeScript/Python） |
+| packages/core/tools/src/types.ts | `CodeDispatchStartEventData`/`CodeDispatchEventData` 接口，SessionEventMap 扩展（tool/code-dispatch 事件） |
 
 ### Core — 会话与作用域
 
 | 文件 | 内容 |
 |------|------|
-| [packages/core/session/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/session/src/index.ts#L1-L1132) | `Session` 类和 `SessionStore` 类（会话创建、事件追加、派生消息生成） |
-| [packages/core/session/src/types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/session/src/types.ts#L1-L436) | `SessionId`/`SessionHeader` 类型、`SessionEventMap` 接口（session 全生命周期事件） |
-| [packages/core/scope/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/scope/src/index.ts#L1-L204) | `ScopeKey` 类型、`Scoped` 接口，scoped context/carrier 创建函数 |
-| [packages/core/scope/src/store.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/scope/src/store.ts#L1-L267) | `NamedEntries`/`AnonymousEntries`/`ScopedLayers` 类（作用域内注册条目分层管理） |
+| packages/core/session/src/index.ts | `Session` 类和 `SessionStore` 类（会话创建、事件追加、派生消息生成） |
+| packages/core/session/src/types.ts | `SessionId`/`SessionHeader` 类型、`SessionEventMap` 接口（session 全生命周期事件） |
+| packages/core/scope/src/index.ts | `ScopeKey` 类型、`Scoped` 接口，scoped context/carrier 创建函数 |
+| packages/core/scope/src/store.ts | `NamedEntries`/`AnonymousEntries`/`ScopedLayers` 类（作用域内注册条目分层管理） |
 
 ### LLM 抽象层
 
 | 文件 | 内容 |
 |------|------|
-| [packages/llm/llm/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/index.ts#L1-L947) | `LlmRuntime` Cordis Service 和 `LlmAdapter` 抽象类，瀑布式 `llm/stream` 事件、`LlmError` 类 |
-| [packages/llm/llm/src/types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/types.ts#L1-L356) | `ContentBlock` 联合类型（text/reasoning/tool-call/tool-result/image）、`StreamChunk` 联合类型、`GenerateOptions` 接口、`TokenUsage`/`FinishReason` |
-| [packages/llm/llm/src/assembler.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/assembler.ts#L1-L164) | `BlockAssembler` 类（增量组装 StreamChunk→ContentBlock→assistant Message，处理 6 种 chunk 类型） |
-| [packages/llm/llm/src/message.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/message.ts#L1-L261) | `Message`/`UserMessage`/`AssistantMessage`/`ToolResultMessage` 接口，`MessageSource` 判别联合，消息工厂函数（freeze/create） |
-| [packages/llm/llm/src/error.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/error.ts#L1-L163) | `HarnessError` 类（机器可路由 code 字段），错误码常量（CONTEXT_WINDOW_EXCEEDED/QUOTA/EMPTY_RESPONSE/INVALID_CREDENTIAL），`errorChain` 函数 |
-| [packages/llm/llm/src/call-config.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/call-config.ts#L1-L117) | `LlmCallConfig` 接口、`callConfigEquals` 函数、`deepFreeze` 函数、agent loop 请求标记 |
-| [packages/llm/llm/src/retry-policy.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/retry-policy.ts#L1-L191) | 重试策略（BackoffConfig/RetryPolicyConfig）、默认常量、`RetryPolicySchema`/`resolveRetryPolicy` |
-| [packages/llm/llm-pi-ai/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm-pi-ai/src/index.ts#L84-L311) | PI-AI 适配器插件（name='llm-pi-ai', inject=['llm']），memoized profiles、热更新、API Key 解析 |
-| [packages/llm/llm-pi-ai/src/stream.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm-pi-ai/src/stream.ts#L1-L208) | PI-AI SSE 流转换：`toStreamChunks` async generator、错误分类、stop reason 映射、usage 映射 |
-| [packages/llm/llm-pi-ai/src/config.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm-pi-ai/src/config.ts#L1-L372) | `PiAiProviderProfile` 接口（20+ 字段）、Config schema、`resolveProfiles` 验证函数 |
+| packages/llm/llm/src/index.ts | `LlmRuntime` Cordis Service 和 `LlmAdapter` 抽象类，瀑布式 `llm/stream` 事件、`LlmError` 类 |
+| packages/llm/llm/src/types.ts | `ContentBlock` 联合类型（text/reasoning/tool-call/tool-result/image）、`StreamChunk` 联合类型、`GenerateOptions` 接口、`TokenUsage`/`FinishReason` |
+| packages/llm/llm/src/assembler.ts | `BlockAssembler` 类（增量组装 StreamChunk→ContentBlock→assistant Message，处理 6 种 chunk 类型） |
+| packages/llm/llm/src/message.ts | `Message`/`UserMessage`/`AssistantMessage`/`ToolResultMessage` 接口，`MessageSource` 判别联合，消息工厂函数（freeze/create） |
+| packages/llm/llm/src/error.ts | `HarnessError` 类（机器可路由 code 字段），错误码常量（CONTEXT_WINDOW_EXCEEDED/QUOTA/EMPTY_RESPONSE/INVALID_CREDENTIAL），`errorChain` 函数 |
+| packages/llm/llm/src/call-config.ts | `LlmCallConfig` 接口、`callConfigEquals` 函数、`deepFreeze` 函数、agent loop 请求标记 |
+| packages/llm/llm/src/retry-policy.ts | 重试策略（BackoffConfig/RetryPolicyConfig）、默认常量、`RetryPolicySchema`/`resolveRetryPolicy` |
+| packages/llm/llm-pi-ai/src/index.ts | PI-AI 适配器插件（name='llm-pi-ai', inject=['llm']），memoized profiles、热更新、API Key 解析 |
+| packages/llm/llm-pi-ai/src/stream.ts | PI-AI SSE 流转换：`toStreamChunks` async generator、错误分类、stop reason 映射、usage 映射 |
+| packages/llm/llm-pi-ai/src/config.ts | `PiAiProviderProfile` 接口（20+ 字段）、Config schema、`resolveProfiles` 验证函数 |
 
 ### MCP / ACP / SDK 协议层
 
 | 文件 | 内容 |
 |------|------|
-| [packages/mcp/mcp-client/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/mcp/mcp-client/src/index.ts#L1-L181) | MCP 客户端插件（name='mcp-client', inject=['tools']），stdio/HTTP 传输配置、serverName 命名空间防冲突 |
-| [packages/acp/acp/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/acp/acp/src/index.ts#L1-L436) | ACP 服务端插件（name='acp', inject=['agents']），AcpAgent、SessionRecord、quiesce 关闭、JSON-RPC over stdio |
-| [packages/sdk/protocol/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/sdk/protocol/src/index.ts#L1-L12) | `JsonRpcLineTransport` 类（换行分隔 JSON-RPC over stdio）、`JsonRpcResponseError` 类 |
-| [packages/sdk/protocol/src/types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/sdk/protocol/src/types.ts#L1-L105) | SDK 协议类型：InitializeParams/Result、SessionPromptParams/Result、4 种服务端通知、Request/Notification Map |
-| [packages/sdk/client/src/client.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/sdk/client/src/client.ts#L1-L467) | `HarnessClient` 类（子进程 spawn、stdio 传输、通知分发、stderr 缓冲、shutdown→SIGTERM→SIGKILL dispose ladder） |
-| [packages/sdk/client/src/api.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/sdk/client/src/api.ts) | `DeepSeekHarness` 和 `HarnessSession` 高层 API |
-| [packages/sdk/server/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/sdk/server/src/index.ts#L1-L92) | SDK JSON-RPC 服务端插件（name='sdk-jsonrpc-server', inject=['agents']），shutdown→flush→dispose→exit(0) 优雅关闭 |
+| packages/mcp/mcp-client/src/index.ts | MCP 客户端插件（name='mcp-client', inject=['tools']），stdio/HTTP 传输配置、serverName 命名空间防冲突 |
+| packages/acp/acp/src/index.ts | ACP 服务端插件（name='acp', inject=['agents']），AcpAgent、SessionRecord、quiesce 关闭、JSON-RPC over stdio |
+| packages/sdk/protocol/src/index.ts | `JsonRpcLineTransport` 类（换行分隔 JSON-RPC over stdio）、`JsonRpcResponseError` 类 |
+| packages/sdk/protocol/src/types.ts | SDK 协议类型：InitializeParams/Result、SessionPromptParams/Result、4 种服务端通知、Request/Notification Map |
+| packages/sdk/client/src/client.ts | `HarnessClient` 类（子进程 spawn、stdio 传输、通知分发、stderr 缓冲、shutdown→SIGTERM→SIGKILL dispose ladder） |
+| packages/sdk/client/src/api.ts | `DeepSeekHarness` 和 `HarnessSession` 高层 API |
+| packages/sdk/server/src/index.ts | SDK JSON-RPC 服务端插件（name='sdk-jsonrpc-server', inject=['agents']），shutdown→flush→dispose→exit(0) 优雅关闭 |
 
 ### 文件系统 / Shell / LSP
 
 | 文件 | 内容 |
 |------|------|
-| [packages/fs/tool-fs/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/fs/tool-fs/src/index.ts#L1-L79) | FS 工具插件（name='tool-fs', inject=['tools','fs','systemPrompt']），read/write/edit/read_image 工具注册、FsSandboxController |
-| [packages/fs/fs/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/fs/fs/src/index.ts) | `ctx.fs` 文件系统 Service 定义 |
-| [packages/shell/shell/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/shell/shell/src/index.ts#L1-L103) | `ShellExecutor` 抽象类（abstract resolve/run/start）、SHELL_SETTINGS_NAMESPACE、Context 声明合并 |
-| [packages/lsp/lsp/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/lsp/lsp/src/index.ts#L1-L150) | `Lsp` Service 类（provider 原子注册、扩展名路由、finalExtension 辅助函数）、`LspError` |
+| packages/fs/tool-fs/src/index.ts | FS 工具插件（name='tool-fs', inject=['tools','fs','systemPrompt']），read/write/edit/read_image 工具注册、FsSandboxController |
+| packages/fs/fs/src/index.ts | `ctx.fs` 文件系统 Service 定义 |
+| packages/shell/shell/src/index.ts | `ShellExecutor` 抽象类（abstract resolve/run/start）、SHELL_SETTINGS_NAMESPACE、Context 声明合并 |
+| packages/lsp/lsp/src/index.ts | `Lsp` Service 类（provider 原子注册、扩展名路由、finalExtension 辅助函数）、`LspError` |
 
 ### Web 客户端
 
 | 文件 | 内容 |
 |------|------|
-| [packages/client/web/src/boot.tsx](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/web/src/boot.tsx#L1-L237) | `AppWebEntry` 启动内核（两阶段启动、模块系统、prefetch、Loader、assertEntriesActive） |
-| [packages/client/web/src/AppRoot.tsx](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/web/src/AppRoot.tsx#L1-L60) | `AppRoot` React 组件（boot gate、useSyncExternalStore 订阅 signal、失败报告） |
-| [packages/client/web/src/app.tsx](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/web/src/app.tsx#L1-L44) | `buildRenderApp` 渲染工厂（slots.renderSlot('root')） |
+| packages/client/web/src/boot.tsx | `AppWebEntry` 启动内核（两阶段启动、模块系统、prefetch、Loader、assertEntriesActive） |
+| packages/client/web/src/AppRoot.tsx | `AppRoot` React 组件（boot gate、useSyncExternalStore 订阅 signal、失败报告） |
+| packages/client/web/src/app.tsx | `buildRenderApp` 渲染工厂（slots.renderSlot('root')） |
 
 ---
 

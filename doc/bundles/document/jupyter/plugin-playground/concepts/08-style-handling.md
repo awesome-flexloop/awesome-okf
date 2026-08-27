@@ -274,6 +274,6 @@ if (typeof style === 'string' && style.endsWith('.css')) {
 
 ## 相关概念
 
-- [模块解析系统](/concepts/04-module-resolution.md)
-- [插件加载流程](/concepts/05-plugin-loader.md)
-- [ImportResolver API 参考](/references/resolver-api.md)
+- [模块解析系统](04-module-resolution.md)
+- [插件加载流程](05-plugin-loader.md)
+- [ImportResolver API 参考](../references/resolver-api.md)

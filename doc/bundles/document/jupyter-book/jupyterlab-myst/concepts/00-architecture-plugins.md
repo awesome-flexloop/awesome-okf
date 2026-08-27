@@ -169,7 +169,7 @@ metadata 变化触发 MySTWidget 重渲染，显示最新表达式结果
 
 ## 相关概念
 
-- [01-myst-rendering-pipeline.md](/concepts/01-myst-rendering-pipeline.md)：MyST 解析和渲染管道
-- [02-myst-markdown-cell.md](/concepts/02-myst-markdown-cell.md)：MySTMarkdownCell 生命周期
-- [03-inline-expressions.md](/concepts/03-inline-expressions.md)：内联表达式执行机制
-- [01-using-jupyterlab-myst.md](/examples/01-using-jupyterlab-myst.md)：安装和使用示例
+- [01-myst-rendering-pipeline.md](01-myst-rendering-pipeline.md)：MyST 解析和渲染管道
+- [02-myst-markdown-cell.md](02-myst-markdown-cell.md)：MySTMarkdownCell 生命周期
+- [03-inline-expressions.md](03-inline-expressions.md)：内联表达式执行机制
+- [01-using-jupyterlab-myst.md](../examples/01-using-jupyterlab-myst.md)：安装和使用示例

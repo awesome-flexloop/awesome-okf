@@ -295,9 +295,9 @@ asyncio.run(main())
 
 ## 相关概念
 
-- [异步与 asyncio](/concepts/05-async-future-asyncio.md) — Future 状态机与 add_reader 详解
-- [Context 生命周期](/concepts/01-context-lifecycle.md) — asyncio.Context 的单例重置
-- [Poller 多路复用](/concepts/04-poller.md) — 同步/异步 Poller 继承关系
-- [Socket sugar 语法层](/concepts/02-socket-sugar.md) — send_string 等序列化方法
-- [错误层次结构](/references/error-hierarchy.md) — ContextTerminated/Again 异常
+- [异步与 asyncio](../concepts/05-async-future-asyncio.md) — Future 状态机与 add_reader 详解
+- [Context 生命周期](../concepts/01-context-lifecycle.md) — asyncio.Context 的单例重置
+- [Poller 多路复用](../concepts/04-poller.md) — 同步/异步 Poller 继承关系
+- [Socket sugar 语法层](../concepts/02-socket-sugar.md) — send_string 等序列化方法
+- [错误层次结构](../references/error-hierarchy.md) — ContextTerminated/Again 异常
 - [同步 PUB/SUB 示例](sync-pubsub.md) — 同步版本对比

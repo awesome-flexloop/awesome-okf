@@ -280,8 +280,8 @@ deep_gemm.fp8_fp4_mega_moe(
 
 ## 九、相关链接
 
-- [/deepseek/deep-gemm/references/mega-moe](/ai/deepseek/deep-gemm/references/mega-moe) — MegaMoE API 参考
-- [/deepseek/deep-gemm/examples/moe-forward](/ai/deepseek/deep-gemm/examples/moe-forward) — MegaMoE 使用示例
-- [/deepseek/deep-gemm/concepts/fp8-gemm](/ai/deepseek/deep-gemm/concepts/fp8-gemm) — FP8/FP4 量化方案
-- [/deepseek/deep-gemm/concepts/grouped-gemm](/ai/deepseek/deep-gemm/concepts/grouped-gemm) — 分组 GEMM（非融合 MoE 方案）
-- [/deepseek/deep-ep/](/ai/deepseek/deep-ep/) — DeepEP 通信库（非融合方案）
+- /deepseek/deep-gemm/references/mega-moe — MegaMoE API 参考
+- /deepseek/deep-gemm/examples/moe-forward — MegaMoE 使用示例
+- /deepseek/deep-gemm/concepts/fp8-gemm — FP8/FP4 量化方案
+- /deepseek/deep-gemm/concepts/grouped-gemm — 分组 GEMM（非融合 MoE 方案）
+- [/deepseek/deep-ep/](../../deep-ep/index.md) — DeepEP 通信库（非融合方案）

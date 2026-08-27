@@ -277,7 +277,7 @@ wscat -c ws://127.0.0.1:8000/ws/chat
 
 ## 相关概念
 
-- [流式响应与 WebSocket](/concepts/12-streaming-websocket.md)
-- [路由系统与请求处理管线](/concepts/02-routing-system.md)
-- [路径操作与端点执行](/concepts/03-path-operations.md)
-- [响应模型与序列化](/concepts/07-response-model.md)
+- [流式响应与 WebSocket](../concepts/12-streaming-websocket.md)
+- [路由系统与请求处理管线](../concepts/02-routing-system.md)
+- [路径操作与端点执行](../concepts/03-path-operations.md)
+- [响应模型与序列化](../concepts/07-response-model.md)

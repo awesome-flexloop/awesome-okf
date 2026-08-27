@@ -197,8 +197,8 @@ robust = model.with_retry(stop_after_attempt=3).with_fallbacks([backup_model])
 
 ## 相关概念
 
-- [消息类型](/ai/langchain-ai/langchain/concepts/message-types) —— AIMessage 是输出，HumanMessage/SystemMessage 是输入
-- [提示词系统](/ai/langchain-ai/langchain/concepts/prompt-system) —— ChatPromptValue 是输入桥梁
-- [工具抽象](/ai/langchain-ai/langchain/concepts/tool-abstraction) —— bind_tools 接受 BaseTool
-- [Runnable 协议](/ai/langchain-ai/langchain/concepts/runnable-protocol) —— BaseChatModel 是 RunnableSerializable
-- [输出解析器](/ai/langchain-ai/langchain/concepts/output-parser) —— with_structured_output 的底层机制
+- 消息类型 —— AIMessage 是输出，HumanMessage/SystemMessage 是输入
+- 提示词系统 —— ChatPromptValue 是输入桥梁
+- 工具抽象 —— bind_tools 接受 BaseTool
+- Runnable 协议 —— BaseChatModel 是 RunnableSerializable
+- 输出解析器 —— with_structured_output 的底层机制

@@ -100,6 +100,6 @@ mdformat-myst 插件自动依赖 mdformat-footnote，因此在 MyST 项目中脚
 
 ## 相关概念
 
-- [脚注渲染格式与缩进规则](/concepts/02-footnote-rendering.md)
-- [脚注排序逻辑与分类机制](/concepts/03-footnote-reordering.md)
-- [插件配置与 CLI 选项](/concepts/01-plugin-configuration.md)
+- [脚注渲染格式与缩进规则](../concepts/02-footnote-rendering.md)
+- [脚注排序逻辑与分类机制](../concepts/03-footnote-reordering.md)
+- [插件配置与 CLI 选项](../concepts/01-plugin-configuration.md)

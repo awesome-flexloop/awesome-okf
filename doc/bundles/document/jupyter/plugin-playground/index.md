@@ -4,7 +4,7 @@ okf_version: "0.2"
 
 # Plugin Playground 知识库
 
-本知识包是 JupyterLab 插件快速原型工具 [Plugin Playground](https://github.com/jupyterlab/jupyterlab-plugin-playground) 的系统化中文教程，基于源码深度阅读生成，覆盖从 Hello World 到联邦扩展与CSS隔离的完整知识体系。所有内容均溯源至 plugin-playground 源码（`external/libs/jupyter/plugin-playground/src/` 目录核心模块），遵循 [OKF v0.2 规范](/concepts/00-introduction.md)。
+本知识包是 JupyterLab 插件快速原型工具 [Plugin Playground](https://github.com/jupyterlab/jupyterlab-plugin-playground) 的系统化中文教程，基于源码深度阅读生成，覆盖从 Hello World 到联邦扩展与CSS隔离的完整知识体系。所有内容均溯源至 plugin-playground 源码（`external/libs/jupyter/plugin-playground/src/` 目录核心模块），遵循 [OKF v0.2 规范](concepts/00-introduction.md)。
 
 ## 入门与基础（concepts/）
 

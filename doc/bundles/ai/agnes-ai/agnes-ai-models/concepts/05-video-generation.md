@@ -217,7 +217,7 @@ payload = {
 
 ## 相关概念
 
-- [图像生成API](/concepts/04-image-generation.md)
-- [速率限制与配额](/concepts/06-rate-limits.md)
-- [错误处理与重试](/concepts/07-error-handling.md)
-- [视频生成示例](/examples/video-generation.md)
+- [图像生成API](04-image-generation.md)
+- [速率限制与配额](06-rate-limits.md)
+- [错误处理与重试](07-error-handling.md)
+- [视频生成示例](../examples/video-generation.md)

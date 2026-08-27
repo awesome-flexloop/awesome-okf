@@ -128,6 +128,6 @@ Jupyter **不要求版权转让**（Copyright Assignment Agreement）。每个�
 
 ## 相关概念
 
-- [常设委员会与工作组](/concepts/07-committees-and-working-groups.md)
-- [Jupyter 基金会](/concepts/05-jupyter-foundation.md)
-- [软件子项目体系](/concepts/06-software-subprojects.md)
+- [常设委员会与工作组](07-committees-and-working-groups.md)
+- [Jupyter 基金会](05-jupyter-foundation.md)
+- [软件子项目体系](06-software-subprojects.md)

@@ -149,6 +149,6 @@ litegitpuller 不会覆盖已存在的文件。如需重新拉取，请先删除
 
 ## 相关概念
 
-- [URL参数完整参考](/concepts/06-url-parameters.md) — 所有参数的详细说明
-- [平台 Puller 实现](/concepts/04-platform-pullers.md) — GitHub API 调用细节
-- [限制与注意事项](/concepts/07-limitations.md) — API 速率限制等使用限制
+- [URL参数完整参考](../concepts/06-url-parameters.md) — 所有参数的详细说明
+- [平台 Puller 实现](../concepts/04-platform-pullers.md) — GitHub API 调用细节
+- [限制与注意事项](../concepts/07-limitations.md) — API 速率限制等使用限制

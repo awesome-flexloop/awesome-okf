@@ -25,7 +25,7 @@ sources:
 
 ## Filters 过滤管道
 
-`Filters` 类定义在 [filters.py:50](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/filters.py#L50)，是一个容器类，保存分块叶子节点（Table、CArray、EArray、VLArray）的 I/O 过滤器配置。过滤器以管道方式应用于每个 chunk：写入时依次编码，读取时反向解码。
+`Filters` 类定义在 filters.py:50，是一个容器类，保存分块叶子节点（Table、CArray、EArray、VLArray）的 I/O 过滤器配置。过滤器以管道方式应用于每个 chunk：写入时依次编码，读取时反向解码。
 
 ### Filters 构造参数
 
@@ -124,7 +124,7 @@ h5file = tb.open_file('data.h5', mode='w', filters=filters)
 
 ### Chunk 大小计算
 
-[leaf.py:95](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/leaf.py#L95) 中的 `calc_chunksize(expected_mb)` 根据预期数据量自动计算最优 chunk 大小：
+leaf.py:95 中的 `calc_chunksize(expected_mb)` 根据预期数据量自动计算最优 chunk 大小：
 
 ```python
 def calc_chunksize(expected_mb: int) -> int:
@@ -134,7 +134,7 @@ def calc_chunksize(expected_mb: int) -> int:
 
 ## 索引系统
 
-PyTables 为 Table 的列提供索引以加速条件查询。索引定义在 [index.py](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/index.py)，底层实现使用 [indexes.py](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/indexes.py) 和 `indexesextension.pyx` Cython 扩展。
+PyTables 为 Table 的列提供索引以加速条件查询。索引定义在 index.py，底层实现使用 indexes.py 和 `indexesextension.pyx` Cython 扩展。
 
 ### 索引类型（kind）
 
@@ -171,7 +171,7 @@ PyTables 的索引实现基于 CSI（Chunked Sorted Index）：
 
 ### Index 类
 
-`Index`（[index.py:113](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/index.py#L113)）继承自 `NotLoggedMixin`、`Group` 和 `indexesextension.Index`，是列索引的容器：
+`Index`（index.py:113）继承自 `NotLoggedMixin`、`Group` 和 `indexesextension.Index`，是列索引的容器：
 
 | 属性/方法 | 说明 |
 |-----------|------|
@@ -220,7 +220,7 @@ default_index_filters = Filters(complevel=1, complib='zlib', shuffle=True)
 - 浮点：float32/64
 
 不支持索引的类型：
-- uint64 列（[table.py:292](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/table.py#L292) 抛出 NotImplementedError）
+- uint64 列（table.py:292 抛出 NotImplementedError）
 - 复数列
 - 多维列（shape 非空）
 

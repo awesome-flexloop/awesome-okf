@@ -204,7 +204,7 @@ class NoDefaultExportError extends Error
 
 ## 相关概念
 
-- [整体架构与数据流](/concepts/01-architecture-overview.md)
-- [TypeScript 转译机制](/concepts/03-typescript-transpilation.md)
-- [插件加载流程](/concepts/05-plugin-loader.md)
-- [模块解析系统](/concepts/04-module-resolution.md)
+- [整体架构与数据流](../concepts/01-architecture-overview.md)
+- [TypeScript 转译机制](../concepts/03-typescript-transpilation.md)
+- [插件加载流程](../concepts/05-plugin-loader.md)
+- [模块解析系统](../concepts/04-module-resolution.md)

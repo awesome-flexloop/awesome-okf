@@ -254,6 +254,6 @@ Go 端通过以下函数定位 Python 子系统目录：
 
 ## 相关概念
 
-- [Go/Python 桥接](/concepts/05-python-bridge.md)
-- [MCP 安全扫描](/concepts/06-mcp-scan.md)
-- [四种任务类型](/concepts/01-task-types.md)
+- [Go/Python 桥接](../concepts/05-python-bridge.md)
+- [MCP 安全扫描](../concepts/06-mcp-scan.md)
+- [四种任务类型](../concepts/01-task-types.md)

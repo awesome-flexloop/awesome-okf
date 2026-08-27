@@ -293,7 +293,7 @@ curl -X DELETE $BASE/my-extension/items/<item-id>?token=$TOKEN
 
 ## 相关概念
 
-- [API Handler 开发](/concepts/05-api-handlers.md)
-- [ExtensionApp 开发](/concepts/04-extension-app.md)
-- [测试策略](/concepts/07-testing.md)
-- [基础 Ping 扩展示例](/examples/01-basic-ping-extension.md)
+- [API Handler 开发](../concepts/05-api-handlers.md)
+- [ExtensionApp 开发](../concepts/04-extension-app.md)
+- [测试策略](../concepts/07-testing.md)
+- [基础 Ping 扩展示例](01-basic-ping-extension.md)

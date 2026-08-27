@@ -148,6 +148,6 @@ CI 镜像同样发布到两个 Registry：
 
 ## 相关概念
 
-- [三镜像架构解析](/concepts/02-image-architecture.md)：三个镜像的设计分工
-- [构建流水线详解](/concepts/06-build-pipeline.md)：GitHub Actions 自动化构建
-- [CI 集成测试示例](/examples/04-ci-integration.md)：在 CI 中使用 Sphinx Docker 镜像
+- [三镜像架构解析](02-image-architecture.md)：三个镜像的设计分工
+- [构建流水线详解](06-build-pipeline.md)：GitHub Actions 自动化构建
+- [CI 集成测试示例](../examples/04-ci-integration.md)：在 CI 中使用 Sphinx Docker 镜像

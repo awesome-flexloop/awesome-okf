@@ -72,7 +72,7 @@ $$\psi=\psi(\psi)\ \Longrightarrow\ \operatorname{Collapse}\ \Longrightarrow\ \t
 - **自指类型**：引入允许受控自应用的类型构造子，使 $\psi:\psi\to\psi$ 可被类型化而不立即导致矛盾；
 - **一元性（Univalence）的坍缩解读**：等价即同一，被解读为塌缩在等价结构上的不变性；
 - **高阶同一**：身份类型的迭代对应 $\sigma=\sigma(\sigma)$ 的递归觉知；
-- **与 CST 的衔接**：ψ-HoTT 为 [坍缩集合论](/psi-math/concepts/01-collapse-set-theory.md) 提供类型论语义，集合作为 0-类型（h-set）出现。
+- **与 CST 的衔接**：ψ-HoTT 为 [坍缩集合论](01-collapse-set-theory.md) 提供类型论语义，集合作为 0-类型（h-set）出现。
 
 ψ-HoTT 的设计动机是：经典集合论因基础公理禁止自指而无法直接类型化 $\psi=\psi(\psi)$，而无类型 λ 演算又缺乏防止平凡化的结构。ψ-HoTT 试图在类型安全与自指表达之间取中道。
 
@@ -80,22 +80,22 @@ $$\psi=\psi(\psi)\ \Longrightarrow\ \operatorname{Collapse}\ \Longrightarrow\ \t
 
 坍缩数学在 math.dw.cash 中处于"枢纽"位置：
 
-- 它以 [theory_psi](/psi-math/concepts/00-theory-psi-core.md) 为公理来源；
-- 其猜想系统为 [RH 证明](/psi-math/concepts/02-riemann-hypothesis.md) 提供位置；
-- 其类型系统为 CST 与 [ZFC 坍缩](/psi-math/concepts/05-zfc-collapse.md) 提供元理论；
-- 其几何与数值系统是 [物理常数推导](/psi-math/concepts/04-physics-constants.md) 的数学前提；
+- 它以 [theory_psi](00-theory-psi-core.md) 为公理来源；
+- 其猜想系统为 [RH 证明](02-riemann-hypothesis.md) 提供位置；
+- 其类型系统为 CST 与 [ZFC 坍缩](05-zfc-collapse.md) 提供元理论；
+- 其几何与数值系统是 [物理常数推导](04-physics-constants.md) 的数学前提；
 - 元数学典（9 本书 72 章）进一步展开其元结构侧面[^f045]。
 
 整个系列体现了理论的一个核心主张：数学不是静态真理的集合，而是一个自我展开、自我认识的递归过程。
 
 ## 相关概念
 
-- [/psi-math/concepts/00-theory-psi-core.md](/psi-math/concepts/00-theory-psi-core.md) — 十大系统的公理起点
-- [/psi-math/concepts/01-collapse-set-theory.md](/psi-math/concepts/01-collapse-set-theory.md) — CST 与 ψ-HoTT 的衔接
-- [/psi-math/concepts/02-riemann-hypothesis.md](/psi-math/concepts/02-riemann-hypothesis.md) — 猜想系统中的 RH
-- [/psi-math/concepts/05-zfc-collapse.md](/psi-math/concepts/05-zfc-collapse.md) — 元数学层的 ZFC 批判
-- [/psi-core/concepts/06-meta-recursion.md](/psi-core/concepts/06-meta-recursion.md) — 元递归与超坍缩类型
-- [/psi-universe/concepts/01-flip-xor-shift.md](/psi-universe/concepts/01-flip-xor-shift.md) — 数值/函数系统的公理化对应
+- [/psi-math/concepts/00-theory-psi-core.md](00-theory-psi-core.md) — 十大系统的公理起点
+- [/psi-math/concepts/01-collapse-set-theory.md](01-collapse-set-theory.md) — CST 与 ψ-HoTT 的衔接
+- [/psi-math/concepts/02-riemann-hypothesis.md](02-riemann-hypothesis.md) — 猜想系统中的 RH
+- [/psi-math/concepts/05-zfc-collapse.md](05-zfc-collapse.md) — 元数学层的 ZFC 批判
+- [/psi-core/concepts/06-meta-recursion.md](../../psi-core/concepts/06-meta-recursion.md) — 元递归与超坍缩类型
+- [/psi-universe/concepts/01-flip-xor-shift.md](../../psi-universe/concepts/01-flip-xor-shift.md) — 数值/函数系统的公理化对应
 
 [^f042]: 事实 F-042：系列 psi-collapse-mathematics 含 10 系统 90 章。
 [^f045]: 事实 F-045：系列 psi-metamath-codex 含 9 本书 72 章。

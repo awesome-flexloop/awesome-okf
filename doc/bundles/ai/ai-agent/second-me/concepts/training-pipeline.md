@@ -349,7 +349,7 @@ def convert_model(self) -> bool:
 
 ### LoRA默认参数
 
-训练默认使用以下LoRA配置（在 [train.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/train.py) 中定义）：
+训练默认使用以下LoRA配置（在 train.py 中定义）：
 
 ```python
 @dataclass
@@ -519,17 +519,17 @@ sequenceDiagram
 
 | 文件 | 职责 |
 |------|------|
-| [lpm_kernel/api/domains/trainprocess/process_step.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/trainprocess/process_step.py) | ProcessStep枚举：14个训练步骤定义 |
-| [lpm_kernel/api/domains/trainprocess/trainprocess_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/trainprocess/trainprocess_service.py) | TrainProcessService单例：流水线编排，1109行 |
-| [lpm_kernel/api/domains/trainprocess/progress_holder.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/trainprocess/progress_holder.py) | TrainProgressHolder：进度持久化 |
-| [lpm_kernel/api/domains/trainprocess/progress_enum.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/trainprocess/progress_enum.py) | Status枚举：步骤状态 |
-| [lpm_kernel/api/domains/trainprocess/training_params_manager.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/trainprocess/training_params_manager.py) | 训练参数持久化管理 |
-| [lpm_kernel/api/domains/trainprocess/routes.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/trainprocess/routes.py) | 训练API路由：start/logs/progress/stop/retrain |
-| [lpm_kernel/api/common/script_executor.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/common/script_executor.py) | ScriptExecutor：shell脚本统一执行器 |
-| [lpm_kernel/L2/train.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/train.py) | SFT训练主脚本 |
-| [lpm_kernel/L2/train_for_user.sh](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/train_for_user.sh) | 用户训练shell脚本 |
-| [lpm_kernel/L2/merge_lora_weights.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/merge_lora_weights.py) | LoRA权重合并 |
-| [lpm_kernel/L2/convert_hf_to_gguf.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/convert_hf_to_gguf.py) | HF→GGUF模型转换 |
+| lpm_kernel/api/domains/trainprocess/process_step.py | ProcessStep枚举：14个训练步骤定义 |
+| lpm_kernel/api/domains/trainprocess/trainprocess_service.py | TrainProcessService单例：流水线编排，1109行 |
+| lpm_kernel/api/domains/trainprocess/progress_holder.py | TrainProgressHolder：进度持久化 |
+| lpm_kernel/api/domains/trainprocess/progress_enum.py | Status枚举：步骤状态 |
+| lpm_kernel/api/domains/trainprocess/training_params_manager.py | 训练参数持久化管理 |
+| lpm_kernel/api/domains/trainprocess/routes.py | 训练API路由：start/logs/progress/stop/retrain |
+| lpm_kernel/api/common/script_executor.py | ScriptExecutor：shell脚本统一执行器 |
+| lpm_kernel/L2/train.py | SFT训练主脚本 |
+| lpm_kernel/L2/train_for_user.sh | 用户训练shell脚本 |
+| lpm_kernel/L2/merge_lora_weights.py | LoRA权重合并 |
+| lpm_kernel/L2/convert_hf_to_gguf.py | HF→GGUF模型转换 |
 
 ## 相关概念
 

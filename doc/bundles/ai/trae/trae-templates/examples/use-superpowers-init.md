@@ -192,11 +192,11 @@ A: 可以。superpowers-trae-init 是可选模板。简单项目可以只使用�
 
 ## 相关概念
 
-- [AGENTS.md 开发契约](/concepts/07-agents-contract.md)
-- [工具与 DevOps 模板](/concepts/06-tools-devops-templates.md)
+- [AGENTS.md 开发契约](../concepts/07-agents-contract.md)
+- [工具与 DevOps 模板](../concepts/06-tools-devops-templates.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/templates-source.md)
-- [使用 Next.js 模板创建项目](/examples/use-nextjs-template.md)
-- [AGENTS.md 配置示例](/examples/agents-md-config.md)
+- [源码信源索引](../references/templates-source.md)
+- [使用 Next.js 模板创建项目](use-nextjs-template.md)
+- [AGENTS.md 配置示例](agents-md-config.md)

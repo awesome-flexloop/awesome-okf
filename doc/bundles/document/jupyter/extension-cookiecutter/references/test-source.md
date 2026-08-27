@@ -205,6 +205,6 @@ async def test_custom_config(jp_fetch):
 
 ## 相关概念
 
-- [测试策略详解](/concepts/07-testing.md)
-- [API Handler 开发指南](/concepts/05-api-handlers.md)
-- [ExtensionApp 源码解析](/references/extension-app-source.md)
+- [测试策略详解](../concepts/07-testing.md)
+- [API Handler 开发指南](../concepts/05-api-handlers.md)
+- [ExtensionApp 源码解析](extension-app-source.md)

@@ -113,8 +113,8 @@ sources:
 
 ## 相关概念
 
-- [为什么读帛书本](/concepts/00-why-boshu.md)
-- [德经在前的阅读策略](/concepts/02-de-before-dao.md)
-- [避讳字与通假字](/concepts/03-taboo-characters.md)
-- [核心异文选读](/concepts/04-key-variants.md)
-- [出土原典信源](/references/core-manuscripts.md)
+- [为什么读帛书本](00-why-boshu.md)
+- [德经在前的阅读策略](02-de-before-dao.md)
+- [避讳字与通假字](03-taboo-characters.md)
+- [核心异文选读](04-key-variants.md)
+- [出土原典信源](../references/core-manuscripts.md)

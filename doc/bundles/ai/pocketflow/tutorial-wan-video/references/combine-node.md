@@ -103,7 +103,7 @@ else:
 
 ### merge_audio_video：音视频合并
 
-在 [utils/ffmpeg.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/utils/ffmpeg.py) 中实现：
+在 utils/ffmpeg.py 中实现：
 
 ```
 ffmpeg -y
@@ -176,4 +176,4 @@ animate >> combine       # 从 AnimateVideoNode 进入
 
 ## 源码位置
 
-[nodes.py#L241-L266](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/nodes.py#L241-L266)
+nodes.py#L241-L266

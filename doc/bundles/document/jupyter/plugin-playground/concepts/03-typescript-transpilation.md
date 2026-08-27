@@ -234,7 +234,7 @@ pluginSource = new Function(
 
 ## 相关概念
 
-- [插件加载流程](/concepts/05-plugin-loader.md)
-- [模块解析系统](/concepts/04-module-resolution.md)
-- [JupyterLab 插件基础结构](/concepts/02-plugin-basics.md)
-- [PluginLoader API 参考](/references/loader-transpiler-api.md)
+- [插件加载流程](05-plugin-loader.md)
+- [模块解析系统](04-module-resolution.md)
+- [JupyterLab 插件基础结构](02-plugin-basics.md)
+- [PluginLoader API 参考](../references/loader-transpiler-api.md)

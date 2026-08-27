@@ -323,6 +323,6 @@ ls -la /proc/12345/fd/
 ## 相关概念
 
 - [基本命令行使用](01-basic-usage.md) — 手动调用 conmon 的参数示例
-- [进程生命周期管理](/bundles/containers/conmon/concepts/01-process-lifecycle.md) — 理解双fork和subreaper如何让conmon脱离Podman继续运行
-- [cgroup与OOM检测](/bundles/containers/conmon/concepts/03-cgroup-oom.md) — 理解Podman如何通过oom文件判断OOM
-- [终端附加与日志管理](/bundles/containers/conmon/concepts/04-attach-logging.md) — 理解attach socket和FIFO控制协议
+- [进程生命周期管理](../concepts/01-process-lifecycle.md) — 理解双fork和subreaper如何让conmon脱离Podman继续运行
+- [cgroup与OOM检测](../concepts/03-cgroup-oom.md) — 理解Podman如何通过oom文件判断OOM
+- [终端附加与日志管理](../concepts/04-attach-logging.md) — 理解attach socket和FIFO控制协议

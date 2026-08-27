@@ -109,7 +109,7 @@ Tracing 是 CozeLoop 的核心功能。它基于 Span 模型，每个 Span 代�
 
 核心 API：`start_span()`、`span.finish()`、`span.set_input()`/`set_output()`、`span.set_tags()`。
 
-详细内容参见 [Tracing 模型](/concepts/01-tracing-model.md)。
+详细内容参见 [Tracing 模型](01-tracing-model.md)。
 
 ### 2. Prompt Hub（提示词管理）
 
@@ -164,8 +164,8 @@ cozeloop.close()
 
 ## 下一步
 
-- 学习 [Tracing 模型](/concepts/01-tracing-model.md)理解 Span、Trace、Context 的核心概念
-- 了解 [LLM 埋点模式](/concepts/02-llm-instrumentation.md)掌握三种集成方式
-- 深入 [上下文传播](/concepts/03-context-propagation.md)处理跨线程/跨服务场景
-- 配置 [批量上报与采样](/concepts/04-configuration-batching.md)优化生产环境性能
-- 查看 [API 参考](/references/tracing-api.md)了解完整接口
+- 学习 [Tracing 模型](01-tracing-model.md)理解 Span、Trace、Context 的核心概念
+- 了解 [LLM 埋点模式](02-llm-instrumentation.md)掌握三种集成方式
+- 深入 [上下文传播](03-context-propagation.md)处理跨线程/跨服务场景
+- 配置 [批量上报与采样](04-configuration-batching.md)优化生产环境性能
+- 查看 [API 参考](../references/tracing-api.md)了解完整接口

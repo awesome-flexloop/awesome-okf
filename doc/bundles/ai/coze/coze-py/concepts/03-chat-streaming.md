@@ -106,7 +106,7 @@ for event in coze.chat.stream(
         print(event.message.content, end="", flush=True)
 ```
 
-**方式二**：通过 `conversations` 服务显式创建和管理会话（见[会话管理](/concepts/06-conversations.md)）。
+**方式二**：通过 `conversations` 服务显式创建和管理会话（见[会话管理](06-conversations.md)）。
 
 ## ChatEvent 事件体系
 
@@ -219,9 +219,9 @@ except CozeInvalidEventError as e:
 
 ## 相关概念
 
-- [客户端初始化与配置](/concepts/02-client-init.md) — 创建客户端后才能发起对话
-- [Bot 管理](/concepts/04-bot-management.md) — 创建和管理 Bot
-- [工作流](/concepts/05-workflows.md) — 工作流式对话（ChatEvent 复用）
-- [会话管理](/concepts/06-conversations.md) — 显式管理会话生命周期
-- [基础对话示例](/examples/basic-chat.md) — 完整的流式对话代码示例
-- [对话与工作流参考](/references/chat-workflow.md) — ChatClient 和 Message 模型的完整 API
+- [客户端初始化与配置](02-client-init.md) — 创建客户端后才能发起对话
+- [Bot 管理](04-bot-management.md) — 创建和管理 Bot
+- [工作流](05-workflows.md) — 工作流式对话（ChatEvent 复用）
+- [会话管理](06-conversations.md) — 显式管理会话生命周期
+- [基础对话示例](../examples/basic-chat.md) — 完整的流式对话代码示例
+- [对话与工作流参考](../references/chat-workflow.md) — ChatClient 和 Message 模型的完整 API

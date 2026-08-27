@@ -204,6 +204,6 @@ def should_defer_control_plane_db(config, paths) -> bool:
 
 ## 相关概念
 
-- [/concepts/04-db-di.md](/concepts/04-db-di.md)
-- [/concepts/01-server-lifecycle.md](/concepts/01-server-lifecycle.md)
-- [/concepts/00-architecture.md](/concepts/00-architecture.md)
+- [/concepts/04-db-di.md](../concepts/04-db-di.md)
+- [/concepts/01-server-lifecycle.md](../concepts/01-server-lifecycle.md)
+- [/concepts/00-architecture.md](../concepts/00-architecture.md)

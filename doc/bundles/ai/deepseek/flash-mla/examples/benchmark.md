@@ -9,7 +9,7 @@ description: 使用 FlashMLA 内置 benchmark 脚本进行性能测试与对比
 
 # 性能基准测试指南
 
-FlashMLA 提供了内置的 benchmark 脚本（[benchmark/bench_flash_mla.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/benchmark/bench_flash_mla.py)），支持与 PyTorch SDPA、FlashInfer、Triton 实现进行性能对比。本文档介绍如何运行和自定义 benchmark。
+FlashMLA 提供了内置的 benchmark 脚本（benchmark/bench_flash_mla.py），支持与 PyTorch SDPA、FlashInfer、Triton 实现进行性能对比。本文档介绍如何运行和自定义 benchmark。
 
 ---
 
@@ -376,8 +376,8 @@ def verify_correctness(batch_size=2, seq_len=128, h_q=64, h_kv=1, d=576, dv=512)
 
 ## 六、相关链接
 
-- [/deepseek/flash-mla/examples/basic-decoding](/ai/deepseek/flash-mla/examples/basic-decoding) — MLA 解码基础使用示例
-- [/deepseek/flash-mla/references/api](/ai/deepseek/flash-mla/references/api) — Python API 参考
-- [/deepseek/flash-mla/concepts/splitkv](/ai/deepseek/flash-mla/concepts/splitkv) — SplitKV 性能优化原理
-- [/deepseek/flash-mla/concepts/hopper-blackwell-kernels](/ai/deepseek/flash-mla/concepts/hopper-blackwell-kernels) — 架构特性与性能
-- [/deepseek/deep-gemm/examples/tuning](/ai/deepseek/deep-gemm/examples/tuning) — DeepGEMM 性能调优参考
+- /deepseek/flash-mla/examples/basic-decoding — MLA 解码基础使用示例
+- /deepseek/flash-mla/references/api — Python API 参考
+- /deepseek/flash-mla/concepts/splitkv — SplitKV 性能优化原理
+- /deepseek/flash-mla/concepts/hopper-blackwell-kernels — 架构特性与性能
+- /deepseek/deep-gemm/examples/tuning — DeepGEMM 性能调优参考

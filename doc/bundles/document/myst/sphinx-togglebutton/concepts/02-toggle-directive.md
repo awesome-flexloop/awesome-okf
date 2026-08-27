@@ -113,6 +113,6 @@ Toggle 指令在 Python 端生成一个 `<div class="toggle">` 容器（若有 `
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [配置项参考](/concepts/03-configuration.md)
-- [基础使用示例](/examples/basic-usage.md)
+- [快速开始](01-getting-started.md)
+- [配置项参考](03-configuration.md)
+- [基础使用示例](../examples/basic-usage.md)

@@ -19,7 +19,7 @@ related:
 
 ## 概述
 
-`ToolRegistry`（[tools/registry.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/registry.py#L414-L900)）是 hermes-agent 的工具管理中枢，采用**单例模式**收集所有工具的 schema、handler 和可用性检查函数。每个工具模块在导入时通过 `registry.register()` 自注册，ToolRegistry 统一提供工具发现、schema 查询、可用性过滤、handler 调度和错误归一化能力。
+`ToolRegistry`（tools/registry.py）是 hermes-agent 的工具管理中枢，采用**单例模式**收集所有工具的 schema、handler 和可用性检查函数。每个工具模块在导入时通过 `registry.register()` 自注册，ToolRegistry 统一提供工具发现、schema 查询、可用性过滤、handler 调度和错误归一化能力。
 
 hermes-agent 内置约 100 个工具模块，涵盖终端执行、文件操作、浏览器自动化、子 Agent 委托、MCP 集成、技能管理、记忆存取、图像/视频生成、TTS、视觉分析、Home Assistant、看板、Discord、飞书、定时任务等。工具按**工具集（toolset）**分组管理，通过 `toolsets.py` 中的 DAG 解析系统支持预定义组合工具集（如 `research`、`development`、`webhook_safe`）。
 
@@ -69,7 +69,7 @@ registry.register(
 
 ### 2. ToolEntry 数据类
 
-每个注册的工具由 [ToolEntry](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/registry.py#L201-L230) 表示，使用 `__slots__` 限定属性以减少内存开销：
+每个注册的工具由 ToolEntry 表示，使用 `__slots__` 限定属性以减少内存开销：
 
 ```python
 class ToolEntry:
@@ -236,7 +236,7 @@ sequenceDiagram
 
 ### 核心注册代码片段
 
-以下是 [ToolRegistry.register()](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/registry.py#L562-L644) 的核心逻辑：
+以下是 ToolRegistry.register() 的核心逻辑：
 
 ```python
 def register(
@@ -395,18 +395,18 @@ registry = ToolRegistry()
 
 | 文件 | 内容 |
 |------|------|
-| [tools/registry.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/registry.py) | `ToolEntry`、`ToolRegistry` 类定义，check_fn 缓存机制，工具发现函数 |
-| [toolsets.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/toolsets.py) | 核心工具列表 `_HERMES_CORE_TOOLS`、webhook 安全工具集、工具集 DAG 解析函数 |
-| [model_tools.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/model_tools.py) | 工具定义获取、handler 调度桥接层（async 桥接、错误清理） |
-| [agent/tool_executor.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/tool_executor.py) | 顺序/并发工具执行引擎、授权门控、结果持久化 |
-| [tools/terminal_tool.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/terminal_tool.py) | 终端命令执行工具示例 |
-| [tools/browser_tool.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/browser_tool.py) | 浏览器自动化工具 |
-| [tools/delegate_tool.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/delegate_tool.py) | 子 Agent 委托工具 |
-| [tools/mcp_tool.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/mcp_tool.py) | MCP 工具集成 |
-| [tools/memory_tool.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/memory_tool.py) | 记忆存取工具 |
-| [tools/file_operations.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/file_operations.py) | 文件读写操作工具 |
-| [tools/environments/](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/environments/) | 代码执行环境后端（local/docker/ssh/modal/daytona 等） |
-| [tools/computer_use/](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/tools/computer_use/) | 计算机使用工具（屏幕/键鼠/CUA 后端） |
+| tools/registry.py | `ToolEntry`、`ToolRegistry` 类定义，check_fn 缓存机制，工具发现函数 |
+| toolsets.py | 核心工具列表 `_HERMES_CORE_TOOLS`、webhook 安全工具集、工具集 DAG 解析函数 |
+| model_tools.py | 工具定义获取、handler 调度桥接层（async 桥接、错误清理） |
+| agent/tool_executor.py | 顺序/并发工具执行引擎、授权门控、结果持久化 |
+| tools/terminal_tool.py | 终端命令执行工具示例 |
+| tools/browser_tool.py | 浏览器自动化工具 |
+| tools/delegate_tool.py | 子 Agent 委托工具 |
+| tools/mcp_tool.py | MCP 工具集成 |
+| tools/memory_tool.py | 记忆存取工具 |
+| tools/file_operations.py | 文件读写操作工具 |
+| tools/environments/ | 代码执行环境后端（local/docker/ssh/modal/daytona 等） |
+| tools/computer_use/ | 计算机使用工具（屏幕/键鼠/CUA 后端） |
 
 ## 相关概念交叉引用
 

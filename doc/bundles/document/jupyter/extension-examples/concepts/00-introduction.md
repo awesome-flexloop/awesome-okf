@@ -120,7 +120,7 @@ extension-examples 使用 Lerna 管理多包仓库：
 
 ## 相关概念
 
-- [Hello World：最小插件](/concepts/01-hello-world.md)
-- [项目结构与构建系统](/concepts/02-project-setup.md)
-- [插件基础与依赖注入](/concepts/03-plugin-basics.md)
-- [插件解剖结构参考](/references/plugin-anatomy.md)
+- [Hello World：最小插件](01-hello-world.md)
+- [项目结构与构建系统](02-project-setup.md)
+- [插件基础与依赖注入](03-plugin-basics.md)
+- [插件解剖结构参考](../references/plugin-anatomy.md)

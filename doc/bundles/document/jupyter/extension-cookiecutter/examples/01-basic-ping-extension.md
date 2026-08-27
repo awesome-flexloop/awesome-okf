@@ -228,7 +228,7 @@ c.Extension.ping_response = "hello from config"
 
 ## 相关概念
 
-- [ExtensionApp 开发](/concepts/04-extension-app.md)
-- [API Handler 开发](/concepts/05-api-handlers.md)
-- [测试策略](/concepts/07-testing.md)
-- [添加自定义 API 端点示例](/examples/02-custom-endpoint.md)
+- [ExtensionApp 开发](../concepts/04-extension-app.md)
+- [API Handler 开发](../concepts/05-api-handlers.md)
+- [测试策略](../concepts/07-testing.md)
+- [添加自定义 API 端点示例](02-custom-endpoint.md)

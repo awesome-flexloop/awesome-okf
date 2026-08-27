@@ -24,45 +24,45 @@ AI-Infra-Guard 是腾讯朱雀实验室开源的 AI 基础设施安全检测工�
 
 | 文档 | 说明 |
 |------|------|
-| [分布式架构总览](/concepts/00-architecture.md) | Server-Agent 三层架构、通信流、部署模式 |
-| [四种任务类型](/concepts/01-task-types.md) | AI-Infra-Scan、Mcp-Scan、Model-Redteam-Report、Agent-Scan |
+| [分布式架构总览](concepts/00-architecture.md) | Server-Agent 三层架构、通信流、部署模式 |
+| [四种任务类型](concepts/01-task-types.md) | AI-Infra-Scan、Mcp-Scan、Model-Redteam-Report、Agent-Scan |
 
 ### 核心层
 
 | 文档 | 说明 |
 |------|------|
-| [指纹规则 DSL](/concepts/02-fingerprint-dsl.md) | body/header/icon/hash 匹配、操作符、AST 求值 |
-| [CVE 漏洞匹配](/concepts/03-vuln-matching.md) | 语义化版本比较、AdvisoryEngine、安全评分 |
-| [WebSocket 通信协议](/concepts/04-websocket-protocol.md) | 消息格式、8 种事件类型、SSE 推送、心跳 |
+| [指纹规则 DSL](concepts/02-fingerprint-dsl.md) | body/header/icon/hash 匹配、操作符、AST 求值 |
+| [CVE 漏洞匹配](concepts/03-vuln-matching.md) | 语义化版本比较、AdvisoryEngine、安全评分 |
+| [WebSocket 通信协议](concepts/04-websocket-protocol.md) | 消息格式、8 种事件类型、SSE 推送、心跳 |
 
 ### 进阶层
 
 | 文档 | 说明 |
 |------|------|
-| [Go/Python 桥接](/concepts/05-python-bridge.md) | 子进程调用、stdout JSON 行协议、uv run |
-| [MCP 安全扫描](/concepts/06-mcp-scan.md) | stdio/SSE/HTTP 传输、规则匹配、LLM 动态分析 |
+| [Go/Python 桥接](concepts/05-python-bridge.md) | 子进程调用、stdout JSON 行协议、uv run |
+| [MCP 安全扫描](concepts/06-mcp-scan.md) | stdio/SSE/HTTP 传输、规则匹配、LLM 动态分析 |
 
 ### 示例
 
 | 文档 | 说明 |
 |------|------|
-| [CLI 命令行扫描](/examples/cli-scan.md) | scan/webserver 命令参数、输出格式、常用场景 |
-| [自定义指纹规则](/examples/custom-fingerprint.md) | YAML 编写、DSL 语法、版本提取、关联漏洞 |
-| [Docker 部署](/examples/docker-deploy.md) | docker-compose、环境变量、多 Agent 扩展 |
+| [CLI 命令行扫描](examples/cli-scan.md) | scan/webserver 命令参数、输出格式、常用场景 |
+| [自定义指纹规则](examples/custom-fingerprint.md) | YAML 编写、DSL 语法、版本提取、关联漏洞 |
+| [Docker 部署](examples/docker-deploy.md) | docker-compose、环境变量、多 Agent 扩展 |
 
 ### 信源溯源
 
 | 信源 | 覆盖源码 |
 |------|---------|
-| [Go Server 信源](/references/go-server.md) | common/websocket/、cmd/cli/、cmd/agent/ |
-| [扫描引擎信源](/references/scan-engine.md) | common/runner/、common/fingerprints/parser/ |
-| [漏洞结构信源](/references/vuln-struct.md) | pkg/vulstruct/ |
-| [Python 子系统信源](/references/python-subsystems.md) | mcp-scan/、agent-scan/、AIG-PromptSecurity/ |
-| [数据规则信源](/references/data-rules.md) | data/fingerprints/、data/vuln/、data/mcp/、data/eval/ |
+| [Go Server 信源](references/go-server.md) | common/websocket/、cmd/cli/、cmd/agent/ |
+| [扫描引擎信源](references/scan-engine.md) | common/runner/、common/fingerprints/parser/ |
+| [漏洞结构信源](references/vuln-struct.md) | pkg/vulstruct/ |
+| [Python 子系统信源](references/python-subsystems.md) | mcp-scan/、agent-scan/、AIG-PromptSecurity/ |
+| [数据规则信源](references/data-rules.md) | data/fingerprints/、data/vuln/、data/mcp/、data/eval/ |
 
 ## 变更日志
 
-见 [log.md](/log.md)。
+见 [log.md](log.md)。
 
 ```{toctree}
 :hidden:

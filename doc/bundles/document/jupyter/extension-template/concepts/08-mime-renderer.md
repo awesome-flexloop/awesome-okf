@@ -279,6 +279,6 @@ renderModel(model: IRenderMime.IMimeModel): Promise<void> {
 
 ## 相关概念
 
-- [四种扩展类型对比](/concepts/03-four-extension-types.md)
-- [前端扩展开发](/concepts/06-frontend-extension.md)
-- [双包构建系统](/concepts/05-build-system.md)
+- [四种扩展类型对比](03-four-extension-types.md)
+- [前端扩展开发](06-frontend-extension.md)
+- [双包构建系统](05-build-system.md)

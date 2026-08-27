@@ -74,30 +74,30 @@ for await (const chunk of stream) {
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/langchainjs/concepts/overview) — 架构分层、设计哲学与组件生态
-- [Runnable 接口](/ai/langchain-ai/langchainjs/concepts/runnable-interface) — 统一执行抽象、四维调用模型与 LCEL 组合子
-- [消息系统](/ai/langchain-ai/langchainjs/concepts/message-system) — BaseMessage 类型层次、tool_call 与多模态内容
-- [工具定义](/ai/langchain-ai/langchainjs/concepts/tool-definition) — StructuredTool、Zod/JSON Schema 与 tool 工厂
-- [提示模板](/ai/langchain-ai/langchainjs/concepts/prompt-templates) — PromptTemplate、ChatPromptTemplate 与 MessagesPlaceholder
-- [ReAct Agent](/ai/langchain-ai/langchainjs/concepts/react-agent) — createAgent、图拓扑、状态管理与结构化输出
-- [Middleware](/ai/langchain-ai/langchainjs/concepts/middleware) — 六钩子织入、洋葱模型与内置中间件
-- [Document 与 Embedding](/ai/langchain-ai/langchainjs/concepts/document-embedding) — 文档数据模型、向量化抽象与 RAG 基础
+- 总览 — 架构分层、设计哲学与组件生态
+- Runnable 接口 — 统一执行抽象、四维调用模型与 LCEL 组合子
+- 消息系统 — BaseMessage 类型层次、tool_call 与多模态内容
+- 工具定义 — StructuredTool、Zod/JSON Schema 与 tool 工厂
+- 提示模板 — PromptTemplate、ChatPromptTemplate 与 MessagesPlaceholder
+- ReAct Agent — createAgent、图拓扑、状态管理与结构化输出
+- Middleware — 六钩子织入、洋葱模型与内置中间件
+- Document 与 Embedding — 文档数据模型、向量化抽象与 RAG 基础
 
 ### API 参考
 
-- [Runnable 核心 API](/ai/langchain-ai/langchainjs/references/core-runnable) — Runnable 类、RunnableConfig、内置 Runnable 实现与 Graph
-- [Message 与 Tool API](/ai/langchain-ai/langchainjs/references/messages-tools) — 消息类型、ToolCall、StructuredTool 与 tool 工厂
-- [Agent 与 Middleware API](/ai/langchain-ai/langchainjs/references/agents-middleware) — createAgent、ReactAgent、AgentMiddleware 与状态注解
+- Runnable 核心 API — Runnable 类、RunnableConfig、内置 Runnable 实现与 Graph
+- Message 与 Tool API — 消息类型、ToolCall、StructuredTool 与 tool 工厂
+- Agent 与 Middleware API — createAgent、ReactAgent、AgentMiddleware 与状态注解
 
 ### 使用示例
 
-- [构建 LCEL 链](/ai/langchain-ai/langchainjs/examples/lcel-chain) — Prompt → Model → Parser 管道与流式/批量/并行
-- [创建 ReAct Agent](/ai/langchain-ai/langchainjs/examples/react-agent) — 工具、Middleware、结构化输出与流式传输
+- 构建 LCEL 链 — Prompt → Model → Parser 管道与流式/批量/并行
+- 创建 ReAct Agent — 工具、Middleware、结构化输出与流式传输
 
 ### 规格文档
 
-- [事实清单](/ai/langchain-ai/langchainjs/spec/facts) — 109 条从源码提取的可验证事实
-- [架构洞察](/ai/langchain-ai/langchainjs/spec/insights) — 5 个核心设计决策与机制分析
+- 事实清单 — 109 条从源码提取的可验证事实
+- 架构洞察 — 5 个核心设计决策与机制分析
 
 ## 目录结构
 

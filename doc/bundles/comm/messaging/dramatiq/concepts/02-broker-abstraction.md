@@ -130,10 +130,10 @@ class Consumer:
 
 ## 相关概念
 
-- [整体架构](/concepts/00-overall-architecture.md)：Broker 在五大组件中的位置
-- [Actor 装饰器](/concepts/01-actor-decorator.md)：Actor 注册时调用 broker.declare_actor
-- [Worker 线程模型](/concepts/03-worker-threading-model.md)：Worker 通过 broker.consume 获取消息
-- [Middleware 中间件管道](/concepts/05-middleware-pipeline.md)：emit_before/emit_after 的洋葱模型
-- [RedisBroker 内部结构](/references/redis-broker-internals.md)：Redis 后端实现详解
-- [RabbitmqBroker 内部结构](/references/rabbitmq-broker-internals.md)：RabbitMQ 后端实现详解
-- [异常类层次结构](/references/error-hierarchy.md)：ActorNotFound、BrokerConnectionError 等
+- [整体架构](00-overall-architecture.md)：Broker 在五大组件中的位置
+- [Actor 装饰器](01-actor-decorator.md)：Actor 注册时调用 broker.declare_actor
+- [Worker 线程模型](03-worker-threading-model.md)：Worker 通过 broker.consume 获取消息
+- [Middleware 中间件管道](05-middleware-pipeline.md)：emit_before/emit_after 的洋葱模型
+- [RedisBroker 内部结构](../references/redis-broker-internals.md)：Redis 后端实现详解
+- [RabbitmqBroker 内部结构](../references/rabbitmq-broker-internals.md)：RabbitMQ 后端实现详解
+- [异常类层次结构](../references/error-hierarchy.md)：ActorNotFound、BrokerConnectionError 等

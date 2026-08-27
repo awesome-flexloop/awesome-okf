@@ -136,7 +136,7 @@ Reviewer 有自己的 `reviewer` 子 Agent，最多委派一次评审轮次，�
 
 ## 相关概念
 
-- [总览](/ai/langchain-ai/open-swe/concepts/overview) — Open SWE 是什么
-- [Dispatch-Review 循环](/ai/langchain-ai/open-swe/concepts/dispatch-review-cycle) — durable dispatch 与 findings 模型
-- [Scheduler 与 Reconcile](/ai/langchain-ai/open-swe/concepts/scheduler-reconcile) — cron 扇出与安全网
-- [架构参考](/ai/langchain-ai/open-swe/references/architecture) — 完整函数与常量清单
+- 总览 — Open SWE 是什么
+- Dispatch-Review 循环 — durable dispatch 与 findings 模型
+- Scheduler 与 Reconcile — cron 扇出与安全网
+- 架构参考 — 完整函数与常量清单

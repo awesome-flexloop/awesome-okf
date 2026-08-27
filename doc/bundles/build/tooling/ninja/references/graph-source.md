@@ -17,7 +17,7 @@ sources:
 
 # 图结构 API 参考
 
-> 信源文件：[graph.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/graph.h)、[graph.cc](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/graph.cc)
+> 信源文件：graph.h、graph.cc
 
 本文档记录 Ninja 依赖图核心数据结构的完整 API。
 

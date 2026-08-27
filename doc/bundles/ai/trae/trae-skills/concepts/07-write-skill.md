@@ -74,7 +74,7 @@ description 是技能被正确触发的唯一依据，必须包含双重信息�
 差的 description 示例：
 > Git 工具。（太模糊，无法判断何时触发）
 
-详见 [触发条件设计示例](/examples/trigger-condition-design.md)。
+详见 [触发条件设计示例](../examples/trigger-condition-design.md)。
 
 ### 第三步：填充章节
 
@@ -164,7 +164,7 @@ skills/<your-skill>/
 3. 将输出格式化为 Markdown 热榜报告
 ```
 
-详见 [带 Python 脚本的 Skill 示例](/examples/skill-with-python-script.md)。
+详见 [带 Python 脚本的 Skill 示例](../examples/skill-with-python-script.md)。
 
 ## 子技能复用（Workflow 型）
 
@@ -268,17 +268,17 @@ tags: [article, analysis, deep-read]
 
 ## 相关概念
 
-- [SKILL.md 格式规范](/concepts/01-skill-format.md)
-- [技能分类与模板模式](/concepts/02-skill-categories.md)
-- [纯 Prompt 型技能](/concepts/03-prompt-only-skills.md)
-- [脚本辅助型技能](/concepts/04-script-assisted-skills.md)
-- [Workflow 编排型技能](/concepts/05-workflow-skills.md)
-- [社区积分机制](/concepts/06-community-points.md)
+- [SKILL.md 格式规范](01-skill-format.md)
+- [技能分类与模板模式](02-skill-categories.md)
+- [纯 Prompt 型技能](03-prompt-only-skills.md)
+- [脚本辅助型技能](04-script-assisted-skills.md)
+- [Workflow 编排型技能](05-workflow-skills.md)
+- [社区积分机制](06-community-points.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/skills-source.md)
-- [创建第一个 Skill](/examples/create-first-skill.md)
-- [带 Python 脚本的 Skill 示例](/examples/skill-with-python-script.md)
-- [触发条件设计示例](/examples/trigger-condition-design.md)
-- [社区积分贡献示例](/examples/points-contribution.md)
+- [源码信源索引](../references/skills-source.md)
+- [创建第一个 Skill](../examples/create-first-skill.md)
+- [带 Python 脚本的 Skill 示例](../examples/skill-with-python-script.md)
+- [触发条件设计示例](../examples/trigger-condition-design.md)
+- [社区积分贡献示例](../examples/points-contribution.md)

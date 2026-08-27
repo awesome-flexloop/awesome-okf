@@ -17,7 +17,7 @@ sources:
 
 Intelligent Terminal 的 Agent 设置通过 Microsoft Terminal Settings Model (MTSM) 的 X 宏系统定义，分为全局设置和 Profile 级设置两层。设置以 JSON 存储在 `settings.json` 中，通过设置 UI（AIAgents 页面）可视化编辑，支持运行时热重载——配置变更无需重启 Terminal 或 wta-master。
 
-设置定义的单一事实来源是 [MTSMSettings.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalSettingsModel/MTSMSettings.h) 中的宏列表。
+设置定义的单一事实来源是 MTSMSettings.h 中的宏列表。
 
 ## MTSM X 宏系统
 
@@ -199,7 +199,7 @@ Settings → AI Agents
 
 ### Agent 图标资源
 
-设置 UI 中每个 Agent 对应一个 SVG 图标，位于 [CascadiaPackage/AgentIcons/](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/CascadiaPackage/AgentIcons/)：
+设置 UI 中每个 Agent 对应一个 SVG 图标，位于 CascadiaPackage/AgentIcons/：
 
 | 文件 | Agent |
 |------|-------|
@@ -272,10 +272,10 @@ flowchart LR
 
 | 文件 | 关键内容 |
 |------|---------|
-| [MTSMSettings.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalSettingsModel/MTSMSettings.h#L76-L90) | 全局 Agent 设置宏定义 |
-| [MTSMSettings.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalSettingsModel/MTSMSettings.h#L107) | Profile 级 AgentPaneBackend 设置 |
-| [TerminalPage.cpp](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/TerminalPage.cpp#L1497-L1570) | 设置热重载事件发送 |
-| [AIAgents.cpp](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalSettingsEditor/AIAgents.cpp) | AI Agents 设置 UI 页面 |
-| [AIAgentsViewModel.cpp](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalSettingsEditor/AIAgentsViewModel.cpp) | 设置 UI ViewModel |
-| [TerminalProtocol.idl](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalProtocol/TerminalProtocol.idl) | GetSettings() COM 接口 |
-| [AgentIcons/](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/CascadiaPackage/AgentIcons/) | Agent SVG 图标 |
+| MTSMSettings.h | 全局 Agent 设置宏定义 |
+| MTSMSettings.h | Profile 级 AgentPaneBackend 设置 |
+| TerminalPage.cpp | 设置热重载事件发送 |
+| AIAgents.cpp | AI Agents 设置 UI 页面 |
+| AIAgentsViewModel.cpp | 设置 UI ViewModel |
+| TerminalProtocol.idl | GetSettings() COM 接口 |
+| AgentIcons/ | Agent SVG 图标 |

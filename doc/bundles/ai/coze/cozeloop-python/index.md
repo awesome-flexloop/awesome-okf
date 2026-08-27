@@ -48,27 +48,27 @@ cozeloop.flush()
 
 | 序号 | 主题 | 说明 |
 |------|------|------|
-| 00 | [CozeLoop 概述与架构](/concepts/00-overview-architecture.md) | 三大功能域、分层架构、设计原则、框架支持 |
-| 01 | [Tracing 模型](/concepts/01-tracing-model.md) | Span/Trace/SpanContext、标签系统、标准数据模型、生命周期、上报格式 |
-| 02 | [LLM 埋点模式](/concepts/02-llm-instrumentation.md) | @observe 装饰器、OpenAI 自动埋点、手动 Span、LangChain 集成 |
-| 03 | [上下文传播](/concepts/03-context-propagation.md) | ContextVar 隐式传播、跨线程 child_of、跨服务 header、Baggage |
-| 04 | [配置、批量上报与性能](/concepts/04-configuration-batching.md) | 四队列上报引擎、截断策略、超大数据上报、生命周期、性能优化 |
+| 00 | [CozeLoop 概述与架构](concepts/00-overview-architecture.md) | 三大功能域、分层架构、设计原则、框架支持 |
+| 01 | [Tracing 模型](concepts/01-tracing-model.md) | Span/Trace/SpanContext、标签系统、标准数据模型、生命周期、上报格式 |
+| 02 | [LLM 埋点模式](concepts/02-llm-instrumentation.md) | @observe 装饰器、OpenAI 自动埋点、手动 Span、LangChain 集成 |
+| 03 | [上下文传播](concepts/03-context-propagation.md) | ContextVar 隐式传播、跨线程 child_of、跨服务 header、Baggage |
+| 04 | [配置、批量上报与性能](concepts/04-configuration-batching.md) | 四队列上报引擎、截断策略、超大数据上报、生命周期、性能优化 |
 
 ### 💡 示例文档
 
 | 示例 | 说明 |
 |------|------|
-| [快速开始：第一个 Trace](/examples/quickstart-tracing.md) | 安装→初始化→创建 Span→with 语句→模拟 LLM 调用 |
-| [OpenAI 集成：零侵入自动埋点](/examples/openai-integration.md) | openai_wrapper→同步/异步/流式→Azure→Responses API→RAG |
-| [自定义 Span 追踪与高级场景](/examples/custom-span-tracing.md) | 父子嵌套→跨线程→跨服务→Baggage→异常→多模态→条件追踪 |
+| [快速开始：第一个 Trace](examples/quickstart-tracing.md) | 安装→初始化→创建 Span→with 语句→模拟 LLM 调用 |
+| [OpenAI 集成：零侵入自动埋点](examples/openai-integration.md) | openai_wrapper→同步/异步/流式→Azure→Responses API→RAG |
+| [自定义 Span 追踪与高级场景](examples/custom-span-tracing.md) | 父子嵌套→跨线程→跨服务→Baggage→异常→多模态→条件追踪 |
 
 ### 📖 API 参考
 
 | 参考文档 | 覆盖范围 |
 |----------|---------|
-| [Tracing API 参考](/references/tracing-api.md) | new_client、模块级函数、Span/SpanContext 接口、标签方法、Prompt API、@observe 参数 |
-| [框架集成参考](/references/integrations.md) | @observe 装饰器、openai_wrapper、LangChain/LangGraph LoopTracer |
-| [传输层与配置参考](/references/transport-config.md) | HTTP 客户端、认证（PAT/JWT）、环境变量、队列配置、超大数据上报、异常体系 |
+| [Tracing API 参考](references/tracing-api.md) | new_client、模块级函数、Span/SpanContext 接口、标签方法、Prompt API、@observe 参数 |
+| [框架集成参考](references/integrations.md) | @observe 装饰器、openai_wrapper、LangChain/LangGraph LoopTracer |
+| [传输层与配置参考](references/transport-config.md) | HTTP 客户端、认证（PAT/JWT）、环境变量、队列配置、超大数据上报、异常体系 |
 
 ## SDK 能力速查
 
@@ -80,9 +80,9 @@ cozeloop.flush()
 
 ## 链接索引
 
-- [概念文档索引](/concepts/index.md)
-- [示例文档索引](/examples/index.md)
-- [API 参考索引](/references/index.md)
+- [概念文档索引](concepts/index.md)
+- [示例文档索引](examples/index.md)
+- [API 参考索引](references/index.md)
 
 ```{toctree}
 :hidden:

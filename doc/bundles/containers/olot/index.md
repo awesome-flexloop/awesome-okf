@@ -68,35 +68,35 @@ skopeo_push("./download", "quay.io/your/model:v1")
 
 ## 文档导航
 
-### [概念文档 Concepts](/bundles/containers/olot/concepts/index.md)
+### [概念文档 Concepts](concepts/index.md)
 
 按学习路径排列的核心概念：
 
 | 主题 | 说明 |
 |------|------|
-| [olot 定位与 ModelCar 标准](/bundles/containers/olot/concepts/00-introduction.md) | 项目介绍、解决的问题、ModelCar 标准 |
-| [OCI 层操作与四元组注解](/bundles/containers/olot/concepts/01-oci-layers.md) | OCI layout 结构、层创建流程、四元组注解机制 |
-| [后端抽象层](/bundles/containers/olot/concepts/02-backends.md) | skopeo/oras/oras-py 三种后端对比与 API |
-| [Python API 编程](/bundles/containers/olot/concepts/03-python-api.md) | 完整的 Python API 参数详解、枚举、辅助函数 |
+| [olot 定位与 ModelCar 标准](concepts/00-introduction.md) | 项目介绍、解决的问题、ModelCar 标准 |
+| [OCI 层操作与四元组注解](concepts/01-oci-layers.md) | OCI layout 结构、层创建流程、四元组注解机制 |
+| [后端抽象层](concepts/02-backends.md) | skopeo/oras/oras-py 三种后端对比与 API |
+| [Python API 编程](concepts/03-python-api.md) | 完整的 Python API 参数详解、枚举、辅助函数 |
 
-### [示例文档 Examples](/bundles/containers/olot/examples/index.md)
+### [示例文档 Examples](examples/index.md)
 
 可直接复制使用的实战示例：
 
 | 示例 | 说明 |
 |------|------|
-| [命令行基本使用](/bundles/containers/olot/examples/01-cli-usage.md) | CLI 完整工作流，含验证步骤和常见问题 |
-| [Python API 打包模型](/bundles/containers/olot/examples/02-python-api.md) | Python 脚本集成，含 skopeo/oras-py 两种后端、自动后端检测、异常处理 |
+| [命令行基本使用](examples/01-cli-usage.md) | CLI 完整工作流，含验证步骤和常见问题 |
+| [Python API 打包模型](examples/02-python-api.md) | Python 脚本集成，含 skopeo/oras-py 两种后端、自动后端检测、异常处理 |
 
-### [信源 References](/bundles/containers/olot/references/index.md)
+### [信源 References](references/index.md)
 
 所有文档内容的可验证信源：
 
 | 信源 | 内容 |
 |------|------|
-| [readme-source.md](/bundles/containers/olot/references/readme-source.md) | 项目官方 README 摘要 |
-| [oci-source.md](/bundles/containers/olot/references/oci-source.md) | OCI 层操作、四元组注解、MediaType 源码 |
-| [backend-source.md](/bundles/containers/olot/references/backend-source.md) | 三种后端实现的函数签名和说明 |
+| [readme-source.md](references/readme-source.md) | 项目官方 README 摘要 |
+| [oci-source.md](references/oci-source.md) | OCI 层操作、四元组注解、MediaType 源码 |
+| [backend-source.md](references/backend-source.md) | 三种后端实现的函数签名和说明 |
 
 ## 核心特性
 
@@ -150,7 +150,7 @@ olot/
 
 ## 更新日志
 
-完整变更记录见 [log.md](/bundles/containers/olot/log.md)。
+完整变更记录见 [log.md](log.md)。
 
 ```{toctree}
 :hidden:

@@ -166,7 +166,7 @@ make html
 
 ## CI 构建（GitHub Actions）
 
-Xeus 的 CI 构建需要额外安装 micromamba。参考 [/concepts/09-ci-deployment.md](/concepts/09-ci-deployment.md) 中的完整工作流，关键差异是 Xeus 构建步骤前需要：
+Xeus 的 CI 构建需要额外安装 micromamba。参考 [/concepts/09-ci-deployment.md](../concepts/09-ci-deployment.md) 中的完整工作流，关键差异是 Xeus 构建步骤前需要：
 
 ```yaml
 - name: Install micromamba
@@ -219,6 +219,6 @@ import sympy
 
 ## 相关内容
 
-- [/concepts/04-kernel-comparison.md](/concepts/04-kernel-comparison.md)：内核选型指南
-- [/examples/02-pyodide-setup.md](/examples/02-pyodide-setup.md)：Pyodide 配置对比
-- [/concepts/09-ci-deployment.md](/concepts/09-ci-deployment.md)：CI/CD 配置
+- [/concepts/04-kernel-comparison.md](../concepts/04-kernel-comparison.md)：内核选型指南
+- [/examples/02-pyodide-setup.md](02-pyodide-setup.md)：Pyodide 配置对比
+- [/concepts/09-ci-deployment.md](../concepts/09-ci-deployment.md)：CI/CD 配置

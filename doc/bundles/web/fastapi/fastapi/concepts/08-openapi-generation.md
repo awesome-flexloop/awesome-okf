@@ -194,8 +194,8 @@ ReDoc 渲染为 `<redoc spec-url="...">` 自定义元素，由 ReDoc JS 自动�
 
 ## 相关概念
 
-- [响应模型与序列化](/concepts/07-response-model.md)
-- [路径操作与请求处理](/concepts/03-path-operations.md)
-- [安全与认证](/concepts/09-security.md)
-- [FastAPI 应用类与生命周期](/concepts/01-application.md)
-- [路由系统](/concepts/02-routing-system.md)
+- [响应模型与序列化](07-response-model.md)
+- [路径操作与请求处理](03-path-operations.md)
+- [安全与认证](09-security.md)
+- [FastAPI 应用类与生命周期](01-application.md)
+- [路由系统](02-routing-system.md)

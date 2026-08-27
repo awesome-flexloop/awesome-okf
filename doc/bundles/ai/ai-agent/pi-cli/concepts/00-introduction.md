@@ -74,8 +74,8 @@ npm run check                  # biome lint + 类型检查 + 供应链检查
 
 ## 相关概念
 
-- [Monorepo 架构](./01-monorepo-architecture.md)
-- [AI 包（packages/ai）](./02-ai-package.md)
-- [TUI 系统](./03-tui-system.md)
-- [内置 Prompts](./04-builtin-prompts.md)
+- [Monorepo 架构](01-monorepo-architecture.md)
+- [AI 包（packages/ai）](02-ai-package.md)
+- [TUI 系统](03-tui-system.md)
+- [内置 Prompts](04-builtin-prompts.md)
 - [基础使用示例](../examples/01-basic-usage.md)

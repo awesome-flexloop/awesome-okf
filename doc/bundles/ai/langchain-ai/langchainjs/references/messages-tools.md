@@ -283,6 +283,6 @@ ServerTool 是由模型 provider 端处理的工具（如 OpenAI hosted tools）
 
 ## 相关文档
 
-- [Runnable 核心 API](/ai/langchain-ai/langchainjs/references/core-runnable) — Runnable 抽象参考
-- [消息系统概念](/ai/langchain-ai/langchainjs/concepts/message-system) — 消息类型设计理念
-- [工具定义概念](/ai/langchain-ai/langchainjs/concepts/tool-definition) — 工具创建与 Schema 设计
+- Runnable 核心 API — Runnable 抽象参考
+- 消息系统概念 — 消息类型设计理念
+- 工具定义概念 — 工具创建与 Schema 设计

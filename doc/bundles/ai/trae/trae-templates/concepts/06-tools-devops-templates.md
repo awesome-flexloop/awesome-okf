@@ -248,11 +248,11 @@ tools-devops 分类的存在揭示了一个重要洞察：模板库的收录标�
 
 ## 相关概念
 
-- [五维分面分类体系](/concepts/01-template-classification.md)
-- [AGENTS.md 开发契约](/concepts/07-agents-contract.md)
+- [五维分面分类体系](01-template-classification.md)
+- [AGENTS.md 开发契约](07-agents-contract.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/templates-source.md)
-- [使用 superpowers-trae-init 初始化环境](/examples/use-superpowers-init.md)
-- [AGENTS.md 配置示例](/examples/agents-md-config.md)
+- [源码信源索引](../references/templates-source.md)
+- [使用 superpowers-trae-init 初始化环境](../examples/use-superpowers-init.md)
+- [AGENTS.md 配置示例](../examples/agents-md-config.md)

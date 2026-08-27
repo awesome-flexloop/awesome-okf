@@ -207,4 +207,4 @@ sphinx-intl update -p _build/gettext
 - [sphinx-intl 简介](00-introduction.md)
 - [CLI 命令体系详解](02-cli-commands.md)
 - [翻译工作流原理](03-translation-workflow.md)
-- [基本翻译全流程示例](/examples/basic-translation.md)
+- [基本翻译全流程示例](../examples/basic-translation.md)

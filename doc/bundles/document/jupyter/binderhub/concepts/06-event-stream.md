@@ -14,7 +14,7 @@ sources:
 
 ## 概述
 
-BuildHandler 定义在 [builder.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py) 中，是 BinderHub 最核心的 HTTP 请求处理器。它通过 **Server-Sent Events (SSE)** 协议向浏览器客户端实时推送构建和启动进度。当用户点击"launch"按钮时，前端 JavaScript 代码通过 `EventSource` API 连接到 `/build/<provider>/<spec>` 端点，BuildHandler 负责完整的构建生命周期：仓库引用解析、镜像缓存检查、镜像构建、JupyterHub 服务器启动，全程通过 SSE 推送状态事件。
+BuildHandler 定义在 builder.py 中，是 BinderHub 最核心的 HTTP 请求处理器。它通过 **Server-Sent Events (SSE)** 协议向浏览器客户端实时推送构建和启动进度。当用户点击"launch"按钮时，前端 JavaScript 代码通过 `EventSource` API 连接到 `/build/<provider>/<spec>` 端点，BuildHandler 负责完整的构建生命周期：仓库引用解析、镜像缓存检查、镜像构建、JupyterHub 服务器启动，全程通过 SSE 推送状态事件。
 
 ## SSE 协议基础
 
@@ -28,7 +28,7 @@ data: {"phase": "waiting", "message": "Waiting for build to start...\n"}\n\n
 
 ## BuildHandler 类结构
 
-BuildHandler 继承自 `BaseHandler`（[base.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/base.py)），获得了 JupyterHub OAuth 认证、IP 黑名单检查、速率限制、构建 Token 验证等基础能力。
+BuildHandler 继承自 `BaseHandler`（base.py），获得了 JupyterHub OAuth 认证、IP 黑名单检查、速率限制、构建 Token 验证等基础能力。
 
 ```python
 class BuildHandler(BaseHandler):
@@ -208,7 +208,7 @@ def send_error(self, status_code, **kwargs):
 
 ## get()：主处理方法
 
-`get()` 方法（[builder.py:322-676](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L322-L676)）是整个构建流程的主入口，使用 `@authenticated` 装饰器保护。
+`get()` 方法（builder.py:322-676）是整个构建流程的主入口，使用 `@authenticated` 装饰器保护。
 
 ### 1. Token 与限流验证
 
@@ -665,14 +665,14 @@ eventSource.onerror = () => {
 
 ## 关键源码引用
 
-- BuildHandler 类定义：[builder.py:149-858](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L149-L858)
-- emit() 方法：[builder.py:157-176](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L157-L176)
-- keep_alive() 方法：[builder.py:185-201](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L185-L201)
-- send_error() 方法：[builder.py:203-223](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L203-L223)
-- prepare() 预检：[builder.py:299-319](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L299-L319)
-- get() 主处理方法：[builder.py:322-676](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L322-L676)
-- launch() 启动方法：[builder.py:734-858](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L734-L858)
-- emit_launch_event()：[builder.py:678-705](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L678-L705)
-- 镜像名辅助函数：[builder.py:66-87](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L66-L87)
-- 构建名生成函数：[builder.py:90-147](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L90-L147)
-- Prometheus 指标定义：[builder.py:30-63](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L30-L63)
+- BuildHandler 类定义：builder.py:149-858
+- emit() 方法：builder.py:157-176
+- keep_alive() 方法：builder.py:185-201
+- send_error() 方法：builder.py:203-223
+- prepare() 预检：builder.py:299-319
+- get() 主处理方法：builder.py:322-676
+- launch() 启动方法：builder.py:734-858
+- emit_launch_event()：builder.py:678-705
+- 镜像名辅助函数：builder.py:66-87
+- 构建名生成函数：builder.py:90-147
+- Prometheus 指标定义：builder.py:30-63

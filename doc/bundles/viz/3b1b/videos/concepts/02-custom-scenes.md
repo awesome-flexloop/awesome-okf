@@ -583,9 +583,9 @@ class Episode1(MySignatureScene):
 
 ## 相关概念
 
-- [00 Videos 仓库总览](/concepts/00-videos-overview.md)
-- [01 PiCreature 角色系统详解](/concepts/01-picreature-characters.md)
-- [03 视频代码结构与叙事模式](/concepts/03-video-structure-pattern.md)
-- [04 checkpoint_paste 交互式开发工作流](/concepts/04-checkpoint-paste-workflow.md)
-- [自定义模块索引](/references/custom-modules-index.md)
-- [代表性系列目录导航](/references/representative-series.md)
+- [00 Videos 仓库总览](00-videos-overview.md)
+- [01 PiCreature 角色系统详解](01-picreature-characters.md)
+- [03 视频代码结构与叙事模式](03-video-structure-pattern.md)
+- [04 checkpoint_paste 交互式开发工作流](04-checkpoint-paste-workflow.md)
+- [自定义模块索引](../references/custom-modules-index.md)
+- [代表性系列目录导航](../references/representative-series.md)

@@ -104,6 +104,6 @@ CLI flags/aliases 详见 `lock.py` L67-86。
 
 ## 相关概念
 
-- [构建时 Addon 系统](/concepts/04-build-addons.md)
-- [Lockfile 定制](/concepts/08-lockfile-customization.md)
-- [浏览器端包管理](/concepts/05-package-management.md)
+- [构建时 Addon 系统](../concepts/04-build-addons.md)
+- [Lockfile 定制](../concepts/08-lockfile-customization.md)
+- [浏览器端包管理](../concepts/05-package-management.md)

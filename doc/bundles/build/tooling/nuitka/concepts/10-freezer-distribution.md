@@ -89,7 +89,7 @@ C编译完成（生成<app>.exe）
 
 ### DLL依赖检测
 
-[DllDependenciesCommon.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/freezer/DllDependenciesCommon.py)和平台特定模块处理DLL检测：
+DllDependenciesCommon.py和平台特定模块处理DLL检测：
 
 | 平台 | 检测工具 | 说明 |
 |------|---------|------|
@@ -111,7 +111,7 @@ DLL黑名单（从不打包）：
 
 ### ImportDetection：子进程自动导入检测
 
-CPython启动时会自动加载一些模块（如encodings、codecs、io、abc等），这些模块在用户代码中没有显式import语句。Nuitka通过[ImportDetection.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/freezer/ImportDetection.py)检测：
+CPython启动时会自动加载一些模块（如encodings、codecs、io、abc等），这些模块在用户代码中没有显式import语句。Nuitka通过ImportDetection.py检测：
 
 ```python
 def detectEarlyImports():
@@ -132,7 +132,7 @@ def detectEarlyImports():
 
 ### IncludedEntryPoint：文件包含管理
 
-[IncludedEntryPoint](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/freezer/IncludedEntryPoints.py)类表示一个需要包含到分发中的文件：
+IncludedEntryPoint类表示一个需要包含到分发中的文件：
 
 | 属性 | 说明 |
 |------|------|
@@ -180,7 +180,7 @@ Standalone处理完成（dist/目录就绪）
 
 ### OnefileBootstrap.c
 
-[OnefileBootstrap.c](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/build/static_src/nuitka/OnefileBootstrap.c)是一个独立的C程序（约1000行），职责：
+OnefileBootstrap.c是一个独立的C程序（约1000行），职责：
 1. 找到自身exe路径
 2. 读取exe末尾附加的压缩数据
 3. 使用内嵌的zstd解压到临时目录

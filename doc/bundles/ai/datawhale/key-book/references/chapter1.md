@@ -62,9 +62,9 @@ sources:
 
 ## 理论定位
 
-本章工具按强度递进：Markov → Chebyshev → Chernoff → Hoeffding → McDiarmid/Bernstein → Azuma，对应从独立同分布到鞅差序列、从无界到有界、从方差信息到矩条件的逐步精细化。这些不等式是[泛化界](/ai/datawhale/key-book/concepts/generalization-bound)、[稳定性](/ai/datawhale/key-book/concepts/stability)、[收敛率](/ai/datawhale/key-book/concepts/convergence-rate)证明的通用武器。
+本章工具按强度递进：Markov → Chebyshev → Chernoff → Hoeffding → McDiarmid/Bernstein → Azuma，对应从独立同分布到鞅差序列、从无界到有界、从方差信息到矩条件的逐步精细化。这些不等式是泛化界、稳定性、收敛率证明的通用武器。
 
 ## 参见
 
-- [附录](/ai/datawhale/key-book/references/appendix)：凸分析、优化、概率论的基础概念备查
-- [第 4 章：泛化界](/ai/datawhale/key-book/references/chapter4)：集中不等式的直接应用
+- 附录：凸分析、优化、概率论的基础概念备查
+- 第 4 章：泛化界：集中不等式的直接应用

@@ -194,8 +194,8 @@ crossdomain 层的设计：
 
 ## 相关概念
 
-- [整体架构概览](/concepts/00-overview-ddd-architecture.md)
-- [Thrift IDL 与代码生成](/concepts/02-thrift-idl-codegen.md)
-- [认证与中间件](/concepts/03-auth-middleware.md)
-- [可插拔基础设施](/concepts/04-pluggable-infrastructure.md)
-- [后端架构参考](/references/backend-architecture.md)
+- [整体架构概览](00-overview-ddd-architecture.md)
+- [Thrift IDL 与代码生成](02-thrift-idl-codegen.md)
+- [认证与中间件](03-auth-middleware.md)
+- [可插拔基础设施](04-pluggable-infrastructure.md)
+- [后端架构参考](../references/backend-architecture.md)

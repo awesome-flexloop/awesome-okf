@@ -334,10 +334,10 @@ jupyter lite build --piplite-wheels https://example.com/my-package-1.0.0-py3-non
 
 ## 下一步
 
-- [浏览器端包管理](/concepts/05-package-management.md) — 构建产物如何在浏览器中被使用
-- [Lockfile 定制](/concepts/08-lockfile-customization.md) — PyodideLockAddon 深入
-- [基本安装与配置示例](/examples/basic-install-config.md)
+- [浏览器端包管理](05-package-management.md) — 构建产物如何在浏览器中被使用
+- [Lockfile 定制](08-lockfile-customization.md) — PyodideLockAddon 深入
+- [基本安装与配置示例](../examples/basic-install-config.md)
 
 ## 源码参考
 
-- [Python Addon 源码](/references/addon-source.md)
+- [Python Addon 源码](../references/addon-source.md)

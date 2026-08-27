@@ -207,7 +207,7 @@ results = retriever.invoke("法国首都")
 
 ## 相关概念
 
-- [总览](/ai/langchain-ai/langchain/concepts/overview) —— 检索器与向量库在能力层中的位置
-- [Runnable 协议](/ai/langchain-ai/langchain/concepts/runnable-protocol) —— BaseRetriever 是 RunnableSerializable
-- [回调系统](/ai/langchain-ai/langchain/concepts/callback-system) —— 检索触发 on_retriever_start/end
-- [文档与加载器](/ai/langchain-ai/langchain/concepts/document-loader) —— Document 与 Blob 的数据模型
+- 总览 —— 检索器与向量库在能力层中的位置
+- Runnable 协议 —— BaseRetriever 是 RunnableSerializable
+- 回调系统 —— 检索触发 on_retriever_start/end
+- 文档与加载器 —— Document 与 Blob 的数据模型

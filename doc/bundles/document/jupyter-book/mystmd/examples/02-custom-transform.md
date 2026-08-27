@@ -291,6 +291,6 @@ project:
 
 ## 下一步
 
-- 了解 [basicTransformations 管线顺序](/concepts/03-myst-transforms.md)以确定自定义 transform 的位置
-- 学习 [VFile 错误处理](/concepts/05-error-handling.md)正确上报问题
-- 学习 [MystPlugin 打包方式](/concepts/01-unified-plugin-architecture.md)分发插件
+- 了解 [basicTransformations 管线顺序](../concepts/03-myst-transforms.md)以确定自定义 transform 的位置
+- 学习 [VFile 错误处理](../concepts/05-error-handling.md)正确上报问题
+- 学习 [MystPlugin 打包方式](../concepts/01-unified-plugin-architecture.md)分发插件

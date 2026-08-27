@@ -45,9 +45,9 @@ GodGPT应用知识包记录AI灵性引导应用GodGPT的产品定位、核心功
 
 ## 相关知识包
 
-* [Ψhē 核心哲学](/psi-core/index.md) — GodGPT 的哲学与意识理论根基
-* [Ψhē 数学形式化](/psi-math/index.md) — 递归与塌缩机制的形式化基础
-* [XOR-SHIFT 宇宙本论](/psi-universe/index.md) — 信息场与意识理论的宇宙学背景
+* [Ψhē 核心哲学](../psi-core/index.md) — GodGPT 的哲学与意识理论根基
+* [Ψhē 数学形式化](../psi-math/index.md) — 递归与塌缩机制的形式化基础
+* [XOR-SHIFT 宇宙本论](../psi-universe/index.md) — 信息场与意识理论的宇宙学背景
 
 ```{toctree}
 :hidden:

@@ -80,5 +80,5 @@ sources:
 
 ## 相关概念
 
-- [Agent Harness——从框架到运行时外壳](./agent-harness.md)——理解虚拟文件系统在 Harness 层中的定位
+- [Agent Harness——从框架到运行时外壳](agent-harness.md)——理解虚拟文件系统在 Harness 层中的定位
 - [信源登记](../references/readme-source.md)——版本要求与章节结构

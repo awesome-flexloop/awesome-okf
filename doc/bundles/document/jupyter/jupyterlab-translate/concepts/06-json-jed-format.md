@@ -218,7 +218,7 @@ JSON输出使用以下格式化选项：
 
 ## 相关概念
 
-- [翻译目录管理](/concepts/05-catalog-management.md)
-- [字符串提取流水线](/concepts/04-extraction-pipeline.md)
-- [Hatch构建钩子集成](/concepts/07-hatch-build-hook.md)
-- [格式转换源码映射](/references/converters-source.md)
+- [翻译目录管理](05-catalog-management.md)
+- [字符串提取流水线](04-extraction-pipeline.md)
+- [Hatch构建钩子集成](07-hatch-build-hook.md)
+- [格式转换源码映射](../references/converters-source.md)

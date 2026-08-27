@@ -273,7 +273,7 @@ JIT 编译的开销是一次性的：
 
 ## 相关参考
 
-- [JIT 编译系统 API](/ai/deepseek/deep-ep/references/jit-system)
-- [ElasticBuffer API](/ai/deepseek/deep-ep/references/buffer-elastic)
+- JIT 编译系统 API
+- ElasticBuffer API
 - [架构概述](overview.md)
 - [Dispatch/Combine 流程](dispatch-combine.md)

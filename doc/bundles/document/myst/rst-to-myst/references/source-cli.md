@@ -90,4 +90,4 @@ Click 命令组，是 CLI 入口点（通过 `rst2myst` 脚本调用）。支持
 
 ## 相关概念
 
-- [命令行工具详细用法](/concepts/01-cli-usage.md)
+- [命令行工具详细用法](../concepts/01-cli-usage.md)

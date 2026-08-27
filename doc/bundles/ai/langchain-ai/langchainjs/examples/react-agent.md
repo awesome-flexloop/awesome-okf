@@ -302,8 +302,8 @@ const readDocument = tool(
 
 ## 相关文档
 
-- [ReAct Agent 概念](/ai/langchain-ai/langchainjs/concepts/react-agent)
-- [Middleware 概念](/ai/langchain-ai/langchainjs/concepts/middleware)
-- [工具定义概念](/ai/langchain-ai/langchainjs/concepts/tool-definition)
-- [Agent 与 Middleware API](/ai/langchain-ai/langchainjs/references/agents-middleware)
-- [构建 LCEL 链示例](/ai/langchain-ai/langchainjs/examples/lcel-chain)
+- ReAct Agent 概念
+- Middleware 概念
+- 工具定义概念
+- Agent 与 Middleware API
+- 构建 LCEL 链示例

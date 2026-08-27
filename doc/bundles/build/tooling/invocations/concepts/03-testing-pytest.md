@@ -188,9 +188,9 @@ ns.configure({
 
 ## 相关概念
 
-- [快速上手](/concepts/01-getting-started.md)
-- [代码检查与格式化](/concepts/02-checks-formatting.md)
-- [工具函数与文件监控](/concepts/07-utilities-watchers.md)
-- [组合模式：组装自己的任务集合](/concepts/10-composition-patterns.md)
+- [快速上手](01-getting-started.md)
+- [代码检查与格式化](02-checks-formatting.md)
+- [工具函数与文件监控](07-utilities-watchers.md)
+- [组合模式：组装自己的任务集合](10-composition-patterns.md)
 
-[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](/references/invocations-source.md)。
+[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](../references/invocations-source.md)。

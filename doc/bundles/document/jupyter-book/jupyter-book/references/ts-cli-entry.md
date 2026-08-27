@@ -137,7 +137,7 @@ export function makeStartCLI(program: Command) {
 
 ## 相关概念
 
-- [00-v2-architecture](/concepts/00-v2-architecture.md)：v2 双层架构
-- [02-ts-cli-commands](/concepts/02-ts-cli-commands.md)：TS CLI 命令详解
-- [03-myst-cli-relationship](/concepts/03-myst-cli-relationship.md)：与 myst-cli 的关系
-- [04-template-system](/concepts/04-template-system.md)：模板系统
+- [00-v2-architecture](../concepts/00-v2-architecture.md)：v2 双层架构
+- [02-ts-cli-commands](../concepts/02-ts-cli-commands.md)：TS CLI 命令详解
+- [03-myst-cli-relationship](../concepts/03-myst-cli-relationship.md)：与 myst-cli 的关系
+- [04-template-system](../concepts/04-template-system.md)：模板系统

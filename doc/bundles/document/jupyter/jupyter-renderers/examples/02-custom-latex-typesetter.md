@@ -4,9 +4,9 @@ title: 自定义 LaTeX 排版器
 description: 开发自定义 ILatexTypesetter 替换默认数学公式排版引擎，以一个极简 MathML 渲染器为例展示应用扩展模式
 tags: [tutorial, latex, typesetter, ilatextypesetter, howto]
 prerequisites:
-  - 理解 [扩展类型对比](/concepts/03-extension-types.md)
-  - 理解 [数学公式渲染机制](/concepts/06-math-renderers.md)
-  - 熟悉 [IRenderMime API](/references/rendermime-interfaces-api.md)
+  - 理解 [扩展类型对比](../concepts/03-extension-types.md)
+  - 理解 [数学公式渲染机制](../concepts/06-math-renderers.md)
+  - 熟悉 [IRenderMime API](../references/rendermime-interfaces-api.md)
 sources:
   - id: katex-index
     resource: external/libs/jupyter/jupyter-renderers/packages/katex-extension/src/index.ts
@@ -282,7 +282,7 @@ class AsyncTypesetter implements ILatexTypesetter {
 
 ## 步骤 5：Python 打包
 
-与 MIME 渲染器的 Python 打包方式完全相同（参见 [Python 打包规范](/concepts/08-python-packaging.md)）：
+与 MIME 渲染器的 Python 打包方式完全相同（参见 [Python 打包规范](../concepts/08-python-packaging.md)）：
 
 - pyproject.toml 使用 hatchling + hatch-jupyter-builder
 - `__init__.py` 实现 `_jupyter_labextension_paths()`
@@ -322,8 +322,8 @@ JupyterLab 加载时，如果检测到当前扩展被激活，自动禁用列表
 
 ## 相关资源
 
-- [扩展类型对比](/concepts/03-extension-types.md)
-- [数学公式渲染机制](/concepts/06-math-renderers.md)
-- [MIME 渲染器开发教程](/examples/01-custom-mime-renderer.md)
-- [IRenderMime API 参考](/references/rendermime-interfaces-api.md)
-- [Python 打包规范](/concepts/08-python-packaging.md)
+- [扩展类型对比](../concepts/03-extension-types.md)
+- [数学公式渲染机制](../concepts/06-math-renderers.md)
+- [MIME 渲染器开发教程](01-custom-mime-renderer.md)
+- [IRenderMime API 参考](../references/rendermime-interfaces-api.md)
+- [Python 打包规范](../concepts/08-python-packaging.md)

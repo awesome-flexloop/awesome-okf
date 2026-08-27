@@ -16,7 +16,7 @@ sources:
 
 ## 什么是 Invocations
 
-**Invocations** 是 [PyInvoke](/concepts/00-introduction.md) 官方维护的**可复用任务集合库**（reusable task collections）。它将 Python 项目中常见的自动化工作流——代码格式化、测试运行、文档构建、包发布、CI 环境设置等——封装为即插即用的 Invoke 任务模块。
+**Invocations** 是 [PyInvoke](00-introduction.md) 官方维护的**可复用任务集合库**（reusable task collections）。它将 Python 项目中常见的自动化工作流——代码格式化、测试运行、文档构建、包发布、CI 环境设置等——封装为即插即用的 Invoke 任务模块。
 
 Invocations 最初源自 Invoke 项目自身的 `tasks.py`，后来被抽离为独立库，目标是成为 Python 项目自动化"最佳实践"的交换中心（clearinghouse）。
 
@@ -79,4 +79,4 @@ Invocations 特别适合以下场景：
 3. **学习 PyInvoke 最佳实践**：Invocations 的源码本身就是 PyInvoke 高级用法的优秀范例
 4. **需要 Sphinx + CI + PyPI 发布标准流程**的项目
 
-[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](/references/invocations-source.md)。
+[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](../references/invocations-source.md)。

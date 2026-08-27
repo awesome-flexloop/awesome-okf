@@ -206,7 +206,7 @@ sharedPackages 配置中 @jupyterlite/lsp 设为 singleton 且不 bundled，确�
 
 ## 相关概念
 
-- [IJSONRPCLanguageServer 接口与 Session](/concepts/04-language-server-interface.md)
-- [Mock-Socket 桥接机制](/concepts/05-mock-socket-bridge.md)
-- [添加自定义语言服务器示例](/examples/add-custom-language-server.md)
-- [YAML包源码引用](/references/yaml-plugin-source.md)
+- [IJSONRPCLanguageServer 接口与 Session](04-language-server-interface.md)
+- [Mock-Socket 桥接机制](05-mock-socket-bridge.md)
+- [添加自定义语言服务器示例](../examples/add-custom-language-server.md)
+- [YAML包源码引用](../references/yaml-plugin-source.md)

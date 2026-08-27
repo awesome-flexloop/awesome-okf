@@ -72,7 +72,7 @@ claude-api Skill 的 references/ 目录覆盖 Claude API 的两大块内容：
 | **错误处理** | 错误码列表、重试逻辑、速率限制处理 |
 | **分页** | 列表类 API 的分页处理 |
 
-> 🔗 Python SDK 详细用法参见 [/python-sdk/concepts/00-overview.md](/python-sdk/concepts/00-overview.md)
+> 🔗 Python SDK 详细用法参见 [/python-sdk/concepts/00-overview.md](../../python-sdk/concepts/00-overview.md)
 
 ### 2. Managed Agents 文档
 
@@ -254,6 +254,6 @@ claude-api Skill 会在以下场景自动触发：
 - [Skills 生态概览](00-overview.md) — Skills 的基本概念和触发机制
 - [SKILL.md 格式规范](01-skill-format.md) — 了解 claude-api 的 SKILL.md 是如何组织的
 - [Skill Creator 工具详解](02-skill-creator.md) — 如果你想为其他 API 创建类似的参考 Skill
-- [Python SDK 概览](/python-sdk/concepts/00-overview.md) — Python SDK 的详细文档
-- [Python SDK Beta Agents](/python-sdk/concepts/08-beta-agents.md) — Managed Agents 相关的 Beta API
-- [全部 Skills 索引](/official-skills/references/skills-index.md) — 查看其他官方 Skills
+- [Python SDK 概览](../../python-sdk/concepts/00-overview.md) — Python SDK 的详细文档
+- [Python SDK Beta Agents](../../python-sdk/concepts/08-beta-agents.md) — Managed Agents 相关的 Beta API
+- [全部 Skills 索引](../references/skills-index.md) — 查看其他官方 Skills

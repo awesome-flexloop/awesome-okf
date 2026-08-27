@@ -37,9 +37,9 @@ sources:
 
 ## 相关概念
 
-- [溯源与信源](./provenance-sources.md)
-- [信任：generated 与 verified](./trust-generated-verified.md)
-- [信任层级](./trust-generated-verified.md)
-- [可认证计算](./attested-computations.md)
+- [溯源与信源](provenance-sources.md)
+- [信任：generated 与 verified](trust-generated-verified.md)
+- [信任层级](trust-generated-verified.md)
+- [可认证计算](attested-computations.md)
 
-[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](/references/okf-spec.md)。
+[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](../references/okf-spec.md)。

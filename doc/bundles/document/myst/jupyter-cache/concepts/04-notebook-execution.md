@@ -172,7 +172,7 @@ cache.execute_all_notebooks()
 
 ## 相关概念
 
-- [缓存架构设计](/concepts/02-architecture.md)
-- [缓存API详解](/concepts/03-cache-api.md)
-- [配置项参考](/concepts/07-configuration.md)
-- [Python API示例](/examples/python-api.md)
+- [缓存架构设计](02-architecture.md)
+- [缓存API详解](03-cache-api.md)
+- [配置项参考](07-configuration.md)
+- [Python API示例](../examples/python-api.md)

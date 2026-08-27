@@ -349,9 +349,9 @@ REQ/REP 的简单状态机在简单 RPC 场景下方便，但在需要异步/多
 
 ## 相关概念
 
-- [套接字基类](/concepts/02-socket-base.md) — 模板方法模式和 x-钩子体系
-- [管道与流控](/concepts/04-pipe.md) — fq/lb/dist 管理的 pipe 对象
-- [消息与引用计数](/concepts/03-message.md) — 消息在模式间的传递
-- [编解码与帧格式](/concepts/12-encoder-decoder.md) — SUBSCRIBE/CANCEL 命令帧
-- [套接字选项体系](/concepts/09-options.md) — CONFLATE/MANDATORY 等模式选项
-- [实战示例](/examples/push-pull-pipeline.md) — PUSH/PULL 流水线代码
+- [套接字基类](02-socket-base.md) — 模板方法模式和 x-钩子体系
+- [管道与流控](04-pipe.md) — fq/lb/dist 管理的 pipe 对象
+- [消息与引用计数](03-message.md) — 消息在模式间的传递
+- [编解码与帧格式](12-encoder-decoder.md) — SUBSCRIBE/CANCEL 命令帧
+- [套接字选项体系](09-options.md) — CONFLATE/MANDATORY 等模式选项
+- [实战示例](../examples/push-pull-pipeline.md) — PUSH/PULL 流水线代码

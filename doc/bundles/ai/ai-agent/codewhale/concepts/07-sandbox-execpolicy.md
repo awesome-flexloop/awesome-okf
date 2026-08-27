@@ -337,8 +337,8 @@ pub fn is_session_approved(&self, approval_key: &str) -> bool {
 
 ## 相关概念
 
-- [工具系统](/concepts/04-tool-system.md) — 工具调度中的 allow_mutating 守卫
-- [Fleet 多 Agent](/concepts/05-fleet-subagents.md) — 权限 clamp 与 shell ceiling
-- [Agent 核心运行时](/concepts/02-agent-core.md) — Runtime 中的 exec_policy 组件
-- [MCP 协议集成](/concepts/03-mcp-protocol.md) — MCP 工具调用的权限控制
-- [工作区架构](/concepts/01-workspace-architecture.md) — execpolicy crate 在分层中的位置
+- [工具系统](04-tool-system.md) — 工具调度中的 allow_mutating 守卫
+- [Fleet 多 Agent](05-fleet-subagents.md) — 权限 clamp 与 shell ceiling
+- [Agent 核心运行时](02-agent-core.md) — Runtime 中的 exec_policy 组件
+- [MCP 协议集成](03-mcp-protocol.md) — MCP 工具调用的权限控制
+- [工作区架构](01-workspace-architecture.md) — execpolicy crate 在分层中的位置

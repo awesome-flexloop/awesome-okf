@@ -26,7 +26,7 @@ sources:
 
 ## 前置条件
 
-- 已在 Vercel 部署并配置 Edge Config（参见 [Vercel部署配置示例](/examples/setup-vercel-deployment.md)）
+- 已在 Vercel 部署并配置 Edge Config（参见 [Vercel部署配置示例](setup-vercel-deployment.md)）
 - 管理员账号
 - 配置了 `EDGE_CONFIG_ID` 和 `VERCEL_API_TOKEN` 环境变量
 
@@ -271,6 +271,6 @@ async function getSubmitFormData(lang: string) {
 
 ## 相关内容
 
-- [Vercel Edge Config缓存](/concepts/01-edge-config-cache.md)
-- [Vercel部署](/concepts/05-vercel-deployment.md)
-- [Vercel部署配置示例](/examples/setup-vercel-deployment.md)
+- [Vercel Edge Config缓存](../concepts/01-edge-config-cache.md)
+- [Vercel部署](../concepts/05-vercel-deployment.md)
+- [Vercel部署配置示例](setup-vercel-deployment.md)

@@ -91,6 +91,6 @@ History 使用三个正则解析文件（命令行、specs行、版本行）。�
 
 ## 相关概念
 
-- [UnlinkLinkTransaction 事务与包链接](./10-transaction-link.md)：事务通过 Action 调用 PrefixData、History、envs_manager 维护环境元数据
-- [Index 索引与 SubdirData](./08-index-and-repodata.md)：Index 使用 PrefixData 补充已安装包信息
-- [Context 全局配置与 condarc](./07-context-configuration.md)：envs_dirs、register_envs 等配置来自 context
+- [UnlinkLinkTransaction 事务与包链接](10-transaction-link.md)：事务通过 Action 调用 PrefixData、History、envs_manager 维护环境元数据
+- [Index 索引与 SubdirData](08-index-and-repodata.md)：Index 使用 PrefixData 补充已安装包信息
+- [Context 全局配置与 condarc](07-context-configuration.md)：envs_dirs、register_envs 等配置来自 context

@@ -302,11 +302,11 @@ const plugin: JupyterFrontEndPlugin<void> = {
 
 ## 相关概念
 
-- [模型层架构](/concepts/model-architecture.md)
-- [组件层次结构](/concepts/component-hierarchy.md)
-- [生命周期事件](/concepts/lifecycle-events.md)
-- [附件系统](/concepts/attachment-system.md)
-- [Token 与命令参考](/references/api-tokens.md)
+- [模型层架构](model-architecture.md)
+- [组件层次结构](component-hierarchy.md)
+- [生命周期事件](lifecycle-events.md)
+- [附件系统](attachment-system.md)
+- [Token 与命令参考](../references/api-tokens.md)
 
 [^events-py]: binderhub/events.py 源码
 [^factory-ts]: factory.ts

@@ -210,7 +210,7 @@ abstract class BuiltinCommand implements ICommandRunner {
 
 ## 相关概念
 
-- [解析器源码参考](/references/parser-source.md)：命令行分词与 AST 构建
-- [内置命令源码参考](/references/builtin-source.md)：12 个内置命令完整清单
-- [IO 系统源码参考](/references/io-source.md)：命令输入输出接口与实现
-- [配置与环境源码参考](/references/config-source.md)：cockle-config.json 包配置格式
+- [解析器源码参考](parser-source.md)：命令行分词与 AST 构建
+- [内置命令源码参考](builtin-source.md)：12 个内置命令完整清单
+- [IO 系统源码参考](io-source.md)：命令输入输出接口与实现
+- [配置与环境源码参考](config-source.md)：cockle-config.json 包配置格式

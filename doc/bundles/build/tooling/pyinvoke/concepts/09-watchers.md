@@ -285,10 +285,10 @@ Watcher 在 IO 线程中执行，需要注意：
 
 ## 相关概念
 
-- [Runner 系统](/concepts/06-runners.md)
-- [Context 对象](/concepts/03-context-object.md)
-- [执行模型](/concepts/08-execution-model.md)
-- [终端与 IO](/concepts/10-terminals-io.md)
-- [PyInvoke 源码信源登记](/references/pyinvoke-source.md)
+- [Runner 系统](06-runners.md)
+- [Context 对象](03-context-object.md)
+- [执行模型](08-execution-model.md)
+- [终端与 IO](10-terminals-io.md)
+- [PyInvoke 源码信源登记](../references/pyinvoke-source.md)
 
-[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](/references/pyinvoke-source.md)；StreamWatcher/Responder/FailingResponder 定义于 `invoke/watchers.py`，Runner.respond() 方法定义于 `invoke/runners.py`。
+[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](../references/pyinvoke-source.md)；StreamWatcher/Responder/FailingResponder 定义于 `invoke/watchers.py`，Runner.respond() 方法定义于 `invoke/runners.py`。

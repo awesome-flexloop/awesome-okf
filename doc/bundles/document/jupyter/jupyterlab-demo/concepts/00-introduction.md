@@ -35,7 +35,7 @@ https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/master?urlpath=lab
 
 ### 1. 环境可复现
 
-[environment.yml](/references/binder-config-source.md) 精确锁定了所有依赖的版本：
+[environment.yml](../references/binder-config-source.md) 精确锁定了所有依赖的版本：
 - Python 3.12 + conda-forge 频道
 - JupyterLab 核心 + 协作扩展
 - 多语言内核（Python/R，C++ 可选）
@@ -46,7 +46,7 @@ https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/master?urlpath=lab
 
 ### 2. 场景可配置
 
-[talks.yml](/references/talks-yml-source.md) 定义了四种演讲场景配置，每种场景面向不同的会议和受众，从共享素材库中自动组装演示文件：
+[talks.yml](../references/talks-yml-source.md) 定义了四种演讲场景配置，每种场景面向不同的会议和受众，从共享素材库中自动组装演示文件：
 
 | 场景 | 面向 | 特点 |
 |------|------|------|
@@ -59,7 +59,7 @@ https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/master?urlpath=lab
 
 ### 3. 体验可预设
 
-[workspace.json](/references/binder-config-source.md) 不仅仅启动 JupyterLab，还预设了完整的工作区布局：
+[workspace.json](../references/binder-config-source.md) 不仅仅启动 JupyterLab，还预设了完整的工作区布局：
 - 左右分屏：Notebook + 官方文档
 - 左侧面板：文件浏览器/运行会话/目录/扩展管理器
 - 文件浏览器自动定位到 `demo/` 目录
@@ -88,6 +88,6 @@ https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/master?urlpath=lab
 
 ## 相关概念
 
-- [仓库目录结构详解](/concepts/01-repo-structure.md)
-- [Binder 环境配置三要素](/concepts/02-binder-config.md)
-- [build.py 与 talks.yml 配置化组装](/concepts/03-build-system.md)
+- [仓库目录结构详解](01-repo-structure.md)
+- [Binder 环境配置三要素](02-binder-config.md)
+- [build.py 与 talks.yml 配置化组装](03-build-system.md)

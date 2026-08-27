@@ -238,8 +238,8 @@ TryExamples 演示文档
 
 ## 相关概念
 
-- [TryExamples 指令详解](/concepts/08-try-examples-directive.md)
-- [_try_examples 模块源码](/references/try-examples-source.md)
-- [与 autodoc 集成](/examples/autodoc-integration.md)
-- [指令系统总览](/concepts/03-directive-overview.md)
-- [核心模块源码](/references/main-source.md)
+- [TryExamples 指令详解](../concepts/08-try-examples-directive.md)
+- [_try_examples 模块源码](../references/try-examples-source.md)
+- [与 autodoc 集成](autodoc-integration.md)
+- [指令系统总览](../concepts/03-directive-overview.md)
+- [核心模块源码](../references/main-source.md)

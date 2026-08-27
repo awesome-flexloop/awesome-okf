@@ -61,4 +61,4 @@ uv run --directory libs/talon deepagents-talon --telegram
 
 ## 相关概念
 
-- [Talon运行时宿主](/ai/datawhale/deepagents/concepts/talon-runtime)
+- Talon运行时宿主

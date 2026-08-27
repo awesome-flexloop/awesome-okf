@@ -220,8 +220,8 @@ fn main() -> anyhow::Result<()> {
 
 ## 相关概念
 
-- [工作区架构](./01-workspace-architecture.md)
-- [沙箱执行模型](./04-sandbox-execution.md)
-- [Skills 与 AGENTS.md](./05-skills-agents-md.md)
-- [Node.js CLI 入口](./03-nodejs-cli.md)
-- [简介](./00-introduction.md)
+- [工作区架构](01-workspace-architecture.md)
+- [沙箱执行模型](04-sandbox-execution.md)
+- [Skills 与 AGENTS.md](05-skills-agents-md.md)
+- [Node.js CLI 入口](03-nodejs-cli.md)
+- [简介](00-introduction.md)

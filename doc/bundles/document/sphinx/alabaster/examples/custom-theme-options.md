@@ -235,6 +235,6 @@ html_theme_options = {
 
 ## 相关概念
 
-- [主题配置选项体系](/concepts/04-theme-options.md)：50+ 选项完整参考
+- [主题配置选项体系](../concepts/04-theme-options.md)：50+ 选项完整参考
 - [基础配置示例](basic-setup.md)：完整 conf.py 模板
 - [自定义 CSS 与品牌化](custom-css-and-branding.md)：CSS 覆盖进阶

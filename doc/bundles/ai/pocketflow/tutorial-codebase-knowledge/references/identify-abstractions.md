@@ -15,7 +15,7 @@ source: nodes.py
 class IdentifyAbstractions(Node):
 ```
 
-源码位置：[nodes.py#L84-L237](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py#L84-L237)
+源码位置：nodes.py#L84-L237
 
 ## 生命周期方法
 
@@ -89,7 +89,7 @@ class IdentifyAbstractions(Node):
 
 ### get_content_for_indices(files_data, indices)
 
-源码位置：[nodes.py#L11-L19](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py#L11-L19)
+源码位置：nodes.py#L11-L19
 
 根据索引列表从 `files_data` 中提取对应文件内容，返回 `{"{i} # {path}": content}` 字典。被本节点后续的 AnalyzeRelationships 和 WriteChapters 节点复用。
 
@@ -101,4 +101,4 @@ class IdentifyAbstractions(Node):
 
 ## 源码位置
 
-[nodes.py#L84-L237](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py#L84-L237)
+nodes.py#L84-L237

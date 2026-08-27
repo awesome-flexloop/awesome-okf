@@ -252,7 +252,7 @@ jupyter lab --no-browser --debug
 
 ## 相关概念
 
-- [IJSONRPCLanguageServer 接口](/concepts/04-language-server-interface.md)
-- [YAML/JSON 语言服务器](/concepts/06-yaml-server.md)
-- [三插件体系](/concepts/03-plugin-system.md)
-- [架构总览](/concepts/02-architecture-overview.md)
+- [IJSONRPCLanguageServer 接口](../concepts/04-language-server-interface.md)
+- [YAML/JSON 语言服务器](../concepts/06-yaml-server.md)
+- [三插件体系](../concepts/03-plugin-system.md)
+- [架构总览](../concepts/02-architecture-overview.md)

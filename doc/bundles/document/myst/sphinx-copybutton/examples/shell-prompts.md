@@ -291,5 +291,5 @@ html_static_path = ['_static']
 
 ## 相关概念
 
-- [文本处理与提示符剥离](/concepts/03-text-processing.md)
+- [文本处理与提示符剥离](../concepts/03-text-processing.md)
 - [基础配置示例](basic-setup.md)

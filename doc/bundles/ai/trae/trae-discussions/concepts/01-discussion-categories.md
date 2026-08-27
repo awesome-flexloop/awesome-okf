@@ -113,7 +113,7 @@ GitHub Discussions 平台预定义了 5 个讨论分类，每个分类有明确�
 
 ## 相关链接
 
-- [GitHub Discussions 作为社区论坛](/concepts/00-introduction.md)
-- [社区礼仪与有效提问](/concepts/02-community-etiquette.md)
-- [发起讨论示例](/examples/start-discussion.md)
-- [社区讨论仓库资源索引](/references/discussions-source.md)
+- [GitHub Discussions 作为社区论坛](00-introduction.md)
+- [社区礼仪与有效提问](02-community-etiquette.md)
+- [发起讨论示例](../examples/start-discussion.md)
+- [社区讨论仓库资源索引](../references/discussions-source.md)

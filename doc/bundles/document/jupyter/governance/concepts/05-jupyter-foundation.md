@@ -91,6 +91,6 @@ Jupyter Foundation 的正式章程文档：[Jupyter Foundation Charter (PDF)](ht
 
 ## 相关概念
 
-- [三主体治理模型](/concepts/01-governance-model.md)
-- [执行委员会（EC）](/concepts/03-executive-council.md)
-- [商标政策与许可证](/concepts/14-trademarks-and-licensing.md)
+- [三主体治理模型](01-governance-model.md)
+- [执行委员会（EC）](03-executive-council.md)
+- [商标政策与许可证](14-trademarks-and-licensing.md)

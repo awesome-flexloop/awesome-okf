@@ -116,7 +116,7 @@ $$H(Q) + H(\mathrm{environment}) = H(C) + H(\mathrm{environment}')$$
 
 ## 与 ψ 理论塌缩概念的对应
 
-ψ 理论中 [塌缩动力学](/psi-core/concepts/01-collapse-dynamics.md) 描述"潜能结晶为结构"的过程。两套语言的对应关系：
+ψ 理论中 [塌缩动力学](../../psi-core/concepts/01-collapse-dynamics.md) 描述"潜能结晶为结构"的过程。两套语言的对应关系：
 
 | ψ 理论 | XOR-SHIFT 宇宙本论 |
 |--------|-------------------|
@@ -149,7 +149,7 @@ $$\mathcal{U}^{(t+1)} = \Omega_Q^t \oplus \mathrm{SHIFT}\!\left(\Omega_Q^t \oplu
 
 ## 相关概念
 
-- [/concepts/00-three-axioms.md](/concepts/00-three-axioms.md)
-- [/concepts/01-flip-xor-shift.md](/concepts/01-flip-xor-shift.md)
-- [/concepts/04-cosmic-ontology.md](/concepts/04-cosmic-ontology.md)
-- [/psi-core/concepts/01-collapse-dynamics.md](/psi-core/concepts/01-collapse-dynamics.md)
+- [/concepts/00-three-axioms.md](../concepts/00-three-axioms.md)
+- [/concepts/01-flip-xor-shift.md](../concepts/01-flip-xor-shift.md)
+- [/concepts/04-cosmic-ontology.md](../concepts/04-cosmic-ontology.md)
+- [/psi-core/concepts/01-collapse-dynamics.md](../../psi-core/concepts/01-collapse-dynamics.md)

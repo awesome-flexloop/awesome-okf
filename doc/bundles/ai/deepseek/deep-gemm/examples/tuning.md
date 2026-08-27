@@ -359,7 +359,7 @@ print(f"Speedup: {t_cublas/t_dg:.2f}x")
 
 ## 八、相关链接
 
-- [/deepseek/deep-gemm/references/runtime-config](/ai/deepseek/deep-gemm/references/runtime-config) — 完整运行时配置 API
-- [/deepseek/deep-gemm/concepts/performance-optimization](/ai/deepseek/deep-gemm/concepts/performance-optimization) — 硬件优化技术详解
-- [/deepseek/deep-gemm/concepts/jit-kernel-compilation](/ai/deepseek/deep-gemm/concepts/jit-kernel-compilation) — JIT 编译系统
-- [/deepseek/deep-gemm/examples/basic-gemm](/ai/deepseek/deep-gemm/examples/basic-gemm) — 基础 GEMM 示例
+- /deepseek/deep-gemm/references/runtime-config — 完整运行时配置 API
+- /deepseek/deep-gemm/concepts/performance-optimization — 硬件优化技术详解
+- /deepseek/deep-gemm/concepts/jit-kernel-compilation — JIT 编译系统
+- /deepseek/deep-gemm/examples/basic-gemm — 基础 GEMM 示例

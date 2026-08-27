@@ -351,6 +351,6 @@ n**2/2 + n/2
 - 前置概念：[假设系统](05-assumptions.md) 了解 ask/Q 如何依赖布尔逻辑
 - 关联概念：[简化系统](06-simplification.md) 了解 simplify 如何利用逻辑推理
 - 关联概念：[方程求解](08-solvers.md) 了解 solveset 如何使用集合表示解
-- 源码信源：[logic-sets-source](/references/logic-sets-source.md) 提供完整 API 参考
+- 源码信源：[logic-sets-source](../references/logic-sets-source.md) 提供完整 API 参考
 
 [^logic-sets-source]: logic/__init__.py、logic/boolalg.py、sets/__init__.py、ntheory/__init__.py、concrete/__init__.py

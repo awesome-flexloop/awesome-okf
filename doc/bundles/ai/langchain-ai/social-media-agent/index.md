@@ -48,22 +48,22 @@ description: Social Media Agent——LangChain 开源的基于 LangGraph 多图�
 | `curated_post_interrupt` | 策展帖子中断处理 |
 | `ingest_repurposed_data` | 摄取待改编内容 |
 
-详见 [图结构参考](/ai/langchain-ai/social-media-agent/references/graphs)。
+详见 图结构参考。
 
 ## 文档导航
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/social-media-agent/concepts/overview) — 项目定位、14 图架构、generate_post 流程、技术栈
+- 总览 — 项目定位、14 图架构、generate_post 流程、技术栈
 
 ### 参考
 
-- [图结构参考](/ai/langchain-ai/social-media-agent/references/graphs) — 各图节点、状态字段、条件路由、运行时配置
+- 图结构参考 — 各图节点、状态字段、条件路由、运行时配置
 
 ### 规格
 
-- [事实清单](/ai/langchain-ai/social-media-agent/spec/facts) — 从源码中提取的 34 条可验证事实
-- [深度洞察](/ai/langchain-ai/social-media-agent/spec/insights) — 多图架构、HITL 状态机、Send API 并行模式等 10 条设计洞察
+- 事实清单 — 从源码中提取的 34 条可验证事实
+- 深度洞察 — 多图架构、HITL 状态机、Send API 并行模式等 10 条设计洞察
 
 ## 目录结构
 

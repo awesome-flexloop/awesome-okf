@@ -252,6 +252,6 @@ article-info 使用嵌套网格布局：
 
 ## 相关概念
 
-- [快速上手](/concepts/01-getting-started.md) — FontAwesome CDN 配置
-- [卡片组件](/concepts/05-cards.md) — 在卡片中使用图标
-- [徽章与按钮](/concepts/07-badges-buttons.md) — 在按钮中使用图标
+- [快速上手](01-getting-started.md) — FontAwesome CDN 配置
+- [卡片组件](05-cards.md) — 在卡片中使用图标
+- [徽章与按钮](07-badges-buttons.md) — 在按钮中使用图标

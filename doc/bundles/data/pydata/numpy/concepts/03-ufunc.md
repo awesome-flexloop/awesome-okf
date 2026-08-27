@@ -352,4 +352,4 @@ with np.errstate(divide='ignore', invalid='ignore'):
 - [广播规则](04-broadcasting.md) — ufunc运算中的形状对齐机制
 - [ndarray多维数组](01-ndarray.md) — ufunc操作的对象
 - [dtype数据类型系统](02-dtype-system.md) — ufunc的类型循环选择
-- [NumPy ufunc通用函数系统源码](/references/ufunc-source.md) — 源码信源
+- [NumPy ufunc通用函数系统源码](../references/ufunc-source.md) — 源码信源

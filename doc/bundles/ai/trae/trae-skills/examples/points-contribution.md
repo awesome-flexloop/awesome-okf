@@ -225,9 +225,9 @@ concurrency:
 
 ## 相关概念
 
-- [社区积分机制](/concepts/06-community-points.md)
-- [编写自定义 Skill](/concepts/07-write-skill.md)
+- [社区积分机制](../concepts/06-community-points.md)
+- [编写自定义 Skill](../concepts/07-write-skill.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/skills-source.md)
+- [源码信源索引](../references/skills-source.md)

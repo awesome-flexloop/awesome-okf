@@ -342,7 +342,7 @@ html_theme_options = {
 
 ## 相关概念
 
-- [主题配置选项体系](/concepts/04-theme-options.md)：50+ 内置配置选项
-- [侧边栏组件化设计](/concepts/05-sidebar-components.md)：组件模板结构
-- [setup 函数与注册机制](/concepts/03-setup-and-registration.md)：主题入口函数
-- [自定义 CSS 与品牌化示例](/examples/custom-css-and-branding.md)：实战案例
+- [主题配置选项体系](04-theme-options.md)：50+ 内置配置选项
+- [侧边栏组件化设计](05-sidebar-components.md)：组件模板结构
+- [setup 函数与注册机制](03-setup-and-registration.md)：主题入口函数
+- [自定义 CSS 与品牌化示例](../examples/custom-css-and-branding.md)：实战案例

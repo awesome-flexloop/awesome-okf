@@ -23,7 +23,7 @@ sources:
 
 JupyterLite 插件是**构建时依赖**，必须添加到 `.github/build-environment.yml`，**不要**添加到根目录的 `environment.yml`。
 
-> 如果还不理解两个 environment 文件的区别，请先阅读[双环境模型](/concepts/02-dual-environment.md)。
+> 如果还不理解两个 environment 文件的区别，请先阅读[双环境模型](../concepts/02-dual-environment.md)。
 
 ## 步骤1：编辑 .github/build-environment.yml
 
@@ -140,6 +140,6 @@ A: 从 build-environment.yml 中删除对应行，commit 并等待重新部署�
 
 ## 相关概念
 
-- [构建环境配置](/concepts/05-build-env-config.md) — build-environment.yml 详解
-- [双环境模型](/concepts/02-dual-environment.md) — 理解两个配置文件的区别
-- [CI/CD 流水线](/concepts/06-cicd-pipeline.md) — 构建流程如何使用 build-environment.yml
+- [构建环境配置](../concepts/05-build-env-config.md) — build-environment.yml 详解
+- [双环境模型](../concepts/02-dual-environment.md) — 理解两个配置文件的区别
+- [CI/CD 流水线](../concepts/06-cicd-pipeline.md) — 构建流程如何使用 build-environment.yml

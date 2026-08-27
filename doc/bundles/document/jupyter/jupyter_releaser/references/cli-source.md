@@ -98,6 +98,6 @@ CLI 层基于 Click 框架实现，提供 `jupyter-releaser` 命令行工具。�
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [CLI命令详解](/concepts/03-cli-commands.md)
-- [配置与Hooks系统](/concepts/04-config-and-hooks.md)
+- [架构总览](../concepts/02-architecture-overview.md)
+- [CLI命令详解](../concepts/03-cli-commands.md)
+- [配置与Hooks系统](../concepts/04-config-and-hooks.md)

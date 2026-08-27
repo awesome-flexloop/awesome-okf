@@ -19,7 +19,7 @@ sources:
 
 ## Widget：一切 UI 的基类
 
-[Widget](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/widget.ts#L36) 是 Lumino 所有 UI 组件的基类，实现了 `IMessageHandler` 和 `IObservableDisposable` 接口。每个 Widget 拥有一个真实的 DOM 节点（`HTMLElement`），通过消息系统管理生命周期。
+Widget 是 Lumino 所有 UI 组件的基类，实现了 `IMessageHandler` 和 `IObservableDisposable` 接口。每个 Widget 拥有一个真实的 DOM 节点（`HTMLElement`），通过消息系统管理生命周期。
 
 ## 核心属性
 
@@ -65,7 +65,7 @@ Widget 对 `node` 拥有**所有权**：dispose 时会从 DOM 中分离 node 并
 
 ### title：标题对象
 
-每个 Widget 有一个 [Title](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/widgets/src/title.ts) 对象，供容器组件（TabBar、Menu等）显示标签、图标、关闭按钮等：
+每个 Widget 有一个 Title 对象，供容器组件（TabBar、Menu等）显示标签、图标、关闭按钮等：
 
 ```typescript
 widget.title.label = '我的面板';

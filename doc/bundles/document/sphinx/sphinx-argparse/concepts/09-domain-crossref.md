@@ -27,7 +27,7 @@ Sphinx 的域（Domain）是一种对象分类和交叉引用机制。每个域�
 sphinx-argparse 定义的域名为 `commands`，它提供：
 - 对象类型：`command`（命令）
 - 引用角色：`:command:` 用于交叉引用
-- 两个索引：Commands Index 和 Commands by Group Index（详见[命令索引生成](/concepts/10-command-indices.md)）
+- 两个索引：Commands Index 和 Commands by Group Index（详见[命令索引生成](10-command-indices.md)）
 
 ## :command: 交叉引用角色
 
@@ -151,6 +151,6 @@ mytool init
 
 ## 相关概念
 
-- [命令索引生成](/concepts/10-command-indices.md)
-- [配置选项详解](/concepts/11-configuration.md)
-- [嵌套内容增强](/concepts/06-nested-content-enhancement.md)
+- [命令索引生成](10-command-indices.md)
+- [配置选项详解](11-configuration.md)
+- [嵌套内容增强](06-nested-content-enhancement.md)

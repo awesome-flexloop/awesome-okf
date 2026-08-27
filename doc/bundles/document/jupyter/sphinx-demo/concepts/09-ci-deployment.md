@@ -215,11 +215,11 @@ GitHub Pages 需要在仓库 Settings → Pages 中将 Source 设置为 `gh-page
 
 ## 完整工作流源码
 
-完整的 GitHub Actions YAML 见 [/references/ci-workflow-source.md](/references/ci-workflow-source.md)。
+完整的 GitHub Actions YAML 见 [/references/ci-workflow-source.md](../references/ci-workflow-source.md)。
 
 ## 相关内容
 
-- [01-project-structure](/concepts/01-project-structure.md)
-- [04-kernel-comparison](/concepts/04-kernel-comparison.md)
-- [08-customization](/concepts/08-customization.md)
-- [/references/ci-workflow-source.md](/references/ci-workflow-source.md)
+- [01-project-structure](01-project-structure.md)
+- [04-kernel-comparison](04-kernel-comparison.md)
+- [08-customization](08-customization.md)
+- [/references/ci-workflow-source.md](../references/ci-workflow-source.md)

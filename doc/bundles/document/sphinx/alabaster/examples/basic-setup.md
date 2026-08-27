@@ -174,6 +174,6 @@ A: 需要同时设置 `github_user` 和 `github_repo`，且 `github_button = Tru
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [主题配置选项体系](/concepts/04-theme-options.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [主题配置选项体系](../concepts/04-theme-options.md)
 - [主题选项定制示例](custom-theme-options.md)

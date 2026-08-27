@@ -93,7 +93,7 @@ NPC 支持三方面定制（F-049）：
 
 ## 相关概念
 
-- [NPC 云端 AI 员工](/concepts/03-npc.md) — NPC 架构与工作模式详解
-- [产品矩阵总览](/concepts/00-product-matrix.md) — NPC 在 CodeBuddy 矩阵中的定位
-- [CodeBuddy IDE](/concepts/01-ide.md) — NPC 基于 CodeBuddy 核心能力打造
-- [CLI](/concepts/02-cli.md) — 本地 Sub-agents 与云端 NPC 的对比
+- [NPC 云端 AI 员工](../concepts/03-npc.md) — NPC 架构与工作模式详解
+- [产品矩阵总览](../concepts/00-product-matrix.md) — NPC 在 CodeBuddy 矩阵中的定位
+- [CodeBuddy IDE](../concepts/01-ide.md) — NPC 基于 CodeBuddy 核心能力打造
+- [CLI](../concepts/02-cli.md) — 本地 Sub-agents 与云端 NPC 的对比

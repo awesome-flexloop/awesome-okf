@@ -78,7 +78,7 @@ await gitExtension.checkout({ branchName: 'feature/add-data-visualization' });
 后端执行 `git checkout <branch-name>`（或 `git switch <branch-name>`）。
 
 **切换分支的注意事项**：
-- 如果当前分支有未提交的更改，而这些更改与目标分支的同一文件有冲突，Git 会阻止切换。此时需要先提交更改、储藏更改（Stash，详见 [Diff查看与Stash使用](/examples/03-diff-and-stash.md)），或丢弃更改
+- 如果当前分支有未提交的更改，而这些更改与目标分支的同一文件有冲突，Git 会阻止切换。此时需要先提交更改、储藏更改（Stash，详见 [Diff查看与Stash使用](03-diff-and-stash.md)），或丢弃更改
 - 切换分支后，`GitExtension.checkout()` 方法会先调用 `_changedFiles()` 获取受影响的文件列表，然后通过 `_revertFile()` 关闭并重新打开这些文件在 JupyterLab 中的文档，确保编辑器中显示的内容与新分支一致
 - 切换成功后，面板发出 `headChanged` 信号，触发状态刷新，文件列表更新为新分支的状态
 
@@ -86,7 +86,7 @@ await gitExtension.checkout({ branchName: 'feature/add-data-visualization' });
 
 ### 步骤四：修改文件并提交
 
-切换到功能分支后，正常进行文件编辑、暂存和提交操作（具体流程参见 [基础使用示例](/examples/01-basic-usage.md)）。每完成一个小的功能点或修复，建议做一次提交，保持提交粒度适中、提交信息清晰。
+切换到功能分支后，正常进行文件编辑、暂存和提交操作（具体流程参见 [基础使用示例](01-basic-usage.md)）。每完成一个小的功能点或修复，建议做一次提交，保持提交粒度适中、提交信息清晰。
 
 在功能分支上可以进行多次提交，这些提交不会影响主分支。面板顶部始终显示当前所在分支名称，帮助你确认正在哪个分支上工作。
 
@@ -202,13 +202,13 @@ Notebook 文件（`.ipynb`）的冲突通过 nbdime 库提供语义化的冲突�
 
 ## 相关示例
 
-- [基础使用示例](/examples/01-basic-usage.md)
-- [Diff查看与Stash使用](/examples/03-diff-and-stash.md)
+- [基础使用示例](01-basic-usage.md)
+- [Diff查看与Stash使用](03-diff-and-stash.md)
 
 ## 相关概念
 
-- [GitExtension核心模型](/concepts/04-git-extension-model.md)
-- [命令系统与菜单](/concepts/10-commands-and-menu.md)
-- [Stash与高级操作](/concepts/12-stash-and-advanced.md)
-- [服务端Git执行引擎](/concepts/08-server-git-execution.md)
-- [UI组件与Widget体系](/concepts/07-ui-components-and-widgets.md)
+- [GitExtension核心模型](../concepts/04-git-extension-model.md)
+- [命令系统与菜单](../concepts/10-commands-and-menu.md)
+- [Stash与高级操作](../concepts/12-stash-and-advanced.md)
+- [服务端Git执行引擎](../concepts/08-server-git-execution.md)
+- [UI组件与Widget体系](../concepts/07-ui-components-and-widgets.md)

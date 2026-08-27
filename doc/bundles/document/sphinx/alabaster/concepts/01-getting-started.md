@@ -116,6 +116,6 @@ sphinx-autobuild docs docs/_build/html
 
 ## 下一步
 
-- [主题架构四要素](/concepts/02-theme-architecture.md)：理解 Alabaster 的底层架构
-- [主题配置选项体系](/concepts/04-theme-options.md)：完整的 50+ 配置选项参考
-- [基础配置示例](/examples/basic-setup.md)：完整 conf.py 示例
+- [主题架构四要素](02-theme-architecture.md)：理解 Alabaster 的底层架构
+- [主题配置选项体系](04-theme-options.md)：完整的 50+ 配置选项参考
+- [基础配置示例](../examples/basic-setup.md)：完整 conf.py 示例

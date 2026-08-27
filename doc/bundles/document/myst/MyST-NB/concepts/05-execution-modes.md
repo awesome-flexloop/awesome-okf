@@ -210,4 +210,4 @@ MyST-NB 自动生成执行统计表，显示每个 notebook 的执行状态和�
 - [配置系统](04-config-system.md)
 - [Eval 内联求值](08-eval.md)
 - [代码隐藏与输出控制](09-hiding-code.md)
-- [执行模式配置示例](/examples/02-execution-config.md)
+- [执行模式配置示例](../examples/02-execution-config.md)

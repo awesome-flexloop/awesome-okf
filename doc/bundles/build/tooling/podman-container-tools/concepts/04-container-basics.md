@@ -236,8 +236,8 @@ Container 结构体本身不直接执行容器进程，而是通过 OCI 运行�
 
 ## 相关概念
 
-- [Pod一等公民](/concepts/05-pod-first-class.md) — Pod独立资源模型、infra容器与命名空间共享机制
-- [Runtime运行时](/concepts/03-runtime.md) — Runtime结构体、函数式选项模式与NewRuntime创建流程
-- [架构概览](/concepts/02-architecture-overview.md) — 无守护进程架构与三层核心抽象
-- [CLI命令结构](/concepts/06-cli-structure.md) — Cobra框架、命令注册表与EngineMode过滤
-- [容器操作命令](/concepts/07-container-commands.md) — 36个容器命令的分类用法详解
+- [Pod一等公民](05-pod-first-class.md) — Pod独立资源模型、infra容器与命名空间共享机制
+- [Runtime运行时](03-runtime.md) — Runtime结构体、函数式选项模式与NewRuntime创建流程
+- [架构概览](02-architecture-overview.md) — 无守护进程架构与三层核心抽象
+- [CLI命令结构](06-cli-structure.md) — Cobra框架、命令注册表与EngineMode过滤
+- [容器操作命令](07-container-commands.md) — 36个容器命令的分类用法详解

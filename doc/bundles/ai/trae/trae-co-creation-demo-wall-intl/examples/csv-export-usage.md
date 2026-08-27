@@ -221,5 +221,5 @@ async function createExportJob(filters: ExportFilters) {
 
 ## 相关内容
 
-- [CSV导出功能](/concepts/03-csv-export.md)
-- [Demo Wall Intl 简介](/concepts/00-introduction.md)
+- [CSV导出功能](../concepts/03-csv-export.md)
+- [Demo Wall Intl 简介](../concepts/00-introduction.md)

@@ -197,7 +197,7 @@ podman info
 
 ## 相关概念
 
-- [CLI结构](/concepts/06-cli-structure.md) — parseCommands命令过滤机制与命令树结构
-- [架构概览](/concepts/02-architecture-overview.md) — Podman整体分层架构与组件交互
-- [Runtime运行时](/concepts/03-runtime.md) — ABI模式下libpod Runtime直接调用路径
-- [systemd集成与Quadlet](/concepts/12-systemd-quadlet.md) — systemd socket激活API服务
+- [CLI结构](06-cli-structure.md) — parseCommands命令过滤机制与命令树结构
+- [架构概览](02-architecture-overview.md) — Podman整体分层架构与组件交互
+- [Runtime运行时](03-runtime.md) — ABI模式下libpod Runtime直接调用路径
+- [systemd集成与Quadlet](12-systemd-quadlet.md) — systemd socket激活API服务

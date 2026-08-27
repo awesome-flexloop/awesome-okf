@@ -4,8 +4,8 @@ title: 开发自定义 MIME 渲染器扩展
 description: 从零开始开发一个 JupyterLab MIME 渲染器扩展的完整示例，基于 jupyter-renderers 提炼的四要素模式
 tags: [tutorial, mime-renderer, custom-extension, howto]
 prerequisites:
-  - 理解 [MIME 渲染器开发模式](/concepts/02-mime-renderer-pattern.md)
-  - 熟悉 [IRenderMime API](/references/rendermime-interfaces-api.md)
+  - 理解 [MIME 渲染器开发模式](../concepts/02-mime-renderer-pattern.md)
+  - 熟悉 [IRenderMime API](../references/rendermime-interfaces-api.md)
   - Node.js 14+、Python 3.7+、JupyterLab 3.0+
 sources:
   - id: fasta-index
@@ -382,8 +382,8 @@ display({"text/csv": csv_data}, raw=True)
 
 ## 相关资源
 
-- [MIME 渲染器开发模式](/concepts/02-mime-renderer-pattern.md)
-- [扩展类型对比](/concepts/03-extension-types.md)
-- [IRenderMime API 参考](/references/rendermime-interfaces-api.md)
-- [Python 打包规范](/concepts/08-python-packaging.md)
-- [扩展配置参考](/references/extension-config-reference.md)
+- [MIME 渲染器开发模式](../concepts/02-mime-renderer-pattern.md)
+- [扩展类型对比](../concepts/03-extension-types.md)
+- [IRenderMime API 参考](../references/rendermime-interfaces-api.md)
+- [Python 打包规范](../concepts/08-python-packaging.md)
+- [扩展配置参考](../references/extension-config-reference.md)

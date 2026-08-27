@@ -139,8 +139,8 @@ c.JupyterLabGit.actions = {'post_init': ['chmod 600 .git/config']}
 
 ## 相关概念
 
-- [Python Git执行引擎](/references/git-py-source.md)
-- [Tornado处理器](/references/handlers-py-source.md)
-- [配置系统](/concepts/11-configuration-and-settings.md)
-- [服务端Git执行引擎](/concepts/08-server-git-execution.md)
-- [架构总览](/concepts/02-architecture-overview.md)
+- [Python Git执行引擎](git-py-source.md)
+- [Tornado处理器](handlers-py-source.md)
+- [配置系统](../concepts/11-configuration-and-settings.md)
+- [服务端Git执行引擎](../concepts/08-server-git-execution.md)
+- [架构总览](../concepts/02-architecture-overview.md)

@@ -185,6 +185,6 @@ Sphinx 原生 `.. toctree::` 默认 `:hidden: false`（在文档正文中显示�
 
 ## 相关概念
 
-- [_toc.yml 语法详解](/concepts/02-toc-yaml-syntax.md)
-- [高级功能](/concepts/04-advanced-features.md)
-- [sphinx-external-toc 源码路径映射](/references/etoc-source.md)
+- [_toc.yml 语法详解](02-toc-yaml-syntax.md)
+- [高级功能](04-advanced-features.md)
+- [sphinx-external-toc 源码路径映射](../references/etoc-source.md)

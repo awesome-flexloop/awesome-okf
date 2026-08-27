@@ -467,6 +467,6 @@ manimgl pythagoras.py PythagorasTheorem -p
 
 ## 相关概念
 
-- [04 checkpoint_paste 交互式开发工作流](/concepts/04-checkpoint-paste-workflow.md) — checkpoint_paste三种模式、force_skipping跳转、Sublime集成、工作流原理
-- [03 视频Scene代码结构与叙事模式](/concepts/03-video-structure-pattern.md) — construct()分段子方法、多继承组合、generate_target()动画模式
-- [ManimGL：基础图形绘制](/viz/3b1b/manim/examples/basic-shapes.md) — Polygon、颜色、ShowCreation等基础API用法
+- [04 checkpoint_paste 交互式开发工作流](../concepts/04-checkpoint-paste-workflow.md) — checkpoint_paste三种模式、force_skipping跳转、Sublime集成、工作流原理
+- [03 视频Scene代码结构与叙事模式](../concepts/03-video-structure-pattern.md) — construct()分段子方法、多继承组合、generate_target()动画模式
+- [ManimGL：基础图形绘制](../../manim/examples/basic-shapes.md) — Polygon、颜色、ShowCreation等基础API用法

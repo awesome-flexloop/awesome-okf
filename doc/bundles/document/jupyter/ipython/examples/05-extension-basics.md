@@ -743,9 +743,9 @@ def unload_ipython_extension(ipython):
 
 ## 相关概念
 
-- [扩展系统](/concepts/09-extension-system.md)
-- [事件与钩子](/concepts/10-events-hooks.md)
-- [自定义魔法开发](/concepts/11-custom-magics.md)
-- [魔法命令系统](/concepts/04-magic-system.md)
-- [Shell 生命周期](/concepts/03-shell-lifecycle.md)
-- [信源参考 - 扩展系统](/references/extension-source.md)
+- [扩展系统](../concepts/09-extension-system.md)
+- [事件与钩子](../concepts/10-events-hooks.md)
+- [自定义魔法开发](../concepts/11-custom-magics.md)
+- [魔法命令系统](../concepts/04-magic-system.md)
+- [Shell 生命周期](../concepts/03-shell-lifecycle.md)
+- [信源参考 - 扩展系统](../references/extension-source.md)

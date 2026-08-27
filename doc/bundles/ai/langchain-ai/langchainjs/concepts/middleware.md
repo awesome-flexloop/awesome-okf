@@ -226,7 +226,7 @@ const toolClasses = [...(options.tools ?? []), ...middlewareTools];
 
 ## 相关文档
 
-- [ReAct Agent](/ai/langchain-ai/langchainjs/concepts/react-agent) — Agent 图拓扑
-- [工具定义](/ai/langchain-ai/langchainjs/concepts/tool-definition) — middleware 工具注册
-- [Agent 与 Middleware API](/ai/langchain-ai/langchainjs/references/agents-middleware) — API 参考
-- [创建 ReAct Agent 示例](/ai/langchain-ai/langchainjs/examples/react-agent)
+- ReAct Agent — Agent 图拓扑
+- 工具定义 — middleware 工具注册
+- Agent 与 Middleware API — API 参考
+- 创建 ReAct Agent 示例

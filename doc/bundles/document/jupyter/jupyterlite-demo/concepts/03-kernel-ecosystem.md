@@ -135,8 +135,8 @@ Demo 未包含 Xeus Python 内核，但它是一个重要的替代方案。Xeus 
 
 ## 相关概念
 
-- [Demo 仓库结构与三件套模式](/concepts/01-demo-overview.md)
-- [Pyodide 生态库与 %pip 安装](/concepts/05-pyodide-libraries.md)
-- [内容目录与数据文件组织](/concepts/04-content-and-data.md)
-- [Python 内核基础使用](/examples/02-python-basics.md)
-- [创意编程与物理模拟](/examples/06-creative-coding.md)
+- [Demo 仓库结构与三件套模式](01-demo-overview.md)
+- [Pyodide 生态库与 %pip 安装](05-pyodide-libraries.md)
+- [内容目录与数据文件组织](04-content-and-data.md)
+- [Python 内核基础使用](../examples/02-python-basics.md)
+- [创意编程与物理模拟](../examples/06-creative-coding.md)

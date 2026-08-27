@@ -219,7 +219,7 @@ _output/
 
 ## 相关概念
 
-- [整体架构](/concepts/01-architecture-overview.md)
-- [浏览器存储](/concepts/05-browser-storage.md)
-- [扩展架构](/concepts/07-extension-architecture.md)
-- [构建系统信源](/references/build-source.md)
+- [整体架构](01-architecture-overview.md)
+- [浏览器存储](05-browser-storage.md)
+- 扩展架构
+- [构建系统信源](../references/build-source.md)

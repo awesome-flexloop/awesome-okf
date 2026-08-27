@@ -140,7 +140,7 @@ github-activity owner/repo --no-cache
 github-activity owner/repo --tags my_tags.json
 ```
 
-配置文件为JSON格式，覆盖默认分类规则。详见[标签分类配置](/concepts/04-configuration.md)。
+配置文件为JSON格式，覆盖默认分类规则。详见[标签分类配置](04-configuration.md)。
 
 ## 分支选项
 
@@ -189,7 +189,7 @@ github-activity myorg/myrepo --kind both
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [标签分类配置](/concepts/04-configuration.md)
-- [数据获取与处理](/concepts/03-activity-data.md)
-- [变更日志生成示例](/examples/changelog-generation.md)
+- [快速开始](01-getting-started.md)
+- [标签分类配置](04-configuration.md)
+- [数据获取与处理](03-activity-data.md)
+- [变更日志生成示例](../examples/changelog-generation.md)

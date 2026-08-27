@@ -49,7 +49,7 @@ sources:
 
 `KnowledgeBase` 是知识库的门面类（Facade），统一管理后端实例和文档操作。
 
-[veadk/knowledgebase/knowledgebase.py:L92-L180](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/knowledgebase.py#L92-L180)
+veadk/knowledgebase/knowledgebase.py:L92-L180
 
 ```python
 class KnowledgeBase(BaseModel):
@@ -84,7 +84,7 @@ class KnowledgeBase(BaseModel):
 
 ### 后端选择逻辑（model_post_init）
 
-[veadk/knowledgebase/knowledgebase.py:L156-L185](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/knowledgebase.py#L156-L185)
+veadk/knowledgebase/knowledgebase.py:L156-L185
 
 ```python
 def model_post_init(self, __context: Any, /) -> None:
@@ -113,7 +113,7 @@ def model_post_init(self, __context: Any, /) -> None:
 
 `_get_backend_cls` 函数实现后端类型到类的延迟映射（F-073）：
 
-[veadk/knowledgebase/knowledgebase.py:L30-L89](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/knowledgebase.py#L30-L89)
+veadk/knowledgebase/knowledgebase.py:L30-L89
 
 | 后端 | 类 | 适用场景 | 依赖 |
 |------|-----|---------|------|
@@ -130,7 +130,7 @@ def model_post_init(self, __context: Any, /) -> None:
 
 ### BaseKnowledgebaseBackend 抽象接口
 
-[veadk/knowledgebase/backends/base_backend.py:L20-L58](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/backends/base_backend.py#L20-L58)
+veadk/knowledgebase/backends/base_backend.py:L20-L58
 
 ```python
 class BaseKnowledgebaseBackend(ABC, BaseModel):
@@ -200,7 +200,7 @@ kb.add_from_text(["段落1", "段落2", "段落3"])
 
 ### search：语义检索
 
-[veadk/knowledgebase/knowledgebase.py:L265-L282](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/knowledgebase.py#L265-L282)
+veadk/knowledgebase/knowledgebase.py:L265-L282
 
 ```python
 def search(self, query: str, top_k: int = 0, **kwargs) -> list[KnowledgebaseEntry]
@@ -208,7 +208,7 @@ def search(self, query: str, top_k: int = 0, **kwargs) -> list[KnowledgebaseEntr
 
 对 query 进行语义嵌入后，在向量后端中检索 top_k 个最相似的文档块。返回 `KnowledgebaseEntry` 列表：
 
-[veadk/knowledgebase/entry.py:L18-L25](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/entry.py#L18-L25)
+veadk/knowledgebase/entry.py:L18-L25
 
 ```python
 class KnowledgebaseEntry(BaseModel):
@@ -235,7 +235,7 @@ def close(self) -> None
 
 Agent 在 `model_post_init` 中检测到 `knowledgebase` 字段后，自动将知识库作为工具挂载，Agent 无需手动配置即可在对话中检索知识库（F-021）：
 
-[veadk/agent.py:L306-L324](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L306-L324)（概念性）
+veadk/agent.py:L306-L324（概念性）
 
 ```python
 if self.knowledgebase:
@@ -246,7 +246,7 @@ if self.knowledgebase:
 
 ### LoadKnowledgebaseTool：知识库检索工具
 
-[veadk/tools/builtin_tools/load_knowledgebase.py:L39-L167](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/load_knowledgebase.py#L39-L167)
+veadk/tools/builtin_tools/load_knowledgebase.py:L39-L167
 
 `LoadKnowledgebaseTool` 是一个 `FunctionTool`，向 LLM 暴露 `load_knowledgebase(query)` 函数：
 
@@ -301,7 +301,7 @@ sequenceDiagram
 
 ### KnowledgebaseProfile
 
-[veadk/knowledgebase/types.py:L18-L29](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/types.py#L18-L29)
+veadk/knowledgebase/types.py:L18-L29
 
 ```python
 class KnowledgebaseProfile(BaseModel):
@@ -313,7 +313,7 @@ class KnowledgebaseProfile(BaseModel):
 
 ### generate_profiles：自动生成 Profile
 
-[veadk/knowledgebase/knowledgebase.py:L297-L357](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/knowledgebase.py#L297-L357)
+veadk/knowledgebase/knowledgebase.py:L297-L357
 
 ```python
 async def generate_profiles(self, files: list[str], profile_path: str = ""):
@@ -366,16 +366,16 @@ response = await runner.run(
 
 | 文件 | 职责 |
 |------|------|
-| [veadk/knowledgebase/knowledgebase.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/knowledgebase.py) | KnowledgeBase 门面类、_get_backend_cls、generate_profiles |
-| [veadk/knowledgebase/entry.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/entry.py) | KnowledgebaseEntry 数据模型 |
-| [veadk/knowledgebase/types.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/types.py) | KnowledgebaseProfile 模型 |
-| [veadk/knowledgebase/backends/base_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/backends/base_backend.py) | BaseKnowledgebaseBackend 抽象基类 |
-| [veadk/knowledgebase/backends/in_memory_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/backends/in_memory_backend.py) | 内存后端（开发测试） |
-| [veadk/knowledgebase/backends/opensearch_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/backends/opensearch_backend.py) | OpenSearch 后端 |
-| [veadk/knowledgebase/backends/vikingdb_knowledge_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/backends/vikingdb_knowledge_backend.py) | VikingDB 后端 |
-| [veadk/knowledgebase/backends/redis_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/backends/redis_backend.py) | Redis 向量后端 |
-| [veadk/knowledgebase/backends/milvus_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/knowledgebase/backends/milvus_backend.py) | Milvus 后端 |
-| [veadk/tools/builtin_tools/load_knowledgebase.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/load_knowledgebase.py) | LoadKnowledgebaseTool 检索工具 |
+| veadk/knowledgebase/knowledgebase.py | KnowledgeBase 门面类、_get_backend_cls、generate_profiles |
+| veadk/knowledgebase/entry.py | KnowledgebaseEntry 数据模型 |
+| veadk/knowledgebase/types.py | KnowledgebaseProfile 模型 |
+| veadk/knowledgebase/backends/base_backend.py | BaseKnowledgebaseBackend 抽象基类 |
+| veadk/knowledgebase/backends/in_memory_backend.py | 内存后端（开发测试） |
+| veadk/knowledgebase/backends/opensearch_backend.py | OpenSearch 后端 |
+| veadk/knowledgebase/backends/vikingdb_knowledge_backend.py | VikingDB 后端 |
+| veadk/knowledgebase/backends/redis_backend.py | Redis 向量后端 |
+| veadk/knowledgebase/backends/milvus_backend.py | Milvus 后端 |
+| veadk/tools/builtin_tools/load_knowledgebase.py | LoadKnowledgebaseTool 检索工具 |
 
 ## 相关概念
 

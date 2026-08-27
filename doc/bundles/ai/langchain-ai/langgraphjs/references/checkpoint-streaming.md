@@ -186,6 +186,6 @@ pushMessage(new AIMessage({ content: "processing..." }), config);
 
 ## 相关概念
 
-- [Checkpoint 持久化机制](/ai/langchain-ai/langgraphjs/concepts/checkpointing)
-- [Channels 通道体系](/ai/langchain-ai/langgraphjs/concepts/channels)
-- [Pregel 执行引擎](/ai/langchain-ai/langgraphjs/concepts/pregel-execution)
+- Checkpoint 持久化机制
+- Channels 通道体系
+- Pregel 执行引擎

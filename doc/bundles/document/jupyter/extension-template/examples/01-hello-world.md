@@ -170,4 +170,4 @@ Lumino 的 `Widget` 是 JupyterLab UI 的基础单元：
 - 添加菜单项：使用 `app.commands.addCommand` 的 `isEnabled`/`isToggled` 状态，配合 `IMainMenu` 添加到菜单栏
 - 添加快捷键：在 `commands.addKeyBinding()` 中绑定按键
 - 添加设置：启用 `has_settings` 并集成 ISettingRegistry
-- 参考 [前端扩展开发](/concepts/06-frontend-extension.md) 了解更多 API
+- 参考 [前端扩展开发](../concepts/06-frontend-extension.md) 了解更多 API

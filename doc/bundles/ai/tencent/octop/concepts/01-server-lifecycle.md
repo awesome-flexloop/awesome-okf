@@ -228,6 +228,6 @@ self.services.secret_repo.get_or_create("jwt", lambda: os.urandom(32))
 
 ## 相关概念
 
-- [/concepts/00-architecture.md](/concepts/00-architecture.md)
-- [/concepts/02-agent-runtime.md](/concepts/02-agent-runtime.md)
-- [/concepts/03-gateway-channels.md](/concepts/03-gateway-channels.md)
+- [/concepts/00-architecture.md](00-architecture.md)
+- [/concepts/02-agent-runtime.md](02-agent-runtime.md)
+- [/concepts/03-gateway-channels.md](03-gateway-channels.md)

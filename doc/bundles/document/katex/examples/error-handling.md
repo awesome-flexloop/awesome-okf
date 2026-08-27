@@ -428,12 +428,12 @@ renderMathInElement(document.body, {
 
 ## 相关内容
 
-- [快速开始](/concepts/01-getting-started.md)
-- [配置系统](/concepts/10-settings-options.md)
-- [安全与错误处理](/concepts/18-security-and-errors.md)
-- [基础渲染示例](/examples/basic-render.md)
-- [自动渲染使用示例](/examples/auto-render-usage.md)
-- [常见问题](/concepts/21-common-issues.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [配置系统](../concepts/10-settings-options.md)
+- [安全与错误处理](../concepts/18-security-and-errors.md)
+- [基础渲染示例](basic-render.md)
+- [自动渲染使用示例](auto-render-usage.md)
+- [常见问题](../concepts/21-common-issues.md)
 
 [^web-error]: 官网 Handling Errors 页面，https://katex.org/docs/error
 [^web-security]: 官网 Security 页面，https://katex.org/docs/security

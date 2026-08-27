@@ -645,10 +645,10 @@ wasmUrlQueryParams: (url: string) => {
 
 ## 相关概念
 
-- [03 - 命令系统](/concepts/03-command-system.md)：CommandRegistry、CommandRunner 的整体架构
-- [06 - 文件系统](/concepts/06-filesystem.md)：cockle_fs、PROXYFS、DriveFS 的关系
-- [07 - 缓冲 IO 系统](/concepts/07-buffered-io.md)：WASM 命令的同步 stdin 读取机制
-- [08 - 内置命令详解](/concepts/08-builtin-commands.md)：TypeScript 内置命令（优先级高于WASM）
-- [09 - 外部命令](/concepts/09-external-commands.md)：主线程执行的自定义命令
-- [命令系统参考](/references/command-source.md)：CommandModule/CommandPackage 完整 API
-- [配置参考](/references/config-source.md)：cockle-config.json 完整字段说明
+- [03 - 命令系统](03-command-system.md)：CommandRegistry、CommandRunner 的整体架构
+- [06 - 文件系统](06-filesystem.md)：cockle_fs、PROXYFS、DriveFS 的关系
+- [07 - 缓冲 IO 系统](07-buffered-io.md)：WASM 命令的同步 stdin 读取机制
+- [08 - 内置命令详解](08-builtin-commands.md)：TypeScript 内置命令（优先级高于WASM）
+- [09 - 外部命令](09-external-commands.md)：主线程执行的自定义命令
+- [命令系统参考](../references/command-source.md)：CommandModule/CommandPackage 完整 API
+- [配置参考](../references/config-source.md)：cockle-config.json 完整字段说明

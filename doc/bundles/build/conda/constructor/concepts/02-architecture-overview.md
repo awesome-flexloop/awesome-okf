@@ -233,6 +233,6 @@ constructor/
 
 ## 下一步
 
-- [03-construct.yaml 配置规范](./03-construct-yaml-schema.md)：深入了解所有配置字段
-- [06-FCP依赖求解与包下载](./06-fcp-fetch-and-solve.md)：理解核心求解下载管线
-- [09-平台安装器实现](./09-platform-installers.md)：各平台安装器的具体实现细节
+- [03-construct.yaml 配置规范](03-construct-yaml-schema.md)：深入了解所有配置字段
+- [06-FCP依赖求解与包下载](06-fcp-fetch-and-solve.md)：理解核心求解下载管线
+- [09-平台安装器实现](09-platform-installers.md)：各平台安装器的具体实现细节

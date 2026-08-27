@@ -106,10 +106,10 @@ npx okf add-agent-skill
 
 ## 相关概念
 
-- [OKF Validator](./tooling-validator.md) - 在线可视化验证工具
-- [OKF Knowledge Catalog CLI](./tooling-knowledge-catalog.md) - 官方生态 CLI 工具
-- [合规性](./conformance.md) - validate.sh 检查的规范依据
-- [知识包目录结构](./bundle-structure.md) - Skill 创建的目录布局
+- [OKF Validator](tooling-validator.md) - 在线可视化验证工具
+- [OKF Knowledge Catalog CLI](tooling-knowledge-catalog.md) - 官方生态 CLI 工具
+- [合规性](conformance.md) - validate.sh 检查的规范依据
+- [知识包目录结构](bundle-structure.md) - Skill 创建的目录布局
 - [SaaS 指标快速入门](../examples/saas-metrics-quickstart.md) - Quickstart 教程示例
 
 [^okf-md-skill]: OKF Agent Skill 安装页，见 [okf.md/skill](https://okf.md/skill)。

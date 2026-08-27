@@ -28,40 +28,40 @@ jupyter-chat 是 JupyterLab 的实时协作聊天扩展，基于 Yjs CRDT 实现
 
 | 文档 | 说明 |
 |---|---|
-| [整体架构概览](/concepts/architecture-overview.md) | 包结构、四层架构、双传输模式、核心设计原则 |
-| [双传输架构](/concepts/dual-transport.md) | RTC vs WebSocket 模式详解、统一接口设计 |
-| [模型层架构](/concepts/model-architecture.md) | IChatModel、AbstractChatModel、InputModel 详解 |
-| [组件层次结构](/concepts/component-hierarchy.md) | React 组件树、Lumino Widget 桥接、通信机制 |
-| [Yjs CRDT 同步机制](/concepts/crdt-sync.md) | 共享数据结构、时间戳同步、Awareness 协议 |
-| [消息生命周期](/concepts/message-lifecycle.md) | 消息从创建到渲染的完整流程 |
-| [扩展点系统](/concepts/extension-points.md) | 注册器、Token 注入、元数据扩展 |
-| [生命周期事件](/concepts/lifecycle-events.md) | 事件总线、消息观察者、RTC 事件转发 |
-| [ChatManager 生命周期管理](/concepts/chat-manager.md) | 模型创建、内存管理、不活跃 GC |
-| [附件系统](/concepts/attachment-system.md) | 附件类型、去重存储、ID 引用、打开器 |
+| [整体架构概览](concepts/architecture-overview.md) | 包结构、四层架构、双传输模式、核心设计原则 |
+| [双传输架构](concepts/dual-transport.md) | RTC vs WebSocket 模式详解、统一接口设计 |
+| [模型层架构](concepts/model-architecture.md) | IChatModel、AbstractChatModel、InputModel 详解 |
+| [组件层次结构](concepts/component-hierarchy.md) | React 组件树、Lumino Widget 桥接、通信机制 |
+| [Yjs CRDT 同步机制](concepts/crdt-sync.md) | 共享数据结构、时间戳同步、Awareness 协议 |
+| [消息生命周期](concepts/message-lifecycle.md) | 消息从创建到渲染的完整流程 |
+| [扩展点系统](concepts/extension-points.md) | 注册器、Token 注入、元数据扩展 |
+| [生命周期事件](concepts/lifecycle-events.md) | 事件总线、消息观察者、RTC 事件转发 |
+| [ChatManager 生命周期管理](concepts/chat-manager.md) | 模型创建、内存管理、不活跃 GC |
+| [附件系统](concepts/attachment-system.md) | 附件类型、去重存储、ID 引用、打开器 |
 
 ### API 参考（References）
 
 | 文档 | 说明 |
 |---|---|
-| [核心类型参考](/references/api-types.md) | IUser、IMessageContent、IConfig、IAttachment 等 |
-| [Model API 参考](/references/api-model.md) | IChatModel、AbstractChatModel、InputModel、Message |
-| [Python 后端 API 参考](/references/api-python.md) | BaseChatModel、YChat、WsChatModel、ChatManager |
-| [Token 与命令参考](/references/api-tokens.md) | Lumino Token、命令 ID、工厂类、文件类型注册 |
+| [核心类型参考](references/api-types.md) | IUser、IMessageContent、IConfig、IAttachment 等 |
+| [Model API 参考](references/api-model.md) | IChatModel、AbstractChatModel、InputModel、Message |
+| [Python 后端 API 参考](references/api-python.md) | BaseChatModel、YChat、WsChatModel、ChatManager |
+| [Token 与命令参考](references/api-tokens.md) | Lumino Token、命令 ID、工厂类、文件类型注册 |
 
 ### 示例（Examples）
 
 | 文档 | 说明 |
 |---|---|
-| [最小聊天示例](/examples/minimal-chat.md) | 创建最基本的 JupyterLab 聊天扩展 |
-| [自定义扩展示例](/examples/custom-extension.md) | 自定义工具栏、欢迎消息、元数据扩展 |
-| [Bot 集成示例](/examples/bot-integration.md) | 消息观察者实现 Echo Bot、命令 Bot、AI Bot |
+| [最小聊天示例](examples/minimal-chat.md) | 创建最基本的 JupyterLab 聊天扩展 |
+| [自定义扩展示例](examples/custom-extension.md) | 自定义工具栏、欢迎消息、元数据扩展 |
+| [Bot 集成示例](examples/bot-integration.md) | 消息观察者实现 Echo Bot、命令 Bot、AI Bot |
 
 ## 快速开始
 
-1. 阅读[整体架构概览](/concepts/architecture-overview.md)了解系统设计
-2. 按照[最小聊天示例](/examples/minimal-chat.md)创建第一个聊天扩展
-3. 通过[扩展点系统](/concepts/extension-points.md)了解如何定制功能
-4. 参考[Bot 集成示例](/examples/bot-integration.md)实现自动回复
+1. 阅读[整体架构概览](concepts/architecture-overview.md)了解系统设计
+2. 按照[最小聊天示例](examples/minimal-chat.md)创建第一个聊天扩展
+3. 通过[扩展点系统](concepts/extension-points.md)了解如何定制功能
+4. 参考[Bot 集成示例](examples/bot-integration.md)实现自动回复
 
 ## 包结构
 

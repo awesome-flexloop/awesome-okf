@@ -59,13 +59,13 @@ sphinx-autobuild 是一个基于 **ASGI（Asynchronous Server Gateway Interface�
 
 ### 1. Builder（构建器）
 
-[Builder](/concepts/04-builder-system.md) 负责封装 sphinx-build 的调用逻辑。它接收变更路径列表，依次执行 pre-build 命令、sphinx-build 子进程、post-build 命令。Builder 是一个可调用对象（实现了 `__call__`），在文件变化时被 RebuildServer 调用。
+[Builder](04-builder-system.md) 负责封装 sphinx-build 的调用逻辑。它接收变更路径列表，依次执行 pre-build 命令、sphinx-build 子进程、post-build 命令。Builder 是一个可调用对象（实现了 `__call__`），在文件变化时被 RebuildServer 调用。
 
 关键设计：**构建在独立子进程中执行**，通过 `ProcessPoolExecutor` 提交，避免阻塞 asyncio 事件循环。
 
 ### 2. IgnoreFilter（忽略过滤器）
 
-[IgnoreFilter](/concepts/05-file-watching.md) 决定哪些文件变化应该被忽略。它支持两种匹配模式：
+[IgnoreFilter](05-file-watching.md) 决定哪些文件变化应该被忽略。它支持两种匹配模式：
 
 - **路径前缀/glob 匹配**：对路径前缀和 fnmatch glob 模式进行匹配
 - **正则表达式匹配**：对完整路径进行正则搜索
@@ -74,7 +74,7 @@ sphinx-autobuild 是一个基于 **ASGI（Asynchronous Server Gateway Interface�
 
 ### 3. RebuildServer（重建服务器）
 
-[RebuildServer](/concepts/06-server-and-hotreload.md) 是整个系统的核心控制器，承担两个职责：
+[RebuildServer](06-server-and-hotreload.md) 是整个系统的核心控制器，承担两个职责：
 
 - **文件监听**：通过 `watchfiles.awatch()` 异步监听文件系统变化，过滤后触发 Builder 执行构建
 - **WebSocket 服务**：处理浏览器 WebSocket 连接，构建完成后发送 `"refresh"` 消息触发页面刷新
@@ -83,7 +83,7 @@ sphinx-autobuild 是一个基于 **ASGI（Asynchronous Server Gateway Interface�
 
 ### 4. JavascriptInjectorMiddleware（JS注入中间件）
 
-[JavascriptInjectorMiddleware](/concepts/07-middleware-injection.md) 是一个 ASGI 中间件，拦截 HTML 响应并注入 WebSocket 热重载脚本。它不需要修改 Sphinx 的任何模板或主题文件，对 Sphinx 构建过程完全透明。
+[JavascriptInjectorMiddleware](07-middleware-injection.md) 是一个 ASGI 中间件，拦截 HTML 响应并注入 WebSocket 热重载脚本。它不需要修改 Sphinx 的任何模板或主题文件，对 Sphinx 构建过程完全透明。
 
 ## 请求处理流程
 
@@ -159,9 +159,9 @@ Sphinx 7.2.3 将 CLI 入口从 `sphinx.cmd.build` 模块迁移到 `python -m sph
 
 ## 相关概念
 
-- [CLI 入口与参数解析](/concepts/03-cli-and-entrypoint.md)
-- [构建系统](/concepts/04-builder-system.md)
-- [文件监听与过滤](/concepts/05-file-watching.md)
-- [服务器与热重载](/concepts/06-server-and-hotreload.md)
-- [中间件注入机制](/concepts/07-middleware-injection.md)
-- [sphinx-autobuild 源码信源登记](/references/sphinx-autobuild-source.md)
+- [CLI 入口与参数解析](03-cli-and-entrypoint.md)
+- [构建系统](04-builder-system.md)
+- [文件监听与过滤](05-file-watching.md)
+- [服务器与热重载](06-server-and-hotreload.md)
+- [中间件注入机制](07-middleware-injection.md)
+- [sphinx-autobuild 源码信源登记](../references/sphinx-autobuild-source.md)

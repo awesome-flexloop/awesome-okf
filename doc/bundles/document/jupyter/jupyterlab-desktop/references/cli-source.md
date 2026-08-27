@@ -127,6 +127,6 @@ config 选项：
 
 ## 相关概念
 
-- [CLI 命令系统](/concepts/07-cli-system.md)
-- [Python 环境管理](/concepts/05-python-env-management.md)
-- [设置与配置系统](/concepts/06-settings-config.md)
+- [CLI 命令系统](../concepts/07-cli-system.md)
+- [Python 环境管理](../concepts/05-python-env-management.md)
+- [设置与配置系统](../concepts/06-settings-config.md)

@@ -85,13 +85,13 @@ python main.py --repo https://github.com/pallets/flask --language Chinese
 
 ## 源码
 
-- 核心节点：[nodes.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py)
-- 流程定义：[flow.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/flow.py)
-- 入口程序：[main.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/main.py)
-- 工具函数：[utils/](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/)
-  - [call_llm.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/call_llm.py)
-  - [crawl_github_files.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/crawl_github_files.py)
-  - [crawl_local_files.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/utils/crawl_local_files.py)
+- 核心节点：nodes.py
+- 流程定义：flow.py
+- 入口程序：main.py
+- 工具函数：utils/
+  - call_llm.py
+  - crawl_github_files.py
+  - crawl_local_files.py
 
 ```{toctree}
 :hidden:

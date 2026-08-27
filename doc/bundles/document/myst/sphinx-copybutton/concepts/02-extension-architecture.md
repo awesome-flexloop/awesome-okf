@@ -168,7 +168,7 @@ sphinx-copybutton 代表了一类 Sphinx 扩展的开发范式——**前端增�
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [文本处理与提示符剥离](/concepts/03-text-processing.md)
-- [自定义样式与图标](/concepts/04-customization.md)
-- [sphinx-copybutton 源码路径映射](/references/copybutton-source.md)
+- [快速开始](01-getting-started.md)
+- [文本处理与提示符剥离](03-text-processing.md)
+- [自定义样式与图标](04-customization.md)
+- [sphinx-copybutton 源码路径映射](../references/copybutton-source.md)

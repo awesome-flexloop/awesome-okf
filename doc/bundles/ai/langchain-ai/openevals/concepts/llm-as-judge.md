@@ -358,6 +358,6 @@ const hallucinationEvaluator = createLLMAsJudge({
 
 ## 进一步阅读
 
-- [精确评测器](/ai/langchain-ai/openevals/concepts/exact-evaluators) — 确定性评测，无需 LLM
-- [API 参考](/ai/langchain-ai/openevals/references/api) — `createLLMAsJudge` 完整参数说明
-- [基础评测示例](/ai/langchain-ai/openevals/examples/basic-evaluation) — 包含 LLM-as-Judge 的完整代码
+- 精确评测器 — 确定性评测，无需 LLM
+- API 参考 — `createLLMAsJudge` 完整参数说明
+- 基础评测示例 — 包含 LLM-as-Judge 的完整代码

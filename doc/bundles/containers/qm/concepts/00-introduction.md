@@ -97,7 +97,7 @@ QM 使用多层隔离技术实现"免于干扰"（Freedom from Interference, FFI
 
 ## 相关概念
 
-- [嵌套隔离架构](/bundles/containers/qm/concepts/01-nested-architecture.md)：了解容器→systemd→Podman→嵌套容器的多层隔离架构
-- [三级 OOM 策略与 SELinux 隔离](/bundles/containers/qm/concepts/02-oom-selinux.md)：了解内存不足时的进程优先级和强制访问控制
-- [子系统扩展](/bundles/containers/qm/concepts/03-subsystems.md)：了解 KVM、Wayland、ROS2 等可选子系统
-- [BlueChi 多节点管理](/bundles/containers/qm/concepts/04-bluechi.md)：了解多节点环境下的服务管理
+- [嵌套隔离架构](01-nested-architecture.md)：了解容器→systemd→Podman→嵌套容器的多层隔离架构
+- [三级 OOM 策略与 SELinux 隔离](02-oom-selinux.md)：了解内存不足时的进程优先级和强制访问控制
+- [子系统扩展](03-subsystems.md)：了解 KVM、Wayland、ROS2 等可选子系统
+- [BlueChi 多节点管理](04-bluechi.md)：了解多节点环境下的服务管理

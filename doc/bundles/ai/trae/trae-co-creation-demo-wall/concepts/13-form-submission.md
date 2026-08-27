@@ -89,9 +89,9 @@ POST /api/submit 服务端处理：
 
 ## 相关概念
 
-- [富文本编辑器](/concepts/08-rich-text-editor.md)
-- [COS 对象存储](/concepts/09-cos-storage.md)
-- [CRUD 数据层](/concepts/07-crud-layer.md)
-- [API 路由设计](/concepts/06-api-routes.md)
-- [审核与治理](/concepts/10-audit-governance.md)
-- [作品提交示例](/examples/submit-work.md)
+- [富文本编辑器](08-rich-text-editor.md)
+- [COS 对象存储](09-cos-storage.md)
+- [CRUD 数据层](07-crud-layer.md)
+- [API 路由设计](06-api-routes.md)
+- [审核与治理](10-audit-governance.md)
+- [作品提交示例](../examples/submit-work.md)

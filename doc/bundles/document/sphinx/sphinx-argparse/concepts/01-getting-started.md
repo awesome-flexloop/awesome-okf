@@ -16,7 +16,7 @@ sources:
 
 ## 准备工作
 
-假设你有一个使用 argparse 的 Python 命令行工具。首先确保已安装 sphinx-argparse 并在 `conf.py` 中启用扩展（参见[简介](/concepts/00-introduction.md)的安装部分）。
+假设你有一个使用 argparse 的 Python 命令行工具。首先确保已安装 sphinx-argparse 并在 `conf.py` 中启用扩展（参见[简介](00-introduction.md)的安装部分）。
 
 ## 第一步：组织你的 parser 代码
 
@@ -147,14 +147,14 @@ sphinx-build -b html docs/ docs/_build/html
 
 ## 下一步
 
-- 了解所有[指令选项](/concepts/03-directive-options.md)以掌握更多控制能力
-- 学习如何[单独文档化子命令](/concepts/05-nested-subcommands.md)（使用 `:path:` 选项）
-- 探索[嵌套内容增强](/concepts/06-nested-content-enhancement.md)来精确修改自动生成的描述
-- 如需 Markdown 支持，参见[Markdown 集成](/concepts/07-markdown-support.md)
+- 了解所有[指令选项](03-directive-options.md)以掌握更多控制能力
+- 学习如何[单独文档化子命令](05-nested-subcommands.md)（使用 `:path:` 选项）
+- 探索[嵌套内容增强](06-nested-content-enhancement.md)来精确修改自动生成的描述
+- 如需 Markdown 支持，参见[Markdown 集成](07-markdown-support.md)
 
 ## 相关概念
 
-- [sphinx-argparse 简介](/concepts/00-introduction.md)
-- [argparse 指令基础](/concepts/02-directive-basics.md)
-- [指令选项全解](/concepts/03-directive-options.md)
-- [基础用法完整示例](/examples/basic-usage.md)
+- [sphinx-argparse 简介](00-introduction.md)
+- [argparse 指令基础](02-directive-basics.md)
+- [指令选项全解](03-directive-options.md)
+- [基础用法完整示例](../examples/basic-usage.md)

@@ -412,6 +412,6 @@ spawn master 前调用 `WtaProcess::RefreshProcessPath()` 从注册表刷新系�
 
 | 文件 | 关键内容 |
 |------|---------|
-| [agent_registry.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/agent_registry.rs) | AgentProfile、KNOWN_AGENTS、build_acp_command、resolve_agent_id_from_cmd |
-| [session_watcher/](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/session_watcher/) | CLI 会话分类器（classify_claude/codex/copilot/gemini） |
-| [wt-agent-hooks/](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/wt-agent-hooks/) | 各 Agent 的 hooks 配置 |
+| agent_registry.rs | AgentProfile、KNOWN_AGENTS、build_acp_command、resolve_agent_id_from_cmd |
+| session_watcher/ | CLI 会话分类器（classify_claude/codex/copilot/gemini） |
+| wt-agent-hooks/ | 各 Agent 的 hooks 配置 |

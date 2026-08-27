@@ -90,6 +90,6 @@ jupyterlite-xeus/
 
 ## 信源溯源
 
-- 项目描述来自 [README.md](file:///d:/spaces/SpecWeave/external/libs/jupyter/xeus/README.md)
-- 包版本和依赖来自 [package.json](file:///d:/spaces/SpecWeave/external/libs/jupyter/xeus/package.json) 和 [pyproject.toml](file:///d:/spaces/SpecWeave/external/libs/jupyter/xeus/pyproject.toml)
+- 项目描述来自 README.md
+- 包版本和依赖来自 package.json 和 pyproject.toml
 - 支持内核列表来自 README 特性列表

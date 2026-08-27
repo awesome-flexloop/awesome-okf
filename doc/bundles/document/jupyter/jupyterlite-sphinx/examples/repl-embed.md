@@ -245,8 +245,8 @@ REPL 嵌入演示
 
 ## 相关概念
 
-- [replite 指令详解](/concepts/06-replite-directive.md)
-- [指令系统总览](/concepts/03-directive-overview.md)
-- [配置参考](/references/config-reference.md)
-- [核心模块源码](/references/main-source.md)
-- [TryExamples 指令](/concepts/08-try-examples-directive.md)
+- [replite 指令详解](../concepts/06-replite-directive.md)
+- [指令系统总览](../concepts/03-directive-overview.md)
+- [配置参考](../references/config-reference.md)
+- [核心模块源码](../references/main-source.md)
+- [TryExamples 指令](../concepts/08-try-examples-directive.md)

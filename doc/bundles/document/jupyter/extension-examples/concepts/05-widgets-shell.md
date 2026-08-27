@@ -268,8 +268,8 @@ dispose(): void {
 
 ## 相关概念
 
-- [插件基础与依赖注入](/concepts/03-plugin-basics.md)
-- [命令系统](/concepts/04-commands.md)
-- [信号与事件通信](/concepts/06-signals.md)
-- [命令面板与Launcher](/concepts/07-palette-launcher.md)
-- [核心API与Token参考](/references/core-api-tokens.md)
+- [插件基础与依赖注入](03-plugin-basics.md)
+- [命令系统](04-commands.md)
+- [信号与事件通信](06-signals.md)
+- [命令面板与Launcher](07-palette-launcher.md)
+- [核心API与Token参考](../references/core-api-tokens.md)

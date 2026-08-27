@@ -392,7 +392,7 @@ Pyodide 默认预装以下常用包：
 
 ## 相关文档
 
-- [06-thebe-lite-pyodide.md](/concepts/06-thebe-lite-pyodide.md)：JupyterLite/Pyodide 架构详解
-- [03-thebe-core-api.md](/concepts/03-thebe-core-api.md)：核心 API
-- [04-thebe-configuration.md](/concepts/04-thebe-configuration.md)：配置选项
-- [02-thebe-interactive.md](/examples/02-thebe-interactive.md)：Binder 和直连模式示例
+- [06-thebe-lite-pyodide.md](../concepts/06-thebe-lite-pyodide.md)：JupyterLite/Pyodide 架构详解
+- [03-thebe-core-api.md](../concepts/03-thebe-core-api.md)：核心 API
+- [04-thebe-configuration.md](../concepts/04-thebe-configuration.md)：配置选项
+- [02-thebe-interactive.md](02-thebe-interactive.md)：Binder 和直连模式示例

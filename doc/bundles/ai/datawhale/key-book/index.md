@@ -39,13 +39,13 @@ sources:
 
 | 支柱 | 概念 | 核心问题 | 对应章节 |
 |:---:|:---|:---|:---|
-| 1 | [可学性](/ai/datawhale/key-book/concepts/learnability) | 问题能否从数据中被学习 | 第 2 章 |
-| 2 | [计算复杂度](/ai/datawhale/key-book/concepts/computational-complexity) | 学习需要多少样本与时间 | 第 2、3 章 |
-| 3 | [泛化界](/ai/datawhale/key-book/concepts/generalization-bound) | 经验误差与真实误差差距多大 | 第 4 章 |
-| 4 | [稳定性](/ai/datawhale/key-book/concepts/stability) | 算法对样本扰动是否敏感 | 第 5 章 |
-| 5 | [一致性](/ai/datawhale/key-book/concepts/consistency) | 数据无穷时是否收敛到 Bayes 最优 | 第 6 章 |
-| 6 | [收敛率](/ai/datawhale/key-book/concepts/convergence-rate) | 优化算法以多快速度逼近最优 | 第 7 章 |
-| 7 | [遗憾界](/ai/datawhale/key-book/concepts/regret-bound) | 在线序列决策的累积损失能否受控 | 第 8 章 |
+| 1 | 可学性 | 问题能否从数据中被学习 | 第 2 章 |
+| 2 | 计算复杂度 | 学习需要多少样本与时间 | 第 2、3 章 |
+| 3 | 泛化界 | 经验误差与真实误差差距多大 | 第 4 章 |
+| 4 | 稳定性 | 算法对样本扰动是否敏感 | 第 5 章 |
+| 5 | 一致性 | 数据无穷时是否收敛到 Bayes 最优 | 第 6 章 |
+| 6 | 收敛率 | 优化算法以多快速度逼近最优 | 第 7 章 |
+| 7 | 遗憾界 | 在线序列决策的累积损失能否受控 | 第 8 章 |
 
 ## 三层分析框架
 
@@ -57,15 +57,15 @@ sources:
 
 ## 章节导航
 
-- [第 1 章：预备知识](/ai/datawhale/key-book/references/chapter1) — 集中不等式与分析工具库
-- [第 2 章：可学性](/ai/datawhale/key-book/references/chapter2) — PAC 学习框架
-- [第 3 章：复杂度](/ai/datawhale/key-book/references/chapter3) — VC 维、Natarajan 维、Rademacher 复杂度
-- [第 4 章：泛化界](/ai/datawhale/key-book/references/chapter4) — 有限/无限假设空间泛化保证
-- [第 5 章：稳定性](/ai/datawhale/key-book/references/chapter5) — 算法稳定性与泛化性
-- [第 6 章：一致性](/ai/datawhale/key-book/references/chapter6) — 收敛到 Bayes 最优的条件
-- [第 7 章：收敛率](/ai/datawhale/key-book/references/chapter7) — 确定性与随机优化
-- [第 8 章：遗憾界](/ai/datawhale/key-book/references/chapter8) — 在线学习与赌博机
-- [附录](/ai/datawhale/key-book/references/appendix) — 范数、凸分析、优化、概率论基础
+- 第 1 章：预备知识 — 集中不等式与分析工具库
+- 第 2 章：可学性 — PAC 学习框架
+- 第 3 章：复杂度 — VC 维、Natarajan 维、Rademacher 复杂度
+- 第 4 章：泛化界 — 有限/无限假设空间泛化保证
+- 第 5 章：稳定性 — 算法稳定性与泛化性
+- 第 6 章：一致性 — 收敛到 Bayes 最优的条件
+- 第 7 章：收敛率 — 确定性与随机优化
+- 第 8 章：遗憾界 — 在线学习与赌博机
+- 附录 — 范数、凸分析、优化、概率论基础
 
 ## 核心洞察
 

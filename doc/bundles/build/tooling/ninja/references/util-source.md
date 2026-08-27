@@ -32,7 +32,7 @@ sources:
 
 # 工具集与基础设施 API 参考
 
-> 信源文件：[util.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/util.h)、[disk_interface.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/disk_interface.h)、[string_piece.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/string_piece.h)、[subprocess.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/subprocess.h)、[jobserver.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/jobserver.h)、[metrics.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/metrics.h)
+> 信源文件：util.h、disk_interface.h、string_piece.h、subprocess.h、jobserver.h、metrics.h
 
 本文档记录 Ninja 基础设施模块的完整 API，包括工具函数、磁盘 I/O、字符串处理、子进程管理、GNU Make 兼容 Jobserver 和性能指标收集。
 

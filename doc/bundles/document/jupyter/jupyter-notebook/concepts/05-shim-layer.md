@@ -42,7 +42,7 @@ from notebook_shim.shim import NotebookConfigShimMixin
 class JupyterNotebookApp(NotebookConfigShimMixin, LabServerApp):
 ```
 
-> **信源**: [app.py:L32,L242](/references/00-source-registry.md#S-004)（F-014）
+> **信源**: [app.py:L32,L242](../references/00-source-registry.md#S-004)（F-014）
 
 关键观察：
 1. `NotebookConfigShimMixin` **不在notebook包内**，而是来自独立的 `notebook_shim` 包
@@ -114,7 +114,7 @@ nbclassic_enabled = self.server_extension_is_enabled("nbclassic")
 page_config["nbclassic_enabled"] = nbclassic_enabled
 ```
 
-> **信源**: [app.py:L330-331](/references/00-source-registry.md#S-004)
+> **信源**: [app.py:L330-331](../references/00-source-registry.md#S-004)
 
 nbclassic提供了Notebook 6.x的**完整UI复刻**，在v7的JupyterLab基座上运行经典界面。前端通过 `nbclassic_enabled` 标志检测是否安装了nbclassic，并可能显示切换提示。
 
@@ -203,5 +203,5 @@ def my_setting(self):
 
 ## 下一步
 
-- → [v6到v7迁移指南](./11-migration-guide.md) 完整的迁移检查清单和常见问题
-- → [JupyterHub集成](./07-jupyterhub-integration.md) 多用户环境配置
+- → [v6到v7迁移指南](11-migration-guide.md) 完整的迁移检查清单和常见问题
+- → [JupyterHub集成](07-jupyterhub-integration.md) 多用户环境配置

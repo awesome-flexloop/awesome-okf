@@ -226,4 +226,4 @@ const plugin: JupyterFrontEndPlugin<void> = {
 - [Agent 执行引擎](05-agent-engine.md)
 - [Skill 技能系统](06-skill-system.md)
 - [MCP 协议集成](08-mcp-integration.md)
-- [内置工具参考](/references/built-in-tools.md)
+- [内置工具参考](../references/built-in-tools.md)

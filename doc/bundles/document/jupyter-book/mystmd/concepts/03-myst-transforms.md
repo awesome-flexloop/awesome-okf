@@ -177,8 +177,8 @@ compositePlugin({ plugins, name }) => Plugin
 
 ## 相关概念
 
-- [MyST 解析器](/concepts/02-myst-parser.md)
-- [统一插件架构](/concepts/01-unified-plugin-architecture.md)
-- [目标与引用系统](/concepts/07-targets-references.md)
-- [错误处理与规则 ID](/concepts/05-error-handling.md)
-- [编写自定义 Transform](/examples/02-custom-transform.md)
+- [MyST 解析器](02-myst-parser.md)
+- [统一插件架构](01-unified-plugin-architecture.md)
+- [目标与引用系统](07-targets-references.md)
+- [错误处理与规则 ID](05-error-handling.md)
+- [编写自定义 Transform](../examples/02-custom-transform.md)

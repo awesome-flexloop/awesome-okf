@@ -446,7 +446,7 @@ if __name__ == "__main__":
 
 ## 相关概念
 
-- [Messages API 基础](/python-sdk/concepts/02-messages-basics.md) — 理解消息 content 数组结构和 TextBlock 基础
-- [工具调用（Function Calling）](/python-sdk/concepts/04-tool-use.md) — 学习如何将视觉识别与工具调用结合
-- [多模态视觉示例](/python-sdk/examples/04-vision.md) — 更多可运行的图片分析、OCR、图表解读代码示例
-- [Anthropic Python SDK 客户端入口与基础设施参考](/python-sdk/references/sdk-client.md) — client.files 资源的完整 API 参考
+- [Messages API 基础](02-messages-basics.md) — 理解消息 content 数组结构和 TextBlock 基础
+- [工具调用（Function Calling）](04-tool-use.md) — 学习如何将视觉识别与工具调用结合
+- [多模态视觉示例](../examples/04-vision.md) — 更多可运行的图片分析、OCR、图表解读代码示例
+- [Anthropic Python SDK 客户端入口与基础设施参考](../references/sdk-client.md) — client.files 资源的完整 API 参考

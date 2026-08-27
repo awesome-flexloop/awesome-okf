@@ -27,7 +27,7 @@ sources:
 - Python ≥ 3.11 且 < 3.14
 - 已安装 hermes-agent 和 MCP SDK（`pip install hermes-agent mcp`）
 - Node.js（用于运行 stdio 类型的官方 MCP 服务器，如 `@modelcontextprotocol/server-filesystem`）
-- 理解 [MCP 协议概念](/concepts/mcp-protocol.md)
+- 理解 [MCP 协议概念](../concepts/mcp-protocol.md)
 
 ## 完整代码示例
 

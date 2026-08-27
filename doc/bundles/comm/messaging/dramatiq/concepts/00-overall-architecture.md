@@ -79,11 +79,11 @@ Worker 和 Actor 完全不感知后端差异，通过 Broker 抽象接口解耦�
 
 ## 相关概念
 
-- [Actor 装饰器](/concepts/01-actor-decorator.md)：业务函数如何变为可异步入队的任务单元
-- [Broker 抽象基类](/concepts/02-broker-abstraction.md)：消息中间件的防腐层设计
-- [Worker 线程模型](/concepts/03-worker-threading-model.md)：ConsumerThread 与 WorkerThread 的流水线协作
-- [Message 与序列化](/concepts/04-message-and-serialization.md)：不可变信封的字段结构与编解码
-- [Middleware 中间件管道](/concepts/05-middleware-pipeline.md)：洋葱模型与默认中间件顺序
-- [Encoder 编码层](/concepts/06-encoder.md)：JSON/Pickle 编码器与全局编码器管理
-- [Results 结果后端](/concepts/07-results-backend.md)：任务结果存储与获取
-- [CLI 与 Watcher](/concepts/08-cli-and-watcher.md)：多进程启动与热重载
+- [Actor 装饰器](01-actor-decorator.md)：业务函数如何变为可异步入队的任务单元
+- [Broker 抽象基类](02-broker-abstraction.md)：消息中间件的防腐层设计
+- [Worker 线程模型](03-worker-threading-model.md)：ConsumerThread 与 WorkerThread 的流水线协作
+- [Message 与序列化](04-message-and-serialization.md)：不可变信封的字段结构与编解码
+- [Middleware 中间件管道](05-middleware-pipeline.md)：洋葱模型与默认中间件顺序
+- [Encoder 编码层](06-encoder.md)：JSON/Pickle 编码器与全局编码器管理
+- [Results 结果后端](07-results-backend.md)：任务结果存储与获取
+- [CLI 与 Watcher](08-cli-and-watcher.md)：多进程启动与热重载

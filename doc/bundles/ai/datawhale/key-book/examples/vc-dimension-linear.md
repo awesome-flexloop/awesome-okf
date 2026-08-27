@@ -12,7 +12,7 @@ sources:
 
 # 案例：线性分类器的 VC 维
 
-本案例通过二维线性分类器直观展示 VC 维的含义，是理解[计算复杂度](/ai/datawhale/key-book/concepts/computational-complexity)中"有效自由度"的经典示例。
+本案例通过二维线性分类器直观展示 VC 维的含义，是理解计算复杂度中"有效自由度"的经典示例。
 
 ## 问题设定
 
@@ -99,6 +99,6 @@ $$R(h) \leq \hat{R}_S(h) + \sqrt{\frac{8d\ln\frac{2em}{d}+8\ln\frac{4}{\delta}}{
 
 ## 参见
 
-- [计算复杂度](/ai/datawhale/key-book/concepts/computational-complexity)
-- [泛化界](/ai/datawhale/key-book/concepts/generalization-bound)
-- [第 3 章：复杂性分析](/ai/datawhale/key-book/references/chapter3)
+- 计算复杂度
+- 泛化界
+- 第 3 章：复杂性分析

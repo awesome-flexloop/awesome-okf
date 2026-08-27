@@ -16,9 +16,9 @@
 | 示例 | 建议先读 |
 |------|---------|
 | 01-最小站点 | 无需前置知识 |
-| 02-Pyodide配置 | [01-最小站点](01-minimal-site.md) + [conf.py配置](/concepts/03-sphinx-conf.md) |
-| 03-Xeus配置 | [02-Pyodide配置](02-pyodide-setup.md) + [内核对比](/concepts/04-kernel-comparison.md) |
-| 04-Matplotlib笔记本 | [02或03配置示例](02-pyodide-setup.md) + [NotebookLite](/concepts/07-notebook-embedding.md) |
+| 02-Pyodide配置 | [01-最小站点](01-minimal-site.md) + [conf.py配置](../concepts/03-sphinx-conf.md) |
+| 03-Xeus配置 | [02-Pyodide配置](02-pyodide-setup.md) + [内核对比](../concepts/04-kernel-comparison.md) |
+| 04-Matplotlib笔记本 | [02或03配置示例](02-pyodide-setup.md) + [NotebookLite](../concepts/07-notebook-embedding.md) |
 
 ## 快速选择
 

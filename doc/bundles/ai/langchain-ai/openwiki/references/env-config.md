@@ -324,6 +324,6 @@ type OAuthTokenMapping = {
 
 ## 进一步阅读
 
-- [Agent API 参考](/ai/langchain-ai/openwiki/references/api)
-- [Auth 与 CLI 认证体系](/ai/langchain-ai/openwiki/concepts/auth-cli)
-- [OAuth 认证与 ngrok 示例](/ai/langchain-ai/openwiki/examples/oauth-ngrok)
+- Agent API 参考
+- Auth 与 CLI 认证体系
+- OAuth 认证与 ngrok 示例

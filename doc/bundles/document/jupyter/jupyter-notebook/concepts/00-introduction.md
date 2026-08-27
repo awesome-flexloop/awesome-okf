@@ -15,7 +15,7 @@ sources: ["F-001", "F-002", "F-003"]
 
 Jupyter Notebook 是一个基于Web的交互式计算环境，允许用户创建和共享包含实时代码、方程式、可视化和叙事文本的文档。它支持超过40种编程语言，广泛应用于数据科学、机器学习、学术研究和教育领域。
 
-> **信源**: [pyproject.toml](/references/00-source-registry.md#S-001) 中description定义为 "Jupyter Notebook - A web-based notebook environment for interactive computing"（F-001）
+> **信源**: [pyproject.toml](../references/00-source-registry.md#S-001) 中description定义为 "Jupyter Notebook - A web-based notebook environment for interactive computing"（F-001）
 
 ## v7 的核心变革
 
@@ -93,4 +93,4 @@ Notebook v7 的核心定位是 **JupyterLab的"经典模式"发行版**：
 
 ## 下一步
 
-→ [架构总览](./01-architecture-overview.md) 理解前后端分离架构与请求生命周期
+→ [架构总览](01-architecture-overview.md) 理解前后端分离架构与请求生命周期

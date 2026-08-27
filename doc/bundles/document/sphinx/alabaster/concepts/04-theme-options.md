@@ -255,7 +255,7 @@ html_theme_options = {
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)：最小配置示例
-- [侧边栏组件化设计](/concepts/05-sidebar-components.md)：各侧边栏组件的选项
-- [主题选项定制示例](/examples/custom-theme-options.md)：常见定制场景的完整配置
-- [高级定制开发](/concepts/06-customization-advanced.md)：CSS 覆盖与主题二次开发
+- [快速开始](01-getting-started.md)：最小配置示例
+- [侧边栏组件化设计](05-sidebar-components.md)：各侧边栏组件的选项
+- [主题选项定制示例](../examples/custom-theme-options.md)：常见定制场景的完整配置
+- [高级定制开发](06-customization-advanced.md)：CSS 覆盖与主题二次开发

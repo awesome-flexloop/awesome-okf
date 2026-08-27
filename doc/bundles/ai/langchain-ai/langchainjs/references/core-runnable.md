@@ -182,6 +182,6 @@ type RunnableBatchOptions = {
 
 ## 相关文档
 
-- [Runnable 接口概念](/ai/langchain-ai/langchainjs/concepts/runnable-interface) — 深入理解 Runnable 设计理念
-- [消息与工具 API](/ai/langchain-ai/langchainjs/references/messages-tools) — Message 与 Tool 参考
-- [Agent 与 Middleware API](/ai/langchain-ai/langchainjs/references/agents-middleware) — ReactAgent 参考
+- Runnable 接口概念 — 深入理解 Runnable 设计理念
+- 消息与工具 API — Message 与 Tool 参考
+- Agent 与 Middleware API — ReactAgent 参考

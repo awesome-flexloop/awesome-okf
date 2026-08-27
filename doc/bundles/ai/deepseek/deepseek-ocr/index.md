@@ -55,24 +55,24 @@ res = model.infer(
 
 | 项目 | 路径 | 关系 |
 |---|---|---|
-| DeepSeek-OCR-2 | [/deepseek/deepseek-ocr2/](/ai/deepseek/deepseek-ocr2/) | 升级版，采用 Visual Causal Flow 架构和 Qwen2 解码器编码器 |
+| DeepSeek-OCR-2 | [/deepseek/deepseek-ocr2/](../deepseek-ocr2/index.md) | 升级版，采用 Visual Causal Flow 架构和 Qwen2 解码器编码器 |
 
 ## 文档导航
 
 ### 核心概念
 
-- [总览](/ai/deepseek/deepseek-ocr/concepts/overview) — DeepSeek-OCR 定位、Contexts Optical Compression 理念、双编码器架构
-- [使用模式](/ai/deepseek/deepseek-ocr/concepts/usage-modes) — HuggingFace vs vLLM 部署对比、选择指南
+- 总览 — DeepSeek-OCR 定位、Contexts Optical Compression 理念、双编码器架构
+- 使用模式 — HuggingFace vs vLLM 部署对比、选择指南
 
 ### API 参考
 
-- [API 参考](/ai/deepseek/deepseek-ocr/references/api) — DeepseekOCRForCausalLM、DeepseekOCRProcessor、图像处理函数
-- [推理配置与使用指南](/ai/deepseek/deepseek-ocr/references/inference-config) — 分辨率模式、vLLM/HF 配置、Prompt 参考
+- API 参考 — DeepseekOCRForCausalLM、DeepseekOCRProcessor、图像处理函数
+- 推理配置与使用指南 — 分辨率模式、vLLM/HF 配置、Prompt 参考
 
 ### 使用示例
 
-- [图片 OCR](/ai/deepseek/deepseek-ocr/examples/image-ocr) — 单图/批量图片 OCR 完整代码
-- [PDF OCR](/ai/deepseek/deepseek-ocr/examples/pdf-ocr) — PDF 文档批量推理与性能调优
+- 图片 OCR — 单图/批量图片 OCR 完整代码
+- PDF OCR — PDF 文档批量推理与性能调优
 
 ## 目录结构
 

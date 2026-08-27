@@ -49,26 +49,26 @@ Torch-RecHub 是 Datawhale 开源的 PyTorch 推荐系统工具箱（v0.8.0）�
 
 | 文档 | 内容 |
 |------|------|
-| [模型体系](/ai/datawhale/torch-rechub/concepts/model-architecture) | 四大类模型的组织方式、基类约定、代表性模型 |
-| [特征工程](/ai/datawhale/torch-rechub/concepts/feature-engineering) | SparseFeature/SequenceFeature/DenseFeature、EmbeddingLayer、池化 |
-| [Trainer 系统](/ai/datawhale/torch-rechub/concepts/trainer-system) | 四类 Trainer 的职责、训练循环、损失模式、早停与正则化 |
-| [数据管道](/ai/datawhale/torch-rechub/concepts/data-pipeline) | Dataset、DataGenerator、序列特征生成、Parquet 流式读取 |
-| [ONNX 导出与部署](/ai/datawhale/torch-rechub/concepts/onnx-export) | ONNXExporter、ONNXWrapper、动态轴、量化、向量检索 |
-| [多任务学习](/ai/datawhale/torch-rechub/concepts/multi-task-learning) | MMOE/PLE/ESMM 架构、uwl/metabalance/gradnorm 加权 |
-| [实验跟踪与可视化](/ai/datawhale/torch-rechub/concepts/tracking-and-visualization) | BaseLogger、torchview 模型可视化、评估指标 |
+| 模型体系 | 四大类模型的组织方式、基类约定、代表性模型 |
+| 特征工程 | SparseFeature/SequenceFeature/DenseFeature、EmbeddingLayer、池化 |
+| Trainer 系统 | 四类 Trainer 的职责、训练循环、损失模式、早停与正则化 |
+| 数据管道 | Dataset、DataGenerator、序列特征生成、Parquet 流式读取 |
+| ONNX 导出与部署 | ONNXExporter、ONNXWrapper、动态轴、量化、向量检索 |
+| 多任务学习 | MMOE/PLE/ESMM 架构、uwl/metabalance/gradnorm 加权 |
+| 实验跟踪与可视化 | BaseLogger、torchview 模型可视化、评估指标 |
 
 ### 参考文档
 
-- [模型模块源码登记](/ai/datawhale/torch-rechub/references/models-module)
-- [Trainer 模块源码登记](/ai/datawhale/torch-rechub/references/trainers-module)
-- [基础层模块源码登记](/ai/datawhale/torch-rechub/references/basic-layers-module)
-- [数据与工具模块源码登记](/ai/datawhale/torch-rechub/references/data-and-utils-module)
-- [服务与 ONNX 模块源码登记](/ai/datawhale/torch-rechub/references/serving-and-onnx-module)
+- 模型模块源码登记
+- Trainer 模块源码登记
+- 基础层模块源码登记
+- 数据与工具模块源码登记
+- 服务与 ONNX 模块源码登记
 
 ### 示例
 
-- [DeepFM CTR 训练示例](/ai/datawhale/torch-rechub/examples/deepfm-ctr-training)
-- [DSSM 召回训练与 ONNX 导出](/ai/datawhale/torch-rechub/examples/dssm-matching-export)
+- DeepFM CTR 训练示例
+- DSSM 召回训练与 ONNX 导出
 
 ## 安装
 

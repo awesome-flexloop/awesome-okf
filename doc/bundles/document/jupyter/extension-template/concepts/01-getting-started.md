@@ -192,7 +192,7 @@ Copier 会交互式地让你审核每个变更，避免覆盖你的自定义代�
 
 ## 相关概念
 
-- [项目结构详解](/concepts/04-project-structure.md)
-- [双包构建系统](/concepts/05-build-system.md)
-- [前端扩展开发](/concepts/06-frontend-extension.md)
-- [Copier 模板引擎基础](/concepts/02-copier-basics.md)
+- [项目结构详解](04-project-structure.md)
+- [双包构建系统](05-build-system.md)
+- [前端扩展开发](06-frontend-extension.md)
+- [Copier 模板引擎基础](02-copier-basics.md)

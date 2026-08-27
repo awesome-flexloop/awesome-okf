@@ -271,8 +271,8 @@ katex.__defineFunction({
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [解析器（Parser）](/concepts/05-parser.md)
-- [渲染管线](/concepts/06-render-pipeline.md)
-- [宏系统](/concepts/09-macro-system.md)
-- [自定义扩展示例](/examples/custom-extension.md)
+- [架构总览](02-architecture-overview.md)
+- [解析器（Parser）](05-parser.md)
+- [渲染管线](06-render-pipeline.md)
+- [宏系统](09-macro-system.md)
+- [自定义扩展示例](../examples/custom-extension.md)

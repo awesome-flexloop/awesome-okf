@@ -167,7 +167,7 @@ sources:
 
 ## 相关概念
 
-- [如何使用历代注本](/concepts/05-using-commentaries.md)
-- [德经在前的阅读策略](/concepts/02-de-before-dao.md)
-- [三周通读计划示例](/examples/03-reading-plan.md)
-- [历代注本信源](/references/historical-commentaries.md)
+- [如何使用历代注本](05-using-commentaries.md)
+- [德经在前的阅读策略](02-de-before-dao.md)
+- [三周通读计划示例](../examples/03-reading-plan.md)
+- [历代注本信源](../references/historical-commentaries.md)

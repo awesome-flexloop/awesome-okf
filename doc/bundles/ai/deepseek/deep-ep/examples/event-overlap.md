@@ -323,8 +323,8 @@ recv_x, _, _, handle, event = buffer.dispatch(
 
 ## 相关参考
 
-- [事件系统 API](/ai/deepseek/deep-ep/references/events)
-- [ElasticBuffer API](/ai/deepseek/deep-ep/references/buffer-elastic)
+- 事件系统 API
+- ElasticBuffer API
 - [基础 MoE 示例](basic-moe.md)
 - [ElasticBuffer 配置示例](elastic-buffer.md)
-- [Dispatch/Combine 流程](/ai/deepseek/deep-ep/concepts/dispatch-combine)
+- Dispatch/Combine 流程

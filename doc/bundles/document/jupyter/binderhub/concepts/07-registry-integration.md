@@ -14,7 +14,7 @@ sources:
 
 ## 概述
 
-BinderHub 的注册表集成系统定义在 [registry.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py) 中，负责与 Docker Registry V2 API 交互以检查镜像是否已存在、获取认证令牌以及管理推送凭证。该系统采用可扩展的类层次结构，支持 Docker Hub、Google Artifact Registry、Oracle Cloud Infrastructure Registry (OCIR) 等多种注册表实现，同时提供测试用的 `FakeRegistry` 和基于微服务的 `ExternalRegistryHelper` 用于复杂场景。
+BinderHub 的注册表集成系统定义在 registry.py 中，负责与 Docker Registry V2 API 交互以检查镜像是否已存在、获取认证令牌以及管理推送凭证。该系统采用可扩展的类层次结构，支持 Docker Hub、Google Artifact Registry、Oracle Cloud Infrastructure Registry (OCIR) 等多种注册表实现，同时提供测试用的 `FakeRegistry` 和基于微服务的 `ExternalRegistryHelper` 用于复杂场景。
 
 ## 模块常量
 
@@ -37,7 +37,7 @@ LoggingConfigurable
 
 ## DockerRegistry 基础类
 
-`DockerRegistry`（[registry.py:20-341](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py#L20-L341)）是所有注册表实现的基类，封装了 Docker Registry V2 HTTP API 的认证和镜像查询逻辑。
+`DockerRegistry`（registry.py:20-341）是所有注册表实现的基类，封装了 Docker Registry V2 HTTP API 的认证和镜像查询逻辑。
 
 ### 核心 Traitlets 属性
 
@@ -53,7 +53,7 @@ LoggingConfigurable
 
 ### Docker Config 加载与凭证解析
 
-`_load_docker_config()` 方法（[registry.py:110-117](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py#L110-L117)）在类实例化时自动加载 Docker 配置文件：
+`_load_docker_config()` 方法（registry.py:110-117）在类实例化时自动加载 Docker 配置文件：
 
 ```python
 @default("_docker_config")
@@ -287,7 +287,7 @@ async def _get_image_manifest_from_www_authenticate(self, client, www_auth_heade
 
 ### get_image_manifest()：镜像查询主入口
 
-`get_image_manifest()` 方法（[registry.py:272-333](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py#L272-L333)）是检查镜像是否存在的核心方法。
+`get_image_manifest()` 方法（registry.py:272-333）是检查镜像是否存在的核心方法。
 
 ```python
 async def get_image_manifest(self, image, tag):
@@ -385,7 +385,7 @@ async def get_credentials(self, image, tag):
 
 ## GoogleArtifactRegistry
 
-`GoogleArtifactRegistry`（[registry.py:344-370](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py#L344-L370)）是为 Google Cloud Platform 的 Artifact Registry（以及 GCR）设计的子类，使用 GCE 元数据服务器自动获取服务账户令牌，无需手动配置凭证。
+`GoogleArtifactRegistry`（registry.py:344-370）是为 Google Cloud Platform 的 Artifact Registry（以及 GCR）设计的子类，使用 GCE 元数据服务器自动获取服务账户令牌，无需手动配置凭证。
 
 ```python
 class GoogleArtifactRegistry(DockerRegistry):
@@ -437,7 +437,7 @@ c.BinderHub.builder_required = False
 
 ## ExternalRegistryHelper：外部微服务注册表
 
-`ExternalRegistryHelper`（[registry.py:382-478](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py#L382-L478)）通过一个辅助微服务（通常以 sidecar 形式部署在 BinderHub Pod 中）与注册表交互，解决某些云注册表需要动态创建仓库和短期推送令牌的问题。
+`ExternalRegistryHelper`（registry.py:382-478）通过一个辅助微服务（通常以 sidecar 形式部署在 BinderHub Pod 中）与注册表交互，解决某些云注册表需要动态创建仓库和短期推送令牌的问题。
 
 ### 配置属性
 
@@ -612,12 +612,12 @@ c.BinderHub.image_prefix = "ocir.io/my-tenancy/binder-"
 
 ## 关键源码引用
 
-- DockerRegistry 基类：[registry.py:20-341](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py#L20-L341)
-- 模块常量：[registry.py:16-17](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py#L16-L17)
-- docker config 加载：[registry.py:110-117](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py#L110-L117)
-- WWW-Authenticate 解析：[registry.py:209-225](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py#L209-L225)
-- _get_token()：[registry.py:227-251](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py#L227-L251)
-- get_image_manifest()：[registry.py:272-333](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py#L272-L333)
-- GoogleArtifactRegistry：[registry.py:344-370](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py#L344-L370)
-- FakeRegistry：[registry.py:373-379](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py#L373-L379)
-- ExternalRegistryHelper：[registry.py:382-478](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py#L382-L478)
+- DockerRegistry 基类：registry.py:20-341
+- 模块常量：registry.py:16-17
+- docker config 加载：registry.py:110-117
+- WWW-Authenticate 解析：registry.py:209-225
+- _get_token()：registry.py:227-251
+- get_image_manifest()：registry.py:272-333
+- GoogleArtifactRegistry：registry.py:344-370
+- FakeRegistry：registry.py:373-379
+- ExternalRegistryHelper：registry.py:382-478

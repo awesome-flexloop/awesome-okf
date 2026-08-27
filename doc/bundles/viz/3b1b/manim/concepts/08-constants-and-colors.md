@@ -382,7 +382,7 @@ perpendicular = rotate_vector(direction, PI / 2)
 
 ## 相关概念
 
-- [02 配置系统与 CLI 参数](/concepts/02-configuration.md)
-- [03 Mobject：数学对象基类](/concepts/03-mobject-fundamentals.md)
-- [04 VMobject 与几何图形](/concepts/04-vmobject-and-geometry.md)
-- [07 相机与视角控制](/concepts/07-camera-and-frame.md)
+- [02 配置系统与 CLI 参数](02-configuration.md)
+- [03 Mobject：数学对象基类](03-mobject-fundamentals.md)
+- [04 VMobject 与几何图形](04-vmobject-and-geometry.md)
+- [07 相机与视角控制](07-camera-and-frame.md)

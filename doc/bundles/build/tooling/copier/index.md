@@ -4,7 +4,7 @@ okf_version: "0.2"
 
 # Copier 知识库
 
-本知识包是 Python 项目模板渲染库 [Copier](https://copier.readthedocs.io/) 的系统化中文教程，基于源码深度阅读生成，覆盖从快速上手到高级 API 集成的完整知识体系。Copier 是一个用于从模板创建项目并支持后续更新的库和 CLI 工具，核心特性包括 Jinja2 模板渲染、Git 版本管理、交互式问卷、条件任务、跨版本迁移和智能三向合并更新。所有内容均溯源至 Copier 源码（`external/libs/copier/` 包核心模块），遵循 [OKF v0.2 规范](/concepts/00-introduction.md)。
+本知识包是 Python 项目模板渲染库 [Copier](https://copier.readthedocs.io/) 的系统化中文教程，基于源码深度阅读生成，覆盖从快速上手到高级 API 集成的完整知识体系。Copier 是一个用于从模板创建项目并支持后续更新的库和 CLI 工具，核心特性包括 Jinja2 模板渲染、Git 版本管理、交互式问卷、条件任务、跨版本迁移和智能三向合并更新。所有内容均溯源至 Copier 源码（`external/libs/copier/` 包核心模块），遵循 [OKF v0.2 规范](concepts/00-introduction.md)。
 
 ## 入门与基础（concepts/）
 

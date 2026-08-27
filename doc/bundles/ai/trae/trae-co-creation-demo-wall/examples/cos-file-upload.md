@@ -165,7 +165,7 @@ async function deleteFile(path: string, url: string) {
 
 ## 相关内容
 
-- [COS 对象存储](/concepts/09-cos-storage.md)
-- [作品提交流程](/concepts/13-form-submission.md)
-- [作品提交示例](/examples/submit-work.md)
-- [富文本编辑器](/concepts/08-rich-text-editor.md)
+- [COS 对象存储](../concepts/09-cos-storage.md)
+- [作品提交流程](../concepts/13-form-submission.md)
+- [作品提交示例](submit-work.md)
+- [富文本编辑器](../concepts/08-rich-text-editor.md)

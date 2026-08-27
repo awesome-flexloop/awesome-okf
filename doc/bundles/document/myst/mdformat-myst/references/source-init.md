@@ -31,4 +31,4 @@ sources:
 
 ## 相关概念
 
-- [插件架构](/concepts/01-plugin-architecture.md)
+- [插件架构](../concepts/01-plugin-architecture.md)

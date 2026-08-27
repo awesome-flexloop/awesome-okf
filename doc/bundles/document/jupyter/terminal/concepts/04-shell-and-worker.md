@@ -309,5 +309,5 @@ module.exports = {
 
 - [文件系统与Stdin路由](06-drivefs-and-stdin.md)：DriveFS挂载细节和stdin请求路由
 - [无头命令执行](05-headless-exec.md)：createHeadlessShell的特殊行为
-- [LiteTerminalAPIClient API参考](/references/client-source.md)：API完整签名
-- [Shell与Worker源码信源](/references/shell-source.md)：完整源码细节
+- [LiteTerminalAPIClient API参考](../references/client-source.md)：API完整签名
+- [Shell与Worker源码信源](../references/shell-source.md)：完整源码细节

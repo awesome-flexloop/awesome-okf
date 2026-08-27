@@ -341,10 +341,10 @@ IPython 和 Cockle 虽然一个运行在桌面终端、一个运行在浏览器�
 
 ## 相关概念
 
-- [IPython 简介](/concepts/00-introduction.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [Shell 生命周期](/concepts/03-shell-lifecycle.md)
-- [代码执行管线](/concepts/05-execution-pipeline.md)
-- [终端前端与 GUI 集成](/concepts/13-terminal-frontend.md)
-- [信源参考 - 应用层](/references/app-source.md)
-- [信源参考 - 核心引擎](/references/interactiveshell-source.md)
+- [IPython 简介](00-introduction.md)
+- [快速开始](01-getting-started.md)
+- [Shell 生命周期](03-shell-lifecycle.md)
+- [代码执行管线](05-execution-pipeline.md)
+- [终端前端与 GUI 集成](13-terminal-frontend.md)
+- [信源参考 - 应用层](../references/app-source.md)
+- [信源参考 - 核心引擎](../references/interactiveshell-source.md)

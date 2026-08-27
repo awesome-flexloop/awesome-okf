@@ -107,10 +107,10 @@ Octop 采用单进程、单 asyncio 事件循环模型承载所有用户和 Agen
 
 ## DI 容器：SharedServices
 
-依赖注入通过 `SharedServices` frozen dataclass 手动组装，无 IoC 框架（参见 [/concepts/04-db-di.md](/concepts/04-db-di.md)）。Routers 通过 `Depends(get_server)` 获取 `OctopServer`，再访问 `server.services`。
+依赖注入通过 `SharedServices` frozen dataclass 手动组装，无 IoC 框架（参见 [/concepts/04-db-di.md](04-db-di.md)）。Routers 通过 `Depends(get_server)` 获取 `OctopServer`，再访问 `server.services`。
 
 ## 相关概念
 
-- [/concepts/01-server-lifecycle.md](/concepts/01-server-lifecycle.md)
-- [/concepts/04-db-di.md](/concepts/04-db-di.md)
-- [/concepts/06-cli-commands.md](/concepts/06-cli-commands.md)
+- [/concepts/01-server-lifecycle.md](01-server-lifecycle.md)
+- [/concepts/04-db-di.md](04-db-di.md)
+- [/concepts/06-cli-commands.md](06-cli-commands.md)

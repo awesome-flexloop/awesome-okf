@@ -229,8 +229,8 @@ flowchart TD
 
 ## 相关概念
 
-- [Problem Matcher JSON 格式](/concepts/03-matcher-json.md)
-- [测试 Problem Matcher](/concepts/05-testing.md)
-- [Action 结构解析](/concepts/02-action-structure.md)
-- [自定义 Problem Matcher 示例](/examples/custom-matcher.md)
-- [源码信源登记](/references/github-problem-matcher-source.md)
+- [Problem Matcher JSON 格式](03-matcher-json.md)
+- [测试 Problem Matcher](05-testing.md)
+- [Action 结构解析](02-action-structure.md)
+- [自定义 Problem Matcher 示例](../examples/custom-matcher.md)
+- [源码信源登记](../references/github-problem-matcher-source.md)

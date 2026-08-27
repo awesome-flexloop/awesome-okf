@@ -127,6 +127,6 @@ proof 指令仅支持 `:class:` 选项：
 
 ## 相关概念
 
-- [定理类型详解](/concepts/02-theorem-types.md)
-- [交叉引用与编号映射](/concepts/04-cross-references.md)
-- [数学定理排版示例](/examples/math-theorems.md)
+- [定理类型详解](02-theorem-types.md)
+- [交叉引用与编号映射](04-cross-references.md)
+- [数学定理排版示例](../examples/math-theorems.md)

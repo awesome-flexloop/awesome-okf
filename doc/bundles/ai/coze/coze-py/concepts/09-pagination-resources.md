@@ -276,8 +276,8 @@ for bot in coze.bots.list(
 
 ## 相关概念
 
-- [整体架构概览](/concepts/00-overview-architecture.md) — 服务属性一览
-- [Bot 管理](/concepts/04-bot-management.md) — Bot 列表分页的使用
-- [会话管理](/concepts/06-conversations.md) — 会话和消息列表分页
-- [认证体系](/concepts/01-auth-system.md) — 不同认证方式的权限差异
-- [数据模型、分页与资源管理参考](/references/data-pagination.md) — 所有模型和枚举的完整 API
+- [整体架构概览](00-overview-architecture.md) — 服务属性一览
+- [Bot 管理](04-bot-management.md) — Bot 列表分页的使用
+- [会话管理](06-conversations.md) — 会话和消息列表分页
+- [认证体系](01-auth-system.md) — 不同认证方式的权限差异
+- [数据模型、分页与资源管理参考](../references/data-pagination.md) — 所有模型和枚举的完整 API

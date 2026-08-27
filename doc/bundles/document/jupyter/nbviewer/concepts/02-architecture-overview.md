@@ -174,7 +174,7 @@ IndexHandler CreateHandler ProviderHandler*
 
 ## 相关文档
 
-- [nbviewer简介](/concepts/00-introduction.md)：功能和技术栈概述
-- [应用类与traitlets配置](/concepts/03-app-and-traitlets.md)：NBViewer应用类详解
-- [Handler继承体系](/concepts/04-handler-hierarchy.md)：Handler层次结构
-- [Provider插件系统](/concepts/05-provider-plugin-system.md)：插件机制详解
+- [nbviewer简介](00-introduction.md)：功能和技术栈概述
+- [应用类与traitlets配置](03-app-and-traitlets.md)：NBViewer应用类详解
+- [Handler继承体系](04-handler-hierarchy.md)：Handler层次结构
+- [Provider插件系统](05-provider-plugin-system.md)：插件机制详解

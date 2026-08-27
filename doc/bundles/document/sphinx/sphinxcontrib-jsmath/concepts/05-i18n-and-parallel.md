@@ -197,7 +197,7 @@ sphinxcontrib/jsmath/py.typed
 
 ## 相关概念
 
-- [扩展注册与 setup 函数](/concepts/02-setup-and-registration.md)
-- [数学节点访问者](/concepts/03-math-node-visitors.md)
-- [智能JS加载机制](/concepts/04-smart-js-loading.md)
-- [源码信源登记](/references/jsmath-source.md)
+- [扩展注册与 setup 函数](02-setup-and-registration.md)
+- [数学节点访问者](03-math-node-visitors.md)
+- [智能JS加载机制](04-smart-js-loading.md)
+- [源码信源登记](../references/jsmath-source.md)

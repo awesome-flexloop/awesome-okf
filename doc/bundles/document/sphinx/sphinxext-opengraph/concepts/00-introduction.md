@@ -115,7 +115,7 @@ sphinxext-opengraph 适用于以下场景：
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [配置选项全解](/concepts/02-configuration.md)
-- [核心标签生成流程](/concepts/03-tag-generation.md)
-- [sphinxext-opengraph 源码信源登记](/references/sphinxext-opengraph-source.md)
+- [5分钟快速上手](01-getting-started.md)
+- [配置选项全解](02-configuration.md)
+- [核心标签生成流程](03-tag-generation.md)
+- [sphinxext-opengraph 源码信源登记](../references/sphinxext-opengraph-source.md)

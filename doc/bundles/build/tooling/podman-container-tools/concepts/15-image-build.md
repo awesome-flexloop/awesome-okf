@@ -283,7 +283,7 @@ cgroup_manager = "cgroupfs"
 
 ## 相关概念
 
-- [容器工具生态全景](/concepts/14-ecosystem.md) — Podman/Buildah/Skopeo三剑客与共享底层库
-- [自动化与Machine OS](/concepts/16-automation-ci.md) — automation/CI镜像构建与image_build的关系
-- [无Root容器](/concepts/10-rootless.md) — rootless模式嵌套容器配置
-- [Runtime运行时](/concepts/03-runtime.md) — conmon/crun/storage驱动等运行时组件
+- [容器工具生态全景](14-ecosystem.md) — Podman/Buildah/Skopeo三剑客与共享底层库
+- [自动化与Machine OS](16-automation-ci.md) — automation/CI镜像构建与image_build的关系
+- [无Root容器](10-rootless.md) — rootless模式嵌套容器配置
+- [Runtime运行时](03-runtime.md) — conmon/crun/storage驱动等运行时组件

@@ -275,10 +275,10 @@ model.observe_messages(echo_bot)
 
 ## 相关概念
 
-- [ChatManager 生命周期管理](/concepts/chat-manager.md)
-- [双传输架构](/concepts/dual-transport.md)
-- [消息生命周期](/concepts/message-lifecycle.md)
-- [扩展点系统](/concepts/extension-points.md)
+- [ChatManager 生命周期管理](chat-manager.md)
+- [双传输架构](dual-transport.md)
+- [消息生命周期](message-lifecycle.md)
+- [扩展点系统](extension-points.md)
 
 [^chat-manager-py]: chat_manager.py
 [^events-py]: binderhub/events.py 源码

@@ -288,9 +288,9 @@ lockfile 定制和 piplite wheel 索引是两种不同的包管理机制：
 
 ## 下一步
 
-- [构建时 Addon 系统](/concepts/04-build-addons.md)
-- [浏览器端包管理](/concepts/05-package-management.md)
+- [构建时 Addon 系统](04-build-addons.md)
+- [浏览器端包管理](05-package-management.md)
 
 ## 源码参考
 
-- [Python Addon 源码](/references/addon-source.md)
+- [Python Addon 源码](../references/addon-source.md)

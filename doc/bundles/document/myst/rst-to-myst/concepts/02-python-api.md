@@ -242,6 +242,6 @@ print(yaml_dump({"key": "value", "multiline": "line1\nline2\nline3"}))
 
 ## 相关概念
 
-- [命令行工具详细用法](/concepts/01-cli-usage.md)
-- [三阶段转换流水线架构](/concepts/03-conversion-pipeline.md)
-- [转换选项详解](/concepts/10-configuration-options.md)
+- [命令行工具详细用法](01-cli-usage.md)
+- [三阶段转换流水线架构](03-conversion-pipeline.md)
+- [转换选项详解](10-configuration-options.md)

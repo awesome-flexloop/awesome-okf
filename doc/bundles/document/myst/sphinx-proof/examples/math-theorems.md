@@ -116,10 +116,10 @@ sources:
 
 ## 相关示例
 
-- [自定义编号与配置](/examples/custom-numbering.md)
+- [自定义编号与配置](custom-numbering.md)
 
 ## 相关概念
 
-- [定理类型详解](/concepts/02-theorem-types.md)
-- [证明指令](/concepts/03-proof-directive.md)
-- [交叉引用与编号映射](/concepts/04-cross-references.md)
+- [定理类型详解](../concepts/02-theorem-types.md)
+- [证明指令](../concepts/03-proof-directive.md)
+- [交叉引用与编号映射](../concepts/04-cross-references.md)

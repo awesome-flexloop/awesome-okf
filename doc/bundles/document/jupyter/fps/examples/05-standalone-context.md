@@ -199,6 +199,6 @@ ctx.put(resource, teardown_callback=cleanup)
 
 ## 相关概念
 
-- [上下文与共享值](/concepts/03-context-sharing.md)
-- [模块系统](/concepts/02-module-system.md)
+- [上下文与共享值](../concepts/03-context-sharing.md)
+- [模块系统](../concepts/02-module-system.md)
 - [信号使用](06-signals-usage.md)

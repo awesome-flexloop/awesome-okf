@@ -174,8 +174,8 @@ class Main(Module):
 
 ## 相关概念
 
-- [Web模块](/concepts/07-web-modules.md)
-- [生命周期阶段](/concepts/04-lifecycle-phases.md)
-- [配置系统](/concepts/05-configuration-system.md)
+- [Web模块](../concepts/07-web-modules.md)
+- [生命周期阶段](../concepts/04-lifecycle-phases.md)
+- [配置系统](../concepts/05-configuration-system.md)
 - [模块间共享对象](02-sharing-objects.md)
 - [声明式配置应用](04-declarative-config.md)

@@ -185,6 +185,6 @@ package.json 中的 `jupyterlab.sharedPackages` 配置控制依赖的打包策�
 
 ## 相关概念
 
-- [WebRtcProvider文档提供者](/concepts/04-document-provider.md)
-- [构建与打包系统](/concepts/10-build-and-packaging.md)
-- [房间ID与信令机制](/concepts/05-room-and-signaling.md)
+- [WebRtcProvider文档提供者](04-document-provider.md)
+- [构建与打包系统](10-build-and-packaging.md)
+- [房间ID与信令机制](05-room-and-signaling.md)

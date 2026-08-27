@@ -166,8 +166,8 @@ myst:
 
 ## 相关概念
 
-- [三阶段解析管线](/concepts/03-architecture-pipeline.md)
-- [扩展语法系统](/concepts/05-extension-system.md)
-- [YAML Frontmatter](/concepts/12-frontmatter.md)
-- [Sphinx 集成机制](/concepts/11-sphinx-integration.md)
-- [警告系统](/concepts/14-warning-system.md)
+- [三阶段解析管线](03-architecture-pipeline.md)
+- [扩展语法系统](05-extension-system.md)
+- [YAML Frontmatter](12-frontmatter.md)
+- [Sphinx 集成机制](11-sphinx-integration.md)
+- [警告系统](14-warning-system.md)

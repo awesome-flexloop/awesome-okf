@@ -180,8 +180,8 @@ sphinx_matcher.json 注册了 3 个 matcher，GitHub runner 的行为是：
 
 ## 相关概念
 
-- [三种正则模式详解](/concepts/04-regex-patterns.md)
-- [测试 Problem Matcher](/concepts/05-testing.md)
-- [Action 结构解析](/concepts/02-action-structure.md)
-- [自定义 Problem Matcher 示例](/examples/custom-matcher.md)
-- [源码信源登记](/references/github-problem-matcher-source.md)
+- [三种正则模式详解](04-regex-patterns.md)
+- [测试 Problem Matcher](05-testing.md)
+- [Action 结构解析](02-action-structure.md)
+- [自定义 Problem Matcher 示例](../examples/custom-matcher.md)
+- [源码信源登记](../references/github-problem-matcher-source.md)

@@ -33,10 +33,10 @@ stale_after: 2027-08-22
 
 | 本bundle概念 | 对应laozi-lineage文档 | 跳转场景 |
 |-------------|---------------------|---------|
-| 四大版本系统 | [manuscripts/index.md](../../../../../../bundles/laozi-lineage/manuscripts/index.md) | 需要了解各传本详细考古信息时 |
-| 德经在前的阅读策略 | [variants/de-dao-chapter-order.md](../../../../../../bundles/laozi-lineage/variants/de-dao-chapter-order.md) | 需要深入了解篇序翻转学术争议时 |
-| 避讳字与通假字 | [variants/taboo-bang-guo.md](../../../../../../bundles/laozi-lineage/variants/taboo-bang-guo.md) + [variants/taboo-heng-chang.md](../../../../../../bundles/laozi-lineage/variants/taboo-heng-chang.md) | 需要了解避讳断代法细节时 |
-| 核心异文选读 | [variants/daqi-mian-cheng.md](../../../../../../bundles/laozi-lineage/variants/daqi-mian-cheng.md) | 深入研究"大器免成/晚成"等异文时 |
+| 四大版本系统 | manuscripts/index.md | 需要了解各传本详细考古信息时 |
+| 德经在前的阅读策略 | variants/de-dao-chapter-order.md | 需要深入了解篇序翻转学术争议时 |
+| 避讳字与通假字 | variants/taboo-bang-guo.md + variants/taboo-heng-chang.md | 需要了解避讳断代法细节时 |
+| 核心异文选读 | variants/daqi-mian-cheng.md | 深入研究"大器免成/晚成"等异文时 |
 
 ## 外部在线资源
 
@@ -57,4 +57,4 @@ stale_after: 2027-08-22
 
 ## 相关概念
 
-- [资料库使用指南](/concepts/06-collection-usage.md)
+- [资料库使用指南](../concepts/06-collection-usage.md)

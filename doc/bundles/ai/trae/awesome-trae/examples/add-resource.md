@@ -109,7 +109,7 @@ A Markdown editor built with TRAE, featuring live preview and AI-assisted writin
 
 ## 相关链接
 
-- [Awesome List 定位与双层分类](/concepts/00-introduction.md)
-- [贡献指南与权重评分](/concepts/01-contribution-guide.md)
-- [资源分类详解](/concepts/02-resource-categories.md)
-- [Awesome TRAE 仓库资源索引](/references/awesome-source.md)
+- [Awesome List 定位与双层分类](../concepts/00-introduction.md)
+- [贡献指南与权重评分](../concepts/01-contribution-guide.md)
+- [资源分类详解](../concepts/02-resource-categories.md)
+- [Awesome TRAE 仓库资源索引](../references/awesome-source.md)

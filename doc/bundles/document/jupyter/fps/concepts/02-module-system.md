@@ -218,7 +218,7 @@ async def start(self):
 
 ## 相关概念
 
-- [上下文与共享值](/concepts/03-context-sharing.md)
-- [生命周期阶段](/concepts/04-lifecycle-phases.md)
-- [配置系统](/concepts/05-configuration-system.md)
-- [模块间共享对象](/examples/02-sharing-objects.md)
+- [上下文与共享值](03-context-sharing.md)
+- [生命周期阶段](04-lifecycle-phases.md)
+- [配置系统](05-configuration-system.md)
+- [模块间共享对象](../examples/02-sharing-objects.md)

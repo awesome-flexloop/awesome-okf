@@ -70,5 +70,5 @@ Harness 能力通过 AgentSeek 模板系统交付为可运行项目脚手架，�
 
 ## 相关概念
 
-- [虚拟文件系统与 Context Engineering](./virtual-filesystem-context-engineering.md)——Harness 层最核心的上下文工程底座
+- [虚拟文件系统与 Context Engineering](virtual-filesystem-context-engineering.md)——Harness 层最核心的上下文工程底座
 - [信源登记](../references/readme-source.md)——项目官方仓库与版本要求

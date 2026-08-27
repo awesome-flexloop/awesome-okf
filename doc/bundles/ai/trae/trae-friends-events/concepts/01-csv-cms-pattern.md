@@ -146,8 +146,8 @@ update_readme('README.zh-CN.md', 'zh') # 更新中文版
 
 ## 相关链接
 
-- [Trae Friends 活动仓库简介](/concepts/00-introduction.md)
-- [活动数据格式](/concepts/02-event-data-format.md)
-- [贡献流程](/concepts/03-contribution-workflow.md)
-- [运行更新脚本示例](/examples/run-update-script.md)
-- [添加新活动示例](/examples/add-event.md)
+- [Trae Friends 活动仓库简介](00-introduction.md)
+- [活动数据格式](02-event-data-format.md)
+- [贡献流程](03-contribution-workflow.md)
+- [运行更新脚本示例](../examples/run-update-script.md)
+- [添加新活动示例](../examples/add-event.md)

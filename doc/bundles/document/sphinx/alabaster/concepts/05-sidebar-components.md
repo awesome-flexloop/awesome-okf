@@ -271,7 +271,7 @@ html_sidebars = {
 
 ## 相关概念
 
-- [主题架构四要素](/concepts/02-theme-architecture.md)：模板继承机制
-- [主题配置选项体系](/concepts/04-theme-options.md)：侧边栏相关配置项
-- [高级定制开发](/concepts/06-customization-advanced.md)：自定义模板与 CSS
-- [主题选项定制示例](/examples/custom-theme-options.md)
+- [主题架构四要素](02-theme-architecture.md)：模板继承机制
+- [主题配置选项体系](04-theme-options.md)：侧边栏相关配置项
+- [高级定制开发](06-customization-advanced.md)：自定义模板与 CSS
+- [主题选项定制示例](../examples/custom-theme-options.md)

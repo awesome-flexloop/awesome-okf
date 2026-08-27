@@ -299,6 +299,6 @@ curl -X PUT http://127.0.0.1:8088/api/acp/my-opencode \
 
 ## 相关概念
 
-- [/concepts/05-acp-protocol.md](/concepts/05-acp-protocol.md)
-- [/concepts/06-cli-commands.md](/concepts/06-cli-commands.md)
-- [/concepts/02-agent-runtime.md](/concepts/02-agent-runtime.md)
+- [/concepts/05-acp-protocol.md](../concepts/05-acp-protocol.md)
+- [/concepts/06-cli-commands.md](../concepts/06-cli-commands.md)
+- [/concepts/02-agent-runtime.md](../concepts/02-agent-runtime.md)

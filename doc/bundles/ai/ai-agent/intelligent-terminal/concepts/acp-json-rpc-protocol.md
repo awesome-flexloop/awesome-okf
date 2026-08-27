@@ -391,7 +391,7 @@ orphaned_sessions: Mutex<HashMap<AgentCmdKey, HashSet<SessionId>>>,
 
 | 文件 | 关键内容 |
 |------|---------|
-| [master/mod.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/master/mod.rs) | Master 核心：路由表、反压、多Agent池、session_notification |
-| [protocol/acp/conn.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/protocol/acp/conn.rs) | ClientLink/AgentLink 兼容层、set_session_model 扩展 |
-| [protocol/acp/client.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/protocol/acp/client.rs) | WtaClient、管道连接重试 |
-| [agent_registry.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/agent_registry.rs) | Agent 注册表、命令构建 |
+| master/mod.rs | Master 核心：路由表、反压、多Agent池、session_notification |
+| protocol/acp/conn.rs | ClientLink/AgentLink 兼容层、set_session_model 扩展 |
+| protocol/acp/client.rs | WtaClient、管道连接重试 |
+| agent_registry.rs | Agent 注册表、命令构建 |

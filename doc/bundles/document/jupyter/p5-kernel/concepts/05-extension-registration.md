@@ -237,6 +237,6 @@ jupyter lite build
 
 ## 相关概念
 
-- [架构概览](/concepts/01-architecture-overview.md)
-- [构建与打包](/concepts/06-build-and-packaging.md)
-- [第一个 p5 Sketch](/examples/01-first-sketch.md)
+- [架构概览](01-architecture-overview.md)
+- [构建与打包](06-build-and-packaging.md)
+- [第一个 p5 Sketch](../examples/01-first-sketch.md)

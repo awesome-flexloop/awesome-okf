@@ -215,9 +215,9 @@ with paramiko.SSHClient() as client:
 
 ## 相关概念
 
-- [SSHClient 详解](/concepts/02-ssh-client.md)
-- [Channel 通道](/concepts/04-channel.md)
-- [认证体系](/concepts/05-authentication.md)
-- [交互式 Shell 示例](/examples/interactive-shell.md)
+- [SSHClient 详解](../concepts/02-ssh-client.md)
+- [Channel 通道](../concepts/04-channel.md)
+- [认证体系](../concepts/05-authentication.md)
+- [交互式 Shell 示例](interactive-shell.md)
 
-[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](/references/paramiko-source.md)。
+[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](../references/paramiko-source.md)。

@@ -50,30 +50,30 @@ description: DeepSpec - DeepSeek 投机解码草稿模型训练框架文档，�
 
 ## 文档导航
 
-### 📘 核心概念 [concepts/](/ai/deepseek/deep-spec/concepts/)
+### 📘 核心概念 [concepts/](concepts/index.md)
 
 | 文档 | 内容 |
 |---|---|
-| [概述](/ai/deepseek/deep-spec/concepts/overview) | DeepSpec 整体架构、三种草稿模型对比、训练与评估管线概览、包结构、快速开始 |
-| [投机解码训练方法论](/ai/deepseek/deep-spec/concepts/speculative-decoding-training) | 投机解码基本原理、拒绝采样验证机制、草稿模型训练范式、置信度校准 |
-| [DSpark 模型架构](/ai/deepseek/deep-spec/concepts/dspark-model) | 块级锚点采样、噪声嵌入、Markov头三种变体（vanilla/gated/rnn）、多任务损失设计、DFlash变体 |
-| [Eagle3 模型架构](/ai/deepseek/deep-spec/concepts/eagle3-model) | 5层目标隐状态拼接、双维度注意力、TTT自回归训练、FusedLogSoftmaxLoss Triton融合损失 |
-| [训练管线](/ai/deepseek/deep-spec/concepts/training-pipeline) | FSDP分片策略、BF16Optimizer、CUDAPrefetcher、目标隐状态缓存、可恢复采样器、原子Checkpoint |
+| 概述 | DeepSpec 整体架构、三种草稿模型对比、训练与评估管线概览、包结构、快速开始 |
+| 投机解码训练方法论 | 投机解码基本原理、拒绝采样验证机制、草稿模型训练范式、置信度校准 |
+| DSpark 模型架构 | 块级锚点采样、噪声嵌入、Markov头三种变体（vanilla/gated/rnn）、多任务损失设计、DFlash变体 |
+| Eagle3 模型架构 | 5层目标隐状态拼接、双维度注意力、TTT自回归训练、FusedLogSoftmaxLoss Triton融合损失 |
+| 训练管线 | FSDP分片策略、BF16Optimizer、CUDAPrefetcher、目标隐状态缓存、可恢复采样器、原子Checkpoint |
 
-### 📗 API 参考 [references/](/ai/deepseek/deep-spec/references/)
+### 📗 API 参考 [references/](references/index.md)
 
 | 文档 | 内容 |
 |---|---|
-| [训练 API](/ai/deepseek/deep-spec/references/training-api) | BaseTrainer、DSparkTrainer、Eagle3Trainer、BF16Optimizer、FSDP配置、Checkpoint管理、配置系统 |
-| [模型 API](/ai/deepseek/deep-spec/references/model-api) | Qwen3/Gemma4 DSpark/Eagle3模型类、Markov头（Vanilla/Gated/RNN）、FusedLogSoftmaxLoss、损失函数、配置构建 |
-| [评估 API](/ai/deepseek/deep-spec/references/eval-api) | BaseEvaluator、DSpark/Eagle3评估器、verify_draft_tokens、generate_decoding_sample回调框架、DraftProposal/VerificationResult |
+| 训练 API | BaseTrainer、DSparkTrainer、Eagle3Trainer、BF16Optimizer、FSDP配置、Checkpoint管理、配置系统 |
+| 模型 API | Qwen3/Gemma4 DSpark/Eagle3模型类、Markov头（Vanilla/Gated/RNN）、FusedLogSoftmaxLoss、损失函数、配置构建 |
+| 评估 API | BaseEvaluator、DSpark/Eagle3评估器、verify_draft_tokens、generate_decoding_sample回调框架、DraftProposal/VerificationResult |
 
-### 📙 代码示例 [examples/](/ai/deepseek/deep-spec/examples/)
+### 📙 代码示例 [examples/](examples/index.md)
 
 | 示例 | 内容 |
 |---|---|
-| [DSpark 训练](/ai/deepseek/deep-spec/examples/training-dspark) | DSpark 草稿模型训练完整流程，包括数据准备、配置编写、训练启动、DFlash/Eagle3/Gemma4变体 |
-| [投机解码评估](/ai/deepseek/deep-spec/examples/evaluation) | 模型评估方法，9个评测任务、指标解读、置信度校准与早停、Python API调用 |
+| DSpark 训练 | DSpark 草稿模型训练完整流程，包括数据准备、配置编写、训练启动、DFlash/Eagle3/Gemma4变体 |
+| 投机解码评估 | 模型评估方法，9个评测任务、指标解读、置信度校准与早停、Python API调用 |
 
 ---
 
@@ -165,10 +165,10 @@ DeepSpec/
 
 | 项目 | 关系 |
 |---|---|
-| [FlashMLA](/ai/deepseek/flash-mla/) | DeepSeek 高效 MLA 注意力解码核函数库，可加速目标模型在推理验证阶段的注意力计算，与 DeepSpec 训练的草稿模型协同工作——草稿模型减少目标模型前向次数，FlashMLA 加速每次前向 |
-| [DeepGEMM](/ai/deepseek/deep-gemm/) | DeepSeek 高性能 JIT GEMM 核函数库，为 LLM 训练/推理提供矩阵乘法能力 |
-| [DeepEP](/ai/deepseek/deep-ep/) | DeepSeek 专家并行通信库，提供 all-to-all 通信原语 |
-| [DualPipe](/ai/deepseek/dual-pipe/) | DeepSeek 双向流水线并行调度算法 |
+| [FlashMLA](../flash-mla/index.md) | DeepSeek 高效 MLA 注意力解码核函数库，可加速目标模型在推理验证阶段的注意力计算，与 DeepSpec 训练的草稿模型协同工作——草稿模型减少目标模型前向次数，FlashMLA 加速每次前向 |
+| [DeepGEMM](../deep-gemm/index.md) | DeepSeek 高性能 JIT GEMM 核函数库，为 LLM 训练/推理提供矩阵乘法能力 |
+| [DeepEP](../deep-ep/index.md) | DeepSeek 专家并行通信库，提供 all-to-all 通信原语 |
+| [DualPipe](../dual-pipe/index.md) | DeepSeek 双向流水线并行调度算法 |
 
 ```{toctree}
 :hidden:

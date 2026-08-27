@@ -434,8 +434,8 @@ model = TransformersModel(
 
 ## 相关链接
 
-- [模型层概述](/concepts/09-model-layer.md) — Model 基类设计和多后端架构
-- [工具调用智能体](/concepts/05-tool-calling-agent.md) — 模型 function calling 与工具调用
-- [代码执行智能体](/concepts/06-code-agent.md) — 模型代码生成与 CodeAgent
-- [Models API 参考](/references/models-api.md) — 所有模型类的完整参数和方法
-- [Agents API 参考](/references/agents-api.md) — Agent 构造中 model 参数的使用
+- [模型层概述](../concepts/09-model-layer.md) — Model 基类设计和多后端架构
+- [工具调用智能体](../concepts/05-tool-calling-agent.md) — 模型 function calling 与工具调用
+- [代码执行智能体](../concepts/06-code-agent.md) — 模型代码生成与 CodeAgent
+- [Models API 参考](../references/models-api.md) — 所有模型类的完整参数和方法
+- [Agents API 参考](../references/agents-api.md) — Agent 构造中 model 参数的使用

@@ -87,7 +87,7 @@ numpy
 
 ## Jupyter Surveys的Binder配置
 
-[binder/requirements.txt](../../../../../../external/libs/jupyter/surveys/binder/requirements.txt) 包含分析notebooks所需的核心依赖：
+binder/requirements.txt 包含分析notebooks所需的核心依赖：
 
 - **pandas**：数据处理和分析
 - **matplotlib**：数据可视化

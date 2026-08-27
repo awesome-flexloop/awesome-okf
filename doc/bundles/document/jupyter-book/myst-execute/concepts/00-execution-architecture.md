@@ -118,8 +118,8 @@ thebe 运行时执行产生的 IOutput 对象（@jupyterlab/nbformat 格式）�
 
 ## 相关概念
 
-- [01-myst-execute-kernel.md](/concepts/01-myst-execute-kernel.md)：myst-execute 内核连接和执行机制详解
-- [02-execution-cache.md](/concepts/02-execution-cache.md)：构建时缓存系统设计
-- [03-thebe-core-api.md](/concepts/03-thebe-core-api.md)：thebe 核心 API 链式调用
-- [05-thebe-binder.md](/concepts/05-thebe-binder.md)：Binder 远程连接机制
-- [06-thebe-lite-pyodide.md](/concepts/06-thebe-lite-pyodide.md)：Pyodide 无服务器执行
+- [01-myst-execute-kernel.md](01-myst-execute-kernel.md)：myst-execute 内核连接和执行机制详解
+- [02-execution-cache.md](02-execution-cache.md)：构建时缓存系统设计
+- [03-thebe-core-api.md](03-thebe-core-api.md)：thebe 核心 API 链式调用
+- [05-thebe-binder.md](05-thebe-binder.md)：Binder 远程连接机制
+- [06-thebe-lite-pyodide.md](06-thebe-lite-pyodide.md)：Pyodide 无服务器执行

@@ -23,57 +23,57 @@ sources:
 
 | 文档 | 内容 |
 |------|------|
-| [项目简介](/concepts/00-introduction.md) | 定位、技术栈总览、核心特性、能力边界 |
-| [快速开始](/concepts/01-getting-started.md) | 环境要求、安装步骤、环境变量、数据库初始化、开发启动 |
+| [项目简介](concepts/00-introduction.md) | 定位、技术栈总览、核心特性、能力边界 |
+| [快速开始](concepts/01-getting-started.md) | 环境要求、安装步骤、环境变量、数据库初始化、开发启动 |
 
 ### 核心架构
 
 | 文档 | 内容 |
 |------|------|
-| [架构总览](/concepts/02-architecture-overview.md) | Next.js全栈架构、垂直分表模型、三层数据流、治理闭环 |
-| [数据模型设计](/concepts/03-data-model.md) | Prisma Schema详解、Work五表垂直分表、SysDict字典系统、RBAC角色 |
-| [认证系统](/concepts/04-auth-system.md) | NextAuth v5配置、Credentials+JWT、授权守卫、用户封禁双重检查 |
-| [国际化路由](/concepts/05-i18n-routing.md) | next-intl配置、[language]动态段、三层中间件链、翻译文件 |
+| [架构总览](concepts/02-architecture-overview.md) | Next.js全栈架构、垂直分表模型、三层数据流、治理闭环 |
+| [数据模型设计](concepts/03-data-model.md) | Prisma Schema详解、Work五表垂直分表、SysDict字典系统、RBAC角色 |
+| [认证系统](concepts/04-auth-system.md) | NextAuth v5配置、Credentials+JWT、授权守卫、用户封禁双重检查 |
+| [国际化路由](concepts/05-i18n-routing.md) | next-intl配置、[language]动态段、三层中间件链、翻译文件 |
 
 ### 扩展机制
 
 | 文档 | 内容 |
 |------|------|
-| [API 路由设计](/concepts/06-api-routes.md) | RESTful路由组织、Prisma CRUD、Zod校验、文件上传代理 |
-| [CRUD 数据层](/concepts/07-crud-layer.md) | 通用CRUD函数、zustand缓存、react-query Hooks、表单校验 |
-| [富文本编辑器](/concepts/08-rich-text-editor.md) | Tiptap配置、sanitize-html白名单XSS防护 |
-| [COS 对象存储](/concepts/09-cos-storage.md) | 腾讯云COS SDK、服务端代理上传、类型/大小限制 |
-| [审核与治理](/concepts/10-audit-governance.md) | 双状态审核机、三类审计日志、封禁闭环、管理后台 |
-| [字典系统](/concepts/11-dictionary-system.md) | SysDict/SysDictItem动态分类、labelI18n多语言、字典复用 |
-| [前端组件体系](/concepts/12-frontend-components.md) | shadcn/ui、Radix UI、CRUD通用组件、业务组件、粒子动效 |
-| [作品提交流程](/concepts/13-form-submission.md) | 四步向导、StepIndicator、react-hook-form+zod校验 |
-| [点赞与统计](/concepts/14-like-system.md) | WorkLike唯一约束、计数优化、toggle-like API、排行榜 |
+| [API 路由设计](concepts/06-api-routes.md) | RESTful路由组织、Prisma CRUD、Zod校验、文件上传代理 |
+| [CRUD 数据层](concepts/07-crud-layer.md) | 通用CRUD函数、zustand缓存、react-query Hooks、表单校验 |
+| [富文本编辑器](concepts/08-rich-text-editor.md) | Tiptap配置、sanitize-html白名单XSS防护 |
+| [COS 对象存储](concepts/09-cos-storage.md) | 腾讯云COS SDK、服务端代理上传、类型/大小限制 |
+| [审核与治理](concepts/10-audit-governance.md) | 双状态审核机、三类审计日志、封禁闭环、管理后台 |
+| [字典系统](concepts/11-dictionary-system.md) | SysDict/SysDictItem动态分类、labelI18n多语言、字典复用 |
+| [前端组件体系](concepts/12-frontend-components.md) | shadcn/ui、Radix UI、CRUD通用组件、业务组件、粒子动效 |
+| [作品提交流程](concepts/13-form-submission.md) | 四步向导、StepIndicator、react-hook-form+zod校验 |
+| [点赞与统计](concepts/14-like-system.md) | WorkLike唯一约束、计数优化、toggle-like API、排行榜 |
 
 ### 运维
 
 | 文档 | 内容 |
 |------|------|
-| [Docker 部署](/concepts/15-docker-deployment.md) | 三阶段Dockerfile、五服务compose编排、entrypoint初始化、Nginx |
-| [测试体系](/concepts/16-testing.md) | Docker依赖测试、运行时测试、seed序列测试、部署配置测试 |
+| [Docker 部署](concepts/15-docker-deployment.md) | 三阶段Dockerfile、五服务compose编排、entrypoint初始化、Nginx |
+| [测试体系](concepts/16-testing.md) | Docker依赖测试、运行时测试、seed序列测试、部署配置测试 |
 
 ### 示例
 
 | 文档 | 内容 |
 |------|------|
-| [开发环境搭建](/examples/setup-dev-environment.md) | 从clone到dev启动的完整流程 |
-| [用户注册认证](/examples/user-registration-auth.md) | 注册API、NextAuth登录、Session获取、权限检查 |
-| [作品提交](/examples/submit-work.md) | 四步表单填写、图片上传、富文本编辑、标签选择 |
-| [管理员审核](/examples/admin-review.md) | 后台登录、审核通过/拒绝、荣誉授予、用户管理 |
-| [字典管理](/examples/dictionary-management.md) | 查询字典、添加字典项、国家/城市/分类配置 |
-| [COS 文件上传](/examples/cos-file-upload.md) | 服务端代理上传、文件删除、类型限制 |
-| [Docker 部署](/examples/docker-deploy.md) | docker-compose配置、生产环境变量、Nginx配置 |
-| [自定义 CRUD API](/examples/custom-crud-api.md) | 新增API路由的完整模式（schema+权限+校验+日志） |
+| [开发环境搭建](examples/setup-dev-environment.md) | 从clone到dev启动的完整流程 |
+| [用户注册认证](examples/user-registration-auth.md) | 注册API、NextAuth登录、Session获取、权限检查 |
+| [作品提交](examples/submit-work.md) | 四步表单填写、图片上传、富文本编辑、标签选择 |
+| [管理员审核](examples/admin-review.md) | 后台登录、审核通过/拒绝、荣誉授予、用户管理 |
+| [字典管理](examples/dictionary-management.md) | 查询字典、添加字典项、国家/城市/分类配置 |
+| [COS 文件上传](examples/cos-file-upload.md) | 服务端代理上传、文件删除、类型限制 |
+| [Docker 部署](examples/docker-deploy.md) | docker-compose配置、生产环境变量、Nginx配置 |
+| [自定义 CRUD API](examples/custom-crud-api.md) | 新增API路由的完整模式（schema+权限+校验+日志） |
 
 ### 参考信源
 
 | 文档 | 内容 |
 |------|------|
-| [Demo Wall 源码信源](/references/demo-wall-source.md) | 源码核心文件路径索引（按模块分类） |
+| [Demo Wall 源码信源](references/demo-wall-source.md) | 源码核心文件路径索引（按模块分类） |
 
 ## 学习路径推荐
 

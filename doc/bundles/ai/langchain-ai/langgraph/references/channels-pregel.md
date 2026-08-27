@@ -240,7 +240,7 @@ class ChannelWriteTupleEntry(NamedTuple):
 
 ## 相关概念
 
-- [通道系统](/ai/langchain-ai/langgraph/concepts/channels) — 通道类型详解与选择指南
-- [Pregel 引擎](/ai/langchain-ai/langgraph/concepts/pregel-engine) — BSP 执行模型深度解析
-- [状态图](/ai/langchain-ai/langgraph/concepts/state-graph) — StateGraph 如何编译为 Pregel
-- [检查点持久化](/ai/langchain-ai/langgraph/references/checkpoint-persistence) — Checkpoint 与序列化 API
+- 通道系统 — 通道类型详解与选择指南
+- Pregel 引擎 — BSP 执行模型深度解析
+- 状态图 — StateGraph 如何编译为 Pregel
+- 检查点持久化 — Checkpoint 与序列化 API

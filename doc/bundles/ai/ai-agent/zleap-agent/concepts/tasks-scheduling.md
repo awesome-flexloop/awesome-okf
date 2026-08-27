@@ -254,7 +254,7 @@ pg-boss 的 `schedule` 方法接收 `tz` 参数，确保 cron 在正确时区触
 
 ## 任务管理服务
 
-[TaskManagementService](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/tasks/src/service.ts#L10-L151) 提供任务 CRUD 和手动触发：
+TaskManagementService 提供任务 CRUD 和手动触发：
 
 ```typescript
 export class TaskManagementService {
@@ -309,7 +309,7 @@ async runNow(actor: TaskActor, id: string) {
 
 ## 执行服务
 
-[TaskExecutionService](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/tasks/src/execution.ts#L16-L107) 负责单个任务运行的执行生命周期：
+TaskExecutionService 负责单个任务运行的执行生命周期：
 
 ```typescript
 export class TaskExecutionService {
@@ -356,7 +356,7 @@ stateDiagram-v2
 
 ## Worker 进程
 
-[worker.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/tasks/src/worker.ts) 是独立的 Node.js 进程，负责初始化存储、队列、处理器并开始消费作业：
+worker.ts 是独立的 Node.js 进程，负责初始化存储、队列、处理器并开始消费作业：
 
 ```typescript
 async function main(): Promise<void> {
@@ -491,13 +491,13 @@ export function scheduleKeyForTask(taskId: string): string {
 
 | 文件 | 关键内容 |
 |------|---------|
-| [queue.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/tasks/src/queue.ts) | PgBossTaskQueue、队列创建/策略、cron 调度、singleton 保证、双向同步 |
-| [service.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/tasks/src/service.ts) | TaskManagementService、CRUD、手动触发、过期回收、权限控制 |
-| [execution.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/tasks/src/execution.ts) | TaskExecutionService、运行生命周期、状态转换、孤儿清理 |
-| [worker.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/tasks/src/worker.ts) | Worker 进程入口、AgentTaskHandler、模型解析链、项目上下文、死信处理 |
-| [registry.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/tasks/src/registry.ts) | TaskHandlerRegistry、处理器注册/解析 |
-| [cron.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/tasks/src/cron.ts) | Cron 验证（5字段）、时区验证（IANA + Intl 测试） |
-| [types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/tasks/src/types.ts) | 核心类型定义（CreateTaskInput、TaskRunRequest、TaskHandler、TaskQueue） |
+| queue.ts | PgBossTaskQueue、队列创建/策略、cron 调度、singleton 保证、双向同步 |
+| service.ts | TaskManagementService、CRUD、手动触发、过期回收、权限控制 |
+| execution.ts | TaskExecutionService、运行生命周期、状态转换、孤儿清理 |
+| worker.ts | Worker 进程入口、AgentTaskHandler、模型解析链、项目上下文、死信处理 |
+| registry.ts | TaskHandlerRegistry、处理器注册/解析 |
+| cron.ts | Cron 验证（5字段）、时区验证（IANA + Intl 测试） |
+| types.ts | 核心类型定义（CreateTaskInput、TaskRunRequest、TaskHandler、TaskQueue） |
 
 ## 小结
 

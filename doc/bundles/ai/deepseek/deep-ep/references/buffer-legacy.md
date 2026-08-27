@@ -9,7 +9,7 @@ description: V1 遗留 Buffer 类 API 参考，包括三模式（intranode/inter
 
 # Buffer (Legacy) API 参考
 
-`Buffer` 是 DeepEP V1 的通信缓冲区类，基于 NVSHMEM 构建，支持三种通信模式：节点内高吞吐（NVLink）、节点间高吞吐（RDMA+NVLink）、低延迟（IBGDA）。新代码推荐使用 [ElasticBuffer](/ai/deepseek/deep-ep/references/buffer-elastic)。
+`Buffer` 是 DeepEP V1 的通信缓冲区类，基于 NVSHMEM 构建，支持三种通信模式：节点内高吞吐（NVLink）、节点间高吞吐（RDMA+NVLink）、低延迟（IBGDA）。新代码推荐使用 ElasticBuffer。
 
 ## 构造函数
 
@@ -313,7 +313,7 @@ buffer.low_latency_clean_mask_buffer() -> None
 
 ## 相关参考
 
-- [ElasticBuffer API](/ai/deepseek/deep-ep/references/buffer-elastic) — V2 推荐使用的弹性缓冲区
-- [Elastic vs Legacy 对比](/ai/deepseek/deep-ep/concepts/elastic-vs-legacy)
-- [低延迟模式](/ai/deepseek/deep-ep/concepts/low-latency-mode)
-- [事件系统](/ai/deepseek/deep-ep/references/events)
+- ElasticBuffer API — V2 推荐使用的弹性缓冲区
+- Elastic vs Legacy 对比
+- 低延迟模式
+- 事件系统

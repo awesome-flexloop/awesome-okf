@@ -164,7 +164,7 @@ ai-infra-guard scan -t https://target.com -o result.txt
 
 ## 相关概念
 
-- [指纹规则 DSL](/concepts/02-fingerprint-dsl.md)
-- [CVE 漏洞匹配](/concepts/03-vuln-matching.md)
-- [分布式架构总览](/concepts/00-architecture.md)
-- [Docker 部署示例](/examples/docker-deploy.md)
+- [指纹规则 DSL](../concepts/02-fingerprint-dsl.md)
+- [CVE 漏洞匹配](../concepts/03-vuln-matching.md)
+- [分布式架构总览](../concepts/00-architecture.md)
+- [Docker 部署示例](docker-deploy.md)

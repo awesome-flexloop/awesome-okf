@@ -340,6 +340,6 @@ myst build paper.md --pdf --html --docx
 
 ## 相关概念
 
-- [05-jats-export](/concepts/05-jats-export.md)：JATS XML 导出（对称反向）
-- [02-latex-export](/concepts/02-latex-export.md)：LaTeX 导出（对称反向）
-- [09-import-converters](/concepts/09-import-converters.md)：导入转换器详解
+- [05-jats-export](../concepts/05-jats-export.md)：JATS XML 导出（对称反向）
+- [02-latex-export](../concepts/02-latex-export.md)：LaTeX 导出（对称反向）
+- [09-import-converters](../concepts/09-import-converters.md)：导入转换器详解

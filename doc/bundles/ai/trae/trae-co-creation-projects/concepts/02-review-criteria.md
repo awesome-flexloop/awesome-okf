@@ -94,7 +94,7 @@ Collaboration 维度的 30% 权重主要评估：
 
 ## 相关链接
 
-- [共创项目仓库定位与协作核心理念](/concepts/00-introduction.md)
-- [项目提交流程与 Issue 表单](/concepts/01-project-submission.md)
-- [提交共创项目示例](/examples/submit-project.md)
-- [共创项目仓库资源索引](/references/co-creation-source.md)
+- [共创项目仓库定位与协作核心理念](00-introduction.md)
+- [项目提交流程与 Issue 表单](01-project-submission.md)
+- [提交共创项目示例](../examples/submit-project.md)
+- [共创项目仓库资源索引](../references/co-creation-source.md)

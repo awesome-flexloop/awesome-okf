@@ -139,6 +139,6 @@ interface IRect {
 
 ## 相关概念
 
-- [架构概览](/concepts/01-architecture-overview.md)
-- [Python 环境管理](/concepts/05-python-env-management.md)
-- [CLI 命令系统](/concepts/07-cli-system.md)
+- [架构概览](../concepts/01-architecture-overview.md)
+- [Python 环境管理](../concepts/05-python-env-management.md)
+- [CLI 命令系统](../concepts/07-cli-system.md)

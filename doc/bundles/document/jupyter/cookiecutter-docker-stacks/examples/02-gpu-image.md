@@ -257,6 +257,6 @@ A: GPU镜像本身就比较大（PyTorch+CUDA通常5-10GB）。可以通过以�
 
 ## 相关概念
 
-- [预设配置与基础镜像选择](/concepts/08-config-presets.md)
-- [Dockerfile模板与编写指南](/concepts/04-dockerfile-template.md)
-- [测试框架详解](/concepts/05-testing-framework.md)
+- [预设配置与基础镜像选择](../concepts/08-config-presets.md)
+- [Dockerfile模板与编写指南](../concepts/04-dockerfile-template.md)
+- [测试框架详解](../concepts/05-testing-framework.md)

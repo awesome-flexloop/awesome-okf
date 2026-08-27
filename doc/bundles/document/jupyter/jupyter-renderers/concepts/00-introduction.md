@@ -43,7 +43,7 @@ jupyter-renderers 包含两种不同类型的 JupyterLab 扩展：
 1. **MIME 渲染器扩展**（mimeExtension）：fasta、geojson、vega3——注册特定 MIME 类型的渲染工厂，在 Notebook 输出或文件查看器中渲染富媒体内容。
 2. **应用服务扩展**（extension）：katex、mathjax2——提供 `ILatexTypesetter` 服务，替换 JupyterLab 默认的数学公式排版引擎。它们不渲染文件，而是作为全局服务被其他组件调用。
 
-详见[扩展类型详解](/concepts/03-extension-types.md)。
+详见[扩展类型详解](03-extension-types.md)。
 
 ## 安装
 
@@ -71,10 +71,10 @@ pip install jupyterlab-vega3
 
 ## 相关概念
 
-- [Monorepo 架构与构建系统](/concepts/01-monorepo-architecture.md)
-- [MIME 渲染器开发模式](/concepts/02-mime-renderer-pattern.md)
-- [扩展类型：MIME 渲染器 vs 应用扩展](/concepts/03-extension-types.md)
-- [IRenderMime 核心 API 参考](/references/rendermime-interfaces-api.md)
+- [Monorepo 架构与构建系统](01-monorepo-architecture.md)
+- [MIME 渲染器开发模式](02-mime-renderer-pattern.md)
+- [扩展类型：MIME 渲染器 vs 应用扩展](03-extension-types.md)
+- [IRenderMime 核心 API 参考](../references/rendermime-interfaces-api.md)
 
 [^readme]: 项目说明
 [^root-pkg]: root package.json

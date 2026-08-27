@@ -166,6 +166,6 @@ pytest --fixtures -p pytest_jupyter
 
 ## 相关概念
 
-- [Core插件详解](/concepts/03-core-plugin.md) — Core插件fixtures完整API
-- [架构总览](/concepts/02-architecture-overview.md) — 异步测试支持机制
+- [Core插件详解](../concepts/03-core-plugin.md) — Core插件fixtures完整API
+- [架构总览](../concepts/02-architecture-overview.md) — 异步测试支持机制
 - [内核测试示例](02-kernel-testing.md) — 升级到Client插件测试内核

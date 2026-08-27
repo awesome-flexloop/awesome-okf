@@ -111,6 +111,6 @@ cookiecutter.json (用户输入)
 
 ## 相关概念
 
-- [Cookiecutter 模板引擎基础](/concepts/02-cookiecutter-basics.md)
-- [项目结构详解](/concepts/03-project-structure.md)
-- [post_gen_project 钩子解析](/references/post-gen-hook-source.md)
+- [Cookiecutter 模板引擎基础](../concepts/02-cookiecutter-basics.md)
+- [项目结构详解](../concepts/03-project-structure.md)
+- [post_gen_project 钩子解析](post-gen-hook-source.md)

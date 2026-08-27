@@ -18,7 +18,7 @@ sources:
 
 # 构建环境
 
-`BuildEnvironment`（定义在 [sphinx/environment/__init__.py](file:///d:/spaces/SpecWeave/external/libs/docs/sphinx/sphinx/environment/__init__.py)）是 Sphinx 构建过程中的核心数据容器。它存储所有文档的索引信息、依赖关系、域数据、TOC结构、搜索索引等，并通过 pickle 序列化到磁盘实现增量构建。理解 BuildEnvironment 是理解 Sphinx 如何"记住"上次构建结果并只重新处理变更文档的关键。
+`BuildEnvironment`（定义在 sphinx/environment/__init__.py）是 Sphinx 构建过程中的核心数据容器。它存储所有文档的索引信息、依赖关系、域数据、TOC结构、搜索索引等，并通过 pickle 序列化到磁盘实现增量构建。理解 BuildEnvironment 是理解 Sphinx 如何"记住"上次构建结果并只重新处理变更文档的关键。
 
 ## 核心数据结构
 

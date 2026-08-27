@@ -246,10 +246,10 @@ history = MongoDBChatMessageHistory(
 - **MongoDBRecordManager**（`indexes.py`）：跟踪文档写入时间，配合 LangChain indexing API 实现增量更新
 - **MongoDBDocStore**（`docstores.py`）：`BaseStore[str, Document]` 实现，用于父文档检索等场景的 KV 存储
 
-这些组件共同构成完整的 RAG 状态管理层。详见 [API 参考](/ai/langchain-ai/langchain-mongodb/references/api)。
+这些组件共同构成完整的 RAG 状态管理层。详见 API 参考。
 
 ## 相关阅读
 
-- [总览](/ai/langchain-ai/langchain-mongodb/concepts/overview)
-- [向量存储架构](/ai/langchain-ai/langchain-mongodb/concepts/vector-store)
-- [基础使用示例](/ai/langchain-ai/langchain-mongodb/examples/basic-usage)
+- 总览
+- 向量存储架构
+- 基础使用示例

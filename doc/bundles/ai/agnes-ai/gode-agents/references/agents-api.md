@@ -539,11 +539,11 @@ def to_dict(self) -> dict[str, Any]
 
 ## 相关概念
 
-- [智能体架构概述](/concepts/agent-architecture.md) — MultiStepAgent的ReAct循环设计
-- [工具调用智能体](/concepts/tool-calling-agent.md) — ToolCallingAgent的JSON工具调用机制
-- [代码执行智能体](/concepts/code-agent.md) — CodeAgent的Python代码执行机制
-- [提示词模板系统](/concepts/prompt-templates.md) — PromptTemplates和YAML提示词配置
-- [模型API参考](/references/models-api.md) — Model基类和各实现类
-- [工具API参考](/references/tools-api.md) — Tool基类和工具定义
-- [内存API参考](/references/memory-api.md) — AgentMemory和MemoryStep体系
-- [执行器API参考](/references/executor-api.md) — PythonExecutor和执行环境
+- 智能体架构概述 — MultiStepAgent的ReAct循环设计
+- 工具调用智能体 — ToolCallingAgent的JSON工具调用机制
+- 代码执行智能体 — CodeAgent的Python代码执行机制
+- 提示词模板系统 — PromptTemplates和YAML提示词配置
+- [模型API参考](models-api.md) — Model基类和各实现类
+- [工具API参考](tools-api.md) — Tool基类和工具定义
+- [内存API参考](memory-api.md) — AgentMemory和MemoryStep体系
+- [执行器API参考](executor-api.md) — PythonExecutor和执行环境

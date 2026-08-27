@@ -53,10 +53,10 @@ LangChain.js 的架构分为三个层次：
 
 | 模块 | 核心抽象 | 说明 |
 |---|---|---|
-| [Runnable](/ai/langchain-ai/langchainjs/concepts/runnable-interface) | `Runnable` 类 | 一切组件的统一执行接口 |
-| [Messages](/ai/langchain-ai/langchainjs/concepts/message-system) | `BaseMessage` 类族 | 对话消息类型系统 |
-| [Tools](/ai/langchain-ai/langchainjs/concepts/tool-definition) | `StructuredTool` 类 | 工具定义与调用 |
-| [Prompts](/ai/langchain-ai/langchainjs/concepts/prompt-templates) | `BasePromptTemplate` 类 | 提示模板 |
+| Runnable | `Runnable` 类 | 一切组件的统一执行接口 |
+| Messages | `BaseMessage` 类族 | 对话消息类型系统 |
+| Tools | `StructuredTool` 类 | 工具定义与调用 |
+| Prompts | `BasePromptTemplate` 类 | 提示模板 |
 | Documents | `Document` 类 | 文本文档与元数据 |
 | Embeddings | `Embeddings` 抽象类 | 文本向量化 |
 | Callbacks | `BaseCallbackHandler` | 生命周期事件钩子 |
@@ -69,15 +69,15 @@ LangChain.js 的架构分为三个层次：
 
 | 模块 | 核心 API | 说明 |
 |---|---|---|
-| [ReactAgent](/ai/langchain-ai/langchainjs/concepts/react-agent) | `createAgent()` | 生产级 ReAct Agent |
-| [Middleware](/ai/langchain-ai/langchainjs/concepts/middleware) | `createMiddleware()` | Agent 横切扩展系统 |
+| ReactAgent | `createAgent()` | 生产级 ReAct Agent |
+| Middleware | `createMiddleware()` | Agent 横切扩展系统 |
 | Chat Models | 通用聊天模型封装 | 统一模型接口 |
 
 ## 设计哲学
 
 ### 1. Runnable 统一一切
 
-所有核心组件——LLM、Chat Model、Prompt Template、Output Parser、Tool、Retriever——都继承自 `Runnable`。这意味着它们共享同一套执行接口（`invoke`/`batch`/`stream`）和组合子（`pipe`/`withRetry`/`withFallbacks`）。详见 [Runnable 接口](/ai/langchain-ai/langchainjs/concepts/runnable-interface)。
+所有核心组件——LLM、Chat Model、Prompt Template、Output Parser、Tool、Retriever——都继承自 `Runnable`。这意味着它们共享同一套执行接口（`invoke`/`batch`/`stream`）和组合子（`pipe`/`withRetry`/`withFallbacks`）。详见 Runnable 接口。
 
 ### 2. 组合优于继承
 
@@ -132,21 +132,21 @@ await agent.invoke({
 
 ### 核心概念
 
-- [Runnable 接口](/ai/langchain-ai/langchainjs/concepts/runnable-interface) — 统一执行抽象与组合子
-- [消息系统](/ai/langchain-ai/langchainjs/concepts/message-system) — Message 类型层次与 tool_call
-- [工具定义](/ai/langchain-ai/langchainjs/concepts/tool-definition) — StructuredTool 与 tool 工厂
-- [提示模板](/ai/langchain-ai/langchainjs/concepts/prompt-templates) — PromptTemplate 与 ChatPromptTemplate
-- [ReAct Agent](/ai/langchain-ai/langchainjs/concepts/react-agent) — createAgent 与图编排
-- [Middleware](/ai/langchain-ai/langchainjs/concepts/middleware) — Agent 横切扩展
-- [Document 与 Embedding](/ai/langchain-ai/langchainjs/concepts/document-embedding) — 文档与向量化
+- Runnable 接口 — 统一执行抽象与组合子
+- 消息系统 — Message 类型层次与 tool_call
+- 工具定义 — StructuredTool 与 tool 工厂
+- 提示模板 — PromptTemplate 与 ChatPromptTemplate
+- ReAct Agent — createAgent 与图编排
+- Middleware — Agent 横切扩展
+- Document 与 Embedding — 文档与向量化
 
 ### API 参考
 
-- [Runnable 核心 API](/ai/langchain-ai/langchainjs/references/core-runnable)
-- [Message 与 Tool API](/ai/langchain-ai/langchainjs/references/messages-tools)
-- [Agent 与 Middleware API](/ai/langchain-ai/langchainjs/references/agents-middleware)
+- Runnable 核心 API
+- Message 与 Tool API
+- Agent 与 Middleware API
 
 ### 使用示例
 
-- [构建 LCEL 链](/ai/langchain-ai/langchainjs/examples/lcel-chain) — Prompt → Model → Parser 管道
-- [创建 ReAct Agent](/ai/langchain-ai/langchainjs/examples/react-agent) — 工具调用 Agent 完整示例
+- 构建 LCEL 链 — Prompt → Model → Parser 管道
+- 创建 ReAct Agent — 工具调用 Agent 完整示例

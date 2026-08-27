@@ -280,7 +280,7 @@ Podman 的自动化基础设施体现了成熟开源项目的工程实践：
 
 ## 相关概念
 
-- [容器工具生态全景](/concepts/14-ecosystem.md) — automation/community/image_build/podman-machine-os五大子目录概览
-- [官方镜像构建](/concepts/15-image-build.md) — image_build/用户镜像构建与automation/CI镜像的对比
-- [架构概览](/concepts/02-architecture-overview.md) — Podman Machine虚拟机在跨平台架构中的角色
-- [无Root容器](/concepts/10-rootless.md) — Machine OS镜像中的rootless模式预配置
+- [容器工具生态全景](14-ecosystem.md) — automation/community/image_build/podman-machine-os五大子目录概览
+- [官方镜像构建](15-image-build.md) — image_build/用户镜像构建与automation/CI镜像的对比
+- [架构概览](02-architecture-overview.md) — Podman Machine虚拟机在跨平台架构中的角色
+- [无Root容器](10-rootless.md) — Machine OS镜像中的rootless模式预配置

@@ -226,8 +226,8 @@ mock-socket → MockWebSocket.onmessage
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [三插件体系](/concepts/03-plugin-system.md)
-- [YAML/JSON 语言服务器实现](/concepts/06-yaml-server.md)
-- [Mock-Socket 桥接机制](/concepts/05-mock-socket-bridge.md)
-- [添加自定义语言服务器](/examples/add-custom-language-server.md)
+- [架构总览](02-architecture-overview.md)
+- [三插件体系](03-plugin-system.md)
+- [YAML/JSON 语言服务器实现](06-yaml-server.md)
+- [Mock-Socket 桥接机制](05-mock-socket-bridge.md)
+- [添加自定义语言服务器](../examples/add-custom-language-server.md)

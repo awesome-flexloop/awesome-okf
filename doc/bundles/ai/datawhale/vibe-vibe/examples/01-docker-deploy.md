@@ -199,5 +199,5 @@ Vibe Vibe 采用 CC BY-NC-SA 4.0 许可证。私有化部署时：
 
 ## 相关概念
 
-- [多语言文档架构](/ai/datawhale/vibe-vibe/concepts/03-multilingual-docs-architecture.md)：VitePress 双语构建、首页重定向、交互组件体系。
-- [Vibe 开发理念](/ai/datawhale/vibe-vibe/concepts/01-vibe-coding-philosophy.md)：站点承载的教学内容与 AI 创造工作流。
+- [多语言文档架构](../concepts/03-multilingual-docs-architecture.md)：VitePress 双语构建、首页重定向、交互组件体系。
+- [Vibe 开发理念](../concepts/01-vibe-coding-philosophy.md)：站点承载的教学内容与 AI 创造工作流。

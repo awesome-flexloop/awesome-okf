@@ -178,6 +178,6 @@ export default plugin;
 
 ## 相关概念
 
-- [插件基础与依赖注入](/concepts/03-plugin-basics.md)
-- [命令系统](/concepts/04-commands.md)
-- [项目搭建与开发工作流](/concepts/02-project-setup.md)
+- [插件基础与依赖注入](../concepts/03-plugin-basics.md)
+- [命令系统](../concepts/04-commands.md)
+- [项目搭建与开发工作流](../concepts/02-project-setup.md)

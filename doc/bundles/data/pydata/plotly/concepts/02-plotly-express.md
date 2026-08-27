@@ -32,7 +32,7 @@ Plotly Express（简称 `px`）是 Plotly.py 提供的高级绘图接口，以"�
 
 ## 模块入口
 
-`plotly.express` 模块通过 [__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/express/__init__.py) 导出三大类内容：
+`plotly.express` 模块通过 __init__.py 导出三大类内容：
 
 1. **图表工厂函数**（来自 `_chart_types.py`）：`scatter`, `line`, `bar`, `pie`, `histogram`, `box`, `violin`, `imshow` 等 40+ 函数
 2. **核心工具**（来自 `_core.py`）：`set_mapbox_access_token`, `defaults`, `get_trendline_results`, `NO_COLOR`
@@ -43,7 +43,7 @@ Plotly Express 依赖 numpy（必需）、narwhals（DataFrame 抽象层，支�
 
 ## 图表工厂函数（_chart_types.py）
 
-[_chart_types.py](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/express/_chart_types.py) 中定义了所有图表类型的工厂函数。每个函数遵循统一模式：
+_chart_types.py 中定义了所有图表类型的工厂函数。每个函数遵循统一模式：
 
 ```python
 def scatter(
@@ -68,7 +68,7 @@ def scatter(
     return make_figure(args=locals(), constructor=go.Scatter)
 ```
 
-所有工厂函数最终都调用 [_core.py](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/express/_core.py) 中的 `make_figure()` 函数，传入：
+所有工厂函数最终都调用 _core.py 中的 `make_figure()` 函数，传入：
 
 - `args=locals()`：所有调用参数（包括默认值）
 - `constructor`：底层 graph_objects Trace 类（如 `go.Scatter`, `go.Bar`, `go.Histogram2dContour`）
@@ -270,7 +270,7 @@ fig = px.line(df, x="year", y=["gdpPercap", "lifeExp"])
 
 ### 特殊输入类型
 
-[_special_inputs.py](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/express/_special_inputs.py) 提供三种特殊输入包装器：
+_special_inputs.py 提供三种特殊输入包装器：
 
 - **`IdentityMap`**：将列值直接用作视觉属性（不做映射转换）
 - **`Constant`**：将常量值应用于所有数据点
@@ -286,7 +286,7 @@ fig = px.scatter(x=[1,2,3,4], y=[10,11,12,13], color=[0,0,1,1])
 
 ## _core.py 核心逻辑
 
-[_core.py](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/express/_core.py) 是 Plotly Express 的核心引擎，主要逻辑包括：
+_core.py 是 Plotly Express 的核心引擎，主要逻辑包括：
 
 ### 属性分类（all_attrables）
 
@@ -302,7 +302,7 @@ all_attrables = direct_attrables + array_attrables + group_attrables + renameabl
 
 ### PxDefaults 默认配置
 
-[PxDefaults](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/express/_core.py#L54) 类（实例为 `px.defaults`）管理全局默认值：
+PxDefaults 类（实例为 `px.defaults`）管理全局默认值：
 
 ```python
 px.defaults.template = "plotly_dark"       # 全局模板

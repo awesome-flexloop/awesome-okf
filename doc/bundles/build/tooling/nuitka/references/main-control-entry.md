@@ -26,7 +26,7 @@ status: active
 
 # Nuitka 主控制入口 API 参考
 
-> 源码路径：[nuitka/MainControl.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/MainControl.py)
+> 源码路径：nuitka/MainControl.py
 
 ## 概述
 

@@ -55,8 +55,8 @@ Sphinx 是 Python 生态最主流的文档生成器，但搭建完整的文档�
 
 ## 相关概念
 
-- [快速上手](/concepts/01-getting-started.md)：5 分钟内用 Docker 构建第一份 Sphinx 文档
-- [三镜像架构解析](/concepts/02-image-architecture.md)：理解三个镜像的分工与设计思路
-- [Base 镜像详解](/concepts/03-base-image.md)：深入了解基础镜像的构成
+- [快速上手](01-getting-started.md)：5 分钟内用 Docker 构建第一份 Sphinx 文档
+- [三镜像架构解析](02-image-architecture.md)：理解三个镜像的分工与设计思路
+- [Base 镜像详解](03-base-image.md)：深入了解基础镜像的构成
 
 [^1]: 参考来源

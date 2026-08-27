@@ -15,7 +15,7 @@ sources:
 
 ## IXeusWorkerKernel 接口
 
-Worker端内核接口，定义在 [interfaces.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/xeus/packages/xeus-core/src/interfaces.ts)。
+Worker端内核接口，定义在 interfaces.ts。
 
 ```typescript
 interface IXeusWorkerKernel extends IWorkerKernel {
@@ -45,7 +45,7 @@ interface IXeusWorkerKernel extends IWorkerKernel {
 
 ## WebWorkerKernelBase 类
 
-主线程内核抽象基类，定义在 [kernel.base.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/xeus/packages/xeus-core/src/kernel.base.ts)。
+主线程内核抽象基类，定义在 kernel.base.ts。
 
 ### 构造函数
 
@@ -91,7 +91,7 @@ constructor(options: WebWorkerKernelBase.IOptions)
 
 ## XeusRemoteKernelBase 类
 
-Worker端远程内核抽象基类，定义在 [worker.base.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/xeus/packages/xeus-core/src/worker.base.ts)。
+Worker端远程内核抽象基类，定义在 worker.base.ts。
 
 ### 核心生命周期方法 initialize()
 

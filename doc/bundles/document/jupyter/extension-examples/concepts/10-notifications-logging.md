@@ -263,7 +263,7 @@ commands.addCommand('jlab-examples/custom-log-console:level', {
 
 ## 相关概念
 
-- [菜单与工具栏](/concepts/08-menus-toolbars.md)
-- [设置与状态持久化](/concepts/09-settings-state.md)
-- [Widget与Shell布局](/concepts/05-widgets-shell.md)
-- [核心API与Token参考](/references/core-api-tokens.md)
+- [菜单与工具栏](08-menus-toolbars.md)
+- [设置与状态持久化](09-settings-state.md)
+- [Widget与Shell布局](05-widgets-shell.md)
+- [核心API与Token参考](../references/core-api-tokens.md)

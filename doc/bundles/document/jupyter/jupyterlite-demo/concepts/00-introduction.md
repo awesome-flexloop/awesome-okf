@@ -85,6 +85,6 @@ JupyterLite Demo 是 JupyterLite 生态中「使用端」的模板项目：
 
 ## 相关概念
 
-- [Demo 仓库结构与三件套模式](/concepts/01-demo-overview.md)
-- [三大内核生态对比](/concepts/03-kernel-ecosystem.md)
-- [GitHub Pages 部署实战](/concepts/06-deployment-github-pages.md)
+- [Demo 仓库结构与三件套模式](01-demo-overview.md)
+- [三大内核生态对比](03-kernel-ecosystem.md)
+- [GitHub Pages 部署实战](06-deployment-github-pages.md)

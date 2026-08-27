@@ -432,6 +432,6 @@ Cockle 的 IO 系统通过统一接口实现了灵活的组合能力：
 
 ## 相关概念
 
-- [命令系统](/concepts/03-command-system.md)
-- [命令解析管线](/concepts/04-parsing-pipeline.md)
-- [架构总览](/concepts/02-architecture-overview.md)
+- [命令系统](03-command-system.md)
+- [命令解析管线](04-parsing-pipeline.md)
+- [架构总览](02-architecture-overview.md)

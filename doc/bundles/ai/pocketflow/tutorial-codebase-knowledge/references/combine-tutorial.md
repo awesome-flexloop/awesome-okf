@@ -15,7 +15,7 @@ source: nodes.py
 class CombineTutorial(Node):
 ```
 
-源码位置：[nodes.py#L753-L880](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py#L753-L880)
+源码位置：nodes.py#L753-L880
 
 ## 生命周期方法
 
@@ -118,4 +118,4 @@ CombineTutorial 中的固定英文短语（如 "**Source Repository:**"、"## Ch
 
 ## 源码位置
 
-[nodes.py#L753-L880](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py#L753-L880)
+nodes.py#L753-L880

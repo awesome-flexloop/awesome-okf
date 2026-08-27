@@ -78,7 +78,7 @@ Tunnel 是 veadk-python 的安全网络桥接系统，解决企业内网资源�
 
 ### mount_tunnel：挂载隧道路由
 
-[veadk/tunnel/server.py:L117-L275](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/server.py#L117-L275)
+veadk/tunnel/server.py:L117-L275
 
 在 FastAPI 应用上挂载三个隧道端点：
 
@@ -162,7 +162,7 @@ sequenceDiagram
 
 ### mount_tunnel_if_enabled：按需挂载
 
-[veadk/tunnel/server.py:L278-L293](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/server.py#L278-L293)
+veadk/tunnel/server.py:L278-L293
 
 ```python
 def mount_tunnel_if_enabled(app: FastAPI, agents: list, **kwargs) -> bool:
@@ -179,7 +179,7 @@ mount_tunnel(app, allowed_agents=enabled, **kwargs)
 
 ### ConnectorConnection：连接器状态
 
-[veadk/tunnel/server.py:L66-L109](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/server.py#L66-L109)
+veadk/tunnel/server.py:L66-L109
 
 ```python
 @dataclass
@@ -210,7 +210,7 @@ class ConnectorConnection:
 
 ### TunnelRegistry：进程内注册表
 
-[veadk/tunnel/registry.py:L67-L125](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/registry.py#L67-L125)
+veadk/tunnel/registry.py:L67-L125
 
 ```python
 class TunnelRegistry:
@@ -233,7 +233,7 @@ class TunnelRegistry:
 
 ### LocalServer：本地服务器描述
 
-[veadk/tunnel/connector.py:L38-L65](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/connector.py#L38-L65)
+veadk/tunnel/connector.py:L38-L65
 
 ```python
 @dataclass
@@ -255,7 +255,7 @@ def descriptor(self) -> dict:
 
 ### TunnelConnector：企业侧连接器
 
-[veadk/tunnel/connector.py:L77-L202](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/connector.py#L77-L202)
+veadk/tunnel/connector.py:L77-L202
 
 ```python
 class TunnelConnector:
@@ -296,7 +296,7 @@ async with http.stream(method, url=server.address, headers=fwd, ...) as resp:
 
 ## Agent 侧：TunnelToolset
 
-[veadk/tunnel/toolset.py:L53-L104](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/toolset.py#L53-L104)
+veadk/tunnel/toolset.py:L53-L104
 
 设置 `enable_tunnel=True` 的 Agent 会自动获得 `TunnelToolset`（F-026）。ADK 在每轮 LLM 调用前调用 `get_tools()`，Toolset 从 Registry 读取当前在线服务器列表：
 
@@ -338,13 +338,13 @@ Loopback 代理地址通过 `TUNNEL_SELF_PORT` 或 `PORT` 环境变量确定（�
 
 ### BaseProtocol 抽象
 
-[veadk/tunnel/protocol/base.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/protocol/base.py)
+veadk/tunnel/protocol/base.py
 
 协议层封装了不同资源协议的适配逻辑，目前支持 MCP 协议。`get_protocol(name)` 工厂函数按协议名返回对应 handler 类。
 
 ### MCP 协议
 
-[veadk/tunnel/protocol/mcp.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/protocol/mcp.py)
+veadk/tunnel/protocol/mcp.py
 
 MCP 协议 handler 连接到代理 URL（loopback），获取远程 MCP 服务器的工具列表，将其包装为 ADK BaseTool 返回给 Agent。支持 tool_filter 过滤。
 
@@ -413,13 +413,13 @@ asyncio.run(main())
 
 | 文件 | 职责 |
 |------|------|
-| [veadk/tunnel/\_\_init\_\_.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/__init__.py) | 模块导出 |
-| [veadk/tunnel/server.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/server.py) | 云端路由：mount_tunnel、ConnectorConnection、HTTP 代理、帧协议 |
-| [veadk/tunnel/connector.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/connector.py) | 企业侧客户端：TunnelConnector、LocalServer、请求转发 |
-| [veadk/tunnel/registry.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/registry.py) | 进程内注册表：TunnelRegistry、ServerDescriptor、get_registry |
-| [veadk/tunnel/toolset.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/toolset.py) | Agent 工具集：TunnelToolset、动态发现、Protocol handler 缓存 |
-| [veadk/tunnel/protocol/base.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/protocol/base.py) | 协议抽象基类 |
-| [veadk/tunnel/protocol/mcp.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tunnel/protocol/mcp.py) | MCP 协议适配 |
+| veadk/tunnel/\_\_init\_\_.py | 模块导出 |
+| veadk/tunnel/server.py | 云端路由：mount_tunnel、ConnectorConnection、HTTP 代理、帧协议 |
+| veadk/tunnel/connector.py | 企业侧客户端：TunnelConnector、LocalServer、请求转发 |
+| veadk/tunnel/registry.py | 进程内注册表：TunnelRegistry、ServerDescriptor、get_registry |
+| veadk/tunnel/toolset.py | Agent 工具集：TunnelToolset、动态发现、Protocol handler 缓存 |
+| veadk/tunnel/protocol/base.py | 协议抽象基类 |
+| veadk/tunnel/protocol/mcp.py | MCP 协议适配 |
 
 ## 相关概念
 

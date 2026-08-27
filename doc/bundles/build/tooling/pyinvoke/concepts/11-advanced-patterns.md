@@ -462,13 +462,13 @@ inv --print-completion-script fish | source
 
 ## 相关概念
 
-- [Task 基础](/concepts/02-task-basics.md)
-- [Context 对象](/concepts/03-context-object.md)
-- [Collection 与命名空间](/concepts/04-collection-namespace.md)
-- [配置系统](/concepts/05-configuration.md)
-- [Runner 系统](/concepts/06-runners.md)
-- [CLI 与 Program 类](/concepts/07-cli-program.md)
-- [执行模型](/concepts/08-execution-model.md)
-- [PyInvoke 源码信源登记](/references/pyinvoke-source.md)
+- [Task 基础](02-task-basics.md)
+- [Context 对象](03-context-object.md)
+- [Collection 与命名空间](04-collection-namespace.md)
+- [配置系统](05-configuration.md)
+- [Runner 系统](06-runners.md)
+- [CLI 与 Program 类](07-cli-program.md)
+- [执行模型](08-execution-model.md)
+- [PyInvoke 源码信源登记](../references/pyinvoke-source.md)
 
-[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](/references/pyinvoke-source.md)；Program/Executor/Runner/MockContext 分别定义于 `invoke/program.py`、`invoke/executor.py`、`invoke/runners.py`、`invoke/context.py`。
+[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](../references/pyinvoke-source.md)；Program/Executor/Runner/MockContext 分别定义于 `invoke/program.py`、`invoke/executor.py`、`invoke/runners.py`、`invoke/context.py`。

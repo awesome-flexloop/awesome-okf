@@ -95,6 +95,6 @@ providers.guest(ttl="24h", actor_prefix="guest:")
 
 ## 相关文档
 
-- [Agent 入口参考](/ai/langchain-ai/chat-langchain/references/agent-entrypoint)
-- [架构总览](/ai/langchain-ai/chat-langchain/concepts/overview)
-- [事实清单](/ai/langchain-ai/chat-langchain/spec/facts)
+- Agent 入口参考
+- 架构总览
+- 事实清单

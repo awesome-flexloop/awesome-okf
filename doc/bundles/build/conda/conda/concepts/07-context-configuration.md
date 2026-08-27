@@ -180,5 +180,5 @@ frozendict 在 conda 配置系统中被广泛使用，其核心作用有两点�
 
 ## 相关概念
 
-- [Index 索引与 SubdirData](./08-index-and-repodata.md)：context 提供 channels、subdirs、repodata_fn 等配置给 Index 使用
-- [Solver 求解器与 SAT 算法](./09-solver-and-resolve.md)：context 提供 solver、channel_priority 等求解器相关配置
+- [Index 索引与 SubdirData](08-index-and-repodata.md)：context 提供 channels、subdirs、repodata_fn 等配置给 Index 使用
+- [Solver 求解器与 SAT 算法](09-solver-and-resolve.md)：context 提供 solver、channel_priority 等求解器相关配置

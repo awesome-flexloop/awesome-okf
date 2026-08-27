@@ -201,7 +201,7 @@ def setup(app):
 
 ## 相关概念
 
-- [主题架构四要素](/concepts/02-theme-architecture.md)：四要素整体概览
-- [主题配置选项体系](/concepts/04-theme-options.md)：theme.conf 中的 50+ 选项
-- [侧边栏组件化设计](/concepts/05-sidebar-components.md)：模板组件的开发
-- [高级定制开发](/concepts/06-customization-advanced.md)：开发自定义主题
+- [主题架构四要素](02-theme-architecture.md)：四要素整体概览
+- [主题配置选项体系](04-theme-options.md)：theme.conf 中的 50+ 选项
+- [侧边栏组件化设计](05-sidebar-components.md)：模板组件的开发
+- [高级定制开发](06-customization-advanced.md)：开发自定义主题

@@ -177,9 +177,9 @@ except paramiko.ssh_exception.NoValidConnectionsError as e:
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [SSHClient 详解](/concepts/02-ssh-client.md)
-- [命令执行模式](/examples/execute-commands.md)
-- [交互式 Shell](/examples/interactive-shell.md)
+- [5分钟快速上手](../concepts/01-getting-started.md)
+- [SSHClient 详解](../concepts/02-ssh-client.md)
+- [命令执行模式](execute-commands.md)
+- [交互式 Shell](interactive-shell.md)
 
-[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](/references/paramiko-source.md)。
+[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](../references/paramiko-source.md)。

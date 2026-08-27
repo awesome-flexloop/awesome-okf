@@ -141,6 +141,6 @@ parts:
 
 ## 相关概念
 
-- [_toc.yml 语法详解](/concepts/02-toc-yaml-syntax.md)
-- [扩展工作机制](/concepts/03-extension-mechanism.md)
-- [高级功能](/concepts/04-advanced-features.md)
+- [_toc.yml 语法详解](../concepts/02-toc-yaml-syntax.md)
+- [扩展工作机制](../concepts/03-extension-mechanism.md)
+- [高级功能](../concepts/04-advanced-features.md)

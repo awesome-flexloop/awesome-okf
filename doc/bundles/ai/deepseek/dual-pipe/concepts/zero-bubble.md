@@ -85,4 +85,4 @@ dW 计算被推迟到与通信重叠的时间段执行，消除了等待通信�
 2. 将权重梯度计算包装为 lambda 函数，通过 `WeightGradStore.put()` 缓存
 3. DualPipe 内部在适当时机自动调用 `flush()` 和 `pop()`
 
-参考 [examples/example_dualpipe.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/DualPipe/examples/example_dualpipe.py) 中的 `LinearFunc` 实现。
+参考 examples/example_dualpipe.py 中的 `LinearFunc` 实现。

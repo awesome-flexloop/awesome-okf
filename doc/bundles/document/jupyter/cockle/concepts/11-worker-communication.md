@@ -171,7 +171,7 @@ private _createComlinkRemote(worker: Worker): void {
 
 ### IComlinkShellWorker 接口
 
-Comlink Worker 暴露的接口定义在 [comlink_shell_worker.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/comlink_shell_worker.ts)：
+Comlink Worker 暴露的接口定义在 comlink_shell_worker.ts：
 
 ```typescript
 interface IComlinkShellWorker {
@@ -300,7 +300,7 @@ Worker read() → Atomics.wait(SAB) → 零等待（主线程Atomics.notify时�
 
 ### ICoincidentShellWorker 接口
 
-Coincident Worker 暴露的接口定义在 [coincident_shell_worker.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/coincident_shell_worker.ts)：
+Coincident Worker 暴露的接口定义在 coincident_shell_worker.ts：
 
 ```typescript
 interface ICoincidentShellWorker {
@@ -676,9 +676,9 @@ Coincident 模式下如果 SAB 可用，Service Worker 仅作为备用 stdin 后
 
 ## 相关概念
 
-- [07 - 缓冲 IO 系统](/concepts/07-buffered-io.md)：SAB 和 Service Worker stdin 的实现细节
-- [09 - 外部命令](/concepts/09-external-commands.md)：外部命令如何通过回调桥接执行
-- [06 - 文件系统](/concepts/06-filesystem.md)：DriveFS 初始化回调如何跨线程工作
-- [02 - 架构总览](/concepts/02-architecture-overview.md)：主线程/Worker分层架构
-- [Shell API 参考](/references/shell-api.md)：Shell 构造函数完整选项
-- [Worker通信参考](/references/worker-source.md)：IComlinkShellWorker/ICoincidentShellWorker完整接口
+- [07 - 缓冲 IO 系统](07-buffered-io.md)：SAB 和 Service Worker stdin 的实现细节
+- [09 - 外部命令](09-external-commands.md)：外部命令如何通过回调桥接执行
+- [06 - 文件系统](06-filesystem.md)：DriveFS 初始化回调如何跨线程工作
+- [02 - 架构总览](02-architecture-overview.md)：主线程/Worker分层架构
+- [Shell API 参考](../references/shell-api.md)：Shell 构造函数完整选项
+- [Worker通信参考](../references/worker-source.md)：IComlinkShellWorker/ICoincidentShellWorker完整接口

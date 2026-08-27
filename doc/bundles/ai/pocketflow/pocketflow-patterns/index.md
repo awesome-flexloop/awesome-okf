@@ -38,9 +38,9 @@ examples:
 
 ## 快速导航
 
-- [概念文档](concepts/) — 6种模式的详细说明
-- [API参考](references/) — 模式目录与cookbook映射
-- [示例代码](examples/) — 完整可运行示例
+- 概念文档 — 6种模式的详细说明
+- API参考 — 模式目录与cookbook映射
+- 示例代码 — 完整可运行示例
 
 ```{toctree}
 :hidden:

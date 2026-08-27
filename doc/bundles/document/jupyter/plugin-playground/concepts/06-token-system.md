@@ -282,7 +282,7 @@ CommandCompletionProvider 为编辑器中的命令 ID 提供自动补全。当�
 
 ## 相关概念
 
-- [模块解析系统](/concepts/04-module-resolution.md)
-- [插件加载流程](/concepts/05-plugin-loader.md)
-- [JupyterLab 插件基础结构](/concepts/02-plugin-basics.md)
-- [Token 注入示例](/examples/02-token-injection.md)
+- [模块解析系统](04-module-resolution.md)
+- [插件加载流程](05-plugin-loader.md)
+- [JupyterLab 插件基础结构](02-plugin-basics.md)
+- [Token 注入示例](../examples/02-token-injection.md)

@@ -265,6 +265,6 @@ new_path = f"{env_path / 'bin'}{os.pathsep}{os.environ['PATH']}"
 
 ## 相关概念
 
-- [00-v2-architecture](/concepts/00-v2-architecture.md)：v2 双层架构
-- [02-ts-cli-commands](/concepts/02-ts-cli-commands.md)：TS CLI 命令
-- [01-create-book](/examples/01-create-book.md)：创建 Jupyter Book 示例
+- [00-v2-architecture](00-v2-architecture.md)：v2 双层架构
+- [02-ts-cli-commands](02-ts-cli-commands.md)：TS CLI 命令
+- [01-create-book](../examples/01-create-book.md)：创建 Jupyter Book 示例

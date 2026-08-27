@@ -131,10 +131,10 @@ compile:  PO文件 → pybabel compile → MO文件 (*.mo)
 
 ## 相关概念
 
-- [JupyterLab Translate 简介](/concepts/00-introduction.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [CLI命令参考](/concepts/03-cli-commands.md)
-- [字符串提取流水线](/concepts/04-extraction-pipeline.md)
-- [翻译目录管理](/concepts/05-catalog-management.md)
-- [Jed JSON翻译格式](/concepts/06-json-jed-format.md)
-- [双模式分发机制](/concepts/11-dual-mode-distribution.md)
+- [JupyterLab Translate 简介](00-introduction.md)
+- [快速开始](01-getting-started.md)
+- [CLI命令参考](03-cli-commands.md)
+- [字符串提取流水线](04-extraction-pipeline.md)
+- [翻译目录管理](05-catalog-management.md)
+- [Jed JSON翻译格式](06-json-jed-format.md)
+- [双模式分发机制](11-dual-mode-distribution.md)

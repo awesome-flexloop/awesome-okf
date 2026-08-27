@@ -91,6 +91,6 @@ CMake 通过 `check_cxx_source_compiles` 检测目标架构 SIMD 支持：
 
 ## 相关概念
 
-- [00 整体架构](/concepts/00-overall-architecture.md)
-- [09 层注册表与自定义层](/concepts/09-layer-registry.md)
-- [10 Python 绑定](/concepts/10-python-binding.md)
+- [00 整体架构](../concepts/00-overall-architecture.md)
+- [09 层注册表与自定义层](../concepts/09-layer-registry.md)
+- [10 Python 绑定](../concepts/10-python-binding.md)

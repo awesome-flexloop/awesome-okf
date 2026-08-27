@@ -21,7 +21,7 @@ sources:
 - 命令本身定义：执行逻辑、显示名称、图标、启用/选中状态
 - 触发方式独立：快捷键、菜单、按钮、命令面板都引用同一个命令 ID
 
-Lumino 的 [CommandRegistry](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/commands/src/index.ts#L39) 实现了这一模式。
+Lumino 的 CommandRegistry 实现了这一模式。
 
 ## CommandRegistry 核心 API
 

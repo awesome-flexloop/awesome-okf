@@ -171,7 +171,7 @@ mdurl 的行为是为 Markdown 链接解析场景精确调整的，这也是 mar
 
 ## 相关概念
 
-- [URL 数据结构](/concepts/01-url-data-structure.md)
-- [URL 编码与解码](/concepts/03-encode-and-decode.md)
-- [基础使用示例](/examples/basic-usage.md)
-- [mdurl 简介](/concepts/00-introduction.md)
+- [URL 数据结构](01-url-data-structure.md)
+- [URL 编码与解码](03-encode-and-decode.md)
+- [基础使用示例](../examples/basic-usage.md)
+- [mdurl 简介](00-introduction.md)

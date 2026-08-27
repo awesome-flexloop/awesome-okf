@@ -203,9 +203,9 @@ def normalize_project(project: str) -> str:
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [CLI命令参考](/concepts/03-cli-commands.md)
-- [翻译目录管理](/concepts/05-catalog-management.md)
-- [Hatch构建钩子集成](/concepts/07-hatch-build-hook.md)
-- [运行时语言包发现](/concepts/08-runtime-discovery.md)
-- [语言包工作流示例](/examples/02-language-pack-workflow.md)
+- [快速开始](01-getting-started.md)
+- [CLI命令参考](03-cli-commands.md)
+- [翻译目录管理](05-catalog-management.md)
+- [Hatch构建钩子集成](07-hatch-build-hook.md)
+- [运行时语言包发现](08-runtime-discovery.md)
+- [语言包工作流示例](../examples/02-language-pack-workflow.md)

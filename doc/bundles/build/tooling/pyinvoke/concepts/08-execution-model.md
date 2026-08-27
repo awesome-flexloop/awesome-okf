@@ -289,11 +289,11 @@ Runner._finish()
 
 ## 相关概念
 
-- [Task 基础](/concepts/02-task-basics.md)
-- [Collection 与命名空间](/concepts/04-collection-namespace.md)
-- [Runner 系统](/concepts/06-runners.md)
-- [CLI 与 Program 类](/concepts/07-cli-program.md)
-- [高级模式](/concepts/11-advanced-patterns.md)
-- [PyInvoke 源码信源登记](/references/pyinvoke-source.md)
+- [Task 基础](02-task-basics.md)
+- [Collection 与命名空间](04-collection-namespace.md)
+- [Runner 系统](06-runners.md)
+- [CLI 与 Program 类](07-cli-program.md)
+- [高级模式](11-advanced-patterns.md)
+- [PyInvoke 源码信源登记](../references/pyinvoke-source.md)
 
-[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](/references/pyinvoke-source.md)；Executor 定义于 `invoke/executor.py`，Call 类和 call() 函数定义于 `invoke/tasks.py`，异常类定义于 `invoke/exceptions.py`。
+[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](../references/pyinvoke-source.md)；Executor 定义于 `invoke/executor.py`，Call 类和 call() 函数定义于 `invoke/tasks.py`，异常类定义于 `invoke/exceptions.py`。

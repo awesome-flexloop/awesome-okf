@@ -491,8 +491,8 @@ TOOL_MAPPING = {
 
 ## 相关概念
 
-- [工具系统概述](/concepts/tool-system.md) — 工具定义、注册和调用机制
-- [工具调用智能体](/concepts/tool-calling-agent.md) — ToolCallingAgent的工具调用流程
-- [代码执行智能体](/concepts/code-agent.md) — CodeAgent中的工具注入机制
-- [智能体API参考](/references/agents-api.md) — Agent如何管理和调用工具
-- [模型API参考](/references/models-api.md) — Model的工具JSON Schema生成
+- 工具系统概述 — 工具定义、注册和调用机制
+- 工具调用智能体 — ToolCallingAgent的工具调用流程
+- 代码执行智能体 — CodeAgent中的工具注入机制
+- [智能体API参考](agents-api.md) — Agent如何管理和调用工具
+- [模型API参考](models-api.md) — Model的工具JSON Schema生成

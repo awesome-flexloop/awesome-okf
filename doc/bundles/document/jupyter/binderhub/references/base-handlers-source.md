@@ -23,9 +23,9 @@ sources:
 ## 概述
 
 本文档解析 BinderHub 的 Web 处理器基础层和 UI 处理器：
-- [base.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/base.py)：`BaseHandler` 基类和 `VersionHandler`
-- [main.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/main.py)：`UIHandler`、`RepoLaunchUIHandler`、`LegacyRedirectHandler`
-- [handlers/repoproviders.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/handlers/repoproviders.py)：`RepoProvidersHandlers`
+- base.py：`BaseHandler` 基类和 `VersionHandler`
+- main.py：`UIHandler`、`RepoLaunchUIHandler`、`LegacyRedirectHandler`
+- handlers/repoproviders.py：`RepoProvidersHandlers`
 
 ## BaseHandler：请求处理器基类
 
@@ -293,7 +293,7 @@ class VersionHandler(BaseHandler):
 
 ## main.py：UI 处理器
 
-[main.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/main.py) 实现了前端 UI 页面处理器。
+main.py 实现了前端 UI 页面处理器。
 
 ### MainHandler（第 38-104 行）
 
@@ -377,7 +377,7 @@ class AboutHandler(BaseHandler):
 
 ## handlers/repoproviders.py：提供器配置端点
 
-[handlers/repoproviders.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/handlers/repoproviders.py) 实现了向客户端暴露仓库提供器配置的 API 端点。
+handlers/repoproviders.py 实现了向客户端暴露仓库提供器配置的 API 端点。
 
 ### RepoProvidersHandlers（第 16-85 行）
 

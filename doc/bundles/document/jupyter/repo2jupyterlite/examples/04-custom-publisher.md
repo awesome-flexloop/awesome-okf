@@ -17,7 +17,7 @@ sources:
 
 ## Publisher 接口回顾
 
-根据 [Publisher信源](/references/publisher-source.md)，需要实现的方法：
+根据 [Publisher信源](../references/publisher-source.md)，需要实现的方法：
 
 | 方法 | 类型 | 返回值 | 说明 |
 |------|------|--------|------|
@@ -283,6 +283,6 @@ S3 Bucket 策略需要允许公共读取（构建产物）：
 
 ## 相关概念
 
-- [05-Publisher存储系统](/concepts/05-publisher-system.md)
-- [03-BinderLite Web应用](/concepts/03-binderlite-web.md)
-- [08-整体架构总结](/concepts/08-architecture-summary.md#扩展点)
+- [05-Publisher存储系统](../concepts/05-publisher-system.md)
+- [03-BinderLite Web应用](../concepts/03-binderlite-web.md)
+- [08-整体架构总结](../concepts/08-architecture-summary.md#扩展点)

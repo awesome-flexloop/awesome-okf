@@ -249,7 +249,7 @@ manimgl hello.py HelloManim
 manimgl hello.py HelloManim -w --hd -o
 ```
 
-完整 CLI 参数说明参见 [配置系统与 CLI 参数](/concepts/02-configuration.md) 和 [CLI 参数速查表](/references/cli-parameters-reference.md)。
+完整 CLI 参数说明参见 [配置系统与 CLI 参数](02-configuration.md) 和 [CLI 参数速查表](../references/cli-parameters-reference.md)。
 
 ## Scene 核心状态
 
@@ -269,9 +269,9 @@ Scene 在初始化时建立以下核心状态（F-048）：
 
 ## 相关概念
 
-- [00 ManimGL 简介与安装](/concepts/00-introduction.md)
-- [02 配置系统与 CLI 参数](/concepts/02-configuration.md)
-- [03 Mobject：数学对象基类](/concepts/03-mobject-fundamentals.md)
-- [05 动画基础](/concepts/05-animation-basics.md)
-- [06 Transform 深度解析](/concepts/06-transform-deep-dive.md)
-- [ManimGL CLI 参数速查表](/references/cli-parameters-reference.md)
+- [00 ManimGL 简介与安装](00-introduction.md)
+- [02 配置系统与 CLI 参数](02-configuration.md)
+- [03 Mobject：数学对象基类](03-mobject-fundamentals.md)
+- [05 动画基础](05-animation-basics.md)
+- [06 Transform 深度解析](06-transform-deep-dive.md)
+- [ManimGL CLI 参数速查表](../references/cli-parameters-reference.md)

@@ -26,7 +26,7 @@ sources:
 
 KaTeX 支持多种运行环境和安装方式。本文档系统说明浏览器端（CDN/自托管/打包工具）和 Node.js 端（npm/yarn/pnpm/Deno）的安装与模块格式，以及 CSS、字体路径和从源码构建的配置。
 
-快速上手的最简安装见 [快速开始](/concepts/01-getting-started.md#安装)。
+快速上手的最简安装见 [快速开始](01-getting-started.md#安装)。
 
 ## 浏览器安装
 
@@ -242,8 +242,8 @@ USE_TTF=false USE_WOFF=false USE_WOFF2=true pnpm build
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [KaTeX 简介](/concepts/00-introduction.md)
-- [命令行接口](/concepts/16-command-line.md)
-- [字体与单位](/concepts/17-fonts-and-units.md)
-- [自动渲染扩展](/concepts/13-auto-render.md)
+- [快速开始](01-getting-started.md)
+- [KaTeX 简介](00-introduction.md)
+- [命令行接口](16-command-line.md)
+- [字体与单位](17-fonts-and-units.md)
+- [自动渲染扩展](13-auto-render.md)

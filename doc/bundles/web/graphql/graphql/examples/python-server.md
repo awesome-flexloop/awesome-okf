@@ -687,9 +687,9 @@ schema = make_executable_schema(type_defs, query, mutation)
 
 ## 相关概念
 
-- [Python 生态：客户端与服务端实践](/concepts/10-python-ecosystem.md) — Python GraphQL 生态全景，graphql-core 的定位及客户端/服务端库对比
-- [执行引擎：字段解析与值完成](/concepts/06-execution.md) — graphql_sync 的执行流程对应规范的 ExecuteRequest 算法、resolver 调用与值完成
-- [响应格式、错误冒泡与序列化](/concepts/07-response-and-errors.md) — ExecutionResult 的 data/errors 结构、错误对象格式与 Non-Null 冒泡
-- [内省系统：GraphQL 的自描述机制](/concepts/08-introspection.md) — get_introspection_query 与 build_client_schema 的内省流程
-- [Schema 设计实战](/examples/schema-design.md) — 本文 Schema 中使用的 Connection 分页、枚举、输入对象等设计模式
-- [错误处理与 Non-Null 冒泡](/examples/error-handling.md) — resolver 抛错时 graphql-core 如何处理 execution error 和部分数据
+- [Python 生态：客户端与服务端实践](../concepts/10-python-ecosystem.md) — Python GraphQL 生态全景，graphql-core 的定位及客户端/服务端库对比
+- [执行引擎：字段解析与值完成](../concepts/06-execution.md) — graphql_sync 的执行流程对应规范的 ExecuteRequest 算法、resolver 调用与值完成
+- [响应格式、错误冒泡与序列化](../concepts/07-response-and-errors.md) — ExecutionResult 的 data/errors 结构、错误对象格式与 Non-Null 冒泡
+- [内省系统：GraphQL 的自描述机制](../concepts/08-introspection.md) — get_introspection_query 与 build_client_schema 的内省流程
+- [Schema 设计实战](schema-design.md) — 本文 Schema 中使用的 Connection 分页、枚举、输入对象等设计模式
+- [错误处理与 Non-Null 冒泡](error-handling.md) — resolver 抛错时 graphql-core 如何处理 execution error 和部分数据

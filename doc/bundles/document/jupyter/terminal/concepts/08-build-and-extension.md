@@ -305,5 +305,5 @@ style/index.css是样式入口，默认@import base.css。可以在base.css中�
 - [插件系统](03-plugin-system.md)：插件定义和依赖注入
 - [安装与快速开始](01-getting-started.md)：开发模式安装步骤
 - [Shell与Worker机制](04-shell-and-worker.md)：Worker打包原因
-- [Python端源码信源](/references/python-source.md)：TerminalAddon完整实现
-- [项目元信源](/references/metasource.md)：完整依赖和构建配置
+- [Python端源码信源](../references/python-source.md)：TerminalAddon完整实现
+- [项目元信源](../references/metasource.md)：完整依赖和构建配置

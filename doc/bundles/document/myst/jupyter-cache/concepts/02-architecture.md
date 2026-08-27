@@ -155,7 +155,7 @@ Notebook B ──┘
 
 ## 相关概念
 
-- [简介](/concepts/00-introduction.md)
-- [缓存API详解](/concepts/03-cache-api.md)
-- [配置项参考](/concepts/07-configuration.md)
-- [基本使用示例](/examples/basic-usage.md)
+- [简介](00-introduction.md)
+- [缓存API详解](03-cache-api.md)
+- [配置项参考](07-configuration.md)
+- [基本使用示例](../examples/basic-usage.md)

@@ -49,7 +49,7 @@ Nuitka通过插件机制处理这些库特殊性——每个主流库（NumPy、
 
 ## Plugins 管理器
 
-[Plugins](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/plugins/Plugins.py)是全局单例，管理所有插件的生命周期。
+Plugins是全局单例，管理所有插件的生命周期。
 
 ### 插件分类列表
 
@@ -122,7 +122,7 @@ Detector插件不计入激活插件计数，仅用于自动激活。
 
 ## NuitkaPluginBase 钩子
 
-[NuitkaPluginBase](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/plugins/PluginBase.py)定义了约60个可覆盖的钩子方法。以下是最常用的：
+NuitkaPluginBase定义了约60个可覆盖的钩子方法。以下是最常用的：
 
 ### 编译生命周期
 
@@ -176,7 +176,7 @@ Detector插件不计入激活插件计数，仅用于自动激活。
 
 ## YAML 声明式插件
 
-很多库适配不需要写Python代码，只需要声明配置。[NuitkaYamlPluginBase](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/plugins/NuitkaYamlPluginBase.py)允许通过YAML配置文件定义插件行为。
+很多库适配不需要写Python代码，只需要声明配置。NuitkaYamlPluginBase允许通过YAML配置文件定义插件行为。
 
 ### YAML配置示例
 

@@ -150,7 +150,7 @@ Makefile 提供以下关键目标：
 
 ## 相关概念
 
-- [Reasonix 简介](/concepts/00-introduction.md)
-- [Agent 运行循环](/concepts/02-agent-run-loop.md)——boot 组装后的核心执行引擎
-- [ACP 协议](/concepts/03-acp-protocol.md)——ACP 如何通过 Factory 使用 boot 组装
-- [CLI 与 TUI](/concepts/05-cli-tui.md)——CLI 前端如何调用 boot
+- [Reasonix 简介](00-introduction.md)
+- [Agent 运行循环](02-agent-run-loop.md)——boot 组装后的核心执行引擎
+- [ACP 协议](03-acp-protocol.md)——ACP 如何通过 Factory 使用 boot 组装
+- [CLI 与 TUI](05-cli-tui.md)——CLI 前端如何调用 boot

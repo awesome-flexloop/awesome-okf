@@ -425,7 +425,7 @@ const ASYNC_TASK_TOOL_NAMES = [
 
 ## 相关阅读
 
-- [总览](/ai/langchain-ai/deepagentsjs/concepts/overview)
-- [子代理与规划](/ai/langchain-ai/deepagentsjs/concepts/subagent-planning)
-- [上下文与 Todo 管理](/ai/langchain-ai/deepagentsjs/concepts/context-todo)
-- [基础 Agent 示例](/ai/langchain-ai/deepagentsjs/examples/basic-agent)
+- 总览
+- 子代理与规划
+- 上下文与 Todo 管理
+- 基础 Agent 示例

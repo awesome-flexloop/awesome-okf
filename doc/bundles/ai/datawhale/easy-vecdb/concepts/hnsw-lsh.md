@@ -192,6 +192,6 @@ L 越大召回率越高，但内存和查询时间也线性增加。
 
 ## 延伸阅读
 
-- [IVF 与 PQ 量化](/ai/datawhale/easy-vecdb/concepts/ivf-pq-quantization.md) — 空间划分与压缩方案
-- [ANN 近似最近邻算法](/ai/datawhale/easy-vecdb/concepts/ann-algorithms.md) — 六大索引类型总览
-- [Faiss 与 Milvus 工程实践](/ai/datawhale/easy-vecdb/concepts/faiss-milvus-engineering.md) — HNSW 在工业系统中的配置
+- [IVF 与 PQ 量化](ivf-pq-quantization.md) — 空间划分与压缩方案
+- [ANN 近似最近邻算法](ann-algorithms.md) — 六大索引类型总览
+- [Faiss 与 Milvus 工程实践](faiss-milvus-engineering.md) — HNSW 在工业系统中的配置

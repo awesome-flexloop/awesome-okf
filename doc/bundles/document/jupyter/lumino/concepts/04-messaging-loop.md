@@ -33,7 +33,7 @@ Lumino 同时提供 Signal 和 Message 两种通信机制，它们解决不同�
 
 ### Message 基类
 
-[Message](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/messaging/src/index.ts#L24-L101) 是所有消息的基类：
+Message 是所有消息的基类：
 
 ```typescript
 class Message {
@@ -57,7 +57,7 @@ class ResizeMessage extends Message {
 
 ### ConflatableMessage：自动合并消息
 
-[ConflatableMessage](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/messaging/src/index.ts#L116-L136) 是无状态的可合并消息：
+ConflatableMessage 是无状态的可合并消息：
 
 ```typescript
 class ConflatableMessage extends Message {
@@ -80,7 +80,7 @@ Widget 实现了这个接口，`processMessage` 根据消息类型分发到具�
 
 ## MessageLoop：全局消息循环
 
-[MessageLoop](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/messaging/src/index.ts#L201-L641) 是一个命名空间（非类），提供全局静态方法管理消息投递：
+MessageLoop 是一个命名空间（非类），提供全局静态方法管理消息投递：
 
 ### sendMessage：同步立即投递
 

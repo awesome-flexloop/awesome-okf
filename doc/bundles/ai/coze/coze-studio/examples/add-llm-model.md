@@ -174,7 +174,7 @@ EMBEDDING_API_KEY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ## 相关文档
 
-- [LLM 模型集成](/concepts/05-llm-integration.md)
-- [可插拔基础设施](/concepts/04-pluggable-infrastructure.md)
-- [Docker 快速入门](/examples/docker-quickstart.md)
-- [配置基础设施](/examples/configure-infrastructure.md)
+- [LLM 模型集成](../concepts/05-llm-integration.md)
+- [可插拔基础设施](../concepts/04-pluggable-infrastructure.md)
+- [Docker 快速入门](docker-quickstart.md)
+- [配置基础设施](configure-infrastructure.md)

@@ -229,7 +229,7 @@ def manage_history(state: MessagesState):
 
 ## 相关概念
 
-- [状态图](/ai/langchain-ai/langgraph/concepts/state-graph) — StateGraph 与 reducer 机制
-- [通道系统](/ai/langchain-ai/langgraph/concepts/channels) — BinaryOperatorAggregate 通道
-- [流式处理](/ai/langchain-ai/langgraph/concepts/streaming) — messages 流模式
-- [检查点机制](/ai/langchain-ai/langgraph/concepts/checkpointing) — 消息状态持久化
+- 状态图 — StateGraph 与 reducer 机制
+- 通道系统 — BinaryOperatorAggregate 通道
+- 流式处理 — messages 流模式
+- 检查点机制 — 消息状态持久化

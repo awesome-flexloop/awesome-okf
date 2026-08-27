@@ -145,6 +145,6 @@ INCLUDE_DEBUG_SECTION=1 sphinx-build -b man docs/ docs/_build/man
 
 ## 相关概念
 
-- [指令选项全解](/concepts/03-directive-options.md)
-- [Parser 数据提取模型](/concepts/04-parser-data-model.md)
-- [嵌套内容增强](/concepts/06-nested-content-enhancement.md)
+- [指令选项全解](03-directive-options.md)
+- [Parser 数据提取模型](04-parser-data-model.md)
+- [嵌套内容增强](06-nested-content-enhancement.md)

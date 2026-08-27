@@ -32,7 +32,7 @@ status: active
 
 # Nuitka 节点基类 API 参考
 
-> 源码路径：[nuitka/nodes/](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/nodes/)
+> 源码路径：nuitka/nodes/
 
 ## 类层次
 

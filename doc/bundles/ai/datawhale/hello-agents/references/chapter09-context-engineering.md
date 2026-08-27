@@ -85,5 +85,5 @@ sources:
 - **TerminalTool**：文件系统操作和即时上下文检索
 
 ## 相关概念
-- [上下文工程](/ai/datawhale/hello-agents/concepts/context-engineering)
-- [记忆系统](/ai/datawhale/hello-agents/concepts/memory-systems)
+- 上下文工程
+- 记忆系统

@@ -31,41 +31,41 @@ DeepEP（DeepSeek Expert Parallelism）是 DeepSeek 开发的高性能专家并�
 - **高吞吐 Dispatch/Combine**：JIT 编译的专用通信内核，支持 BF16/FP8 精度、确定性路由、缓存 dispatch、expand 模式
 - **低延迟推理模式**：基于 IBGDA（GPU Direct Async）的超低延迟 dispatch/combine，支持零拷贝优化和动态 rank 屏蔽
 - **Engram 远程 KV 缓存**：通过 RDMA 从远程 CPU 内存获取 KV 条目，支持 DeepSeek-V4/R1 条件内存
-- **流水线并行支持**：内置 PP send/recv 原语，与 [DualPipe](/ai/deepseek/dual-pipe) 双向流水线无缝配合
+- **流水线并行支持**：内置 PP send/recv 原语，与 [DualPipe](../dual-pipe/index.md) 双向流水线无缝配合
 - **All-Gather Reduce-Scatter**：支持 AGRS 集合通信原语，用于序列并行等场景
 - **JIT 编译内核**：运行时根据模型参数和硬件拓扑生成最优 CUDA 内核，CRTP 启动器框架
 - **计算-通信重叠**：独立通信流 + EventOverlap 事件系统，精细控制计算与通信的重叠
 
 ## 快速导航
 
-### [核心概念](/ai/deepseek/deep-ep/concepts)
+### [核心概念](concepts/index.md)
 
 | 概念 | 说明 |
 |------|------|
-| [架构概述](/ai/deepseek/deep-ep/concepts/overview) | DeepEP 定位、两代缓冲区设计、通信拓扑抽象、在 DeepSeek 训练栈中的位置 |
-| [Dispatch/Combine 流程](/ai/deepseek/deep-ep/concepts/dispatch-combine) | Token 分发和聚合的数据流动模型、EPHandle 路由元数据、高级模式 |
-| [MoE 专家并行](/ai/deepseek/deep-ep/concepts/moe-parallelism) | EP 并行策略基础、top-k 路由、EP 与 TP/PP/DP 组合、负载均衡 |
-| [Elastic vs Legacy](/ai/deepseek/deep-ep/concepts/elastic-vs-legacy) | V2 ElasticBuffer 与 V1 Buffer 的架构差异、API 对比、迁移指南 |
-| [低延迟模式](/ai/deepseek/deep-ep/concepts/low-latency-mode) | V1 IBGDA 低延迟推理路径、零拷贝优化、rank 屏蔽机制 |
-| [JIT 编译系统](/ai/deepseek/deep-ep/concepts/jit-compilation) | 运行时 CUDA 内核编译原理、CRTP 启动器框架、内核缓存机制 |
+| 架构概述 | DeepEP 定位、两代缓冲区设计、通信拓扑抽象、在 DeepSeek 训练栈中的位置 |
+| Dispatch/Combine 流程 | Token 分发和聚合的数据流动模型、EPHandle 路由元数据、高级模式 |
+| MoE 专家并行 | EP 并行策略基础、top-k 路由、EP 与 TP/PP/DP 组合、负载均衡 |
+| Elastic vs Legacy | V2 ElasticBuffer 与 V1 Buffer 的架构差异、API 对比、迁移指南 |
+| 低延迟模式 | V1 IBGDA 低延迟推理路径、零拷贝优化、rank 屏蔽机制 |
+| JIT 编译系统 | 运行时 CUDA 内核编译原理、CRTP 启动器框架、内核缓存机制 |
 
-### [API 参考](/ai/deepseek/deep-ep/references)
+### [API 参考](references/index.md)
 
 | 参考文档 | 说明 |
 |----------|------|
-| [公开 API](/ai/deepseek/deep-ep/references/api) | 包导出一览、数据类型（Config/topk_idx_t）、初始化行为、工具函数 |
-| [ElasticBuffer API](/ai/deepseek/deep-ep/references/buffer-elastic) | V2 弹性缓冲区完整 API：构造、dispatch/combine、Engram、PP、AGRS |
-| [Buffer (Legacy) API](/ai/deepseek/deep-ep/references/buffer-legacy) | V1 遗留缓冲区 API：三模式 dispatch/combine、低延迟专用接口 |
-| [JIT 编译系统](/ai/deepseek/deep-ep/references/jit-system) | 编译器、内核缓存、CRTP 启动器框架、环境变量 |
-| [事件系统](/ai/deepseek/deep-ep/references/events) | EventOverlap/EventHandle：计算-通信重叠、流同步、钩子机制 |
+| 公开 API | 包导出一览、数据类型（Config/topk_idx_t）、初始化行为、工具函数 |
+| ElasticBuffer API | V2 弹性缓冲区完整 API：构造、dispatch/combine、Engram、PP、AGRS |
+| Buffer (Legacy) API | V1 遗留缓冲区 API：三模式 dispatch/combine、低延迟专用接口 |
+| JIT 编译系统 | 编译器、内核缓存、CRTP 启动器框架、环境变量 |
+| 事件系统 | EventOverlap/EventHandle：计算-通信重叠、流同步、钩子机制 |
 
-### [示例](/ai/deepseek/deep-ep/examples)
+### [示例](examples/index.md)
 
 | 示例 | 说明 |
 |------|------|
-| [基础 MoE 通信](/ai/deepseek/deep-ep/examples/basic-moe) | ElasticBuffer 进行 dispatch → 专家计算 → combine 的完整流程 |
-| [ElasticBuffer 配置与使用](/ai/deepseek/deep-ep/examples/elastic-buffer) | 缓冲区大小计算、FP8、缓存 dispatch、Engram、PP、AGRS 等高级功能 |
-| [计算-通信重叠](/ai/deepseek/deep-ep/examples/event-overlap) | EventOverlap 各种使用模式：with 语句、钩子、链式等待、异步模式 |
+| 基础 MoE 通信 | ElasticBuffer 进行 dispatch → 专家计算 → combine 的完整流程 |
+| ElasticBuffer 配置与使用 | 缓冲区大小计算、FP8、缓存 dispatch、Engram、PP、AGRS 等高级功能 |
+| 计算-通信重叠 | EventOverlap 各种使用模式：with 语句、钩子、链式等待、异步模式 |
 
 ## 安装
 
@@ -128,9 +128,9 @@ DeepEP 是 DeepSeek 混合并行训练栈的通信基石：
 
 | 组件 | 与 DeepEP 的关系 |
 |------|-----------------|
-| [DeepGEMM](/ai/deepseek/deep-gemm) | MoE 分组 GEMM 内核，在 dispatch 之后执行专家计算，为 DeepEP 通信提供规整的输入输出形状 |
-| [LPLB](/ai/deepseek/lplb) | 专家负载均衡器，生成 top-k 路由决策（`topk_idx`）给 DeepEP dispatch |
-| [DualPipe](/ai/deepseek/dual-pipe) | 双向流水线并行，ElasticBuffer 的 PP send/recv API 为 DualPipe 提供流水线通信原语 |
+| [DeepGEMM](../deep-gemm/index.md) | MoE 分组 GEMM 内核，在 dispatch 之后执行专家计算，为 DeepEP 通信提供规整的输入输出形状 |
+| [LPLB](../lplb/index.md) | 专家负载均衡器，生成 top-k 路由决策（`topk_idx`）给 DeepEP dispatch |
+| [DualPipe](../dual-pipe/index.md) | 双向流水线并行，ElasticBuffer 的 PP send/recv API 为 DualPipe 提供流水线通信原语 |
 
 典型的 DeepSeek-V3 混合并行配置：8-way EP（DeepEP）+ DualPipe PP + TP，DeepEP 同时承载 EP dispatch/combine 和 PP send/recv 通信。
 

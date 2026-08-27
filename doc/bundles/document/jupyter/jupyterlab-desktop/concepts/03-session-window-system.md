@@ -230,7 +230,7 @@ SessionConfig.createRemote(remoteURL, persistSessionData, partition?)
 - `partition`：Electron session partition 字符串（`persist:` 前缀持久化，`partition:` 前缀临时）
 - 从 URL 自动解析 token
 
-详见 [应用数据与会话配置信源](/references/config-source.md)。
+详见 [应用数据与会话配置信源](../references/config-source.md)。
 
 ## 环境选择弹窗
 
@@ -252,19 +252,19 @@ ProgressView 是覆盖在内容区域上的加载指示器：
 
 ## 相关信源
 
-- [SessionWindow 信源](/references/sessionwindow-source.md)
-- [App 信源](/references/app-source.md)
-- [Config 信源](/references/config-source.md)
-- [导航安全信源](/references/navigation-source.md)
+- [SessionWindow 信源](../references/sessionwindow-source.md)
+- [App 信源](../references/app-source.md)
+- [Config 信源](../references/config-source.md)
+- [导航安全信源](../references/navigation-source.md)
 
 ## 下一篇
 
-- [Jupyter 服务器管理](/concepts/04-server-management.md)
-- [Python 环境管理](/concepts/05-python-env-management.md)
+- [Jupyter 服务器管理](04-server-management.md)
+- [Python 环境管理](05-python-env-management.md)
 
 ## 相关概念
 
-- [架构概览](/concepts/01-architecture-overview.md) — 理解 SessionWindow 在整体架构中的位置
-- [应用入口与生命周期](/concepts/02-app-entry-lifecycle.md) — 了解窗口创建的启动时序
-- [Jupyter 服务器管理](/concepts/04-server-management.md) — 本地会话中 LabView 加载依赖的服务器创建流程
-- [安全与导航策略](/concepts/09-security-navigation.md) — 窗口中 guardAppOwnedView 导航守卫的安全机制
+- [架构概览](01-architecture-overview.md) — 理解 SessionWindow 在整体架构中的位置
+- [应用入口与生命周期](02-app-entry-lifecycle.md) — 了解窗口创建的启动时序
+- [Jupyter 服务器管理](04-server-management.md) — 本地会话中 LabView 加载依赖的服务器创建流程
+- [安全与导航策略](09-security-navigation.md) — 窗口中 guardAppOwnedView 导航守卫的安全机制

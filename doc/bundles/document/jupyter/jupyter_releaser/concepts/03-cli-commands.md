@@ -261,4 +261,4 @@ flowchart LR
 - [配置与Hooks系统](04-config-and-hooks.md)
 - [发布流水线详解](05-release-pipeline.md)
 - [Python与npm双生态发布](06-python-npm-dual.md)
-- [源码信源：cli.py](/references/cli-source.md)
+- [源码信源：cli.py](../references/cli-source.md)

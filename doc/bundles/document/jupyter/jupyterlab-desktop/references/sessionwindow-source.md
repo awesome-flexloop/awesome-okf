@@ -135,6 +135,6 @@ namespace SessionWindow {
 
 ## 相关概念
 
-- [会话窗口系统](/concepts/03-session-window-system.md)
-- [Jupyter 服务器管理](/concepts/04-server-management.md)
-- [导航安全策略](/concepts/09-security-navigation.md)
+- [会话窗口系统](../concepts/03-session-window-system.md)
+- [Jupyter 服务器管理](../concepts/04-server-management.md)
+- [导航安全策略](../concepts/09-security-navigation.md)

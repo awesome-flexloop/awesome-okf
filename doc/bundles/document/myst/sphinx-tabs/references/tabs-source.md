@@ -59,6 +59,6 @@ def setup(app):
 
 ## 相关概念
 
-- [简介](/concepts/00-introduction.md)
-- [四个指令详解](/concepts/02-directives.md)
-- [分组标签与代码标签](/concepts/03-group-and-code-tabs.md)
+- [简介](../concepts/00-introduction.md)
+- [四个指令详解](../concepts/02-directives.md)
+- [分组标签与代码标签](../concepts/03-group-and-code-tabs.md)

@@ -263,6 +263,6 @@ def capture_directives(app):
 
 ## 相关概念
 
-- [配置与自定义指令](/concepts/09-configuration.md) — 配置项详解与自定义指令用法
-- [徽章与按钮](/concepts/07-badges-buttons.md) — 徽章/按钮指令与角色详解（含 Stash/Graft 实例）
-- [标签页组件](/concepts/06-dropdown-tabs.md) — Tab 两阶段渲染与 JS 同步机制
+- [配置与自定义指令](09-configuration.md) — 配置项详解与自定义指令用法
+- [徽章与按钮](07-badges-buttons.md) — 徽章/按钮指令与角色详解（含 Stash/Graft 实例）
+- [标签页组件](06-dropdown-tabs.md) — Tab 两阶段渲染与 JS 同步机制

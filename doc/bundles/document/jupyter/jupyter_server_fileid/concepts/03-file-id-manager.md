@@ -252,4 +252,4 @@ def log(log_before: Callable[..., str], log_after: Callable[..., str]) -> Callab
 **相关文档：**
 - [双管理器对比](04-arbitrary-vs-local.md) — 两种实现的详细差异
 - [事件驱动同步机制](05-event-sync-mechanism.md) — 事件监听与 OOB 检测
-- [自定义管理器示例](../examples/02-custom-manager.md) — 创建自定义 FileIdManager
+- 自定义管理器示例 — 创建自定义 FileIdManager

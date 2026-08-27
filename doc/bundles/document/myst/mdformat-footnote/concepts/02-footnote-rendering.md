@@ -86,5 +86,5 @@ mdit.disable("footnote_inline")
 
 ## 相关概念
 
-- [脚注排序逻辑与分类机制](/concepts/03-footnote-reordering.md)
-- [插件配置与 CLI 选项](/concepts/01-plugin-configuration.md)
+- [脚注排序逻辑与分类机制](03-footnote-reordering.md)
+- [插件配置与 CLI 选项](01-plugin-configuration.md)

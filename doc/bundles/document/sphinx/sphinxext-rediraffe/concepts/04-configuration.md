@@ -275,10 +275,10 @@ rediraffe_auto_redirect_perc = 90
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [架构概览](/concepts/02-architecture-overview.md)
-- [Builder体系详解](/concepts/05-builders.md)
-- [Jinja2模板系统](/concepts/06-jinja-templates.md)
-- [基础重定向示例](/examples/basic-redirects.md)
-- [CI Diff检查集成示例](/examples/diff-checker-ci.md)
-- [自动重定向写入示例](/examples/auto-redirect-writer.md)
+- [5分钟快速上手](01-getting-started.md)
+- [架构概览](02-architecture-overview.md)
+- [Builder体系详解](05-builders.md)
+- [Jinja2模板系统](06-jinja-templates.md)
+- [基础重定向示例](../examples/basic-redirects.md)
+- [CI Diff检查集成示例](../examples/diff-checker-ci.md)
+- [自动重定向写入示例](../examples/auto-redirect-writer.md)

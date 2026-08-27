@@ -314,7 +314,7 @@ c.MagicsManager.lazy_magics = {
 
 ## 相关概念
 
-- [事件与钩子](/concepts/10-events-hooks.md)
-- [魔法命令系统](/concepts/04-magic-system.md)
-- [自定义魔法开发](/concepts/11-custom-magics.md)
-- [信源参考 - 扩展系统](/references/extension-source.md)
+- [事件与钩子](10-events-hooks.md)
+- [魔法命令系统](04-magic-system.md)
+- [自定义魔法开发](11-custom-magics.md)
+- [信源参考 - 扩展系统](../references/extension-source.md)

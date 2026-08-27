@@ -50,8 +50,8 @@ verified: { by: human:ahormati, at: 2026-06-25T09:00:00Z }
 
 ## 相关概念
 
-- [溯源与信源（sources）](./provenance-sources.md)
-- [生命周期：status 与 stale_after](./lifecycle-status-stale.md)
-- [参与者约定](./actor-convention.md)
+- [溯源与信源（sources）](provenance-sources.md)
+- [生命周期：status 与 stale_after](lifecycle-status-stale.md)
+- [参与者约定](actor-convention.md)
 
-[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](/references/okf-spec.md)。
+[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](../references/okf-spec.md)。

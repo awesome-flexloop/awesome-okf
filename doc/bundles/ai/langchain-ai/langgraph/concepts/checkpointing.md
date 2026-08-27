@@ -248,7 +248,7 @@ Store 支持分层命名空间（元组路径）、键值存储和可选向量�
 
 ## 相关概念
 
-- [Pregel 引擎](/ai/langchain-ai/langgraph/concepts/pregel-engine) — 检查点在超步中的角色
-- [通道系统](/ai/langchain-ai/langgraph/concepts/channels) — DeltaChannel 与通道检查点表示
-- [错误处理](/ai/langchain-ai/langgraph/concepts/error-handling) — 中断与恢复机制
-- [API 参考](/ai/langchain-ai/langgraph/references/checkpoint-persistence) — 检查点完整 API
+- Pregel 引擎 — 检查点在超步中的角色
+- 通道系统 — DeltaChannel 与通道检查点表示
+- 错误处理 — 中断与恢复机制
+- API 参考 — 检查点完整 API

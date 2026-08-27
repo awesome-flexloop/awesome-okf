@@ -190,8 +190,8 @@ post_build_commands = list(map(shlex.split, args.post_build))
 
 ## 相关概念
 
-- [架构概览](/concepts/02-architecture-overview.md)
-- [构建系统](/concepts/04-builder-system.md)
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [基础使用示例](/examples/basic-usage.md)
-- [sphinx-autobuild 源码信源登记](/references/sphinx-autobuild-source.md)
+- [架构概览](02-architecture-overview.md)
+- [构建系统](04-builder-system.md)
+- [5分钟快速上手](01-getting-started.md)
+- [基础使用示例](../examples/basic-usage.md)
+- [sphinx-autobuild 源码信源登记](../references/sphinx-autobuild-source.md)

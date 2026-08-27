@@ -19,17 +19,17 @@ sources:
 
 ## 概念篇（concepts/）
 
-- [GitHub Discussions 作为社区论坛](/concepts/00-introduction.md) — 导向枢纽定位（不承载讨论内容，只做路标）、组织级 vs 仓库级 Discussions 区别、3 文件极简仓库模式（README 中英+LICENSE）、Quick Links 串联分散资源。
-- [讨论分类与使用指南](/concepts/01-discussion-categories.md) — 5 个讨论分类（📚General / 💡Ideas / ❓Q&A / 📖Knowledge Sharing / 🤝Collaboration）的用途详解、分类选择决策逻辑、4 步参与流程。
-- [社区礼仪与有效提问指南](/concepts/02-community-etiquette.md) — 4 条行为准则（尊重他人/保持主题/先搜索/质量内容）、中英文双语规范、Q&A 有效提问模板、知识分享和协作配对指南。
+- [GitHub Discussions 作为社区论坛](concepts/00-introduction.md) — 导向枢纽定位（不承载讨论内容，只做路标）、组织级 vs 仓库级 Discussions 区别、3 文件极简仓库模式（README 中英+LICENSE）、Quick Links 串联分散资源。
+- [讨论分类与使用指南](concepts/01-discussion-categories.md) — 5 个讨论分类（📚General / 💡Ideas / ❓Q&A / 📖Knowledge Sharing / 🤝Collaboration）的用途详解、分类选择决策逻辑、4 步参与流程。
+- [社区礼仪与有效提问指南](concepts/02-community-etiquette.md) — 4 条行为准则（尊重他人/保持主题/先搜索/质量内容）、中英文双语规范、Q&A 有效提问模板、知识分享和协作配对指南。
 
 ## 示例篇（examples/）
 
-- [发起讨论示例](/examples/start-discussion.md) — 4 种讨论类型的发帖实战：Q&A 提问（含完整模板）、Knowledge Sharing 经验分享（TDD 工作流示例）、Ideas 功能建议、Collaboration 招募合作者，含发帖注意事项。
+- [发起讨论示例](examples/start-discussion.md) — 4 种讨论类型的发帖实战：Q&A 提问（含完整模板）、Knowledge Sharing 经验分享（TDD 工作流示例）、Ideas 功能建议、Collaboration 招募合作者，含发帖注意事项。
 
 ## 信源登记簿（references/）
 
-- [社区讨论仓库资源索引](/references/discussions-source.md) — 仓库基本信息、3 文件目录结构、5 分类速查表、4 步参与指南、4 条社区准则、Quick Links 映射。
+- [社区讨论仓库资源索引](references/discussions-source.md) — 仓库基本信息、3 文件目录结构、5 分类速查表、4 步参与指南、4 条社区准则、Quick Links 映射。
 
 ## 关键事实
 

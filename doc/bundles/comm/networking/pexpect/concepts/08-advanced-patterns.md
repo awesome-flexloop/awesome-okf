@@ -373,10 +373,10 @@ def ssh_execute(host, user, password, command):
 
 - [run() 函数](#run-函数)
 - [FSM 有限状态机](#fsm-有限状态机)
-- [spawn 类详解](/concepts/02-spawn-class.md)
-- [expect 模式匹配](/concepts/03-expect-patterns.md)
-- [pxssh SSH 自动化](/concepts/05-pxssh.md)
-- [REPLWrapper](/concepts/07-replwrap.md)
-- [pexpect 源码信源登记](/references/pexpect-source.md)
+- [spawn 类详解](02-spawn-class.md)
+- [expect 模式匹配](03-expect-patterns.md)
+- [pxssh SSH 自动化](05-pxssh.md)
+- [REPLWrapper](07-replwrap.md)
+- [pexpect 源码信源登记](../references/pexpect-source.md)
 
-[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](/references/pexpect-source.md)。
+[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](../references/pexpect-source.md)。

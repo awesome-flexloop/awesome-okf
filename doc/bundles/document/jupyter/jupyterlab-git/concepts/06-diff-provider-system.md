@@ -281,7 +281,7 @@ const myCustomDiffPlugin: JupyterFrontEndPlugin<void> = {
 
 ## 相关概念
 
-- [插件系统与五个Plugin](/concepts/03-extension-plugin-system.md)
-- [GitExtension核心模型](/concepts/04-git-extension-model.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [REST API通信机制](/concepts/05-rest-api-and-communication.md)
+- [插件系统与五个Plugin](03-extension-plugin-system.md)
+- [GitExtension核心模型](04-git-extension-model.md)
+- [架构总览](02-architecture-overview.md)
+- [REST API通信机制](05-rest-api-and-communication.md)

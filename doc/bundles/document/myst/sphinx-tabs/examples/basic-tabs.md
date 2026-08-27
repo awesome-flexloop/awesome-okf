@@ -97,10 +97,10 @@ sources:
 
 ## 相关示例
 
-- [多语言代码标签页](/examples/code-tabs.md)
-- [分组标签同步](/examples/group-tabs-sync.md)
+- [多语言代码标签页](code-tabs.md)
+- [分组标签同步](group-tabs-sync.md)
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [四个指令详解](/concepts/02-directives.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [四个指令详解](../concepts/02-directives.md)

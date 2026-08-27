@@ -23,21 +23,21 @@ sources:
 
 ## 内置命令总览
 
-所有内置命令继承自 `BuiltinCommand` 基类，位于 [src/builtin/](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/builtin/) 目录下：
+所有内置命令继承自 `BuiltinCommand` 基类，位于 src/builtin/ 目录下：
 
 | 命令 | 功能 | 文件 |
 |------|------|------|
-| `alias` / `unalias` | 定义和删除命令别名 | [alias_command.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/builtin/alias_command.ts) |
-| `cd` | 切换工作目录 | [cd_command.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/builtin/cd_command.ts) |
-| `clear` | 清屏 | [clear_command.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/builtin/clear_command.ts) |
-| `cockle-config` | 查询和配置 Shell 参数 | [cockle_config_command.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/builtin/cockle_config_command.ts) |
-| `exit` | 退出 Shell | [exit_command.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/builtin/exit_command.ts) |
-| `export` | 设置环境变量 | [export_command.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/builtin/export_command.ts) |
-| `help` | 显示帮助信息 | [help_command.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/builtin/help_command.ts) |
-| `history` | 显示命令历史 | [history_command.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/builtin/history_command.ts) |
-| `unset` | 删除环境变量 | [unset_command.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/builtin/unset_command.ts) |
-| `which` | 查找命令位置 | [which_command.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/builtin/which_command.ts) |
-| `true` / `false` | 返回 0/1 退出码 | [bool_commands.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/builtin/bool_commands.ts) |
+| `alias` / `unalias` | 定义和删除命令别名 | alias_command.ts |
+| `cd` | 切换工作目录 | cd_command.ts |
+| `clear` | 清屏 | clear_command.ts |
+| `cockle-config` | 查询和配置 Shell 参数 | cockle_config_command.ts |
+| `exit` | 退出 Shell | exit_command.ts |
+| `export` | 设置环境变量 | export_command.ts |
+| `help` | 显示帮助信息 | help_command.ts |
+| `history` | 显示命令历史 | history_command.ts |
+| `unset` | 删除环境变量 | unset_command.ts |
+| `which` | 查找命令位置 | which_command.ts |
+| `true` / `false` | 返回 0/1 退出码 | bool_commands.ts |
 
 ### BuiltinCommand 基类
 
@@ -64,7 +64,7 @@ abstract class BuiltinCommand {
 
 ### 自动注册机制
 
-内置命令通过 [src/builtin/index.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/builtin/index.ts) 自动注册到命令注册表（CommandRegistry）：
+内置命令通过 src/builtin/index.ts 自动注册到命令注册表（CommandRegistry）：
 
 ```typescript
 // src/builtin/index.ts
@@ -666,7 +666,7 @@ class FalseCommand extends BuiltinCommand {
 
 ## 退出码含义
 
-Cockle 定义了标准退出码常量，位于 [exit_code.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/exit_code.ts)：
+Cockle 定义了标准退出码常量，位于 exit_code.ts：
 
 ```typescript
 enum ExitCode {
@@ -695,8 +695,8 @@ echo $?  # 输出: 1
 
 ## 相关概念
 
-- [03 - 命令系统](/concepts/03-command-system.md)：命令注册表和命令运行器
-- [09 - 外部命令](/concepts/09-external-commands.md)：主线程注册的自定义命令
-- [10 - WASM 与 JavaScript 命令](/concepts/10-wasm-js-commands.md)：动态加载的 WASM/JS 命令
-- [Shell API 参考](/references/shell-api.md)：Shell 构造函数和 API
-- [内置命令参考](/references/builtin-source.md)：内置命令完整接口定义
+- [03 - 命令系统](03-command-system.md)：命令注册表和命令运行器
+- [09 - 外部命令](09-external-commands.md)：主线程注册的自定义命令
+- [10 - WASM 与 JavaScript 命令](10-wasm-js-commands.md)：动态加载的 WASM/JS 命令
+- [Shell API 参考](../references/shell-api.md)：Shell 构造函数和 API
+- [内置命令参考](../references/builtin-source.md)：内置命令完整接口定义

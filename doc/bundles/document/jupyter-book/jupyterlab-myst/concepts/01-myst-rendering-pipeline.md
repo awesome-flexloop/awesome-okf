@@ -243,7 +243,7 @@ Provider 嵌套（在 MySTWidget.render() 中）提供渲染所需的上下文�
 
 ## 相关概念
 
-- [00-architecture-plugins.md](/concepts/00-architecture-plugins.md)：插件架构
-- [02-myst-markdown-cell.md](/concepts/02-myst-markdown-cell.md)：单元格生命周期
-- [03-inline-expressions.md](/concepts/03-inline-expressions.md)：内联表达式执行
-- [01-using-jupyterlab-myst.md](/examples/01-using-jupyterlab-myst.md)：使用示例
+- [00-architecture-plugins.md](00-architecture-plugins.md)：插件架构
+- [02-myst-markdown-cell.md](02-myst-markdown-cell.md)：单元格生命周期
+- [03-inline-expressions.md](03-inline-expressions.md)：内联表达式执行
+- [01-using-jupyterlab-myst.md](../examples/01-using-jupyterlab-myst.md)：使用示例

@@ -296,6 +296,6 @@ export function _deepEqual(a: unknown, b: unknown): boolean {
 
 ## 进一步阅读
 
-- [LLM-as-Judge](/ai/langchain-ai/openevals/concepts/llm-as-judge) — 当精确匹配不够时，使用 LLM 进行语义评判
-- [API 参考](/ai/langchain-ai/openevals/references/api) — 精确评测器的完整函数签名
-- [基础评测示例](/ai/langchain-ai/openevals/examples/basic-evaluation) — 精确匹配和 LLM 评判的代码示例
+- LLM-as-Judge — 当精确匹配不够时，使用 LLM 进行语义评判
+- API 参考 — 精确评测器的完整函数签名
+- 基础评测示例 — 精确匹配和 LLM 评判的代码示例

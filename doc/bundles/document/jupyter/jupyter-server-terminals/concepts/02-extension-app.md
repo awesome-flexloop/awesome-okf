@@ -16,7 +16,7 @@ sources:
 
 ## 类定义与继承
 
-`TerminalsExtensionApp` 是 jupyter_server_terminals 的核心入口类，定义在 [app.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyter_server_terminals/jupyter_server_terminals/app.py) 中：
+`TerminalsExtensionApp` 是 jupyter_server_terminals 的核心入口类，定义在 app.py 中：
 
 ```python
 from jupyter_server.extension.application import ExtensionApp
@@ -203,11 +203,11 @@ TerminalManager 创建时传入两个环境变量给终端进程：
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [TerminalManager 终端管理器](/concepts/03-terminal-manager.md)
-- [REST API 处理器](/concepts/04-rest-api.md)
-- [WebSocket 处理器](/concepts/05-websocket.md)
-- [Shell 配置与平台差异](/concepts/06-shell-configuration.md)
-- [jupyter_server_terminals 源码信源登记](/references/jupyter-server-terminals-source.md)
+- [5分钟快速上手](01-getting-started.md)
+- [TerminalManager 终端管理器](03-terminal-manager.md)
+- [REST API 处理器](04-rest-api.md)
+- [WebSocket 处理器](05-websocket.md)
+- [Shell 配置与平台差异](06-shell-configuration.md)
+- [jupyter_server_terminals 源码信源登记](../references/jupyter-server-terminals-source.md)
 
-[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](/references/jupyter-server-terminals-source.md)。
+[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](../references/jupyter-server-terminals-source.md)。

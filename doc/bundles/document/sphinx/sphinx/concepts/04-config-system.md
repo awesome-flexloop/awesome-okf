@@ -18,7 +18,7 @@ sources:
 
 # 配置系统
 
-Sphinx 的配置系统由 `Config` 类（定义在 [sphinx/config.py](file:///d:/spaces/SpecWeave/external/libs/docs/sphinx/sphinx/config.py)）负责管理。配置文件 `conf.py` 本质上是一个普通的 Python 文件，Sphinx 在初始化时执行它，然后将其中定义的变量作为配置项加载。
+Sphinx 的配置系统由 `Config` 类（定义在 sphinx/config.py）负责管理。配置文件 `conf.py` 本质上是一个普通的 Python 文件，Sphinx 在初始化时执行它，然后将其中定义的变量作为配置项加载。
 
 ## _Opt：配置选项定义
 

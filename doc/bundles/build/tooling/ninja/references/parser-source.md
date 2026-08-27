@@ -26,7 +26,7 @@ sources:
 
 # 清单解析器 API 参考
 
-> 信源文件：[manifest_parser.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/manifest_parser.h)、[lexer.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/lexer.h)、[parser.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/parser.h)
+> 信源文件：manifest_parser.h、lexer.h、parser.h
 
 本文档记录 Ninja 构建清单（.ninja 文件）解析模块的完整 API。
 

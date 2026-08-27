@@ -74,4 +74,4 @@ server = AgentServerACP(agent=build_agent, models=models)
 
 ## 相关概念
 
-- [ACP协议集成](/ai/datawhale/deepagents/concepts/acp-protocol)
+- ACP协议集成

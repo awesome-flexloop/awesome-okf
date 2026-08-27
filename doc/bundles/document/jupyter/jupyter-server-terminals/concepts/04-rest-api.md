@@ -16,7 +16,7 @@ sources:
 
 ## API 路由总览
 
-jupyter_server_terminals 注册了两个 REST 端点，定义在 [api_handlers.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyter_server_terminals/jupyter_server_terminals/api_handlers.py) 中：
+jupyter_server_terminals 注册了两个 REST 端点，定义在 api_handlers.py 中：
 
 ```python
 default_handlers: list[tuple[str, type[Any]]] = [
@@ -217,11 +217,11 @@ async def delete(self, name: str) -> None:
 
 ## 相关概念
 
-- [TerminalManager 终端管理器](/concepts/03-terminal-manager.md)
-- [WebSocket 处理器](/concepts/05-websocket.md)
-- [TerminalsExtensionApp 扩展应用](/concepts/02-extension-app.md)
-- [基础终端操作示例](/examples/basic-operations.md)
-- [配置自动清理与指定工作目录](/examples/culler-and-cwd.md)
-- [jupyter_server_terminals 源码信源登记](/references/jupyter-server-terminals-source.md)
+- [TerminalManager 终端管理器](03-terminal-manager.md)
+- [WebSocket 处理器](05-websocket.md)
+- [TerminalsExtensionApp 扩展应用](02-extension-app.md)
+- [基础终端操作示例](../examples/basic-operations.md)
+- [配置自动清理与指定工作目录](../examples/culler-and-cwd.md)
+- [jupyter_server_terminals 源码信源登记](../references/jupyter-server-terminals-source.md)
 
-[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](/references/jupyter-server-terminals-source.md)。
+[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](../references/jupyter-server-terminals-source.md)。

@@ -18,7 +18,7 @@ sources:
 
 # ZFC坍缩 — 集合论的元数学批判
 
-`psi-collapse-zfc` 是 math.dw.cash 的 16 章系列，分 4 部分[^f044]。它对 Zermelo-Fraenkel 集合论（含选择公理，ZFC）进行系统的元数学批判，论证 ZFC 是自指塌缩被抑制后的退化投影，并提出以 [坍缩集合论（CST）](/psi-math/concepts/01-collapse-set-theory.md) 作为后 ZFC 语言。
+`psi-collapse-zfc` 是 math.dw.cash 的 16 章系列，分 4 部分[^f044]。它对 Zermelo-Fraenkel 集合论（含选择公理，ZFC）进行系统的元数学批判，论证 ZFC 是自指塌缩被抑制后的退化投影，并提出以 [坍缩集合论（CST）](01-collapse-set-theory.md) 作为后 ZFC 语言。
 
 > 本文所涉对 ZFC 的批判、空集与后继函数的"坍缩起源"解读均为 Ψhē 理论体系内部主张，未经同行评审。ZFC 在主流数学中仍是标准基础，其有效性不因此处叙述而动摇。
 
@@ -100,10 +100,10 @@ $$0 = \varnothing,\qquad S(n) = \operatorname{Collapse}(n)$$
 
 ## 相关概念
 
-- [/psi-math/concepts/01-collapse-set-theory.md](/psi-math/concepts/01-collapse-set-theory.md) — CST 作为后 ZFC 框架
-- [/psi-math/concepts/00-theory-psi-core.md](/psi-math/concepts/00-theory-psi-core.md) — 自指核心与不可约性
-- [/psi-math/concepts/03-collapse-mathematics.md](/psi-math/concepts/03-collapse-mathematics.md) — ψ-HoTT 类型论基础
-- [/psi-math/concepts/02-riemann-hypothesis.md](/psi-math/concepts/02-riemann-hypothesis.md) — 元数学批判与 RH 的关联
-- [/psi-core/concepts/06-meta-recursion.md](/psi-core/concepts/06-meta-recursion.md) — 元递归与自指闭合
+- [/psi-math/concepts/01-collapse-set-theory.md](01-collapse-set-theory.md) — CST 作为后 ZFC 框架
+- [/psi-math/concepts/00-theory-psi-core.md](00-theory-psi-core.md) — 自指核心与不可约性
+- [/psi-math/concepts/03-collapse-mathematics.md](03-collapse-mathematics.md) — ψ-HoTT 类型论基础
+- [/psi-math/concepts/02-riemann-hypothesis.md](02-riemann-hypothesis.md) — 元数学批判与 RH 的关联
+- [/psi-core/concepts/06-meta-recursion.md](../../psi-core/concepts/06-meta-recursion.md) — 元递归与自指闭合
 
 [^f044]: 事实 F-044：系列 psi-collapse-zfc 含 16 章 4 部分。

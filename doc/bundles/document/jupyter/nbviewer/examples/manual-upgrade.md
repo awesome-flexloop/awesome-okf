@@ -216,7 +216,7 @@ helm rollback nbviewer
 
 ## 相关文档
 
-- [版本更新机制](/concepts/05-version-update.md)
-- [CI/CD与自动化](/concepts/04-cicd-and-automation.md)
-- [Helm部署流程](/concepts/06-helm-deploy-process.md)
+- [版本更新机制](../concepts/05-version-update.md)
+- [CI/CD与自动化](../concepts/04-cicd-and-automation.md)
+- [Helm部署流程](../concepts/06-helm-deploy-process.md)
 - [本地部署调试](local-debug.md)

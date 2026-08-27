@@ -76,7 +76,7 @@ awesome-trae 维护中英双语 README，贡献者提交 PR 时需要：
 
 ## 相关链接
 
-- [Awesome List 定位与双层分类](/concepts/00-introduction.md)
-- [资源分类详解](/concepts/02-resource-categories.md)
-- [添加资源条目示例](/examples/add-resource.md)
-- [Awesome TRAE 仓库资源索引](/references/awesome-source.md)
+- [Awesome List 定位与双层分类](00-introduction.md)
+- [资源分类详解](02-resource-categories.md)
+- [添加资源条目示例](../examples/add-resource.md)
+- [Awesome TRAE 仓库资源索引](../references/awesome-source.md)

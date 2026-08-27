@@ -444,7 +444,7 @@ def load_ipython_extension(ip):
 
 ## 相关概念
 
-- **[扩展系统](./extension-source.md)**：扩展中如何注册事件回调（load_ipython_extension）
-- **[InteractiveShell](./interactiveshell-source.md)**：init_hooks() 和 init_events() 初始化流程
-- **[生命周期](../concepts/lifecycle.md)**：pre_execute/post_execute 与单元格执行生命周期
-- **[启动文件](../concepts/startup-files.md)**：通过 startup 脚本设置自定义钩子
+- **[扩展系统](extension-source.md)**：扩展中如何注册事件回调（load_ipython_extension）
+- **[InteractiveShell](interactiveshell-source.md)**：init_hooks() 和 init_events() 初始化流程
+- **生命周期**：pre_execute/post_execute 与单元格执行生命周期
+- **启动文件**：通过 startup 脚本设置自定义钩子

@@ -264,6 +264,6 @@ myst-spec 还导出 CSL-JSON 相关类型，用于参考文献数据：
 
 ## 相关概念
 
-- [MyST 解析器](/concepts/02-myst-parser.md)
-- [公共类型系统](/concepts/04-myst-common-types.md)
-- [指令与角色系统](/concepts/06-directives-and-roles.md)
+- [MyST 解析器](02-myst-parser.md)
+- [公共类型系统](04-myst-common-types.md)
+- [指令与角色系统](06-directives-and-roles.md)

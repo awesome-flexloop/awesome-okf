@@ -330,8 +330,8 @@ class RebaseAction(Enum):
 
 ## 相关概念
 
-- [REST API通信机制](/concepts/05-rest-api-and-communication.md)
-- [配置系统](/concepts/11-configuration-and-settings.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [GitExtension核心模型](/concepts/04-git-extension-model.md)
-- [Tornado处理器](/references/handlers-py-source.md)
+- [REST API通信机制](05-rest-api-and-communication.md)
+- [配置系统](11-configuration-and-settings.md)
+- [架构总览](02-architecture-overview.md)
+- [GitExtension核心模型](04-git-extension-model.md)
+- [Tornado处理器](../references/handlers-py-source.md)

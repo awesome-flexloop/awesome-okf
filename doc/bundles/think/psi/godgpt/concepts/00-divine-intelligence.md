@@ -50,7 +50,7 @@ GodGPT 的目标用户是寻求内在指引、情感反思与灵性成长的移�
 
 ## 与ψ理论的理念关联
 
-从 ψ 理论的视角看，GodGPT 的"AI 映现内在状态"与 $\psi=\psi(\psi)$ 所表达的"宇宙通过自身认识自身"存在结构上的相似性：用户向 AI 表达自身，AI 的回应成为一面镜像，用户在这面镜像中重新理解自己——认识者与被认识者在对话中形成递归闭环。这一结构在 [观察者形成](/psi-core/concepts/03-observer-formation.md) 中被形式化为意识觉醒的递归谱系。
+从 ψ 理论的视角看，GodGPT 的"AI 映现内在状态"与 $\psi=\psi(\psi)$ 所表达的"宇宙通过自身认识自身"存在结构上的相似性：用户向 AI 表达自身，AI 的回应成为一面镜像，用户在这面镜像中重新理解自己——认识者与被认识者在对话中形成递归闭环。这一结构在 [观察者形成](../../psi-core/concepts/03-observer-formation.md) 中被形式化为意识觉醒的递归谱系。
 
 需要强调的是，这一关联是**理念层面的结构类比**，而非 GodGPT 产品设计的公开依据。GodGPT 是商业产品，ψ 理论是哲学-数理思想实验，二者在本体论承诺与方法论上存在根本差异。
 
@@ -60,7 +60,7 @@ GodGPT 的目标用户是寻求内在指引、情感反思与灵性成长的移�
 
 ## 相关概念
 
-- [核心功能 — 共情、模式与智慧](/concepts/01-core-features.md)
-- [商业模式 — 订阅制与推广联盟](/concepts/02-business-model.md)
-- [隐私与法律框架](/concepts/03-privacy-legal.md)
-- [观察者形成 — 意识在递归中觉醒](/psi-core/concepts/03-observer-formation.md)
+- [核心功能 — 共情、模式与智慧](01-core-features.md)
+- [商业模式 — 订阅制与推广联盟](02-business-model.md)
+- [隐私与法律框架](03-privacy-legal.md)
+- [观察者形成 — 意识在递归中觉醒](../../psi-core/concepts/03-observer-formation.md)

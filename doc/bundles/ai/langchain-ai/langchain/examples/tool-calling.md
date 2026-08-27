@@ -183,7 +183,7 @@ messages.extend(tool_messages)
 
 ## 相关概念
 
-- [工具抽象](/ai/langchain-ai/langchain/concepts/tool-abstraction)
-- [消息类型](/ai/langchain-ai/langchain/concepts/message-types)
-- [聊天模型](/ai/langchain-ai/langchain/concepts/chat-model)
-- [回调系统](/ai/langchain-ai/langchain/concepts/callback-system)
+- 工具抽象
+- 消息类型
+- 聊天模型
+- 回调系统

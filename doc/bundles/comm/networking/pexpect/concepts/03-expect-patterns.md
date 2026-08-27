@@ -267,9 +267,9 @@ asyncio.run(main())
 
 ## 相关概念
 
-- [spawn 类详解](/concepts/02-spawn-class.md)
-- [发送与交互](/concepts/04-send-interact.md)
-- [跨平台 spawn 变体](/concepts/06-cross-platform-spawn.md)
-- [高级模式](/concepts/08-advanced-patterns.md)
+- [spawn 类详解](02-spawn-class.md)
+- [发送与交互](04-send-interact.md)
+- [跨平台 spawn 变体](06-cross-platform-spawn.md)
+- [高级模式](08-advanced-patterns.md)
 
-[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](/references/pexpect-source.md)。
+[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](../references/pexpect-source.md)。

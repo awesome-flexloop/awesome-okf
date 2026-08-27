@@ -90,7 +90,7 @@ strip_tagged_cells = True
 
 典型用途：在 Notebook 开头添加解释性 Markdown 单元格，这些说明在文档中可见，但在用户点击按钮打开的可执行 Notebook 中不会出现，避免干扰代码执行。
 
-详细说明见 [07-notebook-embedding](/concepts/07-notebook-embedding.md)。
+详细说明见 [07-notebook-embedding](07-notebook-embedding.md)。
 
 ## TryExamples 配置项
 
@@ -171,12 +171,12 @@ html_context = {
 
 ## 完整配置速查
 
-所有配置项的完整列表和默认值见 [/references/conf-py-source.md](/references/conf-py-source.md)。
+所有配置项的完整列表和默认值见 [/references/conf-py-source.md](../references/conf-py-source.md)。
 
 ## 相关内容
 
-- [02-quick-start](/concepts/02-quick-start.md)
-- [04-kernel-comparison](/concepts/04-kernel-comparison.md)
-- [05-config-files](/concepts/05-config-files.md)
-- [06-try-examples](/concepts/06-try-examples.md)
-- [/references/conf-py-source.md](/references/conf-py-source.md)
+- [02-quick-start](02-quick-start.md)
+- [04-kernel-comparison](04-kernel-comparison.md)
+- [05-config-files](05-config-files.md)
+- [06-try-examples](06-try-examples.md)
+- [/references/conf-py-source.md](../references/conf-py-source.md)

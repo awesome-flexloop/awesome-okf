@@ -52,7 +52,7 @@ graph TB
 
 ## Context 类定义
 
-[context.ts:L9-L78](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/context.ts#L9-L78)
+context.ts:L9-L78
 
 ### 接口声明
 
@@ -158,7 +158,7 @@ static {
 
 ## 构造函数：Proxy 代理模式
 
-[context.ts:L36-L49](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/context.ts#L36-L49)
+context.ts:L36-L49
 
 ```typescript
 constructor() {
@@ -207,7 +207,7 @@ graph LR
 
 ### extend(meta) — 通用扩展
 
-[context.ts:L55-L63](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/context.ts#L55-L63)
+context.ts:L55-L63
 
 ```typescript
 extend(meta = {}): this {
@@ -227,7 +227,7 @@ extend(meta = {}): this {
 
 ### isolate(name, label?) — 服务隔离
 
-[context.ts:L65-L69](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/context.ts#L65-L69)
+context.ts:L65-L69
 
 ```typescript
 isolate(name: string, label?: symbol) {
@@ -255,7 +255,7 @@ protected [symbols.filter](ctx: Context) {
 
 ### intercept(name, config) — 配置覆盖
 
-[context.ts:L71-L77](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/context.ts#L71-L77)
+context.ts:L71-L77
 
 ```typescript
 intercept(name: string, config: any) {
@@ -292,7 +292,7 @@ Intercept 用于为特定服务提供配置覆盖。Service 的 `[symbols.resolv
 
 Mixin 是 Cordis 将服务方法"混合"到 Context 原型上的核心机制，由 `ReflectService.mixin()` 实现：
 
-[reflect.ts:L239-L265](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts#L239-L265)
+reflect.ts:L239-L265
 
 ```typescript
 mixin(source: any, mixins: string[] | Dict<string>) {
@@ -346,7 +346,7 @@ this.mixin('events', ['on', 'once', 'parallel', 'emit', 'serial', 'bail', 'water
 
 Context 与 Fiber 的 effect 系统深度绑定。`ctx.effect()` 方法（实际是 fiber.effect 通过 mixin 暴露）是 Cordis 资源管理的核心：
 
-[fiber.ts:L275-L340](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L275-L340)
+fiber.ts:L275-L340
 
 ```typescript
 effect(execute: () => Effect, label = 'anonymous'): AsyncDisposable {
@@ -413,7 +413,7 @@ Fiber 销毁时，`_disposables.clear()` 返回逆序的值数组，按注册顺
 
 Shadow 是 Cordis 的一个精巧机制，解决"服务方法中访问 this.ctx 应指向原始注册 context 而非调用方 context"的问题：
 
-[utils.ts:L141-L155](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts#L141-L155)
+utils.ts:L141-L155
 
 ```typescript
 function createShadow(ctx: Context, target: any, property: string | undefined, receiver: any) {
@@ -493,8 +493,8 @@ class Context {
 
 | 文件 | 内容 |
 |------|------|
-| [context.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/context.ts) | Context 类定义、Proxy 构造、extend/isolate/intercept |
-| [reflect.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts) | ReflectService.handler（Proxy 拦截器）、mixin/accessor/provide |
-| [fiber.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts) | Fiber 类、effect 效果管理、epoch 状态机 |
-| [utils.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts) | createTraceable/createShadow/createCallable、symbols 定义 |
-| [service.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/service.ts) | Service 抽象基类、filter/resolveConfig |
+| context.ts | Context 类定义、Proxy 构造、extend/isolate/intercept |
+| reflect.ts | ReflectService.handler（Proxy 拦截器）、mixin/accessor/provide |
+| fiber.ts | Fiber 类、effect 效果管理、epoch 状态机 |
+| utils.ts | createTraceable/createShadow/createCallable、symbols 定义 |
+| service.ts | Service 抽象基类、filter/resolveConfig |

@@ -291,6 +291,6 @@ theme 类型的 package.json 在 `jupyterlab` 字段中有特殊配置：
 
 ## 相关概念
 
-- [四种扩展类型对比](/concepts/03-four-extension-types.md)
-- [前端扩展开发](/concepts/06-frontend-extension.md)
-- [生成项目结构详解](/concepts/04-project-structure.md)
+- [四种扩展类型对比](03-four-extension-types.md)
+- [前端扩展开发](06-frontend-extension.md)
+- [生成项目结构详解](04-project-structure.md)

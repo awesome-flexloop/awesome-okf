@@ -106,9 +106,9 @@ NPC 基于 CodeBuddy 核心能力打造（F-039），与 IDE/CLI 共享 Skills �
 
 ## 相关概念
 
-- [产品矩阵总览](/concepts/00-product-matrix.md) — NPC 在 CodeBuddy 矩阵中的定位
-- [CodeBuddy IDE](/concepts/01-ide.md) — NPC 基于其核心能力打造
-- [CLI](/concepts/02-cli.md) — 本地 Sub-agents 与云端 NPC 的能力对比
-- [Security 安全审计](/concepts/05-security.md) — NPC 自主修复与安全审计的协同
-- [IDE 工作流示例](/examples/ide-workflow.md) — 本地研发流程参考
-- [CLI 快速入门](/examples/quick-start-cli.md) — 本地 Sub-agents 使用参考
+- [产品矩阵总览](00-product-matrix.md) — NPC 在 CodeBuddy 矩阵中的定位
+- [CodeBuddy IDE](01-ide.md) — NPC 基于其核心能力打造
+- [CLI](02-cli.md) — 本地 Sub-agents 与云端 NPC 的能力对比
+- [Security 安全审计](05-security.md) — NPC 自主修复与安全审计的协同
+- [IDE 工作流示例](../examples/ide-workflow.md) — 本地研发流程参考
+- [CLI 快速入门](../examples/quick-start-cli.md) — 本地 Sub-agents 使用参考

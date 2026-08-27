@@ -18,7 +18,7 @@ sources:
 
 # 事件系统
 
-Sphinx 的事件系统是其扩展机制的核心，定义在 [sphinx/events.py](file:///d:/spaces/SpecWeave/external/libs/docs/sphinx/sphinx/events.py)。扩展通过 `app.connect(event, callback, priority)` 订阅事件，在构建流程的特定时机插入自定义逻辑，而不需要修改 Sphinx 源码。
+Sphinx 的事件系统是其扩展机制的核心，定义在 sphinx/events.py。扩展通过 `app.connect(event, callback, priority)` 订阅事件，在构建流程的特定时机插入自定义逻辑，而不需要修改 Sphinx 源码。
 
 ## EventManager 类
 

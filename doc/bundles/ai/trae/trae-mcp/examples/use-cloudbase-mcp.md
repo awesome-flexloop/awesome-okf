@@ -76,6 +76,6 @@ CloudBase MCP 覆盖 7 类云开发资源：AI 模型、认证（auth）、NoSQL
 
 ## 相关链接
 
-- [CloudBase MCP](/concepts/03-cloudbase-mcp.md)
-- [MCP 配置格式](/concepts/02-mcp-configuration.md)
-- [配置 MCP 服务器示例](/examples/configure-mcp.md)
+- [CloudBase MCP](../concepts/03-cloudbase-mcp.md)
+- [MCP 配置格式](../concepts/02-mcp-configuration.md)
+- [配置 MCP 服务器示例](configure-mcp.md)

@@ -113,6 +113,6 @@ npm run dev
 
 ## 相关内容
 
-- [快速开始](/concepts/01-getting-started.md)
-- [Docker 部署](/concepts/15-docker-deployment.md)
-- [用户注册认证示例](/examples/user-registration-auth.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [Docker 部署](../concepts/15-docker-deployment.md)
+- [用户注册认证示例](user-registration-auth.md)

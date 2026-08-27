@@ -214,10 +214,10 @@ io_object_t（poller 事件适配器）
 
 ## 相关概念
 
-- [上下文与基础设施](/concepts/01-context.md) — ctx_t 延迟启动、I/O 线程池、reaper 终止序列
-- [套接字基类](/concepts/02-socket-base.md) — 模板方法模式、x-钩子体系、bind/connect 流程
-- [消息与引用计数](/concepts/03-message.md) — msg_t 六类型、content_t 引用计数、零拷贝
-- [管道与流控](/concepts/04-pipe.md) — pipepair、ypipe 无锁队列、HWM/LWM
-- [会话与连接生命周期](/concepts/05-session.md) — session_base_t、connecter/listener、重连退避
-- [ZMTP 协议引擎](/concepts/06-zmtp-engine.md) — greeting 帧结构、握手状态机、安全机制
-- [消息模式实现](/concepts/11-patterns.md) — fq/lb/dist 算法、ROUTER 路由、PUB/SUB 过滤
+- [上下文与基础设施](01-context.md) — ctx_t 延迟启动、I/O 线程池、reaper 终止序列
+- [套接字基类](02-socket-base.md) — 模板方法模式、x-钩子体系、bind/connect 流程
+- [消息与引用计数](03-message.md) — msg_t 六类型、content_t 引用计数、零拷贝
+- [管道与流控](04-pipe.md) — pipepair、ypipe 无锁队列、HWM/LWM
+- [会话与连接生命周期](05-session.md) — session_base_t、connecter/listener、重连退避
+- [ZMTP 协议引擎](06-zmtp-engine.md) — greeting 帧结构、握手状态机、安全机制
+- [消息模式实现](11-patterns.md) — fq/lb/dist 算法、ROUTER 路由、PUB/SUB 过滤

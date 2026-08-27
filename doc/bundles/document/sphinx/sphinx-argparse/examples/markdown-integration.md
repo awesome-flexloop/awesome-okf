@@ -282,6 +282,6 @@ sphinx-argparse 的 Markdown 支持是精简实现，有以下限制：
 
 ## 相关概念
 
-- [Markdown 支持](/concepts/07-markdown-support.md)
-- [嵌套内容增强系统](/concepts/06-nested-content-enhancement.md)
-- [基础用法完整示例](/examples/basic-usage.md)
+- [Markdown 支持](../concepts/07-markdown-support.md)
+- [嵌套内容增强系统](../concepts/06-nested-content-enhancement.md)
+- [基础用法完整示例](basic-usage.md)

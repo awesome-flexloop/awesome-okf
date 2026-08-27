@@ -75,6 +75,6 @@ jupyterlite-sphinx 在 Sphinx 构建流程中深度集成了 JupyterLite 的构�
 
 ## 相关概念
 
-- [安装与基础配置](/concepts/01-installation.md)
-- [快速开始](/concepts/02-quick-start.md)
-- [指令系统总览](/concepts/03-directive-overview.md)
+- [安装与基础配置](01-installation.md)
+- [快速开始](02-quick-start.md)
+- [指令系统总览](03-directive-overview.md)

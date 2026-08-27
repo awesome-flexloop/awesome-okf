@@ -184,7 +184,7 @@ jlab env set-conda-channels conda-forge defaults bioconda
 
 ## 相关概念
 
-- [Python 环境管理](/concepts/05-python-env-management.md) — 环境发现、验证、创建与激活的完整机制
-- [设置与配置系统](/concepts/06-settings-config.md) — 全局/项目级配置层级与 desktop-settings.json 持久化
-- [CLI 命令系统](/concepts/07-cli-system.md) — jlab env/config 子命令的完整参数与用法参考
-- [Jupyter 服务器管理](/concepts/04-server-management.md) — 环境切换时服务器重启与会话管理机制
+- [Python 环境管理](../concepts/05-python-env-management.md) — 环境发现、验证、创建与激活的完整机制
+- [设置与配置系统](../concepts/06-settings-config.md) — 全局/项目级配置层级与 desktop-settings.json 持久化
+- [CLI 命令系统](../concepts/07-cli-system.md) — jlab env/config 子命令的完整参数与用法参考
+- [Jupyter 服务器管理](../concepts/04-server-management.md) — 环境切换时服务器重启与会话管理机制

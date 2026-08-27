@@ -70,6 +70,6 @@ jupyter-translate = "jupyterlab_translate.hooks"
 
 ## 相关概念
 
-- [Hatch构建钩子集成](/concepts/07-hatch-build-hook.md)
-- [翻译目录管理](/concepts/05-catalog-management.md)
-- [Jed JSON翻译格式](/concepts/06-json-jed-format.md)
+- [Hatch构建钩子集成](../concepts/07-hatch-build-hook.md)
+- [翻译目录管理](../concepts/05-catalog-management.md)
+- [Jed JSON翻译格式](../concepts/06-json-jed-format.md)

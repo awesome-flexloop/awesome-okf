@@ -210,7 +210,7 @@ PassportWebLogoutGet             // 登出
 
 ## 相关概念
 
-- [整体架构概览](/concepts/00-overview-ddd-architecture.md)
-- [DDD 分层详解](/concepts/01-ddd-layers.md)
-- [认证与中间件](/concepts/03-auth-middleware.md)
-- [IDL 与 API 契约参考](/references/idl-api-contracts.md)
+- [整体架构概览](00-overview-ddd-architecture.md)
+- [DDD 分层详解](01-ddd-layers.md)
+- [认证与中间件](03-auth-middleware.md)
+- [IDL 与 API 契约参考](../references/idl-api-contracts.md)

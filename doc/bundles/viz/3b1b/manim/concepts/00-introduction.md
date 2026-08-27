@@ -162,8 +162,8 @@ ManimGL 是 3Blue1Brown 本人维护的"原教旨"版本，与社区版（Manim 
 
 ## 相关概念
 
-- [01 第一个 Scene：Hello World](/concepts/01-hello-world.md)
-- [02 配置系统与 CLI 参数](/concepts/02-configuration.md)
-- [03 Mobject：数学对象基类](/concepts/03-mobject-fundamentals.md)
-- [ManimGL 源码结构与核心模块索引](/references/manimgl-source-code.md)
-- [ManimGL CLI 参数速查表](/references/cli-parameters-reference.md)
+- [01 第一个 Scene：Hello World](01-hello-world.md)
+- [02 配置系统与 CLI 参数](02-configuration.md)
+- [03 Mobject：数学对象基类](03-mobject-fundamentals.md)
+- [ManimGL 源码结构与核心模块索引](../references/manimgl-source-code.md)
+- [ManimGL CLI 参数速查表](../references/cli-parameters-reference.md)

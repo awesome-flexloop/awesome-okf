@@ -22,4 +22,4 @@ Deep Agents ACP 集成的使用指南。
 
 ## 相关概念
 
-- [ACP协议集成](/ai/datawhale/deepagents/concepts/acp-protocol)
+- ACP协议集成

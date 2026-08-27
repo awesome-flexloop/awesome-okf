@@ -11,7 +11,7 @@
 **videos仓库是2015-2026年持续积累的"活化石"代码库**，其中2015-2018年的经典视频（如线性代数本质、微积分本质）使用的是Manim老版本API。
 
 **学习路径建议**：
-1. 先学习 [manim知识包](../manim/spec/insights.md) 掌握当前ManimGL的API和核心机制
+1. 先学习 [manim知识包](../../manim/spec/insights.md) 掌握当前ManimGL的API和核心机制
 2. 再回到videos知识包，重点学习**叙事编排技巧**、**角色动画设计**、**交互式开发工作流**——这些才是3Blue1Brown视频制作的"不传之秘"，API差异不影响核心思想的理解
 3. 遇到老API写法（CONFIG字典、ShowCreation、OldTex等）时，参考manim知识包中的现代等价写法
 

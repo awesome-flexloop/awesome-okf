@@ -177,8 +177,8 @@ async def custom():
 
 ## 相关概念
 
-- [路径操作与请求处理](/concepts/03-path-operations.md)
-- [流式响应与 WebSocket](/concepts/12-streaming-websocket.md)
-- [OpenAPI 文档生成](/concepts/08-openapi-generation.md)
-- [参数声明系统](/concepts/05-parameter-declaration.md)
-- [异常处理与校验错误](/concepts/11-exception-handling.md)
+- [路径操作与请求处理](03-path-operations.md)
+- [流式响应与 WebSocket](12-streaming-websocket.md)
+- [OpenAPI 文档生成](08-openapi-generation.md)
+- [参数声明系统](05-parameter-declaration.md)
+- [异常处理与校验错误](11-exception-handling.md)

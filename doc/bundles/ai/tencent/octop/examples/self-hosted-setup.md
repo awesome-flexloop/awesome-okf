@@ -246,6 +246,6 @@ octop backup auto run
 
 ## 相关概念
 
-- [/concepts/01-server-lifecycle.md](/concepts/01-server-lifecycle.md)
-- [/concepts/04-db-di.md](/concepts/04-db-di.md)
-- [/concepts/06-cli-commands.md](/concepts/06-cli-commands.md)
+- [/concepts/01-server-lifecycle.md](../concepts/01-server-lifecycle.md)
+- [/concepts/04-db-di.md](../concepts/04-db-di.md)
+- [/concepts/06-cli-commands.md](../concepts/06-cli-commands.md)

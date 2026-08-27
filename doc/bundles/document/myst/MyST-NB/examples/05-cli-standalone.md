@@ -274,6 +274,6 @@ if __name__ == "__main__":
 
 ## 相关概念
 
-- [Docutils 独立使用](/concepts/11-docutils-standalone.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [MyST Notebook 文件格式](/concepts/02-notebook-format.md)
+- [Docutils 独立使用](../concepts/11-docutils-standalone.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [MyST Notebook 文件格式](../concepts/02-notebook-format.md)

@@ -230,9 +230,9 @@ def my_function(x):
 
 ## 相关概念
 
-- [指令系统总览](/concepts/03-directive-overview.md)
-- [replite 指令——嵌入交互式 REPL](/concepts/06-replite-directive.md)
-- [配置参考](/concepts/09-configuration.md)
-- [核心模块源码](/references/main-source.md)
-- [_try_examples 模块源码](/references/try-examples-source.md)
-- [前端 JS 源码](/references/js-source.md)
+- [指令系统总览](03-directive-overview.md)
+- [replite 指令——嵌入交互式 REPL](06-replite-directive.md)
+- [配置参考](09-configuration.md)
+- [核心模块源码](../references/main-source.md)
+- [_try_examples 模块源码](../references/try-examples-source.md)
+- [前端 JS 源码](../references/js-source.md)

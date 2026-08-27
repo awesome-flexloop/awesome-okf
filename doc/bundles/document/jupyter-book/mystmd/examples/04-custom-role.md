@@ -374,6 +374,6 @@ project:
 
 ## 下一步
 
-- 学习 [自定义指令](/examples/05-custom-directive.md) 创建块级扩展
-- 了解 [统一插件架构](/concepts/01-unified-plugin-architecture.md) 中 MystPlugin 的完整结构
-- 学习 [基本解析示例](/examples/00-basic-parsing.md) 了解 mystParse 的完整用法
+- 学习 [自定义指令](05-custom-directive.md) 创建块级扩展
+- 了解 [统一插件架构](../concepts/01-unified-plugin-architecture.md) 中 MystPlugin 的完整结构
+- 学习 [基本解析示例](00-basic-parsing.md) 了解 mystParse 的完整用法

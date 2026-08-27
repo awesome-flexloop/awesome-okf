@@ -99,6 +99,6 @@ export interface IWebRtcManager {
 
 ## 相关概念
 
-- [4个JupyterLab插件架构](/concepts/06-plugin-system.md)
-- [配置三级优先级系统](/concepts/09-configuration.md)
-- [房间ID与信令机制](/concepts/05-room-and-signaling.md)
+- [4个JupyterLab插件架构](../concepts/06-plugin-system.md)
+- [配置三级优先级系统](../concepts/09-configuration.md)
+- [房间ID与信令机制](../concepts/05-room-and-signaling.md)

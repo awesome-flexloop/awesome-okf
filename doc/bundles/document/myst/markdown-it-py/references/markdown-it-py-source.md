@@ -138,7 +138,7 @@ sources:
 
 ## 相关概念
 
-- [markdown-it-py 简介](/concepts/00-introduction.md)
-- [Token 流模型](/concepts/03-token-stream.md)
-- [解析管线架构](/concepts/04-parsing-pipeline.md)
-- [Ruler 规则管理](/concepts/05-ruler.md)
+- [markdown-it-py 简介](../concepts/00-introduction.md)
+- [Token 流模型](../concepts/03-token-stream.md)
+- [解析管线架构](../concepts/04-parsing-pipeline.md)
+- [Ruler 规则管理](../concepts/05-ruler.md)

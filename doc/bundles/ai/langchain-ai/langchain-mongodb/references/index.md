@@ -2,7 +2,7 @@
 
 ## API 参考
 
-- [核心 API 参考](/ai/langchain-ai/langchain-mongodb/references/api) — MongoDBAtlasVectorSearch、缓存、聊天历史、记录管理器、文档存储、检索器、Agent Toolkit 的完整类与方法签名
+- 核心 API 参考 — MongoDBAtlasVectorSearch、缓存、聊天历史、记录管理器、文档存储、检索器、Agent Toolkit 的完整类与方法签名
 
 ## 源码结构
 

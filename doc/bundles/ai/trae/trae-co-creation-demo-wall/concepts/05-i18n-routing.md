@@ -47,7 +47,7 @@ SysDictItem 的 labelI18n 字段存储 JSON 多语言标签，API 根据 lang �
 
 ## 相关概念
 
-- [认证系统](/concepts/04-auth-system.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [字典系统](/concepts/11-dictionary-system.md)
-- [API 路由设计](/concepts/06-api-routes.md)
+- [认证系统](04-auth-system.md)
+- [架构总览](02-architecture-overview.md)
+- [字典系统](11-dictionary-system.md)
+- [API 路由设计](06-api-routes.md)

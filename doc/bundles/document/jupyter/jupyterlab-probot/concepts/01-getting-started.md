@@ -48,7 +48,7 @@ npm install
 npm run build
 ```
 
-编译配置（[tsconfig.json](../../../../../external/libs/jupyter/jupyterlab-probot/tsconfig.json)）：
+编译配置（tsconfig.json）：
 - 编译目标：ES5 + CommonJS
 - 输出目录：`./lib/`
 - 启用严格模式（`strict: true`）
@@ -69,7 +69,7 @@ jupyterlab-probot 需要一个 GitHub App 来接收 Webhook 事件。按照以�
 2. 填写基本信息（名称、描述、主页 URL）
 3. **Webhook URL**：本地开发时使用 [smee.io](https://smee.io/) 代理（见下方说明）
 4. **Webhook Secret**：设置一个密钥，记录下来
-5. **权限配置**（参考 [app.yml](../../../../../external/libs/jupyter/jupyterlab-probot/app.yml)）：
+5. **权限配置**（参考 app.yml）：
    - Issues: **Read & write**
    - Metadata: **Read-only**
    - Pull requests: **Read & write**（如果需要 Binder 链接功能）

@@ -169,6 +169,6 @@ CMD ["sphinx-build", "-M", "html", ".", "_build"]
 
 ## 相关概念
 
-- [三镜像架构解析](/concepts/02-image-architecture.md)：三个镜像的分工与设计
-- [LaTeX/PDF 镜像详解](/concepts/04-latexpdf-image.md)：TeXLive 包的选择策略
-- [自定义镜像扩展](/concepts/07-customization.md)：基于 base 镜像创建自定义镜像
+- [三镜像架构解析](02-image-architecture.md)：三个镜像的分工与设计
+- [LaTeX/PDF 镜像详解](04-latexpdf-image.md)：TeXLive 包的选择策略
+- [自定义镜像扩展](07-customization.md)：基于 base 镜像创建自定义镜像

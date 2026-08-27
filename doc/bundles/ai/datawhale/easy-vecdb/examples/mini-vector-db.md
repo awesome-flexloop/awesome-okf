@@ -249,6 +249,6 @@ loaded_db = SimpleVectorDB.load()
 
 ## 延伸阅读
 
-- [向量检索基础](/ai/datawhale/easy-vecdb/concepts/vector-retrieval-basics.md) — 相似度度量和维度灾难
-- [IVF 与 PQ 量化](/ai/datawhale/easy-vecdb/concepts/ivf-pq-quantization.md) — IVF 算法原理详解
-- [Faiss 与 Milvus 工程实践](/ai/datawhale/easy-vecdb/concepts/faiss-milvus-engineering.md) — 工业级实现
+- [向量检索基础](../concepts/vector-retrieval-basics.md) — 相似度度量和维度灾难
+- [IVF 与 PQ 量化](../concepts/ivf-pq-quantization.md) — IVF 算法原理详解
+- [Faiss 与 Milvus 工程实践](../concepts/faiss-milvus-engineering.md) — 工业级实现

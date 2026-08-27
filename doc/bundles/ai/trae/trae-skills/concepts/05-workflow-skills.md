@@ -167,13 +167,13 @@ trae-claw-install 实现仓库驱动的 OpenClaw 部署，核心特点是跨平�
 
 ## 相关概念
 
-- [技能分类与模板模式](/concepts/02-skill-categories.md)
-- [纯 Prompt 型技能](/concepts/03-prompt-only-skills.md)
-- [脚本辅助型技能](/concepts/04-script-assisted-skills.md)
-- [社区积分机制](/concepts/06-community-points.md)
-- [编写自定义 Skill](/concepts/07-write-skill.md)
+- [技能分类与模板模式](02-skill-categories.md)
+- [纯 Prompt 型技能](03-prompt-only-skills.md)
+- [脚本辅助型技能](04-script-assisted-skills.md)
+- [社区积分机制](06-community-points.md)
+- [编写自定义 Skill](07-write-skill.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/skills-source.md)
-- [带 Python 脚本的 Skill 示例](/examples/skill-with-python-script.md)
+- [源码信源索引](../references/skills-source.md)
+- [带 Python 脚本的 Skill 示例](../examples/skill-with-python-script.md)

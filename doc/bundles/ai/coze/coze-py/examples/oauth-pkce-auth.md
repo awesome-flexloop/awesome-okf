@@ -396,7 +396,7 @@ PKCE 的安全原理：即使授权码被截获，没有 code_verifier 也无法
 
 ## 相关概念
 
-- [认证体系](/concepts/01-auth-system.md) — 四种认证方式的详细对比和选择指南
-- [客户端初始化](/concepts/02-client-init.md) — TokenAuth 的使用
-- [基础对话示例](/examples/basic-chat.md) — 获取 token 后如何调用对话 API
-- [认证体系参考](/references/auth-model.md) — OAuth 类和模型的完整 API
+- [认证体系](../concepts/01-auth-system.md) — 四种认证方式的详细对比和选择指南
+- [客户端初始化](../concepts/02-client-init.md) — TokenAuth 的使用
+- [基础对话示例](basic-chat.md) — 获取 token 后如何调用对话 API
+- [认证体系参考](../references/auth-model.md) — OAuth 类和模型的完整 API

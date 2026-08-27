@@ -237,9 +237,9 @@ pip install jupyterlab-fasta
 
 ## 相关概念
 
-- [MIME 渲染器开发模式](/concepts/02-mime-renderer-pattern.md)
-- [GeoJSON 地理数据渲染器](/concepts/05-geojson-renderer.md)
-- [Vega/Vega-Lite 可视化渲染器](/concepts/07-vega-renderer.md)
-- [IRenderMime 核心 API 参考](/references/rendermime-interfaces-api.md)
+- [MIME 渲染器开发模式](02-mime-renderer-pattern.md)
+- [GeoJSON 地理数据渲染器](05-geojson-renderer.md)
+- [Vega/Vega-Lite 可视化渲染器](07-vega-renderer.md)
+- [IRenderMime 核心 API 参考](../references/rendermime-interfaces-api.md)
 
 [^fasta-index]: fasta-extension/src/index.ts

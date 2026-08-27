@@ -147,10 +147,10 @@ TUI 支持 16 种语言区域，包括简体中文（zh-Hans）、繁体中文�
 
 ## 相关概念
 
-- [工作区架构](/concepts/01-workspace-architecture.md) — 21 个 crate 的 Cargo workspace 分层设计
-- [Agent 核心运行时](/concepts/02-agent-core.md) — Runtime、Engine、Thread/Session 和 JobManager
-- [MCP 协议集成](/concepts/03-mcp-protocol.md) — MCP 服务器生命周期与工具代理
-- [工具系统](/concepts/04-tool-system.md) — ToolRegistry 与 ToolHandler trait
-- [Fleet 多 Agent](/concepts/05-fleet-subagents.md) — 持久化多 worker 控制平面
-- [技能与 Hooks](/concepts/06-skills-hooks.md) — Skills 四层架构与 Hook 生命周期
-- [沙箱与执行策略](/concepts/07-sandbox-execpolicy.md) — ExecPolicyEngine 与 OS 沙箱
+- [工作区架构](01-workspace-architecture.md) — 21 个 crate 的 Cargo workspace 分层设计
+- [Agent 核心运行时](02-agent-core.md) — Runtime、Engine、Thread/Session 和 JobManager
+- [MCP 协议集成](03-mcp-protocol.md) — MCP 服务器生命周期与工具代理
+- [工具系统](04-tool-system.md) — ToolRegistry 与 ToolHandler trait
+- [Fleet 多 Agent](05-fleet-subagents.md) — 持久化多 worker 控制平面
+- [技能与 Hooks](06-skills-hooks.md) — Skills 四层架构与 Hook 生命周期
+- [沙箱与执行策略](07-sandbox-execpolicy.md) — ExecPolicyEngine 与 OS 沙箱

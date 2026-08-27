@@ -214,7 +214,7 @@ upper_tool.invoke({"text": "hello"})  # "HELLO"
 
 ## 相关概念
 
-- [消息类型](/ai/langchain-ai/langchain/concepts/message-types) —— ToolCall 与 ToolMessage 的数据结构
-- [聊天模型](/ai/langchain-ai/langchain/concepts/chat-model) —— bind_tools 将工具绑定到模型
-- [Runnable 协议](/ai/langchain-ai/langchain/concepts/runnable-protocol) —— BaseTool 本身是 RunnableSerializable
-- [回调系统](/ai/langchain-ai/langchain/concepts/callback-system) —— 工具执行触发 on_tool_start/end/error
+- 消息类型 —— ToolCall 与 ToolMessage 的数据结构
+- 聊天模型 —— bind_tools 将工具绑定到模型
+- Runnable 协议 —— BaseTool 本身是 RunnableSerializable
+- 回调系统 —— 工具执行触发 on_tool_start/end/error

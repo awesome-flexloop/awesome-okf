@@ -133,6 +133,6 @@ rst2myst stream input.rst
 
 ## 相关概念
 
-- [LosslessRSTParser 与自定义 Transform](/concepts/04-lossless-parser.md)
-- [MarkdownItRenderer 与 AST→Token 遍历](/concepts/06-token-rendering.md)
-- [mdformat 渲染集成与自定义渲染器](/concepts/07-mdformat-integration.md)
+- [LosslessRSTParser 与自定义 Transform](04-lossless-parser.md)
+- [MarkdownItRenderer 与 AST→Token 遍历](06-token-rendering.md)
+- [mdformat 渲染集成与自定义渲染器](07-mdformat-integration.md)

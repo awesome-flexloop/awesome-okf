@@ -195,6 +195,6 @@ copybutton_line_continuation_character = "\\"
 
 ## 相关概念
 
-- [扩展架构与注册机制](/concepts/02-extension-architecture.md)
-- [自定义样式与图标](/concepts/04-customization.md)
-- [Shell 提示符配置示例](/examples/shell-prompts.md)
+- [扩展架构与注册机制](02-extension-architecture.md)
+- [自定义样式与图标](04-customization.md)
+- [Shell 提示符配置示例](../examples/shell-prompts.md)

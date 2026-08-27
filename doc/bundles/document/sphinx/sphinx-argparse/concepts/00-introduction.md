@@ -85,7 +85,7 @@ sphinxcontrib-autoprogram 是另一个 argparse 自动文档扩展，功能上�
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [argparse 指令基础](/concepts/02-directive-basics.md)
-- [指令选项全解](/concepts/03-directive-options.md)
-- [sphinx-argparse 源码信源登记](/references/sphinx-argparse-source.md)
+- [5分钟快速上手](01-getting-started.md)
+- [argparse 指令基础](02-directive-basics.md)
+- [指令选项全解](03-directive-options.md)
+- [sphinx-argparse 源码信源登记](../references/sphinx-argparse-source.md)

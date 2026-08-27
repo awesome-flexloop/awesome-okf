@@ -30,7 +30,7 @@ trae-discussions 定义了 4 条核心社区指南，所有参与者都应遵守
 
 ### 2. Stay On Topic（保持主题）
 
-- **使用适当分类**：发帖时选择最匹配的分类（参见[讨论分类与使用指南](/concepts/01-discussion-categories.md)）
+- **使用适当分类**：发帖时选择最匹配的分类（参见[讨论分类与使用指南](01-discussion-categories.md)）
 - **讨论相关内容**：帖子内容与分类主题一致，不在 Q&A 下发无关广告
 - **链接相关讨论**：如果已有类似讨论，在帖子中链接引用而非重复开帖
 - **避免劫持话题**：不在他人帖子下讨论无关的子话题，开新帖讨论
@@ -122,7 +122,7 @@ TRAE 社区是国际化社区：
 
 ## 相关链接
 
-- [GitHub Discussions 作为社区论坛](/concepts/00-introduction.md)
-- [讨论分类与使用指南](/concepts/01-discussion-categories.md)
-- [发起讨论示例](/examples/start-discussion.md)
-- [社区讨论仓库资源索引](/references/discussions-source.md)
+- [GitHub Discussions 作为社区论坛](00-introduction.md)
+- [讨论分类与使用指南](01-discussion-categories.md)
+- [发起讨论示例](../examples/start-discussion.md)
+- [社区讨论仓库资源索引](../references/discussions-source.md)

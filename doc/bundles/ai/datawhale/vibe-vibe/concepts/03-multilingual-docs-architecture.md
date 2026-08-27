@@ -249,5 +249,5 @@ config.mts 实现了一套自动化的 SEO 增强系统，位于 `docs/.vitepres
 
 ## 相关概念
 
-- [Vibe 开发理念](/ai/datawhale/vibe-vibe/concepts/01-vibe-coding-philosophy.md)：多语言站点承载的教学内容与 AI 助教路由设计。
-- [Basic 入门教学设计](/ai/datawhale/vibe-vibe/concepts/02-basic-getting-started.md)：基础篇的单一连续案例与 7 里程碑结构。
+- [Vibe 开发理念](01-vibe-coding-philosophy.md)：多语言站点承载的教学内容与 AI 助教路由设计。
+- [Basic 入门教学设计](02-basic-getting-started.md)：基础篇的单一连续案例与 7 里程碑结构。

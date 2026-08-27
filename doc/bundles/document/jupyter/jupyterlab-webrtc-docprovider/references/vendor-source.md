@@ -90,6 +90,6 @@ webpack 配置中设置 `fallback: { crypto: false }`，因为浏览器环境不
 
 ## 相关概念
 
-- [Vendor补丁与大消息传输](/concepts/08-vendor-patches.md)
-- [WebRtcProvider文档提供者](/concepts/04-document-provider.md)
-- [构建与打包系统](/concepts/10-build-and-packaging.md)
+- [Vendor补丁与大消息传输](../concepts/08-vendor-patches.md)
+- [WebRtcProvider文档提供者](../concepts/04-document-provider.md)
+- [构建与打包系统](../concepts/10-build-and-packaging.md)

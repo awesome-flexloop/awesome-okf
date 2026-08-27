@@ -166,10 +166,10 @@ numfig_format = {"exercise": "习题 %s"}
 
 ## 相关示例
 
-- [基础练习与解答](/examples/basic-exercise.md)
-- [门控练习包裹内容](/examples/gated-exercises.md)
+- [基础练习与解答](basic-exercise.md)
+- [门控练习包裹内容](gated-exercises.md)
 
 ## 相关概念
 
-- [配置项参考](/concepts/05-configuration.md)
-- [解答指令详解](/concepts/03-solution-directive.md)
+- [配置项参考](../concepts/05-configuration.md)
+- [解答指令详解](../concepts/03-solution-directive.md)

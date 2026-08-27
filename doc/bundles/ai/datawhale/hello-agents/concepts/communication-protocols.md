@@ -101,6 +101,6 @@ sources:
 
 ## 相关阅读
 
-- [第十章 智能体通信协议](/ai/datawhale/hello-agents/references/chapter10-communication-protocols)
-- [多Agent协作](/ai/datawhale/hello-agents/concepts/multi-agent-collaboration)
-- [Agent框架开发](/ai/datawhale/hello-agents/concepts/agent-framework-development)
+- 第十章 智能体通信协议
+- 多Agent协作
+- Agent框架开发

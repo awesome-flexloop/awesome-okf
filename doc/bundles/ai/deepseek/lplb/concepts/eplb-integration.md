@@ -101,4 +101,4 @@ EPLB 通过 `update_redundancy_mapping(workload)` 被调用：
 3. **副本数静态**：副本槽位数由拓扑决定（不随负载动态变化），EPLB 仅决定哪些专家占据这些槽位，LP 规模固定。
 4. **单副本限制**：max_logcnt=2 简化路由为二选一，是当前版本的约束。
 
-相关参考：[API 参考](/ai/deepseek/lplb/references/api)、[拓扑配置](/ai/deepseek/lplb/references/topology)。
+相关参考：API 参考、拓扑配置。

@@ -61,32 +61,32 @@ result = agent.invoke({"messages": "Research LangGraph and write a summary"})
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/deepagents/concepts/overview) — Deep Agents 是什么、三层架构定位、核心特性
-- [规划与子代理](/ai/langchain-ai/deepagents/concepts/planning-subagents) — 上下文隔离、三种子代理形态、task 工具、安全设计模式
-- [Todo 与上下文管理](/ai/langchain-ai/deepagents/concepts/todo-context) — 摘要压缩、消息卸载、技能、内存、DeltaChannel
-- [ACP 协议](/ai/langchain-ai/deepagents/concepts/acp-protocol) — Agent Client Protocol 集成、编辑器对接、会话管理
+- 总览 — Deep Agents 是什么、三层架构定位、核心特性
+- 规划与子代理 — 上下文隔离、三种子代理形态、task 工具、安全设计模式
+- Todo 与上下文管理 — 摘要压缩、消息卸载、技能、内存、DeltaChannel
+- ACP 协议 — Agent Client Protocol 集成、编辑器对接、会话管理
 
 ### API 与技术参考
 
-- [核心 API](/ai/langchain-ai/deepagents/references/api) — `create_deep_agent()`、`DeepAgentState`、公共导出
-- [中间件栈](/ai/langchain-ai/deepagents/references/middleware-stack) — 默认中间件顺序、自定义合并规则、必需脚手架
-- [后端系统](/ai/langchain-ai/deepagents/references/backends) — `BackendProtocol`、七种内置后端、沙箱协议
-- [Profile 机制](/ai/langchain-ai/deepagents/references/profiles) — Harness/Provider Profile、模型特化调优
-- [ACP 协议参考](/ai/langchain-ai/deepagents/references/acp-protocol) — `AgentServerACP` API 详情
-- [lca-deepagents 变体](/ai/langchain-ai/deepagents/references/lca-variant) — LangChain Academy 课程材料仓库说明
+- 核心 API — `create_deep_agent()`、`DeepAgentState`、公共导出
+- 中间件栈 — 默认中间件顺序、自定义合并规则、必需脚手架
+- 后端系统 — `BackendProtocol`、七种内置后端、沙箱协议
+- Profile 机制 — Harness/Provider Profile、模型特化调优
+- ACP 协议参考 — `AgentServerACP` API 详情
+- lca-deepagents 变体 — LangChain Academy 课程材料仓库说明
 
 ### 使用示例
 
-- [lca-deepagents 教学变体](/ai/langchain-ai/deepagents/examples/lca-variant) — Chinook Sales Assistant 综合示例
+- lca-deepagents 教学变体 — Chinook Sales Assistant 综合示例
 
 ### 规格文档
 
-- [事实清单](/ai/langchain-ai/deepagents/spec/facts) — 64条从源码验证的编号事实
-- [深度洞察](/ai/langchain-ai/deepagents/spec/insights) — 5个架构设计洞察
+- 事实清单 — 64条从源码验证的编号事实
+- 深度洞察 — 5个架构设计洞察
 
 ## 变体说明
 
-本 bundle 同时覆盖 [lca-deepagents](https://github.com/langchain-ai/lca-deepagents)——LangChain Academy 官方课程材料仓库。它不是 SDK 的分支，而是固定在 `deepagents==0.7.0` 的教学示例集合，包含5个模块的课程练习和 Chinook Sales Assistant 综合项目。详见 [lca-deepagents 变体说明](/ai/langchain-ai/deepagents/references/lca-variant)。
+本 bundle 同时覆盖 [lca-deepagents](https://github.com/langchain-ai/lca-deepagents)——LangChain Academy 官方课程材料仓库。它不是 SDK 的分支，而是固定在 `deepagents==0.7.0` 的教学示例集合，包含5个模块的课程练习和 Chinook Sales Assistant 综合项目。详见 lca-deepagents 变体说明。
 
 ## 目录结构
 

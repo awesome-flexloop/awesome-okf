@@ -729,9 +729,9 @@ while not done:
 
 ## 相关概念
 
-- [Agent 核心循环模式](/concepts/01-agent-loop.md)
-- [工具系统](/concepts/02-tool-system.md)
-- [记忆架构模式](/concepts/03-memory-architecture.md)
-- [模型 Provider 抽象](/concepts/05-provider-abstraction.md)
+- Agent 核心循环模式
+- 工具系统
+- 记忆架构模式
+- 模型 Provider 抽象
 - [对比不同框架的 Agent 循环](compare-agent-loops.md)
 - [Agent 框架选型指南](choose-framework.md)

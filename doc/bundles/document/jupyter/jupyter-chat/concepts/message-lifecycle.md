@@ -340,11 +340,11 @@ ChatMessageAction 枚举定义了 4 种消息事件：[^models-py]
 
 ## 相关概念
 
-- [Yjs CRDT 同步机制](/concepts/crdt-sync.md)
-- [模型层架构](/concepts/model-architecture.md)
-- [双传输架构](/concepts/dual-transport.md)
-- [生命周期事件](/concepts/lifecycle-events.md)
-- [附件系统](/concepts/attachment-system.md)
+- [Yjs CRDT 同步机制](crdt-sync.md)
+- [模型层架构](model-architecture.md)
+- [双传输架构](dual-transport.md)
+- [生命周期事件](lifecycle-events.md)
+- [附件系统](attachment-system.md)
 
 [^input-model-ts]: input-model.ts
 [^message-ts]: message.ts

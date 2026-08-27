@@ -338,11 +338,11 @@ function ChatInput() {
 
 ## 相关概念
 
-- [组件层次结构](/concepts/component-hierarchy.md)
-- [双传输架构](/concepts/dual-transport.md)
-- [扩展点系统](/concepts/extension-points.md)
-- [消息生命周期](/concepts/message-lifecycle.md)
-- [Model API 参考](/references/api-model.md)
+- [组件层次结构](component-hierarchy.md)
+- [双传输架构](dual-transport.md)
+- [扩展点系统](extension-points.md)
+- [消息生命周期](message-lifecycle.md)
+- [Model API 参考](../references/api-model.md)
 
 [^context-ts]: context.ts
 [^input-model-ts]: input-model.ts

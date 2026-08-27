@@ -185,4 +185,4 @@ prep 阶段会自动创建一个 Changelog PR：
 
 - [发布流水线详解](05-release-pipeline.md)
 - [CLI命令详解](03-cli-commands.md)
-- [示例：基本发布流程](/examples/01-basic-release-workflow.md)
+- [示例：基本发布流程](../examples/01-basic-release-workflow.md)

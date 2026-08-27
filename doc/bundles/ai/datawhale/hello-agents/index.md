@@ -70,21 +70,21 @@ Hello-Agents 是一本理论与实战并重的智能体系统构建指南。教�
 
 | 概念 | 说明 |
 |------|------|
-| [智能体范式与ReAct](/ai/datawhale/hello-agents/concepts/agent-paradigms-react) | ReAct、Plan-and-Solve、Reflection三大经典范式的原理与实现 |
-| [Agent框架开发](/ai/datawhale/hello-agents/concepts/agent-framework-development) | 从手动实现到框架抽象，AutoGen/AgentScope/CAMEL/LangGraph对比与HelloAgents自建 |
-| [记忆系统](/ai/datawhale/hello-agents/concepts/memory-systems) | 四层记忆架构（工作/情景/语义/感知）与RAG检索增强生成 |
-| [上下文工程](/ai/datawhale/hello-agents/concepts/context-engineering) | GSSC流水线、上下文腐蚀、JIT检索、长时程任务管理 |
-| [通信协议](/ai/datawhale/hello-agents/concepts/communication-protocols) | MCP（Agent-工具）、A2A（Agent-Agent）、ANP（Agent网络）三层协议栈 |
-| [多Agent协作](/ai/datawhale/hello-agents/concepts/multi-agent-collaboration) | 对话驱动、角色扮演、图结构工作流等协作模式 |
-| [Agentic-RL](/ai/datawhale/hello-agents/concepts/agentic-rl) | 从SFT到GRPO，将LLM作为可学习策略的多步决策优化 |
-| [评估方法](/ai/datawhale/hello-agents/concepts/evaluation-methods) | BFCL工具调用评估、GAIA通用能力评估、LLM Judge与数据生成质量评估 |
+| 智能体范式与ReAct | ReAct、Plan-and-Solve、Reflection三大经典范式的原理与实现 |
+| Agent框架开发 | 从手动实现到框架抽象，AutoGen/AgentScope/CAMEL/LangGraph对比与HelloAgents自建 |
+| 记忆系统 | 四层记忆架构（工作/情景/语义/感知）与RAG检索增强生成 |
+| 上下文工程 | GSSC流水线、上下文腐蚀、JIT检索、长时程任务管理 |
+| 通信协议 | MCP（Agent-工具）、A2A（Agent-Agent）、ANP（Agent网络）三层协议栈 |
+| 多Agent协作 | 对话驱动、角色扮演、图结构工作流等协作模式 |
+| Agentic-RL | 从SFT到GRPO，将LLM作为可学习策略的多步决策优化 |
+| 评估方法 | BFCL工具调用评估、GAIA通用能力评估、LLM Judge与数据生成质量评估 |
 
 ## 实战示例
 
-- [ReAct范式从零实现](/ai/datawhale/hello-agents/examples/react-implementation)：Thought→Action→Observation循环的完整代码
-- [HelloAgents框架架构](/ai/datawhale/hello-agents/examples/helloagents-framework)："万物皆工具"的轻量级框架设计
-- [MCP协议集成](/ai/datawhale/hello-agents/examples/mcp-integration)：天气MCP服务器与多Agent文档助手
-- [Agentic-RL训练Pipeline](/ai/datawhale/hello-agents/examples/agentic-rl-training)：SFT+GRPO全流程训练代码
+- ReAct范式从零实现：Thought→Action→Observation循环的完整代码
+- HelloAgents框架架构："万物皆工具"的轻量级框架设计
+- MCP协议集成：天气MCP服务器与多Agent文档助手
+- Agentic-RL训练Pipeline：SFT+GRPO全流程训练代码
 
 ## 配套资源
 

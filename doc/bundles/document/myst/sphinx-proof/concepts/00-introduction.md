@@ -59,6 +59,6 @@ sphinx-proof 与 sphinx-exercise 均由 QuantEcon 团队开发，设计模式相
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [定理类型详解](/concepts/02-theorem-types.md)
-- [证明指令](/concepts/03-proof-directive.md)
+- [快速开始](01-getting-started.md)
+- [定理类型详解](02-theorem-types.md)
+- [证明指令](03-proof-directive.md)

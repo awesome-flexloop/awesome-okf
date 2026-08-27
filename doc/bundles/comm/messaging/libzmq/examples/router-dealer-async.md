@@ -452,7 +452,7 @@ zmq_proxy(frontend, backend, NULL);  // 阻塞
 
 ## 延伸阅读
 
-- [消息模式实现](/concepts/11-patterns.md) — ROUTER routing_id 表和 DEALER fq+lb
-- [套接字基类](/concepts/02-socket-base.md) — routing_socket_base_t 路由表
-- [管道与流控](/concepts/04-pipe.md) — HWM 和多部分消息原子性
-- [PUSH/PULL 流水线](/examples/push-pull-pipeline.md) — 更简单的无状态分发
+- [消息模式实现](../concepts/11-patterns.md) — ROUTER routing_id 表和 DEALER fq+lb
+- [套接字基类](../concepts/02-socket-base.md) — routing_socket_base_t 路由表
+- [管道与流控](../concepts/04-pipe.md) — HWM 和多部分消息原子性
+- [PUSH/PULL 流水线](push-pull-pipeline.md) — 更简单的无状态分发

@@ -100,7 +100,7 @@ pip show sphinxext-rediraffe
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [架构概览](/concepts/02-architecture-overview.md)
-- [重定向图模型](/concepts/03-redirect-graph.md)
-- [sphinxext-rediraffe 源码信源登记](/references/rediraffe-source.md)
+- [5分钟快速上手](01-getting-started.md)
+- [架构概览](02-architecture-overview.md)
+- [重定向图模型](03-redirect-graph.md)
+- [sphinxext-rediraffe 源码信源登记](../references/rediraffe-source.md)

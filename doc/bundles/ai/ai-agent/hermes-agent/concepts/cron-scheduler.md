@@ -23,7 +23,7 @@ hermes-agent 的 cron 子系统提供自动化定时任务能力，支持两类�
 1. **Agent 模式**：定时触发 Agent 执行一个 prompt，结果可投递到指定平台（Telegram/Discord 等）
 2. **no_agent 模式**：定时执行外部脚本（shell/Python），将 stdout 作为结果投递，不消耗 LLM token
 
-调度器位于 [cron/scheduler.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/scheduler.py)，核心设计点：
+调度器位于 cron/scheduler.py，核心设计点：
 - 基于文件锁（fcntl/msvcrt）实现跨进程互斥，防止 gateway 内进程 ticker 与独立守护进程同时执行
 - 使用标准 cron 表达式（5 段或 6 段带秒），支持固定间隔、一次性、cron 表达式三种调度
 - 作业持久化在 `~/.hermes/cron/jobs.json`，支持 Profile 隔离
@@ -279,18 +279,18 @@ Gateway 内嵌模式的优势：已持有所有平台的 live adapter 连接，�
 
 | 函数/类 | 文件位置 | 说明 |
 |---------|----------|------|
-| `tick(verbose, adapters, loop, sync, *, can_dispatch)` | [cron/scheduler.py#L4826](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/scheduler.py#L4826) | 调度一次：检查到期作业、推进时间、执行 |
-| `run_job(job, *, defer_agent_teardown, extra_prompt)` | [cron/scheduler.py#L3164](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/scheduler.py#L3164) | 执行单个作业，返回 `(success, doc, response, error)` |
-| `get_due_jobs()` | [cron/jobs.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/jobs.py) | 加载并返回当前到期的作业列表 |
-| `add_job(job_config)` | [cron/jobs.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/jobs.py) | 添加新作业到 jobs.json |
-| `remove_job(job_id)` | [cron/jobs.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/jobs.py) | 删除作业 |
-| `list_jobs()` | [cron/jobs.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/jobs.py) | 列出所有作业（含下次执行时间） |
-| `enable_job(job_id)` / `disable_job(job_id)` | [cron/jobs.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/jobs.py) | 启用/禁用作业 |
-| `_build_cron_agent(job)` | [cron/scheduler.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/scheduler.py) | 为 Agent 模式作业创建 AIAgent 实例 |
-| `_run_job_script_with_claim_heartbeat(job, script_path, workdir)` | [cron/scheduler.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/scheduler.py) | 执行 no_agent 脚本（含 claim 心跳防锁超时） |
-| `_parse_wake_gate(output)` | [cron/scheduler.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/scheduler.py) | 解析脚本输出中的 `wakeAgent: true/false` 门控 |
-| `_get_lock_paths()` | [cron/scheduler.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/scheduler.py) | 获取文件锁路径 |
-| `start_scheduler(interval=60)` | [cron/scheduler.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/scheduler.py) | 启动独立守护进程循环 |
+| `tick(verbose, adapters, loop, sync, *, can_dispatch)` | cron/scheduler.py#L4826 | 调度一次：检查到期作业、推进时间、执行 |
+| `run_job(job, *, defer_agent_teardown, extra_prompt)` | cron/scheduler.py#L3164 | 执行单个作业，返回 `(success, doc, response, error)` |
+| `get_due_jobs()` | cron/jobs.py | 加载并返回当前到期的作业列表 |
+| `add_job(job_config)` | cron/jobs.py | 添加新作业到 jobs.json |
+| `remove_job(job_id)` | cron/jobs.py | 删除作业 |
+| `list_jobs()` | cron/jobs.py | 列出所有作业（含下次执行时间） |
+| `enable_job(job_id)` / `disable_job(job_id)` | cron/jobs.py | 启用/禁用作业 |
+| `_build_cron_agent(job)` | cron/scheduler.py | 为 Agent 模式作业创建 AIAgent 实例 |
+| `_run_job_script_with_claim_heartbeat(job, script_path, workdir)` | cron/scheduler.py | 执行 no_agent 脚本（含 claim 心跳防锁超时） |
+| `_parse_wake_gate(output)` | cron/scheduler.py | 解析脚本输出中的 `wakeAgent: true/false` 门控 |
+| `_get_lock_paths()` | cron/scheduler.py | 获取文件锁路径 |
+| `start_scheduler(interval=60)` | cron/scheduler.py | 启动独立守护进程循环 |
 
 ### run_job 返回值
 
@@ -323,13 +323,13 @@ hermes resume                        # 恢复调度
 
 | 文件 | 内容 |
 |------|------|
-| [cron/scheduler.py#L3164-](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/scheduler.py#L3164) | `run_job()` 作业执行核心 |
-| [cron/scheduler.py#L4826-](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/scheduler.py#L4826) | `tick()` 调度 tick 入口 |
-| [cron/jobs.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/jobs.py) | 作业 CRUD、文件锁、Profile 隔离 |
-| [cron/parser.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/parser.py) | Cron 表达式解析（标准 5 段/6 段扩展） |
-| [cron/persistence.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/persistence.py) | 执行历史/输出存档 |
-| [cron/delivery.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/delivery.py) | 结果投递到各平台 |
-| [cron/__init__.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/cron/__init__.py) | 模块初始化 |
+| cron/scheduler.py#L3164- | `run_job()` 作业执行核心 |
+| cron/scheduler.py#L4826- | `tick()` 调度 tick 入口 |
+| cron/jobs.py | 作业 CRUD、文件锁、Profile 隔离 |
+| cron/parser.py | Cron 表达式解析（标准 5 段/6 段扩展） |
+| cron/persistence.py | 执行历史/输出存档 |
+| cron/delivery.py | 结果投递到各平台 |
+| cron/__init__.py | 模块初始化 |
 
 ## 相关 Concepts
 

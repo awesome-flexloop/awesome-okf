@@ -92,21 +92,21 @@ sources:
 
 | 编号 | 文档 | 状态 | 内容概要 |
 |------|------|------|---------|
-| 00 | [00-introduction.md](/concepts/00-introduction.md) | 更新 | KaTeX 是什么、核心特点、版本许可、能力边界；融合首页卖点与 Users/Versions 入口 |
-| 01 | [01-getting-started.md](/concepts/01-getting-started.md) | 更新 | 安装、CDN、核心 API（render/renderToString）、String.raw、错误处理、持久宏说明 |
-| 02 | [02-architecture-overview.md](/concepts/02-architecture-overview.md) | 保留 | 三层消化管模型（Lexer→MacroExpander→Parser）、注册表驱动设计、双输出无障碍 |
-| 03 | [03-lexer.md](/concepts/03-lexer.md) | 保留 | 正则分词、Token结构、catcodes、\verb特殊处理 |
-| 04 | [04-macro-expander.md](/concepts/04-macro-expander.md) | 保留 | Token栈、展开循环、参数消费、Namespace分组作用域 |
-| 05 | [05-parser.md](/concepts/05-parser.md) | 保留 | 递归下降解析、atom/上下标处理、函数调度、模式切换 |
-| 06 | [06-render-pipeline.md](/concepts/06-render-pipeline.md) | 保留 | buildTree/buildHTML/buildMathML、HTML+MathML双输出、displayWrap |
-| 07 | [07-dom-tree.md](/concepts/07-dom-tree.md) | 保留 | Span/Anchor/SymbolNode/SvgNode、toNode/toMarkup双输出 |
-| 08 | [08-function-registry.md](/concepts/08-function-registry.md) | 保留 | defineFunction三要素（handler/htmlBuilder/mathmlBuilder）、FunctionSpec、参数类型 |
-| 09 | [09-macro-system.md](/concepts/09-macro-system.md) | 保留 | 内置宏、自定义宏（settings.macros/__defineMacro）、\newcommand/\def |
-| 10 | [10-settings-options.md](/concepts/10-settings-options.md) | 更新 | Settings/Options双层配置、strict/trust/globalGroup默认值修正、trust context、macro函数、不可变状态传递 |
-| 11 | [11-style-system.md](/concepts/11-style-system.md) | 更新 | 8种TeX样式、字号映射、tight spacing；补充官网Font页用户视角说明 |
-| 12 | [12-font-metrics.md](/concepts/12-font-metrics.md) | 更新 | 字体族组织、fontMetrics、Unicode；融合Font页字体格式/Browserslist/Sass变量 |
-| 13 | [13-auto-render.md](/concepts/13-auto-render.md) | 更新 | renderMathInElement()、默认delimiters修正（8条不含$...$）、ignoredTags默认值、preProcess、宏持久化 |
-| 14 | [14-contrib-extensions.md](/concepts/14-contrib-extensions.md) | 更新 | 官方5扩展（auto-render/copy-tex/mathtex-script-type/mhchem/render-a11y-string）；第三方库移至23 |
+| 00 | [00-introduction.md](../concepts/00-introduction.md) | 更新 | KaTeX 是什么、核心特点、版本许可、能力边界；融合首页卖点与 Users/Versions 入口 |
+| 01 | [01-getting-started.md](../concepts/01-getting-started.md) | 更新 | 安装、CDN、核心 API（render/renderToString）、String.raw、错误处理、持久宏说明 |
+| 02 | [02-architecture-overview.md](../concepts/02-architecture-overview.md) | 保留 | 三层消化管模型（Lexer→MacroExpander→Parser）、注册表驱动设计、双输出无障碍 |
+| 03 | [03-lexer.md](../concepts/03-lexer.md) | 保留 | 正则分词、Token结构、catcodes、\verb特殊处理 |
+| 04 | [04-macro-expander.md](../concepts/04-macro-expander.md) | 保留 | Token栈、展开循环、参数消费、Namespace分组作用域 |
+| 05 | [05-parser.md](../concepts/05-parser.md) | 保留 | 递归下降解析、atom/上下标处理、函数调度、模式切换 |
+| 06 | [06-render-pipeline.md](../concepts/06-render-pipeline.md) | 保留 | buildTree/buildHTML/buildMathML、HTML+MathML双输出、displayWrap |
+| 07 | [07-dom-tree.md](../concepts/07-dom-tree.md) | 保留 | Span/Anchor/SymbolNode/SvgNode、toNode/toMarkup双输出 |
+| 08 | [08-function-registry.md](../concepts/08-function-registry.md) | 保留 | defineFunction三要素（handler/htmlBuilder/mathmlBuilder）、FunctionSpec、参数类型 |
+| 09 | [09-macro-system.md](../concepts/09-macro-system.md) | 保留 | 内置宏、自定义宏（settings.macros/__defineMacro）、\newcommand/\def |
+| 10 | [10-settings-options.md](../concepts/10-settings-options.md) | 更新 | Settings/Options双层配置、strict/trust/globalGroup默认值修正、trust context、macro函数、不可变状态传递 |
+| 11 | [11-style-system.md](../concepts/11-style-system.md) | 更新 | 8种TeX样式、字号映射、tight spacing；补充官网Font页用户视角说明 |
+| 12 | [12-font-metrics.md](../concepts/12-font-metrics.md) | 更新 | 字体族组织、fontMetrics、Unicode；融合Font页字体格式/Browserslist/Sass变量 |
+| 13 | [13-auto-render.md](../concepts/13-auto-render.md) | 更新 | renderMathInElement()、默认delimiters修正（8条不含$...$）、ignoredTags默认值、preProcess、宏持久化 |
+| 14 | [14-contrib-extensions.md](../concepts/14-contrib-extensions.md) | 更新 | 官方5扩展（auto-render/copy-tex/mathtex-script-type/mhchem/render-a11y-string）；第三方库移至23 |
 | 15 | 15-installation-and-runtime.md | 新增 | 浏览器CDN/自托管、Node/npm/pnpm/yarn/Deno、ESM/CJS、CSS/字体路径、Bundler、Browserslist/USE_FONT构建 |
 | 16 | 16-command-line.md | 新增 | CLI输入/输出、18个选项（含--version/--help）、与Options映射、宏文件、常见用法 |
 | 17 | 17-fonts-and-units.md | 新增 | 字体加载策略、katex-swap.css、FOUT/FOIT、TeX单位换算、绝对长度缩放、字体自托管、1.21em默认缩放 |
@@ -121,11 +121,11 @@ sources:
 
 | 文档 | 状态 | 内容 |
 |------|------|------|
-| [basic-render.md](/examples/basic-render.md) | 更新 | render/renderToString、行内/显示模式、常见公式；与官网API表述一致 |
-| [custom-macros.md](/examples/custom-macros.md) | 更新 | settings.macros别名、带参数宏、函数宏、共享macros对象、\gdef持久化、宏安全边界 |
-| [custom-extension.md](/examples/custom-extension.md) | 更新 | __defineFunction添加命令、builder、MathML无障碍要求；对照官网/源码检查 |
-| [auto-render-usage.md](/examples/auto-render-usage.md) | 更新 | 默认delimiters、$$先于$规则、ignoredTags/ignoredClasses、preProcess、动态内容、宏持久化 |
-| [error-handling.md](/examples/error-handling.md) | 更新 | throwOnError/errorColor、strict模式、ParseError、trust安全、安全封装函数 |
+| [basic-render.md](../examples/basic-render.md) | 更新 | render/renderToString、行内/显示模式、常见公式；与官网API表述一致 |
+| [custom-macros.md](../examples/custom-macros.md) | 更新 | settings.macros别名、带参数宏、函数宏、共享macros对象、\gdef持久化、宏安全边界 |
+| [custom-extension.md](../examples/custom-extension.md) | 更新 | __defineFunction添加命令、builder、MathML无障碍要求；对照官网/源码检查 |
+| [auto-render-usage.md](../examples/auto-render-usage.md) | 更新 | 默认delimiters、$$先于$规则、ignoredTags/ignoredClasses、preProcess、动态内容、宏持久化 |
+| [error-handling.md](../examples/error-handling.md) | 更新 | throwOnError/errorColor、strict模式、ParseError、trust安全、安全封装函数 |
 | node-ssr.md | 新增 | Node.js/ESM/CJS中renderToString、CSS引入、HTML注入注意事项 |
 | security-trust.md | 新增 | 不可信输入配置、trust函数、错误处理、HTML消毒、持久宏隔离 |
 | cli-render.md | 新增 | npx katex从stdin到stdout、--input/--output/--display-mode/--macro/--macro-file/--no-throw-on-error |
@@ -134,7 +134,7 @@ sources:
 
 | 文档 | 状态 | 内容 |
 |------|------|------|
-| [katex-source.md](/references/katex-source.md) | 更新 | v0.18.4 源码核心文件索引，补充官网关联说明 |
+| [katex-source.md](../references/katex-source.md) | 更新 | v0.18.4 源码核心文件索引，补充官网关联说明 |
 | katex-website.md | 新增 | 官网17个页面登记：ID、URL、标题、用途、引用提示 |
 
 ### 概念文档与事实映射

@@ -55,6 +55,6 @@ pip install github-activity
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [CLI命令详解](/concepts/02-cli-usage.md)
-- [变更日志生成示例](/examples/changelog-generation.md)
+- [快速开始](01-getting-started.md)
+- [CLI命令详解](02-cli-usage.md)
+- [变更日志生成示例](../examples/changelog-generation.md)

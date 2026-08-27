@@ -259,7 +259,7 @@ activate: (app, palette, launcher) => {
 
 ## 相关概念
 
-- [Hello World：最小插件](/concepts/01-hello-world.md)
-- [命令系统](/concepts/04-commands.md)
-- [Widget与Shell布局](/concepts/05-widgets-shell.md)
-- [核心API与Token参考](/references/core-api-tokens.md)
+- [Hello World：最小插件](01-hello-world.md)
+- [命令系统](04-commands.md)
+- [Widget与Shell布局](05-widgets-shell.md)
+- [核心API与Token参考](../references/core-api-tokens.md)

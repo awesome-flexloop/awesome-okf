@@ -127,7 +127,7 @@ const plugin: Plugin<[Options?], Root, VFile> = function (opts) {
 
 ## 相关概念
 
-- [00-exporter-architecture](/concepts/00-exporter-architecture.md)：统一导出接口架构
-- [01-html-export](/concepts/01-html-export.md)：HTML 导出详解
-- [02-latex-export](/concepts/02-latex-export.md)：LaTeX 导出详解
-- [08-jtex-template-engine](/concepts/08-jtex-template-engine.md)：jtex 模板引擎
+- [00-exporter-architecture](../concepts/00-exporter-architecture.md)：统一导出接口架构
+- [01-html-export](../concepts/01-html-export.md)：HTML 导出详解
+- [02-latex-export](../concepts/02-latex-export.md)：LaTeX 导出详解
+- [08-jtex-template-engine](../concepts/08-jtex-template-engine.md)：jtex 模板引擎

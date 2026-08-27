@@ -672,13 +672,13 @@ class TrainProcessService:
 
 | 文件 | 职责 |
 |------|------|
-| [lpm_kernel/app.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/app.py) | Flask 应用工厂、CORS、文件服务配置 |
-| [lpm_kernel/api/__init__.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/__init__.py) | Blueprint 注册入口 |
-| [lpm_kernel/api/common/responses.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/common/responses.py) | 统一 API 响应格式 |
-| [lpm_kernel/api/domains/documents/routes.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/documents/routes.py) | 文档管理路由 |
-| [lpm_kernel/api/domains/trainprocess/routes.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/trainprocess/routes.py) | 训练流水线路由 |
-| [lpm_kernel/api/domains/kernel2/routes_talk.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/kernel2/routes_talk.py) | 对话聊天路由 |
-| [lpm_kernel/api/domains/space/space_routes.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/space/space_routes.py) | Space 多智能体路由 |
-| [lpm_kernel/api/domains/upload/routes.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/upload/routes.py) | 上传/注册路由 |
-| [lpm_kernel/api/services/local_llm_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/services/local_llm_service.py) | 本地 LLM 服务管理 |
-| [lpm_kernel/common/repository/database_session.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/common/repository/database_session.py) | 数据库会话管理 |
+| lpm_kernel/app.py | Flask 应用工厂、CORS、文件服务配置 |
+| lpm_kernel/api/__init__.py | Blueprint 注册入口 |
+| lpm_kernel/api/common/responses.py | 统一 API 响应格式 |
+| lpm_kernel/api/domains/documents/routes.py | 文档管理路由 |
+| lpm_kernel/api/domains/trainprocess/routes.py | 训练流水线路由 |
+| lpm_kernel/api/domains/kernel2/routes_talk.py | 对话聊天路由 |
+| lpm_kernel/api/domains/space/space_routes.py | Space 多智能体路由 |
+| lpm_kernel/api/domains/upload/routes.py | 上传/注册路由 |
+| lpm_kernel/api/services/local_llm_service.py | 本地 LLM 服务管理 |
+| lpm_kernel/common/repository/database_session.py | 数据库会话管理 |

@@ -18,12 +18,12 @@ CodeBuddy 的核心差异化在于"三态一体"——IDE（产设研一体桌�
 
 | 文档 | 说明 |
 |------|------|
-| [产品矩阵总览](/concepts/00-product-matrix.md) | IDE/插件/CLI 三态一体与 NPC、WorkBuddy、Security 三大延伸产品的定位、关系与适用场景 |
-| [CodeBuddy IDE](/concepts/01-ide.md) | 基于 VSCode 架构的产设研一体桌面端，自然语言驱动 PRD→设计→代码→部署全流程 |
-| [CLI](/concepts/02-cli.md) | 终端原生 AI 编程工具，全仓百万级代码感知、MCP 双端、分层记忆与 Sub-agents |
-| [NPC 云端 AI 员工](/concepts/03-npc.md) | 基于 CodeBuddy 的云端自主 Agent，目标驱动从需求到 PR 全流程，支持多 NPC 协同 |
-| [WorkBuddy 在线助手](/concepts/04-workbuddy.md) | 覆盖日常办公与代码开发双场景的对话式在线 AI 助手，公测阶段 |
-| [Security 安全审计](/concepts/05-security.md) | 基于 TCA-Xcheck 与 AI 安全 Agent 的六步安全闭环，对抗性审查与 PoC 动态验证 |
+| [产品矩阵总览](concepts/00-product-matrix.md) | IDE/插件/CLI 三态一体与 NPC、WorkBuddy、Security 三大延伸产品的定位、关系与适用场景 |
+| [CodeBuddy IDE](concepts/01-ide.md) | 基于 VSCode 架构的产设研一体桌面端，自然语言驱动 PRD→设计→代码→部署全流程 |
+| [CLI](concepts/02-cli.md) | 终端原生 AI 编程工具，全仓百万级代码感知、MCP 双端、分层记忆与 Sub-agents |
+| [NPC 云端 AI 员工](concepts/03-npc.md) | 基于 CodeBuddy 的云端自主 Agent，目标驱动从需求到 PR 全流程，支持多 NPC 协同 |
+| [WorkBuddy 在线助手](concepts/04-workbuddy.md) | 覆盖日常办公与代码开发双场景的对话式在线 AI 助手，公测阶段 |
+| [Security 安全审计](concepts/05-security.md) | 基于 TCA-Xcheck 与 AI 安全 Agent 的六步安全闭环，对抗性审查与 PoC 动态验证 |
 
 ## 核心能力篇
 
@@ -43,37 +43,37 @@ CodeBuddy 三态共享的高级能力（详见各概念文档）：
 
 | 示例 | 说明 |
 |------|------|
-| [CLI 快速入门](/examples/quick-start-cli.md) | 环境准备、全局安装、/init 初始化项目手册、/doctor 诊断、Sub-agents 与 MCP 配置 |
-| [IDE 产设研工作流](/examples/ide-workflow.md) | 从自然语言需求到 PRD、Figma 转码、前后端实现、CloudBase/Supabase 部署与代码审查的全流程 |
+| [CLI 快速入门](examples/quick-start-cli.md) | 环境准备、全局安装、/init 初始化项目手册、/doctor 诊断、Sub-agents 与 MCP 配置 |
+| [IDE 产设研工作流](examples/ide-workflow.md) | 从自然语言需求到 PRD、Figma 转码、前后端实现、CloudBase/Supabase 部署与代码审查的全流程 |
 
 ## 信源登记簿
 
 | 信源 | 文件 | 对应事实 |
 |------|------|----------|
-| CodeBuddy IDE 官网 | [ide.md](/references/ide.md) | F-001 ~ F-008 |
-| CodeBuddy IDE 文档介绍 | [docs-intro.md](/references/docs-intro.md) | F-009 ~ F-025 |
-| CodeBuddy CLI 官网 | [cli.md](/references/cli.md) | F-026 ~ F-038 |
-| CodeBuddy NPC 官网 | [npc.md](/references/npc.md) | F-039 ~ F-051 |
-| WorkBuddy 官网 | [workbuddy.md](/references/workbuddy.md) | F-052 ~ F-060 |
-| CodeBuddy Security 官网 | [security.md](/references/security.md) | F-061 ~ F-079 |
+| CodeBuddy IDE 官网 | [ide.md](references/ide.md) | F-001 ~ F-008 |
+| CodeBuddy IDE 文档介绍 | [docs-intro.md](references/docs-intro.md) | F-009 ~ F-025 |
+| CodeBuddy CLI 官网 | [cli.md](references/cli.md) | F-026 ~ F-038 |
+| CodeBuddy NPC 官网 | [npc.md](references/npc.md) | F-039 ~ F-051 |
+| WorkBuddy 官网 | [workbuddy.md](references/workbuddy.md) | F-052 ~ F-060 |
+| CodeBuddy Security 官网 | [security.md](references/security.md) | F-061 ~ F-079 |
 
-完整编号事实清单见 [spec/facts.md](/spec/facts.md)，架构洞察见 [spec/insights.md](/spec/insights.md)。
+完整编号事实清单见 [spec/facts.md](spec/facts.md)，架构洞察见 [spec/insights.md](spec/insights.md)。
 
 ## 规格说明
 
 | 文件 | 说明 |
 |------|------|
-| [事实清单 (F-001~F-079)](/spec/facts.md) | 79 条带信源标注的编号事实 |
-| [核心洞察](/spec/insights.md) | 5 条架构洞察（陈述/证据/反常识/行动） |
-| [变更日志](/log.md) | 版本变更记录 |
+| [事实清单 (F-001~F-079)](spec/facts.md) | 79 条带信源标注的编号事实 |
+| [核心洞察](spec/insights.md) | 5 条架构洞察（陈述/证据/反常识/行动） |
+| [变更日志](log.md) | 版本变更记录 |
 
 ## 学习路径建议
 
-1. **了解全貌**：[产品矩阵总览](/concepts/00-product-matrix.md) → 选择感兴趣的产品
-2. **本地开发**：[CodeBuddy IDE](/concepts/01-ide.md) → [IDE 工作流示例](/examples/ide-workflow.md) → [CLI](/concepts/02-cli.md) → [CLI 快速入门](/examples/quick-start-cli.md)
-3. **云端交付**：[NPC 云端 AI 员工](/concepts/03-npc.md)
-4. **安全审计**：[Security 安全审计](/concepts/05-security.md)
-5. **办公协同**：[WorkBuddy 在线助手](/concepts/04-workbuddy.md)
+1. **了解全貌**：[产品矩阵总览](concepts/00-product-matrix.md) → 选择感兴趣的产品
+2. **本地开发**：[CodeBuddy IDE](concepts/01-ide.md) → [IDE 工作流示例](examples/ide-workflow.md) → [CLI](concepts/02-cli.md) → [CLI 快速入门](examples/quick-start-cli.md)
+3. **云端交付**：[NPC 云端 AI 员工](concepts/03-npc.md)
+4. **安全审计**：[Security 安全审计](concepts/05-security.md)
+5. **办公协同**：[WorkBuddy 在线助手](concepts/04-workbuddy.md)
 
 ## 目录结构
 

@@ -29,7 +29,7 @@ WebSocket 使用 JSON 数组格式的简单消息协议：
 
 ## 前置条件
 
-- 已通过 REST API 创建了一个终端（参见 [基础终端操作](/examples/basic-operations.md)）
+- 已通过 REST API 创建了一个终端（参见 [基础终端操作](basic-operations.md)）
 - 知道目标终端的 `name`（如 `"1"`）
 - WebSocket 连接使用 `ws://` 或 `wss://` 协议
 
@@ -303,9 +303,9 @@ function stripAnsi(str) {
 
 ## 相关概念
 
-- [WebSocket 处理器](/concepts/05-websocket.md)
-- [REST API 处理器](/concepts/04-rest-api.md)
-- [基础终端操作](/examples/basic-operations.md)
-- [jupyter_server_terminals 源码信源登记](/references/jupyter-server-terminals-source.md)
+- [WebSocket 处理器](../concepts/05-websocket.md)
+- [REST API 处理器](../concepts/04-rest-api.md)
+- [基础终端操作](basic-operations.md)
+- [jupyter_server_terminals 源码信源登记](../references/jupyter-server-terminals-source.md)
 
-[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](/references/jupyter-server-terminals-source.md)。
+[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](../references/jupyter-server-terminals-source.md)。

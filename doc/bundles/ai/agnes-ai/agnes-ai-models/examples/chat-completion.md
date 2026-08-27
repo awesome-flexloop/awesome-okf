@@ -137,12 +137,12 @@ A: 事实性问答用0.1-0.3（更确定），创意写作用0.7-1.0（更多样
 
 ## 相关示例
 
-- [流式对话示例](/examples/streaming-chat.md) — 逐字输出效果
-- [OpenAI兼容客户端配置](/examples/openai-compatible.md) — 最小化客户端配置
-- [Agent工作流示例](/examples/agent-workflow.md) — 工具调用完整流程
+- 流式对话示例 — 逐字输出效果
+- [OpenAI兼容客户端配置](openai-compatible.md) — 最小化客户端配置
+- [Agent工作流示例](agent-workflow.md) — 工具调用完整流程
 
 ## 相关概念
 
-- [对话补全 API](/concepts/03-chat-completions.md)
-- [API认证与安全](/concepts/02-api-authentication.md)
-- [错误处理与调试](/concepts/07-error-handling.md)
+- [对话补全 API](../concepts/03-chat-completions.md)
+- [API认证与安全](../concepts/02-api-authentication.md)
+- [错误处理与调试](../concepts/07-error-handling.md)

@@ -313,7 +313,7 @@ ll -la /tmp
 
 ## 相关概念
 
-- [输入转换与特殊语法](/concepts/07-input-transform.md)
-- [魔法命令系统](/concepts/04-magic-system.md)
-- [代码执行管线](/concepts/05-execution-pipeline.md)
-- [信源参考 - 历史/补全/别名](/references/history-completer-source.md)
+- [输入转换与特殊语法](07-input-transform.md)
+- [魔法命令系统](04-magic-system.md)
+- [代码执行管线](05-execution-pipeline.md)
+- [信源参考 - 历史/补全/别名](../references/history-completer-source.md)

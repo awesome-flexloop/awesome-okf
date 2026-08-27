@@ -687,8 +687,8 @@ GraphQL 输入值支持以下类型（F-056）：
 
 ## 相关概念
 
-- [查询语言基础：文档、操作与选择集](/concepts/01-query-language-basics.md) — 本文语法的规范来源：Document、OperationDefinition、SelectionSet、Field、Arguments、Value、Variables
-- [Schema 与类型系统入门](/concepts/02-schema-and-types.md) — 本文 Schema 中使用的标量、对象、枚举、输入对象类型定义
-- [指令、包装类型与输入系统](/concepts/04-directives-and-wrapping-types.md) — Non-Null (`!`) 和 List (`[]`) 包装类型的语义
-- [片段、变量作用域与 Schema Coordinates](/concepts/09-fragments-and-advanced-syntax.md) — 片段复用与变量作用域的深入讨论
-- [响应格式、错误冒泡与序列化](/concepts/07-response-and-errors.md) — 本文 JSON 响应的格式规范
+- [查询语言基础：文档、操作与选择集](../concepts/01-query-language-basics.md) — 本文语法的规范来源：Document、OperationDefinition、SelectionSet、Field、Arguments、Value、Variables
+- [Schema 与类型系统入门](../concepts/02-schema-and-types.md) — 本文 Schema 中使用的标量、对象、枚举、输入对象类型定义
+- [指令、包装类型与输入系统](../concepts/04-directives-and-wrapping-types.md) — Non-Null (`!`) 和 List (`[]`) 包装类型的语义
+- [片段、变量作用域与 Schema Coordinates](../concepts/09-fragments-and-advanced-syntax.md) — 片段复用与变量作用域的深入讨论
+- [响应格式、错误冒泡与序列化](../concepts/07-response-and-errors.md) — 本文 JSON 响应的格式规范

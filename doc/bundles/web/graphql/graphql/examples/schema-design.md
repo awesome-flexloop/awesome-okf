@@ -752,8 +752,8 @@ type Mutation {
 
 ## 相关概念
 
-- [Schema 与类型系统入门](/concepts/02-schema-and-types.md) — Schema 定义、标量类型、六种命名类型的基础概念
-- [复合类型：对象、接口、联合与枚举](/concepts/03-composite-types.md) — Interface、Union、Enum、Object 的详细规范
-- [指令、包装类型与输入系统](/concepts/04-directives-and-wrapping-types.md) — Non-Null/List 包装、InputObject、OneOf、自定义指令的完整语义
-- [响应格式、错误冒泡与序列化](/concepts/07-response-and-errors.md) — Non-Null 设计如何影响错误传播和部分数据响应
-- [基础查询与变更示例](/examples/basic-query.md) — 基础 query/mutation 语法
+- [Schema 与类型系统入门](../concepts/02-schema-and-types.md) — Schema 定义、标量类型、六种命名类型的基础概念
+- [复合类型：对象、接口、联合与枚举](../concepts/03-composite-types.md) — Interface、Union、Enum、Object 的详细规范
+- [指令、包装类型与输入系统](../concepts/04-directives-and-wrapping-types.md) — Non-Null/List 包装、InputObject、OneOf、自定义指令的完整语义
+- [响应格式、错误冒泡与序列化](../concepts/07-response-and-errors.md) — Non-Null 设计如何影响错误传播和部分数据响应
+- [基础查询与变更示例](basic-query.md) — 基础 query/mutation 语法

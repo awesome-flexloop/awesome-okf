@@ -105,6 +105,6 @@ import { cn } from '@/lib/utils';
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [CRUD 数据层](/concepts/07-crud-layer.md)
-- [作品提交流程](/concepts/13-form-submission.md)
+- [架构总览](02-architecture-overview.md)
+- [CRUD 数据层](07-crud-layer.md)
+- [作品提交流程](13-form-submission.md)

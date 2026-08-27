@@ -215,9 +215,9 @@ core 模式下 `labextensions_path` 为空（F-088），`buildAvailable` 和 `bu
 
 ## 相关概念
 
-- [00 概述与知识地图](/concepts/00-introduction.md)
-- [02 应用框架与 Shell 布局](/concepts/02-application-shell.md)
-- [03 插件系统与依赖注入](/concepts/03-plugin-system.md)
-- [04 服务层与后端通信](/concepts/04-service-layer.md)
-- [08 构建系统与运行模式](/concepts/08-build-and-modes.md)
-- [源码文件地图](/references/source-code-map.md)
+- [00 概述与知识地图](00-introduction.md)
+- [02 应用框架与 Shell 布局](02-application-shell.md)
+- [03 插件系统与依赖注入](03-plugin-system.md)
+- [04 服务层与后端通信](04-service-layer.md)
+- [08 构建系统与运行模式](08-build-and-modes.md)
+- [源码文件地图](../references/source-code-map.md)

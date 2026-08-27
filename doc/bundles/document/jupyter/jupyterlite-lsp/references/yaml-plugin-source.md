@@ -131,7 +131,7 @@ import 'yaml-language-server/lib/esm/webworker/yamlServerMain';
 
 ## 相关概念
 
-- [YAML/JSON 语言服务器](/concepts/06-yaml-server.md)
-- [IJSONRPCLanguageServer 接口](/concepts/04-language-server-interface.md)
-- [核心包源码引用](/references/core-plugin-source.md)
-- [添加自定义语言服务器示例](/examples/add-custom-language-server.md)
+- [YAML/JSON 语言服务器](../concepts/06-yaml-server.md)
+- [IJSONRPCLanguageServer 接口](../concepts/04-language-server-interface.md)
+- [核心包源码引用](core-plugin-source.md)
+- [添加自定义语言服务器示例](../examples/add-custom-language-server.md)

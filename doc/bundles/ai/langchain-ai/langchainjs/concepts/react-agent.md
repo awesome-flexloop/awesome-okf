@@ -231,8 +231,8 @@ interface AgentTypeConfig<Response, State, Context, Middleware, Tools, StreamTra
 
 ## 相关文档
 
-- [Middleware](/ai/langchain-ai/langchainjs/concepts/middleware) — Agent 横切扩展系统
-- [消息系统](/ai/langchain-ai/langchainjs/concepts/message-system) — AIMessage 与 ToolMessage
-- [工具定义](/ai/langchain-ai/langchainjs/concepts/tool-definition) — 工具创建
-- [Agent 与 Middleware API](/ai/langchain-ai/langchainjs/references/agents-middleware) — API 参考
-- [创建 ReAct Agent 示例](/ai/langchain-ai/langchainjs/examples/react-agent)
+- Middleware — Agent 横切扩展系统
+- 消息系统 — AIMessage 与 ToolMessage
+- 工具定义 — 工具创建
+- Agent 与 Middleware API — API 参考
+- 创建 ReAct Agent 示例

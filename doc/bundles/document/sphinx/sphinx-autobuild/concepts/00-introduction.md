@@ -86,7 +86,7 @@ sphinx-autobuild 是 Sphinx 官方维护的工具，早期有一些社区替代�
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [架构概览](/concepts/02-architecture-overview.md)
-- [CLI 入口与参数解析](/concepts/03-cli-and-entrypoint.md)
-- [sphinx-autobuild 源码信源登记](/references/sphinx-autobuild-source.md)
+- [5分钟快速上手](01-getting-started.md)
+- [架构概览](02-architecture-overview.md)
+- [CLI 入口与参数解析](03-cli-and-entrypoint.md)
+- [sphinx-autobuild 源码信源登记](../references/sphinx-autobuild-source.md)

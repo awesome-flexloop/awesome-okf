@@ -83,5 +83,5 @@ URL中的`?param=value`被编码为路径段`/%3Fparam%3Dvalue`，确保缓存�
 
 ## 相关文档
 
-- [Provider插件系统](/concepts/05-provider-plugin-system.md)
-- [自定义Provider扩展](/concepts/12-custom-provider.md)
+- [Provider插件系统](05-provider-plugin-system.md)
+- [自定义Provider扩展](12-custom-provider.md)

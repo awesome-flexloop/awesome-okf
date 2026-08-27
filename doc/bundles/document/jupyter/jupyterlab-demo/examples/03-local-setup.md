@@ -252,6 +252,6 @@ A: Windows 下路径分隔符使用 `\` 或在 PowerShell 中使用 `/`。build.
 
 ## 相关概念
 
-- [Binder 环境配置三要素](/concepts/02-binder-config.md)
-- [build.py 与 talks.yml 配置化组装系统](/concepts/03-build-system.md)
-- [在 Binder 启动 JupyterLab 演示环境](/examples/01-launch-binder.md)
+- [Binder 环境配置三要素](../concepts/02-binder-config.md)
+- [build.py 与 talks.yml 配置化组装系统](../concepts/03-build-system.md)
+- [在 Binder 启动 JupyterLab 演示环境](01-launch-binder.md)

@@ -121,7 +121,7 @@ await client.awaitPendingTraceBatches();
 
 ## 相关概念
 
-- [traceable 装饰器](/ai/langchain-ai/langsmith-sdk/concepts/traceable-decorator.md)
-- [SDK 总览](/ai/langchain-ai/langsmith-sdk/concepts/overview.md)
-- [评测运行器](/ai/langchain-ai/langsmith-sdk/concepts/evaluation.md)
-- [核心源码参考](/ai/langchain-ai/langsmith-sdk/references/source-core.md)
+- [traceable 装饰器](traceable-decorator.md)
+- [SDK 总览](overview.md)
+- [评测运行器](evaluation.md)
+- [核心源码参考](../references/source-core.md)

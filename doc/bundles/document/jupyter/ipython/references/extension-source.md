@@ -429,8 +429,8 @@ def unload_ipython_extension(ipython):
 
 ## 相关概念
 
-- **[魔法命令系统](./magic-source.md)**：扩展中注册魔法命令的 API
-- **[事件与钩子](./events-hooks-source.md)**：扩展中使用事件回调和钩子
-- **[InteractiveShell](./interactiveshell-source.md)**：Shell 实例 API 参考
-- **[应用层](./app-source.md)**：配置 extensions 自动加载
-- **[扩展开发指南](../concepts/extension-development.md)**：扩展开发完整指南
+- **[魔法命令系统](magic-source.md)**：扩展中注册魔法命令的 API
+- **[事件与钩子](events-hooks-source.md)**：扩展中使用事件回调和钩子
+- **[InteractiveShell](interactiveshell-source.md)**：Shell 实例 API 参考
+- **[应用层](app-source.md)**：配置 extensions 自动加载
+- **扩展开发指南**：扩展开发完整指南

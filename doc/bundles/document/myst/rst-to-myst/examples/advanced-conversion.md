@@ -211,7 +211,7 @@ rst2myst roles show math
 
 ## 相关概念
 
-- [转换选项详解](/concepts/10-configuration-options.md)
-- [ApplicationNamespace 与 Sphinx 扩展加载机制](/concepts/08-namespace-mocking.md)
-- [指令转换机制与 directives.yml 映射](/concepts/05-directive-conversion.md)
-- [Front Matter 提取与 YAML 输出](/concepts/09-front-matter.md)
+- [转换选项详解](../concepts/10-configuration-options.md)
+- [ApplicationNamespace 与 Sphinx 扩展加载机制](../concepts/08-namespace-mocking.md)
+- [指令转换机制与 directives.yml 映射](../concepts/05-directive-conversion.md)
+- [Front Matter 提取与 YAML 输出](../concepts/09-front-matter.md)

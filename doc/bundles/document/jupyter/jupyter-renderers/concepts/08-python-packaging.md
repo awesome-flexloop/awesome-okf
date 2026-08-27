@@ -287,10 +287,10 @@ pip install jupyterlab-fasta
 
 ## 相关概念
 
-- [Monorepo 架构与 Lerna 管理](/concepts/01-monorepo-architecture.md)
-- [扩展类型：MIME 渲染器 vs 应用扩展](/concepts/03-extension-types.md)
-- [Python 入口点参考](/references/python-entrypoint-reference.md)
-- [扩展配置参考](/references/extension-config-reference.md)
+- [Monorepo 架构与 Lerna 管理](01-monorepo-architecture.md)
+- [扩展类型：MIME 渲染器 vs 应用扩展](03-extension-types.md)
+- [Python 入口点参考](../references/python-entrypoint-reference.md)
+- [扩展配置参考](../references/extension-config-reference.md)
 
 [^fasta-pyproject]: fasta-extension/pyproject.toml
 [^root-pkg]: root package.json

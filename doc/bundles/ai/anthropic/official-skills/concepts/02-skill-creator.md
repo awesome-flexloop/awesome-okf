@@ -329,5 +329,5 @@ cases:
 - [SKILL.md 格式规范](01-skill-format.md) — Skill 文件的完整格式定义，在编写初版时参考
 - [Skills 生态概览](00-overview.md) — Skills 的整体生态和触发机制
 - [Claude API Skill 详解](03-claude-api-skill.md) — 高质量官方 Skill 案例学习
-- [全部 Skills 索引](/official-skills/references/skills-index.md) — 查看其他官方 Skill 的实现参考
-- [Claude Code 插件体系](/claude-code/concepts/01-plugin-system.md) — 了解如何将你创建的 Skill 打包为插件
+- [全部 Skills 索引](../references/skills-index.md) — 查看其他官方 Skill 的实现参考
+- [Claude Code 插件体系](../../claude-code/concepts/01-plugin-system.md) — 了解如何将你创建的 Skill 打包为插件

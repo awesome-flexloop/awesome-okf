@@ -198,6 +198,6 @@ mapped_idx = planner.run(idx, avail_counter)
 5. **n_sms 参数**：`run()` 不传 n_sms 时会自动查询当前设备 SM 数量；分步执行时需手动获取。
 
 相关参考：
-- [API 参考](/ai/deepseek/lplb/references/api)
-- [拓扑配置示例](/ai/deepseek/lplb/examples/topology-config)
-- [拓扑感知路由概念](/ai/deepseek/lplb/concepts/topology-aware-routing)
+- API 参考
+- 拓扑配置示例
+- 拓扑感知路由概念

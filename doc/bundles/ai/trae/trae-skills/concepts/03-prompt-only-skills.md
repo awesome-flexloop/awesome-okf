@@ -137,14 +137,14 @@ cloudbase 技能指导 Agent 使用 CloudBase MCP 工具完成腾讯云开发操
 
 ## 相关概念
 
-- [技能分类与模板模式](/concepts/02-skill-categories.md)
-- [脚本辅助型技能](/concepts/04-script-assisted-skills.md)
-- [Workflow 编排型技能](/concepts/05-workflow-skills.md)
-- [SKILL.md 格式规范](/concepts/01-skill-format.md)
-- [编写自定义 Skill](/concepts/07-write-skill.md)
+- [技能分类与模板模式](02-skill-categories.md)
+- [脚本辅助型技能](04-script-assisted-skills.md)
+- [Workflow 编排型技能](05-workflow-skills.md)
+- [SKILL.md 格式规范](01-skill-format.md)
+- [编写自定义 Skill](07-write-skill.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/skills-source.md)
-- [创建第一个 Skill](/examples/create-first-skill.md)
-- [触发条件设计示例](/examples/trigger-condition-design.md)
+- [源码信源索引](../references/skills-source.md)
+- [创建第一个 Skill](../examples/create-first-skill.md)
+- [触发条件设计示例](../examples/trigger-condition-design.md)

@@ -49,24 +49,24 @@ sphinx-book-theme 是 Executable Books 团队开发的 Sphinx 主题，专为科
 
 ### 🟢 初学者：构建第一本书
 
-1. [主题概述](/concepts/00-introduction.md) → 了解定位和特性
-2. [安装与基础配置](/concepts/01-getting-started.md) → 安装、启用、验证
-3. [基础书籍配置示例](/examples/basic-book-setup.md) → 复制配置快速开始
-4. [配置系统详解](/concepts/03-configuration.md) → 按需调整配置项
+1. [主题概述](concepts/00-introduction.md) → 了解定位和特性
+2. [安装与基础配置](concepts/01-getting-started.md) → 安装、启用、验证
+3. [基础书籍配置示例](examples/basic-book-setup.md) → 复制配置快速开始
+4. [配置系统详解](concepts/03-configuration.md) → 按需调整配置项
 
 ### 🟡 进阶用户：添加交互功能
 
-5. [头部按钮系统](/concepts/04-header-buttons.md) → 理解按钮机制
-6. [Margin指令与边注旁注](/concepts/05-margin-sidenotes.md) → 丰富文档排版
-7. [交互功能详解](/concepts/06-interactive-features.md) → 全屏/TOC/Thebe
-8. [交互式计算书籍示例](/examples/interactive-book.md) → 配置Binder/Colab/Thebe
+5. [头部按钮系统](concepts/04-header-buttons.md) → 理解按钮机制
+6. [Margin指令与边注旁注](concepts/05-margin-sidenotes.md) → 丰富文档排版
+7. [交互功能详解](concepts/06-interactive-features.md) → 全屏/TOC/Thebe
+8. [交互式计算书籍示例](examples/interactive-book.md) → 配置Binder/Colab/Thebe
 
 ### 🔴 高级用户：深度定制
 
-9. [主题架构与PST继承](/concepts/02-theme-architecture.md) → 理解继承链和事件系统
-10. [布局与模板定制](/concepts/07-layout-and-templates.md) → 覆盖模板和组件
-11. [样式定制与扩展适配](/concepts/08-customization.md) → SCSS/暗色模式/打印
-12. [国际化与高级主题](/concepts/09-internationalization.md) → 子主题/翻译/缓存
+9. [主题架构与PST继承](concepts/02-theme-architecture.md) → 理解继承链和事件系统
+10. [布局与模板定制](concepts/07-layout-and-templates.md) → 覆盖模板和组件
+11. [样式定制与扩展适配](concepts/08-customization.md) → SCSS/暗色模式/打印
+12. [国际化与高级主题](concepts/09-internationalization.md) → 子主题/翻译/缓存
 
 ## 核心洞察
 
@@ -103,9 +103,9 @@ Sphinx主题与扩展初始化时机不同，SBT通过 setup() 立即调用 + co
 
 ## 文档结构
 
-- [概念文档（10篇）](/concepts/index.md) — 系统性介绍各功能模块
-- [示例文档（2篇）](/examples/index.md) — 可直接使用的配置示例
-- [参考文档（1篇）](/references/index.md) — 配置速查、API参考
+- [概念文档（10篇）](concepts/index.md) — 系统性介绍各功能模块
+- [示例文档（2篇）](examples/index.md) — 可直接使用的配置示例
+- [参考文档（1篇）](references/index.md) — 配置速查、API参考
 - [R阶段事实采集](spec/facts.md) — 192条零推断源码事实
 - [I阶段洞察提炼](spec/insights.md) — 4个核心洞察与知识地图
 

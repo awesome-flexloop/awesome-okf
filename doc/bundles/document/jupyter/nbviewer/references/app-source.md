@@ -95,6 +95,6 @@ MEMCACHIER_SERVERS/MEMCACHE_SERVERS/NBCACHE_PORT存在且pylibmc可用 → Async
 
 ## 相关概念
 
-- [Handler继承体系](/concepts/04-handler-hierarchy.md)
-- [Provider插件系统](/concepts/05-provider-plugin-system.md)
-- [缓存系统](/concepts/07-caching-system.md)
+- [Handler继承体系](../concepts/04-handler-hierarchy.md)
+- [Provider插件系统](../concepts/05-provider-plugin-system.md)
+- [缓存系统](../concepts/07-caching-system.md)

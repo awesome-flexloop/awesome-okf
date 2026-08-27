@@ -218,5 +218,5 @@ v1 和 v2 使用不同的枚举类型指定返回字段：
 
 ## 相关概念
 
-- [CLI 命令体系](/ai/langchain-ai/langsmith-cli/concepts/cli-commands) — 过滤器 DSL、分页、输出模式
-- [总览](/ai/langchain-ai/langsmith-cli/concepts/overview) — 项目定位与架构概览
+- CLI 命令体系 — 过滤器 DSL、分页、输出模式
+- 总览 — 项目定位与架构概览

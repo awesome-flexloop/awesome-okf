@@ -298,9 +298,9 @@ asyncio.run(main())
 
 ## 相关概念
 
-- [SFTP 文件传输](/concepts/07-sftp.md)
-- [SCP 文件复制](/concepts/08-scp.md)
-- [多主机并行连接](/examples/parallel-connections.md)
+- [SFTP 文件传输](../concepts/07-sftp.md)
+- [SCP 文件复制](../concepts/08-scp.md)
+- [多主机并行连接](parallel-connections.md)
 - [paramiko SFTP 文件传输](../../paramiko/examples/file-transfer.md)（同步 SFTP 对比）
 
-[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](/references/asyncssh-source.md)。
+[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](../references/asyncssh-source.md)。

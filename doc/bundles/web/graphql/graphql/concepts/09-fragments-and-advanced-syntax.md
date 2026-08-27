@@ -348,9 +348,9 @@ Schema Coordinates 在以下场景中广泛使用：
 
 ## 相关概念
 
-- [查询语言基础：文档、操作与选择集](/concepts/01-query-language-basics.md) — 片段是选择集的复用单元，变量定义是操作的组成部分
-- [复合类型：对象、接口、联合与枚举](/concepts/03-composite-types.md) — 片段的类型条件只能应用于复合类型（Object/Interface/Union）
-- [指令、包装类型与输入系统](/concepts/04-directives-and-wrapping-types.md) — 指令可在片段定义、片段展开和内联片段上使用
-- [验证管线与规则体系](/concepts/05-validation.md) — Fragment Spread Is Possible、IsVariableUsageAllowed 等验证规则
-- [内省系统：GraphQL 的自描述机制](/concepts/08-introspection.md) — Schema Coordinates 与内省类型的关联
-- [GraphQL 与 AI：MCP、语义内省与 Agent](/concepts/11-graphql-and-ai.md) — 语义内省 RFC 使用 Schema Coordinates 定位 schema 元素
+- [查询语言基础：文档、操作与选择集](01-query-language-basics.md) — 片段是选择集的复用单元，变量定义是操作的组成部分
+- [复合类型：对象、接口、联合与枚举](03-composite-types.md) — 片段的类型条件只能应用于复合类型（Object/Interface/Union）
+- [指令、包装类型与输入系统](04-directives-and-wrapping-types.md) — 指令可在片段定义、片段展开和内联片段上使用
+- [验证管线与规则体系](05-validation.md) — Fragment Spread Is Possible、IsVariableUsageAllowed 等验证规则
+- [内省系统：GraphQL 的自描述机制](08-introspection.md) — Schema Coordinates 与内省类型的关联
+- [GraphQL 与 AI：MCP、语义内省与 Agent](11-graphql-and-ai.md) — 语义内省 RFC 使用 Schema Coordinates 定位 schema 元素

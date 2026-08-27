@@ -196,8 +196,8 @@ Plugin Playground 包含多层安全机制：
 
 ## 相关概念
 
-- [Plugin Playground 简介](/concepts/00-introduction.md)
-- [JupyterLab 插件基础结构](/concepts/02-plugin-basics.md)
-- [TypeScript 转译机制](/concepts/03-typescript-transpilation.md)
-- [模块解析系统](/concepts/04-module-resolution.md)
-- [插件加载流程](/concepts/05-plugin-loader.md)
+- [Plugin Playground 简介](00-introduction.md)
+- [JupyterLab 插件基础结构](02-plugin-basics.md)
+- [TypeScript 转译机制](03-typescript-transpilation.md)
+- [模块解析系统](04-module-resolution.md)
+- [插件加载流程](05-plugin-loader.md)

@@ -309,7 +309,7 @@ assert 'from_url: another/index.html' in text
 
 ## 相关概念
 
-- [Builder体系详解](/concepts/05-builders.md)
-- [路径处理与跨平台兼容](/concepts/07-path-and-cross-platform.md)
-- [自定义Jinja模板示例](/examples/custom-jinja-template.md)
-- [基础重定向示例](/examples/basic-redirects.md)
+- [Builder体系详解](05-builders.md)
+- [路径处理与跨平台兼容](07-path-and-cross-platform.md)
+- [自定义Jinja模板示例](../examples/custom-jinja-template.md)
+- [基础重定向示例](../examples/basic-redirects.md)

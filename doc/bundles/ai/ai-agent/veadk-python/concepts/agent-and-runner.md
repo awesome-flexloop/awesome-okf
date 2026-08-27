@@ -55,7 +55,7 @@ veadk-python 的运行时架构建立在两个核心抽象之上：**Agent** 定
 
 ### 类定义与字段
 
-[veadk/agent.py:L72-L213](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L72-L213)
+veadk/agent.py:L72-L213
 
 ```python
 class Agent(LlmAgent):
@@ -108,7 +108,7 @@ class Agent(LlmAgent):
 
 Agent 的所有自动装配逻辑在 Pydantic 的 `model_post_init` 中完成，这是理解 Agent 初始化过程的关键：
 
-[veadk/agent.py:L214-L445](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L214-L445)
+veadk/agent.py:L214-L445
 
 初始化流程如下：
 
@@ -179,7 +179,7 @@ API Key 解析优先级（F-019）：
 
 `_llm_flow` 属性根据 Agent 配置决定 LLM 对话的流转策略：
 
-[veadk/agent.py:L698-L721](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L698-L721)
+veadk/agent.py:L698-L721
 
 | 条件 | Flow 类型 | 说明 |
 |------|-----------|------|
@@ -192,7 +192,7 @@ API Key 解析优先级（F-019）：
 
 `_run_async_impl` 方法支持三种运行时后端（F-028）：
 
-[veadk/agent.py:L723-L741](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L723-L741)
+veadk/agent.py:L723-L741
 
 ```python
 def _run_async_impl(self, ctx):
@@ -226,7 +226,7 @@ def update_model(self, model_name: str):
     )
 ```
 
-[veadk/agent.py:L447-L451](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L447-L451)
+veadk/agent.py:L447-L451
 
 ## Runner 类：执行引擎
 
@@ -234,7 +234,7 @@ def update_model(self, model_name: str):
 
 ### 构造函数
 
-[veadk/runner.py:L354-L466](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/runner.py#L354-L466)
+veadk/runner.py:L354-L466
 
 ```python
 class Runner(ADKRunner):
@@ -261,7 +261,7 @@ class Runner(ADKRunner):
 
 Runner 接受灵活的消息输入格式（F-037）：
 
-[veadk/runner.py:L46-L52](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/runner.py#L46-L52)
+veadk/runner.py:L46-L52
 
 ```python
 RunnerMessage = Union[
@@ -275,7 +275,7 @@ RunnerMessage = Union[
 
 ### run 方法：主执行入口
 
-[veadk/runner.py:L467-L575](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/runner.py#L467-L575)
+veadk/runner.py:L467-L575
 
 `run` 是 async 方法，接收 RunnerMessage 并返回最终文本结果：
 
@@ -334,7 +334,7 @@ sequenceDiagram
 
 ### 消息转换：_convert_messages
 
-[veadk/runner.py:L200-L277](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/runner.py#L200-L277)
+veadk/runner.py:L200-L277
 
 `_convert_messages` 函数将用户友好的 `RunnerMessage` 转换为 Google GenAI 的 `list[Content]`：
 
@@ -344,7 +344,7 @@ sequenceDiagram
 
 ### 消息拦截装饰器：intercept_new_message
 
-[veadk/runner.py:L106-L197](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/runner.py#L106-L197)
+veadk/runner.py:L106-L197
 
 这是一个装饰器工厂，在 `run_async` 调用前后插入横切逻辑：
 
@@ -357,7 +357,7 @@ sequenceDiagram
 
 ### TOS 媒体上传：_upload_image_to_tos
 
-[veadk/runner.py:L279-L326](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/runner.py#L279-L326)
+veadk/runner.py:L279-L326
 
 当 inline_data 包含文件名和字节数据时：
 
@@ -377,7 +377,7 @@ sequenceDiagram
 
 ## 顶层包入口
 
-[veadk/__init__.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/__init__.py) 通过 `__getattr__` 实现延迟加载，避免导入 `veadk` 时就加载 Agent 和 Runner 的重量级依赖：
+veadk/__init__.py 通过 `__getattr__` 实现延迟加载，避免导入 `veadk` 时就加载 Agent 和 Runner 的重量级依赖：
 
 ```python
 def __getattr__(name):
@@ -415,12 +415,12 @@ result = await runner.run(
 
 | 文件 | 职责 |
 |------|------|
-| [veadk/\_\_init\_\_.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/__init__.py) | 包入口，延迟加载 Agent/Runner |
-| [veadk/agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py) | Agent 类定义、model_post_init 装配逻辑、LLM Flow 选择、多运行时委托 |
-| [veadk/runner.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/runner.py) | Runner 类、消息转换、TOS 上传、事件拦截装饰器、run 主入口 |
-| [veadk/version.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/version.py) | 版本号获取 |
-| [veadk/utils/patches.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/utils/patches.py) | Monkey patches（tracer/asyncio/mcp） |
-| [veadk/processors/base_run_processor.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/processors/base_run_processor.py) | RunProcessor 抽象基类 |
+| veadk/\_\_init\_\_.py | 包入口，延迟加载 Agent/Runner |
+| veadk/agent.py | Agent 类定义、model_post_init 装配逻辑、LLM Flow 选择、多运行时委托 |
+| veadk/runner.py | Runner 类、消息转换、TOS 上传、事件拦截装饰器、run 主入口 |
+| veadk/version.py | 版本号获取 |
+| veadk/utils/patches.py | Monkey patches（tracer/asyncio/mcp） |
+| veadk/processors/base_run_processor.py | RunProcessor 抽象基类 |
 
 ## 相关概念
 

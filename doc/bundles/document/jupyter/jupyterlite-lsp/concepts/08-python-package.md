@@ -141,7 +141,7 @@ jupyterlite-lsp 采用 JS/Python 分离的结构是因为：
 
 ## 相关概念
 
-- [构建系统详解](/concepts/07-build-system.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [三插件体系](/concepts/03-plugin-system.md)
-- [Python包源码引用](/references/python-source.md)
+- [构建系统详解](07-build-system.md)
+- [快速开始](01-getting-started.md)
+- [三插件体系](03-plugin-system.md)
+- [Python包源码引用](../references/python-source.md)

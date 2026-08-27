@@ -51,7 +51,7 @@ FPS 不是一个Web框架（尽管它内置了Web支持），而是一个更通�
 
 ## 相关概念
 
-- [安装与快速开始](/concepts/01-getting-started.md)
-- [模块系统](/concepts/02-module-system.md)
-- [上下文与共享值](/concepts/03-context-sharing.md)
-- [生命周期阶段](/concepts/04-lifecycle-phases.md)
+- [安装与快速开始](01-getting-started.md)
+- [模块系统](02-module-system.md)
+- [上下文与共享值](03-context-sharing.md)
+- [生命周期阶段](04-lifecycle-phases.md)

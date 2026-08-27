@@ -121,7 +121,7 @@ latex_engine = 'xelatex'  # 中文推荐
 
 ## 相关概念
 
-- [三镜像架构解析](/concepts/02-image-architecture.md)：三个镜像的分工对比
-- [Base 镜像详解](/concepts/03-base-image.md)：基础镜像的构建细节
-- [PDF 文档构建示例](/examples/02-pdf-build.md)：完整的 PDF 构建流程
-- [自定义镜像扩展](/concepts/07-customization.md)：安装额外 LaTeX 包
+- [三镜像架构解析](02-image-architecture.md)：三个镜像的分工对比
+- [Base 镜像详解](03-base-image.md)：基础镜像的构建细节
+- [PDF 文档构建示例](../examples/02-pdf-build.md)：完整的 PDF 构建流程
+- [自定义镜像扩展](07-customization.md)：安装额外 LaTeX 包

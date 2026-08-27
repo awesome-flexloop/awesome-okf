@@ -189,7 +189,7 @@ JupyterLab启动
 
 ## 相关概念
 
-- [Hatch构建钩子集成](/concepts/07-hatch-build-hook.md)
-- [Jed JSON翻译格式](/concepts/06-json-jed-format.md)
-- [双模式分发机制](/concepts/11-dual-mode-distribution.md)
-- [运行时发现模块源码映射](/references/finder-source.md)
+- [Hatch构建钩子集成](07-hatch-build-hook.md)
+- [Jed JSON翻译格式](06-json-jed-format.md)
+- [双模式分发机制](11-dual-mode-distribution.md)
+- [运行时发现模块源码映射](../references/finder-source.md)

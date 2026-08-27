@@ -4,7 +4,7 @@ okf_version: "0.2"
 
 # pexpect 知识库
 
-本知识包是纯 Python Expect 风格交互控制库 [pexpect](https://pexpect.readthedocs.io)（v4.9.0）的系统化中文教程，基于源码深度阅读生成，覆盖从快速上手到跨平台变体、REPL 封装的完整知识体系。所有内容均溯源至 pexpect 源码（`pexpect/` 包核心模块），遵循 [OKF v0.2 规范](/concepts/00-introduction.md)。
+本知识包是纯 Python Expect 风格交互控制库 [pexpect](https://pexpect.readthedocs.io)（v4.9.0）的系统化中文教程，基于源码深度阅读生成，覆盖从快速上手到跨平台变体、REPL 封装的完整知识体系。所有内容均溯源至 pexpect 源码（`pexpect/` 包核心模块），遵循 [OKF v0.2 规范](concepts/00-introduction.md)。
 
 ## 入门与基础（concepts/）
 

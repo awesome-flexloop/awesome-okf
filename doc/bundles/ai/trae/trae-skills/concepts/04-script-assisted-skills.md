@@ -276,14 +276,14 @@ Create Project → Save Settings → Multi-turn Agent Chat → View Results
 
 ## 相关概念
 
-- [技能分类与模板模式](/concepts/02-skill-categories.md)
-- [纯 Prompt 型技能](/concepts/03-prompt-only-skills.md)
-- [Workflow 编排型技能](/concepts/05-workflow-skills.md)
-- [社区积分机制](/concepts/06-community-points.md)
-- [编写自定义 Skill](/concepts/07-write-skill.md)
+- [技能分类与模板模式](02-skill-categories.md)
+- [纯 Prompt 型技能](03-prompt-only-skills.md)
+- [Workflow 编排型技能](05-workflow-skills.md)
+- [社区积分机制](06-community-points.md)
+- [编写自定义 Skill](07-write-skill.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/skills-source.md)
-- [带 Python 脚本的 Skill 示例](/examples/skill-with-python-script.md)
-- [社区积分贡献示例](/examples/points-contribution.md)
+- [源码信源索引](../references/skills-source.md)
+- [带 Python 脚本的 Skill 示例](../examples/skill-with-python-script.md)
+- [社区积分贡献示例](../examples/points-contribution.md)

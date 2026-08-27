@@ -78,7 +78,7 @@ viewCount 和 likeCount 存储在 WorkStatistic 表中（与 WorkBase 分离）�
 
 ## 相关概念
 
-- [数据模型设计](/concepts/03-data-model.md)
-- [API 路由设计](/concepts/06-api-routes.md)
-- [CRUD 数据层](/concepts/07-crud-layer.md)
-- [审核与治理](/concepts/10-audit-governance.md)
+- [数据模型设计](03-data-model.md)
+- [API 路由设计](06-api-routes.md)
+- [CRUD 数据层](07-crud-layer.md)
+- [审核与治理](10-audit-governance.md)

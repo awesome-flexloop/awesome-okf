@@ -69,6 +69,6 @@ MyST-Parser 适合以下场景：
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [MyST 语法概览](/concepts/02-myst-syntax-overview.md)
-- [三阶段解析管线](/concepts/03-architecture-pipeline.md)
+- [快速开始](01-getting-started.md)
+- [MyST 语法概览](02-myst-syntax-overview.md)
+- [三阶段解析管线](03-architecture-pipeline.md)

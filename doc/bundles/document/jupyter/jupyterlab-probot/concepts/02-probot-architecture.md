@@ -144,7 +144,7 @@ interface Config {
 }
 ```
 
-所有字段都是可选的（`?`），与 [schema.json](../../../../../external/libs/jupyter/jupyterlab-probot/schema.json) 保持镜像关系。这是 Probot 应用的常见模式：TypeScript 接口提供编译时类型检查，JSON Schema 提供运行时验证。
+所有字段都是可选的（`?`），与 schema.json 保持镜像关系。这是 Probot 应用的常见模式：TypeScript 接口提供编译时类型检查，JSON Schema 提供运行时验证。
 
 ### Context 泛型
 

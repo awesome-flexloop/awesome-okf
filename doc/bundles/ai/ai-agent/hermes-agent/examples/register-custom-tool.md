@@ -26,7 +26,7 @@ sources:
 - Python ≥ 3.11 且 < 3.14
 - 已安装 hermes-agent（`pip install hermes-agent`）
 - 拥有一个兼容 OpenAI Chat Completions API 的模型服务
-- 理解 [工具注册表概念](/concepts/tool-registry.md)
+- 理解 [工具注册表概念](../concepts/tool-registry.md)
 
 ## 完整代码示例
 

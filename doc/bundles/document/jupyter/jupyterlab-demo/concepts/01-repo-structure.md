@@ -52,7 +52,7 @@ jupyterlab-demo/
 | `postBuild` | 镜像构建完成后执行的脚本 | Dockerfile 的 RUN 指令 |
 | `workspace.json` | JupyterLab 工作区布局定义 | IDE 的工作区配置文件 |
 
-这三个文件共同构成了 Binder 配置的"三要素"——环境依赖、构建步骤、界面布局。详见 [Binder 环境配置三要素](/concepts/02-binder-config.md)。
+这三个文件共同构成了 Binder 配置的"三要素"——环境依赖、构建步骤、界面布局。详见 [Binder 环境配置三要素](02-binder-config.md)。
 
 ### 第二层：构建逻辑层
 
@@ -171,6 +171,6 @@ slides/ ───────┤            │ build.py │           demo/
 
 ## 相关概念
 
-- [项目定位与设计理念](/concepts/00-introduction.md)
-- [Binder 环境配置三要素](/concepts/02-binder-config.md)
-- [build.py 与 talks.yml 配置化组装](/concepts/03-build-system.md)
+- [项目定位与设计理念](00-introduction.md)
+- [Binder 环境配置三要素](02-binder-config.md)
+- [build.py 与 talks.yml 配置化组装](03-build-system.md)

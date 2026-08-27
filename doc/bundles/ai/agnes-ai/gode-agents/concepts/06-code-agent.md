@@ -415,8 +415,8 @@ LocalPythonExecutor 在同一进程内执行代码，虽然有导入白名单、
 
 ## 相关链接
 
-- [MultiStepAgent：核心推理循环](/concepts/03-multi-step-agent.md) — 父类的run循环和step抽象
-- [ToolCallingAgent：函数调用范式](/concepts/05-tool-calling-agent.md) — 另一种智能体范式（function calling）
-- [内置工具详解](/concepts/08-builtin-tools.md) — 默认工具在CodeAgent中的使用
-- [Agents API 参考](/references/agents-api.md) — CodeAgent完整API
-- [Executor API 参考](/references/executor-api.md) — PythonExecutor及子类完整API
+- [MultiStepAgent：核心推理循环](03-multi-step-agent.md) — 父类的run循环和step抽象
+- [ToolCallingAgent：函数调用范式](05-tool-calling-agent.md) — 另一种智能体范式（function calling）
+- [内置工具详解](08-builtin-tools.md) — 默认工具在CodeAgent中的使用
+- [Agents API 参考](../references/agents-api.md) — CodeAgent完整API
+- [Executor API 参考](../references/executor-api.md) — PythonExecutor及子类完整API

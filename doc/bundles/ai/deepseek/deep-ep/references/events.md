@@ -167,6 +167,6 @@ event.current_stream_wait()
 
 ## 相关参考
 
-- [ElasticBuffer API](/ai/deepseek/deep-ep/references/buffer-elastic)
-- [计算-通信重叠示例](/ai/deepseek/deep-ep/examples/event-overlap)
-- [Dispatch/Combine 概念](/ai/deepseek/deep-ep/concepts/dispatch-combine)
+- ElasticBuffer API
+- 计算-通信重叠示例
+- Dispatch/Combine 概念

@@ -333,11 +333,11 @@ hono-starter/
 
 ## 相关概念
 
-- [五维分面分类体系](/concepts/01-template-classification.md)
-- [后端服务模板](/concepts/03-backend-templates.md)
-- [Trae Templates 简介](/concepts/00-introduction.md)
+- [五维分面分类体系](../concepts/01-template-classification.md)
+- [后端服务模板](../concepts/03-backend-templates.md)
+- [Trae Templates 简介](../concepts/00-introduction.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/templates-source.md)
-- [使用 Next.js 模板创建项目](/examples/use-nextjs-template.md)
+- [源码信源索引](../references/templates-source.md)
+- [使用 Next.js 模板创建项目](use-nextjs-template.md)

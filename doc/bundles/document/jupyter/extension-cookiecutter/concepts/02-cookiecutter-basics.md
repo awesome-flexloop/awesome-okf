@@ -193,6 +193,6 @@ Jupyter 生态正在从 Cookiecutter 向 Copier 迁移（如 JupyterLab Extensio
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [项目结构详解](/concepts/03-project-structure.md)
-- [post_gen_project 钩子解析](/references/post-gen-hook-source.md)
+- [快速开始](01-getting-started.md)
+- [项目结构详解](03-project-structure.md)
+- [post_gen_project 钩子解析](../references/post-gen-hook-source.md)

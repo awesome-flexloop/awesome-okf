@@ -225,11 +225,11 @@ except (CachingError, NbValidityError) as e:
 
 ## 相关示例
 
-- [基本CLI使用](/examples/basic-usage.md)
-- [CI集成与缓存策略](/examples/ci-integration.md)
+- [基本CLI使用](basic-usage.md)
+- [CI集成与缓存策略](ci-integration.md)
 
 ## 相关概念
 
-- [缓存API详解](/concepts/03-cache-api.md)
-- [读取器与执行器扩展](/concepts/06-readers-and-executors.md)
-- [配置项参考](/concepts/07-configuration.md)
+- [缓存API详解](../concepts/03-cache-api.md)
+- [读取器与执行器扩展](../concepts/06-readers-and-executors.md)
+- [配置项参考](../concepts/07-configuration.md)

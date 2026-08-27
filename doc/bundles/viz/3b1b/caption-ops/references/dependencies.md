@@ -277,9 +277,9 @@ python retime_srt.py input.srt output.srt 1.5
 
 ## 相关概念
 
-- [00 caption-ops 工具集总览](/concepts/00-caption-ops-overview.md)
-- [01 音频转录：faster-whisper本地/API双模式](/concepts/01-transcription.md)
-- [02 多语言翻译：DeepL/Google/GPT多后端](/concepts/02-translation.md)
-- [03 SRT操作：时间轴与智能分段](/concepts/03-srt-operations.md)
-- [04 完整管线：从视频到多语言字幕](/concepts/04-pipeline-workflow.md)
-- [Caption Ops CLI 脚本参数速查表](/references/scripts-reference.md)
+- [00 caption-ops 工具集总览](../concepts/00-caption-ops-overview.md)
+- [01 音频转录：faster-whisper本地/API双模式](../concepts/01-transcription.md)
+- [02 多语言翻译：DeepL/Google/GPT多后端](../concepts/02-translation.md)
+- [03 SRT操作：时间轴与智能分段](../concepts/03-srt-operations.md)
+- [04 完整管线：从视频到多语言字幕](../concepts/04-pipeline-workflow.md)
+- [Caption Ops CLI 脚本参数速查表](scripts-reference.md)

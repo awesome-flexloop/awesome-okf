@@ -291,8 +291,8 @@ client.connect("tcp://localhost:5555")
 
 ## 相关概念
 
-- [整体架构与双后端](/concepts/00-architecture-dual-backend.md) — curve_keypair 在 public_api 中
-- [异步与 asyncio](/concepts/05-async-future-asyncio.md) — AsyncioAuthenticator 与 asyncio.Poller
-- [Socket sugar 语法层](/concepts/02-socket-sugar.md) — CURVE/PLAIN 套接字选项设置
-- [常量枚举参考](/references/constants-enums.md) — SecurityMechanism 枚举
-- [Frame 与消息](/concepts/03-frame-message.md) — frame['User-Id'] 访问认证用户
+- [整体架构与双后端](00-architecture-dual-backend.md) — curve_keypair 在 public_api 中
+- [异步与 asyncio](05-async-future-asyncio.md) — AsyncioAuthenticator 与 asyncio.Poller
+- [Socket sugar 语法层](02-socket-sugar.md) — CURVE/PLAIN 套接字选项设置
+- [常量枚举参考](../references/constants-enums.md) — SecurityMechanism 枚举
+- [Frame 与消息](03-frame-message.md) — frame['User-Id'] 访问认证用户

@@ -23,4 +23,4 @@ Deep Agents monorepo 的全局开发指南，包含仓库级规则。
 
 ## 相关概念
 
-- [Monorepo 架构](/ai/datawhale/deepagents/concepts/monorepo-architecture)
+- Monorepo 架构

@@ -45,7 +45,7 @@ Python导入的动态特性给静态编译带来了挑战：
 
 ## locateModule：模块定位
 
-[locateModule()](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/importing/Importing.py)是模块发现的核心公共API：
+locateModule()是模块发现的核心公共API：
 
 ```python
 def locateModule(module_name, parent_package=None, level=0):
@@ -88,7 +88,7 @@ locateModule(module_name)
 
 ## recurseTo：递归编译决策
 
-找到模块后，[recurseTo()](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/importing/Importing.py)决定是否递归编译该模块：
+找到模块后，recurseTo()决定是否递归编译该模块：
 
 ```python
 def recurseTo(module_name, parent_package=None, ...):
@@ -97,7 +97,7 @@ def recurseTo(module_name, parent_package=None, ...):
 
 ### decideRecursion 决策逻辑
 
-[decideRecursion()](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/importing/Recursion.py)综合多个因素决定是否跟随导入：
+decideRecursion()综合多个因素决定是否跟随导入：
 
 1. **用户选项**：
    - `--follow-imports`：跟随所有导入（默认）
@@ -136,7 +136,7 @@ def recurseTo(module_name, parent_package=None, ...):
 
 ## ImportCache：全局模块缓存
 
-[ImportCache](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/importing/ImportCache.py)维护两个全局字典：
+ImportCache维护两个全局字典：
 
 ```python
 imported_modules = {}     # module_name → ModuleNode 实例
@@ -150,7 +150,7 @@ imported_by_name = {}     # (module_name, parent_package) → ModuleNode
 
 ## ModuleRegistry：模块注册表
 
-[ModuleRegistry](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/ModuleRegistry.py)维护所有已完成构建的模块列表：
+ModuleRegistry维护所有已完成构建的模块列表：
 
 ```python
 # 核心API
@@ -164,7 +164,7 @@ ModuleRegistry.addModule(module)     # 添加模块到注册表
 
 ## 隐式导入检测
 
-某些模块在CPython启动时自动加载，用户代码中没有显式的import语句。Nuitka通过[freezer/ImportDetection.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/freezer/ImportDetection.py)处理这个问题：
+某些模块在CPython启动时自动加载，用户代码中没有显式的import语句。Nuitka通过freezer/ImportDetection.py处理这个问题：
 
 1. 启动一个**子进程**运行Python解释器（`python -s -S -v`）
 2. `-s -S`跳过site模块和用户site目录，`-v`输出导入信息

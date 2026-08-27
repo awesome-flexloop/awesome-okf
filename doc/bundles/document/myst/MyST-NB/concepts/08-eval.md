@@ -104,4 +104,4 @@ nb_eval_name_regex = r"^[a-zA-Z_][a-zA-Z0-9_.\[\]():,'\" ]*$"
 - [Glue 变量粘贴](07-glue.md)
 - [执行模式与缓存](05-execution-modes.md)
 - [配置系统](04-config-system.md)
-- [Glue & Eval 实战示例](/examples/03-glue-and-eval.md)
+- [Glue & Eval 实战示例](../examples/03-glue-and-eval.md)

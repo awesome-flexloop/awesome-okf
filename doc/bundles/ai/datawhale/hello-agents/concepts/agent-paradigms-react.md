@@ -74,6 +74,6 @@ Reflection范式赋予智能体"反思"能力：
 
 ## 相关阅读
 
-- [第四章 智能体经典范式构建](/ai/datawhale/hello-agents/references/chapter04-classic-paradigms)
-- [Agent框架开发](/ai/datawhale/hello-agents/concepts/agent-framework-development)
-- [多Agent协作](/ai/datawhale/hello-agents/concepts/multi-agent-collaboration)
+- 第四章 智能体经典范式构建
+- Agent框架开发
+- 多Agent协作

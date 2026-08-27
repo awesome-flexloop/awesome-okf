@@ -218,7 +218,7 @@ cd m5/sales_assistant
 
 ## 相关参考
 
-- [lca-deepagents 变体说明](/ai/langchain-ai/deepagents/references/lca-variant) — 仓库结构与课程模块映射
-- [规划与子代理](/ai/langchain-ai/deepagents/concepts/planning-subagents) — 子代理安全模式详解
-- [Todo 与上下文管理](/ai/langchain-ai/deepagents/concepts/todo-context) — 技能和内存机制
-- [后端系统](/ai/langchain-ai/deepagents/references/backends) — FilesystemBackend 配置
+- lca-deepagents 变体说明 — 仓库结构与课程模块映射
+- 规划与子代理 — 子代理安全模式详解
+- Todo 与上下文管理 — 技能和内存机制
+- 后端系统 — FilesystemBackend 配置

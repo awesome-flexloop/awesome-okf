@@ -37,15 +37,15 @@
 
 ### 路径1：测试Jupyter Server扩展（最常见）
 
-简介 → 快速上手 → 架构总览 → Core插件 → Server插件 → Fixture工厂模式 → [Server API测试示例](/examples/03-server-api-test.md)
+简介 → 快速上手 → 架构总览 → Core插件 → Server插件 → Fixture工厂模式 → [Server API测试示例](../examples/03-server-api-test.md)
 
 ### 路径2：测试Jupyter内核
 
-简介 → 快速上手 → 架构总览 → Core插件 → Client插件 → Echo内核 → [内核测试示例](/examples/02-kernel-testing.md)
+简介 → 快速上手 → 架构总览 → Core插件 → Client插件 → Echo内核 → [内核测试示例](../examples/02-kernel-testing.md)
 
 ### 路径3：测试Jupyter基础工具（不涉及网络）
 
-简介 → 快速上手 → Core插件 → [基础测试示例](/examples/01-basic-core-test.md)
+简介 → 快速上手 → Core插件 → [基础测试示例](../examples/01-basic-core-test.md)
 
 ```{toctree}
 :hidden:

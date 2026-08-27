@@ -448,9 +448,9 @@ sudo sealert -a /var/log/audit/audit.log
 
 ## 相关示例
 
-- [创建 QM 虚拟机环境](/bundles/containers/qm/examples/01-vm-setup.md)：本示例的前置条件，先搭建 QM 基础环境
+- [创建 QM 虚拟机环境](01-vm-setup.md)：本示例的前置条件，先搭建 QM 基础环境
 
 ## 相关概念
 
-- [子系统扩展](/bundles/containers/qm/concepts/03-subsystems.md)：了解其他子系统（Wayland、ROS2 等）
-- [嵌套隔离架构](/bundles/containers/qm/concepts/01-nested-architecture.md)：了解 QM 的设备绑定挂载机制
+- [子系统扩展](../concepts/03-subsystems.md)：了解其他子系统（Wayland、ROS2 等）
+- [嵌套隔离架构](../concepts/01-nested-architecture.md)：了解 QM 的设备绑定挂载机制

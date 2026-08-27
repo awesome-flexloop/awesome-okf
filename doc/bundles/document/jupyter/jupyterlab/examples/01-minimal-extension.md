@@ -265,10 +265,10 @@ npm run watch
 
 ## 相关概念
 
-- [03 插件系统与依赖注入](/concepts/03-plugin-system.md)
-- [09 关键子系统](/concepts/09-key-subsystems.md)
-- [07 扩展生态系统](/concepts/07-extension-ecosystem.md)
+- [03 插件系统与依赖注入](../concepts/03-plugin-system.md)
+- [09 关键子系统](../concepts/09-key-subsystems.md)
+- [07 扩展生态系统](../concepts/07-extension-ecosystem.md)
 
 ## 相关示例
 
-- [02 自定义文件类型查看器](/examples/02-custom-file-type.md)
+- [02 自定义文件类型查看器](02-custom-file-type.md)

@@ -305,6 +305,6 @@ with from_env() as client:
 
 ## 相关概念
 
-- [/concepts/01-connection.md](/concepts/01-connection.md)
-- [/concepts/03-containers.md](/concepts/03-containers.md)
-- [/examples/01-migration.md](/examples/01-migration.md)
+- [/concepts/01-connection.md](../concepts/01-connection.md)
+- [/concepts/03-containers.md](../concepts/03-containers.md)
+- [/examples/01-migration.md](01-migration.md)

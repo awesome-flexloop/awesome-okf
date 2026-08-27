@@ -250,11 +250,11 @@ PDF 导出需要配置支持中文的模板，或自定义模板添加 ctex 包�
 
 ## 相关概念
 
-- [00-exporter-architecture](/concepts/00-exporter-architecture.md)：统一导出架构
-- [01-html-export](/concepts/01-html-export.md)：HTML 导出
-- [02-latex-export](/concepts/02-latex-export.md)：LaTeX 导出
-- [03-pdf-export](/concepts/03-pdf-export.md)：PDF 导出
-- [04-docx-export](/concepts/04-docx-export.md)：DOCX 导出
-- [05-jats-export](/concepts/05-jats-export.md)：JATS 导出
-- [06-markdown-export](/concepts/06-markdown-export.md)：Markdown 导出
-- [07-typst-export](/concepts/07-typst-export.md)：Typst 导出
+- [00-exporter-architecture](../concepts/00-exporter-architecture.md)：统一导出架构
+- [01-html-export](../concepts/01-html-export.md)：HTML 导出
+- [02-latex-export](../concepts/02-latex-export.md)：LaTeX 导出
+- [03-pdf-export](../concepts/03-pdf-export.md)：PDF 导出
+- [04-docx-export](../concepts/04-docx-export.md)：DOCX 导出
+- [05-jats-export](../concepts/05-jats-export.md)：JATS 导出
+- [06-markdown-export](../concepts/06-markdown-export.md)：Markdown 导出
+- [07-typst-export](../concepts/07-typst-export.md)：Typst 导出

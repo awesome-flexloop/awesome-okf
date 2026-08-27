@@ -71,7 +71,7 @@ curl http://localhost:8888/api
 }
 ```
 
-这个端点由 [APIVersionHandler](/references/handlers-source.md) 处理 [F-131]。
+这个端点由 [APIVersionHandler](../references/handlers-source.md) 处理 [F-131]。
 
 ## 查看可用内核
 
@@ -140,11 +140,11 @@ curl -H "Authorization: token my-secret-token" http://localhost:8888/api
 curl http://localhost:8888/api?token=my-secret-token
 ```
 
-Token认证由 [TokenAuthorizationMixin](/references/config-mixin-source.md) 处理 [F-054,F-055]。
+Token认证由 [TokenAuthorizationMixin](../references/config-mixin-source.md) 处理 [F-054,F-055]。
 
 ## 下一步
 
 - 了解EG的整体架构 → [架构总览](02-architecture-overview.md)
 - 配置项完整参考 → [应用入口与配置体系](03-app-and-config.md)
 - 远程内核部署 → [部署模式与Kernel Launcher](10-deployment-modes.md)
-- 本地实战示例 → [本地启动EG并执行代码](/examples/01-start-eg-locally.md)
+- 本地实战示例 → [本地启动EG并执行代码](../examples/01-start-eg-locally.md)

@@ -44,10 +44,10 @@ sphinx-proof 是 Executable Books 生态中的数学/学术排版 Sphinx 扩展�
 
 | 章节 | 链接 |
 |------|------|
-| 📖 入门 | [概念文档](/concepts/index.md) |
-| 💡 示例 | [示例代码](/examples/index.md) |
-| 📚 参考 | [源码参考](/references/index.md) |
-| 🔬 规格 | [事实清单](/spec/facts.md) · [架构洞察](/spec/insights.md) |
+| 📖 入门 | [概念文档](concepts/index.md) |
+| 💡 示例 | [示例代码](examples/index.md) |
+| 📚 参考 | [源码参考](references/index.md) |
+| 🔬 规格 | [事实清单](spec/facts.md) · [架构洞察](spec/insights.md) |
 
 ## 快速开始
 
@@ -73,7 +73,7 @@ extensions = ['sphinx_proof']
 
 ## 更新日志
 
-见 [log.md](/log.md)。
+见 [log.md](../log.md)。
 
 ```{toctree}
 :hidden:

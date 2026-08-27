@@ -334,7 +334,7 @@ resolver 方法遵循统一签名：`resolve_field_name(objectValue, info, **arg
 
 ## 相关概念
 
-- [执行引擎：字段解析与值完成](/concepts/06-execution.md) — graphql_sync 的执行流程对应规范的 ExecuteRequest 算法
-- [响应格式、错误冒泡与序列化](/concepts/07-response-and-errors.md) — ExecutionResult 的 data/errors 结构对应规范响应格式
-- [内省系统：GraphQL 的自描述机制](/concepts/08-introspection.md) — get_introspection_query 和 build_client_schema 的内省流程
-- [GraphQL 与 AI：MCP、语义内省与 Agent](/concepts/11-graphql-and-ai.md) — MCP 服务器基于 graphql-core 构建，test_graphql_server 为其提供真实数据源
+- [执行引擎：字段解析与值完成](06-execution.md) — graphql_sync 的执行流程对应规范的 ExecuteRequest 算法
+- [响应格式、错误冒泡与序列化](07-response-and-errors.md) — ExecutionResult 的 data/errors 结构对应规范响应格式
+- [内省系统：GraphQL 的自描述机制](08-introspection.md) — get_introspection_query 和 build_client_schema 的内省流程
+- [GraphQL 与 AI：MCP、语义内省与 Agent](11-graphql-and-ai.md) — MCP 服务器基于 graphql-core 构建，test_graphql_server 为其提供真实数据源

@@ -87,7 +87,7 @@ serverFactory.createFreeServer();
 const server = await serverFactory.createServer({ workingDirectory, environment });
 ```
 
-详见 [Jupyter 服务器管理](/concepts/04-server-management.md)。
+详见 [Jupyter 服务器管理](04-server-management.md)。
 
 ### 2. 单例模式（ApplicationData / UserSettings）
 
@@ -101,7 +101,7 @@ const server = await serverFactory.createServer({ workingDirectory, environment 
 - 读取设置时工作区优先，未设置则回退到全局值
 - 只有标记 `wsOverridable: true` 的设置项可被工作区覆盖
 
-详见 [设置与配置系统](/concepts/06-settings-config.md)。
+详见 [设置与配置系统](06-settings-config.md)。
 
 ### 4. 信号模式（@lumino/signaling）
 
@@ -188,7 +188,7 @@ interface IApplication {
 
 ### IRegistry 接口
 
-环境注册表接口，详见 [Registry 信源](/references/registry-source.md)。
+环境注册表接口，详见 [Registry 信源](../references/registry-source.md)。
 
 ### IServerFactory 接口
 
@@ -232,12 +232,12 @@ src/main/
 
 ## 下一篇
 
-- [应用入口与生命周期](/concepts/02-app-entry-lifecycle.md)
-- [会话窗口系统](/concepts/03-session-window-system.md)
+- [应用入口与生命周期](02-app-entry-lifecycle.md)
+- [会话窗口系统](03-session-window-system.md)
 
 ## 相关概念
 
-- [JupyterLab Desktop 简介](/concepts/00-introduction.md) — 应用概述与核心特性
-- [应用入口与生命周期](/concepts/02-app-entry-lifecycle.md) — 从进程启动到就绪的启动序列
-- [会话窗口系统](/concepts/03-session-window-system.md) — 多窗口管理与窗口生命周期
-- [Jupyter 服务器管理](/concepts/04-server-management.md) — Factory 模式与服务器进程管理
+- [JupyterLab Desktop 简介](00-introduction.md) — 应用概述与核心特性
+- [应用入口与生命周期](02-app-entry-lifecycle.md) — 从进程启动到就绪的启动序列
+- [会话窗口系统](03-session-window-system.md) — 多窗口管理与窗口生命周期
+- [Jupyter 服务器管理](04-server-management.md) — Factory 模式与服务器进程管理

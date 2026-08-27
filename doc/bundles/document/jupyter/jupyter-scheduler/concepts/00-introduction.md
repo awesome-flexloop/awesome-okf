@@ -54,15 +54,15 @@ Jupyter Scheduler 采用前后端分离架构，后端是 Jupyter Server 扩展�
 
 | 组件 | 职责 | 源码 |
 |-----|------|------|
-| SchedulerApp | Jupyter Server 扩展入口，注册路由和初始化 | [extension.py](../../references/app-entry-source.md) |
-| BackendRegistry | 后端注册中心，管理多后端路由 | [backend_registry.py](../../references/backend-registry-source.md) |
-| BaseBackend | 后端基类，声明后端能力 | [base_backend.py](../../references/backend-registry-source.md) |
-| BaseScheduler/Scheduler | 作业调度核心，CRUD+执行调度 | [scheduler.py](../../references/scheduler-source.md) |
-| ExecutionManager | 执行管理器，模板方法定义执行生命周期 | [executors.py](../../references/executor-source.md) |
-| TaskRunner | 定时任务运行器，优先队列+cron调度 | [task_runner.py](../../references/task-runner-source.md) |
-| Handlers | REST API 请求处理 | [handlers.py](../../references/handlers-source.md) |
-| ORM | SQLAlchemy 数据持久化 | [orm.py](../../references/orm-source.md) |
-| Models | Pydantic 数据模型 | [models.py](../../references/models-source.md) |
+| SchedulerApp | Jupyter Server 扩展入口，注册路由和初始化 | extension.py |
+| BackendRegistry | 后端注册中心，管理多后端路由 | backend_registry.py |
+| BaseBackend | 后端基类，声明后端能力 | base_backend.py |
+| BaseScheduler/Scheduler | 作业调度核心，CRUD+执行调度 | scheduler.py |
+| ExecutionManager | 执行管理器，模板方法定义执行生命周期 | executors.py |
+| TaskRunner | 定时任务运行器，优先队列+cron调度 | task_runner.py |
+| Handlers | REST API 请求处理 | handlers.py |
+| ORM | SQLAlchemy 数据持久化 | orm.py |
+| Models | Pydantic 数据模型 | models.py |
 | JobFilesManager | 输出文件下载管理 | `job_files_manager.py` |
 
 ## 作业生命周期

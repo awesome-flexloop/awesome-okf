@@ -45,11 +45,11 @@ Diffusion 模型是当下最流行的图像生成方案，生成效果优秀、�
 
 ## 在项目中的位置
 
-TinyDiffusion 属于"生成模型"方向，与 [TinyLLM](/ai/datawhale/tiny-universe/concepts/tiny-llm)（语言模型）并列，共同构成"从零训练模型"层。它不依赖 RAG 或 Agent 模块，可独立学习。
+TinyDiffusion 属于"生成模型"方向，与 TinyLLM（语言模型）并列，共同构成"从零训练模型"层。它不依赖 RAG 或 Agent 模块，可独立学习。
 
 项目 README 中配有 DDPM 架构图（`./content/TinyDiffusion/fig/ddpm.png`），直观展示前向与反向过程。
 
 ## 延伸
 
-- 同属生成模型白盒实现：[TinyLLM](/ai/datawhale/tiny-universe/concepts/tiny-llm)
-- 方法论根源：[白盒构建理念](/ai/datawhale/tiny-universe/concepts/white-box-philosophy)
+- 同属生成模型白盒实现：TinyLLM
+- 方法论根源：白盒构建理念

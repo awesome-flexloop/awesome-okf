@@ -254,7 +254,7 @@ def blink(self):
     return self
 ```
 
-在实际视频中，你不需要手动调用 `blink()`——PiCreatureScene 基类会自动在 `wait()` 期间每3秒触发一次自然眨眼（详见[02 自定义 Scene 基类](/concepts/02-custom-scenes.md)）。
+在实际视频中，你不需要手动调用 `blink()`——PiCreatureScene 基类会自动在 `wait()` 期间每3秒触发一次自然眨眼（详见[02 自定义 Scene 基类](02-custom-scenes.md)）。
 
 ## 对话与思考气泡：says() / thinks()
 
@@ -422,11 +422,11 @@ class MyPiScene(Scene):
         self.wait()
 ```
 
-**提示**：对于需要频繁使用 Pi 生物的场景，建议直接继承 PiCreatureScene 或 TeacherStudentsScene 基类，它们会自动处理眨眼、视线追踪等功能（详见[02 自定义 Scene 基类](/concepts/02-custom-scenes.md)）。
+**提示**：对于需要频繁使用 Pi 生物的场景，建议直接继承 PiCreatureScene 或 TeacherStudentsScene 基类，它们会自动处理眨眼、视线追踪等功能（详见[02 自定义 Scene 基类](02-custom-scenes.md)）。
 
 ## 相关概念
 
-- [00 Videos 仓库总览](/concepts/00-videos-overview.md)
-- [02 自定义 Scene 基类](/concepts/02-custom-scenes.md)（PiCreatureScene 自动眨眼与视线追踪）
-- [03 视频代码结构与叙事模式](/concepts/03-video-structure-pattern.md)
-- [自定义模块索引](/references/custom-modules-index.md)
+- [00 Videos 仓库总览](00-videos-overview.md)
+- [02 自定义 Scene 基类](02-custom-scenes.md)（PiCreatureScene 自动眨眼与视线追踪）
+- [03 视频代码结构与叙事模式](03-video-structure-pattern.md)
+- [自定义模块索引](../references/custom-modules-index.md)

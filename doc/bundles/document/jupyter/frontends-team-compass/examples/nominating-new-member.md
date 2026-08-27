@@ -183,6 +183,6 @@ Admin Team 成员需要：
 
 ## 相关概念
 
-- [Frontends Council 架构](/concepts/01-team-council.md) — 三层成员体系和加入流程
-- [决策制定流程](/concepts/03-decision-making.md) — 共识与投票机制
-- [成员行为指南](/concepts/04-member-guide.md) — 新成员的职责和期望
+- [Frontends Council 架构](../concepts/01-team-council.md) — 三层成员体系和加入流程
+- [决策制定流程](../concepts/03-decision-making.md) — 共识与投票机制
+- [成员行为指南](../concepts/04-member-guide.md) — 新成员的职责和期望

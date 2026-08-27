@@ -114,6 +114,6 @@ function changeTabs(e) {
 
 ## 相关概念
 
-- [四个指令详解](/concepts/02-directives.md)
-- [配置项参考](/concepts/04-configuration.md)
-- [基础标签页示例](/examples/basic-tabs.md)
+- [四个指令详解](02-directives.md)
+- [配置项参考](04-configuration.md)
+- [基础标签页示例](../examples/basic-tabs.md)

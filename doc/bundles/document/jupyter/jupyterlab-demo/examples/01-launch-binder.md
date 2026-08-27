@@ -150,6 +150,6 @@ A: File → New → Terminal，或通过命令面板搜索 "terminal"。
 
 ## 下一步
 
-- 阅读 [项目定位与设计理念](/concepts/00-introduction.md) 理解为什么这样设计
-- 尝试 [本地搭建演示环境](/examples/03-local-setup.md) 在自己的机器上运行
-- 学习 [创建自定义演讲配置](/examples/02-custom-demo-talk.md) 定制自己的演示
+- 阅读 [项目定位与设计理念](../concepts/00-introduction.md) 理解为什么这样设计
+- 尝试 [本地搭建演示环境](03-local-setup.md) 在自己的机器上运行
+- 学习 [创建自定义演讲配置](02-custom-demo-talk.md) 定制自己的演示

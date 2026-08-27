@@ -48,12 +48,12 @@ description: awesome-deepseek-agent——DeepSeek 模型接入主流 AI Agent �
 
 ### 核心概念
 
-- [总览](/ai/deepseek/awesome-deepseek-agent/concepts/overview) — 资源列表定位、收录范围、适用模型
-- [集成分类](/ai/deepseek/awesome-deepseek-agent/concepts/integration-categories) — 四大工具分类详解与选择指南
+- 总览 — 资源列表定位、收录范围、适用模型
+- 集成分类 — 四大工具分类详解与选择指南
 
 ### 参考
 
-- [支持的工具与平台](/ai/deepseek/awesome-deepseek-agent/references/supported-tools) — 22 个工具的完整列表与分类
+- 支持的工具与平台 — 22 个工具的完整列表与分类
 
 ## 目录结构
 

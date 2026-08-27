@@ -232,6 +232,6 @@ def recommend(item_id):
 
 ## 延伸阅读
 
-- [ANN 近似最近邻算法](/ai/datawhale/easy-vecdb/concepts/ann-algorithms.md) — Annoy 在六大索引分类中的位置
-- [HNSW 与 LSH](/ai/datawhale/easy-vecdb/concepts/hnsw-lsh.md) — 其他索引算法的对比
-- [Faiss 与 Milvus 工程实践](/ai/datawhale/easy-vecdb/concepts/faiss-milvus-engineering.md) — 更强大的向量检索方案
+- [ANN 近似最近邻算法](ann-algorithms.md) — Annoy 在六大索引分类中的位置
+- [HNSW 与 LSH](hnsw-lsh.md) — 其他索引算法的对比
+- [Faiss 与 Milvus 工程实践](faiss-milvus-engineering.md) — 更强大的向量检索方案

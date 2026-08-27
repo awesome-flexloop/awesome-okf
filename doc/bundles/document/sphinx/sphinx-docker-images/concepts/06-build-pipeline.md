@@ -235,6 +235,6 @@ Dependabot 每月检查 GitHub Actions 更新：
 
 ## 相关概念
 
-- [三镜像架构解析](/concepts/02-image-architecture.md)：三个镜像的用途
-- [CI 镜像详解](/concepts/05-ci-image.md)：CI 镜像的 Dockerfile 细节
-- [CI 集成测试示例](/examples/04-ci-integration.md)：在 GitHub Actions 中使用这些镜像
+- [三镜像架构解析](02-image-architecture.md)：三个镜像的用途
+- [CI 镜像详解](05-ci-image.md)：CI 镜像的 Dockerfile 细节
+- [CI 集成测试示例](../examples/04-ci-integration.md)：在 GitHub Actions 中使用这些镜像

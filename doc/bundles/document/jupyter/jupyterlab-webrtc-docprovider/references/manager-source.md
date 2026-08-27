@@ -95,6 +95,6 @@ export namespace WebRtcManager {
 
 ## 相关概念
 
-- [配置三级优先级系统](/concepts/09-configuration.md)
-- [房间ID哈希与隐私保护](/concepts/05-room-and-signaling.md)
-- [WebRtcProvider文档提供者](/concepts/04-document-provider.md)
+- [配置三级优先级系统](../concepts/09-configuration.md)
+- [房间ID哈希与隐私保护](../concepts/05-room-and-signaling.md)
+- [WebRtcProvider文档提供者](../concepts/04-document-provider.md)

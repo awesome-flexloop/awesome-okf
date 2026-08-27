@@ -64,6 +64,6 @@ sphinx-copybutton 没有额外的 Python 第三方依赖（除了 Sphinx 本身�
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [扩展架构与注册机制](/concepts/02-extension-architecture.md)
-- [基础配置示例](/examples/basic-setup.md)
+- [快速开始](01-getting-started.md)
+- [扩展架构与注册机制](02-extension-architecture.md)
+- [基础配置示例](../examples/basic-setup.md)

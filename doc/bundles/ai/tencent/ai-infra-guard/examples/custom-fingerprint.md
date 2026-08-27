@@ -266,7 +266,7 @@ references:
 
 ## 相关概念
 
-- [指纹规则 DSL](/concepts/02-fingerprint-dsl.md)
-- [CVE 漏洞匹配](/concepts/03-vuln-matching.md)
-- [CLI 扫描示例](/examples/cli-scan.md)
-- [数据文件格式](/references/data-rules.md)
+- [指纹规则 DSL](../concepts/02-fingerprint-dsl.md)
+- [CVE 漏洞匹配](../concepts/03-vuln-matching.md)
+- [CLI 扫描示例](cli-scan.md)
+- [数据文件格式](../references/data-rules.md)

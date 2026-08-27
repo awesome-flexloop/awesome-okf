@@ -462,4 +462,4 @@ def test_set_result_for_after_creation():
 * [Runner 与命令执行（§6）](../concepts/06-runners.md)
 * [高级模式（§11）](../concepts/11-advanced-patterns.md)
 
-[^pyinvoke-src]: PyInvoke 源码，见本 bundle 信源登记 [references/pyinvoke-source.md](/references/pyinvoke-source.md)。
+[^pyinvoke-src]: PyInvoke 源码，见本 bundle 信源登记 [references/pyinvoke-source.md](../references/pyinvoke-source.md)。

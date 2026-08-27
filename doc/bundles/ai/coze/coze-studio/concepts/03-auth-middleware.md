@@ -198,8 +198,8 @@ safego.Go(func() {
 
 ## 相关概念
 
-- [整体架构概览](/concepts/00-overview-ddd-architecture.md)
-- [DDD 分层详解](/concepts/01-ddd-layers.md)
-- [Thrift IDL 与代码生成](/concepts/02-thrift-idl-codegen.md)
-- [部署与运维](/concepts/08-deployment-operations.md)
-- [后端架构参考](/references/backend-architecture.md)
+- [整体架构概览](00-overview-ddd-architecture.md)
+- [DDD 分层详解](01-ddd-layers.md)
+- [Thrift IDL 与代码生成](02-thrift-idl-codegen.md)
+- [部署与运维](08-deployment-operations.md)
+- [后端架构参考](../references/backend-architecture.md)

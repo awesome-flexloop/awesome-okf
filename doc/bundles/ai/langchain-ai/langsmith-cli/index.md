@@ -52,18 +52,18 @@ langsmith evaluator upload evals.py --name accuracy --function check_accuracy --
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/langsmith-cli/concepts/overview) — 项目定位、解决的问题、核心机制与架构概览
-- [CLI 命令体系](/ai/langchain-ai/langsmith-cli/concepts/cli-commands) — Cobra 命令树、通用过滤器、DSL 构建、分页与双模式输出
-- [API 客户端架构](/ai/langchain-ai/langsmith-cli/concepts/api-client) — langsmith-go SDK 封装、v1/v2 透明切换、OAuth 认证与原始 HTTP
+- 总览 — 项目定位、解决的问题、核心机制与架构概览
+- CLI 命令体系 — Cobra 命令树、通用过滤器、DSL 构建、分页与双模式输出
+- API 客户端架构 — langsmith-go SDK 封装、v1/v2 透明切换、OAuth 认证与原始 HTTP
 
 ### 参考文档
 
-- [命令参考](/ai/langchain-ai/langsmith-cli/references/commands) — 全部命令、子命令、标志、过滤器与输出格式详解
-- [核心数据结构](/ai/langchain-ai/langsmith-cli/references/data-structures) — Client、Options、FilterFlags、Config/Profile/OAuth 等关键类型
+- 命令参考 — 全部命令、子命令、标志、过滤器与输出格式详解
+- 核心数据结构 — Client、Options、FilterFlags、Config/Profile/OAuth 等关键类型
 
 ### 使用示例
 
-- [基础使用示例](/ai/langchain-ai/langsmith-cli/examples/basic-usage) — 认证、查询 traces/runs、过滤器 DSL、数据集与评估器管理、JSON 输出、OAuth、通用 API 调用
+- 基础使用示例 — 认证、查询 traces/runs、过滤器 DSL、数据集与评估器管理、JSON 输出、OAuth、通用 API 调用
 
 ## 目录结构
 

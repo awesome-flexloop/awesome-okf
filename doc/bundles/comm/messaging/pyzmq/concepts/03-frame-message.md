@@ -307,8 +307,8 @@ for frame in frames:
 
 ## 相关概念
 
-- [整体架构与双后端](/concepts/00-architecture-dual-backend.md) — COPY_THRESHOLD 和 DRAFT_API 全局配置
-- [Socket sugar 语法层](/concepts/02-socket-sugar.md) — send/recv 的 copy/track 参数
-- [CFFI 后端内部](/references/cffi-internals.md) — GC 回调和 fast_copy 的完整实现
-- [错误层次结构](/references/error-hierarchy.md) — NotDone 异常
-- [常量枚举参考](/references/constants-enums.md) — MessageOption 和 draft 相关常量
+- [整体架构与双后端](00-architecture-dual-backend.md) — COPY_THRESHOLD 和 DRAFT_API 全局配置
+- [Socket sugar 语法层](02-socket-sugar.md) — send/recv 的 copy/track 参数
+- [CFFI 后端内部](../references/cffi-internals.md) — GC 回调和 fast_copy 的完整实现
+- [错误层次结构](../references/error-hierarchy.md) — NotDone 异常
+- [常量枚举参考](../references/constants-enums.md) — MessageOption 和 draft 相关常量

@@ -17,9 +17,9 @@ sources:
 
 ## 前置知识
 
-- [Widget与Shell布局](/concepts/05-widgets-shell.md)
-- [信号与事件通信](/concepts/06-signals.md)
-- [进阶UI模式](/concepts/14-advanced-ui.md)
+- [Widget与Shell布局](../concepts/05-widgets-shell.md)
+- [信号与事件通信](../concepts/06-signals.md)
+- [进阶UI模式](../concepts/14-advanced-ui.md)
 
 ## 完整代码
 
@@ -169,6 +169,6 @@ export default plugin;
 
 ## 相关概念
 
-- [Widget与Shell布局](/concepts/05-widgets-shell.md)
-- [进阶UI模式（React）](/concepts/14-advanced-ui.md)
-- [命令系统](/concepts/04-commands.md)
+- [Widget与Shell布局](../concepts/05-widgets-shell.md)
+- [进阶UI模式（React）](../concepts/14-advanced-ui.md)
+- [命令系统](../concepts/04-commands.md)

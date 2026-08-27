@@ -21,11 +21,11 @@ related:
 
 hermes-agent 的平台插件系统通过统一的适配器（Adapter）接口接入 22+ 个消息平台，使同一个 AI Agent 实例可以同时在 Telegram、Discord、Slack、飞书（Feishu）、企业微信（WeCom）、WhatsApp、Microsoft Teams、Email、IRC、Matrix、Google Chat、Home Assistant、Line、Mattermost、A2A 协议等渠道提供对话服务。
 
-平台插件位于 [plugins/platforms/](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/plugins/platforms/) 目录下，每个平台包含：
+平台插件位于 plugins/platforms/ 目录下，每个平台包含：
 - `plugin.yaml`：插件元数据声明
-- `adapter.py`：适配器实现，继承或实现 [gateway/platforms/base.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/platforms/base.py) 中定义的接口
+- `adapter.py`：适配器实现，继承或实现 gateway/platforms/base.py 中定义的接口
 
-[GatewayRunner](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/run.py#L5848) 是网关的核心运行时类，负责加载配置、启动所有平台适配器、管理会话缓存和消息路由。
+GatewayRunner 是网关的核心运行时类，负责加载配置、启动所有平台适配器、管理会话缓存和消息路由。
 
 ### 解决的核心问题
 
@@ -40,7 +40,7 @@ hermes-agent 的平台插件系统通过统一的适配器（Adapter）接口接
 
 ### 1. Platform 枚举动态扩展
 
-[Platform](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/config.py#L272-L347) 枚举内置了核心平台成员（TELEGRAM、DISCORD、SLACK、FEISHU、WECOM 等），同时通过 `_missing_()` 方法支持动态成员创建：当访问 `Platform("irc")` 时，如果 `irc` 是已发现的插件平台名称，则自动创建一个伪成员缓存到 `_value2member_map_`，确保身份稳定性（`Platform("irc") is Platform("irc")` 为 True）。
+Platform 枚举内置了核心平台成员（TELEGRAM、DISCORD、SLACK、FEISHU、WECOM 等），同时通过 `_missing_()` 方法支持动态成员创建：当访问 `Platform("irc")` 时，如果 `irc` 是已发现的插件平台名称，则自动创建一个伪成员缓存到 `_value2member_map_`，确保身份稳定性（`Platform("irc") is Platform("irc")` 为 True）。
 
 ```python
 class Platform(Enum):
@@ -80,7 +80,7 @@ class Platform(Enum):
 
 ### 3. PII 哈希保护
 
-[gateway/session.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/session.py#L64-L84) 提供了三个哈希函数：
+gateway/session.py 提供了三个哈希函数：
 
 ```python
 def _hash_id(value: str) -> str:
@@ -304,7 +304,7 @@ class TelegramAdapter(BaseAdapter):
 
 | 方法 | 位置 | 说明 |
 |------|------|------|
-| `start_gateway()` | [gateway/run.py:27135](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/run.py#L27135) | 启动网关的异步入口函数，加载配置并运行 GatewayRunner |
+| `start_gateway()` | gateway/run.py:27135 | 启动网关的异步入口函数，加载配置并运行 GatewayRunner |
 | `_get_or_create_agent()` | GatewayRunner 内部 | 根据 session_key 获取或创建 AIAgent 实例（LRU 缓存） |
 | `_enforce_agent_cache_cap()` | GatewayRunner 内部 | 强制 agent 缓存容量限制，LRU 驱逐超出的 agent |
 | `_session_expiry_watcher()` | GatewayRunner 内部 | 后台线程，定期回收空闲超时的 agent |
@@ -340,32 +340,32 @@ class TelegramAdapter(BaseAdapter):
 
 | 函数 | 位置 | 说明 |
 |------|------|------|
-| `auto_continue_freshness_window()` | [gateway/session.py:40-57](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/session.py#L40-L57) | 返回自动续期新鲜窗口（秒），读取环境变量 `HERMES_AUTO_CONTINUE_FRESHNESS` |
-| `_hash_id(value)` | [gateway/session.py:64-66](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/session.py#L64-L66) | SHA-256 前 12 位十六进制哈希 |
-| `_hash_sender_id(value)` | [gateway/session.py:69-71](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/session.py#L69-L71) | 发送者 ID 哈希（`user_<12hex>`） |
-| `_hash_chat_id(value)` | [gateway/session.py:74-84](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/session.py#L74-L84) | 聊天 ID 哈希（保留平台前缀） |
-| `_is_path_unsafe(value)` | [gateway/session.py:109-120](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/session.py#L109-L120) | 检查值是否可能导致路径遍历 |
-| `_coerce_bool(value, default)` | [gateway/config.py:26-37](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/config.py#L26-L37) | 布尔配置值类型强制 |
+| `auto_continue_freshness_window()` | gateway/session.py:40-57 | 返回自动续期新鲜窗口（秒），读取环境变量 `HERMES_AUTO_CONTINUE_FRESHNESS` |
+| `_hash_id(value)` | gateway/session.py:64-66 | SHA-256 前 12 位十六进制哈希 |
+| `_hash_sender_id(value)` | gateway/session.py:69-71 | 发送者 ID 哈希（`user_<12hex>`） |
+| `_hash_chat_id(value)` | gateway/session.py:74-84 | 聊天 ID 哈希（保留平台前缀） |
+| `_is_path_unsafe(value)` | gateway/session.py:109-120 | 检查值是否可能导致路径遍历 |
+| `_coerce_bool(value, default)` | gateway/config.py:26-37 | 布尔配置值类型强制 |
 
 ### 插件基础原语
 
 | 原语 | 位置 | 说明 |
 |------|------|------|
-| `lazy_singleton(fn)` | [plugins/plugin_utils.py:43-81](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/plugins/plugin_utils.py#L43-L81) | 双重检查锁定单例装饰器，零参数工厂函数，附 `.reset()` |
-| `SingletonSlot[T]` | [plugins/plugin_utils.py:84-135](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/plugins/plugin_utils.py#L84-L135) | 带参数的懒加载泛型槽，线程安全，提供 `get()`/`peek()`/`reset()` |
+| `lazy_singleton(fn)` | plugins/plugin_utils.py:43-81 | 双重检查锁定单例装饰器，零参数工厂函数，附 `.reset()` |
+| `SingletonSlot[T]` | plugins/plugin_utils.py:84-135 | 带参数的懒加载泛型槽，线程安全，提供 `get()`/`peek()`/`reset()` |
 
 ## 源码位置指引
 
 | 文件/目录 | 内容 |
 |----------|------|
-| [gateway/run.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/run.py) | `GatewayRunner` 类、`start_gateway()` 入口、agent 缓存管理 |
-| [gateway/config.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/config.py#L272-L347) | `Platform` 枚举、`GatewayConfig`、`PlatformConfig`、`HomeChannel` |
-| [gateway/session.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/session.py) | 会话管理、PII 哈希、自动续期窗口、路径安全检查 |
-| [gateway/platforms/base.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/platforms/base.py) | 平台适配器基类接口 |
-| [gateway/delivery.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/delivery.py) | 消息投递逻辑 |
-| [gateway/slash_commands.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/slash_commands.py) | 平台斜杠命令处理（/model、/reset 等） |
-| [plugins/plugin_utils.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/plugins/plugin_utils.py) | 线程安全单例原语（`lazy_singleton`、`SingletonSlot`） |
-| [plugins/platforms/](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/plugins/platforms/) | 22 个平台适配器插件目录 |
+| gateway/run.py | `GatewayRunner` 类、`start_gateway()` 入口、agent 缓存管理 |
+| gateway/config.py | `Platform` 枚举、`GatewayConfig`、`PlatformConfig`、`HomeChannel` |
+| gateway/session.py | 会话管理、PII 哈希、自动续期窗口、路径安全检查 |
+| gateway/platforms/base.py | 平台适配器基类接口 |
+| gateway/delivery.py | 消息投递逻辑 |
+| gateway/slash_commands.py | 平台斜杠命令处理（/model、/reset 等） |
+| plugins/plugin_utils.py | 线程安全单例原语（`lazy_singleton`、`SingletonSlot`） |
+| plugins/platforms/ | 22 个平台适配器插件目录 |
 
 ## 相关概念交叉引用
 

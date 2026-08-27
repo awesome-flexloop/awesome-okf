@@ -116,7 +116,7 @@ repo2jupyterlite https://github.com/username/repo ./output --ref abc1234def5678
 }
 ```
 
-CLI 会自动检测到此文件并添加 `--config jupyterlite_config.json` 参数（参见 [CLI信源F-021](/references/cli-source.md)）。
+CLI 会自动检测到此文件并添加 `--config jupyterlite_config.json` 参数（参见 [CLI信源F-021](../references/cli-source.md)）。
 
 ## 常见问题
 
@@ -163,5 +163,5 @@ repo2jupyterlite &lt;url&gt; &lt;output_dir&gt; [--ref &lt;ref&gt;]
 
 ## 相关概念
 
-- [02-CLI命令使用详解](/concepts/02-cli-usage.md)
-- [06-构建流程与缓存策略](/concepts/06-build-process.md)
+- [02-CLI命令使用详解](../concepts/02-cli-usage.md)
+- [06-构建流程与缓存策略](../concepts/06-build-process.md)

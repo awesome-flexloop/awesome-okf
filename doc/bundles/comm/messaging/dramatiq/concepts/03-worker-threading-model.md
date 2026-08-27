@@ -126,10 +126,10 @@ PriorityQueue 按 `(priority, _queued_time)` 排序：priority 数值越小越�
 
 ## 相关概念
 
-- [整体架构](/concepts/00-overall-architecture.md)：Worker 在五大组件中的位置
-- [Broker 抽象基类](/concepts/02-broker-abstraction.md)：Worker 通过 broker.consume 获取 Consumer
-- [Message 与序列化](/concepts/04-message-and-serialization.md)：MessageProxy 包装 Message 增加 failed 状态
-- [Middleware 中间件管道](/concepts/05-middleware-pipeline.md)：process_message 触发的 before/after 钩子
-- [CLI 与 Watcher](/concepts/08-cli-and-watcher.md)：多进程 fork 与信号处理
-- [RedisBroker 内部结构](/references/redis-broker-internals.md)：Redis consumer 的 fetch/ack 实现
-- [RabbitmqBroker 内部结构](/references/rabbitmq-broker-internals.md)：RabbitMQ consumer 的线程模型
+- [整体架构](00-overall-architecture.md)：Worker 在五大组件中的位置
+- [Broker 抽象基类](02-broker-abstraction.md)：Worker 通过 broker.consume 获取 Consumer
+- [Message 与序列化](04-message-and-serialization.md)：MessageProxy 包装 Message 增加 failed 状态
+- [Middleware 中间件管道](05-middleware-pipeline.md)：process_message 触发的 before/after 钩子
+- [CLI 与 Watcher](08-cli-and-watcher.md)：多进程 fork 与信号处理
+- [RedisBroker 内部结构](../references/redis-broker-internals.md)：Redis consumer 的 fetch/ack 实现
+- [RabbitmqBroker 内部结构](../references/rabbitmq-broker-internals.md)：RabbitMQ consumer 的线程模型

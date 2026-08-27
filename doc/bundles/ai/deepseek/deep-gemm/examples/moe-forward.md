@@ -11,7 +11,7 @@ description: 使用 DeepGEMM MegaMoE 进行 MoE 前向计算的完整示例，�
 
 本文档展示如何使用 DeepGEMM 的 MegaMoE API 进行高性能 MoE（Mixture of Experts）前向计算。MegaMoE 利用对称内存实现融合的 dispatch-compute-combine 流程，仅支持 SM100（Blackwell）GPU。
 
-> **注意**：MegaMoE 仅在 Blackwell（SM100）GPU 上可用。如需在 Hopper 上运行 MoE，请使用分组 GEMM 方案（参见 [/deepseek/deep-gemm/examples/basic-gemm#分组GEMM示例](/ai/deepseek/deep-gemm/examples/basic-gemm) 中的 M-grouped GEMM）。
+> **注意**：MegaMoE 仅在 Blackwell（SM100）GPU 上可用。如需在 Hopper 上运行 MoE，请使用分组 GEMM 方案（参见 /deepseek/deep-gemm/examples/basic-gemm#分组GEMM示例 中的 M-grouped GEMM）。
 
 ---
 
@@ -379,7 +379,7 @@ deep_gemm.bf16_mega_moe(
 
 ## 五、与 DeepEP 的协同
 
-对于非融合 MoE 方案，可以结合 [/deepseek/deep-ep/](/ai/deepseek/deep-ep/) 进行专家并行通信：
+对于非融合 MoE 方案，可以结合 [/deepseek/deep-ep/](../../deep-ep/index.md) 进行专家并行通信：
 
 ```
 DeepEP (通信) + DeepGEMM M-grouped GEMM (计算):
@@ -394,7 +394,7 @@ MegaMoE 将上述三步融合为单内核，通过对称环形缓冲区在核函
 
 ## 六、相关链接
 
-- [/deepseek/deep-gemm/concepts/moe-operations](/ai/deepseek/deep-gemm/concepts/moe-operations) — MegaMoE 设计原理
-- [/deepseek/deep-gemm/concepts/grouped-gemm](/ai/deepseek/deep-gemm/concepts/grouped-gemm) — 分组 GEMM 概念
-- [/deepseek/deep-gemm/references/mega-moe](/ai/deepseek/deep-gemm/references/mega-moe) — MegaMoE API 参考
-- [/deepseek/deep-ep/](/ai/deepseek/deep-ep/) — DeepEP 专家并行通信库
+- /deepseek/deep-gemm/concepts/moe-operations — MegaMoE 设计原理
+- /deepseek/deep-gemm/concepts/grouped-gemm — 分组 GEMM 概念
+- /deepseek/deep-gemm/references/mega-moe — MegaMoE API 参考
+- [/deepseek/deep-ep/](../../deep-ep/index.md) — DeepEP 专家并行通信库

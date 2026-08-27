@@ -228,7 +228,7 @@ stop阶段的执行顺序：
 
 ## 相关概念
 
-- [模块系统](/concepts/02-module-system.md)
-- [上下文与共享值](/concepts/03-context-sharing.md)
-- [可插拔Web服务器](/concepts/07-web-modules.md)
-- [后台任务处理模式](/examples/03-web-server.md)
+- [模块系统](02-module-system.md)
+- [上下文与共享值](03-context-sharing.md)
+- [可插拔Web服务器](07-web-modules.md)
+- [后台任务处理模式](../examples/03-web-server.md)

@@ -14,7 +14,7 @@ sources:
 
 ## 概述
 
-BinderHub 的 RepoProvider 系统定义在 [repoproviders.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py) 中，是一个可扩展的插件架构，用于支持多种版本控制平台和数据仓库作为 Binder 镜像的来源。每个提供者负责解析用户提供的仓库引用（spec）、将符号引用（如分支名 `main`）解析为具体的 commit SHA、提供 Git 克隆 URL、生成历史版本 URL，以及创建唯一且安全的构建标识（build slug）。
+BinderHub 的 RepoProvider 系统定义在 repoproviders.py 中，是一个可扩展的插件架构，用于支持多种版本控制平台和数据仓库作为 Binder 镜像的来源。每个提供者负责解析用户提供的仓库引用（spec）、将符号引用（如分支名 `main`）解析为具体的 commit SHA、提供 Git 克隆 URL、生成历史版本 URL，以及创建唯一且安全的构建标识（build slug）。
 
 ## 类继承体系
 
@@ -97,7 +97,7 @@ def strip_suffix(text, suffix):
 
 ### _safe_build_slug() 与 _generate_build_name()
 
-虽然定义在 [builder.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py) 中，但与 RepoProvider 的 `get_build_slug()` 密切相关：
+虽然定义在 builder.py 中，但与 RepoProvider 的 `get_build_slug()` 密切相关：
 
 ```python
 def _safe_build_slug(build_slug, limit, hash_length=6):
@@ -116,7 +116,7 @@ def _safe_build_slug(build_slug, limit, hash_length=6):
 
 ## RepoProvider 抽象基类
 
-`RepoProvider`（[repoproviders.py:55-215](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L55-L215)）是所有仓库提供者的基类，继承自 `LoggingConfigurable`。
+`RepoProvider`（repoproviders.py:55-215）是所有仓库提供者的基类，继承自 `LoggingConfigurable`。
 
 ### 核心 Traitlets 属性
 
@@ -240,7 +240,7 @@ c.GitHubRepoProvider.spec_config = [
 
 ## GitHubRepoProvider
 
-`GitHubRepoProvider`（[repoproviders.py:853-1112](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L853-L1112)）是最常用的提供者，支持 GitHub.com 和 GitHub Enterprise。
+`GitHubRepoProvider`（repoproviders.py:853-1112）是最常用的提供者，支持 GitHub.com 和 GitHub Enterprise。
 
 ### 配置属性
 
@@ -275,7 +275,7 @@ def __init__(self, *args, **kwargs):
 
 ### GitHub API 请求与速率限制
 
-`github_api_request()` 方法（[repoproviders.py:970-1051](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L970-L1051)）封装了 GitHub API 调用，处理认证、ETag 缓存和速率限制：
+`github_api_request()` 方法（repoproviders.py:970-1051）封装了 GitHub API 调用，处理认证、ETag 缓存和速率限制：
 
 ```python
 async def github_api_request(self, api_url, etag=None):
@@ -371,7 +371,7 @@ def _default_git_credentials(self):
 
 ## GistRepoProvider
 
-`GistRepoProvider`（[repoproviders.py:1115-1207](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L1115-L1207)）继承自 `GitHubRepoProvider`，支持 GitHub Gist。
+`GistRepoProvider`（repoproviders.py:1115-1207）继承自 `GitHubRepoProvider`，支持 GitHub Gist。
 
 ### 特殊行为
 
@@ -403,7 +403,7 @@ async def get_resolved_ref(self):
 
 ## GitLabRepoProvider
 
-`GitLabRepoProvider`（[repoproviders.py:717-850](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L717-L850)）支持 GitLab.com 和自建 GitLab 实例。
+`GitLabRepoProvider`（repoproviders.py:717-850）支持 GitLab.com 和自建 GitLab 实例。
 
 ### 配置属性
 
@@ -455,7 +455,7 @@ def get_build_slug(self):
 
 ## GitRepoProvider
 
-`GitRepoProvider`（[repoproviders.py:606-714](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L606-L714)）是通用 Git 提供者，支持任意 Git 仓库 URL。
+`GitRepoProvider`（repoproviders.py:606-714）是通用 Git 提供者，支持任意 Git 仓库 URL。
 
 ### 协议白名单
 
@@ -504,7 +504,7 @@ async def get_resolved_ref(self):
 
 ## ZenodoProvider
 
-`ZenodoProvider`（[repoproviders.py:253-300](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L253-L300)）支持 Zenodo 科学数据仓库的 DOI。
+`ZenodoProvider`（repoproviders.py:253-300）支持 Zenodo 科学数据仓库的 DOI。
 
 ### 工作流程
 
@@ -524,7 +524,7 @@ async def get_resolved_ref(self):
 
 ## FigshareProvider
 
-`FigshareProvider`（[repoproviders.py:303-379](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L303-L379)）支持 Figshare 学术数据仓库。
+`FigshareProvider`（repoproviders.py:303-379）支持 Figshare 学术数据仓库。
 
 ### 版本处理
 
@@ -547,7 +547,7 @@ else:
 
 ## DataverseProvider
 
-`DataverseProvider`（[repoproviders.py:382-445](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L382-L445)）支持 Dataverse 开源数据仓库平台。
+`DataverseProvider`（repoproviders.py:382-445）支持 Dataverse 开源数据仓库平台。
 
 ### 工作流程
 
@@ -578,7 +578,7 @@ async def get_resolved_ref(self):
 
 ## HydroshareProvider
 
-`HydroshareProvider`（[repoproviders.py:448-514](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L448-L514)）支持 Hydroshare 水资源研究共享平台。
+`HydroshareProvider`（repoproviders.py:448-514）支持 Hydroshare 水资源研究共享平台。
 
 ### Resource ID 解析
 
@@ -607,7 +607,7 @@ def parse_date(json_body):
 
 ## CKANProvider
 
-`CKANProvider`（[repoproviders.py:517-603](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L517-L603)）支持 CKAN 开放数据平台。
+`CKANProvider`（repoproviders.py:517-603）支持 CKAN 开放数据平台。
 
 ### URL 解析
 
@@ -632,7 +632,7 @@ elif parse_qs(parsed_repo.query).get("activity_id") is not None:
 
 ## RepoProvider 注册与选择
 
-在 [app.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py) 中，所有内置提供者通过 `repo_providers` 字典注册：
+在 app.py 中，所有内置提供者通过 `repo_providers` 字典注册：
 
 ```python
 repo_providers = Dict({
@@ -708,14 +708,14 @@ c.BinderHub.repo_providers["mp"] = MyCustomProvider
 
 ## 关键源码引用
 
-- RepoProvider 基类：[repoproviders.py:55-215](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L55-L215)
-- GitHubRepoProvider：[repoproviders.py:853-1112](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L853-L1112)
-- GistRepoProvider：[repoproviders.py:1115-1207](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L1115-L1207)
-- GitLabRepoProvider：[repoproviders.py:717-850](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L717-L850)
-- GitRepoProvider：[repoproviders.py:606-714](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L606-L714)
-- ZenodoProvider：[repoproviders.py:253-300](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L253-L300)
-- FigshareProvider：[repoproviders.py:303-379](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L303-L379)
-- DataverseProvider：[repoproviders.py:382-445](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L382-L445)
-- HydroshareProvider：[repoproviders.py:448-514](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L448-L514)
-- CKANProvider：[repoproviders.py:517-603](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L517-L603)
-- 辅助函数：[repoproviders.py:36-52](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L36-L52)
+- RepoProvider 基类：repoproviders.py:55-215
+- GitHubRepoProvider：repoproviders.py:853-1112
+- GistRepoProvider：repoproviders.py:1115-1207
+- GitLabRepoProvider：repoproviders.py:717-850
+- GitRepoProvider：repoproviders.py:606-714
+- ZenodoProvider：repoproviders.py:253-300
+- FigshareProvider：repoproviders.py:303-379
+- DataverseProvider：repoproviders.py:382-445
+- HydroshareProvider：repoproviders.py:448-514
+- CKANProvider：repoproviders.py:517-603
+- 辅助函数：repoproviders.py:36-52

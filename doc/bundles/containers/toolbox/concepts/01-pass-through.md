@@ -229,6 +229,6 @@ fi
 
 ## 相关概念
 
-- [/concepts/00-introduction.md](/concepts/00-introduction.md)
-- [/concepts/02-workflow.md](/concepts/02-workflow.md)
-- [/concepts/03-custom-images.md](/concepts/03-custom-images.md)
+- [/concepts/00-introduction.md](00-introduction.md)
+- [/concepts/02-workflow.md](02-workflow.md)
+- [/concepts/03-custom-images.md](03-custom-images.md)

@@ -273,6 +273,6 @@ const mdastWithHtml = mystParse(contentWithHtml, { html: true });
 
 ## 下一步
 
-- 解析后的 MDAST 需要通过 [basicTransformations](/concepts/03-myst-transforms.md) 处理才能得到最终语义
-- 自定义指令的完整示例见 [自定义指令](/examples/05-custom-directive.md)
-- 自定义角色的完整示例见 [自定义角色](/examples/04-custom-role.md)
+- 解析后的 MDAST 需要通过 [basicTransformations](../concepts/03-myst-transforms.md) 处理才能得到最终语义
+- 自定义指令的完整示例见 [自定义指令](05-custom-directive.md)
+- 自定义角色的完整示例见 [自定义角色](04-custom-role.md)

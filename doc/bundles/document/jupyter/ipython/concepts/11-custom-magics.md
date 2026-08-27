@@ -493,8 +493,8 @@ def load_ipython_extension(ipython):
 
 ## 相关概念
 
-- [魔法命令系统](/concepts/04-magic-system.md)
-- [扩展系统](/concepts/09-extension-system.md)
-- [事件与钩子](/concepts/10-events-hooks.md)
-- [代码执行管线](/concepts/05-execution-pipeline.md)
-- [信源参考 - 魔法系统](/references/magic-source.md)
+- [魔法命令系统](04-magic-system.md)
+- [扩展系统](09-extension-system.md)
+- [事件与钩子](10-events-hooks.md)
+- [代码执行管线](05-execution-pipeline.md)
+- [信源参考 - 魔法系统](../references/magic-source.md)

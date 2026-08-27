@@ -351,8 +351,8 @@ stream_engine_base_t I/O 循环:
 
 ## 相关概念
 
-- [ZMTP 协议引擎](/concepts/06-zmtp-engine.md) — 握手状态机和安全机制
-- [消息与引用计数](/concepts/03-message.md) — msg_t 标志位和 zclmsg 零拷贝类型
-- [消息模式实现](/concepts/11-patterns.md) — SUBSCRIBE/CANCEL 命令在 PUB/SUB 中的传播
-- [套接字选项体系](/concepts/09-options.md) — 心跳和最大消息大小选项
-- [I/O 线程与多路复用](/concepts/07-io-thread-poller.md) — 引擎在 I/O 线程中执行实际 read/write
+- [ZMTP 协议引擎](06-zmtp-engine.md) — 握手状态机和安全机制
+- [消息与引用计数](03-message.md) — msg_t 标志位和 zclmsg 零拷贝类型
+- [消息模式实现](11-patterns.md) — SUBSCRIBE/CANCEL 命令在 PUB/SUB 中的传播
+- [套接字选项体系](09-options.md) — 心跳和最大消息大小选项
+- [I/O 线程与多路复用](07-io-thread-poller.md) — 引擎在 I/O 线程中执行实际 read/write

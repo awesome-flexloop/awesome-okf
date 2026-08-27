@@ -116,6 +116,6 @@ directory = "src/jupyterlite_lsp/_d"
 
 ## 相关概念
 
-- [Python包与Labextension注册](/concepts/08-python-package.md)
-- [构建系统](/concepts/07-build-system.md)
-- [核心包源码引用](/references/core-plugin-source.md)
+- [Python包与Labextension注册](../concepts/08-python-package.md)
+- [构建系统](../concepts/07-build-system.md)
+- [核心包源码引用](core-plugin-source.md)

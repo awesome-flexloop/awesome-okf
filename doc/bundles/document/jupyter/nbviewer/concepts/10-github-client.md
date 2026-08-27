@@ -108,5 +108,5 @@ class AsyncGitHubClient:
 
 ## 相关文档
 
-- [Provider插件系统](/concepts/05-provider-plugin-system.md)
-- [速率限制与安全机制](/concepts/11-rate-limit-security.md)
+- [Provider插件系统](05-provider-plugin-system.md)
+- [速率限制与安全机制](11-rate-limit-security.md)

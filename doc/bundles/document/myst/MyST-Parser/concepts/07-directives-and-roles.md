@@ -197,8 +197,8 @@ class SubstitutionReferenceRole(SphinxRole):
 
 ## 相关概念
 
-- [MyST 语法概览](/concepts/02-myst-syntax-overview.md)
-- [扩展语法系统](/concepts/05-extension-system.md)
-- [解析器与渲染器](/concepts/06-parser-and-renderer.md)
-- [交叉引用](/concepts/08-cross-references.md)
-- [基础配置示例](/examples/01-basic-setup.md)
+- [MyST 语法概览](02-myst-syntax-overview.md)
+- [扩展语法系统](05-extension-system.md)
+- [解析器与渲染器](06-parser-and-renderer.md)
+- [交叉引用](08-cross-references.md)
+- [基础配置示例](../examples/01-basic-setup.md)

@@ -220,7 +220,7 @@ Copier 智能处理文件可执行权限：
 - [Worker 与生命周期](05-worker-and-lifecycle.md)
 - [任务与迁移](07-tasks-and-migrations.md)
 - [安全与信任机制](09-security-and-safety.md)
-- [条件渲染与动态文件示例](/examples/conditional-rendering.md)
-- [Copier 源码信源登记](/references/copier-source.md)
+- [条件渲染与动态文件示例](../examples/conditional-rendering.md)
+- [Copier 源码信源登记](../references/copier-source.md)
 
-[^copier-source]: Copier 源码信源，见 [copier-source.md](/references/copier-source.md)。
+[^copier-source]: Copier 源码信源，见 [copier-source.md](../references/copier-source.md)。

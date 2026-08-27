@@ -153,6 +153,6 @@ async with create_task_group() as tg:
 
 ## 相关概念
 
-- [上下文与共享值](/concepts/03-context-sharing.md)
-- [生命周期阶段](/concepts/04-lifecycle-phases.md)
-- [信号使用示例](/examples/06-signals-usage.md)
+- [上下文与共享值](03-context-sharing.md)
+- [生命周期阶段](04-lifecycle-phases.md)
+- [信号使用示例](../examples/06-signals-usage.md)

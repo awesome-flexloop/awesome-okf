@@ -43,7 +43,7 @@ output.pdf
 
 ### 第一步：myst-to-tex 生成结构化结果
 
-参见 [LaTeX 导出](/concepts/02-latex-export.md)。TexSerializer 输出 `LatexResult`，包含正文 value、包 imports、导言区 preamble 和数学宏 commands。这些信息不会自动组装为完整 .tex 文件，而是交给 jtex 注入模板。
+参见 [LaTeX 导出](02-latex-export.md)。TexSerializer 输出 `LatexResult`，包含正文 value、包 imports、导言区 preamble 和数学宏 commands。这些信息不会自动组装为完整 .tex 文件，而是交给 jtex 注入模板。
 
 ### 第二步：jtex 模板渲染
 
@@ -159,7 +159,7 @@ Jupyter Book / MyST 提供官方模板库（通过 myst-templates）：
 
 ## 相关概念
 
-- [02-latex-export](/concepts/02-latex-export.md)：LaTeX 序列化器
-- [07-typst-export](/concepts/07-typst-export.md)：Typst 导出
-- [08-jtex-template-engine](/concepts/08-jtex-template-engine.md)：jtex 模板引擎
-- [02-custom-jtex-template](/examples/02-custom-jtex-template.md)：自定义模板示例
+- [02-latex-export](02-latex-export.md)：LaTeX 序列化器
+- [07-typst-export](07-typst-export.md)：Typst 导出
+- [08-jtex-template-engine](08-jtex-template-engine.md)：jtex 模板引擎
+- [02-custom-jtex-template](../examples/02-custom-jtex-template.md)：自定义模板示例

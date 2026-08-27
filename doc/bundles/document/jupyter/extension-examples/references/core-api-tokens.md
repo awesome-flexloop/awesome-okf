@@ -201,6 +201,6 @@ commands.addCommand(commandId, {
 
 ## 相关概念
 
-- [插件基础与依赖注入](/concepts/03-plugin-basics.md)
-- [命令系统](/concepts/04-commands.md)
-- [Widget与Shell布局](/concepts/05-widgets-shell.md)
+- [插件基础与依赖注入](../concepts/03-plugin-basics.md)
+- [命令系统](../concepts/04-commands.md)
+- [Widget与Shell布局](../concepts/05-widgets-shell.md)

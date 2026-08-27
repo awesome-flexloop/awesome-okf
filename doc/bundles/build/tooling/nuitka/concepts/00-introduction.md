@@ -32,7 +32,7 @@ Nuitka是一个**Python源码到C代码的提前（AOT）编译器**。它读取
 
 Nuitka由Kay Hayen自2012年开始开发，本教程基于 **Nuitka V4.1rc11**（版权年份2026），采用Apache 2.0许可证。
 
-> **源码定位**：版本字符串定义于 [Version.py:6-8](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/Version.py#L6-L8)：
+> **源码定位**：版本字符串定义于 Version.py:6-8：
 > ```python
 > version_string = "Nuitka V4.1rc11\nCopyright (C) 2026 Kay Hayen."
 > ```

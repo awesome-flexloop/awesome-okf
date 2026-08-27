@@ -300,9 +300,9 @@ When a command failure is detected:
 
 ## 逐步解释
 
-1. **Autofix 状态机**：Autofix 由 [`TabAutofixState`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/app/autofix.rs#L19-L48) 管理，每个标签页独立跟踪自己的 Autofix 状态。状态流转为：`Idle` → `Detected`（检测到错误，显示提示条）→ `Pending`（AI 分析中）→ `Review`（结果就绪，等待用户查看）。
+1. **Autofix 状态机**：Autofix 由 `TabAutofixState` 管理，每个标签页独立跟踪自己的 Autofix 状态。状态流转为：`Idle` → `Detected`（检测到错误，显示提示条）→ `Pending`（AI 分析中）→ `Review`（结果就绪，等待用户查看）。
 
-2. **错误检测**：当 shell 发射 `OSC 133;D;<exit_code>` 时，WT 的 VT 解析器在 `adaptDispatch.cpp` 中解析退出码，存储到 `ScrollbarData.exitCode`，然后通过 `autofix_state` 事件通知 WTA。[`trigger_autofix_inner()`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/app/autofix.rs#L96-L288) 处理错误通知并触发 LLM 分析。
+2. **错误检测**：当 shell 发射 `OSC 133;D;<exit_code>` 时，WT 的 VT 解析器在 `adaptDispatch.cpp` 中解析退出码，存储到 `ScrollbarData.exitCode`，然后通过 `autofix_state` 事件通知 WTA。`trigger_autofix_inner()` 处理错误通知并触发 LLM 分析。
 
 3. **Detected 状态**：当自动建议模式关闭（`autofix_enabled=false`）时，只显示 `Detected` 提示条，不自动调用 LLM。用户按 `Ctrl+Alt+.` 或点击提示条触发分析。当自动建议模式开启时，直接进入 `Pending` 状态并发送 prompt 给 Agent。
 

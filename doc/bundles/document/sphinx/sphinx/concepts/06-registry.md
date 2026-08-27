@@ -17,7 +17,7 @@ sources:
 ---
 # 组件注册表
 
-`SphinxComponentRegistry`（`sphinx/registry.py`）是 Sphinx 的组件注册中心，统一管理所有可扩展组件的注册、查找和去重（见核心洞察 [I-003](/spec/insights.md)）。
+`SphinxComponentRegistry`（`sphinx/registry.py`）是 Sphinx 的组件注册中心，统一管理所有可扩展组件的注册、查找和去重（见核心洞察 [I-003](../spec/insights.md)）。
 
 ## 为什么需要统一注册表
 
@@ -123,7 +123,7 @@ def setup(app):
 
 ## 相关概念
 
-- [02-应用类](02-application.md) — app.add_*方法的入口
-- [08-构建器](08-builders.md) — Builder注册和选择
-- [09-Domain机制](09-domains.md) — Domain注册和语义抽象
-- [07-扩展开发](07-extension-dev.md) — 扩展中的组件注册模式
+- 02-应用类 — app.add_*方法的入口
+- 08-构建器 — Builder注册和选择
+- 09-Domain机制 — Domain注册和语义抽象
+- 07-扩展开发 — 扩展中的组件注册模式

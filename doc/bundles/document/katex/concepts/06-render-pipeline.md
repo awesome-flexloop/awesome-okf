@@ -209,8 +209,8 @@ export function renderToString(expression, options) {
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [虚拟DOM树](/concepts/07-dom-tree.md)
-- [配置系统](/concepts/10-settings-options.md)
-- [样式系统](/concepts/11-style-system.md)
-- [函数注册表](/concepts/08-function-registry.md)
+- [架构总览](02-architecture-overview.md)
+- [虚拟DOM树](07-dom-tree.md)
+- [配置系统](10-settings-options.md)
+- [样式系统](11-style-system.md)
+- [函数注册表](08-function-registry.md)

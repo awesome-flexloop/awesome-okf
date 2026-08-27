@@ -226,4 +226,4 @@ sphinx-intl update -p _build/gettext -l ja -l de -j 4
 - [翻译工作流原理](03-translation-workflow.md)
 - [目录文件操作：Catalog 模块](04-catalog-operations.md)
 - [编译与统计机制](06-build-stat-mechanism.md)
-- [basic.py API 参考](/references/basic-api.md)
+- [basic.py API 参考](../references/basic-api.md)

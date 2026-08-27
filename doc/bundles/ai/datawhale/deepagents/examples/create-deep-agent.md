@@ -49,4 +49,4 @@ Agent 可以规划、读写文件、管理自身上下文。可添加自定义�
 
 ## 相关概念
 
-- [核心SDK与三层架构](/ai/datawhale/deepagents/concepts/core-sdk)
+- 核心SDK与三层架构

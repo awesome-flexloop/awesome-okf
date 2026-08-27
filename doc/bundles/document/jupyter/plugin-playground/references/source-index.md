@@ -131,7 +131,7 @@ namespace ContentUtils {
 
 ## 相关概念
 
-- [插件加载流程](/concepts/05-plugin-loader.md)
-- [TypeScript 转译机制](/concepts/03-typescript-transpilation.md)
-- [模块解析系统](/concepts/04-module-resolution.md)
-- [Token 依赖注入](/concepts/06-token-system.md)
+- [插件加载流程](../concepts/05-plugin-loader.md)
+- [TypeScript 转译机制](../concepts/03-typescript-transpilation.md)
+- [模块解析系统](../concepts/04-module-resolution.md)
+- [Token 依赖注入](../concepts/06-token-system.md)

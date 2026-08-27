@@ -94,7 +94,7 @@ jupyter-chat 支持两种实时通信模式，通过统一接口抽象：
 | 离线支持 | Yjs 文档持久化 | JSON 文件持久化 |
 | 内容提供者 | `contentProviderId = 'rtc'` | 默认 HTTP provider |
 
-详见 [双传输架构](/concepts/dual-transport.md)。
+详见 [双传输架构](dual-transport.md)。
 
 ## 核心设计原则
 
@@ -111,7 +111,7 @@ jupyter-chat 支持两种实时通信模式，通过统一接口抽象：
 - 消息导言（Preambles）
 - 输入工具栏（Input Toolbar）
 
-详见 [扩展点系统](/concepts/extension-points.md)。
+详见 [扩展点系统](extension-points.md)。
 
 ### 3. Token 依赖注入
 
@@ -121,7 +121,7 @@ jupyter-chat 支持两种实时通信模式，通过统一接口抽象：
 
 后端通过 Jupyter Events 发射传输无关的生命周期事件，通过 MessageObserver 模式发射消息事件，支持插件监听和响应。
 
-详见 [生命周期事件](/concepts/lifecycle-events.md)。
+详见 [生命周期事件](lifecycle-events.md)。
 
 ## 前后端通信
 
@@ -161,9 +161,9 @@ jupyter-chat 支持两种实时通信模式，通过统一接口抽象：
 
 ## 相关概念
 
-- [模型层架构](/concepts/model-architecture.md)
-- [组件层次结构](/concepts/component-hierarchy.md)
-- [Yjs CRDT 同步机制](/concepts/crdt-sync.md)
-- [消息生命周期](/concepts/message-lifecycle.md)
-- [ChatManager 生命周期管理](/concepts/chat-manager.md)
-- [附件系统](/concepts/attachment-system.md)
+- [模型层架构](model-architecture.md)
+- [组件层次结构](component-hierarchy.md)
+- [Yjs CRDT 同步机制](crdt-sync.md)
+- [消息生命周期](message-lifecycle.md)
+- [ChatManager 生命周期管理](chat-manager.md)
+- [附件系统](attachment-system.md)

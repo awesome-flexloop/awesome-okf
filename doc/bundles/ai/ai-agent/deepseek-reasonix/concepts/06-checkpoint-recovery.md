@@ -259,6 +259,6 @@ type BranchMeta struct {
 
 ## 相关概念
 
-- [Agent 运行循环](/concepts/02-agent-run-loop.md)——checkpoint 如何集成到 turn 生命周期
-- [Fleet 与 Subagent](/concepts/07-fleet-subagents.md)——后台 writer 的 checkpoint 影响
-- [项目架构](/concepts/01-project-architecture.md)——checkpoint 在 boot 中的组装
+- [Agent 运行循环](02-agent-run-loop.md)——checkpoint 如何集成到 turn 生命周期
+- [Fleet 与 Subagent](07-fleet-subagents.md)——后台 writer 的 checkpoint 影响
+- [项目架构](01-project-architecture.md)——checkpoint 在 boot 中的组装

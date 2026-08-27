@@ -322,11 +322,11 @@ pub struct PromptSubmission {
 
 | 文件 | 关键内容 |
 |------|---------|
-| [AgentPaneContent.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/AgentPaneContent.h#L37-L64) | AutofixState枚举、ApplyAutofixState、IsAgentConnected |
-| [AgentPaneContent.cpp](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/AgentPaneContent.cpp#L130-L174) | ApplyAutofixState实现、状态字段管理 |
-| [TerminalPage.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/TerminalPage.h#L266) | ProtocolVtSequenceReceived事件声明 |
-| [TerminalPage.cpp](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/TerminalPage.cpp#L1497-L1570) | 配置热重载事件发送 |
-| [TerminalProtocol.idl](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalProtocol/TerminalProtocol.idl#L48-L59) | PaneOutput.HasMarks、PaneInfo Shell字段 |
-| [ProtocolParsing.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalProtocol/ProtocolParsing.h#L183-L202) | PaneOutputSource枚举、ClassifyPaneOutputSource |
-| [TerminalProtocolComServer.cpp](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/WindowsTerminal/TerminalProtocolComServer.cpp#L307-L362) | _ensurePageEventsRegistered、VT事件连接 |
-| [client.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/protocol/acp/client.rs#L70-L86) | PromptSubmission.is_autofix标记 |
+| AgentPaneContent.h | AutofixState枚举、ApplyAutofixState、IsAgentConnected |
+| AgentPaneContent.cpp | ApplyAutofixState实现、状态字段管理 |
+| TerminalPage.h | ProtocolVtSequenceReceived事件声明 |
+| TerminalPage.cpp | 配置热重载事件发送 |
+| TerminalProtocol.idl | PaneOutput.HasMarks、PaneInfo Shell字段 |
+| ProtocolParsing.h | PaneOutputSource枚举、ClassifyPaneOutputSource |
+| TerminalProtocolComServer.cpp | _ensurePageEventsRegistered、VT事件连接 |
+| client.rs | PromptSubmission.is_autofix标记 |

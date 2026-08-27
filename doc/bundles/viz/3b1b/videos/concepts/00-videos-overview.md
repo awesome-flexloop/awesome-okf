@@ -18,7 +18,7 @@ sources:
 
 # Videos 仓库总览与入门
 
-> ⚠️ **重要版本说明**：本知识包基于3Blue1Brown 2015-2018年视频源码，代码使用的是Manim早期版本API（CONFIG字典、OldTex、ShowCreation等），与当前ManimGL有差异。建议先学习[ManimGL知识包](/viz/3b1b/manim/index.md)掌握当前API后，再回来研读videos仓库学习叙事设计和动画技巧。
+> ⚠️ **重要版本说明**：本知识包基于3Blue1Brown 2015-2018年视频源码，代码使用的是Manim早期版本API（CONFIG字典、OldTex、ShowCreation等），与当前ManimGL有差异。建议先学习[ManimGL知识包](../../manim/index.md)掌握当前API后，再回来研读videos仓库学习叙事设计和动画技巧。
 
 **Videos 仓库**不是一个独立的框架或库，而是 Grant Sanderson（3Blue1Brown）过去11年制作数学科普动画视频的全部源码资产集合（F-001）。从2015年的最早视频到2026年的最新作品，这里沉淀了 PiCreature（π生物）角色系统、可复用场景基类、以及每一期视频的完整实现代码。它的核心价值不在于"如何调用 Manim API"，而在于"如何用代码讲好一个数学故事"——包括叙事节奏编排、角色动画设计、交互式开发工作流等经过上百个视频实战验证的制作经验。
 
@@ -130,7 +130,7 @@ from custom.opening_quote import *
 
 **1. 掌握 ManimGL 基础 API**
 
-先学习 [ManimGL 知识包](/viz/3b1b/manim/index.md)，理解以下核心概念：
+先学习 [ManimGL 知识包](../../manim/index.md)，理解以下核心概念：
 - Scene 基类和 construct() 方法的作用
 - Mobject/VMobject 的创建和样式设置
 - Animation 和 self.play() 的基本用法
@@ -231,10 +231,10 @@ Videos 仓库跨越 11 年（2015-2026），存在多代 API 并存的情况（�
 
 ## 相关概念
 
-- [01 PiCreature 角色系统](/concepts/01-picreature-characters.md)
-- [02 自定义 Scene 基类](/concepts/02-custom-scenes.md)
-- [03 视频代码结构与叙事模式](/concepts/03-video-structure-pattern.md)
-- [04 checkpoint_paste 交互式开发工作流](/concepts/04-checkpoint-paste-workflow.md)
-- [自定义模块索引](/references/custom-modules-index.md)
-- [代表性系列目录导航](/references/representative-series.md)
-- [ManimGL 知识包首页](/viz/3b1b/manim/index.md)
+- [01 PiCreature 角色系统](01-picreature-characters.md)
+- [02 自定义 Scene 基类](02-custom-scenes.md)
+- [03 视频代码结构与叙事模式](03-video-structure-pattern.md)
+- [04 checkpoint_paste 交互式开发工作流](04-checkpoint-paste-workflow.md)
+- [自定义模块索引](../references/custom-modules-index.md)
+- [代表性系列目录导航](../references/representative-series.md)
+- [ManimGL 知识包首页](../../manim/index.md)

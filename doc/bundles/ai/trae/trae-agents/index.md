@@ -19,17 +19,17 @@ sources:
 
 ## 概念篇（concepts/）
 
-- [TRAE Agents 仓库定位与"文档即配置"模式](/concepts/00-introduction.md) — 仓库定位（Agent 配置集合 vs MCP 工具服务器）、Agent 配置四要素（名称/提示词/工具/协作）、`agents/<name>/README.md` 目录约定、"文档即配置"设计取舍。
-- [Agent 目录结构与模板规范](/concepts/01-agent-structure.md) — kebab-case 目录命名、README 必备 8 章节结构、`_template/` 目录作用、内置工具 5 项勾选清单、工具最小化原则、贡献自检清单。
-- [Git Commit Generator 参考实现分析](/concepts/02-git-commit-agent.md) — 唯一正式 Agent 的完整分析：11 种 Conventional Commits 类型、格式规则、5 条行为原则、4 个 few-shot 示例、仅勾选"终端命令"的最小化配置、温度 0.3-0.5 的参数调优。
+- [TRAE Agents 仓库定位与"文档即配置"模式](concepts/00-introduction.md) — 仓库定位（Agent 配置集合 vs MCP 工具服务器）、Agent 配置四要素（名称/提示词/工具/协作）、`agents/<name>/README.md` 目录约定、"文档即配置"设计取舍。
+- [Agent 目录结构与模板规范](concepts/01-agent-structure.md) — kebab-case 目录命名、README 必备 8 章节结构、`_template/` 目录作用、内置工具 5 项勾选清单、工具最小化原则、贡献自检清单。
+- [Git Commit Generator 参考实现分析](concepts/02-git-commit-agent.md) — 唯一正式 Agent 的完整分析：11 种 Conventional Commits 类型、格式规则、5 条行为原则、4 个 few-shot 示例、仅勾选"终端命令"的最小化配置、温度 0.3-0.5 的参数调优。
 
 ## 示例篇（examples/）
 
-- [创建自定义 Agent 示例](/examples/create-agent.md) — 从零创建 Code Review Expert Agent 的完整流程：复制模板→填写 frontmatter→编写 Prompt→配置工具→编写示例→配置参数→更新列表→提交 PR，含每个步骤的具体内容示例。
+- [创建自定义 Agent 示例](examples/create-agent.md) — 从零创建 Code Review Expert Agent 的完整流程：复制模板→填写 frontmatter→编写 Prompt→配置工具→编写示例→配置参数→更新列表→提交 PR，含每个步骤的具体内容示例。
 
 ## 信源登记簿（references/）
 
-- [TRAE Agents 仓库资源索引](/references/agents-source.md) — 仓库基本信息、目录结构、Agent 配置四要素、内置工具清单、模板 8 章节结构、Git Commit Generator 配置速查表、Issue 模板字段、6 步贡献流程。
+- [TRAE Agents 仓库资源索引](references/agents-source.md) — 仓库基本信息、目录结构、Agent 配置四要素、内置工具清单、模板 8 章节结构、Git Commit Generator 配置速查表、Issue 模板字段、6 步贡献流程。
 
 ## 关键事实
 

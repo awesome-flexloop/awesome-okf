@@ -190,7 +190,7 @@ def _jupyter_labextension_paths():
 
 ## 相关概念
 
-- [Echo Kernel简介](/concepts/00-introduction.md)
-- [JupyterLite内核架构](/concepts/01-kernel-architecture.md)
-- [EchoKernel实现详解](/concepts/03-echokernel-implementation.md)
-- [构建与打包](/concepts/04-build-and-packaging.md)
+- [Echo Kernel简介](00-introduction.md)
+- [JupyterLite内核架构](01-kernel-architecture.md)
+- [EchoKernel实现详解](03-echokernel-implementation.md)
+- [构建与打包](04-build-and-packaging.md)

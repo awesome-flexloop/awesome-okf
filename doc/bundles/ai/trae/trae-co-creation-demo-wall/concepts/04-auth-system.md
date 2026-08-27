@@ -109,8 +109,8 @@ interface AuthUser {
 
 ## 相关概念
 
-- [数据模型设计](/concepts/03-data-model.md)
-- [国际化路由](/concepts/05-i18n-routing.md)
-- [审核与治理](/concepts/10-audit-governance.md)
-- [API 路由设计](/concepts/06-api-routes.md)
-- [用户注册认证示例](/examples/user-registration-auth.md)
+- [数据模型设计](03-data-model.md)
+- [国际化路由](05-i18n-routing.md)
+- [审核与治理](10-audit-governance.md)
+- [API 路由设计](06-api-routes.md)
+- [用户注册认证示例](../examples/user-registration-auth.md)

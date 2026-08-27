@@ -15,7 +15,7 @@ sources:
 
 ## WebWorkerKernel 类
 
-主线程内核实现，继承 `WebWorkerKernelBase`，定义在 [kernel.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/xeus/packages/xeus/src/kernel.ts)。
+主线程内核实现，继承 `WebWorkerKernelBase`，定义在 kernel.ts。
 
 ### IOptions 扩展
 
@@ -67,7 +67,7 @@ protected async initRemote(options: WebWorkerKernel.IOptions) {
 
 ## EmpackedXeusRemoteKernel 类
 
-Worker端empack内核基类，继承 `XeusRemoteKernelBase`，定义在 [worker.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/xeus/packages/xeus/src/worker.ts)。
+Worker端empack内核基类，继承 `XeusRemoteKernelBase`，定义在 worker.ts。
 
 ### initializeModule 实现
 

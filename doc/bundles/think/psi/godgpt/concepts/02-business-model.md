@@ -73,10 +73,10 @@ GodGPT 通过第三方平台 Tolt.io 运营推广联盟计划。核心条款为�
 
 ## 法律框架关联
 
-订阅支付、自动续费、退款政策等具体条款受 [隐私与法律框架](/concepts/03-privacy-legal.md) 中服务条款的约束。服务条款载明适用开曼群岛法律，争议通过 UNCITRAL 仲裁解决。用户在订阅前应阅读完整条款以了解续费与取消规则。
+订阅支付、自动续费、退款政策等具体条款受 [隐私与法律框架](03-privacy-legal.md) 中服务条款的约束。服务条款载明适用开曼群岛法律，争议通过 UNCITRAL 仲裁解决。用户在订阅前应阅读完整条款以了解续费与取消规则。
 
 ## 相关概念
 
-- [神圣智能 — GodGPT产品定位](/concepts/00-divine-intelligence.md)
-- [核心功能 — 共情、模式与智慧](/concepts/01-core-features.md)
-- [隐私与法律框架](/concepts/03-privacy-legal.md)
+- [神圣智能 — GodGPT产品定位](00-divine-intelligence.md)
+- [核心功能 — 共情、模式与智慧](01-core-features.md)
+- [隐私与法律框架](03-privacy-legal.md)

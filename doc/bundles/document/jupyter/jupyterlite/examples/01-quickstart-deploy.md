@@ -130,5 +130,5 @@ import numpy as np
 
 ## 相关概念
 
-- [Python构建系统](/concepts/06-build-system.md)
-- [整体架构](/concepts/01-architecture-overview.md)
+- [Python构建系统](../concepts/06-build-system.md)
+- [整体架构](../concepts/01-architecture-overview.md)

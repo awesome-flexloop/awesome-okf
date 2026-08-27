@@ -131,5 +131,5 @@ const SERVER_TOKEN_PREFIX = 'jlab:srvr:';
 
 ## 相关概念
 
-- [Python 环境管理](/concepts/05-python-env-management.md)
-- [应用入口与生命周期](/concepts/02-app-entry-lifecycle.md)
+- [Python 环境管理](../concepts/05-python-env-management.md)
+- [应用入口与生命周期](../concepts/02-app-entry-lifecycle.md)

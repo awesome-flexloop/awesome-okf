@@ -168,7 +168,7 @@ get url() {
 
 ## 相关概念
 
-- [三插件体系](/concepts/03-plugin-system.md)
-- [IJSONRPCLanguageServer 接口与 Session](/concepts/04-language-server-interface.md)
-- [构建系统详解](/concepts/07-build-system.md)
-- [Monkey-patch 源码引用](/references/hacks-source.md)
+- [三插件体系](03-plugin-system.md)
+- [IJSONRPCLanguageServer 接口与 Session](04-language-server-interface.md)
+- [构建系统详解](07-build-system.md)
+- [Monkey-patch 源码引用](../references/hacks-source.md)

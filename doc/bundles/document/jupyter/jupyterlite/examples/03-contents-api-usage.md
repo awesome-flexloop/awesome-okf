@@ -246,6 +246,6 @@ BrowserStorageDrive 自动处理三种文件格式的转换：
 
 ## 相关概念
 
-- [内容管理与文件系统](/concepts/03-contents-and-filesystem.md)
-- [浏览器存储](/concepts/05-browser-storage.md)
-- [内容管理信源](/references/contents-source.md)
+- [内容管理与文件系统](../concepts/03-contents-and-filesystem.md)
+- [浏览器存储](../concepts/05-browser-storage.md)
+- [内容管理信源](../references/contents-source.md)

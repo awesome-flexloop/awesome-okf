@@ -106,7 +106,7 @@ Date,Type,City_EN,City_ZH
 
 ## 相关链接
 
-- [CSV+Python 轻量 CMS 模式](/concepts/01-csv-cms-pattern.md)
-- [贡献流程](/concepts/03-contribution-workflow.md)
-- [添加新活动示例](/examples/add-event.md)
-- [运行更新脚本示例](/examples/run-update-script.md)
+- [CSV+Python 轻量 CMS 模式](01-csv-cms-pattern.md)
+- [贡献流程](03-contribution-workflow.md)
+- [添加新活动示例](../examples/add-event.md)
+- [运行更新脚本示例](../examples/run-update-script.md)

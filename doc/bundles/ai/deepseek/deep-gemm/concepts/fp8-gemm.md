@@ -83,7 +83,7 @@ SM100 引入 UE8M0（Unsigned 8-bit Exponent-only, 0 mantissa bits）编码来�
 - **优势**：
   - SF 内存占用减少 4×（Float32 → Int8 packed，即 4 byte/scale → 1 byte/scale）
   - 硬件直接支持 UE8M0 格式的 WGMMA 指令，无需反序列化开销
-- **转换函数**（Python 层，[deep_gemm/utils/math.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/DeepGEMM/deep_gemm/utils/math.py)）：
+- **转换函数**（Python 层，deep_gemm/utils/math.py）：
   - `ceil_to_ue8m0(x)`：通过 bit 操作计算 UE8M0 指数
   - `pack_ue8m0_to_int(x)`：4 个 scale 打包为 int32
   - `unpack_ue8m0_from_int(packed_sf)`：解包为 float
@@ -139,7 +139,7 @@ check_sf_layout(sf, mn, k, gran_mn, gran_k, num_groups,
 
 ## 四、Python 量化工具
 
-[deep_gemm/utils/math.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/DeepGEMM/deep_gemm/utils/math.py) 提供完整的 FP8/FP4 量化工具链。
+deep_gemm/utils/math.py 提供完整的 FP8/FP4 量化工具链。
 
 ### 4.1 FP8 量化函数
 
@@ -225,7 +225,7 @@ fp8_fp4_gemm_nt(a, b, d, c, recipe, ...)
 
 ## 七、相关链接
 
-- [/deepseek/deep-gemm/concepts/grouped-gemm](/ai/deepseek/deep-gemm/concepts/grouped-gemm) — 分组 GEMM 中的 FP8 方案
-- [/deepseek/deep-gemm/concepts/performance-optimization](/ai/deepseek/deep-gemm/concepts/performance-optimization) — WGMMA 和 TMA 硬件加速
-- [/deepseek/deep-gemm/references/api](/ai/deepseek/deep-gemm/references/api) — FP8/FP4 GEMM API 参考
-- [/deepseek/deep-gemm/examples/basic-gemm](/ai/deepseek/deep-gemm/examples/basic-gemm) — FP8 GEMM 使用示例
+- /deepseek/deep-gemm/concepts/grouped-gemm — 分组 GEMM 中的 FP8 方案
+- /deepseek/deep-gemm/concepts/performance-optimization — WGMMA 和 TMA 硬件加速
+- /deepseek/deep-gemm/references/api — FP8/FP4 GEMM API 参考
+- /deepseek/deep-gemm/examples/basic-gemm — FP8 GEMM 使用示例

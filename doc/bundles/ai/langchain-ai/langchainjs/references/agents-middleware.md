@@ -251,7 +251,7 @@ function createAgentState(
 
 ## 相关文档
 
-- [Runnable 核心 API](/ai/langchain-ai/langchainjs/references/core-runnable) — Runnable 抽象参考
-- [消息与工具 API](/ai/langchain-ai/langchainjs/references/messages-tools) — Message 与 Tool 参考
-- [ReAct Agent 概念](/ai/langchain-ai/langchainjs/concepts/react-agent) — Agent 设计理念
-- [Middleware 概念](/ai/langchain-ai/langchainjs/concepts/middleware) — 中间件系统
+- Runnable 核心 API — Runnable 抽象参考
+- 消息与工具 API — Message 与 Tool 参考
+- ReAct Agent 概念 — Agent 设计理念
+- Middleware 概念 — 中间件系统

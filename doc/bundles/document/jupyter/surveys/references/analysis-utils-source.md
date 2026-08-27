@@ -17,7 +17,7 @@ sources:
 
 ## 概述
 
-[analysis_utils.py](../../../../../../external/libs/jupyter/surveys/surveys/2018-09-jupytercon-2018/notebooks/analysis_utils.py) 和 [user_testing_data.py](../../../../../../external/libs/jupyter/surveys/surveys/2018-09-jupytercon-2018/notebooks/user_testing_data.py) 是2018年JupyterCon用户测试数据分析的核心工具模块。它们提供了从原始CSV数据清洗、编码到主题分析的pipeline函数。
+analysis_utils.py 和 user_testing_data.py 是2018年JupyterCon用户测试数据分析的核心工具模块。它们提供了从原始CSV数据清洗、编码到主题分析的pipeline函数。
 
 ## 核心函数解析
 

@@ -183,16 +183,16 @@ for step in range(max_gen_len):
 ## 八、相关链接
 
 ### 核心概念
-- [/deepseek/flash-mla/concepts/mla-decoding](/ai/deepseek/flash-mla/concepts/mla-decoding) — MLA 解码算法原理
-- [/deepseek/flash-mla/concepts/splitkv](/ai/deepseek/flash-mla/concepts/splitkv) — SplitKV 长序列技术
-- [/deepseek/flash-mla/concepts/kv-cache-quantization](/ai/deepseek/flash-mla/concepts/kv-cache-quantization) — FP8 KV cache 量化
-- [/deepseek/flash-mla/concepts/hopper-blackwell-kernels](/ai/deepseek/flash-mla/concepts/hopper-blackwell-kernels) — Hopper/Blackwell 内核设计
+- /deepseek/flash-mla/concepts/mla-decoding — MLA 解码算法原理
+- /deepseek/flash-mla/concepts/splitkv — SplitKV 长序列技术
+- /deepseek/flash-mla/concepts/kv-cache-quantization — FP8 KV cache 量化
+- /deepseek/flash-mla/concepts/hopper-blackwell-kernels — Hopper/Blackwell 内核设计
 
 ### API 参考
-- [/deepseek/flash-mla/references/api](/ai/deepseek/flash-mla/references/api) — Python API 完整参考
-- [/deepseek/flash-mla/references/kernel-architecture](/ai/deepseek/flash-mla/references/kernel-architecture) — 内核架构详解
-- [/deepseek/flash-mla/references/kv-cache-layout](/ai/deepseek/flash-mla/references/kv-cache-layout) — KV cache 内存布局
+- /deepseek/flash-mla/references/api — Python API 完整参考
+- /deepseek/flash-mla/references/kernel-architecture — 内核架构详解
+- /deepseek/flash-mla/references/kv-cache-layout — KV cache 内存布局
 
 ### 相关项目
-- [/deepseek/deep-gemm/](/ai/deepseek/deep-gemm/) — DeepSeek 高性能 GEMM 核函数库（JIT 编译），负责 MLP/MoE 线性层计算
-- [/deepseek/tile-kernels/](/ai/deepseek/tile-kernels/) — TileLang 核函数库，作为 CUDA C++ 核函数的补充
+- [/deepseek/deep-gemm/](../../deep-gemm/index.md) — DeepSeek 高性能 GEMM 核函数库（JIT 编译），负责 MLP/MoE 线性层计算
+- [/deepseek/tile-kernels/](../../tile-kernels/index.md) — TileLang 核函数库，作为 CUDA C++ 核函数的补充

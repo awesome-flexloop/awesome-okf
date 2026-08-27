@@ -84,7 +84,7 @@ solve(a*x + b, x)              # -> [-b/a]
 solve(sqrt(x + 2) - x, x)      # -> [2]（增根 -1 被自动排除）
 ```
 
-> 相关参考：[solve() 函数签名与用法](/references/series-solvers-source.md)
+> 相关参考：[solve() 函数签名与用法](../references/series-solvers-source.md)
 
 ## 2. solveset 集合求解
 
@@ -125,7 +125,7 @@ solveset(exp(x) - 1, x, S.Complexes)
 # -> ImageSet(Lambda(_n, 2*_n*I*pi), Integers)
 ```
 
-> 相关参考：[solveset() 集合化求解](/references/series-solvers-source.md)
+> 相关参考：[solveset() 集合化求解](../references/series-solvers-source.md)
 
 ## 3. 线性方程组
 
@@ -171,7 +171,7 @@ A_mat, b_mat = linear_eq_to_matrix(eqs, [x, y])
 # A_mat -> Matrix([[1, 1], [1, -1]]), b_mat -> Matrix([3, 1])
 ```
 
-> 相关参考：[linsolve() 线性方程组](/references/series-solvers-source.md)
+> 相关参考：[linsolve() 线性方程组](../references/series-solvers-source.md)
 
 ## 4. 非线性方程组
 
@@ -296,7 +296,7 @@ C = Matrix([[1, 2 + I], [3, 4]])
 C.H                            # 共轭转置
 ```
 
-> 相关参考：[Matrix 类与基本运算](/references/matrices-source.md)
+> 相关参考：[Matrix 类与基本运算](../references/matrices-source.md)
 
 ## 7. 特征值与对角化
 
@@ -339,7 +339,7 @@ cp = M2.charpoly()
 cp.as_expr().subs(x, M2)       # 将矩阵代入特征多项式 -> 零矩阵
 ```
 
-> 相关参考：[特征值与对角化 API](/references/matrices-source.md)
+> 相关参考：[特征值与对角化 API](../references/matrices-source.md)
 
 ## 8. 矩阵分解
 
@@ -428,7 +428,7 @@ together(1/x + 1/(x+1))       # -> (2*x + 1)/(x*(x + 1))
 apart(1/(x**2 + 2*x - 3))     # -> 1/(4*(x - 1)) - 1/(4*(x + 3))
 ```
 
-> 相关参考：[Poly 类与多项式运算](/references/polys-algebra-source.md)
+> 相关参考：[Poly 类与多项式运算](../references/polys-algebra-source.md)
 
 ## 10. 综合实战：弹簧-质点系统
 
@@ -504,4 +504,4 @@ sol_ic = dsolve(eq_ode, x_func(t_val),
 
 ---
 
-**小结**：本文档覆盖了 SymPy 方程求解和线性代数的核心能力。方程求解从 `solve()`（返回列表/字典）到 `solveset()`（返回集合对象），线性方程组用 `linsolve()`/`Matrix.solve()`，非线性用 `nonlinsolve()`，数值求解用 `nsolve()`。矩阵方面掌握了创建（`Matrix`/`eye`/`zeros`/`diag`）、基本运算（`+`/`*`/`**`/`.T`/`.det()`/`.inv()`/`.rref()`/`.rank()`/`.trace()`）、特征值（`.eigenvals()`/`.eigenvects()`/`.diagonalize()`）、分解（`LUdecomposition`/`QRdecomposition`/`cholesky`）和多项式（`Poly`/`factor`/`gcd`/`groebner`）。结合 [基础符号操作](./basic-symbols.md) 和 [微积分实战](./calculus-examples.md)，你已具备 SymPy 的核心使用能力。
+**小结**：本文档覆盖了 SymPy 方程求解和线性代数的核心能力。方程求解从 `solve()`（返回列表/字典）到 `solveset()`（返回集合对象），线性方程组用 `linsolve()`/`Matrix.solve()`，非线性用 `nonlinsolve()`，数值求解用 `nsolve()`。矩阵方面掌握了创建（`Matrix`/`eye`/`zeros`/`diag`）、基本运算（`+`/`*`/`**`/`.T`/`.det()`/`.inv()`/`.rref()`/`.rank()`/`.trace()`）、特征值（`.eigenvals()`/`.eigenvects()`/`.diagonalize()`）、分解（`LUdecomposition`/`QRdecomposition`/`cholesky`）和多项式（`Poly`/`factor`/`gcd`/`groebner`）。结合 [基础符号操作](basic-symbols.md) 和 [微积分实战](calculus-examples.md)，你已具备 SymPy 的核心使用能力。

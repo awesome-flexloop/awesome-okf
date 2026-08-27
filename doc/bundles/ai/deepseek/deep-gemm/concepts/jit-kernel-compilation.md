@@ -322,6 +322,6 @@ C++ 端执行三步初始化：
 
 ## 七、相关链接
 
-- [/deepseek/deep-gemm/references/jit-system](/ai/deepseek/deep-gemm/references/jit-system) — JIT 系统 API 参考
-- [/deepseek/deep-gemm/references/runtime-config](/ai/deepseek/deep-gemm/references/runtime-config) — 运行时配置与环境变量
-- [/deepseek/deep-gemm/concepts/performance-optimization](/ai/deepseek/deep-gemm/concepts/performance-optimization) — TMA/WGMMA/PDL 等硬件特性
+- /deepseek/deep-gemm/references/jit-system — JIT 系统 API 参考
+- /deepseek/deep-gemm/references/runtime-config — 运行时配置与环境变量
+- /deepseek/deep-gemm/concepts/performance-optimization — TMA/WGMMA/PDL 等硬件特性

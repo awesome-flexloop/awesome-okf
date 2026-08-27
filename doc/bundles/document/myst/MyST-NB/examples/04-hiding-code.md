@@ -306,7 +306,7 @@ model = train_model()
 
 ## 相关概念
 
-- [代码隐藏与输出控制](/concepts/09-hiding-code.md)
-- [渲染与 MIME 类型](/concepts/06-render-and-mime.md)
-- [配置系统](/concepts/04-config-system.md)
-- [MyST Notebook 语法速查](/references/notebook-cheatsheet.md)
+- [代码隐藏与输出控制](../concepts/09-hiding-code.md)
+- [渲染与 MIME 类型](../concepts/06-render-and-mime.md)
+- [配置系统](../concepts/04-config-system.md)
+- [MyST Notebook 语法速查](../references/notebook-cheatsheet.md)

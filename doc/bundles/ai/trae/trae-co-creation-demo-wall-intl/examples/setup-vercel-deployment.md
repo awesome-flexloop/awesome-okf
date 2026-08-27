@@ -200,8 +200,8 @@ docker compose -f docker-compose.yml up -d
 
 ## 相关内容
 
-- [Edge Config 缓存同步示例](/examples/edge-config-sync.md)
-- [从中文版迁移指南](/examples/migrate-from-cn.md)
-- [Vercel 部署概念](/concepts/05-vercel-deployment.md)
-- [CSV 导出功能](/concepts/03-csv-export.md)
-- [GDPR 合规审计留存](/concepts/04-gdpr-audit-retention.md)
+- [Edge Config 缓存同步示例](edge-config-sync.md)
+- [从中文版迁移指南](migrate-from-cn.md)
+- [Vercel 部署概念](../concepts/05-vercel-deployment.md)
+- [CSV 导出功能](../concepts/03-csv-export.md)
+- [GDPR 合规审计留存](../concepts/04-gdpr-audit-retention.md)

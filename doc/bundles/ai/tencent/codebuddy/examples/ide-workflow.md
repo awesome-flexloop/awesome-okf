@@ -192,9 +192,9 @@ CodeBuddy 提供三种形态（F-009）：
 
 ## 相关概念
 
-- [CodeBuddy IDE](/concepts/01-ide.md) — IDE 能力与架构详解
-- [产品矩阵总览](/concepts/00-product-matrix.md) — 三态一体与生态产品
-- [CLI](/concepts/02-cli.md) — 终端形态与跨形态能力共享
-- [NPC 云端 AI 员工](/concepts/03-npc.md) — 从需求到 PR 的云端自主交付
-- [Security 安全审计](/concepts/05-security.md) — 代码审查后的深度安全审计
-- [CLI 快速入门](/examples/quick-start-cli.md) — 终端工具使用实战
+- [CodeBuddy IDE](../concepts/01-ide.md) — IDE 能力与架构详解
+- [产品矩阵总览](../concepts/00-product-matrix.md) — 三态一体与生态产品
+- [CLI](../concepts/02-cli.md) — 终端形态与跨形态能力共享
+- [NPC 云端 AI 员工](../concepts/03-npc.md) — 从需求到 PR 的云端自主交付
+- [Security 安全审计](../concepts/05-security.md) — 代码审查后的深度安全审计
+- [CLI 快速入门](quick-start-cli.md) — 终端工具使用实战

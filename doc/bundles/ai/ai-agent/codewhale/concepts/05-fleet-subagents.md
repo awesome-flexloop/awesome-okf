@@ -210,8 +210,8 @@ pub const DEFAULT_FLEET_WORKFLOW_MAX_DEPTH: usize = 5;
 
 ## 相关概念
 
-- [Workflow 工作流引擎](/concepts/06-skills-hooks.md) — 声明式 IR 与命令式 JS 双轨
-- [Agent 核心运行时](/concepts/02-agent-core.md) — Runtime 和 ThreadManager
-- [工具系统](/concepts/04-tool-system.md) — 子 agent 继承工具注册表
-- [沙箱与执行策略](/concepts/07-sandbox-execpolicy.md) — 权限 clamp 与执行策略
-- [MCP 协议集成](/concepts/03-mcp-protocol.md) — 网络工具 deny list
+- [Workflow 工作流引擎](06-skills-hooks.md) — 声明式 IR 与命令式 JS 双轨
+- [Agent 核心运行时](02-agent-core.md) — Runtime 和 ThreadManager
+- [工具系统](04-tool-system.md) — 子 agent 继承工具注册表
+- [沙箱与执行策略](07-sandbox-execpolicy.md) — 权限 clamp 与执行策略
+- [MCP 协议集成](03-mcp-protocol.md) — 网络工具 deny list

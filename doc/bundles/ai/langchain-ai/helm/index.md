@@ -30,20 +30,20 @@ tags:
 
 | Chart | 版本 | appVersion | 定位 |
 |-------|------|------------|------|
-| [langgraph-cloud](/ai/langchain-ai/helm/references/chart-structure.md#chart-1langgraph-cloud) | 0.3.2 | 0.2.3 | LangGraph Cloud 全栈（API Server + Queue + PostgreSQL + Redis + MongoDB） |
-| [langgraph-dataplane](/ai/langchain-ai/helm/references/chart-structure.md#chart-2langgraph-dataplane) | 0.2.22 | 0.16.36 | LangGraph 数据平面（Listener + Operator + CRD + Redis） |
-| [langsmith](/ai/langchain-ai/helm/references/chart-structure.md#chart-3langsmith) | 0.17.0-rc.12 | 0.17.12rc1 | LangSmith 全栈（Backend + Frontend + ClickHouse + PG + Redis + Agent Features + Sandbox） |
-| [langsmith-auth-proxy](/ai/langchain-ai/helm/references/chart-structure.md#chart-4langsmith-auth-proxy) | 0.0.11 | 1.37.0 | Envoy 认证代理（JWT 验证 + ext_authz + ext_proc） |
-| [langsmith-observability](/ai/langchain-ai/helm/references/chart-structure.md#chart-5langsmith-observability已废弃) | 0.2.0 | 0.2.0 | 可观测性栈（**已废弃**，Prometheus/Grafana/Loki/Tempo） |
+| [langgraph-cloud](references/chart-structure.md#chart-1langgraph-cloud) | 0.3.2 | 0.2.3 | LangGraph Cloud 全栈（API Server + Queue + PostgreSQL + Redis + MongoDB） |
+| [langgraph-dataplane](references/chart-structure.md#chart-2langgraph-dataplane) | 0.2.22 | 0.16.36 | LangGraph 数据平面（Listener + Operator + CRD + Redis） |
+| [langsmith](references/chart-structure.md#chart-3langsmith) | 0.17.0-rc.12 | 0.17.12rc1 | LangSmith 全栈（Backend + Frontend + ClickHouse + PG + Redis + Agent Features + Sandbox） |
+| [langsmith-auth-proxy](references/chart-structure.md#chart-4langsmith-auth-proxy) | 0.0.11 | 1.37.0 | Envoy 认证代理（JWT 验证 + ext_authz + ext_proc） |
+| [langsmith-observability](references/chart-structure.md#chart-5langsmith-observability已废弃) | 0.2.0 | 0.2.0 | 可观测性栈（**已废弃**，Prometheus/Grafana/Loki/Tempo） |
 
 ## 信源登记簿（references/）
 
-* [Helm Chart 结构索引](/ai/langchain-ai/helm/references/chart-structure.md) — 仓库顶层结构、5 个 Chart 版本矩阵、镜像清单、模板文件映射、核心 values 配置段、探针模式、CI/CD 工具链、跨 Chart 共性模式（双模式有状态服务、三入口互斥、命名模板规范）。
+* [Helm Chart 结构索引](references/chart-structure.md) — 仓库顶层结构、5 个 Chart 版本矩阵、镜像清单、模板文件映射、核心 values 配置段、探针模式、CI/CD 工具链、跨 Chart 共性模式（双模式有状态服务、三入口互斥、命名模板规范）。
 
 ## 事实与洞察（spec/）
 
-* [事实清单](/ai/langchain-ai/helm/spec/facts.md) — 85 条源码事实（F-001~F-085），覆盖仓库元数据、Chart 版本、模板结构、values 配置、CI/CD、命名约定、探针模式。
-* [架构洞察](/ai/langchain-ai/helm/spec/insights.md) — 4 个架构洞察：五 Chart 分层矩阵、内置/外部双模式、三入口互斥设计、文档即代码流水线。
+* [事实清单](spec/facts.md) — 85 条源码事实（F-001~F-085），覆盖仓库元数据、Chart 版本、模板结构、values 配置、CI/CD、命名约定、探针模式。
+* [架构洞察](spec/insights.md) — 4 个架构洞察：五 Chart 分层矩阵、内置/外部双模式、三入口互斥设计、文档即代码流水线。
 
 ## 关键设计模式
 

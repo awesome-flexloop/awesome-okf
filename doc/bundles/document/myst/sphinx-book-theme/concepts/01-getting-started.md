@@ -117,8 +117,8 @@ ipynb 笔记本的下载按钮会自动出现（F-066、F-067）。
 
 ## 相关概念
 
-- [主题概述](/concepts/00-introduction.md)
-- [主题架构与PST继承](/concepts/02-theme-architecture.md)
-- [配置系统详解](/concepts/03-configuration.md)
-- [头部按钮系统](/concepts/04-header-buttons.md)
-- [基础配置示例](/examples/basic-book-setup.md)
+- [主题概述](00-introduction.md)
+- [主题架构与PST继承](02-theme-architecture.md)
+- [配置系统详解](03-configuration.md)
+- [头部按钮系统](04-header-buttons.md)
+- [基础配置示例](../examples/basic-book-setup.md)

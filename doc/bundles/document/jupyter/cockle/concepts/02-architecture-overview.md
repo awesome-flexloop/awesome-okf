@@ -338,8 +338,8 @@ await shell.start();
 
 ## 相关概念
 
-- [Cockle 简介](/concepts/00-introduction.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [命令系统](/concepts/03-command-system.md)
-- [命令解析管线](/concepts/04-parsing-pipeline.md)
-- [IO 系统](/concepts/05-io-system.md)
+- [Cockle 简介](00-introduction.md)
+- [快速开始](01-getting-started.md)
+- [命令系统](03-command-system.md)
+- [命令解析管线](04-parsing-pipeline.md)
+- [IO 系统](05-io-system.md)

@@ -32,7 +32,7 @@ sources:
 
 ## 核心设计理念
 
-langchain-core 围绕一个统一协议——[Runnable 协议](/ai/langchain-ai/langchain/concepts/runnable-protocol)——构建。所有组件（提示词、模型、输出解析器、检索器、工具）都是 `Runnable`，因此都自动具备：
+langchain-core 围绕一个统一协议——Runnable 协议——构建。所有组件（提示词、模型、输出解析器、检索器、工具）都是 `Runnable`，因此都自动具备：
 
 - 同步 `invoke` / 异步 `ainvoke`
 - 批量 `batch` / `abatch`
@@ -41,7 +41,7 @@ langchain-core 围绕一个统一协议——[Runnable 协议](/ai/langchain-ai/
 - 通过 `|` 运算符组合成链
 - 统一的配置（`RunnableConfig`）、回调（callbacks）和追踪（tracing）传播
 
-这种"一切皆 Runnable"的设计使得组件可以任意组合，且组合后的链自动继承全部执行模式。详见 [Runnable 协议](/ai/langchain-ai/langchain/concepts/runnable-protocol)。
+这种"一切皆 Runnable"的设计使得组件可以任意组合，且组合后的链自动继承全部执行模式。详见 Runnable 协议。
 
 ## 抽象分层
 
@@ -71,7 +71,7 @@ langchain-core 围绕一个统一协议——[Runnable 协议](/ai/langchain-ai/
 
 ### 数据层
 
-- **消息体系**：`BaseMessage` 派生 `HumanMessage`、`SystemMessage`、`AIMessage`（含 `tool_calls`、`usage_metadata`）、`ToolMessage`（通过 `tool_call_id` 关联结果）。所有消息有对应的 `*Chunk` 变体支持流式拼接。`content_blocks` 属性将 provider 特定内容懒解析为统一的 `ContentBlock` 联合类型。详见 [消息类型](/ai/langchain-ai/langchain/concepts/message-types)。
+- **消息体系**：`BaseMessage` 派生 `HumanMessage`、`SystemMessage`、`AIMessage`（含 `tool_calls`、`usage_metadata`）、`ToolMessage`（通过 `tool_call_id` 关联结果）。所有消息有对应的 `*Chunk` 变体支持流式拼接。`content_blocks` 属性将 provider 特定内容懒解析为统一的 `ContentBlock` 联合类型。详见 消息类型。
 - **`Document`**（`documents/base.py:288`）：检索工作流的数据单元，含 `page_content: str`、`metadata`、`id`。注意它用于检索而非对话 I/O。
 - **`Generation`/`ChatGeneration`**：模型输出的内部表示，`ChatGeneration` 持有 `BaseMessage`，最终映射为 `AIMessage`。
 - **`PromptValue`**：提示词格式化结果，可 `to_string()` 或 `to_messages()`。
@@ -80,13 +80,13 @@ langchain-core 围绕一个统一协议——[Runnable 协议](/ai/langchain-ai/
 
 | 组件 | 基类 | 核心方法 | 概念文档 |
 |---|---|---|---|
-| 提示词 | `BasePromptTemplate` | `format`/`format_prompt` | [提示词系统](/ai/langchain-ai/langchain/concepts/prompt-system) |
-| 聊天模型 | `BaseChatModel` | `_generate`/`invoke`/`bind_tools` | [聊天模型](/ai/langchain-ai/langchain/concepts/chat-model) |
-| 工具 | `BaseTool` | `_run`/`invoke` | [工具抽象](/ai/langchain-ai/langchain/concepts/tool-abstraction) |
-| 输出解析 | `BaseOutputParser` | `parse`/`parse_result` | [输出解析器](/ai/langchain-ai/langchain/concepts/output-parser) |
-| 检索器 | `BaseRetriever` | `_get_relevant_documents` | [检索器与向量库](/ai/langchain-ai/langchain/concepts/retriever-vectorstore) |
-| 向量库 | `VectorStore` | `add_texts`/`similarity_search` | [检索器与向量库](/ai/langchain-ai/langchain/concepts/retriever-vectorstore) |
-| 嵌入 | `Embeddings` | `embed_documents`/`embed_query` | [检索器与向量库](/ai/langchain-ai/langchain/concepts/retriever-vectorstore) |
+| 提示词 | `BasePromptTemplate` | `format`/`format_prompt` | 提示词系统 |
+| 聊天模型 | `BaseChatModel` | `_generate`/`invoke`/`bind_tools` | 聊天模型 |
+| 工具 | `BaseTool` | `_run`/`invoke` | 工具抽象 |
+| 输出解析 | `BaseOutputParser` | `parse`/`parse_result` | 输出解析器 |
+| 检索器 | `BaseRetriever` | `_get_relevant_documents` | 检索器与向量库 |
+| 向量库 | `VectorStore` | `add_texts`/`similarity_search` | 检索器与向量库 |
+| 嵌入 | `Embeddings` | `embed_documents`/`embed_query` | 检索器与向量库 |
 
 ### 组合层
 
@@ -98,7 +98,7 @@ langchain-core 围绕一个统一协议——[Runnable 协议](/ai/langchain-ai/
 
 ### 横切层
 
-- **Callbacks**：`BaseCallbackHandler` 通过多 Mixin 组合定义 `on_<component>_start/end/error` 生命周期方法；`CallbackManager`/`AsyncCallbackManager` 两棵独立的树管理 handler 传播。详见 [回调系统](/ai/langchain-ai/langchain/concepts/callback-system)。
+- **Callbacks**：`BaseCallbackHandler` 通过多 Mixin 组合定义 `on_<component>_start/end/error` 生命周期方法；`CallbackManager`/`AsyncCallbackManager` 两棵独立的树管理 handler 传播。详见 回调系统。
 - **Tracers**：`BaseTracer`/`AsyncBaseTracer` 继承 callback handler，将事件构建为 `Run` 对象树并持久化。
 
 ## 典型 LCEL 链
@@ -124,11 +124,11 @@ chain.invoke({"topic": "程序员"})
 
 ## 进一步阅读
 
-- [Runnable 协议](/ai/langchain-ai/langchain/concepts/runnable-protocol) —— 执行接口、组合原语、配置传播
-- [消息类型](/ai/langchain-ai/langchain/concepts/message-types) —— BaseMessage 体系、ContentBlock、ToolCall
-- [提示词系统](/ai/langchain-ai/langchain/concepts/prompt-system) —— PromptTemplate、ChatPromptTemplate
-- [聊天模型](/ai/langchain-ai/langchain/concepts/chat-model) —— BaseChatModel、bind_tools、结构化输出
-- [工具抽象](/ai/langchain-ai/langchain/concepts/tool-abstraction) —— BaseTool、@tool、StructuredTool
-- [回调系统](/ai/langchain-ai/langchain/concepts/callback-system) —— Handler、Manager、Tracer
-- [检索器与向量库](/ai/langchain-ai/langchain/concepts/retriever-vectorstore) —— BaseRetriever、VectorStore、Embeddings
-- [输出解析器](/ai/langchain-ai/langchain/concepts/output-parser) —— BaseOutputParser、parse_result
+- Runnable 协议 —— 执行接口、组合原语、配置传播
+- 消息类型 —— BaseMessage 体系、ContentBlock、ToolCall
+- 提示词系统 —— PromptTemplate、ChatPromptTemplate
+- 聊天模型 —— BaseChatModel、bind_tools、结构化输出
+- 工具抽象 —— BaseTool、@tool、StructuredTool
+- 回调系统 —— Handler、Manager、Tracer
+- 检索器与向量库 —— BaseRetriever、VectorStore、Embeddings
+- 输出解析器 —— BaseOutputParser、parse_result

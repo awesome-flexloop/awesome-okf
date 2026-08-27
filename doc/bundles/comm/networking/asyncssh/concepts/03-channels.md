@@ -241,9 +241,9 @@ response = await reader.readline()
 
 ## 相关概念
 
-- [流与进程](/concepts/04-streams-processes.md) —— SSHReader/SSHWriter、create_process、SSHCompletedProcess
-- [异步连接详解](/concepts/02-async-connection.md) —— 如何创建连接
-- [端口转发](/concepts/09-port-forwarding.md) —— TCP/UNIX 通道的转发应用
+- [流与进程](04-streams-processes.md) —— SSHReader/SSHWriter、create_process、SSHCompletedProcess
+- [异步连接详解](02-async-connection.md) —— 如何创建连接
+- [端口转发](09-port-forwarding.md) —— TCP/UNIX 通道的转发应用
 - [paramiko Channel 通道](../../paramiko/concepts/04-channel.md)（同步 Channel 对比）
 
-[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](/references/asyncssh-source.md)。
+[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](../references/asyncssh-source.md)。

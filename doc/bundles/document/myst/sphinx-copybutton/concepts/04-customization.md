@@ -249,6 +249,6 @@ html_css_files = ['custom.css']
 
 ## 相关概念
 
-- [扩展架构与注册机制](/concepts/02-extension-architecture.md)
-- [文本处理与提示符剥离](/concepts/03-text-processing.md)
-- [基础配置示例](/examples/basic-setup.md)
+- [扩展架构与注册机制](02-extension-architecture.md)
+- [文本处理与提示符剥离](03-text-processing.md)
+- [基础配置示例](../examples/basic-setup.md)

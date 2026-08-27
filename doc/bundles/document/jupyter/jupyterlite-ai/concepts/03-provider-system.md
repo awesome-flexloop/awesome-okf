@@ -252,4 +252,4 @@ const plugin: JupyterFrontEndPlugin<void> = {
 - [Token 依赖注入系统](02-token-di-system.md)
 - [Agent 执行引擎](05-agent-engine.md)
 - [配置与设置](07-settings-and-config.md)
-- [内置 Provider 参考](/references/built-in-providers.md)
+- [内置 Provider 参考](../references/built-in-providers.md)

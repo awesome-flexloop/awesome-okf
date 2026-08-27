@@ -168,7 +168,7 @@ const exactMatch = new StringEvaluator({
 
 ## 相关概念
 
-- [SDK 总览](/ai/langchain-ai/langsmith-sdk/concepts/overview.md)
-- [traceable 装饰器](/ai/langchain-ai/langsmith-sdk/concepts/traceable-decorator.md)
-- [RunTree 追踪模型](/ai/langchain-ai/langsmith-sdk/concepts/run-tree-tracing.md)
-- [评测运行器](/ai/langchain-ai/langsmith-sdk/concepts/evaluation.md)
+- [SDK 总览](../concepts/overview.md)
+- [traceable 装饰器](../concepts/traceable-decorator.md)
+- [RunTree 追踪模型](../concepts/run-tree-tracing.md)
+- [评测运行器](../concepts/evaluation.md)

@@ -327,7 +327,7 @@ answer = chain.invoke({"role": "Python", "question": "什么是装饰器？"})
 
 ## 相关文档
 
-- [API 参考](/ai/langchain-ai/langchain-google/references/api)
-- [聊天模型架构](/ai/langchain-ai/langchain-google/concepts/chat-models)
-- [嵌入模型与 Vertex AI](/ai/langchain-ai/langchain-google/concepts/embeddings-vertex)
-- [总览](/ai/langchain-ai/langchain-google/concepts/overview)
+- API 参考
+- 聊天模型架构
+- 嵌入模型与 Vertex AI
+- 总览

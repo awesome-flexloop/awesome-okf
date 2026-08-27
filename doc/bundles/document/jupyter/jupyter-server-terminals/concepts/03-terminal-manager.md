@@ -16,7 +16,7 @@ sources:
 
 ## 类定义与继承
 
-`TerminalManager` 定义在 [terminalmanager.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyter_server_terminals/jupyter_server_terminals/terminalmanager.py) 中，是终端管理的核心类：
+`TerminalManager` 定义在 terminalmanager.py 中，是终端管理的核心类：
 
 ```python
 from terminado.management import NamedTermManager, PtyWithClients
@@ -235,11 +235,11 @@ c.TerminalManager.cull_inactive_timeout = 0
 
 ## 相关概念
 
-- [TerminalsExtensionApp 扩展应用](/concepts/02-extension-app.md)
-- [REST API 处理器](/concepts/04-rest-api.md)
-- [WebSocket 处理器](/concepts/05-websocket.md)
-- [基础终端操作示例](/examples/basic-operations.md)
-- [配置自动清理与指定工作目录示例](/examples/culler-and-cwd.md)
-- [jupyter_server_terminals 源码信源登记](/references/jupyter-server-terminals-source.md)
+- [TerminalsExtensionApp 扩展应用](02-extension-app.md)
+- [REST API 处理器](04-rest-api.md)
+- [WebSocket 处理器](05-websocket.md)
+- [基础终端操作示例](../examples/basic-operations.md)
+- [配置自动清理与指定工作目录示例](../examples/culler-and-cwd.md)
+- [jupyter_server_terminals 源码信源登记](../references/jupyter-server-terminals-source.md)
 
-[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](/references/jupyter-server-terminals-source.md)。
+[^jst-source]: jupyter_server_terminals 源码信源，见 [jupyter-server-terminals-source.md](../references/jupyter-server-terminals-source.md)。

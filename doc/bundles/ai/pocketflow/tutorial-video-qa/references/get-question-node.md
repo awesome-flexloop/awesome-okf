@@ -93,4 +93,4 @@ exec 返回值示例：
 
 ## 源码位置
 
-[nodes.py#L4-L13](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Video-Generator/nodes.py#L4-L13)
+nodes.py#L4-L13

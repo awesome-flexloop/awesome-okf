@@ -209,6 +209,6 @@ cli/ ──► launch.py ──► api/ + infra/
 
 ## 相关概念
 
-- [/concepts/00-architecture.md](/concepts/00-architecture.md)
-- [/concepts/02-agent-runtime.md](/concepts/02-agent-runtime.md)
-- [/concepts/03-gateway-channels.md](/concepts/03-gateway-channels.md)
+- [/concepts/00-architecture.md](../concepts/00-architecture.md)
+- [/concepts/02-agent-runtime.md](../concepts/02-agent-runtime.md)
+- [/concepts/03-gateway-channels.md](../concepts/03-gateway-channels.md)

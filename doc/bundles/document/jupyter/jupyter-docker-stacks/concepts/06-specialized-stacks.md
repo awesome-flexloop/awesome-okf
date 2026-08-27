@@ -192,4 +192,4 @@ SPARK_OPTS="--driver-java-options=-Xms1024M --driver-java-options=-Xmx4096M ..."
 - [镜像层级架构](02-image-hierarchy.md)
 - [Minimal到SciPy层](05-minimal-scipy.md)
 - [基础启动示例](../examples/01-basic-run.md)
-- [GPU/CUDA使用](../examples/04-gpu-cuda.md)
+- GPU/CUDA使用

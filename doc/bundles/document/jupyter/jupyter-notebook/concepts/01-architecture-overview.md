@@ -222,5 +222,5 @@ packages/                          # TypeScript前端包
 
 ## 下一步
 
-- → [后端应用类](./02-backend-app.md) 深入理解JupyterNotebookApp的启动流程与配置系统
-- → [前端Shell布局](./03-frontend-shell.md) 深入理解NotebookShell的区域管理与widget添加机制
+- → [后端应用类](02-backend-app.md) 深入理解JupyterNotebookApp的启动流程与配置系统
+- → [前端Shell布局](03-frontend-shell.md) 深入理解NotebookShell的区域管理与widget添加机制

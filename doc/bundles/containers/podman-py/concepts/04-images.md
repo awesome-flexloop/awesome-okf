@@ -349,6 +349,6 @@ client.images.scp(
 
 ## 相关概念
 
-- [/concepts/02-managers.md](/concepts/02-managers.md)
-- [/concepts/03-containers.md](/concepts/03-containers.md)
-- [/examples/01-migration.md](/examples/01-migration.md)
+- [/concepts/02-managers.md](02-managers.md)
+- [/concepts/03-containers.md](03-containers.md)
+- [/examples/01-migration.md](../examples/01-migration.md)

@@ -149,7 +149,7 @@ await shell.input('ls -la\n');
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [缓冲 IO 系统](/concepts/07-buffered-io.md)
-- [Worker 通信](/concepts/11-worker-communication.md)
-- [外部命令](/concepts/09-external-commands.md)
+- [架构总览](../concepts/02-architecture-overview.md)
+- [缓冲 IO 系统](../concepts/07-buffered-io.md)
+- [Worker 通信](../concepts/11-worker-communication.md)
+- [外部命令](../concepts/09-external-commands.md)

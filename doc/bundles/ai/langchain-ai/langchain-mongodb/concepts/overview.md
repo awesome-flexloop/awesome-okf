@@ -77,11 +77,11 @@ langchain-mongodb 通过 MongoDB Atlas 的 Vector Search 和 Search 能力，在
 
 ### 1. 聚合管道为核心
 
-所有搜索逻辑都构建为 MongoDB 聚合管道（Aggregation Pipeline），在 Atlas 服务端执行。这包括向量搜索、全文搜索、RRF 混合融合、$rerank 重排序、$lookup 父子文档关联等。详见 [向量存储架构](/ai/langchain-ai/langchain-mongodb/concepts/vector-store)。
+所有搜索逻辑都构建为 MongoDB 聚合管道（Aggregation Pipeline），在 Atlas 服务端执行。这包括向量搜索、全文搜索、RRF 混合融合、$rerank 重排序、$lookup 父子文档关联等。详见 向量存储架构。
 
 ### 2. 双嵌入模式
 
-支持**客户端嵌入**（传入 Embeddings 实例）和 **Atlas Auto-Embedding**（传入模型名称字符串，由 Atlas 服务端生成嵌入）。两种模式在类型层面严格区分，详见 [架构洞察](/ai/langchain-ai/langchain-mongodb/spec/insights)。
+支持**客户端嵌入**（传入 Embeddings 实例）和 **Atlas Auto-Embedding**（传入模型名称字符串，由 Atlas 服务端生成嵌入）。两种模式在类型层面严格区分，详见 架构洞察。
 
 ### 3. 自动索引管理
 
@@ -116,7 +116,7 @@ VectorStore 的异步方法（`adelete`、`amax_marginal_relevance_search_by_vec
 
 ## 快速入口
 
-- 想了解向量搜索的内部机制：[向量存储架构](/ai/langchain-ai/langchain-mongodb/concepts/vector-store)
-- 想了解缓存和聊天历史：[缓存与聊天历史](/ai/langchain-ai/langchain-mongodb/concepts/chat-history-cache)
-- 想查看完整 API：[API 参考](/ai/langchain-ai/langchain-mongodb/references/api)
-- 想查看使用示例：[基础使用示例](/ai/langchain-ai/langchain-mongodb/examples/basic-usage)
+- 想了解向量搜索的内部机制：向量存储架构
+- 想了解缓存和聊天历史：缓存与聊天历史
+- 想查看完整 API：API 参考
+- 想查看使用示例：基础使用示例

@@ -269,10 +269,10 @@ child.sendline('response')
 
 ## 相关概念
 
-- [pexpect 简介](/concepts/00-introduction.md)
-- [spawn 类详解](/concepts/02-spawn-class.md)
-- [expect 模式匹配](/concepts/03-expect-patterns.md)
-- [REPLWrapper](/concepts/07-replwrap.md)
-- [pexpect 源码信源登记](/references/pexpect-source.md)
+- [pexpect 简介](00-introduction.md)
+- [spawn 类详解](02-spawn-class.md)
+- [expect 模式匹配](03-expect-patterns.md)
+- [REPLWrapper](07-replwrap.md)
+- [pexpect 源码信源登记](../references/pexpect-source.md)
 
-[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](/references/pexpect-source.md)。
+[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](../references/pexpect-source.md)。

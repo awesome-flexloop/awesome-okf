@@ -210,6 +210,6 @@ make livehtml
 
 ## 相关概念
 
-- [构建系统](/concepts/04-builder-system.md)
-- [CLI 入口与参数解析](/concepts/03-cli-and-entrypoint.md)
-- [基础使用](/examples/basic-usage.md)
+- [构建系统](../concepts/04-builder-system.md)
+- [CLI 入口与参数解析](../concepts/03-cli-and-entrypoint.md)
+- [基础使用](basic-usage.md)

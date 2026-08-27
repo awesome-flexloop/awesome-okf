@@ -49,9 +49,9 @@ jupyterlab-probot/
 
 ## 快速导航
 
-- 📚 **概念学习**：从 [concepts/](concepts/) 开始，按编号顺序阅读
-- 🛠️ **动手实践**：查看 [examples/](examples/) 中的实操指南
-- 📖 **源码参考**：深入 [references/](references/) 阅读逐行注释的源码分析
+- 📚 **概念学习**：从 [concepts/](concepts/index.md) 开始，按编号顺序阅读
+- 🛠️ **动手实践**：查看 [examples/](examples/index.md) 中的实操指南
+- 📖 **源码参考**：深入 [references/](references/index.md) 阅读逐行注释的源码分析
 
 ## 快速开始
 
@@ -66,7 +66,7 @@ npm test
 npm start
 ```
 
-详细说明请阅读 [快速上手](concepts/01-getting-started)。
+详细说明请阅读 [快速上手](concepts/01-getting-started.md)。
 
 ## 技术栈
 

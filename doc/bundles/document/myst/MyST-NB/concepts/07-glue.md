@@ -122,4 +122,4 @@ glue key 'my_var' duplicate [myst-nb.glue]
 - [Eval 内联求值](08-eval.md)
 - [渲染与 MIME 类型](06-render-and-mime.md)
 - [四阶段处理管线](03-processing-pipeline.md)
-- [Glue 实战示例](/examples/03-glue-and-eval.md)
+- [Glue 实战示例](../examples/03-glue-and-eval.md)

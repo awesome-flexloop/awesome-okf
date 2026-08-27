@@ -23,7 +23,7 @@ sources:
 
 KaTeX 使用自包含的 Web 字体渲染数学公式，不依赖系统字体。本文档面向集成 KaTeX 的开发者，说明字体加载策略、`katex-swap.css` 的取舍、TeX 单位换算、绝对长度缩放以及字体自托管要求。
 
-字体内部架构（fontMetrics 度量数据、Unicode 支持、度量提取工具链）见 [字体与度量](/concepts/12-font-metrics.md)；样式系统的 8 种 TeX Style 与字号倍数见 [样式系统](/concepts/11-style-system.md)。
+字体内部架构（fontMetrics 度量数据、Unicode 支持、度量提取工具链）见 [字体与度量](12-font-metrics.md)；样式系统的 8 种 TeX Style 与字号倍数见 [样式系统](11-style-system.md)。
 
 ## 字体加载策略
 
@@ -181,14 +181,14 @@ BROWSERSLIST="Chrome 68" pnpm build
 USE_WOFF2=true USE_TTF=false pnpm build
 ```
 
-字体格式、字体目录的 Sass 变量配置详见 [字体与度量](/concepts/12-font-metrics.md#字体格式与构建配置用户视角)。
+字体格式、字体目录的 Sass 变量配置详见 [字体与度量](12-font-metrics.md#字体格式与构建配置用户视角)。
 
 ## 相关概念
 
-- [字体与度量](/concepts/12-font-metrics.md) — 字体族、fontMetrics 内部架构、Unicode 支持、Sass/Browserslist 构建配置
-- [样式系统](/concepts/11-style-system.md) — 8 种 TeX Style、字号倍数、数学原子类
-- [安装与运行时](/concepts/15-installation-and-runtime.md) — CDN、Node、打包工具集成
-- [配置系统](/concepts/10-settings-options.md) — minRuleThickness 等影响渲染的选项
+- [字体与度量](12-font-metrics.md) — 字体族、fontMetrics 内部架构、Unicode 支持、Sass/Browserslist 构建配置
+- [样式系统](11-style-system.md) — 8 种 TeX Style、字号倍数、数学原子类
+- [安装与运行时](15-installation-and-runtime.md) — CDN、Node、打包工具集成
+- [配置系统](10-settings-options.md) — minRuleThickness 等影响渲染的选项
 
 [^web-font]: 官网 Font 页面，https://katex.org/docs/font
 [^web-browser]: 官网 Browser 页面，https://katex.org/docs/browser

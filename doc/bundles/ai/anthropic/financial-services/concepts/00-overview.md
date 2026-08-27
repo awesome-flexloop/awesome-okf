@@ -52,7 +52,7 @@ Claude for Financial Services 的核心设计哲学是**一套源码、两种运
 └───────────────────────┘      └─────────────────────────┘
 ```
 
-> 🔗 Managed Agents API 详见 [/python-sdk/concepts/08-beta-agents.md](/python-sdk/concepts/08-beta-agents.md)
+> 🔗 Managed Agents API 详见 [/python-sdk/concepts/08-beta-agents.md](../../python-sdk/concepts/08-beta-agents.md)
 
 ## 四大功能域
 
@@ -163,13 +163,13 @@ claude-for-financial-services/
 | **MCP 协议** | 数据连接器基于 Model Context Protocol 构建，与 Claude 生态的 MCP 工具链兼容 |
 
 > 🔗 相关交叉阅读：
-> - [/official-skills/concepts/00-overview.md](/official-skills/concepts/00-overview.md) — Skills 机制详解
-> - [/claude-code/concepts/01-plugin-system.md](/claude-code/concepts/01-plugin-system.md) — 插件安装体系
-> - [/python-sdk/concepts/08-beta-agents.md](/python-sdk/concepts/08-beta-agents.md) — Managed Agents API
+> - [/official-skills/concepts/00-overview.md](../../official-skills/concepts/00-overview.md) — Skills 机制详解
+> - [/claude-code/concepts/01-plugin-system.md](../../claude-code/concepts/01-plugin-system.md) — 插件安装体系
+> - [/python-sdk/concepts/08-beta-agents.md](../../python-sdk/concepts/08-beta-agents.md) — Managed Agents API
 
 ## 相关概念
 
 - [10个金融Agents详解](01-agents.md) — 深入了解每个 End-to-End Agent 的功能、输入输出和包含的 skills
 - [垂直行业Skills与Commands](02-vertical-skills.md) — 7个官方 vertical plugins 的 skills 和 slash commands 完整说明
 - [数据连接器与部署](03-connectors-deployment.md) — 12个MCP数据连接器清单和三种部署方式详解
-- [Agents与Skills完整索引](/financial-services/references/agents-skills-index.md) — 所有Agents、Skills、Commands、连接器的快速查询索引
+- [Agents与Skills完整索引](../references/agents-skills-index.md) — 所有Agents、Skills、Commands、连接器的快速查询索引

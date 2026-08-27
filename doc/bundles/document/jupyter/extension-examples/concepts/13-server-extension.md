@@ -256,7 +256,7 @@ server-extension示例展示了最基础的API端点注册。其他示例演示�
 
 ## 相关概念
 
-- [项目结构与构建系统](/concepts/02-project-setup.md)
-- [插件基础与依赖注入](/concepts/03-plugin-basics.md)
-- [Kernel交互](/concepts/11-kernel-interaction.md)
-- [核心API与Token参考](/references/core-api-tokens.md)
+- [项目结构与构建系统](02-project-setup.md)
+- [插件基础与依赖注入](03-plugin-basics.md)
+- [Kernel交互](11-kernel-interaction.md)
+- [核心API与Token参考](../references/core-api-tokens.md)

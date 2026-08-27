@@ -353,7 +353,7 @@ Claude 的响应可能包含多个内容块（比如先思考，再输出文本�
 
 ## 相关概念
 
-- [Messages API 基础](/python-sdk/concepts/02-messages-basics.md) — 非流式消息 API 的基础用法，理解 Message 对象结构
-- [工具调用（Function Calling）](/python-sdk/concepts/04-tool-use.md) — 学习如何定义工具和处理工具调用循环
-- [流式对话示例](/python-sdk/examples/02-streaming-chat.md) — 完整可运行的流式 CLI 聊天机器人代码
-- [Anthropic Python SDK 消息 API 与流式处理参考](/python-sdk/references/messages-api.md) — 流式类、事件类型、MessageStream API 的完整参考手册
+- [Messages API 基础](02-messages-basics.md) — 非流式消息 API 的基础用法，理解 Message 对象结构
+- [工具调用（Function Calling）](04-tool-use.md) — 学习如何定义工具和处理工具调用循环
+- [流式对话示例](../examples/02-streaming-chat.md) — 完整可运行的流式 CLI 聊天机器人代码
+- [Anthropic Python SDK 消息 API 与流式处理参考](../references/messages-api.md) — 流式类、事件类型、MessageStream API 的完整参考手册

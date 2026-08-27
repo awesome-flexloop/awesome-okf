@@ -14,7 +14,7 @@ sources:
 
 ## 概述
 
-BinderHub 的运维保障系统由四个核心模块组成：[health.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/health.py) 提供健康检查端点，[quota.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/quota.py) 管理并发启动配额，[ratelimit.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/ratelimit.py) 实现客户端速率限制，[utils.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/utils.py) 提供 IP 网络匹配、内存单位解析和 LRU 缓存等基础工具。这些模块共同保障 BinderHub 在高并发场景下的稳定性和可观测性。
+BinderHub 的运维保障系统由四个核心模块组成：health.py 提供健康检查端点，quota.py 管理并发启动配额，ratelimit.py 实现客户端速率限制，utils.py 提供 IP 网络匹配、内存单位解析和 LRU 缓存等基础工具。这些模块共同保障 BinderHub 在高并发场景下的稳定性和可观测性。
 
 ## 健康检查装饰器体系
 
@@ -162,7 +162,7 @@ def _log_duration(f):
 
 ## HealthHandler：基础健康检查处理器
 
-`HealthHandler`（[health.py:122-208](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/health.py#L122-L208)）继承自 `BaseHandler`，提供 `/health` GET 和 HEAD 端点。
+`HealthHandler`（health.py:122-208）继承自 `BaseHandler`，提供 `/health` GET 和 HEAD 端点。
 
 ### 类属性
 
@@ -286,7 +286,7 @@ async def head(self):
 
 ## KubernetesHealthHandler：Kubernetes 增强健康检查
 
-`KubernetesHealthHandler`（[health.py:211-266](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/health.py#L211-L266)）继承自 `HealthHandler`，增加了 Kubernetes Pod 配额检查。在 `app.py` 中，当 `build_class` 是 `KubernetesBuildExecutor` 子类时自动选用此类：
+`KubernetesHealthHandler`（health.py:211-266）继承自 `HealthHandler`，增加了 Kubernetes Pod 配额检查。在 `app.py` 中，当 `build_class` 是 `KubernetesBuildExecutor` 子类时自动选用此类：
 
 ```python
 @default("health_handler_class")
@@ -422,7 +422,7 @@ class LaunchQuota(LoggingConfigurable):
 
 ### KubernetesLaunchQuota：Kubernetes 实现
 
-`KubernetesLaunchQuota`（[quota.py:78-158](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/quota.py#L78-L158)）通过查询 Kubernetes Pod 状态实现配额检查。
+`KubernetesLaunchQuota`（quota.py:78-158）通过查询 Kubernetes Pod 状态实现配额检查。
 
 #### 属性
 
@@ -515,7 +515,7 @@ flowchart TD
 
 ## RateLimiter：固定窗口速率限制
 
-`RateLimiter`（[ratelimit.py:13-96](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/ratelimit.py#L13-L96)）实现基于固定时间窗口的速率限制，按客户端 IP 地址限制构建请求频率。
+`RateLimiter`（ratelimit.py:13-96）实现基于固定时间窗口的速率限制，按客户端 IP 地址限制构建请求频率。
 
 ### 核心配置
 
@@ -578,7 +578,7 @@ def _clean_limits(self):
 
 ### 在 BaseHandler 中的集成
 
-在 [base.py:100-130](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/base.py#L100-L130) 中，`check_rate_limit()` 方法在构建请求前被调用：
+在 base.py:100-130 中，`check_rate_limit()` 方法在构建请求前被调用：
 
 ```python
 def check_rate_limit(self):
@@ -829,16 +829,16 @@ c.KubernetesBuildExecutor.memory_request = "1G"
 
 ## 关键源码引用
 
-- 健康检查装饰器：[health.py:14-119](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/health.py#L14-L119)
-- HealthHandler 基类：[health.py:122-208](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/health.py#L122-L208)
-- KubernetesHealthHandler：[health.py:211-266](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/health.py#L211-L266)
-- LaunchQuota 基类与异常：[quota.py:18-75](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/quota.py#L18-L75)
-- KubernetesLaunchQuota：[quota.py:78-158](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/quota.py#L78-L158)
-- RateLimiter：[ratelimit.py:13-96](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/ratelimit.py#L13-L96)
-- ip_in_networks()：[utils.py:171-186](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/utils.py#L171-L186)
-- ByteSpecification：[utils.py:48-98](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/utils.py#L48-L98)
-- Cache LRU 实现：[utils.py:101-145](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/utils.py#L101-L145)
-- KUBE_REQUEST_TIMEOUT 与 monkeypatch：[utils.py:18-19,195-196](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/utils.py#L18-L19)
-- rendezvous_rank()：[utils.py:29-45](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/utils.py#L29-L45)
-- HealthHandler 类自动选择：[app.py:374-378](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L374-L378)
-- ban_networks 配置验证：[app.py:789-796](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L789-L796)
+- 健康检查装饰器：health.py:14-119
+- HealthHandler 基类：health.py:122-208
+- KubernetesHealthHandler：health.py:211-266
+- LaunchQuota 基类与异常：quota.py:18-75
+- KubernetesLaunchQuota：quota.py:78-158
+- RateLimiter：ratelimit.py:13-96
+- ip_in_networks()：utils.py:171-186
+- ByteSpecification：utils.py:48-98
+- Cache LRU 实现：utils.py:101-145
+- KUBE_REQUEST_TIMEOUT 与 monkeypatch：utils.py:18-19,195-196
+- rendezvous_rank()：utils.py:29-45
+- HealthHandler 类自动选择：app.py:374-378
+- ban_networks 配置验证：app.py:789-796

@@ -139,4 +139,4 @@ LP 得到比例后，加权哈希路由：
 - **编译开销**：首次 JIT 编译数秒，后续缓存命中。
 - **精度**：float32，5 步迭代，小规模 LP 通常收敛。
 
-详见 [LP 求解器 API 参考](/ai/deepseek/lplb/references/lp-solver)。
+详见 LP 求解器 API 参考。

@@ -352,10 +352,10 @@ interface ContinuableDrain {
 
 | 文件 | 核心内容 |
 |------|---------|
-| [packages/core/tools/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/tools/src/index.ts) | `ToolRuntime` Service、四级瀑布事件、`ToolDefinition`、执行管道 |
-| [packages/core/tools/src/schema.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/tools/src/schema.ts) | `defineTool`、`ValueSchemaSpec`、`ParameterSchemaSpec`、类型推断、迭代式 Schema 编译器 |
-| [packages/core/tools/src/code-mode.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/tools/src/code-mode.ts) | `createRunCodeTool`、`RUN_CODE_NAME`、SDK section 渲染、Code Mode 指令 |
-| [packages/core/tools/src/types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/tools/src/types.ts) | `CodeDispatchStartEventData`、`CodeDispatchEventData`、code-dispatch 事件 |
-| [packages/subagent/subagent/src/types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/subagent/subagent/src/types.ts) | `SubagentStartRequest`、`SubagentCapabilities`、`SubagentRunInfo/EndInfo` |
-| [packages/subagent/subagent/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/subagent/subagent/src/index.ts) | Subagent 服务注册与生命周期管理 |
-| [packages/mcp/mcp-client/src/tools.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/mcp/mcp-client/src/tools.ts) | MCP 工具桥接（执行器、结果提取、输出 Schema） |
+| packages/core/tools/src/index.ts | `ToolRuntime` Service、四级瀑布事件、`ToolDefinition`、执行管道 |
+| packages/core/tools/src/schema.ts | `defineTool`、`ValueSchemaSpec`、`ParameterSchemaSpec`、类型推断、迭代式 Schema 编译器 |
+| packages/core/tools/src/code-mode.ts | `createRunCodeTool`、`RUN_CODE_NAME`、SDK section 渲染、Code Mode 指令 |
+| packages/core/tools/src/types.ts | `CodeDispatchStartEventData`、`CodeDispatchEventData`、code-dispatch 事件 |
+| packages/subagent/subagent/src/types.ts | `SubagentStartRequest`、`SubagentCapabilities`、`SubagentRunInfo/EndInfo` |
+| packages/subagent/subagent/src/index.ts | Subagent 服务注册与生命周期管理 |
+| packages/mcp/mcp-client/src/tools.ts | MCP 工具桥接（执行器、结果提取、输出 Schema） |

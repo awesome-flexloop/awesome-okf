@@ -64,7 +64,7 @@ Jupyter 作为一个学术和产业双重背景的项目，其软件和工具经
 
 ## 与决策流程的关系
 
-论文流程是 Jupyter 决策制定流程在学术出版领域的具体化。当论文涉及项目方向、技术决策或社区共识时，需要遵循[决策制定流程](/concepts/09-decision-making.md)中的共识寻求和投票机制。
+论文流程是 Jupyter 决策制定流程在学术出版领域的具体化。当论文涉及项目方向、技术决策或社区共识时，需要遵循[决策制定流程](09-decision-making.md)中的共识寻求和投票机制。
 
 ## 反常识要点
 
@@ -74,6 +74,6 @@ Jupyter 作为一个学术和产业双重背景的项目，其软件和工具经
 
 ## 相关概念
 
-- [决策制定流程](/concepts/09-decision-making.md)
-- [常设委员会与工作组](/concepts/07-committees-and-working-groups.md)
-- [Jupyter Governance 仓库简介](/concepts/00-introduction.md)
+- [决策制定流程](09-decision-making.md)
+- [常设委员会与工作组](07-committees-and-working-groups.md)
+- [Jupyter Governance 仓库简介](00-introduction.md)

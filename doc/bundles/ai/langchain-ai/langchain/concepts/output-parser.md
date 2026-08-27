@@ -182,7 +182,7 @@ results = parser.batch(["a", "b", "c"])
 
 ## 相关概念
 
-- [总览](/ai/langchain-ai/langchain/concepts/overview) —— 输出解析器在能力层中的位置
-- [Runnable 协议](/ai/langchain-ai/langchain/concepts/runnable-protocol) —— BaseOutputParser 是 RunnableSerializable
-- [聊天模型](/ai/langchain-ai/langchain/concepts/chat-model) —— 模型输出 AIMessage 给解析器
-- [提示词系统](/ai/langchain-ai/langchain/concepts/prompt-system) —— output_parser 字段与 get_format_instructions
+- 总览 —— 输出解析器在能力层中的位置
+- Runnable 协议 —— BaseOutputParser 是 RunnableSerializable
+- 聊天模型 —— 模型输出 AIMessage 给解析器
+- 提示词系统 —— output_parser 字段与 get_format_instructions

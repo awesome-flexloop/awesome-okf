@@ -154,7 +154,7 @@ VSCode 扩展提供编辑器内的 AI 聊天面板：
 
 ## 相关概念
 
-- [项目简介](/concepts/00-introduction.md)
-- [权限系统](/concepts/02-permission-system.md)
-- [MCP 集成](/concepts/03-mcp-integration.md)
-- [CLI 命令与会话管理](/concepts/04-cli-commands.md)
+- [项目简介](00-introduction.md)
+- [权限系统](02-permission-system.md)
+- [MCP 集成](03-mcp-integration.md)
+- [CLI 命令与会话管理](04-cli-commands.md)

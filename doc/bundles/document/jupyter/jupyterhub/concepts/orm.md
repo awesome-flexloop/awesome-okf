@@ -383,5 +383,5 @@ API 访问令牌，支持用户和服务两种所有者类型。采用哈希存�
 
 ## 源码溯源
 
-- ORM 模块完整源码：[jupyterhub/orm.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/orm.py)（v6.0.0b2）
+- ORM 模块完整源码：jupyterhub/orm.py（v6.0.0b2）
 - 详细参考文档：[references/orm-source.md](../references/orm-source.md)

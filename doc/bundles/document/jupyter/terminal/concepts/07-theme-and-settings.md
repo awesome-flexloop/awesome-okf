@@ -209,5 +209,5 @@ const myPlugin: JupyterFrontEndPlugin<void> = {
 
 - [插件系统](03-plugin-system.md)：terminalThemeChangePlugin详细实现
 - [安装与快速开始](01-getting-started.md)：jupyter-lite.json配置
-- [示例：自定义外部命令](/examples/04-custom-command.md)：外部命令注册示例
-- [LiteTerminalAPIClient API参考](/references/client-source.md)：完整方法签名
+- [示例：自定义外部命令](../examples/04-custom-command.md)：外部命令注册示例
+- [LiteTerminalAPIClient API参考](../references/client-source.md)：完整方法签名

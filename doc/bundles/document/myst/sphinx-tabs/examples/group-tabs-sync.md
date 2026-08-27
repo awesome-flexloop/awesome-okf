@@ -138,10 +138,10 @@ html_assets_policy = 'always'  # Sphinx 5+
 
 ## 相关示例
 
-- [基础标签页](/examples/basic-tabs.md)
-- [多语言代码标签页](/examples/code-tabs.md)
+- [基础标签页](basic-tabs.md)
+- [多语言代码标签页](code-tabs.md)
 
 ## 相关概念
 
-- [分组标签与代码标签](/concepts/03-group-and-code-tabs.md)
-- [配置项参考](/concepts/04-configuration.md)
+- [分组标签与代码标签](../concepts/03-group-and-code-tabs.md)
+- [配置项参考](../concepts/04-configuration.md)

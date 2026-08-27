@@ -57,9 +57,9 @@ Anthropic 官方提供了 **19 个开箱即用的 Skills**，覆盖 API 开发�
 
 | 相关 bundle | 链接 | 关系说明 |
 |------------|------|---------|
-| **Claude Code Wiki** | [/claude-code/concepts/01-plugin-system.md](/claude-code/concepts/01-plugin-system.md) | Skills 是 Claude Code 插件体系四大扩展机制之一，插件可以打包分发 Skills |
-| **Python SDK Wiki** | [/python-sdk/concepts/08-beta-agents.md](/python-sdk/concepts/08-beta-agents.md) | SDK Beta Skills API 是云端 API 层面的技能封装，与本地文件系统级的 Claude Code Skills 是不同概念 |
-| **Python SDK 概览** | [/python-sdk/concepts/00-overview.md](/python-sdk/concepts/00-overview.md) | claude-api Skill 中 Python 部分的详细文档在 Python SDK bundle 中 |
+| **Claude Code Wiki** | [/claude-code/concepts/01-plugin-system.md](../claude-code/concepts/01-plugin-system.md) | Skills 是 Claude Code 插件体系四大扩展机制之一，插件可以打包分发 Skills |
+| **Python SDK Wiki** | [/python-sdk/concepts/08-beta-agents.md](../python-sdk/concepts/08-beta-agents.md) | SDK Beta Skills API 是云端 API 层面的技能封装，与本地文件系统级的 Claude Code Skills 是不同概念 |
+| **Python SDK 概览** | [/python-sdk/concepts/00-overview.md](../python-sdk/concepts/00-overview.md) | claude-api Skill 中 Python 部分的详细文档在 Python SDK bundle 中 |
 
 > ⚠️ **注意区分**：本 bundle（`official-skills`）是 Anthropic **官方 Skills 库的文档索引**；另一个 bundle `ai/ai-agent/anthropics-skills/`（如存在）是 Skills 格式规范的通用说明，两者不冲突——本 bundle 聚焦官方库索引和具体 Skills 的使用，前者聚焦格式规范本身。
 

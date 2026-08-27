@@ -407,10 +407,10 @@ llama-server 提供OpenAI兼容的 `/v1/chat/completions` 接口，`ChatService`
 
 | 文件 | 用途 |
 |------|------|
-| [mlx_training/train_by_mlx.sh](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/mlx_training/train_by_mlx.sh) | MLX训练脚本 |
-| [mlx_training/lora_config.yaml](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/mlx_training/lora_config.yaml) | MLX LoRA配置 |
-| [mlx_training/data_transform.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/mlx_training/data_transform.py) | 数据格式转换 |
-| [mlx_training/convert_and_serve.sh](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/mlx_training/convert_and_serve.sh) | 转换并启动服务 |
+| mlx_training/train_by_mlx.sh | MLX训练脚本 |
+| mlx_training/lora_config.yaml | MLX LoRA配置 |
+| mlx_training/data_transform.py | 数据格式转换 |
+| mlx_training/convert_and_serve.sh | 转换并启动服务 |
 
 ## 模型生命周期
 
@@ -448,17 +448,17 @@ resources/
 
 | 文件 | 职责 |
 |------|------|
-| [lpm_kernel/L2/l2_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/l2_generator.py) | L2数据编排器 |
-| [lpm_kernel/L2/data.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/data.py) | L2DataProcessor：笔记分类+数据生成+GraphRAG |
-| [lpm_kernel/L2/train.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/train.py) | SFT训练入口：SFTTrainer+LoRA配置+内存优化 |
-| [lpm_kernel/L2/merge_lora_weights.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/merge_lora_weights.py) | LoRA权重合并：PeftModel.merge_and_unload() |
-| [lpm_kernel/L2/dpo/dpo_train.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/dpo/dpo_train.py) | DPO训练：DPOTrainer+DPOConfig |
-| [lpm_kernel/L2/convert_hf_to_gguf.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/convert_hf_to_gguf.py) | HF→GGUF模型转换 |
-| [lpm_kernel/L2/memory_manager.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/memory_manager.py) | GPU内存管理工具 |
-| [lpm_kernel/L2/utils.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/utils.py) | 模型创建、数据格式化工具 |
-| [lpm_kernel/api/services/local_llm_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/services/local_llm_service.py) | llama-server进程管理 |
-| [lpm_kernel/L2/gguf-py/](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/gguf-py/) | GGUF读写库（内置） |
-| [lpm_kernel/L2/mlx_training/](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/mlx_training/) | Apple Silicon MLX训练 |
+| lpm_kernel/L2/l2_generator.py | L2数据编排器 |
+| lpm_kernel/L2/data.py | L2DataProcessor：笔记分类+数据生成+GraphRAG |
+| lpm_kernel/L2/train.py | SFT训练入口：SFTTrainer+LoRA配置+内存优化 |
+| lpm_kernel/L2/merge_lora_weights.py | LoRA权重合并：PeftModel.merge_and_unload() |
+| lpm_kernel/L2/dpo/dpo_train.py | DPO训练：DPOTrainer+DPOConfig |
+| lpm_kernel/L2/convert_hf_to_gguf.py | HF→GGUF模型转换 |
+| lpm_kernel/L2/memory_manager.py | GPU内存管理工具 |
+| lpm_kernel/L2/utils.py | 模型创建、数据格式化工具 |
+| lpm_kernel/api/services/local_llm_service.py | llama-server进程管理 |
+| lpm_kernel/L2/gguf-py/ | GGUF读写库（内置） |
+| lpm_kernel/L2/mlx_training/ | Apple Silicon MLX训练 |
 
 ## 相关概念
 

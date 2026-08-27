@@ -323,10 +323,10 @@ print()
 
 ## 相关概念
 
-- [SSHClient 详解](/concepts/02-ssh-client.md)
-- [Channel 通道](/concepts/04-channel.md)
-- [服务端开发](/concepts/09-server.md)
-- [高级模式](/concepts/10-advanced-patterns.md)
-- [文件传输示例](/examples/file-transfer.md)
+- [SSHClient 详解](02-ssh-client.md)
+- [Channel 通道](04-channel.md)
+- [服务端开发](09-server.md)
+- [高级模式](10-advanced-patterns.md)
+- [文件传输示例](../examples/file-transfer.md)
 
-[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](/references/paramiko-source.md)。
+[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](../references/paramiko-source.md)。

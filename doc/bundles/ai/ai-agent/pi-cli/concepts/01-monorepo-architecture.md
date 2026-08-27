@@ -129,7 +129,7 @@ AGENTS.md 规定的代码约束：
 
 ## 相关概念
 
-- [Pi AI CLI 简介](./00-introduction.md)
-- [AI 包（packages/ai）](./02-ai-package.md)
-- [TUI 系统](./03-tui-system.md)
+- [Pi AI CLI 简介](00-introduction.md)
+- [AI 包（packages/ai）](02-ai-package.md)
+- [TUI 系统](03-tui-system.md)
 - [基础使用示例](../examples/01-basic-usage.md)

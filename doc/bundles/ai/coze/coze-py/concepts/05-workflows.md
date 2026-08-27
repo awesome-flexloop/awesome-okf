@@ -186,7 +186,7 @@ for event in coze.workflows.runs.stream(
 
 ## 相关概念
 
-- [对话与流式处理](/concepts/03-chat-streaming.md) — ChatEvent 事件体系，workflows.chat.stream 复用
-- [Bot 管理](/concepts/04-bot-management.md) — Bot 可以绑定工作流
-- [工作流执行示例](/examples/workflow-execution.md) — 流式/异步/中断恢复的完整代码
-- [对话与工作流参考](/references/chat-workflow.md) — WorkflowsClient 和 WorkflowEvent 的完整 API
+- [对话与流式处理](03-chat-streaming.md) — ChatEvent 事件体系，workflows.chat.stream 复用
+- [Bot 管理](04-bot-management.md) — Bot 可以绑定工作流
+- [工作流执行示例](../examples/workflow-execution.md) — 流式/异步/中断恢复的完整代码
+- [对话与工作流参考](../references/chat-workflow.md) — WorkflowsClient 和 WorkflowEvent 的完整 API

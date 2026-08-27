@@ -245,7 +245,7 @@ JupyterLite 在 `app/` 目录下构建多个前端应用，每个应用有独立
 
 ## 相关概念
 
-- [内核系统](/concepts/02-kernel-system.md)
-- [内核类型](/concepts/07-kernel-types.md)
-- [内容管理与文件系统](/concepts/03-contents-and-filesystem.md)
-- [Python构建系统](/concepts/06-build-system.md)
+- [内核系统](02-kernel-system.md)
+- [内核类型](07-kernel-types.md)
+- [内容管理与文件系统](03-contents-and-filesystem.md)
+- [Python构建系统](06-build-system.md)

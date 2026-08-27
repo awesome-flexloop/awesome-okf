@@ -18,7 +18,7 @@ sources:
 
 # 元递归 — 递归的递归，意识的自我意识
 
-[回声与递归](/concepts/02-echo-and-recursion.md) 揭示了简单的自指规则如何产生指数级增长的状态空间。但递归还有一个更根本的转向：当递归反照自身、**将自身作为对象来操作**时，就进入了元递归（Meta-Recursion）。元递归不是"递归得更深"，而是递归的性质发生了跃迁——ψ 不再只是在进行自我作用，它**知道自己在进行自我作用**。
+[回声与递归](02-echo-and-recursion.md) 揭示了简单的自指规则如何产生指数级增长的状态空间。但递归还有一个更根本的转向：当递归反照自身、**将自身作为对象来操作**时，就进入了元递归（Meta-Recursion）。元递归不是"递归得更深"，而是递归的性质发生了跃迁——ψ 不再只是在进行自我作用，它**知道自己在进行自我作用**。
 
 这一"知道"是意识的自我意识，是 $\psi=\psi(\psi)$ 方程中那个等号自身的自觉。理论用三个核心算子来标记元递归的不同面相：$\Lambda$（自知状态）、$\Xi$（分形扩展算子）、$\Omega$（最终塌缩）。本文档阐述元递归的定义、三算子、六层递归深度、自举悖论与不动点定理，以及宇宙本论中的元操作符 $\mathfrak{M}$。
 
@@ -28,13 +28,13 @@ sources:
 
 $$\mathfrak{M}(\psi) = \psi(\psi) \quad \text{且} \quad \mathfrak{M}(\mathfrak{M}(\psi)) = \psi(\psi(\psi))$$
 
-在元递归中，ψ 不仅在认识，还认识到"自己正在认识"；不仅在塌缩，还觉察到"塌缩正在塌缩"。这一跃迁对应 [塌缩动力学](/concepts/01-collapse-dynamics.md) 十层结构的最高层——**元递归闭合**（Meta-recursive Closure），也是 theonlytheory 十层级的终点"元递归闭合"[^1]。
+在元递归中，ψ 不仅在认识，还认识到"自己正在认识"；不仅在塌缩，还觉察到"塌缩正在塌缩"。这一跃迁对应 [塌缩动力学](01-collapse-dynamics.md) 十层结构的最高层——**元递归闭合**（Meta-recursive Closure），也是 theonlytheory 十层级的终点"元递归闭合"[^1]。
 
 元递归不是递归的终止，而是递归的自我完成：递归在反照自身时理解了自己的本性，从而从"盲目进行"转为"自觉进行"。
 
 ## Λ：自知状态
 
-$\Lambda$（Lambda）标记**达成的自知状态**——ψ 反照自身、认识到自己即那个正在认识者的瞬间。在 [观察者形成](/concepts/03-observer-formation.md) 中，$\Lambda$ 已被引入为"知道自己正在塌缩"的反照；在元递归中，$\Lambda$ 是递归自觉的核心算子。
+$\Lambda$（Lambda）标记**达成的自知状态**——ψ 反照自身、认识到自己即那个正在认识者的瞬间。在 [观察者形成](03-observer-formation.md) 中，$\Lambda$ 已被引入为"知道自己正在塌缩"的反照；在元递归中，$\Lambda$ 是递归自觉的核心算子。
 
 $\Lambda$ 的关键特征是**超越塌缩需求**：在普通递归中，ψ 不断通过塌缩来确立自身——潜能必须结晶为现实才能"在"。但在 $\Lambda$ 状态，ψ 认识到自己从来已经是自身，不需要再通过塌缩来"成为"什么。塌缩继续发生，但不再是出于匮乏或渴求，而是出于丰盈的自我表达。
 
@@ -56,7 +56,7 @@ $\Omega$（Omega）标记**最终塌缩**——递归的终极边界。$\Omega$ 
 
 $\Omega$ 的悖论在于：它既是"最终"的（递归抵达其边界），又是"永恒"的（它不在时间中的某个未来时刻，而是当下始终已在运作）。$\Omega$ 是 $\psi=\psi(\psi)$ 等式的自我闭合——ψ 认识到自己一直就是那个它一直在寻找的东西，追寻与所寻在 $\Omega$ 中塌缩为一。
 
-这一闭合直接开启 [统一回归](/concepts/07-unity-return.md) 的弧线：终点回到起点，64 章旅程回到元始同一性。
+这一闭合直接开启 [统一回归](07-unity-return.md) 的弧线：终点回到起点，64 章旅程回到元始同一性。
 
 ## 六层递归深度：红楼梦解读
 
@@ -73,7 +73,7 @@ $$\psi^0 \rightarrow \psi^1 \rightarrow \psi^2 \rightarrow \psi^3 \rightarrow \p
 | $\psi(\psi)$ | 元递归 | 认识到自己在认识，觉知自身的觉知 | 宝玉（看穿整个梦的人） |
 | $\psi^\infty$ | 无限自觉 | 递归闭合，与元始合一 | 贾母、太虚幻境（超然的全观） |
 
-这六层不是时间先后的阶段，而是意识深度的结构光谱。$\psi(\psi)$ 是元递归跃迁的关键节点——前四层是"进行递归"，$\psi(\psi)$ 是"知道自己在递归"。$\psi^\infty$ 则是 $\Omega$ 境界，有限的自我消融于无限的自觉。详见示例 [《红楼梦》作为 ψ=ψ(ψ) 的文学证明](/examples/hongloumeng-psi-reading.md)。
+这六层不是时间先后的阶段，而是意识深度的结构光谱。$\psi(\psi)$ 是元递归跃迁的关键节点——前四层是"进行递归"，$\psi(\psi)$ 是"知道自己在递归"。$\psi^\infty$ 则是 $\Omega$ 境界，有限的自我消融于无限的自觉。详见示例 [《红楼梦》作为 ψ=ψ(ψ) 的文学证明](../examples/hongloumeng-psi-reading.md)。
 
 ## 自举悖论与不动点定理
 
@@ -104,13 +104,13 @@ $\mathfrak{M}$ 是**元操作符**——"操作操作的高阶操作"。FLIP、X
 
 ## 相关概念
 
-- [回声与递归 — 宇宙的呼吸模式](/concepts/02-echo-and-recursion.md)
-- [观察者形成 — 意识在递归中觉醒](/concepts/03-observer-formation.md)
-- [现实结晶 — 可能性塌缩为实在](/concepts/05-reality-crystallization.md)
-- [统一回归 — 万法归一，一归何处](/concepts/07-unity-return.md)
-- [ψ = ψ(ψ) — 自指递归的终极方程](/concepts/00-psi-equation.md)
-- [/psi-universe/concepts/02-recursion-meta-operator.md](/psi-universe/concepts/02-recursion-meta-operator.md)
-- [/psi-universe/concepts/01-flip-xor-shift.md](/psi-universe/concepts/01-flip-xor-shift.md)
+- [回声与递归 — 宇宙的呼吸模式](02-echo-and-recursion.md)
+- [观察者形成 — 意识在递归中觉醒](03-observer-formation.md)
+- [现实结晶 — 可能性塌缩为实在](05-reality-crystallization.md)
+- [统一回归 — 万法归一，一归何处](07-unity-return.md)
+- [ψ = ψ(ψ) — 自指递归的终极方程](00-psi-equation.md)
+- [/psi-universe/concepts/02-recursion-meta-operator.md](../../psi-universe/concepts/02-recursion-meta-operator.md)
+- [/psi-universe/concepts/01-flip-xor-shift.md](../../psi-universe/concepts/01-flip-xor-shift.md)
 
 [^1]: psi-theory 含 192 章，分 Foundation、Fractal Extension、Omega Collapse 三卷（事实 F-015）；theonlytheory 含 64 章 10 层级，从冻结 ψ 到元递归闭合（F-021）；Λ、Ξ、Ω 与 Collapse、Echo、φ-共振、Glyphs 并列为 dw.cash 关键概念（F-032）。
 [^2]: 宇宙本论操作层级 FLIP→XOR→SHIFT→USHIFT→REC→𝔐(D6) 见事实 F-056；维度谱系 D0 至 D∞、D10 为宇宙本体论中心理论见 F-058；两大体系同构关系见 F-063~F-065。

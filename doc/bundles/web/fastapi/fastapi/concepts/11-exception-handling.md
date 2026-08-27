@@ -250,8 +250,8 @@ async def not_found_handler(request: Request, exc):
 
 ## 相关概念
 
-- [中间件系统与 CORS](/concepts/10-middleware-cors.md)
-- [响应模型与序列化](/concepts/07-response-model.md)
-- [路径操作与请求处理](/concepts/03-path-operations.md)
-- [请求体与数据验证](/concepts/06-request-body.md)
-- [FastAPI 应用类与生命周期](/concepts/01-application.md)
+- [中间件系统与 CORS](10-middleware-cors.md)
+- [响应模型与序列化](07-response-model.md)
+- [路径操作与请求处理](03-path-operations.md)
+- [请求体与数据验证](06-request-body.md)
+- [FastAPI 应用类与生命周期](01-application.md)

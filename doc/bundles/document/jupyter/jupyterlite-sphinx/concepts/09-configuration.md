@@ -159,7 +159,7 @@ strip_tagged_cells = True
 
 ## TryExamples 全局配置
 
-这组配置项控制 [try_examples 指令](/concepts/08-try-examples-directive.md) 的全局默认行为。
+这组配置项控制 [try_examples 指令](08-try-examples-directive.md) 的全局默认行为。
 
 ### global_enable_try_examples
 
@@ -232,10 +232,10 @@ import matplotlib.pyplot as plt
 
 | 配置名 | 默认值 | 对应指令 |
 |--------|--------|---------|
-| `jupyterlite_new_tab_button_text` | `"Open as a notebook"` | [jupyterlite](/concepts/04-jupyterlite-directive.md) |
-| `notebooklite_new_tab_button_text` | `"Open as a notebook"` | [notebooklite](/concepts/05-notebooklite-directive.md) |
-| `voici_new_tab_button_text` | `"Open with Voici"` | [voici](/concepts/07-voici-directive.md) |
-| `replite_new_tab_button_text` | `"Open in a REPL"` | [replite](/concepts/06-replite-directive.md) |
+| `jupyterlite_new_tab_button_text` | `"Open as a notebook"` | [jupyterlite](04-jupyterlite-directive.md) |
+| `notebooklite_new_tab_button_text` | `"Open as a notebook"` | [notebooklite](05-notebooklite-directive.md) |
+| `voici_new_tab_button_text` | `"Open with Voici"` | [voici](07-voici-directive.md) |
+| `replite_new_tab_button_text` | `"Open in a REPL"` | [replite](06-replite-directive.md) |
 
 ```python
 # 统一设置为中文
@@ -249,7 +249,7 @@ replite_new_tab_button_text = "打开 REPL 控制台"
 
 ## REPL 行为配置
 
-这组配置项控制 [replite 指令](/concepts/06-replite-directive.md) 中 REPL 控制台的默认行为：
+这组配置项控制 [replite 指令](06-replite-directive.md) 中 REPL 控制台的默认行为：
 
 | 配置名 | 类型 | 默认值 | 说明 |
 |--------|------|--------|------|
@@ -340,11 +340,11 @@ voici_new_tab_button_text = "打开仪表板"
 
 ## 相关概念
 
-- [指令系统总览](/concepts/03-directive-overview.md)
-- [jupyterlite 指令——嵌入 JupyterLab](/concepts/04-jupyterlite-directive.md)
-- [notebooklite 指令——嵌入经典 Notebook](/concepts/05-notebooklite-directive.md)
-- [replite 指令——嵌入交互式 REPL](/concepts/06-replite-directive.md)
-- [voici 指令——嵌入 Voici 仪表板](/concepts/07-voici-directive.md)
-- [try_examples 指令——交互式文档示例](/concepts/08-try-examples-directive.md)
-- [核心模块源码](/references/main-source.md)
-- [配置项完整速查表](/references/config-reference.md)
+- [指令系统总览](03-directive-overview.md)
+- [jupyterlite 指令——嵌入 JupyterLab](04-jupyterlite-directive.md)
+- [notebooklite 指令——嵌入经典 Notebook](05-notebooklite-directive.md)
+- [replite 指令——嵌入交互式 REPL](06-replite-directive.md)
+- [voici 指令——嵌入 Voici 仪表板](07-voici-directive.md)
+- [try_examples 指令——交互式文档示例](08-try-examples-directive.md)
+- [核心模块源码](../references/main-source.md)
+- [配置项完整速查表](../references/config-reference.md)

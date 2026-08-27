@@ -316,9 +316,9 @@ zmq_setsockopt(socket, ZMQ_CONFLATE, &yes, sizeof(yes));
 
 ## 相关概念
 
-- [套接字基类](/concepts/02-socket-base.md) — socket 通过 _pipes 数组管理所有 pipe
-- [消息与引用计数](/concepts/03-message.md) — msg_t 在 ypipe 中值拷贝传递
-- [会话与连接生命周期](/concepts/05-session.md) — session 持有 pipe 连接到 socket
-- [命令传递与邮箱](/concepts/08-command-mailbox.md) — activate_read/write 命令通过 mailbox 传递
-- [I/O 线程与多路复用](/concepts/07-io-thread-poller.md) — ypipe flush 失败时通过 signaler 唤醒
-- [消息模式实现](/concepts/11-patterns.md) — fq/lb/dist 算法管理多个 pipe
+- [套接字基类](02-socket-base.md) — socket 通过 _pipes 数组管理所有 pipe
+- [消息与引用计数](03-message.md) — msg_t 在 ypipe 中值拷贝传递
+- [会话与连接生命周期](05-session.md) — session 持有 pipe 连接到 socket
+- [命令传递与邮箱](08-command-mailbox.md) — activate_read/write 命令通过 mailbox 传递
+- [I/O 线程与多路复用](07-io-thread-poller.md) — ypipe flush 失败时通过 signaler 唤醒
+- [消息模式实现](11-patterns.md) — fq/lb/dist 算法管理多个 pipe

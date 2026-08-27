@@ -132,6 +132,6 @@ MacroExpander 通过 `lexer.lex()` 逐个获取 Token，这是 Lexer 与外部�
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [宏展开器（MacroExpander）](/concepts/04-macro-expander.md)
-- [解析器（Parser）](/concepts/05-parser.md)
+- [架构总览](02-architecture-overview.md)
+- [宏展开器（MacroExpander）](04-macro-expander.md)
+- [解析器（Parser）](05-parser.md)

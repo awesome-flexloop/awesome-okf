@@ -223,6 +223,6 @@ function tokenize(
 
 ## 相关概念
 
-- [命令系统源码参考](/references/command-source.md)：命令注册表与运行器接口
-- [内置命令源码参考](/references/builtin-source.md)：alias 命令与别名管理
-- [配置与环境源码参考](/references/config-source.md)：Aliases 类的递归解析 API
+- [命令系统源码参考](command-source.md)：命令注册表与运行器接口
+- [内置命令源码参考](builtin-source.md)：alias 命令与别名管理
+- [配置与环境源码参考](config-source.md)：Aliases 类的递归解析 API

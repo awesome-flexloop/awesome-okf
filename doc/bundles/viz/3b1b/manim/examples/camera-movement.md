@@ -426,7 +426,7 @@ manimgl camera_movement.py CameraMovement -w --hd
 
 ## 相关概念
 
-- [07 相机与视角控制](/concepts/07-camera-and-frame.md) — CameraFrame 作为 Mobject 的统一抽象、四元数旋转、reorient 欧拉角、视图矩阵、2D/3D 切换、is_fixed_in_frame
-- [03 Mobject：数学对象基类](/concepts/03-mobject-fundamentals.md) — shift/scale/rotate/move_to 几何变换方法、animate 链式语法糖、family 机制
-- [05 动画基础](/concepts/05-animation-basics.md) — run_time、rate_func（smooth/linear 等）、self.play() 多动画同时播放
-- [08 常量系统与颜色体系](/concepts/08-constants-and-colors.md) — 方向向量（UP/RIGHT/OUT 等）、角度常量（PI/TAU/DEG）、颜色常量
+- [07 相机与视角控制](../concepts/07-camera-and-frame.md) — CameraFrame 作为 Mobject 的统一抽象、四元数旋转、reorient 欧拉角、视图矩阵、2D/3D 切换、is_fixed_in_frame
+- [03 Mobject：数学对象基类](../concepts/03-mobject-fundamentals.md) — shift/scale/rotate/move_to 几何变换方法、animate 链式语法糖、family 机制
+- [05 动画基础](../concepts/05-animation-basics.md) — run_time、rate_func（smooth/linear 等）、self.play() 多动画同时播放
+- [08 常量系统与颜色体系](../concepts/08-constants-and-colors.md) — 方向向量（UP/RIGHT/OUT 等）、角度常量（PI/TAU/DEG）、颜色常量

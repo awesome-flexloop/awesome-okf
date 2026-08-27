@@ -143,8 +143,8 @@ ogp_type = 'article'
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [配置选项全解](/concepts/02-configuration.md)
-- [社交卡片配置示例](/examples/social-cards-example.md)
-- [高级配置示例](/examples/advanced-config.md)
-- [sphinxext-opengraph 源码信源登记](/references/sphinxext-opengraph-source.md)
+- [5分钟快速上手](../concepts/01-getting-started.md)
+- [配置选项全解](../concepts/02-configuration.md)
+- [社交卡片配置示例](social-cards-example.md)
+- [高级配置示例](advanced-config.md)
+- [sphinxext-opengraph 源码信源登记](../references/sphinxext-opengraph-source.md)

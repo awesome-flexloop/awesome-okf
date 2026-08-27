@@ -226,11 +226,11 @@ JupyterLab 前端显示输出
 
 ## 下一步
 
-- [Worker 通信模式](/concepts/03-worker-communication.md) — 深入了解 Comlink vs Coincident
-- [构建时 Addon 系统](/concepts/04-build-addons.md) — 三个 Addon 的详细工作机制
-- [消息桥接机制](/concepts/07-message-bridge.md) — Python↔JS↔前端的消息传递细节
+- [Worker 通信模式](03-worker-communication.md) — 深入了解 Comlink vs Coincident
+- [构建时 Addon 系统](04-build-addons.md) — 三个 Addon 的详细工作机制
+- [消息桥接机制](07-message-bridge.md) — Python↔JS↔前端的消息传递细节
 
 ## 源码参考
 
-- [TypeScript Kernel 源码](/references/kernel-ts-source.md)
-- [浏览器端 Python Kernel 源码](/references/kernel-py-source.md)
+- [TypeScript Kernel 源码](../references/kernel-ts-source.md)
+- [浏览器端 Python Kernel 源码](../references/kernel-py-source.md)

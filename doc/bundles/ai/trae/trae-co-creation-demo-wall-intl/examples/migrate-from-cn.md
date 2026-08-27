@@ -189,7 +189,7 @@ async function migrateDictionaryTranslations() {
 #### 方案 A：切换到 Vercel（推荐）
 
 1. 在 Vercel 导入国际版仓库
-2. 配置环境变量（参见 [Vercel部署配置示例](/examples/setup-vercel-deployment.md)）
+2. 配置环境变量（参见 [Vercel部署配置示例](setup-vercel-deployment.md)）
 3. 配置外部 PostgreSQL 连接（Neon/Supabase 或保持原数据库）
 4. 部署并测试
 5. 切换 DNS 到 Vercel 域名
@@ -301,7 +301,7 @@ const isProtectedRoute = (pathname: string) => {
 
 ## 相关内容
 
-- [与中文版完整差异对照](/concepts/06-differences-from-cn.md)
-- [Vercel部署](/concepts/05-vercel-deployment.md)
-- [Vercel部署配置示例](/examples/setup-vercel-deployment.md)
-- [符合GDPR的用户删除操作示例](/examples/user-deletion-gdpr.md)
+- [与中文版完整差异对照](../concepts/06-differences-from-cn.md)
+- [Vercel部署](../concepts/05-vercel-deployment.md)
+- [Vercel部署配置示例](setup-vercel-deployment.md)
+- [符合GDPR的用户删除操作示例](user-deletion-gdpr.md)

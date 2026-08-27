@@ -113,7 +113,7 @@ AI 会帮你完成 CSV 编辑和脚本运行，你只需要检查 Diff 确认变
 
 ## 相关链接
 
-- [活动数据格式](/concepts/02-event-data-format.md)
-- [CSV+Python 轻量 CMS 模式](/concepts/01-csv-cms-pattern.md)
-- [贡献流程](/concepts/03-contribution-workflow.md)
-- [运行更新脚本示例](/examples/run-update-script.md)
+- [活动数据格式](../concepts/02-event-data-format.md)
+- [CSV+Python 轻量 CMS 模式](../concepts/01-csv-cms-pattern.md)
+- [贡献流程](../concepts/03-contribution-workflow.md)
+- [运行更新脚本示例](run-update-script.md)

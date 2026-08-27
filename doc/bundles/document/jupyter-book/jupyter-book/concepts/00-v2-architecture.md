@@ -188,8 +188,8 @@ TypeScript 编译为单个 CommonJS 文件（`dist/jupyter-book.cjs`），原因
 
 ## 相关概念
 
-- [01-python-entry-nodeenv](/concepts/01-python-entry-nodeenv.md)：Python 入口与 nodeenv 详解
-- [02-ts-cli-commands](/concepts/02-ts-cli-commands.md)：TS CLI 命令详解
-- [03-myst-cli-relationship](/concepts/03-myst-cli-relationship.md)：与 myst-cli 的关系
-- [04-template-system](/concepts/04-template-system.md)：模板系统
-- [05-migration-from-v1](/concepts/05-migration-from-v1.md)：从 v1 迁移
+- [01-python-entry-nodeenv](01-python-entry-nodeenv.md)：Python 入口与 nodeenv 详解
+- [02-ts-cli-commands](02-ts-cli-commands.md)：TS CLI 命令详解
+- [03-myst-cli-relationship](03-myst-cli-relationship.md)：与 myst-cli 的关系
+- [04-template-system](04-template-system.md)：模板系统
+- [05-migration-from-v1](05-migration-from-v1.md)：从 v1 迁移

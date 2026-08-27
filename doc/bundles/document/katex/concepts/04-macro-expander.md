@@ -179,8 +179,8 @@ Parser 不直接与 Lexer 通信，所有 Token 都通过 MacroExpander 获取�
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [词法分析器（Lexer）](/concepts/03-lexer.md)
-- [解析器（Parser）](/concepts/05-parser.md)
-- [宏系统](/concepts/09-macro-system.md)
-- [函数注册表](/concepts/08-function-registry.md)
+- [架构总览](02-architecture-overview.md)
+- [词法分析器（Lexer）](03-lexer.md)
+- [解析器（Parser）](05-parser.md)
+- [宏系统](09-macro-system.md)
+- [函数注册表](08-function-registry.md)

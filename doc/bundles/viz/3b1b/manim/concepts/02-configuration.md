@@ -264,12 +264,12 @@ manimgl scene.py -a -w --hd
 manimgl scene.py MyScene -w --config_file ./my_config.yml
 ```
 
-完整 CLI 参数列表和速查表参见 [ManimGL CLI 参数速查表](/references/cli-parameters-reference.md)。
+完整 CLI 参数列表和速查表参见 [ManimGL CLI 参数速查表](../references/cli-parameters-reference.md)。
 
 ## 相关概念
 
-- [00 ManimGL 简介与安装](/concepts/00-introduction.md)
-- [01 第一个 Scene：Hello World](/concepts/01-hello-world.md)
-- [08 常量系统与颜色体系](/concepts/08-constants-and-colors.md)
-- [ManimGL CLI 参数速查表](/references/cli-parameters-reference.md)
-- [ManimGL 源码结构与核心模块索引](/references/manimgl-source-code.md)
+- [00 ManimGL 简介与安装](00-introduction.md)
+- [01 第一个 Scene：Hello World](01-hello-world.md)
+- [08 常量系统与颜色体系](08-constants-and-colors.md)
+- [ManimGL CLI 参数速查表](../references/cli-parameters-reference.md)
+- [ManimGL 源码结构与核心模块索引](../references/manimgl-source-code.md)

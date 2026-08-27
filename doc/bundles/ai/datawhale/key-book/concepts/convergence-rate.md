@@ -12,7 +12,7 @@ sources:
 
 # 收敛率（Convergence Rate）
 
-收敛率量化优化算法逼近最优解的**速度**。如果说[一致性](/ai/datawhale/key-book/concepts/consistency)回答"最终能否到达"，收敛率回答的是"多快能到"——在资源约束下，速度往往比极限更关键。
+收敛率量化优化算法逼近最优解的**速度**。如果说一致性回答"最终能否到达"，收敛率回答的是"多快能到"——在资源约束下，速度往往比极限更关键。
 
 ## 收敛率分类
 
@@ -76,10 +76,10 @@ $$\mathbb{P}\left(\max_{i\leq k} S_i > t,\ V_k^2 \leq v\right) \leq \exp\left(-\
 
 ## 与其他概念的关系
 
-- [一致性](/ai/datawhale/key-book/concepts/consistency)：收敛率是一致性的定量化，从"是否"到"多快"
-- [遗憾界](/ai/datawhale/key-book/concepts/regret-bound)：在线学习的遗憾 $O(\sqrt{T})$ 与离线凸优化的次线性收敛率 $O(1/\sqrt{T})$ 数学同源
+- 一致性：收敛率是一致性的定量化，从"是否"到"多快"
+- 遗憾界：在线学习的遗憾 $O(\sqrt{T})$ 与离线凸优化的次线性收敛率 $O(1/\sqrt{T})$ 数学同源
 - 光滑性与强凸性是决定收敛率的两个关键函数性质（附录详述）
 
 ## 参见
 
-- [第 7 章：收敛率](/ai/datawhale/key-book/references/chapter7)
+- 第 7 章：收敛率

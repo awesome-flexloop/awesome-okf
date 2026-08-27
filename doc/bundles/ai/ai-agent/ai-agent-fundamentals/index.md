@@ -38,18 +38,18 @@ related:
 
 | 层级 | 项目 | 语言 | 核心特色 |
 |------|------|------|---------|
-| **Tier 1** | [hermes-agent](../hermes-agent/) | Python | Nous Research 多Provider/平台/工具Agent框架，802个py文件 |
-| **Tier 1** | [veadk-python](../veadk-python/) | Python | 火山引擎 VeADK，基于 google-adk 的企业级 Agent SDK |
-| **Tier 1** | [zleap-agent](../zleap-agent/) | TS/Rust | 12包monorepo，Fiber状态机+Workspace OS+Tauri桌面端 |
-| **Tier 1** | [deepseek-harness](../deepseek-harness/) | TypeScript | 50+包Cordis插件架构，MCP/ACP双协议，Event-Sourcing会话 |
-| **Tier 1** | [intelligent-terminal](../intelligent-terminal/) | C++/Rust | Windows Terminal Agent集成，双进程架构，COM+JSON-RPC |
-| **Tier 2** | [cordis](../cordis/) | TypeScript | 元框架，DI+Fiber生命周期+5种事件模式，9个包 |
-| **Tier 2** | [second-me](../second-me/) | Python/TS | 三层记忆HMM（L0→L1→L2），LoRA个性化数字分身 |
-| **Tier 3** | [agency-agents](../agency-agents/) | Markdown | 270+ Persona角色库，17部门分类，NEXUS编排 |
-| **Tier 3** | [agency-agents-app](../agency-agents-app/) | Rust/Svelte | Tauri 2桌面应用，35个后端命令，Svelte 5 Runes |
-| **Tier 3** | [anthropics-skills](../anthropics-skills/) | Python/MD | Anthropic官方Skills规范，SKILL.md格式+渐进式加载 |
-| **Tier 3** | [book-to-skill](../book-to-skill/) | Python | 知识编译系统，7种格式解析器，四层产出流水线 |
-| **Tier 3** | [i-have-adhd](../i-have-adhd/) | Shell/MD | ADHD认知适配技能，10条输出规则，10+平台集成 |
+| **Tier 1** | [hermes-agent](../hermes-agent/index.md) | Python | Nous Research 多Provider/平台/工具Agent框架，802个py文件 |
+| **Tier 1** | [veadk-python](../veadk-python/index.md) | Python | 火山引擎 VeADK，基于 google-adk 的企业级 Agent SDK |
+| **Tier 1** | [zleap-agent](../zleap-agent/index.md) | TS/Rust | 12包monorepo，Fiber状态机+Workspace OS+Tauri桌面端 |
+| **Tier 1** | [deepseek-harness](../deepseek-harness/index.md) | TypeScript | 50+包Cordis插件架构，MCP/ACP双协议，Event-Sourcing会话 |
+| **Tier 1** | [intelligent-terminal](../intelligent-terminal/index.md) | C++/Rust | Windows Terminal Agent集成，双进程架构，COM+JSON-RPC |
+| **Tier 2** | [cordis](../cordis/index.md) | TypeScript | 元框架，DI+Fiber生命周期+5种事件模式，9个包 |
+| **Tier 2** | [second-me](../second-me/index.md) | Python/TS | 三层记忆HMM（L0→L1→L2），LoRA个性化数字分身 |
+| **Tier 3** | [agency-agents](../agency-agents/index.md) | Markdown | 270+ Persona角色库，17部门分类，NEXUS编排 |
+| **Tier 3** | [agency-agents-app](../agency-agents-app/index.md) | Rust/Svelte | Tauri 2桌面应用，35个后端命令，Svelte 5 Runes |
+| **Tier 3** | [anthropics-skills](../anthropics-skills/index.md) | Python/MD | Anthropic官方Skills规范，SKILL.md格式+渐进式加载 |
+| **Tier 3** | [book-to-skill](../book-to-skill/index.md) | Python | 知识编译系统，7种格式解析器，四层产出流水线 |
+| **Tier 3** | [i-have-adhd](../i-have-adhd/index.md) | Shell/MD | ADHD认知适配技能，10条输出规则，10+平台集成 |
 
 ## 🧩 核心概念（Concepts）
 

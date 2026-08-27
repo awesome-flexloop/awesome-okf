@@ -91,5 +91,5 @@ togglebutton_open_on_print = False  # 打印时不自动展开
 
 ## 相关概念
 
-- [toggle 指令详解](/concepts/02-toggle-directive.md)
-- [打印与国际化示例](/examples/print-and-i18n.md)
+- [toggle 指令详解](02-toggle-directive.md)
+- [打印与国际化示例](../examples/print-and-i18n.md)

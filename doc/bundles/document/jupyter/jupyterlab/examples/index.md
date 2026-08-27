@@ -12,8 +12,8 @@
 ## 返回导航
 
 - [返回首页](../index.md)
-- [概念文档](../concepts/)
-- [参考资料](../references/)
+- [概念文档](../concepts/index.md)
+- [参考资料](../references/index.md)
 
 ```{toctree}
 :hidden:

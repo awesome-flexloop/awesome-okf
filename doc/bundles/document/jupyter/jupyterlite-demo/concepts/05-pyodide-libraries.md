@@ -247,9 +247,9 @@ update_display(square, display_id='my-square')
 
 ## 相关概念
 
-- [三大内核生态对比](/concepts/03-kernel-ecosystem.md)
-- [内容目录与数据文件组织](/concepts/04-content-and-data.md)
-- [站点配置详解](/concepts/02-site-configuration.md)
-- [Python 基础使用示例](/examples/02-python-basics.md)
-- [数据可视化实战](/examples/03-data-visualization.md)
-- [交互式控件实战](/examples/04-interactive-widgets.md)
+- [三大内核生态对比](03-kernel-ecosystem.md)
+- [内容目录与数据文件组织](04-content-and-data.md)
+- [站点配置详解](02-site-configuration.md)
+- [Python 基础使用示例](../examples/02-python-basics.md)
+- [数据可视化实战](../examples/03-data-visualization.md)
+- [交互式控件实战](../examples/04-interactive-widgets.md)

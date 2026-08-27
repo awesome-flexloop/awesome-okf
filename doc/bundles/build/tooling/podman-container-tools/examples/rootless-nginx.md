@@ -202,7 +202,7 @@ curl http://localhost:8080
 
 ## 相关概念
 
-- [Rootless容器](/concepts/10-rootless.md)
-- [systemd与Quadlet](/concepts/12-systemd-quadlet.md)
-- [容器基础](/concepts/04-container-basics.md)
-- [入门指南](/concepts/01-getting-started.md)
+- [Rootless容器](../concepts/10-rootless.md)
+- [systemd与Quadlet](../concepts/12-systemd-quadlet.md)
+- [容器基础](../concepts/04-container-basics.md)
+- [入门指南](../concepts/01-getting-started.md)

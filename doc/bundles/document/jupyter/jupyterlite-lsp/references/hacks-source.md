@@ -98,7 +98,7 @@ applyHacks 返回 `{ hacked: true }`，但调用方不使用返回值。
 
 ## 相关概念
 
-- [Mock-Socket 桥接机制](/concepts/05-mock-socket-bridge.md)
-- [三插件体系](/concepts/03-plugin-system.md)
-- [构建系统](/concepts/07-build-system.md)
-- [核心包源码引用](/references/core-plugin-source.md)
+- [Mock-Socket 桥接机制](../concepts/05-mock-socket-bridge.md)
+- [三插件体系](../concepts/03-plugin-system.md)
+- [构建系统](../concepts/07-build-system.md)
+- [核心包源码引用](core-plugin-source.md)

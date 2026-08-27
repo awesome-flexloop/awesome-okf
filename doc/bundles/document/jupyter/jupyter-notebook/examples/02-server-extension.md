@@ -470,5 +470,5 @@ from notebook.auth import passwd
 
 ## 下一步
 
-- [集成自定义认证](./04-custom-auth.md) 学习替换默认认证系统
-- [自定义Shell布局](./03-customize-shell.md) 前端+后端联动的完整示例
+- [集成自定义认证](04-custom-auth.md) 学习替换默认认证系统
+- [自定义Shell布局](03-customize-shell.md) 前端+后端联动的完整示例

@@ -414,8 +414,8 @@ manimgl simple_animation.py SimpleAnimation -w --hd
 
 ## 相关概念
 
-- [05 动画基础](/concepts/05-animation-basics.md) — Animation 生命周期、run_time/lag_ratio/rate_func 参数、内置动画类型（ShowCreation/社区版Create、FadeIn/FadeOut/Transform）、self.play() 机制
-- [06 Transform 深度解析](/concepts/06-transform-deep-dive.md) — Transform 与 ReplacementTransform 的区别、target_copy 机制、路径插值
-- [03 Mobject：数学对象基类](/concepts/03-mobject-fundamentals.md) — animate 声明式语法糖、shift/scale/rotate/set_color 等几何变换方法
-- [04 VMobject 与几何图形](/concepts/04-vmobject-and-geometry.md) — VMobject 描边填充、Circle/Square/Triangle/Arrow 几何类
-- [缓动函数可视化参考](/references/rate-functions-gallery.md) — 15 种内置 rate_func 的曲线图和效果对比
+- [05 动画基础](../concepts/05-animation-basics.md) — Animation 生命周期、run_time/lag_ratio/rate_func 参数、内置动画类型（ShowCreation/社区版Create、FadeIn/FadeOut/Transform）、self.play() 机制
+- [06 Transform 深度解析](../concepts/06-transform-deep-dive.md) — Transform 与 ReplacementTransform 的区别、target_copy 机制、路径插值
+- [03 Mobject：数学对象基类](../concepts/03-mobject-fundamentals.md) — animate 声明式语法糖、shift/scale/rotate/set_color 等几何变换方法
+- [04 VMobject 与几何图形](../concepts/04-vmobject-and-geometry.md) — VMobject 描边填充、Circle/Square/Triangle/Arrow 几何类
+- [缓动函数可视化参考](../references/rate-functions-gallery.md) — 15 种内置 rate_func 的曲线图和效果对比

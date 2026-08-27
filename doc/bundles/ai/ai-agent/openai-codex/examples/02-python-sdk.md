@@ -369,7 +369,7 @@ python -m pydoc openai_codex.Codex
 
 ## 相关示例
 
-- [CLI 基本使用](./01-basic-usage.md)
+- [CLI 基本使用](01-basic-usage.md)
 
 ## 相关概念
 

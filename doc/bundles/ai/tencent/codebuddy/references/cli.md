@@ -118,7 +118,7 @@ CLI 使用按 Token 消耗计费（F-038）。
 
 ## 相关概念
 
-- [CLI](/concepts/02-cli.md) — CLI 架构与分层记忆详解
-- [产品矩阵总览](/concepts/00-product-matrix.md) — CLI 在三态一体中的定位
-- [CLI 快速入门](/examples/quick-start-cli.md) — 安装、初始化与常用命令实战
-- [CodeBuddy IDE](/concepts/01-ide.md) — CLI 与 IDE 共享的高级能力
+- [CLI](../concepts/02-cli.md) — CLI 架构与分层记忆详解
+- [产品矩阵总览](../concepts/00-product-matrix.md) — CLI 在三态一体中的定位
+- [CLI 快速入门](../examples/quick-start-cli.md) — 安装、初始化与常用命令实战
+- [CodeBuddy IDE](../concepts/01-ide.md) — CLI 与 IDE 共享的高级能力

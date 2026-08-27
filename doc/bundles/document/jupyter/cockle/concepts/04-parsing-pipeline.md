@@ -369,6 +369,6 @@ AST:
 
 ## 相关概念
 
-- [命令系统](/concepts/03-command-system.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [IO 系统](/concepts/05-io-system.md)
+- [命令系统](03-command-system.md)
+- [架构总览](02-architecture-overview.md)
+- [IO 系统](05-io-system.md)

@@ -50,7 +50,7 @@ jupyterlab_<name>/
 
 ## _jupyter_labextension_paths 入口点
 
-JupyterLab 发现扩展的标准入口点。所有5个包的 `__init__.py` 结构完全一致：[^fasta-init][^geojson-init][^katex-init][^mathjax2-init][^vega3-init]
+JupyterLab 发现扩展的标准入口点。所有5个包的 `__init__.py` 结构完全一致：[^fasta-init] [^geojson-init] [^katex-init] [^mathjax2-init] [^vega3-init]
 
 ```python
 # jupyterlab_fasta/__init__.py（示例）

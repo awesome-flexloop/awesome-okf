@@ -27,37 +27,37 @@ stale_after: 2027-08-23
 
 | 文档 | 说明 |
 |------|------|
-| [整体架构概览](/concepts/00-overview-ddd-architecture.md) | 前后端分离、DDD 五层、双端代码生成、Eino+FlowGram 引擎 |
-| [DDD 分层架构详解](/concepts/01-ddd-layers.md) | api/application/crossdomain/domain/infra 五层职责与协作 |
-| [Thrift IDL 与双端代码生成](/concepts/02-thrift-idl-codegen.md) | 契约优先开发、hz/idl2ts 代码生成、18 服务聚合 |
-| [认证与中间件体系](/concepts/03-auth-middleware.md) | SessionAuthMW/AdminAuthMW 双层认证、7 中间件链 |
-| [可插拔基础设施架构](/concepts/04-pluggable-infrastructure.md) | 工厂模式多后端、云端/私有部署适配 |
+| [整体架构概览](concepts/00-overview-ddd-architecture.md) | 前后端分离、DDD 五层、双端代码生成、Eino+FlowGram 引擎 |
+| [DDD 分层架构详解](concepts/01-ddd-layers.md) | api/application/crossdomain/domain/infra 五层职责与协作 |
+| [Thrift IDL 与双端代码生成](concepts/02-thrift-idl-codegen.md) | 契约优先开发、hz/idl2ts 代码生成、18 服务聚合 |
+| [认证与中间件体系](concepts/03-auth-middleware.md) | SessionAuthMW/AdminAuthMW 双层认证、7 中间件链 |
+| [可插拔基础设施架构](concepts/04-pluggable-infrastructure.md) | 工厂模式多后端、云端/私有部署适配 |
 
 ### 特性与运维
 
 | 文档 | 说明 |
 |------|------|
-| [LLM 模型集成](/concepts/05-llm-integration.md) | Eino 框架、6 协议支持、序号后缀多模型配置 |
-| [Rush.js Monorepo 前端架构](/concepts/06-rushjs-monorepo.md) | 四级包层次、Rsbuild 构建、Semi+Zustand 技术栈 |
-| [工作流与智能体编辑器](/concepts/07-workflow-editor.md) | FlowGram 引擎、workflow/agent-ide 包结构 |
-| [部署与运维](/concepts/08-deployment-operations.md) | Docker Compose、Helm K8s、Makefile、数据库迁移 |
+| [LLM 模型集成](concepts/05-llm-integration.md) | Eino 框架、6 协议支持、序号后缀多模型配置 |
+| [Rush.js Monorepo 前端架构](concepts/06-rushjs-monorepo.md) | 四级包层次、Rsbuild 构建、Semi+Zustand 技术栈 |
+| [工作流与智能体编辑器](concepts/07-workflow-editor.md) | FlowGram 引擎、workflow/agent-ide 包结构 |
+| [部署与运维](concepts/08-deployment-operations.md) | Docker Compose、Helm K8s、Makefile、数据库迁移 |
 
 ## 实践示例
 
 | 示例 | 说明 |
 |------|------|
-| [Docker Compose 快速入门](/examples/docker-quickstart.md) | 一键部署、环境准备、服务验证、首次注册 |
-| [添加自定义 LLM 模型](/examples/add-llm-model.md) | Ollama 本地模型、OpenAI 兼容 API、多模型混合配置 |
-| [配置基础设施后端](/examples/configure-infrastructure.md) | 切换向量库、存储、嵌入、MQ 等可插拔组件 |
+| [Docker Compose 快速入门](examples/docker-quickstart.md) | 一键部署、环境准备、服务验证、首次注册 |
+| [添加自定义 LLM 模型](examples/add-llm-model.md) | Ollama 本地模型、OpenAI 兼容 API、多模型混合配置 |
+| [配置基础设施后端](examples/configure-infrastructure.md) | 切换向量库、存储、嵌入、MQ 等可插拔组件 |
 
 ## 技术参考
 
 | 参考 | 说明 |
 |------|------|
-| [后端架构参考](/references/backend-architecture.md) | DDD 五层目录、路由注册、中间件、错误码、初始化顺序 |
-| [前端架构参考](/references/frontend-architecture.md) | Rush.js 配置、四级包层次、20+ arch 包、Rsbuild |
-| [IDL 与 API 契约参考](/references/idl-api-contracts.md) | Thrift IDL 组织、18 服务、Base/BaseResp、bigint 处理 |
-| [部署与基础设施参考](/references/deployment-infrastructure.md) | 11 Docker 服务、270+ 环境变量、可插拔选项、Helm Chart |
+| [后端架构参考](references/backend-architecture.md) | DDD 五层目录、路由注册、中间件、错误码、初始化顺序 |
+| [前端架构参考](references/frontend-architecture.md) | Rush.js 配置、四级包层次、20+ arch 包、Rsbuild |
+| [IDL 与 API 契约参考](references/idl-api-contracts.md) | Thrift IDL 组织、18 服务、Base/BaseResp、bigint 处理 |
+| [部署与基础设施参考](references/deployment-infrastructure.md) | 11 Docker 服务、270+ 环境变量、可插拔选项、Helm Chart |
 
 ```{toctree}
 :hidden:

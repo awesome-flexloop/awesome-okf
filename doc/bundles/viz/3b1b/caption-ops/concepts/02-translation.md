@@ -405,9 +405,9 @@ translations = gpt4_translate(sentences, "Chinese", n_context_sentences=2)
 
 ## 相关概念
 
-- [00 caption-ops 工具集总览](/concepts/00-caption-ops-overview.md)
-- [01 音频转录模块](/concepts/01-transcription.md)
-- [SRT 操作与智能分段](/concepts/03-srt-operations.md)
-- [完整管线工作流](/concepts/04-pipeline-workflow.md)
-- [CLI 脚本参考](/references/scripts-reference.md)
-- [依赖与 API 配置](/references/dependencies.md)
+- [00 caption-ops 工具集总览](00-caption-ops-overview.md)
+- [01 音频转录模块](01-transcription.md)
+- [SRT 操作与智能分段](03-srt-operations.md)
+- [完整管线工作流](04-pipeline-workflow.md)
+- [CLI 脚本参考](../references/scripts-reference.md)
+- [依赖与 API 配置](../references/dependencies.md)

@@ -211,8 +211,8 @@ parseTree 入口函数（[src/parseTree.ts](https://github.com/KaTeX/KaTeX/blob/
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [宏展开器（MacroExpander）](/concepts/04-macro-expander.md)
-- [函数注册表](/concepts/08-function-registry.md)
-- [渲染管线](/concepts/06-render-pipeline.md)
-- [配置系统](/concepts/10-settings-options.md)
+- [架构总览](02-architecture-overview.md)
+- [宏展开器（MacroExpander）](04-macro-expander.md)
+- [函数注册表](08-function-registry.md)
+- [渲染管线](06-render-pipeline.md)
+- [配置系统](10-settings-options.md)

@@ -164,7 +164,7 @@ myst_heading_slug_func: github
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [Docutils 独立使用](/concepts/15-docutils-standalone.md)
-- [配置系统](/concepts/04-config-system.md)
-- [CLI 工具使用示例](/examples/05-standalone-cli.md)
+- [快速开始](01-getting-started.md)
+- [Docutils 独立使用](15-docutils-standalone.md)
+- [配置系统](04-config-system.md)
+- [CLI 工具使用示例](../examples/05-standalone-cli.md)

@@ -71,7 +71,7 @@ Team Compass 是 Jupyter 治理体系中**子项目层**的运作手册：
 
 ## 相关概念
 
-- [团队成员体系](/concepts/01-team-membership.md)
-- [成为团队成员](/concepts/02-becoming-member.md)
-- [决策机制](/concepts/03-decision-making.md)
-- [文档构建基础设施](/concepts/06-doc-infrastructure.md)
+- [团队成员体系](01-team-membership.md)
+- [成为团队成员](02-becoming-member.md)
+- [决策机制](03-decision-making.md)
+- [文档构建基础设施](06-doc-infrastructure.md)

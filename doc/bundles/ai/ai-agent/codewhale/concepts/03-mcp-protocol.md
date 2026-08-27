@@ -293,8 +293,8 @@ struct JsonRpcRequest {
 
 ## 相关概念
 
-- [Agent 核心运行时](/concepts/02-agent-core.md) — Runtime 中的 mcp_manager 组件
-- [工具系统](/concepts/04-tool-system.md) — ToolRegistry 与 MCP 工具集成
-- [Fleet 多 Agent](/concepts/05-fleet-subagents.md) — 子 agent 继承工具注册表
-- [沙箱与执行策略](/concepts/07-sandbox-execpolicy.md) — MCP 工具调用的权限控制
-- [CodeWhale 简介](/concepts/00-introduction.md) — 项目概述
+- [Agent 核心运行时](02-agent-core.md) — Runtime 中的 mcp_manager 组件
+- [工具系统](04-tool-system.md) — ToolRegistry 与 MCP 工具集成
+- [Fleet 多 Agent](05-fleet-subagents.md) — 子 agent 继承工具注册表
+- [沙箱与执行策略](07-sandbox-execpolicy.md) — MCP 工具调用的权限控制
+- [CodeWhale 简介](00-introduction.md) — 项目概述

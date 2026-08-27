@@ -108,6 +108,6 @@ GodGPT 拥有 AI 模型、软件、品牌标识（商标）及服务相关内容
 
 ## 相关概念
 
-- [神圣智能 — GodGPT产品定位](/concepts/00-divine-intelligence.md)
-- [核心功能 — 共情、模式与智慧](/concepts/01-core-features.md)
-- [商业模式 — 订阅制与推广联盟](/concepts/02-business-model.md)
+- [神圣智能 — GodGPT产品定位](00-divine-intelligence.md)
+- [核心功能 — 共情、模式与智慧](01-core-features.md)
+- [商业模式 — 订阅制与推广联盟](02-business-model.md)

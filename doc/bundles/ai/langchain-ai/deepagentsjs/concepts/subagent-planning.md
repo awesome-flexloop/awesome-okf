@@ -159,6 +159,6 @@ const agent = createDeepAgent({
 
 ## 相关阅读
 
-- [总览](/ai/langchain-ai/deepagentsjs/concepts/overview)
-- [上下文与 Todo 管理](/ai/langchain-ai/deepagentsjs/concepts/context-todo)
-- [API 参考](/ai/langchain-ai/deepagentsjs/references/api)
+- 总览
+- 上下文与 Todo 管理
+- API 参考

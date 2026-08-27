@@ -29,7 +29,7 @@ class GenerateScenesNode(Node):
 - `shared` — 共享数据字典
 
 **读取：**
-- `shared["md_path"]` — Markdown 文件路径（由 [main.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/main.py) 设置）
+- `shared["md_path"]` — Markdown 文件路径（由 main.py 设置）
 
 **写入：**
 - `shared["md_content"]` — 加载的 Markdown 文件全文
@@ -137,4 +137,4 @@ scenes >> script  # 默认边连接到 GenerateScriptNode
 
 ## 源码位置
 
-[nodes.py#L19-L68](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/nodes.py#L19-L68)
+nodes.py#L19-L68

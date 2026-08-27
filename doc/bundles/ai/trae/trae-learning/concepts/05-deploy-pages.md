@@ -115,7 +115,7 @@ npm run docs:preview  # 预览构建结果
 
 ## 相关链接
 
-- [VitePress 站点架构](/concepts/01-vitepress-setup.md)
-- [Tutorials 实战教程](/concepts/04-tutorial-content.md)
-- [本地预览与构建示例](/examples/local-preview.md)
-- [文档站源码索引](/references/learning-source.md)
+- [VitePress 站点架构](01-vitepress-setup.md)
+- [Tutorials 实战教程](04-tutorial-content.md)
+- [本地预览与构建示例](../examples/local-preview.md)
+- [文档站源码索引](../references/learning-source.md)

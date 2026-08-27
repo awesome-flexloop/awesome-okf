@@ -316,6 +316,6 @@ TEST_IMAGE=my-image pytest tests/ -v -k "test_package"
 
 ## 相关概念
 
-- [测试框架详解](/concepts/05-testing-framework.md)
-- [Dockerfile模板与编写指南](/concepts/04-dockerfile-template.md)
-- [最佳实践](/concepts/09-best-practices.md)
+- [测试框架详解](../concepts/05-testing-framework.md)
+- [Dockerfile模板与编写指南](../concepts/04-dockerfile-template.md)
+- [最佳实践](../concepts/09-best-practices.md)

@@ -191,6 +191,6 @@ docker-compose up
 
 ## 相关文档
 
-- [架构概览](/concepts/02-architecture-overview.md)：理解系统架构
-- [部署指南](/concepts/13-deployment.md)：生产环境部署
-- [基本配置示例](/examples/01-basic-config.md)：配置文件示例
+- [架构概览](02-architecture-overview.md)：理解系统架构
+- [部署指南](13-deployment.md)：生产环境部署
+- [基本配置示例](../examples/01-basic-config.md)：配置文件示例

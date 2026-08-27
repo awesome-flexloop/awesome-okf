@@ -189,6 +189,6 @@ print(f"SHAP: {shap.__version__}")
 
 ## 相关概念
 
-- [Dockerfile模板与编写指南](/concepts/04-dockerfile-template.md)
-- [测试框架详解](/concepts/05-testing-framework.md)
-- [最佳实践](/concepts/09-best-practices.md)
+- [Dockerfile模板与编写指南](../concepts/04-dockerfile-template.md)
+- [测试框架详解](../concepts/05-testing-framework.md)
+- [最佳实践](../concepts/09-best-practices.md)

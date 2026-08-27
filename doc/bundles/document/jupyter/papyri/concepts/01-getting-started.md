@@ -162,4 +162,4 @@ pnpm dev
 - [Papyri 简介](00-introduction.md)
 - [架构总览](02-architecture-overview.md)
 - [配置系统](07-config-system.md)
-- [基本 gen 工作流示例](/examples/01-basic-gen-workflow.md)
+- 基本 gen 工作流示例

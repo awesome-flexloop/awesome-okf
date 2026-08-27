@@ -17,7 +17,7 @@ sources:
 
 本文档登记 KaTeX 官网（https://katex.org）17 个公开页面的稳定 ID、URL、标题、页面用途和引用提示，作为 Wiki 中所有官网事实溯源的信源目标。后续概念文档与示例的 `sources.resource` 可通过 `/references/katex-website.md#<id>` 引用本文件，或直接引用对应 URL。
 
-> 采集日期：2026-08-23。官网版本标注存在不一致：Versions 页面标注当前稳定版为 0.16.47，而 Node/Browser/Font 等文档页 CDN 链接引用 0.18.4，Auto-render 页面引用 0.18.1。本 bundle 以源码 v0.18.4 为基准，详见 [事实清单修正-8](/spec/facts.md#修正-8官网版本号标注不一致)。
+> 采集日期：2026-08-23。官网版本标注存在不一致：Versions 页面标注当前稳定版为 0.16.47，而 Node/Browser/Font 等文档页 CDN 链接引用 0.18.4，Auto-render 页面引用 0.18.1。本 bundle 以源码 v0.18.4 为基准，详见 [事实清单修正-8](../spec/facts.md#修正-8官网版本号标注不一致)。
 
 ### 页面清单
 
@@ -67,5 +67,5 @@ sources:
 
 1. **稳定 ID 优先**：文档 `sources` 中引用官网页面时，优先使用本文件定义的稳定 ID（如 `/references/katex-website.md#web-options`），而非直接硬编码 URL。
 2. **URL 直引**：需要直接可点击链接时，可在正文使用 Markdown 链接指向官网 URL，但 `sources.resource` 仍应指向本文件对应锚点。
-3. **版本标注**：引用 CDN 链接或版本号时，必须注明该 bundle 基于 v0.18.4，官网 Versions 页面标注差异参见 [facts.md 修正-8](/spec/facts.md#修正-8官网版本号标注不一致)。
+3. **版本标注**：引用 CDN 链接或版本号时，必须注明该 bundle 基于 v0.18.4，官网 Versions 页面标注差异参见 [facts.md 修正-8](../spec/facts.md#修正-8官网版本号标注不一致)。
 4. **默认值溯源**：配置选项默认值以 web-options 页面为权威来源；源码中未显式标注默认值的选项（strict/trust/globalGroup）不得仅凭源码推断。

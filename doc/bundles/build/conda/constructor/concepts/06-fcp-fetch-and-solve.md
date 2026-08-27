@@ -263,5 +263,5 @@ FCP 完成后，info 字典中写入以下关键数据供后续模块使用：
 
 ## 下一步
 
-- [07-conda_interface 防腐层](./07-conda-interface.md)：了解 FCP 使用的 conda API 如何被封装
-- [08-Preconda Payload 准备](./08-preconda-payload.md)：了解下载后的包如何被打包进安装程序
+- [07-conda_interface 防腐层](07-conda-interface.md)：了解 FCP 使用的 conda API 如何被封装
+- [08-Preconda Payload 准备](08-preconda-payload.md)：了解下载后的包如何被打包进安装程序

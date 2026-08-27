@@ -246,6 +246,6 @@ pytest-jupyter
 ---
 
 **下一步阅读：**
-- [Core插件详解](/concepts/03-core-plugin.md) — 深入环境隔离、异步测试钩子和临时目录fixtures
-- [Client插件详解](/concepts/04-client-plugin.md) — 内核管理和ZMQ资源
-- [Server插件详解](/concepts/05-server-plugin.md) — ServerApp生命周期和HTTP/WebSocket测试
+- [Core插件详解](03-core-plugin.md) — 深入环境隔离、异步测试钩子和临时目录fixtures
+- [Client插件详解](04-client-plugin.md) — 内核管理和ZMQ资源
+- [Server插件详解](05-server-plugin.md) — ServerApp生命周期和HTTP/WebSocket测试

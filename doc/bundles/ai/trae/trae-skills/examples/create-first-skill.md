@@ -144,12 +144,12 @@ A: 在 Examples 或 Instructions 中给出明确的输出模板和格式要求�
 
 ## 相关概念
 
-- [SKILL.md 格式规范](/concepts/01-skill-format.md)
-- [纯 Prompt 型技能](/concepts/03-prompt-only-skills.md)
-- [编写自定义 Skill](/concepts/07-write-skill.md)
-- [触发条件设计示例](/examples/trigger-condition-design.md)
+- [SKILL.md 格式规范](../concepts/01-skill-format.md)
+- [纯 Prompt 型技能](../concepts/03-prompt-only-skills.md)
+- [编写自定义 Skill](../concepts/07-write-skill.md)
+- [触发条件设计示例](trigger-condition-design.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/skills-source.md)
-- [带 Python 脚本的 Skill 示例](/examples/skill-with-python-script.md)
+- [源码信源索引](../references/skills-source.md)
+- [带 Python 脚本的 Skill 示例](skill-with-python-script.md)

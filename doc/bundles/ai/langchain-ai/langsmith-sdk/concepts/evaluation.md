@@ -161,7 +161,7 @@ await evaluate(
 
 ## 相关概念
 
-- [SDK 总览](/ai/langchain-ai/langsmith-sdk/concepts/overview.md)
-- [traceable 装饰器](/ai/langchain-ai/langsmith-sdk/concepts/traceable-decorator.md)
-- [RunTree 追踪模型](/ai/langchain-ai/langsmith-sdk/concepts/run-tree-tracing.md)
-- [快速追踪与评测示例](/ai/langchain-ai/langsmith-sdk/examples/quickstart-trace-and-evaluate.md)
+- [SDK 总览](overview.md)
+- [traceable 装饰器](traceable-decorator.md)
+- [RunTree 追踪模型](run-tree-tracing.md)
+- [快速追踪与评测示例](../examples/quickstart-trace-and-evaluate.md)

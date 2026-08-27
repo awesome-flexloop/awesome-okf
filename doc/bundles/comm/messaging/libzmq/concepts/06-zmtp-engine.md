@@ -321,8 +321,8 @@ flags 位：
 
 ## 相关概念
 
-- [会话与连接生命周期](/concepts/05-session.md) — engine 通过 plug 插入 session，握手完成后 engine_ready
-- [编解码与帧格式](/concepts/12-encoder-decoder.md) — v2_encoder/decoder 状态机和零拷贝
-- [消息与引用计数](/concepts/03-message.md) — msg_t 命令帧标志位
-- [套接字选项体系](/concepts/09-options.md) — heartbeat/mechanism/curve 密钥等选项
-- [传输层](/concepts/10-transport.md) — TCP fd 如何传递给 engine
+- [会话与连接生命周期](05-session.md) — engine 通过 plug 插入 session，握手完成后 engine_ready
+- [编解码与帧格式](12-encoder-decoder.md) — v2_encoder/decoder 状态机和零拷贝
+- [消息与引用计数](03-message.md) — msg_t 命令帧标志位
+- [套接字选项体系](09-options.md) — heartbeat/mechanism/curve 密钥等选项
+- [传输层](10-transport.md) — TCP fd 如何传递给 engine

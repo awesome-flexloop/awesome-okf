@@ -23,4 +23,4 @@ Deep Agents CLI 部署工具的使用文档。
 
 ## 相关概念
 
-- [CLI部署工具链](/ai/datawhale/deepagents/concepts/cli-toolchain)
+- CLI部署工具链

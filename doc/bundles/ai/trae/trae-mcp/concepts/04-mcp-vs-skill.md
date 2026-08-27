@@ -92,8 +92,8 @@ trae-mcp 仓库中存在 MCP 和 Skill 混淆的典型案例：
 
 ## 相关链接
 
-- [MCP 简介](/concepts/00-introduction.md)
-- [MCP 三层模型](/concepts/01-mcp-architecture.md)
-- [MCP 配置格式](/concepts/02-mcp-configuration.md)
-- [CloudBase MCP](/concepts/03-cloudbase-mcp.md)
-- [MCP 开发入门](/concepts/05-mcp-development.md)
+- [MCP 简介](00-introduction.md)
+- [MCP 三层模型](01-mcp-architecture.md)
+- [MCP 配置格式](02-mcp-configuration.md)
+- [CloudBase MCP](03-cloudbase-mcp.md)
+- [MCP 开发入门](05-mcp-development.md)

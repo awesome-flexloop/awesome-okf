@@ -317,9 +317,9 @@ for tag, content in sorted(parser.og_tags.items()):
 
 ## 相关概念
 
-- [配置选项全解](/concepts/02-configuration.md)
-- [ReadTheDocs 自动检测与集成](/concepts/07-readthedocs-integration.md)
-- [社交卡片生成](/concepts/08-social-cards.md)
-- [自定义Meta标签与扩展协作](/concepts/09-custom-meta-tags.md)
-- [页面级定制示例](/examples/per-page-customization.md)
-- [sphinxext-opengraph 源码信源登记](/references/sphinxext-opengraph-source.md)
+- [配置选项全解](../concepts/02-configuration.md)
+- [ReadTheDocs 自动检测与集成](../concepts/07-readthedocs-integration.md)
+- [社交卡片生成](../concepts/08-social-cards.md)
+- [自定义Meta标签与扩展协作](../concepts/09-custom-meta-tags.md)
+- [页面级定制示例](per-page-customization.md)
+- [sphinxext-opengraph 源码信源登记](../references/sphinxext-opengraph-source.md)

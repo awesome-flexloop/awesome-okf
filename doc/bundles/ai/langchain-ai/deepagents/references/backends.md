@@ -117,6 +117,6 @@ Deep Agents 遵循"信任 LLM"模型——代理可以做其工具允许的任�
 
 ## 相关概念
 
-- [核心 API](/ai/langchain-ai/deepagents/references/api) — `create_deep_agent(backend=)` 参数
-- [Todo 与上下文管理](/ai/langchain-ai/deepagents/concepts/todo-context) — 摘要卸载如何使用后端
-- [lca-deepagents 变体](/ai/langchain-ai/deepagents/references/lca-variant) — 课程示例中的后端使用模式
+- 核心 API — `create_deep_agent(backend=)` 参数
+- Todo 与上下文管理 — 摘要卸载如何使用后端
+- lca-deepagents 变体 — 课程示例中的后端使用模式

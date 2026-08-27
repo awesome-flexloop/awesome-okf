@@ -26,7 +26,7 @@ examples:
 
 # Wan-Video Generator 教程
 
-Wan-Video Generator 是一个基于 [PocketFlow](/ai/pocketflow/pocketflow-core/) 框架的 AI 视频生成应用。它读取任意 Markdown 技术文章，自动生成带有配音、动画和角色一致性的完整卡通教学视频——只需一条命令，无需任何剪辑软件。
+Wan-Video Generator 是一个基于 [PocketFlow](../pocketflow-core/index.md) 框架的 AI 视频生成应用。它读取任意 Markdown 技术文章，自动生成带有配音、动画和角色一致性的完整卡通教学视频——只需一条命令，无需任何剪辑软件。
 
 ## 核心特性
 
@@ -114,10 +114,10 @@ shared = {
 
 ## 源码位置
 
-- 节点定义：[nodes.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/nodes.py)
-- 流程编排：[flow.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/flow.py)
-- 入口程序：[main.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/main.py)
-- 工具函数：[utils/](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/utils/)
+- 节点定义：nodes.py
+- 流程编排：flow.py
+- 入口程序：main.py
+- 工具函数：utils/
 
 ```{toctree}
 :hidden:

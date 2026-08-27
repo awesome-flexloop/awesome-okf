@@ -38,7 +38,7 @@ Skills 本质上是**领域专家知识的结构化封装**——它们将某个
 
 Skills 与 Commands 的关键区别：Commands 需要用户**主动输入**命令名称来触发，而 Skills 由 AI 代理根据用户请求的语义**自动判断**是否需要加载——用户无需知道 Skill 的存在，代理会在合适的场景下自主应用。
 
-> 🔗 扩展阅读：Claude Code 插件体系详见 [/claude-code/concepts/01-plugin-system.md](/claude-code/concepts/01-plugin-system.md)
+> 🔗 扩展阅读：Claude Code 插件体系详见 [/claude-code/concepts/01-plugin-system.md](../../claude-code/concepts/01-plugin-system.md)
 
 ## SKILL.md 基本结构
 
@@ -140,7 +140,7 @@ Anthropic 官方提供了 19 个开箱即用的 Skills，按功能分为四大�
 | `academy-guide` | 学院指南 |
 | `discernment-nudge` | 辨别力提示 |
 
-> 🔗 完整索引详见 [全部 Skills 索引](/official-skills/references/skills-index.md)
+> 🔗 完整索引详见 [全部 Skills 索引](../references/skills-index.md)
 
 ## 如何安装与使用 Skills
 
@@ -188,7 +188,7 @@ git clone https://github.com/someone/skill-repo.git ~/.claude/skills/skill-name
 
 简单来说：Claude Code Skills 是**本地文件级别的知识封装**，用于增强代理在本地环境中的能力；而 SDK Beta Skills API 是**云端 API 级别的功能抽象**，用于在 API 调用中封装可复用的业务逻辑。
 
-> 🔗 SDK Beta Agents/Skills 详见 [/python-sdk/concepts/08-beta-agents.md](/python-sdk/concepts/08-beta-agents.md)
+> 🔗 SDK Beta Agents/Skills 详见 [/python-sdk/concepts/08-beta-agents.md](../../python-sdk/concepts/08-beta-agents.md)
 
 ## 与 Claude Code 插件体系的关系
 
@@ -210,13 +210,13 @@ my-plugin/
 └── hooks/               # 生命周期钩子
 ```
 
-> 🔗 插件体系详解详见 [/claude-code/concepts/01-plugin-system.md](/claude-code/concepts/01-plugin-system.md)
+> 🔗 插件体系详解详见 [/claude-code/concepts/01-plugin-system.md](../../claude-code/concepts/01-plugin-system.md)
 
 ## 相关概念
 
 - [SKILL.md 格式规范](01-skill-format.md) — 深入了解 SKILL.md 的完整格式规范和最佳实践
 - [Skill Creator 工具详解](02-skill-creator.md) — 学习如何使用 skill-creator 元技能创建和评估自定义 Skills
 - [Claude API Skill 详解](03-claude-api-skill.md) — claude-api Skill 的详细使用指南
-- [全部 Skills 索引](/official-skills/references/skills-index.md) — 19 个官方 Skills 的完整清单和功能说明
-- [Claude Code 插件体系](/claude-code/concepts/01-plugin-system.md) — Skills 在 Claude Code 插件生态中的定位
-- [Python SDK Beta Agents](/python-sdk/concepts/08-beta-agents.md) — API 层面的 Skills/Agents 概念（与本地 Skills 区分）
+- [全部 Skills 索引](../references/skills-index.md) — 19 个官方 Skills 的完整清单和功能说明
+- [Claude Code 插件体系](../../claude-code/concepts/01-plugin-system.md) — Skills 在 Claude Code 插件生态中的定位
+- [Python SDK Beta Agents](../../python-sdk/concepts/08-beta-agents.md) — API 层面的 Skills/Agents 概念（与本地 Skills 区分）

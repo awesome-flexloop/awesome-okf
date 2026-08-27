@@ -69,5 +69,5 @@ sources:
 | LangGraph | 图结构工作流 | 节点+边+循环 | 有限 |
 
 ## 相关概念
-- [Agent框架开发](/ai/datawhale/hello-agents/concepts/agent-framework-development)
-- [多Agent协作](/ai/datawhale/hello-agents/concepts/multi-agent-collaboration)
+- Agent框架开发
+- 多Agent协作

@@ -218,5 +218,5 @@ from conda.base.context import context
 
 ## 下一步
 
-- [06-FCP 依赖求解与包下载](./06-fcp-fetch-and-solve.md)：了解防腐层中的 Solver/Fetch API 如何在 FCP 中使用
-- [08-Preconda Payload 准备](./08-preconda-payload.md)：了解 repodata 精简和缓存写入的用途
+- [06-FCP 依赖求解与包下载](06-fcp-fetch-and-solve.md)：了解防腐层中的 Solver/Fetch API 如何在 FCP 中使用
+- [08-Preconda Payload 准备](08-preconda-payload.md)：了解 repodata 精简和缓存写入的用途

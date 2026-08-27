@@ -178,13 +178,13 @@ Git 面板通过 Poll 轮询机制（默认 3 秒间隔）自动刷新状态。�
 
 ## 相关示例
 
-- [分支管理与合并工作流](/examples/02-branch-merge-workflow.md)
-- [Diff查看与Stash使用](/examples/03-diff-and-stash.md)
+- [分支管理与合并工作流](02-branch-merge-workflow.md)
+- [Diff查看与Stash使用](03-diff-and-stash.md)
 
 ## 相关概念
 
-- [jupyterlab-git简介](/concepts/00-introduction.md)
-- [安装与快速上手](/concepts/01-getting-started.md)
-- [GitExtension核心模型](/concepts/04-git-extension-model.md)
-- [命令系统与菜单](/concepts/10-commands-and-menu.md)
-- [可插拔Diff系统](/concepts/06-diff-provider-system.md)
+- [jupyterlab-git简介](../concepts/00-introduction.md)
+- [安装与快速上手](../concepts/01-getting-started.md)
+- [GitExtension核心模型](../concepts/04-git-extension-model.md)
+- [命令系统与菜单](../concepts/10-commands-and-menu.md)
+- [可插拔Diff系统](../concepts/06-diff-provider-system.md)

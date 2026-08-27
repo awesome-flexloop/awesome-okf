@@ -237,7 +237,7 @@ sphinx-argparse 不仅能自动生成文档，还允许你通过指令体中的�
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [指令选项全解](/concepts/03-directive-options.md)
-- [Markdown 支持](/concepts/07-markdown-support.md)
-- [内容增强完整示例](/examples/content-enhancement.md)
+- [5分钟快速上手](01-getting-started.md)
+- [指令选项全解](03-directive-options.md)
+- [Markdown 支持](07-markdown-support.md)
+- [内容增强完整示例](../examples/content-enhancement.md)

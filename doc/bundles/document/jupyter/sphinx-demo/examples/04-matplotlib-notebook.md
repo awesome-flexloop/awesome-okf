@@ -258,6 +258,6 @@ widgets.interact(plot_sine, freq=(0.5, 5.0, 0.1), amp=(0.1, 2.0, 0.1))
 
 ## 相关内容
 
-- [/concepts/07-notebook-embedding.md](/concepts/07-notebook-embedding.md)：NotebookLite 机制详解
-- [/concepts/03-sphinx-conf.md](/concepts/03-sphinx-conf.md)：strip_tagged_cells 配置
-- [/examples/02-pyodide-setup.md](/examples/02-pyodide-setup.md)：Pyodide 完整配置
+- [/concepts/07-notebook-embedding.md](../concepts/07-notebook-embedding.md)：NotebookLite 机制详解
+- [/concepts/03-sphinx-conf.md](../concepts/03-sphinx-conf.md)：strip_tagged_cells 配置
+- [/examples/02-pyodide-setup.md](02-pyodide-setup.md)：Pyodide 完整配置

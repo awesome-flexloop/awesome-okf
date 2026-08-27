@@ -65,7 +65,7 @@ cookiecutter https://github.com/jupyter/cookiecutter-docker-stacks \
   --no-input
 ```
 
-预设配置文件存放在 [configs/](external/libs/jupyter/cookiecutter-docker-stacks/configs/) 目录，共14个，每个对应一个官方基础镜像。
+预设配置文件存放在 configs/ 目录，共14个，每个对应一个官方基础镜像。
 
 ### 本地生成
 

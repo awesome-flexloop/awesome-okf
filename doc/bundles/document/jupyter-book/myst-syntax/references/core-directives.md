@@ -26,7 +26,7 @@ sources:
 
 ## Admonition 指令
 
-[admonition.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/admonition.ts#L1-L78)
+admonition.ts
 
 ### 别名（10种）
 
@@ -75,7 +75,7 @@ run(data) {
 
 ## Code 和 Code-Cell 指令
 
-[code.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/code.ts#L1-L281)
+code.ts
 
 ### CODE_DIRECTIVE_OPTIONS
 
@@ -161,7 +161,7 @@ run(data, vfile) {
 
 ## Figure 指令
 
-[figure.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/figure.ts#L1-L113)
+figure.ts
 
 ### 选项
 
@@ -192,7 +192,7 @@ container(kind:'figure'|自定义kind)
 
 ## Table 指令系列
 
-[table.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/table.ts#L1-L331)
+table.ts
 
 ### tableDirective
 
@@ -215,7 +215,7 @@ container(kind:'figure'|自定义kind)
 
 ## Math 指令
 
-[math.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/math.ts#L1-L28)
+math.ts
 
 ```ts
 run(data) {

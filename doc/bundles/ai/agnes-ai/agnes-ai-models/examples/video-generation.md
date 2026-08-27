@@ -233,12 +233,12 @@ curl "https://apihub.agnes-ai.com/agnesapi?video_id=YOUR_VIDEO_ID" \
 
 ## 相关示例
 
-- [图像生成示例](/examples/image-generation.md)
-- [Python对话补全示例](/examples/chat-completion.md)
-- [Agent工作流示例](/examples/agent-workflow.md)
+- [图像生成示例](image-generation.md)
+- [Python对话补全示例](chat-completion.md)
+- [Agent工作流示例](agent-workflow.md)
 
 ## 相关概念
 
-- [视频生成 API](/concepts/05-video-generation.md)
-- [错误处理与调试](/concepts/07-error-handling.md)
-- [速率限制与配额](/concepts/06-rate-limits.md)
+- [视频生成 API](../concepts/05-video-generation.md)
+- [错误处理与调试](../concepts/07-error-handling.md)
+- [速率限制与配额](../concepts/06-rate-limits.md)

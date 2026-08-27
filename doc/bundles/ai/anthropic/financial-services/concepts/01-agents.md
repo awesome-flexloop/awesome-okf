@@ -319,11 +319,11 @@ response = client.beta.agents.create(
 )
 ```
 
-> 🔗 Managed Agents API 完整文档详见 [/python-sdk/concepts/08-beta-agents.md](/python-sdk/concepts/08-beta-agents.md)
+> 🔗 Managed Agents API 完整文档详见 [/python-sdk/concepts/08-beta-agents.md](../../python-sdk/concepts/08-beta-agents.md)
 
 ## 相关概念
 
 - [Claude for Financial Services概览](00-overview.md) — 产品定位、双模式架构、四大功能域总览
 - [垂直行业Skills与Commands](02-vertical-skills.md) — Agents所依赖的vertical skills和commands详解
 - [数据连接器与部署](03-connectors-deployment.md) — MCP连接器清单和三种部署方式
-- [Agents与Skills完整索引](/financial-services/references/agents-skills-index.md) — 10个Agents的快速查询索引表
+- [Agents与Skills完整索引](../references/agents-skills-index.md) — 10个Agents的快速查询索引表

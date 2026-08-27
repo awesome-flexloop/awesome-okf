@@ -207,7 +207,7 @@ app = Pregel(
 
 ## 相关概念
 
-- [状态图](/ai/langchain-ai/langgraph/concepts/state-graph) — StateGraph 如何编译为 Pregel
-- [通道系统](/ai/langchain-ai/langgraph/concepts/channels) — 通道类型与生命周期
-- [检查点机制](/ai/langchain-ai/langgraph/concepts/checkpointing) — 持久化在循环中的作用
-- [API 参考](/ai/langchain-ai/langgraph/references/channels-pregel) — Pregel 完整 API
+- 状态图 — StateGraph 如何编译为 Pregel
+- 通道系统 — 通道类型与生命周期
+- 检查点机制 — 持久化在循环中的作用
+- API 参考 — Pregel 完整 API

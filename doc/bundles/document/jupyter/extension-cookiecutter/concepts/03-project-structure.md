@@ -62,7 +62,7 @@ my_server_extension/
 - **hatch 配置**：版本源路径、shared-data 映射
 - **工具配置**：pytest、mypy、black、ruff
 
-详细解析参见 [pyproject.toml 模板字段全解析](/references/pyproject-source.md)。
+详细解析参见 [pyproject.toml 模板字段全解析](../references/pyproject-source.md)。
 
 ### conftest.py
 
@@ -144,7 +144,7 @@ def _jupyter_server_extension_points():
 - 定义可配置 trait（`ping_response`）
 - 实现 `initialize_settings()` 注入配置到 settings 字典
 
-详细解析参见 [ExtensionApp 类源码解析](/references/extension-app-source.md)。
+详细解析参见 [ExtensionApp 类源码解析](../references/extension-app-source.md)。
 
 ### handlers.py
 
@@ -153,7 +153,7 @@ HTTP 请求处理器：
 - `get()` 方法处理 GET 请求，返回 JSON 响应
 - 使用 `@tornado.web.authenticated` 装饰器确保认证
 
-详细解析参见 [PingHandler 请求处理器源码解析](/references/handler-source.md)。
+详细解析参见 [PingHandler 请求处理器源码解析](../references/handler-source.md)。
 
 ### tests/ 目录
 
@@ -257,6 +257,6 @@ my_server_extension/tests/test_handlers.py
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [配置发现机制](/concepts/06-config-discovery.md)
-- [ExtensionApp 开发](/concepts/04-extension-app.md)
+- [快速开始](01-getting-started.md)
+- [配置发现机制](06-config-discovery.md)
+- [ExtensionApp 开发](04-extension-app.md)

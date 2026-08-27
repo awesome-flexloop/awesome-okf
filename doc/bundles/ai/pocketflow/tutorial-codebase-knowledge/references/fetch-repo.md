@@ -15,7 +15,7 @@ source: nodes.py
 class FetchRepo(Node):
 ```
 
-源码位置：[nodes.py#L22-L82](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py#L22-L82)
+源码位置：nodes.py#L22-L82
 
 ## 生命周期方法
 
@@ -92,4 +92,4 @@ shared["files"] = [
 
 ## 源码位置
 
-[nodes.py#L22-L82](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py#L22-L82)
+nodes.py#L22-L82

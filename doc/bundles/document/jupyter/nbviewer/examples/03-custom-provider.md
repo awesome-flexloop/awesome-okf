@@ -294,7 +294,7 @@ python -m nbviewer --config-file=nbviewer_config.py
 
 ## 相关文档
 
-- [自定义Provider扩展](/concepts/12-custom-provider.md)：Provider契约和开发指南
-- [Provider插件系统](/concepts/05-provider-plugin-system.md)：Provider加载机制
-- [Handler继承体系](/concepts/04-handler-hierarchy.md)：RenderingHandler基类
-- [URI重写机制](/concepts/08-uri-rewrite.md)：重写规则详解
+- [自定义Provider扩展](../concepts/12-custom-provider.md)：Provider契约和开发指南
+- [Provider插件系统](../concepts/05-provider-plugin-system.md)：Provider加载机制
+- [Handler继承体系](../concepts/04-handler-hierarchy.md)：RenderingHandler基类
+- [URI重写机制](../concepts/08-uri-rewrite.md)：重写规则详解

@@ -106,7 +106,7 @@ services:
 
 ### 5. Edge Config 集成
 
-Vercel 原生服务集成，详见 [Vercel Edge Config缓存](/concepts/01-edge-config-cache.md)。
+Vercel 原生服务集成，详见 [Vercel Edge Config缓存](01-edge-config-cache.md)。
 
 ## Vercel 部署必需环境变量
 
@@ -178,8 +178,8 @@ Docker 部署注意事项：
 
 ## 相关概念
 
-- [Demo Wall Intl 简介](/concepts/00-introduction.md)
-- [Vercel Edge Config缓存](/concepts/01-edge-config-cache.md)
-- [与中文版完整差异对照](/concepts/06-differences-from-cn.md)
-- [Vercel部署配置示例](/examples/setup-vercel-deployment.md)
-- [从中文版迁移到国际版指南](/examples/migrate-from-cn.md)
+- [Demo Wall Intl 简介](00-introduction.md)
+- [Vercel Edge Config缓存](01-edge-config-cache.md)
+- [与中文版完整差异对照](06-differences-from-cn.md)
+- [Vercel部署配置示例](../examples/setup-vercel-deployment.md)
+- [从中文版迁移到国际版指南](../examples/migrate-from-cn.md)

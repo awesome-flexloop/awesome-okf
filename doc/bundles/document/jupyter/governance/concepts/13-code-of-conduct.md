@@ -83,6 +83,6 @@ CoC 委员会拥有和管理事件响应流程，对具体事件做出裁决。�
 
 ## 相关概念
 
-- [常设委员会与工作组](/concepts/07-committees-and-working-groups.md)
-- [执行委员会（EC）](/concepts/03-executive-council.md)
-- [决策制定流程](/concepts/09-decision-making.md)
+- [常设委员会与工作组](07-committees-and-working-groups.md)
+- [执行委员会（EC）](03-executive-council.md)
+- [决策制定流程](09-decision-making.md)

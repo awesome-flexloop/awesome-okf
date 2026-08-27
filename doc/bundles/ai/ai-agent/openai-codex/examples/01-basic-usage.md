@@ -331,7 +331,7 @@ cargo run --bin codex -- "your prompt here"
 
 ## 相关示例
 
-- [Python SDK 使用](./02-python-sdk.md)
+- [Python SDK 使用](02-python-sdk.md)
 
 ## 相关概念
 

@@ -274,8 +274,8 @@ zmq_msg_send(&part3, socket, 0);            // more=0, 最后一帧
 
 ## 相关概念
 
-- [整体架构总览](/concepts/00-overview.md) — 消息在四层管线中的流动
-- [管道与流控](/concepts/04-pipe.md) — msg_t 在 pipe 的 ypipe 中传递
-- [编解码与帧格式](/concepts/12-encoder-decoder.md) — v2_encoder/decoder 处理 msg_t 的线格式
-- [ZMTP 协议引擎](/concepts/06-zmtp-engine.md) — 命令帧标志在 ZMTP 握手和心跳中的使用
-- [命令传递与邮箱](/concepts/08-command-mailbox.md) — command_t 也使用 ypipe 但类型不同
+- [整体架构总览](00-overview.md) — 消息在四层管线中的流动
+- [管道与流控](04-pipe.md) — msg_t 在 pipe 的 ypipe 中传递
+- [编解码与帧格式](12-encoder-decoder.md) — v2_encoder/decoder 处理 msg_t 的线格式
+- [ZMTP 协议引擎](06-zmtp-engine.md) — 命令帧标志在 ZMTP 握手和心跳中的使用
+- [命令传递与邮箱](08-command-mailbox.md) — command_t 也使用 ypipe 但类型不同

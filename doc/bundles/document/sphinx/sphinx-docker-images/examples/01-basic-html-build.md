@@ -176,6 +176,6 @@ extensions = ['sphinx.ext.graphviz']
 
 ## 相关概念
 
-- [5 分钟快速上手](/concepts/01-getting-started.md)：快速入门指南
-- [Base 镜像详解](/concepts/03-base-image.md)：了解镜像中预装的工具
-- [自定义镜像扩展](/examples/03-custom-image.md)：安装额外的 Sphinx 扩展
+- [5 分钟快速上手](../concepts/01-getting-started.md)：快速入门指南
+- [Base 镜像详解](../concepts/03-base-image.md)：了解镜像中预装的工具
+- [自定义镜像扩展](03-custom-image.md)：安装额外的 Sphinx 扩展

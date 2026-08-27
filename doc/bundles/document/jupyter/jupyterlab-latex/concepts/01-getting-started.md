@@ -92,7 +92,7 @@ jupyter labextension list
 
 ### 步骤 2：编写 LaTeX 内容
 
-使用项目自带的示例作为起点（[sample.tex](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterlab-latex/sample.tex)），或写入一个最小文档：
+使用项目自带的示例作为起点（sample.tex），或写入一个最小文档：
 
 ```latex
 \documentclass{article}
@@ -145,7 +145,7 @@ Hello, \LaTeX!
 
 ## 开发模式安装
 
-如需修改扩展源码，参考 [README 开发安装](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterlab-latex/README.md) 中的 Development install 章节：
+如需修改扩展源码，参考 README 开发安装 中的 Development install 章节：
 
 ```bash
 git clone https://github.com/jupyterlab/jupyterlab-latex.git

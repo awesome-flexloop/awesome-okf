@@ -46,7 +46,7 @@ traceable(fn)
 
 `Client.createRun()` 在启用自动批处理且 run 具有 `trace_id`、`dotted_order` 时不会立即发送请求，而是把 create 操作放入后台队列。`updateRun()` 对根 run 的结束有特殊等待逻辑，短进程或脚本通常需要调用 `await client.awaitPendingTraceBatches()`。
 
-RunTree 与 traceable 的细节分别见 [RunTree 追踪模型](/ai/langchain-ai/langsmith-sdk/concepts/run-tree-tracing.md) 和 [traceable 装饰器](/ai/langchain-ai/langsmith-sdk/concepts/traceable-decorator.md)。
+RunTree 与 traceable 的细节分别见 [RunTree 追踪模型](run-tree-tracing.md) 和 [traceable 装饰器](traceable-decorator.md)。
 
 ## 评测链路
 
@@ -62,7 +62,7 @@ Example
   → Feedback 挂到实验项目
 ```
 
-评测接口、`RunEvaluator`、`StringEvaluator` 和 `_ExperimentManager` 的流程见 [评测运行器](/ai/langchain-ai/langsmith-sdk/concepts/evaluation.md)。
+评测接口、`RunEvaluator`、`StringEvaluator` 和 `_ExperimentManager` 的流程见 [评测运行器](evaluation.md)。
 
 ## 数据模型主线
 
@@ -99,11 +99,11 @@ await answer("What is LangSmith?");
 await client.awaitPendingTraceBatches();
 ```
 
-完整可运行示例见 [快速追踪与评测示例](/ai/langchain-ai/langsmith-sdk/examples/quickstart-trace-and-evaluate.md)。
+完整可运行示例见 [快速追踪与评测示例](../examples/quickstart-trace-and-evaluate.md)。
 
 ## 相关概念
 
-- [traceable 装饰器](/ai/langchain-ai/langsmith-sdk/concepts/traceable-decorator.md)
-- [RunTree 追踪模型](/ai/langchain-ai/langsmith-sdk/concepts/run-tree-tracing.md)
-- [评测运行器](/ai/langchain-ai/langsmith-sdk/concepts/evaluation.md)
-- [核心源码参考](/ai/langchain-ai/langsmith-sdk/references/source-core.md)
+- [traceable 装饰器](traceable-decorator.md)
+- [RunTree 追踪模型](run-tree-tracing.md)
+- [评测运行器](evaluation.md)
+- [核心源码参考](../references/source-core.md)

@@ -60,27 +60,27 @@ const result = await graph.invoke(
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/langgraphjs/concepts/overview) — 四层架构、设计哲学、概念速查
-- [状态图与工作流](/ai/langchain-ai/langgraphjs/concepts/state-graph) — 节点、边、条件边、编译、循环、节点策略
-- [Annotation 状态定义](/ai/langchain-ai/langgraphjs/concepts/annotation) — 状态 DSL、reducer、类型推导、Zod 互操作
-- [Channels 通道体系](/ai/langchain-ai/langgraphjs/concepts/channels) — BaseChannel 抽象与内置通道类型
-- [Checkpoint 持久化机制](/ai/langchain-ai/langgraphjs/concepts/checkpointing) — 链表结构、后端、时间旅行、线程分叉
-- [Pregel 执行引擎](/ai/langchain-ai/langgraphjs/concepts/pregel-execution) — 超步调度、任务、中断、重试、函数式 API
+- 总览 — 四层架构、设计哲学、概念速查
+- 状态图与工作流 — 节点、边、条件边、编译、循环、节点策略
+- Annotation 状态定义 — 状态 DSL、reducer、类型推导、Zod 互操作
+- Channels 通道体系 — BaseChannel 抽象与内置通道类型
+- Checkpoint 持久化机制 — 链表结构、后端、时间旅行、线程分叉
+- Pregel 执行引擎 — 超步调度、任务、中断、重试、函数式 API
 
 ### API 参考
 
-- [Graph 核心 API](/ai/langchain-ai/langgraphjs/references/graph-core) — StateGraph、Annotation、Command、Send、Branch
-- [Checkpoint 与流式 API](/ai/langchain-ai/langgraphjs/references/checkpoint-streaming) — Checkpointer、StreamMode、Pregel 方法
+- Graph 核心 API — StateGraph、Annotation、Command、Send、Branch
+- Checkpoint 与流式 API — Checkpointer、StreamMode、Pregel 方法
 
 ### 使用示例
 
-- [基础 ReAct Agent](/ai/langchain-ai/langgraphjs/examples/basic-agent) — 工具调用循环、持久化、流式
-- [Map-Reduce 与 Command 控制流](/ai/langchain-ai/langgraphjs/examples/map-reduce-command) — Send 并行、Command 路由、HITL
+- 基础 ReAct Agent — 工具调用循环、持久化、流式
+- Map-Reduce 与 Command 控制流 — Send 并行、Command 路由、HITL
 
 ### 溯源与洞察
 
-- [源码事实清单](spec/facts) — 从源码提取的 14 组编号事实
-- [架构洞察](spec/insights) — 7 条设计决策与深层权衡
+- [源码事实清单](spec/facts.md) — 从源码提取的 14 组编号事实
+- [架构洞察](spec/insights.md) — 7 条设计决策与深层权衡
 
 ## 目录结构
 

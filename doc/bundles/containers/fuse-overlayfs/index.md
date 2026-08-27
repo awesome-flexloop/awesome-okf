@@ -136,16 +136,16 @@ fusermount -u merged
 
 | 文件 | 模块 | 核心职责 |
 |------|------|---------|
-| [main.rs](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/src/main.rs) | 主入口 | 参数解析、挂载配置、daemonize、SIGUSR1处理 |
-| [overlay.rs](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/src/overlay.rs) | 核心FS | OverlayFs、FUSE回调、whiteout检测 |
-| [node.rs](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/src/node.rs) | 节点管理 | NodeArena、OvlNode、InodeTable、OvlIno |
-| [copyup.rs](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/src/copyup.rs) | Copy-up | 三级数据复制、原子rename、xattr复制 |
-| [config.rs](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/src/config.rs) | 配置 | OverlayConfig、参数解析、lowerdir解析 |
-| [layer.rs](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/src/layer.rs) | 层管理 | OvlLayer、init_layers、DataSource初始化 |
-| [direct.rs](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/src/direct.rs) | 直接访问 | DirectAccess、openat2安全打开、statx |
-| [datasource.rs](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/src/datasource.rs) | 数据源trait | DataSource、DirIterator trait定义 |
-| [whiteout.rs](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/src/whiteout.rs) | Whiteout | whiteout检测与处理 |
-| [sys/](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/src/sys/) | 系统抽象 | 所有unsafe代码封装（目录/IO/打开/statx/xattr等） |
+| main.rs | 主入口 | 参数解析、挂载配置、daemonize、SIGUSR1处理 |
+| overlay.rs | 核心FS | OverlayFs、FUSE回调、whiteout检测 |
+| node.rs | 节点管理 | NodeArena、OvlNode、InodeTable、OvlIno |
+| copyup.rs | Copy-up | 三级数据复制、原子rename、xattr复制 |
+| config.rs | 配置 | OverlayConfig、参数解析、lowerdir解析 |
+| layer.rs | 层管理 | OvlLayer、init_layers、DataSource初始化 |
+| direct.rs | 直接访问 | DirectAccess、openat2安全打开、statx |
+| datasource.rs | 数据源trait | DataSource、DirIterator trait定义 |
+| whiteout.rs | Whiteout | whiteout检测与处理 |
+| sys/ | 系统抽象 | 所有unsafe代码封装（目录/IO/打开/statx/xattr等） |
 
 ## 🔗 外部资源
 

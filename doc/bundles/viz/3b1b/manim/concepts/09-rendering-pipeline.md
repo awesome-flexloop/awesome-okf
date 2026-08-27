@@ -377,7 +377,7 @@ FrameStream：GPU 渲染结果异步拷贝到读缓冲区
 
 ## 相关概念
 
-- [02 配置系统与 CLI 参数](/concepts/02-configuration.md)
-- [03 Mobject：数学对象基类](/concepts/03-mobject-fundamentals.md)
-- [05 动画基础](/concepts/05-animation-basics.md)
-- [07 相机与视角控制](/concepts/07-camera-and-frame.md)
+- [02 配置系统与 CLI 参数](02-configuration.md)
+- [03 Mobject：数学对象基类](03-mobject-fundamentals.md)
+- [05 动画基础](05-animation-basics.md)
+- [07 相机与视角控制](07-camera-and-frame.md)

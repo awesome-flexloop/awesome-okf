@@ -192,4 +192,4 @@ SectionContent = FlowContent | Parameters | SubstitutionDef | ...
 - [IR 与 DocBundle](03-ir-and-docbundle.md)
 - [gen 管线](05-gen-pipeline.md)
 - [RST 解析](10-rst-parsing.md)
-- [IR 节点类型信源](/references/ir-nodes-source.md)
+- [IR 节点类型信源](../references/ir-nodes-source.md)

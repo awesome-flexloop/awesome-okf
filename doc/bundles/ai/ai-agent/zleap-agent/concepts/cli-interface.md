@@ -79,7 +79,7 @@ flowchart TB
 
 ### 命令路由
 
-CLI 使用 **cac**（Commander.js 的轻量替代）进行命令路由，入口为 [runCli](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/cli/src/cli/router.ts#L38-L226) 函数。
+CLI 使用 **cac**（Commander.js 的轻量替代）进行命令路由，入口为 runCli 函数。
 
 ```typescript
 export async function runCli(argv: string[]): Promise<void> {
@@ -142,7 +142,7 @@ cli.command('serve', ...).action(async (options) => {
 
 ### App 组件
 
-聊天模式的核心是 [App](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/cli/src/app.tsx#L104-L200) React 组件，基于 **Ink** 框架（React for CLI）渲染终端 UI：
+聊天模式的核心是 App React 组件，基于 **Ink** 框架（React for CLI）渲染终端 UI：
 
 ```typescript
 export function App({
@@ -291,7 +291,7 @@ const [wizard, setWizard] = useState<ModelWizard | null>(
 
 ## 桌面端（Tauri）
 
-桌面端是一个 Tauri v2 应用，Rust 代码位于 [packages/desktop/src-tauri/src/lib.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/desktop/src-tauri/src/lib.rs)。它本质上是一个**运行时引导器 + Web 窗口壳**：不直接实现 Agent 逻辑，而是解压/定位运行时、启动 Node.js 子进程引导本地 Web 服务，然后在 WebView 窗口中加载该服务。
+桌面端是一个 Tauri v2 应用，Rust 代码位于 packages/desktop/src-tauri/src/lib.rs。它本质上是一个**运行时引导器 + Web 窗口壳**：不直接实现 Agent 逻辑，而是解压/定位运行时、启动 Node.js 子进程引导本地 Web 服务，然后在 WebView 窗口中加载该服务。
 
 ### 启动流程
 
@@ -600,11 +600,11 @@ flowchart LR
 
 | 文件 | 关键内容 |
 |------|---------|
-| [app.tsx](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/cli/src/app.tsx) | Ink TUI 主组件、状态管理、ChatEngine 集成、会话恢复 |
-| [router.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/cli/src/cli/router.ts) | cac 命令路由、所有 CLI 命令定义、动态导入 |
-| [lib.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/desktop/src-tauri/src/lib.rs) | Tauri 桌面端完整实现（1341行）、引导流程、自动更新、系统托盘、服务生命周期 |
-| [useChat.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/cli/src/hooks/useChat.ts) | 聊天状态 Hook、消息管理、流式输出处理 |
-| [mode.tsx](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/cli/src/chat/mode.tsx) | 运行模式 UI |
+| app.tsx | Ink TUI 主组件、状态管理、ChatEngine 集成、会话恢复 |
+| router.ts | cac 命令路由、所有 CLI 命令定义、动态导入 |
+| lib.rs | Tauri 桌面端完整实现（1341行）、引导流程、自动更新、系统托盘、服务生命周期 |
+| useChat.ts | 聊天状态 Hook、消息管理、流式输出处理 |
+| mode.tsx | 运行模式 UI |
 | cli/serve.ts | 服务启动逻辑（Postgres+Web+Worker） |
 | cli/setup.ts | Web 配置向导启动 |
 | cli/doctor.ts | 环境体检 |

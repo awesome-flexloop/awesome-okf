@@ -70,7 +70,7 @@
 - F-043: SphinxComponentRegistry类定义在sphinx/registry.py
 - F-044: 注册表维护的字典属性：autodoc_attrgetters, builders(dict[str,type[Builder]]), documenters, css_files(list[tuple[str,dict]]), domains(dict[str,type[Domain]]), domain_directives, domain_indices, domain_object_types, domain_roles, enumerable_nodes, html_inline_math_renderers, html_block_math_renderers, html_themes, js_files(list[tuple[str|None,dict]]), static_dirs, latex_packages, latex_packages_after_hyperref, post_transforms(list[type[Transform]]), source_parsers(dict[str,type[Parser]]), source_suffix(dict[str,str]), translators, translation_handlers, transforms(list[type[Transform]])
 - F-045: add_builder(builder, override)注册构建器，builder必须有name属性
-- F-046: create_builder(app, name, env)实例化构建器：builders[name](app, env)
+- F-046: create_builder(app, name, env)实例化构建器：buildersname
 - F-047: preload_builder通过entry_points(group='sphinx.builders')发现第三方builder
 - F-048: load_extension(app, extname)通过import_module加载扩展模块，调用setup(app)
 - F-049: EXTENSION_BLACKLIST字典记录已废弃的扩展名及合并版本

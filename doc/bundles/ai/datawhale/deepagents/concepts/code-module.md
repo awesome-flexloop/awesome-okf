@@ -150,8 +150,8 @@ Code 支持 LangChain 聊天模型提供商作为可选依赖。添加新提供�
 
 ## 与其他概念的关系
 
-- [核心SDK与三层架构](/ai/datawhale/deepagents/concepts/core-sdk) 是 dcode 构建于其上的 Agent 框架。
-- [ACP协议集成](/ai/datawhale/deepagents/concepts/acp-protocol) 允许 dcode 通过 `--acp` 标志嵌入编辑器。
-- [Evals评估套件](/ai/datawhale/deepagents/concepts/evals-suite) 对 dcode 的编码能力进行基准测试。
-- [CLI部署工具](/ai/datawhale/deepagents/concepts/cli-toolchain) 是从 code 拆分出的独立部署工具。
-- [Talon运行时宿主](/ai/datawhale/deepagents/concepts/talon-runtime) 依赖 deepagents-code 作为其 Agent 运行时。
+- 核心SDK与三层架构 是 dcode 构建于其上的 Agent 框架。
+- ACP协议集成 允许 dcode 通过 `--acp` 标志嵌入编辑器。
+- Evals评估套件 对 dcode 的编码能力进行基准测试。
+- CLI部署工具 是从 code 拆分出的独立部署工具。
+- Talon运行时宿主 依赖 deepagents-code 作为其 Agent 运行时。

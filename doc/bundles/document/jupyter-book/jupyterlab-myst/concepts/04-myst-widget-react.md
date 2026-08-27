@@ -224,7 +224,7 @@ MySTWidget 添加 CSS class `myst`，配合 style/ 目录的样式表：
 
 ## 相关概念
 
-- [00-architecture-plugins.md](/concepts/00-architecture-plugins.md)：插件架构（mime-renderer 插件）
-- [01-myst-rendering-pipeline.md](/concepts/01-myst-rendering-pipeline.md)：解析管道
-- [02-myst-markdown-cell.md](/concepts/02-myst-markdown-cell.md)：单元格生命周期
-- [03-inline-expressions.md](/concepts/03-inline-expressions.md)：内联表达式
+- [00-architecture-plugins.md](00-architecture-plugins.md)：插件架构（mime-renderer 插件）
+- [01-myst-rendering-pipeline.md](01-myst-rendering-pipeline.md)：解析管道
+- [02-myst-markdown-cell.md](02-myst-markdown-cell.md)：单元格生命周期
+- [03-inline-expressions.md](03-inline-expressions.md)：内联表达式

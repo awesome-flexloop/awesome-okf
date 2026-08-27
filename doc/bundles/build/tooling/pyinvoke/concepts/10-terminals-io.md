@@ -286,9 +286,9 @@ def decode(self, data):
 
 ## 相关概念
 
-- [Runner 系统](/concepts/06-runners.md)
-- [StreamWatcher 自动响应](/concepts/09-watchers.md)
-- [配置系统](/concepts/05-configuration.md)
-- [PyInvoke 源码信源登记](/references/pyinvoke-source.md)
+- [Runner 系统](06-runners.md)
+- [StreamWatcher 自动响应](09-watchers.md)
+- [配置系统](05-configuration.md)
+- [PyInvoke 源码信源登记](../references/pyinvoke-source.md)
 
-[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](/references/pyinvoke-source.md)；终端工具函数定义于 `invoke/terminals.py`，Runner 的 IO 线程处理定义于 `invoke/runners.py`。
+[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](../references/pyinvoke-source.md)；终端工具函数定义于 `invoke/terminals.py`，Runner 的 IO 线程处理定义于 `invoke/runners.py`。

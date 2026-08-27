@@ -281,6 +281,6 @@ CI 中还有一个特殊的 `test_isolated` job，它：
 
 ## 相关概念
 
-- [CI/CD 工作流详解](/concepts/12-ci-workflows.md)
-- [双包构建系统](/concepts/05-build-system.md)
-- [打包与发布](/concepts/13-packaging-release.md)
+- [CI/CD 工作流详解](12-ci-workflows.md)
+- [双包构建系统](05-build-system.md)
+- [打包与发布](13-packaging-release.md)

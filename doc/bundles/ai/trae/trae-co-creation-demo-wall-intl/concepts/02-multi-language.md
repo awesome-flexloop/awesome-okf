@@ -143,7 +143,7 @@ const isProtectedRoute = (pathname: string) => {
 5. **CSV 导出**：导出逻辑中的 AUDIT_STATUS_LABEL/DISPLAY_STATUS_LABEL 如有硬编码标签需补充翻译
 6. **测试**：访问新语言下的受保护路由（submit/console/profile）验证认证检查生效
 
-详见 [添加新语言示例](/examples/add-new-language.md)。
+详见 [添加新语言示例](../examples/add-new-language.md)。
 
 ## 翻译文件管理
 
@@ -153,7 +153,7 @@ const isProtectedRoute = (pathname: string) => {
 
 ## 相关概念
 
-- [Demo Wall Intl 简介](/concepts/00-introduction.md)
-- [与中文版完整差异对照](/concepts/06-differences-from-cn.md)
-- [5语言配置与翻译扩展示例](/examples/multi-language-setup.md)
-- [添加新语言完整步骤](/examples/add-new-language.md)
+- [Demo Wall Intl 简介](00-introduction.md)
+- [与中文版完整差异对照](06-differences-from-cn.md)
+- [5语言配置与翻译扩展示例](../examples/multi-language-setup.md)
+- [添加新语言完整步骤](../examples/add-new-language.md)

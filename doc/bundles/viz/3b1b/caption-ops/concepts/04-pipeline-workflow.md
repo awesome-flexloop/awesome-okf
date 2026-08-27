@@ -592,9 +592,9 @@ YouTube Data API 每日有配额限制（默认约 100 次请求/天），字幕
 
 ## 相关概念
 
-- [00 caption-ops 工具集总览](/concepts/00-caption-ops-overview.md)
-- [01 音频转录模块](/concepts/01-transcription.md)
-- [02 多语言翻译模块](/concepts/02-translation.md)
-- [03 SRT字幕操作](/concepts/03-srt-operations.md)
-- [CLI 脚本参考](/references/scripts-reference.md)
-- [依赖与 API 配置](/references/dependencies.md)
+- [00 caption-ops 工具集总览](00-caption-ops-overview.md)
+- [01 音频转录模块](01-transcription.md)
+- [02 多语言翻译模块](02-translation.md)
+- [03 SRT字幕操作](03-srt-operations.md)
+- [CLI 脚本参考](../references/scripts-reference.md)
+- [依赖与 API 配置](../references/dependencies.md)

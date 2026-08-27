@@ -262,5 +262,5 @@ constructor 在构建时执行以下安全检查：
 
 ## 下一步
 
-- [11-多环境与通道配置](../11-multi-env-and-channels.md)：了解 channels_remap 等隐私相关配置
-- [09-平台安装器实现](../09-platform-installers.md)：了解签名在各平台模块中的调用点
+- 11-多环境与通道配置：了解 channels_remap 等隐私相关配置
+- 09-平台安装器实现：了解签名在各平台模块中的调用点

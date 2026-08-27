@@ -205,7 +205,7 @@ msgstr "打开..."
 
 ## 相关概念
 
-- [字符串提取流水线](/concepts/04-extraction-pipeline.md)
-- [Jed JSON翻译格式](/concepts/06-json-jed-format.md)
-- [自定义Schema选择器示例](/examples/03-custom-schema-selectors.md)
-- [核心工具源码映射](/references/utils-source.md)
+- [字符串提取流水线](04-extraction-pipeline.md)
+- [Jed JSON翻译格式](06-json-jed-format.md)
+- [自定义Schema选择器示例](../examples/03-custom-schema-selectors.md)
+- [核心工具源码映射](../references/utils-source.md)

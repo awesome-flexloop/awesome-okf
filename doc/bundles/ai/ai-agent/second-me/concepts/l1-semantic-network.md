@@ -460,15 +460,15 @@ L1 生成完成后，Bio 和 Note 列表作为 L2 数据合成的输入，GraphR
 
 | 文件 | 职责 |
 |------|------|
-| [lpm_kernel/L1/bio.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/bio.py) | 核心数据结构：Chunk/Note/Cluster/ShadeInfo/Bio/UserInfo，786行 |
-| [lpm_kernel/L1/l1_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/l1_generator.py) | L1主生成器，组合四子生成器 |
-| [lpm_kernel/L1/shade_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/shade_generator.py) | 人格侧面生成器 |
-| [lpm_kernel/L1/shade_merger.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/shade_merger.py) | 人格侧面合并器 |
-| [lpm_kernel/L1/status_bio_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/status_bio_generator.py) | 状态传记生成器 |
-| [lpm_kernel/L1/topics_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/topics_generator.py) | 主题提取生成器 |
-| [lpm_kernel/L1/prompt.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/prompt.py) | L1层prompt模板集合 |
-| [lpm_kernel/models/l1.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/models/l1.py) | L1 ORM模型：Version/Bio/Shade/Cluster/ChunkTopic |
-| [lpm_kernel/kernel/l1/l1_manager.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/kernel/l1/l1_manager.py) | L1版本管理与持久化 |
+| lpm_kernel/L1/bio.py | 核心数据结构：Chunk/Note/Cluster/ShadeInfo/Bio/UserInfo，786行 |
+| lpm_kernel/L1/l1_generator.py | L1主生成器，组合四子生成器 |
+| lpm_kernel/L1/shade_generator.py | 人格侧面生成器 |
+| lpm_kernel/L1/shade_merger.py | 人格侧面合并器 |
+| lpm_kernel/L1/status_bio_generator.py | 状态传记生成器 |
+| lpm_kernel/L1/topics_generator.py | 主题提取生成器 |
+| lpm_kernel/L1/prompt.py | L1层prompt模板集合 |
+| lpm_kernel/models/l1.py | L1 ORM模型：Version/Bio/Shade/Cluster/ChunkTopic |
+| lpm_kernel/kernel/l1/l1_manager.py | L1版本管理与持久化 |
 
 ## 相关概念
 

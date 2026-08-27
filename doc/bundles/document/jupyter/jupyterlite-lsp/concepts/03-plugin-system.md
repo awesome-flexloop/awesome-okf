@@ -140,7 +140,7 @@ const plugin: JupyterLiteServerPlugin<void> = {
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [IJSONRPCLanguageServer 接口](/concepts/04-language-server-interface.md)
-- [LanguageServers 与 Session](/concepts/04-language-server-interface.md#sessions-管理)
-- [核心包源码引用](/references/core-plugin-source.md)
+- [架构总览](02-architecture-overview.md)
+- [IJSONRPCLanguageServer 接口](04-language-server-interface.md)
+- [LanguageServers 与 Session](04-language-server-interface.md#sessions-管理)
+- [核心包源码引用](../references/core-plugin-source.md)

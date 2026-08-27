@@ -114,4 +114,4 @@ exec 返回值示例（取决于问题和 LLM 响应）：
 
 ## 源码位置
 
-[nodes.py#L15-L26](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Video-Generator/nodes.py#L15-L26)
+nodes.py#L15-L26

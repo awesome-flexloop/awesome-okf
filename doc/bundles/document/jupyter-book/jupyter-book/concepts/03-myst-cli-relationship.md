@@ -176,7 +176,7 @@ Jupyter Book v2 的版本号与 myst-cli 的版本号不是一一对应的：
 
 ## 相关概念
 
-- [00-v2-architecture](/concepts/00-v2-architecture.md)：v2 双层架构
-- [02-ts-cli-commands](/concepts/02-ts-cli-commands.md)：TS CLI 命令
-- [04-template-system](/concepts/04-template-system.md)：模板系统
-- [05-migration-from-v1](/concepts/05-migration-from-v1.md)：从 v1 迁移
+- [00-v2-architecture](00-v2-architecture.md)：v2 双层架构
+- [02-ts-cli-commands](02-ts-cli-commands.md)：TS CLI 命令
+- [04-template-system](04-template-system.md)：模板系统
+- [05-migration-from-v1](05-migration-from-v1.md)：从 v1 迁移

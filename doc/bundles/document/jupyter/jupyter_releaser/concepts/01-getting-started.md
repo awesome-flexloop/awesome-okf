@@ -134,7 +134,7 @@ on:
 - [ ] PyPI 包已创建（或第一次发布时自动创建）
 - [ ] npm 包已创建（如适用）
 - [ ] 分支保护规则不会阻止 release commit 推送
-- [ ] 本地测试过 dry-run（参见 [Dry-Run测试](/examples/03-dry-run-testing.md)）
+- [ ] 本地测试过 dry-run（参见 [Dry-Run测试](../examples/03-dry-run-testing.md)）
 
 ## 常用触发方式对比
 

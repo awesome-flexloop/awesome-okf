@@ -42,7 +42,7 @@ sources:
 **沟通要点**：
 1. 表达对其贡献的认可
 2. 询问是否有兴趣加入团队
-3. 让其阅读[成员指南](/concepts/04-member-guide.md)了解职责
+3. 让其阅读[成员指南](../concepts/04-member-guide.md)了解职责
 4. 说明加入后的期望（参加投票、关注仓库等）
 
 **示例消息**：
@@ -113,6 +113,6 @@ Issue 开放7天期间：
 
 ## 相关概念
 
-- [成为团队成员](/concepts/02-becoming-member.md)
-- [团队成员体系](/concepts/01-team-membership.md)
-- [成员指南与PR合并原则](/concepts/04-member-guide.md)
+- [成为团队成员](../concepts/02-becoming-member.md)
+- [团队成员体系](../concepts/01-team-membership.md)
+- [成员指南与PR合并原则](../concepts/04-member-guide.md)

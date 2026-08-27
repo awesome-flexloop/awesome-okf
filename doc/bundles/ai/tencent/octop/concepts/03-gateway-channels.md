@@ -213,6 +213,6 @@ task_type="agent"（默认）:
 
 ## 相关概念
 
-- [/concepts/02-agent-runtime.md](/concepts/02-agent-runtime.md)
-- [/concepts/01-server-lifecycle.md](/concepts/01-server-lifecycle.md)
-- [/concepts/04-db-di.md](/concepts/04-db-di.md)
+- [/concepts/02-agent-runtime.md](02-agent-runtime.md)
+- [/concepts/01-server-lifecycle.md](01-server-lifecycle.md)
+- [/concepts/04-db-di.md](04-db-di.md)

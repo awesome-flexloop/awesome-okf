@@ -137,10 +137,10 @@ sources:
 
 ## 相关示例
 
-- [基础练习与解答](/examples/basic-exercise.md)
-- [教师版/学生版配置](/examples/hide-solutions.md)
+- [基础练习与解答](basic-exercise.md)
+- [教师版/学生版配置](hide-solutions.md)
 
 ## 相关概念
 
-- [门控指令](/concepts/04-gated-directives.md)
-- [练习指令详解](/concepts/02-exercise-directive.md)
+- [门控指令](../concepts/04-gated-directives.md)
+- [练习指令详解](../concepts/02-exercise-directive.md)

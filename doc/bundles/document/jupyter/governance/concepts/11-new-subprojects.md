@@ -139,7 +139,7 @@ sources:
 
 ## 相关概念
 
-- [软件子项目体系](/concepts/06-software-subprojects.md)
-- [软件指导委员会（SSC）](/concepts/04-software-steering-council.md)
-- [执行委员会（EC）](/concepts/03-executive-council.md)
-- [决策制定流程](/concepts/09-decision-making.md)
+- [软件子项目体系](06-software-subprojects.md)
+- [软件指导委员会（SSC）](04-software-steering-council.md)
+- [执行委员会（EC）](03-executive-council.md)
+- [决策制定流程](09-decision-making.md)

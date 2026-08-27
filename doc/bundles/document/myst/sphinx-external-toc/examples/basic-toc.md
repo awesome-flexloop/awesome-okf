@@ -315,6 +315,6 @@ A: glob 按文件名字母顺序排序。可以通过文件命名控制顺序（
 
 ## 相关概念
 
-- [_toc.yml 语法详解](/concepts/02-toc-yaml-syntax.md)
-- [高级功能](/concepts/04-advanced-features.md)
-- [快速开始](/concepts/01-getting-started.md)
+- [_toc.yml 语法详解](../concepts/02-toc-yaml-syntax.md)
+- [高级功能](../concepts/04-advanced-features.md)
+- [快速开始](../concepts/01-getting-started.md)

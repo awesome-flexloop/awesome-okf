@@ -184,4 +184,4 @@ const consumerPlugin: JupyterFrontEndPlugin<void> = {
 
 - [架构概览](01-architecture-overview.md)
 - [Provider 模型管理](03-provider-system.md)
-- [插件架构参考](/references/plugin-architecture.md)
+- [插件架构参考](../references/plugin-architecture.md)

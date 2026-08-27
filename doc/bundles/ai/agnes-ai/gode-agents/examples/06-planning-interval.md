@@ -460,9 +460,9 @@ agent.replay(detailed=False)  # detailed=True 显示模型输入（更长）
 
 ## 相关链接
 
-- [多步智能体与 ReAct 循环](/concepts/03-multi-step-agent.md) — ReAct 循环和规划步骤的触发机制
-- [内存系统](/concepts/04-memory-system.md) — PlanningStep、ActionStep 在内存中的组织方式
-- [提示词模板](/concepts/12-prompt-templates.md) — PlanningPromptTemplate 的结构和自定义方法
-- [高级特性](/concepts/14-advanced-features.md) — 规划与其他高级特性的组合使用
-- [Agents API 参考](/references/agents-api.md) — planning_interval 和 provide_run_summary 参数说明
-- [Memory API 参考](/references/memory-api.md) — PlanningStep 和 AgentMemory 的完整数据结构
+- [多步智能体与 ReAct 循环](../concepts/03-multi-step-agent.md) — ReAct 循环和规划步骤的触发机制
+- [内存系统](../concepts/04-memory-system.md) — PlanningStep、ActionStep 在内存中的组织方式
+- [提示词模板](../concepts/12-prompt-templates.md) — PlanningPromptTemplate 的结构和自定义方法
+- [高级特性](../concepts/14-advanced-features.md) — 规划与其他高级特性的组合使用
+- [Agents API 参考](../references/agents-api.md) — planning_interval 和 provide_run_summary 参数说明
+- [Memory API 参考](../references/memory-api.md) — PlanningStep 和 AgentMemory 的完整数据结构

@@ -165,11 +165,11 @@ Cross-Origin-Embedder-Policy: require-corp
 
 ## 下一步
 
-- [架构总览](/concepts/02-architecture-overview.md) — 理解双层架构
-- [构建时 Addon 系统](/concepts/04-build-addons.md) — 深入了解三个 Addon
-- [基本安装与配置示例](/examples/basic-install-config.md) — 完整的配置示例
+- [架构总览](02-architecture-overview.md) — 理解双层架构
+- [构建时 Addon 系统](04-build-addons.md) — 深入了解三个 Addon
+- [基本安装与配置示例](../examples/basic-install-config.md) — 完整的配置示例
 
 ## 源码参考
 
-- [Python Addon 源码](/references/addon-source.md)
-- [JupyterLab Extension 源码](/references/extension-source.md)
+- [Python Addon 源码](../references/addon-source.md)
+- [JupyterLab Extension 源码](../references/extension-source.md)

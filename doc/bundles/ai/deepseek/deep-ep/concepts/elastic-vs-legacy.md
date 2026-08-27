@@ -177,7 +177,7 @@ V2 目前不直接暴露低延迟模式 API。对于需要超低延迟推理的�
 ### 何时必须使用 V2
 
 - 需要 Engram（远程 KV 缓存）
-- 需要 PP send/recv（与 [DualPipe](/ai/deepseek/dual-pipe) 集成）
+- 需要 PP send/recv（与 [DualPipe](../../dual-pipe/index.md) 集成）
 - 需要 AGRS（All-Gather Reduce-Scatter）
 - 需要确定性路由（可复现训练）
 - 需要 expand 模式
@@ -190,7 +190,7 @@ V1 和 V2 可以在同一进程中导入和使用（通过 `from deep_ep import 
 
 ## 相关参考
 
-- [ElasticBuffer API](/ai/deepseek/deep-ep/references/buffer-elastic)
-- [Buffer (Legacy) API](/ai/deepseek/deep-ep/references/buffer-legacy)
+- ElasticBuffer API
+- Buffer (Legacy) API
 - [低延迟模式](low-latency-mode.md)
 - [架构概述](overview.md)

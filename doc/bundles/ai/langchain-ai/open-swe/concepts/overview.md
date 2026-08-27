@@ -30,7 +30,7 @@ Open SWE 由 `langgraph.json` 注册的五个独立 LangGraph 图组成（F-005�
 | **chat** | 无沙箱的"与 PR 对话"只读助手，基于 diff 和已发布 findings 回答问题 |
 | **scheduler** | 将确定性 cron 滴答扇出为调度运行、reconcile 清理、baby-sit CI 检查 |
 
-每个图都是一个工厂函数（`get_agent` / `get_reviewer_agent` / `get_analyzer` / `get_chat_agent` / `get_scheduler`），在每次运行时构造一个全新的 `create_deep_agent(...)` 实例。Agent 自身无状态——所有 per-thread 状态寄居在沙箱和线程元数据中。详见 [Agent 架构](/ai/langchain-ai/open-swe/concepts/agent-architecture)。
+每个图都是一个工厂函数（`get_agent` / `get_reviewer_agent` / `get_analyzer` / `get_chat_agent` / `get_scheduler`），在每次运行时构造一个全新的 `create_deep_agent(...)` 实例。Agent 自身无状态——所有 per-thread 状态寄居在沙箱和线程元数据中。详见 Agent 架构。
 
 ## 核心运行机制
 
@@ -62,11 +62,11 @@ Slack/Linear/GitHub/Dashboard
 
 ### 持久化分发
 
-所有外部触发都汇聚到 `dispatch_agent_run` → `create_durable_run`。它默认 `multitask_strategy="interrupt"`（跟进消息中断活跃运行并带完整历史恢复）、`durability="sync"`（每步前 checkpoint）、`stream_resumable=True`（事件流可重放），并通过 completion webhook 保证每次运行都有终态信号。详见 [Dispatch-Review 循环](/ai/langchain-ai/open-swe/concepts/dispatch-review-cycle)。
+所有外部触发都汇聚到 `dispatch_agent_run` → `create_durable_run`。它默认 `multitask_strategy="interrupt"`（跟进消息中断活跃运行并带完整历史恢复）、`durability="sync"`（每步前 checkpoint）、`stream_resumable=True`（事件流可重放），并通过 completion webhook 保证每次运行都有终态信号。详见 Dispatch-Review 循环。
 
 ### Review-Reconcile 循环
 
-Reviewer 围绕一个持续演进的 findings 列表工作：`add_finding` 记录、`update_finding` 更新、`publish_review` 发布、`resolve_finding_thread` 关闭。每次评审前，`reconcile_findings_with_review_threads` 把本地 findings 与 GitHub 上的实际 review thread 状态双向同步。另有一个独立的 `reconcile_stale_runs` 安全网清理卡在 pending 的运行。详见 [Dispatch-Review 循环](/ai/langchain-ai/open-swe/concepts/dispatch-review-cycle) 与 [Scheduler 与 Reconcile](/ai/langchain-ai/open-swe/concepts/scheduler-reconcile)。
+Reviewer 围绕一个持续演进的 findings 列表工作：`add_finding` 记录、`update_finding` 更新、`publish_review` 发布、`resolve_finding_thread` 关闭。每次评审前，`reconcile_findings_with_review_threads` 把本地 findings 与 GitHub 上的实际 review thread 状态双向同步。另有一个独立的 `reconcile_stale_runs` 安全网清理卡在 pending 的运行。详见 Dispatch-Review 循环 与 Scheduler 与 Reconcile。
 
 ### 沙箱生命周期
 
@@ -110,10 +110,10 @@ agent/
 └── skills/            # 内置 SKILL.md playbooks
 ```
 
-完整的函数与常量清单见 [架构参考](/ai/langchain-ai/open-swe/references/architecture)。
+完整的函数与常量清单见 架构参考。
 
 ## 进一步阅读
 
-- [Agent 架构](/ai/langchain-ai/open-swe/concepts/agent-architecture) — 图工厂、模型优先级、middleware 洋葱圈
-- [Dispatch-Review 循环](/ai/langchain-ai/open-swe/concepts/dispatch-review-cycle) — durable dispatch、findings 模型、GitHub thread 协调
-- [Scheduler 与 Reconcile](/ai/langchain-ai/open-swe/concepts/scheduler-reconcile) — cron 扇出、陈旧运行清理、baby-sit
+- Agent 架构 — 图工厂、模型优先级、middleware 洋葱圈
+- Dispatch-Review 循环 — durable dispatch、findings 模型、GitHub thread 协调
+- Scheduler 与 Reconcile — cron 扇出、陈旧运行清理、baby-sit

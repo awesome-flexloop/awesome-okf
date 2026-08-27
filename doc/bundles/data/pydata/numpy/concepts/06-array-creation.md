@@ -380,4 +380,4 @@ rng.choice([1,2,3], 5)   # 从序列中随机选择（可重复）
 - [ndarray多维数组](01-ndarray.md) — 数组对象的结构和属性
 - [dtype数据类型系统](02-dtype-system.md) — 选择正确的dtype
 - [广播规则](04-broadcasting.md) — 理解mgrid/ogrid的广播原理
-- [基础数组操作](/examples/basic-array-ops.md) — 创建数组后的基本操作
+- [基础数组操作](../examples/basic-array-ops.md) — 创建数组后的基本操作

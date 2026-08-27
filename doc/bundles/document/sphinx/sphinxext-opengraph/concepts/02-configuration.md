@@ -209,7 +209,7 @@ ogp_social_cards = {
 - `ogp_social_cards` 未设置 `enable: False`
 - matplotlib已安装（`create_social_card` 不为None）
 
-详细配置参见[社交卡片生成](/concepts/08-social-cards.md)章节。
+详细配置参见[社交卡片生成](08-social-cards.md)章节。
 
 ## 自定义标签
 
@@ -278,10 +278,10 @@ ogp_canonical_url = "https://docs.example.org/en/stable/"
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [核心标签生成流程](/concepts/03-tag-generation.md)
-- [页面图片处理逻辑](/concepts/05-image-handling.md)
-- [社交卡片生成](/concepts/08-social-cards.md)
-- [页面级覆盖机制](/concepts/06-per-page-overrides.md)
-- [高级配置示例](/examples/advanced-config.md)
-- [sphinxext-opengraph 源码信源登记](/references/sphinxext-opengraph-source.md)
+- [5分钟快速上手](01-getting-started.md)
+- [核心标签生成流程](03-tag-generation.md)
+- [页面图片处理逻辑](05-image-handling.md)
+- [社交卡片生成](08-social-cards.md)
+- [页面级覆盖机制](06-per-page-overrides.md)
+- [高级配置示例](../examples/advanced-config.md)
+- [sphinxext-opengraph 源码信源登记](../references/sphinxext-opengraph-source.md)

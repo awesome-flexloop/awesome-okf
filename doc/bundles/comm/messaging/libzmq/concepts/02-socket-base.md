@@ -277,10 +277,10 @@ ROUTER 接收消息时，自动在消息前前置 peer 的 routing_id 帧；发�
 
 ## 相关概念
 
-- [整体架构总览](/concepts/00-overview.md) — 四层管线模型和线程模型
-- [上下文与基础设施](/concepts/01-context.md) — ctx_t 管理 socket 槽位和 I/O 线程
-- [消息与引用计数](/concepts/03-message.md) — msg_t 在 pipe 中的传递方式
-- [管道与流控](/concepts/04-pipe.md) — pipe_t 的双向无锁队列和 HWM 流控
-- [消息模式实现](/concepts/11-patterns.md) — dealer/router/pub/sub 等子类的 x-钩子覆写
-- [套接字选项体系](/concepts/09-options.md) — options_t 如何影响 socket 行为
-- [命令传递与邮箱](/concepts/08-command-mailbox.md) — mailbox_t vs mailbox_safe_t
+- [整体架构总览](00-overview.md) — 四层管线模型和线程模型
+- [上下文与基础设施](01-context.md) — ctx_t 管理 socket 槽位和 I/O 线程
+- [消息与引用计数](03-message.md) — msg_t 在 pipe 中的传递方式
+- [管道与流控](04-pipe.md) — pipe_t 的双向无锁队列和 HWM 流控
+- [消息模式实现](11-patterns.md) — dealer/router/pub/sub 等子类的 x-钩子覆写
+- [套接字选项体系](09-options.md) — options_t 如何影响 socket 行为
+- [命令传递与邮箱](08-command-mailbox.md) — mailbox_t vs mailbox_safe_t

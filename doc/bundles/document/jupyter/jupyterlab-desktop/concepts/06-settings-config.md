@@ -253,16 +253,16 @@ const DEFAULT_WIN_HEIGHT = 768;
 
 ## 相关信源
 
-- [Settings 信源](/references/settings-source.md)
-- [Config 信源](/references/config-source.md)
+- [Settings 信源](../references/settings-source.md)
+- [Config 信源](../references/config-source.md)
 
 ## 下一篇
 
-- [CLI 命令系统](/concepts/07-cli-system.md)
-- [事件与IPC系统](/concepts/08-event-ipc-system.md)
+- [CLI 命令系统](07-cli-system.md)
+- [事件与IPC系统](08-event-ipc-system.md)
 
 ## 相关概念
 
-- [Python 环境管理](/concepts/05-python-env-management.md) — pythonPath、condaPath 等设置项用于环境管理
-- [CLI 命令系统](/concepts/07-cli-system.md) — jlab config 子命令通过 CLI 读写设置
-- [事件与IPC系统](/concepts/08-event-ipc-system.md) — 设置变更通过 IPC 事件通知渲染进程
+- [Python 环境管理](05-python-env-management.md) — pythonPath、condaPath 等设置项用于环境管理
+- [CLI 命令系统](07-cli-system.md) — jlab config 子命令通过 CLI 读写设置
+- [事件与IPC系统](08-event-ipc-system.md) — 设置变更通过 IPC 事件通知渲染进程

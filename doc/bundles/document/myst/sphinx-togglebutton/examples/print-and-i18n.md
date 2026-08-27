@@ -107,5 +107,5 @@ if (typeof syncAllToggleHints === 'function') {
 
 ## 相关概念
 
-- [配置项参考](/concepts/03-configuration.md)
+- [配置项参考](../concepts/03-configuration.md)
 - [基础使用示例](basic-usage.md)

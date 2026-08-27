@@ -130,6 +130,6 @@ hello_agents/evaluation/
 
 ## 相关阅读
 
-- [第十二章 智能体性能评估](/ai/datawhale/hello-agents/references/chapter12-evaluation)
-- [Agentic-RL](/ai/datawhale/hello-agents/concepts/agentic-rl)
-- [智能体范式与ReAct](/ai/datawhale/hello-agents/concepts/agent-paradigms-react)
+- 第十二章 智能体性能评估
+- Agentic-RL
+- 智能体范式与ReAct

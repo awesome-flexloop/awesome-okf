@@ -50,7 +50,7 @@ if "hub_prefix" in self.serverapp.tornado_settings:
     page_config["token"] = ""
 ```
 
-> **信源**: [app.py:L334-348](/references/00-source-registry.md#S-004)（F-026）
+> **信源**: [app.py:L334-348](../references/00-source-registry.md#S-004)（F-026）
 
 这些配置在Jupyter Server启动时由 `jupyterhub` 包或 `jupyter-server-proxy` 注入。
 
@@ -70,7 +70,7 @@ if "hub_prefix" in self.serverapp.tornado_settings:
 page_config["token"] = ""
 ```
 
-> **信源**: [app.py:L348](/references/00-source-registry.md#S-004)
+> **信源**: [app.py:L348](../references/00-source-registry.md#S-004)
 
 **这是一个关键安全措施**：
 

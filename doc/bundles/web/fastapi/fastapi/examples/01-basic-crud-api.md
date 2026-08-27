@@ -224,9 +224,9 @@ uvicorn main:app --reload
 
 ## 相关概念
 
-- [FastAPI 应用类](/concepts/01-application.md)
-- [路由系统与请求处理管线](/concepts/02-routing-system.md)
-- [路径操作与端点执行](/concepts/03-path-operations.md)
-- [参数声明与类型系统](/concepts/05-parameter-declaration.md)
-- [请求体与表单/文件处理](/concepts/06-request-body.md)
-- [响应模型与序列化](/concepts/07-response-model.md)
+- [FastAPI 应用类](../concepts/01-application.md)
+- [路由系统与请求处理管线](../concepts/02-routing-system.md)
+- [路径操作与端点执行](../concepts/03-path-operations.md)
+- [参数声明与类型系统](../concepts/05-parameter-declaration.md)
+- [请求体与表单/文件处理](../concepts/06-request-body.md)
+- [响应模型与序列化](../concepts/07-response-model.md)

@@ -122,7 +122,7 @@ dist/
 
 ## 相关概念
 
-- [JupyterLite Demo 简介](/concepts/00-introduction.md)
-- [站点配置详解](/concepts/02-site-configuration.md)
-- [三大内核生态对比](/concepts/03-kernel-ecosystem.md)
-- [内容目录与数据文件组织](/concepts/04-content-and-data.md)
+- [JupyterLite Demo 简介](00-introduction.md)
+- [站点配置详解](02-site-configuration.md)
+- [三大内核生态对比](03-kernel-ecosystem.md)
+- [内容目录与数据文件组织](04-content-and-data.md)

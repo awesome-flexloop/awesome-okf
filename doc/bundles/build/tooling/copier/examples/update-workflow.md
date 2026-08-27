@@ -303,4 +303,4 @@ grep _commit .copier-answers.yml
 * [CLI 命令参考](../concepts/08-cli-reference.md)
 * [任务与自动化钩子示例](tasks-and-hooks.md)
 
-[^copier-src]: Copier 源码，见本 bundle 信源登记 [references/copier-source.md](/references/copier-source.md)。
+[^copier-src]: Copier 源码，见本 bundle 信源登记 [references/copier-source.md](../references/copier-source.md)。

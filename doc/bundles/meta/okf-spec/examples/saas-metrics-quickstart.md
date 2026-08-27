@@ -341,7 +341,7 @@ stale_after: 2026-10-01T00:00:00Z
 
 ## 相关文档
 
-- [OKF 格式概览](../concepts/format-overview.md) - 了解 OKF 的基本概念
+- OKF 格式概览 - 了解 OKF 的基本概念
 - [知识包目录结构](../concepts/bundle-structure.md) - 目录布局规范
 - [概念文档](../concepts/concept-documents.md) - frontmatter 和正文规范
 - [溯源与信源](../concepts/provenance-sources.md) - sources 字段详解

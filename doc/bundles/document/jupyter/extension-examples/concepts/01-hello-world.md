@@ -145,7 +145,7 @@ hello-world演示了插件的骨架，但没有添加任何用户可见功能。
 
 ## 相关概念
 
-- [JupyterLab扩展开发入门](/concepts/00-introduction.md)
-- [插件基础与依赖注入](/concepts/03-plugin-basics.md)
-- [命令系统](/concepts/04-commands.md)
-- [插件解剖结构参考](/references/plugin-anatomy.md)
+- [JupyterLab扩展开发入门](00-introduction.md)
+- [插件基础与依赖注入](03-plugin-basics.md)
+- [命令系统](04-commands.md)
+- [插件解剖结构参考](../references/plugin-anatomy.md)

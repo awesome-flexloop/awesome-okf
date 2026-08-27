@@ -44,7 +44,7 @@ sources:
 
 ### 步骤2：联系候选人
 
-如果团队有共识，提名人**私下联系**潜在新成员，询问其是否有兴趣加入。同时让候选人阅读[成员指南](/concepts/04-member-guide.md)，确保其了解加入后的职责。如果候选人同意，进入下一步。
+如果团队有共识，提名人**私下联系**潜在新成员，询问其是否有兴趣加入。同时让候选人阅读[成员指南](04-member-guide.md)，确保其了解加入后的职责。如果候选人同意，进入下一步。
 
 ### 步骤3：公开提名Issue
 
@@ -94,7 +94,7 @@ README.md 明确指出，向 Jupyter Server GitHub 组织贡献扩展的指南�
 
 ## 相关概念
 
-- [团队成员体系](/concepts/01-team-membership.md)
-- [决策机制](/concepts/03-decision-making.md)
-- [成员指南与PR合并原则](/concepts/04-member-guide.md)
-- [实操：提名新成员](/examples/nominating-new-member.md)
+- [团队成员体系](01-team-membership.md)
+- [决策机制](03-decision-making.md)
+- [成员指南与PR合并原则](04-member-guide.md)
+- [实操：提名新成员](../examples/nominating-new-member.md)

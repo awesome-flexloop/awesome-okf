@@ -312,8 +312,8 @@ run(data, vfile, ctx) {
 
 ## 相关概念
 
-- [统一插件架构](/concepts/01-unified-plugin-architecture.md)
-- [MyST 解析器](/concepts/02-myst-parser.md)
-- [公共类型系统](/concepts/04-myst-common-types.md)
-- [自定义指令示例](/examples/05-custom-directive.md)
-- [自定义角色示例](/examples/04-custom-role.md)
+- [统一插件架构](01-unified-plugin-architecture.md)
+- [MyST 解析器](02-myst-parser.md)
+- [公共类型系统](04-myst-common-types.md)
+- [自定义指令示例](../examples/05-custom-directive.md)
+- [自定义角色示例](../examples/04-custom-role.md)

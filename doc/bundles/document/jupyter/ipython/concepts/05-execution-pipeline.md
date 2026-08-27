@@ -354,9 +354,9 @@ run_line_magic("timeit", "sum(range(1000))")  [F-222]
 
 ## 相关概念
 
-- [Shell 生命周期](/concepts/03-shell-lifecycle.md)
-- [魔法命令系统](/concepts/04-magic-system.md)
-- [输入转换与特殊语法](/concepts/07-input-transform.md)
-- [显示系统](/concepts/06-display-system.md)
-- [异步支持](/concepts/12-async-support.md)
-- [信源参考 - 核心引擎](/references/interactiveshell-source.md)
+- [Shell 生命周期](03-shell-lifecycle.md)
+- [魔法命令系统](04-magic-system.md)
+- [输入转换与特殊语法](07-input-transform.md)
+- [显示系统](06-display-system.md)
+- [异步支持](12-async-support.md)
+- [信源参考 - 核心引擎](../references/interactiveshell-source.md)

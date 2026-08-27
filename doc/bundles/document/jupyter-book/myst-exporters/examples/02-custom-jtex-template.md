@@ -364,7 +364,7 @@ npx jtex check templates/lecture-notes
 
 ## 相关概念
 
-- [08-jtex-template-engine](/concepts/08-jtex-template-engine.md)：jtex 模板引擎详解
-- [02-latex-export](/concepts/02-latex-export.md)：LaTeX 导出
-- [03-pdf-export](/concepts/03-pdf-export.md)：PDF 生成流程
+- [08-jtex-template-engine](../concepts/08-jtex-template-engine.md)：jtex 模板引擎详解
+- [02-latex-export](../concepts/02-latex-export.md)：LaTeX 导出
+- [03-pdf-export](../concepts/03-pdf-export.md)：PDF 生成流程
 - [04-template-system](../../jupyter-book/concepts/04-template-system.md)：模板系统

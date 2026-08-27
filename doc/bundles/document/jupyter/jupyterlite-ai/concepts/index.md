@@ -64,8 +64,8 @@
 
 ## 相关资源
 
-- [API 参考](/references/index.md) — 接口定义、源码索引、工具/提供商参考
-- [实践示例](/examples/index.md) — 从安装到开发的操作指南
+- [API 参考](../references/index.md) — 接口定义、源码索引、工具/提供商参考
+- [实践示例](../examples/index.md) — 从安装到开发的操作指南
 - [官方文档](https://jupyterlite-ai.readthedocs.io/)
 
 ```{toctree}

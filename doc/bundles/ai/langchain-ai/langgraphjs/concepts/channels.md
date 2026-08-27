@@ -15,7 +15,7 @@ sources:
 
 # Channels 通道体系
 
-通道（Channel）是 LangGraphJS 状态管理的最小原语。图状态的每个字段就是一个通道实例，节点通过通道读写通信，[Pregel 执行引擎](pregel-execution)在超步边界统一更新所有通道。
+通道（Channel）是 LangGraphJS 状态管理的最小原语。图状态的每个字段就是一个通道实例，节点通过通道读写通信，[Pregel 执行引擎](pregel-execution.md)在超步边界统一更新所有通道。
 
 ## BaseChannel 抽象
 
@@ -155,6 +155,6 @@ class MyChannel<T> extends BaseChannel<T, T, T> {
 
 ## 相关概念
 
-- [Annotation 状态定义](annotation) — 用 DSL 声明通道
-- [Pregel 执行引擎](pregel-execution) — 通道如何在超步中被调度
-- [Checkpoint 持久化](checkpointing) — 通道状态如何持久化
+- [Annotation 状态定义](annotation.md) — 用 DSL 声明通道
+- [Pregel 执行引擎](pregel-execution.md) — 通道如何在超步中被调度
+- [Checkpoint 持久化](checkpointing.md) — 通道状态如何持久化

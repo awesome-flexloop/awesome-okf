@@ -202,7 +202,7 @@ EG在 `etc/kernelspecs/` 下提供了25+种预配置kernelspec，每种对应一
 - `serviceaccount.yaml`：ServiceAccount
 - `configmap.yaml`：内核配置和kernelspec
 
-部署示例参见 [K8s部署示例](/examples/03-kubernetes-deployment.md)。
+部署示例参见 [K8s部署示例](../examples/03-kubernetes-deployment.md)。
 
 ## 部署模式选择指南
 

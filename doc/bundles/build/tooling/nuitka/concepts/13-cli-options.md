@@ -172,7 +172,7 @@ Nuitka的选项按功能分为以下几大类：
 
 ## 选项解析流程
 
-选项解析在[__main__.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/__main__.py)中完成：
+选项解析在__main__.py中完成：
 
 ```
 1. 解析环境变量（NUITKA_*）

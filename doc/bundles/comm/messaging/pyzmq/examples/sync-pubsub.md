@@ -149,7 +149,7 @@ context = zmq.Context.instance()
 publish_socket.linger = 0
 ```
 
-通过属性赋值设置 LINGER 选项（F-027/F-059）。`linger=0` 表示关闭 socket 时不等待挂起消息发送完成，立即关闭。这避免了进程退出时因未发送消息导致的无限阻塞。详见 [attrsettr 选项系统](/references/attrsettr-options.md)。
+通过属性赋值设置 LINGER 选项（F-027/F-059）。`linger=0` 表示关闭 socket 时不等待挂起消息发送完成，立即关闭。这避免了进程退出时因未发送消息导致的无限阻塞。详见 [attrsettr 选项系统](../references/attrsettr-options.md)。
 
 ### 3. bind 与 connect
 
@@ -242,9 +242,9 @@ finally:
 
 ## 相关概念
 
-- [Context 生命周期](/concepts/01-context-lifecycle.md) — 单例、destroy、linger
-- [Socket sugar 语法层](/concepts/02-socket-sugar.md) — send_string/subscribe/bind 详解
-- [Poller 多路复用](/concepts/04-poller.md) — Poller 完整 API
-- [attrsettr 选项系统](/references/attrsettr-options.md) — linger 属性赋值原理
-- [常量枚举参考](/references/constants-enums.md) — PUB/SUB/POLLIN 常量
+- [Context 生命周期](../concepts/01-context-lifecycle.md) — 单例、destroy、linger
+- [Socket sugar 语法层](../concepts/02-socket-sugar.md) — send_string/subscribe/bind 详解
+- [Poller 多路复用](../concepts/04-poller.md) — Poller 完整 API
+- [attrsettr 选项系统](../references/attrsettr-options.md) — linger 属性赋值原理
+- [常量枚举参考](../references/constants-enums.md) — PUB/SUB/POLLIN 常量
 - [asyncio PUSH/PULL 示例](asyncio-pushpull.md) — 异步版本示例

@@ -191,7 +191,7 @@ execution error 在给定 response position 引发时（F-400）：
 
 发生错误的字段声明为 Non-Null 时，null 结果冒泡到下一个可为 null 的字段（F-404）。错误的 path 应包含到引发错误的结果字段的**完整路径**，即使该字段不在响应中（因冒泡而被抹去）。
 
-详细冒泡机制（详见 [执行引擎](/concepts/06-execution.md)）：
+详细冒泡机制（详见 [执行引擎](06-execution.md)）：
 
 1. 叶子字段 execution error → 该 position 视为 null；
 2. 若该 position 类型为 Non-Null → 错误传播到父 position；
@@ -424,8 +424,8 @@ Schema coordinate 不得包含 Ignored token（F-434）。
 
 ## 相关概念
 
-- [执行引擎：字段解析与值完成](/concepts/06-execution.md) — 了解 execution error 的产生机制和 Non-Null 冒泡算法（洞察4）
-- [指令、包装类型与输入系统](/concepts/04-directives-and-wrapping-types.md) — Non-Null 类型语义是错误冒泡的类型基础
-- [验证管线与规则体系](/concepts/05-validation.md) — request error 主要来源于验证阶段
-- [复合类型：对象、接口、联合与枚举](/concepts/03-composite-types.md) — 了解类型定义语法和 List item 错误处理
-- [内省系统：GraphQL 的自描述机制](/concepts/08-introspection.md) — 内省查询的响应格式遵循相同规则
+- [执行引擎：字段解析与值完成](06-execution.md) — 了解 execution error 的产生机制和 Non-Null 冒泡算法（洞察4）
+- [指令、包装类型与输入系统](04-directives-and-wrapping-types.md) — Non-Null 类型语义是错误冒泡的类型基础
+- [验证管线与规则体系](05-validation.md) — request error 主要来源于验证阶段
+- [复合类型：对象、接口、联合与枚举](03-composite-types.md) — 了解类型定义语法和 List item 错误处理
+- [内省系统：GraphQL 的自描述机制](08-introspection.md) — 内省查询的响应格式遵循相同规则

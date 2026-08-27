@@ -15,7 +15,7 @@ sources:
 
 jupyterlab-demo 展示了 JupyterLab 扩展的强大能力（fasta、geojson、bqplot 等）。本示例提供一个扩展开发的快速入门指南，帮助你创建自己的第一个 JupyterLab 扩展。
 
-> 💡 **前置知识**：建议先阅读 [插件架构与扩展生态](/concepts/08-extension-demo.md) 理解扩展架构的核心概念。
+> 💡 **前置知识**：建议先阅读 [插件架构与扩展生态](../concepts/08-extension-demo.md) 理解扩展架构的核心概念。
 
 ## 前置条件
 
@@ -306,6 +306,6 @@ JupyterLab 4.x 的预构建扩展（prebuilt extension）安装后无需重建�
 
 ## 相关概念
 
-- [插件架构与扩展生态](/concepts/08-extension-demo.md)
-- [工作区布局与交互体验设计](/concepts/07-workspace-layout.md)
-- [为演示添加自定义内容](/examples/04-add-demo-content.md)
+- [插件架构与扩展生态](../concepts/08-extension-demo.md)
+- [工作区布局与交互体验设计](../concepts/07-workspace-layout.md)
+- [为演示添加自定义内容](04-add-demo-content.md)

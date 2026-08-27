@@ -166,9 +166,9 @@ proof_minimal_theme = True
 
 ## 相关示例
 
-- [数学定理排版](/examples/math-theorems.md)
+- [数学定理排版](math-theorems.md)
 
 ## 相关概念
 
-- [配置项参考](/concepts/05-configuration.md)
-- [交叉引用与编号映射](/concepts/04-cross-references.md)
+- [配置项参考](../concepts/05-configuration.md)
+- [交叉引用与编号映射](../concepts/04-cross-references.md)

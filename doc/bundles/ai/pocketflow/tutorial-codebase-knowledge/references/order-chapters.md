@@ -15,7 +15,7 @@ source: nodes.py
 class OrderChapters(Node):
 ```
 
-源码位置：[nodes.py#L410-L534](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py#L410-L534)
+源码位置：nodes.py#L410-L534
 
 ## 生命周期方法
 
@@ -85,4 +85,4 @@ OrderChapters 的 prompt 明确指示 LLM 按以下原则排序：
 
 ## 源码位置
 
-[nodes.py#L410-L534](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py#L410-L534)
+nodes.py#L410-L534

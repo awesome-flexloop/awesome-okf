@@ -223,7 +223,7 @@ GeoJSON 文件直接放入 data/ 目录，jupyterlab-geojson 扩展会自动识�
 如果你的数据格式不在 JupyterLab 默认支持的范围内，有两种选择：
 
 1. **使用代码加载**：在 Notebook 中用 pandas/json 等库加载，不需要专用查看器
-2. **开发扩展**：为该格式开发专用查看器扩展（见 [开发 JupyterLab 扩展入门](/examples/05-extension-dev.md)）
+2. **开发扩展**：为该格式开发专用查看器扩展（见 [开发 JupyterLab 扩展入门](05-extension-dev.md)）
 
 ## 进阶：添加图片和多媒体
 
@@ -287,7 +287,7 @@ https://mybinder.org/v2/gh/your-username/your-repo/master?urlpath=lab/tree/noteb
 
 ## 相关概念
 
-- [Notebook 示例解析](/concepts/05-notebook-examples.md)
-- [数据文件与多格式查看器](/concepts/06-data-files.md)
-- [创建自定义演讲配置](/examples/02-custom-demo-talk.md)
-- [开发 JupyterLab 扩展入门](/examples/05-extension-dev.md)
+- [Notebook 示例解析](../concepts/05-notebook-examples.md)
+- [数据文件与多格式查看器](../concepts/06-data-files.md)
+- [创建自定义演讲配置](02-custom-demo-talk.md)
+- [开发 JupyterLab 扩展入门](05-extension-dev.md)

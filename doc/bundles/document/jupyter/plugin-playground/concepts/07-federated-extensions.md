@@ -203,7 +203,7 @@ export default plugin;
 
 ## 相关概念
 
-- [模块解析系统](/concepts/04-module-resolution.md)
-- [Token 依赖注入系统](/concepts/06-token-system.md)
-- [整体架构与数据流](/concepts/01-architecture-overview.md)
-- [ImportResolver API 参考](/references/resolver-api.md)
+- [模块解析系统](04-module-resolution.md)
+- [Token 依赖注入系统](06-token-system.md)
+- [整体架构与数据流](01-architecture-overview.md)
+- [ImportResolver API 参考](../references/resolver-api.md)

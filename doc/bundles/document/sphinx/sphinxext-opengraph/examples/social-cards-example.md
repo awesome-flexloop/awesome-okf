@@ -264,9 +264,9 @@ WARNING: [Social card] image cannot be an SVG image, skipping...
 
 ## 相关概念
 
-- [社交卡片生成](/concepts/08-social-cards.md)
-- [页面图片处理逻辑](/concepts/05-image-handling.md)
-- [配置选项全解](/concepts/02-configuration.md)
-- [基础配置示例](/examples/basic-setup.md)
-- [高级配置示例](/examples/advanced-config.md)
-- [sphinxext-opengraph 源码信源登记](/references/sphinxext-opengraph-source.md)
+- [社交卡片生成](../concepts/08-social-cards.md)
+- [页面图片处理逻辑](../concepts/05-image-handling.md)
+- [配置选项全解](../concepts/02-configuration.md)
+- [基础配置示例](basic-setup.md)
+- [高级配置示例](advanced-config.md)
+- [sphinxext-opengraph 源码信源登记](../references/sphinxext-opengraph-source.md)

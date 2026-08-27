@@ -301,7 +301,7 @@ type AllowlistConfig struct {
 
 ## 相关概念
 
-- [ACP 协议](/concepts/03-acp-protocol.md)——另一种前端传输
-- [Agent 运行循环](/concepts/02-agent-run-loop.md)——bot 会话驱动的核心
-- [CLI 与 TUI](/concepts/05-cli-tui.md)——`reasonix bot` 命令
-- [Bot 网关示例](/examples/02-bot-gateway.md)——配置和接入示例
+- [ACP 协议](03-acp-protocol.md)——另一种前端传输
+- [Agent 运行循环](02-agent-run-loop.md)——bot 会话驱动的核心
+- [CLI 与 TUI](05-cli-tui.md)——`reasonix bot` 命令
+- [Bot 网关示例](../examples/02-bot-gateway.md)——配置和接入示例

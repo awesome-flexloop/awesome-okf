@@ -117,7 +117,7 @@ HTTP API 通过 Effect HttpApi 在 `packages/protocol` 中定义，路由组位�
 
 ## 相关概念
 
-- [OpenCode 简介](/concepts/00-introduction.md)
-- [配置系统](/concepts/02-config-system.md)
-- [会话与工具](/concepts/03-session-tools.md)
-- [部署与基础设施](/concepts/04-deployment-infra.md)
+- [OpenCode 简介](00-introduction.md)
+- [配置系统](02-config-system.md)
+- [会话与工具](03-session-tools.md)
+- [部署与基础设施](04-deployment-infra.md)

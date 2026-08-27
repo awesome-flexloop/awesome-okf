@@ -408,9 +408,9 @@ class GitResponseError extends Error {
 
 ## 相关概念
 
-- [GitExtension核心模型](/concepts/04-git-extension-model.md)
-- [服务端Git执行引擎](/concepts/08-server-git-execution.md)
-- [命令系统与菜单](/concepts/10-commands-and-menu.md)
-- [UI组件与Widget体系](/concepts/07-ui-components-and-widgets.md)
-- [轮询与信号系统](/concepts/09-polling-and-signals.md)
-- [配置系统](/concepts/11-configuration-and-settings.md)
+- [GitExtension核心模型](04-git-extension-model.md)
+- [服务端Git执行引擎](08-server-git-execution.md)
+- [命令系统与菜单](10-commands-and-menu.md)
+- [UI组件与Widget体系](07-ui-components-and-widgets.md)
+- [轮询与信号系统](09-polling-and-signals.md)
+- [配置系统](11-configuration-and-settings.md)

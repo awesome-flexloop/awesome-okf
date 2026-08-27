@@ -121,9 +121,9 @@ CodeBuddy 同时提供 IDE 与插件两种形态（F-009）。插件兼容六大
 
 ## 相关概念
 
-- [产品矩阵总览](/concepts/00-product-matrix.md) — IDE 在三态一体中的定位
-- [CLI](/concepts/02-cli.md) — 与 IDE 共享高级能力的终端形态
-- [NPC 云端 AI 员工](/concepts/03-npc.md) — 基于 CodeBuddy 核心能力的云端延伸
-- [Security 安全审计](/concepts/05-security.md) — 代码审查与安全审计的协同
-- [IDE 工作流示例](/examples/ide-workflow.md) — 从自然语言到部署的实战流程
-- [CLI 快速入门](/examples/quick-start-cli.md) — 三态一体中 CLI 的使用
+- [产品矩阵总览](00-product-matrix.md) — IDE 在三态一体中的定位
+- [CLI](02-cli.md) — 与 IDE 共享高级能力的终端形态
+- [NPC 云端 AI 员工](03-npc.md) — 基于 CodeBuddy 核心能力的云端延伸
+- [Security 安全审计](05-security.md) — 代码审查与安全审计的协同
+- [IDE 工作流示例](../examples/ide-workflow.md) — 从自然语言到部署的实战流程
+- [CLI 快速入门](../examples/quick-start-cli.md) — 三态一体中 CLI 的使用

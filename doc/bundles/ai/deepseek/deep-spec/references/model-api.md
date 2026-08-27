@@ -596,8 +596,8 @@ DFlash 没有独立的模型类，通过配置实现：
 
 ## 九、相关链接
 
-- [/deepseek/deep-spec/concepts/dspark-model](/ai/deepseek/deep-spec/concepts/dspark-model) — DSpark 架构详解
-- [/deepseek/deep-spec/concepts/eagle3-model](/ai/deepseek/deep-spec/concepts/eagle3-model) — Eagle3 架构详解
-- [/deepseek/deep-spec/concepts/speculative-decoding-training](/ai/deepseek/deep-spec/concepts/speculative-decoding-training) — 投机解码训练方法论
-- [/deepseek/deep-spec/references/training-api](/ai/deepseek/deep-spec/references/training-api) — 训练 API 参考
-- [/deepseek/deep-spec/references/eval-api](/ai/deepseek/deep-spec/references/eval-api) — 评估 API 参考
+- /deepseek/deep-spec/concepts/dspark-model — DSpark 架构详解
+- /deepseek/deep-spec/concepts/eagle3-model — Eagle3 架构详解
+- /deepseek/deep-spec/concepts/speculative-decoding-training — 投机解码训练方法论
+- /deepseek/deep-spec/references/training-api — 训练 API 参考
+- /deepseek/deep-spec/references/eval-api — 评估 API 参考

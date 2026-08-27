@@ -149,6 +149,6 @@ demo 中使用 `:tags: [remove-input]` 隐藏 Matplotlib 配置代码（`%matplo
 
 ## 相关内容
 
-- [03-sphinx-conf](/concepts/03-sphinx-conf.md)
-- [06-try-examples](/concepts/06-try-examples.md)
-- [/examples/04-matplotlib-notebook.md](/examples/04-matplotlib-notebook.md)
+- [03-sphinx-conf](03-sphinx-conf.md)
+- [06-try-examples](06-try-examples.md)
+- [/examples/04-matplotlib-notebook.md](../examples/04-matplotlib-notebook.md)

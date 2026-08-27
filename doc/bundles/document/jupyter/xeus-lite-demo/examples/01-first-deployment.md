@@ -142,6 +142,6 @@ A: 首次加载需要下载 WASM 模块和包（约几十 MB），取决于网�
 
 ## 相关概念
 
-- [GitHub 模板三步部署](/concepts/03-github-template-deploy.md) — 部署流程概念详解
-- [双环境模型](/concepts/02-dual-environment.md) — 理解两个配置文件
+- [GitHub 模板三步部署](../concepts/03-github-template-deploy.md) — 部署流程概念详解
+- [双环境模型](../concepts/02-dual-environment.md) — 理解两个配置文件
 - [Python 科学计算环境](02-numpy-matplotlib.md) — 下一步：添加 numpy 和 matplotlib

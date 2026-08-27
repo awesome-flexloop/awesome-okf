@@ -153,7 +153,7 @@ sphinx-build -c . -b html -C source build/student  # 使用 conf_student.py
 
 ## 相关概念
 
-- [练习指令详解](/concepts/02-exercise-directive.md)
-- [门控指令](/concepts/04-gated-directives.md)
-- [配置项参考](/concepts/05-configuration.md)
-- [教师版/学生版示例](/examples/hide-solutions.md)
+- [练习指令详解](02-exercise-directive.md)
+- [门控指令](04-gated-directives.md)
+- [配置项参考](05-configuration.md)
+- [教师版/学生版示例](../examples/hide-solutions.md)

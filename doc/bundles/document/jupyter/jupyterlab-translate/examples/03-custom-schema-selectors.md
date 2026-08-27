@@ -226,6 +226,6 @@ grep -A2 "placeholder" my-extension/my_extension/locale/my_extension.pot
 
 ## 相关概念
 
-- [Schema国际化选择器](/concepts/09-schema-i18n-selectors.md)
-- [字符串提取流水线](/concepts/04-extraction-pipeline.md)
-- [Jed JSON翻译格式](/concepts/06-json-jed-format.md)
+- [Schema国际化选择器](../concepts/09-schema-i18n-selectors.md)
+- [字符串提取流水线](../concepts/04-extraction-pipeline.md)
+- [Jed JSON翻译格式](../concepts/06-json-jed-format.md)

@@ -101,7 +101,7 @@ Tutorials 部分包含 7 篇文档（1 篇索引 + 6 篇实战教程），按难
 
 ## 相关链接
 
-- [Guide 基础教程](/concepts/03-guide-content.md)
-- [Trae Learning 学习站简介](/concepts/00-introduction.md)
-- [VitePress 站点架构](/concepts/01-vitepress-setup.md)
-- [添加新教程文档示例](/examples/add-tutorial.md)
+- [Guide 基础教程](03-guide-content.md)
+- [Trae Learning 学习站简介](00-introduction.md)
+- [VitePress 站点架构](01-vitepress-setup.md)
+- [添加新教程文档示例](../examples/add-tutorial.md)

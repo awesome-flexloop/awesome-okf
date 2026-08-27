@@ -10,9 +10,9 @@
   - 从 Agent Framework 到 Agent Harness 的定位跃迁
   - 模板驱动 + 渐进式能力扩展的学习路径重构
 - 新增概念文档：
-  - [Agent Harness——从框架到运行时外壳](./concepts/agent-harness.md)
-  - [虚拟文件系统与 Context Engineering](./concepts/virtual-filesystem-context-engineering.md)
-- 新增信源登记：[readme-source.md](./references/readme-source.md)
+  - [Agent Harness——从框架到运行时外壳](concepts/agent-harness.md)
+  - [虚拟文件系统与 Context Engineering](concepts/virtual-filesystem-context-engineering.md)
+- 新增信源登记：[readme-source.md](references/readme-source.md)
 - 新增 examples 占位索引，记录7种 AgentSeek 模板与章节映射
 
 ### 说明

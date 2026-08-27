@@ -23,7 +23,7 @@ Cockle（浏览器Shell）的文件系统采用三层架构设计：底层是 Em
 
 ## 文件系统架构概述
 
-Cockle 的文件系统初始化在 [shell_impl.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/shell_impl.ts) 的 `_initFileSystem` 方法中完成，整个架构包含三个核心层次：
+Cockle 的文件系统初始化在 shell_impl.ts 的 `_initFileSystem` 方法中完成，整个架构包含三个核心层次：
 
 1. **MEMFS 基础层**：Emscripten 编译时默认启用的内存文件系统，所有文件操作在内存中执行，速度极快但刷新后数据丢失
 2. **PROXYFS 代理层**：Emscripten 提供的代理文件系统，将文件操作转发到主线程处理
@@ -345,7 +345,7 @@ cat < /drive/hello.txt
 
 ## 通配符展开
 
-Cockle 在解析命令行参数时会自动进行文件名通配符展开（globbing），实现位于 [shell_impl.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/cockle/src/shell_impl.ts) 的 `_filenameExpansion` 方法。
+Cockle 在解析命令行参数时会自动进行文件名通配符展开（globbing），实现位于 shell_impl.ts 的 `_filenameExpansion` 方法。
 
 ### 支持的通配符
 
@@ -466,9 +466,9 @@ const shell = new CockleShell({
 
 ## 相关概念
 
-- [05 - IO 系统](/concepts/05-io-system.md)：标准输入输出、重定向和管道的实现
-- [07 - 缓冲 IO 系统](/concepts/07-buffered-io.md)：stdin 的同步阻塞读取机制
-- [10 - WASM 与 JavaScript 命令](/concepts/10-wasm-js-commands.md)：WASM 命令的加载和执行
-- [11 - Worker 通信机制](/concepts/11-worker-communication.md)：Worker 与主线程的消息传递
-- [Shell API 参考](/references/shell-api.md)：Shell 构造函数完整选项
-- [配置参考](/references/config-source.md)：cockle-config.json 完整格式
+- [05 - IO 系统](05-io-system.md)：标准输入输出、重定向和管道的实现
+- [07 - 缓冲 IO 系统](07-buffered-io.md)：stdin 的同步阻塞读取机制
+- [10 - WASM 与 JavaScript 命令](10-wasm-js-commands.md)：WASM 命令的加载和执行
+- [11 - Worker 通信机制](11-worker-communication.md)：Worker 与主线程的消息传递
+- [Shell API 参考](../references/shell-api.md)：Shell 构造函数完整选项
+- [配置参考](../references/config-source.md)：cockle-config.json 完整格式

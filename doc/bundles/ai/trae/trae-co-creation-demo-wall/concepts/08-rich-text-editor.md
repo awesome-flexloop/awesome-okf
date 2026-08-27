@@ -71,6 +71,6 @@ RichTextEditor 组件在 Step3Content（内容介绍步骤）中使用（F-019�
 
 ## 相关概念
 
-- [作品提交流程](/concepts/13-form-submission.md)
-- [CRUD 数据层](/concepts/07-crud-layer.md)
-- [API 路由设计](/concepts/06-api-routes.md)
+- [作品提交流程](13-form-submission.md)
+- [CRUD 数据层](07-crud-layer.md)
+- [API 路由设计](06-api-routes.md)

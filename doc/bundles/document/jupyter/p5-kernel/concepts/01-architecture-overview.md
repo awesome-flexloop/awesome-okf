@@ -193,7 +193,7 @@ P5Kernel 不重新实现 JS 执行、import 处理、Worker 通信等基础能�
 
 ## 相关概念
 
-- [P5Kernel 实现详解](/concepts/02-kernel-implementation.md)
-- [P5Executor 与渲染机制](/concepts/03-executor-and-rendering.md)
-- [%show 魔法命令](/concepts/04-magic-commands.md)
-- [扩展注册与 CDN 配置](/concepts/05-extension-registration.md)
+- [P5Kernel 实现详解](02-kernel-implementation.md)
+- [P5Executor 与渲染机制](03-executor-and-rendering.md)
+- [%show 魔法命令](04-magic-commands.md)
+- [扩展注册与 CDN 配置](05-extension-registration.md)

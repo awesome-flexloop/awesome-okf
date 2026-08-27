@@ -466,11 +466,11 @@ python test_customstack.py
 
 ## 相关概念
 
-* [对象模型（§2）](/concepts/02-object-model.md)
-* [类型系统（§3）](/concepts/03-type-system.md)
-* [引用计数（§4）](/concepts/04-reference-counting.md)
-* [垃圾回收（§5）](/concepts/05-garbage-collector.md)
-* [最简 C 扩展模块](./minimal-c-extension.md)
-* [CPython 源码信源登记](/references/cpython-source.md)
+* [对象模型（§2）](../concepts/02-object-model.md)
+* [类型系统（§3）](../concepts/03-type-system.md)
+* [引用计数（§4）](../concepts/04-reference-counting.md)
+* [垃圾回收（§5）](../concepts/05-garbage-collector.md)
+* [最简 C 扩展模块](minimal-c-extension.md)
+* [CPython 源码信源登记](../references/cpython-source.md)
 
-[^cpython-source]: CPython 3.16.0a0 源码，类型对象定义于 `Include/cpython/object.h`、`Objects/typeobject.c`，成员定义于 `Include/structmember.h`，见本 bundle 信源登记 [references/cpython-source.md](/references/cpython-source.md)。
+[^cpython-source]: CPython 3.16.0a0 源码，类型对象定义于 `Include/cpython/object.h`、`Objects/typeobject.c`，成员定义于 `Include/structmember.h`，见本 bundle 信源登记 [references/cpython-source.md](../references/cpython-source.md)。

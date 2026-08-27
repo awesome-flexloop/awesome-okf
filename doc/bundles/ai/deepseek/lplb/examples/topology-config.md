@@ -266,7 +266,7 @@ print(f"n_group = {planner.n_group}")  # 8 个冗余组
 - n_group 越大，可并行的 LP 求解 block 越多，但跨组分流需要通过 EPLB 静态层处理。
 
 相关参考：
-- [API 参考](/ai/deepseek/lplb/references/api)
-- [拓扑配置参考](/ai/deepseek/lplb/references/topology)
-- [拓扑感知路由概念](/ai/deepseek/lplb/concepts/topology-aware-routing)
-- [基础使用示例](/ai/deepseek/lplb/examples/basic-planning)
+- API 参考
+- 拓扑配置参考
+- 拓扑感知路由概念
+- 基础使用示例

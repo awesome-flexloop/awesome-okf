@@ -271,7 +271,7 @@ MarkdownParseState 在 openPosition 时从 Token 的 map 属性计算位置。
 
 ## 相关概念
 
-- [MyST 解析器](/concepts/02-myst-parser.md)
-- [MDAST 转换管线](/concepts/03-myst-transforms.md)
-- [公共类型系统](/concepts/04-myst-common-types.md)
-- [配置系统](/concepts/10-configuration-system.md)
+- [MyST 解析器](02-myst-parser.md)
+- [MDAST 转换管线](03-myst-transforms.md)
+- [公共类型系统](04-myst-common-types.md)
+- [配置系统](10-configuration-system.md)

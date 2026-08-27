@@ -468,8 +468,8 @@ PlanningPromptTemplate 的六个字段在规划流程的不同阶段被分别渲
 
 ## 相关链接
 
-- [CodeAgent：代码执行范式](/concepts/06-code-agent.md) — CodeAgent如何使用system_prompt
-- [ToolCallingAgent：函数调用范式](/concepts/05-tool-calling-agent.md) — ToolCallingAgent的提示词差异
-- [多步推理循环](/concepts/03-multi-step-agent.md) — 规划模板在多步循环中的使用
-- [高级特性](/concepts/14-advanced-features.md) — Managed Agents的task/report模板
-- [Prompts 参考](/references/prompts-reference.md) — 默认模板完整内容
+- [CodeAgent：代码执行范式](06-code-agent.md) — CodeAgent如何使用system_prompt
+- [ToolCallingAgent：函数调用范式](05-tool-calling-agent.md) — ToolCallingAgent的提示词差异
+- [多步推理循环](03-multi-step-agent.md) — 规划模板在多步循环中的使用
+- [高级特性](14-advanced-features.md) — Managed Agents的task/report模板
+- [Prompts 参考](../references/prompts-reference.md) — 默认模板完整内容

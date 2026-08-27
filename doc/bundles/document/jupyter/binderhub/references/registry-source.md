@@ -16,7 +16,7 @@ sources:
 
 ## 概述
 
-[registry.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/registry.py) 实现了 BinderHub 与 Docker Registry 的交互。核心类 `DockerRegistry` 负责检查镜像是否已存在（缓存命中检查）、获取推送凭证以及处理 Docker Registry API v2 的认证流程。
+registry.py 实现了 BinderHub 与 Docker Registry 的交互。核心类 `DockerRegistry` 负责检查镜像是否已存在（缓存命中检查）、获取推送凭证以及处理 Docker Registry API v2 的认证流程。
 
 ## DockerRegistry 类
 

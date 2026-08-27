@@ -34,22 +34,22 @@ stale_after: 2027-08-22
 
 | 阶段 | 文档 |
 |------|------|
-| **入门** | [项目简介](/concepts/00-introduction.md) · [快速开始](/concepts/01-getting-started.md) · [架构总览](/concepts/02-architecture-overview.md) |
-| **核心** | [CLI命令参考](/concepts/03-cli-commands.md) · [字符串提取流水线](/concepts/04-extraction-pipeline.md) · [翻译目录管理](/concepts/05-catalog-management.md) · [Jed JSON格式](/concepts/06-json-jed-format.md) · [Hatch构建钩子](/concepts/07-hatch-build-hook.md) · [运行时发现](/concepts/08-runtime-discovery.md) |
-| **进阶** | [Schema选择器](/concepts/09-schema-i18n-selectors.md) · [Crowdin贡献者](/concepts/10-contributors-crowdin.md) · [双模式分发](/concepts/11-dual-mode-distribution.md) |
+| **入门** | [项目简介](concepts/00-introduction.md) · [快速开始](concepts/01-getting-started.md) · [架构总览](concepts/02-architecture-overview.md) |
+| **核心** | [CLI命令参考](concepts/03-cli-commands.md) · [字符串提取流水线](concepts/04-extraction-pipeline.md) · [翻译目录管理](concepts/05-catalog-management.md) · [Jed JSON格式](concepts/06-json-jed-format.md) · [Hatch构建钩子](concepts/07-hatch-build-hook.md) · [运行时发现](concepts/08-runtime-discovery.md) |
+| **进阶** | [Schema选择器](concepts/09-schema-i18n-selectors.md) · [Crowdin贡献者](concepts/10-contributors-crowdin.md) · [双模式分发](concepts/11-dual-mode-distribution.md) |
 
-完整索引见 [概念文档索引](/concepts/index.md)。
+完整索引见 [概念文档索引](concepts/index.md)。
 
 ### 🛠️ 示例文档（4篇）
 
 | 示例 | 场景 |
 |------|------|
-| [扩展包国际化基础流程](/examples/01-basic-extension-i18n.md) | 从零为扩展添加i18n的6步完整流程 |
-| [语言包仓库工作流](/examples/02-language-pack-workflow.md) | 维护集中式语言包仓库的批量处理和发布 |
-| [自定义Schema选择器](/examples/03-custom-schema-selectors.md) | 提取非标准schema字段的翻译字符串 |
-| [Hatch构建钩子配置](/examples/04-hatch-hook-integration.md) | pyproject.toml配置与构建验证 |
+| [扩展包国际化基础流程](examples/01-basic-extension-i18n.md) | 从零为扩展添加i18n的6步完整流程 |
+| [语言包仓库工作流](examples/02-language-pack-workflow.md) | 维护集中式语言包仓库的批量处理和发布 |
+| [自定义Schema选择器](examples/03-custom-schema-selectors.md) | 提取非标准schema字段的翻译字符串 |
+| [Hatch构建钩子配置](examples/04-hatch-hook-integration.md) | pyproject.toml配置与构建验证 |
 
-完整索引见 [示例文档索引](/examples/index.md)。
+完整索引见 [示例文档索引](examples/index.md)。
 
 ### 📋 信源登记（8篇）
 
@@ -57,16 +57,16 @@ stale_after: 2027-08-22
 
 | 信源 | 模块 |
 |------|------|
-| [CLI命令源码](/references/cli-source.md) | `cli.py`（7个Click命令） |
-| [API层源码](/references/api-source.md) | `api.py`（6个流程编排函数） |
-| [核心工具源码](/references/utils-source.md) | `utils.py`（19个核心功能函数） |
-| [格式转换源码](/references/converters-source.md) | `converters.py`（PO→JSON转换） |
-| [运行时发现源码](/references/finder-source.md) | `finder.py`（entry points发现） |
-| [Hatch钩子源码](/references/plugin-source.md) | `plugin.py`（构建时自动编译） |
-| [贡献者模块源码](/references/contributors-source.md) | `contributors.py`（Crowdin API集成） |
-| [常量与配置](/references/constants-config.md) | 版本号、依赖、翻译函数配置 |
+| [CLI命令源码](references/cli-source.md) | `cli.py`（7个Click命令） |
+| [API层源码](references/api-source.md) | `api.py`（6个流程编排函数） |
+| [核心工具源码](references/utils-source.md) | `utils.py`（19个核心功能函数） |
+| [格式转换源码](references/converters-source.md) | `converters.py`（PO→JSON转换） |
+| [运行时发现源码](references/finder-source.md) | `finder.py`（entry points发现） |
+| [Hatch钩子源码](references/plugin-source.md) | `plugin.py`（构建时自动编译） |
+| [贡献者模块源码](references/contributors-source.md) | `contributors.py`（Crowdin API集成） |
+| [常量与配置](references/constants-config.md) | 版本号、依赖、翻译函数配置 |
 
-完整索引见 [信源登记索引](/references/index.md)。
+完整索引见 [信源登记索引](references/index.md)。
 
 ## 快速导航
 
@@ -109,30 +109,30 @@ jupyterlab-translate/
 
 ### 路径一：扩展开发者（为自己的扩展添加国际化）
 
-1. [快速开始](/concepts/01-getting-started.md)
-2. [字符串提取流水线](/concepts/04-extraction-pipeline.md)
-3. [翻译目录管理](/concepts/05-catalog-management.md)
-4. [扩展包国际化基础流程](/examples/01-basic-extension-i18n.md)
-5. [Hatch构建钩子配置](/examples/04-hatch-hook-integration.md)
-6. （可选）[自定义Schema选择器](/examples/03-custom-schema-selectors.md)
+1. [快速开始](concepts/01-getting-started.md)
+2. [字符串提取流水线](concepts/04-extraction-pipeline.md)
+3. [翻译目录管理](concepts/05-catalog-management.md)
+4. [扩展包国际化基础流程](examples/01-basic-extension-i18n.md)
+5. [Hatch构建钩子配置](examples/04-hatch-hook-integration.md)
+6. （可选）[自定义Schema选择器](examples/03-custom-schema-selectors.md)
 
 ### 路径二：语言包维护者（维护某语言的翻译）
 
-1. [项目简介](/concepts/00-introduction.md)
-2. [CLI命令参考](/concepts/03-cli-commands.md)
-3. [双模式分发机制](/concepts/11-dual-mode-distribution.md)
-4. [翻译目录管理](/concepts/05-catalog-management.md)
-5. [语言包仓库工作流](/examples/02-language-pack-workflow.md)
-6. [Hatch构建钩子集成](/concepts/07-hatch-build-hook.md)
-7. （可选）[Crowdin贡献者集成](/concepts/10-contributors-crowdin.md)
+1. [项目简介](concepts/00-introduction.md)
+2. [CLI命令参考](concepts/03-cli-commands.md)
+3. [双模式分发机制](concepts/11-dual-mode-distribution.md)
+4. [翻译目录管理](concepts/05-catalog-management.md)
+5. [语言包仓库工作流](examples/02-language-pack-workflow.md)
+6. [Hatch构建钩子集成](concepts/07-hatch-build-hook.md)
+7. （可选）[Crowdin贡献者集成](concepts/10-contributors-crowdin.md)
 
 ### 路径三：深度理解源码
 
-1. [架构总览](/concepts/02-architecture-overview.md)
-2. 从[核心工具源码映射](/references/utils-source.md)开始，对照concepts深入各模块
-3. [格式转换模块](/concepts/06-json-jed-format.md) / [converters源码](/references/converters-source.md)
-4. [运行时发现机制](/concepts/08-runtime-discovery.md) / [finder源码](/references/finder-source.md)
-5. [Hatch构建钩子](/concepts/07-hatch-build-hook.md) / [plugin源码](/references/plugin-source.md)
+1. [架构总览](concepts/02-architecture-overview.md)
+2. 从[核心工具源码映射](references/utils-source.md)开始，对照concepts深入各模块
+3. [格式转换模块](concepts/06-json-jed-format.md) / [converters源码](references/converters-source.md)
+4. [运行时发现机制](concepts/08-runtime-discovery.md) / [finder源码](references/finder-source.md)
+5. [Hatch构建钩子](concepts/07-hatch-build-hook.md) / [plugin源码](references/plugin-source.md)
 
 ## 依赖环境
 

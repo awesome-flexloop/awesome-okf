@@ -160,8 +160,8 @@ schema.model_json_schema()
 
 ## 相关概念
 
-- [总览](/ai/langchain-ai/langchain/concepts/overview) —— 提示词在能力层中的位置
-- [Runnable 协议](/ai/langchain-ai/langchain/concepts/runnable-protocol) —— BasePromptTemplate 是 RunnableSerializable
-- [聊天模型](/ai/langchain-ai/langchain/concepts/chat-model) —— PromptValue 是模型的输入
-- [输出解析器](/ai/langchain-ai/langchain/concepts/output-parser) —— output_parser 字段关联解析器
-- [消息类型](/ai/langchain-ai/langchain/concepts/message-types) —— ChatPromptValue 产生消息列表
+- 总览 —— 提示词在能力层中的位置
+- Runnable 协议 —— BasePromptTemplate 是 RunnableSerializable
+- 聊天模型 —— PromptValue 是模型的输入
+- 输出解析器 —— output_parser 字段关联解析器
+- 消息类型 —— ChatPromptValue 产生消息列表

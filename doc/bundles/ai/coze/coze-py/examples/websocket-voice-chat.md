@@ -379,8 +379,8 @@ WebSocket 中音频数据作为 bytes 传输：
 
 ## 相关概念
 
-- [WebSocket 实时通信](/concepts/07-websockets-realtime.md) — WebSocket 架构和事件体系详解
-- [音频与语音](/concepts/08-audio-voice.md) — HTTP 音频 API（TTS/ASR/房间/直播）
-- [对话与流式处理](/concepts/03-chat-streaming.md) — HTTP+SSE 对话方案
-- [基础对话示例](/examples/basic-chat.md) — HTTP SSE 对话示例
-- [WebSocket 实时通信与音频参考](/references/websockets-audio.md) — 所有 WS 客户端和事件的完整 API
+- [WebSocket 实时通信](../concepts/07-websockets-realtime.md) — WebSocket 架构和事件体系详解
+- [音频与语音](../concepts/08-audio-voice.md) — HTTP 音频 API（TTS/ASR/房间/直播）
+- [对话与流式处理](../concepts/03-chat-streaming.md) — HTTP+SSE 对话方案
+- [基础对话示例](basic-chat.md) — HTTP SSE 对话示例
+- [WebSocket 实时通信与音频参考](../references/websockets-audio.md) — 所有 WS 客户端和事件的完整 API

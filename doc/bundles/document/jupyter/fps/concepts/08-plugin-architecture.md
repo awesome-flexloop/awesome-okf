@@ -216,7 +216,7 @@ auth.token_expiry:
 
 ## 相关概念
 
-- [配置系统](/concepts/05-configuration-system.md)
-- [模块系统](/concepts/02-module-system.md)
-- [上下文与共享值](/concepts/03-context-sharing.md)
-- [可插拔Web服务器](/concepts/07-web-modules.md)
+- [配置系统](05-configuration-system.md)
+- [模块系统](02-module-system.md)
+- [上下文与共享值](03-context-sharing.md)
+- [可插拔Web服务器](07-web-modules.md)

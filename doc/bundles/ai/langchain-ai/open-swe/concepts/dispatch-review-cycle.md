@@ -168,7 +168,7 @@ completion webhook ──► 终态回复到源频道
 
 ## 相关概念
 
-- [Agent 架构](/ai/langchain-ai/open-swe/concepts/agent-architecture) — 图工厂与 middleware 栈
-- [Scheduler 与 Reconcile](/ai/langchain-ai/open-swe/concepts/scheduler-reconcile) — cron 扇出与 baby-sit
-- [总览](/ai/langchain-ai/open-swe/concepts/overview)
-- [架构参考](/ai/langchain-ai/open-swe/references/architecture) — dispatch 与 finding 函数签名
+- Agent 架构 — 图工厂与 middleware 栈
+- Scheduler 与 Reconcile — cron 扇出与 baby-sit
+- 总览
+- 架构参考 — dispatch 与 finding 函数签名

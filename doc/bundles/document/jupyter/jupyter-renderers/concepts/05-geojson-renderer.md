@@ -325,9 +325,9 @@ export const mapIcon = new LabIcon({
 
 ## 相关概念
 
-- [MIME 渲染器开发模式](/concepts/02-mime-renderer-pattern.md)
-- [FASTA 生物序列渲染器](/concepts/04-fasta-renderer.md)
-- [Vega/Vega-Lite 可视化渲染器](/concepts/07-vega-renderer.md)
-- [IRenderMime 核心 API 参考](/references/rendermime-interfaces-api.md)
+- [MIME 渲染器开发模式](02-mime-renderer-pattern.md)
+- [FASTA 生物序列渲染器](04-fasta-renderer.md)
+- [Vega/Vega-Lite 可视化渲染器](07-vega-renderer.md)
+- [IRenderMime 核心 API 参考](../references/rendermime-interfaces-api.md)
 
 [^geojson-icons]: geojson-extension/src/icons.ts

@@ -165,7 +165,7 @@ MathJax 的以下命令在 KaTeX 中有不同的名称：
 - 展开结果受 `\expandafter` 和 `\noexpand` 影响
 - 这与 MathJax 中符号作为原子单位处理的方式不同
 
-遇到符号相关的意外行为时，可查阅 [支持表](/concepts/20-support-table.md) 确认命令是宏还是函数实现，或直接阅读 `src/macros.ts` 源码。
+遇到符号相关的意外行为时，可查阅 [支持表](20-support-table.md) 确认命令是宏还是函数实现，或直接阅读 `src/macros.ts` 源码。
 
 ## CSS 排障
 
@@ -190,7 +190,7 @@ if (!cssLoaded) {
 
 ### 版本匹配
 
-CSS 版本应与 `katex.version` 中的 JS 版本匹配。版本不匹配可能导致类名或样式规则对不上（尤其是 v0.18.0 CSS 类名加了 `katex-` 前缀，详见 [版本迁移](/concepts/22-migration.md)）。
+CSS 版本应与 `katex.version` 中的 JS 版本匹配。版本不匹配可能导致类名或样式规则对不上（尤其是 v0.18.0 CSS 类名加了 `katex-` 前缀，详见 [版本迁移](22-migration.md)）。
 
 ### 显示公式水平滚动
 
@@ -229,12 +229,12 @@ KaTeX 默认禁用显示公式自动换行（与 LaTeX 一致）。如需允许�
 
 ## 相关概念
 
-- [安装与运行时](/concepts/15-installation-and-runtime.md) — CSS/字体路径要求、DOCTYPE 说明
-- [配置系统](/concepts/10-settings-options.md) — colorIsTextColor、strict 等选项
-- [版本迁移](/concepts/22-migration.md) — v0.13-v0.18 版本变更要点
-- [支持的函数](/concepts/19-supported-functions.md) — 命令分类与支持范围
-- [字体与单位](/concepts/17-fonts-and-units.md) — 字体加载与目录结构
-- [错误处理示例](/examples/error-handling.md) — ParseError 捕获与调试技巧
+- [安装与运行时](15-installation-and-runtime.md) — CSS/字体路径要求、DOCTYPE 说明
+- [配置系统](10-settings-options.md) — colorIsTextColor、strict 等选项
+- [版本迁移](22-migration.md) — v0.13-v0.18 版本变更要点
+- [支持的函数](19-supported-functions.md) — 命令分类与支持范围
+- [字体与单位](17-fonts-and-units.md) — 字体加载与目录结构
+- [错误处理示例](../examples/error-handling.md) — ParseError 捕获与调试技巧
 
 [^web-issues]: 官网 Common Issues 页面，https://katex.org/docs/issues
 [^web-options]: 官网 Options 页面，https://katex.org/docs/options

@@ -50,15 +50,15 @@ sphinx-demo 是 `jupyterlite-sphinx` 扩展的官方演示项目。它展示了�
 
 建议按以下顺序学习本 Wiki：
 
-1. **[02-quick-start](/concepts/02-quick-start.md)**：从零搭建一个最小可运行站点
-2. **[03-sphinx-conf](/concepts/03-sphinx-conf.md)**：理解 conf.py 中每个配置项的作用
-3. **[04-kernel-comparison](/concepts/04-kernel-comparison.md)**：选择适合你项目的内核
-4. **[05-config-files](/concepts/05-config-files.md)**：掌握四层 JSON 配置文件体系
-5. **[06-try-examples](/concepts/06-try-examples.md)**：为文档添加交互式代码示例
-6. **[09-ci-deployment](/concepts/09-ci-deployment.md)**：配置自动构建和部署
+1. **[02-quick-start](02-quick-start.md)**：从零搭建一个最小可运行站点
+2. **[03-sphinx-conf](03-sphinx-conf.md)**：理解 conf.py 中每个配置项的作用
+3. **[04-kernel-comparison](04-kernel-comparison.md)**：选择适合你项目的内核
+4. **[05-config-files](05-config-files.md)**：掌握四层 JSON 配置文件体系
+5. **[06-try-examples](06-try-examples.md)**：为文档添加交互式代码示例
+6. **[09-ci-deployment](09-ci-deployment.md)**：配置自动构建和部署
 
 ## 相关内容
 
-- [02-quick-start](/concepts/02-quick-start.md)：快速开始教程
-- [03-sphinx-conf](/concepts/03-sphinx-conf.md)：conf.py 配置详解
-- [/examples/01-minimal-site.md](/examples/01-minimal-site.md)：最小站点示例
+- [02-quick-start](02-quick-start.md)：快速开始教程
+- [03-sphinx-conf](03-sphinx-conf.md)：conf.py 配置详解
+- [/examples/01-minimal-site.md](../examples/01-minimal-site.md)：最小站点示例

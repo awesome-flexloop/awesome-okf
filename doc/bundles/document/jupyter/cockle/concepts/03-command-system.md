@@ -350,6 +350,6 @@ parse() → PipeNode(
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [命令解析管线](/concepts/04-parsing-pipeline.md)
-- [IO 系统](/concepts/05-io-system.md)
+- [架构总览](02-architecture-overview.md)
+- [命令解析管线](04-parsing-pipeline.md)
+- [IO 系统](05-io-system.md)

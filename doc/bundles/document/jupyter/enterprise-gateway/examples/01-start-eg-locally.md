@@ -60,7 +60,7 @@ jupyter enterprisegateway --ip=127.0.0.1 --port=8888 --debug
 [I ...] Jupyter Enterprise Gateway 3.4.0 is available at http://127.0.0.1:8888
 ```
 
-关键配置说明参见 [应用入口与配置体系](/concepts/03-app-and-config.md)。
+关键配置说明参见 [应用入口与配置体系](../concepts/03-app-and-config.md)。
 
 ## 步骤4：验证服务状态
 
@@ -103,7 +103,7 @@ curl -X POST http://127.0.0.1:8888/api/kernels \
 }
 ```
 
-记下返回的 `id`，后续WebSocket通信需要使用。创建内核的内部流程参见 [内核启动流程详解](/concepts/09-kernel-launch-flow.md)。
+记下返回的 `id`，后续WebSocket通信需要使用。创建内核的内部流程参见 [内核启动流程详解](../concepts/09-kernel-launch-flow.md)。
 
 等待几秒让内核启动完成，查询内核状态：
 
@@ -223,7 +223,7 @@ jupyter enterprisegateway --ip=127.0.0.1 --port=8888
 curl -H "Authorization: token my-secret-token" http://127.0.0.1:8888/api
 ```
 
-参见 [安全认证与高可用](/concepts/11-security-and-ha.md) 了解更多安全配置。
+参见 [安全认证与高可用](../concepts/11-security-and-ha.md) 了解更多安全配置。
 
 ## 常见问题
 

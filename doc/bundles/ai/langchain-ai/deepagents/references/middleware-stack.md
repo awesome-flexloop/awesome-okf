@@ -91,6 +91,6 @@ FilesystemMiddleware
 
 ## 相关 API
 
-- [`create_deep_agent()`](/ai/langchain-ai/deepagents/references/api) — 中间件栈的组装入口
-- [后端系统](/ai/langchain-ai/deepagents/references/backends) — 中间件依赖的后端抽象
-- [Profile 机制](/ai/langchain-ai/deepagents/references/profiles) — 控制中间件排除和额外中间件
+- `create_deep_agent()` — 中间件栈的组装入口
+- 后端系统 — 中间件依赖的后端抽象
+- Profile 机制 — 控制中间件排除和额外中间件

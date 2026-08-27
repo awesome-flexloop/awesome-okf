@@ -105,9 +105,9 @@ asyncssh 的主要模块构成：
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [异步连接详解](/concepts/02-async-connection.md)
-- [通道与流](/concepts/03-channels.md)
-- [asyncssh 源码信源登记](/references/asyncssh-source.md)
+- [5分钟快速上手](01-getting-started.md)
+- [异步连接详解](02-async-connection.md)
+- [通道与流](03-channels.md)
+- [asyncssh 源码信源登记](../references/asyncssh-source.md)
 
-[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](/references/asyncssh-source.md)。
+[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](../references/asyncssh-source.md)。

@@ -98,9 +98,9 @@ cargo run --bin codex -- "explain this codebase to me"
 
 ## 相关概念
 
-- [工作区架构](./01-workspace-architecture.md)
-- [Rust 核心与 TUI](./02-rust-core-tui.md)
-- [Node.js CLI 入口](./03-nodejs-cli.md)
-- [沙箱执行模型](./04-sandbox-execution.md)
-- [Skills 与 AGENTS.md](./05-skills-agents-md.md)
-- [Python SDK](./06-python-sdk.md)
+- [工作区架构](01-workspace-architecture.md)
+- [Rust 核心与 TUI](02-rust-core-tui.md)
+- [Node.js CLI 入口](03-nodejs-cli.md)
+- [沙箱执行模型](04-sandbox-execution.md)
+- [Skills 与 AGENTS.md](05-skills-agents-md.md)
+- [Python SDK](06-python-sdk.md)

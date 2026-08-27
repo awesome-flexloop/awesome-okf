@@ -319,9 +319,9 @@ JobManager 支持从 StateStore 加载已有任务，记录任务历史（最多
 
 ## 相关概念
 
-- [工作区架构](/concepts/01-workspace-architecture.md) — core crate 在 21 crate 分层中的位置
-- [MCP 协议集成](/concepts/03-mcp-protocol.md) — Runtime 中的 mcp_manager 组件
-- [工具系统](/concepts/04-tool-system.md) — Runtime 中的 tool_registry 组件
-- [沙箱与执行策略](/concepts/07-sandbox-execpolicy.md) — Runtime 中的 exec_policy 组件
-- [技能与 Hooks](/concepts/06-skills-hooks.md) — Runtime 中的 hooks 组件
-- [Fleet 多 Agent](/concepts/05-fleet-subagents.md) — 多 worker 编排与子 agent
+- [工作区架构](01-workspace-architecture.md) — core crate 在 21 crate 分层中的位置
+- [MCP 协议集成](03-mcp-protocol.md) — Runtime 中的 mcp_manager 组件
+- [工具系统](04-tool-system.md) — Runtime 中的 tool_registry 组件
+- [沙箱与执行策略](07-sandbox-execpolicy.md) — Runtime 中的 exec_policy 组件
+- [技能与 Hooks](06-skills-hooks.md) — Runtime 中的 hooks 组件
+- [Fleet 多 Agent](05-fleet-subagents.md) — 多 worker 编排与子 agent

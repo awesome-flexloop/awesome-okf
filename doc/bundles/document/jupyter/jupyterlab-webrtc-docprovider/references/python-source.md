@@ -101,5 +101,5 @@ JupyterLab 扩展管理器使用的元数据文件。
 
 ## 相关概念
 
-- [构建与打包系统](/concepts/10-build-and-packaging.md)
-- [安装与快速开始](/concepts/01-getting-started.md)
+- [构建与打包系统](../concepts/10-build-and-packaging.md)
+- [安装与快速开始](../concepts/01-getting-started.md)

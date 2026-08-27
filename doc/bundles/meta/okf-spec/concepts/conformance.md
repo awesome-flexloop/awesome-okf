@@ -17,9 +17,9 @@ sources:
 
 一个 bundle **合规**（conformant）于 OKF v0.2，当且仅当：[^okf-spec]
 
-1. 树中每个非保留 `.md` 文件都包含一个可解析的 YAML frontmatter 块（frontmatter 结构见 [概念文档](./concept-documents.md)）。
+1. 树中每个非保留 `.md` 文件都包含一个可解析的 YAML frontmatter 块（frontmatter 结构见 [概念文档](concept-documents.md)）。
 2. 每个 frontmatter 块都包含非空的 `type` 字段。
-3. 每个保留文件名（`index.md`、`log.md`）在出现时分别遵循 §8（见 [索引文件](./index-files.md)）与 §9（见 [日志文件](./log-files.md)）的结构。
+3. 每个保留文件名（`index.md`、`log.md`）在出现时分别遵循 §8（见 [索引文件](index-files.md)）与 §9（见 [日志文件](log-files.md)）的结构。
 
 当信任、生命周期、溯源或计算字段族出现时，生产者**应当**（SHOULD）遵循 §5 至 §10，而消费者：[^okf-spec]
 
@@ -37,8 +37,8 @@ sources:
 
 ## 相关概念
 
-- [概念文档](./concept-documents.md)
-- [索引文件](./index-files.md)
-- [日志文件](./log-files.md)
+- [概念文档](concept-documents.md)
+- [索引文件](index-files.md)
+- [日志文件](log-files.md)
 
-[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](/references/okf-spec.md)。
+[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](../references/okf-spec.md)。

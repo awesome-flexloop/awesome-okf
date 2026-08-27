@@ -69,5 +69,5 @@ Thought → Action → Observation → Thought → ... → Final Answer
 - 终止条件判断
 
 ## 相关概念
-- [智能体范式与ReAct](/ai/datawhale/hello-agents/concepts/agent-paradigms-react)
-- [Agent框架开发](/ai/datawhale/hello-agents/concepts/agent-framework-development)
+- 智能体范式与ReAct
+- Agent框架开发

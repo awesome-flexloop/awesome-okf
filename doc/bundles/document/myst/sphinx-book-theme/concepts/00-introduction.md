@@ -79,8 +79,8 @@ sphinx-book-theme 在 PST 的基础上添加了书籍特有的功能，但 PST �
 
 ## 相关概念
 
-- [安装与基础配置](/concepts/01-getting-started.md)
-- [主题架构与PST继承](/concepts/02-theme-architecture.md)
-- [配置系统详解](/concepts/03-configuration.md)
-- [头部按钮系统](/concepts/04-header-buttons.md)
-- [Margin指令与边注旁注](/concepts/05-margin-sidenotes.md)
+- [安装与基础配置](01-getting-started.md)
+- [主题架构与PST继承](02-theme-architecture.md)
+- [配置系统详解](03-configuration.md)
+- [头部按钮系统](04-header-buttons.md)
+- [Margin指令与边注旁注](05-margin-sidenotes.md)

@@ -271,7 +271,7 @@ embed(user_ns={'x': x, 'data': data})
 
 ## 相关概念
 
-- [IPython 简介](/concepts/00-introduction.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [补全与历史管理](/concepts/08-completer-history.md)
-- [Shell 生命周期](/concepts/03-shell-lifecycle.md)
+- [IPython 简介](../concepts/00-introduction.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [补全与历史管理](../concepts/08-completer-history.md)
+- [Shell 生命周期](../concepts/03-shell-lifecycle.md)

@@ -255,9 +255,9 @@ with paramiko.SSHClient() as client:
 
 ## 相关概念
 
-- [SSHClient 详解](/concepts/02-ssh-client.md)
-- [Channel 通道](/concepts/04-channel.md)
-- [基础连接示例](/examples/basic-connection.md)
-- [命令执行模式](/examples/execute-commands.md)
+- [SSHClient 详解](../concepts/02-ssh-client.md)
+- [Channel 通道](../concepts/04-channel.md)
+- [基础连接示例](basic-connection.md)
+- [命令执行模式](execute-commands.md)
 
-[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](/references/paramiko-source.md)。
+[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](../references/paramiko-source.md)。

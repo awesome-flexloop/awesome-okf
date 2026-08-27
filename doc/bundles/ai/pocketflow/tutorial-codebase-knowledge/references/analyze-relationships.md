@@ -15,7 +15,7 @@ source: nodes.py
 class AnalyzeRelationships(Node):
 ```
 
-源码位置：[nodes.py#L240-L408](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py#L240-L408)
+源码位置：nodes.py#L240-L408
 
 ## 生命周期方法
 
@@ -93,4 +93,4 @@ class AnalyzeRelationships(Node):
 
 ## 源码位置
 
-[nodes.py#L240-L408](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/nodes.py#L240-L408)
+nodes.py#L240-L408

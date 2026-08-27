@@ -392,7 +392,7 @@ train = dict(
 
 ## 十一、相关链接
 
-- [/deepseek/deep-spec/concepts/dspark-model](/ai/deepseek/deep-spec/concepts/dspark-model) — DSpark 架构详解
-- [/deepseek/deep-spec/concepts/training-pipeline](/ai/deepseek/deep-spec/concepts/training-pipeline) — 训练管线详解
-- [/deepseek/deep-spec/references/training-api](/ai/deepseek/deep-spec/references/training-api) — 训练 API 完整参考
-- [/deepseek/deep-spec/examples/evaluation](/ai/deepseek/deep-spec/examples/evaluation) — 模型评估示例
+- /deepseek/deep-spec/concepts/dspark-model — DSpark 架构详解
+- /deepseek/deep-spec/concepts/training-pipeline — 训练管线详解
+- /deepseek/deep-spec/references/training-api — 训练 API 完整参考
+- /deepseek/deep-spec/examples/evaluation — 模型评估示例

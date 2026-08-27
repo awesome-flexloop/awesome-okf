@@ -469,8 +469,8 @@ def sample_residual(
 
 ## 九、相关链接
 
-- [/deepseek/deep-spec/concepts/speculative-decoding-training](/ai/deepseek/deep-spec/concepts/speculative-decoding-training) — 投机解码训练方法论
-- [/deepseek/deep-spec/concepts/overview](/ai/deepseek/deep-spec/concepts/overview) — DeepSpec 整体概述
-- [/deepseek/deep-spec/examples/evaluation](/ai/deepseek/deep-spec/examples/evaluation) — 评估使用示例
-- [/deepseek/deep-spec/references/model-api](/ai/deepseek/deep-spec/references/model-api) — 模型 API 参考
-- [/deepseek/deep-spec/references/training-api](/ai/deepseek/deep-spec/references/training-api) — 训练 API 参考
+- /deepseek/deep-spec/concepts/speculative-decoding-training — 投机解码训练方法论
+- /deepseek/deep-spec/concepts/overview — DeepSpec 整体概述
+- /deepseek/deep-spec/examples/evaluation — 评估使用示例
+- /deepseek/deep-spec/references/model-api — 模型 API 参考
+- /deepseek/deep-spec/references/training-api — 训练 API 参考

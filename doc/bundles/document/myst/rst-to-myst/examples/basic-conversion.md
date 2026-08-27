@@ -143,6 +143,6 @@ echo "**Bold text**" | rst2myst stream -
 
 ## 相关概念
 
-- [命令行工具详细用法](/concepts/01-cli-usage.md)
-- [Python API 使用指南](/concepts/02-python-api.md)
-- [三阶段转换流水线架构](/concepts/03-conversion-pipeline.md)
+- [命令行工具详细用法](../concepts/01-cli-usage.md)
+- [Python API 使用指南](../concepts/02-python-api.md)
+- [三阶段转换流水线架构](../concepts/03-conversion-pipeline.md)

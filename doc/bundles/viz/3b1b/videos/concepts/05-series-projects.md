@@ -134,7 +134,7 @@ _2017/eoc/
 
 ### eoc的核心特色：多继承组合场景
 
-eoc系列最值得学习的是其**多继承场景组合模式**——这在[03-video-structure-pattern.md](/concepts/03-video-structure-pattern.md)中已有提及，eoc把这种模式用到了极致（F-046）。
+eoc系列最值得学习的是其**多继承场景组合模式**——这在[03-video-structure-pattern.md](03-video-structure-pattern.md)中已有提及，eoc把这种模式用到了极致（F-046）。
 
 以chapter1.py为例，文件中定义了多个Scene子类，很多都用了多继承：
 
@@ -451,10 +451,10 @@ class DiceProbability(Scene):
 
 ## 相关概念
 
-- [00 Videos 仓库总览与入门](/concepts/00-videos-overview.md)
-- [02 自定义 Scene 基类体系](/concepts/02-custom-scenes.md)
-- [03 视频Scene代码结构与叙事模式](/concepts/03-video-structure-pattern.md)
-- [04 checkpoint_paste 交互式开发工作流](/concepts/04-checkpoint-paste-workflow.md)
-- [信源：代表性系列目录导航](/references/representative-series.md)
-- [信源：自定义模块索引](/references/custom-modules-index.md)
-- [ManimGL 知识包首页](/viz/3b1b/manim/index.md)
+- [00 Videos 仓库总览与入门](00-videos-overview.md)
+- [02 自定义 Scene 基类体系](02-custom-scenes.md)
+- [03 视频Scene代码结构与叙事模式](03-video-structure-pattern.md)
+- [04 checkpoint_paste 交互式开发工作流](04-checkpoint-paste-workflow.md)
+- [信源：代表性系列目录导航](../references/representative-series.md)
+- [信源：自定义模块索引](../references/custom-modules-index.md)
+- [ManimGL 知识包首页](../../manim/index.md)

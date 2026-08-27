@@ -12,7 +12,7 @@ sources:
 
 # 案例：UCB 多臂赌博机与遗憾界
 
-本案例展示 UCB（Upper Confidence Bound）算法如何在探索-利用权衡中实现对数遗憾，是理解[遗憾界](/ai/datawhale/key-book/concepts/regret-bound)的经典示例。
+本案例展示 UCB（Upper Confidence Bound）算法如何在探索-利用权衡中实现对数遗憾，是理解遗憾界的经典示例。
 
 ## 问题设定
 
@@ -113,6 +113,6 @@ $$\Delta_i \cdot \mathbb{E}[n_i^T] \approx (1+\pi^2/3)\Delta_i + \frac{2\ln T}{\
 
 ## 参见
 
-- [遗憾界](/ai/datawhale/key-book/concepts/regret-bound)
-- [收敛率](/ai/datawhale/key-book/concepts/convergence-rate)
-- [第 8 章：遗憾界](/ai/datawhale/key-book/references/chapter8)
+- 遗憾界
+- 收敛率
+- 第 8 章：遗憾界

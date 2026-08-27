@@ -191,8 +191,8 @@ sphinx-book-theme 提供两种在右侧边距显示内容的方式：`margin` �
 
 ## 相关概念
 
-- [主题概述](/concepts/00-introduction.md)
-- [配置系统详解](/concepts/03-configuration.md)
-- [交互功能（全屏/TOC隐藏/Thebe）](/concepts/06-interactive-features.md)
-- [样式定制与第三方扩展适配](/concepts/08-customization.md)
-- [源码路径映射与配置速查](/references/sbt-source.md)
+- [主题概述](00-introduction.md)
+- [配置系统详解](03-configuration.md)
+- [交互功能（全屏/TOC隐藏/Thebe）](06-interactive-features.md)
+- [样式定制与第三方扩展适配](08-customization.md)
+- [源码路径映射与配置速查](../references/sbt-source.md)

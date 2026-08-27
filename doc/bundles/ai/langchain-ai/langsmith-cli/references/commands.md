@@ -389,5 +389,5 @@ trace 和 run 命令共享以下标志（`addCommonFilterFlags`）：
 
 ## 相关参考
 
-- [核心数据结构](/ai/langchain-ai/langsmith-cli/references/data-structures) — Client/Options/FilterFlags/RunSchema 等关键类型
-- [API 客户端架构](/ai/langchain-ai/langsmith-cli/concepts/api-client) — 概念性说明
+- 核心数据结构 — Client/Options/FilterFlags/RunSchema 等关键类型
+- API 客户端架构 — 概念性说明

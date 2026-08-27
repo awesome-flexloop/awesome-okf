@@ -132,4 +132,4 @@ def glue(name, variable, display=True):
 - [配置系统](04-config-system.md)
 - [四阶段处理管线](03-processing-pipeline.md)
 - [代码隐藏与输出控制](09-hiding-code.md)
-- [基础配置示例](/examples/01-basic-setup.md)
+- [基础配置示例](../examples/01-basic-setup.md)

@@ -98,6 +98,6 @@ sources:
 
 ## 相关概念
 
-- [00-exporter-architecture](/concepts/00-exporter-architecture.md)：统一导出接口架构
-- [09-import-converters](/concepts/09-import-converters.md)：导入转换器详解
-- [03-latex-import](/examples/03-latex-import.md)：LaTeX 导入示例
+- [00-exporter-architecture](../concepts/00-exporter-architecture.md)：统一导出接口架构
+- [09-import-converters](../concepts/09-import-converters.md)：导入转换器详解
+- [03-latex-import](../examples/03-latex-import.md)：LaTeX 导入示例

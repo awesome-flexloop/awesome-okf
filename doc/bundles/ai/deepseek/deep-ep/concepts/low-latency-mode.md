@@ -240,7 +240,7 @@ for step in range(max_gen_len):
 
 ## 相关参考
 
-- [Buffer (Legacy) API](/ai/deepseek/deep-ep/references/buffer-legacy#低延迟模式专用-api)
+- Buffer (Legacy) API
 - [Dispatch/Combine 流程](dispatch-combine.md)
 - [MoE 专家并行](moe-parallelism.md)
 - [Elastic vs Legacy 对比](elastic-vs-legacy.md)

@@ -101,6 +101,6 @@ Markdown 单元格文本在写入 notebook 前依次经过四个处理函数：
 
 ## 相关概念
 
-- [try_examples 指令](/concepts/08-try-examples-directive.md)
-- [TryExamples 内部机制](/concepts/13-try-examples-internals.md)
-- [核心模块源码](/references/main-source.md)
+- [try_examples 指令](../concepts/08-try-examples-directive.md)
+- TryExamples 内部机制
+- [核心模块源码](main-source.md)

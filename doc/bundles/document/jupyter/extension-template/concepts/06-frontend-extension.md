@@ -279,8 +279,8 @@ import './base.css';
 
 ## 相关概念
 
-- [四种扩展类型对比](/concepts/03-four-extension-types.md)
-- [双包构建系统](/concepts/05-build-system.md)
-- [服务端扩展开发](/concepts/07-server-extension.md)
-- [设置系统 Schema](/concepts/10-settings-schema.md)
-- [前端入口模板解析](/references/frontend-entry-source.md)
+- [四种扩展类型对比](03-four-extension-types.md)
+- [双包构建系统](05-build-system.md)
+- [服务端扩展开发](07-server-extension.md)
+- [设置系统 Schema](10-settings-schema.md)
+- [前端入口模板解析](../references/frontend-entry-source.md)

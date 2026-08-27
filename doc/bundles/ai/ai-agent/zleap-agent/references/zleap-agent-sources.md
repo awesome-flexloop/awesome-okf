@@ -34,7 +34,7 @@ sources:
 
 ## 版本标识
 
-版本号定义于根目录 [package.json](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/package.json#L2-L3)：
+版本号定义于根目录 package.json：
 
 ```json
 {
@@ -105,129 +105,129 @@ packages/
 
 | 文件 | 内容 | 关键导出 |
 |------|------|---------|
-| [core/src/types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/types.ts) | 全局类型系统（713行） | `RunStatus`、`WorkStatus`、`WorkStepStatus`、`ToolDefinition`、`SkillDefinition`、`AgentDefinition`、`AgentRuntimeHook`、`AgentEvent`、`Run/Work/WorkStep`、`WorkspaceDelta` |
-| [core/src/runtime.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/runtime.ts) | AgentRuntime 核心类（~800行） | `AgentRuntime` 类：`runAgent()`、`run()`、`work()`、`callTool()`、8个注册中心成员 |
-| [core/src/agents.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/agents.ts) | Agent 注册中心 | `AgentRegistry` 类：`register()`、`get()`、`list()` |
-| [core/src/tools.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/tools.ts) | Tool 注册中心 | `ToolRegistry` 类：`register()`、`get()`、`list()` |
-| [core/src/skills.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/skills.ts) | Skill 注册中心 | `SkillRegistry` 类 |
-| [core/src/events.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/events.ts) | 事件总线 | `AgentEventBus` 类 |
-| [core/src/hooks.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/hooks.ts) | 生命周期钩子注册 | `AgentHookRegistry` 类 |
-| [core/src/actor.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/actor.ts) | Actor 角色与权限 | `ActorRole`、`ActorPermission`、`ActorContext` |
-| [core/src/memory/orchestrator.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/memory/orchestrator.ts) | 记忆编排器 | 记忆投影、笔记、人际策略编排 |
-| [core/src/context/assembly.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/context/assembly.ts) | 上下文组装 | 系统提示、工具描述、技能指令组装 |
-| [core/src/workspace.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/workspace.ts) | Workspace 注册中心 | `WorkSpaceRegistry`、`WorkSpaceDefinition`、`WorkSpaceHandler` |
-| [core/src/toolPolicy.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/toolPolicy.ts) | 工具策略 | 工具调用审批/拦截策略 |
-| [core/src/toolRecovery.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/toolRecovery.ts) | 工具参数恢复 | JSON 修复、参数形状校验与恢复 |
-| [core/src/traces.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/traces.ts) | Trace 存储 | `TraceStore`，运行追踪记录 |
-| [core/src/store-ports.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/core/src/store-ports.ts) | 存储端口接口 | `RecordMemoryPort`、`RuntimeCacheStore` 等端口定义 |
+| core/src/types.ts | 全局类型系统（713行） | `RunStatus`、`WorkStatus`、`WorkStepStatus`、`ToolDefinition`、`SkillDefinition`、`AgentDefinition`、`AgentRuntimeHook`、`AgentEvent`、`Run/Work/WorkStep`、`WorkspaceDelta` |
+| core/src/runtime.ts | AgentRuntime 核心类（~800行） | `AgentRuntime` 类：`runAgent()`、`run()`、`work()`、`callTool()`、8个注册中心成员 |
+| core/src/agents.ts | Agent 注册中心 | `AgentRegistry` 类：`register()`、`get()`、`list()` |
+| core/src/tools.ts | Tool 注册中心 | `ToolRegistry` 类：`register()`、`get()`、`list()` |
+| core/src/skills.ts | Skill 注册中心 | `SkillRegistry` 类 |
+| core/src/events.ts | 事件总线 | `AgentEventBus` 类 |
+| core/src/hooks.ts | 生命周期钩子注册 | `AgentHookRegistry` 类 |
+| core/src/actor.ts | Actor 角色与权限 | `ActorRole`、`ActorPermission`、`ActorContext` |
+| core/src/memory/orchestrator.ts | 记忆编排器 | 记忆投影、笔记、人际策略编排 |
+| core/src/context/assembly.ts | 上下文组装 | 系统提示、工具描述、技能指令组装 |
+| core/src/workspace.ts | Workspace 注册中心 | `WorkSpaceRegistry`、`WorkSpaceDefinition`、`WorkSpaceHandler` |
+| core/src/toolPolicy.ts | 工具策略 | 工具调用审批/拦截策略 |
+| core/src/toolRecovery.ts | 工具参数恢复 | JSON 修复、参数形状校验与恢复 |
+| core/src/traces.ts | Trace 存储 | `TraceStore`，运行追踪记录 |
+| core/src/store-ports.ts | 存储端口接口 | `RecordMemoryPort`、`RuntimeCacheStore` 等端口定义 |
 
 ### AI Provider 层（@zleap/ai）
 
 | 文件 | 内容 | 关键导出 |
 |------|------|---------|
-| [ai/src/types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/ai/src/types.ts) | AI 层类型系统（155行） | `ProviderAdapter` 接口、`Message`、`AssistantStreamEvent`、`Model`、`ProviderCapabilities` |
-| [ai/src/providers/anthropic.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/ai/src/providers/anthropic.ts) | Anthropic Provider（~315行） | `AnthropicProvider` 类，实现 `ProviderAdapter` |
-| [ai/src/providers/openai-compatible.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/ai/src/providers/openai-compatible.ts) | OpenAI 兼容 Provider | OpenAI Compatible 适配器 |
-| [ai/src/providers/sse.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/ai/src/providers/sse.ts) | SSE 流式解析 | Server-Sent Events 解析器 |
-| [ai/src/registry.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/ai/src/registry.ts) | Provider 注册中心 | AI Provider 注册与查找 |
-| [ai/src/create.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/ai/src/create.ts) | Provider 工厂 | `createProvider()` 创建入口 |
-| [ai/src/stream.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/ai/src/stream.ts) | 统一流式抽象 | 流式事件处理 |
+| ai/src/types.ts | AI 层类型系统（155行） | `ProviderAdapter` 接口、`Message`、`AssistantStreamEvent`、`Model`、`ProviderCapabilities` |
+| ai/src/providers/anthropic.ts | Anthropic Provider（~315行） | `AnthropicProvider` 类，实现 `ProviderAdapter` |
+| ai/src/providers/openai-compatible.ts | OpenAI 兼容 Provider | OpenAI Compatible 适配器 |
+| ai/src/providers/sse.ts | SSE 流式解析 | Server-Sent Events 解析器 |
+| ai/src/registry.ts | Provider 注册中心 | AI Provider 注册与查找 |
+| ai/src/create.ts | Provider 工厂 | `createProvider()` 创建入口 |
+| ai/src/stream.ts | 统一流式抽象 | 流式事件处理 |
 
 ### Agent 引擎层（@zleap/agent）
 
 | 文件 | 内容 | 关键导出 |
 |------|------|---------|
-| [agent/src/conversation/service.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/agent/src/conversation/service.ts) | 对话服务（~430行） | `ConversationService` 类：入站消息处理、模型解析、会话管理 |
-| [agent/src/tools.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/agent/src/tools.ts) | 内置工具集（~1150行） | ls/read/write/edit/bash 等文件系统和命令行工具定义 |
-| [agent/src/kernel/kernel.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/agent/src/kernel/kernel.ts) | Agent 内核 | L2 核心逻辑 |
-| [agent/src/mcpRuntime.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/agent/src/mcpRuntime.ts) | MCP 运行时 | MCP 服务器管理 |
-| [agent/src/soul.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/agent/src/soul.ts) | Agent 人格配置 | "灵魂"/人格定义 |
-| [agent/src/memoryDream.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/agent/src/memoryDream.ts) | 记忆梦境整理 | 记忆整理/压缩功能 |
-| [agent/src/permissions.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/agent/src/permissions.ts) | 权限模式 | 工具调用权限策略 |
-| [agent/src/compaction/service.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/agent/src/compaction/service.ts) | 对话压缩 | 对话历史压缩服务 |
-| [agent/src/workspace-turn/turnLoop.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/agent/src/workspace-turn/turnLoop.ts) | Workspace Turn 循环 | workspace 级别 turn 执行循环 |
+| agent/src/conversation/service.ts | 对话服务（~430行） | `ConversationService` 类：入站消息处理、模型解析、会话管理 |
+| agent/src/tools.ts | 内置工具集（~1150行） | ls/read/write/edit/bash 等文件系统和命令行工具定义 |
+| agent/src/kernel/kernel.ts | Agent 内核 | L2 核心逻辑 |
+| agent/src/mcpRuntime.ts | MCP 运行时 | MCP 服务器管理 |
+| agent/src/soul.ts | Agent 人格配置 | "灵魂"/人格定义 |
+| agent/src/memoryDream.ts | 记忆梦境整理 | 记忆整理/压缩功能 |
+| agent/src/permissions.ts | 权限模式 | 工具调用权限策略 |
+| agent/src/compaction/service.ts | 对话压缩 | 对话历史压缩服务 |
+| agent/src/workspace-turn/turnLoop.ts | Workspace Turn 循环 | workspace 级别 turn 执行循环 |
 
 ### 持久化层（@zleap/store）
 
 | 文件 | 内容 | 关键导出 |
 |------|------|---------|
-| [store/src/store.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/store/src/store.ts) | PgStore 主类（~1000行） | `PgStore`、`ZleapStore` 接口、`createStore()`、`sanitizeMcpConfigForStorage()` |
-| [store/src/core/schema.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/store/src/core/schema.ts) | 核心表 Schema（~100行） | source_group、source、event、entity、event_entity 五张核心表 |
-| [store/src/core/rrf.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/store/src/core/rrf.ts) | RRF 融合排序（60行） | Reciprocal Rank Fusion 算法实现，默认 k=60 |
-| [store/src/core/extract.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/store/src/core/extract.ts) | 抽取管线（~280行） | 会话→event+entity 抽取、contentHash(SHA-256)、`topKeywords()`、记忆调和器 |
-| [store/src/core/record-memory.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/store/src/core/record-memory.ts) | 记忆适配器（~210行） | RecordMemoryPort 适配，ingest/recall/listRecent 方法 |
-| [store/src/schema.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/store/src/schema.ts) | 外层 Schema | 完整 DDL（含 notes、scheduled_tasks 等） |
-| [store/src/migrate.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/store/src/migrate.ts) | 数据库迁移 | Schema 迁移执行 |
+| store/src/store.ts | PgStore 主类（~1000行） | `PgStore`、`ZleapStore` 接口、`createStore()`、`sanitizeMcpConfigForStorage()` |
+| store/src/core/schema.ts | 核心表 Schema（~100行） | source_group、source、event、entity、event_entity 五张核心表 |
+| store/src/core/rrf.ts | RRF 融合排序（60行） | Reciprocal Rank Fusion 算法实现，默认 k=60 |
+| store/src/core/extract.ts | 抽取管线（~280行） | 会话→event+entity 抽取、contentHash(SHA-256)、`topKeywords()`、记忆调和器 |
+| store/src/core/record-memory.ts | 记忆适配器（~210行） | RecordMemoryPort 适配，ingest/recall/listRecent 方法 |
+| store/src/schema.ts | 外层 Schema | 完整 DDL（含 notes、scheduled_tasks 等） |
+| store/src/migrate.ts | 数据库迁移 | Schema 迁移执行 |
 
 ### 宿主与服务编排（@zleap/host）
 
 | 文件 | 内容 | 关键导出 |
 |------|------|---------|
-| [host/src/supervisor.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/host/src/supervisor.ts) | 服务主管（~150行） | `runServe()`：PG确保→构建→迁移→启动Web/Worker/Gateway |
-| [host/src/postgres.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/host/src/postgres.ts) | PostgreSQL 管理 | `ensurePostgres()`：自定义URL→bundled→本地→Docker 四级回退 |
-| [host/src/config.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/host/src/config.ts) | 配置管理 | `CliConfig`、CONFIG_ENV_MAP（9个映射）、TRACKED_ENV_KEYS（15个）、`formatConfigValue()` |
-| [host/src/constants.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/host/src/constants.ts) | 默认常量 | 默认DB URL、Web端口(4789)、嵌入维度(1536) |
-| [host/src/paths.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/host/src/paths.ts) | 路径解析 | `resolveRuntimeRoot()`、`isBundledInstall()` |
-| [host/src/lifecycle.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/host/src/lifecycle.ts) | 安装生命周期 | `finishInstall()`：目录确保→状态写入→detached serve→健康检查→打开浏览器 |
-| [host/src/lock.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/host/src/lock.ts) | 运行时锁 | `acquireRuntimeLock()` 防止多实例并发 |
+| host/src/supervisor.ts | 服务主管（~150行） | `runServe()`：PG确保→构建→迁移→启动Web/Worker/Gateway |
+| host/src/postgres.ts | PostgreSQL 管理 | `ensurePostgres()`：自定义URL→bundled→本地→Docker 四级回退 |
+| host/src/config.ts | 配置管理 | `CliConfig`、CONFIG_ENV_MAP（9个映射）、TRACKED_ENV_KEYS（15个）、`formatConfigValue()` |
+| host/src/constants.ts | 默认常量 | 默认DB URL、Web端口(4789)、嵌入维度(1536) |
+| host/src/paths.ts | 路径解析 | `resolveRuntimeRoot()`、`isBundledInstall()` |
+| host/src/lifecycle.ts | 安装生命周期 | `finishInstall()`：目录确保→状态写入→detached serve→健康检查→打开浏览器 |
+| host/src/lock.ts | 运行时锁 | `acquireRuntimeLock()` 防止多实例并发 |
 
 ### IM 网关（@zleap/gateway）
 
 | 文件 | 内容 | 关键导出 |
 |------|------|---------|
-| [gateway/src/runner.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/gateway/src/runner.ts) | Gateway 运行器（~80行） | `GatewayRunner` 类：适配器→ConversationService 桥接、权限策略 |
-| [gateway/src/supervisor.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/gateway/src/supervisor.ts) | 渠道控制平面（~120行） | `ChannelSupervisor` 类：2500ms reconcile 循环 |
-| [gateway/src/types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/gateway/src/types.ts) | 网关类型 | `PlatformAdapter` 接口、`PlatformMessageEvent` |
-| [gateway/src/config.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/gateway/src/config.ts) | 渠道配置 | Feishu/WeChat/FeishuCli 配置、`GroupPolicy`、`GatewayPermissionMode` |
-| [gateway/src/platforms/base.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/gateway/src/platforms/base.ts) | 平台基类（~90行） | `BasePlatformAdapter`：消息分割（safeCut）、指数退避重试 |
-| [gateway/src/worker.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/gateway/src/worker.ts) | Worker 入口（~100行） | 独立进程入口：加载→初始化→注册渠道→启动 |
+| gateway/src/runner.ts | Gateway 运行器（~80行） | `GatewayRunner` 类：适配器→ConversationService 桥接、权限策略 |
+| gateway/src/supervisor.ts | 渠道控制平面（~120行） | `ChannelSupervisor` 类：2500ms reconcile 循环 |
+| gateway/src/types.ts | 网关类型 | `PlatformAdapter` 接口、`PlatformMessageEvent` |
+| gateway/src/config.ts | 渠道配置 | Feishu/WeChat/FeishuCli 配置、`GroupPolicy`、`GatewayPermissionMode` |
+| gateway/src/platforms/base.ts | 平台基类（~90行） | `BasePlatformAdapter`：消息分割（safeCut）、指数退避重试 |
+| gateway/src/worker.ts | Worker 入口（~100行） | 独立进程入口：加载→初始化→注册渠道→启动 |
 
 ### 定时任务（@zleap/tasks）
 
 | 文件 | 内容 | 关键导出 |
 |------|------|---------|
-| [tasks/src/service.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/tasks/src/service.ts) | 任务服务 | 定时任务调度服务 |
-| [tasks/src/cron.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/tasks/src/cron.ts) | Cron 解析 | Cron 表达式解析 |
-| [tasks/src/queue.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/tasks/src/queue.ts) | 任务队列 | pg-boss 队列管理 |
-| [tasks/src/worker.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/tasks/src/worker.ts) | Task Worker 入口 | 独立 worker 进程 |
+| tasks/src/service.ts | 任务服务 | 定时任务调度服务 |
+| tasks/src/cron.ts | Cron 解析 | Cron 表达式解析 |
+| tasks/src/queue.ts | 任务队列 | pg-boss 队列管理 |
+| tasks/src/worker.ts | Task Worker 入口 | 独立 worker 进程 |
 
 ### 输入组装层（@zleap/avatar）
 
 | 文件 | 内容 |
 |------|------|
-| [avatar/src/inboundRun.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/avatar/src/inboundRun.ts) | IM 入站运行输入构建（`buildInboundRunInput`） |
-| [avatar/src/scheduledRun.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/avatar/src/scheduledRun.ts) | 定时任务运行输入构建 |
-| [avatar/src/webChatRun.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/avatar/src/webChatRun.ts) | Web 聊天运行输入构建 |
-| [avatar/src/runAssembly.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/avatar/src/runAssembly.ts) | 通用运行组装 |
+| avatar/src/inboundRun.ts | IM 入站运行输入构建（`buildInboundRunInput`） |
+| avatar/src/scheduledRun.ts | 定时任务运行输入构建 |
+| avatar/src/webChatRun.ts | Web 聊天运行输入构建 |
+| avatar/src/runAssembly.ts | 通用运行组装 |
 
 ### CLI（@zleap-ai/cli）
 
 | 文件 | 内容 |
 |------|------|
-| [cli/src/app.tsx](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/cli/src/app.tsx) | Ink TUI 主组件（~860行）：终端聊天界面 |
-| [cli/src/cli/router.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/cli/src/cli/router.ts) | 命令路由：channels/config/doctor/init/models/serve/sessions/setup 等 |
-| [cli/src/chat/mode.tsx](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/cli/src/chat/mode.tsx) | 交互聊天模式组件 |
-| [cli/src/index.tsx](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/cli/src/index.tsx) | CLI 入口 |
+| cli/src/app.tsx | Ink TUI 主组件（~860行）：终端聊天界面 |
+| cli/src/cli/router.ts | 命令路由：channels/config/doctor/init/models/serve/sessions/setup 等 |
+| cli/src/chat/mode.tsx | 交互聊天模式组件 |
+| cli/src/index.tsx | CLI 入口 |
 
 ### Web UI（@zleap/web）
 
 | 文件 | 内容 |
 |------|------|
-| [web/app/layout.tsx](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/web/app/layout.tsx) | Next.js 根布局（字体加载、主题、i18n） |
-| [web/app/page.tsx](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/web/app/page.tsx) | 首页/聊天页 |
-| [web/app/globals.css](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/web/app/globals.css) | 全局样式与设计 token（颜色/圆角/阴影/字号/动效） |
-| [web/app/api/chat/route.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/web/app/api/chat/route.ts) | 聊天 API 端点 |
-| [web/lib/server/sharedStore.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/web/lib/server/sharedStore.ts) | 共享 Store 工厂（服务端） |
-| [web/lib/sseEngine.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/web/lib/sseEngine.ts) | SSE 流式引擎（服务端推送） |
+| web/app/layout.tsx | Next.js 根布局（字体加载、主题、i18n） |
+| web/app/page.tsx | 首页/聊天页 |
+| web/app/globals.css | 全局样式与设计 token（颜色/圆角/阴影/字号/动效） |
+| web/app/api/chat/route.ts | 聊天 API 端点 |
+| web/lib/server/sharedStore.ts | 共享 Store 工厂（服务端） |
+| web/lib/sseEngine.ts | SSE 流式引擎（服务端推送） |
 
 ### 桌面端（@zleap/desktop，Rust）
 
 | 文件 | 内容 |
 |------|------|
-| [desktop/src-tauri/src/main.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/desktop/src-tauri/src/main.rs) | Rust 入口：release 模式隐藏控制台窗口 |
-| [desktop/src-tauri/src/lib.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/desktop/src-tauri/src/lib.rs) | Tauri 主逻辑（~1350行）：窗口管理、bootstrap、自动更新、系统托盘、Node.js 管理 |
-| [desktop/src-tauri/Cargo.toml](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/desktop/src-tauri/Cargo.toml) | Rust 依赖配置（tauri 2.x、updater、dialog、shell 插件） |
-| [desktop/src-tauri/tauri.conf.json](file:///d:/spaces/SpecWeave/external/libs/models/ai/Zleap-Agent/packages/desktop/src-tauri/tauri.conf.json) | Tauri 应用配置 |
+| desktop/src-tauri/src/main.rs | Rust 入口：release 模式隐藏控制台窗口 |
+| desktop/src-tauri/src/lib.rs | Tauri 主逻辑（~1350行）：窗口管理、bootstrap、自动更新、系统托盘、Node.js 管理 |
+| desktop/src-tauri/Cargo.toml | Rust 依赖配置（tauri 2.x、updater、dialog、shell 插件） |
+| desktop/src-tauri/tauri.conf.json | Tauri 应用配置 |
 
 ## 核心类/函数/接口索引
 

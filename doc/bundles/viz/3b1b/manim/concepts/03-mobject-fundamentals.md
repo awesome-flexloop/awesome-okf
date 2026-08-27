@@ -294,8 +294,8 @@ Mobject (mobject.py, F-056)
 
 ## 相关概念
 
-- [01 第一个 Scene：Hello World](/concepts/01-hello-world.md)
-- [04 VMobject 与几何图形](/concepts/04-vmobject-and-geometry.md)
-- [05 动画基础](/concepts/05-animation-basics.md)
-- [06 Transform 深度解析](/concepts/06-transform-deep-dive.md)
-- [07 相机与视角控制](/concepts/07-camera-and-frame.md)
+- [01 第一个 Scene：Hello World](01-hello-world.md)
+- [04 VMobject 与几何图形](04-vmobject-and-geometry.md)
+- [05 动画基础](05-animation-basics.md)
+- [06 Transform 深度解析](06-transform-deep-dive.md)
+- [07 相机与视角控制](07-camera-and-frame.md)

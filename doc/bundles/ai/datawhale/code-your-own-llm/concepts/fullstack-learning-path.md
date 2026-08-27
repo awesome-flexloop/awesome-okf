@@ -68,5 +68,5 @@ code-your-own-llm 的核心价值在于提供了一条**端到端的大语言模
 
 ## 相关概念
 
-- [文档写作规范体系](./documentation-standards.md)——理解项目的文档约定后再开始学习
+- [文档写作规范体系](documentation-standards.md)——理解项目的文档约定后再开始学习
 - [信源登记](../references/readme-source.md)——项目官方仓库与在线阅读地址

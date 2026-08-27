@@ -300,6 +300,6 @@ async def test_delete_item(jp_fetch):
 
 ## 相关概念
 
-- [API Handler 开发](/concepts/05-api-handlers.md)
-- [构建系统详解](/concepts/08-build-system.md)
-- [测试源码解析](/references/test-source.md)
+- [API Handler 开发](05-api-handlers.md)
+- [构建系统详解](08-build-system.md)
+- [测试源码解析](../references/test-source.md)

@@ -194,7 +194,7 @@ python -m nbviewer \
 
 ## 相关文档
 
-- [Provider源码分析](/references/providers-source.md)：完整源码分析
-- [URI重写机制](/concepts/08-uri-rewrite.md)：重写规则详解
-- [Handler继承体系](/concepts/04-handler-hierarchy.md)：RenderingHandler基类
-- [自定义Provider扩展](/concepts/12-custom-provider.md)：开发指南
+- [Provider源码分析](../references/providers-source.md)：完整源码分析
+- [URI重写机制](08-uri-rewrite.md)：重写规则详解
+- [Handler继承体系](04-handler-hierarchy.md)：RenderingHandler基类
+- [自定义Provider扩展](12-custom-provider.md)：开发指南

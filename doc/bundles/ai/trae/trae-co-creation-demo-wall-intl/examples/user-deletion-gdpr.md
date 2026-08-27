@@ -311,5 +311,5 @@ function LogRow({ log }: { log: AuthLogView }) {
 
 ## 相关内容
 
-- [GDPR合规审计留存](/concepts/04-gdpr-audit-retention.md)
-- [与中文版完整差异对照](/concepts/06-differences-from-cn.md)
+- [GDPR合规审计留存](../concepts/04-gdpr-audit-retention.md)
+- [与中文版完整差异对照](../concepts/06-differences-from-cn.md)

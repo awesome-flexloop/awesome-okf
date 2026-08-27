@@ -316,9 +316,9 @@ DFlash 是 DSpark 的纯 CE 损失简化版，通过配置实现：
 
 ## 九、相关链接
 
-- [/deepseek/deep-spec/concepts/overview](/ai/deepseek/deep-spec/concepts/overview) — DeepSpec 整体概述
-- [/deepseek/deep-spec/concepts/speculative-decoding-training](/ai/deepseek/deep-spec/concepts/speculative-decoding-training) — 投机解码训练方法论
-- [/deepseek/deep-spec/concepts/eagle3-model](/ai/deepseek/deep-spec/concepts/eagle3-model) — Eagle3 架构对比
-- [/deepseek/deep-spec/concepts/training-pipeline](/ai/deepseek/deep-spec/concepts/training-pipeline) — 训练管线详解
-- [/deepseek/deep-spec/references/model-api](/ai/deepseek/deep-spec/references/model-api) — 模型 API 参考（Markov 头、损失函数完整签名）
-- [/deepseek/deep-spec/examples/training-dspark](/ai/deepseek/deep-spec/examples/training-dspark) — DSpark 训练示例
+- /deepseek/deep-spec/concepts/overview — DeepSpec 整体概述
+- /deepseek/deep-spec/concepts/speculative-decoding-training — 投机解码训练方法论
+- /deepseek/deep-spec/concepts/eagle3-model — Eagle3 架构对比
+- /deepseek/deep-spec/concepts/training-pipeline — 训练管线详解
+- /deepseek/deep-spec/references/model-api — 模型 API 参考（Markov 头、损失函数完整签名）
+- /deepseek/deep-spec/examples/training-dspark — DSpark 训练示例

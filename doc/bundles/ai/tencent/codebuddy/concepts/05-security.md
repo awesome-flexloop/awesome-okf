@@ -115,8 +115,8 @@ Security 与矩阵其他产品形成协同：
 
 ## 相关概念
 
-- [产品矩阵总览](/concepts/00-product-matrix.md) — Security 在矩阵中的定位
-- [CodeBuddy IDE](/concepts/01-ide.md) — 代码审查与安全审计的协同
-- [NPC 云端 AI 员工](/concepts/03-npc.md) — 自主修复与安全闭环的关联
-- [CLI](/concepts/02-cli.md) — MCP 服务器能力可被安全工具集成
-- [IDE 工作流示例](/examples/ide-workflow.md) — 研发阶段安全检查参考
+- [产品矩阵总览](00-product-matrix.md) — Security 在矩阵中的定位
+- [CodeBuddy IDE](01-ide.md) — 代码审查与安全审计的协同
+- [NPC 云端 AI 员工](03-npc.md) — 自主修复与安全闭环的关联
+- [CLI](02-cli.md) — MCP 服务器能力可被安全工具集成
+- [IDE 工作流示例](../examples/ide-workflow.md) — 研发阶段安全检查参考

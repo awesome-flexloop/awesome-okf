@@ -222,4 +222,4 @@ sphinx-intl 通过 catalog.py 返回的核心数据结构是 Babel 的 `babel.su
 - [翻译工作流原理](03-translation-workflow.md)
 - [更新机制：多进程合并与 Fuzzy](05-update-mechanism.md)
 - [编译与统计机制](06-build-stat-mechanism.md)
-- [catalog.py API 参考](/references/catalog-api.md)
+- [catalog.py API 参考](../references/catalog-api.md)

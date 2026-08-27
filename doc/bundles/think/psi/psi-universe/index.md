@@ -47,9 +47,9 @@ XOR-SHIFT宇宙本论知识包基于三大公理和FLIP/XOR/SHIFT基本操作，
 
 ## 相关知识包
 
-* [Ψhē 核心哲学](/psi-core/index.md) — 宇宙本论的哲学本体论根源
-* [Ψhē 数学形式化](/psi-math/index.md) — 宇宙操作的形式化数学基础
-* [GodGPT 应用](/godgpt/index.md) — 意识与信息场理论的 AI 实践
+* [Ψhē 核心哲学](../psi-core/index.md) — 宇宙本论的哲学本体论根源
+* [Ψhē 数学形式化](../psi-math/index.md) — 宇宙操作的形式化数学基础
+* [GodGPT 应用](../godgpt/index.md) — 意识与信息场理论的 AI 实践
 
 ```{toctree}
 :hidden:

@@ -34,7 +34,7 @@ related:
 
 ### 3. LLM 配置验证
 
-项目默认使用 Google Gemini。如需更换 LLM，修改 [utils/call_llm.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/utils/call_llm.py)。可参考 [PocketFlow LLM Wrappers](https://the-pocket.github.io/PocketFlow/utility_function/llm.html) 文档。
+项目默认使用 Google Gemini。如需更换 LLM，修改 utils/call_llm.py。可参考 [PocketFlow LLM Wrappers](https://the-pocket.github.io/PocketFlow/utility_function/llm.html) 文档。
 
 验证 LLM 是否正确配置：
 ```bash
@@ -198,7 +198,7 @@ print(f"Final video: {shared['final_video']}")
 
 ## LLM 缓存机制
 
-项目在 [utils/call_llm.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/utils/call_llm.py) 中实现了基于文件的提示词-响应缓存，缓存存储在 `utils/.llm_cache/cache.json`。相同的提示词会直接返回缓存结果，避免重复调用 LLM 产生费用。首次运行后，场景规划和脚本生成阶段会命中缓存，加速迭代。
+项目在 utils/call_llm.py 中实现了基于文件的提示词-响应缓存，缓存存储在 `utils/.llm_cache/cache.json`。相同的提示词会直接返回缓存结果，避免重复调用 LLM 产生费用。首次运行后，场景规划和脚本生成阶段会命中缓存，加速迭代。
 
 如需强制重新生成（如修改了提示词），删除缓存文件即可：
 ```bash
@@ -221,5 +221,5 @@ rm utils/.llm_cache/cache.json
 
 ## 源码位置
 
-- 入口程序：[main.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/main.py)
-- 流程创建：[flow.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/flow.py)
+- 入口程序：main.py
+- 流程创建：flow.py

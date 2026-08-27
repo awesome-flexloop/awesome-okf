@@ -595,7 +595,7 @@ def foo():
 
 ## 相关概念
 
-- **[魔法命令系统](./magic-source.md)**：`%magic` 和 `%%cell_magic` 的注册与执行机制
-- **[InteractiveShell](./interactiveshell-source.md)**：`input_transformer_manager` 属性和初始化流程
-- **[Prefilter 系统](../concepts/prefilter.md)**：旧版预过滤机制与新版 transformer 的关系
-- **[特殊语法](../concepts/special-syntax.md)**：IPython 扩展语法完整列表
+- **[魔法命令系统](magic-source.md)**：`%magic` 和 `%%cell_magic` 的注册与执行机制
+- **[InteractiveShell](interactiveshell-source.md)**：`input_transformer_manager` 属性和初始化流程
+- **Prefilter 系统**：旧版预过滤机制与新版 transformer 的关系
+- **特殊语法**：IPython 扩展语法完整列表

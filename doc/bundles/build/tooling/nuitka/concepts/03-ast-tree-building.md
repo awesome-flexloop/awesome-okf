@@ -33,7 +33,7 @@ Nuitka不自己实现Python语法解析器，而是**复用CPython的`ast`模块
 
 ## 构建入口
 
-核心函数：[buildParseTree()](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/tree/Building.py)
+核心函数：buildParseTree()
 
 ```python
 def buildParseTree(provider, source_code, source_ref, source_path, is_module, is_main):
@@ -138,7 +138,7 @@ def buildNode(provider, ast_node, source_ref, ...):
 
 ## SourceReference 源码引用
 
-每个Nuitka节点都携带一个[SourceReference](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/tree/SourceReferences.py)对象，记录该节点对应的源码位置：
+每个Nuitka节点都携带一个SourceReference对象，记录该节点对应的源码位置：
 
 - `filename`：源文件路径
 - `line`：行号
@@ -192,7 +192,7 @@ CompiledPythonModule
 
 当构建过程中遇到`import`或`from...import`语句时（`buildImportNode`/`buildImportFromNode`），会触发模块递归：
 
-1. 调用[importing.Importing.locateModule()](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/importing/Importing.py)定位被导入的模块文件
+1. 调用importing.Importing.locateModule()定位被导入的模块文件
 2. 根据`--follow-imports`选项和插件`onModuleEncountered`钩子，决定是否递归编译该模块
 3. 如果决定跟随（recurseTo），则为该模块递归调用`buildParseTree()`构建其IR树
 4. 已构建的模块存入ImportCache，避免重复构建

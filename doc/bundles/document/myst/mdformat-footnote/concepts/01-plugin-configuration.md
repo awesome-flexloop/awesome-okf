@@ -98,5 +98,5 @@ CLI 参数值在 mdformat 内部存储在 `mdit.options["mdformat"]["plugin"]["f
 
 ## 相关概念
 
-- [脚注渲染格式与缩进规则](/concepts/02-footnote-rendering.md)
-- [脚注排序逻辑与分类机制](/concepts/03-footnote-reordering.md)
+- [脚注渲染格式与缩进规则](02-footnote-rendering.md)
+- [脚注排序逻辑与分类机制](03-footnote-reordering.md)

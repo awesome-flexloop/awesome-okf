@@ -2,7 +2,7 @@
 
 I阶段产出：核心洞察四元组 + 知识地图设计
 
-> **定位说明**：demo-wall-intl 是 demo-wall 中文版的**国际版变体**，共享核心架构（Next.js App Router + Prisma + NextAuth + next-intl + Tiptap + COS），针对海外 Vercel 部署场景做了定向调整。本文件重点阐述与中文版的**架构差异**及其设计意图，共享架构部分请参阅 [demo-wall/spec/insights.md](../trae-co-creation-demo-wall/spec/insights.md)。
+> **定位说明**：demo-wall-intl 是 demo-wall 中文版的**国际版变体**，共享核心架构（Next.js App Router + Prisma + NextAuth + next-intl + Tiptap + COS），针对海外 Vercel 部署场景做了定向调整。本文件重点阐述与中文版的**架构差异**及其设计意图，共享架构部分请参阅 [demo-wall/spec/insights.md](../../trae-co-creation-demo-wall/spec/insights.md)。
 
 ---
 
@@ -21,8 +21,8 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 4. **为什么优雅降级返回 null 而不是抛错？** Edge Config 不可用时（本地开发、未配置环境变量、网络故障），系统应回退到数据库查询而不是崩溃，这是弹性设计的基本要求。
 
 **行动**：
-- **先看** [lib/edge-config.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/src/lib/edge-config.ts) 的 getDictionaries() 实现和优雅降级模式；
-- **再看** [api/sync-edge-config/route.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/src/app/api/sync-edge-config/route.ts) 的序列化逻辑（BigInt→string 是 Prisma JSON 序列化的关键细节）；
+- **先看** lib/edge-config.ts 的 getDictionaries() 实现和优雅降级模式；
+- **再看** api/sync-edge-config/route.ts 的序列化逻辑（BigInt→string 是 Prisma JSON 序列化的关键细节）；
 - **扩展点**：如需缓存其他低频变更数据（如系统配置、排行榜周榜），可在 sync-edge-config 中追加 key，在 getDictionaries() 同层添加 getter；
 - **常见误区**：Edge Config 有大小限制（通常 1MB 以下），不要缓存大数据集；必须处理 get() 返回 null 的降级路径，不能假设缓存永远命中。
 
@@ -41,7 +41,7 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 4. **但这不是无条件的"简化"**：SysAuthLog 和 SysOperationLog 仍然保留，说明系统仍有审计能力，只是去掉了"主动封禁"这一动作。管理员仍可通过删除用户（DELETE /api/users）来处理严重违规。
 
 **行动**：
-- **先看**中文版 [lib/ban.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/src/lib/ban.ts) 理解被移除的功能全貌，再对比 intl 版 auth-nextauth.ts 的简化；
+- **先看**中文版 lib/ban.ts 理解被移除的功能全貌，再对比 intl 版 auth-nextauth.ts 的简化；
 - **扩展点**：若国际版运营需要恢复封禁功能，需回加 ban.ts（注意适配 Edge Runtime 或接受 Node.js only）、ban API 路由、注册域名检查、authorize/jwt 双重检查；
 - **常见误区**：移除封禁≠移除安全措施，内容审核（auditStatus/displayStatus 双状态机）仍然完整保留，这是最后一道防线；不要因为没有封禁功能就放松审核流程。
 
@@ -60,7 +60,7 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 4. **这个 bug 的影响范围有限**——受影响的只是受保护路由（submit/console/profile），公开页面（首页/作品列表/排行榜/详情页）不受影响。但 /id-ID/console 如果没有认证检查，可能泄露管理后台数据。
 
 **行动**：
-- **先看** [lib/language/routing.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/src/lib/language/routing.ts) 的 locales 配置和 [middleware.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/src/middleware.ts) 的正则，定位遗漏点；
+- **先看** lib/language/routing.ts 的 locales 配置和 middleware.ts 的正则，定位遗漏点；
 - **修复建议**：在 middleware.ts 中从 routing.locales 动态构建正则：`new RegExp(\`^/(${routing.locales.join('|')})/(submit|console|profile)\`)`；
 - **扩展点**：新增语言时检查清单——routing.ts 添加 locale、创建翻译 JSON、labelI18n 字典数据补充、isProtectedRoute 正则同步（修复后此步自动完成）、管理后台字典翻译；
 - **常见误区**：不要在多个文件中硬编码语言列表（违反 DRY）；翻译文件中的 key 必须与其他语言文件完全对齐，缺失 key 会导致运行时 fallback 或报错。
@@ -80,7 +80,7 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 4. **为什么 escapeCsv 处理逗号/引号/换行？** CSV 格式中逗号是字段分隔符、引号是文本限定符、换行是记录分隔符，字段值包含这些字符时必须转义（双引号包裹+引号转双写），否则会导致列错位。更重要的是防 CSV 注入——字段值以 `=`/`+`/`-`/`@` 开头时 Excel 会当作公式执行。
 
 **行动**：
-- **先看** [api/console/works/export/route.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/src/app/api/console/works/export/route.ts) 的 escapeCsv、pickI18nLabel、formatDate 等工具函数和主查询逻辑；
+- **先看** api/console/works/export/route.ts 的 escapeCsv、pickI18nLabel、formatDate 等工具函数和主查询逻辑；
 - **扩展点**：可按相同模式新增用户导出、日志导出、标签导出等 CSV 端点；如需更大数据集导出，考虑改为异步生成+下载链接模式（写入 COS 后返回 URL）；
 - **常见误区**：不要忘记 Content-Disposition 头设置中文文件名编码；不要在 CSV 中直接输出未转义的用户输入（XSS/CSV 注入风险）；5000 条上限是硬限制，不要随意调大。
 
@@ -98,7 +98,7 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 3. **DateTime 精度降低影响什么？** 微秒精度（6）到默认精度通常不影响业务——日志的 created_at 排序和筛选精确到秒已足够，降低精度可微幅减少存储和索引开销。
 
 **行动**：
-- **先看** intl 版 [schema.prisma](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/prisma/schema.prisma) 中 SysAuthLog 和 SysOperationLog 的关系定义，对比中文版的 Cascade 设置；
+- **先看** intl 版 schema.prisma 中 SysAuthLog 和 SysOperationLog 的关系定义，对比中文版的 Cascade 设置；
 - **扩展点**：设计数据模型时，对审计日志类表优先考虑 SetNull 或 Restrict（阻止删除有日志的用户），而非 Cascade；
 - **常见误区**：SetNull 要求外键字段必须是 nullable（userId?/operatorId?），schema 设计时需要同步修改；SetNull 后查询日志时需要处理 null 用户（显示"已删除用户"而非报错）。
 
@@ -117,8 +117,8 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 4. **移除 --accept-data-loss 更安全吗？** `prisma db push --accept-data-loss` 会在 schema 变更可能导致数据丢失时自动确认（如删除列），适合开发环境但生产环境有风险。移除后需要手动确认变更，更安全但初始化流程更保守。
 
 **行动**：
-- **先看**中文版 [docker-compose.yml](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall/docker-compose.yml) 的五服务编排（含 nginx），对比 intl 版的精简版；
-- **再看** intl 版 [next.config.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/next.config.ts) 和 Dockerfile 注释，理解 Vercel 适配点；
+- **先看**中文版 docker-compose.yml 的五服务编排（含 nginx），对比 intl 版的精简版；
+- **再看** intl 版 next.config.ts 和 Dockerfile 注释，理解 Vercel 适配点；
 - **扩展点**：Vercel 部署需要配置环境变量（DATABASE_URL 需指向外部 PostgreSQL 如 Neon/Supabase、NEXTAUTH_SECRET、COS_*、EDGE_CONFIG_ID、VERCEL_API_TOKEN），数据库不能用 Vercel 内置的（Vercel Postgres 已弃用方向）；
 - **常见误区**：Vercel Serverless Function 有执行时间限制（Hobby 10s、Pro 60s），CSV 导出 5000 条上限要考虑这个限制；Edge Config 不是通用缓存，不要当 Redis 用；Vercel 部署的文件系统是只读的，文件上传必须走外部存储（COS），不能写本地磁盘。
 
@@ -129,7 +129,7 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 ### 学习路径（分层次）
 
 #### 🟢 入门层（与中文版共享基础）
-1. **前置阅读**：先完成 [demo-wall 中文版入门层学习路径](../trae-co-creation-demo-wall/spec/insights.md)，理解核心架构（五表分表、RBAC、i18n、三层数据、富文本管线、Docker 部署、审核日志）
+1. **前置阅读**：先完成 [demo-wall 中文版入门层学习路径](../../trae-co-creation-demo-wall/spec/insights.md)，理解核心架构（五表分表、RBAC、i18n、三层数据、富文本管线、Docker 部署、审核日志）
 2. **差异速览**：阅读本文件的六个洞察，快速把握 intl 版的五个核心差异点
 3. **环境选择**：决定本地开发（Docker 或 npm run dev）还是直接 Vercel 部署体验
 
@@ -178,7 +178,7 @@ I阶段产出：核心洞察四元组 + 知识地图设计
 
 | 文档名 | 来源/位置 | 用途 |
 |---|---|---|
-| **中文版洞察文档** | [demo-wall/spec/insights.md](../trae-co-creation-demo-wall/spec/insights.md) | 共享核心架构的完整说明（必读前置） |
+| **中文版洞察文档** | [demo-wall/spec/insights.md](../../trae-co-creation-demo-wall/spec/insights.md) | 共享核心架构的完整说明（必读前置） |
 | Vercel Edge Config 文档 | https://vercel.com/docs/edge-config | Edge Config SDK、限制、API 参考 |
 | Vercel Serverless Functions 限制 | https://vercel.com/docs/functions/runtimes | 执行时间、内存、包大小限制参考 |
 | @vercel/edge-config SDK | https://vercel.com/docs/edge-config/sdk | get/ getAll/digest 等方法参考 |

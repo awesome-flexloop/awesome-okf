@@ -227,6 +227,6 @@ YAML 配置文件路径，设置选项默认值。配置文件是 eager 加载�
 
 ## 相关概念
 
-- [命令行工具详细用法](/concepts/01-cli-usage.md)
-- [Python API 使用指南](/concepts/02-python-api.md)
-- [mdformat 渲染集成与自定义渲染器](/concepts/07-mdformat-integration.md)
+- [命令行工具详细用法](01-cli-usage.md)
+- [Python API 使用指南](02-python-api.md)
+- [mdformat 渲染集成与自定义渲染器](07-mdformat-integration.md)

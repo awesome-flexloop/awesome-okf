@@ -347,8 +347,8 @@ def handle_agent_output_types(output, observations_images=None)
 
 ## 相关概念
 
-- [智能体内存系统](/concepts/memory-system.md) — 步骤序列与消息转换机制
-- [智能体执行循环](/concepts/agent-execution-loop.md) — ReAct循环中ActionStep的生命周期
-- [多模态数据处理](/concepts/multimodal-types.md) — AgentType类型系统与多模态支持
-- [智能体API参考](/references/agents-api.md) — MultiStepAgent如何使用AgentMemory
-- [工具API参考](/references/tools-api.md) — 工具调用与AgentType的关系
+- 智能体内存系统 — 步骤序列与消息转换机制
+- 智能体执行循环 — ReAct循环中ActionStep的生命周期
+- 多模态数据处理 — AgentType类型系统与多模态支持
+- [智能体API参考](agents-api.md) — MultiStepAgent如何使用AgentMemory
+- [工具API参考](tools-api.md) — 工具调用与AgentType的关系

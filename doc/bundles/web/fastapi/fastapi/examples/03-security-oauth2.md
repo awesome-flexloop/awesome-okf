@@ -286,7 +286,7 @@ curl -X POST http://127.0.0.1:8000/token \
 
 ## 相关概念
 
-- [安全与认证](/concepts/09-security.md)
-- [依赖注入系统](/concepts/04-dependency-injection.md)
-- [参数声明与类型系统](/concepts/05-parameter-declaration.md)
-- [异常处理与校验错误](/concepts/11-exception-handling.md)
+- [安全与认证](../concepts/09-security.md)
+- [依赖注入系统](../concepts/04-dependency-injection.md)
+- [参数声明与类型系统](../concepts/05-parameter-declaration.md)
+- [异常处理与校验错误](../concepts/11-exception-handling.md)

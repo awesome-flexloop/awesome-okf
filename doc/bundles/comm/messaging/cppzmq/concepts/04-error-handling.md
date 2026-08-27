@@ -89,6 +89,6 @@ do { rc = zmq_ctx_term(ptr); } while (rc == -1 && errno == EINTR);
 
 ## 相关概念
 
-- [01 context_t](/concepts/01-context.md)：shutdown/ETERM
-- [02 socket_t](/concepts/02-socket.md)：send/recv optional
-- [信源：zmq.hpp](/references/zmq-hpp.md)
+- [01 context_t](01-context.md)：shutdown/ETERM
+- [02 socket_t](02-socket.md)：send/recv optional
+- [信源：zmq.hpp](../references/zmq-hpp.md)

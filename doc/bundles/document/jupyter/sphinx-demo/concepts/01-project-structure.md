@@ -116,6 +116,6 @@ JupyterLite 的实际构建产物在 `docs/build/html/lite/` 中，`_static/` �
 
 ## 相关内容
 
-- [03-sphinx-conf](/concepts/03-sphinx-conf.md)：conf.py 配置详解
-- [05-config-files](/concepts/05-config-files.md)：四层 JSON 配置文件
-- [09-ci-deployment](/concepts/09-ci-deployment.md)：CI/CD 部署流程
+- [03-sphinx-conf](03-sphinx-conf.md)：conf.py 配置详解
+- [05-config-files](05-config-files.md)：四层 JSON 配置文件
+- [09-ci-deployment](09-ci-deployment.md)：CI/CD 部署流程

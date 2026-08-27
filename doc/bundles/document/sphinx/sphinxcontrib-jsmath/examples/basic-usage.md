@@ -233,7 +233,7 @@ a^2 + b^2 = c^2</div>
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [数学节点访问者](/concepts/03-math-node-visitors.md)
-- [公式编号与引用示例](/examples/equation-numbering.md)
-- [常见问题排查](/examples/troubleshooting.md)
+- [5分钟快速上手](../concepts/01-getting-started.md)
+- [数学节点访问者](../concepts/03-math-node-visitors.md)
+- [公式编号与引用示例](equation-numbering.md)
+- [常见问题排查](troubleshooting.md)

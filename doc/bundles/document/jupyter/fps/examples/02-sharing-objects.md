@@ -165,8 +165,8 @@ Publisher.start()              Consumer.start()
 
 ## 相关概念
 
-- [模块系统](/concepts/02-module-system.md)
-- [上下文与共享值](/concepts/03-context-sharing.md)
-- [生命周期阶段](/concepts/04-lifecycle-phases.md)
+- [模块系统](../concepts/02-module-system.md)
+- [上下文与共享值](../concepts/03-context-sharing.md)
+- [生命周期阶段](../concepts/04-lifecycle-phases.md)
 - [第一个FPS应用](01-first-app.md)
 - [可插拔Web服务器](03-web-server.md)

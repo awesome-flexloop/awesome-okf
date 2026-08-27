@@ -53,29 +53,29 @@ result = chain.invoke({"topic": "Python 装饰器"})
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/langchain/concepts/overview) — 核心抽象分层与架构概览
-- [Runnable 协议](/ai/langchain-ai/langchain/concepts/runnable-protocol) — 执行接口、组合原语、装饰器链与配置传播
-- [消息类型体系](/ai/langchain-ai/langchain/concepts/message-types) — BaseMessage、AIMessage、ToolMessage、ContentBlock
-- [工具抽象](/ai/langchain-ai/langchain/concepts/tool-abstraction) — BaseTool、StructuredTool、@tool、错误处理
-- [提示词系统](/ai/langchain-ai/langchain/concepts/prompt-system) — PromptTemplate、ChatPromptTemplate、PromptValue
-- [聊天模型](/ai/langchain-ai/langchain/concepts/chat-model) — BaseChatModel、bind_tools、结构化输出
-- [输出解析器](/ai/langchain-ai/langchain/concepts/output-parser) — BaseOutputParser、parse_result
-- [回调系统](/ai/langchain-ai/langchain/concepts/callback-system) — Handler、Manager、Tracer
-- [检索器与向量库](/ai/langchain-ai/langchain/concepts/retriever-vectorstore) — BaseRetriever、VectorStore、Embeddings
-- [文档与加载器](/ai/langchain-ai/langchain/concepts/document-loader) — Document、Blob、BaseLoader
+- 总览 — 核心抽象分层与架构概览
+- Runnable 协议 — 执行接口、组合原语、装饰器链与配置传播
+- 消息类型体系 — BaseMessage、AIMessage、ToolMessage、ContentBlock
+- 工具抽象 — BaseTool、StructuredTool、@tool、错误处理
+- 提示词系统 — PromptTemplate、ChatPromptTemplate、PromptValue
+- 聊天模型 — BaseChatModel、bind_tools、结构化输出
+- 输出解析器 — BaseOutputParser、parse_result
+- 回调系统 — Handler、Manager、Tracer
+- 检索器与向量库 — BaseRetriever、VectorStore、Embeddings
+- 文档与加载器 — Document、Blob、BaseLoader
 
 ### 信源参考
 
-- [核心抽象源码信源](/ai/langchain-ai/langchain/references/core-abstractions) — Runnable、Serializable、RunnableConfig
-- [消息与工具源码信源](/ai/langchain-ai/langchain/references/messages-tools) — 消息体系与工具抽象
-- [提示词、模型与输出解析源码信源](/ai/langchain-ai/langchain/references/prompts-output) — Prompts、ChatModel、OutputParser、Document
-- [回调、追踪与检索源码信源](/ai/langchain-ai/langchain/references/runnables-callbacks) — Callbacks、Tracers、Retriever、VectorStore
+- 核心抽象源码信源 — Runnable、Serializable、RunnableConfig
+- 消息与工具源码信源 — 消息体系与工具抽象
+- 提示词、模型与输出解析源码信源 — Prompts、ChatModel、OutputParser、Document
+- 回调、追踪与检索源码信源 — Callbacks、Tracers、Retriever、VectorStore
 
 ### 使用示例
 
-- [LCEL 基础链](/ai/langchain-ai/langchain/examples/basic-lcel-chain) — 第一条链：提示词 → 模型 → 解析器
-- [工具调用](/ai/langchain-ai/langchain/examples/tool-calling) — 工具定义、调用与结果回传完整流程
-- [RAG 检索增强生成](/ai/langchain-ai/langchain/examples/rag-retrieval) — 文档入库、检索、接入链
+- LCEL 基础链 — 第一条链：提示词 → 模型 → 解析器
+- 工具调用 — 工具定义、调用与结果回传完整流程
+- RAG 检索增强生成 — 文档入库、检索、接入链
 
 ## 目录结构
 

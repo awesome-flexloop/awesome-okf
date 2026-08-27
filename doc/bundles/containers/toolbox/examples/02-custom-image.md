@@ -486,6 +486,6 @@ toolbox create -i quay.io/yourusername/go-dev-toolbox:v1.0.0 -c go-dev
 
 ## 相关概念
 
-- [/concepts/03-custom-images.md](/concepts/03-custom-images.md)
-- [/concepts/02-workflow.md](/concepts/02-workflow.md)
-- [/examples/01-first-toolbox.md](/examples/01-first-toolbox.md)
+- [/concepts/03-custom-images.md](../concepts/03-custom-images.md)
+- [/concepts/02-workflow.md](../concepts/02-workflow.md)
+- [/examples/01-first-toolbox.md](01-first-toolbox.md)

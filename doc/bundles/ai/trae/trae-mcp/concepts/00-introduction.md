@@ -48,8 +48,8 @@ trae-mcp 仓库中存在两者混淆的案例：`git-commit-generator` 目录下
 
 ## 相关链接
 
-- [MCP 三层模型](/concepts/01-mcp-architecture.md)
-- [MCP 配置格式](/concepts/02-mcp-configuration.md)
-- [MCP 与 Skill 的本质区别](/concepts/04-mcp-vs-skill.md)
-- [配置 MCP 服务器示例](/examples/configure-mcp.md)
-- [MCP 协议文档与 CloudBase MCP 索引](/references/mcp-source.md)
+- [MCP 三层模型](01-mcp-architecture.md)
+- [MCP 配置格式](02-mcp-configuration.md)
+- [MCP 与 Skill 的本质区别](04-mcp-vs-skill.md)
+- [配置 MCP 服务器示例](../examples/configure-mcp.md)
+- [MCP 协议文档与 CloudBase MCP 索引](../references/mcp-source.md)

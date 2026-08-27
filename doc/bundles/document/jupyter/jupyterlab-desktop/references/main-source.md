@@ -75,6 +75,6 @@ app.ready
 
 ## 相关概念
 
-- [应用入口与生命周期](/concepts/02-app-entry-lifecycle.md)
-- [Jupyter 服务器管理](/concepts/04-server-management.md)
-- [CLI 命令系统](/concepts/07-cli-system.md)
+- [应用入口与生命周期](../concepts/02-app-entry-lifecycle.md)
+- [Jupyter 服务器管理](../concepts/04-server-management.md)
+- [CLI 命令系统](../concepts/07-cli-system.md)

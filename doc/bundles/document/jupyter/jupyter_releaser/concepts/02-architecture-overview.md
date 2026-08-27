@@ -191,4 +191,4 @@ jupyter_releaser 通过环境变量传递所有配置，这是 GitHub Actions �
 - [CLI命令详解](03-cli-commands.md)
 - [配置与Hooks系统](04-config-and-hooks.md)
 - [发布流水线详解](05-release-pipeline.md)
-- [源码信源：cli.py](/references/cli-source.md)
+- [源码信源：cli.py](../references/cli-source.md)

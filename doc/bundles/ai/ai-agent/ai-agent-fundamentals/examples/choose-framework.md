@@ -753,10 +753,10 @@ result = await runner.run(dev_config, "Hello")
 
 ## 相关概念
 
-- [Agent 核心循环](/concepts/01-agent-loop.md)
-- [工具系统](/concepts/02-tool-system.md)
-- [模型 Provider 抽象](/concepts/05-provider-abstraction.md)
-- [插件化架构模式](/concepts/08-plugin-architecture.md)
-- [多智能体编排](/concepts/04-multi-agent.md)
+- Agent 核心循环
+- 工具系统
+- 模型 Provider 抽象
+- 插件化架构模式
+- 多智能体编排
 - [对比不同框架的 Agent 循环](compare-agent-loops.md)
 - [从零构建简易 Agent](build-agent-from-scratch.md)

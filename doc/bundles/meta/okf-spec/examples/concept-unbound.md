@@ -41,4 +41,4 @@ expected SLA. See the [orders table](/tables/orders.md).
 * [信任：generated 与 verified（§5）](../concepts/trust-generated-verified.md)
 * [可认证计算（§10）](../concepts/attested-computations.md)
 
-[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](/references/okf-spec.md)。
+[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](../references/okf-spec.md)。

@@ -260,6 +260,6 @@ docker run --rm -v "$(pwd):/docs" sphinxdoc/sphinx:latest sphinx-build -M html .
 
 ## 相关概念
 
-- [Base 镜像详解](/concepts/03-base-image.md)：基础镜像的构建细节
-- [LaTeX/PDF 镜像详解](/concepts/04-latexpdf-image.md)：PDF 镜像的 TeXLive 配置
-- [自定义镜像扩展示例](/examples/03-custom-image.md)：完整的自定义镜像示例
+- [Base 镜像详解](03-base-image.md)：基础镜像的构建细节
+- [LaTeX/PDF 镜像详解](04-latexpdf-image.md)：PDF 镜像的 TeXLive 配置
+- [自定义镜像扩展示例](../examples/03-custom-image.md)：完整的自定义镜像示例

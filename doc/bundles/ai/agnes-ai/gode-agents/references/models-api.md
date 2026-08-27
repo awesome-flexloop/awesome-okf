@@ -438,8 +438,8 @@ JSON Agent和Code Agent的默认正则语法约束。
 
 ## 相关概念
 
-- [模型层概述](/concepts/model-layer.md) — Model抽象层设计和多后端支持
-- [工具调用智能体](/concepts/tool-calling-agent.md) — ToolCallingAgent与模型工具调用的交互
-- [代码执行智能体](/concepts/code-agent.md) — CodeAgent与模型的代码生成交互
-- [智能体API参考](/references/agents-api.md) — Agent如何调用Model
-- [工具API参考](/references/tools-api.md) — Tool与Model的JSON Schema转换
+- 模型层概述 — Model抽象层设计和多后端支持
+- 工具调用智能体 — ToolCallingAgent与模型工具调用的交互
+- 代码执行智能体 — CodeAgent与模型的代码生成交互
+- [智能体API参考](agents-api.md) — Agent如何调用Model
+- [工具API参考](tools-api.md) — Tool与Model的JSON Schema转换

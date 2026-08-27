@@ -401,7 +401,7 @@ podman image sign --sign-by mykey@example.com myimage:latest
 
 ## 相关概念
 
-- [CLI命令结构](/concepts/06-cli-structure.md) — Cobra框架、命令注册表与双引擎模式
-- [容器操作命令](/concepts/07-container-commands.md) — 36个容器命令分类详解
-- [架构概览](/concepts/02-architecture-overview.md) — Buildah/Podman/Skopeo 工具链分工
-- [Runtime运行时](/concepts/03-runtime.md) — libimage.Runtime 镜像运行时初始化
+- [CLI命令结构](06-cli-structure.md) — Cobra框架、命令注册表与双引擎模式
+- [容器操作命令](07-container-commands.md) — 36个容器命令分类详解
+- [架构概览](02-architecture-overview.md) — Buildah/Podman/Skopeo 工具链分工
+- [Runtime运行时](03-runtime.md) — libimage.Runtime 镜像运行时初始化

@@ -38,7 +38,7 @@ export OPENAI_API_KEY="sk-your-api-key-here"
 
 ## 完整代码
 
-以下是项目自带的完整示例（[main.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Video-Generator/main.py)）：
+以下是项目自带的完整示例（main.py）：
 
 ```python
 from flow import create_qa_flow
@@ -87,7 +87,7 @@ Answer: Machine learning is a subset of artificial intelligence that enables sys
 
 ### 步骤 1：创建节点
 
-[nodes.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Video-Generator/nodes.py) 定义了两个节点类：
+nodes.py 定义了两个节点类：
 
 ```python
 from pocketflow import Node
@@ -115,7 +115,7 @@ class AnswerNode(Node):
 
 ### 步骤 2：连接流程
 
-[flow.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Video-Generator/flow.py) 组装节点为 Flow：
+flow.py 组装节点为 Flow：
 
 ```python
 from pocketflow import Flow
@@ -130,7 +130,7 @@ def create_qa_flow():
 
 ### 步骤 3：运行流程
 
-[main.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Video-Generator/main.py) 初始化 shared 并运行：
+main.py 初始化 shared 并运行：
 
 ```python
 from flow import create_qa_flow

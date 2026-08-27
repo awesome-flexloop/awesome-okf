@@ -129,6 +129,6 @@ NCNN_EXPORT void convert_packing(const Mat&, Mat&, int elempack, const Option&);
 
 ## 相关概念
 
-- [02 Mat 张量系统](/concepts/02-mat-tensor-system.md)
-- [07 SIMD 打包存储](/concepts/07-simd-packing.md)
-- [11 量化与低精度](/concepts/11-quantization.md)
+- [02 Mat 张量系统](../concepts/02-mat-tensor-system.md)
+- [07 SIMD 打包存储](../concepts/07-simd-packing.md)
+- [11 量化与低精度](../concepts/11-quantization.md)

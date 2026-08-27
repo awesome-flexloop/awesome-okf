@@ -262,8 +262,8 @@ asyncio.run(main())
 
 ## 相关概念
 
-- [异步连接详解](/concepts/02-async-connection.md)
-- [高级模式](/concepts/11-advanced-patterns.md)
-- [异步执行命令](/examples/async-command.md)
+- [异步连接详解](../concepts/02-async-connection.md)
+- [高级模式](../concepts/11-advanced-patterns.md)
+- [异步执行命令](async-command.md)
 
-[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](/references/asyncssh-source.md)。
+[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](../references/asyncssh-source.md)。

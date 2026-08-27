@@ -321,8 +321,8 @@ Layer 3: TerminalInteractiveShell（终端前端）[F-240]
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [Shell 生命周期](/concepts/03-shell-lifecycle.md)
-- [异步支持](/concepts/12-async-support.md)
-- [信源参考 - 应用层](/references/app-source.md)
+- [架构总览](02-architecture-overview.md)
+- [快速开始](01-getting-started.md)
+- [Shell 生命周期](03-shell-lifecycle.md)
+- [异步支持](12-async-support.md)
+- [信源参考 - 应用层](../references/app-source.md)

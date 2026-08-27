@@ -215,8 +215,8 @@ def test_my_docs(app):
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [智能JS加载机制](/concepts/04-smart-js-loading.md)
-- [数学节点访问者](/concepts/03-math-node-visitors.md)
-- [基础使用示例](/examples/basic-usage.md)
-- [公式编号与引用](/examples/equation-numbering.md)
+- [5分钟快速上手](../concepts/01-getting-started.md)
+- [智能JS加载机制](../concepts/04-smart-js-loading.md)
+- [数学节点访问者](../concepts/03-math-node-visitors.md)
+- [基础使用示例](basic-usage.md)
+- [公式编号与引用](equation-numbering.md)

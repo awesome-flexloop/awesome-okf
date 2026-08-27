@@ -154,7 +154,7 @@ pypi = "jupyterlab.extensions:get_pypi_manager"
 
 ## 相关概念
 
-- [03 插件系统与依赖注入](/concepts/03-plugin-system.md)
-- [08 构建系统与运行模式](/concepts/08-build-and-modes.md)
-- [06 Notebook 与 Cell 架构](/concepts/06-notebook-cells.md)
-- [01 整体架构概览](/concepts/01-architecture-overview.md)
+- [03 插件系统与依赖注入](03-plugin-system.md)
+- [08 构建系统与运行模式](08-build-and-modes.md)
+- [06 Notebook 与 Cell 架构](06-notebook-cells.md)
+- [01 整体架构概览](01-architecture-overview.md)

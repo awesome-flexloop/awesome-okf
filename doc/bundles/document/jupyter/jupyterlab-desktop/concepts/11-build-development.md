@@ -241,14 +241,14 @@ npm test
 
 ## 相关信源
 
-- [Main 信源](/references/main-source.md)
-- [App 信源](/references/app-source.md)
-- [Server 信源](/references/server-source.md)
+- [Main 信源](../references/main-source.md)
+- [App 信源](../references/app-source.md)
+- [Server 信源](../references/server-source.md)
 
 ## 相关概念
 
-- [JupyterLab Desktop 简介](/concepts/00-introduction.md) — 技术栈与核心特性概览
-- [架构概览](/concepts/01-architecture-overview.md) — 核心模块与目录结构
-- [应用入口与生命周期](/concepts/02-app-entry-lifecycle.md) — 开发模式下的启动流程
-- [设置与配置系统](/concepts/06-settings-config.md) — 添加新设置项的完整流程
-- [事件与IPC系统](/concepts/08-event-ipc-system.md) — 添加新 IPC 事件的标准步骤
+- [JupyterLab Desktop 简介](00-introduction.md) — 技术栈与核心特性概览
+- [架构概览](01-architecture-overview.md) — 核心模块与目录结构
+- [应用入口与生命周期](02-app-entry-lifecycle.md) — 开发模式下的启动流程
+- [设置与配置系统](06-settings-config.md) — 添加新设置项的完整流程
+- [事件与IPC系统](08-event-ipc-system.md) — 添加新 IPC 事件的标准步骤

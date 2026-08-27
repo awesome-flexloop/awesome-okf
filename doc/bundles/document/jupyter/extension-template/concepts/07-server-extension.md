@@ -326,7 +326,7 @@ class StreamHandler(APIHandler, WebSocketHandler):
 
 ## 相关概念
 
-- [前端扩展开发](/concepts/06-frontend-extension.md)
-- [四种扩展类型对比](/concepts/03-four-extension-types.md)
-- [三层测试策略](/concepts/11-testing-strategy.md)
-- [Python 服务端模板解析](/references/server-routes-source.md)
+- [前端扩展开发](06-frontend-extension.md)
+- [四种扩展类型对比](03-four-extension-types.md)
+- [三层测试策略](11-testing-strategy.md)
+- [Python 服务端模板解析](../references/server-routes-source.md)

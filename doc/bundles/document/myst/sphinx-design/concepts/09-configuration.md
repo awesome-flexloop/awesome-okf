@@ -277,6 +277,6 @@ sd_custom_directives = {
 
 ## 相关概念
 
-- [扩展架构与两阶段渲染](/concepts/02-extension-architecture.md) — SdDirective 基类如何应用自定义默认值
-- [源码参考与配置速查](/references/source-reference.md) — 完整指令/角色/配置列表
-- [快速上手](/concepts/01-getting-started.md) — 安装和基础配置
+- [扩展架构与两阶段渲染](02-extension-architecture.md) — SdDirective 基类如何应用自定义默认值
+- [源码参考与配置速查](../references/source-reference.md) — 完整指令/角色/配置列表
+- [快速上手](01-getting-started.md) — 安装和基础配置

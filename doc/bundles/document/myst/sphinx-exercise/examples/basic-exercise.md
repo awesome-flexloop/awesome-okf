@@ -112,10 +112,10 @@ sources:
 
 ## 相关示例
 
-- [教师版/学生版配置](/examples/hide-solutions.md)
-- [门控练习包裹内容](/examples/gated-exercises.md)
+- [教师版/学生版配置](hide-solutions.md)
+- [门控练习包裹内容](gated-exercises.md)
 
 ## 相关概念
 
-- [练习指令详解](/concepts/02-exercise-directive.md)
-- [解答指令详解](/concepts/03-solution-directive.md)
+- [练习指令详解](../concepts/02-exercise-directive.md)
+- [解答指令详解](../concepts/03-solution-directive.md)

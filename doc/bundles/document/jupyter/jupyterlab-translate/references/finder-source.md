@@ -64,6 +64,6 @@ jupyterlab-git = "jupyterlab_git"
 
 ## 相关概念
 
-- [运行时语言包发现](/concepts/08-runtime-discovery.md)
-- [Hatch构建钩子集成](/concepts/07-hatch-build-hook.md)
-- [双模式分发机制](/concepts/11-dual-mode-distribution.md)
+- [运行时语言包发现](../concepts/08-runtime-discovery.md)
+- [Hatch构建钩子集成](../concepts/07-hatch-build-hook.md)
+- [双模式分发机制](../concepts/11-dual-mode-distribution.md)

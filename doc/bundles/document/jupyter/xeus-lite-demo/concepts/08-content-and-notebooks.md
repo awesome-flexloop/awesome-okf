@@ -121,7 +121,7 @@ import this
 - Canvas 绘图 API 的使用（fill_style, fill_rect, fill_circle, stroke_arc 等）
 - Jupyter 中可视化对象的显示
 
-详细代码解析参见 [示例 Notebook 信源](/references/demo-notebook-source.md)。
+详细代码解析参见 [示例 Notebook 信源](../references/demo-notebook-source.md)。
 
 ## 构建时内容处理
 
@@ -181,4 +181,4 @@ content/
 
 - [CI/CD 流水线](06-cicd-pipeline.md) — 理解构建命令如何处理 content/
 - [运行时环境配置](04-runtime-env-config.md) — 确保需要的库已安装
-- [创建第一个部署](/examples/01-first-deployment.md) — 包含上传 Notebook 的步骤
+- [创建第一个部署](../examples/01-first-deployment.md) — 包含上传 Notebook 的步骤

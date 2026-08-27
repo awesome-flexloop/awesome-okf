@@ -33,7 +33,7 @@ sources:
 - Python ≥ 3.10
 - 已安装 veadk-python 及其 A2A 依赖（`pip install "veadk-python[a2a]"`）
 - 拥有一个兼容 OpenAI Chat Completions API 的模型服务
-- 理解 [A2A 协议概念](/concepts/a2a-protocol.md)
+- 理解 [A2A 协议概念](../concepts/a2a-protocol.md)
 
 ## 完整代码示例
 

@@ -57,7 +57,7 @@ langsmith
 └── api          # 通用 API 浏览器与请求工具
 ```
 
-详见 [CLI 命令体系](/ai/langchain-ai/langsmith-cli/concepts/cli-commands)。
+详见 CLI 命令体系。
 
 ### 双输出模式
 
@@ -65,7 +65,7 @@ langsmith
 
 ### 认证与配置
 
-认证采用四级优先级链：flag → 环境变量 → profile 配置 → 默认值。支持 API Key 和 OAuth 2.0 设备码流两种方式，配置存储在 `~/.langsmith/config.json`（0600 权限）。详见 [API 客户端架构](/ai/langchain-ai/langsmith-cli/concepts/api-client)。
+认证采用四级优先级链：flag → 环境变量 → profile 配置 → 默认值。支持 API Key 和 OAuth 2.0 设备码流两种方式，配置存储在 `~/.langsmith/config.json`（0600 权限）。详见 API 客户端架构。
 
 ### v1/v2 后端自动适配
 
@@ -122,7 +122,7 @@ langsmith experiment list --dataset my-eval-set
 langsmith --format json trace list --project my-app --limit 5
 ```
 
-详见 [基础使用示例](/ai/langchain-ai/langsmith-cli/examples/basic-usage) 和 [命令参考](/ai/langchain-ai/langsmith-cli/references/commands)。
+详见 基础使用示例 和 命令参考。
 
 ## 已知限制
 
@@ -133,6 +133,6 @@ langsmith --format json trace list --project my-app --limit 5
 
 ## 进一步阅读
 
-- [CLI 命令体系](/ai/langchain-ai/langsmith-cli/concepts/cli-commands) — 命令树结构、过滤器系统、输出模式
-- [API 客户端架构](/ai/langchain-ai/langsmith-cli/concepts/api-client) — SDK 封装、v1/v2 适配、认证体系
-- [命令参考](/ai/langchain-ai/langsmith-cli/references/commands) — 全部命令与标志详解
+- CLI 命令体系 — 命令树结构、过滤器系统、输出模式
+- API 客户端架构 — SDK 封装、v1/v2 适配、认证体系
+- 命令参考 — 全部命令与标志详解

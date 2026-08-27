@@ -401,7 +401,7 @@ nbviewer 可作为 JupyterHub 服务部署：
 
 ## 相关文档
 
-- [快速开始指南](/concepts/01-getting-started.md)：基础使用和安装
-- [缓存系统](/concepts/07-caching-system.md)：缓存后端详细配置
-- [速率限制与安全机制](/concepts/11-rate-limit-security.md)：安全配置建议
-- [自定义Provider扩展](/concepts/12-custom-provider.md)：扩展开发
+- [快速开始指南](01-getting-started.md)：基础使用和安装
+- [缓存系统](07-caching-system.md)：缓存后端详细配置
+- [速率限制与安全机制](11-rate-limit-security.md)：安全配置建议
+- [自定义Provider扩展](12-custom-provider.md)：扩展开发

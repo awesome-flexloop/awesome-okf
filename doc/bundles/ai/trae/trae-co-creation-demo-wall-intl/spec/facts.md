@@ -7,7 +7,7 @@ R阶段产出：编号事实清单 F-001~F-095，零推测纯客观描述。
 
 ## a. 项目基本信息
 
-**F-001**: 项目名称为 `dem`（中文版为 `trae-co-creation-demo-wall`），private 为 true。【intl差异】文件：[package.json](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/package.json#L2)
+**F-001**: 项目名称为 `dem`（中文版为 `trae-co-creation-demo-wall`），private 为 true。【intl差异】文件：package.json
 
 **F-002**: 核心框架依赖同中文版：`next@^15.3.3`、`react@^18.3.1`、`react-dom@^18.3.1`。
 
@@ -27,7 +27,7 @@ R阶段产出：编号事实清单 F-001~F-095，零推测纯客观描述。
 
 **F-010**: 校验依赖同中文版：`zod@^4.3.6`。
 
-**F-011**: 【intl差异】新增依赖 `@vercel/edge-config@^1.4.3`（Vercel Edge Config SDK），中文版无此依赖。文件：[package.json#L43](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/package.json#L43)
+**F-011**: 【intl差异】新增依赖 `@vercel/edge-config@^1.4.3`（Vercel Edge Config SDK），中文版无此依赖。文件：package.json#L43
 
 **F-012**: 【intl差异】缺少 qrcode、qrcode-generator 依赖（中文版有）。
 
@@ -65,9 +65,9 @@ R阶段产出：编号事实清单 F-001~F-095，零推测纯客观描述。
 
 **F-025**: 审核与日志模型同中文版：WorkAuditLog、SysAuthLog、SysOperationLog。
 
-**F-026**: 【intl差异】SysAuthLog 的 user 关系 onDelete 为 SetNull（中文版为 Cascade）。文件：[schema.prisma#L380](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/prisma/schema.prisma#L380)
+**F-026**: 【intl差异】SysAuthLog 的 user 关系 onDelete 为 SetNull（中文版为 Cascade）。文件：schema.prisma#L380
 
-**F-027**: 【intl差异】SysOperationLog 的 operator 关系 onDelete 为 SetNull（中文版为 Cascade）。文件：[schema.prisma#L405](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/prisma/schema.prisma#L405)
+**F-027**: 【intl差异】SysOperationLog 的 operator 关系 onDelete 为 SetNull（中文版为 Cascade）。文件：schema.prisma#L405
 
 **F-028**: 【intl差异】DateTime 字段精度为 @db.Timestamptz（无精度参数 6）；中文版为 @db.Timestamptz(6)。
 
@@ -79,7 +79,7 @@ R阶段产出：编号事实清单 F-001~F-095，零推测纯客观描述。
 
 **F-030**: NextAuth 配置同中文版：PrismaAdapter + JWT session 策略，Credentials provider。
 
-**F-031**: 【intl差异】authorize 回调不检查 isUserBanned（中文版检查封禁状态并在封禁时返回 null）。文件：[auth-nextauth.ts#L16-L44](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/src/lib/auth-nextauth.ts#L16-L44)
+**F-031**: 【intl差异】authorize 回调不检查 isUserBanned（中文版检查封禁状态并在封禁时返回 null）。文件：auth-nextauth.ts#L16-L44
 
 **F-032**: 【intl差异】jwt callback 不做封禁检查和 token.id 清空（中文版在 Node.js runtime 下检查封禁状态并清空 token）。
 
@@ -107,9 +107,9 @@ R阶段产出：编号事实清单 F-001~F-095，零推测纯客观描述。
 
 **F-042**: 排行榜 API 同中文版：/api/rankings。
 
-**F-043**: 【intl差异】新增 POST /api/sync-edge-config 路由，将 country/city/category/honor 字典数据 PATCH 到 Vercel Edge Config，需要 EDGE_CONFIG_ID 和 VERCEL_API_TOKEN 环境变量。文件：[sync-edge-config/route.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/src/app/api/sync-edge-config/route.ts)
+**F-043**: 【intl差异】新增 POST /api/sync-edge-config 路由，将 country/city/category/honor 字典数据 PATCH 到 Vercel Edge Config，需要 EDGE_CONFIG_ID 和 VERCEL_API_TOKEN 环境变量。文件：sync-edge-config/route.ts
 
-**F-044**: 【intl差异】新增 GET /api/console/works/export 路由，导出作品为 CSV（管理员），支持 ids 参数或筛选条件导出，硬上限 5000 条，带 UTF-8 BOM，文件名 works_export_YYYYMMDD_HHMMSS.csv。文件：[export/route.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/src/app/api/console/works/export/route.ts)
+**F-044**: 【intl差异】新增 GET /api/console/works/export 路由，导出作品为 CSV（管理员），支持 ids 参数或筛选条件导出，硬上限 5000 条，带 UTF-8 BOM，文件名 works_export_YYYYMMDD_HHMMSS.csv。文件：export/route.ts
 
 ---
 
@@ -119,9 +119,9 @@ R阶段产出：编号事实清单 F-001~F-095，零推测纯客观描述。
 
 **F-046**: 【intl差异】无 ban.ts 模块（移除用户封禁和邮箱域名屏蔽功能，中文版 ban.ts 提供 clearBanCache/getBannedUserIds/isUserBanned/banUser/unbanUser/isEmailDomainBlocked 及 60 秒内存缓存）。
 
-**F-047**: 【intl差异】新增 edge-config.ts，导出 getDictionaries() 函数，使用 @vercel/edge-config 的 get('dictionaries') 获取缓存的字典数据，失败时返回 null（优雅降级）。文件：[edge-config.ts](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/src/lib/edge-config.ts)
+**F-047**: 【intl差异】新增 edge-config.ts，导出 getDictionaries() 函数，使用 @vercel/edge-config 的 get('dictionaries') 获取缓存的字典数据，失败时返回 null（优雅降级）。文件：edge-config.ts
 
-**F-048**: 【intl差异】language/routing.ts 配置 locales 为 ['en-US', 'zh-CN', 'ja-JP', 'id-ID', 'vi-VN']，defaultLocale 为 'en-US'（中文版为 ['zh-CN', 'en-US', 'ja-JP']，默认 'zh-CN'）。文件：[routing.ts#L3-L6](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/src/lib/language/routing.ts#L3-L6)
+**F-048**: 【intl差异】language/routing.ts 配置 locales 为 ['en-US', 'zh-CN', 'ja-JP', 'id-ID', 'vi-VN']，defaultLocale 为 'en-US'（中文版为 ['zh-CN', 'en-US', 'ja-JP']，默认 'zh-CN'）。文件：routing.ts#L3-L6
 
 ---
 
@@ -129,7 +129,7 @@ R阶段产出：编号事实清单 F-001~F-095，零推测纯客观描述。
 
 **F-049**: 中间件使用 next-auth 的 auth() wrapper 包裹，同中文版。
 
-**F-050**: 【intl差异·注意】isProtectedRoute 正则仍为 `/^\/(zh-CN|en-US)\/(submit|console|profile)/`，未包含 id-ID 和 vi-VN 语言前缀（与中文版相同，这是一个已知限制——新增语言的受保护路由可能无法正确触发认证检查）。文件：[middleware.ts#L9-L11](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/src/middleware.ts#L9-L11)
+**F-050**: 【intl差异·注意】isProtectedRoute 正则仍为 `/^\/(zh-CN|en-US)\/(submit|console|profile)/`，未包含 id-ID 和 vi-VN 语言前缀（与中文版相同，这是一个已知限制——新增语言的受保护路由可能无法正确触发认证检查）。文件：middleware.ts#L9-L11
 
 **F-051**: 中间件其余逻辑同中文版：/api/auth 放行、受保护路由未登录重定向、/api 路径跳过 i18n 中间件、其余路径交给 next-intl middleware。
 
@@ -169,15 +169,15 @@ R阶段产出：编号事实清单 F-001~F-095，零推测纯客观描述。
 
 **F-061**: Dockerfile 三阶段构建同中文版：base → builder → runner。
 
-**F-062**: 【intl差异】构建阶段使用 `npm install`（中文版使用 `npm ci`，npm ci 更严格要求 lockfile 一致，npm install 更宽松）。文件：[Dockerfile#L51](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/Dockerfile#L51)
+**F-062**: 【intl差异】构建阶段使用 `npm install`（中文版使用 `npm ci`，npm ci 更严格要求 lockfile 一致，npm install 更宽松）。文件：Dockerfile#L51
 
 **F-063**: entrypoint.sh 逻辑同中文版：可选 DB 初始化 + seed + 启动 server。
 
-**F-064**: 【intl差异】entrypoint.sh 中 prisma db push 不带 `--accept-data-loss` 参数（中文版带此参数，允许非破坏性 schema 变更时自动接受数据丢失风险）。文件：[entrypoint.sh#L13](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/entrypoint.sh#L13)
+**F-064**: 【intl差异】entrypoint.sh 中 prisma db push 不带 `--accept-data-loss` 参数（中文版带此参数，允许非破坏性 schema 变更时自动接受数据丢失风险）。文件：entrypoint.sh#L13
 
 **F-065**: docker-compose.yml 服务定义同中文版（app、app-init、db、redis），但【intl差异】不含 nginx 服务（中文版有 nginx 反向代理和端口 80 映射，intl 版直接暴露 3000 端口，面向 Vercel 部署优化）。
 
-**F-066**: 【intl差异】next.config.ts 的 outputFileTracingExcludes 注释说明是为了避免 Vercel Lambda 100MB 限制（中文版注释是减小 Docker 镜像体积），体现部署目标从 Docker 转向 Vercel。文件：[next.config.ts#L9-L11](file:///d:/spaces/SpecWeave/external/libs/ai/trae-community/trae-co-creation-demo-wall-intl/next.config.ts#L9-L11)
+**F-066**: 【intl差异】next.config.ts 的 outputFileTracingExcludes 注释说明是为了避免 Vercel Lambda 100MB 限制（中文版注释是减小 Docker 镜像体积），体现部署目标从 Docker 转向 Vercel。文件：next.config.ts#L9-L11
 
 ---
 

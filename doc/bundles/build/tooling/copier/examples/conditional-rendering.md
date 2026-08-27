@@ -274,4 +274,4 @@ health_check_path:
 * [模板配置文件](../concepts/02-template-configuration.md)
 * [Worker 与生命周期](../concepts/05-worker-and-lifecycle.md)
 
-[^copier-src]: Copier 源码，见本 bundle 信源登记 [references/copier-source.md](/references/copier-source.md)。
+[^copier-src]: Copier 源码，见本 bundle 信源登记 [references/copier-source.md](../references/copier-source.md)。

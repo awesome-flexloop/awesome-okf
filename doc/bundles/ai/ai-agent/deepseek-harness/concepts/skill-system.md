@@ -362,7 +362,7 @@ declare module '@deepseek-ai/cordis' {
 
 | 文件 | 职责 |
 |------|------|
-| [skill/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/skill/skill/src/index.ts) | SkillRegistry 核心实现、Provider 接口、类型定义、内容渲染 |
-| [tool-skill/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/skill/tool-skill/src/index.ts) | skill 工具定义、用户斜杠命令拦截、会话目录发布 |
-| [skill-filesystem/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/skill/skill-filesystem/src/index.ts) | 文件系统 Provider、目录扫描、文件监视 |
-| [skill-badge/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/skill/skill-badge/src/index.ts) | 徽章标记 Provider |
+| skill/src/index.ts | SkillRegistry 核心实现、Provider 接口、类型定义、内容渲染 |
+| tool-skill/src/index.ts | skill 工具定义、用户斜杠命令拦截、会话目录发布 |
+| skill-filesystem/src/index.ts | 文件系统 Provider、目录扫描、文件监视 |
+| skill-badge/src/index.ts | 徽章标记 Provider |

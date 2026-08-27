@@ -196,6 +196,6 @@ CLI 层不得导入 `api/`（F-129）。需要启动服务器时通过 `launch.r
 
 ## 相关概念
 
-- [/concepts/00-architecture.md](/concepts/00-architecture.md)
-- [/concepts/05-acp-protocol.md](/concepts/05-acp-protocol.md)
-- [/concepts/01-server-lifecycle.md](/concepts/01-server-lifecycle.md)
+- [/concepts/00-architecture.md](00-architecture.md)
+- [/concepts/05-acp-protocol.md](05-acp-protocol.md)
+- [/concepts/01-server-lifecycle.md](01-server-lifecycle.md)

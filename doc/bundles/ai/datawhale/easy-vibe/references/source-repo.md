@@ -71,5 +71,5 @@ easy-vibe/
 ## 采集说明
 
 - 本信源于 2026-08-23 基于 `main` 分支工作区副本采集。
-- 事实清单见 [/datawhale/easy-vibe/spec/facts.md](/ai/datawhale/easy-vibe/spec/facts.md)。
-- 架构洞察见 [/datawhale/easy-vibe/spec/insights.md](/ai/datawhale/easy-vibe/spec/insights.md)。
+- 事实清单见 [/datawhale/easy-vibe/spec/facts.md](../spec/facts.md)。
+- 架构洞察见 [/datawhale/easy-vibe/spec/insights.md](../spec/insights.md)。

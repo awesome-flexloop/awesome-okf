@@ -147,7 +147,7 @@ universe README 列出的六大待解问题在谱系中的定位：
 
 ## 相关概念
 
-- [三大公理 — 宇宙的递归本源](/concepts/00-three-axioms.md)
-- [REC递归与元操作符 — 从操作到操作的操作](/concepts/02-recursion-meta-operator.md)
-- [宇宙本体论（D10）— 中心理论](/concepts/04-cosmic-ontology.md)
-- [信息场与意识理论 — 物质-意识二元一体](/concepts/05-information-field.md)
+- [三大公理 — 宇宙的递归本源](00-three-axioms.md)
+- [REC递归与元操作符 — 从操作到操作的操作](02-recursion-meta-operator.md)
+- [宇宙本体论（D10）— 中心理论](04-cosmic-ontology.md)
+- [信息场与意识理论 — 物质-意识二元一体](05-information-field.md)

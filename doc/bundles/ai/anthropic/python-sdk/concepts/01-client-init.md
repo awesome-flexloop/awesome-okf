@@ -337,8 +337,8 @@ client = create_anthropic_client()
 
 ## 相关概念
 
-- [整体架构概览](/python-sdk/concepts/00-overview.md) — 理解客户端在 SDK 四层架构中的位置
-- [Messages API 基础](/python-sdk/concepts/02-messages-basics.md) — 客户端初始化后如何发起第一个对话
-- [中间件、扩展与错误处理](/python-sdk/concepts/09-middleware-extended.md) — 深入学习中间件开发和错误处理最佳实践
-- [多云后端支持](/python-sdk/concepts/07-multi-cloud.md) — Bedrock/Vertex 等多云客户端的初始化差异
-- [Anthropic Python SDK 客户端入口与基础设施参考](/python-sdk/references/sdk-client.md) — 构造函数所有参数的完整 API 参考
+- [整体架构概览](00-overview.md) — 理解客户端在 SDK 四层架构中的位置
+- [Messages API 基础](02-messages-basics.md) — 客户端初始化后如何发起第一个对话
+- [中间件、扩展与错误处理](09-middleware-extended.md) — 深入学习中间件开发和错误处理最佳实践
+- [多云后端支持](07-multi-cloud.md) — Bedrock/Vertex 等多云客户端的初始化差异
+- [Anthropic Python SDK 客户端入口与基础设施参考](../references/sdk-client.md) — 构造函数所有参数的完整 API 参考

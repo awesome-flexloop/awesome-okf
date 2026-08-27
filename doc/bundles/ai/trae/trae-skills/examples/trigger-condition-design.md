@@ -197,11 +197,11 @@ description: 基于代码变更（git diff）生成符合 Conventional Commits �
 
 ## 相关概念
 
-- [SKILL.md 格式规范](/concepts/01-skill-format.md)
-- [纯 Prompt 型技能](/concepts/03-prompt-only-skills.md)
-- [编写自定义 Skill](/concepts/07-write-skill.md)
+- [SKILL.md 格式规范](../concepts/01-skill-format.md)
+- [纯 Prompt 型技能](../concepts/03-prompt-only-skills.md)
+- [编写自定义 Skill](../concepts/07-write-skill.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/skills-source.md)
-- [创建第一个 Skill](/examples/create-first-skill.md)
+- [源码信源索引](../references/skills-source.md)
+- [创建第一个 Skill](create-first-skill.md)

@@ -114,7 +114,7 @@ classDiagram
     AssocOp <|-- LatticeOp
 ```
 
-核心继承链：`Printable → Basic → Expr → Add/Mul/Pow`（Add 和 Mul 还同时继承 `AssocOp`）；原子类型链：`Basic → Atom → AtomicExpr → Symbol/Dummy/Wild/Number/NumberSymbol`。[^F-072][^F-073]
+核心继承链：`Printable → Basic → Expr → Add/Mul/Pow`（Add 和 Mul 还同时继承 `AssocOp`）；原子类型链：`Basic → Atom → AtomicExpr → Symbol/Dummy/Wild/Number/NumberSymbol`。[^F-072] [^F-073]
 
 ## Basic 基类
 
@@ -499,7 +499,7 @@ class AssocOp(Basic):
 - **evaluate 参数**：`__new__` 接受 `evaluate` 关键字参数，控制是否执行求值/扁平化；`evaluate=False` 时保持原始参数结构
 - **_sympify 参数**：控制是否对参数执行 sympify 转换
 
-`Add` 和 `Mul` 均继承自 `Expr` 和 `AssocOp`，分别定义了 `is_Add = True`/`is_Mul = True` 和各自的 `flatten` 方法。[^F-037][^F-039]
+`Add` 和 `Mul` 均继承自 `Expr` 和 `AssocOp`，分别定义了 `is_Add = True`/`is_Mul = True` 和各自的 `flatten` 方法。[^F-037] [^F-039]
 
 ```python
 >>> from sympy import Add, Mul, symbols
@@ -524,7 +524,7 @@ x + x + y
 
 ## 表达式遍历工具
 
-`core/traversal.py` 提供遍历表达式树的工具函数和迭代器类。[^F-063][^F-064]
+`core/traversal.py` 提供遍历表达式树的工具函数和迭代器类。[^F-063] [^F-064]
 
 ### preorder_traversal 前序遍历
 

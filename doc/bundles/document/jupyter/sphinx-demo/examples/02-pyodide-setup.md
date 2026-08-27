@@ -373,7 +373,7 @@ print(sympy.integrate(x**2, x))
 
 ## 相关内容
 
-- [/concepts/04-kernel-comparison.md](/concepts/04-kernel-comparison.md)：Pyodide vs Xeus 对比
-- [/examples/03-xeus-setup.md](/examples/03-xeus-setup.md)：Xeus 内核配置
-- [/examples/01-minimal-site.md](/examples/01-minimal-site.md)：最小站点示例
-- [/concepts/06-try-examples.md](/concepts/06-try-examples.md)：TryExamples 详解
+- [/concepts/04-kernel-comparison.md](../concepts/04-kernel-comparison.md)：Pyodide vs Xeus 对比
+- [/examples/03-xeus-setup.md](03-xeus-setup.md)：Xeus 内核配置
+- [/examples/01-minimal-site.md](01-minimal-site.md)：最小站点示例
+- [/concepts/06-try-examples.md](../concepts/06-try-examples.md)：TryExamples 详解

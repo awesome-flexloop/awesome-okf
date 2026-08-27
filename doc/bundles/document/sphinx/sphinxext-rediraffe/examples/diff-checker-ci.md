@@ -229,6 +229,6 @@ sphinx-build -b rediraffecheckdiff -D rediraffe_branch=HEAD~1 docs docs/_build/c
 
 ## 相关概念
 
-- [Builder体系详解](/concepts/05-builders.md)
-- [配置项详解](/concepts/04-configuration.md)
-- [自动重定向写入示例](/examples/auto-redirect-writer.md)
+- [Builder体系详解](../concepts/05-builders.md)
+- [配置项详解](../concepts/04-configuration.md)
+- [自动重定向写入示例](auto-redirect-writer.md)

@@ -164,11 +164,11 @@ GitHub GraphQL API
 `generate_activity_markdown()` 生成格式化输出：
 1. 按分类分组PR
 2. 每个分类生成二级标题
-3. 每个PR生成列表项：`- 标题 ``[#编号](url)`` (@作者)`
+3. 每个PR生成列表项：`- 标题 ``#编号`` (@作者)`
 4. 合并者信息可选包含
 
 ## 相关概念
 
-- [CLI命令详解](/concepts/02-cli-usage.md)
-- [标签分类配置](/concepts/04-configuration.md)
-- [变更日志生成示例](/examples/changelog-generation.md)
+- [CLI命令详解](02-cli-usage.md)
+- [标签分类配置](04-configuration.md)
+- [变更日志生成示例](../examples/changelog-generation.md)

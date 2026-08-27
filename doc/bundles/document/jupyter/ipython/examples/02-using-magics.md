@@ -463,8 +463,8 @@ IPython 内置了 80+ 魔法命令，由 15 个 Magics 类分别管理 [F-340][F
 
 ## 相关概念
 
-- [魔法命令系统](/concepts/04-magic-system.md)
-- [自定义魔法开发](/concepts/11-custom-magics.md)
-- [输入转换与特殊语法](/concepts/07-input-transform.md)
-- [代码执行管线](/concepts/05-execution-pipeline.md)
-- [信源参考 - 魔法系统](/references/magic-source.md)
+- [魔法命令系统](../concepts/04-magic-system.md)
+- [自定义魔法开发](../concepts/11-custom-magics.md)
+- [输入转换与特殊语法](../concepts/07-input-transform.md)
+- [代码执行管线](../concepts/05-execution-pipeline.md)
+- [信源参考 - 魔法系统](../references/magic-source.md)

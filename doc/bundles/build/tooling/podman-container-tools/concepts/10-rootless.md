@@ -112,7 +112,7 @@ rootless 容器内 ping 需要 `CAP_NET_RAW` 能力，解决方案：
 
 ## 相关概念
 
-- [Podman简介](/concepts/00-introduction.md) — Podman核心设计理念与rootless特性概述
-- [网络与存储卷](/concepts/09-network-volume.md) — pasta/slirp4netns网络栈详解与rootless端口转发
-- [架构概览](/concepts/02-architecture-overview.md) — 无守护进程架构与安全模型
-- [容器基础](/concepts/04-container-basics.md) — Linux命名空间隔离机制
+- [Podman简介](00-introduction.md) — Podman核心设计理念与rootless特性概述
+- [网络与存储卷](09-network-volume.md) — pasta/slirp4netns网络栈详解与rootless端口转发
+- [架构概览](02-architecture-overview.md) — 无守护进程架构与安全模型
+- [容器基础](04-container-basics.md) — Linux命名空间隔离机制

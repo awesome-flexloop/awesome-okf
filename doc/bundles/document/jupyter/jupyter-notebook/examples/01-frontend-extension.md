@@ -470,5 +470,5 @@ const plugin: JupyterFrontEndPlugin<void> = {
 
 ## 下一步
 
-- [自定义Shell布局](./03-customize-shell.md) 学习更高级的Shell操作
-- [开发服务端扩展](./02-server-extension.md) 学习添加后端API
+- [自定义Shell布局](03-customize-shell.md) 学习更高级的Shell操作
+- [开发服务端扩展](02-server-extension.md) 学习添加后端API

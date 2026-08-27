@@ -303,10 +303,10 @@ if chan.exit_status_ready():
 
 ## 相关概念
 
-- [Transport 底层传输](/concepts/03-transport.md)
-- [Channel 通道](/concepts/04-channel.md)
-- [服务端开发](/concepts/09-server.md)
-- [高级模式](/concepts/10-advanced-patterns.md)
-- [端口转发示例](/examples/port-forwarding.md)
+- [Transport 底层传输](03-transport.md)
+- [Channel 通道](04-channel.md)
+- [服务端开发](09-server.md)
+- [高级模式](10-advanced-patterns.md)
+- [端口转发示例](../examples/port-forwarding.md)
 
-[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](/references/paramiko-source.md)。
+[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](../references/paramiko-source.md)。

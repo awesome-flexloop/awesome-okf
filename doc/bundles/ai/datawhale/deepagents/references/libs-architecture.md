@@ -22,4 +22,4 @@ Deep Agents 运行时结构和 SDK 起点的架构文档。
 
 ## 相关概念
 
-- [核心SDK与三层架构](/ai/datawhale/deepagents/concepts/core-sdk)
+- 核心SDK与三层架构

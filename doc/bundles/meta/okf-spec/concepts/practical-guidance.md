@@ -165,16 +165,16 @@ v0.2 进行了两项重要改进：
 
 ## 相关概念
 
-- [概念文档](./concept-documents.md) - frontmatter 和正文的规范要求
-- [溯源与信源](./provenance-sources.md) - sources 字段和逐声明归因
-- [索引文件](./index-files.md) - index.md 的格式约定
-- [日志文件](./log-files.md) - log.md 的格式约定
-- [合规性](./conformance.md) - 正式合规三要件
-- [相对 v0.1 的变更](./changes-from-v0.1.md) - v0.1 到 v0.2 的字段迁移
-- [设计原则](./design-principles.md) - 三大设计原则如何驱动规范决策
-- [生态工具：Validator](./tooling-validator.md) - 在线验证工具
-- [生态工具：Agent Skill](./tooling-agent-skill.md) - 智能体技能和 validate.sh
+- [概念文档](concept-documents.md) - frontmatter 和正文的规范要求
+- [溯源与信源](provenance-sources.md) - sources 字段和逐声明归因
+- [索引文件](index-files.md) - index.md 的格式约定
+- [日志文件](log-files.md) - log.md 的格式约定
+- [合规性](conformance.md) - 正式合规三要件
+- [相对 v0.1 的变更](changes-from-v0.1.md) - v0.1 到 v0.2 的字段迁移
+- [设计原则](design-principles.md) - 三大设计原则如何驱动规范决策
+- [生态工具：Validator](tooling-validator.md) - 在线验证工具
+- [生态工具：Agent Skill](tooling-agent-skill.md) - 智能体技能和 validate.sh
 
-[^annotated-v01]: OKF v0.1 Annotated Guide，见 [references/okf-annotated-v01.md](/references/okf-annotated-v01.md)。
-[^okf-spec]: OKF SPEC v0.2 规范，见 [references/okf-spec.md](/references/okf-spec.md)。
+[^annotated-v01]: OKF v0.1 Annotated Guide，见 [references/okf-annotated-v01.md](../references/okf-annotated-v01.md)。
+[^okf-spec]: OKF SPEC v0.2 规范，见 [references/okf-spec.md](../references/okf-spec.md)。
 [^quickstart]: OKF Quickstart 教程，见 [okf.md/quickstart](https://okf.md/quickstart)。

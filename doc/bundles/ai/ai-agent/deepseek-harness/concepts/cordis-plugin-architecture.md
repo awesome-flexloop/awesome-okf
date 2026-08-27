@@ -440,14 +440,14 @@ deepseek-harness 建立了统一的命名约定，贯穿整个代码库：
 
 | 文件 | 核心内容 |
 |------|---------|
-| [packages/llm/llm/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/index.ts) | `LlmRuntime` Service、`LlmError`、`llm/stream` 瀑布事件声明 |
-| [packages/core/tools/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/tools/src/index.ts) | `ToolRuntime` Service、四级工具执行瀑布事件 |
-| [packages/core/agent/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/agent/src/index.ts) | `AgentRegistry` Service、`CreateAgentOptions`、Agent 作用域 |
-| [packages/core/session/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/session/src/index.ts) | `SessionStore` Service、session 生命周期事件 |
-| [packages/core/scope/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/scope/src/index.ts) | `ScopeKey`、`Scoped` 接口、scoped context 创建 |
-| [packages/core/scope/src/store.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/scope/src/store.ts) | `ScopedLayers`、`NamedEntries`、`AnonymousEntries` 分层存储 |
-| [packages/shell/shell/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/shell/shell/src/index.ts) | `ShellExecutor` 抽象 Service 定义 |
-| [packages/fs/fs/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/fs/fs/src/index.ts) | `FileSystem` 抽象 Service、fs/write-intent 瀑布事件 |
-| [packages/lsp/lsp/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/lsp/lsp/src/index.ts) | `Lsp` Service、原子 provider 注册 |
-| [packages/mcp/mcp-client/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/mcp/mcp-client/src/index.ts) | MCP 客户端插件完整示例（name+inject+Config+apply+effect） |
-| [packages/skill/skill/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/skill/skill/src/index.ts) | `SkillRegistry` Service、分层 skill 注册 |
+| packages/llm/llm/src/index.ts | `LlmRuntime` Service、`LlmError`、`llm/stream` 瀑布事件声明 |
+| packages/core/tools/src/index.ts | `ToolRuntime` Service、四级工具执行瀑布事件 |
+| packages/core/agent/src/index.ts | `AgentRegistry` Service、`CreateAgentOptions`、Agent 作用域 |
+| packages/core/session/src/index.ts | `SessionStore` Service、session 生命周期事件 |
+| packages/core/scope/src/index.ts | `ScopeKey`、`Scoped` 接口、scoped context 创建 |
+| packages/core/scope/src/store.ts | `ScopedLayers`、`NamedEntries`、`AnonymousEntries` 分层存储 |
+| packages/shell/shell/src/index.ts | `ShellExecutor` 抽象 Service 定义 |
+| packages/fs/fs/src/index.ts | `FileSystem` 抽象 Service、fs/write-intent 瀑布事件 |
+| packages/lsp/lsp/src/index.ts | `Lsp` Service、原子 provider 注册 |
+| packages/mcp/mcp-client/src/index.ts | MCP 客户端插件完整示例（name+inject+Config+apply+effect） |
+| packages/skill/skill/src/index.ts | `SkillRegistry` Service、分层 skill 注册 |

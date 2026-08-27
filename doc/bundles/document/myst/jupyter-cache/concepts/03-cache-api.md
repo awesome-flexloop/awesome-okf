@@ -240,7 +240,7 @@ cache_restored = pickle.loads(cache_pickled)
 
 ## 相关概念
 
-- [缓存架构设计](/concepts/02-architecture.md)
-- [Notebook执行与插件](/concepts/04-notebook-execution.md)
-- [配置项参考](/concepts/07-configuration.md)
-- [Python API示例](/examples/python-api.md)
+- [缓存架构设计](02-architecture.md)
+- [Notebook执行与插件](04-notebook-execution.md)
+- [配置项参考](07-configuration.md)
+- [Python API示例](../examples/python-api.md)

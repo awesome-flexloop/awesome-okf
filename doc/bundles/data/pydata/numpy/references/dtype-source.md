@@ -179,6 +179,6 @@ def __repr__(dtype):
 
 ## 相关概念
 
-- [dtype数据类型系统](/concepts/02-dtype-system.md)
-- [ndarray多维数组](/concepts/01-ndarray.md)
-- [NumPy简介](/concepts/00-introduction.md)
+- [dtype数据类型系统](../concepts/02-dtype-system.md)
+- [ndarray多维数组](../concepts/01-ndarray.md)
+- [NumPy简介](../concepts/00-introduction.md)

@@ -100,6 +100,6 @@ skopeo copy oci:download:latest docker://quay.io/mmortari/model:latest
 
 ## 相关概念
 
-- [OCI 层操作与四元组注解](/bundles/containers/olot/concepts/01-oci-layers.md)：了解 olot 如何操作 OCI 层
-- [后端抽象层](/bundles/containers/olot/concepts/02-backends.md)：了解三种后端的区别和选择
-- [Python API 编程](/bundles/containers/olot/concepts/03-python-api.md)：在代码中集成 olot
+- [OCI 层操作与四元组注解](01-oci-layers.md)：了解 olot 如何操作 OCI 层
+- [后端抽象层](02-backends.md)：了解三种后端的区别和选择
+- [Python API 编程](03-python-api.md)：在代码中集成 olot

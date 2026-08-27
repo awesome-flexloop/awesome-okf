@@ -126,7 +126,7 @@ pip install faster-whisper pysrt python-Levenshtein pytube youtube-transcript-ap
 | Google Cloud Translation | `GOOGLE_TRANSLATION_SERVICE_ACCOUNT` | 翻译回退方案 | 可选 |
 | YouTube Data API v3 | `YOUTUBE_UPLOADING_KEY` + OAuth | 字幕上传、视频本地化 | 仅上传时需要 |
 
-详细的 API 密钥配置方法和认证流程见 [/references/dependencies.md](/references/dependencies.md)。
+详细的 API 密钥配置方法和认证流程见 [/references/dependencies.md](../references/dependencies.md)。
 
 ### 路径配置
 
@@ -175,7 +175,7 @@ python scripts/auto_caption.py "https://www.youtube.com/watch?v=VIDEO_ID" --lang
 
 ## 相关概念
 
-- [01 音频转录模块](/concepts/01-transcription.md)
-- [02 多语言翻译模块](/concepts/02-translation.md)
-- [CLI 脚本参考](/references/scripts-reference.md)
-- [依赖与 API 配置](/references/dependencies.md)
+- [01 音频转录模块](01-transcription.md)
+- [02 多语言翻译模块](02-translation.md)
+- [CLI 脚本参考](../references/scripts-reference.md)
+- [依赖与 API 配置](../references/dependencies.md)

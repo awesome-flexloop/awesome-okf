@@ -24,7 +24,7 @@ sources:
 
 ## 前置条件
 
-- 已完成[基本安装与配置](/examples/basic-install-config.md)
+- 已完成[基本安装与配置](basic-install-config.md)
 - 有一个纯 Python wheel 文件（`py3-none-any.whl`）
   - 含 C 扩展的包需要预先编译为 WASM，详见[注意事项](#注意事项纯-python-vs-wasm-wheel)
 
@@ -244,6 +244,6 @@ jupyter lite check
 
 ## 下一步
 
-- [浏览器端包管理](/concepts/05-package-management.md)
-- [构建时 Addon 系统](/concepts/04-build-addons.md)
-- [Lockfile 定制](/concepts/08-lockfile-customization.md) — 添加 WASM 编译包
+- [浏览器端包管理](../concepts/05-package-management.md)
+- [构建时 Addon 系统](../concepts/04-build-addons.md)
+- [Lockfile 定制](../concepts/08-lockfile-customization.md) — 添加 WASM 编译包

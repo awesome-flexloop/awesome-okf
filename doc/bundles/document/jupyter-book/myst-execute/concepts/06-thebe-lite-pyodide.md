@@ -232,8 +232,8 @@ thebe-lite 包含一个 `service-worker.js`，用于缓存静态资源和提供�
 
 ## 相关概念
 
-- [03-thebe-core-api.md](/concepts/03-thebe-core-api.md)：核心 API 和服务器连接
-- [04-thebe-configuration.md](/concepts/04-thebe-configuration.md)：配置选项
-- [05-thebe-binder.md](/concepts/05-thebe-binder.md)：Binder 连接（对比模式）
-- [07-thebe-react.md](/concepts/07-thebe-react.md)：React 集成
-- [03-thebe-lite.md](/examples/03-thebe-lite.md)：JupyterLite 使用示例
+- [03-thebe-core-api.md](03-thebe-core-api.md)：核心 API 和服务器连接
+- [04-thebe-configuration.md](04-thebe-configuration.md)：配置选项
+- [05-thebe-binder.md](05-thebe-binder.md)：Binder 连接（对比模式）
+- [07-thebe-react.md](07-thebe-react.md)：React 集成
+- [03-thebe-lite.md](../examples/03-thebe-lite.md)：JupyterLite 使用示例

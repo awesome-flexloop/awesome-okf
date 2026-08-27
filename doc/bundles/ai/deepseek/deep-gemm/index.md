@@ -41,33 +41,33 @@ description: DeepGEMM - DeepSeek 高性能 JIT GEMM 核函数库文档
 
 ## 文档导航
 
-### 📘 核心概念 [concepts/](/ai/deepseek/deep-gemm/concepts/)
+### 📘 核心概念 [concepts/](concepts/index.md)
 
 | 文档 | 内容 |
 |---|---|
-| [概述](/ai/deepseek/deep-gemm/concepts/overview) | 架构总览、功能模块、支持矩阵、包结构 |
-| [FP8/FP4 GEMM](/ai/deepseek/deep-gemm/concepts/fp8-gemm) | 低精度方案、per-block 缩放因子、UE8M0 编码、量化工具 |
-| [分组 GEMM 与 MoE 并行](/ai/deepseek/deep-gemm/concepts/grouped-gemm) | M/K-grouped GEMM、连续/掩码布局、PSUM 布局 |
-| [JIT 内核编译系统](/ai/deepseek/deep-gemm/concepts/jit-kernel-compilation) | NVCC/NVRTC 编译、两级缓存、CRTP 启动、内核加载 |
-| [MegaMoE 融合运算](/ai/deepseek/deep-gemm/concepts/moe-operations) | 对称环形缓冲区、零拷贝通信、权重交错、双精度方案 |
-| [性能优化技术](/ai/deepseek/deep-gemm/concepts/performance-optimization) | TMA、WGMMA/TCGen05、PDL、Cluster、SM 控制、Swizzle |
+| 概述 | 架构总览、功能模块、支持矩阵、包结构 |
+| FP8/FP4 GEMM | 低精度方案、per-block 缩放因子、UE8M0 编码、量化工具 |
+| 分组 GEMM 与 MoE 并行 | M/K-grouped GEMM、连续/掩码布局、PSUM 布局 |
+| JIT 内核编译系统 | NVCC/NVRTC 编译、两级缓存、CRTP 启动、内核加载 |
+| MegaMoE 融合运算 | 对称环形缓冲区、零拷贝通信、权重交错、双精度方案 |
+| 性能优化技术 | TMA、WGMMA/TCGen05、PDL、Cluster、SM 控制、Swizzle |
 
-### 📗 API 参考 [references/](/ai/deepseek/deep-gemm/references/)
+### 📗 API 参考 [references/](references/index.md)
 
 | 文档 | 内容 |
 |---|---|
-| [公共 API](/ai/deepseek/deep-gemm/references/api) | GEMM、Attention、Einsum、Hyperconnection、Layout 核函数完整签名 |
-| [JIT 编译系统](/ai/deepseek/deep-gemm/references/jit-system) | 编译器、设备运行时、内核运行时、Include 解析、句柄管理 |
-| [MegaMoE API](/ai/deepseek/deep-gemm/references/mega-moe) | SymmBuffer、权重变换、fp8_fp4_mega_moe、bf16_mega_moe |
-| [运行时配置](/ai/deepseek/deep-gemm/references/runtime-config) | SM/TC/PDL 配置、编译维度、Block 对齐、环境变量 |
+| 公共 API | GEMM、Attention、Einsum、Hyperconnection、Layout 核函数完整签名 |
+| JIT 编译系统 | 编译器、设备运行时、内核运行时、Include 解析、句柄管理 |
+| MegaMoE API | SymmBuffer、权重变换、fp8_fp4_mega_moe、bf16_mega_moe |
+| 运行时配置 | SM/TC/PDL 配置、编译维度、Block 对齐、环境变量 |
 
-### 📙 代码示例 [examples/](/ai/deepseek/deep-gemm/examples/)
+### 📙 代码示例 [examples/](examples/index.md)
 
 | 示例 | 内容 |
 |---|---|
-| [基础 GEMM](/ai/deepseek/deep-gemm/examples/basic-gemm) | FP8/BF16 GEMM 调用、量化、性能基准测试 |
-| [MoE 前向](/ai/deepseek/deep-gemm/examples/moe-forward) | M-grouped GEMM MoE、MegaMoE 单/多 rank 用法 |
-| [性能调优](/ai/deepseek/deep-gemm/examples/tuning) | SM/TC 配置、JIT 预热、benchmark、问题排查 |
+| 基础 GEMM | FP8/BF16 GEMM 调用、量化、性能基准测试 |
+| MoE 前向 | M-grouped GEMM MoE、MegaMoE 单/多 rank 用法 |
+| 性能调优 | SM/TC 配置、JIT 预热、benchmark、问题排查 |
 
 ---
 
@@ -100,8 +100,8 @@ deep_gemm.fp8_gemm_nt((a_fp8, a_sf), (b_fp8, b_sf), d)
 
 | 项目 | 关系 |
 |---|---|
-| [DeepEP](/ai/deepseek/deep-ep/) | DeepSeek 专家并行（EP）通信库，提供 all-to-all 等通信原语，与 DeepGEMM 分组 GEMM/MegaMoE 协同使用 |
-| [TileLang Kernels](/ai/deepseek/tile-kernels/) | TileLang 编写的核函数库（如 SwiGLU+weight 到 FP8 的融合算子），作为 DeepGEMM 的补充 |
+| [DeepEP](../deep-ep/index.md) | DeepSeek 专家并行（EP）通信库，提供 all-to-all 等通信原语，与 DeepGEMM 分组 GEMM/MegaMoE 协同使用 |
+| [TileLang Kernels](../tile-kernels/index.md) | TileLang 编写的核函数库（如 SwiGLU+weight 到 FP8 的融合算子），作为 DeepGEMM 的补充 |
 
 ```{toctree}
 :hidden:

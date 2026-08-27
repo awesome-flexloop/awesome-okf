@@ -165,7 +165,7 @@ flowchart LR
 |--------|------|
 | [jupyter-docker-stacks](../jupyter-docker-stacks/index.md) | 上游：本模板基于的官方Docker镜像集 |
 | [jupyter-notebook](../jupyter-notebook/index.md) | 同层：Jupyter Notebook应用层 |
-| [jupyter-client](../jupyter-client/README.md) | 同层：Jupyter内核通信协议 |
+| [jupyter-client](../jupyter-client/index.md) | 同层：Jupyter内核通信协议 |
 | [nbformat](../nbformat/index.md) | 同层：Notebook文件格式 |
 
 ## 许可协议

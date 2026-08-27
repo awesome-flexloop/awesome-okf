@@ -14,11 +14,11 @@ sources:
 
 ## 概述
 
-BinderHub 提供两套互补的可观测性系统：结构化事件日志（[events.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/events.py)）和 Prometheus 指标（定义在 [builder.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py) 及 [repoproviders.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py)，端点在 [metrics.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/metrics.py)）。事件日志通过 JSON Schema 验证的结构化事件记录用户行为（如启动事件），适合审计和活动分析；Prometheus 指标提供实时性能和容量数据，适合监控告警和仪表盘。
+BinderHub 提供两套互补的可观测性系统：结构化事件日志（events.py）和 Prometheus 指标（定义在 builder.py 及 repoproviders.py，端点在 metrics.py）。事件日志通过 JSON Schema 验证的结构化事件记录用户行为（如启动事件），适合审计和活动分析；Prometheus 指标提供实时性能和容量数据，适合监控告警和仪表盘。
 
 ## EventLog：结构化事件日志系统
 
-`EventLog`（[events.py:29-108](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/events.py#L29-L108)）继承自 `Configurable`，提供基于 JSON Schema 验证的结构化事件发射能力。
+`EventLog`（events.py:29-108）继承自 `Configurable`，提供基于 JSON Schema 验证的结构化事件发射能力。
 
 ### 核心属性
 
@@ -157,7 +157,7 @@ def emit(self, schema_name, version, event):
 
 ### Schema 自动加载
 
-在 [app.py:960-962](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L960-L962) 中，应用初始化时自动加载 `event-schemas/` 目录下所有 JSON Schema 文件：
+在 app.py:960-962 中，应用初始化时自动加载 `event-schemas/` 目录下所有 JSON Schema 文件：
 
 ```python
 for schema_file in glob(os.path.join(HERE, "event-schemas", "*.json")):
@@ -167,7 +167,7 @@ for schema_file in glob(os.path.join(HERE, "event-schemas", "*.json")):
 
 ## Launch 事件 Schema
 
-[event-schemas/launch.json](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/event-schemas/launch.json) 定义了启动事件的 JSON Schema（v6版本）：
+event-schemas/launch.json 定义了启动事件的 JSON Schema（v6版本）：
 
 ```json
 {
@@ -223,7 +223,7 @@ for schema_file in glob(os.path.join(HERE, "event-schemas", "*.json")):
 
 ### emit_launch_event()：启动事件发射点
 
-在 [builder.py:678-705](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L678-L705) 中，`BuildHandler.emit_launch_event()` 方法在每次成功启动后发射事件：
+在 builder.py:678-705 中，`BuildHandler.emit_launch_event()` 方法在每次成功启动后发射事件：
 
 ```python
 def emit_launch_event(self, provider, spec, ref):
@@ -258,8 +258,8 @@ def emit_launch_event(self, provider, spec, ref):
 3. **仅在成功时发射**：当前实现只在 `status: "success"` 时发射事件，失败启动通过 Prometheus 指标计数。
 
 调用时机：`emit_launch_event()` 在 BuildHandler.get() 中被调用两次：
-- 镜像已存在（无需构建）直接启动后调用（[builder.py:523](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L523)）；
-- 构建完成后启动成功后调用（[builder.py:666](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L666)）。
+- 镜像已存在（无需构建）直接启动后调用（builder.py:523）；
+- 构建完成后启动成功后调用（builder.py:666）。
 
 ## Prometheus 指标体系
 
@@ -302,8 +302,8 @@ BUILD_TIME = Histogram(
 | 桶 | BUILD_BUCKETS |
 
 观测点：
-- 成功构建：BUILT 状态到达时（[builder.py:620-622](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L620-L622)），耗时 = 当前时间 - build_starttime；
-- 失败构建：日志中检测到 failure/failed 阶段时（[builder.py:651-653](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L651-L653)）。
+- 成功构建：BUILT 状态到达时（builder.py:620-622），耗时 = 当前时间 - build_starttime；
+- 失败构建：日志中检测到 failure/failed 阶段时（builder.py:651-653）。
 
 ### LAUNCH_TIME：启动耗时 Histogram
 
@@ -328,7 +328,7 @@ LAUNCH_TIME = Histogram(
 - 成功时 `retries` 标签记录第几次尝试成功（0=首次成功，1=第一次重试后成功等）；
 - 失败和重试时 `retries=-1`，不记录重试次数。
 
-代码参考：[builder.py:810-846](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L810-L846)。
+代码参考：builder.py:810-846。
 
 ### BUILD_COUNT：构建计数 Counter
 
@@ -366,7 +366,7 @@ LAUNCH_COUNT = Counter(
 
 每次启动尝试结果递增。`status` 标签不仅记录成功/失败，还记录配额超限的具体类型（`pod_quota` 或 `repo_quota`），便于区分"真正的失败"和"因容量限制被拒绝"。
 
-配额超限计数参考：[builder.py:727-730](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L727-L730)。
+配额超限计数参考：builder.py:727-730。
 
 ### BUILDS_INPROGRESS：进行中构建 Gauge
 
@@ -381,7 +381,7 @@ with BUILDS_INPROGRESS.track_inprogress():
     # 构建逻辑...
 ```
 
-进入上下文时 Gauge +1，退出时（无论成功失败）-1。参考 [builder.py:558](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L558)。
+进入上下文时 Gauge +1，退出时（无论成功失败）-1。参考 builder.py:558。
 
 ### LAUNCHES_INPROGRESS：进行中启动 Gauge
 
@@ -392,8 +392,8 @@ LAUNCHES_INPROGRESS = Gauge(
 ```
 
 同样使用 `track_inprogress()` 追踪进行中的启动数。注意在镜像已命中缓存（无需构建）的路径和构建后启动的路径中都有追踪：
-- 缓存命中启动：[builder.py:518](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L518)；
-- 构建后启动：[builder.py:664](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L664)。
+- 缓存命中启动：builder.py:518；
+- 构建后启动：builder.py:664。
 
 ### BUILDS_REJECTED：被拒绝构建 Counter
 
@@ -421,7 +421,7 @@ BUILDS_REJECTED = Counter(
 | `"accept_header"` | 请求缺少 `text/event-stream` Accept头 |
 | `"banned_repo"` | 仓库被provider标记为禁止 |
 
-参考：[builder.py:283-297](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L283-L297)。
+参考：builder.py:283-297。
 
 ### GITHUB_RATE_LIMIT：GitHub API 速率限制 Gauge
 
@@ -431,7 +431,7 @@ GITHUB_RATE_LIMIT = Gauge(
 )
 ```
 
-定义在 [repoproviders.py:29-31](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L29-L31)，在每次 GitHub API 响应后更新：
+定义在 repoproviders.py:29-31，在每次 GitHub API 响应后更新：
 
 ```python
 GITHUB_RATE_LIMIT.set(remaining)
@@ -439,7 +439,7 @@ GITHUB_RATE_LIMIT.set(remaining)
 
 从 GitHub API 响应的 `X-RateLimit-Remaining` header 获取剩余请求数，设置到 Gauge 中。当此值接近0时表示 BinderHub 即将因 GitHub API 限流而无法解析仓库引用。
 
-参考：[repoproviders.py:1030](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L1030)。
+参考：repoproviders.py:1030。
 
 ## 指标汇总表
 
@@ -465,12 +465,12 @@ class MetricsHandler(BaseHandler):
         self.write(generate_latest(REGISTRY))
 ```
 
-`MetricsHandler`（[metrics.py:6-12](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/metrics.py#L6-L12)）是一个极简的 Tornado Handler：
+`MetricsHandler`（metrics.py:6-12）是一个极简的 Tornado Handler：
 - `log_success_debug = True`：成功响应降级为DEBUG日志；
 - Content-Type 设置为 `CONTENT_TYPE_LATEST`（`text/plain; version=0.0.4; charset=utf-8`，Prometheus 文本格式标准）；
 - 使用 `prometheus_client.generate_latest(REGISTRY)` 生成所有已注册指标的文本表示。
 
-端点路径为 `/metrics`，在 [app.py:1024](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L1024) 注册。Helm Chart 中 Service 注解 `prometheus.io/scrape: "true"` 让 Prometheus 自动发现并抓取此端点。
+端点路径为 `/metrics`，在 app.py:1024 注册。Helm Chart 中 Service 注解 `prometheus.io/scrape: "true"` 让 Prometheus 自动发现并抓取此端点。
 
 ## 指标与事件的关系
 
@@ -528,16 +528,16 @@ c.EventLog.handlers_maker = setup_event_handlers
 
 ## 关键源码引用
 
-- EventLog 类：[events.py:29-108](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/events.py#L29-L108)
-- _skip_fields 序列化器：[events.py:15-26](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/events.py#L15-L26)
-- register_schema()：[events.py:62-86](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/events.py#L62-L86)
-- emit()：[events.py:88-108](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/events.py#L88-L108)
-- Prometheus 指标定义：[builder.py:30-63](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L30-L63)
-- BUILD_BUCKETS/LAUNCH_BUCKETS：[builder.py:30-31](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L30-L31)
-- BUILDS_REJECTED 与 _record_rejected_build()：[builder.py:58-63,283-297](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L58-L63)
-- emit_launch_event()：[builder.py:678-705](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L678-L705)
-- LAUNCH_TIME 观测（重试逻辑）：[builder.py:760-851](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py#L760-L851)
-- GITHUB_RATE_LIMIT 指标：[repoproviders.py:29-31,1030](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/repoproviders.py#L29-L31)
-- MetricsHandler：[metrics.py:6-12](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/metrics.py#L6-L12)
-- Launch 事件 Schema：[event-schemas/launch.json](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/event-schemas/launch.json)
-- Schema 自动加载：[app.py:958-962](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L958-L962)
+- EventLog 类：events.py:29-108
+- _skip_fields 序列化器：events.py:15-26
+- register_schema()：events.py:62-86
+- emit()：events.py:88-108
+- Prometheus 指标定义：builder.py:30-63
+- BUILD_BUCKETS/LAUNCH_BUCKETS：builder.py:30-31
+- BUILDS_REJECTED 与 _record_rejected_build()：builder.py:58-63,283-297
+- emit_launch_event()：builder.py:678-705
+- LAUNCH_TIME 观测（重试逻辑）：builder.py:760-851
+- GITHUB_RATE_LIMIT 指标：repoproviders.py:29-31,1030
+- MetricsHandler：metrics.py:6-12
+- Launch 事件 Schema：event-schemas/launch.json
+- Schema 自动加载：app.py:958-962

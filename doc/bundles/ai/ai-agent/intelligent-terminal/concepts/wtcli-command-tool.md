@@ -356,8 +356,8 @@ graph TB
 
 | 文件 | 关键内容 |
 |------|---------|
-| [wtcli_functions.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/tools/wtcli/wtcli_functions.h) | TranslateKeys、BuildSendEventJson、MatchesEventFilter、JoinAsUtf16 |
-| [wtcli/main.cpp](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/tools/wtcli/main.cpp) | wtcli 入口、命令分发、COM 激活 |
-| [cli_channel.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/shell/wt_channel/cli_channel.rs) | CliChannel、wtcli 路径解析、异步spawn |
-| [cli/args.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/cli/args.rs) | wta CLI 子命令定义（clap） |
-| [wt_channel/mod.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/shell/wt_channel/mod.rs) | WtChannel trait 定义 |
+| wtcli_functions.h | TranslateKeys、BuildSendEventJson、MatchesEventFilter、JoinAsUtf16 |
+| wtcli/main.cpp | wtcli 入口、命令分发、COM 激活 |
+| cli_channel.rs | CliChannel、wtcli 路径解析、异步spawn |
+| cli/args.rs | wta CLI 子命令定义（clap） |
+| wt_channel/mod.rs | WtChannel trait 定义 |

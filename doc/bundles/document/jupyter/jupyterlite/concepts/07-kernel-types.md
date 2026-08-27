@@ -144,7 +144,7 @@ if (!factory) {
 
 ## 相关概念
 
-- [内核系统](/concepts/02-kernel-system.md)
-- [内容管理与文件系统](/concepts/03-contents-and-filesystem.md)
-- [Service Worker桥接](/concepts/04-service-worker-bridge.md)
-- [扩展架构](/concepts/08-extension-architecture.md)
+- [内核系统](02-kernel-system.md)
+- [内容管理与文件系统](03-contents-and-filesystem.md)
+- [Service Worker桥接](04-service-worker-bridge.md)
+- [扩展架构](08-extension-architecture.md)

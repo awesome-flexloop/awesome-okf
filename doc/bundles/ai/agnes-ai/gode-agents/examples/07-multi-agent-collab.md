@@ -596,10 +596,10 @@ GradioUI(agent).launch(server_name="0.0.0.0", server_port=7860)
 
 ## 相关链接
 
-- [高级特性总览](/concepts/14-advanced-features.md) — Managed Agents、Hub集成、GradioUI的综合说明
-- [架构概述](/concepts/02-architecture-overview.md) — 多智能体在整体架构中的位置
-- [多步智能体](/concepts/03-multi-step-agent.md) — ReAct循环和Agent调用机制
-- [智能体类型](/concepts/10-agent-types.md) — 不同Agent类型在多Agent系统中的角色
-- [提示词模板](/concepts/12-prompt-templates.md) — ManagedAgentPromptTemplate的自定义
-- [监控与日志](/concepts/13-monitoring-logging.md) — step_callbacks和日志配置
-- [Agents API 参考](/references/agents-api.md) — managed_agents、provide_run_summary、__call__的完整API
+- [高级特性总览](../concepts/14-advanced-features.md) — Managed Agents、Hub集成、GradioUI的综合说明
+- [架构概述](../concepts/02-architecture-overview.md) — 多智能体在整体架构中的位置
+- [多步智能体](../concepts/03-multi-step-agent.md) — ReAct循环和Agent调用机制
+- [智能体类型](../concepts/10-agent-types.md) — 不同Agent类型在多Agent系统中的角色
+- [提示词模板](../concepts/12-prompt-templates.md) — ManagedAgentPromptTemplate的自定义
+- [监控与日志](../concepts/13-monitoring-logging.md) — step_callbacks和日志配置
+- [Agents API 参考](../references/agents-api.md) — managed_agents、provide_run_summary、__call__的完整API

@@ -81,6 +81,6 @@ sock.send("hello"_zbuf);                // 等价（zmq::literals）
 
 ## 相关概念
 
-- [02 socket_t](/concepts/02-socket.md) · [06 multipart](/concepts/06-multipart.md)
-- [04 错误处理](/concepts/04-error-handling.md)
-- [信源：zmq.hpp](/references/zmq-hpp.md)
+- [02 socket_t](02-socket.md) · [06 multipart](06-multipart.md)
+- [04 错误处理](04-error-handling.md)
+- [信源：zmq.hpp](../references/zmq-hpp.md)

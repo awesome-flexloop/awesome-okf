@@ -144,4 +144,4 @@ DSpark 评估器支持 `ConfidenceHeadRecorder`：
 
 ## 八、与 FlashMLA 的关系
 
-DeepSpec 训练的草稿模型在推理时需要与目标模型配合进行投机解码，其中目标模型的注意力计算可以利用 [FlashMLA](/ai/deepseek/flash-mla/) 进行 MLA 解码加速。FlashMLA 为 Hopper/Blackwell GPU 提供高效的 MLA 注意力核函数，DeepSpec 训练出的草稿模型减少目标模型前向调用次数，二者在推理 pipeline 中协同工作——草稿模型负责快速生成候选 token，FlashMLA 加速目标模型的验证前向。
+DeepSpec 训练的草稿模型在推理时需要与目标模型配合进行投机解码，其中目标模型的注意力计算可以利用 [FlashMLA](../../flash-mla/index.md) 进行 MLA 解码加速。FlashMLA 为 Hopper/Blackwell GPU 提供高效的 MLA 注意力核函数，DeepSpec 训练出的草稿模型减少目标模型前向调用次数，二者在推理 pipeline 中协同工作——草稿模型负责快速生成候选 token，FlashMLA 加速目标模型的验证前向。

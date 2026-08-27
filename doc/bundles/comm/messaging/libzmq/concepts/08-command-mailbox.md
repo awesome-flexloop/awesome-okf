@@ -342,8 +342,8 @@ zmq_ctx_term()
 
 ## 相关概念
 
-- [套接字基类](/concepts/02-socket-base.md) — socket 的 process_commands 在 send/recv 中调用
-- [上下文与基础设施](/concepts/01-context.md) — ctx 通过 slots 数组路由命令到目标邮箱
-- [I/O 线程与多路复用](/concepts/07-io-thread-poller.md) — I/O 线程通过 poller 监听 signaler fd
-- [管道与流控](/concepts/04-pipe.md) — activate_read/write 命令驱动 pipe 流控
-- [会话与连接生命周期](/concepts/05-session.md) — plug/attach/bind 命令建立会话
+- [套接字基类](02-socket-base.md) — socket 的 process_commands 在 send/recv 中调用
+- [上下文与基础设施](01-context.md) — ctx 通过 slots 数组路由命令到目标邮箱
+- [I/O 线程与多路复用](07-io-thread-poller.md) — I/O 线程通过 poller 监听 signaler fd
+- [管道与流控](04-pipe.md) — activate_read/write 命令驱动 pipe 流控
+- [会话与连接生命周期](05-session.md) — plug/attach/bind 命令建立会话

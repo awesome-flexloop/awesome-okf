@@ -397,8 +397,8 @@ A:
 
 ## 相关概念
 
-- [整体架构概览](/python-sdk/concepts/00-overview.md) — 回顾 SDK 架构和懒加载资源机制
-- [Messages API 基础](/python-sdk/concepts/02-messages-basics.md) — model 参数和 messages.create 基础
-- [客户端初始化与配置](/python-sdk/concepts/01-client-init.md) — 配置 API Key 和超时等客户端选项
-- [Anthropic Python SDK 消息 API 与流式处理参考](/python-sdk/references/messages-api.md) — Batches 资源和 DEPRECATED_MODELS 的完整参考
-- [Anthropic Python SDK 客户端入口与基础设施参考](/python-sdk/references/sdk-client.md) — client.models 和 client.files 资源的 API 参考
+- [整体架构概览](00-overview.md) — 回顾 SDK 架构和懒加载资源机制
+- [Messages API 基础](02-messages-basics.md) — model 参数和 messages.create 基础
+- [客户端初始化与配置](01-client-init.md) — 配置 API Key 和超时等客户端选项
+- [Anthropic Python SDK 消息 API 与流式处理参考](../references/messages-api.md) — Batches 资源和 DEPRECATED_MODELS 的完整参考
+- [Anthropic Python SDK 客户端入口与基础设施参考](../references/sdk-client.md) — client.models 和 client.files 资源的 API 参考

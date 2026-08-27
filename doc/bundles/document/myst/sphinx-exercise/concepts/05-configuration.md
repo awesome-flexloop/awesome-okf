@@ -152,6 +152,6 @@ sphinx-exercise 声明 `parallel_read_safe: True, parallel_write_safe: True`，�
 
 ## 相关概念
 
-- [练习指令详解](/concepts/02-exercise-directive.md)
-- [解答指令详解](/concepts/03-solution-directive.md)
-- [教师版/学生版示例](/examples/hide-solutions.md)
+- [练习指令详解](02-exercise-directive.md)
+- [解答指令详解](03-solution-directive.md)
+- [教师版/学生版示例](../examples/hide-solutions.md)

@@ -233,10 +233,10 @@ child.sendline(password)
 
 ## 相关概念
 
-- [spawn 类详解](/concepts/02-spawn-class.md)
-- [expect 模式匹配](/concepts/03-expect-patterns.md)
-- [pxssh SSH 自动化](/concepts/05-pxssh.md)
-- [SSH 自动登录示例](/examples/ssh-login-automation.md)
-- [密码提示处理示例](/examples/password-prompts.md)
+- [spawn 类详解](02-spawn-class.md)
+- [expect 模式匹配](03-expect-patterns.md)
+- [pxssh SSH 自动化](05-pxssh.md)
+- [SSH 自动登录示例](../examples/ssh-login-automation.md)
+- [密码提示处理示例](../examples/password-prompts.md)
 
-[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](/references/pexpect-source.md)。
+[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](../references/pexpect-source.md)。

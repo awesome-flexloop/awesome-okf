@@ -86,21 +86,21 @@ crawl_result = omlmd.crawl([
 
 ### 核心概念
 
-- [介绍](/containers/omlmd/concepts/00-introduction) — OMLMD 定位、OCI Artifact 媒体类型、架构组件概览
-- [ModelMetadata 双格式](/containers/omlmd/concepts/01-model-metadata) — 元数据结构、JSON/YAML/注解三种序列化格式、文件反序列化
-- [Helper 类与 Listener 模式](/containers/omlmd/concepts/02-helpers-listener) — 高层 API 门面、push/pull/get_config/crawl 流程、观察者事件机制
-- [OMLMDRegistry 扩展](/containers/omlmd/concepts/03-registry) — oras-py 扩展实现、按媒体类型过滤下载、配置层获取、OCI Manifest 结构
+- 介绍 — OMLMD 定位、OCI Artifact 媒体类型、架构组件概览
+- ModelMetadata 双格式 — 元数据结构、JSON/YAML/注解三种序列化格式、文件反序列化
+- Helper 类与 Listener 模式 — 高层 API 门面、push/pull/get_config/crawl 流程、观察者事件机制
+- OMLMDRegistry 扩展 — oras-py 扩展实现、按媒体类型过滤下载、配置层获取、OCI Manifest 结构
 
 ### API 参考
 
-- [README 原始参考](/containers/omlmd/references/readme-source) — 项目概述、安装、官方示例
-- [ModelMetadata 源码参考](/containers/omlmd/references/model-metadata-source) — ModelMetadata 类完整源码、字段说明、序列化方法
-- [Provider 源码参考](/containers/omlmd/references/provider-source) — OMLMDRegistry 类实现、download_layers/get_config 方法
+- README 原始参考 — 项目概述、安装、官方示例
+- ModelMetadata 源码参考 — ModelMetadata 类完整源码、字段说明、序列化方法
+- Provider 源码参考 — OMLMDRegistry 类实现、download_layers/get_config 方法
 
 ### 使用示例
 
-- [CLI 推送模型元数据](/containers/omlmd/examples/01-cli-push) — CLI 完整工作流、push/pull/get config/crawl 命令详解、本地注册表测试、常见问题
-- [Python SDK 自定义扩展](/containers/omlmd/examples/02-python-custom) — Python SDK 高级用法、自定义 Listener（日志/指标）、批量爬取与 jq 查询、scikit-learn 集成、自定义 Registry 扩展
+- CLI 推送模型元数据 — CLI 完整工作流、push/pull/get config/crawl 命令详解、本地注册表测试、常见问题
+- Python SDK 自定义扩展 — Python SDK 高级用法、自定义 Listener（日志/指标）、批量爬取与 jq 查询、scikit-learn 集成、自定义 Registry 扩展
 
 ## 目录结构
 

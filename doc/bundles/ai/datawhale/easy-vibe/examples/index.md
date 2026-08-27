@@ -4,7 +4,7 @@
 
 ## 示例清单
 
-### [本地运行与构建示例](/ai/datawhale/easy-vibe/examples/01-local-dev-quickstart.md)
+### [本地运行与构建示例](01-local-dev-quickstart.md)
 
 从零开始在本地启动 Easy-Vibe 文档站，涵盖依赖安装、开发服务器、生产构建与预览，以及 AI IDE 一键运行方式。
 

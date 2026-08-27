@@ -270,5 +270,5 @@ def create(info, verbose=False):
 
 ## 下一步
 
-- [10-Docker 构建支持](./10-docker-build.md)：了解第五种安装类型 Docker
-- [11-多环境与通道配置](./11-multi-env-and-channels.md)：了解 extra_envs 和 channels_remap 的深入用法
+- [10-Docker 构建支持](10-docker-build.md)：了解第五种安装类型 Docker
+- [11-多环境与通道配置](11-multi-env-and-channels.md)：了解 extra_envs 和 channels_remap 的深入用法

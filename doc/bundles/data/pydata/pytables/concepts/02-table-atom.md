@@ -24,7 +24,7 @@ Table 是 PyTables 中用于存储**异构结构化数据**的叶子节点类型
 
 ## Table 类
 
-`Table` 定义在 [table.py:383](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/table.py#L383)，继承自 `tableextension.Table`（Cython 扩展层）和 `Leaf`。
+`Table` 定义在 table.py:383，继承自 `tableextension.Table`（Cython 扩展层）和 `Leaf`。
 
 ### 表结构描述（Description）
 
@@ -53,7 +53,7 @@ class Event(tb.IsDescription):
 
 ### Col 列类型
 
-`Col` 类（[description.py:41](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/description.py#L41)）继承自 `Atom`，用于声明非嵌套列。主要类型：
+`Col` 类（description.py:41）继承自 `Atom`，用于声明非嵌套列。主要类型：
 
 | Col 类型 | 对应 Atom | 说明 |
 |----------|----------|------|
@@ -88,7 +88,7 @@ class Event(tb.IsDescription):
 
 ### Cols 容器
 
-`Cols` 类（[table.py:3250](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/table.py#L3250)）是列的容器，通过 `table.cols` 访问：
+`Cols` 类（table.py:3250）是列的容器，通过 `table.cols` 访问：
 
 - 支持自然命名访问列：`table.cols.event_id`
 - 嵌套列返回子 Cols 实例：`table.cols.nested.subfield`
@@ -103,7 +103,7 @@ class Event(tb.IsDescription):
 
 ### Column 列对象
 
-`Column` 类（[table.py:3519](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/table.py#L3519)）代表单个非嵌套列的访问器：
+`Column` 类（table.py:3519）代表单个非嵌套列的访问器：
 
 | 属性/方法 | 说明 |
 |-----------|------|
@@ -263,7 +263,7 @@ def append_where(self, table, condition, condvars=None, ...):
 
 ## Atom 类型描述符
 
-`Atom` 类（[atom.py:187](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/atom.py#L187)）是数组元素的类型描述符，定义存储在 CArray/EArray/VLArray 中元素的类型、大小和形状。
+`Atom` 类（atom.py:187）是数组元素的类型描述符，定义存储在 CArray/EArray/VLArray 中元素的类型、大小和形状。
 
 ### Atom 的 kind（类型族）
 

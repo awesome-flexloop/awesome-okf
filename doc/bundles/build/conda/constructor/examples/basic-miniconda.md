@@ -165,5 +165,5 @@ specs:
 
 ## 下一步
 
-- [自定义安装程序](./custom-installer.md)：添加许可证、品牌图片、安装脚本
-- [多环境安装程序](./multi-env-installer.md)：在一个安装程序中创建多个 conda 环境
+- [自定义安装程序](custom-installer.md)：添加许可证、品牌图片、安装脚本
+- [多环境安装程序](multi-env-installer.md)：在一个安装程序中创建多个 conda 环境

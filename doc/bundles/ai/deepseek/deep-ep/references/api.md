@@ -104,7 +104,7 @@ num_scaleout_ranks, num_scaleup_ranks = get_logical_domain_size(group, allow_hyb
 
 ## 相关参考
 
-- [ElasticBuffer API](/ai/deepseek/deep-ep/references/buffer-elastic) — V2 弹性缓冲区完整 API
-- [Buffer (Legacy) API](/ai/deepseek/deep-ep/references/buffer-legacy) — V1 遗留缓冲区 API
-- [事件系统](/ai/deepseek/deep-ep/references/events) — EventOverlap/EventHandle 使用方法
-- [JIT 编译系统](/ai/deepseek/deep-ep/references/jit-system) — 运行时内核编译机制
+- ElasticBuffer API — V2 弹性缓冲区完整 API
+- Buffer (Legacy) API — V1 遗留缓冲区 API
+- 事件系统 — EventOverlap/EventHandle 使用方法
+- JIT 编译系统 — 运行时内核编译机制

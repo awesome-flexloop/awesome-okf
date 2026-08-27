@@ -268,6 +268,6 @@ KaTeX 的虚拟节点广泛使用 CSS 类名来控制样式，常见类名前缀
 
 ## 相关概念
 
-- [渲染管线](/concepts/06-render-pipeline.md)
-- [样式系统](/concepts/11-style-system.md)
-- [配置系统](/concepts/10-settings-options.md)
+- [渲染管线](06-render-pipeline.md)
+- [样式系统](11-style-system.md)
+- [配置系统](10-settings-options.md)

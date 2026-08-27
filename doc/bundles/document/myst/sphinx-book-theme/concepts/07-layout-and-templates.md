@@ -220,7 +220,7 @@ html_theme_options = {
 
 ## 相关概念
 
-- [主题架构与PST继承](/concepts/02-theme-architecture.md)
-- [配置系统详解](/concepts/03-configuration.md)
-- [头部按钮系统](/concepts/04-header-buttons.md)
-- [样式定制与第三方扩展适配](/concepts/08-customization.md)
+- [主题架构与PST继承](02-theme-architecture.md)
+- [配置系统详解](03-configuration.md)
+- [头部按钮系统](04-header-buttons.md)
+- [样式定制与第三方扩展适配](08-customization.md)

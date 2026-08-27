@@ -441,8 +441,8 @@ def __init__(self, agent: MultiStepAgent)
 
 ## 相关概念
 
-- [错误处理机制](/concepts/error-handling.md) — AgentError异常体系与错误恢复
-- [监控与日志](/concepts/monitoring-logging.md) — AgentLogger和Monitor的使用
-- [工具系统概述](/concepts/tool-system.md) — 工具验证与类型安全
-- [智能体API参考](/references/agents-api.md) — Agent如何使用工具函数和监控
-- [工具API参考](/references/tools-api.md) — Tool类使用的验证和序列化函数
+- 错误处理机制 — AgentError异常体系与错误恢复
+- 监控与日志 — AgentLogger和Monitor的使用
+- 工具系统概述 — 工具验证与类型安全
+- [智能体API参考](agents-api.md) — Agent如何使用工具函数和监控
+- [工具API参考](tools-api.md) — Tool类使用的验证和序列化函数

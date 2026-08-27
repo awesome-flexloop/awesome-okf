@@ -100,4 +100,4 @@ sources:
 
 ## 相关概念
 
-- [ApplicationNamespace 与 Sphinx 扩展加载机制](/concepts/08-namespace-mocking.md)
+- [ApplicationNamespace 与 Sphinx 扩展加载机制](../concepts/08-namespace-mocking.md)

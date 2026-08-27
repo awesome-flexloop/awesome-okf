@@ -20,7 +20,7 @@ sources:
 
 # OKF Knowledge Catalog CLI
 
-OKF Knowledge Catalog 是 Google Cloud Platform 在 GitHub 上维护的官方工具链仓库，托管于 [github.com/GoogleCloudPlatform/knowledge-catalog](https://github.com/GoogleCloudPlatform/knowledge-catalog)。它既是 OKF 规范的源码仓库，也是参考实现和 CLI 工具的官方来源。[^okf-md][^github-kc]
+OKF Knowledge Catalog 是 Google Cloud Platform 在 GitHub 上维护的官方工具链仓库，托管于 [github.com/GoogleCloudPlatform/knowledge-catalog](https://github.com/GoogleCloudPlatform/knowledge-catalog)。它既是 OKF 规范的源码仓库，也是参考实现和 CLI 工具的官方来源。[^okf-md] [^github-kc]
 
 ## 仓库结构
 
@@ -28,11 +28,11 @@ knowledge-catalog 仓库包含以下核心组件：
 
 | 组件 | 路径 | 说明 |
 |---|---|---|
-| 规范文档 | `okf/SPEC.md` | OKF v0.2 正式规范的权威文本（即 [references/okf-spec.md](/references/okf-spec.md) 的来源） |
+| 规范文档 | `okf/SPEC.md` | OKF v0.2 正式规范的权威文本（即 [references/okf-spec.md](../references/okf-spec.md) 的来源） |
 | 示例知识包 | `examples/` | 官方示例知识包（SaaS Metrics 等） |
 | OKF 核心库 | `packages/okf/` | 发布为 npm 包 `@okf/okf`，提供知识包解析、验证、生成等核心功能 |
 | CLI 工具 | `packages/cli/` | 命令行工具，通过 `npx okf` 调用 |
-| Agent Skill | `packages/agent-skill/` | AI 智能体技能包的源码（见 [tooling-agent-skill.md](./tooling-agent-skill.md)） |
+| Agent Skill | `packages/agent-skill/` | AI 智能体技能包的源码（见 [tooling-agent-skill.md](tooling-agent-skill.md)） |
 
 ## CLI 功能
 
@@ -79,19 +79,19 @@ npx okf init knowledge/my-domain/
 
 | 工具 | 类型 | 用途 | 文档 |
 |---|---|---|---|
-| 在线 Validator | Web 应用 | 浏览器中快速检查知识包 | [tooling-validator.md](./tooling-validator.md) |
-| Agent Skill | AI 技能包 | 让智能体创建/验证知识包 | [tooling-agent-skill.md](./tooling-agent-skill.md) |
-| validate.sh | Shell 脚本 | 命令行验证（随 Skill 安装） | [tooling-agent-skill.md](./tooling-agent-skill.md) |
+| 在线 Validator | Web 应用 | 浏览器中快速检查知识包 | [tooling-validator.md](tooling-validator.md) |
+| Agent Skill | AI 技能包 | 让智能体创建/验证知识包 | [tooling-agent-skill.md](tooling-agent-skill.md) |
+| validate.sh | Shell 脚本 | 命令行验证（随 Skill 安装） | [tooling-agent-skill.md](tooling-agent-skill.md) |
 | Knowledge Catalog CLI | npm/CLI | 官方命令行工具 | 本文档 |
 | @okf/okf npm 包 | TypeScript 库 | 程序化解析/验证/生成 | 本文档 |
-| okf.md 网站 | 文档站点 | 规范、Quickstart、教程 | [references/okf-spec.md](/references/okf-spec.md) |
+| okf.md 网站 | 文档站点 | 规范、Quickstart、教程 | [references/okf-spec.md](../references/okf-spec.md) |
 
 ## 相关概念
 
-- [OKF Validator](./tooling-validator.md) - 在线可视化验证工具
-- [OKF Agent Skill](./tooling-agent-skill.md) - AI 智能体技能包
-- [知识包目录结构](./bundle-structure.md) - 规范定义的目录布局
-- [版本控制](./versioning.md) - OKF 版本规则与 v0.2 之后的演进
+- [OKF Validator](tooling-validator.md) - 在线可视化验证工具
+- [OKF Agent Skill](tooling-agent-skill.md) - AI 智能体技能包
+- [知识包目录结构](bundle-structure.md) - 规范定义的目录布局
+- [版本控制](versioning.md) - OKF 版本规则与 v0.2 之后的演进
 - [SaaS 指标快速入门](../examples/saas-metrics-quickstart.md) - Quickstart 教程示例
 
 [^okf-md]: OKF 官方网站，见 [okf.md](https://okf.md/)。

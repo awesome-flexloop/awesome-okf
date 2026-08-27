@@ -211,6 +211,6 @@ std::cout << "Hello, xeus-cpp!" << std::endl;
 ## 相关概念
 
 - [运行时环境配置](04-runtime-env-config.md) — environment.yml 配置详解
-- [Python 科学计算环境](/examples/02-numpy-matplotlib.md) — NumPy/Matplotlib 配置示例
-- [R 内核配置](/examples/03-r-kernel.md) — R 语言配置示例
-- [C++ 内核配置](/examples/04-cpp-kernel.md) — C++ 内核配置示例
+- [Python 科学计算环境](../examples/02-numpy-matplotlib.md) — NumPy/Matplotlib 配置示例
+- [R 内核配置](../examples/03-r-kernel.md) — R 语言配置示例
+- [C++ 内核配置](../examples/04-cpp-kernel.md) — C++ 内核配置示例

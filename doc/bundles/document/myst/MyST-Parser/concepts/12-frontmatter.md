@@ -215,7 +215,7 @@ myst:
 
 ## 相关概念
 
-- [配置系统](/concepts/04-config-system.md)
-- [解析器与渲染器](/concepts/06-parser-and-renderer.md)
-- [Sphinx 集成机制](/concepts/11-sphinx-integration.md)
-- [基础配置示例](/examples/01-basic-setup.md)
+- [配置系统](04-config-system.md)
+- [解析器与渲染器](06-parser-and-renderer.md)
+- [Sphinx 集成机制](11-sphinx-integration.md)
+- [基础配置示例](../examples/01-basic-setup.md)

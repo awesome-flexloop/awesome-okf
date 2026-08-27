@@ -122,6 +122,6 @@ lca-deepagents/
 
 ## 相关文档
 
-- [使用示例](/ai/langchain-ai/deepagents/examples/lca-variant) — lca-deepagents 的具体代码示例
-- [规划与子代理](/ai/langchain-ai/deepagents/concepts/planning-subagents) — 子代理架构概念
-- [总览](/ai/langchain-ai/deepagents/concepts/overview) — Deep Agents 整体介绍
+- 使用示例 — lca-deepagents 的具体代码示例
+- 规划与子代理 — 子代理架构概念
+- 总览 — Deep Agents 整体介绍

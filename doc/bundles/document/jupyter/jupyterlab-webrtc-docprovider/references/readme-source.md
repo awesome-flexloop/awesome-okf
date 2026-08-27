@@ -101,6 +101,6 @@ jupyter labextension list  # 查找链接位置
 
 ## 相关概念
 
-- [安装与快速开始](/concepts/01-getting-started.md)
-- [配置三级优先级系统](/concepts/09-configuration.md)
-- [构建与打包系统](/concepts/10-build-and-packaging.md)
+- [安装与快速开始](../concepts/01-getting-started.md)
+- [配置三级优先级系统](../concepts/09-configuration.md)
+- [构建与打包系统](../concepts/10-build-and-packaging.md)

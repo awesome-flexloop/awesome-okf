@@ -264,7 +264,7 @@ def init_logging(self):
 
 ## 相关文档
 
-- [快速开始](/concepts/01-getting-started.md)：CLI参数和环境变量
-- [架构概览](/concepts/02-architecture-overview.md)：五层架构
-- [缓存系统](/concepts/07-caching-system.md)：缓存后端选择
-- [部署指南](/concepts/13-deployment.md)：生产配置
+- [快速开始](01-getting-started.md)：CLI参数和环境变量
+- [架构概览](02-architecture-overview.md)：五层架构
+- [缓存系统](07-caching-system.md)：缓存后端选择
+- [部署指南](13-deployment.md)：生产配置

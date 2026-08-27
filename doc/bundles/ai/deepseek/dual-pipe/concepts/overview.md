@@ -64,7 +64,7 @@ DualPipe 提供两种调度模式：
 | DualPipe | 2×pp_size | GPU i 持有 stage(i) 和 stage(pp_size-1-i) | 对称双向，气泡最小 |
 | DualPipeV | pp_size | GPU i 持有 stage(i) 和 stage(2pp_size-1-i) | V 型连接，节省 GPU |
 
-详见 [DualPipe 算法调度](/ai/deepseek/dual-pipe/concepts/dualpipe-algorithm) 和 [DualPipeV 与 DualPipe 对比](/ai/deepseek/dual-pipe/concepts/dualpipev-comparison)。
+详见 DualPipe 算法调度 和 DualPipeV 与 DualPipe 对比。
 
 ## 适用场景
 

@@ -208,6 +208,6 @@ target_link_libraries(_math PRIVATE m)  # 链接数学库
 
 ## 延伸阅读
 
-- [pybind11 C++ 模块](../examples/pybind11-module.md)——使用 pybind11 简化 C++ 绑定
+- [pybind11 C++ 模块](pybind11-module.md)——使用 pybind11 简化 C++ 绑定
 - [CMake 集成机制](../concepts/04-cmake-integration.md)——理解 CMake 类和 CMaker
 - [构建流程](../concepts/05-build-flow.md)——理解从源码到 wheel 的完整流程

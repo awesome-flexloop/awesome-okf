@@ -78,7 +78,7 @@ sources:
 如果将长时间不可用（如休假、工作重心转移），告知团队：
 - 可以公开说明
 - 如果不方便公开，可以私信某位成员转达
-- 也可以考虑临时转为[不活跃成员](/concepts/01-team-membership.md)
+- 也可以考虑临时转为[不活跃成员](01-team-membership.md)
 
 ### 5. 促进开放包容讨论
 
@@ -135,7 +135,7 @@ sources:
 
 ## 相关概念
 
-- [团队成员体系](/concepts/01-team-membership.md)
-- [成为团队成员](/concepts/02-becoming-member.md)
-- [决策机制](/concepts/03-decision-making.md)
-- [周会制度](/concepts/05-weekly-meetings.md)
+- [团队成员体系](01-team-membership.md)
+- [成为团队成员](02-becoming-member.md)
+- [决策机制](03-decision-making.md)
+- [周会制度](05-weekly-meetings.md)

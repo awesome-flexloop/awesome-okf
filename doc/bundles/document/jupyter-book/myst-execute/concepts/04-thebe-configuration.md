@@ -271,7 +271,7 @@ const server = connectToJupyterLite(config);
 
 ## 相关概念
 
-- [03-thebe-core-api.md](/concepts/03-thebe-core-api.md)：核心 API 对象层次
-- [05-thebe-binder.md](/concepts/05-thebe-binder.md)：Binder 连接机制
-- [06-thebe-lite-pyodide.md](/concepts/06-thebe-lite-pyodide.md)：JupyterLite 无服务器模式
-- [02-thebe-interactive.md](/examples/02-thebe-interactive.md)：配置示例
+- [03-thebe-core-api.md](03-thebe-core-api.md)：核心 API 对象层次
+- [05-thebe-binder.md](05-thebe-binder.md)：Binder 连接机制
+- [06-thebe-lite-pyodide.md](06-thebe-lite-pyodide.md)：JupyterLite 无服务器模式
+- [02-thebe-interactive.md](../examples/02-thebe-interactive.md)：配置示例

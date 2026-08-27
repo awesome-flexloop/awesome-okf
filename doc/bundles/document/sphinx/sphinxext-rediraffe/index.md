@@ -4,7 +4,7 @@ okf_version: "0.2"
 
 # sphinxext-rediraffe 知识库
 
-本知识包是 Sphinx 官方生态中的页面重定向扩展 [sphinxext-rediraffe](https://github.com/sphinx-doc/sphinxext-rediraffe) 的系统化中文教程，基于源码深度阅读生成，覆盖从快速上手到核心架构的完整知识体系。所有内容均溯源至 sphinxext-rediraffe 源码（单文件 `sphinxext/rediraffe.py`，485行核心代码），遵循 [OKF v0.2 规范](/concepts/00-introduction.md)。
+本知识包是 Sphinx 官方生态中的页面重定向扩展 [sphinxext-rediraffe](https://github.com/sphinx-doc/sphinxext-rediraffe) 的系统化中文教程，基于源码深度阅读生成，覆盖从快速上手到核心架构的完整知识体系。所有内容均溯源至 sphinxext-rediraffe 源码（单文件 `sphinxext/rediraffe.py`，485行核心代码），遵循 [OKF v0.2 规范](concepts/00-introduction.md)。
 
 ## 入门与基础（concepts/）
 

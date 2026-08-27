@@ -213,7 +213,7 @@ class MyExtension(ExtensionApp):
 
 ## 相关概念
 
-- [API Handler 开发](/concepts/05-api-handlers.md)
-- [配置发现机制](/concepts/06-config-discovery.md)
-- [测试策略](/concepts/07-testing.md)
-- [ExtensionApp 源码解析](/references/extension-app-source.md)
+- [API Handler 开发](05-api-handlers.md)
+- [配置发现机制](06-config-discovery.md)
+- [测试策略](07-testing.md)
+- [ExtensionApp 源码解析](../references/extension-app-source.md)

@@ -15,7 +15,7 @@ sources:
 
 ## 概述
 
-conda环境创建模块位于 [create_conda_env.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/xeus/jupyterlite_xeus/create_conda_env.py)，pip依赖处理位于 [_pip.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/xeus/jupyterlite_xeus/_pip.py)。
+conda环境创建模块位于 create_conda_env.py，pip依赖处理位于 _pip.py。
 
 ## 常量
 

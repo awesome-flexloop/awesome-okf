@@ -144,7 +144,7 @@ def fan_out_filtered(state: OverallState) -> list[Send]:
 
 ## 相关概念
 
-- [状态图](/ai/langchain-ai/langgraph/concepts/state-graph) — 条件边与 Send
-- [通道系统](/ai/langchain-ai/langgraph/concepts/channels) — BinaryOperatorAggregate reducer
-- [Pregel 引擎](/ai/langchain-ai/langgraph/concepts/pregel-engine) — push 式任务与并行执行
-- [API 参考](/ai/langchain-ai/langgraph/references/graph-state) — add_conditional_edges API
+- 状态图 — 条件边与 Send
+- 通道系统 — BinaryOperatorAggregate reducer
+- Pregel 引擎 — push 式任务与并行执行
+- API 参考 — add_conditional_edges API

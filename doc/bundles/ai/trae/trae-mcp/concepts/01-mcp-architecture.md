@@ -92,8 +92,8 @@ MCP 服务器启动后会自动向 TRAE 注册其全部 Capability，Agent 可�
 
 ## 相关链接
 
-- [MCP 简介](/concepts/00-introduction.md)
-- [MCP 配置格式](/concepts/02-mcp-configuration.md)
-- [CloudBase MCP](/concepts/03-cloudbase-mcp.md)
-- [MCP 开发入门](/concepts/05-mcp-development.md)
-- [配置 MCP 服务器示例](/examples/configure-mcp.md)
+- [MCP 简介](00-introduction.md)
+- [MCP 配置格式](02-mcp-configuration.md)
+- [CloudBase MCP](03-cloudbase-mcp.md)
+- [MCP 开发入门](05-mcp-development.md)
+- [配置 MCP 服务器示例](../examples/configure-mcp.md)

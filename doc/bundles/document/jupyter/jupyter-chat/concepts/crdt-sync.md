@@ -282,9 +282,9 @@ chat = "jupyterlab_chat.ychat:YChat"
 
 ## 相关概念
 
-- [双传输架构](/concepts/dual-transport.md)
-- [消息生命周期](/concepts/message-lifecycle.md)
-- [ChatManager 生命周期管理](/concepts/chat-manager.md)
+- [双传输架构](dual-transport.md)
+- [消息生命周期](message-lifecycle.md)
+- [ChatManager 生命周期管理](chat-manager.md)
 
 [^pyproject.toml]: pyproject.toml 打包配置
 [^ychat-py]: ychat.py

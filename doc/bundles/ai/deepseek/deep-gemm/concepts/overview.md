@@ -148,10 +148,10 @@ csrc/
 
 ## 七、相关链接
 
-- [/deepseek/deep-gemm/concepts/fp8-gemm](/ai/deepseek/deep-gemm/concepts/fp8-gemm) — FP8/FP4 GEMM 精度方案
-- [/deepseek/deep-gemm/concepts/grouped-gemm](/ai/deepseek/deep-gemm/concepts/grouped-gemm) — 分组 GEMM 与 MoE 并行
-- [/deepseek/deep-gemm/concepts/jit-kernel-compilation](/ai/deepseek/deep-gemm/concepts/jit-kernel-compilation) — JIT 内核编译系统
-- [/deepseek/deep-gemm/concepts/moe-operations](/ai/deepseek/deep-gemm/concepts/moe-operations) — MegaMoE 融合运算
-- [/deepseek/deep-gemm/concepts/performance-optimization](/ai/deepseek/deep-gemm/concepts/performance-optimization) — 性能优化技术
-- [/deepseek/deep-ep/](/ai/deepseek/deep-ep/) — DeepEP 专家并行通信库
-- [/deepseek/tile-kernels/](/ai/deepseek/tile-kernels/) — TileLang 核函数库
+- /deepseek/deep-gemm/concepts/fp8-gemm — FP8/FP4 GEMM 精度方案
+- /deepseek/deep-gemm/concepts/grouped-gemm — 分组 GEMM 与 MoE 并行
+- /deepseek/deep-gemm/concepts/jit-kernel-compilation — JIT 内核编译系统
+- /deepseek/deep-gemm/concepts/moe-operations — MegaMoE 融合运算
+- /deepseek/deep-gemm/concepts/performance-optimization — 性能优化技术
+- [/deepseek/deep-ep/](../../deep-ep/index.md) — DeepEP 专家并行通信库
+- [/deepseek/tile-kernels/](../../tile-kernels/index.md) — TileLang 核函数库

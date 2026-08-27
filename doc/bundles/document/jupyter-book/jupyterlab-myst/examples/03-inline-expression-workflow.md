@@ -322,6 +322,6 @@ best_acc = max(rf_acc, lr_acc)
 
 ## 相关文档
 
-- [01-using-jupyterlab-myst.md](/examples/01-using-jupyterlab-myst.md)：基本使用
-- [02-integrating-with-myst.md](/examples/02-integrating-with-myst.md)：与 myst-execute 集成
-- [03-inline-expressions.md](/concepts/03-inline-expressions.md)：技术实现细节
+- [01-using-jupyterlab-myst.md](01-using-jupyterlab-myst.md)：基本使用
+- [02-integrating-with-myst.md](02-integrating-with-myst.md)：与 myst-execute 集成
+- [03-inline-expressions.md](../concepts/03-inline-expressions.md)：技术实现细节

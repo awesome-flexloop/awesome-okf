@@ -151,7 +151,7 @@ Jupyter 前端配置数据对象，以下是常用配置项：
 
 ## 相关概念
 
-- [Demo 仓库结构与三件套模式](/concepts/01-demo-overview.md)
-- [三大内核生态对比](/concepts/03-kernel-ecosystem.md)
-- [自定义 Demo 站点指南](/concepts/07-customization-guide.md)
-- [从零部署到 GitHub Pages](/examples/01-first-deployment.md)
+- [Demo 仓库结构与三件套模式](01-demo-overview.md)
+- [三大内核生态对比](03-kernel-ecosystem.md)
+- [自定义 Demo 站点指南](07-customization-guide.md)
+- [从零部署到 GitHub Pages](../examples/01-first-deployment.md)

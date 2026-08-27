@@ -296,18 +296,18 @@ trae-templates 是 TRAE IDE 的社区维护项目模板集合，采用 MIT 许�
 
 ## 相关概念
 
-- [Trae Templates 简介](/concepts/00-introduction.md)
-- [五维分面分类体系](/concepts/01-template-classification.md)
-- [Web 前端模板](/concepts/02-web-frontend-templates.md)
-- [后端服务模板](/concepts/03-backend-templates.md)
-- [移动端和桌面端模板](/concepts/04-mobile-desktop-templates.md)
-- [数据与 AI 模板](/concepts/05-data-ai-templates.md)
-- [工具与 DevOps 模板](/concepts/06-tools-devops-templates.md)
-- [AGENTS.md 开发契约](/concepts/07-agents-contract.md)
+- [Trae Templates 简介](../concepts/00-introduction.md)
+- [五维分面分类体系](../concepts/01-template-classification.md)
+- [Web 前端模板](../concepts/02-web-frontend-templates.md)
+- [后端服务模板](../concepts/03-backend-templates.md)
+- [移动端和桌面端模板](../concepts/04-mobile-desktop-templates.md)
+- [数据与 AI 模板](../concepts/05-data-ai-templates.md)
+- [工具与 DevOps 模板](../concepts/06-tools-devops-templates.md)
+- [AGENTS.md 开发契约](../concepts/07-agents-contract.md)
 
 ## 相关示例
 
-- [使用 Next.js 模板创建项目](/examples/use-nextjs-template.md)
-- [使用 superpowers-trae-init 初始化环境](/examples/use-superpowers-init.md)
-- [创建自定义模板](/examples/create-custom-template.md)
-- [AGENTS.md 配置示例](/examples/agents-md-config.md)
+- [使用 Next.js 模板创建项目](../examples/use-nextjs-template.md)
+- [使用 superpowers-trae-init 初始化环境](../examples/use-superpowers-init.md)
+- [创建自定义模板](../examples/create-custom-template.md)
+- [AGENTS.md 配置示例](../examples/agents-md-config.md)

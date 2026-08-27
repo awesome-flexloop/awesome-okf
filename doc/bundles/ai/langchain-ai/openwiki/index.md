@@ -74,23 +74,23 @@ openwiki auth slack
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/openwiki/concepts/overview) — OpenWiki 是什么、解决什么问题、核心架构
-- [Agent 系统](/ai/langchain-ai/openwiki/concepts/agent-system) — DeepAgent 图构建、命令模式、checkpoint 策略、中间件管道
-- [Auth 与 CLI 认证体系](/ai/langchain-ai/openwiki/concepts/auth-cli) — OAuth PKCE、动态客户端注册、token 刷新、ngrok 内网穿透
+- 总览 — OpenWiki 是什么、解决什么问题、核心架构
+- Agent 系统 — DeepAgent 图构建、命令模式、checkpoint 策略、中间件管道
+- Auth 与 CLI 认证体系 — OAuth PKCE、动态客户端注册、token 刷新、ngrok 内网穿透
 
 ### API 参考
 
-- [Agent API](/ai/langchain-ai/openwiki/references/api) — runOpenWikiAgent、createModel、createAgentBackend、CLI runners 等
-- [配置与环境变量](/ai/langchain-ai/openwiki/references/env-config) — .env 管理、凭证诊断、OAuth 与 provider 配置
+- Agent API — runOpenWikiAgent、createModel、createAgentBackend、CLI runners 等
+- 配置与环境变量 — .env 管理、凭证诊断、OAuth 与 provider 配置
 
 ### 使用示例
 
-- [OAuth 认证与 ngrok 隧道](/ai/langchain-ai/openwiki/examples/oauth-ngrok) — 为 Slack 连接器配置本地 HTTPS 回调并完成 OAuth 授权
+- OAuth 认证与 ngrok 隧道 — 为 Slack 连接器配置本地 HTTPS 回调并完成 OAuth 授权
 
 ### 规格文档
 
-- [事实清单](/ai/langchain-ai/openwiki/spec/facts) — 从源码提取的 76 条编号事实
-- [架构洞察](/ai/langchain-ai/openwiki/spec/insights) — Agent-CLI 分层架构、OAuth+Token 管理、ngrok 内网穿透
+- 事实清单 — 从源码提取的 76 条编号事实
+- 架构洞察 — Agent-CLI 分层架构、OAuth+Token 管理、ngrok 内网穿透
 
 ## 架构概览
 

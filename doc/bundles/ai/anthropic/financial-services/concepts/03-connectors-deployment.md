@@ -115,7 +115,7 @@ claude plugin install /path/to/claude-for-financial-services/plugins/vertical-pl
 | **自定义扩展** | 方便开发者修改和测试自定义 skills 和 agents |
 | **版本控制** | 插件配置可以纳入 Git 版本管理 |
 
-> 🔗 Claude Code 插件安装和CLI使用详见 [/claude-code/concepts/01-plugin-system.md](/claude-code/concepts/01-plugin-system.md)
+> 🔗 Claude Code 插件安装和CLI使用详见 [/claude-code/concepts/01-plugin-system.md](../../claude-code/concepts/01-plugin-system.md)
 
 ## 部署方式三：Managed Agents API 部署
 
@@ -215,7 +215,7 @@ deck = response.get_artifact("pitch-deck.pptx")
 model = response.get_artifact("valuation-model.xlsx")
 ```
 
-> 🔗 Managed Agents API 完整文档详见 [/python-sdk/concepts/08-beta-agents.md](/python-sdk/concepts/08-beta-agents.md)
+> 🔗 Managed Agents API 完整文档详见 [/python-sdk/concepts/08-beta-agents.md](../../python-sdk/concepts/08-beta-agents.md)
 
 ### Managed API 模式特点
 
@@ -314,7 +314,7 @@ Claude for Financial Services 设计为可扩展框架，企业可以根据自�
 - 创建对应的 `managed-agent-cookbooks/<new-agent>/agent.yaml`
 - 运行 `sync-agent-skills.py` 同步依赖
 
-> 🔗 创建自定义 Skills 详见 [/official-skills/concepts/02-skill-creator.md](/official-skills/concepts/02-skill-creator.md)
+> 🔗 创建自定义 Skills 详见 [/official-skills/concepts/02-skill-creator.md](../../official-skills/concepts/02-skill-creator.md)
 
 ## 部署模式选择指南
 
@@ -331,6 +331,6 @@ Claude for Financial Services 设计为可扩展框架，企业可以根据自�
 - [Claude for Financial Services概览](00-overview.md) — 双模式架构总览
 - [10个金融Agents详解](01-agents.md) — 每个agent的功能和部署配置
 - [垂直行业Skills与Commands](02-vertical-skills.md) — Agents依赖的skills和commands
-- [Agents与Skills完整索引](/financial-services/references/agents-skills-index.md) — 连接器完整清单
-- [/claude-code/concepts/01-plugin-system.md](/claude-code/concepts/01-plugin-system.md) — Claude Code插件安装体系
-- [/python-sdk/concepts/08-beta-agents.md](/python-sdk/concepts/08-beta-agents.md) — Managed Agents API参考
+- [Agents与Skills完整索引](../references/agents-skills-index.md) — 连接器完整清单
+- [/claude-code/concepts/01-plugin-system.md](../../claude-code/concepts/01-plugin-system.md) — Claude Code插件安装体系
+- [/python-sdk/concepts/08-beta-agents.md](../../python-sdk/concepts/08-beta-agents.md) — Managed Agents API参考

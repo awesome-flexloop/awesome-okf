@@ -64,7 +64,7 @@ Probot 的 `context.config()` 支持两级配置继承：
 
 ## JSON Schema 定义
 
-[schema.json](../../../../../external/libs/jupyter/jupyterlab-probot/schema.json) 定义了四个配置项的验证规则：
+schema.json 定义了四个配置项的验证规则：
 
 ```json
 {
@@ -120,7 +120,7 @@ Probot 的 `context.config()` 支持两级配置继承：
 triageLabel: "status:Needs Triage"
 ```
 
-**处理器逻辑**（[src/index.ts L53-69](../../../../../external/libs/jupyter/jupyterlab-probot/src/index.ts)）：
+**处理器逻辑**（src/index.ts L53-69）：
 
 ```typescript
 app.on('issues.opened', async (context) => {
@@ -157,7 +157,7 @@ app.on('issues.opened', async (context) => {
 addBinderLink: true
 ```
 
-**处理器逻辑**（[src/index.ts L71-101](../../../../../external/libs/jupyter/jupyterlab-probot/src/index.ts)）：
+**处理器逻辑**（src/index.ts L71-101）：
 
 ```typescript
 app.on('pull_request.opened', async (context) => {
@@ -209,7 +209,7 @@ https://mybinder.org/v2/gh/{user}/{repo}/{ref}{binderUrlSuffix}
 botUser: "my-custom-bot"
 ```
 
-**处理器逻辑**（[src/index.ts L199-246](../../../../../external/libs/jupyter/jupyterlab-probot/src/index.ts)）：
+**处理器逻辑**（src/index.ts L199-246）：
 
 ```typescript
 app.on('issue_comment.created', async (context) => {
@@ -249,7 +249,7 @@ if (validate(config)) {
 - Bot 不会因为配置错误而崩溃或执行异常操作
 - 错误日志会输出到控制台，运维人员可以发现并修复配置问题
 
-测试中也覆盖了这个场景（[test/index.test.ts L147-171](../../../../../external/libs/jupyter/jupyterlab-probot/test/index.test.ts)）：
+测试中也覆盖了这个场景（test/index.test.ts L147-171）：
 
 ```typescript
 test('handles bad config', async () => {

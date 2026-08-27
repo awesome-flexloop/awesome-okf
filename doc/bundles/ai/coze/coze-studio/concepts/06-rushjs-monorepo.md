@@ -214,8 +214,8 @@ rush build --to @coze-studio/app
 
 ## 相关概念
 
-- [整体架构概览](/concepts/00-overview-ddd-architecture.md)
-- [工作流与智能体编辑器](/concepts/07-workflow-editor.md)
-- [Thrift IDL 与代码生成](/concepts/02-thrift-idl-codegen.md)
-- [部署与运维](/concepts/08-deployment-operations.md)
-- [前端架构参考](/references/frontend-architecture.md)
+- [整体架构概览](00-overview-ddd-architecture.md)
+- [工作流与智能体编辑器](07-workflow-editor.md)
+- [Thrift IDL 与代码生成](02-thrift-idl-codegen.md)
+- [部署与运维](08-deployment-operations.md)
+- [前端架构参考](../references/frontend-architecture.md)

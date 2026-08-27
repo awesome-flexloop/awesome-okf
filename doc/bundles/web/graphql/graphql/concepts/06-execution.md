@@ -406,8 +406,8 @@ ExecuteRootSelectionSet
 
 ## 相关概念
 
-- [验证管线与规则体系](/concepts/05-validation.md) — 执行前必须通过验证，验证失败产生 request error
-- [响应格式、错误冒泡与序列化](/concepts/07-response-and-errors.md) — 执行结果的响应格式、error 对象结构和 Non-Null 冒泡的 path 规则
-- [指令、包装类型与输入系统](/concepts/04-directives-and-wrapping-types.md) — Non-Null/List 类型语义、@skip/@include 指令、变量与参数强制转换
-- [复合类型：对象、接口、联合与枚举](/concepts/03-composite-types.md) — 抽象类型 ResolveAbstractType 机制、Object/Interface/Union 类型
-- [内省系统：GraphQL 的自描述机制](/concepts/08-introspection.md) — 内省字段 __typename/__schema/__type 的执行
+- [验证管线与规则体系](05-validation.md) — 执行前必须通过验证，验证失败产生 request error
+- [响应格式、错误冒泡与序列化](07-response-and-errors.md) — 执行结果的响应格式、error 对象结构和 Non-Null 冒泡的 path 规则
+- [指令、包装类型与输入系统](04-directives-and-wrapping-types.md) — Non-Null/List 类型语义、@skip/@include 指令、变量与参数强制转换
+- [复合类型：对象、接口、联合与枚举](03-composite-types.md) — 抽象类型 ResolveAbstractType 机制、Object/Interface/Union 类型
+- [内省系统：GraphQL 的自描述机制](08-introspection.md) — 内省字段 __typename/__schema/__type 的执行

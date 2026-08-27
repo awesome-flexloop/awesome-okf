@@ -81,6 +81,6 @@ RateLimiter复用缓存后端：
 
 ## 相关文档
 
-- [渲染与缓存源码分析](/references/render-cache-source.md)
-- [Notebook渲染管线](/concepts/06-render-pipeline.md)
-- [速率限制与安全机制](/concepts/11-rate-limit-security.md)
+- [渲染与缓存源码分析](../references/render-cache-source.md)
+- [Notebook渲染管线](06-render-pipeline.md)
+- [速率限制与安全机制](11-rate-limit-security.md)

@@ -106,7 +106,7 @@ WriteChapters 使用 BatchNode 是因为需要**逐章生成**教程，每章是
 
 ## 流程创建
 
-流程在 [create_tutorial_flow()](../references/utility-functions.md#create_tutorial_flow) 中创建（[flow.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Codebase-Knowledge/flow.py)）：
+流程在 [create_tutorial_flow()](../references/utility-functions.md#create_tutorial_flow) 中创建（flow.py）：
 
 ```python
 from pocketflow import Flow

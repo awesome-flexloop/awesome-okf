@@ -276,7 +276,7 @@ renderMathInElement(document.getElementById("post-content"), {
 
 ### 宏持久化（\gdef 跨公式共享）
 
-auto-render 在一次 `renderMathInElement` 调用内部，会将同一个 `macros` 对象传递给每个 `katex.render` 调用。因此 LaTeX 中通过 `\gdef` 定义的宏可在同一容器内的连续公式间共享[^web-autorender][^web-api]：
+auto-render 在一次 `renderMathInElement` 调用内部，会将同一个 `macros` 对象传递给每个 `katex.render` 调用。因此 LaTeX 中通过 `\gdef` 定义的宏可在同一容器内的连续公式间共享[^web-autorender] [^web-api]：
 
 ```html
 <div id="math-article">
@@ -439,13 +439,13 @@ function processMarkdownWithMath(markdown) {
 
 ## 相关内容
 
-- [自动渲染扩展](/concepts/13-auto-render.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [基础渲染示例](/examples/basic-render.md)
-- [自定义宏示例](/examples/custom-macros.md)
-- [配置系统](/concepts/10-settings-options.md)
-- [宏系统](/concepts/09-macro-system.md)
-- [CLI 渲染示例](/examples/cli-render.md)
+- [自动渲染扩展](../concepts/13-auto-render.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [基础渲染示例](basic-render.md)
+- [自定义宏示例](custom-macros.md)
+- [配置系统](../concepts/10-settings-options.md)
+- [宏系统](../concepts/09-macro-system.md)
+- [CLI 渲染示例](cli-render.md)
 
 [^web-autorender]: 官网 Auto-render Extension 页面，https://katex.org/docs/autorender
 [^web-api]: 官网 API 页面，https://katex.org/docs/api

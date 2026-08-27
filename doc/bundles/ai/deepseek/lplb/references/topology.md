@@ -38,7 +38,7 @@ LP 问题的编译期维度：
 
 ## 内置拓扑
 
-LPLB 测试用例中提供了四种预定义拓扑，位于 [tests/utils.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/LPLB/tests/utils.py)。
+LPLB 测试用例中提供了四种预定义拓扑，位于 tests/utils.py。
 
 ### Cube（立方体拓扑）
 

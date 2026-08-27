@@ -103,8 +103,8 @@ Welcome to My Docs
 
 最小配置已可使用，但 sphinx-copybutton 的真正价值在于**智能提示符剥离**——当你的代码块包含 shell 提示符（`$`）或 Python REPL 提示符（`>>>`）时，需要额外配置才能让复制的内容可以直接粘贴运行。详见：
 
-- [文本处理与提示符剥离](/concepts/03-text-processing.md)——配置提示符剥离、行续接等高级文本处理
-- [Shell 提示符配置示例](/examples/shell-prompts.md)——Bash、Python、IPython 等场景的完整配置
+- [文本处理与提示符剥离](03-text-processing.md)——配置提示符剥离、行续接等高级文本处理
+- [Shell 提示符配置示例](../examples/shell-prompts.md)——Bash、Python、IPython 等场景的完整配置
 
 ## 常见问题
 
@@ -118,15 +118,15 @@ A: 检查以下事项：
 
 **Q: 按钮位置不对或样式异常？**
 
-A: 可能是主题与 copybutton 的 CSS 冲突。参考[自定义样式与图标](/concepts/04-customization.md)调整样式。
+A: 可能是主题与 copybutton 的 CSS 冲突。参考[自定义样式与图标](04-customization.md)调整样式。
 
 **Q: 复制的内容包含行号？**
 
-A: 确保代码块没有启用行号（`linenos` 选项），或通过 `copybutton_exclude` 配置排除行号元素。详见[文本处理](/concepts/03-text-processing.md)。
+A: 确保代码块没有启用行号（`linenos` 选项），或通过 `copybutton_exclude` 配置排除行号元素。详见[文本处理](03-text-processing.md)。
 
 ## 相关概念
 
-- [sphinx-copybutton 简介](/concepts/00-introduction.md)
-- [扩展架构与注册机制](/concepts/02-extension-architecture.md)
-- [文本处理与提示符剥离](/concepts/03-text-processing.md)
-- [基础配置示例](/examples/basic-setup.md)
+- [sphinx-copybutton 简介](00-introduction.md)
+- [扩展架构与注册机制](02-extension-architecture.md)
+- [文本处理与提示符剥离](03-text-processing.md)
+- [基础配置示例](../examples/basic-setup.md)

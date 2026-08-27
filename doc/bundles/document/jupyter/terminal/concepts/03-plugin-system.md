@@ -265,6 +265,6 @@ export { ILiteTerminalAPIClient, ITerminalShell, LiteTerminalAPIClient, Terminal
 ## 相关概念
 
 - [架构概览](02-architecture-overview.md)：整体架构和数据流
-- [LiteTerminalAPIClient API参考](/references/client-source.md)：客户端完整API
+- [LiteTerminalAPIClient API参考](../references/client-source.md)：客户端完整API
 - [无头命令执行](05-headless-exec.md)：编程式命令API详解
 - [构建与扩展开发](08-build-and-extension.md)：如何开发自定义扩展

@@ -246,6 +246,6 @@ html_css_files = ["custom.css"]
 
 ## 相关概念
 
-- [网格布局系统](/concepts/04-grids.md) — 网格指令与响应式布局详解
-- [卡片组件](/concepts/05-cards.md) — 卡片指令详解
-- [快速上手](/concepts/01-getting-started.md) — 安装与基本配置
+- [网格布局系统](04-grids.md) — 网格指令与响应式布局详解
+- [卡片组件](05-cards.md) — 卡片指令详解
+- [快速上手](01-getting-started.md) — 安装与基本配置

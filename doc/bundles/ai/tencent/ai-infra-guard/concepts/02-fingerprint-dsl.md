@@ -211,7 +211,7 @@ type Extractor struct {
 
 ## 编写自定义指纹
 
-详见 [自定义指纹示例](/examples/custom-fingerprint.md)。基本步骤：
+详见 [自定义指纹示例](../examples/custom-fingerprint.md)。基本步骤：
 1. 在 `data/fingerprints/` 创建新的 .yaml 文件
 2. 填写 info 基本信息
 3. 编写 http matchers（建议至少 2 条独立特征以减少误报）
@@ -220,7 +220,7 @@ type Extractor struct {
 
 ## 相关概念
 
-- [CVE 漏洞匹配](/concepts/03-vuln-matching.md)
-- [扫描引擎信源](/references/scan-engine.md)
-- [数据文件格式](/references/data-rules.md)
-- [自定义指纹示例](/examples/custom-fingerprint.md)
+- [CVE 漏洞匹配](03-vuln-matching.md)
+- [扫描引擎信源](../references/scan-engine.md)
+- [数据文件格式](../references/data-rules.md)
+- [自定义指纹示例](../examples/custom-fingerprint.md)

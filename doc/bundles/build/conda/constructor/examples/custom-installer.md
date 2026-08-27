@@ -257,5 +257,5 @@ dist/
 
 ## 下一步
 
-- [签名安装程序](./signed-installer.md)：为 Windows/macOS 安装程序添加代码签名
-- [多环境安装程序](./multi-env-installer.md)：添加额外的 conda 环境
+- [签名安装程序](signed-installer.md)：为 Windows/macOS 安装程序添加代码签名
+- [多环境安装程序](multi-env-installer.md)：添加额外的 conda 环境

@@ -227,8 +227,8 @@ Skill 可以来自：
 
 ## 相关概念
 
-- [Rust 核心与 TUI](./02-rust-core-tui.md)
-- [沙箱执行模型](./04-sandbox-execution.md)
-- [工作区架构](./01-workspace-architecture.md)
-- [Python SDK](./06-python-sdk.md)
-- [简介](./00-introduction.md)
+- [Rust 核心与 TUI](02-rust-core-tui.md)
+- [沙箱执行模型](04-sandbox-execution.md)
+- [工作区架构](01-workspace-architecture.md)
+- [Python SDK](06-python-sdk.md)
+- [简介](00-introduction.md)

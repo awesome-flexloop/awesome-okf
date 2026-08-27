@@ -280,8 +280,8 @@ impl HookDispatcher {
 
 ## 相关概念
 
-- [Fleet 多 Agent](/concepts/05-fleet-subagents.md) — fleet-manager skill 和子 agent 编排
-- [MCP 协议集成](/concepts/03-mcp-protocol.md) — 插件贡献的 MCP 服务器
-- [Agent 核心运行时](/concepts/02-agent-core.md) — Runtime 中的 hooks 组件
-- [工具系统](/concepts/04-tool-system.md) — ToolLifecycle 事件
-- [CodeWhale 简介](/concepts/00-introduction.md) — 项目概述
+- [Fleet 多 Agent](05-fleet-subagents.md) — fleet-manager skill 和子 agent 编排
+- [MCP 协议集成](03-mcp-protocol.md) — 插件贡献的 MCP 服务器
+- [Agent 核心运行时](02-agent-core.md) — Runtime 中的 hooks 组件
+- [工具系统](04-tool-system.md) — ToolLifecycle 事件
+- [CodeWhale 简介](00-introduction.md) — 项目概述

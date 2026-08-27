@@ -169,7 +169,7 @@ podman rmi nginx:alpine
 
 ## 相关概念
 
-- [容器基础](/concepts/04-container-basics.md)
-- [镜像与容器命令](/concepts/07-container-commands.md)
-- [Podman CLI结构](/concepts/06-cli-structure.md)
-- [入门指南](/concepts/01-getting-started.md)
+- [容器基础](../concepts/04-container-basics.md)
+- [镜像与容器命令](../concepts/07-container-commands.md)
+- [Podman CLI结构](../concepts/06-cli-structure.md)
+- [入门指南](../concepts/01-getting-started.md)

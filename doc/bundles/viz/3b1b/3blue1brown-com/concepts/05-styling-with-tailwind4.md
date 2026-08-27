@@ -342,7 +342,7 @@ oklch 语法说明：`oklch(L C H)`
 
 ### FOUC 预防的 CSS 配合
 
-暗模式的 `.dark` 类在 HTML 解析阶段就通过内联脚本设置（见 [04 核心组件与状态管理](/concepts/04-components-and-state.md)），这意味着 CSS 加载完成时 `.dark` 类已经存在，不会出现亮/暗闪烁。
+暗模式的 `.dark` 类在 HTML 解析阶段就通过内联脚本设置（见 [04 核心组件与状态管理](04-components-and-state.md)），这意味着 CSS 加载完成时 `.dark` 类已经存在，不会出现亮/暗闪烁。
 
 ## @layer base：全局原生元素样式
 
@@ -614,7 +614,7 @@ TableOfContents 组件通过 JS 计算 `wideEnough` 条件（窗口宽度减去�
 
 ## 相关概念
 
-- [00 官网技术栈总览](/concepts/00-website-overview.md)
-- [03 MDX内容系统与数学渲染](/concepts/03-mdx-content-system.md)
-- [04 核心组件与状态管理](/concepts/04-components-and-state.md)
-- [完整技术栈清单](/references/tech-stack.md)
+- [00 官网技术栈总览](00-website-overview.md)
+- [03 MDX内容系统与数学渲染](03-mdx-content-system.md)
+- [04 核心组件与状态管理](04-components-and-state.md)
+- [完整技术栈清单](../references/tech-stack.md)

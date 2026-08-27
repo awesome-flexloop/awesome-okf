@@ -461,7 +461,7 @@ False
 
 - 前置概念：[微积分](07-calculus.md) 了解 Derivative/Integral 惰性对象在 dsolve 中的使用
 - 前置概念：[矩阵运算](09-matrices.md) 了解 linsolve 与矩阵求解的关系
-- 源码信源：[series-solvers-source](/references/series-solvers-source.md) 提供求解器模块完整 API 与导出清单
+- 源码信源：[series-solvers-source](../references/series-solvers-source.md) 提供求解器模块完整 API 与导出清单
 
 [^F-111]: facts.md F-111 — solvers 模块导出清单
 [^F-112]: facts.md F-112 — solveset/linsolve/nonlinsolve 集合化求解

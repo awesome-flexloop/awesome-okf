@@ -41,7 +41,7 @@ title: SymPy 概念文档索引
 1. **新手入门**：00 → 01 → 02 → 03 → 运行 [examples/basic-symbols.md](../examples/basic-symbols.md)
 2. **数学运算**：04 → 06 → 07 → 08 → 运行 [examples/calculus-examples.md](../examples/calculus-examples.md)
 3. **线性代数**：09 → 运行 [examples/solving-equations.md](../examples/solving-equations.md)
-4. **源码溯源**：阅读 [references/](../references/) 中的信源文档
+4. **源码溯源**：阅读 [references/](../references/index.md) 中的信源文档
 
 ```{toctree}
 :hidden:

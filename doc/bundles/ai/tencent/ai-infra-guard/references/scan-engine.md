@@ -249,6 +249,6 @@ func LoadWebPageScreenShotSummary(language string) string
 
 ## 相关概念
 
-- [指纹规则 DSL](/concepts/02-fingerprint-dsl.md)
-- [CVE 漏洞匹配](/concepts/03-vuln-matching.md)
-- [分布式架构总览](/concepts/00-architecture.md)
+- [指纹规则 DSL](../concepts/02-fingerprint-dsl.md)
+- [CVE 漏洞匹配](../concepts/03-vuln-matching.md)
+- [分布式架构总览](../concepts/00-architecture.md)

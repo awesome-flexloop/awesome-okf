@@ -130,9 +130,9 @@ DeepEP 是 DeepSeek 混合并行训练栈的通信基石：
 
 | DeepSeek 组件 | 与 DeepEP 的关系 |
 |--------------|-----------------|
-| [DeepGEMM](/ai/deepseek/deep-gemm) | MoE 分组 GEMM 内核，在 dispatch 之后执行专家计算，combine 之前完成 |
-| [LPLB](/ai/deepseek/lplb) | 专家负载均衡器，输出 `topk_idx` 路由决策给 dispatch |
-| [DualPipe](/ai/deepseek/dual-pipe) | 双向流水线并行，与 EP 组合使用，ElasticBuffer 提供 PP send/recv 原语 |
+| [DeepGEMM](../../deep-gemm/index.md) | MoE 分组 GEMM 内核，在 dispatch 之后执行专家计算，combine 之前完成 |
+| [LPLB](../../lplb/index.md) | 专家负载均衡器，输出 `topk_idx` 路由决策给 dispatch |
+| [DualPipe](../../dual-pipe/index.md) | 双向流水线并行，与 EP 组合使用，ElasticBuffer 提供 PP send/recv 原语 |
 
 ## 版本信息
 

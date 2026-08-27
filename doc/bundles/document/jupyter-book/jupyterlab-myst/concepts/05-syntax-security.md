@@ -254,7 +254,7 @@ jupyterlab_myst Python 包包含 notary.py，提供与 Notebook 信任相关的�
 
 ## 相关概念
 
-- [01-myst-rendering-pipeline.md](/concepts/01-myst-rendering-pipeline.md)：解析管道和支持的 directives
-- [03-inline-expressions.md](/concepts/03-inline-expressions.md)：内联表达式安全机制
-- [04-myst-widget-react.md](/concepts/04-myst-widget-react.md)：SanitizerProvider 安全清洗
-- [01-using-jupyterlab-myst.md](/examples/01-using-jupyterlab-myst.md)：使用示例
+- [01-myst-rendering-pipeline.md](01-myst-rendering-pipeline.md)：解析管道和支持的 directives
+- [03-inline-expressions.md](03-inline-expressions.md)：内联表达式安全机制
+- [04-myst-widget-react.md](04-myst-widget-react.md)：SanitizerProvider 安全清洗
+- [01-using-jupyterlab-myst.md](../examples/01-using-jupyterlab-myst.md)：使用示例

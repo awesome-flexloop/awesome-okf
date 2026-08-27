@@ -181,7 +181,7 @@ http://localhost:8888/lab?repo=https%3A%2F%2Fgitlab.com%2Fgroup%2Fsubgroup%2Fpro
 
 ### Q: 自建 GitLab API 路径不是 /api/v4？
 
-某些 GitLab 部署可能使用不同的 API 前缀（如反向代理后）。这种情况下需要修改源码中 GitlabPuller 的 URL 构造逻辑，或等待自定义 Provider 功能（参见[自定义Provider](/concepts/08-custom-provider.md)）。
+某些 GitLab 部署可能使用不同的 API 前缀（如反向代理后）。这种情况下需要修改源码中 GitlabPuller 的 URL 构造逻辑，或等待自定义 Provider 功能（参见[自定义Provider](../concepts/08-custom-provider.md)）。
 
 ## 相关示例
 
@@ -191,6 +191,6 @@ http://localhost:8888/lab?repo=https%3A%2F%2Fgitlab.com%2Fgroup%2Fsubgroup%2Fpro
 
 ## 相关概念
 
-- [URL参数完整参考](/concepts/06-url-parameters.md) — provider 参数详解
-- [平台 Puller 实现](/concepts/04-platform-pullers.md) — GitlabPuller 的 API 实现
-- [自定义Provider](/concepts/08-custom-provider.md) — 如何扩展支持更多平台
+- [URL参数完整参考](../concepts/06-url-parameters.md) — provider 参数详解
+- [平台 Puller 实现](../concepts/04-platform-pullers.md) — GitlabPuller 的 API 实现
+- [自定义Provider](../concepts/08-custom-provider.md) — 如何扩展支持更多平台

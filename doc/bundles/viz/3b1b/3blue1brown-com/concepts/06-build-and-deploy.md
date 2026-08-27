@@ -600,11 +600,11 @@ Bun 特定优势：
 
 ## 相关概念
 
-- [00 官网技术栈总览](/concepts/00-website-overview.md)
-- [01 项目结构与目录组织](/concepts/01-project-structure.md)
-- [02 路由系统与页面组织](/concepts/02-routing-and-pages.md)
-- [03 MDX 内容系统与数学渲染](/concepts/03-mdx-content-system.md)
-- [05 Tailwind v4 CSS-first 样式系统](/concepts/05-styling-with-tailwind4.md)
-- [完整技术栈清单](/references/tech-stack.md)
-- [创建带数学公式的 MDX 页面](/examples/minimal-mdx-page.md)
-- [Tailwind v4 主题与自定义变体配置](/examples/tailwind-theme-setup.md)
+- [00 官网技术栈总览](00-website-overview.md)
+- [01 项目结构与目录组织](01-project-structure.md)
+- [02 路由系统与页面组织](02-routing-and-pages.md)
+- [03 MDX 内容系统与数学渲染](03-mdx-content-system.md)
+- [05 Tailwind v4 CSS-first 样式系统](05-styling-with-tailwind4.md)
+- [完整技术栈清单](../references/tech-stack.md)
+- [创建带数学公式的 MDX 页面](../examples/minimal-mdx-page.md)
+- [Tailwind v4 主题与自定义变体配置](../examples/tailwind-theme-setup.md)

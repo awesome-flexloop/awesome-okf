@@ -182,7 +182,7 @@ results = collection.search(data, "vector", search_params, limit=10)
 
 ## 延伸阅读
 
-- [HNSW 与 LSH](/ai/datawhale/easy-vecdb/concepts/hnsw-lsh.md) — 图索引和哈希索引方案
-- [ANN 近似最近邻算法](/ai/datawhale/easy-vecdb/concepts/ann-algorithms.md) — 六大索引类型总览
-- [Faiss 与 Milvus 工程实践](/ai/datawhale/easy-vecdb/concepts/faiss-milvus-engineering.md) — IVF-PQ 在工业系统中的应用
-- [手写 Mini Vector DB](/ai/datawhale/easy-vecdb/examples/mini-vector-db.md) — 实现 IVF 索引
+- [HNSW 与 LSH](hnsw-lsh.md) — 图索引和哈希索引方案
+- [ANN 近似最近邻算法](ann-algorithms.md) — 六大索引类型总览
+- [Faiss 与 Milvus 工程实践](faiss-milvus-engineering.md) — IVF-PQ 在工业系统中的应用
+- [手写 Mini Vector DB](../examples/mini-vector-db.md) — 实现 IVF 索引

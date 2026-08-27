@@ -50,11 +50,11 @@ Sphinx 是一个将 reStructuredText（reST）或 Markdown 源文件转换为多
 - **语言**：Python 3.10+（Sphinx 9.x）
 - **核心依赖**：docutils（reST解析基础库）、Jinja2（模板引擎）、Pygments（语法高亮）
 - **构建系统**：自有的增量构建引擎，通过 environment.pickle 缓存解析结果
-- **版本**：当前版本 9.1.1（beta），见 [F-001](/spec/facts.md)
+- **版本**：当前版本 9.1.1（beta），见 [F-001](../spec/facts.md)
 
 ## 架构概览
 
-Sphinx 采用"应用-事件-注册表"三位一体的核心架构（见 [I-001](/spec/insights.md)）：
+Sphinx 采用"应用-事件-注册表"三位一体的核心架构（见 [I-001](../spec/insights.md)）：
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -105,5 +105,5 @@ Sphinx 源码位于 `sphinx/` 包下，主要模块：
 ## 相关概念
 
 - [01-快速开始](01-getting-started.md) — 安装和第一个Sphinx项目
-- [02-应用类](02-application.md) — Sphinx主类详解
-- [07-扩展开发](07-extension-dev.md) — 如何编写Sphinx扩展
+- 02-应用类 — Sphinx主类详解
+- 07-扩展开发 — 如何编写Sphinx扩展

@@ -288,9 +288,9 @@ session 还负责在 engine 终止时决定是否重连（主动会话）或销�
 
 ## 相关概念
 
-- [套接字基类](/concepts/02-socket-base.md) — socket 通过 send_own 创建 session 和 connecter
-- [ZMTP 协议引擎](/concepts/06-zmtp-engine.md) — engine 握手完成后通知 session
-- [管道与流控](/concepts/04-pipe.md) — session 持有 pipe 连接到 socket
-- [I/O 线程与多路复用](/concepts/07-io-thread-poller.md) — io_object_t 的 poller 接口
-- [传输层](/concepts/10-transport.md) — TCP/IPC/inproc 传输的详细对比
-- [套接字选项体系](/concepts/09-options.md) — reconnect_ivl/heartbeat 等选项影响 session 行为
+- [套接字基类](02-socket-base.md) — socket 通过 send_own 创建 session 和 connecter
+- [ZMTP 协议引擎](06-zmtp-engine.md) — engine 握手完成后通知 session
+- [管道与流控](04-pipe.md) — session 持有 pipe 连接到 socket
+- [I/O 线程与多路复用](07-io-thread-poller.md) — io_object_t 的 poller 接口
+- [传输层](10-transport.md) — TCP/IPC/inproc 传输的详细对比
+- [套接字选项体系](09-options.md) — reconnect_ivl/heartbeat 等选项影响 session 行为

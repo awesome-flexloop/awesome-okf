@@ -37,4 +37,4 @@ sources:
 
 ## 相关概念
 
-- [插件配置与 CLI 选项](/concepts/01-plugin-configuration.md)
+- [插件配置与 CLI 选项](../concepts/01-plugin-configuration.md)

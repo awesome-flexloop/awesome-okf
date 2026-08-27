@@ -211,11 +211,11 @@ v0.13.0 包含多项影响 LaTeX 语义的变更[^web-migration]：
 
 ## 相关概念
 
-- [安装与运行时](/concepts/15-installation-and-runtime.md) — 最新版安装方式
-- [常见问题](/concepts/21-common-issues.md) — 集成排障
-- [函数注册表](/concepts/08-function-registry.md) — defineFunction 机制
-- [宏系统](/concepts/09-macro-system.md) — \def、\newcommand 语义
-- [KaTeX 源码信源](/references/katex-source.md) — 源码版本基准 v0.18.4
+- [安装与运行时](15-installation-and-runtime.md) — 最新版安装方式
+- [常见问题](21-common-issues.md) — 集成排障
+- [函数注册表](08-function-registry.md) — defineFunction 机制
+- [宏系统](09-macro-system.md) — \def、\newcommand 语义
+- [KaTeX 源码信源](../references/katex-source.md) — 源码版本基准 v0.18.4
 
 [^web-migration]: 官网 Migration Guide 页面，https://katex.org/docs/migration
 [^facts]: KaTeX 事实清单，F-001（源码版本 0.18.4）、W-143~W-152（Migration 全页）

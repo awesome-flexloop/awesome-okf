@@ -243,8 +243,8 @@ python -m build --no-isolation -c
 
 ## 相关概念
 
-- [Hatch构建钩子集成](/concepts/07-hatch-build-hook.md)
-- [翻译目录管理](/concepts/05-catalog-management.md)
-- [运行时语言包发现](/concepts/08-runtime-discovery.md)
-- [双模式分发机制](/concepts/11-dual-mode-distribution.md)
-- [Hatch构建钩子源码映射](/references/plugin-source.md)
+- [Hatch构建钩子集成](../concepts/07-hatch-build-hook.md)
+- [翻译目录管理](../concepts/05-catalog-management.md)
+- [运行时语言包发现](../concepts/08-runtime-discovery.md)
+- [双模式分发机制](../concepts/11-dual-mode-distribution.md)
+- [Hatch构建钩子源码映射](../references/plugin-source.md)

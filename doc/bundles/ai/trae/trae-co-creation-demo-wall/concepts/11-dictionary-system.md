@@ -97,9 +97,9 @@ API 返回字典项时，根据 lang 参数解析 labelI18n：
 
 ## 相关概念
 
-- [数据模型设计](/concepts/03-data-model.md)
-- [审核与治理](/concepts/10-audit-governance.md)
-- [认证系统](/concepts/04-auth-system.md)
-- [国际化路由](/concepts/05-i18n-routing.md)
-- [API 路由设计](/concepts/06-api-routes.md)
-- [字典管理示例](/examples/dictionary-management.md)
+- [数据模型设计](03-data-model.md)
+- [审核与治理](10-audit-governance.md)
+- [认证系统](04-auth-system.md)
+- [国际化路由](05-i18n-routing.md)
+- [API 路由设计](06-api-routes.md)
+- [字典管理示例](../examples/dictionary-management.md)

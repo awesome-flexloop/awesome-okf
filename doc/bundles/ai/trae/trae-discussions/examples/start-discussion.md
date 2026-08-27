@@ -210,7 +210,7 @@ TRAE 会：
 
 ## 相关链接
 
-- [GitHub Discussions 作为社区论坛](/concepts/00-introduction.md)
-- [讨论分类与使用指南](/concepts/01-discussion-categories.md)
-- [社区礼仪与有效提问](/concepts/02-community-etiquette.md)
-- [社区讨论仓库资源索引](/references/discussions-source.md)
+- [GitHub Discussions 作为社区论坛](../concepts/00-introduction.md)
+- [讨论分类与使用指南](../concepts/01-discussion-categories.md)
+- [社区礼仪与有效提问](../concepts/02-community-etiquette.md)
+- [社区讨论仓库资源索引](../references/discussions-source.md)

@@ -21,26 +21,26 @@ trae-mcp 是 TRAE IDE 的社区维护 MCP（Model Context Protocol）服务器�
 
 | 文档 | 说明 |
 |------|------|
-| [MCP 简介](/concepts/00-introduction.md) | MCP 是什么、三种能力比喻（资源/工具/提示）、与 SKILL 的区别 |
-| [MCP 三层模型](/concepts/01-mcp-architecture.md) | Transport 层（stdio/SSE）、Protocol 层（JSON-RPC）、Capability 层（Tools/Resources/Prompts） |
-| [MCP 配置格式](/concepts/02-mcp-configuration.md) | JSON 配置结构、server 配置、transport 选择 |
-| [CloudBase MCP](/concepts/03-cloudbase-mcp.md) | 腾讯云开发 MCP 服务器、npm 包、7 类云资源能力、7 步工作流 |
-| [MCP 与 Skill 的本质区别](/concepts/04-mcp-vs-skill.md) | 工具服务器 vs 提示词包、调用方式对比、何时用 MCP 何时用 Skill |
-| [MCP 开发入门](/concepts/05-mcp-development.md) | SDK 选择、服务器骨架、Tool 注册、三层排错法 |
+| [MCP 简介](concepts/00-introduction.md) | MCP 是什么、三种能力比喻（资源/工具/提示）、与 SKILL 的区别 |
+| [MCP 三层模型](concepts/01-mcp-architecture.md) | Transport 层（stdio/SSE）、Protocol 层（JSON-RPC）、Capability 层（Tools/Resources/Prompts） |
+| [MCP 配置格式](concepts/02-mcp-configuration.md) | JSON 配置结构、server 配置、transport 选择 |
+| [CloudBase MCP](concepts/03-cloudbase-mcp.md) | 腾讯云开发 MCP 服务器、npm 包、7 类云资源能力、7 步工作流 |
+| [MCP 与 Skill 的本质区别](concepts/04-mcp-vs-skill.md) | 工具服务器 vs 提示词包、调用方式对比、何时用 MCP 何时用 Skill |
+| [MCP 开发入门](concepts/05-mcp-development.md) | SDK 选择、服务器骨架、Tool 注册、三层排错法 |
 
 ## 示例
 
 | 文档 | 说明 |
 |------|------|
-| [配置 MCP 服务器示例](/examples/configure-mcp.md) | 在 TRAE 中添加本地 MCP 和 CloudBase MCP 的配置步骤 |
-| [CloudBase MCP 使用示例](/examples/use-cloudbase-mcp.md) | CloudBase MCP 配置、登录、7 步工作流使用方式 |
-| [构建简单 MCP 服务器示例](/examples/build-simple-mcp.md) | MCP 服务器开发基本流程、Tool 注册、SKILL.md 编写 |
+| [配置 MCP 服务器示例](examples/configure-mcp.md) | 在 TRAE 中添加本地 MCP 和 CloudBase MCP 的配置步骤 |
+| [CloudBase MCP 使用示例](examples/use-cloudbase-mcp.md) | CloudBase MCP 配置、登录、7 步工作流使用方式 |
+| [构建简单 MCP 服务器示例](examples/build-simple-mcp.md) | MCP 服务器开发基本流程、Tool 注册、SKILL.md 编写 |
 
 ## 参考
 
 | 文档 | 说明 |
 |------|------|
-| [MCP 协议文档与 CloudBase MCP 索引](/references/mcp-source.md) | MCP 官方文档、CloudBase 文档/源码/插件链接、仓库目录索引 |
+| [MCP 协议文档与 CloudBase MCP 索引](references/mcp-source.md) | MCP 官方文档、CloudBase 文档/源码/插件链接、仓库目录索引 |
 
 ```{toctree}
 :hidden:

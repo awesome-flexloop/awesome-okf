@@ -376,6 +376,6 @@ print("迁移验证通过！")
 
 ## 相关概念
 
-- [/concepts/00-introduction.md](/concepts/00-introduction.md)
-- [/concepts/01-connection.md](/concepts/01-connection.md)
-- [/examples/02-container-ops.md](/examples/02-container-ops.md)
+- [/concepts/00-introduction.md](../concepts/00-introduction.md)
+- [/concepts/01-connection.md](../concepts/01-connection.md)
+- [/examples/02-container-ops.md](02-container-ops.md)

@@ -339,7 +339,7 @@ nanobot gateway stop
 
 ## 相关概念
 
-- [nanobot 简介](/concepts/00-introduction.md)
-- [整体架构](/concepts/01-architecture.md)
-- [Agent 运行时](/concepts/02-agent-runtime.md)
-- [多接口架构](/concepts/05-multi-interface.md)
+- [nanobot 简介](../concepts/00-introduction.md)
+- [整体架构](../concepts/01-architecture.md)
+- [Agent 运行时](../concepts/02-agent-runtime.md)
+- [多接口架构](../concepts/05-multi-interface.md)

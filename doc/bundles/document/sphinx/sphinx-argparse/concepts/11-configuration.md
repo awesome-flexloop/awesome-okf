@@ -206,6 +206,6 @@ sphinxarg_commands_by_group_index_title = "命令分类索引"
 
 ## 相关概念
 
-- [Commands 域与交叉引用](/concepts/09-domain-crossref.md)
-- [命令索引生成](/concepts/10-command-indices.md)
-- [子命令与路径导航](/concepts/05-nested-subcommands.md)
+- [Commands 域与交叉引用](09-domain-crossref.md)
+- [命令索引生成](10-command-indices.md)
+- [子命令与路径导航](05-nested-subcommands.md)

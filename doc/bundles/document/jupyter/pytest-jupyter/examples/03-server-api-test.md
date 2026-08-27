@@ -331,6 +331,6 @@ jp_server_cleanup是autouse fixture，每个测试后清理ServerApp。如果还
 
 ## 相关概念
 
-- [Server插件详解](/concepts/05-server-plugin.md) — jp_fetch/jp_ws_fetch完整API
-- [Fixture工厂模式](/concepts/08-fixture-factories.md) — 请求工厂的设计模式
+- [Server插件详解](../concepts/05-server-plugin.md) — jp_fetch/jp_ws_fetch完整API
+- [Fixture工厂模式](../concepts/08-fixture-factories.md) — 请求工厂的设计模式
 - [自定义Server配置](04-custom-server-config.md) — 如何自定义ServerApp配置

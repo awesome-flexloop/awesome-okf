@@ -182,7 +182,7 @@ a + b + c
 
 ## 数字类型层次
 
-SymPy 的数字系统提供任意精度的精确数值表示，避免浮点误差：[^F-029][^F-030]
+SymPy 的数字系统提供任意精度的精确数值表示，避免浮点误差：[^F-029] [^F-030]
 
 ```mermaid
 classDiagram
@@ -328,7 +328,7 @@ x + 1/2
 
 ## S 单例常量
 
-`S` 是 `SingletonRegistry` 的全局唯一实例，统一管理所有单例常量。单例类使用 `Singleton` 元类，确保每个类全局仅有一个实例，节省内存且支持 `is` 快速比较：[^F-065][^F-031]
+`S` 是 `SingletonRegistry` 的全局唯一实例，统一管理所有单例常量。单例类使用 `Singleton` 元类，确保每个类全局仅有一个实例，节省内存且支持 `is` 快速比较：[^F-065] [^F-031]
 
 ```python
 >>> from sympy import S, Integer
@@ -495,7 +495,7 @@ alpha + beta + gamma
 
 ### 名称冲突处理
 
-`O`、`S`、`I`、`N`、`E`、`Q` 这六个单字母名与 SymPy 顶层对象冲突（分别对应 Order、SingletonRegistry、ImaginaryUnit、数值求值N、Exp1、假设键Q）。同时从 `sympy` 和 `sympy.abc` 使用星号导入会产生冲突，后导入者覆盖前者。[^F-067][^F-068]
+`O`、`S`、`I`、`N`、`E`、`Q` 这六个单字母名与 SymPy 顶层对象冲突（分别对应 Order、SingletonRegistry、ImaginaryUnit、数值求值N、Exp1、假设键Q）。同时从 `sympy` 和 `sympy.abc` 使用星号导入会产生冲突，后导入者覆盖前者。[^F-067] [^F-068]
 
 abc 模块提供了三个冲突诊断字典：
 
@@ -582,7 +582,7 @@ False
 ## 延伸阅读
 
 - 前置概念：[表达式树模型](01-expression-tree.md) 了解叶子节点在树中的角色
-- 源码信源：[numbers-symbols-source](/references/numbers-symbols-source.md) 提供符号与数字类的完整 API 参考
+- 源码信源：[numbers-symbols-source](../references/numbers-symbols-source.md) 提供符号与数字类的完整 API 参考
 - 后续概念：[sympify与类型转换](03-sympify-basics.md) 了解如何将 Python 对象转换为 SymPy 符号/数字
 
 [^F-024]: facts.md F-024 — Symbol 类定义、继承与属性

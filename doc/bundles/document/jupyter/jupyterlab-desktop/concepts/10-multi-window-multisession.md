@@ -256,19 +256,19 @@ app.on('will-quit')
 
 ## 相关信源
 
-- [App 信源](/references/app-source.md)
-- [SessionWindow 信源](/references/sessionwindow-source.md)
-- [Config 信源](/references/config-source.md)
-- [Main 信源](/references/main-source.md)
+- [App 信源](../references/app-source.md)
+- [SessionWindow 信源](../references/sessionwindow-source.md)
+- [Config 信源](../references/config-source.md)
+- [Main 信源](../references/main-source.md)
 
 ## 下一篇
 
-- [构建与开发指南](/concepts/11-build-development.md)
+- [构建与开发指南](11-build-development.md)
 
 ## 相关概念
 
-- [会话窗口系统](/concepts/03-session-window-system.md) — 单个 SessionWindow 的生命周期与 UI 管理
-- [Jupyter 服务器管理](/concepts/04-server-management.md) — 多窗口下 Factory 模式管理多个服务器实例
-- [安全与导航策略](/concepts/09-security-navigation.md) — 多窗口环境下的导航安全守卫
-- [应用入口与生命周期](/concepts/02-app-entry-lifecycle.md) — 单实例锁与 second-instance 事件处理
-- [构建与开发指南](/concepts/11-build-development.md) — 开发环境搭建与应用构建流程
+- [会话窗口系统](03-session-window-system.md) — 单个 SessionWindow 的生命周期与 UI 管理
+- [Jupyter 服务器管理](04-server-management.md) — 多窗口下 Factory 模式管理多个服务器实例
+- [安全与导航策略](09-security-navigation.md) — 多窗口环境下的导航安全守卫
+- [应用入口与生命周期](02-app-entry-lifecycle.md) — 单实例锁与 second-instance 事件处理
+- [构建与开发指南](11-build-development.md) — 开发环境搭建与应用构建流程

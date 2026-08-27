@@ -185,12 +185,12 @@ A: 是的，最小可用设计。按需添加：
 
 ## 相关概念
 
-- [Web 前端模板](/concepts/02-web-frontend-templates.md)
-- [五维分面分类体系](/concepts/01-template-classification.md)
-- [AGENTS.md 开发契约](/concepts/07-agents-contract.md)
+- [Web 前端模板](../concepts/02-web-frontend-templates.md)
+- [五维分面分类体系](../concepts/01-template-classification.md)
+- [AGENTS.md 开发契约](../concepts/07-agents-contract.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/templates-source.md)
-- [使用 superpowers-trae-init 初始化环境](/examples/use-superpowers-init.md)
-- [创建自定义模板](/examples/create-custom-template.md)
+- [源码信源索引](../references/templates-source.md)
+- [使用 superpowers-trae-init 初始化环境](use-superpowers-init.md)
+- [创建自定义模板](create-custom-template.md)

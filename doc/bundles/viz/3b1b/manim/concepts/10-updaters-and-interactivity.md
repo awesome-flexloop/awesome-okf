@@ -182,9 +182,9 @@ class ObjectTracker(Scene):
 
 ## 相关概念
 
-- [03 Mobject：数学对象基类](/concepts/03-mobject-fundamentals.md)
-- [05 动画基础](/concepts/05-animation-basics.md)
-- [06 Transform 深度解析](/concepts/06-transform-deep-dive.md)
-- [07 相机与视角控制](/concepts/07-camera-and-frame.md)
-- [02 配置系统与 CLI 参数](/concepts/02-configuration.md)
-- [ManimGL 源码登记](/references/manimgl-source-code.md)
+- [03 Mobject：数学对象基类](03-mobject-fundamentals.md)
+- [05 动画基础](05-animation-basics.md)
+- [06 Transform 深度解析](06-transform-deep-dive.md)
+- [07 相机与视角控制](07-camera-and-frame.md)
+- [02 配置系统与 CLI 参数](02-configuration.md)
+- [ManimGL 源码登记](../references/manimgl-source-code.md)

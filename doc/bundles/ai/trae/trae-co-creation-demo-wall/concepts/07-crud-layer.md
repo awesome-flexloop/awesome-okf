@@ -102,8 +102,8 @@ QueryProvider（React Query ClientProvider）必须包裹在 SessionProvider 内
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [API 路由设计](/concepts/06-api-routes.md)
-- [富文本编辑器](/concepts/08-rich-text-editor.md)
-- [作品提交流程](/concepts/13-form-submission.md)
-- [前端组件体系](/concepts/12-frontend-components.md)
+- [架构总览](02-architecture-overview.md)
+- [API 路由设计](06-api-routes.md)
+- [富文本编辑器](08-rich-text-editor.md)
+- [作品提交流程](13-form-submission.md)
+- [前端组件体系](12-frontend-components.md)

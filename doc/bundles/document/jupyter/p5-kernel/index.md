@@ -39,7 +39,7 @@ p5-kernel 是 [JupyterLite](https://jupyterlite.readthedocs.io/) 的 p5.js 内�
 - [P5Executor 类 API 信源](references/executor-source.md) — MIME 渲染、P5_DOCS、文档生成脚本
 - [扩展注册信源](references/extension-source.md) — 插件定义、CDN 配置、KernelSpec 字段
 
-### [补充材料](/)
+### [补充材料](../index.md)
 - [事实清单](facts.md) — R 阶段采集的 67 条零推测事实
 - [架构洞察](insights.md) — I 阶段提炼的 4 个核心洞察
 

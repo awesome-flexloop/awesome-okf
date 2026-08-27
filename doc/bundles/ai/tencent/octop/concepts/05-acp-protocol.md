@@ -217,6 +217,6 @@ action=close    → 结束会话
 
 ## 相关概念
 
-- [/concepts/02-agent-runtime.md](/concepts/02-agent-runtime.md)
-- [/concepts/06-cli-commands.md](/concepts/06-cli-commands.md)
-- [/examples/acp-integration.md](/examples/acp-integration.md)
+- [/concepts/02-agent-runtime.md](02-agent-runtime.md)
+- [/concepts/06-cli-commands.md](06-cli-commands.md)
+- [/examples/acp-integration.md](../examples/acp-integration.md)

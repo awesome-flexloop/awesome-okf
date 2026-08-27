@@ -228,6 +228,6 @@ protected initRandomParams(): WebRtcManager.IRandomParams {
 
 ## 相关概念
 
-- [WebRtcManager配置管理](/concepts/03-webrtc-manager.md)
-- [安装与快速开始](/concepts/01-getting-started.md)
-- [房间ID哈希与信令机制](/concepts/05-room-and-signaling.md)
+- [WebRtcManager配置管理](03-webrtc-manager.md)
+- [安装与快速开始](01-getting-started.md)
+- [房间ID哈希与信令机制](05-room-and-signaling.md)

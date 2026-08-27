@@ -313,8 +313,8 @@ await this.refreshBranch();
 
 ## 相关概念
 
-- [GitExtension核心模型](/concepts/04-git-extension-model.md)
-- [UI组件与Widget体系](/concepts/07-ui-components-and-widgets.md)
-- [命令系统与菜单](/concepts/10-commands-and-menu.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [插件系统与五个Plugin](/concepts/03-extension-plugin-system.md)
+- [GitExtension核心模型](04-git-extension-model.md)
+- [UI组件与Widget体系](07-ui-components-and-widgets.md)
+- [命令系统与菜单](10-commands-and-menu.md)
+- [架构总览](02-architecture-overview.md)
+- [插件系统与五个Plugin](03-extension-plugin-system.md)

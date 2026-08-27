@@ -134,7 +134,7 @@ katex.render(expr, el, {
 });
 ```
 
-> **安全提示**：处理不可信输入时应保持 `trust: false`，如需启用部分命令请使用自定义函数按协议/命令白名单放行。KaTeX 生成的 HTML 仍建议进行消毒，白名单需包含部分 SVG 和 MathML 以支持全部功能。详见 [安全与错误处理](/concepts/18-security-and-errors.md)。
+> **安全提示**：处理不可信输入时应保持 `trust: false`，如需启用部分命令请使用自定义函数按协议/命令白名单放行。KaTeX 生成的 HTML 仍建议进行消毒，白名单需包含部分 SVG 和 MathML 以支持全部功能。详见 [安全与错误处理](18-security-and-errors.md)。
 
 ### macros 宏配置
 
@@ -179,7 +179,7 @@ katex.render(expr, el, {
 });
 ```
 
-`macros` 对象在 LaTeX 代码通过 `\gdef`、`\global\let`（或 `globalGroup` 下的 `\def`/`\newcommand`/`\let`）定义宏时会被修改。传入同一对象可使多次 `render`/`renderToString` 调用共享宏状态。详见 [快速开始·持久宏](/concepts/01-getting-started.md#持久宏persistent-macros)。
+`macros` 对象在 LaTeX 代码通过 `\gdef`、`\global\let`（或 `globalGroup` 下的 `\def`/`\newcommand`/`\let`）定义宏时会被修改。传入同一对象可使多次 `render`/`renderToString` 调用共享宏状态。详见 [快速开始·持久宏](01-getting-started.md#持久宏persistent-macros)。
 
 ### globalGroup
 
@@ -310,9 +310,9 @@ sizeStyleMap 进一步将每个字号在不同 Style 下映射到实际的字号
 
 ## 相关概念
 
-- [样式系统](/concepts/11-style-system.md)
-- [渲染管线](/concepts/06-render-pipeline.md)
-- [虚拟DOM树](/concepts/07-dom-tree.md)
-- [宏系统](/concepts/09-macro-system.md)
-- [安全与错误处理](/concepts/18-security-and-errors.md)
-- [错误处理示例](/examples/error-handling.md)
+- [样式系统](11-style-system.md)
+- [渲染管线](06-render-pipeline.md)
+- [虚拟DOM树](07-dom-tree.md)
+- [宏系统](09-macro-system.md)
+- [安全与错误处理](18-security-and-errors.md)
+- [错误处理示例](../examples/error-handling.md)

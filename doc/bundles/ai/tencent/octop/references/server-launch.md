@@ -127,6 +127,6 @@ class AppRuntime:
 
 ## 相关概念
 
-- [/concepts/00-architecture.md](/concepts/00-architecture.md)
-- [/concepts/01-server-lifecycle.md](/concepts/01-server-lifecycle.md)
-- [/concepts/04-db-di.md](/concepts/04-db-di.md)
+- [/concepts/00-architecture.md](../concepts/00-architecture.md)
+- [/concepts/01-server-lifecycle.md](../concepts/01-server-lifecycle.md)
+- [/concepts/04-db-di.md](../concepts/04-db-di.md)

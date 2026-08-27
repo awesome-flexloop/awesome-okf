@@ -162,6 +162,6 @@ Zed 配置：
 
 ## 相关概念
 
-- [总览](/ai/langchain-ai/deepagents/concepts/overview) — Deep Agents 整体架构
-- [规划与子代理](/ai/langchain-ai/deepagents/concepts/planning-subagents) — ACP 工厂模式与子代理
-- [ACP 协议参考](/ai/langchain-ai/deepagents/references/acp-protocol) — AgentServerACP API 详情
+- 总览 — Deep Agents 整体架构
+- 规划与子代理 — ACP 工厂模式与子代理
+- ACP 协议参考 — AgentServerACP API 详情

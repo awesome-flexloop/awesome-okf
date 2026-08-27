@@ -168,6 +168,6 @@ Claude Code 的数据处理遵循 Anthropic 的隐私政策：
 
 ## 相关资源
 
-- [插件体系](/claude-code/concepts/01-plugin-system.md) — 了解如何通过插件扩展 Claude Code
-- [基本使用示例](/claude-code/examples/basic-usage.md) — 安装后的常用操作示例
-- [官方插件索引](/claude-code/references/plugins-index.md) — 13 个官方插件完整清单
+- [插件体系](01-plugin-system.md) — 了解如何通过插件扩展 Claude Code
+- [基本使用示例](../examples/basic-usage.md) — 安装后的常用操作示例
+- [官方插件索引](../references/plugins-index.md) — 13 个官方插件完整清单

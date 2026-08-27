@@ -133,4 +133,4 @@ mystnb-to-jupyter notebook.md notebook.ipynb
 - [MyST Notebook 文件格式](02-notebook-format.md)
 - [执行模式与缓存](05-execution-modes.md)
 - [配置系统](04-config-system.md)
-- [基础配置示例](/examples/01-basic-setup.md)
+- [基础配置示例](../examples/01-basic-setup.md)

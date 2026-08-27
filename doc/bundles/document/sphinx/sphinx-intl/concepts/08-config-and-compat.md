@@ -258,4 +258,4 @@ sphinx-intl <command>
 
 - [CLI 命令体系详解](02-cli-commands.md)
 - [Transifex 平台集成](07-transifex-integration.md)
-- [commands.py API 参考](/references/commands-api.md)
+- [commands.py API 参考](../references/commands-api.md)

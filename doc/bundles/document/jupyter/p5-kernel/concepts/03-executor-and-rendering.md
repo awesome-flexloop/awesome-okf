@@ -187,6 +187,6 @@ P5Executor 从父类继承了以下对 p5-kernel 至关重要的方法：
 
 ## 相关概念
 
-- [P5Kernel 实现详解](/concepts/02-kernel-implementation.md)
-- [%show 魔法命令详解](/concepts/04-magic-commands.md)
-- [构建与打包](/concepts/06-build-and-packaging.md)
+- [P5Kernel 实现详解](02-kernel-implementation.md)
+- [%show 魔法命令详解](04-magic-commands.md)
+- [构建与打包](06-build-and-packaging.md)

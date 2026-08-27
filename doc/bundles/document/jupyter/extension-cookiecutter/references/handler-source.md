@@ -222,6 +222,6 @@ def post(self):
 
 ## 相关概念
 
-- [API Handler 开发指南](/concepts/05-api-handlers.md)
-- [ExtensionApp 类源码解析](/references/extension-app-source.md)
-- [测试源码解析](/references/test-source.md)
+- [API Handler 开发指南](../concepts/05-api-handlers.md)
+- [ExtensionApp 类源码解析](extension-app-source.md)
+- [测试源码解析](test-source.md)

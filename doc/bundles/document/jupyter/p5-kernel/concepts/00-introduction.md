@@ -85,7 +85,7 @@ p5-kernel 是目前唯一使用 **iframe 运行时模式** 的 JupyterLite 内�
 
 ## 相关概念
 
-- [架构概览](/concepts/01-architecture-overview.md)
-- [P5Kernel 实现详解](/concepts/02-kernel-implementation.md)
-- [P5Executor 与渲染机制](/concepts/03-executor-and-rendering.md)
-- [%show 魔法命令](/concepts/04-magic-commands.md)
+- [架构概览](01-architecture-overview.md)
+- [P5Kernel 实现详解](02-kernel-implementation.md)
+- [P5Executor 与渲染机制](03-executor-and-rendering.md)
+- [%show 魔法命令](04-magic-commands.md)

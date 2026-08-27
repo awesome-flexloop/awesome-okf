@@ -99,9 +99,9 @@ PUT /api/console/works 支持审核操作：
 
 ## 相关概念
 
-- [CRUD 数据层](/concepts/07-crud-layer.md)
-- [认证系统](/concepts/04-auth-system.md)
-- [作品提交流程](/concepts/13-form-submission.md)
-- [COS 对象存储](/concepts/09-cos-storage.md)
-- [审核与治理](/concepts/10-audit-governance.md)
-- [自定义CRUD API示例](/examples/custom-crud-api.md)
+- [CRUD 数据层](07-crud-layer.md)
+- [认证系统](04-auth-system.md)
+- [作品提交流程](13-form-submission.md)
+- [COS 对象存储](09-cos-storage.md)
+- [审核与治理](10-audit-governance.md)
+- [自定义CRUD API示例](../examples/custom-crud-api.md)

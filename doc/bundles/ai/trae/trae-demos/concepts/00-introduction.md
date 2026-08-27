@@ -46,7 +46,7 @@ demos/
 
 ## 相关链接
 
-- [Demo Markdown 文档格式](/concepts/01-demo-format.md)
-- [投稿流程与多场景 Issue 模板](/concepts/02-contribution-process.md)
-- [提交 Demo 示例](/examples/submit-demo.md)
-- [TRAE Demos 仓库资源索引](/references/demos-source.md)
+- [Demo Markdown 文档格式](01-demo-format.md)
+- [投稿流程与多场景 Issue 模板](02-contribution-process.md)
+- [提交 Demo 示例](../examples/submit-demo.md)
+- [TRAE Demos 仓库资源索引](../references/demos-source.md)

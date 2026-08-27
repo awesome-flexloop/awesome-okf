@@ -250,7 +250,7 @@ fps main:MainApp
 
 ## 相关概念
 
-- [模块系统](/concepts/02-module-system.md)
-- [生命周期阶段](/concepts/04-lifecycle-phases.md)
-- [配置系统](/concepts/05-configuration-system.md)
-- [可插拔Web服务器示例](/examples/03-web-server.md)
+- [模块系统](02-module-system.md)
+- [生命周期阶段](04-lifecycle-phases.md)
+- [配置系统](05-configuration-system.md)
+- [可插拔Web服务器示例](../examples/03-web-server.md)

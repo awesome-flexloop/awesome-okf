@@ -264,9 +264,9 @@ videos仓库中的经典系列（2016-2018年）基于Manim老版本编写，与
 
 ## 相关概念
 
-- [00 Videos仓库总览与环境准备](/concepts/00-videos-overview.md)
-- [02 自定义Scene基类体系](/concepts/02-custom-scenes.md)
-- [03 视频代码结构与叙事模式](/concepts/03-video-structure-pattern.md)
-- [04 checkpoint_paste交互式开发工作流](/concepts/04-checkpoint-paste-workflow.md)
-- [05 代表性系列项目结构解析](/concepts/05-series-projects.md)
-- [Videos 自定义模块索引](/references/custom-modules-index.md)
+- [00 Videos仓库总览与环境准备](../concepts/00-videos-overview.md)
+- [02 自定义Scene基类体系](../concepts/02-custom-scenes.md)
+- [03 视频代码结构与叙事模式](../concepts/03-video-structure-pattern.md)
+- [04 checkpoint_paste交互式开发工作流](../concepts/04-checkpoint-paste-workflow.md)
+- [05 代表性系列项目结构解析](../concepts/05-series-projects.md)
+- [Videos 自定义模块索引](custom-modules-index.md)

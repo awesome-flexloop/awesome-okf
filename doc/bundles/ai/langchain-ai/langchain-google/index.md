@@ -64,28 +64,28 @@ embeddings = GoogleGenerativeAIEmbeddings(model="gemini-embedding-2-preview")
 vector = embeddings.embed_query("什么是向量数据库？")
 ```
 
-详见 [基础使用示例](/ai/langchain-ai/langchain-google/examples/basic-usage)。
+详见 基础使用示例。
 
 ## 文档导航
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/langchain-google/concepts/overview) — Monorepo 三包职责、双后端自动检测、SDK 迁移现状与鉴权方式
-- [聊天模型架构](/ai/langchain-ai/langchain-google/concepts/chat-models) — ChatGoogleGenerativeAI 客户端初始化、消息转换、生成流程、工具调用、结构化输出、错误分类
-- [嵌入模型与 Vertex AI](/ai/langchain-ai/langchain-google/concepts/embeddings-vertex) — GoogleGenerativeAIEmbeddings 双后端、批处理、task_type、VertexAIEmbeddings 弃用与 Vector Search
+- 总览 — Monorepo 三包职责、双后端自动检测、SDK 迁移现状与鉴权方式
+- 聊天模型架构 — ChatGoogleGenerativeAI 客户端初始化、消息转换、生成流程、工具调用、结构化输出、错误分类
+- 嵌入模型与 Vertex AI — GoogleGenerativeAIEmbeddings 双后端、批处理、task_type、VertexAIEmbeddings 弃用与 Vector Search
 
 ### API 参考
 
-- [API 参考](/ai/langchain-ai/langchain-google/references/api) — ChatGoogleGenerativeAI/GoogleGenerativeAIEmbeddings 完整签名、VertexAI 弃用类、Model Garden/Vector Search/Vision、环境变量速查
+- API 参考 — ChatGoogleGenerativeAI/GoogleGenerativeAIEmbeddings 完整签名、VertexAI 弃用类、Model Garden/Vector Search/Vision、环境变量速查
 
 ### 使用示例
 
-- [基础使用](/ai/langchain-ai/langchain-google/examples/basic-usage) — 聊天/流式/Vertex AI 切换/工具调用/结构化输出/嵌入/安全设置/思考预算/错误处理/LCEL
+- 基础使用 — 聊天/流式/Vertex AI 切换/工具调用/结构化输出/嵌入/安全设置/思考预算/错误处理/LCEL
 
 ### 源码事实与洞察
 
-- [事实清单](/ai/langchain-ai/langchain-google/spec/facts) — 85 条带文件行号的源码事实
-- [架构洞察](/ai/langchain-ai/langchain-google/spec/insights) — 双后端统一抽象、SDK 代际迁移策略、错误分类与流式异常处理
+- 事实清单 — 85 条带文件行号的源码事实
+- 架构洞察 — 双后端统一抽象、SDK 代际迁移策略、错误分类与流式异常处理
 
 ## 目录结构
 
@@ -113,8 +113,8 @@ langchain-google/
 
 | 项目 | 路径 | 关系 |
 |---|---|---|
-| langchain | [/langchain-ai/langchain/](/ai/langchain-ai/langchain/) | LangChain 核心框架，langchain-google 实现其 ChatModel/Embeddings/Tool 接口 |
-| langgraph | [/langchain-ai/langgraph/](/ai/langchain-ai/langgraph/) | LangChain 编排框架，可与 ChatGoogleGenerativeAI 组合构建 Agent |
+| langchain | [/langchain-ai/langchain/](../langchain/index.md) | LangChain 核心框架，langchain-google 实现其 ChatModel/Embeddings/Tool 接口 |
+| langgraph | [/langchain-ai/langgraph/](../langgraph/index.md) | LangChain 编排框架，可与 ChatGoogleGenerativeAI 组合构建 Agent |
 
 ```{toctree}
 :hidden:

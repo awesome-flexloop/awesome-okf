@@ -26,7 +26,7 @@ Nuitka的源码按编译流水线自然分层，每个模块目录承担流水�
 
 ## 源码目录结构
 
-Nuitka源码根目录位于 [nuitka/](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/)，核心结构如下：
+Nuitka源码根目录位于 nuitka/，核心结构如下：
 
 ```
 nuitka/

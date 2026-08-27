@@ -200,15 +200,15 @@ eval $(wta set-env -s bash)
 
 ## 逐步解释
 
-1. **双进程架构**：Agent 面板由 wta-helper（每个窗格的 TUI 进程）和 wta-master（单例 ACP 多路复用器）组成。[`wta-master`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/cli/args.rs#L181-L190) 通过命名管道（`\\.\pipe\wta-master-<GUID>`）与 helper 通信，所有 helper 共享同一个 Agent CLI 子进程，避免重复启动。
+1. **双进程架构**：Agent 面板由 wta-helper（每个窗格的 TUI 进程）和 wta-master（单例 ACP 多路复用器）组成。`wta-master` 通过命名管道（`\\.\pipe\wta-master-<GUID>`）与 helper 通信，所有 helper 共享同一个 Agent CLI 子进程，避免重复启动。
 
 2. **面板显隐机制**：Ctrl+Shift+. 触发的 Stash/Restore 通过 WT COM 接口控制窗格可见性。Stash 时 helper 进程保持运行，ACP 连接不断开；Restore 时 helper 重新附着到 master 的管道。
 
-3. **会话绑定**：每个 WT 标签页通过 `owner_tab_id`（Stable GUID）与 ACP SessionId 绑定。[`HelperConfig`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/helper/config.rs#L1-L23) 中的 `owner_tab_id` 和 `owner_window_id` 由 WT 在 spawn helper 时传入，确保面板绑定到正确的标签页。
+3. **会话绑定**：每个 WT 标签页通过 `owner_tab_id`（Stable GUID）与 ACP SessionId 绑定。`HelperConfig` 中的 `owner_tab_id` 和 `owner_window_id` 由 WT 在 spawn helper 时传入，确保面板绑定到正确的标签页。
 
-4. **CLI 通道**：[`cli_channel.rs`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/shell/wt_channel/cli_channel.rs) 通过 `wtcli.exe` 与 Windows Terminal 的 COM 接口通信，实现窗格控制（分屏、创建标签页、发送输入等）。这是 tmux 风格 CLI 命令的底层实现。
+4. **CLI 通道**：`cli_channel.rs` 通过 `wtcli.exe` 与 Windows Terminal 的 COM 接口通信，实现窗格控制（分屏、创建标签页、发送输入等）。这是 tmux 风格 CLI 命令的底层实现。
 
-5. **TUI 状态机**：[`app.rs`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/app.rs) 实现了 TUI 的状态机，管理聊天视图、输入框、弹窗（Agent 选择器、模型选择器、权限确认）、推荐卡片和调试面板。
+5. **TUI 状态机**：`app.rs` 实现了 TUI 的状态机，管理聊天视图、输入框、弹窗（Agent 选择器、模型选择器、权限确认）、推荐卡片和调试面板。
 
 6. **事件协议**：WTA 通过 WT SendEvent 总线向 C++ 端发送 JSON 事件（如 `autofix_state`、`agent_state_changed`），C++ 端通过 VT 序列向 WTA 发送通知（命令完成、窗格变化等）。
 

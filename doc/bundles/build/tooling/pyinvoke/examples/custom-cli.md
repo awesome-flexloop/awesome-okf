@@ -394,4 +394,4 @@ python -m mytool.cli deploy --env production
 * [Task 基础（§2）](../concepts/02-task-basics.md)
 * [配置系统（§5）](../concepts/05-configuration.md)
 
-[^pyinvoke-src]: PyInvoke 源码，见本 bundle 信源登记 [references/pyinvoke-source.md](/references/pyinvoke-source.md)。
+[^pyinvoke-src]: PyInvoke 源码，见本 bundle 信源登记 [references/pyinvoke-source.md](../references/pyinvoke-source.md)。

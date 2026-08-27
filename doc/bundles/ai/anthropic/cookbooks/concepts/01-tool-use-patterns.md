@@ -12,7 +12,7 @@ stale_after: 2027-08-27
 
 工具调用（Tool Use / Function Calling）是 Claude 从"聊天机器人"进化为"智能 Agent"的关键能力。Cookbooks 中包含多个工具使用的完整示例，从中可以提炼出几种**可复用的通用模式**——掌握这些模式，你就能应对 90% 的工具集成场景。
 
-本文档不重复讲解 SDK 层面的 API 参数（那是 [Python SDK 工具调用文档](/python-sdk/concepts/04-tool-use.md) 的内容），而是聚焦于**实践层面的模式和架构**：什么时候用什么模式、常见陷阱、Cookbook 中的最佳实践。
+本文档不重复讲解 SDK 层面的 API 参数（那是 [Python SDK 工具调用文档](../../python-sdk/concepts/04-tool-use.md) 的内容），而是聚焦于**实践层面的模式和架构**：什么时候用什么模式、常见陷阱、Cookbook 中的最佳实践。
 
 ## 工具调用核心模式概览
 
@@ -436,8 +436,8 @@ if response.stop_reason == "tool_use":
 
 ## 相关概念
 
-- [Cookbook 导览](/cookbooks/concepts/00-overview.md) — 回到 Cookbooks 总览
-- [多模态模式](/cookbooks/concepts/02-multimodal-patterns.md) — 工具调用结合 Vision 的多模态场景
-- [高级技巧 - Sub-agents](/cookbooks/concepts/04-advanced-techniques.md) — 主 Agent 调用子 Agent 的复杂模式
-- [Python SDK - 工具调用概念](/python-sdk/concepts/04-tool-use.md) — SDK 层面的工具调用 API 完整参考
-- [Python SDK - Beta Agents](/python-sdk/concepts/08-beta-agents.md) — 官方 Agents SDK 中的高级工具运行器
+- [Cookbook 导览](00-overview.md) — 回到 Cookbooks 总览
+- [多模态模式](02-multimodal-patterns.md) — 工具调用结合 Vision 的多模态场景
+- [高级技巧 - Sub-agents](04-advanced-techniques.md) — 主 Agent 调用子 Agent 的复杂模式
+- [Python SDK - 工具调用概念](../../python-sdk/concepts/04-tool-use.md) — SDK 层面的工具调用 API 完整参考
+- [Python SDK - Beta Agents](../../python-sdk/concepts/08-beta-agents.md) — 官方 Agents SDK 中的高级工具运行器

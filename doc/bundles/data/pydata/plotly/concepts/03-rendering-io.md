@@ -34,7 +34,7 @@ Plotly.py 通过 `plotly.io` 模块（通常缩写为 `pio`）统一管理图表
 
 ## io 模块结构
 
-[plotly/io/](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/io/) 目录包含以下核心文件：
+plotly/io/ 目录包含以下核心文件：
 
 | 文件 | 功能 |
 |------|------|
@@ -54,7 +54,7 @@ Plotly.py 通过 `plotly.io` 模块（通常缩写为 `pio`）统一管理图表
 
 ### RenderersConfig 配置对象
 
-[_renderers.py](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/io/_renderers.py#L65) 中的 `RenderersConfig` 类是一个单例对象 `plotly.io.renderers`，管理所有可用渲染器：
+_renderers.py 中的 `RenderersConfig` 类是一个单例对象 `plotly.io.renderers`，管理所有可用渲染器：
 
 ```python
 import plotly.io as pio
@@ -80,7 +80,7 @@ pio.renderers.default = "notebook+browser"  # 同时在 notebook 和浏览器显
 
 ### 内置渲染器类型
 
-[_base_renderers.py](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/io/_base_renderers.py) 定义了以下渲染器类：
+_base_renderers.py 定义了以下渲染器类：
 
 **交互式渲染器（基于 MIME type）：**
 
@@ -126,7 +126,7 @@ pio.renderers.default = "notebook+browser"  # 同时在 notebook 和浏览器显
 
 调用 `fig.show()` 时的执行路径：
 
-1. [BaseFigure.show()](file:///d:/spaces/SpecWeave/external/libs/python/plotly.py/plotly/basedatatypes.py#L3386) 委托给 `pio.show(self, *args, **kwargs)`
+1. BaseFigure.show() 委托给 `pio.show(self, *args, **kwargs)`
 2. `_renderers.show()` 获取默认渲染器（或参数指定的 renderer）
 3. 渲染器对象调用自身的 `render(fig)` 方法
 4. 交互式渲染器（MimetypeRenderer）：将 Figure 转换为 MIME bundle，通过 IPython display 机制展示

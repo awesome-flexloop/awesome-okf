@@ -92,5 +92,5 @@ const pyodideSpec: ISpecModel = {
 
 ## 相关概念
 
-- [Pyodide Kernel 介绍](/concepts/00-introduction.md)
-- [快速开始](/concepts/01-getting-started.md)
+- [Pyodide Kernel 介绍](../concepts/00-introduction.md)
+- [快速开始](../concepts/01-getting-started.md)

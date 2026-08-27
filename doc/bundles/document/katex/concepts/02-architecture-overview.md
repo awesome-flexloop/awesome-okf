@@ -132,9 +132,9 @@ KaTeX 有两种解析模式：
 
 ## 相关概念
 
-- [词法分析器（Lexer）](/concepts/03-lexer.md)
-- [宏展开器（MacroExpander）](/concepts/04-macro-expander.md)
-- [解析器（Parser）](/concepts/05-parser.md)
-- [渲染管线](/concepts/06-render-pipeline.md)
-- [虚拟DOM树](/concepts/07-dom-tree.md)
-- [函数注册表](/concepts/08-function-registry.md)
+- [词法分析器（Lexer）](03-lexer.md)
+- [宏展开器（MacroExpander）](04-macro-expander.md)
+- [解析器（Parser）](05-parser.md)
+- [渲染管线](06-render-pipeline.md)
+- [虚拟DOM树](07-dom-tree.md)
+- [函数注册表](08-function-registry.md)

@@ -14,7 +14,7 @@ sources:
 
 # 级数/极限与求解器源码信源
 
-SymPy 的 `series` 模块提供极限、泰勒级数、洛朗级数、傅里叶级数、形式幂级数等微积分工具；`solvers` 模块提供代数方程求解（solve/solveset）、线性/非线性方程组（linsolve/nonlinsolve）、微分方程（dsolve/pdsolve）、丢番图方程（diophantine）、递推关系（rsolve）、不等式求解等能力。两个模块通过 `__init__.py` 统一导出。[^F-107][^F-111]
+SymPy 的 `series` 模块提供极限、泰勒级数、洛朗级数、傅里叶级数、形式幂级数等微积分工具；`solvers` 模块提供代数方程求解（solve/solveset）、线性/非线性方程组（linsolve/nonlinsolve）、微分方程（dsolve/pdsolve）、丢番图方程（diophantine）、递推关系（rsolve）、不等式求解等能力。两个模块通过 `__init__.py` 统一导出。[^F-107] [^F-111]
 
 ## 模块架构
 
@@ -661,11 +661,11 @@ print("(x-1)(x-2)²(x-3)=0 的根:", roots((x-1)*(x-2)**2*(x-3), x))
 
 ## 脚注
 
-[^F-107]: series 模块导出清单，参见 [series/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/series/__init__.py)
-[^F-108]: Order 类定义，参见 [series/order.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/series/order.py#L12)
-[^F-109]: limit 函数与 Limit 类，参见 [series/limits.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/series/limits.py#L16)
-[^F-110]: series 函数定义，参见 [series/series.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/series/series.py#L5)
-[^F-111]: solvers 模块导出清单，参见 [solvers/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/solvers/__init__.py)
-[^F-112]: solveset/linsolve/nonlinsolve 定义，参见 [solvers/solveset.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/solvers/solveset.py#L2338)
-[^F-SOLVE]: solve 函数定义，参见 [solvers/solvers.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/solvers/solvers.py#L360)
-[^F-DSOLVE]: dsolve 函数定义，参见 [solvers/ode/ode.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/solvers/ode/ode.py#L357)
+[^F-107]: series 模块导出清单，参见 series/__init__.py
+[^F-108]: Order 类定义，参见 series/order.py
+[^F-109]: limit 函数与 Limit 类，参见 series/limits.py
+[^F-110]: series 函数定义，参见 series/series.py
+[^F-111]: solvers 模块导出清单，参见 solvers/__init__.py
+[^F-112]: solveset/linsolve/nonlinsolve 定义，参见 solvers/solveset.py
+[^F-SOLVE]: solve 函数定义，参见 solvers/solvers.py
+[^F-DSOLVE]: dsolve 函数定义，参见 solvers/ode/ode.py

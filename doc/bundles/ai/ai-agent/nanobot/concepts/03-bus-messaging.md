@@ -286,7 +286,7 @@ client                                server
 
 ## 相关概念
 
-- [整体架构](/concepts/01-architecture.md)
-- [Agent 运行时](/concepts/02-agent-runtime.md)
-- [多接口架构](/concepts/05-multi-interface.md)
-- [SDK 类型系统](/concepts/04-sdk-types.md)
+- [整体架构](01-architecture.md)
+- [Agent 运行时](02-agent-runtime.md)
+- [多接口架构](05-multi-interface.md)
+- [SDK 类型系统](04-sdk-types.md)

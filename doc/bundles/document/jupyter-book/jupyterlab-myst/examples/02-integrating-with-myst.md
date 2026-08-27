@@ -259,6 +259,6 @@ jupyterlab-myst 注册的 directives 列表与 myst-execute 构建时使用的�
 
 ## 相关文档
 
-- [01-using-jupyterlab-myst.md](/examples/01-using-jupyterlab-myst.md)：安装和基本使用
-- [03-inline-expression-workflow.md](/examples/03-inline-expression-workflow.md)：内联表达式高级用法
+- [01-using-jupyterlab-myst.md](01-using-jupyterlab-myst.md)：安装和基本使用
+- [03-inline-expression-workflow.md](03-inline-expression-workflow.md)：内联表达式高级用法
 - [myst-execute examples/01-configure-notebook-execution.md](../../myst-execute/examples/01-configure-notebook-execution.md)：myst-execute 构建配置

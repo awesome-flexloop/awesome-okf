@@ -20,17 +20,17 @@
 
 ### 入门路径（用户）
 1. [00-简介](00-introduction.md) → [01-安装与快速开始](01-getting-started.md)
-2. 前往[实践示例](/examples/01-basic-terminal-usage.md)体验终端使用
+2. 前往[实践示例](../examples/01-basic-terminal-usage.md)体验终端使用
 
 ### 深入理解路径（开发者）
 1. **理解架构**：[02-架构概览](02-architecture-overview.md) → [03-插件系统](03-plugin-system.md)
 2. **核心机制**：[04-Shell与Worker机制](04-shell-and-worker.md) → [06-文件系统与Stdin路由](06-drivefs-and-stdin.md)
 3. **编程式API**：[05-无头命令执行](05-headless-exec.md) → [07-主题同步与设置](07-theme-and-settings.md)
 4. **构建与扩展**：[08-构建系统与扩展开发](08-build-and-extension.md)
-5. **动手实践**：[示例目录](/examples/index.md)中的编程示例
+5. **动手实践**：[示例目录](../examples/index.md)中的编程示例
 
 ### API速查路径
-- 信源文档提供了完整的API签名和源码映射，参见[信源参考](/references/index.md)
+- 信源文档提供了完整的API签名和源码映射，参见[信源参考](../references/index.md)
 
 ```{toctree}
 :hidden:

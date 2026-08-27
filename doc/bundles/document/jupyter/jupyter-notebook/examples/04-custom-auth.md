@@ -16,7 +16,7 @@ related_concepts: ["04-handlers", "07-jupyterhub-integration"]
 
 ## 前置条件
 
-- 已阅读[开发服务端扩展](./02-server-extension.md)
+- 已阅读[开发服务端扩展](02-server-extension.md)
 - 理解Jupyter Server认证机制
 - Python 3.10+
 

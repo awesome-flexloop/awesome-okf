@@ -218,9 +218,9 @@ for step in agent.memory.steps:
 
 ## 相关链接
 
-- [MultiStepAgent 与 ReAct 循环](/concepts/03-multi-step-agent.md) — 深入理解多步智能体的执行循环
-- [ToolCallingAgent 机制](/concepts/05-tool-calling-agent.md) — 了解 JSON 工具调用的工作原理
-- [内存系统](/concepts/04-memory-system.md) — AgentMemory 和 MemoryStep 的详细设计
-- [模型层概述](/concepts/09-model-layer.md) — 了解各种模型后端
-- [Agents API 参考](/references/agents-api.md) — ToolCallingAgent 和 MultiStepAgent 的完整参数说明
-- [Models API 参考](/references/models-api.md) — HfApiModel 的完整 API 文档
+- [MultiStepAgent 与 ReAct 循环](../concepts/03-multi-step-agent.md) — 深入理解多步智能体的执行循环
+- [ToolCallingAgent 机制](../concepts/05-tool-calling-agent.md) — 了解 JSON 工具调用的工作原理
+- [内存系统](../concepts/04-memory-system.md) — AgentMemory 和 MemoryStep 的详细设计
+- [模型层概述](../concepts/09-model-layer.md) — 了解各种模型后端
+- [Agents API 参考](../references/agents-api.md) — ToolCallingAgent 和 MultiStepAgent 的完整参数说明
+- [Models API 参考](../references/models-api.md) — HfApiModel 的完整 API 文档

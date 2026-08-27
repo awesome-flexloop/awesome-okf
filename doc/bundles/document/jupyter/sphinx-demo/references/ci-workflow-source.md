@@ -157,5 +157,5 @@ https://jupyterlite.github.io/sphinx-demo/
 
 ## 相关概念
 
-- [09-ci-deployment](/concepts/09-ci-deployment.md)
-- [04-kernel-comparison](/concepts/04-kernel-comparison.md)
+- [09-ci-deployment](../concepts/09-ci-deployment.md)
+- [04-kernel-comparison](../concepts/04-kernel-comparison.md)

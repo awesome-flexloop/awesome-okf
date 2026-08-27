@@ -125,7 +125,7 @@ http://localhost:8000/?LSP_LITE_DEBUG
 
 ## 相关概念
 
-- [项目介绍](/concepts/00-introduction.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [构建系统详解](/concepts/07-build-system.md)
-- [本地开发环境搭建](/examples/local-dev-setup.md)
+- [项目介绍](00-introduction.md)
+- [架构总览](02-architecture-overview.md)
+- [构建系统详解](07-build-system.md)
+- [本地开发环境搭建](../examples/local-dev-setup.md)

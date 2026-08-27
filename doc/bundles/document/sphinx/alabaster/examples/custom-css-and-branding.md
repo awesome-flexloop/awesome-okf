@@ -425,6 +425,6 @@ div.sphinxsidebar h3:first-of-type {
 
 ## 相关概念
 
-- [高级定制开发](/concepts/06-customization-advanced.md)：custom.css 机制详解
-- [主题配置选项体系](/concepts/04-theme-options.md)：可通过配置选项调整的样式
+- [高级定制开发](../concepts/06-customization-advanced.md)：custom.css 机制详解
+- [主题配置选项体系](../concepts/04-theme-options.md)：可通过配置选项调整的样式
 - [主题选项定制示例](custom-theme-options.md)：html_theme_options 配置

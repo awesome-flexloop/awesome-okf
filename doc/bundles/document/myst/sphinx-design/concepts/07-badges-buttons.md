@@ -204,6 +204,6 @@ MyST Markdown:
 
 ## 相关概念
 
-- [扩展架构与两阶段渲染](/concepts/02-extension-architecture.md) — Stash/Graft 模式深度解析
-- [设计系统与CSS类名体系](/concepts/03-design-system.md) — 按钮/徽章的色彩和样式类
-- [图标系统](/concepts/08-icons-article-info.md) — 在按钮/徽章中使用图标
+- [扩展架构与两阶段渲染](02-extension-architecture.md) — Stash/Graft 模式深度解析
+- [设计系统与CSS类名体系](03-design-system.md) — 按钮/徽章的色彩和样式类
+- [图标系统](08-icons-article-info.md) — 在按钮/徽章中使用图标

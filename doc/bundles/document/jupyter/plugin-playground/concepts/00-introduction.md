@@ -89,7 +89,7 @@ Plugin Playground 适合以下场景：
 
 ## 相关概念
 
-- [整体架构与数据流](/concepts/01-architecture-overview.md)
-- [JupyterLab 插件基础结构](/concepts/02-plugin-basics.md)
-- [Hello World 示例](/examples/01-hello-world.md)
-- [源码索引](/references/source-index.md)
+- [整体架构与数据流](01-architecture-overview.md)
+- [JupyterLab 插件基础结构](02-plugin-basics.md)
+- [Hello World 示例](../examples/01-hello-world.md)
+- [源码索引](../references/source-index.md)

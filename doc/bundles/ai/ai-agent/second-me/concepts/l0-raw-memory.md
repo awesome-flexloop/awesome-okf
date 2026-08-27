@@ -450,10 +450,10 @@ def get_processor(mime_type: str) -> Processor:
 
 | 处理器 | 位置 | 功能 |
 |--------|------|------|
-| `PDFProcessor` | [processors/pdf/processor.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/file_data/processors/pdf/processor.py) | PDF文本提取 |
-| `MarkdownProcessor` | [processors/markdown/processor.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/file_data/processors/markdown/processor.py) | Markdown解析 |
-| `TextProcessor` | [processors/text/processor.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/file_data/processors/text/processor.py) | 纯文本处理 |
-| `ImageProcessor` | [processors/image/processor.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/file_data/processors/image/processor.py) | 图片处理 |
+| `PDFProcessor` | processors/pdf/processor.py | PDF文本提取 |
+| `MarkdownProcessor` | processors/markdown/processor.py | Markdown解析 |
+| `TextProcessor` | processors/text/processor.py | 纯文本处理 |
+| `ImageProcessor` | processors/image/processor.py | 图片处理 |
 
 ## 文件上传API
 
@@ -493,14 +493,14 @@ def delete_memory_file(filename):
 
 | 文件 | 职责 |
 |------|------|
-| [lpm_kernel/L0/l0_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L0/l0_generator.py) | L0核心生成器：insighter() + summarizer()，857行 |
-| [lpm_kernel/L0/models.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L0/models.py) | 5个dataclass数据模型 |
-| [lpm_kernel/L0/prompt.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L0/prompt.py) | Image/audio/document的prompt模板集合 |
-| [lpm_kernel/file_data/chunker.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/file_data/chunker.py) | DocumentChunker分块处理器 |
-| [lpm_kernel/file_data/embedding_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/file_data/embedding_service.py) | EmbeddingService：ChromaDB操作+向量检索 |
-| [lpm_kernel/file_data/document_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/file_data/document_service.py) | 文档CRUD+L0分析编排 |
-| [lpm_kernel/file_data/models.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/file_data/models.py) | DocumentModel/ChunkModel ORM模型 |
-| [lpm_kernel/file_data/process_factory.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/file_data/process_factory.py) | 文件处理器工厂 |
+| lpm_kernel/L0/l0_generator.py | L0核心生成器：insighter() + summarizer()，857行 |
+| lpm_kernel/L0/models.py | 5个dataclass数据模型 |
+| lpm_kernel/L0/prompt.py | Image/audio/document的prompt模板集合 |
+| lpm_kernel/file_data/chunker.py | DocumentChunker分块处理器 |
+| lpm_kernel/file_data/embedding_service.py | EmbeddingService：ChromaDB操作+向量检索 |
+| lpm_kernel/file_data/document_service.py | 文档CRUD+L0分析编排 |
+| lpm_kernel/file_data/models.py | DocumentModel/ChunkModel ORM模型 |
+| lpm_kernel/file_data/process_factory.py | 文件处理器工厂 |
 
 ## 相关概念
 

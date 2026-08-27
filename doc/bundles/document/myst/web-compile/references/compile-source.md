@@ -64,6 +64,6 @@ sources:
 
 ## 相关概念
 
-- [简介](/concepts/00-introduction.md)
-- [三种编译类型](/concepts/02-compilation-types.md)
-- [配置文件详解](/concepts/03-configuration.md)
+- [简介](../concepts/00-introduction.md)
+- [三种编译类型](../concepts/02-compilation-types.md)
+- [配置文件详解](../concepts/03-configuration.md)

@@ -82,4 +82,4 @@ sources:
 
 ## 相关概念
 
-- [脚注排序逻辑与分类机制](/concepts/03-footnote-reordering.md)
+- [脚注排序逻辑与分类机制](../concepts/03-footnote-reordering.md)

@@ -222,4 +222,4 @@ with open("creds") as f:
 
 - [架构总览](02-architecture-overview.md)
 - [Helm部署流程](06-helm-deploy-process.md)
-- [配置文件信源](/references/config-source.md)
+- [配置文件信源](../references/config-source.md)

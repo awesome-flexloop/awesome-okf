@@ -126,5 +126,5 @@ GraphQL 的生态系统建立在自描述原则之上，围绕类型系统形成
 
 ## 相关概念
 
-- [查询语言基础：文档、操作与选择集](/concepts/01-query-language-basics.md) — 学习如何编写 GraphQL 查询文档
-- [Schema 与类型系统入门](/concepts/02-schema-and-types.md) — 理解类型系统如何定义契约
+- [查询语言基础：文档、操作与选择集](01-query-language-basics.md) — 学习如何编写 GraphQL 查询文档
+- [Schema 与类型系统入门](02-schema-and-types.md) — 理解类型系统如何定义契约

@@ -15,9 +15,9 @@
 
 在阅读示例前，建议先了解对应概念：
 
-- 终端基础使用 → [Shell与Worker机制](/concepts/04-shell-and-worker.md)、[文件系统与Stdin路由](/concepts/06-drivefs-and-stdin.md)
-- 编程式API调用 → [无头命令执行](/concepts/05-headless-exec.md)
-- 自定义配置扩展 → [插件系统](/concepts/03-plugin-system.md)、[主题同步与设置](/concepts/07-theme-and-settings.md)、[构建系统与扩展开发](/concepts/08-build-and-extension.md)
+- 终端基础使用 → [Shell与Worker机制](../concepts/04-shell-and-worker.md)、[文件系统与Stdin路由](../concepts/06-drivefs-and-stdin.md)
+- 编程式API调用 → [无头命令执行](../concepts/05-headless-exec.md)
+- 自定义配置扩展 → [插件系统](../concepts/03-plugin-system.md)、[主题同步与设置](../concepts/07-theme-and-settings.md)、[构建系统与扩展开发](../concepts/08-build-and-extension.md)
 
 ```{toctree}
 :hidden:

@@ -18,7 +18,7 @@ sources:
 ## 前置条件
 
 - 已安装 Docker
-- 有一个已初始化的 Sphinx 项目（参见 [基础 HTML 构建](/examples/01-basic-html-build.md)）
+- 有一个已初始化的 Sphinx 项目（参见 [基础 HTML 构建](01-basic-html-build.md)）
 - 首次使用需拉取 latexpdf 镜像（>2GiB，请耐心等待）：
   ```bash
   docker pull sphinxdoc/sphinx-latexpdf:8.2.3
@@ -182,6 +182,6 @@ sphinx-build 默认会生成目录和 PDF 书签。如果需要在 PDF 侧边栏
 
 ## 相关概念
 
-- [LaTeX/PDF 镜像详解](/concepts/04-latexpdf-image.md)：了解 TeXLive 包选择
-- [5 分钟快速上手](/concepts/01-getting-started.md)：基本的 Docker 使用
-- [自定义镜像扩展](/examples/03-custom-image.md)：安装额外 LaTeX 包
+- [LaTeX/PDF 镜像详解](../concepts/04-latexpdf-image.md)：了解 TeXLive 包选择
+- [5 分钟快速上手](../concepts/01-getting-started.md)：基本的 Docker 使用
+- [自定义镜像扩展](03-custom-image.md)：安装额外 LaTeX 包

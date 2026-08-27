@@ -188,6 +188,6 @@ CLI命令的执行流程：
 
 ## 相关概念
 
-- [Hatch构建钩子集成](/concepts/07-hatch-build-hook.md)
-- [CLI命令参考](/concepts/03-cli-commands.md)
-- [Crowdin贡献者模块源码映射](/references/contributors-source.md)
+- [Hatch构建钩子集成](07-hatch-build-hook.md)
+- [CLI命令参考](03-cli-commands.md)
+- [Crowdin贡献者模块源码映射](../references/contributors-source.md)

@@ -377,6 +377,6 @@ x**2 + 2*x + 1
 - 前置概念：[微积分](07-calculus.md) 了解向量微分算子与标量微积分的关系
 - 关联概念：[矩阵运算](09-matrices.md) 了解 Array 与 Matrix 的区别
 - 关联概念：[多项式代数](10-polynomials.md) 了解 factor/gcd 与代码生成的配合
-- 源码信源：[tensor-stats-source](/references/tensor-stats-source.md) 提供完整 API 参考
+- 源码信源：[tensor-stats-source](../references/tensor-stats-source.md) 提供完整 API 参考
 
 [^tensor-stats-source]: tensor/__init__.py、stats/__init__.py、printing/__init__.py、codegen/__init__.py、vector/__init__.py

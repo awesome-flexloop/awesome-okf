@@ -330,7 +330,7 @@ my-book/
 
 ## 相关概念
 
-- [00-v2-architecture](/concepts/00-v2-architecture.md)：v2 双层架构
-- [02-ts-cli-commands](/concepts/02-ts-cli-commands.md)：CLI 命令详解
-- [04-template-system](/concepts/04-template-system.md)：模板系统
-- [02-build-publish](/examples/02-build-publish.md)：构建与发布
+- [00-v2-architecture](../concepts/00-v2-architecture.md)：v2 双层架构
+- [02-ts-cli-commands](../concepts/02-ts-cli-commands.md)：CLI 命令详解
+- [04-template-system](../concepts/04-template-system.md)：模板系统
+- [02-build-publish](02-build-publish.md)：构建与发布

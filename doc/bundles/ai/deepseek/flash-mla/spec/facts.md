@@ -2,13 +2,13 @@
 
 > 源码路径：`d:\spaces\SpecWeave\external\libs\ai\deepseek-ai\FlashMLA`
 > 收集日期：2026-08-22
-> 版本：`__version__ = "1.0.0"`（来自 [flash_mla/__init__.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/flash_mla/__init__.py#L1)）
+> 版本：`__version__ = "1.0.0"`（来自 flash_mla/__init__.py）
 
 ---
 
 ## F-001：Python 包版本与公开 API 导出
 
-- 文件：[flash_mla/__init__.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/flash_mla/__init__.py#L1-L19)
+- 文件：flash_mla/__init__.py
 - 版本号：`__version__ = "1.0.0"`
 - 从 `flash_mla.flash_mla_interface` 导入并通过 `__all__` 导出以下 6 个公开符号：
   1. `get_mla_metadata`
@@ -22,7 +22,7 @@
 
 ## F-002：`FlashMLASchedMeta` 数据类
 
-- 文件：[flash_mla/flash_mla_interface.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/flash_mla/flash_mla_interface.py#L8-L35)
+- 文件：flash_mla/flash_mla_interface.py
 - `FlashMLASchedMeta` 是一个 `@dataclasses.dataclass` 类，存储 FlashMLA 的 tile 调度元数据。
 - 内嵌 `Config` 数据类，字段包括：
   - `b: int`（batch size）
@@ -45,7 +45,7 @@
 
 ## F-003：`get_mla_metadata` 函数签名
 
-- 文件：[flash_mla/flash_mla_interface.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/flash_mla/flash_mla_interface.py#L37-L50)
+- 文件：flash_mla/flash_mla_interface.py
 - 签名：`def get_mla_metadata(*args, **kwargs) -> Tuple[FlashMLASchedMeta, None]`
 - 该函数不使用任何参数（保留 `*args, **kwargs` 仅为兼容旧接口）。
 - 返回值：返回一个空的 `FlashMLASchedMeta()` 实例和 `None` 组成的元组 `(FlashMLASchedMeta(), None)`。
@@ -55,7 +55,7 @@
 
 ## F-004：`flash_mla_with_kvcache` 函数签名与参数
 
-- 文件：[flash_mla/flash_mla_interface.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/flash_mla/flash_mla_interface.py#L53-L173)
+- 文件：flash_mla/flash_mla_interface.py
 - 签名：
   ```python
   def flash_mla_with_kvcache(
@@ -100,7 +100,7 @@
 
 ## F-005：`flash_mla_with_kvcache` 内部路由逻辑
 
-- 文件：[flash_mla/flash_mla_interface.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/flash_mla/flash_mla_interface.py#L104-L173)
+- 文件：flash_mla/flash_mla_interface.py
 - 首次调用时（`sched_meta.have_initialized == False`），执行 sanity check 并初始化 `sched_meta.config`，记录 `b, s_q, h_q, page_block_size, h_k, causal, is_fp8_kvcache, topk, extra_k_page_block_size, extra_topk`。
 - 后续调用时检查输入参数与 `sched_meta.config` 一致性。
 - 若 `topk is not None`（即 sparse attention），调用 `flash_mla_cuda.sparse_decode_fwd(...)`；断言 `causal == False`、`is_fp8_kvcache == True`。
@@ -111,7 +111,7 @@
 
 ## F-006：DeepSeek V3/V3.1/V3.2 FP8+sparse KV cache 布局
 
-- 文件：[flash_mla/flash_mla_interface.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/flash_mla/flash_mla_interface.py#L92-L99)
+- 文件：flash_mla/flash_mla_interface.py
 - DeepSeek V3/V3.1/V3.2 配置：`head_dim = 576`，`head_dim_v = 512`。
 - FP8+sparse 模式每个 token 的 KV cache 为 656 字节，结构：
   - `k_cache` 形状 `(num_blocks, page_block_size, num_heads_k, head_dim)`，`num_heads_k` 必须为 1。
@@ -123,7 +123,7 @@
 
 ## F-007：`flash_mla_sparse_fwd` 函数签名
 
-- 文件：[flash_mla/flash_mla_interface.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/flash_mla/flash_mla_interface.py#L176-L211)
+- 文件：flash_mla/flash_mla_interface.py
 - 签名：
   ```python
   def flash_mla_sparse_fwd(
@@ -155,7 +155,7 @@
 
 ## F-008：`_flash_attn_varlen_forward` 函数签名
 
-- 文件：[flash_mla/flash_mla_interface.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/flash_mla/flash_mla_interface.py#L214-L258)
+- 文件：flash_mla/flash_mla_interface.py
 - 签名：
   ```python
   def _flash_attn_varlen_forward(
@@ -176,7 +176,7 @@
 
 ## F-009：`_flash_attn_varlen_backward` 函数签名
 
-- 文件：[flash_mla/flash_mla_interface.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/flash_mla/flash_mla_interface.py#L261-L325)
+- 文件：flash_mla/flash_mla_interface.py
 - 签名：
   ```python
   def _flash_attn_varlen_backward(
@@ -195,7 +195,7 @@
 
 ## F-010：`FlashAttnVarlenFunc` 自定义 autograd Function
 
-- 文件：[flash_mla/flash_mla_interface.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/flash_mla/flash_mla_interface.py#L328-L369)
+- 文件：flash_mla/flash_mla_interface.py
 - 继承 `torch.autograd.Function`。
 - `forward` 方法调用 `_flash_attn_varlen_forward`，保存 `q, k, v, out, lse, cu_seqlens_qo, cu_seqlens_kv` 及序列长度、causal、scale 等参数到 `ctx`。
 - `backward` 方法丢弃 `dlse`（注释："LSE doesn't support backward currently"），调用 `_flash_attn_varlen_backward`。
@@ -204,7 +204,7 @@
 
 ## F-011：`flash_attn_varlen_func` / `flash_attn_varlen_qkvpacked_func` / `flash_attn_varlen_kvpacked_func`
 
-- 文件：[flash_mla/flash_mla_interface.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/flash_mla/flash_mla_interface.py#L372-L435)
+- 文件：flash_mla/flash_mla_interface.py
 - `flash_attn_varlen_func(q, k, v, cu_seqlens_qo, cu_seqlens_kv, max_seqlen_qo, max_seqlen_kv, dropout_p=0.0, softmax_scale=None, causal=False, deterministic=False, is_varlen=True)`：
   - 断言 `dropout_p == 0.0`、`not deterministic`。
   - 调用 `FlashAttnVarlenFunc.apply(...)`。
@@ -217,7 +217,7 @@
 
 ## F-012：pybind11 模块导出的 C++ 函数
 
-- 文件：[csrc/api/api.cpp](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/api/api.cpp#L1-L15)
+- 文件：csrc/api/api.cpp
 - 模块名：`TORCH_EXTENSION_NAME`（即 `flash_mla.cuda`）。
 - 导出 5 个函数：
   1. `sparse_decode_fwd` → `sparse_attn_decode_interface`
@@ -230,7 +230,7 @@
 
 ## F-013：类型别名与基础结构体（defines.h）
 
-- 文件：[csrc/defines.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/defines.h#L1-L26)
+- 文件：csrc/defines.h
 - 类型别名：
   - `bf16 = cutlass::bfloat16_t`
   - `fp8 = cutlass::float_e4m3_t`
@@ -245,7 +245,7 @@
 
 ## F-014：ModelType 枚举与 DecodingSchedMeta 结构体
 
-- 文件：[csrc/params.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/params.h#L5-L17)
+- 文件：csrc/params.h
 - `enum class ModelType { V32, MODEL1 }`。
 - `DecodingSchedMeta` 结构体（对齐 `4*8` 字节）：
   - `int begin_req_idx, end_req_idx`（均为 inclusive）
@@ -259,7 +259,7 @@
 
 ## F-015：DenseAttnDecodeParams 结构体
 
-- 文件：[csrc/params.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/params.h#L19-L61)
+- 文件：csrc/params.h
 - 成员变量：
   - 维度参数：`b, s_q, q_seq_per_hk, d, d_v, h_q, h_k, num_blocks, q_head_per_hk`
   - `bool is_causal`
@@ -274,7 +274,7 @@
 
 ## F-016：SparseAttnDecodeParams 结构体
 
-- 文件：[csrc/params.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/params.h#L63-L103)
+- 文件：csrc/params.h
 - 成员变量：
   - 维度：`b, s_q, h_q, h_kv, d_qk, d_v`
   - `float sm_scale, sm_scale_div_log2`
@@ -291,7 +291,7 @@
 
 ## F-017：CombineParams 与 GetDecodeSchedMetaParams
 
-- 文件：[csrc/params.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/params.h#L105-L143)
+- 文件：csrc/params.h
 - `CombineParams`：SplitKV 后 combine 阶段参数，包含 `b, s_q, h_q, d_v`，lse/out 指针及步长，lse_accum/o_accum 指针及步长，`tile_scheduler_metadata_ptr`，`num_splits_ptr`，`num_sm_parts`，`attn_sink`，`stream`。
 - `GetDecodeSchedMetaParams`：调度元数据生成参数，包含 `b, s_q, block_size_n, fixed_overhead_num_blocks, topk, extra_topk`（-1 表示禁用 sparse/extra），`topk_length, extra_topk_length`，`seqlens_k_ptr`（仅 dense attention 需要），`tile_scheduler_metadata_ptr, num_splits_ptr, num_sm_parts, stream`。
 
@@ -299,7 +299,7 @@
 
 ## F-018：SparseAttnFwdParams 与 SparseAttnFwdMode
 
-- 文件：[csrc/params.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/params.h#L145-L180)
+- 文件：csrc/params.h
 - `SparseAttnFwdParams`：
   - 维度：`s_q, s_kv, h_q, h_kv, d_qk, d_v, topk`
   - `float sm_scale, sm_scale_div_log2`
@@ -313,7 +313,7 @@
 
 ## F-019：Arch 结构体与 GPU 架构检测
 
-- 文件：[csrc/api/common.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/api/common.h#L20-L41)
+- 文件：csrc/api/common.h
 - `Arch` 结构体在构造时通过 `at::cuda::getCurrentDeviceProperties()` 获取当前 GPU 的 `major, minor, num_sms, device_prop`。
 - 方法：
   - `bool is_sm90a() const`：返回 `major == 9 && minor == 0`
@@ -324,7 +324,7 @@
 
 ## F-020：Dispatch 宏定义
 
-- 文件：[csrc/api/common.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/api/common.h#L51-L99)
+- 文件：csrc/api/common.h
 - `DISPATCH_NUM_HEADS(NUM_HEADS, CONSTEXPR_NAME, ...)`：支持 `NUM_HEADS == 64` 和 `NUM_HEADS == 128`。
 - `DISPATCH_HEAD_DIM(HEAD_DIM, CONSTEXPR_NAME, ...)`：支持 `HEAD_DIM == 576` 和 `HEAD_DIM == 512`。
 - `DISPATCH_BOOLEAN_FLAG(FLAG, CONSTEXPR_NAME, ...)`：将 bool 转为 constexpr bool。
@@ -334,7 +334,7 @@
 
 ## F-021：ImplBase 模板类（特性分发基类）
 
-- 文件：[csrc/api/common.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/api/common.h#L160-L230)
+- 文件：csrc/api/common.h
 - `ImplBase<RunArgT_, FeatureT_>` 是所有 kernel 实现的基类。
 - 纯虚函数：
   - `virtual void run_(const RunArgT &params, const std::vector<FeatureT> &required_features) = 0`
@@ -346,7 +346,7 @@
 
 ## F-022：dense_attn_decode_interface 函数（Dense Decode C++ 入口）
 
-- 文件：[csrc/api/dense_decode.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/api/dense_decode.h#L13-L225)
+- 文件：csrc/api/dense_decode.h
 - 返回类型：`std::tuple<at::Tensor, at::Tensor, std::optional<at::Tensor>, std::optional<at::Tensor>>`
 - 架构检查：仅支持 SM90a（`arch.is_sm90a()`），否则报错。
 - 数据类型：`q` 支持 `kBFloat16` 或 `kHalf`；`kcache` 必须与 q 同 dtype；`seqlens_k` 和 `block_table` 必须为 `kInt32`。
@@ -368,7 +368,7 @@
 
 ## F-023：sparse_attn_decode_interface 函数（Sparse Decode C++ 入口）
 
-- 文件：[csrc/api/sparse_decode.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/api/sparse_decode.h#L183-L495)
+- 文件：csrc/api/sparse_decode.h
 - 返回类型同 dense decode。
 - 架构支持：SM90a 和 SM100f。
 - 维度约束：
@@ -398,7 +398,7 @@
 
 ## F-024：sparse_attn_prefill_interface 函数（Sparse Prefill C++ 入口）
 
-- 文件：[csrc/api/sparse_fwd.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/api/sparse_fwd.h#L101-L243)
+- 文件：csrc/api/sparse_fwd.h
 - 返回类型：`std::vector<at::Tensor>`（out, max_logits, lse）。
 - 架构支持：SM90a 和 SM100f。
 - 输入维度：3D 张量（q: `[s_q, h_q, d_qk]`，kv: `[s_kv, h_kv, d_qk]`，indices: `[s_q, h_kv, topk]`）。
@@ -414,9 +414,9 @@
 
 ## F-025：dense_fwd.h（SM100 Dense Prefill 接口）
 
-- 文件：[csrc/api/dense_fwd.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/api/dense_fwd.h#L1-L5)
+- 文件：csrc/api/dense_fwd.h
 - 仅 `#include "sm100/prefill/dense/interface.h"`。
-- SM100 dense prefill 接口声明在 [csrc/sm100/prefill/dense/interface.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm100/prefill/dense/interface.h#L1-L12)：
+- SM100 dense prefill 接口声明在 csrc/sm100/prefill/dense/interface.h：
   - `void FMHACutlassSM100FwdRun(workspace_buffer, q, k, v, cumulative_seqlen_q, cumulative_seqlen_kv, o, lse, mask_mode_code, softmax_scale, max_seqlen_q, max_seqlen_kv, is_varlen)`
   - `void FMHACutlassSM100BwdRun(workspace_buffer, d_o, q, k, v, o, lse, cumulative_seqlen_q, cumulative_seqlen_kv, dq, dk, dv, mask_mode_code, softmax_scale, max_seqlen_q, max_seqlen_kv, is_varlen)`
 
@@ -424,14 +424,14 @@
 
 ## F-026：SM90 Dense Decode 配置与 Traits
 
-- 文件：[csrc/sm90/decode/dense/config.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm90/decode/dense/config.h#L1-L10)
+- 文件：csrc/sm90/decode/dense/config.h
 - 命名空间 `Config`：
   - `BLOCK_SIZE_M = 64`
   - `PAGE_BLOCK_SIZE = 64`
   - `HEAD_DIM_K = 576`
   - `HEAD_DIM_V = 512`
 
-- 文件：[csrc/sm90/decode/dense/traits.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm90/decode/dense/traits.h#L1-L107)
+- 文件：csrc/sm90/decode/dense/traits.h
 - 模板 `Traits<InputT_>`（InputT 为 `cutlass::bfloat16_t` 或 `cutlass::half_t`）：
   - `NUM_THREADS = 256`
   - WGMMA 配置：
@@ -447,7 +447,7 @@
 
 ## F-027：SM90 Dense Decode 内核入口声明
 
-- 文件：[csrc/sm90/decode/dense/splitkv_mla.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm90/decode/dense/splitkv_mla.h#L1-L10)
+- 文件：csrc/sm90/decode/dense/splitkv_mla.h
 - 命名空间 `sm90`：
   - `template<typename InputT> void run_flash_splitkv_mla_kernel(DenseAttnDecodeParams &params);`
 
@@ -455,7 +455,7 @@
 
 ## F-028：SM90 Sparse FP8 Decode 配置
 
-- 文件：[csrc/sm90/decode/sparse_fp8/config.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm90/decode/sparse_fp8/config.h#L1-L20)
+- 文件：csrc/sm90/decode/sparse_fp8/config.h
 - 命名空间 `sm90::decode::sparse_fp8`：
   - `HEAD_DIM_K = 576`
   - `HEAD_DIM_V = 512`
@@ -470,7 +470,7 @@
 
 ## F-029：SM90 Sparse FP8 Decode 内核模板参数
 
-- 文件：[csrc/sm90/decode/sparse_fp8/splitkv_mla.cuh](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm90/decode/sparse_fp8/splitkv_mla.cuh#L15-L277)（通过 config.h 引用的 KernelTemplate）
+- 文件：csrc/sm90/decode/sparse_fp8/splitkv_mla.cuh（通过 config.h 引用的 KernelTemplate）
 - 模板：`template<ModelType MODEL_TYPE, int NUM_HEADS> class KernelTemplate`
 - 编译期常量：
   - `NUM_HEADS == 64 || NUM_HEADS == 128`（static_assert）
@@ -499,7 +499,7 @@
 
 ## F-030：SM90 Sparse FP8 Decode 反量化组件
 
-- 文件：[csrc/sm90/decode/sparse_fp8/components/dequant.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm90/decode/sparse_fp8/components/dequant.h#L1-L127)
+- 文件：csrc/sm90/decode/sparse_fp8/components/dequant.h
 - 定义 `fp8x8` 和 `fp8x16` 结构体（基于 `__nv_fp8x4_e4m3`）。
 - `cvt_fp8x8_bf16x8(const fp8x8 &inputs, const __nv_bfloat162 &scale_bf162)`：将 8 个 FP8 E4M3 值转为 8 个 BF16 值并乘以 scale。
 - L1 缓存提示枚举：`L1CacheHint { NO_ALLOCATE, EVICT_FIRST, EVICT_NORMAL, EVICT_LAST }`。
@@ -510,8 +510,8 @@
 
 ## F-031：SM90 Sparse Prefill 内核配置
 
-- 文件：[csrc/sm90/prefill/sparse/config.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm90/prefill/sparse/config.h)（引用的 KernelTemplate）
-- 文件：[csrc/sm90/prefill/sparse/fwd.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm90/prefill/sparse/fwd.h#L1-L9)
+- 文件：csrc/sm90/prefill/sparse/config.h（引用的 KernelTemplate）
+- 文件：csrc/sm90/prefill/sparse/fwd.h
 - 命名空间 `sm90`：`void run_fwd_kernel(const SparseAttnFwdParams& params);`
 - KernelTemplate（在 `fwd.cu`/`phase1.cuh` 中定义，通过 sparse_fwd.h 中的引用可知）：
   - 模板参数：`int D_QK, bool HAVE_TOPK_LENGTH`
@@ -524,7 +524,7 @@
 
 ## F-032：SM100 Sparse Decode Head64 配置
 
-- 文件：[csrc/sm100/decode/head64/config.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm100/decode/head64/config.h#L30-L210)
+- 文件：csrc/sm100/decode/head64/config.h
 - 模板：`template<ModelType MODEL_TYPE> struct KernelTemplate`
 - 编译期常量：
   - `D_Q = MODEL_TYPE == V32 ? 576 : 512`
@@ -556,7 +556,7 @@
 
 ## F-033：SM100 Decode Head128 支持说明
 
-- 文件：[csrc/sm100/decode/head128/README.md](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm100/decode/head128/README.md#L1)
+- 文件：csrc/sm100/decode/head128/README.md
 - 内容："Head128 decoding kernels are located at `csrc/sm100/prefill/sparse/fwd_for_small_topk/head128/instantiations/phase1_decode_k512.cu` (for k_dim = 512) or simulated using 2x head64 kernel"。
 - 即：SM100 上 h_q=128 的 decode 有两种路径：
   1. d_qk=512（MODEL1）时使用 `fwd_for_small_topk/head128` 的 decode 模式专门内核。
@@ -566,10 +566,10 @@
 
 ## F-034：SMxx 通用内核（调度元数据 + Combine）
 
-- 文件：[csrc/smxx/decode/get_decoding_sched_meta/get_decoding_sched_meta.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/smxx/decode/get_decoding_sched_meta/get_decoding_sched_meta.h#L1-L8)
+- 文件：csrc/smxx/decode/get_decoding_sched_meta/get_decoding_sched_meta.h
 - 命名空间 `smxx::decode`：`void run_get_decoding_sched_meta_kernel(GetDecodeSchedMetaParams &params);`
 
-- 文件：[csrc/smxx/decode/combine/combine.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/smxx/decode/combine/combine.h#L1-L10)
+- 文件：csrc/smxx/decode/combine/combine.h
 - 命名空间 `smxx::decode`：`template<typename ElementT> void run_flash_mla_combine_kernel(CombineParams &params);`
 - 这两个内核是架构无关的通用组件，被 SM90 和 SM100 的 dense/sparse decode 路径共同使用。
 
@@ -577,7 +577,7 @@
 
 ## F-035：SM100 Sparse Prefill/Decode 公共子程序
 
-- 文件：[csrc/sm100/prefill/sparse/common_subroutine.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm100/prefill/sparse/common_subroutine.h#L1-L208)
+- 文件：csrc/sm100/prefill/sparse/common_subroutine.h
 - `load_indices_and_generate_mask(lane_idx, gIndices, s_kv, abs_pos_start, topk_length)`：从全局内存加载 K/V 索引，每线程加载 8 个，生成有效性掩码（char 类型 bitmask）。
 - `retrieve_mask_and_reduce_p<NUM_ELEMS_PER_THREAD, TMEM_COL_START, ...>(k_validness_base, local_warp_idx, lane_idx, slot_bar_P_empty_arrival, p_exchange_buf, p)`：从 Tensor Memory 获取 P，在 shared memory 中做 warp 间 reduce，执行 masking。Dual GEMM 产生两块 P（行 0-63 和 64-127），经 reduce 合并为一块。
 - `rescale_O<D_V, CHUNK_SIZE, TMEM_COL_START>(scale_factor)`：对 Tensor Memory 中的 O 按 chunk 重新缩放。
@@ -588,7 +588,7 @@
 
 ## F-036：setup.py 编译配置
 
-- 文件：[setup.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/setup.py#L1-L151)
+- 文件：setup.py
 - 包名：`flash_mla`，版本 `1.0.0+<git_rev>`。
 - CUDA 扩展模块名：`flash_mla.cuda`。
 - 编译环境：C++20，`-O3`/`-DNDEBUG`，`--use_fast_math`。
@@ -610,7 +610,7 @@
 
 ## F-037：benchmark 脚本配置与用法
 
-- 文件：[benchmark/bench_flash_mla.py](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/benchmark/bench_flash_mla.py#L1-L520)
+- 文件：benchmark/bench_flash_mla.py
 - 导入：`flash_mla_with_kvcache, get_mla_metadata`（来自 flash_mla），`flashinfer`，`triton`。
 - 4 个 benchmark 目标（`FUNC_TABLE`）：
   1. `torch`：PyTorch 参考实现（`scaled_dot_product_attention` + `repeat_interleave` 处理 GQA）
@@ -640,7 +640,7 @@
 
 ## F-038：utils.h 工具宏与 RingBufferState
 
-- 文件：[csrc/utils.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/utils.h#L1-L82)
+- 文件：csrc/utils.h
 - 宏定义：
   - `CHECK_CUDA(call)`：CUDA 错误检查，失败时 fprintf + exit(1)。
   - `CHECK_CUDA_KERNEL_LAUNCH()`：检查 kernel launch 错误。
@@ -658,7 +658,7 @@
 
 ## F-039：SM90/SM100 helpers 差异
 
-- 文件：[csrc/sm90/helpers.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm90/helpers.h#L1-L170)
+- 文件：csrc/sm90/helpers.h
 - SM90 Hopper 特定辅助函数：
   - `cp_async_cacheglobal_l2_prefetch_256B`：使用 `cp.async.cg.shared.global.L2::256B` PTX 指令进行 L2 预取。
   - `createpolicy_evict_last()` / `createpolicy_evict_first()`：创建 L2 cache 策略（`createpolicy.fractional.L2::evict_last/evict_first.b64`）。
@@ -668,7 +668,7 @@
   - `get_peer_addr(p)`：DSM 跨 cluster 地址计算（`p ^ PEER_ADDR_MASK(16777216)`）。
   - `launch_tma_copy(...)`：封装 TMA async copy 与 ClusterTransactionBarrier。
 
-- 文件：[csrc/sm100/helpers.h](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm100/helpers.h#L1-L34)
+- 文件：csrc/sm100/helpers.h
 - SM100 Blackwell 特定辅助函数：
   - `int4_max/int4_min`：int4 向量的 max/min。
   - `fp8x2_to_bf16x2_with_scale(data, scale)`：将 2 个 FP8 E4M3 转为 2 个 BF16 并乘以 scale（TODO: 待 CUDA>=13.1 使用原生转换）。
@@ -677,7 +677,7 @@
 
 ## F-040：SM100 Dense Prefill/Backward CUTLASS 内核
 
-- 文件：[csrc/sm100/prefill/dense/](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/FlashMLA/csrc/sm100/prefill/dense/)
+- 文件：csrc/sm100/prefill/dense/
 - SM100 dense prefill 基于 CUTLASS 实现，包含：
   - 编译单元：`fmha_cutlass_fwd_sm100.cu`、`fmha_cutlass_bwd_sm100.cu`
   - 主循环/Epilogue/Load TMA warpspecialized 内核

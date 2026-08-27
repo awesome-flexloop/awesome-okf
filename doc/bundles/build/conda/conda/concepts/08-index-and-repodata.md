@@ -187,5 +187,5 @@ Channel URLs × subdirs
 
 ## 相关概念
 
-- [Context 全局配置与 condarc](./07-context-configuration.md)：Index 从 context 获取 channels、subdirs、repodata_fn 等默认配置
-- [Solver 求解器与 SAT 算法](./09-solver-and-resolve.md)：ReducedIndex 是求解器的直接数据源
+- [Context 全局配置与 condarc](07-context-configuration.md)：Index 从 context 获取 channels、subdirs、repodata_fn 等默认配置
+- [Solver 求解器与 SAT 算法](09-solver-and-resolve.md)：ReducedIndex 是求解器的直接数据源

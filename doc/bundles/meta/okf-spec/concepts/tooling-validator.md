@@ -71,10 +71,10 @@ Validator 是在线工具，适合快速检查和可视化结果。而 Agent Ski
 
 ## 相关概念
 
-- [合规性](./conformance.md) - v0.2 正式合规三要件
-- [OKF Agent Skill](./tooling-agent-skill.md) - 包含 validate.sh 命令行工具
-- [OKF Knowledge Catalog CLI](./tooling-knowledge-catalog.md) - 官方生态 CLI 工具
-- [实践指南](./practical-guidance.md) - 快速验证三规则
+- [合规性](conformance.md) - v0.2 正式合规三要件
+- [OKF Agent Skill](tooling-agent-skill.md) - 包含 validate.sh 命令行工具
+- [OKF Knowledge Catalog CLI](tooling-knowledge-catalog.md) - 官方生态 CLI 工具
+- [实践指南](practical-guidance.md) - 快速验证三规则
 
 [^okf-md-validator]: OKF Validator 官方页面，见 [okf.md/validator](https://okf.md/validator)。
-[^okf-spec]: OKF SPEC v0.2 规范，见 [references/okf-spec.md](/references/okf-spec.md)。
+[^okf-spec]: OKF SPEC v0.2 规范，见 [references/okf-spec.md](../references/okf-spec.md)。

@@ -81,7 +81,7 @@ Community                   → 社区入口层
 
 ## 相关链接
 
-- [贡献指南与权重评分](/concepts/01-contribution-guide.md)
-- [资源分类详解](/concepts/02-resource-categories.md)
-- [添加资源条目示例](/examples/add-resource.md)
-- [Awesome TRAE 仓库资源索引](/references/awesome-source.md)
+- [贡献指南与权重评分](01-contribution-guide.md)
+- [资源分类详解](02-resource-categories.md)
+- [添加资源条目示例](../examples/add-resource.md)
+- [Awesome TRAE 仓库资源索引](../references/awesome-source.md)

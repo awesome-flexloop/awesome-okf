@@ -153,6 +153,6 @@ TabsDirective (容器，独立)
 
 ## 相关概念
 
-- [分组标签与代码标签](/concepts/03-group-and-code-tabs.md)
-- [配置项参考](/concepts/04-configuration.md)
-- [基础标签页示例](/examples/basic-tabs.md)
+- [分组标签与代码标签](03-group-and-code-tabs.md)
+- [配置项参考](04-configuration.md)
+- [基础标签页示例](../examples/basic-tabs.md)

@@ -179,7 +179,7 @@ await graph.invoke(
 
 ## 相关概念
 
-- [状态图与工作流](/ai/langchain-ai/langgraphjs/concepts/state-graph)
-- [Pregel 执行引擎](/ai/langchain-ai/langgraphjs/concepts/pregel-execution)
-- [Checkpoint 持久化](/ai/langchain-ai/langgraphjs/concepts/checkpointing)
-- [Graph 核心 API 参考](/ai/langchain-ai/langgraphjs/references/graph-core)
+- 状态图与工作流
+- Pregel 执行引擎
+- Checkpoint 持久化
+- Graph 核心 API 参考

@@ -192,10 +192,10 @@ replite_show_banner = False
 
 ## 相关概念
 
-- [指令系统总览](/concepts/03-directive-overview.md)
-- [jupyterlite 指令——嵌入 JupyterLab](/concepts/04-jupyterlite-directive.md)
-- [notebooklite 指令——嵌入经典 Notebook](/concepts/05-notebooklite-directive.md)
-- [try_examples 指令——交互式文档示例](/concepts/08-try-examples-directive.md)
-- [配置参考](/concepts/09-configuration.md)
-- [核心模块源码](/references/main-source.md)
-- [配置项完整速查表](/references/config-reference.md)
+- [指令系统总览](03-directive-overview.md)
+- [jupyterlite 指令——嵌入 JupyterLab](04-jupyterlite-directive.md)
+- [notebooklite 指令——嵌入经典 Notebook](05-notebooklite-directive.md)
+- [try_examples 指令——交互式文档示例](08-try-examples-directive.md)
+- [配置参考](09-configuration.md)
+- [核心模块源码](../references/main-source.md)
+- [配置项完整速查表](../references/config-reference.md)

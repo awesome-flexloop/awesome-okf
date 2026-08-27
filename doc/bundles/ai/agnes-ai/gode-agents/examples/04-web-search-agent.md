@@ -372,8 +372,8 @@ from codified_smolagents.default_tools import TOOL_MAPPING
 
 ## 相关链接
 
-- [内置工具详解](/concepts/08-builtin-tools.md) — DuckDuckGoSearchTool、VisitWebpageTool 等内置工具的详细说明
-- [工具系统概述](/concepts/07-tool-system.md) — 工具的注册、查找和调用机制
-- [工具调用智能体](/concepts/05-tool-calling-agent.md) — Agent 如何选择工具并传递参数
-- [Tools API 参考](/references/tools-api.md) — TOOL_MAPPING 和各工具类的完整定义
-- [监控与日志](/concepts/13-monitoring-logging.md) — step_callbacks 和日志级别的使用
+- [内置工具详解](../concepts/08-builtin-tools.md) — DuckDuckGoSearchTool、VisitWebpageTool 等内置工具的详细说明
+- [工具系统概述](../concepts/07-tool-system.md) — 工具的注册、查找和调用机制
+- [工具调用智能体](../concepts/05-tool-calling-agent.md) — Agent 如何选择工具并传递参数
+- [Tools API 参考](../references/tools-api.md) — TOOL_MAPPING 和各工具类的完整定义
+- [监控与日志](../concepts/13-monitoring-logging.md) — step_callbacks 和日志级别的使用

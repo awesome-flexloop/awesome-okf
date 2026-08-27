@@ -70,7 +70,7 @@ hdf5_version = _get_hdf5_version()
 
 ## open_file() 工厂函数
 
-`open_file()` 是创建 `File` 实例的推荐入口，定义在 [file.py:216](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/file.py#L216)。
+`open_file()` 是创建 `File` 实例的推荐入口，定义在 file.py:216。
 
 ### 函数签名
 
@@ -104,7 +104,7 @@ def open_file(
 
 ## File 类
 
-`File` 类定义在 [file.py](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/file.py)，继承自 `hdf5extension.File`（Cython 扩展层）。它是 PyTables 文件操作的核心入口。
+`File` 类定义在 file.py，继承自 `hdf5extension.File`（Cython 扩展层）。它是 PyTables 文件操作的核心入口。
 
 ### 构造与初始化
 
@@ -147,14 +147,14 @@ File 类提供一系列 `create_*` 方法在指定分组下创建节点：
 
 | 方法 | 创建的节点类型 | 定义位置 |
 |------|---------------|----------|
-| `create_group(where, name, title, filters, createparents)` | `Group` 分组 | [file.py:924](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/file.py#L924) |
-| `create_table(where, name, description, title, filters, expectedrows, ...)` | `Table` 结构化表 | [file.py:965](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/file.py#L965) |
-| `create_array(where, name, obj, title, byteorder, ...)` | `Array` 数组 | [file.py:1108](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/file.py#L1108) |
-| `create_carray(where, name, atom, shape, title, filters, ...)` | `CArray` 分块数组 | [file.py:1225](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/file.py#L1225) |
-| `create_earray(where, name, atom, shape, title, filters, ...)` | `EArray` 可扩展数组 | [file.py:1360](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/file.py#L1360) |
-| `create_vlarray(where, name, atom, title, filters, ...)` | `VLArray` 变长数组 | [file.py:1501](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/file.py#L1501) |
-| `create_soft_link(where, name, target)` | `SoftLink` 软链接 | [file.py:1655](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/file.py#L1655) |
-| `create_external_link(where, name, target, ...)` | `ExternalLink` 外部链接 | [file.py:1689](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/file.py#L1689) |
+| `create_group(where, name, title, filters, createparents)` | `Group` 分组 | file.py:924 |
+| `create_table(where, name, description, title, filters, expectedrows, ...)` | `Table` 结构化表 | file.py:965 |
+| `create_array(where, name, obj, title, byteorder, ...)` | `Array` 数组 | file.py:1108 |
+| `create_carray(where, name, atom, shape, title, filters, ...)` | `CArray` 分块数组 | file.py:1225 |
+| `create_earray(where, name, atom, shape, title, filters, ...)` | `EArray` 可扩展数组 | file.py:1360 |
+| `create_vlarray(where, name, atom, title, filters, ...)` | `VLArray` 变长数组 | file.py:1501 |
+| `create_soft_link(where, name, target)` | `SoftLink` 软链接 | file.py:1655 |
+| `create_external_link(where, name, target, ...)` | `ExternalLink` 外部链接 | file.py:1689 |
 
 所有创建方法均接受 `createparents: bool = False` 参数，设为 `True` 时自动创建路径中不存在的父分组。
 
@@ -176,7 +176,7 @@ File 类提供一系列 `create_*` 方法在指定分组下创建节点：
 
 ## _FileRegistry：已打开文件注册表
 
-`_FileRegistry` 类（[file.py:90](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/file.py#L90)）维护所有已打开的 File 实例：
+`_FileRegistry` 类（file.py:90）维护所有已打开的 File 实例：
 
 - `_name_mapping`：文件名到 File 实例集合的映射（支持同一文件多次打开）
 - `_handlers`：所有活跃 File 实例集合
@@ -184,7 +184,7 @@ File 类提供一系列 `create_*` 方法在指定分组下创建节点：
 
 ## 节点注册表（registry.py）
 
-[registry.py](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/registry.py) 提供两个全局字典用于避免循环导入：
+registry.py 提供两个全局字典用于避免循环导入：
 
 ### class_name_dict
 
@@ -204,7 +204,7 @@ def get_class_by_name(classname: str | None) -> type:
 
 ## 节点管理器（NodeManager）
 
-`NodeManager`（[file.py:365](file:///d:/spaces/SpecWeave/external/libs/python/PyTables/tables/file.py#L365)）负责节点的缓存与延迟加载：
+`NodeManager`（file.py:365）负责节点的缓存与延迟加载：
 
 - **registry**：`WeakValueDictionary`，跟踪所有已加载节点
 - **cache**：LRU 缓存（由 `lrucacheextension.NodeCache` Cython 扩展实现），默认 64 槽位

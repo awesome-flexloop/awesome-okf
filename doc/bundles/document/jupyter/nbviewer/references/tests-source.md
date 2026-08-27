@@ -163,4 +163,4 @@ frontpage_urls = [a["href"] for a in frontpage_links]                   # 提取
 ## 相关信源
 
 - [CI/CD工作流源码](cicd-source.md)
-- [测试与密钥管理](/concepts/08-testing-and-secrets.md)
+- [测试与密钥管理](../concepts/08-testing-and-secrets.md)

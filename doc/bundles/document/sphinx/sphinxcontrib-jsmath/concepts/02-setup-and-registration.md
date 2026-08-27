@@ -86,7 +86,7 @@ app.add_html_math_renderer('jsmath',
 
 ### 多个渲染器如何选择？
 
-Sphinx 内置了 mathjax 渲染器。当安装多个 math renderer 扩展后，Sphinx 通过内部机制选择渲染器。`app.builder.math_renderer_name` 属性在构建时确定当前使用的渲染器名称，install_jsmath 回调会检查此值来决定是否加载 JS（详见[智能JS加载机制](/concepts/04-smart-js-loading.md)）。
+Sphinx 内置了 mathjax 渲染器。当安装多个 math renderer 扩展后，Sphinx 通过内部机制选择渲染器。`app.builder.math_renderer_name` 属性在构建时确定当前使用的渲染器名称，install_jsmath 回调会检查此值来决定是否加载 JS（详见[智能JS加载机制](04-smart-js-loading.md)）。
 
 ## ④ 配置值注册
 
@@ -174,8 +174,8 @@ import sphinxcontrib.jsmath
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [数学节点访问者](/concepts/03-math-node-visitors.md)
-- [智能JS加载机制](/concepts/04-smart-js-loading.md)
-- [国际化与并行安全](/concepts/05-i18n-and-parallel.md)
-- [源码信源登记](/references/jsmath-source.md)
+- [5分钟快速上手](01-getting-started.md)
+- [数学节点访问者](03-math-node-visitors.md)
+- [智能JS加载机制](04-smart-js-loading.md)
+- [国际化与并行安全](05-i18n-and-parallel.md)
+- [源码信源登记](../references/jsmath-source.md)

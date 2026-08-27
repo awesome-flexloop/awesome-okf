@@ -45,7 +45,7 @@ flowchart TD
 
 ## 函数类核心机制
 
-所有 SymPy 数学函数共享五套核心机制（以 `sin` 为例）：[^F-050][^F-009]
+所有 SymPy 数学函数共享五套核心机制（以 `sin` 为例）：[^F-050] [^F-009]
 
 ```python
 >>> from sympy import sin, cos, exp, pi, I, expand_trig, diff
@@ -361,7 +361,7 @@ Piecewise((-1, x < 0), (1, x > 0))
 
 ### 2.2 Gamma 与 Beta 函数（gamma_functions.py, beta_functions.py）
 
-Gamma 函数是阶乘在实数域的推广，连接离散与连续数学：[^F-092][^F-093]
+Gamma 函数是阶乘在实数域的推广，连接离散与连续数学：[^F-092] [^F-093]
 
 | 函数 | 数学记号 | 说明 |
 |------|----------|------|
@@ -697,8 +697,8 @@ sin(2*x)
 
 - 前置概念：[sympify与类型转换](03-sympify-basics.md) 了解 Function 类和 AppliedUndef 的构造机制
 - 前置概念：[表达式树模型](01-expression-tree.md) 了解函数应用作为树节点的结构
-- 源码信源：[functions-source](/references/functions-source.md) 提供初等/特殊/组合函数的完整 API 参考
-- 参考文档：[core-init](/references/core-init.md) 了解函数在顶层包中的导出清单
+- 源码信源：[functions-source](../references/functions-source.md) 提供初等/特殊/组合函数的完整 API 参考
+- 参考文档：[core-init](../references/core-init.md) 了解函数在顶层包中的导出清单
 
 [^F-009]: facts.md F-009 — rewrite 方法机制
 [^F-050]: facts.md F-050 — Function 基类

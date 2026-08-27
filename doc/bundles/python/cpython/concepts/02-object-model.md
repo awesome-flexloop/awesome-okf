@@ -286,9 +286,9 @@ PyAPI_DATA(PyObject) _Py_NotImplementedStruct;
 
 ## 相关概念
 
-- [源码目录结构导航](/concepts/01-source-layout.md) — 了解 Include/object.h 和 Objects/ 目录
-- [类型系统与 PyTypeObject](/concepts/03-type-system.md) — ob_type 指针指向的类型对象结构详解
-- [CPython 简介](/concepts/00-introduction.md) — 对象模型在整体架构中的位置
-- [CPython 源码信源登记](/references/cpython-source.md) — Include/object.h 路径与版本信息
+- [源码目录结构导航](01-source-layout.md) — 了解 Include/object.h 和 Objects/ 目录
+- [类型系统与 PyTypeObject](03-type-system.md) — ob_type 指针指向的类型对象结构详解
+- [CPython 简介](00-introduction.md) — 对象模型在整体架构中的位置
+- [CPython 源码信源登记](../references/cpython-source.md) — Include/object.h 路径与版本信息
 
-[^cpython-source]: CPython 源码信源，见 [cpython-source.md](/references/cpython-source.md)。结构体定义来自 `Include/object.h`（CPython 3.16.0a0）。
+[^cpython-source]: CPython 源码信源，见 [cpython-source.md](../references/cpython-source.md)。结构体定义来自 `Include/object.h`（CPython 3.16.0a0）。

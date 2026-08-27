@@ -271,6 +271,6 @@ CMD ["python", "statuspage.py"]
 
 ## 相关文档
 
-- [Statuspage Sidecar源码](/references/statuspage-source.md)
-- [测试源码解析](/references/tests-source.md)
+- [Statuspage Sidecar源码](../references/statuspage-source.md)
+- [测试源码解析](../references/tests-source.md)
 - [部署配置详解](03-deployment-config.md)

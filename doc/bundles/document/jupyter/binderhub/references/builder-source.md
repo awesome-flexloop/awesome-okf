@@ -16,7 +16,7 @@ sources:
 
 ## 概述
 
-[builder.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/builder.py) 实现了 BinderHub 的核心构建与启动处理器 `BuildHandler`。该模块包含辅助函数、Prometheus 指标定义以及基于 Server-Sent Events (SSE) 的构建流程控制。
+builder.py 实现了 BinderHub 的核心构建与启动处理器 `BuildHandler`。该模块包含辅助函数、Prometheus 指标定义以及基于 Server-Sent Events (SSE) 的构建流程控制。
 
 ## 辅助函数
 

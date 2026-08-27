@@ -275,8 +275,8 @@ async def ws(websocket: WebSocket):
 
 ## 相关概念
 
-- [响应模型与序列化](/concepts/07-response-model.md)
-- [路由系统](/concepts/02-routing-system.md)
-- [路径操作与请求处理](/concepts/03-path-operations.md)
-- [依赖注入系统](/concepts/04-dependency-injection.md)
-- [异常处理与校验错误](/concepts/11-exception-handling.md)
+- [响应模型与序列化](07-response-model.md)
+- [路由系统](02-routing-system.md)
+- [路径操作与请求处理](03-path-operations.md)
+- [依赖注入系统](04-dependency-injection.md)
+- [异常处理与校验错误](11-exception-handling.md)

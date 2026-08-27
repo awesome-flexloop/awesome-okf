@@ -276,7 +276,7 @@ sphinx-build -b html . _build/html 2>&1 | grep -i copybutton
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [文本处理与提示符剥离](/concepts/03-text-processing.md)
-- [自定义样式与图标](/concepts/04-customization.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [文本处理与提示符剥离](../concepts/03-text-processing.md)
+- [自定义样式与图标](../concepts/04-customization.md)
 - [Shell 提示符配置示例](shell-prompts.md)

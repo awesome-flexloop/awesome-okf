@@ -190,6 +190,6 @@ jupyter lab
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [CI/CD 工作流](/concepts/09-ci-workflows.md)
-- [post_gen_project 钩子解析](/references/post-gen-hook-source.md)
+- [快速开始](01-getting-started.md)
+- [CI/CD 工作流](09-ci-workflows.md)
+- [post_gen_project 钩子解析](../references/post-gen-hook-source.md)

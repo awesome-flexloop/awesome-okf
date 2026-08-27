@@ -17,9 +17,9 @@ sources:
 
 ## 前置知识
 
-- [Hello World入门](/concepts/01-hello-world.md)
-- [项目结构与构建系统](/concepts/02-project-setup.md)
-- [插件基础与依赖注入](/concepts/03-plugin-basics.md)
+- [Hello World入门](../concepts/01-hello-world.md)
+- [项目结构与构建系统](../concepts/02-project-setup.md)
+- [插件基础与依赖注入](../concepts/03-plugin-basics.md)
 
 ## 步骤
 
@@ -106,6 +106,6 @@ JupyterLab extension hello-world is activated!
 
 ## 相关概念
 
-- [Hello World入门](/concepts/01-hello-world.md)
-- [插件基础与依赖注入](/concepts/03-plugin-basics.md)
-- [插件解剖参考](/references/plugin-anatomy.md)
+- [Hello World入门](../concepts/01-hello-world.md)
+- [插件基础与依赖注入](../concepts/03-plugin-basics.md)
+- [插件解剖参考](../references/plugin-anatomy.md)

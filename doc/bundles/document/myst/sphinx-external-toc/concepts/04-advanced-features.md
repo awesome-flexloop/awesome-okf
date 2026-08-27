@@ -310,6 +310,6 @@ external_toc_exclude_missing = True
 
 ## 相关概念
 
-- [_toc.yml 语法详解](/concepts/02-toc-yaml-syntax.md)
-- [扩展工作机制](/concepts/03-extension-mechanism.md)
-- [基础 _toc.yml 示例](/examples/basic-toc.md)
+- [_toc.yml 语法详解](02-toc-yaml-syntax.md)
+- [扩展工作机制](03-extension-mechanism.md)
+- [基础 _toc.yml 示例](../examples/basic-toc.md)

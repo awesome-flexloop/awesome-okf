@@ -201,8 +201,8 @@ RoleSpec 与 DirectiveSpec 的区别：run 方法无 ctx 参数，角色内部�
 
 ## 相关概念
 
-- [统一插件架构](/concepts/01-unified-plugin-architecture.md)
-- [MDAST 转换管线](/concepts/03-myst-transforms.md)
-- [指令与角色系统](/concepts/06-directives-and-roles.md)
-- [VFile 错误处理](/concepts/05-error-handling.md)
-- [使用 mystParse 解析文档](/examples/00-basic-parsing.md)
+- [统一插件架构](01-unified-plugin-architecture.md)
+- [MDAST 转换管线](03-myst-transforms.md)
+- [指令与角色系统](06-directives-and-roles.md)
+- [VFile 错误处理](05-error-handling.md)
+- [使用 mystParse 解析文档](../examples/00-basic-parsing.md)

@@ -46,11 +46,11 @@ KL 散度惩罚后验偏离先验的程度，将贝叶斯方法与 PAC 框架统
 
 ## 与其他概念的关系
 
-- [计算复杂度](/ai/datawhale/key-book/concepts/computational-complexity)决定 PAC 学习的样本与时间代价
-- [泛化界](/ai/datawhale/key-book/concepts/generalization-bound)是 PAC 可学性的直接技术手段
-- [稳定性](/ai/datawhale/key-book/concepts/stability)提供了不依赖假设空间计数的可学性判据（定理 5.4 证明稳定性与不可知 PAC 可学等价）
+- 计算复杂度决定 PAC 学习的样本与时间代价
+- 泛化界是 PAC 可学性的直接技术手段
+- 稳定性提供了不依赖假设空间计数的可学性判据（定理 5.4 证明稳定性与不可知 PAC 可学等价）
 
 ## 参见
 
-- [第 2 章：可学性](/ai/datawhale/key-book/references/chapter2)
-- [3-DNF 不可学案例](/ai/datawhale/key-book/examples/pac-3dnf)
+- 第 2 章：可学性
+- 3-DNF 不可学案例

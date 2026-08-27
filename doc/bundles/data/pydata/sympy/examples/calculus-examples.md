@@ -69,7 +69,7 @@ d.doit()                       # -> cos(x)
 diff(sin(x), x, evaluate=False)  # -> Derivative(sin(x), x)
 ```
 
-> 相关参考：[Derivative 与 diff()](/references/calculus-integrals-source.md)
+> 相关参考：[Derivative 与 diff()](../references/calculus-integrals-source.md)
 
 ## 2. 高阶导数与偏导数
 
@@ -156,7 +156,7 @@ i.doit()                       # -> x**3/3
 integrate(x**x, x)             # -> Integral(x**x, x)（无初等原函数）
 ```
 
-> 相关参考：[积分算法策略链](/references/calculus-integrals-source.md)
+> 相关参考：[积分算法策略链](../references/calculus-integrals-source.md)
 
 ## 4. 定积分
 
@@ -262,7 +262,7 @@ L.doit()                       # -> 1
 sin(x).limit(x, 0)             # -> 0
 ```
 
-> 相关参考：[limit() 与 Gruntz 算法](/references/calculus-integrals-source.md)
+> 相关参考：[limit() 与 Gruntz 算法](../references/calculus-integrals-source.md)
 
 ## 7. 泰勒级数展开
 
@@ -304,7 +304,7 @@ series(1/sin(x), x, 0, 5)
 sin(x).series(x, 0, 8)         # 等价于 series(sin(x), x, 0, 8)
 ```
 
-> 相关参考：[series() 泰勒/洛朗级数](/references/series-solvers-source.md)
+> 相关参考：[series() 泰勒/洛朗级数](../references/series-solvers-source.md)
 
 ## 8. 积分变换
 
@@ -348,7 +348,7 @@ sine_transform(x*exp(-a*x), x, k, noconds=True)
 cosine_transform(exp(-a*x), x, k, noconds=True)
 ```
 
-> 相关参考：[积分变换模块](/references/calculus-integrals-source.md)
+> 相关参考：[积分变换模块](../references/calculus-integrals-source.md)
 
 ## 9. 微积分工具
 
@@ -394,7 +394,7 @@ continuous_domain(1/x, x, S.Reals)
 # -> Union(Interval.open(-oo, 0), Interval.open(0, oo))
 ```
 
-> 相关参考：[calculus 模块工具集](/references/calculus-integrals-source.md)
+> 相关参考：[calculus 模块工具集](../references/calculus-integrals-source.md)
 
 ## 10. 微分方程
 
@@ -449,8 +449,8 @@ dsolve(eq5, y)
 # -> Eq(f(x), C1*exp(x**2))
 ```
 
-> 相关参考：[dsolve 与 ODE 分类](/references/series-solvers-source.md)
+> 相关参考：[dsolve 与 ODE 分类](../references/series-solvers-source.md)
 
 ---
 
-**小结**：SymPy 的微积分覆盖了从求导（`diff`/`Derivative`）、积分（`integrate`/`Integral`）、极限（`limit`/`Limit`）、级数（`series`）到积分变换（`laplace_transform`/`fourier_transform`）、函数分析（`singularities`/`stationary_points`）和微分方程（`dsolve`）的完整工具链。关键模式是：未求值类（`Derivative`/`Integral`/`Limit`）+ `.doit()` 触发计算，顶层函数（`diff`/`integrate`/`limit`）直接求值。继续学习 [方程求解与矩阵实战](./solving-equations.md) 掌握更多代数工具。
+**小结**：SymPy 的微积分覆盖了从求导（`diff`/`Derivative`）、积分（`integrate`/`Integral`）、极限（`limit`/`Limit`）、级数（`series`）到积分变换（`laplace_transform`/`fourier_transform`）、函数分析（`singularities`/`stationary_points`）和微分方程（`dsolve`）的完整工具链。关键模式是：未求值类（`Derivative`/`Integral`/`Limit`）+ `.doit()` 触发计算，顶层函数（`diff`/`integrate`/`limit`）直接求值。继续学习 [方程求解与矩阵实战](solving-equations.md) 掌握更多代数工具。

@@ -42,9 +42,9 @@ CodeBuddy 以三种形态交付同一套 AI 编程能力（F-009）：
 
 | 形态 | 定位 | 典型用户 |
 |------|------|----------|
-| [IDE](/concepts/01-ide.md) | 产设研一体的独立桌面端 | 需要从 PRD 到部署全流程的团队 |
+| [IDE](01-ide.md) | 产设研一体的独立桌面端 | 需要从 PRD 到部署全流程的团队 |
 | 插件 | 即插即用于 VS Code/JetBrains/Xcode 等主流 IDE | 已有固定 IDE 工作流的开发者 |
-| [CLI/Code](/concepts/02-cli.md) | 终端命令行工具 | 偏好终端、服务器/无头场景开发者 |
+| [CLI/Code](02-cli.md) | 终端命令行工具 | 偏好终端、服务器/无头场景开发者 |
 
 三种形态共享 Plan 模式、Subagents、Skills、Hooks、MCP、记忆、规则、智能提交等高级功能（F-018），学习成本可跨形态迁移。IDE 基于 VSCode 架构（F-008），插件兼容六大宿主 IDE（F-019 ~ F-024），CLI 通过 npm 包 `@tencent-ai/codebuddy-code` 分发（F-025, F-027）。
 
@@ -52,9 +52,9 @@ CodeBuddy 以三种形态交付同一套 AI 编程能力（F-009）：
 
 | 产品 | 定位 | 核心场景 |
 |------|------|----------|
-| [NPC](/concepts/03-npc.md) | 云端 AI 员工（Cloud Agent） | 目标驱动的自主需求交付、多 Agent 协同 |
-| [WorkBuddy](/concepts/04-workbuddy.md) | 在线 AI 助手 Web 应用 | 日常办公与代码开发的对话式协同 |
-| [Security](/concepts/05-security.md) | AI 代码安全审计平台 | 漏洞发现、PoC 验证、自动修复 |
+| [NPC](03-npc.md) | 云端 AI 员工（Cloud Agent） | 目标驱动的自主需求交付、多 Agent 协同 |
+| [WorkBuddy](04-workbuddy.md) | 在线 AI 助手 Web 应用 | 日常办公与代码开发的对话式协同 |
+| [Security](05-security.md) | AI 代码安全审计平台 | 漏洞发现、PoC 验证、自动修复 |
 
 ## 产品关系
 
@@ -117,10 +117,10 @@ CodeBuddy 矩阵的核心优势在于能力的跨产品复用：
 
 ## 相关概念
 
-- [CodeBuddy IDE](/concepts/01-ide.md) — 产设研一体的桌面端，全流程开发链路
-- [CLI](/concepts/02-cli.md) — 终端原生工具，分层记忆与 Sub-agents
-- [NPC 云端 AI 员工](/concepts/03-npc.md) — 目标驱动的云端自主 Agent
-- [WorkBuddy 在线助手](/concepts/04-workbuddy.md) — 办公与开发双场景对话式助手
-- [Security 安全审计](/concepts/05-security.md) — 六步安全闭环与对抗性 AI 审查
-- [CLI 快速入门](/examples/quick-start-cli.md) — 体验三态一体中的 CLI 形态
-- [IDE 工作流](/examples/ide-workflow.md) — 从自然语言到部署的实战流程
+- [CodeBuddy IDE](01-ide.md) — 产设研一体的桌面端，全流程开发链路
+- [CLI](02-cli.md) — 终端原生工具，分层记忆与 Sub-agents
+- [NPC 云端 AI 员工](03-npc.md) — 目标驱动的云端自主 Agent
+- [WorkBuddy 在线助手](04-workbuddy.md) — 办公与开发双场景对话式助手
+- [Security 安全审计](05-security.md) — 六步安全闭环与对抗性 AI 审查
+- [CLI 快速入门](../examples/quick-start-cli.md) — 体验三态一体中的 CLI 形态
+- [IDE 工作流](../examples/ide-workflow.md) — 从自然语言到部署的实战流程

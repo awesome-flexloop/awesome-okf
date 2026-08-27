@@ -242,6 +242,6 @@ const accessToken = await getOAuthAccessToken("slack");
 
 ## 进一步阅读
 
-- [Auth 与 CLI 认证体系](/ai/langchain-ai/openwiki/concepts/auth-cli)
-- [配置与环境变量参考](/ai/langchain-ai/openwiki/references/env-config)
-- [Agent API 参考](/ai/langchain-ai/openwiki/references/api)
+- Auth 与 CLI 认证体系
+- 配置与环境变量参考
+- Agent API 参考

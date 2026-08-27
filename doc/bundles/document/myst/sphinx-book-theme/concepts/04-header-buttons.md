@@ -291,8 +291,8 @@ def setup(app):
 
 ## 相关概念
 
-- [主题架构与PST继承](/concepts/02-theme-architecture.md)
-- [配置系统详解](/concepts/03-configuration.md)
-- [交互功能（全屏/TOC隐藏/Thebe）](/concepts/06-interactive-features.md)
-- [源码路径映射与配置速查](/references/sbt-source.md)
-- [交互式计算书籍配置示例](/examples/interactive-book.md)
+- [主题架构与PST继承](02-theme-architecture.md)
+- [配置系统详解](03-configuration.md)
+- [交互功能（全屏/TOC隐藏/Thebe）](06-interactive-features.md)
+- [源码路径映射与配置速查](../references/sbt-source.md)
+- [交互式计算书籍配置示例](../examples/interactive-book.md)

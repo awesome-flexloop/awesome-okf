@@ -87,4 +87,4 @@ deepagents-evals radar
 
 ## 相关概念
 
-- [Evals评估套件](/ai/datawhale/deepagents/concepts/evals-suite)
+- Evals评估套件

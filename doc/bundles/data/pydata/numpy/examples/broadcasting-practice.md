@@ -318,7 +318,7 @@ print(check_broadcast((2, 3, 4), (3, 1)))  # → (2, 3, 4)
 
 ## 相关概念
 
-- [广播规则](/concepts/04-broadcasting.md) — 广播的4条规则详解
-- [ufunc通用函数](/concepts/03-ufunc.md) — ufunc方法（outer、reduce等）
-- [索引与切片](/concepts/05-indexing.md) — newaxis在索引中的使用
+- [广播规则](../concepts/04-broadcasting.md) — 广播的4条规则详解
+- [ufunc通用函数](../concepts/03-ufunc.md) — ufunc方法（outer、reduce等）
+- [索引与切片](../concepts/05-indexing.md) — newaxis在索引中的使用
 - [基础数组操作](basic-array-ops.md) — 数组基础操作

@@ -115,9 +115,9 @@ manimlib/
 
 ## 相关概念
 
-- [00 ManimGL 简介与整体架构](/concepts/00-introduction.md)
-- [01 第一个 Scene：Hello World](/concepts/01-hello-world.md)
-- [02 配置系统](/concepts/02-configuration.md)
-- [05 动画基础](/concepts/05-animation-basics.md)
-- [CLI 参数完整速查表](/references/cli-parameters-reference.md)
-- [缓动函数参考](/references/rate-functions-gallery.md)
+- [00 ManimGL 简介与整体架构](../concepts/00-introduction.md)
+- [01 第一个 Scene：Hello World](../concepts/01-hello-world.md)
+- [02 配置系统](../concepts/02-configuration.md)
+- [05 动画基础](../concepts/05-animation-basics.md)
+- [CLI 参数完整速查表](cli-parameters-reference.md)
+- [缓动函数参考](rate-functions-gallery.md)

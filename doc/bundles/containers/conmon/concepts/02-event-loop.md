@@ -166,7 +166,7 @@ self-pipe 解决一个经典问题：**如何从信号处理器安全唤醒主�
 
 ### self-pipe 在 conmon 中的作用
 
-根据源码注释（[conmon.c#L314-L316](file:///d:/spaces/SpecWeave/external/dao/action/Containers/conmon/src/conmon.c#L314-L316)）：
+根据源码注释（conmon.c#L314-L316）：
 
 > Create a self-pipe to safely wake up the main loop from signal handlers. This avoids calling raise() from a signal handler while ppoll() is active, which can trigger glibc's __syscall_cancel and cause SIGABRT (issue #657).
 

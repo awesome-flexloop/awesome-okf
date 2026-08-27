@@ -104,6 +104,6 @@ setup:js → setup:py:pip → setup:py:ext → build:lib → build:ext → lite:
 
 ## 相关概念
 
-- [构建系统详解](/concepts/07-build-system.md)
-- [本地开发环境搭建](/examples/local-dev-setup.md)
-- [Python包与Labextension注册](/concepts/08-python-package.md)
+- [构建系统详解](../concepts/07-build-system.md)
+- [本地开发环境搭建](../examples/local-dev-setup.md)
+- [Python包与Labextension注册](../concepts/08-python-package.md)

@@ -96,5 +96,5 @@ def get_package_max_version_index(versions: dict, target_v: tuple) -> int: ...  
 
 ## 相关概念
 
-- [浏览器端包管理](/concepts/05-package-management.md)
-- [构建时 Addon 系统](/concepts/04-build-addons.md)
+- [浏览器端包管理](../concepts/05-package-management.md)
+- [构建时 Addon 系统](../concepts/04-build-addons.md)

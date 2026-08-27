@@ -128,7 +128,7 @@ jcache project info
 
 ## 相关概念
 
-- [简介](/concepts/00-introduction.md)
-- [缓存架构设计](/concepts/02-architecture.md)
-- [CLI 命令参考](/concepts/05-cli-reference.md)
-- [基本使用示例](/examples/basic-usage.md)
+- [简介](00-introduction.md)
+- [缓存架构设计](02-architecture.md)
+- [CLI 命令参考](05-cli-reference.md)
+- [基本使用示例](../examples/basic-usage.md)

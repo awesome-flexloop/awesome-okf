@@ -86,6 +86,6 @@ extensions = [
 
 ## 相关概念
 
-- [简介](/concepts/00-introduction.md)
-- [四个指令详解](/concepts/02-directives.md)
-- [基础标签页示例](/examples/basic-tabs.md)
+- [简介](00-introduction.md)
+- [四个指令详解](02-directives.md)
+- [基础标签页示例](../examples/basic-tabs.md)

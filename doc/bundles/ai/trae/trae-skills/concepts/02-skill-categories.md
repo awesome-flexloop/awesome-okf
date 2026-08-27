@@ -45,7 +45,7 @@ sources:
 | `wechat-mini-program-development` | 8 步项目搭建：目录结构→config.js→api.js→request.js→util.js→app.js→tabBar | 文件创建、代码生成 |
 | `cloudbase` | 7 步云开发流程：确认场景→MCP 检查→环境绑定→MCP 工具操作→部署→收尾 | CloudBase MCP 工具调用 |
 
-详见 [纯 Prompt 型技能](/concepts/03-prompt-only-skills.md)。
+详见 [纯 Prompt 型技能](03-prompt-only-skills.md)。
 
 ## 脚本辅助型模式
 
@@ -71,7 +71,7 @@ sources:
 3. 脚本输出结构化数据（JSON/CSV），SKILL.md 指导 Agent 格式化最终输出
 4. 复杂脚本流水线提供一键编排脚本（如 `run_video_workflow.py`）
 
-详见 [脚本辅助型技能](/concepts/04-script-assisted-skills.md)。
+详见 [脚本辅助型技能](04-script-assisted-skills.md)。
 
 ## Workflow 编排型模式
 
@@ -99,7 +99,7 @@ Workflow 编排型技能通过 SKILL.md 定义多阶段（Phase/步骤）的复�
 4. **归档约定**：定义输出文件的路径格式和命名规则
 5. **错误处理**：明确失败时的故障排除流程（如 `trae-claw-install` 的约束条款）
 
-详见 [Workflow 编排型技能](/concepts/05-workflow-skills.md)。
+详见 [Workflow 编排型技能](05-workflow-skills.md)。
 
 ## 模式选择决策树
 
@@ -134,15 +134,15 @@ Workflow 编排型技能通过 SKILL.md 定义多阶段（Phase/步骤）的复�
 
 ## 相关概念
 
-- [Trae Skills 简介](/concepts/00-introduction.md)
-- [SKILL.md 格式规范](/concepts/01-skill-format.md)
-- [纯 Prompt 型技能](/concepts/03-prompt-only-skills.md)
-- [脚本辅助型技能](/concepts/04-script-assisted-skills.md)
-- [Workflow 编排型技能](/concepts/05-workflow-skills.md)
-- [编写自定义 Skill](/concepts/07-write-skill.md)
+- [Trae Skills 简介](00-introduction.md)
+- [SKILL.md 格式规范](01-skill-format.md)
+- [纯 Prompt 型技能](03-prompt-only-skills.md)
+- [脚本辅助型技能](04-script-assisted-skills.md)
+- [Workflow 编排型技能](05-workflow-skills.md)
+- [编写自定义 Skill](07-write-skill.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/skills-source.md)
-- [创建第一个 Skill](/examples/create-first-skill.md)
-- [带 Python 脚本的 Skill 示例](/examples/skill-with-python-script.md)
+- [源码信源索引](../references/skills-source.md)
+- [创建第一个 Skill](../examples/create-first-skill.md)
+- [带 Python 脚本的 Skill 示例](../examples/skill-with-python-script.md)

@@ -69,7 +69,7 @@ sources:
 
 ## 相关概念
 
-- [四大版本系统](/concepts/01-four-systems.md)
-- [德经在前的阅读策略](/concepts/02-de-before-dao.md)
-- [避讳字与通假字](/concepts/03-taboo-characters.md)
-- [核心异文选读](/concepts/04-key-variants.md)
+- [四大版本系统](01-four-systems.md)
+- [德经在前的阅读策略](02-de-before-dao.md)
+- [避讳字与通假字](03-taboo-characters.md)
+- [核心异文选读](04-key-variants.md)

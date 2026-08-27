@@ -245,6 +245,6 @@ core.solve.Solver (classic)
 
 ## 相关概念
 
-- [Index 索引与 SubdirData](./08-index-and-repodata.md)：ReducedIndex 是 SAT 求解的数据来源
-- [UnlinkLinkTransaction 事务与包链接](./10-transaction-link.md)：solve_for_transaction() 的输出是事务对象
-- [Context 全局配置与 condarc](./07-context-configuration.md)：求解器从 context 获取 solver 后端选择、通道优先级等配置
+- [Index 索引与 SubdirData](08-index-and-repodata.md)：ReducedIndex 是 SAT 求解的数据来源
+- [UnlinkLinkTransaction 事务与包链接](10-transaction-link.md)：solve_for_transaction() 的输出是事务对象
+- [Context 全局配置与 condarc](07-context-configuration.md)：求解器从 context 获取 solver 后端选择、通道优先级等配置

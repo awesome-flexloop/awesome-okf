@@ -128,12 +128,12 @@ curl https://apihub.agnes-ai.com/v1/chat/completions \
 | 问题 | 可能原因 | 快速解决 |
 |------|---------|---------|
 | 401 Unauthorized | API密钥错误或未加载 | 检查环境变量名是否正确，密钥是否复制完整 |
-| 429 Too Many Requests | 触发速率限制 | 降低并发，添加重试逻辑，参考[速率限制](/concepts/06-rate-limits.md) |
+| 429 Too Many Requests | 触发速率限制 | 降低并发，添加重试逻辑，参考[速率限制](06-rate-limits.md) |
 | 连接超时 | 网络问题 | 检查网络连接，确认可以访问apihub.agnes-ai.com |
 
 ## 相关概念
 
-- [Agnes AI 简介](/concepts/00-introduction.md)
-- [API认证与安全](/concepts/02-api-authentication.md) — 深入了解认证机制与安全规范
-- [对话补全API](/concepts/03-chat-completions.md) — 对话接口完整参数说明
-- [Python基础对话示例](/examples/chat-completion.md) — 可直接运行的完整示例
+- [Agnes AI 简介](00-introduction.md)
+- [API认证与安全](02-api-authentication.md) — 深入了解认证机制与安全规范
+- [对话补全API](03-chat-completions.md) — 对话接口完整参数说明
+- [Python基础对话示例](../examples/chat-completion.md) — 可直接运行的完整示例

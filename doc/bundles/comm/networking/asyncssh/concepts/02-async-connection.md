@@ -317,10 +317,10 @@ conn = await asyncssh.connect('host', config='~/.ssh/config')
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [通道与流](/concepts/03-channels.md)
-- [认证体系](/concepts/05-authentication.md)
-- [端口转发](/concepts/09-port-forwarding.md)
+- [5分钟快速上手](01-getting-started.md)
+- [通道与流](03-channels.md)
+- [认证体系](05-authentication.md)
+- [端口转发](09-port-forwarding.md)
 - [paramiko SSHClient 详解](../../paramiko/concepts/02-ssh-client.md)（同步模型对比）
 
-[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](/references/asyncssh-source.md)。
+[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](../references/asyncssh-source.md)。

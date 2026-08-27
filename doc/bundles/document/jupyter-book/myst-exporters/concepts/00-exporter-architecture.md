@@ -176,13 +176,13 @@ export function mystToHtml(tree, opts?) {
 
 ## 相关概念
 
-- [01-html-export](/concepts/01-html-export.md)：HTML 导出管线
-- [02-latex-export](/concepts/02-latex-export.md)：LaTeX 序列化器详解
-- [03-pdf-export](/concepts/03-pdf-export.md)：PDF 生成流程（TeX→latexmk）
-- [04-docx-export](/concepts/04-docx-export.md)：DOCX 导出
-- [05-jats-export](/concepts/05-jats-export.md)：JATS XML 导出
-- [06-markdown-export](/concepts/06-markdown-export.md)：Markdown 回环导出
-- [07-typst-export](/concepts/07-typst-export.md)：Typst 导出
-- [08-jtex-template-engine](/concepts/08-jtex-template-engine.md)：jtex 模板引擎
-- [09-import-converters](/concepts/09-import-converters.md)：导入转换器
-- [01-multi-format-export](/examples/01-multi-format-export.md)：多格式到处示例
+- [01-html-export](01-html-export.md)：HTML 导出管线
+- [02-latex-export](02-latex-export.md)：LaTeX 序列化器详解
+- [03-pdf-export](03-pdf-export.md)：PDF 生成流程（TeX→latexmk）
+- [04-docx-export](04-docx-export.md)：DOCX 导出
+- [05-jats-export](05-jats-export.md)：JATS XML 导出
+- [06-markdown-export](06-markdown-export.md)：Markdown 回环导出
+- [07-typst-export](07-typst-export.md)：Typst 导出
+- [08-jtex-template-engine](08-jtex-template-engine.md)：jtex 模板引擎
+- [09-import-converters](09-import-converters.md)：导入转换器
+- [01-multi-format-export](../examples/01-multi-format-export.md)：多格式到处示例

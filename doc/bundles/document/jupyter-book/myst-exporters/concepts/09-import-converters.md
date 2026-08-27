@@ -24,7 +24,7 @@ myst-exporters 不仅包含导出器（MyST→目标格式），还包含两个�
 
 ## jats-to-myst：JATS XML 导入
 
-JATS 是学术出版的标准 XML 格式（见 [JATS XML 导出](/concepts/05-jats-export.md)）。jats-to-myst 可以将 JATS XML 论文导入为 MyST 文档，实现从期刊投稿系统/PMC/PubMed 到 MyST 的工作流。
+JATS 是学术出版的标准 XML 格式（见 [JATS XML 导出](05-jats-export.md)）。jats-to-myst 可以将 JATS XML 论文导入为 MyST 文档，实现从期刊投稿系统/PMC/PubMed 到 MyST 的工作流。
 
 ### 核心 API
 
@@ -207,7 +207,7 @@ myst-cli 根据文件扩展名选择导入器，生成 `myst.yml` 配置和 `.md
 
 ## 相关概念
 
-- [00-exporter-architecture](/concepts/00-exporter-architecture.md)：统一导出架构（导出器共性）
-- [05-jats-export](/concepts/05-jats-export.md)：JATS XML 导出（导出方向对称）
-- [02-latex-export](/concepts/02-latex-export.md)：LaTeX 导出（导出方向对称）
-- [03-latex-import](/examples/03-latex-import.md)：LaTeX 导入示例
+- [00-exporter-architecture](00-exporter-architecture.md)：统一导出架构（导出器共性）
+- [05-jats-export](05-jats-export.md)：JATS XML 导出（导出方向对称）
+- [02-latex-export](02-latex-export.md)：LaTeX 导出（导出方向对称）
+- [03-latex-import](../examples/03-latex-import.md)：LaTeX 导入示例

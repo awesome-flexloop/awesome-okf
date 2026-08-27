@@ -185,6 +185,6 @@ git checkout -- .
 
 ## 相关命令
 
-- [初始化项目](/examples/01-init-project.md)
-- [构建站点](/examples/02-build-site.md)
-- [版本迁移概念](/concepts/07-migration.md)
+- [初始化项目](01-init-project.md)
+- [构建站点](02-build-site.md)
+- [版本迁移概念](../concepts/07-migration.md)

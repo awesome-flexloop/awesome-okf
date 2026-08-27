@@ -232,6 +232,6 @@ minner        thin thin  med   thick 0   thin   thin   thin
 
 ## 相关概念
 
-- [配置系统](/concepts/10-settings-options.md)
-- [渲染管线](/concepts/06-render-pipeline.md)
-- [字体度量](/concepts/12-font-metrics.md)
+- [配置系统](10-settings-options.md)
+- [渲染管线](06-render-pipeline.md)
+- [字体度量](12-font-metrics.md)

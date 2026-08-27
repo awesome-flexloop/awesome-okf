@@ -111,7 +111,7 @@ fps simple:Main --set greeting="Hello, World!" --set farewell="See you later!"
 
 ## 相关概念
 
-- [安装与快速开始](/concepts/01-getting-started.md)
-- [模块系统](/concepts/02-module-system.md)
-- [生命周期阶段](/concepts/04-lifecycle-phases.md)
+- [安装与快速开始](../concepts/01-getting-started.md)
+- [模块系统](../concepts/02-module-system.md)
+- [生命周期阶段](../concepts/04-lifecycle-phases.md)
 - [模块间共享对象](02-sharing-objects.md)

@@ -16,7 +16,7 @@ sources:
 
 ## 概述
 
-[build.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/build.py) 定义了 BinderHub 的镜像构建执行体系。该模块包含三个核心类层次：`ProgressEvent`（构建进度事件）、`BuildExecutor`（构建执行器基类）、`KubernetesBuildExecutor`（Kubernetes Pod 构建实现）、`KubernetesCleaner`（过期 Pod 清理器）和 `FakeBuild`（测试用假构建器）。
+build.py 定义了 BinderHub 的镜像构建执行体系。该模块包含三个核心类层次：`ProgressEvent`（构建进度事件）、`BuildExecutor`（构建执行器基类）、`KubernetesBuildExecutor`（Kubernetes Pod 构建实现）、`KubernetesCleaner`（过期 Pod 清理器）和 `FakeBuild`（测试用假构建器）。
 
 ## ProgressEvent：构建进度事件模型
 

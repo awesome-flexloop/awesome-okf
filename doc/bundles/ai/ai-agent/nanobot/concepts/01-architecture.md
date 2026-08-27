@@ -169,8 +169,8 @@ TUI 和 WebUI 启动器共享一个按需本地网关：任一命令可启动它
 
 ## 相关概念
 
-- [nanobot 简介](/concepts/00-introduction.md)
-- [Agent 运行时](/concepts/02-agent-runtime.md)
-- [消息总线](/concepts/03-bus-messaging.md)
-- [SDK 类型系统](/concepts/04-sdk-types.md)
-- [多接口架构](/concepts/05-multi-interface.md)
+- [nanobot 简介](00-introduction.md)
+- [Agent 运行时](02-agent-runtime.md)
+- [消息总线](03-bus-messaging.md)
+- [SDK 类型系统](04-sdk-types.md)
+- [多接口架构](05-multi-interface.md)

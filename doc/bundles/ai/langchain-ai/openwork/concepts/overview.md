@@ -131,4 +131,4 @@ openwork/
 
 openwork 赋予 AI 代理直接访问文件系统和执行 shell 命令的能力。安全边界完全依赖用户审批——所有 shell 命令在执行前需人工确认。建议仅在受信任的工作区中运行。
 
-详见 [信源登记](/ai/langchain-ai/openwork/references/source-registry) 和 [事实清单](/ai/langchain-ai/openwork/spec/facts)。
+详见 信源登记 和 事实清单。

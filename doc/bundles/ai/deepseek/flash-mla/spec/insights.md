@@ -157,5 +157,5 @@ SplitKV 将长序列的 KV cache 沿序列维度切分为多个 split，每个 s
 
 ## 十一、与 DeepGEMM/TileLang 的关系
 
-- **DeepGEMM**（[/deepseek/deep-gemm/](/ai/deepseek/deep-gemm/)）：DeepSeek 的高性能 GEMM 核函数库，使用 JIT 编译，提供通用矩阵乘法能力；FlashMLA 专注于注意力核函数，两者在推理 pipeline 中各司其职——FlashMLA 负责注意力计算，DeepGEMM 负责 MLP/MoE 的线性层计算
-- **TileLang**（[/deepseek/tile-kernels/](/ai/deepseek/tile-kernels/)）：TileLang 编写的核函数库，可作为 CUDA C++ 核函数的补充，提供更高抽象层级的核函数开发方式；FlashMLA 使用纯 CUDA C++ 手写核函数以达到极致性能
+- **DeepGEMM**（[/deepseek/deep-gemm/](../../deep-gemm/index.md)）：DeepSeek 的高性能 GEMM 核函数库，使用 JIT 编译，提供通用矩阵乘法能力；FlashMLA 专注于注意力核函数，两者在推理 pipeline 中各司其职——FlashMLA 负责注意力计算，DeepGEMM 负责 MLP/MoE 的线性层计算
+- **TileLang**（[/deepseek/tile-kernels/](../../tile-kernels/index.md)）：TileLang 编写的核函数库，可作为 CUDA C++ 核函数的补充，提供更高抽象层级的核函数开发方式；FlashMLA 使用纯 CUDA C++ 手写核函数以达到极致性能

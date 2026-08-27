@@ -257,6 +257,6 @@ try_examples 生成的 HTML 结构比其他指令更复杂，包含三个按钮�
 
 ## 相关概念
 
-- [jupyterlite-sphinx 是什么](/concepts/00-introduction.md)
-- [安装与基础配置](/concepts/01-installation.md)
-- [快速开始](/concepts/02-quick-start.md)
+- [jupyterlite-sphinx 是什么](00-introduction.md)
+- [安装与基础配置](01-installation.md)
+- [快速开始](02-quick-start.md)

@@ -87,7 +87,7 @@ ORM 层的 Spawner 模型通过四个布尔/枚举属性反映状态：
 
 状态不变量：`ready` 蕴含 `running`，`running` 蕴含 `active`；`pending` 非空时 `active` 为 `True`。
 
-[^spawner-source][^orm-source]
+[^spawner-source] [^orm-source]
 
 ### SpawnException（v6.0 新增）
 
@@ -118,7 +118,7 @@ Spawner 通过一组 traitlets 管理单用户服务器的连接信息：
 
 `Server` ORM 模型存储在数据库中，包含 `proto`（http/https）、`ip`、`port`、`base_url`、`cookie_name` 等字段，Spawner 与 Server 是一对一关系。
 
-[^spawner-source][^orm-source]
+[^spawner-source] [^orm-source]
 
 ## 资源配置
 
@@ -316,7 +316,7 @@ async def progress(self):
 - [Proxy 系统](proxy.md) — Proxy 如何根据 Spawner 返回的 (ip, port) 更新路由
 - [Authenticator 认证系统](authenticator.md) — 认证器与 Spawner 的协作关系
 - [ORM 数据模型](orm.md) — Spawner/User/Server 在数据库中的持久化模型
-- [JupyterHub 多用户部署](/concepts/11-jupyterhub.md) — JupyterHub 架构总览中 Spawner 的定位
+- JupyterHub 多用户部署 — JupyterHub 架构总览中 Spawner 的定位
 
 [^orm-source]: JupyterHub ORM 源码参考
 [^spawner-source]: JupyterHub Spawner 源码参考

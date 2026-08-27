@@ -187,6 +187,6 @@ docs = parser.parse(blob)
 
 ## 相关概念
 
-- [检索器与向量库](/ai/langchain-ai/langchain/concepts/retriever-vectorstore) —— Document 存入 VectorStore 供检索
-- [总览](/ai/langchain-ai/langchain/concepts/overview) —— Document 在数据层中的位置
-- [Runnable 协议](/ai/langchain-ai/langchain/concepts/runnable-protocol) —— run_in_executor 实现异步适配
+- 检索器与向量库 —— Document 存入 VectorStore 供检索
+- 总览 —— Document 在数据层中的位置
+- Runnable 协议 —— run_in_executor 实现异步适配

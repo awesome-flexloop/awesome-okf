@@ -24,8 +24,8 @@
 ## 返回导航
 
 - [返回首页](../index.md)
-- [示例文档](../examples/)
-- [参考资料](../references/)
+- [示例文档](../examples/index.md)
+- [参考资料](../references/index.md)
 
 ```{toctree}
 :hidden:

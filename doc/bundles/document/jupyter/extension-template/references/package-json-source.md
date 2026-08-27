@@ -120,6 +120,6 @@ package.json 是 NPM 包的配置文件，同时包含 JupyterLab 扩展的元�
 
 ## 相关概念
 
-- [双包构建系统](/concepts/05-build-system.md)
-- [前端扩展开发](/concepts/06-frontend-extension.md)
-- [pyproject.toml 模板解析](/references/pyproject-source.md)
+- [双包构建系统](../concepts/05-build-system.md)
+- [前端扩展开发](../concepts/06-frontend-extension.md)
+- [pyproject.toml 模板解析](pyproject-source.md)

@@ -677,11 +677,11 @@ async fn main() -> anyhow::Result<()> {
 
 ## 逐步解释
 
-1. **传输层**：ACP 协议使用 stdio（stdin/stdout）作为传输层。WTA 启动 Agent 进程后，通过 [`spawn_agent_process()`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/protocol/acp/spawn.rs#L202-L325) 将子进程的 stdin/stdout/stderr 连接到管道，然后在管道上进行 JSON-RPC 通信。每条消息是一行 JSON（line-delimited JSON）。
+1. **传输层**：ACP 协议使用 stdio（stdin/stdout）作为传输层。WTA 启动 Agent 进程后，通过 `spawn_agent_process()` 将子进程的 stdin/stdout/stderr 连接到管道，然后在管道上进行 JSON-RPC 通信。每条消息是一行 JSON（line-delimited JSON）。
 
 2. **JSON-RPC 2.0**：所有消息遵循 JSON-RPC 2.0 格式。请求包含 `jsonrpc`、`id`、`method`、`params`；响应包含 `jsonrpc`、`id`、`result`（或 `error`）；通知包含 `jsonrpc`、`method`、`params`（无 `id`）。
 
-3. **握手流程**：WTA 连接后首先发送 `initialize` 请求，Agent 必须返回 `protocolVersion` 和 `agentInfo`。随后 WTA 发送 `authenticate` 请求（对于需要认证的 Agent）。WTA 使用 [`conn.spawn_client()`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/protocol/acp/conn.rs) 中的 `ClientLink` 来驱动这些请求。
+3. **握手流程**：WTA 连接后首先发送 `initialize` 请求，Agent 必须返回 `protocolVersion` 和 `agentInfo`。随后 WTA 发送 `authenticate` 请求（对于需要认证的 Agent）。WTA 使用 `conn.spawn_client()` 中的 `ClientLink` 来驱动这些请求。
 
 4. **会话管理**：每个 Agent 面板（标签页）对应一个 ACP Session。`session/new` 创建新会话并返回 `sessionId`；`session/load` 恢复历史会话；`session/list` 返回可恢复的会话列表。会话 ID 由 Agent 生成。
 
@@ -695,9 +695,9 @@ async fn main() -> anyhow::Result<()> {
    - `terminal/wait_for_exit`：等待终端进程退出
    - `fs/read_text_file` / `fs/write_text_file`：读写文件
 
-   这些请求是双向的——Agent 发送带 `id` 的请求，WTA 返回响应。[`AgentLink`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/protocol/acp/conn.rs#L200) 封装了这些 client→agent 的方法。
+   这些请求是双向的——Agent 发送带 `id` 的请求，WTA 返回响应。`AgentLink` 封装了这些 client→agent 的方法。
 
-7. **自定义 Agent 识别**：WTA 通过 [`resolve_agent_id_from_cmd()`](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/agent_registry.rs#L291-L312) 解析 Agent ID。如果命令行不匹配任何内置 Agent，ID 为 `"unknown"`。使用 `--agent-id custom:<name>` 显式指定自定义 ID。
+7. **自定义 Agent 识别**：WTA 通过 `resolve_agent_id_from_cmd()` 解析 Agent ID。如果命令行不匹配任何内置 Agent，ID 为 `"unknown"`。使用 `--agent-id custom:<name>` 显式指定自定义 ID。
 
 8. **进程生命周期**：Agent 进程由 wta-master 管理，使用 `kill_on_drop=true` 在连接断开时自动终止。stderr 被捕获用于日志记录，启动失败时前 32 行 stderr 会被提升到 warn 级别日志。
 

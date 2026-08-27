@@ -119,7 +119,7 @@ git-commit-generator 作为参考实现，展示了高质量 Agent 配置的几�
 
 ## 相关链接
 
-- [TRAE Agents 仓库定位与"文档即配置"模式](/concepts/00-introduction.md)
-- [Agent 目录结构与模板规范](/concepts/01-agent-structure.md)
-- [创建自定义 Agent 示例](/examples/create-agent.md)
-- [TRAE Agents 仓库资源索引](/references/agents-source.md)
+- [TRAE Agents 仓库定位与"文档即配置"模式](00-introduction.md)
+- [Agent 目录结构与模板规范](01-agent-structure.md)
+- [创建自定义 Agent 示例](../examples/create-agent.md)
+- [TRAE Agents 仓库资源索引](../references/agents-source.md)

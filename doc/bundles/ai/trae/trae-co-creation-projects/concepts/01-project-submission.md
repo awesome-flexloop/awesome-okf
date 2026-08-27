@@ -112,7 +112,7 @@ Issue 模板要求投稿者填写 4 类结构化信息：
 
 ## 相关链接
 
-- [共创项目仓库定位与协作核心理念](/concepts/00-introduction.md)
-- [审核标准与 Collaboration 权重](/concepts/02-review-criteria.md)
-- [提交共创项目示例](/examples/submit-project.md)
-- [共创项目仓库资源索引](/references/co-creation-source.md)
+- [共创项目仓库定位与协作核心理念](00-introduction.md)
+- [审核标准与 Collaboration 权重](02-review-criteria.md)
+- [提交共创项目示例](../examples/submit-project.md)
+- [共创项目仓库资源索引](../references/co-creation-source.md)

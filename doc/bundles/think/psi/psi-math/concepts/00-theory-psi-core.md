@@ -90,18 +90,18 @@ $$R := \operatorname{Collapse}(\psi)$$
 - `psi-collapse-constants-codex`（12 章）从塌缩推导物理常数；
 - `psi-collapse-zfc`（16 章）对 ZFC 做元数学批判。
 
-这种结构使 `theory_psi` 不仅是一篇文档，更是整个形式化站点的逻辑根。它与 dw.cash 叙事侧的 [ψ=ψ(ψ) 公理](/psi-core/concepts/00-psi-equation.md) 构成同一方程的两个投影面：前者偏数学形式化，后者偏本体论阐释。
+这种结构使 `theory_psi` 不仅是一篇文档，更是整个形式化站点的逻辑根。它与 dw.cash 叙事侧的 [ψ=ψ(ψ) 公理](../../psi-core/concepts/00-psi-equation.md) 构成同一方程的两个投影面：前者偏数学形式化，后者偏本体论阐释。
 
 ## 与宇宙本论的同构
 
-`theory_psi` 的自应用结构与宇宙本论（universe）的公理一 $U=F(U),\ F(x)=x\oplus\mathrm{SHIFT}(x)$ 存在结构同构。两套符号描述的是同一递归机制：ψ 的自应用对应 $F(U)$ 的状态更新，塌缩对应 XOR-SHIFT 操作，回声对应 SHIFT 后留下的信息迹。这一同构关系在 [跨束关联](/psi-universe/concepts/01-flip-xor-shift.md) 中被进一步展开。
+`theory_psi` 的自应用结构与宇宙本论（universe）的公理一 $U=F(U),\ F(x)=x\oplus\mathrm{SHIFT}(x)$ 存在结构同构。两套符号描述的是同一递归机制：ψ 的自应用对应 $F(U)$ 的状态更新，塌缩对应 XOR-SHIFT 操作，回声对应 SHIFT 后留下的信息迹。这一同构关系在 [跨束关联](../../psi-universe/concepts/01-flip-xor-shift.md) 中被进一步展开。
 
 ## 相关概念
 
-- [/psi-core/concepts/00-psi-equation.md](/psi-core/concepts/00-psi-equation.md) — ψ=ψ(ψ) 的本体论阐释
-- [/psi-math/concepts/01-collapse-set-theory.md](/psi-math/concepts/01-collapse-set-theory.md) — 基于自指的后 ZFC 框架
-- [/psi-math/concepts/03-collapse-mathematics.md](/psi-math/concepts/03-collapse-mathematics.md) — 从 ψ 推导十大数学系统
-- [/psi-universe/concepts/01-flip-xor-shift.md](/psi-universe/concepts/01-flip-xor-shift.md) — XOR-SHIFT 操作的公理化对应
+- [/psi-core/concepts/00-psi-equation.md](../../psi-core/concepts/00-psi-equation.md) — ψ=ψ(ψ) 的本体论阐释
+- [/psi-math/concepts/01-collapse-set-theory.md](01-collapse-set-theory.md) — 基于自指的后 ZFC 框架
+- [/psi-math/concepts/03-collapse-mathematics.md](03-collapse-mathematics.md) — 从 ψ 推导十大数学系统
+- [/psi-universe/concepts/01-flip-xor-shift.md](../../psi-universe/concepts/01-flip-xor-shift.md) — XOR-SHIFT 操作的公理化对应
 
 [^f037]: 事实 F-037：系列 theory_psi 为核心文档，定义 Ψ:=ψ=ψ(ψ)。
 [^f036]: 事实 F-036：math.dw.cash 共含 153 个文档页面，站点描述为 9 大系列。

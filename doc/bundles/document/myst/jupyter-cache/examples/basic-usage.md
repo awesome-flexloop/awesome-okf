@@ -204,11 +204,11 @@ jcache notebook execute-all
 
 ## 相关示例
 
-- [Python API编程](/examples/python-api.md)
-- [CI集成与缓存策略](/examples/ci-integration.md)
+- [Python API编程](python-api.md)
+- [CI集成与缓存策略](ci-integration.md)
 
 ## 相关概念
 
-- [CLI命令详解](/concepts/05-cli-reference.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [缓存架构设计](/concepts/02-architecture.md)
+- [CLI命令详解](../concepts/05-cli-reference.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [缓存架构设计](../concepts/02-architecture.md)

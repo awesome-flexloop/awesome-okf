@@ -267,6 +267,6 @@ clean-assets:
 
 ## 相关概念
 
-- [三种编译类型](/concepts/02-compilation-types.md)
-- [配置文件详解](/concepts/03-configuration.md)
-- [资产编译流水线示例](/examples/asset-pipeline.md)
+- [三种编译类型](02-compilation-types.md)
+- [配置文件详解](03-configuration.md)
+- [资产编译流水线示例](../examples/asset-pipeline.md)

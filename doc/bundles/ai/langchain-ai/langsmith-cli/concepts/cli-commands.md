@@ -185,5 +185,5 @@ CLI 实现了两种分页模式：
 
 ## 相关概念
 
-- [API 客户端架构](/ai/langchain-ai/langsmith-cli/concepts/api-client) — SDK 封装、v1/v2 透明切换、认证体系
-- [总览](/ai/langchain-ai/langsmith-cli/concepts/overview) — 项目定位与架构概览
+- API 客户端架构 — SDK 封装、v1/v2 透明切换、认证体系
+- 总览 — 项目定位与架构概览

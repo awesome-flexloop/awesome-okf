@@ -16,7 +16,7 @@ sources:
 
 # 矩阵运算
 
-SymPy 的矩阵系统位于 `sympy.matrices` 包，分为两大体系：**显式矩阵**（dense/sparse，存储具体元素值）和**符号矩阵表达式**（MatrixExpr，保持符号形式不求值）。显式矩阵以 `MatrixBase` 为抽象基类，`Matrix`（= `MutableDenseMatrix`）是最常用的可变稠密矩阵类，`ImmutableDenseMatrix` 提供不可变版本，`SparseMatrix` 使用 DOK 格式存储稀疏矩阵。矩阵系统支持完整的线性代数运算：算术运算（加减乘幂）、转置/共轭转置、行列式、逆、秩、迹、范数、特征值/特征向量、对角化、Jordan 标准形、LU/QR/Cholesky/SVD 分解、线性方程组求解等。符号矩阵表达式通过 `MatrixSymbol`、`Identity`、`ZeroMatrix` 等类提供代数层面的矩阵操作。[^matrices-init][^dense-source][^matrixbase-source]
+SymPy 的矩阵系统位于 `sympy.matrices` 包，分为两大体系：**显式矩阵**（dense/sparse，存储具体元素值）和**符号矩阵表达式**（MatrixExpr，保持符号形式不求值）。显式矩阵以 `MatrixBase` 为抽象基类，`Matrix`（= `MutableDenseMatrix`）是最常用的可变稠密矩阵类，`ImmutableDenseMatrix` 提供不可变版本，`SparseMatrix` 使用 DOK 格式存储稀疏矩阵。矩阵系统支持完整的线性代数运算：算术运算（加减乘幂）、转置/共轭转置、行列式、逆、秩、迹、范数、特征值/特征向量、对角化、Jordan 标准形、LU/QR/Cholesky/SVD 分解、线性方程组求解等。符号矩阵表达式通过 `MatrixSymbol`、`Identity`、`ZeroMatrix` 等类提供代数层面的矩阵操作。[^matrices-init] [^dense-source] [^matrixbase-source]
 
 ## 矩阵类层次
 
@@ -665,7 +665,7 @@ NonSquareMatrixError
 
 - 前置概念：[方程求解](08-solvers.md) 了解 linsolve() 与矩阵求解的关系
 - 前置概念：[sympify与类型转换](03-sympify-basics.md) 了解 Matrix 在表达式系统中的桥接
-- 源码信源：[matrices-source](/references/matrices-source.md) 提供 MatrixBase API 与类层次完整参考
+- 源码信源：[matrices-source](../references/matrices-source.md) 提供 MatrixBase API 与类层次完整参考
 
 [^matrices-init]: matrices/__init__.py — 模块入口与全部公开导出
 [^dense-source]: matrices/dense.py — DenseMatrix/MutableDenseMatrix/工厂函数源码

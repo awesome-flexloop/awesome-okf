@@ -130,6 +130,6 @@ top_k_indices = np.argsort(distances, axis=1)[:, :k]
 
 ## 延伸阅读
 
-- [ANN 近似最近邻算法](/ai/datawhale/easy-vecdb/concepts/ann-algorithms) — 如何通过近似计算打破暴力搜索的效率瓶颈
-- [IVF 与 PQ 量化](/ai/datawhale/easy-vecdb/concepts/ivf-pq-quantization) — 空间划分与向量压缩的经典组合
-- [手写 Mini Vector DB](/ai/datawhale/easy-vecdb/examples/mini-vector-db) — 用 200 行 Python 实现向量数据库
+- ANN 近似最近邻算法 — 如何通过近似计算打破暴力搜索的效率瓶颈
+- IVF 与 PQ 量化 — 空间划分与向量压缩的经典组合
+- 手写 Mini Vector DB — 用 200 行 Python 实现向量数据库

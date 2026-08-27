@@ -286,9 +286,9 @@ proc.term_size   # Tuple[int, int, int, int] 终端大小
 
 ## 相关概念
 
-- [通道与流](/concepts/03-channels.md) —— SSHChannel 底层通道
-- [异步连接详解](/concepts/02-async-connection.md) —— create_process 的连接前提
-- [服务端开发](/concepts/10-server.md) —— SSHServerProcess 的服务端用法
+- [通道与流](03-channels.md) —— SSHChannel 底层通道
+- [异步连接详解](02-async-connection.md) —— create_process 的连接前提
+- [服务端开发](10-server.md) —— SSHServerProcess 的服务端用法
 - [paramiko Channel 通道](../../paramiko/concepts/04-channel.md)（同步通道对比）
 
-[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](/references/asyncssh-source.md)。
+[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](../references/asyncssh-source.md)。

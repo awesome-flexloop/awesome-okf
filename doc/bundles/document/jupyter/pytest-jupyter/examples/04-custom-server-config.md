@@ -280,6 +280,6 @@ async def test_inline_override(jp_configurable_serverapp):
 
 ## 相关概念
 
-- [Server插件详解](/concepts/05-server-plugin.md) — 各fixture的完整说明
-- [Fixture工厂模式](/concepts/08-fixture-factories.md) — jp_configurable_serverapp工厂模式
+- [Server插件详解](../concepts/05-server-plugin.md) — 各fixture的完整说明
+- [Fixture工厂模式](../concepts/08-fixture-factories.md) — jp_configurable_serverapp工厂模式
 - [Server API测试](03-server-api-test.md) — 基础API测试示例

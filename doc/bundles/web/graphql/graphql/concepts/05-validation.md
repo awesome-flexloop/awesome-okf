@@ -312,8 +312,8 @@ query GetUser($userId: ID) {
 
 ## 相关概念
 
-- [复合类型：对象、接口、联合与枚举](/concepts/03-composite-types.md) — 了解 Object/Interface/Union 等类型上的字段选择规则
-- [指令、包装类型与输入系统](/concepts/04-directives-and-wrapping-types.md) — 了解指令位置定义、变量类型与输入强制转换
-- [执行引擎：字段解析与值完成](/concepts/06-execution.md) — 验证通过后进入执行阶段
-- [响应格式、错误冒泡与序列化](/concepts/07-response-and-errors.md) — 验证错误作为 request error 返回
-- [查询语言基础：文档、操作与选择集](/concepts/01-query-language-basics.md) — 了解文档、操作、片段等语法基础
+- [复合类型：对象、接口、联合与枚举](03-composite-types.md) — 了解 Object/Interface/Union 等类型上的字段选择规则
+- [指令、包装类型与输入系统](04-directives-and-wrapping-types.md) — 了解指令位置定义、变量类型与输入强制转换
+- [执行引擎：字段解析与值完成](06-execution.md) — 验证通过后进入执行阶段
+- [响应格式、错误冒泡与序列化](07-response-and-errors.md) — 验证错误作为 request error 返回
+- [查询语言基础：文档、操作与选择集](01-query-language-basics.md) — 了解文档、操作、片段等语法基础

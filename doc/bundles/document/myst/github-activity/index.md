@@ -44,10 +44,10 @@ github-activity 是 Executable Books 生态中的命令行工具，通过 GitHub
 
 | 章节 | 链接 |
 |------|------|
-| 📖 入门 | [概念文档](/concepts/index.md) |
-| 💡 示例 | [示例代码](/examples/index.md) |
-| 📚 参考 | [源码参考](/references/index.md) |
-| 🔬 规格 | [事实清单](/spec/facts.md) · [架构洞察](/spec/insights.md) |
+| 📖 入门 | [概念文档](concepts/index.md) |
+| 💡 示例 | [示例代码](examples/index.md) |
+| 📚 参考 | [源码参考](references/index.md) |
+| 🔬 规格 | [事实清单](spec/facts.md) · [架构洞察](spec/insights.md) |
 
 ## 快速开始
 
@@ -63,7 +63,7 @@ github-activity owner/repo --since v0.1.0 --until v0.2.0 --output CHANGELOG.md
 
 ## 更新日志
 
-见 [log.md](/log.md)。
+见 [log.md](../log.md)。
 
 ```{toctree}
 :hidden:

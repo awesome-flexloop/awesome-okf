@@ -18,7 +18,7 @@ sources:
 
 ## 什么是 Demo Wall Intl
 
-**trae-co-creation-demo-wall-intl**（项目名 `dem`）是 [trae-co-creation-demo-wall](../trae-co-creation-demo-wall/index.md)（中文版共创作品墙）的**国际版变体**。它在中文版核心架构基础上，针对海外市场和 Vercel 平台部署做了定向调整：将默认语言切换为英语、扩展到5种语言覆盖东南亚市场、引入 Vercel Edge Config 边缘缓存、新增管理员 CSV 导出、按 GDPR 要求调整审计日志外键策略、移除用户封禁系统以简化运营。
+**trae-co-creation-demo-wall-intl**（项目名 `dem`）是 [trae-co-creation-demo-wall](../../trae-co-creation-demo-wall/index.md)（中文版共创作品墙）的**国际版变体**。它在中文版核心架构基础上，针对海外市场和 Vercel 平台部署做了定向调整：将默认语言切换为英语、扩展到5种语言覆盖东南亚市场、引入 Vercel Edge Config 边缘缓存、新增管理员 CSV 导出、按 GDPR 要求调整审计日志外键策略、移除用户封禁系统以简化运营。
 
 > **重要**：本 bundle 仅覆盖国际版与中文版的**差异部分**。核心架构（五表分表、RBAC、NextAuth 认证、COS 存储、Tiptap 富文本、App Router 双层 layout 等）与中文版完全一致，请先阅读中文版概念文档建立基础认知，再读本 bundle 的差异文档。
 
@@ -57,7 +57,7 @@ sources:
 | id-ID | 印尼语 | 印度尼西亚（东南亚最大市场） |
 | vi-VN | 越南语 | 越南（东南亚增长市场） |
 
-> ⚠️ **已知 Bug**：middleware.ts 中 `isProtectedRoute` 正则硬编码为 `/^\/(zh-CN\|en-US)\/(submit\|console\|profile)/`，未包含 id-ID 和 vi-VN，导致印尼语/越南语用户访问受保护路由时可能绕过认证检查。详见 [5语言国际化](/concepts/02-multi-language.md)。
+> ⚠️ **已知 Bug**：middleware.ts 中 `isProtectedRoute` 正则硬编码为 `/^\/(zh-CN\|en-US)\/(submit\|console\|profile)/`，未包含 id-ID 和 vi-VN，导致印尼语/越南语用户访问受保护路由时可能绕过认证检查。详见 [5语言国际化](02-multi-language.md)。
 
 ## 移除封禁系统的设计决策
 
@@ -69,7 +69,7 @@ sources:
 4. **审计能力保留**：SysAuthLog/SysOperationLog 完整保留，管理员仍可通过删除用户处理严重违规
 5. **最后一道防线**：内容审核双状态机（auditStatus/displayStatus）仍然完整
 
-详见 [GDPR合规审计留存](/concepts/04-gdpr-audit-retention.md) 中外键策略变更。
+详见 [GDPR合规审计留存](04-gdpr-audit-retention.md) 中外键策略变更。
 
 ## Vercel 优先部署范式
 
@@ -80,7 +80,7 @@ sources:
 - 字典数据通过 Edge Config 在全球边缘节点缓存（<50ms 读取延迟）
 - Docker 配置保留作为备选方案（"Vercel优先，Docker兼容"）
 
-详见 [Vercel部署](/concepts/05-vercel-deployment.md)。
+详见 [Vercel部署](05-vercel-deployment.md)。
 
 ## 学习路径
 
@@ -88,13 +88,13 @@ sources:
 
 1. **先读中文版核心概念**：了解五表分表、RBAC、认证、审核、COS 存储等基础架构
 2. **读本 bundle 差异概念**：
-   - [Vercel Edge Config缓存](/concepts/01-edge-config-cache.md)
-   - [5语言国际化](/concepts/02-multi-language.md)
-   - [CSV导出功能](/concepts/03-csv-export.md)
-   - [GDPR合规审计留存](/concepts/04-gdpr-audit-retention.md)
-   - [Vercel部署](/concepts/05-vercel-deployment.md)
-   - [与中文版完整差异对照](/concepts/06-differences-from-cn.md)
-3. **动手实践**：参考 [examples/](/examples/) 目录下的示例文档
+   - [Vercel Edge Config缓存](01-edge-config-cache.md)
+   - [5语言国际化](02-multi-language.md)
+   - [CSV导出功能](03-csv-export.md)
+   - [GDPR合规审计留存](04-gdpr-audit-retention.md)
+   - [Vercel部署](05-vercel-deployment.md)
+   - [与中文版完整差异对照](06-differences-from-cn.md)
+3. **动手实践**：参考 examples/ 目录下的示例文档
 
 ## 技术栈速览
 
@@ -114,9 +114,9 @@ sources:
 
 ## 相关概念
 
-- [Vercel Edge Config缓存](/concepts/01-edge-config-cache.md)
-- [5语言国际化](/concepts/02-multi-language.md)
-- [CSV导出功能](/concepts/03-csv-export.md)
-- [GDPR合规审计留存](/concepts/04-gdpr-audit-retention.md)
-- [Vercel部署](/concepts/05-vercel-deployment.md)
-- [与中文版完整差异对照](/concepts/06-differences-from-cn.md)
+- [Vercel Edge Config缓存](01-edge-config-cache.md)
+- [5语言国际化](02-multi-language.md)
+- [CSV导出功能](03-csv-export.md)
+- [GDPR合规审计留存](04-gdpr-audit-retention.md)
+- [Vercel部署](05-vercel-deployment.md)
+- [与中文版完整差异对照](06-differences-from-cn.md)

@@ -24,7 +24,7 @@
   - 错误处理模式
   - 完整可编译示例
 
-- [02-Rust API 使用指南](02-rust.md)
+- 02-Rust API 使用指南
   - Cargo.toml 依赖配置
   - load()/save() 便捷方法
   - 类型安全字段访问（Option、Vec、HashMap）

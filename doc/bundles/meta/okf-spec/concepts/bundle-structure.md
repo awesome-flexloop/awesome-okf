@@ -55,9 +55,9 @@ path/to/bundle/
 
 ## 相关概念
 
-- [概念文档](./concept-documents.md)
-- [溯源与信源](./provenance-sources.md)
-- [索引文件](./index-files.md)
-- [日志文件](./log-files.md)
+- [概念文档](concept-documents.md)
+- [溯源与信源](provenance-sources.md)
+- [索引文件](index-files.md)
+- [日志文件](log-files.md)
 
-[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](/references/okf-spec.md)。
+[^okf-spec]: OKF SPEC v0.2 规范，见本 bundle 信源登记 [references/okf-spec.md](../references/okf-spec.md)。

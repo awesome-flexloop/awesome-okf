@@ -260,7 +260,7 @@ async def exclusive_access():
 
 ## 相关概念
 
-- [模块系统](/concepts/02-module-system.md)
-- [生命周期阶段](/concepts/04-lifecycle-phases.md)
-- [信号系统](/concepts/06-signal-system.md)
-- [独立使用Context](/examples/05-standalone-context.md)
+- [模块系统](02-module-system.md)
+- [生命周期阶段](04-lifecycle-phases.md)
+- [信号系统](06-signal-system.md)
+- [独立使用Context](../examples/05-standalone-context.md)

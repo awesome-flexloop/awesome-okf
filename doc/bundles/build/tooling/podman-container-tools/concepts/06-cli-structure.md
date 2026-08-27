@@ -339,8 +339,8 @@ podman                          # rootCmd
 
 ## 相关概念
 
-- [容器操作命令](/concepts/07-container-commands.md) — 36个容器命令的分类与用法详解
-- [镜像操作命令](/concepts/08-image-commands.md) — 镜像命令与Buildah依赖关系详解
-- [网络与存储卷](/concepts/09-network-volume.md) — 网络和卷命令分类说明
-- [架构概览](/concepts/02-architecture-overview.md) — 双引擎模式与pkg/domain业务逻辑层
-- [Runtime运行时](/concepts/03-runtime.md) — libpod Runtime初始化与关闭流程
+- [容器操作命令](07-container-commands.md) — 36个容器命令的分类与用法详解
+- [镜像操作命令](08-image-commands.md) — 镜像命令与Buildah依赖关系详解
+- [网络与存储卷](09-network-volume.md) — 网络和卷命令分类说明
+- [架构概览](02-architecture-overview.md) — 双引擎模式与pkg/domain业务逻辑层
+- [Runtime运行时](03-runtime.md) — libpod Runtime初始化与关闭流程

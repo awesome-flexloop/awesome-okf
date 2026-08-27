@@ -16,7 +16,7 @@ sources:
 
 `deepagents-cli`（位于 `libs/cli/`）是 Deep Agents 的**部署命令行工具**，用于将 Agent 项目脚手架化并部署到 LangSmith Managed Deep Agents 平台。
 
-> 重要：自 `deepagents-cli==0.1.0` 起，交互式 REPL 已拆分到独立的 [`deepagents-code`](/ai/datawhale/deepagents/concepts/code-module) 包（`dcode`）。CLI 包现在仅包含部署子命令。
+> 重要：自 `deepagents-cli==0.1.0` 起，交互式 REPL 已拆分到独立的 `deepagents-code` 包（`dcode`）。CLI 包现在仅包含部署子命令。
 
 ## 安装与前置条件
 
@@ -129,6 +129,6 @@ libs/cli/deepagents_cli/
 
 ## 与其他概念的关系
 
-- [Code终端编码Agent](/ai/datawhale/deepagents/concepts/code-module) 是从 CLI 拆分出的交互式产品，两者是独立包。
-- [核心SDK与三层架构](/ai/datawhale/deepagents/concepts/core-sdk) 是 CLI 部署的 Agent 的底层运行时。
-- [Monorepo 架构](/ai/datawhale/deepagents/concepts/monorepo-architecture) 描述了 cli 包在仓库中的位置。
+- Code终端编码Agent 是从 CLI 拆分出的交互式产品，两者是独立包。
+- 核心SDK与三层架构 是 CLI 部署的 Agent 的底层运行时。
+- Monorepo 架构 描述了 cli 包在仓库中的位置。

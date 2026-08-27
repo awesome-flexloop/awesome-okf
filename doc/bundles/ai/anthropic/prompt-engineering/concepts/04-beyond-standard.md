@@ -238,7 +238,7 @@ tools = [
 5. 如果用户问的问题不需要工具（如常识、创意写作、基于对话历史的问题），直接回答即可。
 ```
 
-→ 完整的工具使用教程和代码示例见 [Python SDK 工具使用](/python-sdk/concepts/04-tool-use.md)
+→ 完整的工具使用教程和代码示例见 [Python SDK 工具使用](../../python-sdk/concepts/04-tool-use.md)
 
 ---
 
@@ -310,7 +310,7 @@ tools = [
 4. **兜底机制**：检索不到时明确说不知道，不要编造
 5. **冲突处理**：教模型如何处理文档间矛盾的信息
 
-→ 更多 RAG 模式和最佳实践见 [Cookbook RAG 模式](/cookbooks/concepts/03-rag-patterns.md)
+→ 更多 RAG 模式和最佳实践见 [Cookbook RAG 模式](../../cookbooks/concepts/03-rag-patterns.md)
 
 ---
 
@@ -360,7 +360,7 @@ Level 5: 自主 Agent（自主规划、执行、反思、迭代完成复杂任�
 - 任务环境有不确定性，需要根据反馈调整
 - 需要自主完成复杂目标（如"帮我订一张明天去上海的最便宜机票"）
 
-> 提示：Claude Code 就是一个成熟的 Agent 实现，可以参考其设计思路。见 [Claude Code Wiki](/claude-code/)。
+> 提示：Claude Code 就是一个成熟的 Agent 实现，可以参考其设计思路。见 [Claude Code Wiki](../../claude-code/index.md)。
 
 ---
 
@@ -395,7 +395,7 @@ Level 5: 自主 Agent（自主规划、执行、反思、迭代完成复杂任�
 ## 相关概念
 
 - [高级模式（Ch8-9）](03-advanced-patterns.md) — 回到高级技巧
-- [Python SDK 工具使用](/python-sdk/concepts/04-tool-use.md) — 完整的Tool Use代码教程
-- [Cookbook RAG 模式](/cookbooks/concepts/03-rag-patterns.md) — RAG实战模式
-- [Claude Code 概览](/claude-code/concepts/00-overview.md) — 了解实际的Agent产品
-- [Python SDK 概览](/python-sdk/concepts/00-overview.md) — 开始用代码调用Claude
+- [Python SDK 工具使用](../../python-sdk/concepts/04-tool-use.md) — 完整的Tool Use代码教程
+- [Cookbook RAG 模式](../../cookbooks/concepts/03-rag-patterns.md) — RAG实战模式
+- [Claude Code 概览](../../claude-code/concepts/00-overview.md) — 了解实际的Agent产品
+- [Python SDK 概览](../../python-sdk/concepts/00-overview.md) — 开始用代码调用Claude

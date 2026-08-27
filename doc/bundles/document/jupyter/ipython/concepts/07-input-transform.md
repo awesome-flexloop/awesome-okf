@@ -329,7 +329,7 @@ ip.input_transformers_post.append(my_post)
 
 ## 相关概念
 
-- [代码执行管线](/concepts/05-execution-pipeline.md)
-- [魔法命令系统](/concepts/04-magic-system.md)
-- [补全、历史与别名](/concepts/08-completer-history.md)
-- [信源参考 - 输入转换](/references/inputtransformer-source.md)
+- [代码执行管线](05-execution-pipeline.md)
+- [魔法命令系统](04-magic-system.md)
+- [补全、历史与别名](08-completer-history.md)
+- [信源参考 - 输入转换](../references/inputtransformer-source.md)

@@ -336,7 +336,7 @@ DevTool 文档
 
 ## 相关概念
 
-- [子命令与路径导航](/concepts/05-nested-subcommands.md)
-- [Commands 域与交叉引用](/concepts/09-domain-crossref.md)
-- [配置选项详解](/concepts/11-configuration.md)
-- [内容增强完整示例](/examples/content-enhancement.md)
+- [子命令与路径导航](../concepts/05-nested-subcommands.md)
+- [Commands 域与交叉引用](../concepts/09-domain-crossref.md)
+- [配置选项详解](../concepts/11-configuration.md)
+- [内容增强完整示例](content-enhancement.md)

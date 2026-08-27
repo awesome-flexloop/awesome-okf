@@ -235,7 +235,7 @@ research 和 review 只读，implement 写 `internal/auth/`。三者有序执行
 
 ## 相关概念
 
-- [Agent 运行循环](/concepts/02-agent-run-loop.md)——subagent 如何嵌套在 Run 中
-- [CLI 与 TUI](/concepts/05-cli-tui.md)——subagent profile 管理命令
-- [Checkpoint 与恢复](/concepts/06-checkpoint-recovery.md)——后台 writer 的 checkpoint 影响
-- [项目架构](/concepts/01-project-architecture.md)——scheduler 在 boot 中的组装
+- [Agent 运行循环](02-agent-run-loop.md)——subagent 如何嵌套在 Run 中
+- [CLI 与 TUI](05-cli-tui.md)——subagent profile 管理命令
+- [Checkpoint 与恢复](06-checkpoint-recovery.md)——后台 writer 的 checkpoint 影响
+- [项目架构](01-project-architecture.md)——scheduler 在 boot 中的组装

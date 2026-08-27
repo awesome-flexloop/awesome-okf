@@ -355,8 +355,8 @@ def open(self, *args, **kwargs):
 
 ## 相关概念
 
-- [生命周期事件](/concepts/lifecycle-events.md)
-- [消息生命周期](/concepts/message-lifecycle.md)
-- [双传输架构](/concepts/dual-transport.md)
-- [ChatManager 生命周期管理](/concepts/chat-manager.md)
-- [Python 后端 API 参考](/references/api-python.md)
+- [生命周期事件](../concepts/lifecycle-events.md)
+- [消息生命周期](../concepts/message-lifecycle.md)
+- [双传输架构](../concepts/dual-transport.md)
+- [ChatManager 生命周期管理](../concepts/chat-manager.md)
+- [Python 后端 API 参考](../references/api-python.md)

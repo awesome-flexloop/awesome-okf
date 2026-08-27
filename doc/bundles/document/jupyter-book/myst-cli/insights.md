@@ -191,7 +191,7 @@ flowchart TB
 
 ## 学习路径建议
 
-1. **入门**：阅读 [CLI 架构](/concepts/00-cli-architecture.md) 理解命令注册机制，然后跟着 [初始化项目](/examples/01-init-project.md) 实操
-2. **构建流程**：[Build 管线](/concepts/01-build-pipeline.md) → [构建站点](/examples/02-build-site.md)
-3. **开发服务**：[Start 开发服务器](/concepts/02-start-dev-server.md) → [启动开发服务器](/examples/03-dev-server.md)
+1. **入门**：阅读 [CLI 架构](concepts/00-cli-architecture.md) 理解命令注册机制，然后跟着 [初始化项目](examples/01-init-project.md) 实操
+2. **构建流程**：[Build 管线](concepts/01-build-pipeline.md) → [构建站点](examples/02-build-site.md)
+3. **开发服务**：[Start 开发服务器](concepts/02-start-dev-server.md) → [启动开发服务器](examples/03-dev-server.md)
 4. **深入理解**：项目加载 → Session 缓存 → Store 状态 → 模板系统 → 版本迁移

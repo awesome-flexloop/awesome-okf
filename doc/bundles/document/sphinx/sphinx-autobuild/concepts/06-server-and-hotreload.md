@@ -241,8 +241,8 @@ uvicorn.run(app, host=host_name, port=port_num, log_level="warning")
 
 ## 相关概念
 
-- [架构概览](/concepts/02-architecture-overview.md)
-- [中间件注入机制](/concepts/07-middleware-injection.md)
-- [文件监听与过滤](/concepts/05-file-watching.md)
-- [构建系统](/concepts/04-builder-system.md)
-- [sphinx-autobuild 源码信源登记](/references/sphinx-autobuild-source.md)
+- [架构概览](02-architecture-overview.md)
+- [中间件注入机制](07-middleware-injection.md)
+- [文件监听与过滤](05-file-watching.md)
+- [构建系统](04-builder-system.md)
+- [sphinx-autobuild 源码信源登记](../references/sphinx-autobuild-source.md)

@@ -285,7 +285,7 @@ hermes-agent和deepseek-harness均采用这种目录结构，好处是：
 - [Provider适配器模式](provider-adapter-pattern.md) — 不同模型对Prompt格式有不同要求
 
 **跨项目参考**：
-- 🔬 hermes-agent: [分层Prompt构建](external/libs/models/ai/hermes-agent/agent/prompts/)
-- 🔬 deepseek-harness: [Prompt流水线](external/libs/models/ai/deepseek-harness/packages/harness/src/prompt/)
-- 🔬 zleap-agent: [Token预算管理](external/libs/models/ai/Zleap-Agent/packages/core/src/prompt/builder.ts)
-- 🔬 Second-Me: [Few-shot检索](external/libs/models/ai/Second-Me/app/prompts/)
+- 🔬 hermes-agent: 分层Prompt构建
+- 🔬 deepseek-harness: Prompt流水线
+- 🔬 zleap-agent: Token预算管理
+- 🔬 Second-Me: Few-shot检索

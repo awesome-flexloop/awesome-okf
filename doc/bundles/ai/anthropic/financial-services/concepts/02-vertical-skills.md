@@ -23,7 +23,7 @@ sources:
 | **合作方扩展** | LSEG 和 S&P Global 作为合作方提供数据驱动的垂直插件 |
 | **同步机制** | 通过 `sync-agent-skills.py` 脚本从 vertical 源同步 skills 到各个 agent bundles |
 
-> 🔗 Skills 机制基础详见 [/official-skills/concepts/00-overview.md](/official-skills/concepts/00-overview.md)
+> 🔗 Skills 机制基础详见 [/official-skills/concepts/00-overview.md](../../official-skills/concepts/00-overview.md)
 
 ## 7个官方Vertical详解
 
@@ -256,12 +256,12 @@ S&P Global 合作开发的垂直插件，基于 S&P Capital IQ 数据提供 tear
 | **例子** | Excel打开时自动审计模型（audit-xls） | 用户输入 `/comps` 开始可比公司分析 |
 | **类比** | 自动激活的专业知识 | 工具栏上的快捷按钮 |
 
-> 🔗 详细区别详见 [/official-skills/concepts/00-overview.md#skills-与其他扩展机制的关系](/official-skills/concepts/00-overview.md#skills-与其他扩展机制的关系)
+> 🔗 详细区别详见 [/official-skills/concepts/00-overview.md#skills-与其他扩展机制的关系](../../official-skills/concepts/00-overview.md#skills-与其他扩展机制的关系)
 
 ## 相关概念
 
 - [Claude for Financial Services概览](00-overview.md) — 双模式架构、四大功能域总览
 - [10个金融Agents详解](01-agents.md) — Agents如何编排调用这些vertical skills
 - [数据连接器与部署](03-connectors-deployment.md) — financial-analysis插件中的12个MCP连接器
-- [Agents与Skills完整索引](/financial-services/references/agents-skills-index.md) — 所有skills/commands的完整对照表
-- [/official-skills/concepts/00-overview.md](/official-skills/concepts/00-overview.md) — Skills机制基础
+- [Agents与Skills完整索引](../references/agents-skills-index.md) — 所有skills/commands的完整对照表
+- [/official-skills/concepts/00-overview.md](../../official-skills/concepts/00-overview.md) — Skills机制基础

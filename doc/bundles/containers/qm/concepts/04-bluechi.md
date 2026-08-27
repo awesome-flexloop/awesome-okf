@@ -268,6 +268,6 @@ cat tests/qm-sanity-test/check_bluechi_is_ok.sh
 
 ## 相关概念
 
-- [嵌套隔离架构](/bundles/containers/qm/concepts/01-nested-architecture.md)：了解 QM 内独立 systemd 和 BlueChi agent 的运行环境
-- [QM 定位与 ASIL 汽车功能安全场景](/bundles/containers/qm/concepts/00-introduction.md)：了解 BlueChi 适用的汽车安全场景
-- [创建 QM 虚拟机环境](/bundles/containers/qm/examples/01-vm-setup.md)：在虚拟机中测试 BlueChi 多节点配置
+- [嵌套隔离架构](01-nested-architecture.md)：了解 QM 内独立 systemd 和 BlueChi agent 的运行环境
+- [QM 定位与 ASIL 汽车功能安全场景](00-introduction.md)：了解 BlueChi 适用的汽车安全场景
+- [创建 QM 虚拟机环境](../examples/01-vm-setup.md)：在虚拟机中测试 BlueChi 多节点配置

@@ -216,7 +216,7 @@ pyzmq 提供两个层级的轮询 API：
 - `zmq.eventloop.future.Poller` 是 tornado 版异步 Poller（F-107）
 - `zmq.green._Poller` 覆写 `poll()` 用 gevent 让出 greenlet（F-110）
 
-异步 Poller 复用同步 Poller 的 `sockets`/`_map` 数据结构和 `register`/`modify`/`unregister` 方法，只改变等待机制。详见 [异步与 asyncio](/concepts/05-async-future-asyncio.md)。
+异步 Poller 复用同步 Poller 的 `sockets`/`_map` 数据结构和 `register`/`modify`/`unregister` 方法，只改变等待机制。详见 [异步与 asyncio](05-async-future-asyncio.md)。
 
 ## 注意事项
 
@@ -227,7 +227,7 @@ pyzmq 提供两个层级的轮询 API：
 
 ## 相关概念
 
-- [Socket sugar 语法层](/concepts/02-socket-sugar.md) — socket.poll() 单 socket 便捷方法
-- [异步与 asyncio](/concepts/05-async-future-asyncio.md) — asyncio.Poller 的 awaitable poll
-- [生态：eventloop/green/devices/log](/concepts/07-ecosystem-eventloop-green-devices-log.md) — green._Poller 的 gevent 适配
-- [常量枚举参考](/references/constants-enums.md) — PollEvent 标志定义
+- [Socket sugar 语法层](02-socket-sugar.md) — socket.poll() 单 socket 便捷方法
+- [异步与 asyncio](05-async-future-asyncio.md) — asyncio.Poller 的 awaitable poll
+- [生态：eventloop/green/devices/log](07-ecosystem-eventloop-green-devices-log.md) — green._Poller 的 gevent 适配
+- [常量枚举参考](../references/constants-enums.md) — PollEvent 标志定义

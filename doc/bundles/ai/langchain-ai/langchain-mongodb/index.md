@@ -56,22 +56,22 @@ results = vectorstore.similarity_search("向量搜索", k=1)
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/langchain-mongodb/concepts/overview) — 项目定位、核心组件架构、平台要求、Monorepo 结构
-- [向量存储架构](/ai/langchain-ai/langchain-mongodb/concepts/vector-store) — 双嵌入模式、聚合管道、MMR、索引管理、五种检索器
-- [缓存与聊天历史](/ai/langchain-ai/langchain-mongodb/concepts/chat-history-cache) — 精确缓存、语义缓存、一消息一文档模型
+- 总览 — 项目定位、核心组件架构、平台要求、Monorepo 结构
+- 向量存储架构 — 双嵌入模式、聚合管道、MMR、索引管理、五种检索器
+- 缓存与聊天历史 — 精确缓存、语义缓存、一消息一文档模型
 
 ### API 参考
 
-- [核心 API 参考](/ai/langchain-ai/langchain-mongodb/references/api) — 所有公共类的构造函数、方法签名与参数说明
+- 核心 API 参考 — 所有公共类的构造函数、方法签名与参数说明
 
 ### 使用示例
 
-- [基础使用示例](/ai/langchain-ai/langchain-mongodb/examples/basic-usage) — 向量存储 CRUD、聊天历史、缓存、检索器、RAG 链
+- 基础使用示例 — 向量存储 CRUD、聊天历史、缓存、检索器、RAG 链
 
 ### 规范文档
 
-- [事实清单](/ai/langchain-ai/langchain-mongodb/spec/facts) — 源码验证的编号事实（F-001 ~ F-079）
-- [深度洞察](/ai/langchain-ai/langchain-mongodb/spec/insights) — 聚合管道引擎、双嵌入模式、LangChain 契约映射
+- 事实清单 — 源码验证的编号事实（F-001 ~ F-079）
+- 深度洞察 — 聚合管道引擎、双嵌入模式、LangChain 契约映射
 
 ## 目录结构
 

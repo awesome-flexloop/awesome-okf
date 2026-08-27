@@ -142,10 +142,10 @@ Message 保留了 namedtuple 时代的兼容接口：
 
 ## 相关概念
 
-- [整体架构](/concepts/00-overall-architecture.md)：Message 在五大组件中的位置
-- [Actor 装饰器](/concepts/01-actor-decorator.md)：send 构造 Message 并入队
-- [Broker 抽象基类](/concepts/02-broker-abstraction.md)：MessageProxy 由 Consumer 返回
-- [Worker 线程模型](/concepts/03-worker-threading-model.md)：WorkerThread 处理 MessageProxy
-- [Encoder 编码层](/concepts/06-encoder.md)：Message.encode/decode 委托给全局 Encoder
-- [Results 结果后端](/concepts/07-results-backend.md)：Message.get_result 获取结果
-- [异常类层次结构](/references/error-hierarchy.md)：DecodeError 异常
+- [整体架构](00-overall-architecture.md)：Message 在五大组件中的位置
+- [Actor 装饰器](01-actor-decorator.md)：send 构造 Message 并入队
+- [Broker 抽象基类](02-broker-abstraction.md)：MessageProxy 由 Consumer 返回
+- [Worker 线程模型](03-worker-threading-model.md)：WorkerThread 处理 MessageProxy
+- [Encoder 编码层](06-encoder.md)：Message.encode/decode 委托给全局 Encoder
+- [Results 结果后端](07-results-backend.md)：Message.get_result 获取结果
+- [异常类层次结构](../references/error-hierarchy.md)：DecodeError 异常

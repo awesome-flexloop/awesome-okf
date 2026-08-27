@@ -202,10 +202,10 @@ print(child.before)
 
 ## 相关概念
 
-- [REPLWrapper REPL 交互封装](/concepts/07-replwrap.md)
-- [expect 模式匹配](/concepts/03-expect-patterns.md)
-- [发送与交互](/concepts/04-send-interact.md)
-- [pxssh SSH 自动化](/concepts/05-pxssh.md)
-- [高级模式](/concepts/08-advanced-patterns.md)
+- [REPLWrapper REPL 交互封装](../concepts/07-replwrap.md)
+- [expect 模式匹配](../concepts/03-expect-patterns.md)
+- [发送与交互](../concepts/04-send-interact.md)
+- [pxssh SSH 自动化](../concepts/05-pxssh.md)
+- [高级模式](../concepts/08-advanced-patterns.md)
 
-[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](/references/pexpect-source.md)。
+[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](../references/pexpect-source.md)。

@@ -206,7 +206,7 @@ data.describe() if hasattr(data, 'describe') else f"mean={data.mean()}, std={dat
 
 ## 相关概念
 
-- [Glue 变量粘贴](/concepts/07-glue.md)
-- [Eval 内联求值](/concepts/08-eval.md)
-- [执行模式与缓存](/concepts/05-execution-modes.md)
-- [渲染与 MIME 类型](/concepts/06-render-and-mime.md)
+- [Glue 变量粘贴](../concepts/07-glue.md)
+- [Eval 内联求值](../concepts/08-eval.md)
+- [执行模式与缓存](../concepts/05-execution-modes.md)
+- [渲染与 MIME 类型](../concepts/06-render-and-mime.md)

@@ -241,17 +241,17 @@ private _nextFactoryId = 1;
 
 ## 相关信源
 
-- [Server 信源](/references/server-source.md)
-- [Registry 信源](/references/registry-source.md)
-- [Env 信源](/references/env-source.md)
+- [Server 信源](../references/server-source.md)
+- [Registry 信源](../references/registry-source.md)
+- [Env 信源](../references/env-source.md)
 
 ## 下一篇
 
-- [Python 环境管理](/concepts/05-python-env-management.md)
-- [会话窗口系统](/concepts/03-session-window-system.md)
+- [Python 环境管理](05-python-env-management.md)
+- [会话窗口系统](03-session-window-system.md)
 
 ## 相关概念
 
-- [会话窗口系统](/concepts/03-session-window-system.md) — 服务器为 SessionWindow 的 LabView 提供后端服务
-- [Python 环境管理](/concepts/05-python-env-management.md) — 服务器启动依赖 Python 环境的发现与验证
-- [多窗口与会话管理](/concepts/10-multi-window-multisession.md) — Factory 模式支持多窗口独立服务器实例
+- [会话窗口系统](03-session-window-system.md) — 服务器为 SessionWindow 的 LabView 提供后端服务
+- [Python 环境管理](05-python-env-management.md) — 服务器启动依赖 Python 环境的发现与验证
+- [多窗口与会话管理](10-multi-window-multisession.md) — Factory 模式支持多窗口独立服务器实例

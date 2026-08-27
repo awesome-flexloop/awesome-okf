@@ -142,9 +142,9 @@ MCP 定义了三种能力类型，对应 Protocol 层的三种交互模式：
 
 ## 相关链接
 
-- [MCP 三层模型](/concepts/01-mcp-architecture.md)
-- [MCP 配置格式](/concepts/02-mcp-configuration.md)
-- [MCP 与 Skill 的本质区别](/concepts/04-mcp-vs-skill.md)
-- [构建简单 MCP 服务器示例](/examples/build-simple-mcp.md)
-- [配置 MCP 服务器示例](/examples/configure-mcp.md)
-- [MCP 协议文档与 CloudBase MCP 索引](/references/mcp-source.md)
+- [MCP 三层模型](01-mcp-architecture.md)
+- [MCP 配置格式](02-mcp-configuration.md)
+- [MCP 与 Skill 的本质区别](04-mcp-vs-skill.md)
+- [构建简单 MCP 服务器示例](../examples/build-simple-mcp.md)
+- [配置 MCP 服务器示例](../examples/configure-mcp.md)
+- [MCP 协议文档与 CloudBase MCP 索引](../references/mcp-source.md)

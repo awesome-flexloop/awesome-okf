@@ -206,7 +206,7 @@ full = chunk1 + chunk2  # AIMessageChunk(content="Hello world")
 
 ## 相关概念
 
-- [总览](/ai/langchain-ai/langchain/concepts/overview) —— 消息在数据层中的位置
-- [工具抽象](/ai/langchain-ai/langchain/concepts/tool-abstraction) —— ToolCall 与 ToolMessage 的协作
-- [聊天模型](/ai/langchain-ai/langchain/concepts/chat-model) —— AIMessage 是模型的输出类型
-- [提示词系统](/ai/langchain-ai/langchain/concepts/prompt-system) —— 消息可通过 + 组合为提示词模板
+- 总览 —— 消息在数据层中的位置
+- 工具抽象 —— ToolCall 与 ToolMessage 的协作
+- 聊天模型 —— AIMessage 是模型的输出类型
+- 提示词系统 —— 消息可通过 + 组合为提示词模板

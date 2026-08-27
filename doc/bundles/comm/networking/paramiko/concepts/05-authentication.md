@@ -286,10 +286,10 @@ except paramiko.BadAuthenticationType as e:
 
 ## 相关概念
 
-- [SSHClient 详解](/concepts/02-ssh-client.md)
-- [Transport 底层传输](/concepts/03-transport.md)
-- [密钥与主机密钥](/concepts/06-keys-and-hostkeys.md)
-- [高级模式](/concepts/10-advanced-patterns.md)
-- [命令执行示例](/examples/execute-commands.md)
+- [SSHClient 详解](02-ssh-client.md)
+- [Transport 底层传输](03-transport.md)
+- [密钥与主机密钥](06-keys-and-hostkeys.md)
+- [高级模式](10-advanced-patterns.md)
+- [命令执行示例](../examples/execute-commands.md)
 
-[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](/references/paramiko-source.md)。
+[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](../references/paramiko-source.md)。

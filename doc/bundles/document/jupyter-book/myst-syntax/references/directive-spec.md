@@ -20,7 +20,7 @@ sources:
 
 ## defaultDirectives 导出
 
-[directives/index.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/index.ts#L1-L76) 导出 `defaultDirectives` 数组，包含 28 个预定义指令：
+directives/index.ts 导出 `defaultDirectives` 数组，包含 28 个预定义指令：
 
 ```ts
 export const defaultDirectives = [
@@ -57,7 +57,7 @@ export const defaultDirectives = [
 
 ## 通用选项工具
 
-[directives/utils.ts](file:///d:/spaces/SpecWeave/external/libs/ai/jupyter-book/mystmd/packages/myst-directives/src/utils.ts#L1-L82) 提供选项混入和应用工具：
+directives/utils.ts 提供选项混入和应用工具：
 
 ### commonDirectiveOptions()
 

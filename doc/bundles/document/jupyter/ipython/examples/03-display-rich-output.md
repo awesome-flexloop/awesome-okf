@@ -517,7 +517,7 @@ DisplayFormatter 按优先级依次调用这些方法，前端选择最适合的
 
 ## 相关概念
 
-- [显示系统](/concepts/06-display-system.md)
-- [代码执行管线](/concepts/05-execution-pipeline.md)
-- [魔法命令系统](/concepts/04-magic-system.md)
-- [信源参考 - 显示系统](/references/display-source.md)
+- [显示系统](../concepts/06-display-system.md)
+- [代码执行管线](../concepts/05-execution-pipeline.md)
+- [魔法命令系统](../concepts/04-magic-system.md)
+- [信源参考 - 显示系统](../references/display-source.md)

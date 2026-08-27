@@ -323,8 +323,8 @@ class ExecutionResult:
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [代码执行管线](/concepts/05-execution-pipeline.md)
-- [事件与钩子](/concepts/10-events-hooks.md)
-- [扩展系统](/concepts/09-extension-system.md)
-- [信源参考 - 核心引擎](/references/interactiveshell-source.md)
+- [架构总览](02-architecture-overview.md)
+- [代码执行管线](05-execution-pipeline.md)
+- [事件与钩子](10-events-hooks.md)
+- [扩展系统](09-extension-system.md)
+- [信源参考 - 核心引擎](../references/interactiveshell-source.md)

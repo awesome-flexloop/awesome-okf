@@ -176,6 +176,6 @@ const (
 
 ## 相关概念
 
-- [分布式架构总览](/concepts/00-architecture.md)
-- [WebSocket 协议](/concepts/04-websocket-protocol.md)
-- [四种任务类型](/concepts/01-task-types.md)
+- [分布式架构总览](../concepts/00-architecture.md)
+- [WebSocket 协议](../concepts/04-websocket-protocol.md)
+- [四种任务类型](../concepts/01-task-types.md)

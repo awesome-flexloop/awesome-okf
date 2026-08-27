@@ -297,7 +297,7 @@ class ErrorCode(Enum):
 
 ## 相关概念
 
-- [Pregel 引擎](/ai/langchain-ai/langgraph/concepts/pregel-engine) — 错误在超步中的传播
-- [检查点机制](/ai/langchain-ai/langgraph/concepts/checkpointing) — 中断状态持久化
-- [状态图](/ai/langchain-ai/langgraph/concepts/state-graph) — retry_policy/error_handler 配置
-- [API 参考](/ai/langchain-ai/langgraph/references/graph-state) — RetryPolicy/TimeoutPolicy API
+- Pregel 引擎 — 错误在超步中的传播
+- 检查点机制 — 中断状态持久化
+- 状态图 — retry_policy/error_handler 配置
+- API 参考 — RetryPolicy/TimeoutPolicy API

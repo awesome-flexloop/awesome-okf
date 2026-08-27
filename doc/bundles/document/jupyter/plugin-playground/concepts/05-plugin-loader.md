@@ -233,8 +233,8 @@ class PluginLoadingError extends Error {
 
 ## 相关概念
 
-- [TypeScript 转译机制](/concepts/03-typescript-transpilation.md)
-- [模块解析系统](/concepts/04-module-resolution.md)
-- [Token 依赖注入系统](/concepts/06-token-system.md)
-- [JupyterLab 插件基础结构](/concepts/02-plugin-basics.md)
-- [PluginLoader API 参考](/references/loader-transpiler-api.md)
+- [TypeScript 转译机制](03-typescript-transpilation.md)
+- [模块解析系统](04-module-resolution.md)
+- [Token 依赖注入系统](06-token-system.md)
+- [JupyterLab 插件基础结构](02-plugin-basics.md)
+- [PluginLoader API 参考](../references/loader-transpiler-api.md)

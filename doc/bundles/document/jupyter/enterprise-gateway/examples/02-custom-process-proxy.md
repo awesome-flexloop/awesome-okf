@@ -25,7 +25,7 @@ sources:
 
 ## ProcessProxy接口回顾
 
-编写自定义ProcessProxy需要理解以下核心接口（参见 [ProcessProxy进程代理体系](/concepts/04-process-proxy.md)）：
+编写自定义ProcessProxy需要理解以下核心接口（参见 [ProcessProxy进程代理体系](../concepts/04-process-proxy.md)）：
 
 | 方法 | 必须实现 | 说明 |
 |------|---------|------|
@@ -356,7 +356,7 @@ pip install my_package              # 正式安装
 3. 在port-range内选择5个ZMQ端口
 4. 使用RSA+AES加密将连接信息回传到response-address
 
-如果你想复用EG标准launcher，可以使用 `etc/kernel-launchers/` 下的launch_ipykernel.py等脚本。加密回传协议参见 [加密通信机制](/concepts/06-response-manager.md)。
+如果你想复用EG标准launcher，可以使用 `etc/kernel-launchers/` 下的launch_ipykernel.py等脚本。加密回传协议参见 [加密通信机制](../concepts/06-response-manager.md)。
 
 ## 设计要点
 

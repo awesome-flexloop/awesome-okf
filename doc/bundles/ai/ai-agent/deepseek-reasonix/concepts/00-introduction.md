@@ -82,7 +82,7 @@ Reasonix 是 DeepSeek 开源的 AI 编码 Agent，使用 Go 语言编写，以�
 
 ## 相关概念
 
-- [项目架构](/concepts/01-project-architecture.md)——整体包结构和启动流程
-- [Agent 运行循环](/concepts/02-agent-run-loop.md)——核心执行引擎
-- [ACP 协议](/concepts/03-acp-protocol.md)——编辑器集成协议
-- [Bot 网关](/concepts/04-bot-gateway.md)——多平台 IM 接入
+- [项目架构](01-project-architecture.md)——整体包结构和启动流程
+- [Agent 运行循环](02-agent-run-loop.md)——核心执行引擎
+- [ACP 协议](03-acp-protocol.md)——编辑器集成协议
+- [Bot 网关](04-bot-gateway.md)——多平台 IM 接入

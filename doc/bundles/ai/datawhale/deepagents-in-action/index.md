@@ -24,16 +24,16 @@ examples:
 
 ### 核心概念
 
-- [Agent Harness——从框架到运行时外壳](/ai/datawhale/deepagents-in-action/concepts/agent-harness.md)——Deep Agents 的核心定位：不重新发明 Agent 循环，而是为 LangGraph 补充生产级横切能力
-- [虚拟文件系统与 Context Engineering](/ai/datawhale/deepagents-in-action/concepts/virtual-filesystem-context-engineering.md)——Deep Agents 的上下文工程核心，以 FilesystemBackend 为底座支撑内容落盘、Skills 加载与长期记忆
+- [Agent Harness——从框架到运行时外壳](concepts/agent-harness.md)——Deep Agents 的核心定位：不重新发明 Agent 循环，而是为 LangGraph 补充生产级横切能力
+- [虚拟文件系统与 Context Engineering](concepts/virtual-filesystem-context-engineering.md)——Deep Agents 的上下文工程核心，以 FilesystemBackend 为底座支撑内容落盘、Skills 加载与长期记忆
 
 ### 示例
 
-- [示例索引](/ai/datawhale/deepagents-in-action/examples/index.md)——基于 AgentSeek 模板系统的7种可运行项目模板，覆盖14章实验场景
+- [示例索引](examples/index.md)——基于 AgentSeek 模板系统的7种可运行项目模板，覆盖14章实验场景
 
 ### 信源
 
-- [GitHub 仓库信源](/ai/datawhale/deepagents-in-action/references/readme-source.md)——项目官方仓库地址、版本要求、章节结构与技术栈
+- [GitHub 仓库信源](references/readme-source.md)——项目官方仓库地址、版本要求、章节结构与技术栈
 
 ## 课程结构
 

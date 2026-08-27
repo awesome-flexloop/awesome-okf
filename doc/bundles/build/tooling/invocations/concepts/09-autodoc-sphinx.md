@@ -150,8 +150,8 @@ invocations 自己的 docs 构建就使用了这个扩展来文档化其包含�
 
 ## 相关概念
 
-- [Sphinx 文档管理](/concepts/04-docs-sphinx.md)
-- [Invocations 简介](/concepts/00-introduction.md)
-- [组合模式：组装自己的任务集合](/concepts/10-composition-patterns.md)
+- [Sphinx 文档管理](04-docs-sphinx.md)
+- [Invocations 简介](00-introduction.md)
+- [组合模式：组装自己的任务集合](10-composition-patterns.md)
 
-[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](/references/invocations-source.md)。
+[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](../references/invocations-source.md)。

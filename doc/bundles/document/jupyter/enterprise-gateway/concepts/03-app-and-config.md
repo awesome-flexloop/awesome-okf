@@ -137,7 +137,7 @@ EG使用traitlets配置系统，所有配置项定义在 `EnterpriseGatewayConfi
 | `expose_headers` | EG_EXPOSE_HEADERS | 暴露给客户端的响应头 |
 | `max_age` | EG_MAX_AGE | 预检请求缓存时间 |
 
-CORS处理由 [CORSMixin](/references/config-mixin-source.md) 在 `set_default_headers()` 中统一设置 [F-052]。
+CORS处理由 [CORSMixin](../references/config-mixin-source.md) 在 `set_default_headers()` 中统一设置 [F-052]。
 
 #### SSL/TLS [F-035]
 
@@ -157,7 +157,7 @@ CORS处理由 [CORSMixin](/references/config-mixin-source.md) 在 `set_default_h
 | `list_kernels` | False | EG_LIST_KERNELS | 是否允许列出所有用户的内核 |
 | `default_kernel_name` | 自动检测 | EG_DEFAULT_KERNEL_NAME | 默认内核名 |
 
-限额检查在 [RemoteMappingKernelManager._enforce_kernel_limits()](/references/kernel-manager-source.md) 中执行 [F-111]。
+限额检查在 [RemoteMappingKernelManager._enforce_kernel_limits()](../references/kernel-manager-source.md) 中执行 [F-111]。
 
 #### 环境变量传递 [F-037]
 

@@ -59,20 +59,20 @@ claude
 
 | 主题 | 说明 |
 |------|------|
-| [Claude Code 概览](/claude-code/concepts/00-overview.md) | 产品定位、核心能力、安装方式、使用模式、隐私政策 |
-| [插件体系](/claude-code/concepts/01-plugin-system.md) | 插件结构、Commands/Agents/Skills/Hooks 四大扩展点详解 |
+| [Claude Code 概览](concepts/00-overview.md) | 产品定位、核心能力、安装方式、使用模式、隐私政策 |
+| [插件体系](concepts/01-plugin-system.md) | 插件结构、Commands/Agents/Skills/Hooks 四大扩展点详解 |
 
 ### 💡 示例文档
 
 | 示例 | 说明 |
 |------|------|
-| [基本使用示例](/claude-code/examples/basic-usage.md) | 安装、启动、基础对话、任务执行、Git 工作流、插件安装、常用命令速查 |
+| [基本使用示例](examples/basic-usage.md) | 安装、启动、基础对话、任务执行、Git 工作流、插件安装、常用命令速查 |
 
 ### 📖 参考文档
 
 | 参考 | 说明 |
 |------|------|
-| [官方插件索引](/claude-code/references/plugins-index.md) | 13 个官方插件完整清单，按类别分组（开发工作流/安全质量/学习风格/开发工具） |
+| [官方插件索引](references/plugins-index.md) | 13 个官方插件完整清单，按类别分组（开发工作流/安全质量/学习风格/开发工具） |
 
 ## 核心能力
 
@@ -87,7 +87,7 @@ claude
 
 ## 更新日志
 
-完整变更记录见 [log.md](/claude-code/log.md)。
+完整变更记录见 [log.md](log.md)。
 
 ```{toctree}
 :maxdepth: 3

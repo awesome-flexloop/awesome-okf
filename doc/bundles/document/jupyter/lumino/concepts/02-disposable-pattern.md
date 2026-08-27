@@ -22,7 +22,7 @@ Lumino 采用 **IDisposable 模式**统一管理所有资源的生命周期。�
 
 ## 核心接口：IDisposable
 
-[IDisposable](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/disposable/src/index.ts) 定义在 `@lumino/disposable` 包中：
+IDisposable 定义在 `@lumino/disposable` 包中：
 
 ```typescript
 interface IDisposable {
@@ -41,7 +41,7 @@ interface IDisposable {
 
 ## DisposableDelegate：函数适配器
 
-[DisposableDelegate](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/disposable/src/index.ts#L26-L48) 将任意清理函数包装成 IDisposable：
+DisposableDelegate 将任意清理函数包装成 IDisposable：
 
 ```typescript
 class DisposableDelegate implements IDisposable {
@@ -93,7 +93,7 @@ Lumino 中大量 API 返回 `IDisposable`：
 
 ## IObservableDisposable：带信号的 Disposable
 
-[IObservableDisposable](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/disposable/src/index.ts) 在 IDisposable 基础上增加了 `disposed` 信号：
+IObservableDisposable 在 IDisposable 基础上增加了 `disposed` 信号：
 
 ```typescript
 interface IObservableDisposable extends IDisposable {

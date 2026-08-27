@@ -175,9 +175,9 @@ exclude = [
 
 ## 相关概念
 
-- [翻译目录管理](/concepts/05-catalog-management.md)
-- [Jed JSON翻译格式](/concepts/06-json-jed-format.md)
-- [运行时语言包发现](/concepts/08-runtime-discovery.md)
-- [Crowdin贡献者集成](/concepts/10-contributors-crowdin.md)
-- [Hatch构建钩子源码映射](/references/plugin-source.md)
-- [Hatch构建钩子配置示例](/examples/04-hatch-hook-integration.md)
+- [翻译目录管理](05-catalog-management.md)
+- [Jed JSON翻译格式](06-json-jed-format.md)
+- [运行时语言包发现](08-runtime-discovery.md)
+- [Crowdin贡献者集成](10-contributors-crowdin.md)
+- [Hatch构建钩子源码映射](../references/plugin-source.md)
+- [Hatch构建钩子配置示例](../examples/04-hatch-hook-integration.md)

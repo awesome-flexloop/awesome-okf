@@ -14,7 +14,7 @@ sources:
 
 # 节点与 Inode 管理 API 参考
 
-> 信源文件：[node.rs](file:///d:/spaces/SpecWeave/external/dao/action/Containers/fuse-overlayfs/src/node.rs)
+> 信源文件：node.rs
 
 本文档记录 fuse-overlayfs 的节点（Node）与 inode 管理 API，包括 `NodeArena`（节点竞技场）、`OvlNode`（叠加节点）、`InodeTable`（inode 表）、`OvlIno`（inode 条目）等核心数据结构。
 

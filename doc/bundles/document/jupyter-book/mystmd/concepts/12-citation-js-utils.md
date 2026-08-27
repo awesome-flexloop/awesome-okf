@@ -280,7 +280,7 @@ transformCitations (document/project stage)
 
 ## 相关概念
 
-- [目标与引用系统](/concepts/07-targets-references.md)
-- [MDAST 转换管线](/concepts/03-myst-transforms.md)
-- [错误处理与规则 ID](/concepts/05-error-handling.md)
-- [参考文献引用示例](/examples/03-citations-example.md)
+- [目标与引用系统](07-targets-references.md)
+- [MDAST 转换管线](03-myst-transforms.md)
+- [错误处理与规则 ID](05-error-handling.md)
+- [参考文献引用示例](../examples/03-citations-example.md)

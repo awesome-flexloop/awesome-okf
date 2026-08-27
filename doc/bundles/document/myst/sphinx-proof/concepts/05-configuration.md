@@ -37,7 +37,7 @@ proof_minimal_theme = True  # 使用简约主题
 **默认值**：`{}`  
 **重建类型**：`html`
 
-跨类型编号映射，将某些类型映射到其他类型的计数器。详见[交叉引用与编号映射](/concepts/04-cross-references.md)。
+跨类型编号映射，将某些类型映射到其他类型的计数器。详见[交叉引用与编号映射](04-cross-references.md)。
 
 ```python
 # 推论跟随定理编号
@@ -174,6 +174,6 @@ div.proof.definition {
 
 ## 相关概念
 
-- [定理类型详解](/concepts/02-theorem-types.md)
-- [交叉引用与编号映射](/concepts/04-cross-references.md)
-- [自定义编号配置示例](/examples/custom-numbering.md)
+- [定理类型详解](02-theorem-types.md)
+- [交叉引用与编号映射](04-cross-references.md)
+- [自定义编号配置示例](../examples/custom-numbering.md)

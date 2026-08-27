@@ -234,11 +234,11 @@ jcache cache clear
 
 ## 相关示例
 
-- [基本CLI使用](/examples/basic-usage.md)
-- [Python API编程](/examples/python-api.md)
+- [基本CLI使用](basic-usage.md)
+- [Python API编程](python-api.md)
 
 ## 相关概念
 
-- [缓存架构设计](/concepts/02-architecture.md)
-- [配置项参考](/concepts/07-configuration.md)
-- [CLI命令详解](/concepts/05-cli-reference.md)
+- [缓存架构设计](../concepts/02-architecture.md)
+- [配置项参考](../concepts/07-configuration.md)
+- [CLI命令详解](../concepts/05-cli-reference.md)

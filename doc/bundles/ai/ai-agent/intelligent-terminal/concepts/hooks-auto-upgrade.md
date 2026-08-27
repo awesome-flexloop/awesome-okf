@@ -268,6 +268,6 @@ hooks 相关的临时/可重新生成文件存储在 IT 本地缓存根目录：
 
 | 文件 | 关键内容 |
 |------|---------|
-| [agent_hooks_installer.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/agent_hooks_installer.rs) | hooks 安装/升级/状态/卸载完整实现 |
-| [wt-agent-hooks/](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/wt-agent-hooks/) | 捆绑的 hooks 插件源文件（每个 CLI 的 hooks.json + send-event.ps1） |
-| [AGENTS.md](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/AGENTS.md#L132-L176) | hooks 设计文档 |
+| agent_hooks_installer.rs | hooks 安装/升级/状态/卸载完整实现 |
+| wt-agent-hooks/ | 捆绑的 hooks 插件源文件（每个 CLI 的 hooks.json + send-event.ps1） |
+| AGENTS.md | hooks 设计文档 |

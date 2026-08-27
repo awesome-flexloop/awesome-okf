@@ -209,12 +209,12 @@ jupyterlite_silence = False
 
 ## 下一步
 
-- 了解五个指令的详细对比：[指令系统总览](/concepts/03-directive-overview.md)
+- 了解五个指令的详细对比：[指令系统总览](03-directive-overview.md)
 - 学习嵌入 Notebook 文件的方法
 - 探索 `:new_tab:` 模式和搜索参数传递等高级选项
 
 ## 相关概念
 
-- [jupyterlite-sphinx 是什么](/concepts/00-introduction.md)
-- [安装与基础配置](/concepts/01-installation.md)
-- [指令系统总览](/concepts/03-directive-overview.md)
+- [jupyterlite-sphinx 是什么](00-introduction.md)
+- [安装与基础配置](01-installation.md)
+- [指令系统总览](03-directive-overview.md)

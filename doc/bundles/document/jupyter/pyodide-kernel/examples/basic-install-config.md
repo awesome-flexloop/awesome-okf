@@ -204,6 +204,6 @@ print(result)
 
 ## 下一步
 
-- [添加自定义 Wheel 包](/examples/custom-wheels.md)
-- [构建时 Addon 系统](/concepts/04-build-addons.md)
-- [浏览器端包管理](/concepts/05-package-management.md)
+- [添加自定义 Wheel 包](custom-wheels.md)
+- [构建时 Addon 系统](../concepts/04-build-addons.md)
+- [浏览器端包管理](../concepts/05-package-management.md)

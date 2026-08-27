@@ -60,6 +60,6 @@ TinyAgent 位于"增强系统层"的顶端，建立在 TinyRAG 的检索能力�
 
 ## 延伸
 
-- 检索基础：[TinyRAG](/ai/datawhale/tiny-universe/concepts/tiny-rag)
-- 模型底座：[TinyLLM](/ai/datawhale/tiny-universe/concepts/tiny-llm)
-- 方法论根源：[白盒构建理念](/ai/datawhale/tiny-universe/concepts/white-box-philosophy)
+- 检索基础：TinyRAG
+- 模型底座：TinyLLM
+- 方法论根源：白盒构建理念

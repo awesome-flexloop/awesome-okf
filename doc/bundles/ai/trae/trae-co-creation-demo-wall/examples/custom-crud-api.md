@@ -280,7 +280,7 @@ Prisma 使用 BigInt 作为主键类型，JSON.stringify 不能直接序列化 B
 
 ## 相关内容
 
-- [API 路由设计](/concepts/06-api-routes.md)
-- [CRUD 数据层](/concepts/07-crud-layer.md)
-- [认证系统](/concepts/04-auth-system.md)
-- [审核与治理](/concepts/10-audit-governance.md)
+- [API 路由设计](../concepts/06-api-routes.md)
+- [CRUD 数据层](../concepts/07-crud-layer.md)
+- [认证系统](../concepts/04-auth-system.md)
+- [审核与治理](../concepts/10-audit-governance.md)

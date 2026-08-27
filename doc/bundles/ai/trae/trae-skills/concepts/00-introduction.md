@@ -87,11 +87,11 @@ skills/<skill-name>/
 
 ## 相关概念
 
-- [SKILL.md 格式规范](/concepts/01-skill-format.md)
-- [技能分类与模板模式](/concepts/02-skill-categories.md)
-- [编写自定义 Skill](/concepts/07-write-skill.md)
+- [SKILL.md 格式规范](01-skill-format.md)
+- [技能分类与模板模式](02-skill-categories.md)
+- [编写自定义 Skill](07-write-skill.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/skills-source.md)
-- [创建第一个 Skill](/examples/create-first-skill.md)
+- [源码信源索引](../references/skills-source.md)
+- [创建第一个 Skill](../examples/create-first-skill.md)

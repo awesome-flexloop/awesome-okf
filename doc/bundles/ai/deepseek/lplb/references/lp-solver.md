@@ -35,7 +35,7 @@ constexpr int NV = GROUP_SIZE * DUP_PER_RANK * 2 + GROUP_SIZE + 2;  // 变量数
 
 ## JIT 编译流程
 
-JIT 编译在 `compiled_solver::compile_cubin()` 中实现（[csrc/plugin.cpp](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/LPLB/csrc/plugin.cpp)）：
+JIT 编译在 `compiled_solver::compile_cubin()` 中实现（csrc/plugin.cpp）：
 
 1. **架构检测**：通过 `cudaGetDeviceProperties` 获取当前 GPU 的 `arch = major*10 + minor`。
 2. **源码读取**：读取 `resources/csrc-tmpl/minilp.cu` 作为内核模板。
@@ -194,7 +194,7 @@ struct smem_variables {
 
 ## C++ 绑定层（compiled_solver）
 
-`compiled_solver` 结构体（[csrc/plugin.cpp](file:///d:/spaces/SpecWeave/external/libs/ai/deepseek-ai/LPLB/csrc/plugin.cpp#L122-L661)）通过 Pybind11 暴露为 Python 类 `CompiledSolver`：
+`compiled_solver` 结构体（csrc/plugin.cpp）通过 Pybind11 暴露为 Python 类 `CompiledSolver`：
 
 | 方法 | 启动方式 | 说明 |
 |---|---|---|

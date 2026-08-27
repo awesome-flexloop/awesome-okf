@@ -138,7 +138,7 @@ sources:
 
 ## 相关概念
 
-- [为什么读帛书本](/concepts/00-why-boshu.md)
-- [避讳字与通假字](/concepts/03-taboo-characters.md)
-- [如何使用历代注本](/concepts/05-using-commentaries.md)
-- [异文对照实操示例](/examples/02-variant-walkthrough.md)
+- [为什么读帛书本](00-why-boshu.md)
+- [避讳字与通假字](03-taboo-characters.md)
+- [如何使用历代注本](05-using-commentaries.md)
+- [异文对照实操示例](../examples/02-variant-walkthrough.md)

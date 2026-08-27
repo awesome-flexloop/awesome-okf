@@ -162,12 +162,12 @@ npm start
 
 ## 相关概念
 
-- [五维分面分类体系](/concepts/01-template-classification.md)
-- [Web 前端模板](/concepts/02-web-frontend-templates.md)
-- [后端服务模板](/concepts/03-backend-templates.md)
-- [数据与 AI 模板](/concepts/05-data-ai-templates.md)
-- [工具与 DevOps 模板](/concepts/06-tools-devops-templates.md)
+- [五维分面分类体系](01-template-classification.md)
+- [Web 前端模板](02-web-frontend-templates.md)
+- [后端服务模板](03-backend-templates.md)
+- [数据与 AI 模板](05-data-ai-templates.md)
+- [工具与 DevOps 模板](06-tools-devops-templates.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/templates-source.md)
+- [源码信源索引](../references/templates-source.md)

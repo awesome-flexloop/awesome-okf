@@ -21,7 +21,7 @@ SymPy 的多项式系统位于 `sympy.polys` 包，是符号代数计算的核�
 
 ## 模块导出总览
 
-[polys/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/polys/__init__.py) 导出的公开 API 分为以下类别：[^polys-init]
+polys/__init__.py 导出的公开 API 分为以下类别：[^polys-init]
 
 | 类别 | 导出符号 |
 |---|---|
@@ -84,7 +84,7 @@ classDiagram
     Basic <|-- GroebnerBasis
 ```
 
-`Poly` 定义于 [polytools.py:110](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/polys/polytools.py#L110)，继承自 `Basic`，`is_Poly = True`。[^polytools-source]
+`Poly` 定义于 polytools.py:110，继承自 `Basic`，`is_Poly = True`。[^polytools-source]
 
 ### 构造 Poly
 
@@ -194,7 +194,7 @@ Poly(x**3 - x**2 - x + 1, x, domain='ZZ')
 
 ### 因式分解
 
-`factor()` 函数对多项式执行因式分解，支持整数域、有理数域、有限域、代数扩域上的分解：[^polys-init][^polytools-source]
+`factor()` 函数对多项式执行因式分解，支持整数域、有理数域、有限域、代数扩域上的分解：[^polys-init] [^polytools-source]
 
 ```python
 >>> from sympy import factor, expand

@@ -89,7 +89,7 @@ supervisor - "retry" >> agent_flow          # 不合格则重新运行
 supervisor - "pass" >> final_node           # 合格则结束
 ```
 
-详见 [pocketflow-supervisor](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow/cookbook/pocketflow-supervisor/flow.py)。
+详见 pocketflow-supervisor。
 
 ## 适用场景
 

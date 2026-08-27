@@ -55,7 +55,7 @@ A2A（Agent-to-Agent）协议是 Google 提出的 Agent 互操作标准，允许
 
 Agent Card 是 A2A 协议的发现机制，每个 Agent 通过 `/.well-known/agent-card.json` 端点暴露自身元数据，客户端在连接时自动获取。
 
-[veadk/a2a/agent_card.py:L21-L45](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/agent_card.py#L21-L45)
+veadk/a2a/agent_card.py:L21-L45
 
 ```python
 from a2a.types import AgentCapabilities, AgentCard, AgentProvider, AgentSkill
@@ -104,7 +104,7 @@ Agent Card 包含以下核心字段：
 
 `VeA2AServer` 将一个 VeADK Agent 包装为 A2A 兼容的 FastAPI 应用，处理 JSON-RPC 请求、任务管理和 Agent 执行。
 
-[veadk/a2a/ve_a2a_server.py:L31-L64](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/ve_a2a_server.py#L31-L64)
+veadk/a2a/ve_a2a_server.py:L31-L64
 
 ```python
 class VeA2AServer:
@@ -169,7 +169,7 @@ flowchart TD
 
 #### init_app 便捷函数
 
-[veadk/a2a/ve_a2a_server.py:L67-L80](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/ve_a2a_server.py#L67-L80)
+veadk/a2a/ve_a2a_server.py:L67-L80
 
 ```python
 def init_app(
@@ -203,7 +203,7 @@ app = init_app(
 
 `RemoteVeAgent` 继承自 `google.adk.agents.remote_a2a_agent.RemoteA2aAgent`，允许将部署在远程的 A2A Agent 作为本地 Agent 使用（例如作为 sub_agent 接入 SequentialAgent）。
 
-[veadk/a2a/remote_ve_agent.py:L44-L200](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/remote_ve_agent.py#L44-L200)
+veadk/a2a/remote_ve_agent.py:L44-L200
 
 ```python
 class RemoteVeAgent(RemoteA2aAgent):
@@ -298,20 +298,20 @@ AGENT_TYPES = {
 
 | 文件 | 职责 |
 |------|------|
-| [hub/a2a_hub_server.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/hub/a2a_hub_server.py) | Hub 服务端 |
-| [hub/a2a_hub_client.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/hub/a2a_hub_client.py) | Hub 客户端 |
-| [hub/models.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/hub/models.py) | Hub 数据模型 |
-| [hub/rocketmq_middleware.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/hub/rocketmq_middleware.py) | RocketMQ 消息中间件 |
+| hub/a2a_hub_server.py | Hub 服务端 |
+| hub/a2a_hub_client.py | Hub 客户端 |
+| hub/models.py | Hub 数据模型 |
+| hub/rocketmq_middleware.py | RocketMQ 消息中间件 |
 
 ## 其他 A2A 组件
 
 | 文件 | 职责 |
 |------|------|
-| [a2a/registry_client.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/registry_client.py) | Agent 注册中心客户端 |
-| [a2a/ve_agent_executor.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/ve_agent_executor.py) | VeADK 自定义 Agent 执行器 |
-| [a2a/ve_middlewares.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/ve_middlewares.py) | A2A 中间件（认证、日志等） |
-| [a2a/ve_task_store.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/ve_task_store.py) | 自定义任务存储实现 |
-| [a2a/utils/agent_to_a2a.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/utils/agent_to_a2a.py) | Agent 到 A2A 格式的转换工具 |
+| a2a/registry_client.py | Agent 注册中心客户端 |
+| a2a/ve_agent_executor.py | VeADK 自定义 Agent 执行器 |
+| a2a/ve_middlewares.py | A2A 中间件（认证、日志等） |
+| a2a/ve_task_store.py | 自定义任务存储实现 |
+| a2a/utils/agent_to_a2a.py | Agent 到 A2A 格式的转换工具 |
 
 ## A2A 协议通信流程
 
@@ -357,13 +357,13 @@ sequenceDiagram
 
 | 文件 | 职责 |
 |------|------|
-| [veadk/a2a/ve_a2a_server.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/ve_a2a_server.py) | VeA2AServer 服务端、init_app 便捷函数 |
-| [veadk/a2a/remote_ve_agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/remote_ve_agent.py) | RemoteVeAgent A2A 客户端、认证、Agent Card 获取 |
-| [veadk/a2a/agent_card.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/agent_card.py) | get_agent_card 元数据生成 |
-| [veadk/a2a/registry_client.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/registry_client.py) | Agent 注册中心客户端 |
-| [veadk/a2a/ve_agent_executor.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/ve_agent_executor.py) | VeADK Agent 执行器 |
-| [veadk/a2a/hub/](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/hub/) | A2A Hub（RocketMQ 注册中心） |
-| [veadk/agent_builder.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent_builder.py) | AgentBuilder 支持 RemoteVeAgent 类型 |
+| veadk/a2a/ve_a2a_server.py | VeA2AServer 服务端、init_app 便捷函数 |
+| veadk/a2a/remote_ve_agent.py | RemoteVeAgent A2A 客户端、认证、Agent Card 获取 |
+| veadk/a2a/agent_card.py | get_agent_card 元数据生成 |
+| veadk/a2a/registry_client.py | Agent 注册中心客户端 |
+| veadk/a2a/ve_agent_executor.py | VeADK Agent 执行器 |
+| veadk/a2a/hub/ | A2A Hub（RocketMQ 注册中心） |
+| veadk/agent_builder.py | AgentBuilder 支持 RemoteVeAgent 类型 |
 
 ## 相关概念
 

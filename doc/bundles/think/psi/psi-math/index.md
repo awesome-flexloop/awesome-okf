@@ -46,9 +46,9 @@ stale_after: 2027-08-23
 
 ## 相关知识包
 
-* [Ψhē 核心哲学](/psi-core/index.md) — ψ=ψ(ψ) 哲学本体论基础
-* [XOR-SHIFT 宇宙本论](/psi-universe/index.md) — 数学结构的宇宙学实现
-* [GodGPT 应用](/godgpt/index.md) — 形式化理论的 AI 应用延伸
+* [Ψhē 核心哲学](../psi-core/index.md) — ψ=ψ(ψ) 哲学本体论基础
+* [XOR-SHIFT 宇宙本论](../psi-universe/index.md) — 数学结构的宇宙学实现
+* [GodGPT 应用](../godgpt/index.md) — 形式化理论的 AI 应用延伸
 
 ```{toctree}
 :hidden:

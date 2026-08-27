@@ -107,6 +107,6 @@ extensions = [
 
 ## 相关概念
 
-- [简介](/concepts/00-introduction.md)
-- [定理类型详解](/concepts/02-theorem-types.md)
-- [数学定理排版示例](/examples/math-theorems.md)
+- [简介](00-introduction.md)
+- [定理类型详解](02-theorem-types.md)
+- [数学定理排版示例](../examples/math-theorems.md)

@@ -241,9 +241,9 @@ async def contextmanager_in_threadpool(cm: AbstractContextManager):
 
 ## 相关概念
 
-- [FastAPI 应用类与生命周期](/concepts/01-application.md)
-- [依赖注入系统](/concepts/04-dependency-injection.md)
-- [请求体与数据验证](/concepts/06-request-body.md)
-- [路由系统](/concepts/02-routing-system.md)
-- [流式响应与 WebSocket](/concepts/12-streaming-websocket.md)
-- [异常处理与校验错误](/concepts/11-exception-handling.md)
+- [FastAPI 应用类与生命周期](01-application.md)
+- [依赖注入系统](04-dependency-injection.md)
+- [请求体与数据验证](06-request-body.md)
+- [路由系统](02-routing-system.md)
+- [流式响应与 WebSocket](12-streaming-websocket.md)
+- [异常处理与校验错误](11-exception-handling.md)

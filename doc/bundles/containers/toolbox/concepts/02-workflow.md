@@ -368,7 +368,7 @@ toolbox -vv create  # 查看创建容器时底层执行的所有 Podman 命令
 
 ## 相关概念
 
-- [/concepts/00-introduction.md](/concepts/00-introduction.md)
-- [/concepts/01-pass-through.md](/concepts/01-pass-through.md)
-- [/concepts/03-custom-images.md](/concepts/03-custom-images.md)
-- [/examples/01-first-toolbox.md](/examples/01-first-toolbox.md)
+- [/concepts/00-introduction.md](00-introduction.md)
+- [/concepts/01-pass-through.md](01-pass-through.md)
+- [/concepts/03-custom-images.md](03-custom-images.md)
+- [/examples/01-first-toolbox.md](../examples/01-first-toolbox.md)

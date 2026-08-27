@@ -23,4 +23,4 @@ Deep Agents 项目的产品级入口文档。
 
 ## 相关概念
 
-- [核心SDK与三层架构](/ai/datawhale/deepagents/concepts/core-sdk)
+- 核心SDK与三层架构

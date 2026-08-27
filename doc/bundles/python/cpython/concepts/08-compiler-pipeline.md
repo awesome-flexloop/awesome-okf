@@ -298,4 +298,4 @@ PyObject *PyMarshal_ReadObjectFromFile(FILE *fp);
 - [字节码执行引擎](07-bytecode-execution.md) — 编译器输出字节码，执行引擎消费字节码，二者是生产者-消费者关系
 - [解释器帧与执行栈](06-interpreter-frame.md) — _PyInterpreterFrame 是 PyCodeObject 的运行时实例
 - [模块与导入系统](09-module-import.md) — 导入模块时触发编译流程，.pyc 文件缓存由导入系统管理
-- [CPython 源码信源登记](/references/cpython-source.md) — `Python/compile.c`、`Python/ast.c`、`Python/marshal.c` 等关键文件的路径索引
+- [CPython 源码信源登记](../references/cpython-source.md) — `Python/compile.c`、`Python/ast.c`、`Python/marshal.c` 等关键文件的路径索引

@@ -27,7 +27,7 @@ Fiber 的概念类比于操作系统的纤程（轻量级线程），但它不�
 
 ## FiberState 六状态机
 
-[fiber.ts:L78-L85](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L78-L85)
+fiber.ts:L78-L85
 
 ```typescript
 export const enum FiberState {
@@ -78,7 +78,7 @@ stateDiagram-v2
 
 ### 状态判定逻辑
 
-[fiber.ts:L348-L353](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L348-L353)
+fiber.ts:L348-L353
 
 ```typescript
 private _getState() {
@@ -93,7 +93,7 @@ private _getState() {
 
 ## Fiber 类结构
 
-[fiber.ts:L103-L213](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L103-L213)
+fiber.ts:L103-L213
 
 ```typescript
 export class Fiber {
@@ -142,7 +142,7 @@ Fiber 构造函数区分 **root fiber** 和 **plugin fiber** 两种模式：
 
 ### Root Fiber（runtime = null）
 
-[fiber.ts:L200-L212](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L200-L212)
+fiber.ts:L200-L212
 
 ```typescript
 // root fiber 初始化
@@ -163,7 +163,7 @@ Root fiber 是 Context 创建时自动创建的根纤程，uid=0，状态始终�
 
 ### Plugin Fiber（runtime 存在）
 
-[fiber.ts:L133-L199](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L133-L199)
+fiber.ts:L133-L199
 
 ```typescript
 if (runtime) {
@@ -261,7 +261,7 @@ graph TD
 
 ### _refresh() — 计算 epoch
 
-[fiber.ts:L385-L397](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L385-L397)
+fiber.ts:L385-L397
 
 ```typescript
 _refresh() {
@@ -286,7 +286,7 @@ epoch 的构成：
 
 ### _setEpoch() — 状态转换
 
-[fiber.ts:L399-L413](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L399-L413)
+fiber.ts:L399-L413
 
 ```typescript
 private _setEpoch(epoch: string) {
@@ -314,7 +314,7 @@ private _setEpoch(epoch: string) {
 
 ### _reload() — 加载流程
 
-[fiber.ts:L415-L435](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L415-L435)
+fiber.ts:L415-L435
 
 ```typescript
 private async _reload() {
@@ -341,7 +341,7 @@ private async _reload() {
 
 ### _unload() — 卸载流程
 
-[fiber.ts:L437-L458](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L437-L458)
+fiber.ts:L437-L458
 
 ```typescript
 private async _unload() {
@@ -373,7 +373,7 @@ private async _unload() {
 
 ## Effect 执行模型
 
-[fiber.ts:L229-L273](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L229-L273)
+fiber.ts:L229-L273
 
 `_execute()` 方法处理插件回调的返回值，支持 4 种 Effect 形式：
 
@@ -440,7 +440,7 @@ Effect 返回值处理：
 
 ### effect() 公共 API
 
-[fiber.ts:L275-L340](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L275-L340)
+fiber.ts:L275-L340
 
 `ctx.effect()` 是用户和插件代码中最常用的 API，返回一个同时是函数和 PromiseLike 的 **AsyncDisposable**：
 
@@ -517,7 +517,7 @@ dispose()
 
 ### _checkImpl() — 检查服务可用性
 
-[fiber.ts:L371-L383](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L371-L383)
+fiber.ts:L371-L383
 
 ```typescript
 _checkImpl(name: string) {
@@ -542,7 +542,7 @@ _checkImpl(name: string) {
 
 ### restart() — 重启
 
-[fiber.ts:L468-L474](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L468-L474)
+fiber.ts:L468-L474
 
 ```typescript
 async restart() {
@@ -556,7 +556,7 @@ async restart() {
 
 ### update() — 配置更新
 
-[fiber.ts:L476-L485](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L476-L485)
+fiber.ts:L476-L485
 
 ```typescript
 update(config: any, noSave = false) {
@@ -575,7 +575,7 @@ update(config: any, noSave = false) {
 
 ### await() — 等待稳定
 
-[fiber.ts:L460-L466](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L460-L466)
+fiber.ts:L460-L466
 
 ```typescript
 async await() {
@@ -591,7 +591,7 @@ async await() {
 
 ### assertActive() — 活跃性断言
 
-[fiber.ts:L224-L227](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L224-L227)
+fiber.ts:L224-L227
 
 ```typescript
 assertActive() {
@@ -604,7 +604,7 @@ assertActive() {
 
 ## 状态变更通知
 
-[fiber.ts:L355-L369](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L355-L369)
+fiber.ts:L355-L369
 
 ```typescript
 private _updateState(callback: () => void | FiberState) {
@@ -631,7 +631,7 @@ private _updateState(callback: () => void | FiberState) {
 
 ### CordisError
 
-[fiber.ts:L87-L99](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L87-L99)
+fiber.ts:L87-L99
 
 ```typescript
 export class CordisError extends Error {
@@ -650,7 +650,7 @@ export namespace CordisError {
 
 ### ValidationError
 
-[fiber.ts:L16-L32](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts#L16-L32)
+fiber.ts:L16-L32
 
 ```typescript
 export class ValidationError extends TypeError {
@@ -673,7 +673,7 @@ export class ValidationError extends TypeError {
 
 Cordis 通过 `composeError` 实现跨异步边界的长栈追踪，将内部错误栈与外部调用栈拼接：
 
-[utils.ts:L233-L273](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts#L233-L273)
+utils.ts:L233-L273
 
 ```typescript
 export function composeError<T>(callback: (info: StackInfo) => T, getOuterStack = buildOuterStack()): T {
@@ -738,7 +738,7 @@ class Fiber {
 
 | 文件 | 内容 |
 |------|------|
-| [fiber.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts) | Fiber 类完整实现、FiberState 枚举、effect 管理、epoch 状态机 |
-| [context.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/context.ts) | Context 构造函数中 root fiber 的创建 |
-| [registry.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/registry.ts) | RegistryService.plugin() 创建 Fiber 的入口 |
-| [utils.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts) | DisposableList、composeError 长栈追踪、buildOuterStack |
+| fiber.ts | Fiber 类完整实现、FiberState 枚举、effect 管理、epoch 状态机 |
+| context.ts | Context 构造函数中 root fiber 的创建 |
+| registry.ts | RegistryService.plugin() 创建 Fiber 的入口 |
+| utils.ts | DisposableList、composeError 长栈追踪、buildOuterStack |

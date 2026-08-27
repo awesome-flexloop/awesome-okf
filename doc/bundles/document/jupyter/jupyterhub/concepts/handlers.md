@@ -53,7 +53,7 @@ tornado.web.RequestHandler
 
 ## BaseHandler 基类
 
-**位置**：[handlers/base.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/handlers/base.py#L81)
+**位置**：handlers/base.py
 
 `BaseHandler` 是所有处理器的公共基类，继承自 `tornado.web.RequestHandler`，提供以下核心能力：
 
@@ -114,7 +114,7 @@ tornado.web.RequestHandler
 
 ## 页面处理器（pages.py）
 
-**位置**：[handlers/pages.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/handlers/pages.py)
+**位置**：handlers/pages.py
 
 页面处理器负责渲染 HTML 页面，所有页面 Handler 继承 `BaseHandler`，默认使用 Cookie 认证。
 
@@ -204,7 +204,7 @@ tornado.web.RequestHandler
 
 ## 认证处理器（login.py）
 
-**位置**：[handlers/login.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/handlers/login.py)
+**位置**：handlers/login.py
 
 ### LoginHandler — 登录
 
@@ -229,7 +229,7 @@ tornado.web.RequestHandler
 
 ## API 处理器（apihandlers/）
 
-**位置**：[apihandlers/](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/apihandlers/)
+**位置**：apihandlers/
 
 所有 API 处理器继承自 `APIHandler`（`apihandlers/base.py`），该基类在 `BaseHandler` 基础上增加：
 - **JSON 响应**：`get_content_type()` 返回 `application/json`
@@ -345,7 +345,7 @@ API 端点使用 `@needs_scope(scope)` 装饰器进行细粒度权限控制，�
 
 ## 静态资源处理器（static.py）
 
-**位置**：[handlers/static.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/handlers/static.py)
+**位置**：handlers/static.py
 
 ### CacheControlStaticFilesHandler
 
@@ -374,16 +374,16 @@ API 端点使用 `@needs_scope(scope)` 装饰器进行细粒度权限控制，�
 
 ## 源码溯源
 
-- Handler 基类：[handlers/base.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/handlers/base.py)
-- 页面处理器：[handlers/pages.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/handlers/pages.py)
-- 登录处理器：[handlers/login.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/handlers/login.py)
-- 静态资源：[handlers/static.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/handlers/static.py)
-- API 基类：[apihandlers/base.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/apihandlers/base.py)
-- API 处理器目录：[apihandlers/](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/apihandlers/)
-  - [users.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/apihandlers/users.py)
-  - [proxy.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/apihandlers/proxy.py)
-  - [services.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/apihandlers/services.py)
-  - [groups.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/apihandlers/groups.py)
-  - [auth.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/apihandlers/auth.py)
-  - [hub.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/apihandlers/hub.py)
-  - [shares.py](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterhub/jupyterhub/apihandlers/shares.py)
+- Handler 基类：handlers/base.py
+- 页面处理器：handlers/pages.py
+- 登录处理器：handlers/login.py
+- 静态资源：handlers/static.py
+- API 基类：apihandlers/base.py
+- API 处理器目录：apihandlers/
+  - users.py
+  - proxy.py
+  - services.py
+  - groups.py
+  - auth.py
+  - hub.py
+  - shares.py

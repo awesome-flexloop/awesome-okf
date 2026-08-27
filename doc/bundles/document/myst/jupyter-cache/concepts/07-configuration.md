@@ -194,7 +194,7 @@ jcache -v notebook execute-all
 
 ## 相关概念
 
-- [缓存架构设计](/concepts/02-architecture.md)
-- [缓存API详解](/concepts/03-cache-api.md)
-- [CLI命令详解](/concepts/05-cli-reference.md)
-- [CI集成示例](/examples/ci-integration.md)
+- [缓存架构设计](02-architecture.md)
+- [缓存API详解](03-cache-api.md)
+- [CLI命令详解](05-cli-reference.md)
+- [CI集成示例](../examples/ci-integration.md)

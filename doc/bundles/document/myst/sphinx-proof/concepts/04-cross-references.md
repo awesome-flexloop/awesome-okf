@@ -124,6 +124,6 @@ sphinx-proof 正确实现了：
 
 ## 相关概念
 
-- [定理类型详解](/concepts/02-theorem-types.md)
-- [配置项参考](/concepts/05-configuration.md)
-- [自定义编号配置示例](/examples/custom-numbering.md)
+- [定理类型详解](02-theorem-types.md)
+- [配置项参考](05-configuration.md)
+- [自定义编号配置示例](../examples/custom-numbering.md)

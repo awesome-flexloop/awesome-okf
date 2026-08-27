@@ -117,7 +117,7 @@ await parent.patchRun();
 
 ## 相关概念
 
-- [SDK 总览](/ai/langchain-ai/langsmith-sdk/concepts/overview.md)
-- [RunTree 追踪模型](/ai/langchain-ai/langsmith-sdk/concepts/run-tree-tracing.md)
-- [评测运行器](/ai/langchain-ai/langsmith-sdk/concepts/evaluation.md)
-- [快速追踪与评测示例](/ai/langchain-ai/langsmith-sdk/examples/quickstart-trace-and-evaluate.md)
+- [SDK 总览](overview.md)
+- [RunTree 追踪模型](run-tree-tracing.md)
+- [评测运行器](evaluation.md)
+- [快速追踪与评测示例](../examples/quickstart-trace-and-evaluate.md)

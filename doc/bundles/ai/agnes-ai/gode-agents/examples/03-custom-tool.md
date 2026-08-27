@@ -424,8 +424,8 @@ Args:
 
 ## 相关链接
 
-- [工具系统概述](/concepts/07-tool-system.md) — 工具定义、注册和调用机制
-- [内置工具参考](/concepts/08-builtin-tools.md) — 搜索、网页访问、Python解释器等内置工具
-- [Tools API 参考](/references/tools-api.md) — Tool 基类、@tool 装饰器、ToolCollection 的完整文档
-- [工具调用智能体](/concepts/05-tool-calling-agent.md) — Agent 如何选择和调用工具
-- [代码执行智能体](/concepts/06-code-agent.md) — CodeAgent 中的工具注入机制
+- [工具系统概述](../concepts/07-tool-system.md) — 工具定义、注册和调用机制
+- [内置工具参考](../concepts/08-builtin-tools.md) — 搜索、网页访问、Python解释器等内置工具
+- [Tools API 参考](../references/tools-api.md) — Tool 基类、@tool 装饰器、ToolCollection 的完整文档
+- [工具调用智能体](../concepts/05-tool-calling-agent.md) — Agent 如何选择和调用工具
+- [代码执行智能体](../concepts/06-code-agent.md) — CodeAgent 中的工具注入机制

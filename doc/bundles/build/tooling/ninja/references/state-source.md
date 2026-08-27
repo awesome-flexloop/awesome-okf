@@ -17,7 +17,7 @@ sources:
 
 # 状态与池 API 参考
 
-> 信源文件：[state.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/state.h)、[state.cc](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/state.cc)
+> 信源文件：state.h、state.cc
 
 本文档记录 Ninja 全局构建状态和并发池的完整 API。
 

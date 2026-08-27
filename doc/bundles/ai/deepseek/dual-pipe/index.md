@@ -32,26 +32,26 @@ DualPipe 是 DeepSeek-V3 提出的双向流水线并行（Bidirectional Pipeline
 
 ## 快速导航
 
-### [核心概念](/ai/deepseek/dual-pipe/concepts)
+### [核心概念](concepts/index.md)
 
 | 概念 | 说明 |
 |------|------|
-| [双向流水线并行概述](/ai/deepseek/dual-pipe/concepts/overview) | 核心思想、与 1F1B 对比、为什么双向能消除气泡 |
-| [算法调度详解](/ai/deepseek/dual-pipe/concepts/dualpipe-algorithm) | 8 步调度流程、chunk 流转、phase 翻转机制 |
-| [零气泡优化](/ai/deepseek/dual-pipe/concepts/zero-bubble) | WeightGradStore 延迟 dW 计算机制 |
-| [P2P 通信模式](/ai/deepseek/dual-pipe/concepts/communication-pattern) | 批量通信、peer rank 计算、内存管理 |
-| [DualPipe vs DualPipeV](/ai/deepseek/dual-pipe/concepts/dualpipev-comparison) | 两种调度的差异与选择 |
-| [自定义模块集成](/ai/deepseek/dual-pipe/concepts/custom-module-integration) | PipelineStage 编写、overlapped_forward_backward 接口 |
+| 双向流水线并行概述 | 核心思想、与 1F1B 对比、为什么双向能消除气泡 |
+| 算法调度详解 | 8 步调度流程、chunk 流转、phase 翻转机制 |
+| 零气泡优化 | WeightGradStore 延迟 dW 计算机制 |
+| P2P 通信模式 | 批量通信、peer rank 计算、内存管理 |
+| DualPipe vs DualPipeV | 两种调度的差异与选择 |
+| 自定义模块集成 | PipelineStage 编写、overlapped_forward_backward 接口 |
 
-### [API 参考](/ai/deepseek/dual-pipe/references)
+### [API 参考](references/index.md)
 
-- [公开 API](/ai/deepseek/dual-pipe/references/api) — DualPipe、DualPipeV、WeightGradStore、通信配置函数
-- [内部模块](/ai/deepseek/dual-pipe/references/internal-modules) — 内部方法签名与通信工具
+- 公开 API — DualPipe、DualPipeV、WeightGradStore、通信配置函数
+- 内部模块 — 内部方法签名与通信工具
 
-### [示例](/ai/deepseek/dual-pipe/examples)
+### [示例](examples/index.md)
 
-- [基础训练](/ai/deepseek/dual-pipe/examples/basic-training) — 完整训练脚本
-- [推理示例](/ai/deepseek/dual-pipe/examples/inference) — DualPipeV 推理
+- 基础训练 — 完整训练脚本
+- 推理示例 — DualPipeV 推理
 
 ## 安装
 
@@ -84,9 +84,9 @@ loss, _ = model.step(
 
 ## 与其他 DeepSeek 组件的关系
 
-- [DeepEP](/ai/deepseek/deep-ep)：MoE 专家并行通信库，与 DualPipe 配合实现 EP+PP 混合并行
-- [LPLB](/ai/deepseek/lplb)：专家负载均衡器，决定 EP 路由策略
-- [DeepGEMM](/ai/deepseek/deep-gemm)：MoE 分组 GEMM 内核，为 DualPipe stage 内的计算提供高性能 GEMM
+- [DeepEP](../deep-ep/index.md)：MoE 专家并行通信库，与 DualPipe 配合实现 EP+PP 混合并行
+- [LPLB](../lplb/index.md)：专家负载均衡器，决定 EP 路由策略
+- [DeepGEMM](../deep-gemm/index.md)：MoE 分组 GEMM 内核，为 DualPipe stage 内的计算提供高性能 GEMM
 
 ```{toctree}
 :hidden:

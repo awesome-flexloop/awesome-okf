@@ -63,6 +63,6 @@ Token 类型到渲染函数的映射字典，包含 9 个渲染器。
 
 ## 相关概念
 
-- [插件架构](/concepts/01-plugin-architecture.md)
-- [MyST 语法支持](/concepts/02-myst-syntax-support.md)
-- [转义机制与后处理器](/concepts/04-escaping-and-postprocessors.md)
+- [插件架构](../concepts/01-plugin-architecture.md)
+- [MyST 语法支持](../concepts/02-myst-syntax-support.md)
+- [转义机制与后处理器](../concepts/04-escaping-and-postprocessors.md)

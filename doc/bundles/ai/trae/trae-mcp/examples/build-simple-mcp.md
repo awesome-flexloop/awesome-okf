@@ -73,6 +73,6 @@ Protocol 层（JSON-RPC）由 SDK 自动处理。
 
 ## 相关链接
 
-- [MCP 开发入门](/concepts/05-mcp-development.md)
-- [MCP 三层模型](/concepts/01-mcp-architecture.md)
-- [配置 MCP 服务器示例](/examples/configure-mcp.md)
+- [MCP 开发入门](../concepts/05-mcp-development.md)
+- [MCP 三层模型](../concepts/01-mcp-architecture.md)
+- [配置 MCP 服务器示例](configure-mcp.md)

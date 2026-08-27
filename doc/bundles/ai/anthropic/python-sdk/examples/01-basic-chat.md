@@ -310,8 +310,8 @@ SDK 提供了分层的异常类：
 
 ## 相关概念
 
-- [客户端初始化与配置](/python-sdk/concepts/01-client-init.md) — 深入了解客户端配置选项、超时、重试、中间件
-- [Messages API 基础](/python-sdk/concepts/02-messages-basics.md) — 详细理解消息格式、响应结构、stop_reason
+- [客户端初始化与配置](../concepts/01-client-init.md) — 深入了解客户端配置选项、超时、重试、中间件
+- [Messages API 基础](../concepts/02-messages-basics.md) — 详细理解消息格式、响应结构、stop_reason
 - [流式对话](02-streaming-chat.md) — 下一个示例：实时打字效果的流式输出
-- [Anthropic Python SDK 客户端入口与基础设施参考](/python-sdk/references/sdk-client.md) — 构造函数完整参数参考
-- [Anthropic Python SDK 消息 API 与流式处理参考](/python-sdk/references/messages-api.md) — messages.create 所有参数的 API 参考
+- [Anthropic Python SDK 客户端入口与基础设施参考](../references/sdk-client.md) — 构造函数完整参数参考
+- [Anthropic Python SDK 消息 API 与流式处理参考](../references/messages-api.md) — messages.create 所有参数的 API 参考

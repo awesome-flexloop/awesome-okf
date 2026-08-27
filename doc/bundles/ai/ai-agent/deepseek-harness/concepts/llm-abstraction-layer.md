@@ -483,13 +483,13 @@ export function deepFreeze<T>(value: T): T {
 
 | 文件 | 核心内容 |
 |------|---------|
-| [packages/llm/llm/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/index.ts) | `LlmRuntime` Service、`LlmAdapter` 抽象类、`LlmError`、`llm/stream` 瀑布 |
-| [packages/llm/llm/src/types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/types.ts) | `ContentBlock`、`StreamChunk`、`GenerateOptions`、`TokenUsage`、`FinishReason` |
-| [packages/llm/llm/src/assembler.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/assembler.ts) | `BlockAssembler` 增量组装器 |
-| [packages/llm/llm/src/message.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/message.ts) | `Message`/`UserMessage`/`AssistantMessage`/`ToolResultMessage`、消息工厂 |
-| [packages/llm/llm/src/error.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/error.ts) | `HarnessError`、错误码常量、`errorChain`、错误分类函数 |
-| [packages/llm/llm/src/call-config.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/call-config.ts) | `LlmCallConfig`、`callConfigEquals`、`deepFreeze`、Agent Loop 请求标记 |
-| [packages/llm/llm/src/retry-policy.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm/src/retry-policy.ts) | 重试策略类型、默认常量、`resolveRetryPolicy` |
-| [packages/llm/llm-pi-ai/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm-pi-ai/src/index.ts) | PI-AI 适配器插件（注册、热更新、API Key 解析） |
-| [packages/llm/llm-pi-ai/src/stream.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm-pi-ai/src/stream.ts) | SSE→StreamChunk 转换、错误分类、stop reason/usage 映射 |
-| [packages/llm/llm-pi-ai/src/config.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/llm/llm-pi-ai/src/config.ts) | `PiAiProviderProfile`（20+ 字段）、Config schema、`resolveProfiles` |
+| packages/llm/llm/src/index.ts | `LlmRuntime` Service、`LlmAdapter` 抽象类、`LlmError`、`llm/stream` 瀑布 |
+| packages/llm/llm/src/types.ts | `ContentBlock`、`StreamChunk`、`GenerateOptions`、`TokenUsage`、`FinishReason` |
+| packages/llm/llm/src/assembler.ts | `BlockAssembler` 增量组装器 |
+| packages/llm/llm/src/message.ts | `Message`/`UserMessage`/`AssistantMessage`/`ToolResultMessage`、消息工厂 |
+| packages/llm/llm/src/error.ts | `HarnessError`、错误码常量、`errorChain`、错误分类函数 |
+| packages/llm/llm/src/call-config.ts | `LlmCallConfig`、`callConfigEquals`、`deepFreeze`、Agent Loop 请求标记 |
+| packages/llm/llm/src/retry-policy.ts | 重试策略类型、默认常量、`resolveRetryPolicy` |
+| packages/llm/llm-pi-ai/src/index.ts | PI-AI 适配器插件（注册、热更新、API Key 解析） |
+| packages/llm/llm-pi-ai/src/stream.ts | SSE→StreamChunk 转换、错误分类、stop reason/usage 映射 |
+| packages/llm/llm-pi-ai/src/config.ts | `PiAiProviderProfile`（20+ 字段）、Config schema、`resolveProfiles` |

@@ -161,8 +161,8 @@ sources:
 
 ## 相关概念
 
-- [为什么读帛书本](/concepts/00-why-boshu.md)
-- [四大版本系统](/concepts/01-four-systems.md)
-- [核心异文选读](/concepts/04-key-variants.md)
-- [资料库使用指南](/concepts/06-collection-usage.md)
-- [历代注本信源](/references/historical-commentaries.md)
+- [为什么读帛书本](00-why-boshu.md)
+- [四大版本系统](01-four-systems.md)
+- [核心异文选读](04-key-variants.md)
+- [资料库使用指南](06-collection-usage.md)
+- [历代注本信源](../references/historical-commentaries.md)

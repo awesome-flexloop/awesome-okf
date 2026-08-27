@@ -94,6 +94,6 @@ extract_messages = trans.gettext, trans.pgettext, trans.ngettext, trans.npgettex
 
 ## 相关概念
 
-- [字符串提取流水线](/concepts/04-extraction-pipeline.md)
-- [Schema国际化选择器](/concepts/09-schema-i18n-selectors.md)
-- [核心工具源码映射](/references/utils-source.md)
+- [字符串提取流水线](../concepts/04-extraction-pipeline.md)
+- [Schema国际化选择器](../concepts/09-schema-i18n-selectors.md)
+- [核心工具源码映射](utils-source.md)

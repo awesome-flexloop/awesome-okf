@@ -145,7 +145,7 @@ server.initialize()
 server.start()
 ```
 
-更多程序化用法参见 [ExtensionApp 扩展开发](/concepts/10-extension-system.md)。
+更多程序化用法参见 [ExtensionApp 扩展开发](10-extension-system.md)。
 
 ## 下一步
 

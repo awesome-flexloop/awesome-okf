@@ -47,7 +47,7 @@ class TreeHandler(NotebookBaseHandler):
         raise web.HTTPError(404)
 ```
 
-> **信源**: [app.py:L133-170](/references/00-source-registry.md#S-004)（F-022）
+> **信源**: [app.py:L133-170](../references/00-source-registry.md#S-004)（F-022）
 
 ### 路由决策树
 
@@ -139,7 +139,7 @@ TreeHandler和NotebookHandler之间有双向重定向：
 default_url = Unicode("/tree", config=True)
 ```
 
-> **信源**: [app.py:L251](/references/00-source-registry.md#S-004)
+> **信源**: [app.py:L251](../references/00-source-registry.md#S-004)
 
 `default_url = "/tree"` 意味着访问 `http://localhost:8888/` 会自动跳转到 `http://localhost:8888/tree`，即文件浏览器页面。
 
@@ -221,4 +221,4 @@ const treePlugin: JupyterFrontEndPlugin<void> = {
 
 ## 下一步
 
-- → [前端包结构](./10-frontend-packages.md) 了解各npm包的职责划分
+- → [前端包结构](10-frontend-packages.md) 了解各npm包的职责划分

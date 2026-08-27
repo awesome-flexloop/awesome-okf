@@ -48,7 +48,7 @@ agent = define_deep_agent(
 
 MCP 文档工具不在 `agent.py` 中声明，而是在 `connectors/mcp.py` 中由 MDA runtime 在编译期附加。
 
-详见 [Agent 入口参考](/ai/langchain-ai/chat-langchain/references/agent-entrypoint)。
+详见 Agent 入口参考。
 
 ### identity.py — 身份合约入口
 
@@ -69,7 +69,7 @@ identity = define_identity(
 - **匿名访客**：`providers.guest(ttl="24h", actor_prefix="guest:")` 替代前端的 guest token 签发路由。
 - **线程隔离**：`threads: "actor"`——线程按用户 email 或 guest actor id 隔离，替代旧的 `@auth.on.threads` owner 标记。
 
-详见 [Identity 合约参考](/ai/langchain-ai/chat-langchain/references/identity-contract)。
+详见 Identity 合约参考。
 
 ## 中间件管道
 
@@ -99,17 +99,17 @@ identity = define_identity(
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/chat-langchain/concepts/overview) — 本页：架构、agent.py 与 identity.py 的角色
+- 总览 — 本页：架构、agent.py 与 identity.py 的角色
 
 ### 技术参考
 
-- [Agent 入口参考](/ai/langchain-ai/chat-langchain/references/agent-entrypoint) — agent.py 的工具、中间件、模型配置
-- [Identity 合约参考](/ai/langchain-ai/chat-langchain/references/identity-contract) — identity.py 的多区域 Supabase、guest provider、scoping 配置
+- Agent 入口参考 — agent.py 的工具、中间件、模型配置
+- Identity 合约参考 — identity.py 的多区域 Supabase、guest provider、scoping 配置
 
 ### 事实与洞察
 
-- [事实清单](/ai/langchain-ai/chat-langchain/spec/facts) — 26 条源码事实验证
-- [深度洞察](/ai/langchain-ai/chat-langchain/spec/insights) — 双文件合约机制与中间件分层防御策略
+- 事实清单 — 26 条源码事实验证
+- 深度洞察 — 双文件合约机制与中间件分层防御策略
 
 ## 目录结构
 

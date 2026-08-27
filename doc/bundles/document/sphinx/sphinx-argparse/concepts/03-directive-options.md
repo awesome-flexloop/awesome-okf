@@ -71,7 +71,7 @@ sources:
 - **示例**：
   - `:path: install` — 只渲染 install 子命令
   - `:path: remote add` — 渲染嵌套子命令（如 git remote add）
-- **详细说明**：参见[子命令与路径导航](/concepts/05-nested-subcommands.md)
+- **详细说明**：参见[子命令与路径导航](05-nested-subcommands.md)
 
 ## 渲染控制选项
 
@@ -111,7 +111,7 @@ sources:
 - **类型**：字符串（unchanged）
 - **说明**：生成标准 man page 格式的输出结构
 - **生成章节**：SYNOPSIS、DESCRIPTION、OPTIONS、SUB-COMMANDS
-- **详细说明**：参见[Man page 输出格式](/concepts/08-manpage-output.md)
+- **详细说明**：参见[Man page 输出格式](08-manpage-output.md)
 
 ### :color:
 
@@ -128,7 +128,7 @@ sources:
 - **说明**：指令体中的嵌套内容使用 Markdown 语法解析，而非默认的 reStructuredText
 - **前置条件**：需要安装 CommonMark 依赖（`pip install sphinx-argparse[markdown]`）
 - **注意**：启用此选项后，嵌套内容中不能使用 definition_list 语法进行内容增强
-- **详细说明**：参见[Markdown 支持](/concepts/07-markdown-support.md)
+- **详细说明**：参见[Markdown 支持](07-markdown-support.md)
 
 ### :markdownhelp:
 
@@ -136,7 +136,7 @@ sources:
 - **说明**：argparse 的 program description 和 option help 字符串使用 Markdown 解析，而非默认的 RST
 - **前置条件**：需要安装 CommonMark 依赖
 - **与 `:markdown:` 的区别**：`:markdown:` 控制指令嵌套内容的格式，`:markdownhelp:` 控制 parser 中 help/description 字符串的格式
-- **详细说明**：参见[Markdown 支持](/concepts/07-markdown-support.md)
+- **详细说明**：参见[Markdown 支持](07-markdown-support.md)
 
 ## 索引分组选项
 
@@ -147,7 +147,7 @@ sources:
 - **说明**：将该命令归入指定的分组，用于 Commands by Group 索引
 - **示例**：`:index-groups: 基础命令, 项目管理`
 - **前置条件**：需要在 `conf.py` 中启用 `sphinxarg_build_commands_by_group_index = True`
-- **详细说明**：参见[命令索引生成](/concepts/10-command-indices.md)
+- **详细说明**：参见[命令索引生成](10-command-indices.md)
 
 ## 选项速查表
 
@@ -175,9 +175,9 @@ sources:
 
 ## 相关概念
 
-- [argparse 指令基础](/concepts/02-directive-basics.md)
-- [子命令与路径导航](/concepts/05-nested-subcommands.md)
-- [嵌套内容增强](/concepts/06-nested-content-enhancement.md)
-- [Markdown 支持](/concepts/07-markdown-support.md)
-- [Man page 输出格式](/concepts/08-manpage-output.md)
-- [命令索引生成](/concepts/10-command-indices.md)
+- [argparse 指令基础](02-directive-basics.md)
+- [子命令与路径导航](05-nested-subcommands.md)
+- [嵌套内容增强](06-nested-content-enhancement.md)
+- [Markdown 支持](07-markdown-support.md)
+- [Man page 输出格式](08-manpage-output.md)
+- [命令索引生成](10-command-indices.md)

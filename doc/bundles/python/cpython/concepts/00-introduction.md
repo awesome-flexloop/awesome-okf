@@ -83,9 +83,9 @@ CPython 解释器可以划分为几个核心子系统：
 
 ### 实战示例
 
-- [编写最简 C 扩展](/examples/minimal-c-extension.md)
-- [用 C 定义自定义类型](/examples/custom-type-c.md)
-- [字节码剖析](/examples/bytecode-dissection.md)
+- [编写最简 C 扩展](../examples/minimal-c-extension.md)
+- [用 C 定义自定义类型](../examples/custom-type-c.md)
+- [字节码剖析](../examples/bytecode-dissection.md)
 
 ## 前置知识
 
@@ -105,4 +105,4 @@ CPython 解释器可以划分为几个核心子系统：
 
 - [源码目录结构导航](01-source-layout.md) — 第一步：找到你要读的代码在哪里
 - [对象模型：PyObject 与 PyVarObject](02-object-model.md) — 理解一切 Python 值的基础
-- [CPython 源码信源登记](/references/cpython-source.md) — 源码路径、版本信息、关键文件索引
+- [CPython 源码信源登记](../references/cpython-source.md) — 源码路径、版本信息、关键文件索引

@@ -240,6 +240,6 @@ SF 环形 token 数通过 `get_num_sf_ring_tokens(num_ring_tokens, block_m)` 计
 
 ## 五、相关链接
 
-- [/deepseek/deep-gemm/concepts/moe-operations](/ai/deepseek/deep-gemm/concepts/moe-operations) — MegaMoE 概念详解
-- [/deepseek/deep-gemm/examples/moe-forward](/ai/deepseek/deep-gemm/examples/moe-forward) — MegaMoE 使用示例
-- [/deepseek/deep-ep/](/ai/deepseek/deep-ep/) — DeepEP 专家并行通信库
+- /deepseek/deep-gemm/concepts/moe-operations — MegaMoE 概念详解
+- /deepseek/deep-gemm/examples/moe-forward — MegaMoE 使用示例
+- [/deepseek/deep-ep/](../../deep-ep/index.md) — DeepEP 专家并行通信库

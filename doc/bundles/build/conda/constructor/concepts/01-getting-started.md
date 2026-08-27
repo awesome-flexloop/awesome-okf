@@ -199,6 +199,6 @@ mypython-1.0.0-Windows-x86_64.exe /S /D=C:\mypython
 
 ## 8. 下一步
 
-- [02-架构总览](./02-architecture-overview.md)：理解 constructor 的模块划分和执行流程
-- [03-construct.yaml 配置规范](./03-construct-yaml-schema.md)：完整了解所有配置字段
+- [02-架构总览](02-architecture-overview.md)：理解 constructor 的模块划分和执行流程
+- [03-construct.yaml 配置规范](03-construct-yaml-schema.md)：完整了解所有配置字段
 - [示例：基础 Miniconda 风格安装程序](../examples/basic-miniconda.md)：查看更完整的配置示例

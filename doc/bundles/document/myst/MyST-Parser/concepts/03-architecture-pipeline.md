@@ -124,8 +124,8 @@ RendererProtocol (markdown-it-py)
 
 ## 相关概念
 
-- [解析器与渲染器](/concepts/06-parser-and-renderer.md)
-- [配置系统](/concepts/04-config-system.md)
-- [指令与角色](/concepts/07-directives-and-roles.md)
-- [交叉引用](/concepts/08-cross-references.md)
-- [Sphinx 集成机制](/concepts/11-sphinx-integration.md)
+- [解析器与渲染器](06-parser-and-renderer.md)
+- [配置系统](04-config-system.md)
+- [指令与角色](07-directives-and-roles.md)
+- [交叉引用](08-cross-references.md)
+- [Sphinx 集成机制](11-sphinx-integration.md)

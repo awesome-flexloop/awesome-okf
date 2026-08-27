@@ -191,7 +191,7 @@ chain.invoke(input, config={"callbacks": [TimingHandler()]})
 
 ## 相关概念
 
-- [Runnable 协议](/ai/langchain-ai/langchain/concepts/runnable-protocol) —— RunnableConfig 中 callbacks 的传播
-- [聊天模型](/ai/langchain-ai/langchain/concepts/chat-model) —— 模型执行触发 on_chat_model_start/end
-- [工具抽象](/ai/langchain-ai/langchain/concepts/tool-abstraction) —— 工具执行触发 on_tool_start/end
-- [检索器与向量库](/ai/langchain-ai/langchain/concepts/retriever-vectorstore) —— 检索触发 on_retriever_start/end
+- Runnable 协议 —— RunnableConfig 中 callbacks 的传播
+- 聊天模型 —— 模型执行触发 on_chat_model_start/end
+- 工具抽象 —— 工具执行触发 on_tool_start/end
+- 检索器与向量库 —— 检索触发 on_retriever_start/end

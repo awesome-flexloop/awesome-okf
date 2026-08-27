@@ -101,7 +101,7 @@ def _directive_render(node, context):
     return f"{fence_str}{{{name}}}{info_str}\n{option_block}{code_block}{fence_str}"
 ```
 
-这是最复杂的自定义渲染器，处理 MyST 指令的输出。详见[指令转换机制](/concepts/05-directive-conversion.md)。
+这是最复杂的自定义渲染器，处理 MyST 指令的输出。详见[指令转换机制](05-directive-conversion.md)。
 
 ## MyST 扩展推断
 
@@ -145,6 +145,6 @@ if text:
 
 ## 相关概念
 
-- [三阶段转换流水线架构](/concepts/03-conversion-pipeline.md)
-- [MarkdownItRenderer 与 AST→Token 遍历](/concepts/06-token-rendering.md)
-- [指令转换机制与 directives.yml 映射](/concepts/05-directive-conversion.md)
+- [三阶段转换流水线架构](03-conversion-pipeline.md)
+- [MarkdownItRenderer 与 AST→Token 遍历](06-token-rendering.md)
+- [指令转换机制与 directives.yml 映射](05-directive-conversion.md)

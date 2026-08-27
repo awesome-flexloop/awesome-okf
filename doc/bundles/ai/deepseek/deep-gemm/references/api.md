@@ -262,10 +262,10 @@ get_theoretical_mk_alignment_for_contiguous_layout(expected_m=None) -> int
 
 ## 六、MegaMoE API
 
-参见 [/deepseek/deep-gemm/references/mega-moe](/ai/deepseek/deep-gemm/references/mega-moe)。
+参见 /deepseek/deep-gemm/references/mega-moe。
 
 ---
 
 ## 七、Runtime 配置 API
 
-参见 [/deepseek/deep-gemm/references/runtime-config](/ai/deepseek/deep-gemm/references/runtime-config)。
+参见 /deepseek/deep-gemm/references/runtime-config。

@@ -209,6 +209,6 @@ sphinx-build -b html docs/ docs/_build/
 
 ## 相关概念
 
-- [jupyterlite-sphinx 是什么](/concepts/00-introduction.md)
-- [快速开始](/concepts/02-quick-start.md)
-- [指令系统总览](/concepts/03-directive-overview.md)
+- [jupyterlite-sphinx 是什么](00-introduction.md)
+- [快速开始](02-quick-start.md)
+- [指令系统总览](03-directive-overview.md)

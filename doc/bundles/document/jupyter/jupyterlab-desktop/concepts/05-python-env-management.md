@@ -74,7 +74,7 @@ const JUPYTER_ENV_REQUIREMENTS = [{
 
 ## Registry - 环境注册表
 
-`Registry` 类负责发现、验证、排序和管理所有 Python 环境。详见 [Registry 信源](/references/registry-source.md)。
+`Registry` 类负责发现、验证、排序和管理所有 Python 环境。详见 [Registry 信源](../references/registry-source.md)。
 
 ### 环境发现过程
 
@@ -242,18 +242,18 @@ jlab env activate
 
 ## 相关信源
 
-- [Env 信源](/references/env-source.md)
-- [Registry 信源](/references/registry-source.md)
-- [CLI 信源](/references/cli-source.md)
-- [Settings 信源](/references/settings-source.md)
+- [Env 信源](../references/env-source.md)
+- [Registry 信源](../references/registry-source.md)
+- [CLI 信源](../references/cli-source.md)
+- [Settings 信源](../references/settings-source.md)
 
 ## 下一篇
 
-- [设置与配置系统](/concepts/06-settings-config.md)
-- [CLI 命令系统](/concepts/07-cli-system.md)
+- [设置与配置系统](06-settings-config.md)
+- [CLI 命令系统](07-cli-system.md)
 
 ## 相关概念
 
-- [Jupyter 服务器管理](/concepts/04-server-management.md) — 服务器启动脚本依赖环境类型选择激活方式
-- [设置与配置系统](/concepts/06-settings-config.md) — pythonPath、condaPath 等环境相关设置项
-- [CLI 命令系统](/concepts/07-cli-system.md) — jlab env 子命令实现环境创建、激活和管理
+- [Jupyter 服务器管理](04-server-management.md) — 服务器启动脚本依赖环境类型选择激活方式
+- [设置与配置系统](06-settings-config.md) — pythonPath、condaPath 等环境相关设置项
+- [CLI 命令系统](07-cli-system.md) — jlab env 子命令实现环境创建、激活和管理

@@ -65,7 +65,7 @@ notebook~=7.6.0
 jupyterlite-pyodide-kernel==0.8.0
 ```
 
-如果需要其他内核和扩展，参考 [依赖配置信源](/references/requirements-source.md) 添加。
+如果需要其他内核和扩展，参考 [依赖配置信源](../references/requirements-source.md) 添加。
 
 ## 步骤 3：添加内容
 
@@ -209,7 +209,7 @@ jupyter lite serve --output-dir dist
 
 ## 相关概念
 
-- [GitHub Pages 部署流水线](/concepts/06-deployment-github-pages.md)
-- [Demo 仓库结构与三件套模式](/concepts/01-demo-overview.md)
-- [站点配置详解](/concepts/02-site-configuration.md)
-- [自定义 Demo 站点](/examples/07-custom-demo-site.md)
+- [GitHub Pages 部署流水线](../concepts/06-deployment-github-pages.md)
+- [Demo 仓库结构与三件套模式](../concepts/01-demo-overview.md)
+- [站点配置详解](../concepts/02-site-configuration.md)
+- [自定义 Demo 站点](07-custom-demo-site.md)

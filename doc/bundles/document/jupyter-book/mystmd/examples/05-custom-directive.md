@@ -665,7 +665,7 @@ project:
 
 ## 下一步
 
-- 学习 [自定义角色](/examples/04-custom-role.md) 了解行内扩展
-- 学习 [自定义 Transform](/examples/02-custom-transform.md) 进行 AST 后处理
-- 了解 [指令与角色系统](/concepts/06-directives-and-roles.md)完整机制
-- 了解 [MDAST 转换管线](/concepts/03-myst-transforms.md)中 lift 步骤的作用
+- 学习 [自定义角色](04-custom-role.md) 了解行内扩展
+- 学习 [自定义 Transform](02-custom-transform.md) 进行 AST 后处理
+- 了解 [指令与角色系统](../concepts/06-directives-and-roles.md)完整机制
+- 了解 [MDAST 转换管线](../concepts/03-myst-transforms.md)中 lift 步骤的作用

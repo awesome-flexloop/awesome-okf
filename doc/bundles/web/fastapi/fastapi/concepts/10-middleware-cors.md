@@ -195,8 +195,8 @@ FastAPI 的三个中间件模块全部采用薄再导出模式：
 
 ## 相关概念
 
-- [异常处理与校验错误](/concepts/11-exception-handling.md)
-- [FastAPI 应用类与生命周期](/concepts/01-application.md)
-- [路由系统](/concepts/02-routing-system.md)
-- [依赖注入系统](/concepts/04-dependency-injection.md)
-- [测试与高级特性](/concepts/13-testing-advanced.md)
+- [异常处理与校验错误](11-exception-handling.md)
+- [FastAPI 应用类与生命周期](01-application.md)
+- [路由系统](02-routing-system.md)
+- [依赖注入系统](04-dependency-injection.md)
+- [测试与高级特性](13-testing-advanced.md)

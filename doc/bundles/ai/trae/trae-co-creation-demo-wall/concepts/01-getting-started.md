@@ -151,13 +151,13 @@ docker-compose up -d db redis
 
 这会启动 PostgreSQL（端口 5432）和 Redis（端口 6379），然后配置 `.env` 中 `DATABASE_URL` 指向 localhost，再执行上述步骤 4-6。
 
-完整 Docker 部署方式参见 [Docker 部署](/concepts/15-docker-deployment.md)。
+完整 Docker 部署方式参见 [Docker 部署](15-docker-deployment.md)。
 
 ## 相关概念
 
-- [项目简介](/concepts/00-introduction.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [数据模型设计](/concepts/03-data-model.md)
-- [认证系统](/concepts/04-auth-system.md)
-- [Docker 部署](/concepts/15-docker-deployment.md)
-- [开发环境搭建示例](/examples/setup-dev-environment.md)
+- [项目简介](00-introduction.md)
+- [架构总览](02-architecture-overview.md)
+- [数据模型设计](03-data-model.md)
+- [认证系统](04-auth-system.md)
+- [Docker 部署](15-docker-deployment.md)
+- [开发环境搭建示例](../examples/setup-dev-environment.md)

@@ -479,8 +479,8 @@ podman update --cpus=2 --memory=512m myapp
 
 ## 相关概念
 
-- [容器基础](/concepts/04-container-basics.md) — Container结构体、生命周期状态机与命名空间隔离
-- [CLI命令结构](/concepts/06-cli-structure.md) — Cobra框架、命令注册表与EngineMode过滤
-- [镜像操作命令](/concepts/08-image-commands.md) — 镜像拉取、构建、推送等27个镜像命令
-- [Pod一等公民](/concepts/05-pod-first-class.md) — Pod内容器的生命周期协调
-- [架构概览](/concepts/02-architecture-overview.md) — 无守护进程架构与容器执行模型
+- [容器基础](04-container-basics.md) — Container结构体、生命周期状态机与命名空间隔离
+- [CLI命令结构](06-cli-structure.md) — Cobra框架、命令注册表与EngineMode过滤
+- [镜像操作命令](08-image-commands.md) — 镜像拉取、构建、推送等27个镜像命令
+- [Pod一等公民](05-pod-first-class.md) — Pod内容器的生命周期协调
+- [架构概览](02-architecture-overview.md) — 无守护进程架构与容器执行模型

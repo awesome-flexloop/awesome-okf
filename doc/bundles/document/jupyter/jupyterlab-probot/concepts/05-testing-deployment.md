@@ -143,7 +143,7 @@ describe("My Probot app", () => {
 
 ### Docker 部署（推荐生产方案）
 
-[Dockerfile](../../../../../external/libs/jupyter/jupyterlab-probot/Dockerfile) 基于 `node:18-slim`：
+Dockerfile 基于 `node:18-slim`：
 
 ```dockerfile
 FROM node:18-slim
@@ -211,7 +211,7 @@ Probot 应用可以部署在任何支持 Node.js 的平台上：
 
 ## GitHub App 权限配置
 
-创建 GitHub App 时需要配置正确的权限和事件订阅。参考 [app.yml](../../../../../external/libs/jupyter/jupyterlab-probot/app.yml)：
+创建 GitHub App 时需要配置正确的权限和事件订阅。参考 app.yml：
 
 ### 必需权限
 
@@ -236,7 +236,7 @@ Probot 应用可以部署在任何支持 Node.js 的平台上：
 | Issue comment | 评论创建（重启 CI 命令） |
 | Workflow run | Workflow 运行请求（CI 去重） |
 
-> **注意**：[app.yml](../../../../../external/libs/jupyter/jupyterlab-probot/app.yml) 中默认只启用了 `issues` 事件，其他事件需要手动启用。这是因为不同功能需要的权限不同，可以按需开启。
+> **注意**：app.yml 中默认只启用了 `issues` 事件，其他事件需要手动启用。这是因为不同功能需要的权限不同，可以按需开启。
 
 ### Webhook 配置
 

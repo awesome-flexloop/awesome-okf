@@ -241,7 +241,7 @@ Podman 还提供了 `podman generate systemd` 命令用于从已存在的容器�
 
 ## 相关概念
 
-- [容器操作命令](/concepts/07-container-commands.md) — podman run命令参数详解
-- [Kubernetes集成](/concepts/13-kubernetes-integration.md) — kube play运行Kubernetes YAML与.kube单元
-- [远程连接与REST API](/concepts/11-remote-api.md) — podman system service通过systemd socket激活
-- [网络与存储卷](/concepts/09-network-volume.md) — Network/Volume单元对应网络与卷管理
+- [容器操作命令](07-container-commands.md) — podman run命令参数详解
+- [Kubernetes集成](13-kubernetes-integration.md) — kube play运行Kubernetes YAML与.kube单元
+- [远程连接与REST API](11-remote-api.md) — podman system service通过systemd socket激活
+- [网络与存储卷](09-network-volume.md) — Network/Volume单元对应网络与卷管理

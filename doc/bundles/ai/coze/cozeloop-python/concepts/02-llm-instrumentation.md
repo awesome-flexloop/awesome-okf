@@ -308,7 +308,7 @@ result = chain.invoke(
 )
 ```
 
-LangChain 集成自动为每个组件（LLM、Chain、Tool、Prompt）创建对应类型的 span，自动提取模型参数、token 用量、输入输出。详见 [框架集成参考](/references/integrations.md)。
+LangChain 集成自动为每个组件（LLM、Chain、Tool、Prompt）创建对应类型的 span，自动提取模型参数、token 用量、输入输出。详见 [框架集成参考](../references/integrations.md)。
 
 ## 三种方式对比
 

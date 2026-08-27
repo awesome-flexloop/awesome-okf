@@ -649,8 +649,8 @@ Non-Null 错误冒泡遵循以下算法（F-349、F-361、F-373）：
 
 ## 相关概念
 
-- [响应格式、错误冒泡与序列化](/concepts/07-response-and-errors.md) — 错误响应格式的完整规范，包括 execution result、request error result 和序列化映射
-- [指令、包装类型与输入系统](/concepts/04-directives-and-wrapping-types.md) — Non-Null 和 List 包装类型的类型语义，是错误冒泡的类型基础
-- [验证管线与规则体系](/concepts/05-validation.md) — request error 的来源：字段选择、参数、变量等验证规则
-- [执行引擎：字段解析与值完成](/concepts/06-execution.md) — CompleteValue 算法和 Non-Null 错误传播的执行时机制
-- [Schema 设计实战](/examples/schema-design.md) — Non-Null 与 Nullable 的设计权衡及 Connection 分页模式
+- [响应格式、错误冒泡与序列化](../concepts/07-response-and-errors.md) — 错误响应格式的完整规范，包括 execution result、request error result 和序列化映射
+- [指令、包装类型与输入系统](../concepts/04-directives-and-wrapping-types.md) — Non-Null 和 List 包装类型的类型语义，是错误冒泡的类型基础
+- [验证管线与规则体系](../concepts/05-validation.md) — request error 的来源：字段选择、参数、变量等验证规则
+- [执行引擎：字段解析与值完成](../concepts/06-execution.md) — CompleteValue 算法和 Non-Null 错误传播的执行时机制
+- [Schema 设计实战](schema-design.md) — Non-Null 与 Nullable 的设计权衡及 Connection 分页模式

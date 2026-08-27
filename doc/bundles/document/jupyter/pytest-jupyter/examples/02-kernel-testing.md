@@ -244,6 +244,6 @@ pytest tests/test_kernel.py -v
 
 ## 相关概念
 
-- [Client插件详解](/concepts/04-client-plugin.md) — Client插件fixtures完整API
-- [Echo测试内核](/concepts/07-echo-kernel.md) — EchoKernel实现细节
+- [Client插件详解](../concepts/04-client-plugin.md) — Client插件fixtures完整API
+- [Echo测试内核](../concepts/07-echo-kernel.md) — EchoKernel实现细节
 - [Server API测试](03-server-api-test.md) — 结合Server插件测试REST API

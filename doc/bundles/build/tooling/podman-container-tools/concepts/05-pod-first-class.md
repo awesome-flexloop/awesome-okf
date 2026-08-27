@@ -285,7 +285,7 @@ podman kube play pod.yaml
 
 ## 相关概念
 
-- [容器基础](/concepts/04-container-basics.md) — Container结构体、syncContainer同步机制与Linux命名空间详解
-- [Runtime运行时](/concepts/03-runtime.md) — Runtime结构体与容器/Pod管理入口
-- [网络与存储卷](/concepts/09-network-volume.md) — 网络命名空间配置、CNI/netavark网络栈与Volume管理
-- [架构概览](/concepts/02-architecture-overview.md) — 三层核心抽象与双引擎模式
+- [容器基础](04-container-basics.md) — Container结构体、syncContainer同步机制与Linux命名空间详解
+- [Runtime运行时](03-runtime.md) — Runtime结构体与容器/Pod管理入口
+- [网络与存储卷](09-network-volume.md) — 网络命名空间配置、CNI/netavark网络栈与Volume管理
+- [架构概览](02-architecture-overview.md) — 三层核心抽象与双引擎模式

@@ -130,5 +130,5 @@ llms.txt 要求 AI 助手在帮助学习者时：
 
 ## 相关概念
 
-- [Basic 入门教学设计](/ai/datawhale/vibe-vibe/concepts/02-basic-getting-started.md)：Vibe 理念如何在基础篇中通过单一连续案例落地。
-- [多语言文档架构](/ai/datawhale/vibe-vibe/concepts/03-multilingual-docs-architecture.md)：承载 Vibe 教学内容的中英文双语文档站工程实现。
+- [Basic 入门教学设计](02-basic-getting-started.md)：Vibe 理念如何在基础篇中通过单一连续案例落地。
+- [多语言文档架构](03-multilingual-docs-architecture.md)：承载 Vibe 教学内容的中英文双语文档站工程实现。

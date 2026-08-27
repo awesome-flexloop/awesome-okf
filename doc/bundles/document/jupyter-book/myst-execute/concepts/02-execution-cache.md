@@ -264,6 +264,6 @@ matchedNode.result = thisResult?.response;
 
 ## 相关概念
 
-- [00-execution-architecture.md](/concepts/00-execution-architecture.md)：执行架构总览
-- [01-myst-execute-kernel.md](/concepts/01-myst-execute-kernel.md)：内核连接和执行机制
-- [01-configure-notebook-execution.md](/examples/01-configure-notebook-execution.md)：缓存配置示例
+- [00-execution-architecture.md](00-execution-architecture.md)：执行架构总览
+- [01-myst-execute-kernel.md](01-myst-execute-kernel.md)：内核连接和执行机制
+- [01-configure-notebook-execution.md](../examples/01-configure-notebook-execution.md)：缓存配置示例

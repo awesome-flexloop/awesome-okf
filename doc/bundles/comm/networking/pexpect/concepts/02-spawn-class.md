@@ -214,10 +214,10 @@ SpawnBase 提供四个可调时序参数：
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [expect 模式匹配](/concepts/03-expect-patterns.md)
-- [发送与交互](/concepts/04-send-interact.md)
-- [跨平台 spawn 变体](/concepts/06-cross-platform-spawn.md)
-- [pexpect 源码信源登记](/references/pexpect-source.md)
+- [5分钟快速上手](01-getting-started.md)
+- [expect 模式匹配](03-expect-patterns.md)
+- [发送与交互](04-send-interact.md)
+- [跨平台 spawn 变体](06-cross-platform-spawn.md)
+- [pexpect 源码信源登记](../references/pexpect-source.md)
 
-[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](/references/pexpect-source.md)。
+[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](../references/pexpect-source.md)。

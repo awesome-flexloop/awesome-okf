@@ -50,7 +50,7 @@ sentence_translations.json（各语言翻译JSON）
 
 ### 安装依赖
 
-按照 [/references/dependencies.md](/references/dependencies.md) 安装所需 Python 包。
+按照 [/references/dependencies.md](../references/dependencies.md) 安装所需 Python 包。
 
 **最小本地安装（无需任何API密钥，可完成转录+SRT生成）：**
 
@@ -60,7 +60,7 @@ pip install faster-whisper pysrt Levenshtein pytube youtube-transcript-api pycou
 
 **完整安装（包含翻译和上传功能）：**
 
-如需翻译到其他语言或上传到 YouTube，还需配置以下 API 密钥（详见 [/references/dependencies.md](/references/dependencies.md)）：
+如需翻译到其他语言或上传到 YouTube，还需配置以下 API 密钥（详见 [/references/dependencies.md](../references/dependencies.md)）：
 
 | API 服务 | 环境变量 | 是否必须 |
 |----------|----------|:---:|
@@ -455,10 +455,10 @@ shorts 视频会额外放入 `shorts/` 子目录。
 
 ## 相关概念
 
-- [00 caption-ops 工具集总览](/concepts/00-caption-ops-overview.md) — 工具集定位、设计哲学、目录结构
-- [01 音频转录：faster-whisper本地/API双模式](/concepts/01-transcription.md) — 转录引擎原理、词级时间戳、自动回退机制
-- [02 多语言翻译：DeepL/Google/GPT多后端](/concepts/02-translation.md) — 翻译策略、GPT上下文翻译、目标语言列表
-- [03 SRT操作：时间轴与智能分段](/concepts/03-srt-operations.md) — SRT格式、智能分段算法、模糊对齐原理、时间偏移工具
-- [04 完整管线：从视频到多语言字幕](/concepts/04-pipeline-workflow.md) — CLI脚本详解、中间产物作用、批量处理、人工审核流程
-- [依赖安装与 API 配置说明](/references/dependencies.md) — 完整依赖清单、环境变量配置
-- [Caption Ops CLI 脚本参数速查表](/references/scripts-reference.md) — 所有命令行脚本参数说明
+- [00 caption-ops 工具集总览](../concepts/00-caption-ops-overview.md) — 工具集定位、设计哲学、目录结构
+- [01 音频转录：faster-whisper本地/API双模式](../concepts/01-transcription.md) — 转录引擎原理、词级时间戳、自动回退机制
+- [02 多语言翻译：DeepL/Google/GPT多后端](../concepts/02-translation.md) — 翻译策略、GPT上下文翻译、目标语言列表
+- [03 SRT操作：时间轴与智能分段](../concepts/03-srt-operations.md) — SRT格式、智能分段算法、模糊对齐原理、时间偏移工具
+- [04 完整管线：从视频到多语言字幕](../concepts/04-pipeline-workflow.md) — CLI脚本详解、中间产物作用、批量处理、人工审核流程
+- [依赖安装与 API 配置说明](../references/dependencies.md) — 完整依赖清单、环境变量配置
+- [Caption Ops CLI 脚本参数速查表](../references/scripts-reference.md) — 所有命令行脚本参数说明

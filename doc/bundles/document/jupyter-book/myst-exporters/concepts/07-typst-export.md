@@ -180,7 +180,7 @@ myst-cli 的 build 层在 Typst 模板渲染完成后，调用 typst CLI 编译�
 
 ## 相关概念
 
-- [00-exporter-architecture](/concepts/00-exporter-architecture.md)：统一导出架构
-- [02-latex-export](/concepts/02-latex-export.md)：LaTeX 导出（对称对比）
-- [03-pdf-export](/concepts/03-pdf-export.md)：PDF 生成
-- [08-jtex-template-engine](/concepts/08-jtex-template-engine.md)：jtex 模板引擎
+- [00-exporter-architecture](00-exporter-architecture.md)：统一导出架构
+- [02-latex-export](02-latex-export.md)：LaTeX 导出（对称对比）
+- [03-pdf-export](03-pdf-export.md)：PDF 生成
+- [08-jtex-template-engine](08-jtex-template-engine.md)：jtex 模板引擎

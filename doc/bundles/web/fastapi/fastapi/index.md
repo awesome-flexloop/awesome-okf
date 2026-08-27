@@ -6,7 +6,7 @@ title: FastAPI 核心知识库
 
 # FastAPI 核心知识库
 
-本知识包是 Python 高性能 ASGI Web 框架 [FastAPI](https://fastapi.tiangolo.com/)（v0.141.1，MIT 许可证）的系统化中文源码教程，基于 FastAPI 源码（`external/libs/fastapi/fastapi/fastapi/` 目录）深度阅读生成，覆盖从应用类初始化到请求处理全链路、从依赖注入树到 OpenAPI 自动生成、从中间件栈到流式响应的完整知识体系。所有内容均溯源至 FastAPI 源码核心模块，遵循 [OKF v0.2 规范](/concepts/00-introduction.md)。
+本知识包是 Python 高性能 ASGI Web 框架 [FastAPI](https://fastapi.tiangolo.com/)（v0.141.1，MIT 许可证）的系统化中文源码教程，基于 FastAPI 源码（`external/libs/fastapi/fastapi/fastapi/` 目录）深度阅读生成，覆盖从应用类初始化到请求处理全链路、从依赖注入树到 OpenAPI 自动生成、从中间件栈到流式响应的完整知识体系。所有内容均溯源至 FastAPI 源码核心模块，遵循 [OKF v0.2 规范](concepts/00-introduction.md)。
 
 ## 入门篇（concepts/）
 

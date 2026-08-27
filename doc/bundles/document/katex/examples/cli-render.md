@@ -34,7 +34,7 @@ pnpm add katex
 
 无需全局安装，使用 `npx katex` 即可调用；也可直接执行本地二进制 `./node_modules/.bin/katex`[^web-cli]。
 
-> CLI 只生成数学公式的 HTML 片段，在浏览器中正确显示仍需引入 KaTeX CSS 和字体文件，详见 [Node.js 服务端渲染示例](/examples/node-ssr.md)。
+> CLI 只生成数学公式的 HTML 片段，在浏览器中正确显示仍需引入 KaTeX CSS 和字体文件，详见 [Node.js 服务端渲染示例](node-ssr.md)。
 
 ## 从 stdin 到 stdout（最简用法）
 
@@ -193,7 +193,7 @@ echo "\fracc{a}{b}" | npx katex -t -c cc0000
 
 ## 输出格式（--format）
 
-`-F, --format <type>` 决定输出标记语言，对应 Settings 的 `output` 选项[^web-cli][^web-options]：
+`-F, --format <type>` 决定输出标记语言，对应 Settings 的 `output` 选项[^web-cli] [^web-options]：
 
 ```bash
 # 默认：HTML + MathML（无障碍）
@@ -226,7 +226,7 @@ echo "x → y" | npx katex --strict
 echo "\url{https://katex.org}" | npx katex --trust
 ```
 
-不可信输入请勿启用 `--trust`，详见[安全信任示例](/examples/security-trust.md)。
+不可信输入请勿启用 `--trust`，详见[安全信任示例](security-trust.md)。
 
 ### 限制尺寸与宏展开（安全场景）
 
@@ -336,13 +336,13 @@ npx katex --help
 
 ## 相关内容
 
-- [命令行接口](/concepts/16-command-line.md)
-- [安装与运行时](/concepts/15-installation-and-runtime.md)
-- [Node.js 服务端渲染示例](/examples/node-ssr.md)
-- [配置系统](/concepts/10-settings-options.md)
-- [安全与错误处理](/concepts/18-security-and-errors.md)
-- [安全信任示例](/examples/security-trust.md)
-- [自动渲染使用示例](/examples/auto-render-usage.md)
+- [命令行接口](../concepts/16-command-line.md)
+- [安装与运行时](../concepts/15-installation-and-runtime.md)
+- [Node.js 服务端渲染示例](node-ssr.md)
+- [配置系统](../concepts/10-settings-options.md)
+- [安全与错误处理](../concepts/18-security-and-errors.md)
+- [安全信任示例](security-trust.md)
+- [自动渲染使用示例](auto-render-usage.md)
 
 [^web-cli]: 官网 CLI 页面，https://katex.org/docs/cli
 [^web-options]: 官网 Options 页面，https://katex.org/docs/options

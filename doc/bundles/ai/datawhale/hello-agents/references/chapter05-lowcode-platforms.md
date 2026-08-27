@@ -69,5 +69,5 @@ sources:
 | n8n | 通用自动化连接 | 业务流程AI集成 |
 
 ## 相关概念
-- [Agent框架开发](/ai/datawhale/hello-agents/concepts/agent-framework-development)
-- [智能体范式与ReAct](/ai/datawhale/hello-agents/concepts/agent-paradigms-react)
+- Agent框架开发
+- 智能体范式与ReAct

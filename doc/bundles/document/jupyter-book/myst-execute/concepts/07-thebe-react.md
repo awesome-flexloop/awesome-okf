@@ -348,8 +348,8 @@ function App() {
 
 ## 相关概念
 
-- [03-thebe-core-api.md](/concepts/03-thebe-core-api.md)：thebe-core 核心 API
-- [04-thebe-configuration.md](/concepts/04-thebe-configuration.md)：配置选项
-- [05-thebe-binder.md](/concepts/05-thebe-binder.md)：Binder 连接
-- [06-thebe-lite-pyodide.md](/concepts/06-thebe-lite-pyodide.md)：JupyterLite 模式
-- [02-thebe-interactive.md](/examples/02-thebe-interactive.md)：完整 React 集成示例
+- [03-thebe-core-api.md](03-thebe-core-api.md)：thebe-core 核心 API
+- [04-thebe-configuration.md](04-thebe-configuration.md)：配置选项
+- [05-thebe-binder.md](05-thebe-binder.md)：Binder 连接
+- [06-thebe-lite-pyodide.md](06-thebe-lite-pyodide.md)：JupyterLite 模式
+- [02-thebe-interactive.md](../examples/02-thebe-interactive.md)：完整 React 集成示例

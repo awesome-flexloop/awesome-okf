@@ -126,7 +126,7 @@ podman-compose --version
 
 ## 相关概念
 
-- [daemon-less 架构](/concepts/01-daemonless-arch.md)
-- [rootless 模式下的网络与卷](/concepts/02-rootless.md)
-- [Compose 文件常见模式](/concepts/03-compose-patterns.md)
-- [WordPress 部署示例](/examples/01-wordpress.md)
+- [daemon-less 架构](01-daemonless-arch.md)
+- [rootless 模式下的网络与卷](02-rootless.md)
+- [Compose 文件常见模式](03-compose-patterns.md)
+- [WordPress 部署示例](../examples/01-wordpress.md)

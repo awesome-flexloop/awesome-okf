@@ -115,7 +115,7 @@ sources:
 
 ## 相关概念
 
-- [CLI命令详解](/concepts/03-cli-commands.md)
-- [配置与Hooks系统](/concepts/04-config-and-hooks.md)
-- [Dry-Run与Mock机制](/concepts/08-dry-run-and-mock.md)
-- [认证体系](/concepts/10-authentication.md)
+- [CLI命令详解](../concepts/03-cli-commands.md)
+- [配置与Hooks系统](../concepts/04-config-and-hooks.md)
+- [Dry-Run与Mock机制](../concepts/08-dry-run-and-mock.md)
+- [认证体系](../concepts/10-authentication.md)

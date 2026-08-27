@@ -352,6 +352,6 @@ Agent 端：
 
 ## 相关概念
 
-- [分布式架构总览](/concepts/00-architecture.md)
-- [四种任务类型](/concepts/01-task-types.md)
-- [Go/Python 桥接](/concepts/05-python-bridge.md)
+- [分布式架构总览](00-architecture.md)
+- [四种任务类型](01-task-types.md)
+- [Go/Python 桥接](05-python-bridge.md)

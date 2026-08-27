@@ -106,7 +106,7 @@ classDiagram
 
 ## args 与 func：树的重构恒等式
 
-每个 SymPy 对象都有两个核心属性：[^F-004][^F-005]
+每个 SymPy 对象都有两个核心属性：[^F-004] [^F-005]
 
 - **`args`**：返回子节点元组 `tuple[Basic, ...]`，是表达式树的直接子表达式
 - **`func`**：返回对象的类（`self.__class__`），用于重建同类型节点
@@ -180,7 +180,7 @@ flowchart TD
 
 ### Add（加法）
 
-`Add` 继承自 `Expr` 和 `AssocOp`，表示加法运算。构造时自动扁平化同类项、合并系数：[^F-037][^F-042]
+`Add` 继承自 `Expr` 和 `AssocOp`，表示加法运算。构造时自动扁平化同类项、合并系数：[^F-037] [^F-042]
 
 ```python
 >>> from sympy import Add, symbols
@@ -259,7 +259,7 @@ True
 
 ## 表达式遍历
 
-SymPy 提供两种树遍历策略和多种工具函数：[^F-063][^F-064]
+SymPy 提供两种树遍历策略和多种工具函数：[^F-063] [^F-064]
 
 ### 前序遍历（preorder）
 
@@ -536,7 +536,7 @@ True
 
 ## 延伸阅读
 
-- 源码信源：[basic-source](/references/basic-source.md) 提供 `Basic`/`Expr`/`Atom`/`AssocOp` 的完整 API 参考
+- 源码信源：[basic-source](../references/basic-source.md) 提供 `Basic`/`Expr`/`Atom`/`AssocOp` 的完整 API 参考
 - 后续概念：[符号与数值系统](02-symbols-numbers.md) 介绍叶子节点的具体类型
 - 后续概念：[sympify与类型转换](03-sympify-basics.md) 介绍如何将 Python 对象转换为表达式树节点
 

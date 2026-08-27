@@ -140,7 +140,7 @@ $$\frac{\partial \Phi_I}{\partial t} = \Phi_I \oplus \mathrm{SHIFT}(\Phi_I) \opl
 
 ## 与 ψ 理论的对应
 
-意识理论群与 ψ 理论的 [观察者形成](/psi-core/concepts/03-observer-formation.md) 概念直接对应：
+意识理论群与 ψ 理论的 [观察者形成](../../psi-core/concepts/03-observer-formation.md) 概念直接对应：
 
 - ψ 理论中"ψ 对自身的觉知结晶出身份 I"对应 D11 意识场的自指干涉；
 - "观察者、观察行为、被观察对象在自指中坍缩为一"对应信息场的 $\mathcal{C} = \Phi_I \oplus \mathrm{SHIFT}(\Phi_I) \oplus \cdots$ 闭环；
@@ -148,7 +148,7 @@ $$\frac{\partial \Phi_I}{\partial t} = \Phi_I \oplus \mathrm{SHIFT}(\Phi_I) \opl
 
 ## 相关概念
 
-- [宇宙本体论（D10）— 中心理论](/concepts/04-cosmic-ontology.md)
-- [维度谱系 D0-D∞ — 从操作到超高维](/concepts/03-dimension-spectrum.md)
-- [REC递归与元操作符 — 从操作到操作的操作](/concepts/02-recursion-meta-operator.md)
-- [/psi-core/concepts/03-observer-formation.md](/psi-core/concepts/03-observer-formation.md)
+- [宇宙本体论（D10）— 中心理论](04-cosmic-ontology.md)
+- [维度谱系 D0-D∞ — 从操作到超高维](03-dimension-spectrum.md)
+- [REC递归与元操作符 — 从操作到操作的操作](02-recursion-meta-operator.md)
+- [/psi-core/concepts/03-observer-formation.md](../../psi-core/concepts/03-observer-formation.md)

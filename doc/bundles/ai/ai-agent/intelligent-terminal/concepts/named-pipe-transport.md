@@ -309,8 +309,8 @@ catch (...)
 
 | 文件 | 关键内容 |
 |------|---------|
-| [SharedWta.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/SharedWta.h#L149-L155) | MasterPipeName() 声明 |
-| [SharedWta.cpp](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalApp/SharedWta.cpp#L252-L310) | GUID生成、命令行构建、PATH刷新 |
-| [cli/args.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/cli/args.rs#L119-L204) | Helper CLI 参数定义（clap） |
-| [protocol/acp/client.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/protocol/acp/client.rs#L25-L35) | 指数退避常量定义 |
-| [master/mod.rs](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/tools/wta/src/master/mod.rs#L52) | master-pipe.txt 发现文件常量 |
+| SharedWta.h | MasterPipeName() 声明 |
+| SharedWta.cpp | GUID生成、命令行构建、PATH刷新 |
+| cli/args.rs | Helper CLI 参数定义（clap） |
+| protocol/acp/client.rs | 指数退避常量定义 |
+| master/mod.rs | master-pipe.txt 发现文件常量 |

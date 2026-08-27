@@ -199,6 +199,6 @@ _mcp_tool_cache: dict[tuple[int, str, str], list[Any]]
 
 ## 相关概念
 
-- [/concepts/02-agent-runtime.md](/concepts/02-agent-runtime.md)
-- [/concepts/05-acp-protocol.md](/concepts/05-acp-protocol.md)
-- [/concepts/04-db-di.md](/concepts/04-db-di.md)
+- [/concepts/02-agent-runtime.md](../concepts/02-agent-runtime.md)
+- [/concepts/05-acp-protocol.md](../concepts/05-acp-protocol.md)
+- [/concepts/04-db-di.md](../concepts/04-db-di.md)

@@ -630,9 +630,9 @@ Gode Agents 的提示词采用伪代码（pseudocode）风格而非自然语言�
 
 ## 相关概念
 
-- [MultiStepAgent 执行循环](/concepts/agent-execution-loop.md)
-- [ToolCallingAgent JSON工具调用](/concepts/tool-calling-agent.md)
-- [CodeAgent Python代码执行](/concepts/code-agent.md)
-- [规划步骤机制](/concepts/planning-mechanism.md)
-- [托管代理系统](/concepts/managed-agents.md)
-- [AgentMemory 记忆系统](/concepts/memory-system.md)
+- MultiStepAgent 执行循环
+- ToolCallingAgent JSON工具调用
+- CodeAgent Python代码执行
+- 规划步骤机制
+- 托管代理系统
+- AgentMemory 记忆系统

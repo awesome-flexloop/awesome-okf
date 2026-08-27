@@ -271,9 +271,9 @@ await agent.close()
 
 ## 相关概念
 
-- [认证体系](/concepts/05-authentication.md) —— 公钥认证流程
-- [异步连接详解](/concepts/02-async-connection.md) —— client_keys 参数
-- [服务端开发](/concepts/10-server.md) —— server_host_keys 配置
+- [认证体系](05-authentication.md) —— 公钥认证流程
+- [异步连接详解](02-async-connection.md) —— client_keys 参数
+- [服务端开发](10-server.md) —— server_host_keys 配置
 - [paramiko 密钥与主机密钥](../../paramiko/concepts/06-keys-and-hostkeys.md)（同步密钥 API 对比）
 
-[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](/references/asyncssh-source.md)。
+[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](../references/asyncssh-source.md)。

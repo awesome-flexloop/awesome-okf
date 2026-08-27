@@ -58,7 +58,7 @@ sources:
 
 `SequentialAgent` 按预定义顺序依次执行子 Agent，前一个子 Agent 的输出通过 session state 传递给后续子 Agent。
 
-[veadk/agents/sequential_agent.py:L31-L64](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/sequential_agent.py#L31-L64)
+veadk/agents/sequential_agent.py:L31-L64
 
 ```python
 class SequentialAgent(GoogleADKSequentialAgent):
@@ -134,7 +134,7 @@ flowchart LR
 
 `ParallelAgent` 并发执行多个子 Agent，适用于子任务之间无依赖关系、可独立执行的场景。
 
-[veadk/agents/parallel_agent.py:L31-L72](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/parallel_agent.py#L31-L72)
+veadk/agents/parallel_agent.py:L31-L72
 
 ```python
 class ParallelAgent(GoogleADKParallelAgent):
@@ -189,7 +189,7 @@ flowchart TD
 
 `LoopAgent` 循环执行其子 Agent，直到满足终止条件（如 LLM 判断任务完成或达到最大迭代次数）。适用于需要多轮迭代、自我修正的任务。
 
-[veadk/agents/loop_agent.py:L31-L68](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/loop_agent.py#L31-L68)
+veadk/agents/loop_agent.py:L31-L68
 
 ```python
 class LoopAgent(GoogleADKLoopAgent):
@@ -232,7 +232,7 @@ Supervisor 模式在 LLM 每次调用前，由一个专门的"监督者"Agent �
 
 ### build_supervisor：创建监督 Agent
 
-[veadk/agents/supervise_agent.py:L25-L55](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/supervise_agent.py#L25-L55)
+veadk/agents/supervise_agent.py:L25-L55
 
 ```python
 class Advice(BaseModel):
@@ -267,7 +267,7 @@ def build_supervisor(supervised_agent: Agent) -> Agent:
 
 ### generate_advice：生成建议
 
-[veadk/agents/supervise_agent.py:L58-L79](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/supervise_agent.py#L58-L79)
+veadk/agents/supervise_agent.py:L58-L79
 
 ```python
 async def generate_advice(agent: Agent, llm_request: LlmRequest) -> str:
@@ -292,7 +292,7 @@ async def generate_advice(agent: Agent, llm_request: LlmRequest) -> str:
 
 ### SupervisorAutoFlow：监督流
 
-[veadk/flows/supervise_auto_flow.py:L32-L60](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/flows/supervise_auto_flow.py#L32-L60)
+veadk/flows/supervise_auto_flow.py:L32-L60
 
 ```python
 class SupervisorAutoFlow(SupervisorSingleFlow):
@@ -317,7 +317,7 @@ Please follow the advice and reason above to optimize your actions.
 
 Agent 的 `_llm_flow` 属性根据配置自动选择 Flow 类型（F-027）：
 
-[veadk/agent.py:L698-L721](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L698-L721)
+veadk/agent.py:L698-L721
 
 | sub_agents | enable_supervisor | Flow 类型 | 说明 |
 |------------|-------------------|-----------|------|
@@ -332,7 +332,7 @@ Agent 的 `_llm_flow` 属性根据配置自动选择 Flow 类型（F-027）：
 
 `AgentBuilder` 支持从 YAML 配置文件构建任意复杂度的 Agent 树，适合需要动态配置或可视化编排的场景。
 
-[veadk/agent_builder.py:L29-L93](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent_builder.py#L29-L93)
+veadk/agent_builder.py:L29-L93
 
 ### AGENT_TYPES 映射表
 
@@ -410,14 +410,14 @@ root_agent:
 
 | 文件 | 职责 |
 |------|------|
-| [veadk/agents/sequential_agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/sequential_agent.py) | SequentialAgent 定义 |
-| [veadk/agents/parallel_agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/parallel_agent.py) | ParallelAgent 定义（含 OTel 警告） |
-| [veadk/agents/loop_agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/loop_agent.py) | LoopAgent 定义 |
-| [veadk/agents/supervise_agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agents/supervise_agent.py) | Supervisor 模式：build_supervisor、generate_advice、Advice 模型 |
-| [veadk/flows/supervise_single_flow.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/flows/supervise_single_flow.py) | SupervisorSingleFlow 实现 |
-| [veadk/flows/supervise_auto_flow.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/flows/supervise_auto_flow.py) | SupervisorAutoFlow 实现 |
-| [veadk/agent_builder.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent_builder.py) | AgentBuilder YAML 构建器、AGENT_TYPES 映射 |
-| [veadk/a2a/remote_ve_agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/a2a/remote_ve_agent.py) | RemoteVeAgent（A2A 远程 Agent） |
+| veadk/agents/sequential_agent.py | SequentialAgent 定义 |
+| veadk/agents/parallel_agent.py | ParallelAgent 定义（含 OTel 警告） |
+| veadk/agents/loop_agent.py | LoopAgent 定义 |
+| veadk/agents/supervise_agent.py | Supervisor 模式：build_supervisor、generate_advice、Advice 模型 |
+| veadk/flows/supervise_single_flow.py | SupervisorSingleFlow 实现 |
+| veadk/flows/supervise_auto_flow.py | SupervisorAutoFlow 实现 |
+| veadk/agent_builder.py | AgentBuilder YAML 构建器、AGENT_TYPES 映射 |
+| veadk/a2a/remote_ve_agent.py | RemoteVeAgent（A2A 远程 Agent） |
 
 ## 相关概念
 

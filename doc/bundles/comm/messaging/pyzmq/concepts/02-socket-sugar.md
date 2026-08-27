@@ -232,7 +232,7 @@ sock.linger = 1000
 v = sock.linger
 ```
 
-`setsockopt` 和 `getsockopt` 是后端 `set`/`get` 的直接别名，无任何包装。属性访问通过 `AttributeSetter` mixin 实现，详见 [attrsettr 选项系统](/references/attrsettr-options.md)。
+`setsockopt` 和 `getsockopt` 是后端 `set`/`get` 的直接别名，无任何包装。属性访问通过 `AttributeSetter` mixin 实现，详见 [attrsettr 选项系统](../references/attrsettr-options.md)。
 
 ### F-030：字符串选项
 
@@ -264,7 +264,7 @@ if events & zmq.POLLIN:
 
 内部创建 `Poller` 实例，注册自身后 poll，返回事件位掩码。`timeout=None` 表示无限等待，`timeout=0` 表示非阻塞检查。返回 0 表示超时无事件。socket 已关闭时抛 `ZMQError(ENOTSUP)`。
 
-多 socket 轮询应使用独立的 `zmq.Poller`，详见 [Poller 概念](/concepts/04-poller.md)。
+多 socket 轮询应使用独立的 `zmq.Poller`，详见 [Poller 概念](04-poller.md)。
 
 ## 套接字监控
 
@@ -289,7 +289,7 @@ sock.disable_monitor()
 
 `get_monitor_socket` 要求 libzmq ≥4。默认端点为 `inproc://monitor.s-{FD}`，默认事件为 `EVENT_ALL`。内部调用 `self.monitor(addr, events)` 并创建一个 PAIR socket connect 到该端点。重复调用返回缓存的 `_monitor_socket`。
 
-可监控的事件包括连接建立/延迟/重试、监听成功/失败、接受成功/失败、关闭/断开等，详见 [常量枚举参考](/references/constants-enums.md) 的 Event 部分。
+可监控的事件包括连接建立/延迟/重试、监听成功/失败、接受成功/失败、关闭/断开等，详见 [常量枚举参考](../references/constants-enums.md) 的 Event 部分。
 
 ## 文件描述符
 
@@ -355,10 +355,10 @@ def publisher(pub, context=None):
 
 ## 相关概念
 
-- [Context 生命周期](/concepts/01-context-lifecycle.md) — Socket 由 Context 创建并跟踪
-- [Frame 与消息](/concepts/03-frame-message.md) — send/recv 的底层消息单元
-- [Poller 多路复用](/concepts/04-poller.md) — 多 socket 事件轮询
-- [异步与 asyncio](/concepts/05-async-future-asyncio.md) — Socket 的异步子类
-- [attrsettr 选项系统](/references/attrsettr-options.md) — 属性访问的底层机制
-- [常量枚举参考](/references/constants-enums.md) — SocketType/Flag/SocketOption 定义
-- [错误层次结构](/references/error-hierarchy.md) — Again/ZMQBindError 等异常
+- [Context 生命周期](01-context-lifecycle.md) — Socket 由 Context 创建并跟踪
+- [Frame 与消息](03-frame-message.md) — send/recv 的底层消息单元
+- [Poller 多路复用](04-poller.md) — 多 socket 事件轮询
+- [异步与 asyncio](05-async-future-asyncio.md) — Socket 的异步子类
+- [attrsettr 选项系统](../references/attrsettr-options.md) — 属性访问的底层机制
+- [常量枚举参考](../references/constants-enums.md) — SocketType/Flag/SocketOption 定义
+- [错误层次结构](../references/error-hierarchy.md) — Again/ZMQBindError 等异常

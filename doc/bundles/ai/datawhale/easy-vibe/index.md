@@ -39,28 +39,28 @@ Easy-Vibe 把 **Vibe Coding**（用自然语言编程）作为 AI 时代的编�
 
 ## 概念文档
 
-- [Vibe Coding 理念](/ai/datawhale/easy-vibe/concepts/01-vibe-coding-philosophy.md) — 自然语言编程范式、三阶段路径、附录知识库、AI 友好教学设计。
-- [多语言文档站架构](/ai/datawhale/easy-vibe/concepts/02-multilingual-docs-architecture.md) — 10 语言内容层、localeMap 配置层、顺序构建加文件锁的构建层、base 路径自适应、首页语言重定向。
-- [部署与工具链](/ai/datawhale/easy-vibe/concepts/03-deployment-toolchain.md) — 本地开发、Prettier/ESLint/Husky 质量保障、Vercel/GitHub Pages/魔搭 Docker 三平台部署、PDF/EPUB 电子书发布。
+- [Vibe Coding 理念](concepts/01-vibe-coding-philosophy.md) — 自然语言编程范式、三阶段路径、附录知识库、AI 友好教学设计。
+- [多语言文档站架构](concepts/02-multilingual-docs-architecture.md) — 10 语言内容层、localeMap 配置层、顺序构建加文件锁的构建层、base 路径自适应、首页语言重定向。
+- [部署与工具链](concepts/03-deployment-toolchain.md) — 本地开发、Prettier/ESLint/Husky 质量保障、Vercel/GitHub Pages/魔搭 Docker 三平台部署、PDF/EPUB 电子书发布。
 
 ## 示例
 
-- [本地运行与构建示例](/ai/datawhale/easy-vibe/examples/01-local-dev-quickstart.md) — 依赖安装、开发服务器、生产构建、预览命令，以及 AI IDE 一键运行方式。
+- [本地运行与构建示例](examples/01-local-dev-quickstart.md) — 依赖安装、开发服务器、生产构建、预览命令，以及 AI IDE 一键运行方式。
 
 ## 信源
 
-- [官方仓库信源登记](/ai/datawhale/easy-vibe/references/source-repo.md) — 仓库基本信息、关键文件索引、目录速览。
+- [官方仓库信源登记](references/source-repo.md) — 仓库基本信息、关键文件索引、目录速览。
 
 ## 学习建议
 
-1. **先理解理念**：从 [Vibe Coding 理念](/ai/datawhale/easy-vibe/concepts/01-vibe-coding-philosophy.md) 开始，理解课程为何这样组织，而非把它当成普通前端教程合集。
-2. **再看架构**：如果你关注多语言文档站工程化，读[多语言文档站架构](/ai/datawhale/easy-vibe/concepts/02-multilingual-docs-architecture.md)，重点理解"为什么顺序构建"等反直觉决策。
-3. **动手实践**：按[本地运行示例](/ai/datawhale/easy-vibe/examples/01-local-dev-quickstart.md)把站点跑起来，亲身体验欢迎页动画、语言切换与交互组件。
-4. **深入工具链**：需要部署或二次开发时，参考[部署与工具链](/ai/datawhale/easy-vibe/concepts/03-deployment-toolchain.md)。
+1. **先理解理念**：从 [Vibe Coding 理念](concepts/01-vibe-coding-philosophy.md) 开始，理解课程为何这样组织，而非把它当成普通前端教程合集。
+2. **再看架构**：如果你关注多语言文档站工程化，读[多语言文档站架构](concepts/02-multilingual-docs-architecture.md)，重点理解"为什么顺序构建"等反直觉决策。
+3. **动手实践**：按[本地运行示例](examples/01-local-dev-quickstart.md)把站点跑起来，亲身体验欢迎页动画、语言切换与交互组件。
+4. **深入工具链**：需要部署或二次开发时，参考[部署与工具链](concepts/03-deployment-toolchain.md)。
 
 ## 变更记录
 
-详见 [log.md](/ai/datawhale/easy-vibe/log.md)。
+详见 [log.md](log.md)。
 
 ```{toctree}
 :hidden:

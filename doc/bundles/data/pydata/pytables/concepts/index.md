@@ -28,9 +28,9 @@
 
 ## 学习建议
 
-1. **初学者**：按 00→01→02→03 顺序通读，配合 [examples/](../examples/) 中的代码示例动手实践
+1. **初学者**：按 00→01→02→03 顺序通读，配合 [examples/](../examples/index.md) 中的代码示例动手实践
 2. **性能调优**：重点阅读 03，理解压缩级别选择、索引类型选择和查询优化技巧
-3. **API 速查**：跳转到 [references/](../references/) 查看具体的类和方法签名
+3. **API 速查**：跳转到 [references/](../references/index.md) 查看具体的类和方法签名
 
 ```{toctree}
 :hidden:

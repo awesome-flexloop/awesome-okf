@@ -27,7 +27,7 @@ Cordis 插件系统的设计目标是实现**时空可组合性**（Spatiotempor
 
 ## Plugin 三形态
 
-[registry.ts:L63-L100](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/registry.ts#L63-L100)
+registry.ts:L63-L100
 
 Cordis 插件有三种等价的定义形式，都实现了 `Plugin.Base` 接口：
 
@@ -179,7 +179,7 @@ resolve(plugin: Plugin): Function | undefined {
 
 ### inject() — 依赖注入简写
 
-[registry.ts:L189-L191](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/registry.ts#L189-L191)
+registry.ts:L189-L191
 
 ```typescript
 inject(inject: Inject, callback: Plugin.Function<void>) {
@@ -198,7 +198,7 @@ ctx.inject(['database', 'timer'], (ctx) => {
 
 ## Loader 模块加载器
 
-[loader/index.ts:L47-L164](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/index.ts#L47-L164)
+loader/index.ts:L47-L164
 
 Loader 是一个 Service（name='loader'），负责从文件系统动态加载 ESM 插件模块。它继承 EntryTree，管理配置驱动的插件树。
 
@@ -219,7 +219,7 @@ export class Loader extends EntryTree {
 
 ### Node.js ESM Loader 内部 API
 
-[loader/internal.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/internal.ts)
+loader/internal.ts
 
 Loader 通过 `ModuleLoader.fromInternal()` 获取 Node.js 内部 ESM 加载器（需要 `--expose-internals` 标志），兼容两个版本：
 
@@ -230,7 +230,7 @@ Loader 通过 `ModuleLoader.fromInternal()` 获取 Node.js 内部 ESM 加载器�
 
 ### cordis: 协议
 
-[loader/config/tree.ts:L103-L106](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/config/tree.ts#L103-L106)
+loader/config/tree.ts:L103-L106
 
 ```typescript
 import(name: string, getOuterStack?) {
@@ -245,7 +245,7 @@ Loader 定义了 `cordis:` 内置模块协议：`import('cordis:xxx')` 从 `load
 
 ### unwrapExports — 模块导出处理
 
-[loader/index.ts:L156-L163](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/index.ts#L156-L163)
+loader/index.ts:L156-L163
 
 ```typescript
 unwrapExports(exports: any) {
@@ -260,7 +260,7 @@ ESM 模块的 default 导出处理：优先取 `.default`，如果是 `__esModul
 
 ## EntryTree 配置树
 
-[loader/config/tree.ts:L6-L123](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/config/tree.ts#L6-L123)
+loader/config/tree.ts:L6-L123
 
 EntryTree 是 Loader 的核心抽象，管理一棵以 `:` 分隔的层级 ID 配置树。
 
@@ -290,7 +290,7 @@ root
 
 ### Entry 配置条目
 
-[loader/config/entry.ts:L34-L172](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/config/entry.ts#L34-L172)
+loader/config/entry.ts:L34-L172
 
 ```typescript
 export interface EntryOptions {
@@ -330,7 +330,7 @@ private async _init() {
 
 ### EntryGroup 分组
 
-[loader/config/group.ts:L5-L71](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/config/group.ts#L5-L71)
+loader/config/group.ts:L5-L71
 
 ```typescript
 export class EntryGroup {
@@ -349,7 +349,7 @@ EntryGroup 管理一组 Entry 的配置数组，支持增量更新（create/upda
 
 ### Group 插件（Bundle 组合）
 
-[loader/config/group.ts:L73-L88](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/config/group.ts#L73-L88)
+loader/config/group.ts:L73-L88
 
 ```typescript
 export class Group extends EntryGroup {
@@ -391,7 +391,7 @@ ctx.plugin(databaseBundle, [
 
 ### Realm 隔离机制
 
-[loader/config/isolate.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/config/isolate.ts)
+loader/config/isolate.ts
 
 Loader 通过 Realm 机制实现配置驱动的服务隔离：
 
@@ -402,7 +402,7 @@ Loader 通过 Realm 机制实现配置驱动的服务隔离：
 
 ## HMR 热模块替换
 
-[hmr/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/hmr/src/index.ts)
+hmr/index.ts
 
 HMR 是一个 Service（name='hmr'），通过 `@Inject('loader')` 和 `@Inject('timer')` 注入依赖，使用 chokidar 监听文件变化，实现不重启进程的插件热重载。
 
@@ -420,7 +420,7 @@ class Hmr extends Service {
 
 ### 三种文件变更类型
 
-[hmr/index.ts:L127-L152](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/hmr/src/index.ts#L127-L152)
+hmr/index.ts:L127-L152
 
 ```typescript
 this.watcher.on('change', async (path) => {
@@ -450,7 +450,7 @@ this.watcher.on('change', async (path) => {
 
 ### 部分热重载流程
 
-[hmr/index.ts:L229-L378](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/hmr/src/index.ts#L229-L378)
+hmr/index.ts:L229-L378
 
 ```mermaid
 sequenceDiagram
@@ -611,13 +611,13 @@ interface Events {
 
 | 文件 | 内容 |
 |------|------|
-| [registry.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/registry.ts) | Plugin 三形态类型定义、RegistryService.plugin/inject/resolve |
-| [fiber.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts) | Fiber 构造函数中函数/类插件的执行分支、[Service.init] 钩子调用 |
-| [service.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/service.ts) | Service 基类、类式插件的基类 |
-| [loader/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/index.ts) | Loader 主类、unwrapExports、internal/update 处理 |
-| [loader/config/tree.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/config/tree.ts) | EntryTree 抽象类、层级 ID、import/cordis: 协议 |
-| [loader/config/entry.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/config/entry.ts) | Entry 配置条目、动态 import、fiber 创建 |
-| [loader/config/group.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/config/group.ts) | EntryGroup 管理、Group 插件（Bundle 组合） |
-| [loader/config/isolate.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/config/isolate.ts) | LocalRealm/GlobalRealm 隔离机制 |
-| [loader/internal.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/loader/src/internal.ts) | Node.js ESM ModuleLoader 封装 |
-| [hmr/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/hmr/src/index.ts) | Hmr Service、chokidar 监听、analyzeChanges、partialReload、缓存备份/回滚 |
+| registry.ts | Plugin 三形态类型定义、RegistryService.plugin/inject/resolve |
+| fiber.ts | Fiber 构造函数中函数/类插件的执行分支、[Service.init] 钩子调用 |
+| service.ts | Service 基类、类式插件的基类 |
+| loader/index.ts | Loader 主类、unwrapExports、internal/update 处理 |
+| loader/config/tree.ts | EntryTree 抽象类、层级 ID、import/cordis: 协议 |
+| loader/config/entry.ts | Entry 配置条目、动态 import、fiber 创建 |
+| loader/config/group.ts | EntryGroup 管理、Group 插件（Bundle 组合） |
+| loader/config/isolate.ts | LocalRealm/GlobalRealm 隔离机制 |
+| loader/internal.ts | Node.js ESM ModuleLoader 封装 |
+| hmr/index.ts | Hmr Service、chokidar 监听、analyzeChanges、partialReload、缓存备份/回滚 |

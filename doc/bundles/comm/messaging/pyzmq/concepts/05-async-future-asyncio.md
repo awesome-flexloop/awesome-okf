@@ -350,7 +350,7 @@ import zmq.green as zmq
 # send/recv 看起来是同步的，但在 EAGAIN 时自动让出 greenlet
 ```
 
-这是因为 gevent 的协作模型是 greenlet 而非 Future/await，无法直接复用 `_AsyncSocket` 的状态机。详见 [生态篇](/concepts/07-ecosystem-eventloop-green-devices-log.md)。
+这是因为 gevent 的协作模型是 greenlet 而非 Future/await，无法直接复用 `_AsyncSocket` 的状态机。详见 [生态篇](07-ecosystem-eventloop-green-devices-log.md)。
 
 ## 同步与异步共享底层 Socket
 
@@ -371,9 +371,9 @@ async_sock.connect("inproc://shared")
 
 ## 相关概念
 
-- [Socket sugar 语法层](/concepts/02-socket-sugar.md) — 同步 Socket 的基类
-- [Context 生命周期](/concepts/01-context-lifecycle.md) — asyncio.Context 覆写 _socket_class
-- [Poller 多路复用](/concepts/04-poller.md) — 同步 Poller 基类
-- [认证与 ZAP](/concepts/06-auth-zap.md) — ThreadAuthenticator 使用 asyncio Poller
-- [生态：eventloop/green/devices/log](/concepts/07-ecosystem-eventloop-green-devices-log.md) — tornado future 和 gevent 适配
-- [错误层次结构](/references/error-hierarchy.md) — Again 异常在 DONTWAIT 短路中的作用
+- [Socket sugar 语法层](02-socket-sugar.md) — 同步 Socket 的基类
+- [Context 生命周期](01-context-lifecycle.md) — asyncio.Context 覆写 _socket_class
+- [Poller 多路复用](04-poller.md) — 同步 Poller 基类
+- [认证与 ZAP](06-auth-zap.md) — ThreadAuthenticator 使用 asyncio Poller
+- [生态：eventloop/green/devices/log](07-ecosystem-eventloop-green-devices-log.md) — tornado future 和 gevent 适配
+- [错误层次结构](../references/error-hierarchy.md) — Again 异常在 DONTWAIT 短路中的作用

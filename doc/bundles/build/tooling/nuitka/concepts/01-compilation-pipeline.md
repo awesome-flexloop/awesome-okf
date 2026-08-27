@@ -84,7 +84,7 @@ Nuitka将Python源码编译为本地二进制，经历一个**五阶段流水线
 
 ### 阶段1：AST解析
 
-入口：[__main__.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/__main__.py)
+入口：__main__.py
 
 Nuitka**复用CPython的AST解析器**——调用`ast.parse()`将Python源码解析为标准的CPython AST对象。这保证了Nuitka与CPython的语法完全一致。
 
@@ -96,7 +96,7 @@ Nuitka**复用CPython的AST解析器**——调用`ast.parse()`将Python源码�
 
 ### 阶段2：IR树构建
 
-入口：[tree/Building.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/tree/Building.py)的`buildParseTree()`函数。
+入口：tree/Building.py的`buildParseTree()`函数。
 
 CPython的AST是一个通用语法树，但Nuitka需要更丰富的语义信息来做优化。这一阶段：
 
@@ -112,7 +112,7 @@ CPython的AST是一个通用语法树，但Nuitka需要更丰富的语义信息�
 
 ### 阶段3：优化遍
 
-入口：[MainControl.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/MainControl.py)的`optimizeModules()`函数。
+入口：MainControl.py的`optimizeModules()`函数。
 
 这是Nuitka最核心也最复杂的阶段。它采用**不动点迭代**策略——反复遍历模块树进行优化，直到没有任何优化改变了树为止。
 
@@ -143,7 +143,7 @@ while True:
 
 ### 阶段4：C代码生成
 
-入口：[code_generation/CodeGeneration.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/code_generation/CodeGeneration.py)。
+入口：code_generation/CodeGeneration.py。
 
 优化完成后，Nuitka遍历最终的IR树，将其翻译为C源代码。这一阶段使用**双dispatch字典**机制：
 
@@ -167,7 +167,7 @@ while True:
 
 ### 阶段5：C编译
 
-入口：[build/SconsInterface.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/build/SconsInterface.py)。
+入口：build/SconsInterface.py。
 
 Nuitka调用**SCons**（Python构建工具）来驱动系统C编译器：
 - Windows：MSVC（cl.exe）或MinGW64（gcc）
@@ -193,7 +193,7 @@ SCons完成：
 
 ## 主控流程调用链
 
-整个流水线由[MainControl.py](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/MainControl.py)的`runPyhtonCompilation()`编排：
+整个流水线由MainControl.py的`runPyhtonCompilation()`编排：
 
 ```python
 def runPyhtonCompilation(filename, ...):

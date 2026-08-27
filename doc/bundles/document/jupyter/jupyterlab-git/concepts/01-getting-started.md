@@ -201,7 +201,7 @@ jupyterlab-git 支持通过 Jupyter 配置文件自定义行为：
 
 ## 相关概念
 
-- [jupyterlab-git 简介](/concepts/00-introduction.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [GitExtension核心模型](/concepts/04-git-extension-model.md)
-- [REST API通信机制](/concepts/05-rest-api-and-communication.md)
+- [jupyterlab-git 简介](00-introduction.md)
+- [架构总览](02-architecture-overview.md)
+- [GitExtension核心模型](04-git-extension-model.md)
+- [REST API通信机制](05-rest-api-and-communication.md)

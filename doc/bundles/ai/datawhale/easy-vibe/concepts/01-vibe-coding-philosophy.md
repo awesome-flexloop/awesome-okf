@@ -109,5 +109,5 @@ Vibe Coding 理念不仅是教学内容，也体现在课程本身的工程设�
 
 ## 相关概念
 
-- [多语言文档站架构](/ai/datawhale/easy-vibe/concepts/02-multilingual-docs-architecture.md)：Vibe Coding 教程如何以 10 语言交付，以及其构建系统如何保障确定性。
-- [部署与工具链](/ai/datawhale/easy-vibe/concepts/03-deployment-toolchain.md)：从本地开发到多平台部署、电子书发布的完整工具链。
+- [多语言文档站架构](02-multilingual-docs-architecture.md)：Vibe Coding 教程如何以 10 语言交付，以及其构建系统如何保障确定性。
+- [部署与工具链](03-deployment-toolchain.md)：从本地开发到多平台部署、电子书发布的完整工具链。

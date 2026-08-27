@@ -306,9 +306,9 @@ class MyFS(SFTPServerFS):
 
 ## 相关概念
 
-- [SCP 文件复制](/concepts/08-scp.md) —— SCP 协议与 SFTP 的区别
-- [流与进程](/concepts/04-streams-processes.md) —— 通道基础
-- [服务端开发](/concepts/10-server.md) —— SFTPServer 配置
+- [SCP 文件复制](08-scp.md) —— SCP 协议与 SFTP 的区别
+- [流与进程](04-streams-processes.md) —— 通道基础
+- [服务端开发](10-server.md) —— SFTPServer 配置
 - [paramiko SFTP 文件传输](../../paramiko/concepts/07-sftp.md)（同步 SFTP 对比）
 
-[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](/references/asyncssh-source.md)。
+[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](../references/asyncssh-source.md)。

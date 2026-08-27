@@ -129,7 +129,7 @@ HomeFeatures 展示 4 个功能特性，采用左右交替布局：
 
 ## 相关链接
 
-- [VitePress 站点架构](/concepts/01-vitepress-setup.md)
-- [Trae Learning 学习站简介](/concepts/00-introduction.md)
-- [自定义主题样式示例](/examples/customize-theme.md)
-- [文档站源码索引](/references/learning-source.md)
+- [VitePress 站点架构](01-vitepress-setup.md)
+- [Trae Learning 学习站简介](00-introduction.md)
+- [自定义主题样式示例](../examples/customize-theme.md)
+- [文档站源码索引](../references/learning-source.md)

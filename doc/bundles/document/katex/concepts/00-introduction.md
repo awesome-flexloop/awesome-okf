@@ -46,7 +46,7 @@ KaTeX 官网首页明确列出四个特点：
 - **仓库**：[https://github.com/KaTeX/KaTeX](https://github.com/KaTeX/KaTeX)
 - **官网**：[https://katex.org](https://katex.org)
 
-> **版本标注说明**：KaTeX 官网 Versions 页面标注的"当前稳定版"为 0.16.47，而 Node/Browser/Font 等文档页的 CDN 链接引用 `katex@0.18.4`，Auto-render 页面 CDN 引用 `katex@0.18.1`。官网不同页面的版本标注并非原子更新，Versions 页面更新滞后。本 bundle 统一以源码 v0.18.4 为基准，版本差异详见 [事实清单修正-8](/spec/facts.md#修正-8官网版本号标注不一致)。
+> **版本标注说明**：KaTeX 官网 Versions 页面标注的"当前稳定版"为 0.16.47，而 Node/Browser/Font 等文档页的 CDN 链接引用 `katex@0.18.4`，Auto-render 页面 CDN 引用 `katex@0.18.1`。官网不同页面的版本标注并非原子更新，Versions 页面更新滞后。本 bundle 统一以源码 v0.18.4 为基准，版本差异详见 [事实清单修正-8](../spec/facts.md#修正-8官网版本号标注不一致)。
 
 ## KaTeX 能做什么
 
@@ -66,7 +66,7 @@ KaTeX **不支持** LaTeX 的全部功能（如 TikZ 绘图、复杂页面布局
 
 KaTeX 官网 Users 页面列出了众多采用 KaTeX 的知名项目，包括 Khan Academy、Dropbox Paper、GitLab、Gatsby、Gitter、Gradescope、Messenger、Observable、Quill、Rocket.Chat、Slab、Slides、StackEdit、TiddlyWiki 等，以及 BearBei 貝貝、Editor.md、namu.wiki、Techambition 等中文/东亚相关项目。
 
-完整生态列表（含第三方库索引）见 [生态与版本](/concepts/23-ecosystem-and-versions.md)。
+完整生态列表（含第三方库索引）见 [生态与版本](23-ecosystem-and-versions.md)。
 
 ## 在项目中的位置
 
@@ -78,12 +78,12 @@ KaTeX 的源码结构清晰地划分为几个层次：
 4. **构建层（buildHTML/buildMathML）**：将解析树转换为虚拟 DOM 树
 5. **输出层**：虚拟 DOM 序列化为 HTML 字符串或真实 DOM 节点
 
-理解这个分层架构是掌握 KaTeX 的关键。详见 [架构总览](/concepts/02-architecture-overview.md)。
+理解这个分层架构是掌握 KaTeX 的关键。详见 [架构总览](02-architecture-overview.md)。
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [安装与运行时](/concepts/15-installation-and-runtime.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [配置系统](/concepts/10-settings-options.md)
-- [命令行接口](/concepts/16-command-line.md)
+- [快速开始](01-getting-started.md)
+- [安装与运行时](15-installation-and-runtime.md)
+- [架构总览](02-architecture-overview.md)
+- [配置系统](10-settings-options.md)
+- [命令行接口](16-command-line.md)

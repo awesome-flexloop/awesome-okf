@@ -206,7 +206,7 @@ curl -X PUT http://127.0.0.1:8088/api/agents/<agent-id>/acp/tool \
   -d '{"tool_enabled": true}'
 ```
 
-全局 runner 配置（per-user）通过 `/api/acp` 管理。详见 [/concepts/05-acp-protocol.md](/concepts/05-acp-protocol.md)。
+全局 runner 配置（per-user）通过 `/api/acp` 管理。详见 [/concepts/05-acp-protocol.md](../concepts/05-acp-protocol.md)。
 
 ## 工作区目录
 
@@ -250,6 +250,6 @@ curl -X PUT http://127.0.0.1:8088/api/agents/<agent-id> \
 
 ## 相关概念
 
-- [/concepts/02-agent-runtime.md](/concepts/02-agent-runtime.md)
-- [/concepts/05-acp-protocol.md](/concepts/05-acp-protocol.md)
-- [/concepts/03-gateway-channels.md](/concepts/03-gateway-channels.md)
+- [/concepts/02-agent-runtime.md](../concepts/02-agent-runtime.md)
+- [/concepts/05-acp-protocol.md](../concepts/05-acp-protocol.md)
+- [/concepts/03-gateway-channels.md](../concepts/03-gateway-channels.md)

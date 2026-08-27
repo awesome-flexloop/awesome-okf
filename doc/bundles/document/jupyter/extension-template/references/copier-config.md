@@ -148,7 +148,7 @@ Copier 生成文件后会执行 `_tasks` 中定义的命令：
 
 ## 相关概念
 
-- [Copier 模板引擎基础](/concepts/02-copier-basics.md)
-- [四种扩展类型对比](/concepts/03-four-extension-types.md)
-- [生成项目结构详解](/concepts/04-project-structure.md)
-- [快速开始](/concepts/01-getting-started.md)
+- [Copier 模板引擎基础](../concepts/02-copier-basics.md)
+- [四种扩展类型对比](../concepts/03-four-extension-types.md)
+- [生成项目结构详解](../concepts/04-project-structure.md)
+- [快速开始](../concepts/01-getting-started.md)

@@ -20,8 +20,8 @@ related:
 
 hermes-agent 支持 34+ 个模型提供商（Anthropic、OpenAI、DeepSeek、Gemini、Bedrock、xAI、Kimi、Ollama Cloud、OpenRouter 等），每个提供商的 API 协议、认证方式、消息格式、工具 schema、响应结构都存在差异。为了对上层 Agent 核心循环屏蔽这些差异，hermes-agent 设计了**双层抽象**：
 
-1. **ProviderProfile**（[providers/base.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/providers/base.py#L39-L254)）：**声明式配置层**，以 dataclass 形式描述一个推理 provider 的行为特征（认证方式、端点、视觉支持、模型目录、请求级 quirks），不持有客户端实例。
-2. **ProviderTransport**（[agent/transports/base.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/base.py#L16-L89)）：**数据转换层**，负责将 hermes 内部统一格式（OpenAI 风格）的消息/工具/参数转换为 provider 原生 API 格式，并将原始响应归一化为 `NormalizedResponse`。
+1. **ProviderProfile**（providers/base.py）：**声明式配置层**，以 dataclass 形式描述一个推理 provider 的行为特征（认证方式、端点、视觉支持、模型目录、请求级 quirks），不持有客户端实例。
+2. **ProviderTransport**（agent/transports/base.py）：**数据转换层**，负责将 hermes 内部统一格式（OpenAI 风格）的消息/工具/参数转换为 provider 原生 API 格式，并将原始响应归一化为 `NormalizedResponse`。
 
 两层分离的核心设计原则：**Profile 描述"这个 provider 是什么样的"，Transport 负责"怎么和它对话"**。客户端构建、流式处理、凭证轮换、重试逻辑等保持在 AIAgent 中，Transport 只负责纯数据转换，保持无状态和可测试。
 
@@ -56,7 +56,7 @@ Transport 不持有客户端、不发起网络请求，它只做数据格式转�
 
 ### 2. 归一化响应类型
 
-所有 provider 响应最终归一化为 [NormalizedResponse](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/types.py#L89-L144)，它包含所有 provider 共享的最小字段集：
+所有 provider 响应最终归一化为 NormalizedResponse，它包含所有 provider 共享的最小字段集：
 
 - `content`：文本内容
 - `tool_calls`：归一化的 `ToolCall` 列表
@@ -69,7 +69,7 @@ provider 特定的字段（如 Anthropic 的 `reasoning_details`、Codex 的 `co
 
 ### 3. Plugin 注册机制
 
-每个模型 provider 作为插件注册在 [plugins/model-providers/](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/plugins/model-providers/) 目录下，包含：
+每个模型 provider 作为插件注册在 plugins/model-providers/ 目录下，包含：
 
 - `plugin.yaml`：声明插件元数据（name、kind、version、description）
 - `__init__.py`：定义 `ProviderProfile` 子类或实例，调用 `register_provider()` 注册
@@ -260,7 +260,7 @@ flowchart TD
 
 ### Chat Completions Transport 代码片段
 
-以下是 [agent/transports/chat_completions.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/chat_completions.py) 的核心结构：
+以下是 agent/transports/chat_completions.py 的核心结构：
 
 ```python
 class ChatCompletionsTransport(ProviderTransport):
@@ -387,34 +387,34 @@ class ChatCompletionsTransport(ProviderTransport):
 
 | 类型 | 定义位置 | 关键字段 |
 |------|---------|---------|
-| `ToolCall` | [agent/transports/types.py:18-76](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/types.py#L18-L76) | `id`、`name`、`arguments`（JSON 字符串）、`provider_data` |
-| `Usage` | [agent/transports/types.py:79-86](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/types.py#L79-L86) | `prompt_tokens`、`completion_tokens`、`total_tokens`、`cached_tokens` |
-| `NormalizedResponse` | [agent/transports/types.py:89-144](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/types.py#L89-L144) | `content`、`tool_calls`、`finish_reason`、`reasoning`、`usage`、`provider_data` |
-| `build_tool_call()` | [agent/transports/types.py:152-164](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/types.py#L152-L164) | 工厂函数，dict 类型 arguments 自动 JSON 序列化 |
-| `map_finish_reason()` | [agent/transports/types.py:167-174](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/types.py#L167-L174) | 将 provider 特定 stop reason 映射到标准集合 |
+| `ToolCall` | agent/transports/types.py:18-76 | `id`、`name`、`arguments`（JSON 字符串）、`provider_data` |
+| `Usage` | agent/transports/types.py:79-86 | `prompt_tokens`、`completion_tokens`、`total_tokens`、`cached_tokens` |
+| `NormalizedResponse` | agent/transports/types.py:89-144 | `content`、`tool_calls`、`finish_reason`、`reasoning`、`usage`、`provider_data` |
+| `build_tool_call()` | agent/transports/types.py:152-164 | 工厂函数，dict 类型 arguments 自动 JSON 序列化 |
+| `map_finish_reason()` | agent/transports/types.py:167-174 | 将 provider 特定 stop reason 映射到标准集合 |
 
 ### 已实现的 Transport
 
 | Transport | 文件 | api_mode | 覆盖 Provider |
 |-----------|------|----------|--------------|
-| `ChatCompletionsTransport` | [chat_completions.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/chat_completions.py) | `"chat_completions"` | OpenRouter、DeepSeek、xAI、Kimi、Gemini、Ollama 等约 16 个 |
-| `AnthropicTransport` | [anthropic.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/anthropic.py) | `"anthropic_messages"` | Anthropic Claude（原生 Messages API） |
-| `CodexTransport` | [codex.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/codex.py) | `"codex_responses"` | OpenAI Codex（Responses API） |
-| `BedrockTransport` | [bedrock.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/bedrock.py) | `"bedrock_invoke"` | AWS Bedrock（InvokeModel API） |
+| `ChatCompletionsTransport` | chat_completions.py | `"chat_completions"` | OpenRouter、DeepSeek、xAI、Kimi、Gemini、Ollama 等约 16 个 |
+| `AnthropicTransport` | anthropic.py | `"anthropic_messages"` | Anthropic Claude（原生 Messages API） |
+| `CodexTransport` | codex.py | `"codex_responses"` | OpenAI Codex（Responses API） |
+| `BedrockTransport` | bedrock.py | `"bedrock_invoke"` | AWS Bedrock（InvokeModel API） |
 
 ## 源码位置指引
 
 | 文件 | 内容 |
 |------|------|
-| [providers/base.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/providers/base.py#L39-L254) | `ProviderProfile` 基类定义，所有声明式字段和可覆写钩子 |
-| [providers/__init__.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/providers/__init__.py) | `register_provider()` 注册函数和 provider 注册表 |
-| [agent/transports/base.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/base.py#L16-L89) | `ProviderTransport` 抽象基类定义 |
-| [agent/transports/types.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/types.py#L18-L174) | `ToolCall`、`Usage`、`NormalizedResponse` 共享类型 |
-| [agent/transports/chat_completions.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/chat_completions.py) | OpenAI Chat Completions 协议 transport |
-| [agent/transports/anthropic.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/anthropic.py) | Anthropic Messages 协议 transport |
-| [agent/transports/codex.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/codex.py) | OpenAI Codex Responses 协议 transport |
-| [agent/transports/bedrock.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/bedrock.py) | AWS Bedrock 协议 transport |
-| [plugins/model-providers/](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/plugins/model-providers/) | 34 个 model-provider 插件目录，每个含 `plugin.yaml` + `__init__.py` |
+| providers/base.py | `ProviderProfile` 基类定义，所有声明式字段和可覆写钩子 |
+| providers/__init__.py | `register_provider()` 注册函数和 provider 注册表 |
+| agent/transports/base.py | `ProviderTransport` 抽象基类定义 |
+| agent/transports/types.py | `ToolCall`、`Usage`、`NormalizedResponse` 共享类型 |
+| agent/transports/chat_completions.py | OpenAI Chat Completions 协议 transport |
+| agent/transports/anthropic.py | Anthropic Messages 协议 transport |
+| agent/transports/codex.py | OpenAI Codex Responses 协议 transport |
+| agent/transports/bedrock.py | AWS Bedrock 协议 transport |
+| plugins/model-providers/ | 34 个 model-provider 插件目录，每个含 `plugin.yaml` + `__init__.py` |
 
 ## 相关概念交叉引用
 

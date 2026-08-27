@@ -261,7 +261,7 @@ ContentUtils.highlightEditorLines() 使用 CodeMirror 的 StateField 和 Decorat
 
 ## 相关概念
 
-- [整体架构与数据流](/concepts/01-architecture-overview.md)
-- [插件加载流程](/concepts/05-plugin-loader.md)
-- [样式处理与CSS隔离](/concepts/08-style-handling.md)
-- [自定义命令示例](/examples/03-custom-command.md)
+- [整体架构与数据流](01-architecture-overview.md)
+- [插件加载流程](05-plugin-loader.md)
+- [样式处理与CSS隔离](08-style-handling.md)
+- [自定义命令示例](../examples/03-custom-command.md)

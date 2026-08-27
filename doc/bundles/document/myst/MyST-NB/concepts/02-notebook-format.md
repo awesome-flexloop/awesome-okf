@@ -217,4 +217,4 @@ MyST-NB 的读取层（`core/read.py`）负责将输入文件转换为 `Notebook
 - [四阶段处理管线](03-processing-pipeline.md)
 - [配置系统](04-config-system.md)
 - [Glue 变量粘贴](07-glue.md)
-- [MyST Notebook 语法速查](/references/notebook-cheatsheet.md)
+- [MyST Notebook 语法速查](../references/notebook-cheatsheet.md)

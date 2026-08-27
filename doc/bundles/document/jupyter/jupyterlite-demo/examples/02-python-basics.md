@@ -301,8 +301,8 @@ ColorBox('coral', 150)
 
 ## 相关概念
 
-- [三大内核生态对比](/concepts/03-kernel-ecosystem.md)
-- [Pyodide 生态库与 %pip 安装](/concepts/05-pyodide-libraries.md)
-- [内容目录与数据文件组织](/concepts/04-content-and-data.md)
-- [数据可视化实战](/examples/03-data-visualization.md)
-- [交互式控件实战](/examples/04-interactive-widgets.md)
+- [三大内核生态对比](../concepts/03-kernel-ecosystem.md)
+- [Pyodide 生态库与 %pip 安装](../concepts/05-pyodide-libraries.md)
+- [内容目录与数据文件组织](../concepts/04-content-and-data.md)
+- [数据可视化实战](03-data-visualization.md)
+- [交互式控件实战](04-interactive-widgets.md)

@@ -27,7 +27,7 @@ sources:
 
 ## 概述
 
-本文档汇总 KaTeX 的生态信息：谁在使用 KaTeX、版本号说明、官方扩展入口，以及官网 [Extensions & Libraries](https://katex.org/docs/libs) 页面列出的第三方集成库[^web-libs]。官方 contrib 扩展的详细说明见 [贡献扩展模块](/concepts/14-contrib-extensions.md)。
+本文档汇总 KaTeX 的生态信息：谁在使用 KaTeX、版本号说明、官方扩展入口，以及官网 [Extensions & Libraries](https://katex.org/docs/libs) 页面列出的第三方集成库[^web-libs]。官方 contrib 扩展的详细说明见 [贡献扩展模块](14-contrib-extensions.md)。
 
 > 生态信息随时间变化较快，本文档基于 2026-08-23 官网采集，最新列表以 [官网 Users 页面](https://katex.org/users) 和 [Libraries 页面](https://katex.org/docs/libs) 为准。
 
@@ -75,13 +75,13 @@ KaTeX 官网存在版本标注不一致的情况[^web-versions]：
 | Auto-render 页面 CDN 链接 | 0.18.1 |
 | 源码 package.json（本 bundle 基准） | **0.18.4** |
 
-官网 Versions 页面更新滞后于文档页面中的 CDN 版本号。本 bundle 以源码 `package.json` 的 **v0.18.4** 为权威基准[^facts]。版本差异的详细记录见 [事实清单修正-8](/spec/facts.md#修正-8官网版本号标注不一致)。
+官网 Versions 页面更新滞后于文档页面中的 CDN 版本号。本 bundle 以源码 `package.json` 的 **v0.18.4** 为权威基准[^facts]。版本差异的详细记录见 [事实清单修正-8](../spec/facts.md#修正-8官网版本号标注不一致)。
 
 ### 版本历史
 
 - 历史版本 Release Notes 见 [GitHub Releases](https://github.com/KaTeX/KaTeX/releases)[^web-versions]
 - 各版本文档可通过 Versions 页面的 Documentation 链接访问（部分历史版本托管在 netlify.app）
-- 版本迁移指南见 [版本迁移](/concepts/22-migration.md)
+- 版本迁移指南见 [版本迁移](22-migration.md)
 
 ## 官方扩展
 
@@ -89,13 +89,13 @@ KaTeX 自带 5 个 contrib 扩展（在 `contrib/` 目录）[^web-libs]：
 
 | 扩展 | 用途 |
 |------|------|
-| [auto-render](/concepts/13-auto-render.md) | 自动扫描 DOM 文本中的数学分隔符并渲染 |
+| [auto-render](13-auto-render.md) | 自动扫描 DOM 文本中的数学分隔符并渲染 |
 | copy-tex | 选择复制 KaTeX 渲染元素时，将 LaTeX 源码复制到剪贴板 |
 | mathtex-script-type | 自动渲染 `<script type="math/tex">` 标签内的 LaTeX |
 | mhchem | 化学方程式扩展（`\ce{}` 命令） |
 | render-a11y-string | 生成无障碍字符串表示 |
 
-各扩展的实现细节和用法见 [贡献扩展模块](/concepts/14-contrib-extensions.md)。
+各扩展的实现细节和用法见 [贡献扩展模块](14-contrib-extensions.md)。
 
 ## 第三方库索引
 
@@ -147,19 +147,19 @@ AsciiMath 语法需先通过 [asciimath2tex](https://github.com/ForbesLindesay/a
 ## 选型建议
 
 1. **框架集成**：优先选择对应框架的成熟封装库（如 React 用 react-katex），避免手动管理 DOM 生命周期
-2. **服务端渲染**：Ruby 用 katex-ruby、Rust 用 katex-rs；Node.js 直接使用官方 `renderToString` API（见 [基础渲染示例](/examples/basic-render.md)）
+2. **服务端渲染**：Ruby 用 katex-ruby、Rust 用 katex-rs；Node.js 直接使用官方 `renderToString` API（见 [基础渲染示例](../examples/basic-render.md)）
 3. **编辑器嵌入**：Quill 等编辑器有社区 KaTeX 模块，注意检查与 KaTeX v0.18 的兼容性
 4. **小程序**：使用 @rojer/katex-mini，注意小程序 DOM 环境限制可能影响部分功能
-5. **安全场景**：任何第三方库都应遵循 [安全与错误处理](/concepts/18-security-and-errors.md) 中的建议，处理不可信输入时配置 `trust: false`、`maxExpand: 1000` 等基线选项
+5. **安全场景**：任何第三方库都应遵循 [安全与错误处理](18-security-and-errors.md) 中的建议，处理不可信输入时配置 `trust: false`、`maxExpand: 1000` 等基线选项
 
 ## 相关概念
 
-- [KaTeX 简介](/concepts/00-introduction.md) — 项目定位与核心特点
-- [贡献扩展模块](/concepts/14-contrib-extensions.md) — 官方 5 个 contrib 扩展详解
-- [安装与运行时](/concepts/15-installation-and-runtime.md) — 各环境安装方式
-- [版本迁移](/concepts/22-migration.md) — v0.13-v0.18 升级指南
-- [常见问题](/concepts/21-common-issues.md) — 集成排障
-- [安全与错误处理](/concepts/18-security-and-errors.md) — 不可信输入安全配置
+- [KaTeX 简介](00-introduction.md) — 项目定位与核心特点
+- [贡献扩展模块](14-contrib-extensions.md) — 官方 5 个 contrib 扩展详解
+- [安装与运行时](15-installation-and-runtime.md) — 各环境安装方式
+- [版本迁移](22-migration.md) — v0.13-v0.18 升级指南
+- [常见问题](21-common-issues.md) — 集成排障
+- [安全与错误处理](18-security-and-errors.md) — 不可信输入安全配置
 
 [^web-users]: 官网 Users 页面，https://katex.org/users
 [^web-versions]: 官网 Versions 页面，https://katex.org/versions

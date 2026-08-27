@@ -255,7 +255,7 @@ if __name__ == '__main__':
 
 ## 七、相关链接
 
-- [/deepseek/deep-gemm/concepts/fp8-gemm](/ai/deepseek/deep-gemm/concepts/fp8-gemm) — FP8/FP4 量化原理
-- [/deepseek/deep-gemm/references/api](/ai/deepseek/deep-gemm/references/api) — GEMM API 完整参考
-- [/deepseek/deep-gemm/examples/moe-forward](/ai/deepseek/deep-gemm/examples/moe-forward) — MoE 分组 GEMM 示例
-- [/deepseek/deep-gemm/examples/tuning](/ai/deepseek/deep-gemm/examples/tuning) — 性能调优指南
+- /deepseek/deep-gemm/concepts/fp8-gemm — FP8/FP4 量化原理
+- /deepseek/deep-gemm/references/api — GEMM API 完整参考
+- /deepseek/deep-gemm/examples/moe-forward — MoE 分组 GEMM 示例
+- /deepseek/deep-gemm/examples/tuning — 性能调优指南

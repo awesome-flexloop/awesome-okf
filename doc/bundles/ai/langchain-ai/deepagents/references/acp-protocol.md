@@ -151,5 +151,5 @@ dcode --acp
 
 ## 相关概念
 
-- [总览](/ai/langchain-ai/deepagents/concepts/overview) — Deep Agents 整体架构
-- [核心 API](/ai/langchain-ai/deepagents/references/api) — `create_deep_agent()` 与 `checkpointer`
+- 总览 — Deep Agents 整体架构
+- 核心 API — `create_deep_agent()` 与 `checkpointer`

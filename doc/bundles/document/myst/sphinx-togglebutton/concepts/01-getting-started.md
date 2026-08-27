@@ -94,7 +94,7 @@ extensions = [
 
 ## 相关概念
 
-- [简介](/concepts/00-introduction.md)
-- [toggle 指令详解](/concepts/02-toggle-directive.md)
-- [配置项参考](/concepts/03-configuration.md)
-- [基础使用示例](/examples/basic-usage.md)
+- [简介](00-introduction.md)
+- [toggle 指令详解](02-toggle-directive.md)
+- [配置项参考](03-configuration.md)
+- [基础使用示例](../examples/basic-usage.md)

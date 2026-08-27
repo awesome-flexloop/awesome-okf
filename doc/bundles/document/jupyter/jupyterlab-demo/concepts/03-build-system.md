@@ -200,7 +200,7 @@ build.py + talks.yml 实现了一个通用的**声明式文件组装模式**，�
 
 ## 相关概念
 
-- [Binder 环境配置三要素](/concepts/02-binder-config.md)
-- [演示能力维度与文件处理器](/concepts/04-demo-capabilities.md)
-- [数据文件与多格式查看器](/concepts/06-data-files.md)
-- [实战：创建自定义演讲配置](/examples/02-custom-demo-talk.md)
+- [Binder 环境配置三要素](02-binder-config.md)
+- [演示能力维度与文件处理器](04-demo-capabilities.md)
+- [数据文件与多格式查看器](06-data-files.md)
+- [实战：创建自定义演讲配置](../examples/02-custom-demo-talk.md)

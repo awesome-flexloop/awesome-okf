@@ -130,7 +130,7 @@ else:
 
 ## 相关概念
 
-- [mdurl 简介](/concepts/00-introduction.md)
-- [URL 解析与格式化](/concepts/02-parse-and-format.md)
-- [URL 编码与解码](/concepts/03-encode-and-decode.md)
-- [基础使用示例](/examples/basic-usage.md)
+- [mdurl 简介](00-introduction.md)
+- [URL 解析与格式化](02-parse-and-format.md)
+- [URL 编码与解码](03-encode-and-decode.md)
+- [基础使用示例](../examples/basic-usage.md)

@@ -324,8 +324,8 @@ Demo Video
 
 ## 相关概念
 
-- [核心标签生成流程](/concepts/03-tag-generation.md)
-- [配置选项全解](/concepts/02-configuration.md)
-- [自定义Meta标签](/concepts/09-custom-meta-tags.md)
-- [页面级定制示例](/examples/per-page-customization.md)
-- [sphinxext-opengraph 源码信源登记](/references/sphinxext-opengraph-source.md)
+- [核心标签生成流程](03-tag-generation.md)
+- [配置选项全解](02-configuration.md)
+- [自定义Meta标签](09-custom-meta-tags.md)
+- [页面级定制示例](../examples/per-page-customization.md)
+- [sphinxext-opengraph 源码信源登记](../references/sphinxext-opengraph-source.md)

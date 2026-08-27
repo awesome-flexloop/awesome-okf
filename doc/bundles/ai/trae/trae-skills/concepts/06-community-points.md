@@ -196,11 +196,11 @@ update-community-points.js 接收以下环境变量：
 
 ## 相关概念
 
-- [Workflow 编排型技能](/concepts/05-workflow-skills.md)
-- [脚本辅助型技能](/concepts/04-script-assisted-skills.md)
-- [编写自定义 Skill](/concepts/07-write-skill.md)
+- [Workflow 编排型技能](05-workflow-skills.md)
+- [脚本辅助型技能](04-script-assisted-skills.md)
+- [编写自定义 Skill](07-write-skill.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/skills-source.md)
-- [社区积分贡献示例](/examples/points-contribution.md)
+- [源码信源索引](../references/skills-source.md)
+- [社区积分贡献示例](../examples/points-contribution.md)

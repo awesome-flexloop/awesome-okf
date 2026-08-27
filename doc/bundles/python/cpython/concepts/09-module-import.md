@@ -353,4 +353,4 @@ void Py_EndInterpreter(PyThreadState *tstate);
 - [编译器流水线](08-compiler-pipeline.md) — 导入模块时触发源代码到字节码的编译，理解编译流程有助于理解导入延迟
 - [CPython 简介](00-introduction.md) — 了解模块系统在 CPython 整体架构中的位置
 - [解释器帧与执行栈](06-interpreter-frame.md) — 模块执行时创建模块级帧，模块顶层代码在帧中执行
-- [CPython 源码信源登记](/references/cpython-source.md) — `Python/import.c`、`Python/bltinmodule.c`、`Include/moduleobject.h` 的路径索引
+- [CPython 源码信源登记](../references/cpython-source.md) — `Python/import.c`、`Python/bltinmodule.c`、`Include/moduleobject.h` 的路径索引

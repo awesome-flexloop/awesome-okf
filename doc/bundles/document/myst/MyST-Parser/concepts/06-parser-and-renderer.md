@@ -125,7 +125,7 @@ def current_node_context(self, node):
 
 ### 额外功能
 
-1. **跨文档链接**：`render_link_project()` 处理 ```[text](./doc.md#anchor)``` 形式的文档间引用，生成 `addnodes.pending_xref` 节点
+1. **跨文档链接**：`render_link_project()` 处理 ```text``` 形式的文档间引用，生成 `addnodes.pending_xref` 节点
 2. **下载引用**：处理 `{download}` 角色，生成 `addnodes.download_reference` 节点
 3. **Sphinx 环境访问**：`sphinx_env` 属性直接返回 `BuildEnvironment`（不返回 None）
 4. **相对路径处理**：`_handle_relative_docs()` 处理 include 指令的相对路径
@@ -173,7 +173,7 @@ class Parser(RstParser):
 
 ## 相关概念
 
-- [三阶段解析管线](/concepts/03-architecture-pipeline.md)
-- [配置系统](/concepts/04-config-system.md)
-- [指令与角色](/concepts/07-directives-and-roles.md)
-- [Sphinx 集成机制](/concepts/11-sphinx-integration.md)
+- [三阶段解析管线](03-architecture-pipeline.md)
+- [配置系统](04-config-system.md)
+- [指令与角色](07-directives-and-roles.md)
+- [Sphinx 集成机制](11-sphinx-integration.md)

@@ -309,6 +309,6 @@ handlers = [
 
 ## 相关概念
 
-- [ExtensionApp 开发](/concepts/04-extension-app.md)
-- [测试策略](/concepts/07-testing.md)
-- [PingHandler 源码解析](/references/handler-source.md)
+- [ExtensionApp 开发](04-extension-app.md)
+- [测试策略](07-testing.md)
+- [PingHandler 源码解析](../references/handler-source.md)

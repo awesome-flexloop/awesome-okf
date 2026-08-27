@@ -242,7 +242,7 @@ with open('/drive/test.txt', 'r') as f:
 
 ## 相关概念
 
-- [内容管理与文件系统](/concepts/03-contents-and-filesystem.md)
-- [Service Worker桥接](/concepts/04-service-worker-bridge.md)
-- [内核类型](/concepts/07-kernel-types.md)
-- [浏览器存储](/concepts/05-browser-storage.md)
+- [内容管理与文件系统](../concepts/03-contents-and-filesystem.md)
+- [Service Worker桥接](../concepts/04-service-worker-bridge.md)
+- [内核类型](../concepts/07-kernel-types.md)
+- [浏览器存储](../concepts/05-browser-storage.md)

@@ -73,7 +73,7 @@ sources:
 
 ## 相关概念
 
-- [为什么读帛书本](/concepts/00-why-boshu.md)
-- [四大版本系统](/concepts/01-four-systems.md)
-- [德经在前的阅读策略](/concepts/02-de-before-dao.md)
-- [避讳字与通假字](/concepts/03-taboo-characters.md)
+- [为什么读帛书本](../concepts/00-why-boshu.md)
+- [四大版本系统](../concepts/01-four-systems.md)
+- [德经在前的阅读策略](../concepts/02-de-before-dao.md)
+- [避讳字与通假字](../concepts/03-taboo-characters.md)

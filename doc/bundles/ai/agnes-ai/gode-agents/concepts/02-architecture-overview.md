@@ -263,12 +263,12 @@ agent.memory.replay(agent.logger, detailed=False)
 
 ## 相关链接
 
-- [简介：编码式多智能体推理](/concepts/00-introduction.md) — 框架概述与设计哲学
-- [快速开始](/concepts/01-getting-started.md) — 安装与第一个 Agent
-- [MultiStepAgent：核心推理循环](/concepts/03-multi-step-agent.md) — run 循环深度解析
-- [记忆系统：步骤序列](/concepts/04-memory-system.md) — MemoryStep 体系详解
-- [Agents API 参考](/references/agents-api.md) — 完整 Agent API
-- [Models API 参考](/references/models-api.md) — 模型后端 API
-- [Tools API 参考](/references/tools-api.md) — 工具系统 API
-- [Memory API 参考](/references/memory-api.md) — 记忆系统 API
-- [Executor API 参考](/references/executor-api.md) — 执行器 API
+- [简介：编码式多智能体推理](00-introduction.md) — 框架概述与设计哲学
+- [快速开始](01-getting-started.md) — 安装与第一个 Agent
+- [MultiStepAgent：核心推理循环](03-multi-step-agent.md) — run 循环深度解析
+- [记忆系统：步骤序列](04-memory-system.md) — MemoryStep 体系详解
+- [Agents API 参考](../references/agents-api.md) — 完整 Agent API
+- [Models API 参考](../references/models-api.md) — 模型后端 API
+- [Tools API 参考](../references/tools-api.md) — 工具系统 API
+- [Memory API 参考](../references/memory-api.md) — 记忆系统 API
+- [Executor API 参考](../references/executor-api.md) — 执行器 API

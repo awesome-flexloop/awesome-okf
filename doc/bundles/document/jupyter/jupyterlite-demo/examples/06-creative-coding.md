@@ -240,7 +240,7 @@ import b2d  # pyb2d 以 b2d 名称导入
 
 ## 相关概念
 
-- [三大内核生态对比](/concepts/03-kernel-ecosystem.md)
-- [Pyodide 生态库与 %pip 安装](/concepts/05-pyodide-libraries.md)
-- [交互式控件实战](/examples/04-interactive-widgets.md)
-- [自定义 Demo 站点实战](/examples/07-custom-demo-site.md)
+- [三大内核生态对比](../concepts/03-kernel-ecosystem.md)
+- [Pyodide 生态库与 %pip 安装](../concepts/05-pyodide-libraries.md)
+- [交互式控件实战](04-interactive-widgets.md)
+- [自定义 Demo 站点实战](07-custom-demo-site.md)

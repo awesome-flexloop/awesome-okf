@@ -205,7 +205,7 @@ class CompiledStateGraph(Pregel[StateT, ContextT, InputT, OutputT])
 
 ## 相关概念
 
-- [状态图](/ai/langchain-ai/langgraph/concepts/state-graph) — StateGraph 的设计理念与使用模式
-- [通道系统](/ai/langchain-ai/langgraph/concepts/channels) — 通道类型与 reducer 机制
-- [Pregel 引擎](/ai/langchain-ai/langgraph/concepts/pregel-engine) — 底层执行模型
-- [检查点](/ai/langchain-ai/langgraph/concepts/checkpointing) — 持久化与状态恢复
+- 状态图 — StateGraph 的设计理念与使用模式
+- 通道系统 — 通道类型与 reducer 机制
+- Pregel 引擎 — 底层执行模型
+- 检查点 — 持久化与状态恢复

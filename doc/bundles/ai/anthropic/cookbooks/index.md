@@ -13,7 +13,7 @@ stale_after: 2027-08-27
 
 **Claude Cookbooks** 是 Anthropic 官方维护的代码示例集，包含可直接运行的 Jupyter Notebook 和 Python 脚本。与抽象的 API 文档不同，Cookbooks 提供"拿来即用"的实践配方——每个示例都是一个完整的端到端解决方案，覆盖从基础文本分类到企业级 Agent SDK 部署的全场景。
 
-如果把 [Python SDK Wiki](/python-sdk/index.md) 比作"食材清单和烹饪原理"，那么本 Cookbooks Wiki 就是"已经写好的菜谱"——精确的步骤、可运行的代码、经过验证的最佳实践模式。
+如果把 [Python SDK Wiki](../python-sdk/index.md) 比作"食材清单和烹饪原理"，那么本 Cookbooks Wiki 就是"已经写好的菜谱"——精确的步骤、可运行的代码、经过验证的最佳实践模式。
 
 ## 快速开始
 
@@ -67,17 +67,17 @@ print(classify("我的订单怎么还没发货？", ["咨询", "投诉", "建议
 
 | 序号 | 主题 | 内容覆盖 |
 |------|------|---------|
-| 00 | [Cookbook 导览](/cookbooks/concepts/00-overview.md) | Cookbooks 定位、前置条件、快速开始、六大能力域地图、如何选择 Cookbook、与 SDK Wiki 的关系 |
-| 01 | [工具调用模式](/cookbooks/concepts/01-tool-use-patterns.md) | Function Calling 基础流程、客服 Agent 多轮模式、计算器确定性函数、Text-to-SQL 模式、工具错误处理、并行调用 |
-| 02 | [多模态模式](/cookbooks/concepts/02-multimodal-patterns.md) | Vision 最佳实践、图表/PPT 解读、OCR 表单提取、PDF 处理、图片生成配合 Stable Diffusion、提示词技巧 |
-| 03 | [RAG 与知识检索模式](/cookbooks/concepts/03-rag-patterns.md) | 基础 RAG 流程、文档切分策略、Pinecone 等向量数据库集成、上下文嵌入优化、知识图谱增强、Evals 评估 |
-| 04 | [高级技巧](/cookbooks/concepts/04-advanced-techniques.md) | Sub-agents 多模型协作、Extended Thinking、Prompt Caching（降本90%）、JSON 模式、自动化 Evals、成本优化、微调 |
+| 00 | [Cookbook 导览](concepts/00-overview.md) | Cookbooks 定位、前置条件、快速开始、六大能力域地图、如何选择 Cookbook、与 SDK Wiki 的关系 |
+| 01 | [工具调用模式](concepts/01-tool-use-patterns.md) | Function Calling 基础流程、客服 Agent 多轮模式、计算器确定性函数、Text-to-SQL 模式、工具错误处理、并行调用 |
+| 02 | [多模态模式](concepts/02-multimodal-patterns.md) | Vision 最佳实践、图表/PPT 解读、OCR 表单提取、PDF 处理、图片生成配合 Stable Diffusion、提示词技巧 |
+| 03 | [RAG 与知识检索模式](concepts/03-rag-patterns.md) | 基础 RAG 流程、文档切分策略、Pinecone 等向量数据库集成、上下文嵌入优化、知识图谱增强、Evals 评估 |
+| 04 | [高级技巧](concepts/04-advanced-techniques.md) | Sub-agents 多模型协作、Extended Thinking、Prompt Caching（降本90%）、JSON 模式、自动化 Evals、成本优化、微调 |
 
 ### 📖 参考索引（食谱速查表）
 
 | 参考文档 | 内容覆盖 |
 |---------|---------|
-| [食谱完整索引](/cookbooks/references/recipe-index.md) | 六大能力域、30+ 个 Cookbook recipe 的完整表格索引：名称、源路径、核心技术、一句话说明、按难度分级 |
+| [食谱完整索引](references/recipe-index.md) | 六大能力域、30+ 个 Cookbook recipe 的完整表格索引：名称、源路径、核心技术、一句话说明、按难度分级 |
 
 ## 六大能力域一览
 
@@ -99,7 +99,7 @@ print(classify("我的订单怎么还没发货？", ["咨询", "投诉", "建议
 
 ## 与 Python SDK Wiki 的关系
 
-本 Cookbooks Wiki 与 [Python SDK Wiki](/python-sdk/index.md) 是互补关系：
+本 Cookbooks Wiki 与 [Python SDK Wiki](../python-sdk/index.md) 是互补关系：
 
 | 维度 | Python SDK Wiki | Claude Cookbooks Wiki |
 |------|----------------|----------------------|
@@ -127,9 +127,9 @@ print(classify("我的订单怎么还没发货？", ["咨询", "投诉", "建议
 
 ## 链接索引
 
-- [概念文档索引](/cookbooks/concepts/index.md)
-- [参考索引](/cookbooks/references/index.md)
-- [Python SDK Wiki](/python-sdk/index.md)
+- [概念文档索引](concepts/index.md)
+- [参考索引](references/index.md)
+- [Python SDK Wiki](../python-sdk/index.md)
 - 官方仓库：https://github.com/anthropics/anthropic-cookbook
 
 ```{toctree}

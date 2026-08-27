@@ -59,5 +59,5 @@ LLM智能体特性：规划与推理、工具使用、动态修正。
 - 图1.4：亚符号主义、符号主义与神经符号主义关系
 
 ## 相关概念
-- [智能体范式与ReAct](/ai/datawhale/hello-agents/concepts/agent-paradigms-react)
-- [多Agent协作](/ai/datawhale/hello-agents/concepts/multi-agent-collaboration)
+- 智能体范式与ReAct
+- 多Agent协作

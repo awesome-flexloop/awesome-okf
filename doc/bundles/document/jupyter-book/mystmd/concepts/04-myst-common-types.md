@@ -309,6 +309,6 @@ RuleId 定义了 80+ 种错误/警告规则 ID，用于 VFile 消息分类：
 
 ## 相关概念
 
-- [统一插件架构](/concepts/01-unified-plugin-architecture.md)
-- [错误处理与规则 ID](/concepts/05-error-handling.md)
-- [MyST 解析器](/concepts/02-myst-parser.md)
+- [统一插件架构](01-unified-plugin-architecture.md)
+- [错误处理与规则 ID](05-error-handling.md)
+- [MyST 解析器](02-myst-parser.md)

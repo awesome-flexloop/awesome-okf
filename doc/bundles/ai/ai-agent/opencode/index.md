@@ -18,28 +18,28 @@ OpenCode 是一个开源的终端 AI 编码代理，基于 Bun + Turbo + SST 技
 
 ### 概念
 
-- [OpenCode 简介](/concepts/00-introduction.md)
-- [架构概览](/concepts/01-architecture.md)
-- [配置系统](/concepts/02-config-system.md)
-- [会话与工具](/concepts/03-session-tools.md)
-- [部署与基础设施](/concepts/04-deployment-infra.md)
+- [OpenCode 简介](concepts/00-introduction.md)
+- [架构概览](concepts/01-architecture.md)
+- [配置系统](concepts/02-config-system.md)
+- [会话与工具](concepts/03-session-tools.md)
+- [部署与基础设施](concepts/04-deployment-infra.md)
 
 ### 示例
 
-- [基本使用](/examples/01-basic-usage.md)
+- [基本使用](examples/01-basic-usage.md)
 
 ### 参考
 
-- [源文件参考](/references/source.md)
+- [源文件参考](references/source.md)
 
 ### 规范
 
-- [事实清单（80 条）](/spec/facts.md)
-- [架构洞察（4 条）](/spec/insights.md)
+- [事实清单（80 条）](spec/facts.md)
+- [架构洞察（4 条）](spec/insights.md)
 
 ### 其他
 
-- [变更日志](/log.md)
+- [变更日志](log.md)
 
 ```{toctree}
 :hidden:

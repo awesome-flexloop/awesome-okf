@@ -87,4 +87,4 @@ docutils 节点访问者，遍历 AST 生成 markdown-it token 流。继承自 `
 
 ## 相关概念
 
-- [MarkdownItRenderer 与 AST→Token 遍历](/concepts/06-token-rendering.md)
+- [MarkdownItRenderer 与 AST→Token 遍历](../concepts/06-token-rendering.md)

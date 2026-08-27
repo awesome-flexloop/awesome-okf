@@ -334,5 +334,5 @@ constructor . --help-construct
 
 ## 下一步
 
-- [04-安装程序类型](./04-installer-types.md)：深入了解 sh/pkg/exe/msi/docker 五种安装程序类型
-- [05-CLI 命令行入口](./05-cli-and-entrypoint.md)：完整的命令行参数参考
+- [04-安装程序类型](04-installer-types.md)：深入了解 sh/pkg/exe/msi/docker 五种安装程序类型
+- [05-CLI 命令行入口](05-cli-and-entrypoint.md)：完整的命令行参数参考

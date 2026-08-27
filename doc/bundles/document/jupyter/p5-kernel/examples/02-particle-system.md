@@ -156,6 +156,6 @@ for (let i = 0; i < particles.length; i++) {
 
 ## 相关概念
 
-- [%show 魔法命令](/concepts/04-magic-commands.md)
-- [P5Executor 与渲染机制](/concepts/03-executor-and-rendering.md)
-- [外部包导入示例](/examples/03-external-packages.md)
+- [%show 魔法命令](../concepts/04-magic-commands.md)
+- [P5Executor 与渲染机制](../concepts/03-executor-and-rendering.md)
+- [外部包导入示例](03-external-packages.md)

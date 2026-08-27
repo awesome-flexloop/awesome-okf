@@ -70,10 +70,10 @@ $$\lim_{n\to\infty} \mathbb{P}(|X_n - X| \geq \epsilon) = 0$$
 
 ## 与其他概念的关系
 
-- [收敛率](/ai/datawhale/key-book/concepts/convergence-rate)：一致性只回答"是否收敛"，收敛率回答"多快收敛"
-- [泛化界](/ai/datawhale/key-book/concepts/generalization-bound)：有限样本的泛化保证是渐近一致性的非渐近版本
+- 收敛率：一致性只回答"是否收敛"，收敛率回答"多快收敛"
+- 泛化界：有限样本的泛化保证是渐近一致性的非渐近版本
 - 一致性是统计学习理论中 ERM 原则的基石（Vapnik-Chervonenkis 理论）
 
 ## 参见
 
-- [第 6 章：一致性](/ai/datawhale/key-book/references/chapter6)
+- 第 6 章：一致性

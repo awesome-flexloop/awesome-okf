@@ -29,7 +29,7 @@ if (crossOriginIsolated) {
 
 ## XeusCoincidentKernel（coincident模式）
 
-定义在 [coincident.worker.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/xeus/packages/xeus/src/coincident.worker.ts)。
+定义在 coincident.worker.ts。
 
 ### SharedBufferContentsAPI
 
@@ -134,7 +134,7 @@ coincident模式通过`coincident(self)`创建主线程代理，主线程通过�
 
 ## XeusComlinkKernel（comlink模式）
 
-定义在 [comlink.worker.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/xeus/packages/xeus/src/comlink.worker.ts)。
+定义在 comlink.worker.ts。
 
 ### mount 实现
 

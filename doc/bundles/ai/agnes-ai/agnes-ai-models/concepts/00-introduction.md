@@ -61,6 +61,6 @@ Agnes AI 提供双站点服务：
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md) — 5分钟完成第一个API调用
-- [API认证与安全](/concepts/02-api-authentication.md) — API密钥管理与安全最佳实践
-- [对话补全API](/concepts/03-chat-completions.md) — 文本与多模态对话接口详解
+- [快速开始](01-getting-started.md) — 5分钟完成第一个API调用
+- [API认证与安全](02-api-authentication.md) — API密钥管理与安全最佳实践
+- [对话补全API](03-chat-completions.md) — 文本与多模态对话接口详解

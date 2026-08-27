@@ -125,6 +125,6 @@ Android, webOS, iPhone, iPad, iPod, BlackBerry, IEMobile, Windows Phone, Opera M
 
 ## 相关概念
 
-- [前端 JavaScript 交互机制](/concepts/12-frontend-js.md)
-- [try_examples 指令](/concepts/08-try-examples-directive.md)
-- [核心模块源码](/references/main-source.md)
+- [前端 JavaScript 交互机制](../concepts/12-frontend-js.md)
+- [try_examples 指令](../concepts/08-try-examples-directive.md)
+- [核心模块源码](main-source.md)

@@ -177,7 +177,7 @@ Cell 执行（Worker 中）
 
 ## 相关概念
 
-- [%show 魔法命令](/concepts/04-magic-commands.md)
-- [P5Kernel 实现详解](/concepts/02-kernel-implementation.md)
-- [架构概览](/concepts/01-architecture-overview.md)
-- [第一个 p5 Sketch](/examples/01-first-sketch.md)
+- [%show 魔法命令](../concepts/04-magic-commands.md)
+- [P5Kernel 实现详解](../concepts/02-kernel-implementation.md)
+- [架构概览](../concepts/01-architecture-overview.md)
+- [第一个 p5 Sketch](01-first-sketch.md)

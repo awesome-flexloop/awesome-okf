@@ -103,7 +103,7 @@ def image_processing(image_path):
 
 > **重要**：`.. disable_try_examples` 不是 RST 指令（不需要 `::`），而是一个特殊注释标记。它不会在渲染后的文档中可见，仅被 jupyterlite-sphinx 内部检测到后跳过该函数的 TryExamples 按钮插入。
 
-详细说明见 [10-disabling-examples](/concepts/10-disabling-examples.md)。
+详细说明见 [10-disabling-examples](10-disabling-examples.md)。
 
 ## 按钮外观定制
 
@@ -174,7 +174,7 @@ import matplotlib.pyplot as plt
 
 ## 相关内容
 
-- [03-sphinx-conf](/concepts/03-sphinx-conf.md)
-- [05-config-files](/concepts/05-config-files.md)
-- [10-disabling-examples](/concepts/10-disabling-examples.md)
-- [08-customization](/concepts/08-customization.md)
+- [03-sphinx-conf](03-sphinx-conf.md)
+- [05-config-files](05-config-files.md)
+- [10-disabling-examples](10-disabling-examples.md)
+- [08-customization](08-customization.md)

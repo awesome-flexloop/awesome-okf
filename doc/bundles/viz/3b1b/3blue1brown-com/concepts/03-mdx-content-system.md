@@ -490,8 +490,8 @@ Header、Footer、TableOfContents、视频播放器等组件均标记为 `print:
 
 ## 相关概念
 
-- [00 官网技术栈总览](/concepts/00-website-overview.md)
-- [02 路由与 SSG 预渲染](/concepts/02-routing-and-pages.md)
-- [04 核心组件与状态管理](/concepts/04-components-and-state.md)
-- [05 Tailwind v4 CSS-first 样式系统](/concepts/05-styling-with-tailwind4.md)
-- [核心组件路径索引](/references/component-index.md)
+- [00 官网技术栈总览](00-website-overview.md)
+- [02 路由与 SSG 预渲染](02-routing-and-pages.md)
+- [04 核心组件与状态管理](04-components-and-state.md)
+- [05 Tailwind v4 CSS-first 样式系统](05-styling-with-tailwind4.md)
+- [核心组件路径索引](../references/component-index.md)

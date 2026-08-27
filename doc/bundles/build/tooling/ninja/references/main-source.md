@@ -32,7 +32,7 @@ sources:
 
 # 主入口与工具 API 参考
 
-> 信源文件：[ninja.cc](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/ninja.cc)、[status.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/status.h)、[status_printer.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/status_printer.h)、[clean.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/clean.h)、[graphviz.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/graphviz.h)、[browse.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/browse.h)、[missing_deps.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/missing_deps.h)
+> 信源文件：ninja.cc、status.h、status_printer.h、clean.h、graphviz.h、browse.h、missing_deps.h
 
 本文档记录 Ninja 主入口、命令行选项、子工具和状态输出接口的完整 API。
 

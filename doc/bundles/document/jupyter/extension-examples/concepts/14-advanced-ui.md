@@ -294,7 +294,7 @@ extension-examples仓库包含28个示例，覆盖了主要扩展点：
 
 ## 相关概念
 
-- [Widget与Shell布局](/concepts/05-widgets-shell.md)
-- [命令系统](/concepts/04-commands.md)
-- [插件基础与依赖注入](/concepts/03-plugin-basics.md)
-- [核心API与Token参考](/references/core-api-tokens.md)
+- [Widget与Shell布局](05-widgets-shell.md)
+- [命令系统](04-commands.md)
+- [插件基础与依赖注入](03-plugin-basics.md)
+- [核心API与Token参考](../references/core-api-tokens.md)

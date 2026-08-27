@@ -125,7 +125,7 @@ validate_frozen_envs(info)
 fcp_main(info, verbose=verbose, dry_run=dry_run, conda_exe=conda_exe)
 ```
 
-这一步完成依赖求解和包下载，写入 `info["_urls"]`、`info["_records"]`、`info["_all_pkg_records"]` 等字段。详见 [06-FCP依赖求解与包下载](./06-fcp-fetch-and-solve.md)。
+这一步完成依赖求解和包下载，写入 `info["_urls"]`、`info["_records"]`、`info["_all_pkg_records"]` 等字段。详见 [06-FCP依赖求解与包下载](06-fcp-fetch-and-solve.md)。
 
 若为 `--dry-run`，在此步之后退出。
 
@@ -202,5 +202,5 @@ constructor_main([".", "-o", "./dist", "--platform", "win-64",
 
 ## 下一步
 
-- [06-FCP依赖求解与包下载](./06-fcp-fetch-and-solve.md)：了解构建流程中最核心的求解下载管线
-- [07-conda_interface防腐层](./07-conda-interface.md)：理解 constructor 如何隔离 conda 内部 API 的变化
+- [06-FCP依赖求解与包下载](06-fcp-fetch-and-solve.md)：了解构建流程中最核心的求解下载管线
+- [07-conda_interface防腐层](07-conda-interface.md)：理解 constructor 如何隔离 conda 内部 API 的变化

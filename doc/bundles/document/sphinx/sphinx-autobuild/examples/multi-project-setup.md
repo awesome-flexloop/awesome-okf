@@ -256,7 +256,7 @@ Get-CimInstance Win32_Process -Filter "Name='python.exe'" |
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [CLI 入口与参数解析](/concepts/03-cli-and-entrypoint.md)
-- [服务器与热重载](/concepts/06-server-and-hotreload.md)
-- [基础使用](/examples/basic-usage.md)
+- [5分钟快速上手](../concepts/01-getting-started.md)
+- [CLI 入口与参数解析](../concepts/03-cli-and-entrypoint.md)
+- [服务器与热重载](../concepts/06-server-and-hotreload.md)
+- [基础使用](basic-usage.md)

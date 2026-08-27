@@ -18,7 +18,7 @@ sources:
 
 # Domain 域系统
 
-Domain（域）是 Sphinx 实现**语义化交叉引用**的核心抽象，定义在 [sphinx/domains/__init__.py](file:///d:/spaces/SpecWeave/external/libs/docs/sphinx/sphinx/domains/__init__.py)。每个 Domain 封装了一类知识域（通常是一种编程语言）的描述指令、引用角色和对象索引，使得 Sphinx 能够理解代码实体间的关系并生成智能交叉链接。
+Domain（域）是 Sphinx 实现**语义化交叉引用**的核心抽象，定义在 sphinx/domains/__init__.py。每个 Domain 封装了一类知识域（通常是一种编程语言）的描述指令、引用角色和对象索引，使得 Sphinx 能够理解代码实体间的关系并生成智能交叉链接。
 
 ## 什么是 Domain
 

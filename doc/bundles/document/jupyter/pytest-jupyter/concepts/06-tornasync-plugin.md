@@ -240,5 +240,5 @@ pytest的fixture依赖解析自动处理所有这些依赖，测试代码只需�
 ---
 
 **下一步阅读：**
-- [Server插件详解](/concepts/05-server-plugin.md) — jp_fetch/jp_ws_fetch如何在tornasync基础上构建
-- [Fixture工厂模式](/concepts/08-fixture-factories.md) — 可配置fixtures的设计模式
+- [Server插件详解](05-server-plugin.md) — jp_fetch/jp_ws_fetch如何在tornasync基础上构建
+- [Fixture工厂模式](08-fixture-factories.md) — 可配置fixtures的设计模式

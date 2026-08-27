@@ -119,8 +119,8 @@ package.json 中定义的部署相关测试：
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [COS 对象存储](/concepts/09-cos-storage.md)
-- [测试体系](/concepts/16-testing.md)
-- [Docker部署示例](/examples/docker-deploy.md)
+- [快速开始](01-getting-started.md)
+- [架构总览](02-architecture-overview.md)
+- [COS 对象存储](09-cos-storage.md)
+- [测试体系](16-testing.md)
+- [Docker部署示例](../examples/docker-deploy.md)

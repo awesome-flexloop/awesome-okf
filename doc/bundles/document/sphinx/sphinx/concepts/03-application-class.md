@@ -21,7 +21,7 @@ sources:
 
 # Sphinx 应用类
 
-`Sphinx` 类是整个文档生成系统的中枢和唯一入口，定义在 [sphinx/application.py](file:///d:/spaces/SpecWeave/external/libs/docs/sphinx/sphinx/application.py)。它持有所有子组件的引用，提供扩展注册API，并驱动整个构建流程。
+`Sphinx` 类是整个文档生成系统的中枢和唯一入口，定义在 sphinx/application.py。它持有所有子组件的引用，提供扩展注册API，并驱动整个构建流程。
 
 ## 目录属性
 

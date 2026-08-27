@@ -195,6 +195,6 @@ rst2myst --config config.yml stream document.rst
 
 ## 相关概念
 
-- [Python API 使用](/concepts/02-python-api.md)
-- [三阶段转换流水线架构](/concepts/03-conversion-pipeline.md)
-- [转换选项详解](/concepts/10-configuration-options.md)
+- [Python API 使用](02-python-api.md)
+- [三阶段转换流水线架构](03-conversion-pipeline.md)
+- [转换选项详解](10-configuration-options.md)

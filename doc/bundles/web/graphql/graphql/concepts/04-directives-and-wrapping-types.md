@@ -41,7 +41,7 @@ type Example {
 - `nonNullField: String!`：非空字符串，若解析结果为 null 则引发错误；
 - `nonNullList: [String!]!`：非空列表，每个元素也是非空字符串。
 
-> **重要**：Non-Null 不仅是类型约束，更是错误传播控制机制。当 Non-Null 字段解析失败时，null 会沿响应树向上冒泡。详见 [响应格式、错误冒泡与序列化](/concepts/07-response-and-errors.md)。
+> **重要**：Non-Null 不仅是类型约束，更是错误传播控制机制。当 Non-Null 字段解析失败时，null 会沿响应树向上冒泡。详见 [响应格式、错误冒泡与序列化](07-response-and-errors.md)。
 
 ## List 类型（[]）
 
@@ -162,7 +162,7 @@ scalar DateTime @specifiedBy(url: "https://scalars.graphql.org/andimarek/date-ti
 
 #### @oneOf
 
-`@oneOf` 标记输入对象为 OneOf 变体（F-209），详见 [复合类型](/concepts/03-composite-types.md) 中的 OneOf Input Objects 章节。
+`@oneOf` 标记输入对象为 OneOf 变体（F-209），详见 [复合类型](03-composite-types.md) 中的 OneOf Input Objects 章节。
 
 ```graphql
 directive @oneOf on INPUT_OBJECT
@@ -345,8 +345,8 @@ nullable 变量在变量或位置提供默认值时可出现在 non-null 参数�
 
 ## 相关概念
 
-- [复合类型：对象、接口、联合与枚举](/concepts/03-composite-types.md) — 了解 Input Object 类型和 @oneOf 指令的使用
-- [验证管线与规则体系](/concepts/05-validation.md) — 了解指令位置验证、变量类型兼容性验证
-- [执行引擎：字段解析与值完成](/concepts/06-execution.md) — 了解 @skip/@include 在 CollectFields 中的求值、CoerceVariableValues 算法
-- [响应格式、错误冒泡与序列化](/concepts/07-response-and-errors.md) — 深入理解 Non-Null 类型的错误冒泡机制（洞察4）
-- [内省系统：GraphQL 的自描述机制](/concepts/08-introspection.md) — 了解指令如何通过 __Directive 内省暴露
+- [复合类型：对象、接口、联合与枚举](03-composite-types.md) — 了解 Input Object 类型和 @oneOf 指令的使用
+- [验证管线与规则体系](05-validation.md) — 了解指令位置验证、变量类型兼容性验证
+- [执行引擎：字段解析与值完成](06-execution.md) — 了解 @skip/@include 在 CollectFields 中的求值、CoerceVariableValues 算法
+- [响应格式、错误冒泡与序列化](07-response-and-errors.md) — 深入理解 Non-Null 类型的错误冒泡机制（洞察4）
+- [内省系统：GraphQL 的自描述机制](08-introspection.md) — 了解指令如何通过 __Directive 内省暴露

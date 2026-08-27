@@ -133,7 +133,7 @@ console.log(limitValue.composite); // 25（或用户覆盖后的值）
 
 ### Schema中的菜单/工具栏声明
 
-schema/plugin.json 不仅可以定义设置属性，还可以声明菜单和工具栏项（在 `"jupyter.lab.menus"` 和 `"jupyter.lab.toolbars"` 字段），toolbar-button和context-menu示例使用此模式。详见[菜单与工具栏](/concepts/08-menus-toolbars.md)。
+schema/plugin.json 不仅可以定义设置属性，还可以声明菜单和工具栏项（在 `"jupyter.lab.menus"` 和 `"jupyter.lab.toolbars"` 字段），toolbar-button和context-menu示例使用此模式。详见[菜单与工具栏](08-menus-toolbars.md)。
 
 ## 状态数据库（IStateDB）
 
@@ -230,7 +230,7 @@ restorer.restore(tracker, {
 
 ## 相关概念
 
-- [插件基础与依赖注入](/concepts/03-plugin-basics.md)
-- [Widget与Shell布局](/concepts/05-widgets-shell.md)
-- [通知系统与日志](/concepts/10-notifications-logging.md)
-- [核心API与Token参考](/references/core-api-tokens.md)
+- [插件基础与依赖注入](03-plugin-basics.md)
+- [Widget与Shell布局](05-widgets-shell.md)
+- [通知系统与日志](10-notifications-logging.md)
+- [核心API与Token参考](../references/core-api-tokens.md)

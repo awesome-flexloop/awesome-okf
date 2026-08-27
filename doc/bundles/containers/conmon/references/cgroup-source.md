@@ -17,7 +17,7 @@ sources:
 
 # cgroup 与 OOM 检测信源
 
-> 信源文件：[cgroup.c](file:///d:/spaces/SpecWeave/external/dao/action/Containers/conmon/src/cgroup.c)、[cgroup.h](file:///d:/spaces/SpecWeave/external/dao/action/Containers/conmon/src/cgroup.h)
+> 信源文件：cgroup.c、cgroup.h
 
 本文档记录 conmon 中 cgroup 管理与 OOM（Out of Memory）检测的完整实现，包括 cgroup v1 和 v2 双版本支持。
 

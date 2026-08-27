@@ -220,7 +220,7 @@ async delete(path: string): Promise<void> {
 
 ## 相关概念
 
-- [内容管理与文件系统](/concepts/03-contents-and-filesystem.md)
-- [Service Worker桥接](/concepts/04-service-worker-bridge.md)
-- [整体架构](/concepts/01-architecture-overview.md)
-- [Python构建系统](/concepts/06-build-system.md)
+- [内容管理与文件系统](03-contents-and-filesystem.md)
+- [Service Worker桥接](04-service-worker-bridge.md)
+- [整体架构](01-architecture-overview.md)
+- [Python构建系统](06-build-system.md)

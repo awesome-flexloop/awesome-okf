@@ -178,7 +178,7 @@ myst_disable_syntax = ["emphasis"]
 
 ## 相关概念
 
-- [扩展语法系统](/concepts/05-extension-system.md)
-- [配置系统](/concepts/04-config-system.md)
-- [数学公式与 MathJax](/concepts/13-math-and-mathjax.md)
-- [MyST 扩展语法速查](/references/extensions-cheatsheet.md)
+- [扩展语法系统](../concepts/05-extension-system.md)
+- [配置系统](../concepts/04-config-system.md)
+- [数学公式与 MathJax](../concepts/13-math-and-mathjax.md)
+- [MyST 扩展语法速查](../references/extensions-cheatsheet.md)

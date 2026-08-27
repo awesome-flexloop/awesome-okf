@@ -175,7 +175,7 @@ lca-deepagents 的 Sales Assistant 示例展示了一个关键安全模式：**�
 
 ## 相关概念
 
-- [总览](/ai/langchain-ai/deepagents/concepts/overview) — Deep Agents 整体架构
-- [Todo 与上下文管理](/ai/langchain-ai/deepagents/concepts/todo-context) — 摘要压缩如何与子代理协作
-- [中间件栈](/ai/langchain-ai/deepagents/references/middleware-stack) — 子代理中间件的组装细节
-- [lca-deepagents 示例](/ai/langchain-ai/deepagents/examples/lca-variant) — 子代理安全模式的实际应用
+- 总览 — Deep Agents 整体架构
+- Todo 与上下文管理 — 摘要压缩如何与子代理协作
+- 中间件栈 — 子代理中间件的组装细节
+- lca-deepagents 示例 — 子代理安全模式的实际应用

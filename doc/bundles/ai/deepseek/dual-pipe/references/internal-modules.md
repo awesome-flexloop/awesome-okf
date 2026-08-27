@@ -74,7 +74,7 @@ description: DualPipe 内部方法签名与通信工具函数参考
 
 | 函数/类 | 签名 | 说明 |
 |---------|------|------|
-| `WeightGradStore` | class | 权重梯度延迟存储类（详见 [api.md](/ai/deepseek/dual-pipe/references/api.md)） |
+| `WeightGradStore` | class | 权重梯度延迟存储类（详见 [api.md](api.md)） |
 | `run_backward` | `(tensors, grad_tensors) -> None` | 调用 `Variable._execution_engine.run_backward()` 执行反向传播 |
 | `chunk_tensor` | `(x: Tensor, chunks: int, dim: int) -> List[Tensor]` | 将 tensor 沿 dim 切分为 chunks 份 |
 | `cat_tensor` | `(x: List[Tensor], dim: int) -> Tensor` | 将 tensor 列表沿 dim 拼接 |

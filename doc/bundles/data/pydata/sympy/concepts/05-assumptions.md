@@ -16,7 +16,7 @@ sources:
 
 # 假设推理系统
 
-SymPy 拥有两套并行的假设系统：核心层 `is_*` 属性系统（构造时确定，快速但有限）和 `sympy.assumptions` 新假设系统（基于 SAT 求解，灵活但较慢）。两套系统通过桥接机制协同工作：`ask()` 函数在查询时会首先检查 `is_*` 属性，再调用 SAT 推理。`Q` 对象提供谓词构造器，`refine()` 利用假设条件化简表达式，`assuming()` 提供临时假设上下文。[^F-076][^F-077][^F-078]
+SymPy 拥有两套并行的假设系统：核心层 `is_*` 属性系统（构造时确定，快速但有限）和 `sympy.assumptions` 新假设系统（基于 SAT 求解，灵活但较慢）。两套系统通过桥接机制协同工作：`ask()` 函数在查询时会首先检查 `is_*` 属性，再调用 SAT 推理。`Q` 对象提供谓词构造器，`refine()` 利用假设条件化简表达式，`assuming()` 提供临时假设上下文。[^F-076] [^F-077] [^F-078]
 
 ## 系统架构
 
@@ -51,7 +51,7 @@ flowchart TD
 
 ## 一、新旧假设系统双轨设计
 
-SymPy 的假设推理采用"双轨制"设计，两套系统各司其职：[^F-012][^F-077]
+SymPy 的假设推理采用"双轨制"设计，两套系统各司其职：[^F-012] [^F-077]
 
 | 特性 | 旧系统（核心 is_* 属性） | 新系统（sympy.assumptions） |
 |------|--------------------------|----------------------------|
@@ -263,7 +263,7 @@ composite → integer ∧ positive
 
 ## 四、SAT 推理与 CNF 编码
 
-当 `is_*` 属性和 Handler 直接推理都无法确定结果时，`ask()` 会调用 `satask()`，将命题和假设编码为 CNF（合取范式），再交给 SAT 求解器 `satisfiable()` 判定可满足性。[^F-080][^F-081][^F-082]
+当 `is_*` 属性和 Handler 直接推理都无法确定结果时，`ask()` 会调用 `satask()`，将命题和假设编码为 CNF（合取范式），再交给 SAT 求解器 `satisfiable()` 判定可满足性。[^F-080] [^F-081] [^F-082]
 
 ### 推理流程
 
@@ -425,7 +425,7 @@ True
 - 前置概念：[符号与数字](02-symbols-numbers.md) 了解 Symbol 构造时的假设参数
 - 前置概念：[表达式树模型](01-expression-tree.md) 了解 Basic 基类的 _assumptions 机制
 - 后续概念：[表达式化简](06-simplification.md) 了解 simplify 与 refine 的区别
-- 源码信源：[assumptions-source](/references/assumptions-source.md) 提供 ask/Q/CNF/SAT/refine 的完整 API 参考
+- 源码信源：[assumptions-source](../references/assumptions-source.md) 提供 ask/Q/CNF/SAT/refine 的完整 API 参考
 
 [^F-003]: facts.md F-003 — __init_subclass__ 类假设初始化
 [^F-011]: facts.md F-011 — _eval_refine 钩子方法

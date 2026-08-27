@@ -69,7 +69,7 @@ async def fetch():
 | `_READ/_WRITE` | `IOLoop.READ/WRITE` | `selectors.EVENT_READ/WRITE` |
 | `_default_loop()` | `IOLoop.current()` | `asyncio.get_running_loop()` |
 
-核心状态机（`_future._AsyncSocket`）完全复用，详见 [异步与 asyncio](/concepts/05-async-future-asyncio.md)。
+核心状态机（`_future._AsyncSocket`）完全复用，详见 [异步与 asyncio](05-async-future-asyncio.md)。
 
 ## green：gevent 适配
 
@@ -332,8 +332,8 @@ u("hello")  # str: "hello"
 
 ## 相关概念
 
-- [异步与 asyncio](/concepts/05-async-future-asyncio.md) — asyncio 和 tornado future 的核心状态机
-- [Socket sugar 语法层](/concepts/02-socket-sugar.md) — send_json/recv_json 使用 jsonapi
-- [整体架构与双后端](/concepts/00-architecture-dual-backend.md) — 后端选择与 public_api 契约
-- [Context 生命周期](/concepts/01-context-lifecycle.md) — ProcessDevice 的 fork 安全 Context
-- [常量枚举参考](/references/constants-enums.md) — DeviceType 枚举（QUEUE/FORWARDER/STREAMER）
+- [异步与 asyncio](05-async-future-asyncio.md) — asyncio 和 tornado future 的核心状态机
+- [Socket sugar 语法层](02-socket-sugar.md) — send_json/recv_json 使用 jsonapi
+- [整体架构与双后端](00-architecture-dual-backend.md) — 后端选择与 public_api 契约
+- [Context 生命周期](01-context-lifecycle.md) — ProcessDevice 的 fork 安全 Context
+- [常量枚举参考](../references/constants-enums.md) — DeviceType 枚举（QUEUE/FORWARDER/STREAMER）

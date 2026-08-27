@@ -87,5 +87,5 @@ NVSHMEM 模式下，workload 同步分四步：(1) 跨节点 allgather（put+sig
 
 ## 9. 与 DeepEP/DeepGEMM 的协作关系
 
-- **DeepEP**（[/deepseek/deep-ep/](/ai/deepseek/deep-ep/)）：提供高效的 EP 通信原语（all-to-all、dispatch/combine），LPLB 通过 `init_from_deep_ep(buffer)` 获取 NVSHMEM team 和低延迟模式配置，复用 DeepEP 的通信缓冲区。
-- **DeepGEMM**（[/deepseek/deep-gemm/](/ai/deepseek/deep-gemm/)）：提供 MoE 中的 grouped GEMM 计算内核，LPLB 的负载均衡直接影响 DeepGEMM 的计算效率——均衡的专家负载意味着更短的 grouped GEMM 尾延迟。
+- **DeepEP**（[/deepseek/deep-ep/](../../deep-ep/index.md)）：提供高效的 EP 通信原语（all-to-all、dispatch/combine），LPLB 通过 `init_from_deep_ep(buffer)` 获取 NVSHMEM team 和低延迟模式配置，复用 DeepEP 的通信缓冲区。
+- **DeepGEMM**（[/deepseek/deep-gemm/](../../deep-gemm/index.md)）：提供 MoE 中的 grouped GEMM 计算内核，LPLB 的负载均衡直接影响 DeepGEMM 的计算效率——均衡的专家负载意味着更短的 grouped GEMM 尾延迟。

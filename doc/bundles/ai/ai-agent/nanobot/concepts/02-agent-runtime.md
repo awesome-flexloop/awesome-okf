@@ -213,7 +213,7 @@ stream_hook = SDKStreamingHook(emitter)
 
 ## 相关概念
 
-- [整体架构](/concepts/01-architecture.md)
-- [消息总线](/concepts/03-bus-messaging.md)
-- [SDK 类型系统](/concepts/04-sdk-types.md)
-- [多接口架构](/concepts/05-multi-interface.md)
+- [整体架构](01-architecture.md)
+- [消息总线](03-bus-messaging.md)
+- [SDK 类型系统](04-sdk-types.md)
+- [多接口架构](05-multi-interface.md)

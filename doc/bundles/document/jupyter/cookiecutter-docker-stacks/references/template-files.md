@@ -27,38 +27,38 @@ sources:
 
 | 文件 | 源码路径 | 核心内容 |
 |------|---------|---------|
-| cookiecutter.json | [cookiecutter.json](external/libs/jupyter/cookiecutter-docker-stacks/cookiecutter.json) | 定义4个模板变量：stack_name、stack_org、stack_base_image（14个选项）、stack_description |
-| README.md | [\{{cookiecutter.stack_name}}/README.md](external/libs/jupyter/cookiecutter-docker-stacks/%7B%7Bcookiecutter.stack_name%7D%7D/README.md) | 项目README模板，仅包含项目名和描述 |
-| requirements-dev.txt | [\{{cookiecutter.stack_name}}/requirements-dev.txt](external/libs/jupyter/cookiecutter-docker-stacks/%7B%7Bcookiecutter.stack_name%7D%7D/requirements-dev.txt) | 开发依赖：docker、pytest、requests |
-| .gitignore | [\{{cookiecutter.stack_name}}/.gitignore](external/libs/jupyter/cookiecutter-docker-stacks/%7B%7Bcookiecutter.stack_name%7D%7D/.gitignore) | 标准Python .gitignore + Mac/VSCode/PyCharm忽略规则 |
-| .gitattributes | [\{{cookiecutter.stack_name}}/.gitattributes](external/libs/jupyter/cookiecutter-docker-stacks/%7B%7Bcookiecutter.stack_name%7D%7D/.gitattributes) | 统一LF行尾：`* text=auto eol=lf` |
+| cookiecutter.json | cookiecutter.json | 定义4个模板变量：stack_name、stack_org、stack_base_image（14个选项）、stack_description |
+| README.md | \{{cookiecutter.stack_name}}/README.md | 项目README模板，仅包含项目名和描述 |
+| requirements-dev.txt | \{{cookiecutter.stack_name}}/requirements-dev.txt | 开发依赖：docker、pytest、requests |
+| .gitignore | \{{cookiecutter.stack_name}}/.gitignore | 标准Python .gitignore + Mac/VSCode/PyCharm忽略规则 |
+| .gitattributes | \{{cookiecutter.stack_name}}/.gitattributes | 统一LF行尾：`* text=auto eol=lf` |
 
 ## 镜像构建目录
 
 | 文件 | 源码路径 | 核心内容 |
 |------|---------|---------|
-| image/Dockerfile | [\{{cookiecutter.stack_name}}/image/Dockerfile](external/libs/jupyter/cookiecutter-docker-stacks/%7B%7Bcookiecutter.stack_name%7D%7D/image/Dockerfile) | FROM基础镜像 + 注释指导用户添加RUN语句 |
+| image/Dockerfile | \{{cookiecutter.stack_name}}/image/Dockerfile | FROM基础镜像 + 注释指导用户添加RUN语句 |
 
 ## CI/CD 目录
 
 | 文件 | 源码路径 | 核心内容 |
 |------|---------|---------|
-| .github/workflows/docker.yml | [\{{cookiecutter.stack_name}}/.github/workflows/docker.yml](external/libs/jupyter/cookiecutter-docker-stacks/%7B%7Bcookiecutter.stack_name%7D%7D/.github/workflows/docker.yml) | 完整CI/CD流水线：构建→测试→推送Docker Hub |
+| .github/workflows/docker.yml | \{{cookiecutter.stack_name}}/.github/workflows/docker.yml | 完整CI/CD流水线：构建→测试→推送Docker Hub |
 
 ## 测试目录
 
 | 文件 | 源码路径 | 核心内容 |
 |------|---------|---------|
-| tests/conftest.py | [\{{cookiecutter.stack_name}}/tests/conftest.py](external/libs/jupyter/cookiecutter-docker-stacks/%7B%7Bcookiecutter.stack_name%7D%7D/tests/conftest.py) | pytest fixtures：http_client、docker_client、image_name、container、free_host_port |
-| tests/test_notebook.py | [\{{cookiecutter.stack_name}}/tests/test_notebook.py](external/libs/jupyter/cookiecutter-docker-stacks/%7B%7Bcookiecutter.stack_name%7D%7D/tests/test_notebook.py) | 默认测试：验证Jupyter Server登录页面 |
-| tests/utils/tracked_container.py | [\{{cookiecutter.stack_name}}/tests/utils/tracked_container.py](external/libs/jupyter/cookiecutter-docker-stacks/%7B%7Bcookiecutter.stack_name%7D%7D/tests/utils/tracked_container.py) | TrackedContainer类：Docker容器生命周期管理 |
+| tests/conftest.py | \{{cookiecutter.stack_name}}/tests/conftest.py | pytest fixtures：http_client、docker_client、image_name、container、free_host_port |
+| tests/test_notebook.py | \{{cookiecutter.stack_name}}/tests/test_notebook.py | 默认测试：验证Jupyter Server登录页面 |
+| tests/utils/tracked_container.py | \{{cookiecutter.stack_name}}/tests/utils/tracked_container.py | TrackedContainer类：Docker容器生命周期管理 |
 
 ## Dev Container 目录
 
 | 文件 | 源码路径 | 核心内容 |
 |------|---------|---------|
-| .devcontainer/Dockerfile | [\{{cookiecutter.stack_name}}/.devcontainer/Dockerfile](external/libs/jupyter/cookiecutter-docker-stacks/%7B%7Bcookiecutter.stack_name%7D%7D/.devcontainer/Dockerfile) | 基于devcontainers/python:3.13，安装测试依赖 |
-| .devcontainer/devcontainer.json | [\{{cookiecutter.stack_name}}/.devcontainer/devcontainer.json](external/libs/jupyter/cookiecutter-docker-stacks/%7B%7Bcookiecutter.stack_name%7D%7D/.devcontainer/devcontainer.json) | VS Code开发容器配置：docker-in-docker + 推荐扩展 |
+| .devcontainer/Dockerfile | \{{cookiecutter.stack_name}}/.devcontainer/Dockerfile | 基于devcontainers/python:3.13，安装测试依赖 |
+| .devcontainer/devcontainer.json | \{{cookiecutter.stack_name}}/.devcontainer/devcontainer.json | VS Code开发容器配置：docker-in-docker + 推荐扩展 |
 
 ## 模板变量
 

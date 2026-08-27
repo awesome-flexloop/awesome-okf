@@ -145,7 +145,7 @@ myst:
 
 ## 相关概念
 
-- [MyST-Parser 简介](/concepts/00-introduction.md)
-- [MyST 语法概览](/concepts/02-myst-syntax-overview.md)
-- [配置系统](/concepts/04-config-system.md)
-- [基础配置示例](/examples/01-basic-setup.md)
+- [MyST-Parser 简介](00-introduction.md)
+- [MyST 语法概览](02-myst-syntax-overview.md)
+- [配置系统](04-config-system.md)
+- [基础配置示例](../examples/01-basic-setup.md)

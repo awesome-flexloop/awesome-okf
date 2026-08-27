@@ -31,7 +31,7 @@ OpenWiki 通过 AI 代理自动化文档生成与更新流程，并以 git head 
 
 ## 三种命令模式
 
-OpenWiki 支持三种命令（见 [Agent 系统](/ai/langchain-ai/openwiki/concepts/agent-system)）：
+OpenWiki 支持三种命令（见 Agent 系统）：
 
 | 命令 | 用途 | Checkpoint | 输出模式 |
 |---|---|---|---|
@@ -76,7 +76,7 @@ OpenWiki 支持三种命令（见 [Agent 系统](/ai/langchain-ai/openwiki/conce
 
 ## 多 Provider 支持
 
-OpenWiki 通过 `createModel` 工厂支持 13 种 LLM provider（详见 [API 参考](/ai/langchain-ai/openwiki/references/api)）：
+OpenWiki 通过 `createModel` 工厂支持 13 种 LLM provider（详见 API 参考）：
 
 - **API key 类**：OpenAI、Anthropic、Gemini（AI Studio）、OpenRouter、Baseten、Fireworks、NVIDIA、Copilot、Nebius、OpenAI 兼容端点
 - **OAuth 类**：ChatGPT（Codex Responses API，浏览器登录）
@@ -86,7 +86,7 @@ Vertex AI 进一步根据模型 ID 路由到三种 surface：原生 Gemini（Cha
 
 ## 认证与连接器
 
-除 LLM provider 认证外，OpenWiki 还为数据源连接器实现了独立的 OAuth 体系（详见 [Auth 与 CLI 认证体系](/ai/langchain-ai/openwiki/concepts/auth-cli)）：
+除 LLM provider 认证外，OpenWiki 还为数据源连接器实现了独立的 OAuth 体系（详见 Auth 与 CLI 认证体系）：
 
 - **OAuth 连接器**：Slack、Gmail、X/Twitter、Notion（支持 PKCE 和动态客户端注册）
 - **ngrok 内网穿透**：为 Slack 等要求 HTTPS 回调的 provider 桥接本地开发环境
@@ -94,7 +94,7 @@ Vertex AI 进一步根据模型 ID 路由到三种 surface：原生 Gemini（Cha
 
 ## 环境与配置
 
-所有配置通过 `~/.openwiki/.env` 文件管理（见 [配置与环境变量](/ai/langchain-ai/openwiki/references/env-config)）：
+所有配置通过 `~/.openwiki/.env` 文件管理（见 配置与环境变量）：
 
 - `loadOpenWikiEnv()` 加载时 shell 环境变量优先于文件值。
 - `saveOpenWikiEnv()` 使用原子写入（临时文件 + rename），文件权限 0o600。
@@ -105,18 +105,18 @@ Vertex AI 进一步根据模型 ID 路由到三种 surface：原生 Gemini（Cha
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/openwiki/concepts/overview) — 本页
-- [Agent 系统](/ai/langchain-ai/openwiki/concepts/agent-system) — DeepAgent 图构建、命令模式、checkpoint、中间件
-- [Auth 与 CLI 认证体系](/ai/langchain-ai/openwiki/concepts/auth-cli) — OAuth PKCE、token 刷新、ngrok 穿透
+- 总览 — 本页
+- Agent 系统 — DeepAgent 图构建、命令模式、checkpoint、中间件
+- Auth 与 CLI 认证体系 — OAuth PKCE、token 刷新、ngrok 穿透
 
 ### API 参考
 
-- [Agent API](/ai/langchain-ai/openwiki/references/api) — runOpenWikiAgent、createModel、createAgentBackend 等
-- [配置与环境变量](/ai/langchain-ai/openwiki/references/env-config) — .env 管理、凭证诊断、provider 配置
+- Agent API — runOpenWikiAgent、createModel、createAgentBackend 等
+- 配置与环境变量 — .env 管理、凭证诊断、provider 配置
 
 ### 使用示例
 
-- [OAuth 认证与 ngrok 隧道](/ai/langchain-ai/openwiki/examples/oauth-ngrok) — 配置 Slack OAuth、启动 ngrok、运行认证流程
+- OAuth 认证与 ngrok 隧道 — 配置 Slack OAuth、启动 ngrok、运行认证流程
 
 ## 目录结构
 
@@ -133,6 +133,6 @@ openwiki/
 
 ## 进一步阅读
 
-- [Agent 系统](/ai/langchain-ai/openwiki/concepts/agent-system)
-- [Auth 与 CLI 认证体系](/ai/langchain-ai/openwiki/concepts/auth-cli)
-- [API 参考](/ai/langchain-ai/openwiki/references/api)
+- Agent 系统
+- Auth 与 CLI 认证体系
+- API 参考

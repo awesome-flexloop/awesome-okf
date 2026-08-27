@@ -173,7 +173,7 @@ Clippy 配置特别严格，`unwrap_used`、`expect_used`、`redundant_clone`、
 
 ## 相关概念
 
-- [Rust 核心与 TUI](./02-rust-core-tui.md)
-- [Node.js CLI 入口](./03-nodejs-cli.md)
-- [Python SDK](./06-python-sdk.md)
-- [简介](./00-introduction.md)
+- [Rust 核心与 TUI](02-rust-core-tui.md)
+- [Node.js CLI 入口](03-nodejs-cli.md)
+- [Python SDK](06-python-sdk.md)
+- [简介](00-introduction.md)

@@ -709,7 +709,7 @@ response = client.messages.create(
 
 ## 相关概念
 
-- [Messages API 基础](/python-sdk/concepts/02-messages-basics.md) — 理解 content 数组和消息结构
-- [视觉理解与文件处理概念](/python-sdk/concepts/05-vision-files.md) — 视觉能力原理、Files API 上传、更多最佳实践
+- [Messages API 基础](../concepts/02-messages-basics.md) — 理解 content 数组和消息结构
+- [视觉理解与文件处理概念](../concepts/05-vision-files.md) — 视觉能力原理、Files API 上传、更多最佳实践
 - [工具调用实战](03-tool-use.md) — 学习如何将视觉识别与工具调用结合
 - [AWS Bedrock与Google Vertex后端](05-bedrock-vertex.md) — 下一个示例：多云部署

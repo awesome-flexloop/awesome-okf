@@ -936,7 +936,7 @@ def catch_format_error(method):
 
 ## 相关概念
 
-- **[MIME 表示协议](../concepts/mime-repr.md)**：`_repr_*_` 方法命名约定与返回值规范
-- **[显示系统架构](../concepts/display-architecture.md)**：Formatter → Publisher → Frontend 数据流
-- **[InteractiveShell](./interactiveshell-source.md)**：Shell 中 display_formatter/display_pub/displayhook 的初始化
-- **[魔法命令](./magic-source.md)**：`%precision` 等控制显示行为的魔法命令
+- **MIME 表示协议**：`_repr_*_` 方法命名约定与返回值规范
+- **显示系统架构**：Formatter → Publisher → Frontend 数据流
+- **[InteractiveShell](interactiveshell-source.md)**：Shell 中 display_formatter/display_pub/displayhook 的初始化
+- **[魔法命令](magic-source.md)**：`%precision` 等控制显示行为的魔法命令

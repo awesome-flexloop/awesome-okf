@@ -26,7 +26,7 @@ sources:
 
 # 日志与动态依赖 API 参考
 
-> 信源文件：[build_log.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/build_log.h)、[deps_log.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/deps_log.h)、[dyndep.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/dyndep.h)、[dyndep_parser.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/dyndep_parser.h)
+> 信源文件：build_log.h、deps_log.h、dyndep.h、dyndep_parser.h
 
 本文档记录 Ninja 构建日志、依赖日志和动态依赖加载模块的完整 API。
 

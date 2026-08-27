@@ -327,7 +327,7 @@ kernel_time = bench_kineto(
 
 ## 十一、相关链接
 
-- [/deepseek/deep-gemm/concepts/jit-kernel-compilation](/ai/deepseek/deep-gemm/concepts/jit-kernel-compilation) — JIT 编译系统（维度特化、启发式）
-- [/deepseek/deep-gemm/concepts/fp8-gemm](/ai/deepseek/deep-gemm/concepts/fp8-gemm) — FP8/FP4 精度与 WGMMA scale
-- [/deepseek/deep-gemm/references/runtime-config](/ai/deepseek/deep-gemm/references/runtime-config) — SM/TC/PDL 配置 API
-- [/deepseek/deep-gemm/examples/tuning](/ai/deepseek/deep-gemm/examples/tuning) — 性能调优示例
+- /deepseek/deep-gemm/concepts/jit-kernel-compilation — JIT 编译系统（维度特化、启发式）
+- /deepseek/deep-gemm/concepts/fp8-gemm — FP8/FP4 精度与 WGMMA scale
+- /deepseek/deep-gemm/references/runtime-config — SM/TC/PDL 配置 API
+- /deepseek/deep-gemm/examples/tuning — 性能调优示例

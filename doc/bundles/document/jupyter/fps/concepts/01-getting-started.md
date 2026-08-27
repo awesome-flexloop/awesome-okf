@@ -171,8 +171,8 @@ fps simple:Main --backend trio
 
 ## 相关概念
 
-- [FPS简介](/concepts/00-introduction.md)
-- [模块系统](/concepts/02-module-system.md)
-- [配置系统](/concepts/05-configuration-system.md)
-- [可插拔Web服务器](/concepts/07-web-modules.md)
-- [第一个Web应用](/examples/03-web-server.md)
+- [FPS简介](00-introduction.md)
+- [模块系统](02-module-system.md)
+- [配置系统](05-configuration-system.md)
+- [可插拔Web服务器](07-web-modules.md)
+- [第一个Web应用](../examples/03-web-server.md)

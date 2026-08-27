@@ -257,8 +257,8 @@ UI 组件中的按钮和交互操作最终通过命令系统触发：
 
 ## 相关概念
 
-- [GitExtension核心模型](/concepts/04-git-extension-model.md)
-- [插件系统与五个Plugin](/concepts/03-extension-plugin-system.md)
-- [命令系统与菜单](/concepts/10-commands-and-menu.md)
-- [可插拔Diff系统](/concepts/06-diff-provider-system.md)
-- [轮询与信号系统](/concepts/09-polling-and-signals.md)
+- [GitExtension核心模型](04-git-extension-model.md)
+- [插件系统与五个Plugin](03-extension-plugin-system.md)
+- [命令系统与菜单](10-commands-and-menu.md)
+- [可插拔Diff系统](06-diff-provider-system.md)
+- [轮询与信号系统](09-polling-and-signals.md)

@@ -110,6 +110,6 @@ export const JUPYTER_ENV_REQUIREMENTS = [{
 
 ## 相关概念
 
-- [Python 环境管理](/concepts/05-python-env-management.md)
-- [设置与配置系统](/concepts/06-settings-config.md)
-- [核心接口与类型定义](/concepts/01-architecture-overview.md)
+- [Python 环境管理](../concepts/05-python-env-management.md)
+- [设置与配置系统](../concepts/06-settings-config.md)
+- [核心接口与类型定义](../concepts/01-architecture-overview.md)

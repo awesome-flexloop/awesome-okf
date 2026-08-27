@@ -355,10 +355,10 @@ display(HTML("<b>World</b>"))
 
 ## 下一步
 
-- [消息桥接机制](/concepts/07-message-bridge.md) — Python↔JS 回调绑定的详细机制
-- [Worker 通信模式](/concepts/03-worker-communication.md) — Comlink/Coincident 下回调的差异
-- [架构总览](/concepts/02-architecture-overview.md)
+- [消息桥接机制](07-message-bridge.md) — Python↔JS 回调绑定的详细机制
+- [Worker 通信模式](03-worker-communication.md) — Comlink/Coincident 下回调的差异
+- [架构总览](02-architecture-overview.md)
 
 ## 源码参考
 
-- [浏览器端 Python Kernel 源码](/references/kernel-py-source.md)
+- [浏览器端 Python Kernel 源码](../references/kernel-py-source.md)

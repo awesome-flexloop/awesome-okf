@@ -105,7 +105,7 @@ set_encoder(MsgPackEncoder())
 
 ## 相关概念
 
-- [整体架构](/concepts/00-overall-architecture.md)：Encoder 是消息序列化的基础组件
-- [Message 与序列化](/concepts/04-message-and-serialization.md)：Message.encode/decode 委托给全局 Encoder
-- [Results 结果后端](/concepts/07-results-backend.md)：ResultBackend 也使用 Encoder 序列化结果
-- [异常类层次结构](/references/error-hierarchy.md)：DecodeError 在解码失败时抛出
+- [整体架构](00-overall-architecture.md)：Encoder 是消息序列化的基础组件
+- [Message 与序列化](04-message-and-serialization.md)：Message.encode/decode 委托给全局 Encoder
+- [Results 结果后端](07-results-backend.md)：ResultBackend 也使用 Encoder 序列化结果
+- [异常类层次结构](../references/error-hierarchy.md)：DecodeError 在解码失败时抛出

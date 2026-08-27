@@ -230,5 +230,5 @@ token.type 在 rules 中？
 ## 下一步
 
 - [插件系统](12-plugin-system.md)：添加自定义语法和渲染
-- [基础解析示例](/examples/basic-usage.md)
-- [自定义渲染示例](/examples/custom-rendering.md)
+- [基础解析示例](../examples/basic-usage.md)
+- [自定义渲染示例](../examples/custom-rendering.md)

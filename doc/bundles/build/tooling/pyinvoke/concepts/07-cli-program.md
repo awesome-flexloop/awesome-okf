@@ -333,10 +333,10 @@ mytool --list
 
 ## 相关概念
 
-- [Collection 与命名空间](/concepts/04-collection-namespace.md)
-- [配置系统](/concepts/05-configuration.md)
-- [执行模型](/concepts/08-execution-model.md)
-- [高级模式](/concepts/11-advanced-patterns.md)
-- [PyInvoke 源码信源登记](/references/pyinvoke-source.md)
+- [Collection 与命名空间](04-collection-namespace.md)
+- [配置系统](05-configuration.md)
+- [执行模型](08-execution-model.md)
+- [高级模式](11-advanced-patterns.md)
+- [PyInvoke 源码信源登记](../references/pyinvoke-source.md)
 
-[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](/references/pyinvoke-source.md)；Program 类定义于 `invoke/program.py`，FilesystemLoader 定义于 `invoke/loader.py`，Parser/Argument 定义于 `invoke/parser/`。
+[^pyinvoke-source]: PyInvoke 源码信源，见 [pyinvoke-source.md](../references/pyinvoke-source.md)；Program 类定义于 `invoke/program.py`，FilesystemLoader 定义于 `invoke/loader.py`，Parser/Argument 定义于 `invoke/parser/`。

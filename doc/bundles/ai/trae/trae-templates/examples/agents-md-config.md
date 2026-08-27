@@ -213,10 +213,10 @@ A: 建议与团队沟通语言一致。中文团队用中文写，国际团队�
 
 ## 相关概念
 
-- [AGENTS.md 开发契约](/concepts/07-agents-contract.md)
-- [工具与 DevOps 模板](/concepts/06-tools-devops-templates.md)
+- [AGENTS.md 开发契约](../concepts/07-agents-contract.md)
+- [工具与 DevOps 模板](../concepts/06-tools-devops-templates.md)
 
 ## 相关内容
 
-- [源码信源索引](/references/templates-source.md)
-- [使用 superpowers-trae-init 初始化环境](/examples/use-superpowers-init.md)
+- [源码信源索引](../references/templates-source.md)
+- [使用 superpowers-trae-init 初始化环境](use-superpowers-init.md)

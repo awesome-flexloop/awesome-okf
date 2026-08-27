@@ -18,7 +18,7 @@ sources:
 
 Node.js 的 `EventEmitter` 和浏览器的 `EventTarget` 都是经典的事件机制，但它们存在类型安全问题：事件名是字符串，参数类型无法在编译时检查。
 
-Lumino 的 [Signal](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/signaling/src/index.ts) 实现了**类型安全的信号/槽（Signal/Slot）机制**，灵感来自 Qt 的信号槽系统。它在编译时确保信号发送者类型和参数类型匹配。
+Lumino 的 Signal 实现了**类型安全的信号/槽（Signal/Slot）机制**，灵感来自 Qt 的信号槽系统。它在编译时确保信号发送者类型和参数类型匹配。
 
 ## 核心类型
 

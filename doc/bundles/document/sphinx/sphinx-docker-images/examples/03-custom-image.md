@@ -211,6 +211,6 @@ CMD ["sphinx-build", "-M", "html", ".", "_build"]
 
 ## 相关概念
 
-- [自定义扩展与最佳实践](/concepts/07-customization.md)：更多自定义技巧
-- [Base 镜像详解](/concepts/03-base-image.md)：理解基础镜像的层结构
-- [构建流水线详解](/concepts/06-build-pipeline.md)：官方镜像的 CI/CD 流程
+- [自定义扩展与最佳实践](../concepts/07-customization.md)：更多自定义技巧
+- [Base 镜像详解](../concepts/03-base-image.md)：理解基础镜像的层结构
+- [构建流水线详解](../concepts/06-build-pipeline.md)：官方镜像的 CI/CD 流程

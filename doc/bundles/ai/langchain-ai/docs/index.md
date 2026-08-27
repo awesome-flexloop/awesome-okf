@@ -43,10 +43,10 @@ CLI 入口为 `docs` 命令（`docs dev` / `docs build` / `docs mv` / `docs migr
 
 | 文档 | 类型 | 说明 |
 |------|------|------|
-| [references/site-structure.md](/ai/langchain-ai/docs/references/site-structure.md) | 参考索引 | src/ 目录下主要 MDX 文件、子目录、pipeline/ 和 scripts/ 的完整结构化索引 |
-| [spec/facts.md](/ai/langchain-ai/docs/spec/facts.md) | 事实采集 | 100 条从仓库源码提取的事实（目录结构、frontmatter 规范、构建管道、CI 等） |
-| [spec/insights.md](/ai/langchain-ai/docs/spec/insights.md) | 架构洞察 | 2 条深度洞察：单源双语构建模式、导航中心化与文件去中心化的张力 |
-| [log.md](/ai/langchain-ai/docs/log.md) | 更新日志 | 本知识包的变更历史 |
+| [references/site-structure.md](references/site-structure.md) | 参考索引 | src/ 目录下主要 MDX 文件、子目录、pipeline/ 和 scripts/ 的完整结构化索引 |
+| [spec/facts.md](spec/facts.md) | 事实采集 | 100 条从仓库源码提取的事实（目录结构、frontmatter 规范、构建管道、CI 等） |
+| [spec/insights.md](spec/insights.md) | 架构洞察 | 2 条深度洞察：单源双语构建模式、导航中心化与文件去中心化的张力 |
+| [log.md](log.md) | 更新日志 | 本知识包的变更历史 |
 
 ## 关键数字
 

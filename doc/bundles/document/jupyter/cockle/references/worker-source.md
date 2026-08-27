@@ -221,7 +221,7 @@ await remote.start();
 
 ## 相关概念
 
-- [缓冲 IO 源码参考](/references/buffered-io-source.md)：SAB/SW 两种 stdin 后端与 Worker 的配合
-- [命令系统源码参考](/references/command-source.md)：ShellImpl 中的命令注册表与执行逻辑
-- [IO 系统源码参考](/references/io-source.md)：Worker 端 IO 与主线程终端的桥接
-- [配置与环境源码参考](/references/config-source.md)：终端属性（Termios）跨线程同步
+- [缓冲 IO 源码参考](buffered-io-source.md)：SAB/SW 两种 stdin 后端与 Worker 的配合
+- [命令系统源码参考](command-source.md)：ShellImpl 中的命令注册表与执行逻辑
+- [IO 系统源码参考](io-source.md)：Worker 端 IO 与主线程终端的桥接
+- [配置与环境源码参考](config-source.md)：终端属性（Termios）跨线程同步

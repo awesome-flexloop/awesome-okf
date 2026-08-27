@@ -495,8 +495,8 @@ Agent 构造时的 `verbosity_level` 参数接受 `LogLevel` 枚举值（0-3）�
 
 ## 相关链接
 
-- [多步推理循环](/concepts/03-multi-step-agent.md) — Agent运行循环中的日志输出
-- [CodeAgent：代码执行范式](/concepts/06-code-agent.md) — 代码执行错误与异常处理
-- [ToolCallingAgent：函数调用范式](/concepts/05-tool-calling-agent.md) — 工具调用错误解析
-- [Python 执行器与安全沙箱](/concepts/11-python-executor.md) — 执行错误与InterpreterError
-- [Utils API 参考](/references/utils-api.md) — 日志/监控/工具函数完整API
+- [多步推理循环](03-multi-step-agent.md) — Agent运行循环中的日志输出
+- [CodeAgent：代码执行范式](06-code-agent.md) — 代码执行错误与异常处理
+- [ToolCallingAgent：函数调用范式](05-tool-calling-agent.md) — 工具调用错误解析
+- [Python 执行器与安全沙箱](11-python-executor.md) — 执行错误与InterpreterError
+- [Utils API 参考](../references/utils-api.md) — 日志/监控/工具函数完整API

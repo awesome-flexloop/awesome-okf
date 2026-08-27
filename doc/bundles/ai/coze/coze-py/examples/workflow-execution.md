@@ -24,7 +24,7 @@ sources:
 
 1. 在 Coze 平台创建一个工作流并发布
 2. 获取工作流 ID
-3. 配置 PAT Token（参见[基础对话示例](/examples/basic-chat.md)）
+3. 配置 PAT Token（参见[基础对话示例](basic-chat.md)）
 
 ## 完整代码
 
@@ -271,7 +271,7 @@ SDK 提供两种执行工作流的方式：
 
 ## 相关概念
 
-- [工作流](/concepts/05-workflows.md) — 工作流架构和事件体系详解
-- [对话与流式处理](/concepts/03-chat-streaming.md) — ChatEvent 事件处理
-- [基础对话示例](/examples/basic-chat.md) — 基础 SSE 流式对话
-- [对话与工作流参考](/references/chat-workflow.md) — WorkflowsClient 完整 API
+- [工作流](../concepts/05-workflows.md) — 工作流架构和事件体系详解
+- [对话与流式处理](../concepts/03-chat-streaming.md) — ChatEvent 事件处理
+- [基础对话示例](basic-chat.md) — 基础 SSE 流式对话
+- [对话与工作流参考](../references/chat-workflow.md) — WorkflowsClient 完整 API

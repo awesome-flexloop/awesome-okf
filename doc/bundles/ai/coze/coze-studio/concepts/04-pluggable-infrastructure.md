@@ -111,7 +111,7 @@ Docker Compose 默认启动 Milvus standalone 模式，依赖 etcd（元数据�
 | **Gemini** | — | Google Gemini 嵌入 |
 | **HTTP** | — | 自定义 HTTP 嵌入接口 |
 
-通过 `MODEL_PROTOCOL_N` 序号后缀模式配置多个模型实例，详见 [LLM 集成](/concepts/05-llm-integration.md)。
+通过 `MODEL_PROTOCOL_N` 序号后缀模式配置多个模型实例，详见 [LLM 集成](05-llm-integration.md)。
 
 ## OCR — 2 选项
 
@@ -189,9 +189,9 @@ Coze Studio 的可插拔架构主要通过以下 Go 设计模式实现：
 
 ## 相关概念
 
-- [整体架构概览](/concepts/00-overview-ddd-architecture.md)
-- [DDD 分层详解](/concepts/01-ddd-layers.md)
-- [LLM 集成](/concepts/05-llm-integration.md)
-- [部署与运维](/concepts/08-deployment-operations.md)
-- [配置基础设施示例](/examples/configure-infrastructure.md)
-- [部署与基础设施参考](/references/deployment-infrastructure.md)
+- [整体架构概览](00-overview-ddd-architecture.md)
+- [DDD 分层详解](01-ddd-layers.md)
+- [LLM 集成](05-llm-integration.md)
+- [部署与运维](08-deployment-operations.md)
+- [配置基础设施示例](../examples/configure-infrastructure.md)
+- [部署与基础设施参考](../references/deployment-infrastructure.md)

@@ -100,6 +100,6 @@ export default {
 
 ## 相关链接
 
-- [自定义主题开发](/concepts/02-custom-theme.md)
-- [VitePress 站点架构](/concepts/01-vitepress-setup.md)
-- [本地预览与构建示例](/examples/local-preview.md)
+- [自定义主题开发](../concepts/02-custom-theme.md)
+- [VitePress 站点架构](../concepts/01-vitepress-setup.md)
+- [本地预览与构建示例](local-preview.md)

@@ -128,7 +128,7 @@ class MarkdownIt:
 
 ## 相关概念
 
-- [Token 流模型](/concepts/03-token-stream.md)
-- [预设与选项](/concepts/02-presets-and-options.md)
-- [渲染器详解](/concepts/10-renderer.md)
-- [插件系统](/concepts/12-plugin-system.md)
+- [Token 流模型](../concepts/03-token-stream.md)
+- [预设与选项](../concepts/02-presets-and-options.md)
+- [渲染器详解](../concepts/10-renderer.md)
+- [插件系统](../concepts/12-plugin-system.md)

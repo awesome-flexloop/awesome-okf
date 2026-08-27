@@ -221,7 +221,7 @@ curl -N http://127.0.0.1:8088/api/v1/app/tasks/sse/test-session-001
 
 ## 相关概念
 
-- [分布式架构总览](/concepts/00-architecture.md)
-- [WebSocket 通信协议](/concepts/04-websocket-protocol.md)
-- [四种任务类型](/concepts/01-task-types.md)
-- [CLI 扫描示例](/examples/cli-scan.md)
+- [分布式架构总览](../concepts/00-architecture.md)
+- [WebSocket 通信协议](../concepts/04-websocket-protocol.md)
+- [四种任务类型](../concepts/01-task-types.md)
+- [CLI 扫描示例](cli-scan.md)

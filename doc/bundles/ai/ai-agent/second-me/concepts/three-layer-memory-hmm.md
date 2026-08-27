@@ -371,16 +371,16 @@ class TrainProcessService:
 
 | 文件 | 职责 |
 |------|------|
-| [lpm_kernel/L0/l0_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L0/l0_generator.py) | L0 主生成器：insighter() + summarizer() |
-| [lpm_kernel/L0/models.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L0/models.py) | L0 数据模型：FileInfo, InsighterInput, SummarizerInput |
-| [lpm_kernel/L1/bio.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/bio.py) | L1 核心数据结构：Chunk, Note, Cluster, ShadeInfo, Bio, UserInfo |
-| [lpm_kernel/L1/l1_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L1/l1_generator.py) | L1 主生成器：组合四子生成器 |
-| [lpm_kernel/L2/l2_generator.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/l2_generator.py) | L2 数据编排器 |
-| [lpm_kernel/L2/data.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/data.py) | L2 数据处理器：四类数据生成+GraphRAG |
-| [lpm_kernel/L2/train.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/L2/train.py) | SFT 训练入口：SFTTrainer + LoRA |
-| [lpm_kernel/file_data/document_service.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/file_data/document_service.py) | 文档服务：L0分析编排 |
-| [lpm_kernel/api/domains/trainprocess/progress_holder.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/trainprocess/progress_holder.py) | 训练进度持久化 |
-| [lpm_kernel/api/domains/trainprocess/process_step.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/mindverse/Second-Me/lpm_kernel/api/domains/trainprocess/process_step.py) | 训练步骤枚举 |
+| lpm_kernel/L0/l0_generator.py | L0 主生成器：insighter() + summarizer() |
+| lpm_kernel/L0/models.py | L0 数据模型：FileInfo, InsighterInput, SummarizerInput |
+| lpm_kernel/L1/bio.py | L1 核心数据结构：Chunk, Note, Cluster, ShadeInfo, Bio, UserInfo |
+| lpm_kernel/L1/l1_generator.py | L1 主生成器：组合四子生成器 |
+| lpm_kernel/L2/l2_generator.py | L2 数据编排器 |
+| lpm_kernel/L2/data.py | L2 数据处理器：四类数据生成+GraphRAG |
+| lpm_kernel/L2/train.py | SFT 训练入口：SFTTrainer + LoRA |
+| lpm_kernel/file_data/document_service.py | 文档服务：L0分析编排 |
+| lpm_kernel/api/domains/trainprocess/progress_holder.py | 训练进度持久化 |
+| lpm_kernel/api/domains/trainprocess/process_step.py | 训练步骤枚举 |
 
 ## 相关概念
 

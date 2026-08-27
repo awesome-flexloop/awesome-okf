@@ -258,5 +258,5 @@ enum OrderStatus {
 
 ## 相关概念
 
-- [GraphQL 概览与五大设计原则](/concepts/00-overview.md) — 了解类型系统如何体现强类型与自描述原则
-- [查询语言基础：文档、操作与选择集](/concepts/01-query-language-basics.md) — 学习在类型系统上下文中编写查询
+- [GraphQL 概览与五大设计原则](00-overview.md) — 了解类型系统如何体现强类型与自描述原则
+- [查询语言基础：文档、操作与选择集](01-query-language-basics.md) — 学习在类型系统上下文中编写查询

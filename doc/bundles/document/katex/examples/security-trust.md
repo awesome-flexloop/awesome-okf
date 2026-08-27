@@ -418,11 +418,11 @@ container.innerHTML = result.html;
 
 ## 相关内容
 
-- [安全与错误处理](/concepts/18-security-and-errors.md)
-- [配置选项](/concepts/10-settings-options.md)
-- [错误处理示例](/examples/error-handling.md)
-- [自定义宏示例](/examples/custom-macros.md)
-- [Node.js 服务端渲染示例](/examples/node-ssr.md)
+- [安全与错误处理](../concepts/18-security-and-errors.md)
+- [配置选项](../concepts/10-settings-options.md)
+- [错误处理示例](error-handling.md)
+- [自定义宏示例](custom-macros.md)
+- [Node.js 服务端渲染示例](node-ssr.md)
 
 [^web-security]: 官网 Security 页面，https://katex.org/docs/security
 [^web-error]: 官网 Handling Errors 页面，https://katex.org/docs/error

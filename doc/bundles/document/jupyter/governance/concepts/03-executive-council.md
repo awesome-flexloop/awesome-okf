@@ -120,8 +120,8 @@ EC 的日常运营信息（会议记录、联系方式、邮件列表等）发�
 
 ## 相关概念
 
-- [三主体治理模型](/concepts/01-governance-model.md)
-- [软件指导委员会（SSC）](/concepts/04-software-steering-council.md)
-- [理事会联盟与选举人团](/concepts/08-union-of-councils.md)
-- [决策制定流程](/concepts/09-decision-making.md)
-- [选举与投票机制](/concepts/10-elections-and-voting.md)
+- [三主体治理模型](01-governance-model.md)
+- [软件指导委员会（SSC）](04-software-steering-council.md)
+- [理事会联盟与选举人团](08-union-of-councils.md)
+- [决策制定流程](09-decision-making.md)
+- [选举与投票机制](10-elections-and-voting.md)

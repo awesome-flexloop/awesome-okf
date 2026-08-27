@@ -62,7 +62,7 @@ JupyterLab Extension Template 是 JupyterLab 官方维护的项目脚手架模�
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [Copier 模板引擎基础](/concepts/02-copier-basics.md)
-- [四种扩展类型对比](/concepts/03-four-extension-types.md)
-- [Copier 配置参数参考](/references/copier-config.md)
+- [快速开始](01-getting-started.md)
+- [Copier 模板引擎基础](02-copier-basics.md)
+- [四种扩展类型对比](03-four-extension-types.md)
+- [Copier 配置参数参考](../references/copier-config.md)

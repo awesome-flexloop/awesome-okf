@@ -215,8 +215,8 @@ fig.show()
 
 ## 相关概念
 
-- [Pyodide 生态库与 %pip 安装](/concepts/05-pyodide-libraries.md)
-- [三大内核生态对比](/concepts/03-kernel-ecosystem.md)
-- [Python 内核基础使用](/examples/02-python-basics.md)
-- [交互式控件实战](/examples/04-interactive-widgets.md)
-- [交互式地图实战](/examples/05-interactive-maps.md)
+- [Pyodide 生态库与 %pip 安装](../concepts/05-pyodide-libraries.md)
+- [三大内核生态对比](../concepts/03-kernel-ecosystem.md)
+- [Python 内核基础使用](02-python-basics.md)
+- [交互式控件实战](04-interactive-widgets.md)
+- [交互式地图实战](05-interactive-maps.md)

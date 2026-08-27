@@ -190,6 +190,6 @@ sources:
 
 ## 相关概念
 
-- [网格布局系统](/concepts/04-grids.md) — grid-item-card 组合用法
-- [设计系统与CSS类名体系](/concepts/03-design-system.md) — 宽度/阴影/间距类名
-- [徽章与按钮](/concepts/07-badges-buttons.md) — 在卡片 footer 中使用徽章
+- [网格布局系统](04-grids.md) — grid-item-card 组合用法
+- [设计系统与CSS类名体系](03-design-system.md) — 宽度/阴影/间距类名
+- [徽章与按钮](07-badges-buttons.md) — 在卡片 footer 中使用徽章

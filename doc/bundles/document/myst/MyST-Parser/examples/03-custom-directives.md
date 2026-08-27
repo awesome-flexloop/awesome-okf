@@ -192,6 +192,6 @@ def hello():
 
 ## 相关概念
 
-- [指令与角色](/concepts/07-directives-and-roles.md)
-- [MyST 语法概览](/concepts/02-myst-syntax-overview.md)
-- [Sphinx 集成机制](/concepts/11-sphinx-integration.md)
+- [指令与角色](../concepts/07-directives-and-roles.md)
+- [MyST 语法概览](../concepts/02-myst-syntax-overview.md)
+- [Sphinx 集成机制](../concepts/11-sphinx-integration.md)

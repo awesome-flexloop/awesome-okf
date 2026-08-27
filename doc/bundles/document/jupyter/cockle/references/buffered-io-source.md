@@ -71,7 +71,7 @@ interface IMainIO {
 
 ## IWorkerIO 接口
 
-IWorkerIO（Worker 端 IO 接口）定义了 Worker 端 stdin 读取的契约，与 [IInput](/references/io-source.md) 兼容：
+IWorkerIO（Worker 端 IO 接口）定义了 Worker 端 stdin 读取的契约，与 [IInput](io-source.md) 兼容：
 
 ```typescript
 interface IWorkerIO {
@@ -274,7 +274,7 @@ async function selectBestBackend() {
 
 ## 相关概念
 
-- [IO 系统源码参考](/references/io-source.md)：IInput/IOutput 基础接口与终端/文件 IO 实现
-- [Worker 通信源码参考](/references/worker-source.md)：Coincident/Comlink Worker 类型与 StdinContext 初始化
-- [配置与环境源码参考](/references/config-source.md)：cockle-config 命令与 stdin 后端切换
-- [内置命令源码参考](/references/builtin-source.md)：cockle-config 命令触发运行时 IO 切换
+- [IO 系统源码参考](io-source.md)：IInput/IOutput 基础接口与终端/文件 IO 实现
+- [Worker 通信源码参考](worker-source.md)：Coincident/Comlink Worker 类型与 StdinContext 初始化
+- [配置与环境源码参考](config-source.md)：cockle-config 命令与 stdin 后端切换
+- [内置命令源码参考](builtin-source.md)：cockle-config 命令触发运行时 IO 切换

@@ -12,7 +12,7 @@ sources:
 
 # 案例：3-DNF 的不可高效 PAC 学习性
 
-本案例展示计算复杂性理论如何证明一个概念类**信息论上可学但计算上不可学**，是理解[可学性](/ai/datawhale/key-book/concepts/learnability)中"高效"限定词的关键。
+本案例展示计算复杂性理论如何证明一个概念类**信息论上可学但计算上不可学**，是理解可学性中"高效"限定词的关键。
 
 ## 问题定义
 
@@ -85,6 +85,6 @@ $$G\text{ 是 3-可着色的} \iff \exists\text{ 3-DNF 公式与 }S_G\text{ 一�
 
 ## 参见
 
-- [可学性](/ai/datawhale/key-book/concepts/learnability)
-- [计算复杂度](/ai/datawhale/key-book/concepts/computational-complexity)
-- [第 2 章：可学性](/ai/datawhale/key-book/references/chapter2)
+- 可学性
+- 计算复杂度
+- 第 2 章：可学性

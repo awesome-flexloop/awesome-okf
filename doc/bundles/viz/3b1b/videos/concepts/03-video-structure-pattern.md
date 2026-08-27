@@ -369,7 +369,7 @@ class MyVideo(Scene):
 
 **Step 3：用checkpoint_paste交互式调试**
 
-每写完一个子方法，用`manimgl -se`进入交互式模式，边写边看效果（详见[04-checkpoint-paste-workflow](/concepts/04-checkpoint-paste-workflow.md)）。
+每写完一个子方法，用`manimgl -se`进入交互式模式，边写边看效果（详见[04-checkpoint-paste-workflow](04-checkpoint-paste-workflow.md)）。
 
 **Step 4：添加Thumbnail和OpeningQuote（可选）**
 
@@ -402,9 +402,9 @@ class MyVideo(Scene):
 
 ## 相关概念
 
-- [00 Videos 仓库总览与入门](/concepts/00-videos-overview.md)
-- [01 PiCreature 角色系统详解](/concepts/01-picreature-characters.md)
-- [02 自定义 Scene 基类体系](/concepts/02-custom-scenes.md)
-- [04 checkpoint_paste 交互式开发工作流](/concepts/04-checkpoint-paste-workflow.md)
-- [05 代表性系列项目结构解析](/concepts/05-series-projects.md)
-- [ManimGL 知识包：Scene与动画基础](/viz/3b1b/manim/index.md)
+- [00 Videos 仓库总览与入门](00-videos-overview.md)
+- [01 PiCreature 角色系统详解](01-picreature-characters.md)
+- [02 自定义 Scene 基类体系](02-custom-scenes.md)
+- [04 checkpoint_paste 交互式开发工作流](04-checkpoint-paste-workflow.md)
+- [05 代表性系列项目结构解析](05-series-projects.md)
+- [ManimGL 知识包：Scene与动画基础](../../manim/index.md)

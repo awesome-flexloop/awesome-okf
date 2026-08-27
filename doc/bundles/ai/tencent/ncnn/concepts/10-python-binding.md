@@ -129,4 +129,4 @@ detections = net(image)  # 直接传 numpy 图像
 - [02 Mat 张量系统](02-mat-tensor-system.md)
 - [01 Net 与 Extractor 推理流程](01-net-extractor.md)
 - [09 层注册表与自定义层](09-layer-registry.md)
-- [Python YOLO 检测示例](/examples/python-yolo.md)
+- [Python YOLO 检测示例](../examples/python-yolo.md)

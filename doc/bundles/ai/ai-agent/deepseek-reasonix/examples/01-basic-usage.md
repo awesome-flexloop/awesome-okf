@@ -215,7 +215,7 @@ go test ./internal/tool/builtin/ ./internal/boot/
 
 ## 相关概念
 
-- [Reasonix 简介](/concepts/00-introduction.md)
-- [CLI 与 TUI](/concepts/05-cli-tui.md)——CLI 命令系统详解
-- [项目架构](/concepts/01-project-architecture.md)——构建和包结构
-- [Bot 网关示例](/examples/02-bot-gateway.md)——多平台 IM 接入
+- [Reasonix 简介](../concepts/00-introduction.md)
+- [CLI 与 TUI](../concepts/05-cli-tui.md)——CLI 命令系统详解
+- [项目架构](../concepts/01-project-architecture.md)——构建和包结构
+- [Bot 网关示例](02-bot-gateway.md)——多平台 IM 接入

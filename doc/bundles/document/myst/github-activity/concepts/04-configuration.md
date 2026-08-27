@@ -134,6 +134,6 @@ print(md)
 
 ## 相关概念
 
-- [CLI命令详解](/concepts/02-cli-usage.md)
-- [数据获取与处理](/concepts/03-activity-data.md)
-- [变更日志生成示例](/examples/changelog-generation.md)
+- [CLI命令详解](02-cli-usage.md)
+- [数据获取与处理](03-activity-data.md)
+- [变更日志生成示例](../examples/changelog-generation.md)

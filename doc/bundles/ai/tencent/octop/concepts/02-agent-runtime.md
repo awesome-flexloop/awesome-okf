@@ -195,6 +195,6 @@ Agent 支持 16 种 MBTI 人格类型，通过 `persona_mbti` 字段指定，创
 
 ## 相关概念
 
-- [/concepts/00-architecture.md](/concepts/00-architecture.md)
-- [/concepts/05-acp-protocol.md](/concepts/05-acp-protocol.md)
-- [/concepts/04-db-di.md](/concepts/04-db-di.md)
+- [/concepts/00-architecture.md](00-architecture.md)
+- [/concepts/05-acp-protocol.md](05-acp-protocol.md)
+- [/concepts/04-db-di.md](04-db-di.md)

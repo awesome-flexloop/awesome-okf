@@ -119,6 +119,6 @@ print(output.extensions) # 输出所需 MyST 扩展集合
 
 ## 相关概念
 
-- [命令行工具详细用法](/concepts/01-cli-usage.md)
-- [Python API 使用](/concepts/02-python-api.md)
-- [三阶段转换流水线架构](/concepts/03-conversion-pipeline.md)
+- [命令行工具详细用法](01-cli-usage.md)
+- [Python API 使用](02-python-api.md)
+- [三阶段转换流水线架构](03-conversion-pipeline.md)

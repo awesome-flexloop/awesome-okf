@@ -71,13 +71,13 @@ Dash 采用**前后端分离**架构：Python 后端负责布局生成、回调�
 
 ## Dash 类作为 WSGI/ASGI 应用
 
-`Dash` 类（[dash.py:229](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L229)）本身不是直接的 WSGI/ASGI 应用，而是通过后端适配器将路由注册到底层的 Flask/FastAPI/Quart 服务器上：
+`Dash` 类（dash.py:229）本身不是直接的 WSGI/ASGI 应用，而是通过后端适配器将路由注册到底层的 Flask/FastAPI/Quart 服务器上：
 
 - **Flask 后端**：`self.server` 是 `flask.Flask` 实例，本身是 WSGI 应用
 - **FastAPI 后端**：`self.server` 是 `fastapi.FastAPI` 实例，本身是 ASGI 应用
 - **Quart 后端**：`self.server` 是 `quart.Quart` 实例，ASGI 应用
 
-后端抽象层（[backends/](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/backends/)）通过 `BaseDashServer` 基类统一接口：
+后端抽象层（backends/）通过 `BaseDashServer` 基类统一接口：
 
 ```python
 class BaseDashServer(ABC, Generic[ServerType]):
@@ -91,11 +91,11 @@ class BaseDashServer(ABC, Generic[ServerType]):
     # ... 约30个抽象方法
 ```
 
-`RequestAdapter`（[base_server.py:37](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/backends/base_server.py#L37)）统一了不同后端的请求访问方式，提供 `args`、`cookies`、`headers`、`get_json()` 等属性。
+`RequestAdapter`（base_server.py:37）统一了不同后端的请求访问方式，提供 `args`、`cookies`、`headers`、`get_json()` 等属性。
 
 ## 前后端通信协议
 
-Dash 前后端通过固定端点通信（[dash.py:814-836](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L814-L836)）：
+Dash 前后端通过固定端点通信（dash.py:814-836）：
 
 ### 初始化流程
 
@@ -106,7 +106,7 @@ Dash 前后端通过固定端点通信（[dash.py:814-836](file:///d:/spaces/Spe
 
 ### HTML 模板
 
-默认 HTML 模板（[dash.py:96-115](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L96-L115)）使用 Jinja2 风格的占位符：
+默认 HTML 模板（dash.py:96-115）使用 Jinja2 风格的占位符：
 
 ```html
 <!DOCTYPE html>
@@ -144,7 +144,7 @@ app.layout = html.Div([
 
 ### 序列化
 
-每个组件通过 `to_plotly_json()` 方法（[base_component.py:269-294](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/development/base_component.py#L269-L294)）序列化为 JSON：
+每个组件通过 `to_plotly_json()` 方法（base_component.py:269-294）序列化为 JSON：
 
 ```python
 def to_plotly_json(self):
@@ -176,7 +176,7 @@ def to_plotly_json(self):
 
 ### 动态布局
 
-Layout 可以是一个函数（[dash.py:916-930](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L916-L930)），在每次请求时动态生成：
+Layout 可以是一个函数（dash.py:916-930），在每次请求时动态生成：
 
 ```python
 def serve_layout():
@@ -196,11 +196,11 @@ app.layout = serve_layout  # 传入函数而非组件实例
 - **外部资源**：`assets_external_path` 支持 CDN 加载资源
 - **热重载**：开发模式下 assets 文件变化自动刷新浏览器
 
-静态文件通过 `register_assets_blueprint`（[dash.py:773-777](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L773-L777)）注册到后端服务器。
+静态文件通过 `register_assets_blueprint`（dash.py:773-777）注册到后端服务器。
 
 ## Pages 多页面路由
 
-`_pages.py` 模块（[file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_pages.py](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_pages.py)）实现了基于文件系统的多页面路由。
+`_pages.py` 模块（file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_pages.py）实现了基于文件系统的多页面路由。
 
 ### 启用方式
 
@@ -210,7 +210,7 @@ app = Dash(__name__, use_pages=True)
 app = Dash(__name__, pages_folder="my_pages")
 ```
 
-启用后，`app.layout` 自动设置为 `page_container`（[dash.py:146-153](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L146-L153)），包含：
+启用后，`app.layout` 自动设置为 `page_container`（dash.py:146-153），包含：
 
 ```python
 page_container = html.Div([
@@ -223,7 +223,7 @@ page_container = html.Div([
 
 ### 页面注册
 
-每个页面文件通过 `register_page()` 函数（[_pages.py:159](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/_pages.py#L159)）注册到 `PAGE_REGISTRY`（有序字典）：
+每个页面文件通过 `register_page()` 函数（_pages.py:159）注册到 `PAGE_REGISTRY`（有序字典）：
 
 ```python
 # pages/home.py
@@ -283,7 +283,7 @@ nav = html.Nav([
 
 ## 配置系统
 
-Dash 使用 `AttributeDict` 作为配置容器（[dash.py:543-599](file:///d:/spaces/SpecWeave/external/libs/python/dash/dash/dash.py#L543-L599)），支持三层配置源：
+Dash 使用 `AttributeDict` 作为配置容器（dash.py:543-599），支持三层配置源：
 
 1. **构造参数**：最高优先级，如 `app = Dash(suppress_callback_exceptions=True)`
 2. **环境变量**：中间优先级，如 `DASH_SUPPRESS_CALLBACK_EXCEPTIONS=true`

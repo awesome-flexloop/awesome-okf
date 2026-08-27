@@ -269,9 +269,9 @@ conn = await asyncssh.connect(
 
 ## 相关概念
 
-- [异步连接详解](/concepts/02-async-connection.md) —— 建立转发所需的连接
-- [通道与流](/concepts/03-channels.md) —— direct-tcpip 通道
-- [实战示例：端口转发隧道](/examples/port-forward-tunnel.md)
+- [异步连接详解](02-async-connection.md) —— 建立转发所需的连接
+- [通道与流](03-channels.md) —— direct-tcpip 通道
+- [实战示例：端口转发隧道](../examples/port-forward-tunnel.md)
 - [paramiko 端口转发](../../paramiko/concepts/08-port-forwarding.md)（同步转发对比）
 
-[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](/references/asyncssh-source.md)。
+[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](../references/asyncssh-source.md)。

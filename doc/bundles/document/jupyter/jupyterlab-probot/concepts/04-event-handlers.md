@@ -19,7 +19,7 @@ jupyterlab-probot 注册了四个事件处理器，下面逐一深入分析每�
 
 ## 1. issues.opened：自动 Triage 标签
 
-**源码位置**：[src/index.ts L53-69](../../../../../external/libs/jupyter/jupyterlab-probot/src/index.ts)
+**源码位置**：src/index.ts L53-69
 
 ### 功能
 
@@ -68,7 +68,7 @@ Issue 被创建 → Webhook 触发 → 加载配置 → triageLabel 未定义？
 
 ## 2. pull_request.opened：Binder 链接评论
 
-**源码位置**：[src/index.ts L71-101](../../../../../external/libs/jupyter/jupyterlab-probot/src/index.ts)
+**源码位置**：src/index.ts L71-101
 
 ### 功能
 
@@ -151,7 +151,7 @@ To try out this branch on [binder](https://mybinder.org), follow this link: [![B
 
 ## 3. workflow_run.requested：CI 重复运行取消
 
-**源码位置**：[src/index.ts L103-197](../../../../../external/libs/jupyter/jupyterlab-probot/src/index.ts)
+**源码位置**：src/index.ts L103-197
 
 ### 功能
 
@@ -255,7 +255,7 @@ Workflow Run 被请求
 
 ## 4. issue_comment.created：评论命令重启 CI
 
-**源码位置**：[src/index.ts L199-246](../../../../../external/libs/jupyter/jupyterlab-probot/src/index.ts)
+**源码位置**：src/index.ts L199-246
 
 ### 功能
 

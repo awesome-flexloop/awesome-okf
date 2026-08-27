@@ -16,7 +16,7 @@ related_concepts: ["03-frontend-shell", "06-extension-system"]
 
 ## 前置条件
 
-- 已阅读[开发前端扩展](./01-frontend-extension.md)
+- 已阅读[开发前端扩展](01-frontend-extension.md)
 - 理解NotebookShell六区域模型
 - 已有一个可工作的前端扩展项目
 
@@ -546,4 +546,4 @@ c.JupyterNotebookApp.default_url = "/notebooks/my-notebook.ipynb"
 
 ## 下一步
 
-- [集成自定义认证](./04-custom-auth.md) 学习后端+前端联合扩展
+- [集成自定义认证](04-custom-auth.md) 学习后端+前端联合扩展

@@ -14,11 +14,11 @@ sources:
 
 ## 概述
 
-BinderHub 的生产部署通过 Helm Chart 实现，Chart 位于 [helm-chart/binderhub/](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/) 目录。该 Chart 依赖 Zero-to-JupyterHub (Z2JH) Helm Chart 提供 JupyterHub 服务，自身负责 BinderHub API 服务、构建基础设施、镜像清理和 RBAC 权限配置。Chart 使用 chartpress 工具自动构建和发布镜像。
+BinderHub 的生产部署通过 Helm Chart 实现，Chart 位于 helm-chart/binderhub/ 目录。该 Chart 依赖 Zero-to-JupyterHub (Z2JH) Helm Chart 提供 JupyterHub 服务，自身负责 BinderHub API 服务、构建基础设施、镜像清理和 RBAC 权限配置。Chart 使用 chartpress 工具自动构建和发布镜像。
 
 ## Chart 元数据
 
-[Chart.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/Chart.yaml) 定义了 Chart 的基本信息：
+Chart.yaml 定义了 Chart 的基本信息：
 
 ```yaml
 apiVersion: v2
@@ -46,7 +46,7 @@ kubeVersion: ">=1.28.0-0"
 
 ## values.yaml 配置结构
 
-[values.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/values.yaml) 是 Chart 的核心配置文件，分为多个配置段。
+values.yaml 是 Chart 的核心配置文件，分为多个配置段。
 
 ### 顶层配置段
 
@@ -133,9 +133,9 @@ jupyterhub:
 
 关键配置说明：
 
-1. **authenticator_class: "null"**（[values.yaml:81](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/values.yaml#L81)）：使用 NullAuthenticator，即无认证（任何人都可以访问，匿名模式）；
-2. **BinderSpawner.auth_enabled: false**（[values.yaml:83](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/values.yaml#L83)）：Spawner 不使用 JupyterHub 认证，使用 BinderHub 传递的 Token；
-3. **loadRoles.binder**（[values.yaml:84-95](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/values.yaml#L84-L95)）：为 `binder` 服务授予 `servers` 和 `admin:users` 权限。`servers` 范围允许启动/停止服务器；`admin:users` 范围允许创建临时用户（匿名模式必需），认证模式下需要 `read:users` 范围；
+1. **authenticator_class: "null"**（values.yaml:81）：使用 NullAuthenticator，即无认证（任何人都可以访问，匿名模式）；
+2. **BinderSpawner.auth_enabled: false**（values.yaml:83）：Spawner 不使用 JupyterHub 认证，使用 BinderHub 传递的 Token；
+3. **loadRoles.binder**（values.yaml:84-95）：为 `binder` 服务授予 `servers` 和 `admin:users` 权限。`servers` 范围允许启动/停止服务器；`admin:users` 范围允许创建临时用户（匿名模式必需），认证模式下需要 `read:users` 范围；
 4. **BinderSpawnerMixin 内嵌**：`0-binderspawnermixin` 是 BinderSpawnerMixin 类的完整 Python 源码，通过 CI 脚本从 `binderhub/binderspawner_mixin.py` 自动复制；
 5. **00-binder**：定义 `BinderSpawner` 类（继承 BinderSpawnerMixin 和 KubeSpawner），并设置为 JupyterHub 的 spawner_class；
 6. **singleuser.cmd**：启动命令优先使用 jupyterlab（版本≥3时），回退到 jupyter-notebook；
@@ -202,7 +202,7 @@ imageCleaner:
 
 ## binderhub_config.py：运行时配置加载
 
-[files/binderhub_config.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/files/binderhub_config.py) 是容器内的主配置入口，挂载到 `/etc/binderhub/config/binderhub_config.py`，通过 `--config` 参数传递给 BinderHub。
+files/binderhub_config.py 是容器内的主配置入口，挂载到 `/etc/binderhub/config/binderhub_config.py`，通过 `--config` 参数传递给 BinderHub。
 
 ### _load_values()：值文件加载
 
@@ -296,7 +296,7 @@ for key, snippet in sorted((get_value("extraConfig") or {}).items()):
 
 ### templates/deployment.yaml：BinderHub 部署
 
-[deployment.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/templates/deployment.yaml) 定义了 BinderHub 的 Deployment 资源。
+deployment.yaml 定义了 BinderHub 的 Deployment 资源。
 
 #### 关键结构
 
@@ -373,7 +373,7 @@ spec:
 
 ### templates/rbac.yaml：RBAC 权限
 
-[rbac.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/templates/rbac.yaml) 定义 ServiceAccount、Role 和 RoleBinding。
+rbac.yaml 定义 ServiceAccount、Role 和 RoleBinding。
 
 ```yaml
 # BinderHub 主服务的 Role
@@ -495,7 +495,7 @@ Helm install/upgrade 后显示的使用说明。
 
 ### schema.yaml：值验证
 
-[schema.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/schema.yaml) 提供 values.yaml 的 JSON Schema 验证，Helm 3 会在安装时自动验证配置值。
+schema.yaml 提供 values.yaml 的 JSON Schema 验证，Helm 3 会在安装时自动验证配置值。
 
 ## 部署架构图
 
@@ -622,17 +622,17 @@ helm upgrade --install binderhub \\
 
 ## 关键源码引用
 
-- Chart.yaml：[helm-chart/binderhub/Chart.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/Chart.yaml)
-- values.yaml 主配置：[helm-chart/binderhub/values.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/values.yaml)
-- binderhub_config.py 运行时配置：[helm-chart/binderhub/files/binderhub_config.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/files/binderhub_config.py)
-- Deployment 模板：[helm-chart/binderhub/templates/deployment.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/templates/deployment.yaml)
-- RBAC 模板：[helm-chart/binderhub/templates/rbac.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/templates/rbac.yaml)
-- Service 模板：[helm-chart/binderhub/templates/service.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/templates/service.yaml)
-- Secret 模板：[helm-chart/binderhub/templates/secret.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/templates/secret.yaml)
-- PDB 模板：[helm-chart/binderhub/templates/pdb.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/templates/pdb.yaml)
-- Ingress 模板：[helm-chart/binderhub/templates/ingress.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/templates/ingress.yaml)
-- Image Cleaner 模板：[helm-chart/binderhub/templates/image-cleaner.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/templates/image-cleaner.yaml)
-- DinD/Pink DaemonSet 模板：[helm-chart/binderhub/templates/container-builder/daemonset.yaml](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/templates/container-builder/daemonset.yaml)
-- BinderSpawnerMixin 内嵌代码位置：[helm-chart/binderhub/values.yaml#L97-L214](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/helm-chart/binderhub/values.yaml#L97-L214)
-- BinderSpawnerMixin 源码：[binderspawner_mixin.py](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/binderspawner_mixin.py)
-- Launcher 初始化（create_user 设置）：[app.py:950-956](file:///D:/spaces/SpecWeave/external/libs/jupyter/binderhub/binderhub/app.py#L950-L956)
+- Chart.yaml：helm-chart/binderhub/Chart.yaml
+- values.yaml 主配置：helm-chart/binderhub/values.yaml
+- binderhub_config.py 运行时配置：helm-chart/binderhub/files/binderhub_config.py
+- Deployment 模板：helm-chart/binderhub/templates/deployment.yaml
+- RBAC 模板：helm-chart/binderhub/templates/rbac.yaml
+- Service 模板：helm-chart/binderhub/templates/service.yaml
+- Secret 模板：helm-chart/binderhub/templates/secret.yaml
+- PDB 模板：helm-chart/binderhub/templates/pdb.yaml
+- Ingress 模板：helm-chart/binderhub/templates/ingress.yaml
+- Image Cleaner 模板：helm-chart/binderhub/templates/image-cleaner.yaml
+- DinD/Pink DaemonSet 模板：helm-chart/binderhub/templates/container-builder/daemonset.yaml
+- BinderSpawnerMixin 内嵌代码位置：helm-chart/binderhub/values.yaml#L97-L214
+- BinderSpawnerMixin 源码：binderspawner_mixin.py
+- Launcher 初始化（create_user 设置）：app.py:950-956

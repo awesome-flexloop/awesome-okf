@@ -210,6 +210,6 @@ dependencies = [
 
 ## 与其他概念的关系
 
-- [核心SDK与三层架构](/ai/datawhale/deepagents/concepts/core-sdk) 提供 Agent 运行时基础。
-- [Code终端编码Agent](/ai/datawhale/deepagents/concepts/code-module) 是 Talon 的 Agent 运行时依赖（`deepagents-code>=0.1.30`）。
-- [Monorepo 架构](/ai/datawhale/deepagents/concepts/monorepo-architecture) 描述了 talon 包在仓库中的位置。
+- 核心SDK与三层架构 提供 Agent 运行时基础。
+- Code终端编码Agent 是 Talon 的 Agent 运行时依赖（`deepagents-code>=0.1.30`）。
+- Monorepo 架构 描述了 talon 包在仓库中的位置。

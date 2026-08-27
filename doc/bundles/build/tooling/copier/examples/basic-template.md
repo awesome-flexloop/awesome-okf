@@ -301,4 +301,4 @@ copier copy -r v1.0.0 gh:yourname/python-template my-project
 * [Jinja2 模板渲染](../concepts/04-jinja2-templating.md)
 * [CLI 命令参考](../concepts/08-cli-reference.md)
 
-[^copier-src]: Copier 源码，见本 bundle 信源登记 [references/copier-source.md](/references/copier-source.md)。
+[^copier-src]: Copier 源码，见本 bundle 信源登记 [references/copier-source.md](../references/copier-source.md)。

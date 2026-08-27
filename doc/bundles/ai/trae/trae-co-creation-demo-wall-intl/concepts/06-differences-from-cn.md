@@ -180,10 +180,10 @@ sources:
 
 ## 相关概念
 
-- [Demo Wall Intl 简介](/concepts/00-introduction.md)
-- [Vercel Edge Config缓存](/concepts/01-edge-config-cache.md)
-- [5语言国际化](/concepts/02-multi-language.md)
-- [CSV导出功能](/concepts/03-csv-export.md)
-- [GDPR合规审计留存](/concepts/04-gdpr-audit-retention.md)
-- [Vercel部署](/concepts/05-vercel-deployment.md)
-- [从中文版迁移到国际版指南](/examples/migrate-from-cn.md)
+- [Demo Wall Intl 简介](00-introduction.md)
+- [Vercel Edge Config缓存](01-edge-config-cache.md)
+- [5语言国际化](02-multi-language.md)
+- [CSV导出功能](03-csv-export.md)
+- [GDPR合规审计留存](04-gdpr-audit-retention.md)
+- [Vercel部署](05-vercel-deployment.md)
+- [从中文版迁移到国际版指南](../examples/migrate-from-cn.md)

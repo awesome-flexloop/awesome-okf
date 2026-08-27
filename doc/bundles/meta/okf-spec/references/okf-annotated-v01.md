@@ -19,7 +19,7 @@ sources:
 
 ## v0.1 与 v0.2 的关系
 
-- **v0.2**（[okf-spec.md](./okf-spec.md)）是正式规范文档，采用标准化 RFC 风格，精确规定 MUST/SHOULD/MAY 要求。
+- **v0.2**（[okf-spec.md](okf-spec.md)）是正式规范文档，采用标准化 RFC 风格，精确规定 MUST/SHOULD/MAY 要求。
 - **v0.1 Annotated Guide** 是 v0.1 版本的开发者走查文档，作者（fabricioctelles）以"A developer's walkthrough. Opinions included."为定位，在规范条文之外提供了：
   - 三大设计原则（Design Principles）的详细阐释
   - 对每个设计决策的个人观点和理由说明
@@ -55,7 +55,7 @@ sources:
 
 ## 相关信源
 
-- [OKF v0.2 正式规范](./okf-spec.md) - 本 bundle 的权威信源
+- [OKF v0.2 正式规范](okf-spec.md) - 本 bundle 的权威信源
 - [SaaS Metrics Quickstart 示例来源](https://okf.md/quickstart) - 快速入门教程
 - [OKF Agent Skill 文档](https://okf.md/skill) - 智能体技能安装与使用
 - [OKF Validator](https://okf.md/validator) - 在线验证工具

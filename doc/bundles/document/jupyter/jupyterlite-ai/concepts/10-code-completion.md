@@ -192,4 +192,4 @@ interface IAIConfig {
 - [Provider 模型提供商系统](03-provider-system.md)
 - [设置与配置系统](07-settings-and-config.md)
 - [Chat UI 交互](09-chat-ui.md)
-- [插件架构参考](/references/plugin-architecture.md)
+- [插件架构参考](../references/plugin-architecture.md)

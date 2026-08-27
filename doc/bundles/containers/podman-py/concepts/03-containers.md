@@ -321,6 +321,6 @@ Container 对象的常用属性：
 
 ## 相关概念
 
-- [/concepts/02-managers.md](/concepts/02-managers.md)
-- [/concepts/04-images.md](/concepts/04-images.md)
-- [/examples/02-container-ops.md](/examples/02-container-ops.md)
+- [/concepts/02-managers.md](02-managers.md)
+- [/concepts/04-images.md](04-images.md)
+- [/examples/02-container-ops.md](../examples/02-container-ops.md)

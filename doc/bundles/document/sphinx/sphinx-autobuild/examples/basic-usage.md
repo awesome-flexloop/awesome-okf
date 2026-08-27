@@ -185,7 +185,7 @@ sphinx-autobuild docs docs/_build/html
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [CLI 入口与参数解析](/concepts/03-cli-and-entrypoint.md)
-- [文件监听与过滤](/concepts/05-file-watching.md)
-- [自定义前后置命令](/examples/custom-pre-post-build.md)
+- [5分钟快速上手](../concepts/01-getting-started.md)
+- [CLI 入口与参数解析](../concepts/03-cli-and-entrypoint.md)
+- [文件监听与过滤](../concepts/05-file-watching.md)
+- [自定义前后置命令](custom-pre-post-build.md)

@@ -169,15 +169,15 @@ ns.configure({
 })
 ```
 
-配置可以从 YAML 文件、环境变量和 CLI 参数多层级合并，这属于 PyInvoke 核心功能（参见 [PyInvoke 配置系统](../pyinvoke/concepts/05-configuration.md)）。
+配置可以从 YAML 文件、环境变量和 CLI 参数多层级合并，这属于 PyInvoke 核心功能（参见 [PyInvoke 配置系统](../../pyinvoke/concepts/05-configuration.md)）。
 
 ## 相关概念
 
-- [Invocations 简介](/concepts/00-introduction.md)
-- [代码检查与格式化](/concepts/02-checks-formatting.md)
-- [Pytest 测试任务](/concepts/03-testing-pytest.md)
-- [Sphinx 文档管理](/concepts/04-docs-sphinx.md)
-- [包发布生命周期](/concepts/05-packaging-release.md)
-- [Invocations 源码信源登记](/references/invocations-source.md)
+- [Invocations 简介](00-introduction.md)
+- [代码检查与格式化](02-checks-formatting.md)
+- [Pytest 测试任务](03-testing-pytest.md)
+- [Sphinx 文档管理](04-docs-sphinx.md)
+- [包发布生命周期](05-packaging-release.md)
+- [Invocations 源码信源登记](../references/invocations-source.md)
 
-[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](/references/invocations-source.md)。
+[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](../references/invocations-source.md)。

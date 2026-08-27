@@ -198,7 +198,7 @@ myst-frontmatter 将各类元数据拆分为独立子模块：
 
 ## 相关概念
 
-- [配置系统](/concepts/10-configuration-system.md)
-- [公共类型系统](/concepts/04-myst-common-types.md)
-- [错误处理与规则 ID](/concepts/05-error-handling.md)
-- [基本解析示例](/examples/00-basic-parsing.md)
+- [配置系统](10-configuration-system.md)
+- [公共类型系统](04-myst-common-types.md)
+- [错误处理与规则 ID](05-error-handling.md)
+- [基本解析示例](../examples/00-basic-parsing.md)

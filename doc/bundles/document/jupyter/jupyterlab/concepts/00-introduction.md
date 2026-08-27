@@ -199,6 +199,6 @@ flowchart TB
 
 ## 相关概念
 
-- [01 整体架构概览](/concepts/01-architecture-overview.md)
-- [源码文件地图](/references/source-code-map.md)
-- [最小扩展示例](/examples/01-minimal-extension.md)
+- [01 整体架构概览](01-architecture-overview.md)
+- [源码文件地图](../references/source-code-map.md)
+- [最小扩展示例](../examples/01-minimal-extension.md)

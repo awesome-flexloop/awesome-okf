@@ -346,8 +346,8 @@ GraphQL 的六种命名类型均支持扩展（Extend），允许在不修改原
 
 ## 相关概念
 
-- [Schema 与类型系统入门](/concepts/02-schema-and-types.md) — 了解类型系统文档结构、SchemaDefinition 和标量类型基础
-- [指令、包装类型与输入系统](/concepts/04-directives-and-wrapping-types.md) — 深入学习 List/Non-Null 包装类型、@deprecated/@oneOf 等指令以及输入强制转换
-- [验证管线与规则体系](/concepts/05-validation.md) — 了解复合类型上的字段选择、片段展开等验证规则
-- [执行引擎：字段解析与值完成](/concepts/06-execution.md) — 了解抽象类型的 ResolveAbstractType 和 CompleteValue 各分支处理
-- [内省系统：GraphQL 的自描述机制](/concepts/08-introspection.md) — 了解复合类型如何通过 __Type 内省暴露
+- [Schema 与类型系统入门](02-schema-and-types.md) — 了解类型系统文档结构、SchemaDefinition 和标量类型基础
+- [指令、包装类型与输入系统](04-directives-and-wrapping-types.md) — 深入学习 List/Non-Null 包装类型、@deprecated/@oneOf 等指令以及输入强制转换
+- [验证管线与规则体系](05-validation.md) — 了解复合类型上的字段选择、片段展开等验证规则
+- [执行引擎：字段解析与值完成](06-execution.md) — 了解抽象类型的 ResolveAbstractType 和 CompleteValue 各分支处理
+- [内省系统：GraphQL 的自描述机制](08-introspection.md) — 了解复合类型如何通过 __Type 内省暴露

@@ -184,7 +184,7 @@ flowchart TB
 | [jupyter-docker-stacks](../jupyter-docker-stacks/index.md) | 同层：Jupyter Docker镜像部署方案 |
 | [cookiecutter-docker-stacks](../cookiecutter-docker-stacks/index.md) | 同层：Jupyter Docker镜像模板生成器 |
 | [jupyter-notebook](../jupyter-notebook/index.md) | 同层：Jupyter Notebook应用层 |
-| [jupyter-client](../jupyter-client/README.md) | 同层：Jupyter内核通信协议 |
+| [jupyter-client](../jupyter-client/index.md) | 同层：Jupyter内核通信协议 |
 | [nbformat](../nbformat/index.md) | 同层：Notebook文件格式 |
 
 ## 许可协议

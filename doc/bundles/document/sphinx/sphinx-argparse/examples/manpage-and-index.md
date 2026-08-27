@@ -406,8 +406,8 @@ all: html man
 
 ## 相关概念
 
-- [Man page 输出格式](/concepts/08-manpage-output.md)
-- [命令索引生成](/concepts/10-command-indices.md)
-- [配置选项详解](/concepts/11-configuration.md)
-- [Commands 域与交叉引用](/concepts/09-domain-crossref.md)
-- [多页面子命令文档化](/examples/subcommand-docs.md)
+- [Man page 输出格式](../concepts/08-manpage-output.md)
+- [命令索引生成](../concepts/10-command-indices.md)
+- [配置选项详解](../concepts/11-configuration.md)
+- [Commands 域与交叉引用](../concepts/09-domain-crossref.md)
+- [多页面子命令文档化](subcommand-docs.md)

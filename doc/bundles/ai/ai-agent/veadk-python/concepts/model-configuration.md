@@ -43,7 +43,7 @@ veadk-python 的模型层采用**双后端架构**：默认通过 LiteLLM 兼容
 
 `ModelConfig` 基于 `pydantic-settings.BaseSettings`，使用环境变量前缀 `MODEL_AGENT_`，提供模型名、提供商、API 地址和密钥的统一配置入口。
 
-[veadk/configs/model_configs.py:L31-L54](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/configs/model_configs.py#L31-L54)
+veadk/configs/model_configs.py:L31-L54
 
 ```python
 class ModelConfig(BaseSettings):
@@ -92,7 +92,7 @@ flowchart LR
 
 `VeADKConfig` 是所有配置子模型的聚合根，通过全局单例 `settings` 访问：
 
-[veadk/config.py:L64-L146](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/config.py#L64-L146)
+veadk/config.py:L64-L146
 
 ```python
 class VeADKConfig(BaseModel):
@@ -143,7 +143,7 @@ flowchart TD
 
 当 `CLOUD_PROVIDER=byteplus` 时，默认值自动切换为海外版（F-066）：
 
-[veadk/consts.py:L79-L91](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/consts.py#L79-L91)
+veadk/consts.py:L79-L91
 
 ```python
 if provider and provider.lower() == "byteplus":
@@ -160,7 +160,7 @@ if provider and provider.lower() == "byteplus":
 
 `LiteLlm` 来自 `google.adk.models.lite_llm`，基于 LiteLLM 库提供 OpenAI 兼容接口的统一调用。当 `enable_responses=False`（默认）时，Agent 使用此后端。
 
-[veadk/agent.py:L286-L293](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L286-L293)
+veadk/agent.py:L286-L293
 
 ```python
 self.model = LiteLlm(
@@ -198,7 +198,7 @@ if isinstance(self.model_name, list):
 
 `ArkLlm` 继承自 `google.adk.models.Gemini`，通过火山引擎 Ark SDK 的 `AsyncArk` 客户端调用 Responses API，提供比 LiteLLM 更丰富的原生能力。
 
-[veadk/models/ark_llm.py:L703-L719](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/models/ark_llm.py#L703-L719)
+veadk/models/ark_llm.py:L703-L719
 
 ```python
 class ArkLlm(Gemini):
@@ -209,7 +209,7 @@ class ArkLlm(Gemini):
     enable_responses_cache: bool = True
 ```
 
-[veadk/agent.py:L275-L285](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L275-L285)
+veadk/agent.py:L275-L285
 
 ```python
 if self.enable_responses:
@@ -226,7 +226,7 @@ if self.enable_responses:
 
 ### ArkLlmClient：底层 HTTP 客户端
 
-[veadk/models/ark_llm.py:L683-L700](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/models/ark_llm.py#L683-L700)
+veadk/models/ark_llm.py:L683-L700
 
 ```python
 class ArkLlmClient:
@@ -256,7 +256,7 @@ class ArkLlmClient:
 
 ### generate_content_async：请求构造
 
-[veadk/models/ark_llm.py:L732-L759](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/models/ark_llm.py#L732-L759)
+veadk/models/ark_llm.py:L732-L759
 
 ```python
 async def generate_content_async(
@@ -282,7 +282,7 @@ async def generate_content_async(
 
 所有模型请求默认携带以下 extra_headers 和 extra_body（F-069）：
 
-[veadk/consts.py:L25-L42](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/consts.py#L25-L42)
+veadk/consts.py:L25-L42
 
 ```python
 DEFAULT_MODEL_EXTRA_CONFIG = {
@@ -304,7 +304,7 @@ Agent.model_post_init 中将用户配置与默认配置合并（headers 和 body
 
 ## 默认模型一览
 
-[veadk/consts.py:L20-L94](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/consts.py#L20-L94)
+veadk/consts.py:L20-L94
 
 | 用途 | 模型名 | API Base |
 |------|--------|----------|
@@ -319,7 +319,7 @@ Agent.model_post_init 中将用户配置与默认配置合并（headers 和 body
 
 ## 性能优化：LITELLM_LOCAL_MODEL_COST_MAP
 
-[veadk/agent.py:L23-L28](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L23-L28)
+veadk/agent.py:L23-L28
 
 ```python
 if not os.getenv("LITELLM_LOCAL_MODEL_COST_MAP"):
@@ -330,7 +330,7 @@ if not os.getenv("LITELLM_LOCAL_MODEL_COST_MAP"):
 
 ## update_model：运行时切换模型
 
-[veadk/agent.py:L447-L451](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L447-L451)
+veadk/agent.py:L447-L451
 
 ```python
 def update_model(self, model_name: str):
@@ -345,12 +345,12 @@ def update_model(self, model_name: str):
 
 | 文件 | 职责 |
 |------|------|
-| [veadk/configs/model_configs.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/configs/model_configs.py) | ModelConfig/EmbeddingModelConfig/RealtimeModelConfig 定义 |
-| [veadk/config.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/config.py) | VeADKConfig 聚合、配置加载顺序、getenv()、全局 settings |
-| [veadk/consts.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/consts.py) | 默认模型名、API Base、DEFAULT_MODEL_EXTRA_CONFIG、BytePlus 适配 |
-| [veadk/models/ark_llm.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/models/ark_llm.py) | ArkLlm 类、ArkLlmClient、Responses API 调用实现 |
-| [veadk/models/ark_embedding.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/models/ark_embedding.py) | Ark Embedding 模型封装 |
-| [veadk/agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py) | Agent.model_post_init 中的模型实例化逻辑 |
+| veadk/configs/model_configs.py | ModelConfig/EmbeddingModelConfig/RealtimeModelConfig 定义 |
+| veadk/config.py | VeADKConfig 聚合、配置加载顺序、getenv()、全局 settings |
+| veadk/consts.py | 默认模型名、API Base、DEFAULT_MODEL_EXTRA_CONFIG、BytePlus 适配 |
+| veadk/models/ark_llm.py | ArkLlm 类、ArkLlmClient、Responses API 调用实现 |
+| veadk/models/ark_embedding.py | Ark Embedding 模型封装 |
+| veadk/agent.py | Agent.model_post_init 中的模型实例化逻辑 |
 
 ## 相关概念
 

@@ -225,6 +225,6 @@ sphinx-build -b html . _build/html
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [argparse 指令基础](/concepts/02-directive-basics.md)
-- [指令选项全解](/concepts/03-directive-options.md)
+- [5分钟快速上手](../concepts/01-getting-started.md)
+- [argparse 指令基础](../concepts/02-directive-basics.md)
+- [指令选项全解](../concepts/03-directive-options.md)

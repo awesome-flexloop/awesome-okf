@@ -131,10 +131,10 @@ toad acp "python path/to/your_server.py" .
 
 ## 设计意义
 
-ACP 集成代表了 Deep Agents 从终端向**编辑器原生体验**扩展的方向。它定义了一个与传输无关的 Agent 接口标准——Agent 不再绑定到特定 UI，而是作为协议端点被任何兼容客户端消费。这与 [Talon运行时宿主](/ai/datawhale/deepagents/concepts/talon-runtime) 的消息平台通道形成互补：ACP 面向开发者工具场景，Talon 面向消息平台场景。
+ACP 集成代表了 Deep Agents 从终端向**编辑器原生体验**扩展的方向。它定义了一个与传输无关的 Agent 接口标准——Agent 不再绑定到特定 UI，而是作为协议端点被任何兼容客户端消费。这与 Talon运行时宿主 的消息平台通道形成互补：ACP 面向开发者工具场景，Talon 面向消息平台场景。
 
 ## 与其他概念的关系
 
-- [核心SDK与三层架构](/ai/datawhale/deepagents/concepts/core-sdk) 提供被包装的 Agent 图。
-- [Code终端编码Agent](/ai/datawhale/deepagents/concepts/code-module) 可通过 `--acp` 标志直接暴露为 ACP 服务器。
-- [Monorepo 架构](/ai/datawhale/deepagents/concepts/monorepo-architecture) 描述了 acp 包在仓库中的位置。
+- 核心SDK与三层架构 提供被包装的 Agent 图。
+- Code终端编码Agent 可通过 `--acp` 标志直接暴露为 ACP 服务器。
+- Monorepo 架构 描述了 acp 包在仓库中的位置。

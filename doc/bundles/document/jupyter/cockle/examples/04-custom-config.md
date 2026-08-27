@@ -444,6 +444,6 @@ cockle-config stdin sw
 
 ## 相关概念
 
-- [WASM与JavaScript命令](/concepts/10-wasm-js-commands.md)
-- [文件系统](/concepts/06-filesystem.md)
-- [配置参考](/references/config-source.md)
+- [WASM与JavaScript命令](../concepts/10-wasm-js-commands.md)
+- [文件系统](../concepts/06-filesystem.md)
+- [配置参考](../references/config-source.md)

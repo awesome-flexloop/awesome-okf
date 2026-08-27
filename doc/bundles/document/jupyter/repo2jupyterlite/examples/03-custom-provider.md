@@ -23,7 +23,7 @@ sources:
 
 ## 接口契约
 
-根据 [GitHubRepoProvider 信源](/references/github-provider-source.md)，一个仓库提供者需要实现以下方法：
+根据 [GitHubRepoProvider 信源](../references/github-provider-source.md)，一个仓库提供者需要实现以下方法：
 
 | 方法 | 类型 | 返回值 | 说明 |
 |------|------|--------|------|
@@ -255,7 +255,7 @@ https://gitlab.com/group/project/-/blob/main/notebook.ipynb
 
 ## 实现要点
 
-1. **缓存模式复用**：GitLab provider 复用了与 GitHub provider 相同的双层 LRU 缓存模式（Cache 1024 + cache_404 5分钟TTL），参见 [GitHubRepoProvider信源](/references/github-provider-source.md)
+1. **缓存模式复用**：GitLab provider 复用了与 GitHub provider 相同的双层 LRU 缓存模式（Cache 1024 + cache_404 5分钟TTL），参见 [GitHubRepoProvider信源](../references/github-provider-source.md)
 
 2. **API 差异注意**：
    - GitLab project path 需要 URL 编码（`/` 编码为 `%2F`）
@@ -269,6 +269,6 @@ https://gitlab.com/group/project/-/blob/main/notebook.ipynb
 
 ## 相关概念
 
-- [04-仓库提供者系统](/concepts/04-repo-providers.md)
-- [07-前端URL解析机制](/concepts/07-frontend-detectors.md)
-- [08-整体架构总结](/concepts/08-architecture-summary.md#扩展点)
+- [04-仓库提供者系统](../concepts/04-repo-providers.md)
+- [07-前端URL解析机制](../concepts/07-frontend-detectors.md)
+- [08-整体架构总结](../concepts/08-architecture-summary.md#扩展点)

@@ -450,9 +450,9 @@ typedef struct _heaptypeobject {
 
 ## 相关概念
 
-- [对象模型：PyObject 与 PyVarObject](/concepts/02-object-model.md) — 所有对象的基础结构，PyTypeObject 的 ob_base
-- [源码目录结构导航](/concepts/01-source-layout.md) — Include/cpython/object.h 和 Objects/typeobject.c 的位置
-- [CPython 简介](/concepts/00-introduction.md) — 类型系统在整体架构中的位置
-- [CPython 源码信源登记](/references/cpython-source.md) — PyTypeObject 定义路径与完整文件清单
+- [对象模型：PyObject 与 PyVarObject](02-object-model.md) — 所有对象的基础结构，PyTypeObject 的 ob_base
+- [源码目录结构导航](01-source-layout.md) — Include/cpython/object.h 和 Objects/typeobject.c 的位置
+- [CPython 简介](00-introduction.md) — 类型系统在整体架构中的位置
+- [CPython 源码信源登记](../references/cpython-source.md) — PyTypeObject 定义路径与完整文件清单
 
-[^cpython-source]: CPython 源码信源，见 [cpython-source.md](/references/cpython-source.md)。结构体定义来自 `Include/cpython/object.h`（CPython 3.16.0a0）。
+[^cpython-source]: CPython 源码信源，见 [cpython-source.md](../references/cpython-source.md)。结构体定义来自 `Include/cpython/object.h`（CPython 3.16.0a0）。

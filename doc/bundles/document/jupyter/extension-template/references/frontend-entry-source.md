@@ -196,7 +196,7 @@ export async function requestAPI<T>(
 
 ## 相关概念
 
-- [前端扩展开发](/concepts/06-frontend-extension.md)
-- [MIME 渲染器开发](/concepts/08-mime-renderer.md)
-- [主题扩展开发](/concepts/09-theme-extension.md)
-- [服务端扩展开发](/concepts/07-server-extension.md)
+- [前端扩展开发](../concepts/06-frontend-extension.md)
+- [MIME 渲染器开发](../concepts/08-mime-renderer.md)
+- [主题扩展开发](../concepts/09-theme-extension.md)
+- [服务端扩展开发](../concepts/07-server-extension.md)

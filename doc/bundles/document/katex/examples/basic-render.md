@@ -237,7 +237,7 @@ HTML：
 <div class="math-display">\int_0^1 f(x)\,dx</div>
 ```
 
-或者使用 [auto-render扩展](/examples/auto-render-usage.md) 自动处理 `$...$` 分隔符。
+或者使用 [auto-render扩展](auto-render-usage.md) 自动处理 `$...$` 分隔符。
 
 ## 持久宏（Persistent Macros）
 
@@ -252,7 +252,7 @@ katex.render(String.raw`\RR^n`, el2, { macros });
 
 当作者使用 `\gdef` 时，KaTeX 将宏定义插入传入的 `macros` 对象，由于该对象在多次调用间持续存在，后续渲染可以使用前面定义的宏。
 
-**安全注意**：持久宏可改变 KaTeX 行为（如重定义标准命令），应仅在共同信任的多个元素间使用；不应跨多用户消息启用。多用户场景应为每条消息创建独立的 `macros` 对象。详见 [宏系统](/concepts/09-macro-system.md) 和 [安全与错误处理](/concepts/18-security-and-errors.md)。
+**安全注意**：持久宏可改变 KaTeX 行为（如重定义标准命令），应仅在共同信任的多个元素间使用；不应跨多用户消息启用。多用户场景应为每条消息创建独立的 `macros` 对象。详见 [宏系统](../concepts/09-macro-system.md) 和 [安全与错误处理](../concepts/18-security-and-errors.md)。
 
 ## 输出格式选择
 
@@ -269,13 +269,13 @@ katex.render(expr, el, {output: "htmlAndMathml"});
 
 ## 相关内容
 
-- [快速开始](/concepts/01-getting-started.md)
-- [安装与运行时](/concepts/15-installation-and-runtime.md)
-- [渲染管线](/concepts/06-render-pipeline.md)
-- [配置系统](/concepts/10-settings-options.md)
-- [支持的函数](/concepts/19-supported-functions.md)
-- [自定义宏示例](/examples/custom-macros.md)
-- [错误处理示例](/examples/error-handling.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [安装与运行时](../concepts/15-installation-and-runtime.md)
+- [渲染管线](../concepts/06-render-pipeline.md)
+- [配置系统](../concepts/10-settings-options.md)
+- [支持的函数](../concepts/19-supported-functions.md)
+- [自定义宏示例](custom-macros.md)
+- [错误处理示例](error-handling.md)
 
 [^web-api]: 官网 API 页面，https://katex.org/docs/api
 [^web-browser]: 官网 Browser 页面，https://katex.org/docs/browser

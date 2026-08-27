@@ -218,8 +218,8 @@ ogp_site_url = "https://myproj.readthedocs.io/en/latest/"
 
 ## 相关概念
 
-- [配置选项全解](/concepts/02-configuration.md)
-- [核心标签生成流程](/concepts/03-tag-generation.md)
-- [社交卡片生成](/concepts/08-social-cards.md)
-- [基础配置示例](/examples/basic-setup.md)
-- [sphinxext-opengraph 源码信源登记](/references/sphinxext-opengraph-source.md)
+- [配置选项全解](02-configuration.md)
+- [核心标签生成流程](03-tag-generation.md)
+- [社交卡片生成](08-social-cards.md)
+- [基础配置示例](../examples/basic-setup.md)
+- [sphinxext-opengraph 源码信源登记](../references/sphinxext-opengraph-source.md)

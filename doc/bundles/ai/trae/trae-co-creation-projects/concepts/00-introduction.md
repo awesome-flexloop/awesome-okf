@@ -75,7 +75,7 @@ Collaboration 占 30% 是"共创"与"演示"的本质区别。
 
 ## 相关链接
 
-- [项目提交流程与 Issue 表单](/concepts/01-project-submission.md)
-- [审核标准与 Collaboration 权重](/concepts/02-review-criteria.md)
-- [提交共创项目示例](/examples/submit-project.md)
-- [共创项目仓库资源索引](/references/co-creation-source.md)
+- [项目提交流程与 Issue 表单](01-project-submission.md)
+- [审核标准与 Collaboration 权重](02-review-criteria.md)
+- [提交共创项目示例](../examples/submit-project.md)
+- [共创项目仓库资源索引](../references/co-creation-source.md)

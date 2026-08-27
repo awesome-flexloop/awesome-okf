@@ -59,6 +59,6 @@ sources:
 
 ## 相关概念
 
-- [简介](/concepts/00-introduction.md)
-- [CLI命令详解](/concepts/02-cli-usage.md)
-- [标签分类配置](/concepts/04-configuration.md)
+- [简介](../concepts/00-introduction.md)
+- [CLI命令详解](../concepts/02-cli-usage.md)
+- [标签分类配置](../concepts/04-configuration.md)

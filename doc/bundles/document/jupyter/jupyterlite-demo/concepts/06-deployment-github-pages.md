@@ -232,8 +232,8 @@ python -m http.server 8000 --directory dist
 
 ## 相关概念
 
-- [站点配置详解](/concepts/02-site-configuration.md)
-- [Demo 仓库结构与三件套模式](/concepts/01-demo-overview.md)
-- [自定义 Demo 站点指南](/concepts/07-customization-guide.md)
-- [从零部署实战](/examples/01-first-deployment.md)
-- [自定义 Demo 站点实战](/examples/07-custom-demo-site.md)
+- [站点配置详解](02-site-configuration.md)
+- [Demo 仓库结构与三件套模式](01-demo-overview.md)
+- [自定义 Demo 站点指南](07-customization-guide.md)
+- [从零部署实战](../examples/01-first-deployment.md)
+- [自定义 Demo 站点实战](../examples/07-custom-demo-site.md)

@@ -29,17 +29,17 @@ governance 仓库涵盖 Jupyter 项目治理的方方面面：
 | 主题 | 核心文档 |
 |------|---------|
 | 治理模型总览 | [overview.md](01-governance-model.md) |
-| 执行委员会 (EC) | [executive_council.md](/concepts/03-executive-council.md) |
-| 软件指导委员会 (SSC) | [software_steering_council.md](/concepts/04-software-steering-council.md) |
-| 软件子项目体系 | [software_subprojects.md](/concepts/06-software-subprojects.md) |
-| 常设委员会与工作组 | [standing_committees_and_working_groups.md](/concepts/07-committees-and-working-groups.md) |
-| 决策制定流程 | [decision_making.md](/concepts/09-decision-making.md) |
-| 行为准则 (CoC) | [conduct/code_of_conduct.md](/concepts/13-code-of-conduct.md) |
-| 商标政策 | [trademarks.md](/concepts/14-trademarks-and-licensing.md) |
-| 新子项目准入 | [newsubprojects.md](/concepts/11-new-subprojects.md) |
-| 选举机制 | [elections/](/concepts/10-elections-and-voting.md) |
-| 杰出贡献者 | [distinguished_contributors.md](/concepts/12-distinguished-contributors.md) |
-| 学术论文流程 | [papers.md](/concepts/15-academic-papers.md) |
+| 执行委员会 (EC) | [executive_council.md](03-executive-council.md) |
+| 软件指导委员会 (SSC) | [software_steering_council.md](04-software-steering-council.md) |
+| 软件子项目体系 | [software_subprojects.md](06-software-subprojects.md) |
+| 常设委员会与工作组 | [standing_committees_and_working_groups.md](07-committees-and-working-groups.md) |
+| 决策制定流程 | [decision_making.md](09-decision-making.md) |
+| 行为准则 (CoC) | [conduct/code_of_conduct.md](13-code-of-conduct.md) |
+| 商标政策 | [trademarks.md](14-trademarks-and-licensing.md) |
+| 新子项目准入 | [newsubprojects.md](11-new-subprojects.md) |
+| 选举机制 | [elections/](10-elections-and-voting.md) |
+| 杰出贡献者 | [distinguished_contributors.md](12-distinguished-contributors.md) |
+| 学术论文流程 | [papers.md](15-academic-papers.md) |
 
 ## 文档许可证
 
@@ -74,6 +74,6 @@ governance 仓库是理解 Jupyter 项目如何运作的"宪法"——它定义�
 
 ## 相关概念
 
-- [三主体治理模型总览](/concepts/01-governance-model.md)
-- [从 BDFL 到分布式治理的历史演进](/concepts/02-history-and-evolution.md)
-- [文档基础设施与构建系统](/concepts/16-doc-infrastructure.md)
+- [三主体治理模型总览](01-governance-model.md)
+- [从 BDFL 到分布式治理的历史演进](02-history-and-evolution.md)
+- [文档基础设施与构建系统](16-doc-infrastructure.md)

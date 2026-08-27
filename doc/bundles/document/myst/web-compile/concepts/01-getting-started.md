@@ -205,7 +205,7 @@ web-compile --sass-format compressed
 
 ## 相关概念
 
-- [简介](/concepts/00-introduction.md)
-- [三种编译类型](/concepts/02-compilation-types.md)
-- [配置文件详解](/concepts/03-configuration.md)
-- [资产编译流水线示例](/examples/asset-pipeline.md)
+- [简介](00-introduction.md)
+- [三种编译类型](02-compilation-types.md)
+- [配置文件详解](03-configuration.md)
+- [资产编译流水线示例](../examples/asset-pipeline.md)

@@ -105,7 +105,7 @@ CodeBuddy Security 定位为新一代 AI 代码安全审计平台（F-061），�
 
 ## 相关概念
 
-- [Security 安全审计](/concepts/05-security.md) — 六步闭环与对抗性审查详解
-- [产品矩阵总览](/concepts/00-product-matrix.md) — Security 在矩阵中的定位
-- [CodeBuddy IDE](/concepts/01-ide.md) — 代码审查能力与安全审计的协同
-- [NPC 云端 AI 员工](/concepts/03-npc.md) — 自主修复构建与安全闭环的关联
+- [Security 安全审计](../concepts/05-security.md) — 六步闭环与对抗性审查详解
+- [产品矩阵总览](../concepts/00-product-matrix.md) — Security 在矩阵中的定位
+- [CodeBuddy IDE](../concepts/01-ide.md) — 代码审查能力与安全审计的协同
+- [NPC 云端 AI 员工](../concepts/03-npc.md) — 自主修复构建与安全闭环的关联

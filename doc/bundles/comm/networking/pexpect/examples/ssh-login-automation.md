@@ -197,9 +197,9 @@ child.close()
 
 ## 相关概念
 
-- [pxssh SSH 自动化](/concepts/05-pxssh.md)
-- [密码提示处理](/examples/password-prompts.md)
-- [spawn 类详解](/concepts/02-spawn-class.md)
-- [expect 模式匹配](/concepts/03-expect-patterns.md)
+- [pxssh SSH 自动化](../concepts/05-pxssh.md)
+- [密码提示处理](password-prompts.md)
+- [spawn 类详解](../concepts/02-spawn-class.md)
+- [expect 模式匹配](../concepts/03-expect-patterns.md)
 
-[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](/references/pexpect-source.md)。
+[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](../references/pexpect-source.md)。

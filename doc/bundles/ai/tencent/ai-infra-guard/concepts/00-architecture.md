@@ -36,7 +36,7 @@ AI-Infra-Guard（A.I.G）由三个独立部署的组件构成：
 
 ### Server 层
 
-Server 是系统的调度核心，由 `common/websocket/RunWebServer` 启动（[go-server.md](/references/go-server.md)）。它承担以下职责：
+Server 是系统的调度核心，由 `common/websocket/RunWebServer` 启动（[go-server.md](../references/go-server.md)）。它承担以下职责：
 
 - **REST API**：基于 Gin 框架，提供任务 CRUD、模型管理、知识库管理等接口
 - **WebSocket 接入**：在 `/api/v1/agents/ws` 路径接受 Agent 注册和事件上报
@@ -119,11 +119,11 @@ Server 和 Agent 在同一主机运行，Agent 通过 `ws://127.0.0.1:8088/api/v
 
 ### Docker Compose
 
-项目根目录提供 `docker-compose.yml`，一键启动 Server + Agent。详见 [Docker 部署示例](/examples/docker-deploy.md)。
+项目根目录提供 `docker-compose.yml`，一键启动 Server + Agent。详见 [Docker 部署示例](../examples/docker-deploy.md)。
 
 ## 相关概念
 
-- [四种任务类型](/concepts/01-task-types.md)
-- [WebSocket 通信协议](/concepts/04-websocket-protocol.md)
-- [Go/Python 桥接](/concepts/05-python-bridge.md)
-- [CLI 命令行扫描](/examples/cli-scan.md)
+- [四种任务类型](01-task-types.md)
+- [WebSocket 通信协议](04-websocket-protocol.md)
+- [Go/Python 桥接](05-python-bridge.md)
+- [CLI 命令行扫描](../examples/cli-scan.md)

@@ -230,7 +230,7 @@ def quantize_fp8_kv(nope_bf16, rope_bf16, quant_tile_size=128):
 
 ## 八、相关链接
 
-- [/deepseek/flash-mla/references/api](/ai/deepseek/flash-mla/references/api) — Python API 参考
-- [/deepseek/flash-mla/references/kernel-architecture](/ai/deepseek/flash-mla/references/kernel-architecture) — SM90/SM100 内核架构
-- [/deepseek/flash-mla/concepts/kv-cache-quantization](/ai/deepseek/flash-mla/concepts/kv-cache-quantization) — FP8 量化原理与 V32/MODEL1 对比
-- [/deepseek/flash-mla/concepts/overview](/ai/deepseek/flash-mla/concepts/overview) — FlashMLA 整体概述
+- /deepseek/flash-mla/references/api — Python API 参考
+- /deepseek/flash-mla/references/kernel-architecture — SM90/SM100 内核架构
+- /deepseek/flash-mla/concepts/kv-cache-quantization — FP8 量化原理与 V32/MODEL1 对比
+- /deepseek/flash-mla/concepts/overview — FlashMLA 整体概述

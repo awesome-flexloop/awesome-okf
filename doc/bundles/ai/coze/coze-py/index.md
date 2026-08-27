@@ -54,35 +54,35 @@ for event in coze.chat.stream(
 
 | 序号 | 主题 | 说明 |
 |------|------|------|
-| 00 | [整体架构概览](/concepts/00-overview-architecture.md) | 同步/异步双轨、懒加载服务组合、模块组织 |
-| 01 | [认证体系](/concepts/01-auth-system.md) | PAT Token、JWT、Web OAuth、PKCE、设备码 |
-| 02 | [客户端初始化与配置](/concepts/02-client-init.md) | base_url、超时、自定义 http_client、日志 |
-| 03 | [对话与流式处理](/concepts/03-chat-streaming.md) | SSE 流式对话、ChatEvent、Message、工具调用 |
-| 04 | [Bot 管理](/concepts/04-bot-management.md) | Bot CRUD、发布、版本、配置模型 |
-| 05 | [工作流](/concepts/05-workflows.md) | 工作流执行、流式对话、异步运行、中断恢复 |
-| 06 | [会话管理](/concepts/06-conversations.md) | 会话生命周期、消息、反馈 |
-| 07 | [WebSocket 实时通信](/concepts/07-websockets-realtime.md) | Builder 模式、EventHandler、实时对话/语音 |
-| 08 | [音频与语音](/concepts/08-audio-voice.md) | TTS、ASR、声音、房间、直播、声纹 |
-| 09 | [分页模式与资源管理](/concepts/09-pagination-resources.md) | 三种分页器、文件、数据集、工作空间等 |
+| 00 | [整体架构概览](concepts/00-overview-architecture.md) | 同步/异步双轨、懒加载服务组合、模块组织 |
+| 01 | [认证体系](concepts/01-auth-system.md) | PAT Token、JWT、Web OAuth、PKCE、设备码 |
+| 02 | [客户端初始化与配置](concepts/02-client-init.md) | base_url、超时、自定义 http_client、日志 |
+| 03 | [对话与流式处理](concepts/03-chat-streaming.md) | SSE 流式对话、ChatEvent、Message、工具调用 |
+| 04 | [Bot 管理](concepts/04-bot-management.md) | Bot CRUD、发布、版本、配置模型 |
+| 05 | [工作流](concepts/05-workflows.md) | 工作流执行、流式对话、异步运行、中断恢复 |
+| 06 | [会话管理](concepts/06-conversations.md) | 会话生命周期、消息、反馈 |
+| 07 | [WebSocket 实时通信](concepts/07-websockets-realtime.md) | Builder 模式、EventHandler、实时对话/语音 |
+| 08 | [音频与语音](concepts/08-audio-voice.md) | TTS、ASR、声音、房间、直播、声纹 |
+| 09 | [分页模式与资源管理](concepts/09-pagination-resources.md) | 三种分页器、文件、数据集、工作空间等 |
 
 ### 💡 示例文档
 
 | 示例 | 说明 |
 |------|------|
-| [基础对话](/examples/basic-chat.md) | TokenAuth → SSE 流式对话 → 事件处理 → 多轮对话 |
-| [工作流执行](/examples/workflow-execution.md) | 工作流聊天 → runs 流式 → 中断恢复 |
-| [WebSocket 语音对话](/examples/websocket-voice-chat.md) | EventHandler → Builder 模式 → 实时 TTS/ASR |
-| [OAuth PKCE 与设备码认证](/examples/oauth-pkce-auth.md) | PKCE 流程 → 设备码流程 → Token 管理 |
+| [基础对话](examples/basic-chat.md) | TokenAuth → SSE 流式对话 → 事件处理 → 多轮对话 |
+| [工作流执行](examples/workflow-execution.md) | 工作流聊天 → runs 流式 → 中断恢复 |
+| [WebSocket 语音对话](examples/websocket-voice-chat.md) | EventHandler → Builder 模式 → 实时 TTS/ASR |
+| [OAuth PKCE 与设备码认证](examples/oauth-pkce-auth.md) | PKCE 流程 → 设备码流程 → Token 管理 |
 
 ### 📖 API 参考
 
 | 参考文档 | 覆盖范围 |
 |----------|---------|
-| [客户端入口与基础设施](/references/coze-client.md) | Coze/AsyncCoze、配置常量、HTTP 层、Stream、异常、日志 |
-| [认证体系](/references/auth-model.md) | TokenAuth、JWTAuth、OAuthApp 家族、OAuthToken、DeviceAuthCode |
-| [对话与工作流](/references/chat-workflow.md) | ChatClient、Message、ChatEvent、工具调用、WorkflowsClient、WorkflowEvent |
-| [WebSocket 与音频](/references/websockets-audio.md) | WS 基类、EventHandler、Chat/Audio WS、Audio HTTP 客户端 |
-| [数据模型、分页与资源](/references/data-pagination.md) | CozeModel、DynamicStrEnum、分页器、Bot/Conversation/File/Dataset/Workspace 等 |
+| [客户端入口与基础设施](references/coze-client.md) | Coze/AsyncCoze、配置常量、HTTP 层、Stream、异常、日志 |
+| [认证体系](references/auth-model.md) | TokenAuth、JWTAuth、OAuthApp 家族、OAuthToken、DeviceAuthCode |
+| [对话与工作流](references/chat-workflow.md) | ChatClient、Message、ChatEvent、工具调用、WorkflowsClient、WorkflowEvent |
+| [WebSocket 与音频](references/websockets-audio.md) | WS 基类、EventHandler、Chat/Audio WS、Audio HTTP 客户端 |
+| [数据模型、分页与资源](references/data-pagination.md) | CozeModel、DynamicStrEnum、分页器、Bot/Conversation/File/Dataset/Workspace 等 |
 
 ## SDK 能力速查
 
@@ -101,9 +101,9 @@ for event in coze.chat.stream(
 
 ## 链接索引
 
-- [概念文档索引](/concepts/index.md)
-- [示例文档索引](/examples/index.md)
-- [API 参考索引](/references/index.md)
+- [概念文档索引](concepts/index.md)
+- [示例文档索引](examples/index.md)
+- [API 参考索引](references/index.md)
 
 ```{toctree}
 :hidden:

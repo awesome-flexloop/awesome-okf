@@ -6,13 +6,13 @@
 
 | 序号 | 文件 | 场景 | 对应概念 |
 |------|------|------|---------|
-| 01 | [01-cli-usage.md](/bundles/containers/olot/examples/01-cli-usage.md) | CLI 命令行打包 ModelCar 完整流程 | [00-introduction](/bundles/containers/olot/concepts/00-introduction.md), [02-backends](/bundles/containers/olot/concepts/02-backends.md) |
-| 02 | [02-python-api.md](/bundles/containers/olot/examples/02-python-api.md) | Python API 编程与自动化打包 | [03-python-api](/bundles/containers/olot/concepts/03-python-api.md), [02-backends](/bundles/containers/olot/concepts/02-backends.md) |
+| 01 | [01-cli-usage.md](01-cli-usage.md) | CLI 命令行打包 ModelCar 完整流程 | [00-introduction](../concepts/00-introduction.md), [02-backends](../concepts/02-backends.md) |
+| 02 | [02-python-api.md](02-python-api.md) | Python API 编程与自动化打包 | [03-python-api](../concepts/03-python-api.md), [02-backends](../concepts/02-backends.md) |
 
 ## 示例选择指南
 
-- **快速体验/命令行使用**：从 [01-cli-usage.md](/bundles/containers/olot/examples/01-cli-usage.md) 开始
-- **CI/CD 集成/代码中调用**：阅读 [02-python-api.md](/bundles/containers/olot/examples/02-python-api.md)
+- **快速体验/命令行使用**：从 [01-cli-usage.md](01-cli-usage.md) 开始
+- **CI/CD 集成/代码中调用**：阅读 [02-python-api.md](02-python-api.md)
 - **纯 Python 无外部依赖环境**：参考示例 2 中的 oras-py 后端
 - **批量自动化处理**：参考示例 3 的自动后端检测模式
 

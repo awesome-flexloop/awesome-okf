@@ -226,6 +226,6 @@ def build_app(server: OctopServer) -> FastAPI:
 
 ## 相关概念
 
-- [/concepts/06-cli-commands.md](/concepts/06-cli-commands.md)
-- [/concepts/05-acp-protocol.md](/concepts/05-acp-protocol.md)
-- [/concepts/00-architecture.md](/concepts/00-architecture.md)
+- [/concepts/06-cli-commands.md](../concepts/06-cli-commands.md)
+- [/concepts/05-acp-protocol.md](../concepts/05-acp-protocol.md)
+- [/concepts/00-architecture.md](../concepts/00-architecture.md)

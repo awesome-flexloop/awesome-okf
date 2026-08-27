@@ -195,7 +195,7 @@ pyproject.toml 中的 wheel 共享数据映射（F-141）将构建产物安装�
 
 ## 相关概念
 
-- [07 扩展生态系统](/concepts/07-extension-ecosystem.md)
-- [01 整体架构概览](/concepts/01-architecture-overview.md)
-- [02 应用框架与 Shell 布局](/concepts/02-application-shell.md)
-- [00 概述与知识地图](/concepts/00-introduction.md)
+- [07 扩展生态系统](07-extension-ecosystem.md)
+- [01 整体架构概览](01-architecture-overview.md)
+- [02 应用框架与 Shell 布局](02-application-shell.md)
+- [00 概述与知识地图](00-introduction.md)

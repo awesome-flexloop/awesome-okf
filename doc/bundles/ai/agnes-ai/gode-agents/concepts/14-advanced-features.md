@@ -552,10 +552,10 @@ CLI 的 `--tools` 参数默认值为 `["web_search"]`，这意味着默认会启
 
 ## 相关链接
 
-- [多步推理循环](/concepts/03-multi-step-agent.md) — Agent的run()循环与managed_agents调用
-- [提示词模板系统](/concepts/12-prompt-templates.md) — managed_agent.task/report模板
-- [工具系统：@tool装饰器与Tool基类](/concepts/07-tool-system.md) — 工具的保存与加载
-- [CodeAgent：代码执行范式](/concepts/06-code-agent.md) — CodeAgent作为Manager或Worker
-- [模型抽象层与多后端](/concepts/09-model-layer.md) — load_model动态创建模型
-- [Agents API 参考](/references/agents-api.md) — save/from_hub/push_to_hub完整API
-- [Utils API 参考](/references/utils-api.md) — CLI和GradioUI相关API
+- [多步推理循环](03-multi-step-agent.md) — Agent的run()循环与managed_agents调用
+- [提示词模板系统](12-prompt-templates.md) — managed_agent.task/report模板
+- [工具系统：@tool装饰器与Tool基类](07-tool-system.md) — 工具的保存与加载
+- [CodeAgent：代码执行范式](06-code-agent.md) — CodeAgent作为Manager或Worker
+- [模型抽象层与多后端](09-model-layer.md) — load_model动态创建模型
+- [Agents API 参考](../references/agents-api.md) — save/from_hub/push_to_hub完整API
+- [Utils API 参考](../references/utils-api.md) — CLI和GradioUI相关API

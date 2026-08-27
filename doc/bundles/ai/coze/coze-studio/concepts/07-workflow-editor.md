@@ -158,7 +158,7 @@ workflow/render 包在 FlowGram 之上封装了 Coze Studio 特定的节点渲�
 
 ## 相关概念
 
-- [整体架构概览](/concepts/00-overview-ddd-architecture.md)
-- [Rush.js Monorepo 前端架构](/concepts/06-rushjs-monorepo.md)
-- [Thrift IDL 与代码生成](/concepts/02-thrift-idl-codegen.md)
-- [前端架构参考](/references/frontend-architecture.md)
+- [整体架构概览](00-overview-ddd-architecture.md)
+- [Rush.js Monorepo 前端架构](06-rushjs-monorepo.md)
+- [Thrift IDL 与代码生成](02-thrift-idl-codegen.md)
+- [前端架构参考](../references/frontend-architecture.md)

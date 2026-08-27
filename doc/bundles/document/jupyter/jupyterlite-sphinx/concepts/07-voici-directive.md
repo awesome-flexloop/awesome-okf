@@ -143,13 +143,13 @@ Voici 仪表板适合以下场景：
 注意事项：
 
 - Voici 渲染依赖 ipywidgets 等控件库在 JupyterLite 环境中的支持，确保 Notebook 中使用的 widgets 已正确安装
-- 仪表板模式下代码单元格被隐藏，不适合需要读者阅读和修改代码的场景——这种场景应使用 [jupyterlite 指令](/concepts/04-jupyterlite-directive.md) 或 [notebooklite 指令](/concepts/05-notebooklite-directive.md)
+- 仪表板模式下代码单元格被隐藏，不适合需要读者阅读和修改代码的场景——这种场景应使用 [jupyterlite 指令](04-jupyterlite-directive.md) 或 [notebooklite 指令](05-notebooklite-directive.md)
 - 必须安装 voici 包才能使用，否则构建时会报错
 
 ## 相关概念
 
-- [指令系统总览](/concepts/03-directive-overview.md)
-- [jupyterlite 指令——嵌入 JupyterLab](/concepts/04-jupyterlite-directive.md)
-- [notebooklite 指令——嵌入经典 Notebook](/concepts/05-notebooklite-directive.md)
-- [配置参考](/concepts/09-configuration.md)
-- [核心模块源码](/references/main-source.md)
+- [指令系统总览](03-directive-overview.md)
+- [jupyterlite 指令——嵌入 JupyterLab](04-jupyterlite-directive.md)
+- [notebooklite 指令——嵌入经典 Notebook](05-notebooklite-directive.md)
+- [配置参考](09-configuration.md)
+- [核心模块源码](../references/main-source.md)

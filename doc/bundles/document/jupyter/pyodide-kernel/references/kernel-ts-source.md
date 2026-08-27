@@ -135,6 +135,6 @@ interface IOptions extends IWorkerKernel.IOptions {
 
 ## 相关概念
 
-- [架构总览](/concepts/02-architecture-overview.md)
-- [Worker 通信模式](/concepts/03-worker-communication.md)
-- [消息桥接机制](/concepts/07-message-bridge.md)
+- [架构总览](../concepts/02-architecture-overview.md)
+- [Worker 通信模式](../concepts/03-worker-communication.md)
+- [消息桥接机制](../concepts/07-message-bridge.md)

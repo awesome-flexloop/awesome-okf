@@ -11,7 +11,7 @@ sources:
 
 > 来源：`docs/chapter5.md`，编辑：赵志民、李一飞、王茂霖、詹好
 
-本章从算法性质出发推导泛化保证，是[稳定性](/ai/datawhale/key-book/concepts/stability)概念的主体章节，也是 PAC 学习与统计学习理论统一的关键。
+本章从算法性质出发推导泛化保证，是稳定性概念的主体章节，也是 PAC 学习与统计学习理论统一的关键。
 
 ## 内容概要
 
@@ -78,5 +78,5 @@ $$\mathbb{P}(|X-k/2|\leq a/2)<\frac{2\sqrt{2}a}{\sqrt{\pi k}}$$
 
 ## 参见
 
-- [第 4 章：泛化界](/ai/datawhale/key-book/references/chapter4)：VC 维路径的泛化分析
-- [第 8 章：遗憾界](/ai/datawhale/key-book/references/chapter8)：在线学习中稳定性与可塑性的张力
+- 第 4 章：泛化界：VC 维路径的泛化分析
+- 第 8 章：遗憾界：在线学习中稳定性与可塑性的张力

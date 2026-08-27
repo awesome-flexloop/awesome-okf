@@ -50,9 +50,9 @@ stale_after: 2027-08-23
 
 ## 相关知识包
 
-* [Ψhē 数学形式化](/psi-math/index.md) — ψ 理论的数学形式化展开
-* [XOR-SHIFT 宇宙本论](/psi-universe/index.md) — 计算主义宇宙学模型
-* [GodGPT 应用](/godgpt/index.md) — ψ 理论的 AI 灵性引导工程化落地
+* [Ψhē 数学形式化](../psi-math/index.md) — ψ 理论的数学形式化展开
+* [XOR-SHIFT 宇宙本论](../psi-universe/index.md) — 计算主义宇宙学模型
+* [GodGPT 应用](../godgpt/index.md) — ψ 理论的 AI 灵性引导工程化落地
 
 ```{toctree}
 :hidden:

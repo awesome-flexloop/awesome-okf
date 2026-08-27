@@ -156,7 +156,7 @@ make livehtml
 
 ## 相关概念
 
-- [sphinx-autobuild 简介](/concepts/00-introduction.md)
-- [架构概览](/concepts/02-architecture-overview.md)
-- [CLI 入口与参数解析](/concepts/03-cli-and-entrypoint.md)
-- [基础使用示例](/examples/basic-usage.md)
+- [sphinx-autobuild 简介](00-introduction.md)
+- [架构概览](02-architecture-overview.md)
+- [CLI 入口与参数解析](03-cli-and-entrypoint.md)
+- [基础使用示例](../examples/basic-usage.md)

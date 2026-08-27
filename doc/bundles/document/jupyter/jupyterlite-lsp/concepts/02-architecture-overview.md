@@ -129,8 +129,8 @@ WS_BASE_URL 由 `PageConfig.getBaseUrl().replace(/^http/, 'ws')` 生成。
 
 ## 相关概念
 
-- [项目介绍](/concepts/00-introduction.md)
-- [三插件体系](/concepts/03-plugin-system.md)
-- [IJSONRPCLanguageServer 接口](/concepts/04-language-server-interface.md)
-- [Mock-Socket 桥接机制](/concepts/05-mock-socket-bridge.md)
-- [添加自定义语言服务器示例](/examples/add-custom-language-server.md)
+- [项目介绍](00-introduction.md)
+- [三插件体系](03-plugin-system.md)
+- [IJSONRPCLanguageServer 接口](04-language-server-interface.md)
+- [Mock-Socket 桥接机制](05-mock-socket-bridge.md)
+- [添加自定义语言服务器示例](../examples/add-custom-language-server.md)

@@ -421,7 +421,7 @@ expand_log(log(a**b), force=True) # → b*log(a)
 
 ### cancel()、factor()、together()、apart()
 
-这几个函数虽然主要定义在 `polys/` 模块中，但在化简中频繁使用，且作为 Expr 方法和顶层函数可用：[^F-119][^F-121]
+这几个函数虽然主要定义在 `polys/` 模块中，但在化简中频繁使用，且作为 Expr 方法和顶层函数可用：[^F-119] [^F-121]
 
 | 函数 | 定义位置 | 用途 |
 |------|---------|------|
@@ -578,15 +578,15 @@ flowchart TD
 
 ## 脚注
 
-[^F-101]: simplify 模块导出清单，参见 [simplify/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/simplify/__init__.py)
-[^F-102]: simplify 主函数签名与实现，参见 [simplify/simplify.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/simplify/simplify.py#L443)
-[^F-103]: trigsimp 函数签名，参见 [simplify/trigsimp.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/simplify/trigsimp.py#L464)
-[^F-104]: powsimp 函数签名，参见 [simplify/powsimp.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/simplify/powsimp.py#L19)
-[^F-105]: radsimp 函数签名，参见 [simplify/radsimp.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/simplify/radsimp.py#L767)
-[^F-106]: fu/combsimp/ratsimp/gammasimp 函数定义，参见 [simplify/fu.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/simplify/fu.py#L1579)、[simplify/combsimp.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/simplify/combsimp.py#L13)、[simplify/ratsimp.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/simplify/ratsimp.py#L12)
-[^F-057]: expand 系列函数定义，参见 [core/function.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/core/function.py#L2565)
-[^F-119]: cancel/factor 等多项式函数，参见 [polys/__init__.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/polys/__init__.py)
-[^F-121]: together/apart 定义位置，参见 [polys/rationaltools.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/polys/rationaltools.py#L16)、[polys/partfrac.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/polys/partfrac.py#L16)
-[^F-NS]: nsimplify 函数签名，参见 [simplify/simplify.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/simplify/simplify.py#L1404)
-[^F-CSE]: cse 函数签名，参见 [simplify/cse_main.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/simplify/cse_main.py#L729)
-[^F-TR]: FU 变换规则定义，参见 [simplify/fu.py](file:///d:/spaces/SpecWeave/external/libs/python/sympy/sympy/sympy/simplify/fu.py) 第 33-1452 行
+[^F-101]: simplify 模块导出清单，参见 simplify/__init__.py
+[^F-102]: simplify 主函数签名与实现，参见 simplify/simplify.py
+[^F-103]: trigsimp 函数签名，参见 simplify/trigsimp.py
+[^F-104]: powsimp 函数签名，参见 simplify/powsimp.py
+[^F-105]: radsimp 函数签名，参见 simplify/radsimp.py
+[^F-106]: fu/combsimp/ratsimp/gammasimp 函数定义，参见 simplify/fu.py、simplify/combsimp.py、simplify/ratsimp.py
+[^F-057]: expand 系列函数定义，参见 core/function.py
+[^F-119]: cancel/factor 等多项式函数，参见 polys/__init__.py
+[^F-121]: together/apart 定义位置，参见 polys/rationaltools.py、polys/partfrac.py
+[^F-NS]: nsimplify 函数签名，参见 simplify/simplify.py
+[^F-CSE]: cse 函数签名，参见 simplify/cse_main.py
+[^F-TR]: FU 变换规则定义，参见 simplify/fu.py 第 33-1452 行

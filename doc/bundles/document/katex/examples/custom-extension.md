@@ -340,13 +340,13 @@ mathmlBuilder(group, options) {
 
 ## 相关内容
 
-- [函数注册表](/concepts/08-function-registry.md)
-- [渲染管线](/concepts/06-render-pipeline.md)
-- [虚拟 DOM 树](/concepts/07-dom-tree.md)
-- [配置选项](/concepts/10-settings-options.md)
-- [版本迁移](/concepts/22-migration.md)
-- [自定义宏示例](/examples/custom-macros.md)
-- [安全信任示例](/examples/security-trust.md)
+- [函数注册表](../concepts/08-function-registry.md)
+- [渲染管线](../concepts/06-render-pipeline.md)
+- [虚拟 DOM 树](../concepts/07-dom-tree.md)
+- [配置选项](../concepts/10-settings-options.md)
+- [版本迁移](../concepts/22-migration.md)
+- [自定义宏示例](custom-macros.md)
+- [安全信任示例](security-trust.md)
 
-[^src]: 源码信源见 [references/katex-source.md](/references/katex-source.md)，FunctionSpec 定义于 `src/defineFunction.ts`，虚拟 DOM 节点定义于 `src/domTree.ts`。
+[^src]: 源码信源见 [references/katex-source.md](../references/katex-source.md)，FunctionSpec 定义于 `src/defineFunction.ts`，虚拟 DOM 节点定义于 `src/domTree.ts`。
 [^web-migration]: 官网 Migration 页面，https://katex.org/docs/migration；v0.17.0 变更说明 `__defineFunction` 属性不再包裹在 `props` 中。

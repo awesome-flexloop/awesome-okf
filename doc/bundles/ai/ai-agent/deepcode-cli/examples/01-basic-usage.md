@@ -198,7 +198,7 @@ deepcode -x --resume 123e4567-e89b-12d3-a456-426614174000 -p "继续之前的工
 
 ## 相关概念
 
-- [项目简介](/concepts/00-introduction.md)
-- [CLI 命令与会话管理](/concepts/04-cli-commands.md)
-- [权限系统](/concepts/02-permission-system.md)
-- [MCP 集成](/concepts/03-mcp-integration.md)
+- [项目简介](../concepts/00-introduction.md)
+- [CLI 命令与会话管理](../concepts/04-cli-commands.md)
+- [权限系统](../concepts/02-permission-system.md)
+- [MCP 集成](../concepts/03-mcp-integration.md)

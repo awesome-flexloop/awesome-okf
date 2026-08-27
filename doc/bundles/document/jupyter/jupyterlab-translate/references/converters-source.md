@@ -58,6 +58,6 @@ sources:
 
 ## 相关概念
 
-- [Jed JSON翻译格式](/concepts/06-json-jed-format.md)
-- [翻译目录管理](/concepts/05-catalog-management.md)
-- [核心工具源码映射](/references/utils-source.md)
+- [Jed JSON翻译格式](../concepts/06-json-jed-format.md)
+- [翻译目录管理](../concepts/05-catalog-management.md)
+- [核心工具源码映射](utils-source.md)

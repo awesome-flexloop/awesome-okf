@@ -237,8 +237,8 @@ m  # 显示地图
 
 ## 相关概念
 
-- [Pyodide 生态库与 %pip 安装](/concepts/05-pyodide-libraries.md)
-- [内容目录与数据文件组织](/concepts/04-content-and-data.md)
-- [交互式控件实战](/examples/04-interactive-widgets.md)
-- [数据可视化实战](/examples/03-data-visualization.md)
-- [创意编程与物理模拟](/examples/06-creative-coding.md)
+- [Pyodide 生态库与 %pip 安装](../concepts/05-pyodide-libraries.md)
+- [内容目录与数据文件组织](../concepts/04-content-and-data.md)
+- [交互式控件实战](04-interactive-widgets.md)
+- [数据可视化实战](03-data-visualization.md)
+- [创意编程与物理模拟](06-creative-coding.md)

@@ -83,5 +83,5 @@ DeepGEMM（v2.6.1）是 DeepSeek 开源的高性能 GEMM 核函数库，专为 H
 
 ## 八、与 DeepEP/TileLang 的关系
 
-- **DeepEP**（[/deepseek/deep-ep/](/ai/deepseek/deep-ep/)）：DeepSeek 的专家并行通信库，提供 EP（Expert Parallelism）的 all-to-all 通信原语，与 DeepGEMM 的 MegaMoE 协同使用——DeepEP 负责通信，DeepGEMM 负责计算
-- **TileLang**（[/deepseek/tile-kernels/](/ai/deepseek/tile-kernels/)）：TileLang 编写的核函数库，`third-party/tilelang_ops/` 包含 SwiGLU+weight 到 FP8 的融合算子，作为 DeepGEMM 核函数的补充
+- **DeepEP**（[/deepseek/deep-ep/](../../deep-ep/index.md)）：DeepSeek 的专家并行通信库，提供 EP（Expert Parallelism）的 all-to-all 通信原语，与 DeepGEMM 的 MegaMoE 协同使用——DeepEP 负责通信，DeepGEMM 负责计算
+- **TileLang**（[/deepseek/tile-kernels/](../../tile-kernels/index.md)）：TileLang 编写的核函数库，`third-party/tilelang_ops/` 包含 SwiGLU+weight 到 FP8 的融合算子，作为 DeepGEMM 核函数的补充

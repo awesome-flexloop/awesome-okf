@@ -28,4 +28,4 @@ Deep Agents Evals 包的 Agent 快速参考指南。
 
 ## 相关概念
 
-- [Evals评估套件](/ai/datawhale/deepagents/concepts/evals-suite)
+- Evals评估套件

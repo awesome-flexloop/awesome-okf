@@ -66,8 +66,8 @@ Dispatch 内核将数据写入中间缓冲区后，`DispatchCopyEpilogueRuntime`
 - `recv_x`：接收的 token 数据，形状为总接收 token 数 × hidden
 - `recv_topk_idx`：接收的 top-k 索引（非 expand 模式）
 - `recv_topk_weights`：接收的 top-k 权重
-- `handle`：[EPHandle](/ai/deepseek/deep-ep/references/buffer-elastic#ephandle-类)，路由元数据句柄
-- `event`：[EventOverlap](/ai/deepseek/deep-ep/references/events)，事件句柄用于同步
+- `handle`：EPHandle，路由元数据句柄
+- `event`：EventOverlap，事件句柄用于同步
 
 ## Combine 流程
 
@@ -165,12 +165,12 @@ DeepEP 支持 FP8 dispatch 以减少通信带宽：
 
 ## 与 DualPipe 的流水线集成
 
-在 EP+PP 混合并行中（如 [DualPipe](/ai/deepseek/dual-pipe)），ElasticBuffer 的 PP send/recv API 提供了与 dispatch/combine 共享同一对称内存缓冲区的流水线通信能力，避免额外的内存分配和拷贝。详见 [ElasticBuffer API](/ai/deepseek/deep-ep/references/buffer-elastic#流水线并行pp)。
+在 EP+PP 混合并行中（如 [DualPipe](../../dual-pipe/index.md)），ElasticBuffer 的 PP send/recv API 提供了与 dispatch/combine 共享同一对称内存缓冲区的流水线通信能力，避免额外的内存分配和拷贝。详见 ElasticBuffer API。
 
 ## 相关参考
 
-- [ElasticBuffer API](/ai/deepseek/deep-ep/references/buffer-elastic) — dispatch/combine 完整参数说明
-- [EPHandle 类](/ai/deepseek/deep-ep/references/buffer-elastic#ephandle-类) — 路由元数据详细字段
-- [事件系统](/ai/deepseek/deep-ep/references/events) — EventOverlap 同步机制
-- [基础 MoE 示例](/ai/deepseek/deep-ep/examples/basic-moe) — 可运行的 dispatch/combine 代码
-- [计算-通信重叠示例](/ai/deepseek/deep-ep/examples/event-overlap) — EventOverlap 使用示例
+- ElasticBuffer API — dispatch/combine 完整参数说明
+- EPHandle 类 — 路由元数据详细字段
+- 事件系统 — EventOverlap 同步机制
+- 基础 MoE 示例 — 可运行的 dispatch/combine 代码
+- 计算-通信重叠示例 — EventOverlap 使用示例

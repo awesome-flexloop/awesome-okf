@@ -230,6 +230,6 @@ web-compile --verbose
 
 ## 相关概念
 
-- [三种编译类型](/concepts/02-compilation-types.md)
-- [CI集成](/concepts/04-ci-integration.md)
-- [资产编译流水线示例](/examples/asset-pipeline.md)
+- [三种编译类型](02-compilation-types.md)
+- [CI集成](04-ci-integration.md)
+- [资产编译流水线示例](../examples/asset-pipeline.md)

@@ -287,7 +287,7 @@ pandas
 
 ## 相关概念
 
-- [头部按钮系统](/concepts/04-header-buttons.md)
-- [交互功能详解](/concepts/06-interactive-features.md)
-- [配置系统详解](/concepts/03-configuration.md)
-- [基础书籍配置](/examples/basic-book-setup.md)
+- [头部按钮系统](../concepts/04-header-buttons.md)
+- [交互功能详解](../concepts/06-interactive-features.md)
+- [配置系统详解](../concepts/03-configuration.md)
+- [基础书籍配置](basic-book-setup.md)

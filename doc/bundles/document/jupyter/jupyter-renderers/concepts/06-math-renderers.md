@@ -80,7 +80,7 @@ export class KatexTypesetter implements IRenderMime.ILatexTypesetter {
 
 ### 自动渲染算法
 
-[autorender.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyter-renderers/packages/katex-extension/src/autorender.ts) 实现了数学公式的自动发现和渲染，核心流程：[^katex-autorender]
+autorender.ts 实现了数学公式的自动发现和渲染，核心流程：[^katex-autorender]
 
 1. **DOM 遍历**（`renderElem`）：递归遍历 DOM 树
    - 文本节点（nodeType === 3）：调用 `renderMathInText` 处理
@@ -279,10 +279,10 @@ KaTeX 扩展在 package.json 中声明了禁用列表：[^katex-pkg]
 
 ## 相关概念
 
-- [扩展类型：MIME 渲染器 vs 应用扩展](/concepts/03-extension-types.md)
-- [MIME 渲染器开发模式](/concepts/02-mime-renderer-pattern.md)
-- [自定义数学公式排版器](/examples/02-custom-latex-typesetter.md)
-- [IRenderMime 核心 API 参考](/references/rendermime-interfaces-api.md)
+- [扩展类型：MIME 渲染器 vs 应用扩展](03-extension-types.md)
+- [MIME 渲染器开发模式](02-mime-renderer-pattern.md)
+- [自定义数学公式排版器](../examples/02-custom-latex-typesetter.md)
+- [IRenderMime 核心 API 参考](../references/rendermime-interfaces-api.md)
 
 [^katex-autorender]: katex-extension/src/autorender.ts
 [^katex-index]: katex-extension/src/index.ts

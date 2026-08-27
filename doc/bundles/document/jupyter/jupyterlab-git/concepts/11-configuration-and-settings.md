@@ -335,8 +335,8 @@ c.JupyterLabGit.output_cleaning_options = '--ClearOutputPreprocessor.enabled=Tru
 
 ## 相关概念
 
-- [插件系统与五个Plugin](/concepts/03-extension-plugin-system.md)
-- [服务端Git执行引擎](/concepts/08-server-git-execution.md)
-- [REST API通信机制](/concepts/05-rest-api-and-communication.md)
-- [GitExtension核心模型](/concepts/04-git-extension-model.md)
-- [服务端扩展入口](/references/init-py-source.md)
+- [插件系统与五个Plugin](03-extension-plugin-system.md)
+- [服务端Git执行引擎](08-server-git-execution.md)
+- [REST API通信机制](05-rest-api-and-communication.md)
+- [GitExtension核心模型](04-git-extension-model.md)
+- [服务端扩展入口](../references/init-py-source.md)

@@ -136,6 +136,6 @@ A: 需要在仓库根目录有 Binder 配置文件才会启用。或者你可能
 ---
 
 **相关概念**：
-- [GitHubDrive 虚拟文件系统](/concepts/03-github-drive.md)
-- [浏览器 UI 组件与交互](/concepts/04-browser-ui.md)
+- [GitHubDrive 虚拟文件系统](../concepts/03-github-drive.md)
+- [浏览器 UI 组件与交互](../concepts/04-browser-ui.md)
 - [认证配置示例](02-setup-authentication.md)

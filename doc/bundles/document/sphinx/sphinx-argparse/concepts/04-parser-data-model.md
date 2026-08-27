@@ -174,6 +174,6 @@ parse_parser 输出的纯字典结构是渲染层（ArgParseDirective）的唯�
 
 ## 相关概念
 
-- [argparse 指令基础](/concepts/02-directive-basics.md)
-- [子命令与路径导航](/concepts/05-nested-subcommands.md)
-- [sphinx-argparse 源码信源登记](/references/sphinx-argparse-source.md)
+- [argparse 指令基础](02-directive-basics.md)
+- [子命令与路径导航](05-nested-subcommands.md)
+- [sphinx-argparse 源码信源登记](../references/sphinx-argparse-source.md)

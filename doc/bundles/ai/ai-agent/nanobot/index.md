@@ -35,31 +35,31 @@ nanobot 是一个超轻量级、开源、自托管的个人 AI 代理框架，�
 
 | 文档 | 说明 |
 |------|------|
-| [nanobot 简介](/concepts/00-introduction.md) | 项目定位、Python Agent 核心、三端接口概览 |
-| [整体架构](/concepts/01-architecture.md) | 消息总线、SDK 门面、CLI 入口分层、网关模式 |
-| [Agent 运行时](/concepts/02-agent-runtime.md) | AgentLoop、AgentRunner、Provider 抽象、工具调用、钩子 |
-| [消息总线与事件驱动](/concepts/03-bus-messaging.md) | MessageBus、WebSocket 协议、多聊天复用、认证安全 |
-| [SDK 类型系统](/concepts/04-sdk-types.md) | StreamEvent、RunResult、SessionSnapshot、延迟导出 |
-| [多接口架构](/concepts/05-multi-interface.md) | CLI、TUI（OpenTUI）、WebUI（React+Vite）实现细节 |
+| [nanobot 简介](concepts/00-introduction.md) | 项目定位、Python Agent 核心、三端接口概览 |
+| [整体架构](concepts/01-architecture.md) | 消息总线、SDK 门面、CLI 入口分层、网关模式 |
+| [Agent 运行时](concepts/02-agent-runtime.md) | AgentLoop、AgentRunner、Provider 抽象、工具调用、钩子 |
+| [消息总线与事件驱动](concepts/03-bus-messaging.md) | MessageBus、WebSocket 协议、多聊天复用、认证安全 |
+| [SDK 类型系统](concepts/04-sdk-types.md) | StreamEvent、RunResult、SessionSnapshot、延迟导出 |
+| [多接口架构](concepts/05-multi-interface.md) | CLI、TUI（OpenTUI）、WebUI（React+Vite）实现细节 |
 
 ### 示例
 
 | 文档 | 说明 |
 |------|------|
-| [基础使用](/examples/01-basic-usage.md) | 安装、配置模型、WebUI/TUI/SDK 基本交互 |
+| [基础使用](examples/01-basic-usage.md) | 安装、配置模型、WebUI/TUI/SDK 基本交互 |
 
 ### 参考
 
 | 文档 | 说明 |
 |------|------|
-| [源码信源索引](/references/source.md) | 关键源文件与事实 ID 映射 |
+| [源码信源索引](references/source.md) | 关键源文件与事实 ID 映射 |
 
 ### 规格
 
 | 文档 | 说明 |
 |------|------|
-| [事实清单](/spec/facts.md) | 94 条从源码提取的可验证事实（F-001 ~ F-094） |
-| [架构洞察](/spec/insights.md) | 4 条架构与工程洞察（陈述/证据/反常识/行动） |
+| [事实清单](spec/facts.md) | 94 条从源码提取的可验证事实（F-001 ~ F-094） |
+| [架构洞察](spec/insights.md) | 4 条架构与工程洞察（陈述/证据/反常识/行动） |
 
 ## 目录结构
 

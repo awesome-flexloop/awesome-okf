@@ -592,15 +592,15 @@ ctx.on('internal/plugin', (fiber) => {
 
 | 文件 | 职责 |
 |------|------|
-| [client/web/src/boot.tsx](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/web/src/boot.tsx) | AppWebEntry 引导内核（两阶段启动、Fiber 巡检） |
-| [client/web/src/AppRoot.tsx](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/web/src/AppRoot.tsx) | 加载门组件（加载页/失败页/真实UI切换） |
-| [client/web/src/app-shell.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/web/src/app-shell.ts) | AppShell 组装插件（Slot 渲染器安装、renderApp 暴露） |
-| [client/web/src/app.tsx](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/web/src/app.tsx) | buildRenderApp 真实UI树组装 |
-| [client/web/src/loader-status.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/web/src/loader-status.ts) | 内核信号/存储实现、FiberState 镜像 |
-| [client/web/src/seed.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/web/src/seed.ts) | 静态模块表组装 |
-| [client/web/src/platform.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/web/src/platform.ts) | PLATFORM_MODULES 常量 |
-| [client/modules/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/modules/src/index.ts) | Node端 ClientModuleRegistry（增量扫描、图组合、bundle路由、HMR） |
-| [client/modules/src/client/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/modules/src/client/index.ts) | 浏览器端模块系统注册插件 |
-| [client/connection/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/connection/src/index.ts) | Node端连接服务（HTTP桥接、WebSocket下行、信任边界） |
-| [client/connection/src/client/connection.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/connection/src/client/connection.ts) | 浏览器端 ConnectionController（自动重连、指数退避） |
-| [client/runtime/src/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/client/runtime/src/index.ts) | 运行时状态管理入口 |
+| client/web/src/boot.tsx | AppWebEntry 引导内核（两阶段启动、Fiber 巡检） |
+| client/web/src/AppRoot.tsx | 加载门组件（加载页/失败页/真实UI切换） |
+| client/web/src/app-shell.ts | AppShell 组装插件（Slot 渲染器安装、renderApp 暴露） |
+| client/web/src/app.tsx | buildRenderApp 真实UI树组装 |
+| client/web/src/loader-status.ts | 内核信号/存储实现、FiberState 镜像 |
+| client/web/src/seed.ts | 静态模块表组装 |
+| client/web/src/platform.ts | PLATFORM_MODULES 常量 |
+| client/modules/src/index.ts | Node端 ClientModuleRegistry（增量扫描、图组合、bundle路由、HMR） |
+| client/modules/src/client/index.ts | 浏览器端模块系统注册插件 |
+| client/connection/src/index.ts | Node端连接服务（HTTP桥接、WebSocket下行、信任边界） |
+| client/connection/src/client/connection.ts | 浏览器端 ConnectionController（自动重连、指数退避） |
+| client/runtime/src/index.ts | 运行时状态管理入口 |

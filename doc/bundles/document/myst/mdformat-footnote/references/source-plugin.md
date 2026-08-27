@@ -57,5 +57,5 @@ Token 渲染器映射：
 
 ## 相关概念
 
-- [脚注渲染格式与缩进规则](/concepts/02-footnote-rendering.md)
-- [插件配置与 CLI 选项](/concepts/01-plugin-configuration.md)
+- [脚注渲染格式与缩进规则](../concepts/02-footnote-rendering.md)
+- [插件配置与 CLI 选项](../concepts/01-plugin-configuration.md)

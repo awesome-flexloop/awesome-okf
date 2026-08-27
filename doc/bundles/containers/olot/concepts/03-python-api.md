@@ -296,6 +296,6 @@ olot 主要抛出标准 Python 异常：
 
 ## 相关概念
 
-- [后端抽象层](/bundles/containers/olot/concepts/02-backends.md)：后端选择与 API
-- [OCI 层操作与四元组注解](/bundles/containers/olot/concepts/01-oci-layers.md)：层创建内部机制
-- [Python API 打包模型](/bundles/containers/olot/examples/02-python-api.md)：完整的端到端示例
+- [后端抽象层](02-backends.md)：后端选择与 API
+- [OCI 层操作与四元组注解](01-oci-layers.md)：层创建内部机制
+- [Python API 打包模型](../examples/02-python-api.md)：完整的端到端示例

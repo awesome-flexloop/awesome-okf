@@ -27,4 +27,4 @@ Monorepo 包清单与各包描述。
 
 ## 相关概念
 
-- [Monorepo 架构](/ai/datawhale/deepagents/concepts/monorepo-architecture)
+- Monorepo 架构

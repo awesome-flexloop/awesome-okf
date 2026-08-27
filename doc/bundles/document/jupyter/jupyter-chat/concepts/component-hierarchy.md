@@ -165,7 +165,7 @@ useEffect(() => {
 
 ### 3. 注册器回调
 
-扩展点通过注册器组件注入自定义 UI（见[扩展点系统](/concepts/extension-points.md)）。
+扩展点通过注册器组件注入自定义 UI（见[扩展点系统](extension-points.md)）。
 
 ## 核心子模块
 
@@ -244,9 +244,9 @@ protected createNewWidget(context): LabChatPanel {
 
 ## 相关概念
 
-- [模型层架构](/concepts/model-architecture.md)
-- [扩展点系统](/concepts/extension-points.md)
-- [消息生命周期](/concepts/message-lifecycle.md)
+- [模型层架构](model-architecture.md)
+- [扩展点系统](extension-points.md)
+- [消息生命周期](message-lifecycle.md)
 
 [^chat-tsx]: chat.tsx
 [^chat-widget]: chat-widget.tsx

@@ -180,6 +180,6 @@ demo 包含一个自定义图标 `jupyter.svg`，通过 CSS 定义 Font Awesome 
 
 ## 相关内容
 
-- [03-sphinx-conf](/concepts/03-sphinx-conf.md)
-- [06-try-examples](/concepts/06-try-examples.md)
-- [09-ci-deployment](/concepts/09-ci-deployment.md)
+- [03-sphinx-conf](03-sphinx-conf.md)
+- [06-try-examples](06-try-examples.md)
+- [09-ci-deployment](09-ci-deployment.md)

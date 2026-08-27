@@ -263,11 +263,11 @@ KV 打包版本，`kv` 形状为 `(kv_total_len, num_kv_heads, head_dim_qk * 2)`
 
 ## 五、相关链接
 
-- [/deepseek/flash-mla/concepts/overview](/ai/deepseek/flash-mla/concepts/overview) — FlashMLA 整体架构概述
-- [/deepseek/flash-mla/concepts/mla-decoding](/ai/deepseek/flash-mla/concepts/mla-decoding) — MLA 解码算法原理
-- [/deepseek/flash-mla/concepts/splitkv](/ai/deepseek/flash-mla/concepts/splitkv) — SplitKV 长序列技术
-- [/deepseek/flash-mla/concepts/kv-cache-quantization](/ai/deepseek/flash-mla/concepts/kv-cache-quantization) — FP8 KV cache 量化格式
-- [/deepseek/flash-mla/examples/basic-decoding](/ai/deepseek/flash-mla/examples/basic-decoding) — MLA 解码使用示例
-- [/deepseek/flash-mla/examples/benchmark](/ai/deepseek/flash-mla/examples/benchmark) — 性能基准测试指南
-- [/deepseek/flash-mla/references/kernel-architecture](/ai/deepseek/flash-mla/references/kernel-architecture) — SM90/SM100 内核架构详解
-- [/deepseek/flash-mla/references/kv-cache-layout](/ai/deepseek/flash-mla/references/kv-cache-layout) — KV cache 内存布局
+- /deepseek/flash-mla/concepts/overview — FlashMLA 整体架构概述
+- /deepseek/flash-mla/concepts/mla-decoding — MLA 解码算法原理
+- /deepseek/flash-mla/concepts/splitkv — SplitKV 长序列技术
+- /deepseek/flash-mla/concepts/kv-cache-quantization — FP8 KV cache 量化格式
+- /deepseek/flash-mla/examples/basic-decoding — MLA 解码使用示例
+- /deepseek/flash-mla/examples/benchmark — 性能基准测试指南
+- /deepseek/flash-mla/references/kernel-architecture — SM90/SM100 内核架构详解
+- /deepseek/flash-mla/references/kv-cache-layout — KV cache 内存布局

@@ -18,7 +18,7 @@ status: stable
 
 # cppzmq 架构洞察（I 阶段）
 
-> 在 [facts.md](./facts.md) 的 56 条事实基础上，提炼 4 个核心架构洞察。每个洞察采用「陈述 / 证据 / 反常识 / 行动」四元组结构，避免空泛赞美，落到可指导工程决策的张力点上。
+> 在 [facts.md](facts.md) 的 56 条事实基础上，提炼 4 个核心架构洞察。每个洞察采用「陈述 / 证据 / 反常识 / 行动」四元组结构，避免空泛赞美，落到可指导工程决策的张力点上。
 
 ## 洞察一：RAII 资源管理三巨头——用析构函数消灭 C API 的手动释放负担
 
@@ -119,13 +119,13 @@ status: stable
 
 | 序号 | 文件 | 主题 | 核心内容 |
 |---|---|---|---|
-| 00 | [concepts/00-overview.md](concepts/00-overview.md) | 整体架构与设计目标 | header-only 形态、与 libzmq 的分层、命名空间布局、C++11/14/17 兼容垫片、设计哲学（RAII/类型安全/零开销） |
-| 01 | [concepts/01-context.md](concepts/01-context.md) | context_t 上下文 | ctxopt 强类型选项、io_threads/max_sockets、shutdown vs close、EINTR 重试循环、移动语义 |
-| 02 | [concepts/02-socket.md](concepts/02-socket.md) | socket_t 与套接字层 | socket_type 枚举、socket_base 的 bind/connect、send/recv 结果类型、sockopt 标签机制、socket_ref 非拥有引用、proxy |
-| 03 | [concepts/03-message-and-buffer.md](concepts/03-message-and-buffer.md) | message_t 与 buffer 抽象 | 消息构造函数族、移动/拷贝语义、零拷贝 free_fn、const_buffer/mutable_buffer、buffer() 重载、str_buffer/_zbuf |
-| 04 | [concepts/04-error-handling.md](concepts/04-error-handling.md) | 错误处理 | error_t（num/what）、EAGAIN 与 optional 返回值、异常与断言的分工、错误传播模式 |
-| 05 | [concepts/05-poller.md](concepts/05-poller.md) | poller_t 与事件多路复用 | event_flags、poller_event<T> 布局兼容、add/remove/modify/wait_all、active_poller_t 回调分发、poller_ref_t |
-| 06 | [concepts/06-multipart.md](concepts/06-multipart.md) | multipart 高层抽象 | recv_multipart/send_multipart 迭代器接口、multipart_t 容器、encode/decode（RFC 50）、与 CZMQ zmsg 的关系 |
+| 00 | [concepts/00-overview.md](../concepts/00-overview.md) | 整体架构与设计目标 | header-only 形态、与 libzmq 的分层、命名空间布局、C++11/14/17 兼容垫片、设计哲学（RAII/类型安全/零开销） |
+| 01 | [concepts/01-context.md](../concepts/01-context.md) | context_t 上下文 | ctxopt 强类型选项、io_threads/max_sockets、shutdown vs close、EINTR 重试循环、移动语义 |
+| 02 | [concepts/02-socket.md](../concepts/02-socket.md) | socket_t 与套接字层 | socket_type 枚举、socket_base 的 bind/connect、send/recv 结果类型、sockopt 标签机制、socket_ref 非拥有引用、proxy |
+| 03 | [concepts/03-message-and-buffer.md](../concepts/03-message-and-buffer.md) | message_t 与 buffer 抽象 | 消息构造函数族、移动/拷贝语义、零拷贝 free_fn、const_buffer/mutable_buffer、buffer() 重载、str_buffer/_zbuf |
+| 04 | [concepts/04-error-handling.md](../concepts/04-error-handling.md) | 错误处理 | error_t（num/what）、EAGAIN 与 optional 返回值、异常与断言的分工、错误传播模式 |
+| 05 | [concepts/05-poller.md](../concepts/05-poller.md) | poller_t 与事件多路复用 | event_flags、poller_event<T> 布局兼容、add/remove/modify/wait_all、active_poller_t 回调分发、poller_ref_t |
+| 06 | [concepts/06-multipart.md](../concepts/06-multipart.md) | multipart 高层抽象 | recv_multipart/send_multipart 迭代器接口、multipart_t 容器、encode/decode（RFC 50）、与 CZMQ zmsg 的关系 |
 
 > 另预留 `concepts/07-monitor.md`（monitor_t 事件监控）作为可选扩展，本次知识地图先列 6 个核心主题（00-06 共 7 篇）。
 
@@ -133,15 +133,15 @@ status: stable
 
 | 文件 | 内容 |
 |---|---|
-| [references/zmq-hpp.md](references/zmq-hpp.md) | `zmq.hpp` 文件级参考：行号索引、类/函数/宏清单、条件编译开关（ZMQ_BUILD_DRAFT_API / ZMQ_HAVE_POLLER / ZMQ_HAVE_TIMERS / CPPZMQ_HAS_OPTIONAL 等） |
-| [references/zmq-addon-hpp.md](references/zmq-addon-hpp.md) | `zmq_addon.hpp` 文件级参考：multipart_t、自由函数、active_poller_t、poller_ref_t 的签名与依赖说明 |
+| [references/zmq-hpp.md](../references/zmq-hpp.md) | `zmq.hpp` 文件级参考：行号索引、类/函数/宏清单、条件编译开关（ZMQ_BUILD_DRAFT_API / ZMQ_HAVE_POLLER / ZMQ_HAVE_TIMERS / CPPZMQ_HAS_OPTIONAL 等） |
+| [references/zmq-addon-hpp.md](../references/zmq-addon-hpp.md) | `zmq_addon.hpp` 文件级参考：multipart_t、自由函数、active_poller_t、poller_ref_t 的签名与依赖说明 |
 
 ### examples/ —— 示例层（2 篇，可运行用法）
 
 | 文件 | 内容 |
 |---|---|
-| [examples/hello-world.md](examples/hello-world.md) | REQ-REP 最小示例：context_t + socket_t + send/recv(message_t) 与 buffer 两种写法、错误处理 |
-| [examples/multipart-poller.md](examples/multipart-poller.md) | 多部分消息 + poller_t/active_poller_t 示例：send_multipart/recv_multipart、multipart_t、事件回调注册与分发 |
+| [examples/hello-world.md](../examples/hello-world.md) | REQ-REP 最小示例：context_t + socket_t + send/recv(message_t) 与 buffer 两种写法、错误处理 |
+| [examples/multipart-poller.md](../examples/multipart-poller.md) | 多部分消息 + poller_t/active_poller_t 示例：send_multipart/recv_multipart、multipart_t、事件回调注册与分发 |
 
 ### 文档关系图
 

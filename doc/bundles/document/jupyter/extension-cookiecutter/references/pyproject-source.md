@@ -244,6 +244,6 @@ Ruff linter 配置：
 
 ## 相关概念
 
-- [构建系统详解](/concepts/08-build-system.md)
-- [代码质量工具](/concepts/11-code-quality.md)
-- [打包发布指南](/concepts/12-packaging-release.md)
+- [构建系统详解](../concepts/08-build-system.md)
+- [代码质量工具](../concepts/11-code-quality.md)
+- [打包发布指南](../concepts/12-packaging-release.md)

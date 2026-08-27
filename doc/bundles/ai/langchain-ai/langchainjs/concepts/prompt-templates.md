@@ -224,6 +224,6 @@ const results = await chain.batch([
 
 ## 相关文档
 
-- [Runnable 接口](/ai/langchain-ai/langchainjs/concepts/runnable-interface) — 模板作为 Runnable 的组合能力
-- [消息系统](/ai/langchain-ai/langchainjs/concepts/message-system) — BaseMessage 类型
-- [构建 LCEL 链示例](/ai/langchain-ai/langchainjs/examples/lcel-chain) — Prompt → Model → Parser
+- Runnable 接口 — 模板作为 Runnable 的组合能力
+- 消息系统 — BaseMessage 类型
+- 构建 LCEL 链示例 — Prompt → Model → Parser

@@ -165,11 +165,11 @@ curl https://apihub.agnes-ai.com/v1/images/generations \
 
 ## 相关示例
 
-- [Python对话补全示例](/examples/chat-completion.md)
-- [视频生成示例](/examples/video-generation.md)
-- [Agent工作流示例](/examples/agent-workflow.md)
+- [Python对话补全示例](chat-completion.md)
+- [视频生成示例](video-generation.md)
+- [Agent工作流示例](agent-workflow.md)
 
 ## 相关概念
 
-- [图像生成 API](/concepts/04-image-generation.md)
-- [速率限制与配额](/concepts/06-rate-limits.md)
+- [图像生成 API](../concepts/04-image-generation.md)
+- [速率限制与配额](../concepts/06-rate-limits.md)

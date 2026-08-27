@@ -215,7 +215,7 @@ doit info <task>   # 查看任务详情
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [构建系统详解](/concepts/07-build-system.md)
-- [Mock-Socket 桥接机制](/concepts/05-mock-socket-bridge.md)
-- [构建系统源码引用](/references/build-source.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [构建系统详解](../concepts/07-build-system.md)
+- [Mock-Socket 桥接机制](../concepts/05-mock-socket-bridge.md)
+- [构建系统源码引用](../references/build-source.md)

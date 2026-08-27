@@ -74,5 +74,5 @@ TODO 注释表明 markdown-it 仅支持数字编号。
 
 ## 相关概念
 
-- [三阶段转换流水线架构](/concepts/03-conversion-pipeline.md)
-- [LosslessRSTParser 与自定义 Transform](/concepts/04-lossless-parser.md)
+- [三阶段转换流水线架构](../concepts/03-conversion-pipeline.md)
+- [LosslessRSTParser 与自定义 Transform](../concepts/04-lossless-parser.md)

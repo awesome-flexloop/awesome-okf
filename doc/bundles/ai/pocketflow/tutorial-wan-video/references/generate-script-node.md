@@ -154,4 +154,4 @@ animation_prompt: "Camera movement description..."
 
 ## 源码位置
 
-[nodes.py#L73-L156](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Wan-Video/nodes.py#L73-L156)
+nodes.py#L73-L156

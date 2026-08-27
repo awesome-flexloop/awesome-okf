@@ -205,7 +205,7 @@ JupyterLab 启动 → 自动进入预设布局 → demo/ 目录可见 → 开始
 
 ## 相关概念
 
-- [仓库目录结构详解](/concepts/01-repo-structure.md)
-- [build.py 与 talks.yml 配置化组装](/concepts/03-build-system.md)
-- [工作区布局与交互体验](/concepts/07-workspace-layout.md)
-- [实战：在 Binder 启动 JupyterLab 演示](/examples/01-launch-binder.md)
+- [仓库目录结构详解](01-repo-structure.md)
+- [build.py 与 talks.yml 配置化组装](03-build-system.md)
+- [工作区布局与交互体验](07-workspace-layout.md)
+- [实战：在 Binder 启动 JupyterLab 演示](../examples/01-launch-binder.md)

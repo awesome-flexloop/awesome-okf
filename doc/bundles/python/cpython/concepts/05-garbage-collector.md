@@ -303,4 +303,4 @@ finally:
 - [引用计数与内存分配](04-reference-counting.md) — 主要的内存管理机制，GC 是其补充
 - [类型系统与 PyTypeObject](03-type-system.md) — 类型标志 `Py_TPFLAGS_HAVE_GC` 和方法套件
 - [解释器帧与执行栈](06-interpreter-frame.md) — 栈帧也可能持有对象引用，需要 GC 遍历
-- [CPython 源码信源登记](/references/cpython-source.md) — GC 相关关键文件索引
+- [CPython 源码信源登记](../references/cpython-source.md) — GC 相关关键文件索引

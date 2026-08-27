@@ -294,10 +294,10 @@ connect() 验证顺序：
 
 ## 相关概念
 
-- [认证体系](/concepts/05-authentication.md)
-- [SSHClient 详解](/concepts/02-ssh-client.md)
-- [服务端开发](/concepts/09-server.md)
-- [高级模式](/concepts/10-advanced-patterns.md)
-- [基础连接示例](/examples/basic-connection.md)
+- [认证体系](05-authentication.md)
+- [SSHClient 详解](02-ssh-client.md)
+- [服务端开发](09-server.md)
+- [高级模式](10-advanced-patterns.md)
+- [基础连接示例](../examples/basic-connection.md)
 
-[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](/references/paramiko-source.md)。
+[^paramiko-source]: paramiko 源码信源，见 [paramiko-source.md](../references/paramiko-source.md)。

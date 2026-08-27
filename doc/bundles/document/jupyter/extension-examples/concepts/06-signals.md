@@ -203,7 +203,7 @@ SignalExamplePanel 内部包含子Widget，通过Signal连接model和view，类�
 
 ## 相关概念
 
-- [Widget与Shell布局](/concepts/05-widgets-shell.md)
-- [自定义文档类型](/concepts/12-documents.md)
-- [Kernel交互](/concepts/11-kernel-interaction.md)
-- [核心API与Token参考](/references/core-api-tokens.md)
+- [Widget与Shell布局](05-widgets-shell.md)
+- [自定义文档类型](12-documents.md)
+- [Kernel交互](11-kernel-interaction.md)
+- [核心API与Token参考](../references/core-api-tokens.md)

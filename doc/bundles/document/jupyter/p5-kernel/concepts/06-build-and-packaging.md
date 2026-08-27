@@ -308,6 +308,6 @@ jupyter lite serve
 
 ## 相关概念
 
-- [扩展注册与 CDN 配置](/concepts/05-extension-registration.md)
-- [P5Executor 与渲染机制](/concepts/03-executor-and-rendering.md)
-- [架构概览](/concepts/01-architecture-overview.md)
+- [扩展注册与 CDN 配置](05-extension-registration.md)
+- [P5Executor 与渲染机制](03-executor-and-rendering.md)
+- [架构概览](01-architecture-overview.md)

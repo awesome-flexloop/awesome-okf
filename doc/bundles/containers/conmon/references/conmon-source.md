@@ -14,7 +14,7 @@ sources:
 
 # conmon 主入口信源
 
-> 信源文件：[conmon.c](file:///d:/spaces/SpecWeave/external/dao/action/Containers/conmon/src/conmon.c)
+> 信源文件：conmon.c
 
 本文档记录 conmon 主入口 `main()` 函数的完整流程、关键函数调用和数据结构。
 

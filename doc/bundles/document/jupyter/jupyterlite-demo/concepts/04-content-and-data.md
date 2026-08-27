@@ -153,8 +153,8 @@ MTEITAAMVKELRESTGAGMMDCKNALSETNGDFDKAVQLLREKGLGKAAKKADRLAAEG""")
 
 ## 相关概念
 
-- [Demo 仓库结构与三件套模式](/concepts/01-demo-overview.md)
-- [三大内核生态对比](/concepts/03-kernel-ecosystem.md)
-- [Pyodide 生态库与 %pip 安装](/concepts/05-pyodide-libraries.md)
-- [从零部署到 GitHub Pages](/examples/01-first-deployment.md)
-- [自定义 Demo 站点指南](/concepts/07-customization-guide.md)
+- [Demo 仓库结构与三件套模式](01-demo-overview.md)
+- [三大内核生态对比](03-kernel-ecosystem.md)
+- [Pyodide 生态库与 %pip 安装](05-pyodide-libraries.md)
+- [从零部署到 GitHub Pages](../examples/01-first-deployment.md)
+- [自定义 Demo 站点指南](07-customization-guide.md)

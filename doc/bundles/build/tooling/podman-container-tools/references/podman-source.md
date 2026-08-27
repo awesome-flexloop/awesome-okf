@@ -114,6 +114,6 @@ podman-container-tools 是一个容器工具生态 monorepo，包含以下子项
 
 ## 相关概念
 
-- [Podman简介](/concepts/00-introduction.md)
-- [架构概览](/concepts/02-architecture-overview.md)
-- [Runtime运行时](/concepts/03-runtime.md)
+- [Podman简介](../concepts/00-introduction.md)
+- [架构概览](../concepts/02-architecture-overview.md)
+- [Runtime运行时](../concepts/03-runtime.md)

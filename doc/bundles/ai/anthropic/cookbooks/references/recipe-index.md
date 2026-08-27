@@ -162,8 +162,8 @@ stale_after: 2027-08-27
 
 ## 相关概念
 
-- [Cookbook 导览](/cookbooks/concepts/00-overview.md) — 如何选择适合你的 Cookbook
-- [工具调用模式](/cookbooks/concepts/01-tool-use-patterns.md) — Tool Use 分类下所有 recipe 的模式总结
-- [多模态模式](/cookbooks/concepts/02-multimodal-patterns.md) — Multimodal 分类下 recipe 的模式总结
-- [RAG 与知识检索模式](/cookbooks/concepts/03-rag-patterns.md) — RAG/Embeddings/向量数据库相关 recipe 的模式总结
-- [高级技巧](/cookbooks/concepts/04-advanced-techniques.md) — Advanced Techniques 分类下所有 recipe 的模式总结
+- [Cookbook 导览](../concepts/00-overview.md) — 如何选择适合你的 Cookbook
+- [工具调用模式](../concepts/01-tool-use-patterns.md) — Tool Use 分类下所有 recipe 的模式总结
+- [多模态模式](../concepts/02-multimodal-patterns.md) — Multimodal 分类下 recipe 的模式总结
+- [RAG 与知识检索模式](../concepts/03-rag-patterns.md) — RAG/Embeddings/向量数据库相关 recipe 的模式总结
+- [高级技巧](../concepts/04-advanced-techniques.md) — Advanced Techniques 分类下所有 recipe 的模式总结

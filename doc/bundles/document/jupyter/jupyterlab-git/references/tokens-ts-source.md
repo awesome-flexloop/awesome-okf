@@ -246,7 +246,7 @@ enum ContextCommandIDs {
 
 ## 相关概念
 
-- [GitExtension核心模型](/concepts/04-git-extension-model.md)
-- [REST API通信机制](/concepts/05-rest-api-and-communication.md)
-- [插件系统与五个Plugin](/concepts/03-extension-plugin-system.md)
-- [可插拔Diff系统](/concepts/06-diff-provider-system.md)
+- [GitExtension核心模型](../concepts/04-git-extension-model.md)
+- [REST API通信机制](../concepts/05-rest-api-and-communication.md)
+- [插件系统与五个Plugin](../concepts/03-extension-plugin-system.md)
+- [可插拔Diff系统](../concepts/06-diff-provider-system.md)

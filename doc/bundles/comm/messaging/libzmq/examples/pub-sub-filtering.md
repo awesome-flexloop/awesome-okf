@@ -345,8 +345,8 @@ SUB 在连接建立和握手完成之前发送的消息会丢失。解决方案�
 
 ## 延伸阅读
 
-- [消息模式实现](/concepts/11-patterns.md) — trie/mtrie 前缀树和 dist 分发算法
-- [编解码与帧格式](/concepts/12-encoder-decoder.md) — SUBSCRIBE/CANCEL 命令帧格式
-- [管道与流控](/concepts/04-pipe.md) — HWM 流控和 conflate 模式
-- [ZMTP 协议引擎](/concepts/06-zmtp-engine.md) — 命令帧在握手后传递
-- [PUSH/PULL 流水线](/examples/push-pull-pipeline.md) — 另一种消息分发模式
+- [消息模式实现](../concepts/11-patterns.md) — trie/mtrie 前缀树和 dist 分发算法
+- [编解码与帧格式](../concepts/12-encoder-decoder.md) — SUBSCRIBE/CANCEL 命令帧格式
+- [管道与流控](../concepts/04-pipe.md) — HWM 流控和 conflate 模式
+- [ZMTP 协议引擎](../concepts/06-zmtp-engine.md) — 命令帧在握手后传递
+- [PUSH/PULL 流水线](push-pull-pipeline.md) — 另一种消息分发模式

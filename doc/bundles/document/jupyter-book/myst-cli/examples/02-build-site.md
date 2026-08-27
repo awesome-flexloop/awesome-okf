@@ -227,6 +227,6 @@ myst clean --all
 
 ## 相关命令
 
-- [启动开发服务器](/examples/03-dev-server.md)
-- [初始化项目](/examples/01-init-project.md)
-- [Build 管线](/concepts/01-build-pipeline.md)
+- [启动开发服务器](03-dev-server.md)
+- [初始化项目](01-init-project.md)
+- [Build 管线](../concepts/01-build-pipeline.md)

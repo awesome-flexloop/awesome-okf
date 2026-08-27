@@ -204,8 +204,8 @@ sphinx-autobuild -a -j auto docs docs/_build/html \
 
 ## 相关概念
 
-- [文件监听与过滤](/concepts/05-file-watching.md)
-- [构建系统](/concepts/04-builder-system.md)
-- [服务器与热重载](/concepts/06-server-and-hotreload.md)
-- [基础使用](/examples/basic-usage.md)
-- [多项目并行](/examples/multi-project-setup.md)
+- [文件监听与过滤](../concepts/05-file-watching.md)
+- [构建系统](../concepts/04-builder-system.md)
+- [服务器与热重载](../concepts/06-server-and-hotreload.md)
+- [基础使用](basic-usage.md)
+- [多项目并行](multi-project-setup.md)

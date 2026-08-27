@@ -58,6 +58,6 @@ JupyterLab 内置的协作模式（`collaborative: true`）默认使用纯 WebSo
 
 ## 相关概念
 
-- [安装与快速开始](/concepts/01-getting-started.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [WebRtcManager 配置管理](/concepts/03-webrtc-manager.md)
+- [安装与快速开始](01-getting-started.md)
+- [架构总览](02-architecture-overview.md)
+- [WebRtcManager 配置管理](03-webrtc-manager.md)

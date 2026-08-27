@@ -133,7 +133,7 @@ Jupyter 的选举（尤其是 EC 选举）使用**排序复选制**（Ranked Cho
 
 ## 相关概念
 
-- [执行委员会（EC）](/concepts/03-executive-council.md)
-- [理事会联盟（UoC）与选举人团](/concepts/08-union-of-councils.md)
-- [决策制定流程](/concepts/09-decision-making.md)
-- [杰出贡献者制度](/concepts/12-distinguished-contributors.md)
+- [执行委员会（EC）](03-executive-council.md)
+- [理事会联盟（UoC）与选举人团](08-union-of-councils.md)
+- [决策制定流程](09-decision-making.md)
+- [杰出贡献者制度](12-distinguished-contributors.md)

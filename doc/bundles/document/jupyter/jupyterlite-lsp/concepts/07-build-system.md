@@ -273,8 +273,8 @@ D.JS_VERSION = PY_VERSION.replace("a", "-alpha").replace("b", "-beta")
 
 ## 相关概念
 
-- [Python包与Labextension注册](/concepts/08-python-package.md)
-- [Mock-Socket 桥接机制](/concepts/05-mock-socket-bridge.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [构建系统源码引用](/references/build-source.md)
-- [本地开发环境搭建](/examples/local-dev-setup.md)
+- [Python包与Labextension注册](08-python-package.md)
+- [Mock-Socket 桥接机制](05-mock-socket-bridge.md)
+- [快速开始](01-getting-started.md)
+- [构建系统源码引用](../references/build-source.md)
+- [本地开发环境搭建](../examples/local-dev-setup.md)

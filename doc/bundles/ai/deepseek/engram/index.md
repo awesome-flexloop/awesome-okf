@@ -59,17 +59,17 @@ python engram_demo_v1.py
 
 ### 核心概念
 
-- [总览](/ai/deepseek/engram/concepts/overview) — Engram 定位、条件记忆理念、与 MoE 的关系、U 型缩放定律
-- [N-gram 哈希与门控融合机制](/ai/deepseek/engram/concepts/ngram-hashing-and-gating) — 哈希函数设计、多头嵌入、门控机制、短卷积、完整数据流
+- 总览 — Engram 定位、条件记忆理念、与 MoE 的关系、U 型缩放定律
+- N-gram 哈希与门控融合机制 — 哈希函数设计、多头嵌入、门控机制、短卷积、完整数据流
 
 ### API 参考
 
-- [模块 API 参考](/ai/deepseek/engram/references/module-api) — EngramConfig、核心组件类、前向传播接口、TransformerBlock 集成
-- [配置策略与系统效率](/ai/deepseek/engram/references/configuration-and-efficiency) — Host 内存卸载、27B 配置、作用机制分析
+- 模块 API 参考 — EngramConfig、核心组件类、前向传播接口、TransformerBlock 集成
+- 配置策略与系统效率 — Host 内存卸载、27B 配置、作用机制分析
 
 ### 使用示例
 
-- [运行演示](/ai/deepseek/engram/examples/run-demo) — 运行官方 Demo、独立测试 Engram、观察哈希行为
+- 运行演示 — 运行官方 Demo、独立测试 Engram、观察哈希行为
 
 ## 目录结构
 

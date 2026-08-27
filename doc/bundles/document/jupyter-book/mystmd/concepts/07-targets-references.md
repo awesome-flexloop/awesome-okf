@@ -224,7 +224,7 @@ numbering:
 
 ## 相关概念
 
-- [MDAST 转换管线](/concepts/03-myst-transforms.md)
-- [公共类型系统](/concepts/04-myst-common-types.md)
-- [Frontmatter 元数据](/concepts/08-frontmatter.md)
-- [引用处理示例](/examples/03-citations-example.md)
+- [MDAST 转换管线](03-myst-transforms.md)
+- [公共类型系统](04-myst-common-types.md)
+- [Frontmatter 元数据](08-frontmatter.md)
+- [引用处理示例](../examples/03-citations-example.md)

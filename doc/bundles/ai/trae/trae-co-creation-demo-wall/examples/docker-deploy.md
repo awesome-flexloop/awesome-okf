@@ -235,7 +235,7 @@ docker-compose down -v
 
 ## 相关内容
 
-- [Docker 部署](/concepts/15-docker-deployment.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [测试体系](/concepts/16-testing.md)
-- [开发环境搭建示例](/examples/setup-dev-environment.md)
+- [Docker 部署](../concepts/15-docker-deployment.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [测试体系](../concepts/16-testing.md)
+- [开发环境搭建示例](setup-dev-environment.md)

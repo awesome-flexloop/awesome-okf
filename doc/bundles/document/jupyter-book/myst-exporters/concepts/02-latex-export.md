@@ -180,8 +180,8 @@ Handler 中通过 `state.usePackages('packagename')` 按需引用包，最终收
 
 ## 相关概念
 
-- [00-exporter-architecture](/concepts/00-exporter-architecture.md)：统一导出架构
-- [03-pdf-export](/concepts/03-pdf-export.md)：PDF 生成（LaTeX→latexmk）
-- [07-typst-export](/concepts/07-typst-export.md)：Typst 导出（与 LaTeX 对比）
-- [08-jtex-template-engine](/concepts/08-jtex-template-engine.md)：jtex 模板引擎整合 LaTeX 输出
-- [02-custom-jtex-template](/examples/02-custom-jtex-template.md)：自定义 LaTeX 模板示例
+- [00-exporter-architecture](00-exporter-architecture.md)：统一导出架构
+- [03-pdf-export](03-pdf-export.md)：PDF 生成（LaTeX→latexmk）
+- [07-typst-export](07-typst-export.md)：Typst 导出（与 LaTeX 对比）
+- [08-jtex-template-engine](08-jtex-template-engine.md)：jtex 模板引擎整合 LaTeX 输出
+- [02-custom-jtex-template](../examples/02-custom-jtex-template.md)：自定义 LaTeX 模板示例

@@ -88,6 +88,6 @@ hello_agents/
 - 全功能: `pip install "hello-agents[all]==0.2.8"`
 
 ## 相关概念
-- [Agent框架开发](/ai/datawhale/hello-agents/concepts/agent-framework-development)
-- [智能体范式与ReAct](/ai/datawhale/hello-agents/concepts/agent-paradigms-react)
-- [记忆系统](/ai/datawhale/hello-agents/concepts/memory-systems)
+- Agent框架开发
+- 智能体范式与ReAct
+- 记忆系统

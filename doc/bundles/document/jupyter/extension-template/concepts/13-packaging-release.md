@@ -214,7 +214,7 @@ jupyter lab
 
 ## 相关概念
 
-- [CI/CD 工作流详解](/concepts/12-ci-workflows.md)
-- [双包构建系统](/concepts/05-build-system.md)
-- [pyproject.toml 模板解析](/references/pyproject-source.md)
-- [package.json 模板解析](/references/package-json-source.md)
+- [CI/CD 工作流详解](12-ci-workflows.md)
+- [双包构建系统](05-build-system.md)
+- [pyproject.toml 模板解析](../references/pyproject-source.md)
+- [package.json 模板解析](../references/package-json-source.md)

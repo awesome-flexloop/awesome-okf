@@ -87,6 +87,6 @@ sources:
 
 ## 相关概念
 
-- [Crowdin贡献者集成](/concepts/10-contributors-crowdin.md)
-- [Hatch构建钩子集成](/concepts/07-hatch-build-hook.md)
-- [CLI命令参考](/concepts/03-cli-commands.md)
+- [Crowdin贡献者集成](../concepts/10-contributors-crowdin.md)
+- [Hatch构建钩子集成](../concepts/07-hatch-build-hook.md)
+- [CLI命令参考](../concepts/03-cli-commands.md)

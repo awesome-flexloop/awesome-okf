@@ -332,8 +332,8 @@ pub async fn dispatch(
 
 ## 相关概念
 
-- [Agent 核心运行时](/concepts/02-agent-core.md) — Runtime 中的 tool_registry 组件
-- [MCP 协议集成](/concepts/03-mcp-protocol.md) — MCP 工具作为 ToolHandler 注册
-- [沙箱与执行策略](/concepts/07-sandbox-execpolicy.md) — 工具执行的权限和审批
-- [Fleet 多 Agent](/concepts/05-fleet-subagents.md) — 子 agent 继承工具注册表
-- [工作区架构](/concepts/01-workspace-architecture.md) — tools crate 在分层中的位置
+- [Agent 核心运行时](02-agent-core.md) — Runtime 中的 tool_registry 组件
+- [MCP 协议集成](03-mcp-protocol.md) — MCP 工具作为 ToolHandler 注册
+- [沙箱与执行策略](07-sandbox-execpolicy.md) — 工具执行的权限和审批
+- [Fleet 多 Agent](05-fleet-subagents.md) — 子 agent 继承工具注册表
+- [工作区架构](01-workspace-architecture.md) — tools crate 在分层中的位置

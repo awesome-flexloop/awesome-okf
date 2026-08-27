@@ -618,8 +618,8 @@ client = Anthropic(
 
 ## 相关概念
 
-- [客户端初始化与配置](/python-sdk/concepts/01-client-init.md) — 通用客户端配置（超时、重试、中间件等）
-- [多云后端部署概念](/python-sdk/concepts/07-multi-cloud.md) — 多云架构设计、凭证链、继承复用原理
+- [客户端初始化与配置](../concepts/01-client-init.md) — 通用客户端配置（超时、重试、中间件等）
+- [多云后端部署概念](../concepts/07-multi-cloud.md) — 多云架构设计、凭证链、继承复用原理
 - [基础对话](01-basic-chat.md) — 学习 messages.create 的基础用法（后端无关）
 - [流式对话](02-streaming-chat.md) — 流式响应在多云客户端上同样可用
-- [Anthropic Python SDK 多云后端认证参考](/python-sdk/references/multi-cloud.md) — 多云客户端完整参数 API 参考
+- [Anthropic Python SDK 多云后端认证参考](../references/multi-cloud.md) — 多云客户端完整参数 API 参考

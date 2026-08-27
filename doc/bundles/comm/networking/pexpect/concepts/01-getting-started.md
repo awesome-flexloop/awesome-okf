@@ -196,11 +196,11 @@ print(child.before)
 
 ## 相关概念
 
-- [pexpect 简介](/concepts/00-introduction.md)
-- [spawn 类详解](/concepts/02-spawn-class.md)
-- [expect 模式匹配](/concepts/03-expect-patterns.md)
-- [发送与交互](/concepts/04-send-interact.md)
-- [pxssh SSH 自动化](/concepts/05-pxssh.md)
-- [SSH 自动登录示例](/examples/ssh-login-automation.md)
+- [pexpect 简介](00-introduction.md)
+- [spawn 类详解](02-spawn-class.md)
+- [expect 模式匹配](03-expect-patterns.md)
+- [发送与交互](04-send-interact.md)
+- [pxssh SSH 自动化](05-pxssh.md)
+- [SSH 自动登录示例](../examples/ssh-login-automation.md)
 
-[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](/references/pexpect-source.md)。
+[^pexpect-source]: pexpect 源码信源，见 [pexpect-source.md](../references/pexpect-source.md)。

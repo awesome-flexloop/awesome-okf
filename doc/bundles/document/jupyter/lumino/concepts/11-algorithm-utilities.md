@@ -24,7 +24,7 @@ Lumino 提供了独立的算法和数据结构包，不依赖 DOM，可以在 No
 
 ## @lumino/algorithm：迭代器与函数式操作
 
-[algorithm](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/algorithm/src) 包提供了基于 ES6 Iterable/Iterator 的函数式编程工具集，类似 RxJS/Lodash 但使用原生迭代器协议，没有额外抽象。
+algorithm 包提供了基于 ES6 Iterable/Iterator 的函数式编程工具集，类似 RxJS/Lodash 但使用原生迭代器协议，没有额外抽象。
 
 ### 核心概念：Iterable 与 Iterator
 
@@ -182,11 +182,11 @@ namespace ArrayExt {
 
 ## @lumino/collections：高级数据结构
 
-[collections](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/collections/src) 包提供了 JavaScript 标准库没有的高效数据结构。
+collections 包提供了 JavaScript 标准库没有的高效数据结构。
 
 ### BTree：平衡二叉树
 
-[BTree](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/collections/src/btree.ts) 是一个有序的键值对映射，使用 B-tree 数据结构实现：
+BTree 是一个有序的键值对映射，使用 B-tree 数据结构实现：
 
 ```typescript
 class BTree<T, U> {
@@ -225,7 +225,7 @@ BTree 的特点：
 
 ### LinkedList：双向链表
 
-[LinkedList](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/collections/src/linkedlist.ts) 是一个双向链表实现：
+LinkedList 是一个双向链表实现：
 
 ```typescript
 class LinkedList<T> {
@@ -265,7 +265,7 @@ LinkedList 适用于频繁在头部/中间插入/删除的场景，O(1) 复杂�
 
 ## @lumino/coreutils：核心工具集
 
-[coreutils](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/coreutils/src) 提供了多种通用工具：
+coreutils 提供了多种通用工具：
 
 ### PromiseDelegate：延迟 Promise
 
@@ -333,7 +333,7 @@ DragDrop 使用 MimeData 传递拖拽数据，Clipboard 也使用 MimeData。支
 
 ## @lumino/keyboard：键盘布局处理
 
-[keyboard](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/keyboard/src) 包处理键盘布局差异：
+keyboard 包处理键盘布局差异：
 
 ```typescript
 namespace Keyboard {
@@ -355,7 +355,7 @@ class KeyboardLayout {
 
 ## @lumino/polling：轮询机制
 
-[polling](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/polling/src) 提供可控制的轮询器：
+polling 提供可控制的轮询器：
 
 ```typescript
 type PollState = 'constructed' | 'started' | 'stopped' | 'rejected';
@@ -395,7 +395,7 @@ const poll = new Poll({
 
 ## @lumino/domutils：DOM 工具集
 
-[domutils](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/domutils/src) 提供 DOM 相关工具：
+domutils 提供 DOM 相关工具：
 
 ### Selector：CSS 选择器特异性计算
 

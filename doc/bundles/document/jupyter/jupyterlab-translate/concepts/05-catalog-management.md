@@ -199,7 +199,7 @@ pybabel compile --domain=<project> \
 
 ### JSON编译
 
-JSON文件通过 `convert_catalog_to_json()` 生成，使用Jed格式。详见[Jed JSON翻译格式](/concepts/06-json-jed-format.md)。
+JSON文件通过 `convert_catalog_to_json()` 生成，使用Jed格式。详见[Jed JSON翻译格式](06-json-jed-format.md)。
 
 ### 编译产物
 
@@ -225,8 +225,8 @@ JSON文件通过 `convert_catalog_to_json()` 生成，使用Jed格式。详见[J
 
 ## 相关概念
 
-- [字符串提取流水线](/concepts/04-extraction-pipeline.md)
-- [Jed JSON翻译格式](/concepts/06-json-jed-format.md)
-- [Hatch构建钩子集成](/concepts/07-hatch-build-hook.md)
-- [快速开始](/concepts/01-getting-started.md)
-- [核心工具源码映射](/references/utils-source.md)
+- [字符串提取流水线](04-extraction-pipeline.md)
+- [Jed JSON翻译格式](06-json-jed-format.md)
+- [Hatch构建钩子集成](07-hatch-build-hook.md)
+- [快速开始](01-getting-started.md)
+- [核心工具源码映射](../references/utils-source.md)

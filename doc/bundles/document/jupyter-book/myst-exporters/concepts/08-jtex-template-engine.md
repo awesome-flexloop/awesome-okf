@@ -246,7 +246,7 @@ jtex 提供 CLI 工具用于模板检查：
 
 ## 相关概念
 
-- [02-latex-export](/concepts/02-latex-export.md)：LaTeX 导出（LatexResult 输出）
-- [03-pdf-export](/concepts/03-pdf-export.md)：PDF 生成流程
-- [07-typst-export](/concepts/07-typst-export.md)：Typst 导出（TypstResult 输出）
-- [02-custom-jtex-template](/examples/02-custom-jtex-template.md)：自定义 jtex 模板示例
+- [02-latex-export](02-latex-export.md)：LaTeX 导出（LatexResult 输出）
+- [03-pdf-export](03-pdf-export.md)：PDF 生成流程
+- [07-typst-export](07-typst-export.md)：Typst 导出（TypstResult 输出）
+- [02-custom-jtex-template](../examples/02-custom-jtex-template.md)：自定义 jtex 模板示例

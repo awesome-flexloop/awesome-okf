@@ -227,7 +227,7 @@ Python 子系统生成的截图、报告等文件需要回传给 Server。流程
 
 ## 相关概念
 
-- [四种任务类型](/concepts/01-task-types.md)
-- [MCP 安全扫描](/concepts/06-mcp-scan.md)
-- [WebSocket 通信协议](/concepts/04-websocket-protocol.md)
-- [Python 子系统信源](/references/python-subsystems.md)
+- [四种任务类型](01-task-types.md)
+- [MCP 安全扫描](06-mcp-scan.md)
+- [WebSocket 通信协议](04-websocket-protocol.md)
+- [Python 子系统信源](../references/python-subsystems.md)

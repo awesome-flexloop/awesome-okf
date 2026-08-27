@@ -121,5 +121,5 @@ sources:
 
 ## 相关概念
 
-- [会话窗口系统](/concepts/03-session-window-system.md)
-- [设置与配置系统](/concepts/06-settings-config.md)
+- [会话窗口系统](../concepts/03-session-window-system.md)
+- [设置与配置系统](../concepts/06-settings-config.md)

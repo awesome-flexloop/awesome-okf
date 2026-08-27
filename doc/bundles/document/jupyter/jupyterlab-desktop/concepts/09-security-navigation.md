@@ -192,16 +192,16 @@ webview 是 Electron 中一个强大但危险的标签，可以加载任意网�
 
 ## 相关信源
 
-- [Navigation 信源](/references/navigation-source.md)
-- [App 信源](/references/app-source.md)
-- [Event 信源](/references/event-source.md)
+- [Navigation 信源](../references/navigation-source.md)
+- [App 信源](../references/app-source.md)
+- [Event 信源](../references/event-source.md)
 
 ## 下一篇
 
-- [多窗口与会话管理](/concepts/10-multi-window-multisession.md)
+- [多窗口与会话管理](10-multi-window-multisession.md)
 
 ## 相关概念
 
-- [事件与IPC系统](/concepts/08-event-ipc-system.md) — GetServerInfo origin 校验依赖 IPC 事件处理机制
-- [会话窗口系统](/concepts/03-session-window-system.md) — guardAppOwnedView 在 SessionWindow 构造时安装
-- [多窗口与会话管理](/concepts/10-multi-window-multisession.md) — 多窗口环境下安全守卫的安装与维护
+- [事件与IPC系统](08-event-ipc-system.md) — GetServerInfo origin 校验依赖 IPC 事件处理机制
+- [会话窗口系统](03-session-window-system.md) — guardAppOwnedView 在 SessionWindow 构造时安装
+- [多窗口与会话管理](10-multi-window-multisession.md) — 多窗口环境下安全守卫的安装与维护

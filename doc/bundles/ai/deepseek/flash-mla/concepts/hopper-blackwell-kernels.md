@@ -249,7 +249,7 @@ SplitKV 的合并阶段，将各 split 的部分结果（m_i, l_i, o_i）合并�
 
 ## 七、相关链接
 
-- [/deepseek/flash-mla/concepts/overview](/ai/deepseek/flash-mla/concepts/overview) — FlashMLA 整体概述
-- [/deepseek/flash-mla/concepts/splitkv](/ai/deepseek/flash-mla/concepts/splitkv) — SplitKV 调度与执行流程
-- [/deepseek/flash-mla/references/kernel-architecture](/ai/deepseek/flash-mla/references/kernel-architecture) — 内核架构完整技术参考
-- [/deepseek/deep-gemm/concepts/performance-optimization](/ai/deepseek/deep-gemm/concepts/performance-optimization) — DeepGEMM 性能优化技术（WGMMA/TMA/PDL 等）
+- /deepseek/flash-mla/concepts/overview — FlashMLA 整体概述
+- /deepseek/flash-mla/concepts/splitkv — SplitKV 调度与执行流程
+- /deepseek/flash-mla/references/kernel-architecture — 内核架构完整技术参考
+- /deepseek/deep-gemm/concepts/performance-optimization — DeepGEMM 性能优化技术（WGMMA/TMA/PDL 等）

@@ -181,7 +181,7 @@ Python 子系统的结果通过 stdout JSON 行的 `resultUpdate` 类型返回�
 
 ## 相关概念
 
-- [分布式架构总览](/concepts/00-architecture.md)
-- [Go/Python 桥接](/concepts/05-python-bridge.md)
-- [MCP 安全扫描](/concepts/06-mcp-scan.md)
-- [WebSocket 通信协议](/concepts/04-websocket-protocol.md)
+- [分布式架构总览](00-architecture.md)
+- [Go/Python 桥接](05-python-bridge.md)
+- [MCP 安全扫描](06-mcp-scan.md)
+- [WebSocket 通信协议](04-websocket-protocol.md)

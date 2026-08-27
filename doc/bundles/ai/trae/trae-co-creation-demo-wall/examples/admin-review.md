@@ -172,7 +172,7 @@ curl "http://localhost:3000/api/console/overview?window=7" \
 
 ## 相关内容
 
-- [审核与治理](/concepts/10-audit-governance.md)
-- [认证系统](/concepts/04-auth-system.md)
-- [字典系统](/concepts/11-dictionary-system.md)
-- [作品提交示例](/examples/submit-work.md)
+- [审核与治理](../concepts/10-audit-governance.md)
+- [认证系统](../concepts/04-auth-system.md)
+- [字典系统](../concepts/11-dictionary-system.md)
+- [作品提交示例](submit-work.md)

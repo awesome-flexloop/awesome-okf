@@ -29,7 +29,7 @@ TimerService 通过 effect 机制解决了问题 1，通过重载支持三种调
 
 ## TimerService 类定义
 
-[timer/index.ts:L11-L140](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/timer/src/index.ts#L11-L140)
+timer/index.ts:L11-L140
 
 ```typescript
 export class TimerService extends Service {
@@ -73,7 +73,7 @@ declare module 'cordis' {
 
 ## timeout — 延时执行
 
-[timer/index.ts:L27-L52](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/timer/src/index.ts#L27-L52)
+timer/index.ts:L27-L52
 
 `timeout()` 有两种调用模式，通过参数类型自动推导：
 
@@ -157,7 +157,7 @@ else {
 
 ## interval — 定时执行
 
-[timer/index.ts:L54-L101](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/timer/src/index.ts#L54-L101)
+timer/index.ts:L54-L101
 
 `interval()` 同样支持两种模式：
 
@@ -256,7 +256,7 @@ AsyncIterable 模式的关键设计：
 
 ## throttle — 节流包装
 
-[timer/index.ts:L117-L132](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/timer/src/index.ts#L117-L132)
+timer/index.ts:L117-L132
 
 ```typescript
 throttle<F extends (...args: any[]) => void>(callback: F, delay: number, noTrailing?: boolean): WithDispose<F>
@@ -309,7 +309,7 @@ throttle<F extends (...args: any[]) => void>(callback: F, delay: number, noTrail
 
 ## debounce — 防抖包装
 
-[timer/index.ts:L134-L139](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/timer/src/index.ts#L134-L139)
+timer/index.ts:L134-L139
 
 ```typescript
 debounce<F extends (...args: any[]) => void>(callback: F, delay: number): WithDispose<F>
@@ -344,7 +344,7 @@ debounce<F extends (...args: any[]) => void>(callback: F, delay: number): WithDi
 
 ## _schedule — 通用调度器
 
-[timer/index.ts:L103-L115](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/timer/src/index.ts#L103-L115)
+timer/index.ts:L103-L115
 
 throttle 和 debounce 都基于内部的 `_schedule` 方法实现：
 
@@ -517,6 +517,6 @@ class TimerService extends Service {
 
 | 文件 | 内容 |
 |------|------|
-| [timer/index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/timer/src/index.ts) | TimerService 完整实现：timeout/interval 双模式、throttle/debounce、AsyncIterable |
-| [fiber.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts) | Fiber.effect() 效果管理，定时器自动清理的底层机制 |
-| [context.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/context.ts) | Context 扩展，通过 mixin 注入 timer 方法 |
+| timer/index.ts | TimerService 完整实现：timeout/interval 双模式、throttle/debounce、AsyncIterable |
+| fiber.ts | Fiber.effect() 效果管理，定时器自动清理的底层机制 |
+| context.ts | Context 扩展，通过 mixin 注入 timer 方法 |

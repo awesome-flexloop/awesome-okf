@@ -281,8 +281,8 @@ rediraffe_redirects = {
 
 ## 相关概念
 
-- [5分钟快速上手](/concepts/01-getting-started.md)
-- [重定向图模型](/concepts/03-redirect-graph.md)
-- [配置项详解](/concepts/04-configuration.md)
-- [路径处理与跨平台兼容](/concepts/07-path-and-cross-platform.md)
-- [CI Diff检查集成](/examples/diff-checker-ci.md)
+- [5分钟快速上手](../concepts/01-getting-started.md)
+- [重定向图模型](../concepts/03-redirect-graph.md)
+- [配置项详解](../concepts/04-configuration.md)
+- [路径处理与跨平台兼容](../concepts/07-path-and-cross-platform.md)
+- [CI Diff检查集成](diff-checker-ci.md)

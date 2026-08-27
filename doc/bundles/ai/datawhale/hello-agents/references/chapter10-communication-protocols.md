@@ -75,5 +75,5 @@ sources:
 14个递进示例：从连接测试→MCP基础→GitHub MCP→Agent集成→多Agent协作→A2A客户端/服务器→ANP初始化/任务分发/负载均衡→天气MCP服务器
 
 ## 相关概念
-- [通信协议](/ai/datawhale/hello-agents/concepts/communication-protocols)
-- [多Agent协作](/ai/datawhale/hello-agents/concepts/multi-agent-collaboration)
+- 通信协议
+- 多Agent协作

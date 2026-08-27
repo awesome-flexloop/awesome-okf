@@ -15,7 +15,7 @@ sources:
 
 # langsmith-sdk JS 核心源码索引
 
-本参考页登记本次 OKF bundle 使用的源码范围。事实清单见 [/spec/facts.md](/ai/langchain-ai/langsmith-sdk/spec/facts.md)，架构洞察见 [/spec/insights.md](/ai/langchain-ai/langsmith-sdk/spec/insights.md)。
+本参考页登记本次 OKF bundle 使用的源码范围。事实清单见 [/spec/facts.md](../spec/facts.md)，架构洞察见 [/spec/insights.md](../spec/insights.md)。
 
 ## 源码位置
 
@@ -79,7 +79,7 @@ evaluate(target, { data, evaluators })
 
 ## 相关概念
 
-- [SDK 总览](/ai/langchain-ai/langsmith-sdk/concepts/overview.md)
-- [traceable 装饰器](/ai/langchain-ai/langsmith-sdk/concepts/traceable-decorator.md)
-- [RunTree 追踪模型](/ai/langchain-ai/langsmith-sdk/concepts/run-tree-tracing.md)
-- [评测运行器](/ai/langchain-ai/langsmith-sdk/concepts/evaluation.md)
+- [SDK 总览](../concepts/overview.md)
+- [traceable 装饰器](../concepts/traceable-decorator.md)
+- [RunTree 追踪模型](../concepts/run-tree-tracing.md)
+- [评测运行器](../concepts/evaluation.md)

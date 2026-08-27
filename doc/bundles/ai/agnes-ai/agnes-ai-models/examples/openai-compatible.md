@@ -167,12 +167,12 @@ curl https://api.openai.com/v1/chat/completions \
 
 ## 相关示例
 
-- [Python对话补全示例](/examples/chat-completion.md)
-- [流式对话示例](/examples/streaming-chat.md)
-- [Agent工作流示例](/examples/agent-workflow.md)
+- [Python对话补全示例](chat-completion.md)
+- 流式对话示例
+- [Agent工作流示例](agent-workflow.md)
 
 ## 相关概念
 
-- [Agnes AI 简介](/concepts/00-introduction.md)
-- [对话补全 API](/concepts/03-chat-completions.md)
-- [速率限制与配额](/concepts/06-rate-limits.md)
+- [Agnes AI 简介](../concepts/00-introduction.md)
+- [对话补全 API](../concepts/03-chat-completions.md)
+- [速率限制与配额](../concepts/06-rate-limits.md)

@@ -108,7 +108,7 @@ npm link
 
 ## 相关概念
 
-- [三包 monorepo 架构](/concepts/01-architecture.md)
-- [权限系统](/concepts/02-permission-system.md)
-- [MCP 集成](/concepts/03-mcp-integration.md)
-- [CLI 命令与会话管理](/concepts/04-cli-commands.md)
+- [三包 monorepo 架构](01-architecture.md)
+- [权限系统](02-permission-system.md)
+- [MCP 集成](03-mcp-integration.md)
+- [CLI 命令与会话管理](04-cli-commands.md)

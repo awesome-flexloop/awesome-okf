@@ -59,18 +59,18 @@ print(response.choices[0].message.content)             # 最终证明
 
 ### 核心概念
 
-- [总览](/ai/deepseek/deepseek-math-v2/concepts/overview) — 模型定位、自验证动机、训练方法论、评测成绩
-- [自验证机制详解](/ai/deepseek/deepseek-math-v2/concepts/self-verification) — 三层验证架构、评分体系、迭代精炼流程
+- 总览 — 模型定位、自验证动机、训练方法论、评测成绩
+- 自验证机制详解 — 三层验证架构、评分体系、迭代精炼流程
 
 ### API 参考
 
-- [API 使用参考](/ai/deepseek/deepseek-math-v2/references/api-usage) — API 配置、调用方式、四种 prompt 模板
-- [自验证推理管线](/ai/deepseek/deepseek-math-v2/references/self-verification-pipeline) — 多轮管线参数与配置
+- API 使用参考 — API 配置、调用方式、四种 prompt 模板
+- 自验证推理管线 — 多轮管线参数与配置
 
 ### 使用示例
 
-- [基本推理](/ai/deepseek/deepseek-math-v2/examples/basic-inference) — 单题解答、证明生成/验证、批量推理
-- [自验证管线](/ai/deepseek/deepseek-math-v2/examples/self-verification-pipeline) — 运行完整管线、参数调节、断点续跑
+- 基本推理 — 单题解答、证明生成/验证、批量推理
+- 自验证管线 — 运行完整管线、参数调节、断点续跑
 
 ## 目录结构
 

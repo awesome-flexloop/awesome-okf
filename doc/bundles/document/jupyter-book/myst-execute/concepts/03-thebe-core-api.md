@@ -56,7 +56,7 @@ const config = makeConfiguration({
 
 Config 提供 getter 访问各子配置：`config.binder`、`config.kernels`、`config.serverSettings`、`config.savedSessions`、`config.mathjax`、`config.events`。
 
-每个子配置都有合理的默认值（见 [04-thebe-configuration.md](/concepts/04-thebe-configuration.md)）。
+每个子配置都有合理的默认值（见 [04-thebe-configuration.md](04-thebe-configuration.md)）。
 
 ## ThebeServer：服务器连接
 
@@ -315,9 +315,9 @@ const rendermime = makeRenderMimeRegistry({
 
 ## 相关概念
 
-- [00-execution-architecture.md](/concepts/00-execution-architecture.md)：执行架构总览
-- [04-thebe-configuration.md](/concepts/04-thebe-configuration.md)：配置选项详解
-- [05-thebe-binder.md](/concepts/05-thebe-binder.md)：Binder 连接机制
-- [06-thebe-lite-pyodide.md](/concepts/06-thebe-lite-pyodide.md)：Pyodide 无服务器模式
-- [07-thebe-react.md](/concepts/07-thebe-react.md)：React 集成
-- [02-thebe-interactive.md](/examples/02-thebe-interactive.md)：交互式代码示例
+- [00-execution-architecture.md](00-execution-architecture.md)：执行架构总览
+- [04-thebe-configuration.md](04-thebe-configuration.md)：配置选项详解
+- [05-thebe-binder.md](05-thebe-binder.md)：Binder 连接机制
+- [06-thebe-lite-pyodide.md](06-thebe-lite-pyodide.md)：Pyodide 无服务器模式
+- [07-thebe-react.md](07-thebe-react.md)：React 集成
+- [02-thebe-interactive.md](../examples/02-thebe-interactive.md)：交互式代码示例

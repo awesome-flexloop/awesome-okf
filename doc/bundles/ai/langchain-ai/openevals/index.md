@@ -78,22 +78,22 @@ llm_result = evaluator(outputs="The sky is blue due to Rayleigh scattering.")
 
 ### 核心概念
 
-- [总览](/ai/langchain-ai/openevals/concepts/overview) — OpenEvals 是什么、解决什么问题、核心架构与评测器分类
-- [精确评测器](/ai/langchain-ai/openevals/concepts/exact-evaluators) — exactMatch、Levenshtein、嵌入相似度、JSON 混合匹配的实现机制
-- [LLM-as-Judge](/ai/langchain-ai/openevals/concepts/llm-as-judge) — 评分模式、prompt 格式化、judge 后端、结构化输出与多模态
+- 总览 — OpenEvals 是什么、解决什么问题、核心架构与评测器分类
+- 精确评测器 — exactMatch、Levenshtein、嵌入相似度、JSON 混合匹配的实现机制
+- LLM-as-Judge — 评分模式、prompt 格式化、judge 后端、结构化输出与多模态
 
 ### API 参考
 
-- [API 参考](/ai/langchain-ai/openevals/references/api) — 精确匹配、LLM-as-Judge、JSON 匹配、字符串相似度、代码评估、轨迹评估等全部公共函数
+- API 参考 — 精确匹配、LLM-as-Judge、JSON 匹配、字符串相似度、代码评估、轨迹评估等全部公共函数
 
 ### 使用示例
 
-- [基础评测](/ai/langchain-ai/openevals/examples/basic-evaluation) — 精确匹配、LLM-as-Judge、连续/离散评分、预置 Prompt、Few-Shot、JSON 混合评测、自定义 Schema
+- 基础评测 — 精确匹配、LLM-as-Judge、连续/离散评分、预置 Prompt、Few-Shot、JSON 混合评测、自定义 Schema
 
 ### 设计洞察
 
-- [事实清单](/ai/langchain-ai/openevals/spec/facts) — 从源码中提取的 50 条编号事实
-- [架构洞察](/ai/langchain-ai/openevals/spec/insights) — 评测器协议、双模式评测光谱、JS+Python 双语言对称架构
+- 事实清单 — 从源码中提取的 50 条编号事实
+- 架构洞察 — 评测器协议、双模式评测光谱、JS+Python 双语言对称架构
 
 ## 目录结构
 

@@ -29,24 +29,24 @@ description: LangSmith JavaScript/TypeScript SDK 源码学习包，覆盖 Client
 
 ### 核心概念
 
-- [SDK 总览](/ai/langchain-ai/langsmith-sdk/concepts/overview.md) — 五个核心构件、追踪链路、评测链路与数据模型
-- [traceable 自动追踪装饰器](/ai/langchain-ai/langsmith-sdk/concepts/traceable-decorator.md) — 上下文解析、流包装、Promise Proxy 与配置钩子
-- [RunTree 追踪模型](/ai/langchain-ai/langsmith-sdk/concepts/run-tree-tracing.md) — `trace_id`、`dotted_order`、`createChild`、`postRun`、`patchRun`
-- [评测运行器](/ai/langchain-ai/langsmith-sdk/concepts/evaluation.md) — `evaluate`、`_ExperimentManager`、`RunEvaluator`、`StringEvaluator`
+- [SDK 总览](concepts/overview.md) — 五个核心构件、追踪链路、评测链路与数据模型
+- [traceable 自动追踪装饰器](concepts/traceable-decorator.md) — 上下文解析、流包装、Promise Proxy 与配置钩子
+- [RunTree 追踪模型](concepts/run-tree-tracing.md) — `trace_id`、`dotted_order`、`createChild`、`postRun`、`patchRun`
+- [评测运行器](concepts/evaluation.md) — `evaluate`、`_ExperimentManager`、`RunEvaluator`、`StringEvaluator`
 
 ### 使用示例
 
-- [快速追踪与评测示例](/ai/langchain-ai/langsmith-sdk/examples/quickstart-trace-and-evaluate.md) — Client、traceable、anonymizer、evaluate、StringEvaluator 的最小组合
+- [快速追踪与评测示例](examples/quickstart-trace-and-evaluate.md) — Client、traceable、anonymizer、evaluate、StringEvaluator 的最小组合
 
 ### 参考资料
 
-- [核心源码索引](/ai/langchain-ai/langsmith-sdk/references/source-core.md) — 核心源码文件、公共导入路径与数据流
+- [核心源码索引](references/source-core.md) — 核心源码文件、公共导入路径与数据流
 
 ### 工作稿
 
-- [事实清单](/ai/langchain-ai/langsmith-sdk/spec/facts.md) — 100 条带源码路径和行号的编号事实
-- [架构洞察](/ai/langchain-ai/langsmith-sdk/spec/insights.md) — 4 个架构洞察与知识地图
-- [变更日志](/ai/langchain-ai/langsmith-sdk/log.md) — bundle 生成记录
+- [事实清单](spec/facts.md) — 100 条带源码路径和行号的编号事实
+- [架构洞察](spec/insights.md) — 4 个架构洞察与知识地图
+- [变更日志](log.md) — bundle 生成记录
 
 ## 快速开始
 

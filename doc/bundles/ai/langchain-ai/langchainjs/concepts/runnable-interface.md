@@ -197,7 +197,7 @@ prompt
 
 ## 相关文档
 
-- [总览](/ai/langchain-ai/langchainjs/concepts/overview)
-- [消息系统](/ai/langchain-ai/langchainjs/concepts/message-system)
-- [Runnable 核心 API](/ai/langchain-ai/langchainjs/references/core-runnable)
-- [构建 LCEL 链示例](/ai/langchain-ai/langchainjs/examples/lcel-chain)
+- 总览
+- 消息系统
+- Runnable 核心 API
+- 构建 LCEL 链示例

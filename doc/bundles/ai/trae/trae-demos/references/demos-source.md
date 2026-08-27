@@ -97,7 +97,7 @@ config.yml 禁用空 Issue（`blank_issues_enabled: false`），引导至 Discus
 
 ## 相关链接
 
-- [TRAE Demos 定位与期数制组织](/concepts/00-introduction.md)
-- [Demo Markdown 文档格式](/concepts/01-demo-format.md)
-- [投稿流程与多场景 Issue 模板](/concepts/02-contribution-process.md)
-- [提交 Demo 示例](/examples/submit-demo.md)
+- [TRAE Demos 定位与期数制组织](../concepts/00-introduction.md)
+- [Demo Markdown 文档格式](../concepts/01-demo-format.md)
+- [投稿流程与多场景 Issue 模板](../concepts/02-contribution-process.md)
+- [提交 Demo 示例](../examples/submit-demo.md)

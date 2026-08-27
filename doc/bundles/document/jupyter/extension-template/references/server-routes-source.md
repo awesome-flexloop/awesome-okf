@@ -187,7 +187,7 @@ def jp_server_config(jp_server_config):
 
 ## 相关概念
 
-- [服务端扩展开发](/concepts/07-server-extension.md)
-- [前端扩展开发 — 前后端通信](/concepts/06-frontend-extension.md)
-- [三层测试策略](/concepts/11-testing-strategy.md)
-- [CI/CD 工作流详解](/concepts/12-ci-workflows.md)
+- [服务端扩展开发](../concepts/07-server-extension.md)
+- [前端扩展开发 — 前后端通信](../concepts/06-frontend-extension.md)
+- [三层测试策略](../concepts/11-testing-strategy.md)
+- [CI/CD 工作流详解](../concepts/12-ci-workflows.md)

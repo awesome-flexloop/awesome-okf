@@ -190,8 +190,8 @@ SBT会检查并警告已弃用的配置键（F-169-F-179）：
 
 ## 相关概念
 
-- [主题概述](/concepts/00-introduction.md)
-- [主题架构与PST继承](/concepts/02-theme-architecture.md)
-- [布局与模板定制](/concepts/07-layout-and-templates.md)
-- [样式定制与第三方扩展适配](/concepts/08-customization.md)
-- [源码路径映射与配置速查](/references/sbt-source.md)
+- [主题概述](00-introduction.md)
+- [主题架构与PST继承](02-theme-architecture.md)
+- [布局与模板定制](07-layout-and-templates.md)
+- [样式定制与第三方扩展适配](08-customization.md)
+- [源码路径映射与配置速查](../references/sbt-source.md)

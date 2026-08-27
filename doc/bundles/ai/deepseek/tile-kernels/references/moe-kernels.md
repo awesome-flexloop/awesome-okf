@@ -26,7 +26,7 @@ scores = gate(hidden)                    # 计算专家评分
 → reduce_fused (combine)                 # 加权归约回原 token 顺序
 ```
 
-TileKernels 覆盖除核心 GEMM 之外的所有 MoE 算子。GEMM 由 [DeepGEMM](/ai/deepseek/deep-gemm/) 执行，跨节点通信由 [DeepEP](/ai/deepseek/deep-ep/) 执行。
+TileKernels 覆盖除核心 GEMM 之外的所有 MoE 算子。GEMM 由 [DeepGEMM](../../deep-gemm/index.md) 执行，跨节点通信由 [DeepEP](../../deep-ep/index.md) 执行。
 
 ---
 
@@ -343,11 +343,11 @@ Warp 内规约 topk group 选择，使用 warp shuffle 进行 warp 级 reduce。
 |---|---|---|
 | 路由评分 | gate linear | PyTorch/DeepGEMM |
 | Top-k 选择 | top2_sum_gate | TileKernels |
-| 跨节点 dispatch | all-to-all | [DeepEP](/ai/deepseek/deep-ep/) |
+| 跨节点 dispatch | all-to-all | [DeepEP](../../deep-ep/index.md) |
 | 映射构建 | get_fused_mapping | TileKernels |
 | 本地 dispatch | expand_to_fused | TileKernels |
-| Expert GEMM | m_grouped_fp8_gemm | [DeepGEMM](/ai/deepseek/deep-gemm/) |
+| Expert GEMM | m_grouped_fp8_gemm | [DeepGEMM](../../deep-gemm/index.md) |
 | SwiGLU+量化 | swiglu_forward_and_per_token_cast | TileKernels |
-| Expert GEMM (2nd) | m_grouped_fp8_gemm | [DeepGEMM](/ai/deepseek/deep-gemm/) |
+| Expert GEMM (2nd) | m_grouped_fp8_gemm | [DeepGEMM](../../deep-gemm/index.md) |
 | 本地 combine | reduce_fused | TileKernels |
-| 跨节点 combine | all-to-all | [DeepEP](/ai/deepseek/deep-ep/) |
+| 跨节点 combine | all-to-all | [DeepEP](../../deep-ep/index.md) |

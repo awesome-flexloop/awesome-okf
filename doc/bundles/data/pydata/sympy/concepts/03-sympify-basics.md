@@ -185,7 +185,7 @@ f(x) + 1
 
 ## Function 类与函数应用
 
-SymPy 中存在三类函数：已定义函数（`sin`、`exp` 等）、未定义函数（`Function('f')` 创建）、匿名函数（`Lambda`）。函数类使用元类 `FunctionClass` 驱动构造。[^F-048][^F-050]
+SymPy 中存在三类函数：已定义函数（`sin`、`exp` 等）、未定义函数（`Function('f')` 创建）、匿名函数（`Lambda`）。函数类使用元类 `FunctionClass` 驱动构造。[^F-048] [^F-050]
 
 ### 函数类继承体系
 
@@ -424,7 +424,7 @@ Subs(Derivative(f(x), x), x, 0)
 
 ## Relational 关系运算
 
-`Relational` 类层次表示数学关系（等式、不等式），继承自 `Boolean` 和 `EvalfMixin`，支持六类比较运算。[^F-061][^F-062]
+`Relational` 类层次表示数学关系（等式、不等式），继承自 `Boolean` 和 `EvalfMixin`，支持六类比较运算。[^F-061] [^F-062]
 
 ### 关系运算符与类
 
@@ -549,7 +549,7 @@ x + 1/2
 - 前置概念：[表达式树模型](01-expression-tree.md) 了解表达式树结构
 - 前置概念：[符号与数值系统](02-symbols-numbers.md) 了解符号和数字类型
 - 后续概念：[函数体系](04-function-basics.md) 深入初等函数和特殊函数
-- 源码信源：[sympify-function-source](/references/sympify-function-source.md) 提供 sympify/Function/evalf/Relational 的完整 API 参考
+- 源码信源：[sympify-function-source](../references/sympify-function-source.md) 提供 sympify/Function/evalf/Relational 的完整 API 参考
 
 [^F-045]: facts.md F-045 — sympify 函数签名与转换规则
 [^F-046]: facts.md F-046 — converter 字典与自定义类型转换

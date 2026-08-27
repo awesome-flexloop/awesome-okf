@@ -77,10 +77,10 @@ OKF 不绑定任何特定的云平台、数据库、模型提供商或智能体�
 
 ## 相关概念
 
-- [OKF 规范动机](./motivation.md) - 四条设计目标和非目标
-- [概念文档](./concept-documents.md) - frontmatter 和正文的具体规范
-- [合规性](./conformance.md) - 合规三要件与"不得拒绝"清单
-- [版本控制](./versioning.md) - 版本规则与推迟事项
+- [OKF 规范动机](motivation.md) - 四条设计目标和非目标
+- [概念文档](concept-documents.md) - frontmatter 和正文的具体规范
+- [合规性](conformance.md) - 合规三要件与"不得拒绝"清单
+- [版本控制](versioning.md) - 版本规则与推迟事项
 
-[^annotated-v01]: OKF v0.1 Annotated Guide（Design Principles），见 [references/okf-annotated-v01.md](/references/okf-annotated-v01.md)。
-[^okf-spec]: OKF SPEC v0.2 规范，见 [references/okf-spec.md](/references/okf-spec.md)。
+[^annotated-v01]: OKF v0.1 Annotated Guide（Design Principles），见 [references/okf-annotated-v01.md](../references/okf-annotated-v01.md)。
+[^okf-spec]: OKF SPEC v0.2 规范，见 [references/okf-spec.md](../references/okf-spec.md)。

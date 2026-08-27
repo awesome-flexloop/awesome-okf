@@ -225,7 +225,7 @@ std::cout << "Perimeter: " << r.perimeter() << std::endl;
 
 ## 相关概念
 
-- [多语言内核支持](/concepts/07-kernel-options.md) — 所有可用内核
-- [运行时环境配置](/concepts/04-runtime-env-config.md) — 环境配置详解
+- [多语言内核支持](../concepts/07-kernel-options.md) — 所有可用内核
+- [运行时环境配置](../concepts/04-runtime-env-config.md) — 环境配置详解
 - [Python 科学计算环境](02-numpy-matplotlib.md) — Python 配置
 - [R 内核配置](03-r-kernel.md) — R 语言配置

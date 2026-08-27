@@ -112,7 +112,7 @@ hello_agents/
 
 ## 相关阅读
 
-- [第六章 框架开发实践](/ai/datawhale/hello-agents/references/chapter06-framework-practice)
-- [第七章 构建你的Agent框架](/ai/datawhale/hello-agents/references/chapter07-build-framework)
-- [智能体范式与ReAct](/ai/datawhale/hello-agents/concepts/agent-paradigms-react)
-- [多Agent协作](/ai/datawhale/hello-agents/concepts/multi-agent-collaboration)
+- 第六章 框架开发实践
+- 第七章 构建你的Agent框架
+- 智能体范式与ReAct
+- 多Agent协作

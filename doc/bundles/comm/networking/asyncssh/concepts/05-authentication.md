@@ -341,9 +341,9 @@ class MySSHServer(asyncssh.SSHServer):
 
 ## 相关概念
 
-- [密钥与证书](/concepts/06-keys-certificates.md) —— SSHKey 生成/读取/导出、SSHCertificate
-- [异步连接详解](/concepts/02-async-connection.md) —— connect() 认证参数
-- [服务端开发](/concepts/10-server.md) —— SSHServer 认证回调
+- [密钥与证书](06-keys-certificates.md) —— SSHKey 生成/读取/导出、SSHCertificate
+- [异步连接详解](02-async-connection.md) —— connect() 认证参数
+- [服务端开发](10-server.md) —— SSHServer 认证回调
 - [paramiko 认证体系](../../paramiko/concepts/05-authentication.md)（同步认证对比）
 
-[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](/references/asyncssh-source.md)。
+[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](../references/asyncssh-source.md)。

@@ -195,7 +195,7 @@ Jinja2渲染在SASS和JS编译**之后**执行，因此可以在Jinja变量中�
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [配置文件详解](/concepts/03-configuration.md)
-- [CI集成](/concepts/04-ci-integration.md)
-- [资产编译流水线示例](/examples/asset-pipeline.md)
+- [快速开始](01-getting-started.md)
+- [配置文件详解](03-configuration.md)
+- [CI集成](04-ci-integration.md)
+- [资产编译流水线示例](../examples/asset-pipeline.md)

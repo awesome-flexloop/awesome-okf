@@ -128,7 +128,7 @@ npm install -g @tencent-ai/codebuddy-code
 
 ## 相关概念
 
-- [CodeBuddy IDE](/concepts/01-ide.md) — 四阶段流程与内置生态详解
-- [CLI](/concepts/02-cli.md) — 终端工具能力与跨形态共享特性
-- [产品矩阵总览](/concepts/00-product-matrix.md) — 三种形态的定位与关系
-- [CLI 快速入门](/examples/quick-start-cli.md) — CLI 安装与初始化实战
+- [CodeBuddy IDE](../concepts/01-ide.md) — 四阶段流程与内置生态详解
+- [CLI](../concepts/02-cli.md) — 终端工具能力与跨形态共享特性
+- [产品矩阵总览](../concepts/00-product-matrix.md) — 三种形态的定位与关系
+- [CLI 快速入门](../examples/quick-start-cli.md) — CLI 安装与初始化实战

@@ -229,7 +229,7 @@ pipx run 'validate-pyproject[all]' pyproject.toml
 
 ## 相关概念
 
-- [配置发现机制](/concepts/06-config-discovery.md)
-- [打包发布指南](/concepts/12-packaging-release.md)
-- [CI/CD 工作流](/concepts/09-ci-workflows.md)
-- [pyproject.toml 字段全解析](/references/pyproject-source.md)
+- [配置发现机制](06-config-discovery.md)
+- [打包发布指南](12-packaging-release.md)
+- [CI/CD 工作流](09-ci-workflows.md)
+- [pyproject.toml 字段全解析](../references/pyproject-source.md)

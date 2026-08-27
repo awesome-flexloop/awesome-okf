@@ -18,7 +18,7 @@ sources:
 
 ## KaTeX 源码索引
 
-本文档登记 KaTeX v0.18.4 源码中各核心模块的文件路径，作为 Wiki 中所有事实溯源的信源目标。官网用户文档信源见 [katex-website.md](/references/katex-website.md)；源码揭示"内部如何工作"，官网说明"怎么用"和"默认值是什么"，二者互补。
+本文档登记 KaTeX v0.18.4 源码中各核心模块的文件路径，作为 Wiki 中所有事实溯源的信源目标。官网用户文档信源见 [katex-website.md](katex-website.md)；源码揭示"内部如何工作"，官网说明"怎么用"和"默认值是什么"，二者互补。
 
 ### 入口与配置
 
@@ -118,7 +118,7 @@ sources:
 
 ### 源码与官网页面对应关系
 
-下表说明源码模块与官网文档页面的对应关系，便于从"使用文档"追溯到"实现位置"。官网页面稳定 ID 定义见 [katex-website.md](/references/katex-website.md)。
+下表说明源码模块与官网文档页面的对应关系，便于从"使用文档"追溯到"实现位置"。官网页面稳定 ID 定义见 [katex-website.md](katex-website.md)。
 
 | 源码模块/文件 | 对应官网页面 ID | 关联说明 |
 |--------------|----------------|---------|
@@ -139,6 +139,6 @@ sources:
 ### 双信源使用原则
 
 1. **架构机制以源码为准**：Lexer、MacroExpander、Parser、buildTree、虚拟 DOM 等内部实现细节，以本文件索引的源码路径为权威信源。
-2. **配置默认值以官网为准**：strict、trust、globalGroup 等选项的默认值在源码类型定义中未以人类可读方式标注，以 web-options 页面为权威来源；详见 [facts.md 修正-1~修正-7](/spec/facts.md#事实复核修正)。
+2. **配置默认值以官网为准**：strict、trust、globalGroup 等选项的默认值在源码类型定义中未以人类可读方式标注，以 web-options 页面为权威来源；详见 [facts.md 修正-1~修正-7](../spec/facts.md#事实复核修正)。
 3. **使用方法以官网为准**：安装方式、CDN 链接、API 调用示例、CLI 参数说明、安全建议等面向使用者的内容，以 katex-website.md 登记的官网页面为权威信源。
-4. **版本基准以源码 package.json 为准**：本 bundle 基于 v0.18.4；官网 Versions 页面标注的 0.16.47 滞后于文档页 CDN 版本，版本差异记录在 [facts.md 修正-8](/spec/facts.md#修正-8官网版本号标注不一致)。
+4. **版本基准以源码 package.json 为准**：本 bundle 基于 v0.18.4；官网 Versions 页面标注的 0.16.47 滞后于文档页 CDN 版本，版本差异记录在 [facts.md 修正-8](../spec/facts.md#修正-8官网版本号标注不一致)。

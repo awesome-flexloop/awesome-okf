@@ -225,7 +225,7 @@ class RebaseAction(Enum):
 
 ## 相关概念
 
-- [服务端处理器](/references/handlers-py-source.md)
-- [服务端Git执行引擎](/concepts/08-server-git-execution.md)
-- [REST API通信机制](/concepts/05-rest-api-and-communication.md)
-- [配置系统](/concepts/11-configuration-and-settings.md)
+- [服务端处理器](handlers-py-source.md)
+- [服务端Git执行引擎](../concepts/08-server-git-execution.md)
+- [REST API通信机制](../concepts/05-rest-api-and-communication.md)
+- [配置系统](../concepts/11-configuration-and-settings.md)

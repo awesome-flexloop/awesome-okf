@@ -86,5 +86,5 @@ export namespace WebRtcStatus {
 
 ## 相关概念
 
-- [状态栏UI与RetroLab适配](/concepts/07-status-bar.md)
-- [4个JupyterLab插件架构](/concepts/06-plugin-system.md)
+- [状态栏UI与RetroLab适配](../concepts/07-status-bar.md)
+- [4个JupyterLab插件架构](../concepts/06-plugin-system.md)

@@ -49,7 +49,7 @@ veadk-python 实现了双层记忆架构：**短期记忆（ShortTermMemory）**
 
 ### 类定义
 
-[veadk/memory/short_term_memory.py:L57-L91](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/short_term_memory.py#L57-L91)
+veadk/memory/short_term_memory.py:L57-L91
 
 ```python
 class ShortTermMemory(BaseModel):
@@ -65,7 +65,7 @@ class ShortTermMemory(BaseModel):
 
 ### 后端选择逻辑
 
-[veadk/memory/short_term_memory.py:L93-L130](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/short_term_memory.py#L93-L130)
+veadk/memory/short_term_memory.py:L93-L130
 
 ```mermaid
 flowchart TD
@@ -103,7 +103,7 @@ flowchart TD
 
 ### create_session：会话管理
 
-[veadk/memory/short_term_memory.py:L136-L179](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/short_term_memory.py#L136-L179)
+veadk/memory/short_term_memory.py:L136-L179
 
 ```python
 async def create_session(
@@ -122,7 +122,7 @@ Runner 在每次 `run()` 时调用此方法：
 
 短期记忆还提供了历史事件压缩能力，当对话轮次过多时自动摘要早期内容：
 
-[veadk/memory/short_term_memory.py:L242-L290](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/short_term_memory.py#L242-L290)
+veadk/memory/short_term_memory.py:L242-L290
 
 ```python
 async def compact_history_events(
@@ -146,7 +146,7 @@ async def compact_history_events(
 
 ### 类定义
 
-[veadk/memory/long_term_memory.py:L98-L150](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory.py#L98-L150)
+veadk/memory/long_term_memory.py:L98-L150
 
 ```python
 class LongTermMemory(BaseMemoryService, BaseModel):
@@ -185,7 +185,7 @@ flowchart TD
     K --> K1[TosContextBucketLTMBackend<br/>TOS 上下文桶存储]
 ```
 
-[veadk/memory/long_term_memory.py:L42-L95](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory.py#L42-L95)
+veadk/memory/long_term_memory.py:L42-L95
 
 各后端说明：
 
@@ -205,7 +205,7 @@ flowchart TD
 
 ### add_session_to_memory：会话持久化
 
-[veadk/memory/long_term_memory.py:L229-L293](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory.py#L229-L293)
+veadk/memory/long_term_memory.py:L229-L293
 
 会话保存流程：
 
@@ -230,7 +230,7 @@ flowchart LR
 
 ### search_memory：语义检索
 
-[veadk/memory/long_term_memory.py:L295-L345](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory.py#L295-L345)
+veadk/memory/long_term_memory.py:L295-L345
 
 ```python
 async def search_memory(
@@ -247,7 +247,7 @@ async def search_memory(
 
 ### get_user_profile：用户画像
 
-[veadk/memory/long_term_memory.py:L488-L496](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory.py#L488-L496)
+veadk/memory/long_term_memory.py:L488-L496
 
 仅 Viking 后端支持用户画像查询，其他后端返回空字符串并记录错误。
 
@@ -310,7 +310,7 @@ await runner.run(
 
 ## MemoryProfile：记忆画像
 
-[veadk/memory/types.py:L18-L20](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/types.py#L18-L20)
+veadk/memory/types.py:L18-L20
 
 ```python
 class MemoryProfile(BaseModel):
@@ -324,32 +324,32 @@ class MemoryProfile(BaseModel):
 
 | 后端文件 | 说明 |
 |---------|------|
-| [short_term_memory_backends/base_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/short_term_memory_backends/base_backend.py) | 后端抽象基类 |
-| [short_term_memory_backends/mysql_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/short_term_memory_backends/mysql_backend.py) | MySQL 后端，通过 SQLAlchemy 连接 |
-| [short_term_memory_backends/sqlite_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/short_term_memory_backends/sqlite_backend.py) | SQLite 后端，本地文件存储 |
-| [short_term_memory_backends/postgresql_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/short_term_memory_backends/postgresql_backend.py) | PostgreSQL 后端 |
+| short_term_memory_backends/base_backend.py | 后端抽象基类 |
+| short_term_memory_backends/mysql_backend.py | MySQL 后端，通过 SQLAlchemy 连接 |
+| short_term_memory_backends/sqlite_backend.py | SQLite 后端，本地文件存储 |
+| short_term_memory_backends/postgresql_backend.py | PostgreSQL 后端 |
 
 ## 长期记忆后端实现
 
 | 后端文件 | 说明 |
 |---------|------|
-| [long_term_memory_backends/base_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory_backends/base_backend.py) | 后端抽象基类 |
-| [long_term_memory_backends/in_memory_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory_backends/in_memory_backend.py) | 内存后端（开发调试） |
-| [long_term_memory_backends/opensearch_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory_backends/opensearch_backend.py) | OpenSearch 向量检索 |
-| [long_term_memory_backends/redis_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory_backends/redis_backend.py) | Redis 向量搜索 |
-| [long_term_memory_backends/vikingdb_memory_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory_backends/vikingdb_memory_backend.py) | 火山 VikingDB |
-| [long_term_memory_backends/mem0_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory_backends/mem0_backend.py) | Mem0 第三方记忆服务 |
-| [long_term_memory_backends/openviking_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory_backends/openviking_backend.py) | OpenViking 资源检索 |
-| [long_term_memory_backends/tos_context_bucket_backend.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory_backends/tos_context_bucket_backend.py) | TOS 上下文桶 |
+| long_term_memory_backends/base_backend.py | 后端抽象基类 |
+| long_term_memory_backends/in_memory_backend.py | 内存后端（开发调试） |
+| long_term_memory_backends/opensearch_backend.py | OpenSearch 向量检索 |
+| long_term_memory_backends/redis_backend.py | Redis 向量搜索 |
+| long_term_memory_backends/vikingdb_memory_backend.py | 火山 VikingDB |
+| long_term_memory_backends/mem0_backend.py | Mem0 第三方记忆服务 |
+| long_term_memory_backends/openviking_backend.py | OpenViking 资源检索 |
+| long_term_memory_backends/tos_context_bucket_backend.py | TOS 上下文桶 |
 
 ## 关键文件索引
 
 | 文件 | 职责 |
 |------|------|
-| [veadk/memory/short_term_memory.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/short_term_memory.py) | ShortTermMemory 类、后端选择、会话管理、历史压缩 |
-| [veadk/memory/long_term_memory.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/long_term_memory.py) | LongTermMemory 类、事件过滤、会话持久化、语义检索 |
-| [veadk/memory/save_session_callback.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/save_session_callback.py) | auto_save_session 回调实现 |
-| [veadk/memory/types.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/memory/types.py) | MemoryProfile 数据模型 |
+| veadk/memory/short_term_memory.py | ShortTermMemory 类、后端选择、会话管理、历史压缩 |
+| veadk/memory/long_term_memory.py | LongTermMemory 类、事件过滤、会话持久化、语义检索 |
+| veadk/memory/save_session_callback.py | auto_save_session 回调实现 |
+| veadk/memory/types.py | MemoryProfile 数据模型 |
 
 ## 相关概念
 

@@ -11,8 +11,8 @@
 ## 返回导航
 
 - [返回首页](../index.md)
-- [概念文档](../concepts/)
-- [示例文档](../examples/)
+- [概念文档](../concepts/index.md)
+- [示例文档](../examples/index.md)
 
 ```{toctree}
 :hidden:

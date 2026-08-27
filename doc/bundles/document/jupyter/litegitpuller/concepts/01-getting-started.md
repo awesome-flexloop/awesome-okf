@@ -174,4 +174,4 @@ JupyterLab extension @jupyterlite/litegitpuller is activated!
 - [litegitpuller 简介](00-introduction.md) — 了解是什么和为什么
 - [整体架构](02-architecture.md) — 理解内部工作流程
 - [URL参数完整参考](06-url-parameters.md) — 所有参数的详细说明和示例
-- [GitHub仓库拉取示例](/examples/01-basic-github.md) — 完整可运行的示例
+- [GitHub仓库拉取示例](../examples/01-basic-github.md) — 完整可运行的示例

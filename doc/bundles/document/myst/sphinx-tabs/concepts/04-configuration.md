@@ -102,6 +102,6 @@ app.connect(
 
 ## 相关概念
 
-- [四个指令详解](/concepts/02-directives.md)
-- [无障碍设计](/concepts/05-accessibility.md)
-- [分组同步配置示例](/examples/group-tabs-sync.md)
+- [四个指令详解](02-directives.md)
+- [无障碍设计](05-accessibility.md)
+- [分组同步配置示例](../examples/group-tabs-sync.md)

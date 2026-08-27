@@ -41,18 +41,18 @@
 
 推荐阅读顺序：
 
-1. [SDK 总览](/ai/langchain-ai/langsmith-sdk/concepts/overview.md)
-2. [traceable 装饰器](/ai/langchain-ai/langsmith-sdk/concepts/traceable-decorator.md)
-3. [RunTree 追踪模型](/ai/langchain-ai/langsmith-sdk/concepts/run-tree-tracing.md)
-4. [评测运行器](/ai/langchain-ai/langsmith-sdk/concepts/evaluation.md)
-5. [快速示例](/ai/langchain-ai/langsmith-sdk/examples/quickstart-trace-and-evaluate.md)
+1. [SDK 总览](../concepts/overview.md)
+2. [traceable 装饰器](../concepts/traceable-decorator.md)
+3. [RunTree 追踪模型](../concepts/run-tree-tracing.md)
+4. [评测运行器](../concepts/evaluation.md)
+5. [快速示例](../examples/quickstart-trace-and-evaluate.md)
 
 ## 文档覆盖矩阵
 
 | 文档 | 覆盖事实 |
 |---|---|
-| [overview](/ai/langchain-ai/langsmith-sdk/concepts/overview.md) | F-001-F-034, F-093-F-100 |
-| [traceable-decorator](/ai/langchain-ai/langsmith-sdk/concepts/traceable-decorator.md) | F-048-F-068, F-093-F-100 |
-| [run-tree-tracing](/ai/langchain-ai/langsmith-sdk/concepts/run-tree-tracing.md) | F-008-F-015, F-035-F-047 |
-| [evaluation](/ai/langchain-ai/langsmith-sdk/concepts/evaluation.md) | F-069-F-092 |
-| [quickstart-trace-and-evaluate](/ai/langchain-ai/langsmith-sdk/examples/quickstart-trace-and-evaluate.md) | F-003-F-007, F-016-F-034, F-048-F-091 |
+| [overview](../concepts/overview.md) | F-001-F-034, F-093-F-100 |
+| [traceable-decorator](../concepts/traceable-decorator.md) | F-048-F-068, F-093-F-100 |
+| [run-tree-tracing](../concepts/run-tree-tracing.md) | F-008-F-015, F-035-F-047 |
+| [evaluation](../concepts/evaluation.md) | F-069-F-092 |
+| [quickstart-trace-and-evaluate](../examples/quickstart-trace-and-evaluate.md) | F-003-F-007, F-016-F-034, F-048-F-091 |

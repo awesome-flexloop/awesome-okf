@@ -20,9 +20,9 @@ related:
 
 ## 概述
 
-`AIAgent` 是 hermes-agent 框架的核心类，定义于 [run_agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/run_agent.py#L412-L418)，负责管理完整的对话流、工具调用执行、模型响应处理和迭代控制。它实现了经典 AI Agent 的 **Think（思考）→ Act（行动）→ Observe（观察）** 循环：模型思考后产生工具调用或最终回答，Agent 执行工具并将结果反馈给模型，模型基于观察结果继续思考，直到产生最终回答。
+`AIAgent` 是 hermes-agent 框架的核心类，定义于 run_agent.py，负责管理完整的对话流、工具调用执行、模型响应处理和迭代控制。它实现了经典 AI Agent 的 **Think（思考）→ Act（行动）→ Observe（观察）** 循环：模型思考后产生工具调用或最终回答，Agent 执行工具并将结果反馈给模型，模型基于观察结果继续思考，直到产生最终回答。
 
-AIAgent 采用**委托式初始化**设计：`__init__` 方法本身仅做参数转发，实际初始化逻辑（约1400行）委托给 [agent/agent_init.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/agent_init.py) 中的 `init_agent()` 函数。同样，核心对话循环委托给 [agent/conversation_loop.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/conversation_loop.py) 中的 `run_conversation()` 函数（约3900行），`AIAgent.run_conversation()` 仅作为薄转发器，处理 relay 协调、计费上下文和异常安全。
+AIAgent 采用**委托式初始化**设计：`__init__` 方法本身仅做参数转发，实际初始化逻辑（约1400行）委托给 agent/agent_init.py 中的 `init_agent()` 函数。同样，核心对话循环委托给 agent/conversation_loop.py 中的 `run_conversation()` 函数（约3900行），`AIAgent.run_conversation()` 仅作为薄转发器，处理 relay 协调、计费上下文和异常安全。
 
 ### 解决的核心问题
 
@@ -53,7 +53,7 @@ AIAgent 类本身是一个"薄壳"（thin shell），它持有所有状态属性
 
 ### 2. 迭代预算线程安全
 
-[IterationBudget](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/iteration_budget.py#L17-L59) 使用 `threading.Lock` 保护 `_used` 计数器，提供：
+IterationBudget 使用 `threading.Lock` 保护 `_used` 计数器，提供：
 - `consume() -> bool`：消耗一次迭代，返回是否允许继续
 - `refund() -> None`：归还一次迭代（用于 execute_code 回合，因为代码执行不算 agent 推理步骤）
 - `used` / `remaining` 属性：查询已用/剩余次数
@@ -192,7 +192,7 @@ flowchart TD
 
 ### 核心循环代码片段
 
-以下是对话循环的核心结构（来自 [agent/conversation_loop.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/conversation_loop.py)）：
+以下是对话循环的核心结构（来自 agent/conversation_loop.py）：
 
 ```python
 def run_conversation(agent, user_message, system_message=None,
@@ -305,18 +305,18 @@ def run_conversation(agent, user_message, system_message=None,
 
 | 文件 | 内容 |
 |------|------|
-| [run_agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/run_agent.py#L412-L598) | `AIAgent` 类定义、`__init__` 转发器、`run_conversation`/`chat` 方法 |
-| [agent/agent_init.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/agent_init.py) | `init_agent()` 函数（~1400行），AIAgent 实际初始化逻辑 |
-| [agent/conversation_loop.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/conversation_loop.py) | `run_conversation()` 核心循环实现（~3900行） |
-| [agent/tool_executor.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/tool_executor.py) | 工具调用执行引擎（顺序/并发调度、授权门控、结果持久化） |
-| [agent/iteration_budget.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/iteration_budget.py#L17-L59) | `IterationBudget` 线程安全迭代计数器 |
-| [agent/transports/types.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/transports/types.py#L18-L174) | `ToolCall`、`Usage`、`NormalizedResponse` dataclass 定义 |
-| [agent/turn_finalizer.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/turn_finalizer.py) | `finalize_turn()` turn 终结逻辑 |
-| [agent/context_compressor.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/context_compressor.py) | `ContextCompressor` 上下文压缩器 |
-| [agent/memory_manager.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/memory_manager.py) | `MemoryManager` 记忆管理编排器 |
-| [agent/moa_loop.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/moa_loop.py) | Mixture-of-Agents 多模型协作运行时 |
-| [agent/prompt_builder.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/prompt_builder.py) | 对话提示词构建器 |
-| [agent/system_prompt.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/agent/system_prompt.py) | 系统提示词生成与管理 |
+| run_agent.py | `AIAgent` 类定义、`__init__` 转发器、`run_conversation`/`chat` 方法 |
+| agent/agent_init.py | `init_agent()` 函数（~1400行），AIAgent 实际初始化逻辑 |
+| agent/conversation_loop.py | `run_conversation()` 核心循环实现（~3900行） |
+| agent/tool_executor.py | 工具调用执行引擎（顺序/并发调度、授权门控、结果持久化） |
+| agent/iteration_budget.py | `IterationBudget` 线程安全迭代计数器 |
+| agent/transports/types.py | `ToolCall`、`Usage`、`NormalizedResponse` dataclass 定义 |
+| agent/turn_finalizer.py | `finalize_turn()` turn 终结逻辑 |
+| agent/context_compressor.py | `ContextCompressor` 上下文压缩器 |
+| agent/memory_manager.py | `MemoryManager` 记忆管理编排器 |
+| agent/moa_loop.py | Mixture-of-Agents 多模型协作运行时 |
+| agent/prompt_builder.py | 对话提示词构建器 |
+| agent/system_prompt.py | 系统提示词生成与管理 |
 
 ## 相关概念交叉引用
 

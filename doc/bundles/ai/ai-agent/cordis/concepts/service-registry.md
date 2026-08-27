@@ -27,7 +27,7 @@ Cordis 的 Service 系统借鉴了多个 DI 框架的思想，但有自己独特
 
 ## Service<T> 抽象基类
 
-[service.ts:L5-L80](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/service.ts#L5-L80)
+service.ts:L5-L80
 
 ```typescript
 export abstract class Service<out T = never> {
@@ -65,7 +65,7 @@ export abstract class Service<out T = never> {
 
 ### 构造函数流程
 
-[service.ts:L18-L35](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/service.ts#L18-L35)
+service.ts:L18-L35
 
 ```typescript
 constructor(protected ctx: Context, name: string) {
@@ -102,7 +102,7 @@ constructor(protected ctx: Context, name: string) {
 
 `createCallable` 函数创建一个函数，其原型链包含服务的原型，使得服务实例既是可调用的函数，又拥有类的所有方法：
 
-[utils.ts:L219-L226](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts#L219-L226)
+utils.ts:L219-L226
 
 ```typescript
 export function createCallable(name: string, proto: {}, tracker: Tracker) {
@@ -119,7 +119,7 @@ LoggerService 就是典型的 callable service：`logger('myPlugin')` 返回 Log
 
 ### Isolate 域过滤
 
-[service.ts:L37-L39](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/service.ts#L37-L39)
+service.ts:L37-L39
 
 ```typescript
 protected [symbols.filter](ctx: Context) {
@@ -131,7 +131,7 @@ Service 的默认过滤器确保只有同一 isolate 域内的 context 能看到
 
 ### 配置解析
 
-[service.ts:L51-L67](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/service.ts#L51-L67)
+service.ts:L51-L67
 
 ```typescript
 [symbols.resolveConfig](base?: T, head?: T): T {
@@ -161,7 +161,7 @@ Service 的默认过滤器确保只有同一 isolate 域内的 context 能看到
 
 ### 服务扩展
 
-[service.ts:L41-L49](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/service.ts#L41-L49)
+service.ts:L41-L49
 
 ```typescript
 protected [symbols.extend](props?: any) {
@@ -179,7 +179,7 @@ protected [symbols.extend](props?: any) {
 
 ### 自定义 instanceof
 
-[service.ts:L69-L79](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/service.ts#L69-L79)
+service.ts:L69-L79
 
 ```typescript
 static [Symbol.hasInstance](instance: any) {
@@ -199,7 +199,7 @@ static [Symbol.hasInstance](instance: any) {
 
 ## @Inject 装饰器
 
-[registry.ts:L17-L40](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/registry.ts#L17-L40)
+registry.ts:L17-L40
 
 `@Inject` 是 Cordis 唯一的装饰器，支持两种目标：**class（类装饰器）** 和 **class method（方法装饰器）**。
 
@@ -272,7 +272,7 @@ class MyService extends Service {
 
 ### Inject 类型与解析
 
-[registry.ts:L11-L61](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/registry.ts#L11-L61)
+registry.ts:L11-L61
 
 ```typescript
 export type Inject<M = Dict> = (keyof M)[] | { [K in keyof M]?: M[K] }
@@ -319,7 +319,7 @@ export namespace Inject {
 
 ## RegistryService 插件注册表
 
-[registry.ts:L125-L214](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/registry.ts#L125-L214)
+registry.ts:L125-L214
 
 RegistryService 管理所有已注册的插件，维护一个 `Map<Function, Plugin.Runtime>` 存储运行时信息。
 
@@ -355,7 +355,7 @@ export namespace Plugin {
 
 ### 插件注册：plugin()
 
-[registry.ts:L193-L213](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/registry.ts#L193-L213)
+registry.ts:L193-L213
 
 ```typescript
 plugin(plugin: Plugin, config?: any, getOuterStack = buildOuterStack()) {
@@ -388,7 +388,7 @@ plugin(plugin: Plugin, config?: any, getOuterStack = buildOuterStack()) {
 
 ### inject() — 依赖注入简写
 
-[registry.ts:L189-L191](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/registry.ts#L189-L191)
+registry.ts:L189-L191
 
 ```typescript
 inject(inject: Inject, callback: Plugin.Function<void>) {
@@ -408,7 +408,7 @@ ctx.inject(['database', 'timer'], (ctx) => {
 
 ### Map 风格 API
 
-[registry.ts:L152-L187](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/registry.ts#L152-L187)
+registry.ts:L152-L187
 
 ```typescript
 get(plugin: Plugin) {
@@ -548,7 +548,7 @@ ctx.plugin(DatabaseService, { host: 'db.example.com', port: 5432 })
 
 服务实际注册在 `ReflectService.store` 中，以 isolate symbol 为键：
 
-[reflect.ts:L175-L203](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts#L175-L203)
+reflect.ts:L175-L203
 
 ```typescript
 provide(name: string, value?: any, check?: () => boolean) {
@@ -600,7 +600,7 @@ export interface Impl {
 
 ### 服务变更通知
 
-[reflect.ts:L205-L227](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts#L205-L227)
+reflect.ts:L205-L227
 
 ```typescript
 notify(names: string[], filter?) {
@@ -690,8 +690,8 @@ namespace Plugin {
 
 | 文件 | 内容 |
 |------|------|
-| [service.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/service.ts) | Service<T> 抽象基类、7 个 symbol、filter/resolveConfig/extend/instanceof |
-| [registry.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/registry.ts) | @Inject 装饰器、Inject.resolve、RegistryService、Plugin 类型定义 |
-| [reflect.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/reflect.ts) | ReflectService.provide/notify/store、服务注册与通知 |
-| [fiber.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/fiber.ts) | Fiber 构造函数中的依赖检查、_checkImpl/_refresh、类式插件实例化 |
-| [utils.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/cordis/packages/core/src/utils.ts) | createCallable（可调用服务）、joinPrototype（原型合并）、Tracker 接口 |
+| service.ts | Service<T> 抽象基类、7 个 symbol、filter/resolveConfig/extend/instanceof |
+| registry.ts | @Inject 装饰器、Inject.resolve、RegistryService、Plugin 类型定义 |
+| reflect.ts | ReflectService.provide/notify/store、服务注册与通知 |
+| fiber.ts | Fiber 构造函数中的依赖检查、_checkImpl/_refresh、类式插件实例化 |
+| utils.ts | createCallable（可调用服务）、joinPrototype（原型合并）、Tracker 接口 |

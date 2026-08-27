@@ -181,8 +181,8 @@ await asyncssh.create_server(
 
 ## 相关概念
 
-- [SFTP 文件传输](/concepts/07-sftp.md) —— 更完整的文件管理协议
-- [流与进程](/concepts/04-streams-processes.md) —— SCP 底层通道
-- [实战示例：SFTP 传输](/examples/sftp-transfer.md)
+- [SFTP 文件传输](07-sftp.md) —— 更完整的文件管理协议
+- [流与进程](04-streams-processes.md) —— SCP 底层通道
+- [实战示例：SFTP 传输](../examples/sftp-transfer.md)
 
-[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](/references/asyncssh-source.md)。
+[^asyncssh-source]: asyncssh 源码信源，见 [asyncssh-source.md](../references/asyncssh-source.md)。

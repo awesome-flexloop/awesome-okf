@@ -200,7 +200,7 @@ oauth_app = load_oauth_app_from_config(config)
 
 ## 相关概念
 
-- [客户端初始化](/concepts/02-client-init.md) — 认证实例创建后如何初始化客户端
-- [基础对话示例](/examples/basic-chat.md) — 使用 TokenAuth 发起对话的完整示例
-- [OAuth PKCE 认证示例](/examples/oauth-pkce-auth.md) — PKCE 和设备码流程的完整可运行示例
-- [认证体系参考](/references/auth-model.md) — 所有认证类和模型的完整 API 文档
+- [客户端初始化](02-client-init.md) — 认证实例创建后如何初始化客户端
+- [基础对话示例](../examples/basic-chat.md) — 使用 TokenAuth 发起对话的完整示例
+- [OAuth PKCE 认证示例](../examples/oauth-pkce-auth.md) — PKCE 和设备码流程的完整可运行示例
+- [认证体系参考](../references/auth-model.md) — 所有认证类和模型的完整 API 文档

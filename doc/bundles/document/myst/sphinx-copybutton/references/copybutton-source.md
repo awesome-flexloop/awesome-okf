@@ -105,6 +105,6 @@ def setup(app):
 
 ## 相关概念
 
-- [扩展架构与注册机制](/concepts/02-extension-architecture.md)
-- [文本处理与提示符剥离](/concepts/03-text-processing.md)
-- [自定义样式与图标](/concepts/04-customization.md)
+- [扩展架构与注册机制](../concepts/02-extension-architecture.md)
+- [文本处理与提示符剥离](../concepts/03-text-processing.md)
+- [自定义样式与图标](../concepts/04-customization.md)

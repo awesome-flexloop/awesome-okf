@@ -23,7 +23,7 @@ sources:
 
 # 构建执行 API 参考
 
-> 信源文件：[build.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/build.h)、[build.cc](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/build.cc)、[real_command_runner.cc](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/real_command_runner.cc)
+> 信源文件：build.h、build.cc、real_command_runner.cc
 
 本文档记录 Ninja 构建执行核心模块的完整 API，涵盖构建计划、构建器、配置和命令运行器。
 

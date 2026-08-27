@@ -97,4 +97,4 @@ deepagents mcp-servers connect <id|name|url>
 
 ## 相关概念
 
-- [CLI部署工具链](/ai/datawhale/deepagents/concepts/cli-toolchain)
+- CLI部署工具链

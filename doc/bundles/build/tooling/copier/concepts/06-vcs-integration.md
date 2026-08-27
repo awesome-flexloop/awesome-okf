@@ -143,7 +143,7 @@ _min_copier_version: "9.0.0"
 - [Worker 与生命周期](05-worker-and-lifecycle.md)
 - [模板配置文件](02-template-configuration.md)
 - [任务与迁移](07-tasks-and-migrations.md)
-- [项目更新工作流示例](/examples/update-workflow.md)
-- [Copier 源码信源登记](/references/copier-source.md)
+- [项目更新工作流示例](../examples/update-workflow.md)
+- [Copier 源码信源登记](../references/copier-source.md)
 
-[^copier-source]: Copier 源码信源，见 [copier-source.md](/references/copier-source.md)。
+[^copier-source]: Copier 源码信源，见 [copier-source.md](../references/copier-source.md)。

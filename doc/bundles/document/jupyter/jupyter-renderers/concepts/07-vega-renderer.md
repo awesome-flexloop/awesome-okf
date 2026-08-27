@@ -281,9 +281,9 @@ fileTypes: [
 
 ## 相关概念
 
-- [MIME 渲染器开发模式](/concepts/02-mime-renderer-pattern.md)
-- [FASTA 生物序列渲染器](/concepts/04-fasta-renderer.md)
-- [GeoJSON 地理数据渲染器](/concepts/05-geojson-renderer.md)
-- [IRenderMime 核心 API 参考](/references/rendermime-interfaces-api.md)
+- [MIME 渲染器开发模式](02-mime-renderer-pattern.md)
+- [FASTA 生物序列渲染器](04-fasta-renderer.md)
+- [GeoJSON 地理数据渲染器](05-geojson-renderer.md)
+- [IRenderMime 核心 API 参考](../references/rendermime-interfaces-api.md)
 
 [^vega3-index]: vega3-extension/src/index.ts

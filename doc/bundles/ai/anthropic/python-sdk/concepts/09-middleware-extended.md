@@ -573,9 +573,9 @@ client = Anthropic(
 
 ## 相关概念
 
-- [客户端初始化与配置](/python-sdk/concepts/01-client-init.md) — 学习 timeout、max_retries 等基础配置
-- [流式处理](/python-sdk/concepts/03-streaming.md) — with_streaming_response 与 Stream 类的关系
-- [Beta: Agents、Memory与Skills](/python-sdk/concepts/08-beta-agents.md) — Beta API 调用同样需要错误处理
-- [多云后端部署](/python-sdk/concepts/07-multi-cloud.md) — 多云客户端同样支持中间件和异常处理
-- [Anthropic Python SDK 客户端入口与基础设施参考](/python-sdk/references/sdk-client.md) — 中间件基类、响应装饰类的完整 API 手册
-- [Anthropic Python SDK 类型系统与异常体系参考](/python-sdk/references/types-errors.md) — 所有异常类和状态码映射的完整参考
+- [客户端初始化与配置](01-client-init.md) — 学习 timeout、max_retries 等基础配置
+- [流式处理](03-streaming.md) — with_streaming_response 与 Stream 类的关系
+- [Beta: Agents、Memory与Skills](08-beta-agents.md) — Beta API 调用同样需要错误处理
+- [多云后端部署](07-multi-cloud.md) — 多云客户端同样支持中间件和异常处理
+- [Anthropic Python SDK 客户端入口与基础设施参考](../references/sdk-client.md) — 中间件基类、响应装饰类的完整 API 手册
+- [Anthropic Python SDK 类型系统与异常体系参考](../references/types-errors.md) — 所有异常类和状态码映射的完整参考

@@ -18,7 +18,7 @@ sources:
 
 # 音频与语音
 
-cozepy 提供了丰富的音频能力，涵盖文本转语音（TTS）、语音转文本（ASR）、声音克隆与管理、实时音视频房间、直播以及声纹识别。这些功能通过 `coze.audio` 入口下的多个子客户端提供 HTTP API 接口。实时音频场景（边说边转、低延迟语音对话）则通过 WebSocket 通道提供，见[WebSocket 实时通信](/concepts/07-websockets-realtime.md)。
+cozepy 提供了丰富的音频能力，涵盖文本转语音（TTS）、语音转文本（ASR）、声音克隆与管理、实时音视频房间、直播以及声纹识别。这些功能通过 `coze.audio` 入口下的多个子客户端提供 HTTP API 接口。实时音频场景（边说边转、低延迟语音对话）则通过 WebSocket 通道提供，见[WebSocket 实时通信](07-websockets-realtime.md)。
 
 ## AudioClient 总览
 
@@ -63,7 +63,7 @@ resp = coze.audio.speech.create(
 
 语言代码枚举，如中文（ZH）、英文（EN）、日文（JA）等。
 
-> 实时 TTS（边生成边播放）请使用 [WebSocket Speech](/concepts/07-websockets-realtime.md#实时-ttsspeech-ws)。
+> 实时 TTS（边生成边播放）请使用 [WebSocket Speech](07-websockets-realtime.md#实时-ttsspeech-ws)。
 
 ## ASR：语音识别（Transcriptions）
 
@@ -81,7 +81,7 @@ with open("audio.wav", "rb") as f:
 - **限制**：文件大小 10MB，时长 30 分钟
 - **返回**：`CreateTranscriptionsResp`，包含 `text` 字段（识别结果文本）
 
-> 实时 ASR（边说边转写）请使用 [WebSocket Transcriptions](/concepts/07-websockets-realtime.md#实时-asrtranscriptions-ws)。
+> 实时 ASR（边说边转写）请使用 [WebSocket Transcriptions](07-websockets-realtime.md#实时-asrtranscriptions-ws)。
 
 ## 声音管理（Voices）
 
@@ -208,7 +208,7 @@ Translations 子模块提供音频翻译能力，在 TRANSLATE 房间模式或�
 
 ## 相关概念
 
-- [WebSocket 实时通信](/concepts/07-websockets-realtime.md) — 实时 TTS/ASR 的 WebSocket 方案
-- [客户端初始化](/concepts/02-client-init.md) — AudioClient 的初始化方式
-- [WebSocket 语音对话示例](/examples/websocket-voice-chat.md) — 实时语音对话示例
-- [WebSocket 实时通信与音频参考](/references/websockets-audio.md) — 音频 HTTP API 和 WS API 的完整参考
+- [WebSocket 实时通信](07-websockets-realtime.md) — 实时 TTS/ASR 的 WebSocket 方案
+- [客户端初始化](02-client-init.md) — AudioClient 的初始化方式
+- [WebSocket 语音对话示例](../examples/websocket-voice-chat.md) — 实时语音对话示例
+- [WebSocket 实时通信与音频参考](../references/websockets-audio.md) — 音频 HTTP API 和 WS API 的完整参考

@@ -78,7 +78,7 @@ README 中通过"More"链接将流量导向姊妹仓库，体现 hub 索引定�
 
 ## 相关链接
 
-- [Awesome List 定位与双层分类](/concepts/00-introduction.md)
-- [贡献指南与权重评分](/concepts/01-contribution-guide.md)
-- [资源分类详解](/concepts/02-resource-categories.md)
-- [添加资源条目示例](/examples/add-resource.md)
+- [Awesome List 定位与双层分类](../concepts/00-introduction.md)
+- [贡献指南与权重评分](../concepts/01-contribution-guide.md)
+- [资源分类详解](../concepts/02-resource-categories.md)
+- [添加资源条目示例](../examples/add-resource.md)

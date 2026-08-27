@@ -226,7 +226,7 @@ type HostSandboxArgs = codex_cli::WindowsCommand;
 
 ## 相关概念
 
-- [Rust 核心与 TUI](./02-rust-core-tui.md)
-- [Skills 与 AGENTS.md](./05-skills-agents-md.md)
-- [Python SDK](./06-python-sdk.md)
-- [简介](./00-introduction.md)
+- [Rust 核心与 TUI](02-rust-core-tui.md)
+- [Skills 与 AGENTS.md](05-skills-agents-md.md)
+- [Python SDK](06-python-sdk.md)
+- [简介](00-introduction.md)

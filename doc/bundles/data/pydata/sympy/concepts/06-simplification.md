@@ -164,7 +164,7 @@ b*log(a)
 
 ## 三、多项式与有理函数操作
 
-`cancel()`、`factor()`、`together()`、`apart()` 主要定义在 `polys/` 模块，但作为顶层函数和 Expr 方法广泛用于化简场景。[^F-119][^F-121]
+`cancel()`、`factor()`、`together()`、`apart()` 主要定义在 `polys/` 模块，但作为顶层函数和 Expr 方法广泛用于化简场景。[^F-119] [^F-121]
 
 ### 3.1 factor() — 多项式因式分解
 
@@ -492,7 +492,7 @@ sqrt(2) + sqrt(3)
 - 前置概念：[假设推理系统](05-assumptions.md) 了解 refine() 与 simplify() 的区别
 - 前置概念：[函数体系](04-function-basics.md) 了解 expand_func/rewrite 等函数变换机制
 - 后续概念：[微积分](07-calculus.md) 了解微分积分运算中化简的作用
-- 源码信源：[simplify-source](/references/simplify-source.md) 提供各化简函数的完整 API 与参数参考
+- 源码信源：[simplify-source](../references/simplify-source.md) 提供各化简函数的完整 API 与参数参考
 
 [^F-057]: facts.md F-057 — expand 系列函数定义，参见 core/function.py
 [^F-101]: facts.md F-101 — simplify 模块导出清单

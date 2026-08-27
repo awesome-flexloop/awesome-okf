@@ -248,8 +248,8 @@ jupyterlab-translate compile ./my-extension my_extension -l zh_CN
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [字符串提取流水线](/concepts/04-extraction-pipeline.md)
-- [翻译目录管理](/concepts/05-catalog-management.md)
-- [Jed JSON翻译格式](/concepts/06-json-jed-format.md)
-- [Hatch构建钩子集成](/concepts/07-hatch-build-hook.md)
+- [快速开始](../concepts/01-getting-started.md)
+- [字符串提取流水线](../concepts/04-extraction-pipeline.md)
+- [翻译目录管理](../concepts/05-catalog-management.md)
+- [Jed JSON翻译格式](../concepts/06-json-jed-format.md)
+- [Hatch构建钩子集成](../concepts/07-hatch-build-hook.md)

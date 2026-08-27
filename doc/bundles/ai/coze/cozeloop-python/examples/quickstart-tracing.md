@@ -247,7 +247,7 @@ A: SDK 注册了 atexit 钩子，程序正常退出时会自动调用 close。�
 
 ## 下一步
 
-- 学习 [Tracing 模型](/concepts/01-tracing-model.md)理解 Span、标签、Baggage 的详细规范
-- 尝试 [OpenAI 集成示例](/examples/openai-integration.md)，体验零侵入自动埋点
-- 阅读 [自定义 Span 追踪示例](/examples/custom-span-tracing.md)，掌握复杂场景的手动埋点
-- 查看 [API 参考](/references/tracing-api.md)了解完整接口
+- 学习 [Tracing 模型](../concepts/01-tracing-model.md)理解 Span、标签、Baggage 的详细规范
+- 尝试 [OpenAI 集成示例](openai-integration.md)，体验零侵入自动埋点
+- 阅读 [自定义 Span 追踪示例](custom-span-tracing.md)，掌握复杂场景的手动埋点
+- 查看 [API 参考](../references/tracing-api.md)了解完整接口

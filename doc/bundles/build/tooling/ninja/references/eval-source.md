@@ -17,7 +17,7 @@ sources:
 
 # 规则与变量求值 API 参考
 
-> 信源文件：[eval_env.h](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/eval_env.h)、[eval_env.cc](file:///d:/spaces/SpecWeave/external/libs/tools/ninja/src/eval_env.cc)
+> 信源文件：eval_env.h、eval_env.cc
 
 本文档记录 Ninja 规则定义、变量绑定环境和变量字符串求值的完整 API。
 

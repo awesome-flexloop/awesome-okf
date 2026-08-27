@@ -26,7 +26,7 @@ status: active
 
 # Nuitka 插件基类 API 参考
 
-> 源码路径：[nuitka/plugins/](file:///d:/spaces/SpecWeave/playground/chaos/libs/Nuitka/nuitka/plugins/)
+> 源码路径：nuitka/plugins/
 
 ## Plugins 管理器（单例）
 

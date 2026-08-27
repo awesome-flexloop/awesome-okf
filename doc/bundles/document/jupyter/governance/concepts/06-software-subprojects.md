@@ -25,7 +25,7 @@ Jupyter 的软件开发组织为一组**软件子项目（Software Subprojects�
 
 | 责任领域 | 具体要求 |
 |---------|---------|
-| 行为准则 | 遵守 [Jupyter 行为准则](/concepts/13-code-of-conduct.md) |
+| 行为准则 | 遵守 [Jupyter 行为准则](13-code-of-conduct.md) |
 | 决策流程 | 遵循 Jupyter 决策制定指南和流程 |
 | SSC 代表 | 如适用，提名并维护一名 SSC 代表 |
 | 许可 | 遵循 Jupyter 许可指南和实践（BSD-3-Clause） |
@@ -93,7 +93,7 @@ Jupyter 的软件开发组织为一组**软件子项目（Software Subprojects�
 
 ## 相关概念
 
-- [软件指导委员会（SSC）](/concepts/04-software-steering-council.md)
-- [新子项目准入与孵化](/concepts/11-new-subprojects.md)
-- [决策制定流程](/concepts/09-decision-making.md)
-- [常设委员会与工作组](/concepts/07-committees-and-working-groups.md)
+- [软件指导委员会（SSC）](04-software-steering-council.md)
+- [新子项目准入与孵化](11-new-subprojects.md)
+- [决策制定流程](09-decision-making.md)
+- [常设委员会与工作组](07-committees-and-working-groups.md)

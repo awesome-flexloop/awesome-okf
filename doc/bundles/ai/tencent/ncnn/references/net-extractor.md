@@ -134,5 +134,5 @@ private:
 
 ## 相关概念
 
-- [01 Net 与 Extractor 推理流程](/concepts/01-net-extractor.md)
-- [05 Option 推理配置](/concepts/05-option-config.md)
+- [01 Net 与 Extractor 推理流程](../concepts/01-net-extractor.md)
+- [05 Option 推理配置](../concepts/05-option-config.md)

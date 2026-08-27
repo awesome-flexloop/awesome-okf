@@ -15,14 +15,14 @@ status: stable
 
 | 模块文件 | 类/函数数量 | 信源文档 |
 |---------|-----------|---------|
-| `jupyterlab_translate/cli.py` | 1类7命令 | [CLI命令源码映射](/references/cli-source.md) |
-| `jupyterlab_translate/api.py` | 6函数 | [API层源码映射](/references/api-source.md) |
-| `jupyterlab_translate/utils.py` | 19函数 | [核心工具源码映射](/references/utils-source.md) |
-| `jupyterlab_translate/converters.py` | 3函数 | [格式转换模块源码映射](/references/converters-source.md) |
-| `jupyterlab_translate/finder.py` | 4函数 | [运行时发现模块源码映射](/references/finder-source.md) |
-| `jupyterlab_translate/plugin.py` | 1类3方法 | [Hatch构建钩子源码映射](/references/plugin-source.md) |
-| `jupyterlab_translate/contributors.py` | 4函数1类 | [Crowdin贡献者模块源码映射](/references/contributors-source.md) |
-| 常量与配置 | — | [常量与配置映射](/references/constants-config.md) |
+| `jupyterlab_translate/cli.py` | 1类7命令 | [CLI命令源码映射](cli-source.md) |
+| `jupyterlab_translate/api.py` | 6函数 | [API层源码映射](api-source.md) |
+| `jupyterlab_translate/utils.py` | 19函数 | [核心工具源码映射](utils-source.md) |
+| `jupyterlab_translate/converters.py` | 3函数 | [格式转换模块源码映射](converters-source.md) |
+| `jupyterlab_translate/finder.py` | 4函数 | [运行时发现模块源码映射](finder-source.md) |
+| `jupyterlab_translate/plugin.py` | 1类3方法 | [Hatch构建钩子源码映射](plugin-source.md) |
+| `jupyterlab_translate/contributors.py` | 4函数1类 | [Crowdin贡献者模块源码映射](contributors-source.md) |
+| 常量与配置 | — | [常量与配置映射](constants-config.md) |
 
 ## 信源使用规范
 

@@ -145,20 +145,20 @@ Cookbooks 按能力域分为六大类，对应不同的应用场景和技术难�
 根据你的需求场景快速定位：
 
 ### 我想让 Claude 处理文本...
-- **分类打标签** → [classification](/cookbooks/concepts/03-rag-patterns.md) 相关食谱
-- **从文档中找答案** → [RAG 模式](/cookbooks/concepts/03-rag-patterns.md)
+- **分类打标签** → [classification](03-rag-patterns.md) 相关食谱
+- **从文档中找答案** → [RAG 模式](03-rag-patterns.md)
 - **总结长文/会议记录** → summarization 食谱
 - **自然语言查数据库** → text_to_sql 食谱
 - **审核内容合规性** → content_moderation 食谱
 
 ### 我想让 Claude 调用工具/执行动作...
-- **理解工具调用基础** → [工具调用模式](/cookbooks/concepts/01-tool-use-patterns.md)
+- **理解工具调用基础** → [工具调用模式](01-tool-use-patterns.md)
 - **做客服/多轮对话** → customer_service_agent 食谱
 - **做数学计算** → calculator_tool 食谱
 - **查数据库** → SQL queries 食谱
 
 ### 我想处理图片/PDF/多模态...
-- **理解视觉能力基础** → [多模态模式](/cookbooks/concepts/02-multimodal-patterns.md)
+- **理解视觉能力基础** → [多模态模式](02-multimodal-patterns.md)
 - **识别图片内容** → Vision 入门/最佳实践
 - **解读图表 PPT** → 图表解读食谱
 - **提取表单文字** → OCR/表单提取食谱
@@ -166,7 +166,7 @@ Cookbooks 按能力域分为六大类，对应不同的应用场景和技术难�
 - **生成图片** → Stable Diffusion 集成食谱
 
 ### 我想做生产级优化...
-- **减少 Token 成本** → [高级技巧 - 成本优化](/cookbooks/concepts/04-advanced-techniques.md)
+- **减少 Token 成本** → [高级技巧 - 成本优化](04-advanced-techniques.md)
 - **加快响应速度** → Prompt Caching
 - **复杂推理任务** → Extended Thinking
 - **保证输出格式** → JSON 模式
@@ -175,7 +175,7 @@ Cookbooks 按能力域分为六大类，对应不同的应用场景和技术难�
 - **微调模型** → Fine-tuning on Bedrock
 
 ### 我想构建企业级 Agent...
-- **理解 Agent 架构** → [高级技巧 - Sub-agents](/cookbooks/concepts/04-advanced-techniques.md)
+- **理解 Agent 架构** → [高级技巧 - Sub-agents](04-advanced-techniques.md)
 - **任务编排 Agent** → chief_of_staff_agent
 - **运维监控 Agent** → observability_agent / site_reliability_agent
 - **安全扫描 Agent** → vulnerability_detection_agent
@@ -184,7 +184,7 @@ Cookbooks 按能力域分为六大类，对应不同的应用场景和技术难�
 
 ## 与 Python SDK Wiki 的关系
 
-本 Cookbook Wiki 与 [Python SDK Wiki](/python-sdk/index.md) 是互补关系，定位不同：
+本 Cookbook Wiki 与 [Python SDK Wiki](../../python-sdk/index.md) 是互补关系，定位不同：
 
 | 维度 | Python SDK Wiki | Claude Cookbooks Wiki |
 |------|----------------|----------------------|
@@ -216,9 +216,9 @@ Python SDK Wiki（打基础）
 
 ## 相关概念
 
-- [工具调用模式](/cookbooks/concepts/01-tool-use-patterns.md) — 深入理解 Function Calling 的各种实践模式
-- [多模态模式](/cookbooks/concepts/02-multimodal-patterns.md) — Vision、PDF、图片处理的实践方案
-- [RAG 与知识检索模式](/cookbooks/concepts/03-rag-patterns.md) — 检索增强生成的完整实践
-- [高级技巧](/cookbooks/concepts/04-advanced-techniques.md) — 缓存、扩展思考、子 Agent 等进阶能力
-- [食谱完整索引](/cookbooks/references/recipe-index.md) — 按能力域分类的所有 Cookbook 速查表
-- [Python SDK - 工具调用概念](/python-sdk/concepts/04-tool-use.md) — 工具调用的底层 API 原理
+- [工具调用模式](01-tool-use-patterns.md) — 深入理解 Function Calling 的各种实践模式
+- [多模态模式](02-multimodal-patterns.md) — Vision、PDF、图片处理的实践方案
+- [RAG 与知识检索模式](03-rag-patterns.md) — 检索增强生成的完整实践
+- [高级技巧](04-advanced-techniques.md) — 缓存、扩展思考、子 Agent 等进阶能力
+- [食谱完整索引](../references/recipe-index.md) — 按能力域分类的所有 Cookbook 速查表
+- [Python SDK - 工具调用概念](../../python-sdk/concepts/04-tool-use.md) — 工具调用的底层 API 原理

@@ -616,8 +616,8 @@ def my_magic(self, line, local_ns=None):
 
 ## 相关概念
 
-- [魔法命令系统](/concepts/04-magic-system.md)
-- [自定义魔法开发](/concepts/11-custom-magics.md)
-- [扩展系统](/concepts/09-extension-system.md)
-- [输入转换与特殊语法](/concepts/07-input-transform.md)
-- [信源参考 - 魔法系统](/references/magic-source.md)
+- [魔法命令系统](../concepts/04-magic-system.md)
+- [自定义魔法开发](../concepts/11-custom-magics.md)
+- [扩展系统](../concepts/09-extension-system.md)
+- [输入转换与特殊语法](../concepts/07-input-transform.md)
+- [信源参考 - 魔法系统](../references/magic-source.md)

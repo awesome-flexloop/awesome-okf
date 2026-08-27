@@ -26,7 +26,7 @@ sources:
 - Python ≥ 3.10
 - 已安装 veadk-python 及其扩展依赖（`pip install "veadk-python[extensions]"`）
 - 配置 Embedding 模型的 API Key（用于文档向量化）
-- 理解 [知识库概念](/concepts/knowledge-base.md)
+- 理解 [知识库概念](../concepts/knowledge-base.md)
 
 ## 完整代码示例
 

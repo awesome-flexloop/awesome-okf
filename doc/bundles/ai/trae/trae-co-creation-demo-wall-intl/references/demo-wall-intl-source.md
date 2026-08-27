@@ -18,7 +18,7 @@ sources:
 
 ## 项目定位
 
-**trae-co-creation-demo-wall-intl** 是 [trae-co-creation-demo-wall](../trae-co-creation-demo-wall/index.md)（中文版）的**国际版变体**，核心架构与中文版相同（Next.js App Router + Prisma + NextAuth + next-intl + Tiptap + 腾讯云 COS），针对海外 Vercel 部署场景做了定向调整。共享架构部分请参阅中文版信源索引，本文档仅列出 intl 版的差异文件。
+**trae-co-creation-demo-wall-intl** 是 [trae-co-creation-demo-wall](../../trae-co-creation-demo-wall/index.md)（中文版）的**国际版变体**，核心架构与中文版相同（Next.js App Router + Prisma + NextAuth + next-intl + Tiptap + 腾讯云 COS），针对海外 Vercel 部署场景做了定向调整。共享架构部分请参阅中文版信源索引，本文档仅列出 intl 版的差异文件。
 
 ### 中文版共享源码引用
 

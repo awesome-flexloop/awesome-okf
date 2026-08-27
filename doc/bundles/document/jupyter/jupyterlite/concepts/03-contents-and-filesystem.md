@@ -278,8 +278,8 @@ Worker 内部使用 Uint8Array 存储，`get()` 和 `put()` 方法负责格式�
 
 ## 相关概念
 
-- [整体架构](/concepts/01-architecture-overview.md)
-- [内核系统](/concepts/02-kernel-system.md)
-- [Service Worker桥接](/concepts/04-service-worker-bridge.md)
-- [浏览器存储](/concepts/05-browser-storage.md)
-- [内容管理信源](/references/contents-source.md)
+- [整体架构](01-architecture-overview.md)
+- [内核系统](02-kernel-system.md)
+- [Service Worker桥接](04-service-worker-bridge.md)
+- [浏览器存储](05-browser-storage.md)
+- [内容管理信源](../references/contents-source.md)

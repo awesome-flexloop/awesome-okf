@@ -607,9 +607,9 @@ type TurnEndReason =
 
 ## 源码链接
 
-- ReactLoopAgent 主循环实现：[agent.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/agent-loop/src/agent.ts)
-- 运行时上下文投影：[runtime-context.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/agent-loop/src/runtime-context.ts)
-- 工具调用调度器：[tool-calls.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/agent-loop/src/tool-calls.ts)
-- Inbox 双队列实现：[inbox.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/agent/src/inbox.ts)
-- Agent 类型定义：[types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/agent/src/types.ts)
-- Agent 注册与事件声明：[index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/core/agent/src/index.ts)
+- ReactLoopAgent 主循环实现：agent.ts
+- 运行时上下文投影：runtime-context.ts
+- 工具调用调度器：tool-calls.ts
+- Inbox 双队列实现：inbox.ts
+- Agent 类型定义：types.ts
+- Agent 注册与事件声明：index.ts

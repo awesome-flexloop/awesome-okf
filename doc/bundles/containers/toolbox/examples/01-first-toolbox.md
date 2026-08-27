@@ -399,13 +399,13 @@ toolbox create -d ubuntu -r 24.04
 
 ## 下一步
 
-- 阅读 [/concepts/01-pass-through.md](/concepts/01-pass-through.md) 了解 10 类主机资源透传的详细机制
-- 阅读 [/examples/02-custom-image.md](/examples/02-custom-image.md) 学习构建自定义预装工具镜像
+- 阅读 [/concepts/01-pass-through.md](../concepts/01-pass-through.md) 了解 10 类主机资源透传的详细机制
+- 阅读 [/examples/02-custom-image.md](02-custom-image.md) 学习构建自定义预装工具镜像
 - 尝试创建多个容器：`toolbox create -c go-dev -d fedora -r 39`、`toolbox create -c python-dev -d ubuntu -r 24.04`
 - 配置 Shell 别名（如 `alias tbe="toolbox enter"`）简化日常使用
 
 ## 相关概念
 
-- [/concepts/00-introduction.md](/concepts/00-introduction.md)
-- [/concepts/02-workflow.md](/concepts/02-workflow.md)
-- [/examples/02-custom-image.md](/examples/02-custom-image.md)
+- [/concepts/00-introduction.md](../concepts/00-introduction.md)
+- [/concepts/02-workflow.md](../concepts/02-workflow.md)
+- [/examples/02-custom-image.md](02-custom-image.md)

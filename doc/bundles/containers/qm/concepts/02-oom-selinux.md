@@ -264,6 +264,6 @@ sealert -a /var/log/audit/audit.log
 
 ## 相关概念
 
-- [嵌套隔离架构](/bundles/containers/qm/concepts/01-nested-architecture.md)：了解 QM 的整体嵌套架构
-- [QM 定位与 ASIL 汽车功能安全场景](/bundles/containers/qm/concepts/00-introduction.md)：了解安全隔离的背景
-- [创建 QM 虚拟机环境](/bundles/containers/qm/examples/01-vm-setup.md)：在虚拟机中测试 QM 的 OOM 和 SELinux 配置
+- [嵌套隔离架构](01-nested-architecture.md)：了解 QM 的整体嵌套架构
+- [QM 定位与 ASIL 汽车功能安全场景](00-introduction.md)：了解安全隔离的背景
+- [创建 QM 虚拟机环境](../examples/01-vm-setup.md)：在虚拟机中测试 QM 的 OOM 和 SELinux 配置

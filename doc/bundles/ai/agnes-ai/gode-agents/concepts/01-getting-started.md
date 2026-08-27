@@ -262,9 +262,9 @@ CLI 支持 `--model-type`、`--model-id`、`--tools`、`--imports`、`--api-base
 
 ## 相关链接
 
-- [简介：编码式多智能体推理](/concepts/00-introduction.md) — 框架核心理念与设计哲学
-- [架构总览](/concepts/02-architecture-overview.md) — 模块依赖与核心组件
-- [MultiStepAgent：核心推理循环](/concepts/03-multi-step-agent.md) — run 循环机制详解
-- [Agents API 参考](/references/agents-api.md) — 完整构造参数和方法签名
-- [Models API 参考](/references/models-api.md) — 各模型后端配置
-- [Tools API 参考](/references/tools-api.md) — 工具定义与内置工具
+- [简介：编码式多智能体推理](00-introduction.md) — 框架核心理念与设计哲学
+- [架构总览](02-architecture-overview.md) — 模块依赖与核心组件
+- [MultiStepAgent：核心推理循环](03-multi-step-agent.md) — run 循环机制详解
+- [Agents API 参考](../references/agents-api.md) — 完整构造参数和方法签名
+- [Models API 参考](../references/models-api.md) — 各模型后端配置
+- [Tools API 参考](../references/tools-api.md) — 工具定义与内置工具

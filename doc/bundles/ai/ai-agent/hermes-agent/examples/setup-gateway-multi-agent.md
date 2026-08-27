@@ -28,7 +28,7 @@ sources:
 - Python ≥ 3.11 且 < 3.14
 - 已安装 hermes-agent（`pip install hermes-agent`）
 - 拥有一个兼容 OpenAI Chat Completions API 的模型服务
-- 理解 [Gateway 多 Agent 概念](/concepts/gateway-multi-agent.md) 和 [平台插件概念](/concepts/platform-plugin.md)
+- 理解 [Gateway 多 Agent 概念](../concepts/gateway-multi-agent.md) 和 [平台插件概念](../concepts/platform-plugin.md)
 
 ## 完整代码示例
 

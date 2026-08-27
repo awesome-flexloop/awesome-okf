@@ -24,7 +24,7 @@ sources:
 
 ACP（Agent Client Protocol）适配器使 hermes-agent 能够作为 **Agent 服务器** 运行，通过标准 JSON-RPC 协议向 ACP 客户端（如 Zed 编辑器、Codex CLI 等）提供 AI Agent 能力。客户端通过 stdio 启动 hermes-agent 进程，双方在 stdout/stdin 上进行 JSON-RPC 2.0 通信。
 
-核心入口是 [acp_adapter/server.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/server.py) 中的 **`HermesACPAgent`** 类（L566），它继承自 `acp.Agent`，实现了 ACP 协议的所有必需方法。会话管理由 [acp_adapter/session.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/session.py) 中的 **`SessionManager`** 负责，每个 ACP 会话映射到一个独立的 `AIAgent` 实例。
+核心入口是 acp_adapter/server.py 中的 **`HermesACPAgent`** 类（L566），它继承自 `acp.Agent`，实现了 ACP 协议的所有必需方法。会话管理由 acp_adapter/session.py 中的 **`SessionManager`** 负责，每个 ACP 会话映射到一个独立的 `AIAgent` 实例。
 
 ### 协议能力
 
@@ -223,14 +223,14 @@ classDiagram
 
 | 模块 | 职责 |
 |------|------|
-| [acp_adapter/entry.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/entry.py) | 进程入口（`main()`），参数解析，启动 acp.run_agent |
-| [acp_adapter/server.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/server.py) | HermesACPAgent 实现（协议处理、会话路由、流式分发） |
-| [acp_adapter/session.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/session.py) | SessionManager、SessionState、WSL 路径翻译 |
-| [acp_adapter/auth.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/auth.py) | 认证方法构建、provider 检测 |
-| [acp_adapter/events.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/events.py) | 流式事件回调构造器 |
-| [acp_adapter/tools.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/tools.py) | 工具桥接（build_tool_complete、build_tool_start） |
-| [acp_adapter/permissions.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/permissions.py) | 审批回调构建（make_approval_callback） |
-| [acp_adapter/provenance.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/provenance.py) | 会话溯源元数据 |
+| acp_adapter/entry.py | 进程入口（`main()`），参数解析，启动 acp.run_agent |
+| acp_adapter/server.py | HermesACPAgent 实现（协议处理、会话路由、流式分发） |
+| acp_adapter/session.py | SessionManager、SessionState、WSL 路径翻译 |
+| acp_adapter/auth.py | 认证方法构建、provider 检测 |
+| acp_adapter/events.py | 流式事件回调构造器 |
+| acp_adapter/tools.py | 工具桥接（build_tool_complete、build_tool_start） |
+| acp_adapter/permissions.py | 审批回调构建（make_approval_callback） |
+| acp_adapter/provenance.py | 会话溯源元数据 |
 
 ## 工作流程/生命周期
 
@@ -392,16 +392,16 @@ hermes acp --setup-browser  # 浏览器认证设置
 
 | 文件 | 内容 |
 |------|------|
-| [acp_adapter/entry.py#L220-L278](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/entry.py#L220-L278) | 进程入口 main()，参数解析，启动 acp.run_agent |
-| [acp_adapter/server.py#L566-L640](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/server.py#L566-L640) | HermesACPAgent 类定义、命令表、模式映射 |
-| [acp_adapter/server.py#L1139-L1171](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/server.py#L1139-L1171) | initialize() 协议握手与能力声明 |
-| [acp_adapter/server.py#L1435-](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/server.py#L1435) | new_session() 会话创建 |
-| [acp_adapter/session.py#L159-L240](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/session.py#L159-L240) | SessionState、SessionManager 类 |
-| [acp_adapter/session.py#L29-L60](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/session.py#L29-L60) | WSL 路径翻译逻辑 |
-| [acp_adapter/auth.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/auth.py) | 认证方法构建、终端设置流 |
-| [acp_adapter/events.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/events.py) | 流式回调构造器（message/thinking/step/tool_progress） |
-| [acp_adapter/tools.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/tools.py) | 工具完成/开始桥接 |
-| [acp_adapter/permissions.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/acp_adapter/permissions.py) | 编辑审批回调 |
+| acp_adapter/entry.py#L220-L278 | 进程入口 main()，参数解析，启动 acp.run_agent |
+| acp_adapter/server.py#L566-L640 | HermesACPAgent 类定义、命令表、模式映射 |
+| acp_adapter/server.py#L1139-L1171 | initialize() 协议握手与能力声明 |
+| acp_adapter/server.py#L1435- | new_session() 会话创建 |
+| acp_adapter/session.py#L159-L240 | SessionState、SessionManager 类 |
+| acp_adapter/session.py#L29-L60 | WSL 路径翻译逻辑 |
+| acp_adapter/auth.py | 认证方法构建、终端设置流 |
+| acp_adapter/events.py | 流式回调构造器（message/thinking/step/tool_progress） |
+| acp_adapter/tools.py | 工具完成/开始桥接 |
+| acp_adapter/permissions.py | 编辑审批回调 |
 
 ## 相关 Concepts
 

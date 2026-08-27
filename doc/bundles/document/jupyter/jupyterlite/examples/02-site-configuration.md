@@ -178,5 +178,5 @@ my-jupyterlite/
 
 ## 相关概念
 
-- [扩展架构](/concepts/08-extension-architecture.md)
-- [Python构建系统](/concepts/06-build-system.md)
+- [扩展架构](../concepts/08-extension-architecture.md)
+- [Python构建系统](../concepts/06-build-system.md)

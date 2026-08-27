@@ -338,8 +338,8 @@ ns.configure({
 
 ## 相关概念
 
-- [快速上手](/concepts/01-getting-started.md)
-- [基础使用示例](/examples/basic-usage.md)
-- [Invocations 简介](/concepts/00-introduction.md)
+- [快速上手](01-getting-started.md)
+- [基础使用示例](../examples/basic-usage.md)
+- [Invocations 简介](00-introduction.md)
 
-[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](/references/invocations-source.md)。
+[^invocations-source]: Invocations 源码信源，见 [invocations-source.md](../references/invocations-source.md)。

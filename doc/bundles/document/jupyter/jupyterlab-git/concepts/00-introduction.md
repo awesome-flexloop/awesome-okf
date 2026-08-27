@@ -88,7 +88,7 @@ jupyterlab-git 执行严格的版本校验：
 
 ## 相关概念
 
-- [安装与快速上手](/concepts/01-getting-started.md)
-- [架构总览](/concepts/02-architecture-overview.md)
-- [插件系统与五个Plugin](/concepts/03-extension-plugin-system.md)
-- [GitExtension核心模型](/concepts/04-git-extension-model.md)
+- [安装与快速上手](01-getting-started.md)
+- [架构总览](02-architecture-overview.md)
+- [插件系统与五个Plugin](03-extension-plugin-system.md)
+- [GitExtension核心模型](04-git-extension-model.md)

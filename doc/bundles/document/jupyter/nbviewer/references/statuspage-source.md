@@ -197,4 +197,4 @@ API密钥和GitHub凭据通过 `secrets/config/nbviewer.yaml`（git-crypt加密�
 ## 相关信源
 
 - [部署配置文件源码](config-source.md#statuspage-配置节)
-- [测试与密钥管理](/concepts/08-testing-and-secrets.md)
+- [测试与密钥管理](../concepts/08-testing-and-secrets.md)

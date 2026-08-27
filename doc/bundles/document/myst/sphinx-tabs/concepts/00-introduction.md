@@ -52,6 +52,6 @@ sphinx-tabs 是 Executable Books 生态中的 Sphinx 标签页组件扩展，允
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [四个指令详解](/concepts/02-directives.md)
-- [分组标签与代码标签](/concepts/03-group-and-code-tabs.md)
+- [快速开始](01-getting-started.md)
+- [四个指令详解](02-directives.md)
+- [分组标签与代码标签](03-group-and-code-tabs.md)

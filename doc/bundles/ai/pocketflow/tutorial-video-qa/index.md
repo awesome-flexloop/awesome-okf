@@ -77,11 +77,11 @@ PocketFlow-Tutorial-Video-Generator/
 
 ## 源码位置
 
-- 项目根目录：[PocketFlow-Tutorial-Video-Generator/](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Video-Generator/)
-- 节点定义：[nodes.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Video-Generator/nodes.py)
-- 流程编排：[flow.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Video-Generator/flow.py)
-- 程序入口：[main.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Video-Generator/main.py)
-- 工具函数：[utils/call_llm.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow-Tutorial-Video-Generator/utils/call_llm.py)
+- 项目根目录：PocketFlow-Tutorial-Video-Generator/
+- 节点定义：nodes.py
+- 流程编排：flow.py
+- 程序入口：main.py
+- 工具函数：utils/call_llm.py
 
 ```{toctree}
 :hidden:

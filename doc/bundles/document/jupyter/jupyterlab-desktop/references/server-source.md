@@ -127,6 +127,6 @@ export namespace JupyterServerFactory {
 
 ## 相关概念
 
-- [Jupyter 服务器管理](/concepts/04-server-management.md)
-- [Python 环境管理](/concepts/05-python-env-management.md)
-- [会话窗口系统](/concepts/03-session-window-system.md)
+- [Jupyter 服务器管理](../concepts/04-server-management.md)
+- [Python 环境管理](../concepts/05-python-env-management.md)
+- [会话窗口系统](../concepts/03-session-window-system.md)

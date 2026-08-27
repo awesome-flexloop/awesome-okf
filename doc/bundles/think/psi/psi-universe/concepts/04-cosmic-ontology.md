@@ -90,7 +90,7 @@ $$\mathcal{U}^{(t+1)} = \Omega_Q^t \oplus \mathrm{SHIFT}\!\left(\Omega_Q^t \oplu
 D10 及其邻近维度声称对六大终极问题提供解法框架：
 
 1. **暗物质暗能量（D13）**：被解释为 XOR-SHIFT 操作中不可直接观测但影响引力结构的信息分量；
-2. **意识本质（D11）**：意识作为信息场的自指干涉模式，详见 [信息场与意识理论](/concepts/05-information-field.md)；
+2. **意识本质（D11）**：意识作为信息场的自指干涉模式，详见 [信息场与意识理论](05-information-field.md)；
 3. **量子-相对论统一（D10）**：两者分别描述 XOR-SHIFT 操作的不同面相——量子侧关注叠加，相对论侧关注 SHIFT 的时空几何；
 4. **多重宇宙（D15+）**：递归分叉产生的平行状态序列；
 5. **生命起源（D19）**：信息流动在特定熵条件下的自组织必然；
@@ -119,14 +119,14 @@ D10 的扩展理论涉及：
 
 ## 与 ψ 理论的同构
 
-D10 与 ψ 理论的 [现实结晶](/psi-core/concepts/05-reality-crystallization.md) 概念存在精确对应：
+D10 与 ψ 理论的 [现实结晶](../../psi-core/concepts/05-reality-crystallization.md) 概念存在精确对应：
 
 - ψ 理论的"塌缩反复迭代，物理量作为塌缩属性固化"对应 D10 的 XOR-SHIFT 递归生成物理范畴；
 - "现实结晶"描述潜能结晶为结构的过程，D10 将此过程形式化为 $\Omega_C^t = \Omega_Q^t \oplus \mathrm{SHIFT}(\Omega_Q^t)$。
 
 ## 相关概念
 
-- [三大公理 — 宇宙的递归本源](/concepts/00-three-axioms.md)
-- [维度谱系 D0-D∞ — 从操作到超高维](/concepts/03-dimension-spectrum.md)
-- [信息场与意识理论 — 物质-意识二元一体](/concepts/05-information-field.md)
-- [/psi-core/concepts/05-reality-crystallization.md](/psi-core/concepts/05-reality-crystallization.md)
+- [三大公理 — 宇宙的递归本源](00-three-axioms.md)
+- [维度谱系 D0-D∞ — 从操作到超高维](03-dimension-spectrum.md)
+- [信息场与意识理论 — 物质-意识二元一体](05-information-field.md)
+- [/psi-core/concepts/05-reality-crystallization.md](../../psi-core/concepts/05-reality-crystallization.md)

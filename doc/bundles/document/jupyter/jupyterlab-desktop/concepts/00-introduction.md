@@ -102,10 +102,10 @@ JupyterLab Desktop 采用经典的 Electron 架构，分为主进程和渲染进
 
 ## 下一篇
 
-- [架构概览](/concepts/01-architecture-overview.md) - 深入了解核心模块与数据流
-- [应用入口与生命周期](/concepts/02-app-entry-lifecycle.md) - 了解应用启动流程
+- [架构概览](01-architecture-overview.md) - 深入了解核心模块与数据流
+- [应用入口与生命周期](02-app-entry-lifecycle.md) - 了解应用启动流程
 
 ## 相关概念
 
-- [架构概览](/concepts/01-architecture-overview.md) — 了解核心模块架构、依赖关系与数据流
-- [应用入口与生命周期](/concepts/02-app-entry-lifecycle.md) — 掌握从进程启动到应用就绪的完整流程
+- [架构概览](01-architecture-overview.md) — 了解核心模块架构、依赖关系与数据流
+- [应用入口与生命周期](02-app-entry-lifecycle.md) — 掌握从进程启动到应用就绪的完整流程

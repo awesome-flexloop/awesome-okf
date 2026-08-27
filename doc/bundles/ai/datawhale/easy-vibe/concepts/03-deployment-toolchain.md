@@ -86,7 +86,7 @@ README 特别推荐"现代方式"：在 VS Code、Cursor 或 Trae 的 AI 对话�
 
 ## 多语言构建脚本
 
-核心脚本 `scripts/build-locales.mjs` 的设计已在[多语言文档站架构](/ai/datawhale/easy-vibe/concepts/02-multilingual-docs-architecture.md)中详述。工具链视角的关键点：
+核心脚本 `scripts/build-locales.mjs` 的设计已在[多语言文档站架构](02-multilingual-docs-architecture.md)中详述。工具链视角的关键点：
 
 - **文件锁** `build-locales.lock` 防并发，PID 存活检测自动清除僵尸锁。
 - **内存控制**：每 locale 默认 4096MB 堆（`BUILD_HEAP_MB` 可调），CI 中 GitHub Actions 用 8192MB。
@@ -187,5 +187,5 @@ Vercel 部署时自动设置 `VERCEL=1`，config.mjs 据此把 base 设为 `/`�
 
 ## 相关概念
 
-- [Vibe Coding 理念](/ai/datawhale/easy-vibe/concepts/01-vibe-coding-philosophy.md)：工具链所服务的教学理念与三阶段内容。
-- [多语言文档站架构](/ai/datawhale/easy-vibe/concepts/02-multilingual-docs-architecture.md)：build-locales.mjs 的顺序构建、base 自适应、SEO 生成等机制的深入解析。
+- [Vibe Coding 理念](01-vibe-coding-philosophy.md)：工具链所服务的教学理念与三阶段内容。
+- [多语言文档站架构](02-multilingual-docs-architecture.md)：build-locales.mjs 的顺序构建、base 自适应、SEO 生成等机制的深入解析。

@@ -23,7 +23,7 @@ sources:
 
 Gateway 是 hermes-agent 的多平台消息网关运行时，负责同时连接多个即时通讯平台（Telegram、Discord、Slack、微信、飞书、企业微信、WhatsApp 等 22+ 平台），将来自不同平台/会话的消息路由到独立的 `AIAgent` 实例执行，并将响应流式分发回对应平台。
 
-核心入口是 [gateway/run.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/run.py) 中的 **`GatewayRunner`** 类（L5848），它是整个网关的主控制器，继承自三个 Mixin：
+核心入口是 gateway/run.py 中的 **`GatewayRunner`** 类（L5848），它是整个网关的主控制器，继承自三个 Mixin：
 
 - `GatewayAuthorizationMixin`：授权控制
 - `GatewayKanbanWatchersMixin`：看板监控
@@ -42,7 +42,7 @@ Gateway 是 hermes-agent 的多平台消息网关运行时，负责同时连接�
 
 ### 1. 三层状态作用域
 
-[session_state.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/session_state.py) 将每个会话的状态分为三个作用域：
+session_state.py 将每个会话的状态分为三个作用域：
 
 ```python
 @dataclass
@@ -85,11 +85,11 @@ _AGENT_CACHE_MAX_SIZE = 128                    # 默认最大缓存 128 个 Agen
 _AGENT_CACHE_IDLE_TTL_SECS = 3600.0            # 空闲 1 小时后驱逐
 ```
 
-每个 `AIAgent` 实例持有 LLM 客户端、工具 schema、记忆提供者等重资源。长期运行的网关（数周不重启）需要限制缓存大小。缓存通过 LRU 顺序 + 空闲 TTL 驱逐，并由 `_sweep_agent_cache_under_pressure()` 提供内存压力阀值（[agent_cache_pressure.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/agent_cache_pressure.py)）。
+每个 `AIAgent` 实例持有 LLM 客户端、工具 schema、记忆提供者等重资源。长期运行的网关（数周不重启）需要限制缓存大小。缓存通过 LRU 顺序 + 空闲 TTL 驱逐，并由 `_sweep_agent_cache_under_pressure()` 提供内存压力阀值（agent_cache_pressure.py）。
 
 ### 3. 平台适配器注册
 
-[Platform 枚举](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/config.py#L272-L347) 支持内置平台和动态插件平台：
+Platform 枚举 支持内置平台和动态插件平台：
 
 ```python
 class Platform(Enum):
@@ -242,23 +242,23 @@ classDiagram
 
 | 模块 | 职责 |
 |------|------|
-| [gateway/run.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/run.py) | GatewayRunner 主控制器（17000+ 行） |
-| [gateway/config.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/config.py) | GatewayConfig、Platform 枚举、配置加载 |
-| [gateway/session_state.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/session_state.py) | TurnState/ConversationState/PersistentState |
-| [gateway/session.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/session.py) | SessionStore 持久化、会话生命周期 |
-| [gateway/platform_registry.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/platform_registry.py) | 运行时平台注册中心 |
-| [gateway/stream_dispatch.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/stream_dispatch.py) | 流式响应分发到平台适配器 |
-| [gateway/stream_consumer.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/stream_consumer.py) | 消费 Agent 的流式输出队列 |
-| [gateway/delivery.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/delivery.py) | 消息投递与失败重试 |
-| [gateway/slash_commands.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/slash_commands.py) | 斜杠命令路由（/new, /model, /reset 等） |
-| [gateway/session_stall.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/session_stall.py) | 会话停滞检测与通知 |
-| [gateway/turn_lease.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/turn_lease.py) | 跨进程轮次租约（防止多进程并发） |
-| [gateway/shutdown_flush.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/shutdown_flush.py) | 关闭时排空轮次 |
-| [gateway/restart.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/restart.py) | 代码更新后重启逻辑 |
-| [gateway/agent_cache_pressure.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/agent_cache_pressure.py) | 内存压力下的 Agent 缓存清理 |
-| [gateway/scale_to_zero.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/scale_to_zero.py) | 空闲缩容（NAS 部署） |
-| [gateway/drain_control.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/drain_control.py) | NAS 驱动的排空控制 |
-| [gateway/hooks.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/hooks.py) | 网关生命周期钩子 |
+| gateway/run.py | GatewayRunner 主控制器（17000+ 行） |
+| gateway/config.py | GatewayConfig、Platform 枚举、配置加载 |
+| gateway/session_state.py | TurnState/ConversationState/PersistentState |
+| gateway/session.py | SessionStore 持久化、会话生命周期 |
+| gateway/platform_registry.py | 运行时平台注册中心 |
+| gateway/stream_dispatch.py | 流式响应分发到平台适配器 |
+| gateway/stream_consumer.py | 消费 Agent 的流式输出队列 |
+| gateway/delivery.py | 消息投递与失败重试 |
+| gateway/slash_commands.py | 斜杠命令路由（/new, /model, /reset 等） |
+| gateway/session_stall.py | 会话停滞检测与通知 |
+| gateway/turn_lease.py | 跨进程轮次租约（防止多进程并发） |
+| gateway/shutdown_flush.py | 关闭时排空轮次 |
+| gateway/restart.py | 代码更新后重启逻辑 |
+| gateway/agent_cache_pressure.py | 内存压力下的 Agent 缓存清理 |
+| gateway/scale_to_zero.py | 空闲缩容（NAS 部署） |
+| gateway/drain_control.py | NAS 驱动的排空控制 |
+| gateway/hooks.py | 网关生命周期钩子 |
 
 ## 工作流程/生命周期
 
@@ -425,15 +425,15 @@ _SYNC_DRAIN_TIMEOUT_S = 5.0              # 关闭排空超时
 
 | 文件 | 内容 |
 |------|------|
-| [gateway/run.py#L5848-](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/run.py#L5848) | GatewayRunner 类定义 |
-| [gateway/run.py#L10891-](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/run.py#L10891) | `start()` 方法实现 |
-| [gateway/run.py#L14638-](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/run.py#L14638) | `_handle_message()` 消息入口 |
-| [gateway/config.py#L272-L347](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/config.py#L272-L347) | Platform 枚举定义与动态扩展 |
-| [gateway/session_state.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/session_state.py) | TurnState/ConversationState/PersistentState |
-| [gateway/session.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/session.py) | SessionStore 会话持久化 |
-| [gateway/platforms/](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/platforms/) | 平台适配器实现（含 QQBot、微信、WhatsApp、Signal 等） |
-| [gateway/relay/](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/relay/) | Relay 中继协议适配器 |
-| [gateway/stream_dispatch.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/hermes-agent/gateway/stream_dispatch.py) | 流式响应分发 |
+| gateway/run.py#L5848- | GatewayRunner 类定义 |
+| gateway/run.py#L10891- | `start()` 方法实现 |
+| gateway/run.py#L14638- | `_handle_message()` 消息入口 |
+| gateway/config.py#L272-L347 | Platform 枚举定义与动态扩展 |
+| gateway/session_state.py | TurnState/ConversationState/PersistentState |
+| gateway/session.py | SessionStore 会话持久化 |
+| gateway/platforms/ | 平台适配器实现（含 QQBot、微信、WhatsApp、Signal 等） |
+| gateway/relay/ | Relay 中继协议适配器 |
+| gateway/stream_dispatch.py | 流式响应分发 |
 
 ### 启动示例（CLI 入口）
 

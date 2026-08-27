@@ -171,5 +171,5 @@ tags: [claude-code, plugins, official-plugins, index]
 
 ## 相关资源
 
-- [插件体系概念](/claude-code/concepts/01-plugin-system.md) — 了解 Commands/Agents/Skills/Hooks 扩展机制
-- [基本使用示例：安装插件](/claude-code/examples/basic-usage.md#安装插件示例) — 如何安装和使用插件
+- [插件体系概念](../concepts/01-plugin-system.md) — 了解 Commands/Agents/Skills/Hooks 扩展机制
+- [基本使用示例：安装插件](../examples/basic-usage.md#安装插件示例) — 如何安装和使用插件

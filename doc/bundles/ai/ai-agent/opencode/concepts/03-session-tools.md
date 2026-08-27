@@ -228,7 +228,7 @@ V2 权限使用有序规则集：
 
 ## 相关概念
 
-- [OpenCode 简介](/concepts/00-introduction.md)
-- [架构概览](/concepts/01-architecture.md)
-- [配置系统](/concepts/02-config-system.md)
-- [部署与基础设施](/concepts/04-deployment-infra.md)
+- [OpenCode 简介](00-introduction.md)
+- [架构概览](01-architecture.md)
+- [配置系统](02-config-system.md)
+- [部署与基础设施](04-deployment-infra.md)

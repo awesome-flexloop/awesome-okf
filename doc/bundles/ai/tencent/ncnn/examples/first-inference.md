@@ -123,7 +123,7 @@ target_link_libraries(inference ncnn)
 
 ## 相关概念
 
-- [01 Net 与 Extractor 推理流程](/concepts/01-net-extractor.md)
-- [02 Mat 张量系统](/concepts/02-mat-tensor-system.md)
-- [04 内存分配器](/concepts/04-allocator.md)
-- [05 Option 推理配置](/concepts/05-option-config.md)
+- [01 Net 与 Extractor 推理流程](../concepts/01-net-extractor.md)
+- [02 Mat 张量系统](../concepts/02-mat-tensor-system.md)
+- [04 内存分配器](../concepts/04-allocator.md)
+- [05 Option 推理配置](../concepts/05-option-config.md)

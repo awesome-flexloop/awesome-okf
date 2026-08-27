@@ -587,8 +587,8 @@ Agent 调用模型时会传入特定的 `stop_sequences`（如 `["Observation:",
 
 ## 相关链接
 
-- [ToolCallingAgent：函数调用范式](/concepts/05-tool-calling-agent.md) — 模型如何使用tools_to_call_from
-- [CodeAgent：代码执行范式](/concepts/06-code-agent.md) — 模型如何生成代码块
-- [记忆系统：步骤序列](/concepts/04-memory-system.md) — ChatMessage与记忆步骤的关系
-- [Models API 参考](/references/models-api.md) — 所有Model子类完整API
-- [Agents API 参考](/references/agents-api.md) — Agent构造中model参数的使用
+- [ToolCallingAgent：函数调用范式](05-tool-calling-agent.md) — 模型如何使用tools_to_call_from
+- [CodeAgent：代码执行范式](06-code-agent.md) — 模型如何生成代码块
+- [记忆系统：步骤序列](04-memory-system.md) — ChatMessage与记忆步骤的关系
+- [Models API 参考](../references/models-api.md) — 所有Model子类完整API
+- [Agents API 参考](../references/agents-api.md) — Agent构造中model参数的使用

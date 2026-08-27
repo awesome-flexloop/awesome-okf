@@ -223,7 +223,7 @@ bot.RunWithRetry(ctx, logger, "qq", bot.RetryConfig{
 
 ## 相关概念
 
-- [Bot 网关](/concepts/04-bot-gateway.md)——网关架构详解
-- [Agent 运行循环](/concepts/02-agent-run-loop.md)——steer 队列如何注入 turn
-- [CLI 与 TUI](/concepts/05-cli-tui.md)——`reasonix bot` 命令
-- [基础使用](/examples/01-basic-usage.md)——安装和配置
+- [Bot 网关](../concepts/04-bot-gateway.md)——网关架构详解
+- [Agent 运行循环](../concepts/02-agent-run-loop.md)——steer 队列如何注入 turn
+- [CLI 与 TUI](../concepts/05-cli-tui.md)——`reasonix bot` 命令
+- [基础使用](01-basic-usage.md)——安装和配置

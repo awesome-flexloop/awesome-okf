@@ -290,9 +290,9 @@ LabShell 重写了 `onAfterAttach`（shell.ts:1613），在附加后启动 Focus
 
 ## 相关概念
 
-- [00 概述与知识地图](/concepts/00-introduction.md)
-- [01 整体架构概览](/concepts/01-architecture-overview.md)
-- [03 插件系统与依赖注入](/concepts/03-plugin-system.md)
-- [04 服务层与后端通信](/concepts/04-service-layer.md)
-- [05 文档注册与 Widget 工厂](/concepts/05-document-widget-system.md)
-- [源码文件地图](/references/source-code-map.md)
+- [00 概述与知识地图](00-introduction.md)
+- [01 整体架构概览](01-architecture-overview.md)
+- [03 插件系统与依赖注入](03-plugin-system.md)
+- [04 服务层与后端通信](04-service-layer.md)
+- [05 文档注册与 Widget 工厂](05-document-widget-system.md)
+- [源码文件地图](../references/source-code-map.md)

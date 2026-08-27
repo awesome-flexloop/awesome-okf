@@ -446,7 +446,7 @@ DuckDuckGo 搜索的质量很大程度上取决于查询词的选择。在提示
 
 ## 相关链接
 
-- [工具系统：@tool装饰器与Tool基类](/concepts/07-tool-system.md) — 开发自定义工具的方法
-- [ToolCallingAgent：函数调用范式](/concepts/05-tool-calling-agent.md) — 内置工具在ToolCallingAgent中的使用
-- [CodeAgent：代码执行范式](/concepts/06-code-agent.md) — 内置工具在CodeAgent命名空间中的使用
-- [Tools API 参考](/references/tools-api.md) — 内置工具完整API
+- [工具系统：@tool装饰器与Tool基类](07-tool-system.md) — 开发自定义工具的方法
+- [ToolCallingAgent：函数调用范式](05-tool-calling-agent.md) — 内置工具在ToolCallingAgent中的使用
+- [CodeAgent：代码执行范式](06-code-agent.md) — 内置工具在CodeAgent命名空间中的使用
+- [Tools API 参考](../references/tools-api.md) — 内置工具完整API

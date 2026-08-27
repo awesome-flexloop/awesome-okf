@@ -238,4 +238,4 @@ sphinx-intl 的 Transifex 集成**只做配置管理**，不直接调用 Transif
 
 - [CLI 命令体系详解](02-cli-commands.md)
 - [配置读取与 Python 兼容层](08-config-and-compat.md)
-- [Transifex 协作翻译示例](/examples/transifex-collaboration.md)
+- [Transifex 协作翻译示例](../examples/transifex-collaboration.md)

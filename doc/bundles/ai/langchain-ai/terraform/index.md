@@ -21,9 +21,9 @@ description: LangSmith 自托管部署的生产级 Terraform 模块——支持 
 
 | 提供商 | 路径 | 集群 | 状态 | 子模块数 |
 |---|---|---|---|---|
-| AWS | [`modules/aws/`](references/module-structure#aws-子模块详情) | EKS | GA | 14 |
-| Azure | [`modules/azure/`](references/module-structure#azure-子模块详情) | AKS | GA | 11 |
-| GCP | [`modules/gcp/`](references/module-structure#gcp-子模块详情) | GKE | GA | 12 |
+| AWS | [`modules/aws/`](references/module-structure.md#aws-子模块详情) | EKS | GA | 14 |
+| Azure | [`modules/azure/`](references/module-structure.md#azure-子模块详情) | AKS | GA | 11 |
+| GCP | [`modules/gcp/`](references/module-structure.md#gcp-子模块详情) | GKE | GA | 12 |
 | OpenShift | `modules/ocp/` | OCP/ROSA | Preview | stub |
 
 另有 BYOC（Bring Your Own Cloud）IAM 角色模块 `modules/byoc/aws/langsmith-byoc-role/`，为 LangChain 运维侧创建最小权限 IAM 角色和 break-glass 角色。
@@ -77,12 +77,12 @@ make deploy                 # Helm 部署 LangSmith
 
 ### 参考
 
-- [模块结构索引](/ai/langchain-ai/terraform/references/module-structure) — 四云子模块矩阵、Helm values 示例、运维脚本、CI 门禁、关键变量速查
+- 模块结构索引 — 四云子模块矩阵、Helm values 示例、运维脚本、CI 门禁、关键变量速查
 
 ### 源码事实与洞察
 
-- [事实清单](/ai/langchain-ai/terraform/spec/facts) — 56 条带文件行号的源码事实
-- [架构洞察](/ai/langchain-ai/terraform/spec/insights) — count 驱动条件编排与 plan 时 precondition 守卫网
+- 事实清单 — 56 条带文件行号的源码事实
+- 架构洞察 — count 驱动条件编排与 plan 时 precondition 守卫网
 
 ## 目录结构
 
@@ -102,8 +102,8 @@ terraform/
 
 | 项目 | 路径 | 关系 |
 |---|---|---|
-| LangSmith SDK | [/langchain-ai/langsmith-sdk/](/ai/langchain-ai/langsmith-sdk/) | Terraform 部署的 LangSmith 平台的客户端 SDK |
-| LangSmith CLI | [/langchain-ai/langsmith-cli/](/ai/langchain-ai/langsmith-cli/) | 与部署的 LangSmith 实例交互的 CLI 工具 |
+| LangSmith SDK | [/langchain-ai/langsmith-sdk/](../langsmith-sdk/index.md) | Terraform 部署的 LangSmith 平台的客户端 SDK |
+| LangSmith CLI | [/langchain-ai/langsmith-cli/](../langsmith-cli/index.md) | 与部署的 LangSmith 实例交互的 CLI 工具 |
 
 ```{toctree}
 :hidden:

@@ -60,7 +60,7 @@ mdurl 采用函数式设计风格：数据（`URL` namedtuple）是不可变的�
 
 ## 相关概念
 
-- [URL 数据结构](/concepts/01-url-data-structure.md)
-- [URL 解析与格式化](/concepts/02-parse-and-format.md)
-- [URL 编码与解码](/concepts/03-encode-and-decode.md)
-- [基础使用示例](/examples/basic-usage.md)
+- [URL 数据结构](01-url-data-structure.md)
+- [URL 解析与格式化](02-parse-and-format.md)
+- [URL 编码与解码](03-encode-and-decode.md)
+- [基础使用示例](../examples/basic-usage.md)

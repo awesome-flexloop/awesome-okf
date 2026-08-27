@@ -18,7 +18,7 @@ sources:
 
 # Builder 构建器体系
 
-Builder（构建器）是 Sphinx 中负责将解析后的文档树输出为目标格式的组件，定义在 [sphinx/builders/__init__.py](file:///d:/spaces/SpecWeave/external/libs/docs/sphinx/sphinx/builders/__init__.py)。不同的输出格式对应不同的 Builder 子类——HTML、LaTeX、EPUB、纯文本、man手册等。Builder 控制构建流程的执行节奏，是 READING→WRITING→FINISHING 三阶段的驱动者。
+Builder（构建器）是 Sphinx 中负责将解析后的文档树输出为目标格式的组件，定义在 sphinx/builders/__init__.py。不同的输出格式对应不同的 Builder 子类——HTML、LaTeX、EPUB、纯文本、man手册等。Builder 控制构建流程的执行节奏，是 READING→WRITING→FINISHING 三阶段的驱动者。
 
 ## Builder 基类
 

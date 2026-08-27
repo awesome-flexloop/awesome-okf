@@ -460,9 +460,9 @@ GraphQL 工具生态中广泛使用标准内省查询获取完整 schema。该�
 
 ## 相关概念
 
-- [GraphQL 概览与五大设计原则](/concepts/00-overview.md) — 自描述（Self-describing）是 GraphQL 五大设计原则之一
-- [Schema 与类型系统入门](/concepts/02-schema-and-types.md) — 内省系统反映的类型系统基础结构
-- [指令、包装类型与输入系统](/concepts/04-directives-and-wrapping-types.md) — __Directive 内省类型与指令系统对应
-- [复合类型：对象、接口、联合与枚举](/concepts/03-composite-types.md) — __Type 的各 kind 对应六种命名类型
-- [响应格式、错误冒泡与序列化](/concepts/07-response-and-errors.md) — 内省查询的响应格式遵循标准响应规范
-- [GraphQL 与 AI：MCP、语义内省与 Agent](/concepts/11-graphql-and-ai.md) — 内省系统在 AI agent 和 MCP 集成中的应用（洞察5）
+- [GraphQL 概览与五大设计原则](00-overview.md) — 自描述（Self-describing）是 GraphQL 五大设计原则之一
+- [Schema 与类型系统入门](02-schema-and-types.md) — 内省系统反映的类型系统基础结构
+- [指令、包装类型与输入系统](04-directives-and-wrapping-types.md) — __Directive 内省类型与指令系统对应
+- [复合类型：对象、接口、联合与枚举](03-composite-types.md) — __Type 的各 kind 对应六种命名类型
+- [响应格式、错误冒泡与序列化](07-response-and-errors.md) — 内省查询的响应格式遵循标准响应规范
+- [GraphQL 与 AI：MCP、语义内省与 Agent](11-graphql-and-ai.md) — 内省系统在 AI agent 和 MCP 集成中的应用（洞察5）

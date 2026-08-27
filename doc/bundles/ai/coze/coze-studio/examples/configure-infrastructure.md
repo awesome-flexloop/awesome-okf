@@ -267,8 +267,8 @@ docker compose -f docker/docker-compose.yml logs coze-server | grep -i "error\|f
 
 ## 相关文档
 
-- [可插拔基础设施](/concepts/04-pluggable-infrastructure.md)
-- [部署与运维](/concepts/08-deployment-operations.md)
-- [添加 LLM 模型](/examples/add-llm-model.md)
-- [Docker 快速入门](/examples/docker-quickstart.md)
-- [部署与基础设施参考](/references/deployment-infrastructure.md)
+- [可插拔基础设施](../concepts/04-pluggable-infrastructure.md)
+- [部署与运维](../concepts/08-deployment-operations.md)
+- [添加 LLM 模型](add-llm-model.md)
+- [Docker 快速入门](docker-quickstart.md)
+- [部署与基础设施参考](../references/deployment-infrastructure.md)

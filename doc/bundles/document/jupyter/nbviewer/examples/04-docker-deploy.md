@@ -292,6 +292,6 @@ HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
 
 ## 相关文档
 
-- [部署指南](/concepts/13-deployment.md)：完整部署文档
-- [基本配置示例](/examples/01-basic-config.md)：配置文件示例
-- [速率限制与安全机制](/concepts/11-rate-limit-security.md)：安全配置
+- [部署指南](../concepts/13-deployment.md)：完整部署文档
+- [基本配置示例](01-basic-config.md)：配置文件示例
+- [速率限制与安全机制](../concepts/11-rate-limit-security.md)：安全配置

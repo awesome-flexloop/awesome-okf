@@ -282,6 +282,6 @@ print(f"Using backend: {backend_name}")
 
 ## 相关概念
 
-- [Python API 编程](/bundles/containers/olot/concepts/03-python-api.md)：完整的 Python API 使用流程
-- [Python API 打包模型](/bundles/containers/olot/examples/02-python-api.md)：端到端 Python 示例
-- [命令行基本使用](/bundles/containers/olot/examples/01-cli-usage.md)：CLI 使用 skopeo 工作流
+- [Python API 编程](03-python-api.md)：完整的 Python API 使用流程
+- [Python API 打包模型](../examples/02-python-api.md)：端到端 Python 示例
+- [命令行基本使用](../examples/01-cli-usage.md)：CLI 使用 skopeo 工作流

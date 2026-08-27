@@ -167,7 +167,7 @@ bun run preview
 | 包管理 | Bun（首选） | - | 兼容 npm/yarn 的快速包管理 |
 | 部署目标 | Netlify | - | 静态文件托管，无 Node 运行时 |
 
-完整依赖清单见 [完整技术栈清单](/references/tech-stack.md)。
+完整依赖清单见 [完整技术栈清单](../references/tech-stack.md)。
 
 ## 学习路径建议
 
@@ -184,7 +184,7 @@ bun run preview
 
 ## 相关概念
 
-- [01 项目结构与目录组织](/concepts/01-project-structure.md)
-- [02 路由与 SSG 预渲染](/concepts/02-routing-and-pages.md)
-- [完整技术栈清单](/references/tech-stack.md)
-- [核心组件路径索引](/references/component-index.md)
+- [01 项目结构与目录组织](01-project-structure.md)
+- [02 路由与 SSG 预渲染](02-routing-and-pages.md)
+- [完整技术栈清单](../references/tech-stack.md)
+- [核心组件路径索引](../references/component-index.md)

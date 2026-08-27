@@ -200,6 +200,6 @@ limiter.wait_for_token()  # 获取令牌后再发起请求
 
 ## 相关概念
 
-- [API认证与安全](/concepts/02-api-authentication.md)
-- [错误处理与重试](/concepts/07-error-handling.md)
-- [OpenAI兼容客户端配置](/examples/openai-compatible.md)
+- [API认证与安全](02-api-authentication.md)
+- [错误处理与重试](07-error-handling.md)
+- [OpenAI兼容客户端配置](../examples/openai-compatible.md)

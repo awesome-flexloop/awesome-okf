@@ -230,8 +230,8 @@ results = kw_retriever.invoke("Runnable 执行模式")
 
 ## 相关概念
 
-- [检索器与向量库](/ai/langchain-ai/langchain/concepts/retriever-vectorstore)
-- [文档与加载器](/ai/langchain-ai/langchain/concepts/document-loader)
-- [Runnable 协议](/ai/langchain-ai/langchain/concepts/runnable-protocol)
-- [提示词系统](/ai/langchain-ai/langchain/concepts/prompt-system)
-- [输出解析器](/ai/langchain-ai/langchain/concepts/output-parser)
+- 检索器与向量库
+- 文档与加载器
+- Runnable 协议
+- 提示词系统
+- 输出解析器

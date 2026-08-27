@@ -356,9 +356,9 @@ wta/wtcli 调用 COM 需要 MSIX 包身份：
 
 | 文件 | 关键内容 |
 |------|---------|
-| [ITerminalProtocol.idl](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/host/proxy/ITerminalProtocol.idl) | 经典 COM 接口定义（IID、方法签名） |
-| [TerminalProtocol.idl](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalProtocol/TerminalProtocol.idl) | WinRT IDL 数据结构（WindowInfo/PaneInfo 等） |
-| [TerminalProtocolComServer.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/WindowsTerminal/TerminalProtocolComServer.h) | COM 服务器声明、CLSID宏、事件队列 |
-| [TerminalProtocolComServer.cpp](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/WindowsTerminal/TerminalProtocolComServer.cpp) | COM 注册、事件投递、SendEvent路由 |
-| [ProtocolParsing.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/TerminalProtocol/ProtocolParsing.h) | 纯解析函数（ClassifySendEvent等） |
-| [BoundedDispatchQueue.h](file:///d:/spaces/SpecWeave/external/libs/models/ai/intelligent-terminal/src/cascadia/inc/BoundedDispatchQueue.h) | 有界FIFO队列实现 |
+| ITerminalProtocol.idl | 经典 COM 接口定义（IID、方法签名） |
+| TerminalProtocol.idl | WinRT IDL 数据结构（WindowInfo/PaneInfo 等） |
+| TerminalProtocolComServer.h | COM 服务器声明、CLSID宏、事件队列 |
+| TerminalProtocolComServer.cpp | COM 注册、事件投递、SendEvent路由 |
+| ProtocolParsing.h | 纯解析函数（ClassifySendEvent等） |
+| BoundedDispatchQueue.h | 有界FIFO队列实现 |

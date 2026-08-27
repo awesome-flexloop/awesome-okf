@@ -279,7 +279,7 @@ chmod +w ${IMAGE_DIR}/blobs/sha256/*
 
 ## 相关概念
 
-- [olot 定位与 ModelCar 标准](/bundles/containers/olot/concepts/00-introduction.md)
-- [OCI 层操作与四元组注解](/bundles/containers/olot/concepts/01-oci-layers.md)
-- [后端抽象层](/bundles/containers/olot/concepts/02-backends.md)
-- [Python API 打包模型](/bundles/containers/olot/examples/02-python-api.md)
+- [olot 定位与 ModelCar 标准](../concepts/00-introduction.md)
+- [OCI 层操作与四元组注解](../concepts/01-oci-layers.md)
+- [后端抽象层](../concepts/02-backends.md)
+- [Python API 打包模型](02-python-api.md)

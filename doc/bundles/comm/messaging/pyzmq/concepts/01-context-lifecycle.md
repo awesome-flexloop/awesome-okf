@@ -333,8 +333,8 @@ def publisher(pub):
 
 ## 相关概念
 
-- [整体架构与双后端](/concepts/00-architecture-dual-backend.md) — Context 后端基类的来源
-- [Socket sugar 语法层](/concepts/02-socket-sugar.md) — ctx.socket() 创建的 Socket 详解
-- [attrsettr 选项访问系统](/references/attrsettr-options.md) — ContextOption 与 SocketOption 分流
-- [异步与 asyncio](/concepts/05-async-future-asyncio.md) — asyncio.Context 如何覆写 _socket_class
-- [错误层次结构](/references/error-hierarchy.md) — ContextTerminated 异常
+- [整体架构与双后端](00-architecture-dual-backend.md) — Context 后端基类的来源
+- [Socket sugar 语法层](02-socket-sugar.md) — ctx.socket() 创建的 Socket 详解
+- [attrsettr 选项访问系统](../references/attrsettr-options.md) — ContextOption 与 SocketOption 分流
+- [异步与 asyncio](05-async-future-asyncio.md) — asyncio.Context 如何覆写 _socket_class
+- [错误层次结构](../references/error-hierarchy.md) — ContextTerminated 异常

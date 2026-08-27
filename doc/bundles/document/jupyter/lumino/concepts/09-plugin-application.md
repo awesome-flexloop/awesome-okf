@@ -22,7 +22,7 @@ sources:
 
 ## Application：可扩展应用的入口
 
-[Application](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/application/src/index.ts#L42) 是构建桌面级 Web 应用的入口类。它将 CommandRegistry、ContextMenu、Shell（根 Widget）和插件系统组合在一起，提供了一个完整的可扩展应用框架。
+Application 是构建桌面级 Web 应用的入口类。它将 CommandRegistry、ContextMenu、Shell（根 Widget）和插件系统组合在一起，提供了一个完整的可扩展应用框架。
 
 ```typescript
 class Application<T extends Widget = Widget> {
@@ -77,7 +77,7 @@ interface IOptions<T extends Widget> {
 
 ## Token：类型安全的服务标识
 
-[Token<T>](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/coreutils/src/token.ts#L18) 是 Lumino 插件系统的核心抽象，用于在运行时标识服务类型，同时在编译时携带类型信息：
+Token<T> 是 Lumino 插件系统的核心抽象，用于在运行时标识服务类型，同时在编译时携带类型信息：
 
 ```typescript
 class Token<T> {
@@ -109,7 +109,7 @@ Token 的泛型参数 `T` 将运行时对象和编译时类型绑定在一起：
 
 ## IPlugin：插件接口
 
-[IPlugin<T, U>](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/coreutils/src/plugins.ts#L25) 定义插件的结构：
+IPlugin<T, U> 定义插件的结构：
 
 ```typescript
 interface IPlugin<T, U> {
@@ -200,7 +200,7 @@ const editorPlugin: IPlugin<App, void> = {
 
 ## 插件激活流程
 
-[PluginRegistry](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/coreutils/src/plugins.ts#L122) 管理插件的注册、依赖解析和激活：
+PluginRegistry 管理插件的注册、依赖解析和激活：
 
 ### 注册阶段
 

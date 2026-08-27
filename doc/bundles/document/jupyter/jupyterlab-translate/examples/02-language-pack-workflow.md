@@ -210,8 +210,8 @@ jupyterlab-translate compile-pack ./repository jupyterlab -l pt_BR
 
 ## 相关概念
 
-- [CLI命令参考](/concepts/03-cli-commands.md)
-- [翻译目录管理](/concepts/05-catalog-management.md)
-- [Hatch构建钩子集成](/concepts/07-hatch-build-hook.md)
-- [Crowdin贡献者集成](/concepts/10-contributors-crowdin.md)
-- [双模式分发机制](/concepts/11-dual-mode-distribution.md)
+- [CLI命令参考](../concepts/03-cli-commands.md)
+- [翻译目录管理](../concepts/05-catalog-management.md)
+- [Hatch构建钩子集成](../concepts/07-hatch-build-hook.md)
+- [Crowdin贡献者集成](../concepts/10-contributors-crowdin.md)
+- [双模式分发机制](../concepts/11-dual-mode-distribution.md)

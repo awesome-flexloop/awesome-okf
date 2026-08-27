@@ -60,7 +60,7 @@ fasta、geojson、vega3 属于 MIME 渲染器扩展，在 package.json 中配置
 
 这类扩展的入口文件默认导出一个或多个 `IRenderMime.IExtension` 对象，JupyterLab 在启动时扫描所有 mimeExtension，将它们注册到 rendermime 注册表中。当遇到对应 MIME 类型的数据时，JupyterLab 调用工厂创建渲染器 Widget。
 
-详见[ MIME 渲染器开发模式](/concepts/02-mime-renderer-pattern.md)。
+详见[ MIME 渲染器开发模式](02-mime-renderer-pattern.md)。
 
 ## 应用扩展（ILatexTypesetter 服务）
 
@@ -185,7 +185,7 @@ export class KatexTypesetter implements IRenderMime.ILatexTypesetter {
 
 ### 自动渲染（autorender）
 
-[katex-extension/src/autorender.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyter-renderers/packages/katex-extension/src/autorender.ts) 实现了数学公式的自动发现和渲染：[^katex-autorender]
+katex-extension/src/autorender.ts 实现了数学公式的自动发现和渲染：[^katex-autorender]
 
 1. **分隔符识别**：支持5种数学公式分隔符：
    - `$...$` 和 `\(...\)`：行内公式
@@ -214,7 +214,7 @@ export class KatexTypesetter implements IRenderMime.ILatexTypesetter {
 
 ### MathJaxTypesetter
 
-[mathjax2-extension/src/typesetter.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyter-renderers/packages/mathjax2-extension/src/typesetter.ts) 实现了基于 MathJax 2 的排版器。[^mathjax2-typesetter]
+mathjax2-extension/src/typesetter.ts 实现了基于 MathJax 2 的排版器。[^mathjax2-typesetter]
 
 与 KaTeX 的关键区别：
 
@@ -295,10 +295,10 @@ export { MathJaxTypesetter } from './typesetter';
 
 ## 相关概念
 
-- [MIME 渲染器开发模式](/concepts/02-mime-renderer-pattern.md)
-- [数学公式渲染：KaTeX vs MathJax2](/concepts/06-math-renderers.md)
-- [IRenderMime 核心 API 参考](/references/rendermime-interfaces-api.md)
-- [package.json 扩展配置参考](/references/extension-config-reference.md)
+- [MIME 渲染器开发模式](02-mime-renderer-pattern.md)
+- [数学公式渲染：KaTeX vs MathJax2](06-math-renderers.md)
+- [IRenderMime 核心 API 参考](../references/rendermime-interfaces-api.md)
+- [package.json 扩展配置参考](../references/extension-config-reference.md)
 
 [^katex-autorender]: katex-extension/src/autorender.ts
 [^katex-index]: katex-extension/src/index.ts

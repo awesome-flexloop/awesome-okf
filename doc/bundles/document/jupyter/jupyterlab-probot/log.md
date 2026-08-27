@@ -18,13 +18,13 @@ description: OKF Wiki 生成过程记录与变更日志
 
 #### R阶段：事实采集
 - 读取并分析了以下源文件：
-  - [src/index.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterlab-probot/src/index.ts) — 核心逻辑（248行）
-  - [package.json](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterlab-probot/package.json) — 依赖与脚本
-  - [schema.json](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterlab-probot/schema.json) — 配置 Schema
-  - [app.yml](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterlab-probot/app.yml) — GitHub App 权限清单
-  - [test/index.test.ts](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterlab-probot/test/index.test.ts) — 测试用例
-  - [README.md](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterlab-probot/README.md) — 项目说明
-  - [CONTRIBUTING.md](file:///d:/spaces/SpecWeave/external/libs/jupyter/jupyterlab-probot/CONTRIBUTING.md) — 贡献指南
+  - src/index.ts — 核心逻辑（248行）
+  - package.json — 依赖与脚本
+  - schema.json — 配置 Schema
+  - app.yml — GitHub App 权限清单
+  - test/index.test.ts — 测试用例
+  - README.md — 项目说明
+  - CONTRIBUTING.md — 贡献指南
 
 #### I阶段：架构洞察
 - 识别出4大核心功能模块：自动标签、Binder链接、CI取消、CI重启

@@ -570,11 +570,11 @@ type LspQueryResult =
 
 ## 源码链接
 
-- FileSystem 抽象服务：[index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/fs/fs/src/index.ts)
-- FS 类型与错误码：[types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/fs/fs/src/types.ts)
-- ShellExecutor 抽象服务：[index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/shell/shell/src/index.ts)
-- Shell 类型定义：[types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/shell/shell/src/types.ts)
-- Shell 输出渲染与退出码解析：[render.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/shell/shell/src/render.ts)
-- LSP 服务实现：[index.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/lsp/lsp/src/index.ts)
-- LSP 类型定义：[types.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/lsp/lsp/src/types.ts)
-- LSP Provider ID 品牌类型：[brand.ts](file:///d:/spaces/SpecWeave/external/libs/models/ai/deepseek-harness/packages/lsp/lsp/src/brand.ts)
+- FileSystem 抽象服务：index.ts
+- FS 类型与错误码：types.ts
+- ShellExecutor 抽象服务：index.ts
+- Shell 类型定义：types.ts
+- Shell 输出渲染与退出码解析：render.ts
+- LSP 服务实现：index.ts
+- LSP 类型定义：types.ts
+- LSP Provider ID 品牌类型：brand.ts

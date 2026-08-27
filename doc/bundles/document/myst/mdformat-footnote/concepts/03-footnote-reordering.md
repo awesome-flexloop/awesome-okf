@@ -102,5 +102,5 @@ subId 用于同一脚注被多次引用时区分回溯链接。重排后需要�
 
 ## 相关概念
 
-- [脚注渲染格式与缩进规则](/concepts/02-footnote-rendering.md)
-- [插件配置与 CLI 选项](/concepts/01-plugin-configuration.md)
+- [脚注渲染格式与缩进规则](02-footnote-rendering.md)
+- [插件配置与 CLI 选项](01-plugin-configuration.md)

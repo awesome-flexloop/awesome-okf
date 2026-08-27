@@ -133,7 +133,7 @@ sys.path.insert(0, os.path.abspath("disabled_examples"))
 
 ## 相关概念
 
-- [00-introduction](/concepts/00-introduction.md)
-- [03-sphinx-conf](/concepts/03-sphinx-conf.md)
-- [02-quick-start](/concepts/02-quick-start.md)
-- [/references/json-config-source.md](/references/json-config-source.md)
+- [00-introduction](../concepts/00-introduction.md)
+- [03-sphinx-conf](../concepts/03-sphinx-conf.md)
+- [02-quick-start](../concepts/02-quick-start.md)
+- [/references/json-config-source.md](json-config-source.md)

@@ -309,5 +309,5 @@ row_mean = data.mean(axis=1)  # shape (5,)
 - [ufunc通用函数](03-ufunc.md) — 广播是ufunc的核心特性之一
 - [ndarray多维数组](01-ndarray.md) — 了解strides有助于理解广播的零拷贝实现
 - [索引与切片](05-indexing.md) — newaxis在索引中使用
-- [基础数组操作](/examples/basic-array-ops.md) — 广播实践
-- [广播实战](/examples/broadcasting-practice.md) — 更多实战示例
+- [基础数组操作](../examples/basic-array-ops.md) — 广播实践
+- [广播实战](../examples/broadcasting-practice.md) — 更多实战示例

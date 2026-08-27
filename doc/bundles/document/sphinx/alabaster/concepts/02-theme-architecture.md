@@ -165,7 +165,7 @@ def update_context(app, pagename, templatename, context, doctree):
 
 ## 相关概念
 
-- [setup 函数与注册机制](/concepts/03-setup-and-registration.md)：深入理解 entry point 和事件钩子
-- [主题配置选项体系](/concepts/04-theme-options.md)：50+ 配置选项完整参考
-- [侧边栏组件化设计](/concepts/05-sidebar-components.md)：模板组件的拆分与组合
-- [高级定制开发](/concepts/06-customization-advanced.md)：基于 Alabaster 开发自定义主题
+- [setup 函数与注册机制](03-setup-and-registration.md)：深入理解 entry point 和事件钩子
+- [主题配置选项体系](04-theme-options.md)：50+ 配置选项完整参考
+- [侧边栏组件化设计](05-sidebar-components.md)：模板组件的拆分与组合
+- [高级定制开发](06-customization-advanced.md)：基于 Alabaster 开发自定义主题

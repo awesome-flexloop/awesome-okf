@@ -72,6 +72,6 @@ sources:
 
 ## 相关概念
 
-- [发布流水线详解](/concepts/05-release-pipeline.md)
-- [Python与npm双生态发布](/concepts/06-python-npm-dual.md)
-- [Changelog系统](/concepts/07-changelog-system.md)
+- [发布流水线详解](../concepts/05-release-pipeline.md)
+- [Python与npm双生态发布](../concepts/06-python-npm-dual.md)
+- [Changelog系统](../concepts/07-changelog-system.md)

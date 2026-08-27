@@ -29,18 +29,18 @@ tiny-universe 是 Datawhale 发起的开源学习项目，以"白盒"为导向�
 - **最小可运行**：每个模块控制在个人学习者可复现的资源规模（2G 显存、数小时训练）。
 - **全栈覆盖**：Model → RAG → Agent → Eval，形成完整能力闭环。
 
-详见 [白盒构建理念](/ai/datawhale/tiny-universe/concepts/white-box-philosophy)。
+详见 白盒构建理念。
 
 ## 模块地图
 
 项目主体部分包含八个经典技术从零实现模块：
 
-1. [TinyDiffusion](/ai/datawhale/tiny-universe/concepts/tiny-diffusion) — 手写 DDPM 图像生成模型
+1. TinyDiffusion — 手写 DDPM 图像生成模型
 2. Qwen-Blog — 以 Qwen2 为例解剖 LLM 内部结构（GQA、RoPE、Attention Mask）
 3. TinyLlama3 — 逐步预训练手搓大模型（2G 显存）
 4. TinyEval — 大模型评测体系（含高考数学评测）
-5. [TinyRAG](/ai/datawhale/tiny-universe/concepts/tiny-rag) — 纯手工搭建 RAG 框架
-6. [TinyAgent](/ai/datawhale/tiny-universe/concepts/tiny-agent) — 基于 ReAct 的最小 Agent 系统
+5. TinyRAG — 纯手工搭建 RAG 框架
+6. TinyAgent — 基于 ReAct 的最小 Agent 系统
 7. TinyTransformer — 基于《Attention is All You Need》手工搭建 Transformer
 8. TinyGraphRAG — 手搓基本 GraphRAG 系统（图构建/检索/推理/生成）
 
@@ -53,14 +53,14 @@ tiny-universe 是 Datawhale 发起的开源学习项目，以"白盒"为导向�
 - **初学者**：TinyTransformer → Qwen-Blog → TinyLLM
 - **应用方向**：TinyRAG → TinyGraphRAG → TinyAgent → TinyEval
 - **生成模型方向**：TinyDiffusion → TinyLLM
-- **教学者**：先读 [白盒构建理念](/ai/datawhale/tiny-universe/concepts/white-box-philosophy) 与 [洞察笔记](spec/insights.md)
+- **教学者**：先读 白盒构建理念 与 [洞察笔记](spec/insights.md)
 
 ## 参考资料
 
-- [项目总览与意义](/ai/datawhale/tiny-universe/references/readme-overview)
-- [模块结构详述](/ai/datawhale/tiny-universe/references/readme-modules)
-- [发布时间线](/ai/datawhale/tiny-universe/references/readme-news)
-- [模块路线图示例](/ai/datawhale/tiny-universe/examples/module-roadmap)
+- 项目总览与意义
+- 模块结构详述
+- 发布时间线
+- 模块路线图示例
 
 ```{toctree}
 :hidden:

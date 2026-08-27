@@ -204,5 +204,5 @@ installer_type: all    # Linux上生成 .sh + Dockerfile
 
 ## 下一步
 
-- [04-安装程序类型](../04-installer-types.md)：了解所有安装程序类型的对比
-- [示例：Docker 镜像构建](../../examples/docker-installer.md)：查看完整 Docker 配置示例
+- 04-安装程序类型：了解所有安装程序类型的对比
+- 示例：Docker 镜像构建：查看完整 Docker 配置示例

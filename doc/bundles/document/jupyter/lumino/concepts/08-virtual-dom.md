@@ -66,7 +66,7 @@ class VirtualElementPass extends VirtualElement {
 
 ## h() 函数：创建虚拟元素
 
-[h()](file:///d:/spaces/SpecWeave/external/libs/jupyter/lumino/packages/virtualdom/src/index.ts#L969) 是 hyperscript 风格的创建函数，支持多种签名：
+h() 是 hyperscript 风格的创建函数，支持多种签名：
 
 ```typescript
 // 签名1：仅标签

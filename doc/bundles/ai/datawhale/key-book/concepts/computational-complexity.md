@@ -71,12 +71,12 @@ Rademacher 复杂度因引入数据分布，比 VC 维给出更紧的泛化界�
 
 ## 与其他概念的关系
 
-- [可学性](/ai/datawhale/key-book/concepts/learnability)要求样本和时间复杂度均为多项式
-- [泛化界](/ai/datawhale/key-book/concepts/generalization-bound)的阶由复杂度度量决定（$O(\sqrt{d/m})$）
+- 可学性要求样本和时间复杂度均为多项式
+- 泛化界的阶由复杂度度量决定（$O(\sqrt{d/m})$）
 - 深度学习的双下降现象挑战了"复杂度越高越易过拟合"的传统认知
 
 ## 参见
 
-- [第 2 章：可学性](/ai/datawhale/key-book/references/chapter2)
-- [第 3 章：复杂性分析](/ai/datawhale/key-book/references/chapter3)
-- [线性分类器 VC 维案例](/ai/datawhale/key-book/examples/vc-dimension-linear)
+- 第 2 章：可学性
+- 第 3 章：复杂性分析
+- 线性分类器 VC 维案例

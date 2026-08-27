@@ -142,10 +142,10 @@ $$ (eq:energy)
 
 ## Fence（代码/指令围栏）
 
-fence 类型的渲染委托给 `_directives.py` 中的 `fence` 函数，该函数在标准 fence 渲染基础上增加了 MyST 指令的识别和格式化。详见[指令选项 YAML 格式化](/concepts/03-directive-formatting.md)。
+fence 类型的渲染委托给 `_directives.py` 中的 `fence` 函数，该函数在标准 fence 渲染基础上增加了 MyST 指令的识别和格式化。详见[指令选项 YAML 格式化](03-directive-formatting.md)。
 
 ## 相关概念
 
-- [插件架构](/concepts/01-plugin-architecture.md)
-- [指令选项 YAML 格式化](/concepts/03-directive-formatting.md)
-- [转义机制与后处理器](/concepts/04-escaping-and-postprocessors.md)
+- [插件架构](01-plugin-architecture.md)
+- [指令选项 YAML 格式化](03-directive-formatting.md)
+- [转义机制与后处理器](04-escaping-and-postprocessors.md)

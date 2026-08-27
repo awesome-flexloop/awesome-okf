@@ -83,7 +83,7 @@ choco install opencode
 
 ## 相关概念
 
-- [架构概览](/concepts/01-architecture.md)
-- [配置系统](/concepts/02-config-system.md)
-- [会话与工具](/concepts/03-session-tools.md)
-- [部署与基础设施](/concepts/04-deployment-infra.md)
+- [架构概览](01-architecture.md)
+- [配置系统](02-config-system.md)
+- [会话与工具](03-session-tools.md)
+- [部署与基础设施](04-deployment-infra.md)

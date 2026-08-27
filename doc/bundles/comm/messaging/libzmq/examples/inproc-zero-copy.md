@@ -539,8 +539,8 @@ inproc 是最高效的线程间通信方式，特别适合高吞吐、低延迟�
 
 ## 延伸阅读
 
-- [消息与引用计数](/concepts/03-message.md) — msg_t 六类型和 content_t 详细机制
-- [管道与流控](/concepts/04-pipe.md) — pipepair 和 ypipe 无锁队列
-- [上下文与基础设施](/concepts/01-context.md) — inproc 端点注册表
-- [命令传递与邮箱](/concepts/08-command-mailbox.md) — send_bind 命令附加 pipe
-- [PUSH/PULL 流水线](/examples/push-pull-pipeline.md) — 基于 TCP 的任务分发
+- [消息与引用计数](../concepts/03-message.md) — msg_t 六类型和 content_t 详细机制
+- [管道与流控](../concepts/04-pipe.md) — pipepair 和 ypipe 无锁队列
+- [上下文与基础设施](../concepts/01-context.md) — inproc 端点注册表
+- [命令传递与邮箱](../concepts/08-command-mailbox.md) — send_bind 命令附加 pipe
+- [PUSH/PULL 流水线](push-pull-pipeline.md) — 基于 TCP 的任务分发

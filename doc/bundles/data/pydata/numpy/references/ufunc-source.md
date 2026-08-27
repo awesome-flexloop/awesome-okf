@@ -105,6 +105,6 @@ ufunc类的类型对象为 `PyUFunc_Type`，定义在C扩展中。Python层通�
 
 ## 相关概念
 
-- [ufunc通用函数](/concepts/03-ufunc.md)
-- [广播规则](/concepts/04-broadcasting.md)
-- [线性代数与随机数](/concepts/07-linear-algebra.md)
+- [ufunc通用函数](../concepts/03-ufunc.md)
+- [广播规则](../concepts/04-broadcasting.md)
+- [线性代数与随机数](../concepts/07-linear-algebra.md)

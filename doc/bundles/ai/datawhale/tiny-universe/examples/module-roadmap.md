@@ -78,8 +78,8 @@ TinyDiffusion → TinyLLM → TinyTransformer
 
 ## 相关概念
 
-- [白盒构建理念](/ai/datawhale/tiny-universe/concepts/white-box-philosophy)
-- [TinyLLM](/ai/datawhale/tiny-universe/concepts/tiny-llm)
-- [TinyRAG](/ai/datawhale/tiny-universe/concepts/tiny-rag)
-- [TinyAgent](/ai/datawhale/tiny-universe/concepts/tiny-agent)
-- [TinyDiffusion](/ai/datawhale/tiny-universe/concepts/tiny-diffusion)
+- 白盒构建理念
+- TinyLLM
+- TinyRAG
+- TinyAgent
+- TinyDiffusion

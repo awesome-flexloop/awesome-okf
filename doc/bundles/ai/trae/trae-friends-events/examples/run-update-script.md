@@ -100,7 +100,7 @@ python scripts/update_readme.py
 
 ## 相关链接
 
-- [CSV+Python 轻量 CMS 模式](/concepts/01-csv-cms-pattern.md)
-- [活动数据格式](/concepts/02-event-data-format.md)
-- [添加新活动示例](/examples/add-event.md)
-- [活动数据和脚本索引](/references/events-source.md)
+- [CSV+Python 轻量 CMS 模式](../concepts/01-csv-cms-pattern.md)
+- [活动数据格式](../concepts/02-event-data-format.md)
+- [添加新活动示例](add-event.md)
+- [活动数据和脚本索引](../references/events-source.md)

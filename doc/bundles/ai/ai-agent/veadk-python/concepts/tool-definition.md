@@ -49,7 +49,7 @@ sources:
 
 ### 延迟加载机制
 
-[veadk/tools/__init__.py:L26-L67](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/__init__.py#L26-L67)
+veadk/tools/__init__.py:L26-L67
 
 内置工具通过 `_BUILTIN_TOOLS` 字典注册，值为 `"module:attr"` 格式的延迟导入路径：
 
@@ -112,7 +112,7 @@ def get_builtin_tool(name: str) -> ToolUnion:
 
 web_search 工具签名（F-070）：
 
-[veadk/tools/builtin_tools/web_search.py:L31-L39](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/web_search.py#L31-L39)
+veadk/tools/builtin_tools/web_search.py:L31-L39
 
 ```python
 def web_search(query: str, tool_context: ToolContext | None = None) -> list[str]:
@@ -161,7 +161,7 @@ def web_search(query: str, tool_context: ToolContext | None = None) -> list[str]
 
 除内置工具外，veadk-python 通过 MCP（Model Context Protocol）Router 接入远程工具集：
 
-[veadk/tools/builtin_tools/mcp_router.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/mcp_router.py)
+veadk/tools/builtin_tools/mcp_router.py
 
 ```python
 from google.adk.tools.mcp_tool.mcp_toolset import MCPToolset
@@ -225,17 +225,17 @@ flowchart TD
 
 | 触发条件 | 挂载的工具/回调 | 源码位置 |
 |---------|---------------|---------|
-| `knowledgebase` 已设置 | `LoadKnowledgebaseTool` | [agent.py:L306-L314](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L306-L314) |
-| `knowledgebase.enable_profile=True` | `load_kb_queries` 工具 | [agent.py:L316-L324](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L316-L324) |
-| `long_term_memory` 已设置 | `google.adk.tools.load_memory`（设置 backend 元数据） | [agent.py:L326-L333](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L326-L333) |
-| `enable_authz=True` | `check_agent_authorization`（before_agent_callback） | [agent.py:L335-L349](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L335-L349) |
-| `auto_save_session=True` + LTM | `save_session_to_long_term_memory`（after_agent_callback） | [agent.py:L354-L375](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L354-L375) |
-| `skills` 非空 | `load_skills()` + SkillsToolset | [agent.py:L377-L397](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L377-L397) |
-| `example_store` 已设置 | `ExampleTool(examples=example_store)` | [agent.py:L399-L402](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L399-L402) |
-| `enable_ghostchar=True` | `GhostcharTool()` + 幽灵字符指令 | [agent.py:L404-L410](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L404-L410) |
-| `enable_a2ui=True` | `build_a2ui_toolset(catalog=...)` | [agent.py:L412-L416](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L412-L416) |
-| `enable_tunnel=True` | `TunnelToolset(agent_name=self.name)` | [agent.py:L418-L422](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L418-L422) |
-| `enable_dataset_gen=True` | `dataset_auto_gen_callback`（after_agent_callback） | [agent.py:L424-L438](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py#L424-L438) |
+| `knowledgebase` 已设置 | `LoadKnowledgebaseTool` | agent.py:L306-L314 |
+| `knowledgebase.enable_profile=True` | `load_kb_queries` 工具 | agent.py:L316-L324 |
+| `long_term_memory` 已设置 | `google.adk.tools.load_memory`（设置 backend 元数据） | agent.py:L326-L333 |
+| `enable_authz=True` | `check_agent_authorization`（before_agent_callback） | agent.py:L335-L349 |
+| `auto_save_session=True` + LTM | `save_session_to_long_term_memory`（after_agent_callback） | agent.py:L354-L375 |
+| `skills` 非空 | `load_skills()` + SkillsToolset | agent.py:L377-L397 |
+| `example_store` 已设置 | `ExampleTool(examples=example_store)` | agent.py:L399-L402 |
+| `enable_ghostchar=True` | `GhostcharTool()` + 幽灵字符指令 | agent.py:L404-L410 |
+| `enable_a2ui=True` | `build_a2ui_toolset(catalog=...)` | agent.py:L412-L416 |
+| `enable_tunnel=True` | `TunnelToolset(agent_name=self.name)` | agent.py:L418-L422 |
+| `enable_dataset_gen=True` | `dataset_auto_gen_callback`（after_agent_callback） | agent.py:L424-L438 |
 
 ### 知识库工具挂载示例
 
@@ -312,19 +312,19 @@ from google.adk.tools.mcp_tool.mcp_toolset import MCPToolset
 
 | 文件 | 职责 |
 |------|------|
-| [veadk/tools/\_\_init\_\_.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/__init__.py) | 内置工具注册表、get_builtin_tool()、list_builtin_tools() |
-| [veadk/tools/builtin_tools/web_search.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/web_search.py) | 火山引擎网页搜索工具 |
-| [veadk/tools/builtin_tools/web_fetch.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/web_fetch.py) | 网页内容抓取 |
-| [veadk/tools/builtin_tools/run_code.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/run_code.py) | 代码执行（沙箱） |
-| [veadk/tools/builtin_tools/image_generate.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/image_generate.py) | 图片生成（Seedream） |
-| [veadk/tools/builtin_tools/video_generate.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/video_generate.py) | 视频生成（Seedance）+ 任务查询 |
-| [veadk/tools/builtin_tools/ppt_generate.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/ppt_generate.py) | PPT 生成 |
-| [veadk/tools/builtin_tools/tts.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/tts.py) | 文本转语音 |
-| [veadk/tools/builtin_tools/load_knowledgebase.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/load_knowledgebase.py) | 知识库 RAG 工具（自动挂载） |
-| [veadk/tools/builtin_tools/mcp_router.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/mcp_router.py) | MCP Router 远程工具集 |
-| [veadk/tools/builtin_tools/agent_authorization.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/builtin_tools/agent_authorization.py) | Agent 授权检查 |
-| [veadk/tools/demo_tools.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/tools/demo_tools.py) | 演示工具（天气查询） |
-| [veadk/agent.py](file:///d:/spaces/SpecWeave/external/libs/models/ai/veadk-python/veadk/agent.py) | Agent.model_post_init 中的工具自动挂载逻辑 |
+| veadk/tools/\_\_init\_\_.py | 内置工具注册表、get_builtin_tool()、list_builtin_tools() |
+| veadk/tools/builtin_tools/web_search.py | 火山引擎网页搜索工具 |
+| veadk/tools/builtin_tools/web_fetch.py | 网页内容抓取 |
+| veadk/tools/builtin_tools/run_code.py | 代码执行（沙箱） |
+| veadk/tools/builtin_tools/image_generate.py | 图片生成（Seedream） |
+| veadk/tools/builtin_tools/video_generate.py | 视频生成（Seedance）+ 任务查询 |
+| veadk/tools/builtin_tools/ppt_generate.py | PPT 生成 |
+| veadk/tools/builtin_tools/tts.py | 文本转语音 |
+| veadk/tools/builtin_tools/load_knowledgebase.py | 知识库 RAG 工具（自动挂载） |
+| veadk/tools/builtin_tools/mcp_router.py | MCP Router 远程工具集 |
+| veadk/tools/builtin_tools/agent_authorization.py | Agent 授权检查 |
+| veadk/tools/demo_tools.py | 演示工具（天气查询） |
+| veadk/agent.py | Agent.model_post_init 中的工具自动挂载逻辑 |
 
 ## 相关概念
 

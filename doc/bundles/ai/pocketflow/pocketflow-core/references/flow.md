@@ -136,4 +136,4 @@ inner_flow - "inner_done" >> next_node  # 内层 Flow 返回的 action 可作为
 
 ## 源码位置
 
-[pocketflow/\_\_init\_\_.py](file:///d:/spaces/SpecWeave/external/libs/ai/ThePocket/PocketFlow/pocketflow/__init__.py)
+pocketflow/\_\_init\_\_.py

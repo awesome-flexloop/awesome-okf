@@ -165,6 +165,6 @@ Claude Code 会：
 
 ## 相关资源
 
-- [Claude Code 概览](/claude-code/concepts/00-overview.md) — 了解核心能力和安装方式详解
-- [插件体系](/claude-code/concepts/01-plugin-system.md) — 深入理解插件扩展机制
-- [官方插件索引](/claude-code/references/plugins-index.md) — 13 个官方插件功能一览
+- [Claude Code 概览](../concepts/00-overview.md) — 了解核心能力和安装方式详解
+- [插件体系](../concepts/01-plugin-system.md) — 深入理解插件扩展机制
+- [官方插件索引](../references/plugins-index.md) — 13 个官方插件功能一览

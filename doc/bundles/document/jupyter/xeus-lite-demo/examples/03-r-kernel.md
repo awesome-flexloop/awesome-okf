@@ -175,7 +175,7 @@ coursekata 是专为统计教学设计的 R 包集合，包含多个常用统计
 
 ## 相关概念
 
-- [多语言内核支持](/concepts/07-kernel-options.md) — 其他内核选项
-- [运行时环境配置](/concepts/04-runtime-env-config.md) — environment.yml 配置
+- [多语言内核支持](../concepts/07-kernel-options.md) — 其他内核选项
+- [运行时环境配置](../concepts/04-runtime-env-config.md) — environment.yml 配置
 - [Python 科学计算环境](02-numpy-matplotlib.md) — Python 环境配置
 - [C++ 内核配置](04-cpp-kernel.md) — C++ 交互编程

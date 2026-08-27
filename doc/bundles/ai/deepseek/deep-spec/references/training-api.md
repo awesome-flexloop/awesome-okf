@@ -438,8 +438,8 @@ def load_training_state(
 
 ## 八、相关链接
 
-- [/deepseek/deep-spec/concepts/training-pipeline](/ai/deepseek/deep-spec/concepts/training-pipeline) — 训练管线架构详解
-- [/deepseek/deep-spec/concepts/dspark-model](/ai/deepseek/deep-spec/concepts/dspark-model) — DSpark 模型架构
-- [/deepseek/deep-spec/concepts/eagle3-model](/ai/deepseek/deep-spec/concepts/eagle3-model) — Eagle3 模型架构
-- [/deepseek/deep-spec/examples/training-dspark](/ai/deepseek/deep-spec/examples/training-dspark) — DSpark 训练示例
-- [/deepseek/deep-spec/references/model-api](/ai/deepseek/deep-spec/references/model-api) — 模型 API 参考
+- /deepseek/deep-spec/concepts/training-pipeline — 训练管线架构详解
+- /deepseek/deep-spec/concepts/dspark-model — DSpark 模型架构
+- /deepseek/deep-spec/concepts/eagle3-model — Eagle3 模型架构
+- /deepseek/deep-spec/examples/training-dspark — DSpark 训练示例
+- /deepseek/deep-spec/references/model-api — 模型 API 参考

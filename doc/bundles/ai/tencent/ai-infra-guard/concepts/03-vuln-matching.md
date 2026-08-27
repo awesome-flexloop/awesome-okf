@@ -216,7 +216,7 @@ HTTP 响应
 
 ## 相关概念
 
-- [指纹规则 DSL](/concepts/02-fingerprint-dsl.md)
-- [分布式架构总览](/concepts/00-architecture.md)
-- [漏洞结构信源](/references/vuln-struct.md)
-- [CLI 扫描示例](/examples/cli-scan.md)
+- [指纹规则 DSL](02-fingerprint-dsl.md)
+- [分布式架构总览](00-architecture.md)
+- [漏洞结构信源](../references/vuln-struct.md)
+- [CLI 扫描示例](../examples/cli-scan.md)

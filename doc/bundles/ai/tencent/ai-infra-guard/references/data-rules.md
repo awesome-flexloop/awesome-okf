@@ -236,7 +236,7 @@ type Rule struct {
 
 ## 相关概念
 
-- [指纹规则 DSL](/concepts/02-fingerprint-dsl.md)
-- [CVE 漏洞匹配](/concepts/03-vuln-matching.md)
-- [MCP 安全扫描](/concepts/06-mcp-scan.md)
-- [自定义指纹示例](/examples/custom-fingerprint.md)
+- [指纹规则 DSL](../concepts/02-fingerprint-dsl.md)
+- [CVE 漏洞匹配](../concepts/03-vuln-matching.md)
+- [MCP 安全扫描](../concepts/06-mcp-scan.md)
+- [自定义指纹示例](../examples/custom-fingerprint.md)

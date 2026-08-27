@@ -62,6 +62,6 @@ sources:
 
 ## 相关概念
 
-- [简介](/concepts/00-introduction.md)
-- [定理类型详解](/concepts/02-theorem-types.md)
-- [配置项参考](/concepts/05-configuration.md)
+- [简介](../concepts/00-introduction.md)
+- [定理类型详解](../concepts/02-theorem-types.md)
+- [配置项参考](../concepts/05-configuration.md)

@@ -73,9 +73,9 @@ Vibecoding 是 TRAE Learning 倡导的 AI 辅助开发理念，三个核心特�
 
 ## 相关链接
 
-- [VitePress 站点架构](/concepts/01-vitepress-setup.md)
-- [自定义主题开发](/concepts/02-custom-theme.md)
-- [Guide 基础教程](/concepts/03-guide-content.md)
-- [Tutorials 实战教程](/concepts/04-tutorial-content.md)
-- [GitHub Pages 部署](/concepts/05-deploy-pages.md)
-- [文档站源码索引](/references/learning-source.md)
+- [VitePress 站点架构](01-vitepress-setup.md)
+- [自定义主题开发](02-custom-theme.md)
+- [Guide 基础教程](03-guide-content.md)
+- [Tutorials 实战教程](04-tutorial-content.md)
+- [GitHub Pages 部署](05-deploy-pages.md)
+- [文档站源码索引](../references/learning-source.md)

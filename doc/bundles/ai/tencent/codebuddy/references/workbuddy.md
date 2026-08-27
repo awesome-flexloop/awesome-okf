@@ -110,7 +110,7 @@ WorkBuddy 顶部导航包含以下入口（F-059）：
 
 ## 相关概念
 
-- [WorkBuddy 在线助手](/concepts/04-workbuddy.md) — WorkBuddy 场景与交互详解
-- [产品矩阵总览](/concepts/00-product-matrix.md) — WorkBuddy 在生态中的定位
-- [CodeBuddy IDE](/concepts/01-ide.md) — 顶部导航关联的 IDE 产品
-- [CLI](/concepts/02-cli.md) — 顶部导航关联的 CLI 产品
+- [WorkBuddy 在线助手](../concepts/04-workbuddy.md) — WorkBuddy 场景与交互详解
+- [产品矩阵总览](../concepts/00-product-matrix.md) — WorkBuddy 在生态中的定位
+- [CodeBuddy IDE](../concepts/01-ide.md) — 顶部导航关联的 IDE 产品
+- [CLI](../concepts/02-cli.md) — 顶部导航关联的 CLI 产品

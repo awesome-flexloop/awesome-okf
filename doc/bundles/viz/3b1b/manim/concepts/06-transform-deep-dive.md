@@ -357,7 +357,7 @@ MoveToTarget 本质就是 `Transform(mobject, mobject.target)`，它要求你事
 
 ## 相关概念
 
-- [03 Mobject：数学对象基类](/concepts/03-mobject-fundamentals.md)
-- [05 动画基础](/concepts/05-animation-basics.md)
-- [07 相机与视角控制](/concepts/07-camera-and-frame.md)
-- [缓动函数可视化参考](/references/rate-functions-gallery.md)
+- [03 Mobject：数学对象基类](03-mobject-fundamentals.md)
+- [05 动画基础](05-animation-basics.md)
+- [07 相机与视角控制](07-camera-and-frame.md)
+- [缓动函数可视化参考](../references/rate-functions-gallery.md)

@@ -149,9 +149,9 @@ broker.add_middleware(MyMiddleware(), before=Retries)
 
 ## 相关概念
 
-- [整体架构](/concepts/00-overall-architecture.md)：Middleware 是五大组件之一
-- [Broker 抽象基类](/concepts/02-broker-abstraction.md)：emit_before/emit_after 实现在 Broker 基类
-- [Worker 线程模型](/concepts/03-worker-threading-model.md)：process_message 触发中间件钩子
-- [Message 与序列化](/concepts/04-message-and-serialization.md)：options 字典是 middleware 间通信总线
-- [Results 结果后端](/concepts/07-results-backend.md)：Results 本身也是一个 Middleware
-- [内置中间件详解](/references/built-in-middleware.md)：每个内置中间件的参数与钩子逻辑
+- [整体架构](00-overall-architecture.md)：Middleware 是五大组件之一
+- [Broker 抽象基类](02-broker-abstraction.md)：emit_before/emit_after 实现在 Broker 基类
+- [Worker 线程模型](03-worker-threading-model.md)：process_message 触发中间件钩子
+- [Message 与序列化](04-message-and-serialization.md)：options 字典是 middleware 间通信总线
+- [Results 结果后端](07-results-backend.md)：Results 本身也是一个 Middleware
+- [内置中间件详解](../references/built-in-middleware.md)：每个内置中间件的参数与钩子逻辑

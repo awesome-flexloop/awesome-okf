@@ -85,7 +85,7 @@ CloudBase MCP 的 7 步模式揭示了一个关键架构原则：
 
 ## 相关链接
 
-- [MCP 配置格式](/concepts/02-mcp-configuration.md)
-- [MCP 与 Skill 的本质区别](/concepts/04-mcp-vs-skill.md)
-- [CloudBase MCP 使用示例](/examples/use-cloudbase-mcp.md)
-- [MCP 协议文档与 CloudBase MCP 索引](/references/mcp-source.md)
+- [MCP 配置格式](02-mcp-configuration.md)
+- [MCP 与 Skill 的本质区别](04-mcp-vs-skill.md)
+- [CloudBase MCP 使用示例](../examples/use-cloudbase-mcp.md)
+- [MCP 协议文档与 CloudBase MCP 索引](../references/mcp-source.md)

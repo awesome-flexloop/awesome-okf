@@ -260,6 +260,6 @@ nbgitpuller 的其他参数（如 `application`、`custom_image` 等 JupyterHub 
 
 - [安装与快速开始](01-getting-started.md) — 第一个 URL 示例
 - [扩展插件机制](05-extension-plugin.md) — activate 函数中参数解析的完整流程
-- [GitHub仓库拉取示例](/examples/01-basic-github.md) — 构造 GitHub 拉取 URL 的完整示例
-- [GitLab仓库拉取示例](/examples/02-gitlab-repo.md) — 构造 GitLab 拉取 URL 的完整示例
+- [GitHub仓库拉取示例](../examples/01-basic-github.md) — 构造 GitHub 拉取 URL 的完整示例
+- [GitLab仓库拉取示例](../examples/02-gitlab-repo.md) — 构造 GitLab 拉取 URL 的完整示例
 - [限制与注意事项](07-limitations.md) — API 速率限制等使用限制

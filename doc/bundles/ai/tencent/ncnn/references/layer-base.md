@@ -126,6 +126,6 @@ NCNN_EXPORT Layer* create_layer_vulkan(int index);
 
 ## 相关概念
 
-- [03 Layer 抽象层](/concepts/03-layer-abstraction.md)
-- [09 层注册表与自定义层](/concepts/09-layer-registry.md)
-- [06 Vulkan GPU 后端](/concepts/06-vulkan-gpu.md)
+- [03 Layer 抽象层](../concepts/03-layer-abstraction.md)
+- [09 层注册表与自定义层](../concepts/09-layer-registry.md)
+- [06 Vulkan GPU 后端](../concepts/06-vulkan-gpu.md)

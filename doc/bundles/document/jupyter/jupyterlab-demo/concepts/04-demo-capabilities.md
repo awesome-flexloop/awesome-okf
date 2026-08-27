@@ -222,7 +222,7 @@ Markdown+Python 混编是 JupyterLab 独有的工作流：你可以在一个 Mar
 
 ## 相关概念
 
-- [项目定位与设计理念](/concepts/00-introduction.md)
-- [Notebook 示例解析](/concepts/05-notebook-examples.md)
-- [数据文件与多格式查看器](/concepts/06-data-files.md)
-- [插件架构与扩展生态](/concepts/08-extension-demo.md)
+- [项目定位与设计理念](00-introduction.md)
+- [Notebook 示例解析](05-notebook-examples.md)
+- [数据文件与多格式查看器](06-data-files.md)
+- [插件架构与扩展生态](08-extension-demo.md)

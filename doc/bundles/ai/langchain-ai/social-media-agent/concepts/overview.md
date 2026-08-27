@@ -51,7 +51,7 @@ Social Media Agent 是 LangChain 团队开源的社交媒体内容生成 Agent�
 | 中断处理 | `curated_post_interrupt` | 策展帖子的独立中断处理 |
 | 中断处理 | `repurposer_post_interrupt` | 改编帖子的独立中断处理 |
 
-详见 [图结构参考](/ai/langchain-ai/social-media-agent/references/graphs)。
+详见 图结构参考。
 
 ## generate_post 流程图
 
@@ -106,7 +106,7 @@ END
 - **Luma**：验证活动页面
 - **General**：FireCrawl 抓取通用网页内容
 
-详见 [图结构参考](/ai/langchain-ai/social-media-agent/references/graphs)。
+详见 图结构参考。
 
 ## 技术栈
 
@@ -145,7 +145,7 @@ END
 
 ### 提示词定制
 
-四个核心提示词区段可独立定制：`BUSINESS_CONTEXT`、`TWEET_EXAMPLES`、`POST_STRUCTURE_INSTRUCTIONS`、`POST_CONTENT_RULES`。详见 [深度洞察](/ai/langchain-ai/social-media-agent/spec/insights) 第 9 节。
+四个核心提示词区段可独立定制：`BUSINESS_CONTEXT`、`TWEET_EXAMPLES`、`POST_STRUCTURE_INSTRUCTIONS`、`POST_CONTENT_RULES`。详见 深度洞察 第 9 节。
 
 ## 目录结构
 
@@ -180,6 +180,6 @@ social-media-agent/
 
 ## 进一步阅读
 
-- [图结构参考](/ai/langchain-ai/social-media-agent/references/graphs) — 14 个 LangGraph 图的详细结构与节点说明
-- [事实清单](/ai/langchain-ai/social-media-agent/spec/facts) — 从源码中提取的可验证事实
-- [深度洞察](/ai/langchain-ai/social-media-agent/spec/insights) — 架构决策与设计模式分析
+- 图结构参考 — 14 个 LangGraph 图的详细结构与节点说明
+- 事实清单 — 从源码中提取的可验证事实
+- 深度洞察 — 架构决策与设计模式分析

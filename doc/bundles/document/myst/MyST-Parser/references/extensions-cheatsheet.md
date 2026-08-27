@@ -193,6 +193,6 @@ myst:
 
 ## 相关概念
 
-- [MyST 语法概览](/concepts/02-myst-syntax-overview.md)
-- [扩展语法系统](/concepts/05-extension-system.md)
-- [配置系统](/concepts/04-config-system.md)
+- [MyST 语法概览](../concepts/02-myst-syntax-overview.md)
+- [扩展语法系统](../concepts/05-extension-system.md)
+- [配置系统](../concepts/04-config-system.md)

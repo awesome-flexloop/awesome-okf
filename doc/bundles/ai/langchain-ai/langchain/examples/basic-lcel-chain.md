@@ -138,7 +138,7 @@ asyncio.run(main())
 
 ## 相关概念
 
-- [Runnable 协议](/ai/langchain-ai/langchain/concepts/runnable-protocol)
-- [提示词系统](/ai/langchain-ai/langchain/concepts/prompt-system)
-- [聊天模型](/ai/langchain-ai/langchain/concepts/chat-model)
-- [输出解析器](/ai/langchain-ai/langchain/concepts/output-parser)
+- Runnable 协议
+- 提示词系统
+- 聊天模型
+- 输出解析器

@@ -551,7 +551,7 @@ $$
 
 ## 相关概念
 
-- [03 MDX 内容系统与数学渲染](/concepts/03-mdx-content-system.md) — MDX 插件链、frontmatter 解析、MathJax 渲染机制、课程数据加载
-- [02 路由系统与页面组织](/concepts/02-routing-and-pages.md) — React Router 路由配置、动态路由、预渲染
-- [04 核心组件与状态管理](/concepts/04-components-and-state.md) — PiCreature、Figure、TableOfContents、Heading 等组件详解
-- [06 构建系统、包管理与静态部署](/concepts/06-build-and-deploy.md) — Vite 构建配置、插件链、SSG 预渲染
+- [03 MDX 内容系统与数学渲染](../concepts/03-mdx-content-system.md) — MDX 插件链、frontmatter 解析、MathJax 渲染机制、课程数据加载
+- [02 路由系统与页面组织](../concepts/02-routing-and-pages.md) — React Router 路由配置、动态路由、预渲染
+- [04 核心组件与状态管理](../concepts/04-components-and-state.md) — PiCreature、Figure、TableOfContents、Heading 等组件详解
+- [06 构建系统、包管理与静态部署](../concepts/06-build-and-deploy.md) — Vite 构建配置、插件链、SSG 预渲染

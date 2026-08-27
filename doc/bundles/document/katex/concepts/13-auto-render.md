@@ -37,7 +37,7 @@ auto-render 是 KaTeX 的官方扩展模块，位于 [contrib/auto-render/](http
 
 `defer` 属性确保脚本在DOM解析完成后执行。`onload` 回调在脚本加载完成后调用渲染函数。
 
-> **版本注意**：官网 Auto-render 页面的 CDN 示例引用 `katex@0.18.1`（扩展版本），而核心 katex.js 引用 `0.18.4`。本 bundle 以源码 v0.18.4 为基准，实际使用时建议两者保持一致版本，详见 [事实清单修正-8](/spec/facts.md#修正-8官网版本号标注不一致)。
+> **版本注意**：官网 Auto-render 页面的 CDN 示例引用 `katex@0.18.1`（扩展版本），而核心 katex.js 引用 `0.18.4`。本 bundle 以源码 v0.18.4 为基准，实际使用时建议两者保持一致版本，详见 [事实清单修正-8](../spec/facts.md#修正-8官网版本号标注不一致)。
 
 ### npm 方式
 
@@ -217,7 +217,7 @@ $$ \gdef\RR{\mathbb{R}} $$
 $$ f: \RR \to \RR $$
 ```
 
-第二个公式中的 `\RR` 由第一个公式的 `\gdef` 定义。持久宏的安全注意事项见 [宏系统](/concepts/09-macro-system.md) 和 [安全与错误处理](/concepts/18-security-and-errors.md)：不应跨多用户消息共享 macros 对象。
+第二个公式中的 `\RR` 由第一个公式的 `\gdef` 定义。持久宏的安全注意事项见 [宏系统](09-macro-system.md) 和 [安全与错误处理](18-security-and-errors.md)：不应跨多用户消息共享 macros 对象。
 
 ## 使用注意事项
 
@@ -260,7 +260,7 @@ async function loadContent() {
 
 ## 相关概念
 
-- [快速开始](/concepts/01-getting-started.md)
-- [配置系统](/concepts/10-settings-options.md)
-- [自动渲染示例](/examples/auto-render-usage.md)
-- [贡献扩展](/concepts/14-contrib-extensions.md)
+- [快速开始](01-getting-started.md)
+- [配置系统](10-settings-options.md)
+- [自动渲染示例](../examples/auto-render-usage.md)
+- [贡献扩展](14-contrib-extensions.md)

@@ -163,5 +163,5 @@ document, ws = to_docutils_ast(text, front_matter=False)
 
 ## 相关概念
 
-- [mdformat 渲染集成与自定义渲染器](/concepts/07-mdformat-integration.md)
-- [LosslessRSTParser 与自定义 Transform](/concepts/04-lossless-parser.md)
+- [mdformat 渲染集成与自定义渲染器](07-mdformat-integration.md)
+- [LosslessRSTParser 与自定义 Transform](04-lossless-parser.md)
