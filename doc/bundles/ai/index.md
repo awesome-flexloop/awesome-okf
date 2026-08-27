@@ -18,6 +18,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🦜🔗 LangChain-AI LLM 应用框架](langchain-ai/index.md) | LangChain/LangGraph 核心框架（Python+JS）、深度研究 Agent、可观测性、评测与基础设施 |
 | [🐳 Datawhale 开源 AI 学习社区](datawhale/index.md) | 国内最大开源 AI 学习社区——LLM 全栈/RAG/Agent/向量数据库/推荐系统/ML 理论 |
 | [🧩 Coze 扣子开发平台生态](coze/index.md) | 字节跳动一站式 AI Agent 开发平台——Python SDK、开源平台、LLM 可观测性 |
+| [🟠 Anthropic 官方生态](anthropic/index.md) | Anthropic Claude 官方生态——Python SDK、Claude Code CLI、提示词工程教程、官方Skills库、金融服务方案、Cookbook示例集 |
 | [🧠 DeepSeek-AI 基础设施](deepseek/index.md) | DeepSeek 开源大模型基础设施——MoE 通信、GPU kernel 优化、注意力、流水线并行、负载均衡 |
 | [🚀 TRAE Community 生态](trae/index.md) | 字节跳动 AI 编程 IDE 社区——平台应用、技能/模板/MCP 扩展、学习资源、社区治理 |
 | [🐧 腾讯开源生态](tencent/index.md) | 腾讯系开源与商业项目——CodeBuddy 产品矩阵、AI 红队平台、ncnn 推理框架 |
@@ -32,6 +33,7 @@ ai-agent/index
 langchain-ai/index
 datawhale/index
 coze/index
+anthropic/index
 deepseek/index
 trae/index
 tencent/index
