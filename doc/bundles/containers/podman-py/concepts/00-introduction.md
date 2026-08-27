@@ -22,12 +22,7 @@ podman-py 是 [Podman](https://github.com/containers/podman) 容器引擎的官�
 
 ## Python 版本要求
 
-podman-py 5.8.0 要求 Python 版本 ≥ 3.9，官方支持以下版本：
-- Python 3.9
-- Python 3.10
-- Python 3.11
-- Python 3.12
-- Python 3.13
+podman-py 5.8.0 要求 Python 版本 ≥ 3.9。
 
 ## 安装
 
@@ -74,15 +69,16 @@ from podman import DockerClient  # DockerClient = PodmanClient
 
 `PodmanClient.from_env()` 同时识别以下两组环境变量：
 
-| Podman 变量 | Docker 变量 | 用途 |
-|------------|------------|------|
-| `CONTAINER_HOST` | `DOCKER_HOST` | 服务连接 URL |
+| Podman 变量              | Docker 变量           | 用途       |
+| ---------------------- | ------------------- | -------- |
+| `CONTAINER_HOST`       | `DOCKER_HOST`       | 服务连接 URL |
 | `CONTAINER_TLS_VERIFY` | `DOCKER_TLS_VERIFY` | TLS 证书验证 |
-| `CONTAINER_CERT_PATH` | `DOCKER_CERT_PATH` | TLS 证书路径 |
+| `CONTAINER_CERT_PATH`  | `DOCKER_CERT_PATH`  | TLS 证书路径 |
 
 ### 3. Manager API 对齐
 
 `client.containers`、`client.images`、`client.networks`、`client.volumes` 等管理器的方法签名与 docker-py 保持一致，包括：
+
 - `containers.list()` / `containers.get()` / `containers.run()` / `containers.create()`
 - `images.list()` / `images.get()` / `images.pull()` / `images.push()` / `images.build()`
 - `networks.list()` / `networks.get()` / `networks.create()`
@@ -100,6 +96,7 @@ containers = client.containers.list(compatible=True)
 ### 不支持的功能
 
 Podman 是无守护进程（daemonless）容器引擎，原生不支持 Docker Swarm 模式，以下属性会抛出 `NotImplementedError`：
+
 - `client.swarm`
 - `client.services`
 - `client.configs`
@@ -107,14 +104,15 @@ Podman 是无守护进程（daemonless）容器引擎，原生不支持 Docker S
 
 ## 核心依赖
 
-| 依赖 | 版本要求 | 用途 |
-|------|---------|------|
-| `requests` | ≥ 2.24 | HTTP 客户端，APIClient 继承自 `requests.Session` |
-| `tomli` | ≥ 1.2.3 | TOML 配置解析（Python < 3.11） |
-| `urllib3` | - | HTTP 底层传输 |
+| 依赖         | 版本要求    | 用途                                        |
+| ---------- | ------- | ----------------------------------------- |
+| `requests` | ≥ 2.24  | HTTP 客户端，APIClient 继承自 `requests.Session` |
+| `tomli`    | ≥ 1.2.3 | TOML 配置解析（Python < 3.11）                  |
+| `urllib3`  | -       | HTTP 底层传输                                 |
 
 ## 相关概念
 
 - [/concepts/01-connection.md](/concepts/01-connection.md)
 - [/concepts/02-managers.md](/concepts/02-managers.md)
 - [/examples/01-migration.md](/examples/01-migration.md)
+
