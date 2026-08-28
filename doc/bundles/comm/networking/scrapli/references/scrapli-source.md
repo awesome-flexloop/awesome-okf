@@ -4,7 +4,7 @@ title: scrapli2 源码信源登记
 description: scrapli2 0.0.0-dev 源码路径、版本信息、Zig+Python 混合架构、核心模块清单与公开 API
 tags: [scrapli, source, reference, zig, ctypes]
 generated: { by: "reference_agent/trae-glm", at: "2026-08-23T10:00:00Z" }
-verified: { by: "process:grep-v", at: "2026-08-23T12:00:00Z" }
+verified: { by: "process:seven-concepts-v", at: "2026-08-28T00:00:00Z" }
 status: stable
 stale_after: 2027-06-30
 sources:
@@ -123,3 +123,20 @@ from scrapli import (
 - 支持架构：x86_64、aarch64
 - 支持的 libc ABI：glibc、musl
 - 环境变量 `LIBSCRAPLI_PATH` 可覆盖共享库路径
+
+## 仓库级子目录覆盖（2026-08-28 扩展）
+
+2026-08-28 扩展批次（change-id: scrapli-full-coverage-wiki）对仓库全部实质子文件夹补充阅读，新增 109 条事实（F-001~F-109，见 `.trae/specs/scrapli-full-coverage-wiki/scrapli-facts-2.md`）：
+
+| 仓库目录 | 内容 | 覆盖情况 |
+|---------|------|---------|
+| `examples/README.md` | 示例总览：scrapli_clab containerlab "ci" 拓扑、端口 NAT 映射（21022/21023/21830）、环境变量覆盖 | 已读 |
+| `examples/cli/` | 12 个 CLI 示例目录（async_usage、custom_definition、handling_interactions、input_modes、logging_setup、misc_options、output_parsing、proxy_jump_cli、read_callbacks、sending_configs、sending_inputs、session_recorder），每个含 README.md + main.py | 全部 12 目录已读 |
+| `examples/netconf/` | 4 个 NETCONF 示例目录（edit_config、get_operations、proxy_jump_netconf、subscriptions） | 全部 4 目录已读 |
+| `tests/functional/` | conftest.py（cli/netconf fixture、golden 比对、`--update`）、test_cli.py、test_netconf.py、test_transport_bin.py、test_transport_ssh2.py、test_examples.py、fixtures/（SSH 测试密钥与 ssh_config） | 已读 |
+| `tests/functional/golden/` | cli/ 与 netconf/ 两棵 golden 目录树，命名模式 `<操作>[-async]-<平台/服务器>-<transport>[-变体]` | 目录清单已采集 |
+| `tests/unit/` | dummy_ssh_server/（Go 编写，监听 0.0.0.0:2222，模拟 `router> ` prompt）、fixtures/（TEST Transport 会话数据）、golden/（期望输出）、conftest.py | 已读 |
+| `scrapli/definitions/` | 44 个平台 YAML（含 default.yaml），采样精读 8 个：cisco_nxos、juniper_junos、arista_eos、nokia_srlinux、huawei_vrp、mikrotik_routeros、fortinet_fortios、vyos_vyos | 全集清单 + 8 个精读 |
+| `docs/` | index.md、details.md（transport 与 YAML 字段详解）、installation.md（Python/Go/Zig 安装矩阵）、migration.md（旧版→新版迁移指南）、examples/python.md | 全部已读 |
+| `scrapli/lib/README.md` | libscrapli 共享对象存放说明（版本控制为空、wheel/sdist 填充、ffi loader 加载路径） | 已读 |
+| `.github/workflows/` | 7 个工作流：cicd.yaml（入口，复用 lint+test）、test.yaml、lint.yaml、docs.yaml、publish.yaml、release.yaml、validate.yaml | cicd/test 已精读，其余确认存在 |

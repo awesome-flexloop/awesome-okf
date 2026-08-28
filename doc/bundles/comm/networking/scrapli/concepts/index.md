@@ -13,6 +13,10 @@ okf_version: "0.2"
 * [平台定义系统](06-platform-definitions.md) — YAML 定义、44个内置平台、模式层级、自定义定义
 * [NETCONF 驱动](07-netconf.md) — Netconf 类、RPC 操作、数据存储类型、锁/提交/验证
 * [高级模式](08-advanced-patterns.md) — 回调读取、提示输入、结构化解析、异常处理、FFI 深入
+* [测试体系](09-testing-system.md) — golden 文件测试法、functional/unit 结构、dummy_ssh_server、TEST Transport 回放
+* [平台定义目录](10-platform-catalog.md) — 44 个平台 YAML 分类、共性字段、复杂度谱系、definition_options 钩子
+* [迁移指南](11-migration.md) — 旧版 scrapli → scrapli2 变化总览、Python/Go 差异、PyPI 双包
+* [官方示例体系](12-repository-examples.md) — containerlab 共享拓扑、16 个示例主题矩阵、渐进式学习路径
 
 ```{toctree}
 :hidden:
@@ -27,4 +31,8 @@ okf_version: "0.2"
 06-platform-definitions
 07-netconf
 08-advanced-patterns
+09-testing-system
+10-platform-catalog
+11-migration
+12-repository-examples
 ```

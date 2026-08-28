@@ -22,6 +22,10 @@ okf_version: "0.2"
 * [平台定义系统](concepts/06-platform-definitions.md) — YAML 声明式定义、44 个内置平台、模式层级、自定义定义
 * [NETCONF 驱动](concepts/07-netconf.md) — Netconf 类、get-config/edit-config/commit/lock、数据存储枚举
 * [高级模式](concepts/08-advanced-patterns.md) — 回调读取、提示输入、TextFSM/Genie 解析、异常处理、FFI 深入
+* [测试体系](concepts/09-testing-system.md) — golden 文件测试法、functional/unit 结构、dummy_ssh_server、TEST Transport 回放
+* [平台定义目录](concepts/10-platform-catalog.md) — 44 个平台 YAML 分类、共性字段、复杂度谱系、definition_options 钩子
+* [迁移指南](concepts/11-migration.md) — 旧版 scrapli → scrapli2 变化总览、Python/Go 差异、PyPI 双包
+* [官方示例体系](concepts/12-repository-examples.md) — containerlab 共享拓扑、16 个示例主题矩阵、渐进式学习路径
 
 ## 实战示例（examples/）
 
@@ -29,6 +33,9 @@ okf_version: "0.2"
 * [单条与批量命令发送](examples/send-commands.md) — send_input/send_inputs/send_inputs_from_file、结构化解析
 * [异步并行连接多设备](examples/async-parallel.md) — asyncio.gather 并发、Semaphore 限流、异步 NETCONF
 * [自定义平台定义与高级用法](examples/custom-driver.md) — 自定义 YAML、LoadedDefinition、回调读取、会话录制
+* [代理跳转连接](examples/proxy-jump.md) — bin（ssh_config）与 ssh2（proxy_jump_* 参数）两种 ProxyJump 方式
+* [结构化输出解析](examples/output-parsing.md) — textfsm_parse 单条/多条解析、ntc-templates 平台映射
+* [会话录制](examples/session-recorder.md) — SessionOptions(recorder_path=...) 录制底层 session 读取
 
 ## 信源登记簿（references/）
 
@@ -41,12 +48,12 @@ okf_version: "0.2"
 
 ## 信任与生命周期说明
 
-* **status 判定依据**：全部 14 个内容文档（9 个概念 + 4 个示例 + 1 个信源登记）均 `status: stable`。内容基于对 scrapli2 源码（`external/libs/scrapli/scrapli/` 目录）的逐模块阅读与事实提取（133 条源码事实），经 R→I→E→V 四阶段流程生成。
+* **status 判定依据**：全部 21 个内容文档（13 个概念 + 7 个示例 + 1 个信源登记）均 `status: stable`。内容基于对 scrapli2 源码（`external/libs/scrapli/scrapli/` 目录）的逐模块阅读与事实提取（133 条源码事实），经 R→I→E→V 四阶段流程生成；2026-08-28 扩展批次（scrapli-full-coverage-wiki）进一步覆盖仓库全部实质子文件夹（examples/、tests/、docs/、scrapli/definitions/、scrapli/lib/、.github/），新增 109 条事实，扩展为 13 概念 + 7 示例 + 1 信源。
 * **stale_after 解释**：统一设置为 `2027-06-30`。scrapli2 仍处于 0.0.0-dev 开发阶段，API 可能在正式发布前发生变化；该日期作为保守的重新评估节点。
-* **核验链路**：`generated.at` 记录各文档原始生成时刻（2026-08-23）；`verified.at` 记录 V 阶段 Grep 验证事件（2026-08-23），两者分离、可追溯。
+* **核验链路**：`generated.at` 记录各文档原始生成时刻（2026-08-23；扩展批次为 2026-08-28）；`verified.at` 记录 V 阶段 Grep 验证事件（2026-08-23；扩展批次为 2026-08-28），两者分离、可追溯。
 * **架构形态确认**：Zig 核心（libscrapli 共享库）+ Python ctypes 薄绑定，双驱动（Cli/Netconf）×双 API（同步/异步）正交设计，四种可插拔 Transport，YAML 声明式平台定义。
 
-本知识包共收录 14 个内容文档（9 个概念 + 4 个示例 + 1 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
+本知识包共收录 21 个内容文档（13 个概念 + 7 个示例 + 1 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
 
 ```{toctree}
 :hidden:
