@@ -2,10 +2,10 @@
 type: category
 title: "TRAE Community 生态"
 okf_version: "0.2"
-description: "TRAE Community 开源社区生态源码级中文教程——12个核心仓库、119篇内容文档（含71概念+36示例+12信源），覆盖平台应用、扩展系统、学习资源、社区治理四大板块"
-total_bundles: 12
-total_content_docs: 119
-total_md_files: 155
+description: "TRAE Community 生态知识包——13个知识包、124篇内容文档（含74概念+36示例+14信源），覆盖平台应用、扩展系统、学习资源、社区治理、战略资讯五大板块"
+total_bundles: 13
+total_content_docs: 124
+total_md_files: 164
 verified: grep-verified
 generated: true
 status: stable
@@ -15,7 +15,7 @@ status: stable
 
 本知识包分组收录 [TRAE Community](https://github.com/trae-community) 开源社区生态各核心仓库的系统化中文源码教程。TRAE 是字节跳动推出的 AI 编程 IDE，trae-community 组织维护了围绕 TRAE 生态的展示平台、技能系统、模板库、MCP 服务器、学习文档和社区治理仓库。
 
-所有知识包遵循 [OKF v0.2 规范](../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经源码事实验证。
+所有知识包遵循 [OKF v0.2 规范](../../meta/okf-spec/index.md)。源码教程类知识包通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，API 引用均经源码事实验证；战略资讯类知识包（见下方"📰 战略资讯"板块）通过博文事实采集与多媒体核验（R→I→E→V 四阶段链路）生成，数据口径差异与作者观点均已显式标注。
 
 ## 📊 知识包概览
 
@@ -33,9 +33,10 @@ status: stable
 | 👥 社区治理 | [trae-co-creation-projects](trae-co-creation-projects/index.md) | L0 | 3 | 1 | 1 | 5 |
 | 👥 社区治理 | [trae-discussions](trae-discussions/index.md) | L0 | 3 | 1 | 1 | 5 |
 | 👥 社区治理 | [trae-friends-events](trae-friends-events/index.md) | L1 | 4 | 2 | 1 | 7 |
-| **合计** | **12 知识包** | | **71** | **36** | **12** | **119** |
+| 📰 战略资讯 | [bytedance-ai-consolidation](bytedance-ai-consolidation/index.md) | L0 | 3 | 0 | 2 | 5 |
+| **合计** | **13 知识包** | | **74** | **36** | **14** | **124** |
 
-> 注："内容文档"指 concepts/examples/references 目录下的实质性文档。含导航索引、spec 工作文件共 **155 个 .md 文件**。
+> 注："内容文档"指 concepts/examples/references 目录下的实质性文档。含导航索引、spec 工作文件共 **164 个 .md 文件**。
 
 ## 🖥️ 平台应用层
 
@@ -68,6 +69,12 @@ status: stable
 | [trae-co-creation-projects](trae-co-creation-projects/index.md) | 共创项目征集——Issue 表单驱动低门槛投稿，接受所有阶段项目，Collaboration 30% 权重差异化审核，中英双语提交 |
 | [trae-discussions](trae-discussions/index.md) | 社区讨论论坛——GitHub Discussions 分类引导，5 大讨论分类，3 文件极简导航枢纽，社区礼仪与有效提问指南 |
 | [trae-friends-events](trae-friends-events/index.md) | 活动数据管理——CSV+Python 零依赖轻量 CMS 模式，HTML 注释标记替换 README 时间轴，9 种活动类型颜色映射，OPERATION_GUIDE 运营指南+AI Prompt 辅助降低贡献门槛 |
+
+## 📰 战略资讯层
+
+| 知识包 | 一句话简介 |
+|--------|-----------|
+| [bytedance-ai-consolidation](bytedance-ai-consolidation/index.md) | 字节跳动 2026 年 8 月 AI 业务整合商业分析——TRAE/扣子/飞书并入豆包的组织时间线、算力成本驱动逻辑（含 850 亿年份错配更正与多口径标注）、腾讯/阿里/字节 AI 办公三方竞争格局；博文作者标注"个人观点"，数据经 36 氪/南华早报/第一财经等多媒体核验 |
 
 ## 学习路径推荐
 
@@ -142,6 +149,7 @@ trae-agents/index
 trae-co-creation-projects/index
 trae-discussions/index
 trae-friends-events/index
+bytedance-ai-consolidation/index
 spec/index
 log
 ```
