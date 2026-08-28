@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 21
+total_bundles: 23
 ---
 
 # 🤖 AI Agent 框架
@@ -87,6 +87,13 @@ total_bundles: 21
 | [opencode](opencode/index.md) | TypeScript | 5+1+1=7 | OpenCode Terminal Coding Agent——Bun+Turbo+SST技术栈、SessionV2会话模型(Context Epoch)、V2配置规范、infra模块(app/console/lake/stage/stats/secret)、Cloudflare+AWS混合云部署 |
 | [pi-cli](pi-cli/index.md) | TypeScript | 5+1+1=7 | Pi AI CLI——9包monorepo(ai/tui/agent/client/server/evals等)、AI包(models/oauth/cli/compat/images)、TUI差分渲染引擎、5个内置prompt(cl/is/pr/sa/wr)、锁步版本控制 |
 
+### 📰 产品资讯
+
+| 知识包 | 类型 | 文档数 | 一句话简介 |
+|--------|------|--------|-----------|
+| [qwen-creative-platform-news](qwen-creative-platform-news/index.md) | 资讯速报 | 1+2+1=4 | 阿里千问创作平台多Agent协同开测——5个Agent组成虚拟剧组(策划/编剧/视觉/分镜/成片)、Wan 3.0+Qwen-Image 3.0 Pro、书旗ManClaw漫剧Agent(Seedance 2.0)、导演视角解读 |
+| [qwen-ui-agent](qwen-ui-agent/index.md) | 技术评测 | 3+1+2+1=7 | 阿里通义开源GUI智能体Qwen-UI-Agent技术评测——真机训练(100+设备/150+App/400+任务)、MobileWorld 82.1%超GPT-5.6/Claude Opus 4.8、CLI批量动作、3个内部流程实测(财务对账/运营日报/老CRM)、3项勘误(MAI-UI权重混淆/58%以偏概全/硬件要求有误) |
+
 ---
 
 ## 跨项目概念对照
@@ -135,4 +142,6 @@ nanobot/index
 deepcode-cli/index
 opencode/index
 pi-cli/index
+qwen-creative-platform-news/index
+qwen-ui-agent/index
 ```
