@@ -28,3 +28,11 @@ pip install olot[oras-py]
 # 安装 skopeo（可选，用于示例 1）
 # 参考你的操作系统包管理方式
 ```
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+01-cli-usage
+02-python-api
+```

@@ -3,16 +3,16 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程"
-total_bundles: 263
-groups: 30
-domains: 11
+total_bundles: 268
+groups: 32
+domains: 13
 ---
 
 # 知识包总索引（Bundles Index）
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **263 个知识包**，按技术生态分为 **11 个技术域、30 个分组**。
+> 当前共 **268 个知识包**，按技术生态分为 **13 个技术域、32 个分组**。
 
 ***
 
@@ -22,11 +22,12 @@ domains: 11
 flowchart TD
     meta["📐 meta/ 规范与格式（okf-spec 锚点）"]
     py["🐍 python/ Python 语言核心（cpython 锚点）"]
+    rust["🦀 rust/ Rust 语言核心：rustc 编译器 · Cargo 构建系统 · RFC 设计决策"]
     build["🔨 build/ 构建系统与包管理生态：conda 环境 · cmake/scikit-build 构建 · 通用工具"]
     doc["📚 document/ 文档工程：sphinx · myst · jupyter-book · jupyter · katex"]
     data["📊 data/ 数据科学与科学计算：pydata 科学计算全栈"]
     ml["🧠 ml/ 机器学习模型生态：ONNX 标准/转换器/编译器"]
-    comm["📡 comm/ 通信与网络生态：ZeroMQ 消息栈 · SSH 远程控制"]
+    comm["📡 comm/ 通信与网络生态：ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化"]
     ai["🤖 ai/ 人工智能与大模型应用生态：agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow"]
     viz["📐 viz/ 数学可视化与创意编程：3b1b ManimGL · 视频场景 · 字幕工具链 · React官网"]
     web["🌐 web/ Web 开发生态：fastapi · graphql"]
@@ -34,6 +35,7 @@ flowchart TD
     think["💭 think/ 思想与理论：psi · laozi"]
     meta -->|"规范约束"| py
     py -->|"语言底座"| build
+    rust -->|"工具链底座"| build
     build --> doc
     build --> data
     build --> containers
@@ -63,6 +65,7 @@ flowchart TD
 flowchart LR
     meta["📐 meta/okf-spec：了解 OKF 知识包格式规范（30分钟）"]
     py["🐍 python/cpython：理解 Python 解释器底层（选读核心章节）"]
+    rust["🦀 rust/：Rust 语言核心（rustc 编译器流水线 · Cargo 构建系统 · RFC 设计演进，选读）"]
     build["🔨 build/：掌握构建与包管理（copier 脚手架 - pyinvoke 自动化 - conda 环境 - cmake 构建）"]
     doc["📚 document/：掌握文档工程能力（sphinx 文档写作 - jupyter-book/myst 新一代工具链 - jupyter 交互计算）"]
     data["📊 data/：pydata 科学计算全栈（NumPy-pandas-matplotlib/plotly-Dash-PyTables）"]
@@ -71,14 +74,14 @@ flowchart LR
     ai["🤖 ai/：人工智能与大模型应用（agnes-ai 大模型API - ai-agent Agent框架 - langchain-ai LLM应用框架 - datawhale 学习社区）"]
     viz["📐 viz/：数学可视化与创意编程（ManimGL动画引擎 - 视频场景 - 字幕工具链 - React官网）"]
     web["🌐 web/：Web 开发生态（fastapi · graphql）"]
-    comm["📡 comm/：通信与网络生态（ZeroMQ 消息 · SSH 远程控制）"]
+    comm["📡 comm/：通信与网络生态（ZeroMQ 消息 · SSH 远程控制 · Protocol Buffers 序列化）"]
     think["💭 think/：思想与理论（psi · laozi 选读）"]
-    meta --> py --> build --> doc --> data --> ml --> containers --> ai --> viz --> web --> comm --> think
+    meta --> py --> rust --> build --> doc --> data --> ml --> containers --> ai --> viz --> web --> comm --> think
 ```
 
 ***
 
-## 十一域分组导航
+## 十三域分组导航
 
 ### 📐 [规范与格式](meta/index.md) · 1 束 · 1 组
 
@@ -91,6 +94,12 @@ flowchart LR
 | 分组                                            | 束数 | 说明                                                             |
 | --------------------------------------------- | -- | -------------------------------------------------------------- |
 | [🐍 Python 语言核心（cpython 锚点）](python/index.md) | 1  | CPython 解释器核心架构——对象模型、引用计数、GC、字节码、编译器管线、模块导入系统；所有 Python 知识的底座 |
+
+### 🦀 [Rust 语言核心](rust/index.md) · 3 束 · 1 组
+
+| 分组                                  | 束数 | 说明                                                                                       |
+| ----------------------------------- | -- | -------------------------------------------------------------------------------------- |
+| [🦀 Rust 语言核心（rustc · cargo · rfcs）](rust/index.md) | 3  | rustc 编译器流水线（bootstrap 自举→解析→HIR→类型检查→MIR→代码生成）、core/alloc/std 三层标准库、Cargo 包管理与构建系统、RFC 语言设计决策与治理流程 |
 
 ### 🔨 [构建系统与包管理生态](build/index.md) · 14 束 · 4 组
 
@@ -143,12 +152,13 @@ flowchart LR
 | [🐧 腾讯开源生态](ai/tencent/index.md)                       | 4  | 腾讯系开源与商业项目——CodeBuddy 产品矩阵、AI 红队平台、ncnn 推理框架                |
 | [⚡ PocketFlow 极简 LLM 应用框架](ai/pocketflow/index.md)     | 5  | 极简 LLM Agent 框架——节点+流程抽象、设计模式、实战教程                          |
 
-### 📡 [通信与网络生态](comm/index.md) · 10 束 · 2 组
+### 📡 [通信与网络生态](comm/index.md) · 12 束 · 3 组
 
 | 分组                                       | 束数 | 说明                                                                  |
 | ---------------------------------------- | -- | ------------------------------------------------------------------- |
 | [📨 消息通信生态](comm/messaging/index.md)     | 4  | ZeroMQ 消息通信与分布式任务队列——libzmq 核心库、C++/Python 绑定、dramatiq 任务队列         |
 | [🌐 SSH 与远程控制](comm/networking/index.md) | 6  | Python SSH/远程控制生态——paramiko/fabric/netmiko/asyncssh/pexpect/scrapli |
+| [📦 数据序列化生态](comm/serialization/index.md) | 2  | Protocol Buffers 序列化生态——protobuf 主仓（双内核/protoc/Editions/九语言绑定）与 protobuf-ci（CI 动作与五层缓存） |
 
 ### 🌐 [Web 开发生态](web/index.md) · 2 束 · 2 组
 
@@ -184,6 +194,7 @@ document/index
 meta/index
 ml/index
 python/index
+rust/index
 think/index
 viz/index
 web/index

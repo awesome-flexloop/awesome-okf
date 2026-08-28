@@ -21,3 +21,14 @@
 ```
 
 **推荐学习顺序**：00 → 01 → 02 → 03/04（03 和 04 可并行阅读）。
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+00-introduction
+01-nested-architecture
+02-oom-selinux
+03-subsystems
+04-bluechi
+```

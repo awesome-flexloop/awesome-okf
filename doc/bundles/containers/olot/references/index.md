@@ -15,3 +15,12 @@
 - 每个 concepts/examples 文档的 frontmatter 中 `sources` 字段指向此处的文件
 - 信源文件仅记录可验证的事实，不包含推断性内容
 - 文档内容与信源不一致时，以信源为准
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+backend-source
+oci-source
+readme-source
+```

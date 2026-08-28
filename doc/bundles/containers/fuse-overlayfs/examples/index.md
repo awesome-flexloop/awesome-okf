@@ -22,3 +22,11 @@
 2. 观察 copy-up 如何工作：修改 lower 文件后检查 upper 目录
 3. 观察 whiteout 如何工作：删除 lower 文件后检查 upper 中的 `.wh.*` 标记
 4. （可选）阅读 [02 Rootless 模式](02-rootless.md) 了解容器场景配置
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+01-basic-mount
+02-rootless
+```

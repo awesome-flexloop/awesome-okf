@@ -11,3 +11,13 @@
 
 * [02-workflow.md](02-workflow.md) — 日常开发工作流：三大核心命令详解——`toolbox create`（创建容器，--distro/--release/--image/--container 选项，默认命名规则 `<distro>-toolbox-<release>`）、`toolbox enter`（交互式进入，提示符变化，exit 离开容器不删除）、`toolbox run`（非交互式单命令执行，适合脚本调用）；生命周期管理——`list -c/-i`、`rm [-f/-a]`、`rmi [-f/-a]`；最佳实践（单容器 vs 多容器策略、Shell 别名、进入即工作模式、脚本中使用、全局选项 -v/-vv 排障）；完整命令速查表。
 * [03-custom-images.md](03-custom-images.md) — 自定义镜像与高级用法：自定义镜像适用场景（团队统一环境、预装工具链、企业 CA、特殊发行版）；Toolbx 镜像必备特征（POSIX shell、sudo、useradd、/run/host 挂载点、com.github.containers.toolbox 标签）；三种构建方式（基于官方镜像扩展推荐、从基础镜像从头构建、社区工具）；Containerfile 编写示例；/run/host 逃生口 5 个高级场景（访问主机目录、chroot 故障排查、调用主机二进制、共享包缓存、跨容器共享）；自定义镜像版本标签、profile.d 环境配置、预装 vs dotfiles vs 手动安装决策矩阵；NVIDIA GPU 支持说明。
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+00-introduction
+01-pass-through
+02-workflow
+03-custom-images
+```

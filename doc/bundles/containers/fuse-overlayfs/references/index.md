@@ -30,3 +30,13 @@ fuse-overlayfs 源码结构（`src/` 目录）：
 | `mapping.rs` | UID/GID 映射 | 用户命名空间 ID 映射 |
 | `error.rs` | 错误类型 | FsResult、错误定义 |
 | `sys/` | 系统抽象 | 平台相关 unsafe 代码封装 |
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+copyup-source
+node-source
+overlay-source
+readme-source
+```

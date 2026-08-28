@@ -29,3 +29,14 @@
 1. [00 FUSE 与 OverlayFS 基础](00-introduction.md)
 2. [04 挂载选项与运行时统计](04-mount-options.md) — uidmap/gidmap 配置
 3. [02 rootless 模式配置](../examples/02-rootless.md)
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+00-introduction
+01-node-inode
+02-copyup
+03-whiteout
+04-mount-options
+```

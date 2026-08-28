@@ -28,3 +28,13 @@
 2. [02-rootless.md](02-rootless.md) 理解安全边界和权限模型
 3. [03-compose-patterns.md](03-compose-patterns.md) 掌握配置最佳实践
 4. 参考 [examples/](../examples/index.md) 中的多容器示例
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+00-introduction
+01-daemonless-arch
+02-rootless
+03-compose-patterns
+```

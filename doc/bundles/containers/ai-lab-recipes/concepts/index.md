@@ -19,3 +19,13 @@
 | [01-model-servers.md](01-model-servers.md) | llamacpp_python/ollama/whispercpp/object_detection 四种模型服务器对比 |
 | [02-nlp-recipes.md](02-nlp-recipes.md) | Chatbot/RAG/Agent/Codegen/Function Calling/Summarizer 等NLP配方详解 |
 | [03-deployment.md](03-deployment.md) | Quadlet本地部署、Bootc可启动容器、Ansible自动化部署三种方式 |
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+00-introduction
+01-model-servers
+02-nlp-recipes
+03-deployment
+```

@@ -7,3 +7,10 @@
 | 信源文件 | 说明 | 覆盖事实 |
 |---------|------|---------|
 | [readme-source.md](readme-source.md) | 项目根目录 README 整理 | F-001 ~ F-003 |
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+readme-source
+```

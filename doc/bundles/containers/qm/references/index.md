@@ -11,3 +11,12 @@
 ## 事实清单
 
 所有事实的编号来源见 facts-qm.md。
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+qmctl-source
+readme-source
+subsystem-source
+```

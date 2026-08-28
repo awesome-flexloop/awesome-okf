@@ -23,3 +23,11 @@
 1. **Podman 4.0+**：容器运行时
 2. **内存**：至少 8GB（Chatbot）/ 12GB（RAG）
 3. **磁盘空间**：至少 10GB（模型文件+镜像）
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+01-chatbot
+02-rag
+```

@@ -11,3 +11,10 @@
 ## 信源说明
 
 所有概念文档和示例文档的 `sources` 字段均指向本目录下的信源文件，确保知识可溯源、可验证。
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+readme-source
+```

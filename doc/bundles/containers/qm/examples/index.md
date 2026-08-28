@@ -11,3 +11,11 @@
 
 - 示例 01 是基础环境搭建，建议先完成
 - 示例 02 依赖示例 01 的 QM 环境，且需要 CPU 支持硬件虚拟化
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+01-vm-setup
+02-kvm-subsystem
+```

@@ -62,3 +62,11 @@ podman-compose 源码仓库的 `examples/` 目录下还有更多示例可供参�
 | `azure-vote/` | Azure 投票应用（前端+Redis） |
 | `awx3/` | AWX/Ansible Tower 部署示例 |
 | `nodeproj/` | Node.js 项目开发环境配置 |
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+01-wordpress
+02-multi-container
+```
