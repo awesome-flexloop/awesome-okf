@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: bundles-index
 title: "DeepSeek-AI 基础设施"
 description: "DeepSeek-AI 开源大模型基础设施项目源码中文教程——MoE通信、GPU kernel优化、注意力机制、投机解码、流水线并行、负载均衡"
-total_bundles: 12
+total_bundles: 13
 ---
 
 # DeepSeek-AI 基础设施（DeepSeek-AI Infrastructure）
@@ -73,6 +73,7 @@ total_bundles: 12
 | [deepseek-math-v2](deepseek-math-v2/index.md) | 数学推理模型——IMO/Putnam/CMO 竞赛数学、自验证推理管线、数学模板 prompt |
 | [engram](engram/index.md) | 条件记忆机制——n-gram 哈希门控、记忆读写融合、稀疏记忆路由、长上下文扩展 |
 | [awesome-deepseek-agent](awesome-deepseek-agent/index.md) | Agent 生态资源列表——28+ Agent 工具/平台集成指南（Cline/Claude Code/Cherry Studio 等） |
+| [vision-model-selection](vision-model-selection/index.md) | 跨厂商多模态视觉模型选型指南——DeepSeek-V4-Flash-Vision-Exp 切入、五类场景选型矩阵、价格对比、视觉-推理双模型协作架构 |
 
 ## 推荐学习路径
 
@@ -124,4 +125,5 @@ deepseek-ocr2/index
 deepseek-math-v2/index
 engram/index
 awesome-deepseek-agent/index
+vision-model-selection/index
 ```

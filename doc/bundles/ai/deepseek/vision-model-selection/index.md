@@ -5,7 +5,9 @@ title: "多模态视觉模型选型指南"
 description: "基于 DeepSeek-V4-Flash-Vision-Exp 发布的跨厂商视觉模型选型中文教程——五类场景选型矩阵、价格对比、视觉-推理双模型协作架构"
 tags: [AI, LLM, 多模态, 视觉模型, DeepSeek, 模型选型, OCR, 双模型管线]
 generated: { by: "seven-concepts-cmd", at: "2026-08-28T23:00:00+08:00" }
-verified: { by: "process:seven-concepts-v", at: "2026-08-28T23:00:00+08:00" }
+verified:
+  - { by: "process:seven-concepts-v", at: "2026-08-28T23:00:00+08:00" }
+  - { by: "agent-trae/glm-5.3", at: "2026-08-28T23:59:00+08:00" }
 status: stable
 stale_after: 2026-12-31
 sources:

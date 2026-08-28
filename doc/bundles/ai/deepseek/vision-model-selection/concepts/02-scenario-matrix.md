@@ -11,6 +11,9 @@ sources:
   - id: wechat-article-hubei
     resource: https://mp.weixin.qq.com/s/iqoikK7m7arGSHnso-q9hQ
     title: 《DeepSeek 多模态视觉实验模型发布！》
+  - id: volcano-engine-pricing
+    resource: 火山引擎官方价格文档（完整 URL 未在核验记录中登记）
+    title: Doubao-Seed-2.0-mini 官方定价口径（F-036 核验信源）
 ---
 
 # 按场景选型矩阵

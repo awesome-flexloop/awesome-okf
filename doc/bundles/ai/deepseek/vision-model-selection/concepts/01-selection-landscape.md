@@ -11,6 +11,9 @@ sources:
   - id: wechat-article-hubei
     resource: https://mp.weixin.qq.com/s/iqoikK7m7arGSHnso-q9hQ
     title: 《DeepSeek 多模态视觉实验模型发布！》
+  - id: deepseek-official-news-260821
+    resource: https://api-docs.deepseek.com/news/news260821/
+    title: DeepSeek-V4-Flash-Vision-Exp 官方发布新闻
 ---
 
 # 视觉模型全景与选型维度
