@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 23
+total_bundles: 27
 ---
 
 # 🤖 AI Agent 框架
@@ -93,6 +93,11 @@ total_bundles: 23
 |--------|------|--------|-----------|
 | [qwen-creative-platform-news](qwen-creative-platform-news/index.md) | 资讯速报 | 1+2+1=4 | 阿里千问创作平台多Agent协同开测——5个Agent组成虚拟剧组(策划/编剧/视觉/分镜/成片)、Wan 3.0+Qwen-Image 3.0 Pro、书旗ManClaw漫剧Agent(Seedance 2.0)、导演视角解读 |
 | [qwen-ui-agent](qwen-ui-agent/index.md) | 技术评测 | 3+1+2+1=7 | 阿里通义开源GUI智能体Qwen-UI-Agent技术评测——真机训练(100+设备/150+App/400+任务)、MobileWorld 82.1%超GPT-5.6/Claude Opus 4.8、CLI批量动作、3个内部流程实测(财务对账/运营日报/老CRM)、3项勘误(MAI-UI权重混淆/58%以偏概全/硬件要求有误) |
+| [a2a-mcp-convergence](a2a-mcp-convergence/index.md) | 技术分析 | 4+2+1=7 | A2A与MCP协议合流分析——A2A转入AAIF与MCP共治、两协议正交分工(MCP连工具/A2A连Agent)、A2A技术架构(Agent Card/Task/Message+Part/三种交互模式)、AAIF三层Agent栈、归因授权追索三缺口、5项勘误(A2A时间线/1.1亿下载量/AWS GA日期硬性错误/四大工作流/引文意译) |
+| [doubao-work](doubao-work/index.md) | 产品实测 | 4+2+1=7 | 字节豆包工作实测评测——独立桌面客户端+飞书深度打通、Seedance 2.5+Seedream 5.0多模态生成、文档/PPT/网页/AI协同编辑(80+设计风格/带数据库网页)、飞书组织架构/群聊总结/多维表格/会议纪要→任务流、"由豆包发送"标签、滚动额度模型、核心论点"模型决定AI有多聪明，组织上下文决定它能不能成为同事"、8项P0核验全通过零勘误 |
+| [doubao-work-context-layer](doubao-work-context-layer/index.md) | 战略分析 | 4+2+1=7 | AI产品阿颖对豆包工作的Context Layer战略分析——飞书作为Agent组织上下文层、个人效率vs组织效率、Claude Tag(Slack)参照、Cat Wu上下文观(引语勘误)、Context竞争论、企业Agent四阶段演进、6项P0核验(4✅1⚠️1❌含10倍效率数据归因失实勘误) |
+| [doubao-work-org-productivity](doubao-work-org-productivity/index.md) | 行业分析 | 4+2+1=7 | 36氪深度分析豆包工作组织生产力——Agent=Model+Harness能力商品化、Deloitte 34%/37%企业AI落地落差、飞书账号级集成、理解→执行→协作→沉淀组织闭环、BCG 42%员工周省8h但组织价值未转化、权限治理分界线、信通院双项认证(⚠️待佐证)、6项P0核验(5✅1⚠️0❌本系列最高通过率) |
+| [claude-vision-skill](claude-vision-skill/index.md) | 工具教程 | 3+2+2+1=8 | claude-vision-skill给纯文本模型装眼睛——视觉转录架构(图片→qwen-vl-max→文字→DeepSeek推理)、Claude Code Skill自动触发机制、安装避坑(SKILL.md硬编码路径3处/dotenv静默失败)、本地/URL/剪贴板三场景+回退逻辑、⏰博文当天DeepSeek官方视觉模型上线、6项P0核验全✅ |
 
 ---
 
@@ -144,4 +149,9 @@ opencode/index
 pi-cli/index
 qwen-creative-platform-news/index
 qwen-ui-agent/index
+a2a-mcp-convergence/index
+doubao-work/index
+doubao-work-context-layer/index
+doubao-work-org-productivity/index
+claude-vision-skill/index
 ```

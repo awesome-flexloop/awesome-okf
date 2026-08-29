@@ -2,10 +2,10 @@
 type: category
 title: "TRAE Community 生态"
 okf_version: "0.2"
-description: "TRAE Community 生态知识包——13个知识包、124篇内容文档（含74概念+36示例+14信源），覆盖平台应用、扩展系统、学习资源、社区治理、战略资讯五大板块"
-total_bundles: 13
-total_content_docs: 124
-total_md_files: 164
+description: "TRAE Community 生态知识包——15个知识包、136篇内容文档（含82概念+36示例+18信源），覆盖平台应用、扩展系统、学习资源、社区治理、战略资讯五大板块"
+total_bundles: 15
+total_content_docs: 136
+total_md_files: 184
 verified: grep-verified
 generated: true
 status: stable
@@ -34,9 +34,11 @@ status: stable
 | 👥 社区治理 | [trae-discussions](trae-discussions/index.md) | L0 | 3 | 1 | 1 | 5 |
 | 👥 社区治理 | [trae-friends-events](trae-friends-events/index.md) | L1 | 4 | 2 | 1 | 7 |
 | 📰 战略资讯 | [bytedance-ai-consolidation](bytedance-ai-consolidation/index.md) | L0 | 3 | 0 | 2 | 5 |
-| **合计** | **13 知识包** | | **74** | **36** | **14** | **124** |
+| 📰 战略资讯 | [threeui](threeui/index.md) | L0 | 4 | 0 | 2 | 6 |
+| 📰 战略资讯 | [tushare-ai-office](tushare-ai-office/index.md) | L0 | 4 | 0 | 2 | 6 |
+| **合计** | **15 知识包** | | **82** | **36** | **18** | **136** |
 
-> 注："内容文档"指 concepts/examples/references 目录下的实质性文档。含导航索引、spec 工作文件共 **164 个 .md 文件**。
+> 注："内容文档"指 concepts/examples/references 目录下的实质性文档。含导航索引、spec 工作文件共 **184 个 .md 文件**。
 
 ## 🖥️ 平台应用层
 
@@ -75,6 +77,8 @@ status: stable
 | 知识包 | 一句话简介 |
 |--------|-----------|
 | [bytedance-ai-consolidation](bytedance-ai-consolidation/index.md) | 字节跳动 2026 年 8 月 AI 业务整合商业分析——TRAE/扣子/飞书并入豆包的组织时间线、算力成本驱动逻辑（含 850 亿年份错配更正与多口径标注）、腾讯/阿里/字节 AI 办公三方竞争格局；博文作者标注"个人观点"，数据经 36 氪/南华早报/第一财经等多媒体核验 |
+| [threeui](threeui/index.md) | Meng To 开源的 Three.js/WebGL 视觉组件库——164 个 Community 效果、10 大分类（⚠️官网当前 9 个）、6 大组件类型、AI Coding 集成（Codex/Claude Code/Cursor）、MCP Server（Pro），WebGL UI 组件化趋势分析；P0 核验 4✅ 3⚠️ 0❌ |
+| [tushare-ai-office](tushare-ai-office/index.md) | Tushare 宣布上架 WorkBuddy/千问办公/TraeWork 三大 AI 办公平台——⚠️ P0 核验发现核心声明存疑（3✅ 2⚠️ 1❌），Tushare MCP 仍需手动配置，三平台官方预置连接器未获证实，status: flagged |
 
 ## 学习路径推荐
 
@@ -150,6 +154,8 @@ trae-co-creation-projects/index
 trae-discussions/index
 trae-friends-events/index
 bytedance-ai-consolidation/index
+threeui/index
+tushare-ai-office/index
 spec/index
 log
 ```
