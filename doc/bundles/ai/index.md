@@ -14,7 +14,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | 分组 | 一句话简介 |
 |------|-----------|
 | [🤖 AgnesAI 大模型生态](agnes-ai/index.md) | AgnesAI 全模态 AI 平台——OpenAI 兼容 API、对话/图像/视频生成、Agent 工具调用 |
-| [🤖 AI Agent 框架](ai-agent/index.md) | AI Agent 运行时框架与架构模式——工具调用循环、多代理编排、记忆系统、Coding Agent 源码解读 |
+| [🤖 AI Agent 框架](ai-agent/index.md) | AI Agent 运行时框架与架构模式——工具调用循环、多代理编排、记忆系统、Coding Agent 源码解读、Tongyi-MAI GUI Agent 生态源码精读 |
 | [🦜🔗 LangChain-AI LLM 应用框架](langchain-ai/index.md) | LangChain/LangGraph 核心框架（Python+JS）、深度研究 Agent、可观测性、评测与基础设施 |
 | [🐳 Datawhale 开源 AI 学习社区](datawhale/index.md) | 国内最大开源 AI 学习社区——LLM 全栈/RAG/Agent/向量数据库/推荐系统/ML 理论 |
 | [🧩 Coze 扣子开发平台生态](coze/index.md) | 字节跳动一站式 AI Agent 开发平台——Python SDK、开源平台、LLM 可观测性 |

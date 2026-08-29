@@ -92,6 +92,12 @@ qwen-ui-agent/
 
 事实编号索引说明见 [references/index.md](references/index.md)。
 
+### 🔗 相关知识包（Tongyi-MAI 生态源码精读）
+
+- [mai-ui](../mai-ui/index.md) — MAI-UI 基座模型与 Agent 实现源码精读（Qwen-UI-Agent 的前代）
+- [mobile-world](../mobile-world/index.md) — Qwen-UI-Agent 82.1% 成绩所在的评测框架源码精读
+- [mobilepa-bench](../mobilepa-bench/index.md) — 同生态规划智能体基准精读
+
 ---
 
 ## ✅ 信任与生命周期说明

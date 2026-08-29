@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 31
+total_bundles: 34
 ---
 
 # 🤖 AI Agent 框架
@@ -88,6 +88,14 @@ total_bundles: 31
 | [opencode](opencode/index.md) | TypeScript | 5+1+1=7 | OpenCode Terminal Coding Agent——Bun+Turbo+SST技术栈、SessionV2会话模型(Context Epoch)、V2配置规范、infra模块(app/console/lake/stage/stats/secret)、Cloudflare+AWS混合云部署 |
 | [pi-cli](pi-cli/index.md) | TypeScript | 5+1+1=7 | Pi AI CLI——9包monorepo(ai/tui/agent/client/server/evals等)、AI包(models/oauth/cli/compat/images)、TUI差分渲染引擎、5个内置prompt(cl/is/pr/sa/wr)、锁步版本控制 |
 
+### 🔬 Tongyi-MAI 生态源码精读
+
+| 知识包 | 类型 | 文档数 | 一句话简介 |
+|--------|------|--------|-----------|
+| [mai-ui](mai-ui/index.md) | 源码精读 | 7+2+2+1=12 | MAI-UI GUI Agent 基础模型家族源码精读——2B/8B/32B/235B-A22B 四尺寸、vLLM 推理外壳（4 包依赖）、grounding/navigation 双 Agent、TrajStep 轨迹记忆与上下文工程、999/1000 双坐标口径、双通道评估管线，54 条事实可溯源（Qwen-UI-Agent 前代） |
+| [mobile-world](mobile-world/index.md) | 评测框架精读 | 8+3+2+1=14 | MobileWorld 移动 GUI 智能体评测框架源码精读——DinD 单容器 Android 评测环境、agents/core/runtime/tasks 四层架构、BaseAgent 契约与九项注册表、任务快照+冻结时钟确定性复现、eval-server 大规模编排（40 容器/tmux）、MCP 工具注入、双 CLI 驱动，80 条事实全溯源（Qwen-UI-Agent 82.1% 成绩所在基准框架） |
+| [mobilepa-bench](mobilepa-bench/index.md) | 基准精读 | 5+0+2+1=8 | MobilePA-Bench 移动规划智能体基准精读——页面即仓库（零评测代码）、1,705 任务/212 工具四维加权（Tool 50%）、六类 checker 固定验证策略、v1.5 榜单 13 模型与 Cost 口径、并入 Qwen-UI-Agent 网站技术栈简析（Next.js 16），网站型项目无 examples |
+
 ### 📰 产品资讯
 
 | 知识包 | 类型 | 文档数 | 一句话简介 |
@@ -125,7 +133,7 @@ total_bundles: 31
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：31 个知识包，共 268 个内容文档（177 概念 + 49 示例 + 42 信源），零推测事实底稿随束存放
+> **内容统计**：34 个知识包，共 299 个内容文档（197 概念 + 54 示例 + 48 信源），零推测事实底稿随束存放
 
 ```{toctree}
 :hidden:
@@ -152,6 +160,9 @@ nanobot/index
 deepcode-cli/index
 opencode/index
 pi-cli/index
+mai-ui/index
+mobile-world/index
+mobilepa-bench/index
 qwen-creative-platform-news/index
 qwen-ui-agent/index
 a2a-mcp-convergence/index
