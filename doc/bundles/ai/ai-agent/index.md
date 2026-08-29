@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 28
+total_bundles: 29
 ---
 
 # 🤖 AI Agent 框架
@@ -99,6 +99,7 @@ total_bundles: 28
 | [doubao-work-org-productivity](doubao-work-org-productivity/index.md) | 行业分析 | 4+2+1=7 | 36氪深度分析豆包工作组织生产力——Agent=Model+Harness能力商品化、Deloitte 34%/37%企业AI落地落差、飞书账号级集成、理解→执行→协作→沉淀组织闭环、BCG 42%员工周省8h但组织价值未转化、权限治理分界线、信通院双项认证(⚠️待佐证)、6项P0核验(5✅1⚠️0❌本系列最高通过率) |
 | [claude-vision-skill](claude-vision-skill/index.md) | 工具教程 | 3+2+2+1=8 | claude-vision-skill给纯文本模型装眼睛——视觉转录架构(图片→qwen-vl-max→文字→DeepSeek推理)、Claude Code Skill自动触发机制、安装避坑(SKILL.md硬编码路径3处/dotenv静默失败)、本地/URL/剪贴板三场景+回退逻辑、⏰博文当天DeepSeek官方视觉模型上线、6项P0核验全✅ |
 | [siemens-industrial-agent](siemens-industrial-agent/index.md) | 行业分析 | 4+2+1=7 | 量子位解析西门子工业Agent——工业Agent为何不能套壳(43%未部署/IT-OT断层)、Eigen工程智能体(ECAD集成/PLC标签/端到端执行/WAIC SAIL之星)、ICX编排层(下连PLM-ERP-MES-OT+Skill/Agent/Workflow)、Xcelerator三层生态与验证-沉淀-开发-分发飞轮、⚠️平台数字勘误(官方800款/500家非900/600)、报告系西门子联合发布、6项P0核验(3✅3⚠️) |
+| [agora-gemini-transcribe](agora-gemini-transcribe/index.md) | 资讯速报 | 4+2+1=7 | 声网(Agora官方)官宣集成Google Gemini 3.5 Transcribe——双API(Live流式`gemini-3.5-transcribe-live`亚秒延迟/Interactions预录音+说话人归属)、WER流式4.0%/非流式2.6%(Artificial Analysis)、85+语言、Agents SDK三语言(Python/TS/Go)与链式ASR+LLM+TTS/MLLM端到端两架构、Smart Transcription计划支持CRM/信息采集场景、⚠️"全球首个Realtime API"措辞勘误(API为OpenAI产品/Agora为首发语音合作方)、厂商自宣稿无成效数字、6项P0核验(5✅1⚠️) |
 
 ---
 
@@ -156,4 +157,5 @@ doubao-work-context-layer/index
 doubao-work-org-productivity/index
 claude-vision-skill/index
 siemens-industrial-agent/index
+agora-gemini-transcribe/index
 ```
