@@ -18,7 +18,7 @@ Windows PowerShell 对应路径为 `C:\Users\<用户名>\.claude\skills\claude-v
 仓库原始 SKILL.md 写死了作者同事的机器路径，共 **3 处**：
 
 ```
-/Users/wwu/.codex/skills/claude-vision-skill/vision.js
+~/.codex/skills/claude-vision-skill/vision.js
 ```
 
 分别出现在三种场景（本地路径 / `--url` / `--clipboard`）的命令中。需全部替换为本机绝对路径，例如：

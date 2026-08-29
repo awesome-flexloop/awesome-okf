@@ -27,7 +27,7 @@
 
 **补充差异**：
 - README 主推"场景A"（vision.js 拷项目根目录 + 合并 CLAUDE.md），博文采用 `~/.claude/skills/` 全局安装——两者均可行
-- SKILL.md 硬编码 `/Users/wwu/.codex/skills/...`（最近提交者 waynewu411，Codex 路径），需替换
+- SKILL.md 硬编码 `~/.codex/skills/...`（最近提交者 waynewu411，Codex 路径），需替换
 
 ### 2. DeepSeek V4 Pro 纯文本无视觉 — ✅ 通过
 

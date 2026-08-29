@@ -60,7 +60,7 @@ description 写得好不好直接决定触发准确率——需要说明"这个 
 仓库 SKILL.md 中写死了作者同事的机器路径，共 **3 处**（本地路径 / `--url` / `--clipboard` 三种场景）：
 
 ```
-/Users/wwu/.codex/skills/claude-vision-skill/vision.js
+~/.codex/skills/claude-vision-skill/vision.js
 ```
 
 - 这是 macOS 路径 + Codex 目录（非 `~/.claude/skills/`）

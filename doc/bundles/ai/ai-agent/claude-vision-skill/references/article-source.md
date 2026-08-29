@@ -48,7 +48,7 @@
 | F-012 | 真正看图的是视觉模型，DeepSeek 拿文字转录结果 | ✅ |
 | F-013 | Skill 放 ~/.claude/skills/，model-invoked，启动时预加载 name/description，按上下文自动加载，无需斜杠命令 | ✅ Anthropic 官方 |
 | F-014 | SKILL.md 以 YAML frontmatter 开头，含 name（≤64）+ description（≤1024，做什么+何时用） | ✅ |
-| F-015 | SKILL.md 硬编码他人路径 /Users/wwu/.codex/skills/claude-vision-skill/vision.js 共3处（本地/--url/--clipboard），提交者 waynewu411，需替换 | ✅ |
+| F-015 | SKILL.md 硬编码他人路径 ~/.codex/skills/claude-vision-skill/vision.js 共3处（本地/--url/--clipboard），提交者 waynewu411，需替换 | ✅ |
 | F-016 | README 主推"场景A"：vision.js 拷项目根目录 + 合并 CLAUDE.md；博文采用 ~/.claude/skills/ 全局安装 | ✅ 补充 |
 | F-017 | vision.js 的 require("dotenv") 在 try{}catch{} 中，不装则静默失败、Key 退回 sk-xxx 且无报错；必须 npm install dotenv | ✅ 最易踩坑 |
 

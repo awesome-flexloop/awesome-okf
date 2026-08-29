@@ -87,7 +87,7 @@ claude-vision-skill/
 
 ## 已知边界
 
-1. 仓库 SKILL.md 硬编码了他人机器路径 `/Users/wwu/.codex/skills/...`（3处），安装时必须替换为本机绝对路径
+1. 仓库 SKILL.md 硬编码了他人机器路径 `~/.codex/skills/...`（3处），安装时必须替换为本机绝对路径
 2. 仓库 README 主推"项目根目录放 vision.js + 合并 CLAUDE.md"方式，博文采用 `~/.claude/skills/` 全局安装方式，两者都可行
 3. **dotenv 静默失败陷阱**：不装 dotenv 不报错但 .env 完全不生效，Key 退回默认值 sk-xxx
 4. DeepSeek 官方视觉模型 deepseek-v4-flash-vision-exp 已于 2026-08-21 上线，新用户可先评估直连方案
