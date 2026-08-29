@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程"
-total_bundles: 282
+total_bundles: 283
 groups: 32
 domains: 13
 ---
@@ -12,7 +12,7 @@ domains: 13
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **282 个知识包**，按技术生态分为 **13 个技术域、32 个分组**。
+> 当前共 **283 个知识包**，按技术生态分为 **13 个技术域、32 个分组**。
 
 ***
 
@@ -138,12 +138,12 @@ flowchart LR
 | ---------------------------------------- | -- | ------------------------------------------------------------------ |
 | [📦 容器运行时与工具链](containers/index.md) | 11 | conmon/conmon-rs OCI 监控 · fuse-overlayfs 存储驱动 · libocispec 规范库 · podman-py/compose Python/Compose 绑定 · olot/omlmd OCI 模型打包 · qm 虚拟机管理 · toolbox 开发环境 · ai-lab-recipes AI 容器配方 |
 
-### 🤖 [人工智能与大模型应用生态](ai/index.md) · 109 束 · 9 组
+### 🤖 [人工智能与大模型应用生态](ai/index.md) · 110 束 · 9 组
 
 | 分组                                                     | 束数 | 说明                                                          |
 | ------------------------------------------------------ | -- | ----------------------------------------------------------- |
 | [🤖 AgnesAI 大模型生态](ai/agnes-ai/index.md)               | 2  | AgnesAI 全模态 AI 平台——OpenAI 兼容 API、对话/图像/视频生成、Agent 工具调用      |
-| [🤖 AI Agent 框架](ai/ai-agent/index.md)                 | 30 | AI Agent 运行时框架与架构模式——工具调用循环、多代理编排、记忆系统、Coding Agent 源码解读、产品资讯、技术评测、协议治理、产品实测、战略分析、行业分析、工具教程、工业Agent、语音智能体厂商动态、AI治理法学论文    |
+| [🤖 AI Agent 框架](ai/ai-agent/index.md)                 | 31 | AI Agent 运行时框架与架构模式——工具调用循环、多代理编排、记忆系统、Coding Agent 源码解读、技能规范、产品资讯、技术评测、协议治理、产品实测、战略分析、行业分析、工具教程、工业Agent、语音智能体厂商动态、AI治理法学论文    |
 | [🦜🔗 LangChain-AI LLM 应用框架](ai/langchain-ai/index.md) | 19 | LangChain/LangGraph 核心框架（Python+JS）、深度研究 Agent、可观测性、评测与基础设施 |
 | [🐳 Datawhale 开源 AI 学习社区](ai/datawhale/index.md)       | 18 | 国内最大开源 AI 学习社区——LLM 全栈/RAG/Agent/向量数据库/推荐系统/ML 理论           |
 | [🧩 Coze 扣子开发平台生态](ai/coze/index.md)                   | 3  | 字节跳动一站式 AI Agent 开发平台——Python SDK、开源平台、LLM 可观测性             |

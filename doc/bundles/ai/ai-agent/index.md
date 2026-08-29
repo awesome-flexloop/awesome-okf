@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 30
+total_bundles: 31
 ---
 
 # 🤖 AI Agent 框架
@@ -71,6 +71,7 @@ total_bundles: 30
 | [agency-agents](agency-agents/index.md) | 角色库 | 4+1+1=6 | 270+专业Agent Persona库——17部门分类体系、Markdown模板规范、NEXUS 7阶段编排框架(Full/Sprint/Micro三模式)、16种工具集成适配、convert.sh多格式转换 |
 | [agency-agents-app](agency-agents-app/index.md) | 桌面应用 | 3+1+1=5 | Agency Agents桌面工作台——Tauri 2(Rust)+Svelte 5(Runes)、三源Catalog模型、五状态安装协调、35个Tauri命令、⌘K命令面板、Preset Teams策展 |
 | [anthropics-skills](anthropics-skills/index.md) | 技能规范 | 4+1+1=6 | Anthropic官方Skills参考——SKILL.md格式标准(6字段)、三级渐进式加载、.skill分发包、eval双slave评估基准、A/B盲比、17个内置Skill分类 |
+| [agent-skills-spec](agent-skills-spec/index.md) | 技能规范 | 8+2+2+1=13 | Agent Skills开放标准——SKILL.md权威格式规范(name五规则/description≤1024/compatibility≤500)、渐进式披露三阶段token预算、eval驱动迭代(evals/grading双臂对照)、description触发率优化(3次/0.5阈值/60-40切分)、46客户端三层加载契约、skills-ref参考实现(parser四类ParseError/validator校验序列/to_prompt XML/CLI三子命令) |
 | [book-to-skill](book-to-skill/index.md) | 知识工具 | 4+1+1=6 | 书籍→Agent Skill编译器——确定性文本提取、7种文档格式解析器、13语言章节检测、四层产出流水线、多层安全防护 |
 | [i-have-adhd](i-have-adhd/index.md) | 辅助技能 | 3+1+1=5 | ADHD认知辅助技能——10条ADHD友好输出规则、Session Hooks偏好持久化、10+IDE/Agent平台集成、Always-On跨应用模式 |
 | cli-anything | CLI框架 | 8+3+6=17 | Agent原生CLI接口框架——ReplSkin双语终端外壳、SKILL.md自动生成(AST+Jinja2)、PreviewBundle v1三层持久化协议、CLI-Hub包管理器(注册表+pip安装器)、Matrix技能矩阵、Cursor/Claude/Codex多平台插件适配、四层测试与真实软件原则 |
@@ -120,11 +121,11 @@ total_bundles: 30
 
 ---
 
-> **信任声明**：本分组索引基于 21 个 AI Agent 开源项目源码逐模块分析生成，所有知识包均经 OKF 五阶段流程（R→I→E→V→C）验证。
+> **信任声明**：本分组索引基于 22 个 AI Agent 开源项目源码逐模块分析生成，所有知识包均经 OKF 五阶段流程（R→I→E→V→C）验证。
 > 
-> **生成时间**：2026-08-23 | **维护者**：OKF Wiki Bot
+> **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：21 个知识包，共 213 个内容文档（140 概念 + 48 示例 + 25 信源），1500+ 条零推测事实，21 个 facts.md 信源底稿
+> **内容统计**：31 个知识包，共 268 个内容文档（177 概念 + 49 示例 + 42 信源），零推测事实底稿随束存放
 
 ```{toctree}
 :hidden:
@@ -141,6 +142,7 @@ second-me/index
 agency-agents/index
 agency-agents-app/index
 anthropics-skills/index
+agent-skills-spec/index
 book-to-skill/index
 i-have-adhd/index
 codewhale/index
