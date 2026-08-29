@@ -68,3 +68,14 @@
 5. 本知识包与doubao-work互为补充但视角不同，不应合并
 6. 19条作者观点代表博文作者立场，不代表OKF知识库立场
 7. stale_after设为2026-11-30，3个月后需复核产品状态和行业格局
+
+## 2026-08-29 V 阶段补记（L3 模式行动项 A4：主题簇互链）
+
+| 项 | 说明 |
+|------|------|
+| 背景 | 12篇博文转化里程碑复盘行动项 A4：同主题多 bundle 须互链（blog-article-to-okf-bundle 模式 L3 步骤6第8条） |
+| 变更 | index.md 原"与 doubao-work 知识包的关系"段（2包对照）扩写为"主题关联（豆包工作主题簇）"段（3包对照），新增 doubao-work-org-productivity 列与相对链接 |
+| 主题簇 | [doubao-work](../doubao-work/index.md)（功能实测，8✅零勘误）/ doubao-work-context-layer（本包，战略分析，4✅1⚠️1❌）/ [doubao-work-org-productivity](../doubao-work-org-productivity/index.md)（组织生产力，5✅1⚠️0❌） |
+| 阅读顺序 | 功能实测 → 战略分析 → 组织生产力 |
+| 事实基数 | 本次变更仅扩写导航段，F-001~F-039 事实登记不变（39条），勘误记录 E1/E2 不变 |
+| 验证 | 两条相对链接 Test-Path 全部可达（见 V 阶段门禁） |

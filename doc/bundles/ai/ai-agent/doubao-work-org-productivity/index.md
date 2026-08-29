@@ -33,11 +33,11 @@ tags: ["豆包工作", "飞书", "组织生产力", "Agent Harness", "Deloitte",
 | **ROI转向组织** | 42%员工周省8h，但组织价值未转化 | BCG 2026.6（11749人/14市场）✅ |
 | **权限是分界线** | 组织级Agent必须运行在安全治理体系内 | 产品特性 ✅ |
 
-## 与同组知识包的关系
+## 主题关联（豆包工作主题簇）
 
-本知识包与同组两个豆包工作知识包形成三维互补：
+本知识包与同组另外两篇豆包工作博文转化的知识包构成主题簇，建议按"功能实测 → 战略分析 → 组织生产力"顺序阅读，形成三维互补：
 
-| 维度 | doubao-work | doubao-work-context-layer | **doubao-work-org-productivity（本包）** |
+| 维度 | [doubao-work](../doubao-work/index.md) | [doubao-work-context-layer](../doubao-work-context-layer/index.md) | **doubao-work-org-productivity（本包）** |
 |------|-------------|--------------------------|------------------------------------------|
 | 作者 | APPSO（媒体实测） | AI产品阿颖（创业者） | 36氪/陈曦（专业媒体） |
 | 视角 | 功能hands-on | 个人战略感悟 | 行业数据分析+组织ROI |

@@ -77,3 +77,14 @@ sources:
 - 为本系列第6篇博文转化，前5篇：3篇技术教程/商业分析（ARCHIVED）、qwen-ui-agent、a2a-mcp-convergence
 - P0核验通过率：本篇8/8（100%），前5篇分别为不同比例
 - 索引更新：bundles总数273→274，ai域100→101，ai-agent 24→25
+
+## 2026-08-29 V 阶段补记（L3 模式行动项 A4：主题簇互链）
+
+| 项 | 说明 |
+|------|------|
+| 背景 | 12篇博文转化里程碑复盘行动项 A4：同主题多 bundle 须互链（blog-article-to-okf-bundle 模式 L3 步骤6第8条） |
+| 变更 | index.md 新增"主题关联（豆包工作主题簇）"段（信源说明表后、知识结构前），3包对照表+两两相对链接 |
+| 主题簇 | doubao-work（本包，功能实测，8✅零勘误）/ [doubao-work-context-layer](../doubao-work-context-layer/index.md)（战略分析，4✅1⚠️1❌）/ [doubao-work-org-productivity](../doubao-work-org-productivity/index.md)（组织生产力，5✅1⚠️0❌） |
+| 阅读顺序 | 功能实测 → 战略分析 → 组织生产力 |
+| 事实基数 | 本次变更仅新增导航段，F-001~F-042 事实登记不变（42条） |
+| 验证 | 两条相对链接 Test-Path 全部可达（见 V 阶段门禁） |

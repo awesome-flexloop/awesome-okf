@@ -37,6 +37,16 @@ sources:
 | 豆包官网 doubao.com/work | 官方来源 | 产品可用性、模型版本 |
 | David Senra 播客访谈 | 引语来源 | Sam Altman 引语核验 |
 
+## 主题关联（豆包工作主题簇）
+
+本知识包与同组另外两篇豆包工作博文转化的知识包构成主题簇，建议按"功能实测 → 战略分析 → 组织生产力"顺序阅读：
+
+| 知识包 | 视角与分工 | P0 核验 | 链接 |
+|--------|-----------|---------|------|
+| **doubao-work（本包）** | APPSO 媒体一手实测：产品功能、多模态生成、额度模型、飞书集成 | 8✅ 零勘误 | — |
+| doubao-work-context-layer | AI产品阿颖战略分析：飞书作为组织 Context Layer、个人 vs 组织效率、Context 竞争论 | 4✅ 1⚠️ 1❌ | [进入](../doubao-work-context-layer/index.md) |
+| doubao-work-org-productivity | 36氪行业分析：Deloitte/BCG 数据、组织 ROI、权限治理与组织闭环 | 5✅ 1⚠️ 0❌ | [进入](../doubao-work-org-productivity/index.md) |
+
 ## 知识结构
 
 本知识包含 **4 篇概念文档**和 **2 篇信源参考**：

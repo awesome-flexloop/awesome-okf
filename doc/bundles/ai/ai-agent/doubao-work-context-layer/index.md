@@ -31,16 +31,16 @@ tags: ["豆包工作", "飞书", "Context Layer", "企业Agent", "Claude Tag", "
 | **企业级Agent** | 办公Agent本质是服务组织的Agent，需理解企业知识/流程/协作关系 |
 | **豆包+飞书合并逻辑** | 办公Agent需要组织Context，Context沉淀在飞书中 |
 
-## 与 doubao-work 知识包的关系
+## 主题关联（豆包工作主题簇）
 
-本知识包与同组 [doubao-work](../doubao-work/index.md) 互为补充：
+本知识包与同组另外两篇豆包工作博文转化的知识包构成主题簇，建议按"功能实测 → 战略分析 → 组织生产力"顺序阅读，互为补充：
 
-| 维度 | doubao-work | doubao-work-context-layer（本包） |
-|------|-------------|----------------------------------|
-| 作者 | APPSO（媒体实测） | AI产品阿颖（创业者/产品人） |
-| 视角 | 产品功能hands-on评测 | 战略分析与Context Layer论点 |
-| 重点 | 功能清单/多模态生成/额度模型 | 组织上下文/企业Agent/竞争格局 |
-| P0核验 | 8✅ 全通过 | 4✅ 1⚠️ 1❌ |
+| 维度 | [doubao-work](../doubao-work/index.md) | doubao-work-context-layer（本包） | [doubao-work-org-productivity](../doubao-work-org-productivity/index.md) |
+|------|-------------|----------------------------------|----------------|
+| 作者 | APPSO（媒体实测） | AI产品阿颖（创业者/产品人） | 36氪/陈曦（专业媒体） |
+| 视角 | 产品功能hands-on评测 | 战略分析与Context Layer论点 | 行业数据分析+组织ROI |
+| 重点 | 功能清单/多模态生成/额度模型 | 组织上下文/企业Agent/竞争格局 | Harness商品化/组织闭环/权限治理 |
+| P0核验 | 8✅ 全通过 | 4✅ 1⚠️ 1❌ | 5✅ 1⚠️ 0❌ |
 
 ## 知识结构
 

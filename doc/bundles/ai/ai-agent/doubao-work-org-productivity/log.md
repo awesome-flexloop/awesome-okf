@@ -77,3 +77,14 @@
 4. 20条作者观点代表36氪/陈曦立场，不代表OKF知识库立场
 5. "龙虾"为行业俚语（指AI Agent浪潮），非具体产品名
 6. stale_after设为2026-11-30，3个月后复核
+
+## 2026-08-29 V 阶段补记（L3 模式行动项 A4：主题簇互链）
+
+| 项 | 说明 |
+|------|------|
+| 背景 | 12篇博文转化里程碑复盘行动项 A4：同主题多 bundle 须互链（blog-article-to-okf-bundle 模式 L3 步骤6第8条） |
+| 变更 | index.md 原"与同组知识包的关系"段更名"主题关联（豆包工作主题簇）"，表格中 doubao-work / doubao-work-context-layer 两个包名由纯文本改为相对链接 |
+| 主题簇 | [doubao-work](../doubao-work/index.md)（功能实测，8✅零勘误）/ [doubao-work-context-layer](../doubao-work-context-layer/index.md)（战略分析，4✅1⚠️1❌）/ doubao-work-org-productivity（本包，组织生产力，5✅1⚠️0❌） |
+| 阅读顺序 | 功能实测 → 战略分析 → 组织生产力 |
+| 事实基数 | 本次变更仅链接化导航段，F-001~F-040 事实登记不变（40条），勘误/注意事项 N1-N3 不变 |
+| 验证 | 两条相对链接 Test-Path 全部可达（见 V 阶段门禁） |
