@@ -24,7 +24,6 @@
 - 现代整理本仅书目登记与结论性引用，不转录注文译文
 - 真伪两派并列不裁决；傅山说标注"何高民考证、学界有异议"
 
-### V 阶段
 ### V 阶段（对抗审查，2026-08-30）
 
 **自动化扫描（3 项）**
@@ -58,3 +57,26 @@
 **遗留项（待纸本/后续）**
 - WJ-TEX-28 命门三章共同传抄疑误 8 条、WJ-TEX-12「贼夭/贼天」反向异文、WJ-TEX-15「咎/晷」等存异条，均标"存疑，待纸本裁定"，需 1984 年影印本或《陈士铎医学全书》排印本复核
 - WJ-RES-18「命门 94 处、10 篇专论」网络统计数据待纸本复核；WJ-BIB-26「梅自强 1980 年天津获见抄本」说学术出处待核
+
+### C 阶段（交付收尾，2026-08-30）
+
+**gates.toctrees——全量与范围双验证**
+- 范围检查（带路径参数，仅断链检查）：`scripts/check-toctrees.py doc/bundles/tcm` 与 `... doc/bundles/tcm/classics/waijing-weiyan` 均输出"toctree 检查通过：全部 index.md 引用有效，所有内容文档均可达。"
+- 全量四检查（断链/可达/一致/束根 index）报 14 处错误，逐条归因：12 处"未收录(不可达)"全部位于 think/confucian/four-books/（concepts 00–08、examples/02、facts.md、insights.md），2 处"缺失 index.md"为 think/confucian 与 think/confucian/four-books——**全部归并行会话 think/confucian 在建 WIP；tcm 侧 0 错误**。该 14 处非本任务引入，不修复。
+- check-utf8：前置全量 6124 文件通过（UTF-8 无 BOM、LF 行尾）。
+
+**并行会话边界（同盘并发，四重证据确认）**
+- 本束开发期间，另一会话（spec：create-tcm-classics-okf-wiki）在同一子模块内实时建设 tcm/classics 其余 4 束（tcm-overview、nanjing、shanghan-zabinglun、shennong-bencaojing），并两度改写 classics/index.md、增强 tcm/index.md、更新 bundles/index.md（296→300 知识包）。
+- 处置：本束提交边界收窄为 **仅 doc/bundles/tcm/classics/waijing-weiyan/ 24 文件**；共有导航文件（classics/index.md、tcm/index.md、bundles/index.md）与 think/* 全部内容一律只读、不提交。本会话曾写入的 classics/index.md 单束版（1552B）已被他会话五束版取代，归其所有。
+
+**Sphinx 构建验证**
+- 全量 `invoke build`（sphinx-build -b html -E，全树 6244 个 md 源）在 Windows 上单轮约小时级，远超单束验证所需；改用隔离迷你工程（最小 conf.py + myst_parser v5.1.0 + tcm 全树 89 文件副本 + 根 toctree）执行 `sphinx-build -b html -E`：**退出码 0，build succeeded**；waijing-weiyan **24 页全部生成、0 warning / 0 error**。
+- 迷你工程中仅有的 7 条 warning 均非本束：tcm-overview/concepts/01 frontmatter YAML 畸形 1 条（他会话文件），think/ 树 xref_missing 6 条（迷你工程未复制 think/ 副本所致的环境假象，全量构建中目标存在）。
+- 24 文件代码围栏配对自检：全部偶数闭合，无 Jinja 冲突 token；4 个 toctree 指令块（束根 + concepts/examples/references 三个子索引）。
+
+**提交记录**
+- 子模块（awesome-okf-xs）：`docs(bundles): 新增《外经微言》知识包（tcm/classics/waijing-weiyan）`——24 文件首版：90 条事实、4 洞察、9 概念、5 示例（13 篇双源核对精读原文）、3 信源页、81 篇存目；三层分离（著录/托名/文本）、真伪两派并列不裁决、红铅方术批判、医学免责与版权边界齐备。
+- 主仓（SpecWeave）：同步 awesome-okf-xs gitlink 至上述提交。
+
+**方法学（seven-concepts 场景 4：R→I→E→V→C）**
+- R 事实采集 90 条（BIB 26 / TEX 31 / RES 23 / SRC 10，双源逐字核对、异文标注、存疑待纸本）→ I 架构洞察 4 四元组（颠倒之术/命门水火/托名三法/存目完整性）→ E 批量生成 24 文件束 → V 对抗审查（194 链接 0 断链、原文 12 锚点逐字一致、合规 4 项、G1–G4 全过）→ C 原子提交交付。
