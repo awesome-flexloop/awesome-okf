@@ -72,3 +72,6 @@ sources:
 - [《道德经》名实与全书概览](daodejing-overview.md)
 - [现代学者注本解读](../commentaries/modern-commentaries.md)
 - [争议与不确定性](../commentaries/controversies.md)
+
+[^chen-guying-jinzhu]: 陈鼓应《老子今注今译及评介》，中华书局，2009。
+[^lou-yulie-wangbi]: 楼宇烈《老子道德经注校释》，中华书局，2008。
