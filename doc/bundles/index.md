@@ -12,7 +12,7 @@ domains: 13
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **289 个知识包**，按技术生态分为 **13 个技术域、35 个分组**。
+> 当前共 **293 个知识包**，按技术生态分为 **13 个技术域、36 个分组**。
 
 ***
 
@@ -75,7 +75,7 @@ flowchart LR
     viz["📐 viz/：数学可视化与创意编程（ManimGL动画引擎 - 视频场景 - 字幕工具链 - React官网）"]
     web["🌐 web/：Web 开发生态（fastapi · graphql）"]
     comm["📡 comm/：通信与网络生态（ZeroMQ 消息 · SSH 远程控制 · Protocol Buffers 序列化）"]
-    think["💭 think/：思想与理论（psi · laozi · mozi · huangdi · neijing 选读）"]
+    think["💭 think/：思想与理论（psi · laozi · mozi · legalism · huangdi · neijing 选读）"]
     meta --> py --> rust --> build --> doc --> data --> ml --> containers --> ai --> viz --> web --> comm --> think
 ```
 
@@ -167,13 +167,15 @@ flowchart LR
 | [⚡ FastAPI Web 框架生态](web/fastapi/index.md) | 1  | FastAPI 高性能 ASGI Web 框架——类型注解驱动、依赖注入树、OpenAPI 自动生成 |
 | [📡 GraphQL 核心规范与生态](web/graphql/index.md) | 1  | GraphQL 查询语言系统化中文教程——语法、Schema 类型系统、验证执行管线、内省系统    |
 
-### 💭 [思想与理论](think/index.md) · 8 束 · 5 组
+### 💭 [思想与理论](think/index.md) · 13 束 · 7 组
 
 | 分组                                      | 束数 | 说明                                     |
 | --------------------------------------- | -- | -------------------------------------- |
 | [Ψhē 理论体系](think/psi/index.md)          | 4  | ψ=ψ(ψ) 自指递归理论体系——哲学、数学、宇宙学、意识研究与 AI 应用 |
 | [📜 老子（Laozi）知识包](think/laozi/index.md) | 1  | 《老子》（《道德经》）相关知识包——帛书《老子》阅读教程           |
+| [📜 庄子（Zhuangzi）知识包](think/zhuangzi/index.md) | 1 | 《庄子》（《南华经》）相关知识包——内篇七篇全文阅读教程 |
 | [📜 墨子（Mozi）知识包](think/mozi/index.md) | 1  | 《墨子》研读教程——十论、墨经、城守与三篇原文精读 |
+| [⚖️ 法家（Legalism）知识包](think/legalism/index.md) | 4 | 先秦法家经典——《韩非子》《商君书》《管子》及申不害·慎到辑佚的实抓原文核对、概念谱系与校本信源 |
 | [📜 黄帝经典（Huangdi）知识包](think/huangdi/index.md) | 1 | 《黄帝阴符经》知识包——权威原文双源核对版阅读教程 |
 | [📕 黄帝内经（Huangdi Neijing）知识包](think/huangdi-neijing/index.md) | 1 | 《黄帝内经》（《素问》《灵枢》）阅读教程——权威底本逐字原文、异文双录、三层解读与八篇精读 |
 
