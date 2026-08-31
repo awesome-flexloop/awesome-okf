@@ -65,6 +65,7 @@ okf_version: "0.2"
 :hidden:
 :maxdepth: 7
 
+usage
 concepts/index
 text/index
 commentaries/index
