@@ -3,8 +3,8 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程"
-total_bundles: 324
-groups: 61
+total_bundles: 325
+groups: 62
 domains: 14
 ---
 
@@ -12,7 +12,7 @@ domains: 14
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **324 个知识包**，按技术生态分为 **14 个技术域、61 个分组**。
+> 当前共 **325 个知识包**，按技术生态分为 **14 个技术域、62 个分组**。
 
 ***
 
@@ -32,7 +32,7 @@ flowchart TD
     viz["📐 viz/ 数学可视化与创意编程：3b1b ManimGL · 视频场景 · 字幕工具链 · React官网"]
     web["🌐 web/ Web 开发生态：fastapi · graphql"]
     containers["📦 containers/ 容器生态：OCI运行时 · 存储驱动 · Podman工具链 · AI容器配方"]
-    think["💭 think/ 思想与理论：psi · confucian · laozi · mozi · huangdi · neijing · daoyi · fangzhong · classics · sexology · yangsheng"]
+    think["💭 think/ 思想与理论：psi · confucian · laozi · mozi · huangdi · neijing · daoyi · fangzhong · classics · sexology · yangsheng · hetu-luoshu 河图洛书"]
     tcm["🌿 tcm/ 中医经典与理论：典籍谱系总览 · 难经 · 伤寒杂病论 · 神农本草经 · 黄帝外经"]
     meta -->|"规范约束"| py
     py -->|"语言底座"| build
@@ -77,7 +77,7 @@ flowchart LR
     viz["📐 viz/：数学可视化与创意编程（ManimGL动画引擎 - 视频场景 - 字幕工具链 - React官网）"]
     web["🌐 web/：Web 开发生态（fastapi · graphql）"]
     comm["📡 comm/：通信与网络生态（ZeroMQ 消息 · SSH 远程控制 · Protocol Buffers 序列化）"]
-    think["💭 think/：思想与理论（psi · confucian · confucius · laozi · mozi · yinyangjia · legalism · huangdi · neijing · daoyi · fangzhong · classics · sexology · yangsheng 选读）"]
+    think["💭 think/：思想与理论（psi · confucian · confucius · laozi · mozi · yinyangjia · hetu-luoshu 河图洛书 · legalism · huangdi · neijing · daoyi · fangzhong · classics · sexology · yangsheng 选读）"]
     tcm["🌿 tcm/：中医经典研读（典籍谱系总览·难经·伤寒·本草·外经——原文双源核对与注家谱系，人文选读）"]
     meta --> py --> rust --> build --> doc --> data --> ml --> containers --> ai --> viz --> web --> comm --> think --> tcm
 ```
@@ -171,7 +171,7 @@ flowchart LR
 | [⚡ FastAPI Web 框架生态](web/fastapi/index.md) | 1  | FastAPI 高性能 ASGI Web 框架——类型注解驱动、依赖注入树、OpenAPI 自动生成 |
 | [📡 GraphQL 核心规范与生态](web/graphql/index.md) | 1  | GraphQL 查询语言系统化中文教程——语法、Schema 类型系统、验证执行管线、内省系统    |
 
-### 💭 [思想与理论](think/index.md) · 28 束 · 17 组
+### 💭 [思想与理论](think/index.md) · 29 束 · 18 组
 
 | 分组                                      | 束数 | 说明                                     |
 | --------------------------------------- | -- | -------------------------------------- |
@@ -182,6 +182,7 @@ flowchart LR
 | [📜 庄子（Zhuangzi）知识包](think/zhuangzi/index.md) | 1 | 《庄子》（《南华经》）相关知识包——三十三篇全文阅读教程（内篇自著 / 外杂篇后学分层） |
 | [📜 墨子（Mozi）知识包](think/mozi/index.md) | 1 | 《墨子》研读教程——十论、墨经、城守与三篇原文精读 |
 | [☯ 阴阳家（Yinyangjia）知识包](think/yinyangjia/index.md) | 1 | 先秦阴阳家学派（邹衍、五德终始、大九州）——书志著录、辑佚残篇与传世材料的存佚分层阅读 |
+| [🔢 河图洛书（Hetu-Luoshu）知识包](think/hetu-luoshu/index.md) | 1 | 河图洛书与宋代图书学——名实三层框架（名物/图式/附会）、先秦原典双源核对、汉易数理零件、宋清图式考辨、出土文献与西传证据链；风水术数仅作学术辨析 |
 | [⚖️ 法家（Legalism）知识包](think/legalism/index.md) | 4 | 先秦法家经典——《韩非子》《商君书》《管子》及申不害·慎到辑佚的实抓原文核对、概念谱系与校本信源 |
 | [📜 黄帝经典（Huangdi）知识包](think/huangdi/index.md) | 1 | 《黄帝阴符经》知识包——权威原文双源核对版阅读教程 |
 | [佛家核心经典](think/buddhism/index.md) | 5 | 《心经》《金刚经》《六祖坛经》《阿弥陀经》《法华经》选读——般若、禅宗、净土、天台诸宗核心经典阅读知识包 |
