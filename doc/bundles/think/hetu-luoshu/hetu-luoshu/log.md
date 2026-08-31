@@ -37,17 +37,21 @@ okf_version: "0.2"
 ### E 阶段——可复用阅读模式萃取
 
 - 产出 [patterns.md](patterns.md)：2 个可复用阅读模式——**层累符号史阅读法**（年表切层→首次实体描写定位→零件溯源→命名合流断代→定型竞争审查→争议并列→三层表输出，含 5 条反模式与中医史/技术思想史迁移）、**可验算性分级法**（A 可验算/B 义理/C 附会三级，禁止跨级担保）。
-- 模式初稿待 V 阶段对抗评审后定稿。
+- 模式已经 V 阶段对抗评审（2026-08-31，结论 pass-with-fixes）后定稿，修复记录见下节与主仓 review.md。
 
 ### V 阶段——对抗审查
 
-- 待执行：新鲜上下文独立评审（四视角：魔鬼代言人/新人/老板/未来维护者），审查全文见主仓 `.trae/specs/standards-tools/create-hetu-luoshu-wiki-tutorial/review.md`；结论与修正记录于下次更新补入本节。
+- 已执行：新鲜上下文独立评审（四视角只读：魔鬼代言人／新人／老板／未来维护者），审查全文与逐条处置见主仓 `.trae/specs/standards-tools/create-hetu-luoshu-wiki-tutorial/review.md`。
+- 结论：**pass-with-fixes（修复后通过）**——3 BLOCKER（R-01 跨束断链、R-03 墓志铭作者误作程颐〔实为程颢〕、R-04 《太极图说》宋史出处误注）＋7 MAJOR＋10 MINOR，共 R-01～R-20 条意见，**全部采纳修复**。
+- 修复批次（verified 时间戳统一 2026-08-31T23:59:00+08:00，verified.by "process:seven-concepts-v"）：facts.md 15 处（verified 块补登、F-004/U-08 ctext 截断表述如实改写、F-009/F-029/F-036 信源回登、F-010/F-011/F-017/F-018 维基文库第二信源 URL 补全、F-021 程颢《邵尧夫先生墓志铭》改正、F-027 卷首语补全、F-028 因袭链时序、F-035 引文补全、F-047 措辞）；concepts 7 篇（01 异文编号与大戴双源、03 出处署通志堂本与因袭链、04 撤错误 F-025 挂接＋"中华文库"正名、05 "中华文库"正名、07 Y-01 编号与《宋史》出处改写、09 三宗枚举与衍字、11 王羲之朝代）；examples 3 篇（01 "三种原典、四段选文"口径统一＋维基文库双源表述、index 同步、03 yinyangjia 跨束链接层级修复）；references（01 双源稳定性表与双源清单、03 程颢条、04 两处裸文本补完整链接）；工作文档 facts/insights/patterns 补 verified 块、patterns 定稿、异文编号全束统一两位补零（Y-01～Y-05）。
+- 评审正面确认（不得回退）：F-001～F-053 连续无重复无缺号；五条关键论断（AC-3）全部准确；推测均以"某某认为"引出未写成定论；术数边界 AC-4 通过；数学独立复算全对（幻方 8 线皆 15；河图白点 25＋黑点 30＝55；加一倍法 2⁶＝64；揲蓍概率老阳:少阴:少阳:老阴＝3:5:7:1）；references/04 跨束链接经逐一实证存在、深度正确；kebab-case、无 file:/// 链接、stale_after 一致。
+- **外部阻塞（非本束问题，已部分消解）**：并行会话 think/zhouyi/zhouyi-works 束创作中，其 toctree 先行引用 usage、insights、patterns、text/jing-shang、text/jing-xia 五个磁盘尚不存在的文件（5 处断链）；后续并行重构中 zhouyi 分组注册一度从共享索引丢失（toctrees 报错一度扩至 33 项），本会话已按树真值机械补登两级索引（未代写其内容），bundles 门通过、toctrees 收敛回上述 5 处，均由该束作者负责补齐；本束自身三门类零报错。
 
 ### C 阶段——内容生成（本批文件清单）
 
 | 区域 | 文件 | 内容 |
 |------|------|------|
-| 分组导航 | [../../index.md](../../index.md) | think/hetu-luoshu 组导航（名实三层导览＋知识包列表＋toctree） |
+| 分组导航 | [../index.md](../index.md) | think/hetu-luoshu 组导航（名实三层导览＋知识包列表＋toctree） |
 | bundle 根 | [index.md](index.md) | 定位＋名实三层警示表＋12 概念/3 示例/4 信源/4 工作文档导航＋两条快速开始＋三条学习路径 |
 | concepts/ | [index](concepts/index.md)＋00～11 共 13 篇 | 00 总览框架、01 先秦记载、02 汉易数理、03 陈抟谱系、04 刘牧构隐图、05 朱熹启蒙、06 邵雍先天、07 太极图说、08 数理解析、09 清代辨伪、10 考古发现、11 遗产与西传 |
 | examples/ | [index](examples/index.md)＋01～03 共 4 篇 | 01《系辞》《顾命》《洪范》原典精读（双源核对＋5 题自检）、02 四个纸笔实验（幻方 8 线验算/55 点清点/加一倍法/太极五层）、03 五阶段通读计划（含 8 题结业自测） |
@@ -65,5 +69,6 @@ okf_version: "0.2"
 7. **U-07**：欧阳修《易童子问》仅维基文库简体录文——复核《欧阳修全集》中华书局点校本卷七十八。
 8. **U-08**：ctext《系辞上》后半抓取截断（F-004～F-008 单源）——ctext 可达窗口或《周易正义》十三经注疏纸本复核。
 9. **U-09**：《系辞下》"包犧氏之王天下"段未单独抓——胡渭卷一转引已含，可补 ctext 原页。
-10. **索引计数**：本束入库后 bundles 总量与 think 域计数以 `invoke gates.bundles` 实际对账为准（入库前 think 域为 28 束 17 组、总索引 324 束 61 组 14 域；入库后预判 think 29 束 18 组）。
+10. **索引计数（已核验）**：本束入库后 `python scripts/check-bundles-index.py` 对账通过；同日并行会话新增多束后，本会话按树真值复核并再验通过——总计 **15 域 / 68 组 / 343 束**，think 域 **38 束 / 22 组**，frontmatter、计数行、节标题、分组表、toctree 五面一致（2026-08-31 实测；环境无 invocations 包，`invoke gates.*` 不可用，直接运行 scripts/check-*.py 等价）。
 11. **库内联动**：think/zhouyi/zhouyi-works 束（周易著作，含 text/zhuan-xici.md《系辞传》专文）与本束为最直接关联，已在 references/04 互链；未来 zhouyi 束更新时可考虑反向添加 hetu-luoshu 链接。
+12. **外部阻塞交接（已部分消解）**：think/zhouyi/zhouyi-works 为并行会话创作中的束——其分组注册一度在并行重构中从共享索引（think/index.md、bundles/index.md）丢失，本会话已按树真值机械补登（表格行＋toctree＋计数面，未代写其内容），bundles 门与 28 项 toctrees 报错随之消解；**剩余 5 处 toctrees 断链**为 zhouyi-works 自有 toctree 先行引用其尚未创建的 5 个文件（usage.md、insights.md、patterns.md、text/jing-shang.md、text/jing-xia.md），须由该束作者补齐，**本束 hetu-luoshu 自身三门类零报错，请勿据此回退本束内容**。

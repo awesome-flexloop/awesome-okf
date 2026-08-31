@@ -38,7 +38,7 @@ okf_version: "0.2"
 - [刘牧《易数钩隐图》](concepts/04-liu-mu-gouyin.md) — 九为河图说、图书学开山与图名之争
 - [朱熹、蔡元定与《易学启蒙》](concepts/05-zhuxi-qimeng.md) — 十为河图定本、《周易本义》卷首图如何成为标准
 - [邵雍先天学](concepts/06-shaoyong-xiantian.md) — 《观物外篇》、加一倍法、先天八卦为邵雍首倡（李长远 2026）
-- [周敦颐《太极图说》](concepts/07-taijitu-shuo.md) — "无极而太极"版本公案（Y-1）、朱陆太极之辩、道教渊源考
+- [周敦颐《太极图说》](concepts/07-taijitu-shuo.md) — "无极而太极"版本公案（Y-01）、朱陆太极之辩、道教渊源考
 - [河洛数理结构](concepts/08-numerology.md) — 洛书三阶幻方纵横十五、河图生成数、大衍五十、杨辉构造口诀
 - [清代辨伪学史](concepts/09-qing-skepticism.md) — 欧阳修疑经、胡渭《易图明辨》、二黄一毛、《四库总目》两派六宗
 - [出土与实物](concepts/10-archaeology.md) — 阜阳双古堆太乙九宫占盘、凌家滩玉龟玉版（陈久金/张敬国 vs 饶宗颐争议并列）

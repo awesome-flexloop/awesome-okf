@@ -26,7 +26,7 @@ okf_version: "0.2"
 
 | 知识包 | 相对路径 | 关系与跳转场景 |
 |--------|---------|--------------|
-| 周易著作知识包（zhouyi-works） | [zhouyi-works](../../../zhouyi/zhouyi-works/index.md) | **最直接关联**：本经与十翼的系统教程。读《系辞上》河出图段、天地之数章可对照其 [《系辞传》专文](../../../zhouyi/zhouyi-works/text/zhuan-xici.md) 与十翼总论（concepts/04-shiyi-ten-wings）；其易学源流篇（concepts/05-yixue-lineage）与本包概念 03/09 互为表里 |
+| 周易著作知识包（zhouyi-works） | [zhouyi-works](../../../zhouyi/zhouyi-works/index.md) | **最直接关联**：本经与十翼的系统教程。读《系辞上》河出图段、天地之数章可对照其 [《系辞传》专文](../../../zhouyi/zhouyi-works/text/zhuan-xici.md) 与[十翼总论](../../../zhouyi/zhouyi-works/concepts/04-shiyi-ten-wings.md)；其[易学源流篇](../../../zhouyi/zhouyi-works/concepts/05-yixue-lineage.md)与本包概念 03/09 互为表里 |
 | 阴阳家知识包（yinyangjia） | [yinyangjia](../../../yinyangjia/yinyangjia/index.md) | 阴阳五行学说的独立脉络：五行生成数（F-019）、明堂月令（F-010/F-039）与阴阳家的五方配属共享同一数术母体；冯友兰判"阴阳家重五行、《易传》重阴阳，汉以后始融会"，两束对读可见合流过程 |
 | 孔子著作知识包（works） | [confucius/works](../../../confucius/works/index.md) | 《论语·子罕》"河不出图"（F-001）的原始语境，以及其 [周易与易传篇](../../../confucius/works/concepts/05-zhouyi-yizhuan.md)、[鬼书辨伪篇](../../../confucius/works/concepts/08-guishu-bianwei.md) 提供的孔子与《易》关系、古书辨伪方法 |
 | 四书知识包（four-books） | [four-books](../../../confucian/four-books/index.md) | 朱熹《四书章句集注》与《周易本义》《易学启蒙》同为朱熹定本工程；理解"定本为何能定于一尊"（本包概念 05）可参四书形成史 |

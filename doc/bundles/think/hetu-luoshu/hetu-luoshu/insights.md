@@ -8,6 +8,9 @@ source: "基于 facts.md（F-001～F-053）的跨源归纳；古籍与论文出�
 generated:
   by: "agent:seven-concepts-cmd"
   at: "2026-08-31T23:00:00+08:00"
+verified:
+  by: "process:seven-concepts-v"
+  at: "2026-08-31T23:59:00+08:00"
 status: stable
 stale_after: 2027-08-31
 okf_version: "0.2"
