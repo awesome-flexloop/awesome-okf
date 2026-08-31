@@ -113,7 +113,7 @@
 |------|---------|
 | F-057 | 《骈拇》"附赘县疣"之"县"，为"悬"本字；ctext 底本作"縣"（繁体），今简体整理本或径作"悬"。信源：https://ctext.org/zhuangzi/webbed-toes |
 | F-058 | 《骈拇》"累瓦结绳"之"累"，ctext 底本作"纍"（繁体隶古定），今简体整理本多作"累"。信源：https://ctext.org/zhuangzi/webbed-toes |
-| F-059 | 《山木》"神农、黄帝"之法则，ctext 简体版作"黄帝、神农"，通行整理本多以"神农、黄帝"为序，二者皆有例证。信源：https://ctext.org/zhuangzi/tree-on-the-mountain |
+| F-059 | 《山木》"物物而不物于物……此□□之法则也"句，ctext 数字底本（《续古逸丛书》本《南华真经》，繁简同源）作"此黄帝、神农之法则也"；郭象注本系统通行整理本（陈鼓应《庄子校诠》等，百科通行文本，《吕氏春秋·必己》平行引作"神农、黄帝之所法"）作"此神农、黄帝之法则也"，两序皆有传世例证。本 bundle 从郭象注本系统作"神农、黄帝"。信源：https://ctext.org/zhuangzi/tree-on-the-mountain 、https://www.donglishuzhai.net/chapter/8069.html |
 | F-060 | 《徐无鬼》"匠石运斤成风"之"运"，ctext 繁体底本作"運"。信源：https://ctext.org/zhuangzi/xu-wu-gui |
 | F-061 | 《外物》"七十二钻而无遗策"之"策"，一作"䇲"（筴），同指占卜之蓍策。信源：https://ctext.org/zhuangzi/what-comes-from-without |
 | F-062 | 《寓言》"众罔两问于景"之"罔两"，一作"魍魉"，影外微阴之义，通行本多作"罔两"。信源：https://ctext.org/zhuangzi/metaphorical-language |
