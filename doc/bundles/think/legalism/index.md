@@ -32,4 +32,5 @@ guan-tzu/index
 shang-jun-shu/index
 han-fei-tzu/index
 early-legalists/index
+reading-guide
 ```
