@@ -60,7 +60,7 @@ sources:
 2. 再看"字词注释"解决训诂，读"现代物理解读"对照；
 3. 凡见"争议/异说"框，两说并录、不强作裁决；
 4. 写作引用时回到 [references](../references/index.md) 的 L1/L3 信源核对，并在文中写明层级（"《艺文类聚》引《博物志》"而非"《淮南万毕术》"）；
-5. 在线核实用 [online-sources.md](../references/online-sources.md)，维基文库链接在未经人工复核前不得标注为已核（F-049）。
+5. 在线核实用 [online-sources.md](../references/online-sources.md)；维基文库已经人工复核（关键条目逐字一致，见 W-14/F-049），但其收录不全，宋以后典籍与《论衡》部分篇仍以 ctext/中华文库/典藏网等完整信源为底本。
 
 ## 五、一条总原则
 
