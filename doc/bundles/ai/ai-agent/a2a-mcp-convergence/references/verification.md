@@ -21,16 +21,16 @@ sources:
     title: AAIF 官方博客
   - id: lf-press-aaif
     resource: https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation
-    title: LF: AAIF 成立新闻稿
+    title: "LF: AAIF 成立新闻稿"
   - id: lf-press-a2a-launch
     resource: https://www.linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents
-    title: LF: A2A 2025年6月发布新闻稿
+    title: "LF: A2A 2025年6月发布新闻稿"
   - id: lf-press-a2a-anniversary
     resource: https://www.linuxfoundation.org/press/a2a-protocol-surpasses-150-organizations-lands-in-major-cloud-platforms-and-sees-enterprise-production-use-in-first-year
-    title: LF: A2A 一周年新闻稿
+    title: "LF: A2A 一周年新闻稿"
   - id: aws-agentcore-ga
     resource: https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-bedrock-agentcore-available/
-    title: AWS: Bedrock AgentCore GA
+    title: "AWS: Bedrock AgentCore GA"
   - id: eu-ai-omnibus
     resource: https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force
     title: 欧盟：AI Omnibus 生效
