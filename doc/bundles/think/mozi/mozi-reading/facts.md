@@ -193,5 +193,5 @@ title: 事实清单（Facts Inventory）
 | 抓取失败如实标注 | ✅ 通过 | ctext.org 三篇章页、待核注译本出版信息均已标注 |
 
 **⚠ 未能核对 / 待核项清单（如实报告）**：
-1. ctext.org 的《兼爱上》《非攻上》《公输》三个篇章页（`https://ctext.org/jian-ai-shang/zh`、`https://ctext.org/fei-gong-shang/zh`、`https://ctext.org/gong-shu/zh`）本次因 CAPTCHA 无法直接抓取，改用古诗文网、百科、汉典古籍网、chetata、shangshiwen 等独立信源替代核对。
+1. ctext.org 经 browser_use 实测返回「Access unavailable」（当前网络位置/自动化访问触发服务端拦截），**非 CAPTCHA、无法通过真实浏览器绕过**。据此，权威校勘本改用孙诒让《墨子间诂》电子全文替代：国学导航（`guoxue123.com/zhibu/0301/00mzjg/`，含毕沅/王念孙/俞樾/孙诒让夹注，底本补字据中华书局《新编诸子集成》）与汉典古籍网（`gj.zdic.net/zibu/411/`，孙诒让《墨子闲诂》卷一~十五）。十论现存 23 篇对应《墨子间诂》卷二~卷九。
 2. 参考注译本（源自本项目 spec/tasks 上下文提到的「李小龙《墨子译注》」「孙波《墨子》」）的具体出版信息（出版社、年份、ISBN）本次未能通过检索独立确认，建议在 I/E 阶段补核。⚠ 未能核对，不虚构出版信息。
