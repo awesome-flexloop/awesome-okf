@@ -92,4 +92,5 @@ examples/index
 references/index
 facts
 insights
+log
 ```
