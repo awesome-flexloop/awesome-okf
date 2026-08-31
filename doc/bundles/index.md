@@ -2,17 +2,17 @@
 okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
-description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程与经典著作阅读指南"
-total_bundles: 292
-groups: 33
-domains: 13
+description: "awesome-okf-xs 知识包（bundles）分组导航——按知识域与分组组织的开源项目源码中文教程与经典著作阅读指南"
+total_bundles: 297
+groups: 37
+domains: 14
 ---
 
 # 知识包总索引（Bundles Index）
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **292 个知识包**，按技术生态分为 **13 个技术域、33 个分组**。
+> 当前共 **296 个知识包**，按知识生态分为 **14 个知识域、37 个分组**。
 
 ***
 
@@ -32,7 +32,8 @@ flowchart TD
     viz["📐 viz/ 数学可视化与创意编程：3b1b ManimGL · 视频场景 · 字幕工具链 · React官网"]
     web["🌐 web/ Web 开发生态：fastapi · graphql"]
     containers["📦 containers/ 容器生态：OCI运行时 · 存储驱动 · Podman工具链 · AI容器配方"]
-    think["💭 think/ 思想与理论：psi · laozi · relationships"]
+    science["🔬 science/ 自然科学经典：化学中西元典 · 物理中西元典"]
+    think["💭 think/ 思想与理论：psi · laozi · math · suanxue · relationships"]
     meta -->|"规范约束"| py
     py -->|"语言底座"| build
     rust -->|"工具链底座"| build
@@ -53,13 +54,15 @@ flowchart TD
     ai -->|"AI辅助内容生成"| viz
     viz -->|"前端官网发布"| web
     viz -->|"数学思想传播"| think
+    data -->|"科学计算基础"| science
+    science -->|"科学元典传播"| think
 ```
 
 ***
 
 ## 推荐入门路径
 
-从零开始系统学习开源项目源码，推荐按以下顺序：
+从零开始系统学习开源项目源码与科学经典，推荐按以下顺序：
 
 ```mermaid
 flowchart LR
@@ -75,13 +78,14 @@ flowchart LR
     viz["📐 viz/：数学可视化与创意编程（ManimGL动画引擎 - 视频场景 - 字幕工具链 - React官网）"]
     web["🌐 web/：Web 开发生态（fastapi · graphql）"]
     comm["📡 comm/：通信与网络生态（ZeroMQ 消息 · SSH 远程控制 · Protocol Buffers 序列化）"]
-    think["💭 think/：思想与理论（psi · laozi · relationships 选读）"]
-    meta --> py --> rust --> build --> doc --> data --> ml --> containers --> ai --> viz --> web --> comm --> think
+    science["🔬 science/：自然科学经典（化学中西元典 · 物理学元典，经典选读）"]
+    think["💭 think/：思想与理论（psi · laozi · math · suanxue · relationships 选读）"]
+    meta --> py --> rust --> build --> doc --> data --> ml --> containers --> ai --> viz --> web --> comm --> science --> think
 ```
 
 ***
 
-## 十三域分组导航
+## 十四域分组导航
 
 ### 📐 [规范与格式](meta/index.md) · 1 束 · 1 组
 
@@ -98,7 +102,7 @@ flowchart LR
 ### 🦀 [Rust 语言核心](rust/index.md) · 3 束 · 1 组
 
 | 分组                                  | 束数 | 说明                                                                                       |
-| ----------------------------------- | -- | -------------------------------------------------------------------------------------- |
+| ----------------------------------- | -- | ---------------------------------------------------------------------------------------- |
 | [🦀 Rust 语言核心（rustc · cargo · rfcs）](rust/index.md) | 3  | rustc 编译器流水线（bootstrap 自举→解析→HIR→类型检查→MIR→代码生成）、core/alloc/std 三层标准库、Cargo 包管理与构建系统、RFC 语言设计决策与治理流程 |
 
 ### 🔨 [构建系统与包管理生态](build/index.md) · 14 束 · 4 组
@@ -138,12 +142,12 @@ flowchart LR
 | ---------------------------------------- | -- | ------------------------------------------------------------------ |
 | [📦 容器运行时与工具链](containers/index.md) | 11 | conmon/conmon-rs OCI 监控 · fuse-overlayfs 存储驱动 · libocispec 规范库 · podman-py/compose Python/Compose 绑定 · olot/omlmd OCI 模型打包 · qm 虚拟机管理 · toolbox 开发环境 · ai-lab-recipes AI 容器配方 |
 
-### 🤖 [人工智能与大模型应用生态](ai/index.md) · 113 束 · 9 组
+### 🤖 [人工智能与大模型应用生态](ai/index.md) · 107 束 · 9 组
 
 | 分组                                                     | 束数 | 说明                                                          |
 | ------------------------------------------------------ | -- | ----------------------------------------------------------- |
 | [🤖 AgnesAI 大模型生态](ai/agnes-ai/index.md)               | 2  | AgnesAI 全模态 AI 平台——OpenAI 兼容 API、对话/图像/视频生成、Agent 工具调用      |
-| [🤖 AI Agent 框架](ai/ai-agent/index.md)                 | 34 | AI Agent 运行时框架与架构模式——工具调用循环、多代理编排、记忆系统、Coding Agent 源码解读、技能规范、产品资讯、技术评测、协议治理、产品实测、战略分析、行业分析、工具教程、工业Agent、语音智能体厂商动态、AI治理法学论文、Tongyi-MAI GUI Agent 生态源码精读    |
+| [🤖 AI Agent 框架](ai/ai-agent/index.md)                 | 28 | AI Agent 运行时框架与架构模式——工具调用循环、多代理编排、记忆系统、Coding Agent 源码解读、产品资讯、技术评测、协议治理、产品实测、战略分析、行业分析、工具教程、工业Agent    |
 | [🦜🔗 LangChain-AI LLM 应用框架](ai/langchain-ai/index.md) | 19 | LangChain/LangGraph 核心框架（Python+JS）、深度研究 Agent、可观测性、评测与基础设施 |
 | [🐳 Datawhale 开源 AI 学习社区](ai/datawhale/index.md)       | 18 | 国内最大开源 AI 学习社区——LLM 全栈/RAG/Agent/向量数据库/推荐系统/ML 理论           |
 | [🧩 Coze 扣子开发平台生态](ai/coze/index.md)                   | 3  | 字节跳动一站式 AI Agent 开发平台——Python SDK、开源平台、LLM 可观测性             |
@@ -167,12 +171,21 @@ flowchart LR
 | [⚡ FastAPI Web 框架生态](web/fastapi/index.md) | 1  | FastAPI 高性能 ASGI Web 框架——类型注解驱动、依赖注入树、OpenAPI 自动生成 |
 | [📡 GraphQL 核心规范与生态](web/graphql/index.md) | 1  | GraphQL 查询语言系统化中文教程——语法、Schema 类型系统、验证执行管线、内省系统    |
 
-### 💭 [思想与理论](think/index.md) · 11 束 · 3 组
+### 🔬 [自然科学](science/index.md) · 9 束 · 2 组
+
+| 分组                                      | 束数 | 说明                                                                                                       |
+| --------------------------------------- | -- | -------------------------------------------------------------------------------------------------------- |
+| [⚗️ 化学经典](science/chemistry/index.md)     | 7  | 中西化学经典双线索——西方：波义耳《怀疑的化学家》、拉瓦锡《化学基础论》、道尔顿《化学哲学新体系》、门捷列夫元素周期律；中国：《周易参同契》《抱朴子·内篇》《天工开物》 |
+| [🔭 物理学经典](science/physics/index.md)     | 1  | 西方物理学里程碑元典——伽利略至朗道 12 部经典原著（1638—1981）的原文获取、版本甄别、分级阅读路径与精读方法，含 4 篇逐段精读示范 |
+
+### 💭 [思想与理论](think/index.md) · 13 束 · 5 组
 
 | 分组                                      | 束数 | 说明                                     |
 | --------------------------------------- | -- | -------------------------------------- |
 | [Ψhē 理论体系](think/psi/index.md)          | 4  | ψ=ψ(ψ) 自指递归理论体系——哲学、数学、宇宙学、意识研究与 AI 应用 |
 | [📜 老子（Laozi）知识包](think/laozi/index.md) | 1  | 《老子》（《道德经》）相关知识包——帛书《老子》阅读教程           |
+| [📐 数学（Math）知识包](think/math/index.md) | 1  | 国外数学经典阅读——欧几里得到布尔巴基五时段谱系、原文获取、译本注本与阅读方法 |
+| [🧮 算学（Suanxue）知识包](think/suanxue/index.md) | 1  | 中国传统数学典籍——中国算经阅读教程（《九章》《周髀》、刘徽、宋元四大家，算题实战） |
 | [💕 亲密关系与两性情感](think/relationships/index.md) | 6  | 两性关系经典著作——亲密关系科学教材、《爱的艺术》、戈特曼婚姻研究、成人依恋、爱语模型与火星金星（通俗读物附学界评价） |
 
 ### 📐 [数学可视化与创意编程](viz/index.md) · 4 束 · 1 组
@@ -196,6 +209,7 @@ meta/index
 ml/index
 python/index
 rust/index
+science/index
 think/index
 viz/index
 web/index
