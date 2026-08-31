@@ -4,7 +4,7 @@ title: 门捷列夫元素周期律阅读教程
 description: 门捷列夫元素周期律（1869）原文选读与现代解读——元素分类史、周期表发现过程、类铝/类硼/类硅三大预言及其验证、周期律本质的现代认识
 tags: [chemistry, 化学史, 门捷列夫, Mendeleev, 元素周期律, 周期表, 元素预言, 阅读教程]
 version: "1.0.0"
-source: 公开网络调研——公版原著原文（Wikisource/Project Gutenberg/Internet Archive/ctext.org）与权威学术共识解读
+source: 公版原典转录（Le Moyne College Giunta 经典化学页／ChemTeam 原始论文转录／Internet Archive 扫描本）与权威学术共识解读
 generated: { by: "agent:seven-concepts-r-e", at: "2026-08-30T00:00:00+08:00" }
 status: draft
 stale_after: 2027-08-30

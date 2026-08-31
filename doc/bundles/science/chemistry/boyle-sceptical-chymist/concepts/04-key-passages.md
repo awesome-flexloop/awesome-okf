@@ -25,7 +25,7 @@ sources:
 
 **原文**（Eleutherius 语）：
 
-> "insist rather upon Experiments than Syllogismes"
+> "insist rather on Experiments then Syllogismes"
 
 **今译**：
 
@@ -33,7 +33,7 @@ sources:
 
 **注释**：
 
-- *insist upon*：此处意为"坚持以……为根据"。
+- *insist on*：此处意为"坚持以……为根据"（底本作 on，17 世纪拼写 than 作 then）。
 - *Syllogismes*：即 syllogisms，三段论——经院哲学从权威前提出发做演绎推理的典型形式。
 - 这句话由仲裁者 Eleutherius 说出，为全书定下证据规则：可重复的实验高于演绎推理与权威引证[^2]。它是理解后文一切论证的程序前提。
 

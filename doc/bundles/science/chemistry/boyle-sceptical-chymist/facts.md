@@ -45,7 +45,7 @@
 | F-023 | 波义耳在书中否认任何已知物质符合该元素定义；金、银、铅、硫、碳在他的论述中均被视为复合物（compounds）而非元素。（M-1、M-4） |
 | F-024 | 书的批判对象有二：亚里士多德学派的四元素说（土、气、火、水）与帕拉塞尔苏斯（Paracelsus）以来化学家的三要素说（Tria Prima：盐、硫、汞）。（M-3、M-4） |
 | F-025 | 波义耳在书中主张火并非普遍而充分的分析工具，并援引范·赫尔蒙特（van Helmont）的"万能溶剂"（Alkahest）之说讨论不经火的分解途径；他在相关论述中点名 Jean Beguin、Joseph Duchesne 等化学家的著作。（M-4、O-1） |
-| F-026 | 开场对话中 Eleutherius 主张论辩应当"insist rather upon Experiments than Syllogismes"（多凭实验、少靠三段论）；该段见 Giunta 选读标注的 1661 年版第 13—17 页。（M-3） |
+| F-026 | 开场对话中 Eleutherius 主张论辩应当"insist rather on Experiments then Syllogismes"（多凭实验、少靠三段论）；该段见 Giunta 选读标注的 1661 年版第 13—17 页。（M-3） |
 | F-027 | 波义耳的微粒哲学（corpuscularian hypothesis）主张：万物由微小但并非"不可分"的粒子构成，粒子属同一种普遍物质，彼此仅以形状和运动相区分；其 1666 年著作《The Origine of Formes and Qualities》以化学现象支持该假说。（M-1、M-2） |
 | F-028 | 科学史家 E. J. Dijksterhuis 评价：《怀疑的化学家》问世之后，亚里士多德四元素说与帕拉塞尔苏斯三要素说逐渐退出使用；托马斯·库恩《科学革命的结构》第 11 章引用本书。（M-3 导读） |
 | F-029 | 化学史家 J. R. 帕廷顿（J. R. Partington）曾在著作中将 17 世纪其他化学家的元素定义误记为波义耳的定义；中译本前言对此有专门辨析。（中译本前言转述） |

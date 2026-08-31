@@ -65,7 +65,7 @@
 |------|---------|
 | F-024 | 道尔顿以氢原子相对重量 = 1 为基准；1808 年表中主要元素相对重量为：氢 1、氮（Azote）5、碳（Carbone）5、氧 7、磷 9、硫 13、铁 38、锌 56、铜 56、铅 95、银 100、铂（Platina）100、金 140、汞 167；镁氧 20、石灰 23、钠碱 28、钾碱 42 等化合物基亦列入表中。 |
 | F-025 | 道尔顿为常见化合物指定的组成为：水 = 氢 1 + 氧 1（相对重量 8）、氨 = 6、一氧化碳（carbonic oxide）= 12、碳酸（carbonic acid）= 19（1 碳 + 2 氧）、硝酸（nitric acid）= 19（1 氮 + 2 氧）、油气（olefiant gas，乙烯）= 6、碳化氢（carburetted hydrogen，甲烷）= 7。 |
-| F-026 | 道尔顿提出"最大简单性规则"：两种元素若只能得到一种化合物，应假定为二元化合物；原文："When only one combination of two bodies can be obtained, it must be presumed to be a binary one." |
+| F-026 | 道尔顿提出"最大简单性规则"：两种元素若只能得到一种化合物，应假定为二元化合物；原文："When only one combination of two bodies can be obtained, it must be presumed to be a binary one…" |
 | F-027 | 化合等级原文（Chap. III）："1 atom of A + 1 atom of B = 1 atom of C, binary. 1 atom of A + 2 atoms of B = 1 atom of D, ternary."（1 个 A 原子 + 1 个 B 原子 = 1 个 C 原子，二元；1 个 A 原子 + 2 个 B 原子 = 1 个 D 原子，三元。）规则并定义四元（quaternary）组合为 1A+3B 或 3A+1B。 |
 | F-028 | 倍比定律的典型案例：碳的两种氧化物中，与等量碳结合的氧重量成 1:2；乙烯（olefiant gas）与甲烷（carburetted hydrogen）中与等量碳结合的氢重量成 1:2；氮的多种氧化物之间同样呈简单整数比。 |
 

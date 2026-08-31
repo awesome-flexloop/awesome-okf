@@ -32,7 +32,7 @@ sources:
 
 同章化合规则原文：
 
-> "When only one combination of two bodies can be obtained, it must be presumed to be a binary one."（两种物体若只能得到一种化合物，必须假定它是二元的。）
+> "When only one combination of two bodies can be obtained, it must be presumed to be a binary one…"（两种物体若只能得到一种化合物，必须假定它是二元的。）
 
 以及化合等级句：
 
