@@ -32,12 +32,15 @@ description: "中医典籍谱系总览与经典精读——难经·伤寒杂病�
 
 《黄帝内经》阅读教程位于 think 域：[think/huangdi-neijing/neijing-reading](../../think/huangdi-neijing/neijing-reading/index.md)——面向普通读者的权威原文阅读指南，含版本底本链、8 篇名篇逐字精读、历代注本导航与 12 周通读计划。本分组总览束的四大经典导读中提供《黄帝内经》的谱系定位与成书考证视角，与该教程互为补充。
 
-## 推荐阅读路径
+## 推荐阅读路径（按读者身份）
 
-- **入门路径**：[tcm-overview](tcm-overview/index.md) → [《黄帝内经》教程（think 域）](../../think/huangdi-neijing/neijing-reading/index.md) — 先建立典籍谱系全景，再读理论源头
-- **临床文献路径**：[shanghan-zabinglun](shanghan-zabinglun/index.md) → [shennong-bencaojing](shennong-bencaojing/index.md) — 方证体系与本草体系的对照阅读
-- **外经专题路径**：[tcm-overview](tcm-overview/index.md) → [waijing-weiyan](waijing-weiyan/index.md) — 从典籍谱系进入《黄帝外经》真伪考辨与专题研读
-- **精读方法论路径**：[tcm-overview](tcm-overview/index.md)（阅读模式）→ 任一经典的 examples 实操 — 掌握双源核读与托名分层判读后再深入
+完整路径（含预期收获、时间投入与避坑提示）见域指南：[tcm/guide.md](../guide.md) 第 3 节。
+
+- **零基础爱好者**：[tcm-overview](tcm-overview/index.md) concepts/00–01 → [《黄帝内经》教程（think 域）](../../think/huangdi-neijing/neijing-reading/index.md) → 凭兴趣选束深入
+- **临床从业者 / 中医院校学生**：先读[版本学常识](tcm-overview/concepts/02-philology-basics.md)打底 → [shanghan-zabinglun](shanghan-zabinglun/index.md)（六经框架→太阳篇精读→398 条索引备查）→ [shennong-bencaojing](shennong-bencaojing/index.md)（序录精读→三品对照）
+- **文献学 / 版本学研究者**：[tcm-overview](tcm-overview/index.md) concepts/02–03、05（阅读方法论）→ [双源核对演示](tcm-overview/examples/dual-source-verification-demo.md) → 伤寒版本考 / 本草辑本考 / [外经真伪考辨](waijing-weiyan/concepts/03-authenticity-debate.md) 三专题对读
+- **专题兴趣**：脉学读 [nanjing](nanjing/index.md)；命门水火与养生读 [waijing-weiyan](waijing-weiyan/index.md)；本草药物读 [shennong-bencaojing](shennong-bencaojing/index.md)
+- **AI 智能体 / 知识库构建**：直接读 [域指南第 9 节](../guide.md) 与各束束根 toctree
 
 ## 数据源
 
