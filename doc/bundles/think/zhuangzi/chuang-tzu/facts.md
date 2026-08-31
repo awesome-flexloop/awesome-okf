@@ -106,3 +106,17 @@
 | F-054 | 《养生主》"奏刀𬴃然"之"𬴃"，通行整理本或作"騞然"（"騞"为《经典释文》字），系同一拟声词的不同字形。信源：https://www.zhonghuashu.com/wiki/%E8%8E%8A%E5%AD%90/%E9%A4%8A%E7%94%9F%E4%B8%BB |
 | F-055 | 《逍遥游》"抟扶摇而上者九万里"之"抟"，宋以来有"抟/搏"异文；今通行本多作"抟"（盘旋而上）。信源：https://www.zhonghuashu.com/wiki/%E8%8E%8A%E5%AD%90/%E9%80%8D%E9%81%99%E9%81%8A |
 | F-056 | 《应帝王》末章"七日而浑沌死"，通行本作"浑沌"，亦有"混沌"写法；本篇作"浑沌"。信源：https://www.zhonghuashu.com/wiki/%E8%8E%8A%E5%AD%90/%E6%87%89%E5%B8%9D%E7%8E%8B |
+
+## 十、外篇与杂篇异文登记（双源核对）
+
+| 编号 | 事实内容 |
+|------|---------|
+| F-057 | 《骈拇》"附赘县疣"之"县"，为"悬"本字；ctext 底本作"縣"（繁体），今简体整理本或径作"悬"。信源：https://ctext.org/zhuangzi/webbed-toes |
+| F-058 | 《骈拇》"累瓦结绳"之"累"，ctext 底本作"纍"（繁体隶古定），今简体整理本多作"累"。信源：https://ctext.org/zhuangzi/webbed-toes |
+| F-059 | 《山木》"神农、黄帝"之法则，ctext 简体版作"黄帝、神农"，通行整理本多以"神农、黄帝"为序，二者皆有例证。信源：https://ctext.org/zhuangzi/tree-on-the-mountain |
+| F-060 | 《徐无鬼》"匠石运斤成风"之"运"，ctext 繁体底本作"運"。信源：https://ctext.org/zhuangzi/xu-wu-gui |
+| F-061 | 《外物》"七十二钻而无遗策"之"策"，一作"䇲"（筴），同指占卜之蓍策。信源：https://ctext.org/zhuangzi/what-comes-from-without |
+| F-062 | 《寓言》"众罔两问于景"之"罔两"，一作"魍魉"，影外微阴之义，通行本多作"罔两"。信源：https://ctext.org/zhuangzi/metaphorical-language |
+| F-063 | 《天下》"名山三百，支川三千"，俞樾疑"名山"当作"名川"以与"支川三千"相俪，陈鼓应等今译本或从之作"名川三百"；本文从郭象本/ctext《续古逸丛书》本作"名山三百"。信源：https://ctext.org/zhuangzi/tian-xia |
+| F-064 | 《天下》"以聏合欢"之"聏"，罕见字，或作"胹"；ctext 底本作"聏"。信源：https://ctext.org/zhuangzi/tian-xia |
+| F-065 | 《天下》"其犹一蚊一虻之劳者也"，或作"一蚤一虻"，皆喻惠施之能于道若蚊虻之微。信源：https://ctext.org/zhuangzi/tian-xia |

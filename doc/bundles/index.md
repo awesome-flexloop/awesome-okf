@@ -179,7 +179,7 @@ flowchart LR
 | [📜 儒家（Confucianism）知识包](think/confucian/index.md) | 1 | 儒家经典相关知识包——四书（大学·中庸·论语·孟子）权威阅读教程：原文双源核对、五条注疏脉络、三层解读 |
 | [📜 孔子（Confucius）知识包](think/confucius/index.md) | 1 | 孔子本人相关著作（六经与《论语》）权威阅读教程——归属辨析、双源核对原文、注本分级 |
 | [📜 老子（Laozi）知识包](think/laozi/index.md) | 2  | 《老子》（《道德经》）相关知识包——帛书《老子》阅读教程、老子著作原文与解读（出土文献基准、历代注本三线并收） |
-| [📜 庄子（Zhuangzi）知识包](think/zhuangzi/index.md) | 1 | 《庄子》（《南华经》）相关知识包——内篇七篇全文阅读教程 |
+| [📜 庄子（Zhuangzi）知识包](think/zhuangzi/index.md) | 1 | 《庄子》（《南华经》）相关知识包——三十三篇全文阅读教程（内篇自著 / 外杂篇后学分层） |
 | [📜 墨子（Mozi）知识包](think/mozi/index.md) | 1  | 《墨子》研读教程——十论、墨经、城守与三篇原文精读 |
 | [☯ 阴阳家（Yinyangjia）知识包](think/yinyangjia/index.md) | 1 | 先秦阴阳家学派（邹衍、五德终始、大九州）——书志著录、辑佚残篇与传世材料的存佚分层阅读 |
 | [⚖️ 法家（Legalism）知识包](think/legalism/index.md) | 4 | 先秦法家经典——《韩非子》《商君书》《管子》及申不害·慎到辑佚的实抓原文核对、概念谱系与校本信源 |

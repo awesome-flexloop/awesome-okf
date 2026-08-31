@@ -43,7 +43,7 @@ okf_version: "0.2"
 - [交叉引用](references/cross-ref.md) — 关联 laozi 系 bundle 与外部资源
 
 ### 工作文档
-- [事实清单](facts.md) — 56 条零推测事实（G1）
+- [事实清单](facts.md) — 65 条零推测事实（G1）
 - [架构洞察](insights.md) — 4 条核心洞察（G2）
 
 ## 🚀 快速开始
