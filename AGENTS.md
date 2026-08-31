@@ -66,11 +66,12 @@ awesome-okf-xs/
 ├── tasks/              # Invoke 任务包（命名空间组织）
 │   ├── __init__.py     # 命名空间入口
 │   ├── docs.py         # 文档构建任务（build/clean/browse/...）
-│   └── gates.py        # CI 质量门任务（utf8/toctrees）
+│   └── gates.py        # CI 质量门任务（utf8/toctrees/bundles）
 ├── scripts/            # CI 检查脚本（被 tasks/gates.py 调用）
-│   ├── check-toctrees.py  # toctree 完整性检查（含 bundle-root 检测与自检探针）
-│   ├── check-utf8.py      # UTF-8 编码检查
-│   └── scan-history-utf8.py  # Git 历史 UTF-8 扫描
+│   ├── check-toctrees.py      # toctree 完整性检查（含 bundle-root 检测与自检探针）
+│   ├── check-bundles-index.py # 总索引计数对账（锚点组识别 + 束/组/域三角校验）
+│   ├── check-utf8.py          # UTF-8 编码检查
+│   └── scan-history-utf8.py   # Git 历史 UTF-8 扫描
 ├── .agents/            # AI 智能体规范目录（本规范所在目录）
 ├── .github/workflows/  # CI/CD 工作流（GitHub Pages 自动部署）
 ├── pyproject.toml      # 项目元数据与依赖声明
@@ -93,8 +94,9 @@ awesome-okf-xs/
 |---|---|---|
 | 构建 HTML 文档 | `invoke build` | Sphinx 构建输出到 `_build/html/` |
 | 清理构建产物 | `invoke clean` | 清理 `_build/` 目录 |
-| 运行全部质量门 | `invoke gates.all` | UTF-8 编码 + toctree 完整性检查 |
+| 运行全部质量门 | `invoke gates.all` | UTF-8 编码 + toctree 完整性 + 总索引计数对账 |
 | 仅检查 toctree | `invoke gates.toctrees` | 验证无断链、无孤立文档、bundle 根 index 完整 |
+| 仅检查计数对账 | `invoke gates.bundles` | 总索引束/组/域计数与目录树三角一致（新增束后必跑） |
 | 仅检查 UTF-8 | `invoke gates.utf8` | 验证所有文件 UTF-8 编码无 BOM |
 | 本地预览文档 | `invoke browse` | 构建后启动本地服务器预览 |
 
@@ -103,6 +105,7 @@ awesome-okf-xs/
 > 以下规则是高频操作必须遵守的硬性约束，详细说明见对应规范文件。
 
 - **Bundle 导航完整性**：含子目录的 bundle 根目录必须生成 `index.md`，并以 `{toctree}` 引用全部内容文档；新增/迁移 bundle 后必须运行 `invoke gates.toctrees` 验证
+- **总索引计数对账**：新增/迁移 bundle 或分组后，必须运行 `invoke gates.bundles` 验证总索引（frontmatter/计数行/域节标题/分组表束数列/toctree 五面）与目录树计数一致；锚点组（组目录直挂 concepts/examples/references）按 1 束计，禁止手工估算
 - **修复落地验证**：修复完成后必须用 `git diff`/`git status` 核对变更实际写入，并运行构建/测试验证；禁止仅凭过程描述自认为"已完成"
 - **Frontmatter 日期兼容性**：OKF v0.2 的裸日期格式（如 `stale_after: 2026-09-23`）在 Sphinx 构建时由 `doc/conf.py` 的钩子自动处理，无需手动加引号
 - **路径引用**：Markdown 交叉引用使用相对路径，禁止 `file:///` 绝对路径
