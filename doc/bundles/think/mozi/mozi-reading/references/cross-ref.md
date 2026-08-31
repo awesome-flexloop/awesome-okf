@@ -1,55 +1,50 @@
 ---
 type: Reference
-title: 交叉引用信源
-description: 关联本仓库诸子经典知识包与《墨子》外部在线资源的交叉引用登记
-tags: [mozi, 墨子, 交叉引用, 外部资源, 诸子]
-generated: { by: "agent:seven-concepts-cmd", at: "2026-08-30T00:00:00+08:00" }
-verified: { by: "process:seven-concepts-v", at: "2026-08-30T00:00:00+08:00" }
+title: 《墨子》知识包交叉引用
+description: 链接 think 域内兄弟知识包与外部权威信源，说明本知识包在古典思想谱系中的位置与引用原则。
+tags: [mozi, reference, 交叉引用, 谱系]
+generated: { by: reference_agent/trae-deepseek-v4, at: 2026-08-30T00:00:00Z }
+verified: { by: process:seven-concepts-v, at: 2026-08-30T00:00:00Z }
 status: stable
 stale_after: 2027-08-30
+sources:
+  - id: ctext-mozi
+    resource: https://ctext.org/mozi/zh
+    title: ctext.org 中国哲学书电子化计划 ·《墨子》
+  - id: chinamoxue-versions
+    resource: https://chinamoxue.uzz.edu.cn/info/1004/1029.htm
+    title: 中国墨子学会 ·《墨子》版本沿革
+  - id: nlc-mojianzhu
+    resource: https://www.nlc.cn/upload/attachments/2026-01-21/42f15979.pdf
+    title: 国家图书馆《墨子间诂》馆藏 PDF
+  - id: baike-xianxue
+    resource: https://m.baike.com/wiki/韩非子·显学/19833953
+    title: 百科 · 韩非子·显学（儒墨显学）
 ---
 
-## 关联知识包（本仓库）
+# 《墨子》知识包交叉引用
 
-以下关联均为本仓库 think 目录下既有 bundle，关系依据 insights.md 两条可复用阅读模式（模式 1「双源逐字核读法」、模式 2「诸子文本三层判读框架」）及事实中的跨书记载。
+本页链接 think 域内兄弟知识包与外部权威信源，并说明本知识包在「中国古典思想谱系」中的位置与引用时的信源优先原则。
 
-| 关联知识包 | 入口 | 关系 |
-|-----------|------|------|
-| 帛书《老子》阅读 | [../../../laozi/boshu-reading/index.md](../../../laozi/boshu-reading/index.md) | insights.md 模式 1、模式 2 均可迁移到有异文/伪托争议的古籍（帛书 × 王弼本对照） |
-| 《庄子》 | [../../../zhuangzi/chuang-tzu/index.md](../../../zhuangzi/chuang-tzu/index.md) | insights.md 模式 2 迁移示例（内篇/外杂篇之分判读） |
-| 《阴符经》 | [../../../huangdi/yinfujing/index.md](../../../huangdi/yinfujing/index.md) | insights.md 模式 1 迁移示例（道藏本 × ctext 对照） |
-| 《管子》 | [../../../legalism/guan-tzu/index.md](../../../legalism/guan-tzu/index.md) | insights.md 模式 2 迁移示例（托名管仲判读） |
-| 《韩非子》 | [../../../legalism/han-fei-tzu/index.md](../../../legalism/han-fei-tzu/index.md) | 《韩非子·显学》为「儒墨并称显学」「墨离为三」的关键记载出处（F-008、F-013、F-044） |
+## 一、think 域内兄弟知识包（相对路径）
 
-> 儒家四书（confucian/four-books）与《墨子》同为先秦儒墨对照阅读材料：儒墨并称「世之显学」（F-008）、「孔墨之弟子徒属，充满天下」（F-011），可作对照。该 bundle 暂无 index.md，故本文不作链接。
+- [老子（Laozi）知识包](../../../laozi/index.md) —— 道家《老子》知识包，与墨家同为先秦诸子之一。
+- [Ψhē 理论体系](../../../psi/index.md) —— think 域理论体系总纲。
 
-## 外部资源
+## 二、外部权威信源（绝对 URL）
 
-仅登记 facts.md 已著录的公开网页信源，事实编号对应 facts.md 事实清单。
+- **ctext.org《墨子》电子文本**：https://ctext.org/mozi/zh
+- **中国墨子学会（《墨子》版本沿革）**：https://chinamoxue.uzz.edu.cn/info/1004/1029.htm
+- **国家图书馆《墨子间诂》馆藏 PDF**：https://www.nlc.cn/upload/attachments/2026-01-21/42f15979.pdf
 
-| 资源 | URL | 说明 | 事实编号 |
-|------|-----|------|---------|
-| 古诗文网《墨子》全书 | https://www.gushiwen.cn/guwen/book_29.aspx | 五十三篇完整篇次及亡佚标注 | F-001、F-033 |
-| 中国墨子网（枣庄学院） | https://chinamoxue.uzz.edu.cn/info/1004/1029.htm | 卷帙流传、版本源流、鲁胜《墨辩注》 | F-017、F-018、F-020、F-022、F-023 |
-| 山东省情网（方志） | https://shandong-chorography.org/database/a/section/98/article/15/ | 五组结构、十论亡佚篇 | F-019、F-024 至 F-032 |
-| 国家图书馆《墨子间诂》PDF | https://www.nlc.cn/upload/attachments/2026-01-21/42f15979.pdf | 孙诒让《墨子间诂》撰刻经过与定本 | F-021、F-059、F-060 |
-| 百科「墨子」 | https://m.baike.com/wiki/墨子/7201379635672662071 | 生平、卷帙、毕沅《墨子注》 | F-003、F-004、F-015、F-016、F-030、F-058 |
-| 百科「韩非子·显学」 | https://m.baike.com/wiki/韩非子·显学/19833953 | 儒墨显学、墨离为三 | F-008、F-013、F-044 |
-| 百科「兼爱上」「黑说」「墨子救宋」 | https://m.baike.com/wiki/兼爱上/7767032 等 | 三篇核心原文异文核对信源 | facts.md 异文记录 |
-| 读通鉴 wiki「墨家」 | https://wiki.dutongjian.com/墨家 | 十论主张、墨家逻辑三物论 | F-005、F-014、F-034 至 F-043 |
-| 国学大师（guoxuedashi） | https://www.guoxuedashi.com/shijian/118095iofy/ 及 /lishi/1235h/ | 城守篇归属诸说、「三墨」说 | F-046、F-051 至 F-054、F-057 |
-| 汉典古籍网（zdic） | https://gj.zdic.net/zibu/408/10791.html 及 /10799.html | 《非攻上》《公输》异文核对信源 | facts.md 异文记录 |
-| 鲁班文化（滕州） | https://luban.tengzhou.gov.cn/research-papers/59.html | 孙诒让、吴毓江城守篇归属说 | F-055、F-056 |
-| unionpedia「吴毓江」 | https://zh.unionpedia.org/i/吴毓江 | 广义墨经六篇、《墨子间诂》吸收诸家、吴毓江校注 | F-047 至 F-049、注家谱系补遗 |
-| 中国人民大学哲学院 | https://phi.ruc.edu.cn/xsyj/sxwk/89b1110d68a44847a0a69b36b180b158.htm | 孙中原广义墨经六篇说 | F-050 |
-| 台湾大学中文学报 | https://www.cl.ntu.edu.tw/uploads/root/臺大中文學報/第九期/論韓非子對墨家的批判.pdf | 《庄子·天下》墨家三派记载 | F-045 |
-| 光明网（光明日报） | https://epaper.gmw.cn/gmrb/html/2016-07/25/nw.D110000gmrb_20160725_2-16.htm | 墨子身份、学儒、巨子组织、显学 | F-006 至 F-011 |
+## 三、在中国古典思想谱系中的位置
 
-## 待补信源（如实标注）
+- **与儒家并称显学**：《韩非子·显学》称「世之显学，儒、墨也。儒之所至，孔丘也。墨之所至，墨翟也」；《孟子·尽心上》载「墨子兼爱，摩顶放踵利天下为之」；《吕氏春秋·当染》载「孔墨之弟子徒属，充满天下」。
+- **与道家（老子）的关联**：墨子早年「学儒者之业，受孔子之术」，后自创墨家，与老子（道家）、儒家、法家等同属先秦诸子谱系；本知识包与老子知识包并列于 think 域，可对照阅读兼爱、非攻与道家思想的异同。
+- **墨家内部分派**：墨子死后墨家分为相里氏、相夫氏、邓陵氏三派（「墨离为三」），《墨经》六篇多认为反映后期墨家思想。
 
-- 中国哲学书电子化计划（ctext）的《兼爱上》《非攻上》《公输》三个篇章页（https://ctext.org/jian-ai-shang/zh、https://ctext.org/fei-gong-shang/zh、https://ctext.org/gong-shu/zh）本次因 CAPTCHA 未能抓取，未作核对信源；后续若能抓取，补入作独立第三信源（见 facts.md 待核项清单与 insights.md 洞察 4 建议）。
+## 四、信源优先原则
 
-## 相关概念
-
-- [文本版本](../concepts/01-text-versions.md)
-- [墨家学派的兴衰](../concepts/07-school-rise-fall.md)
+- **原文引用**：优先采权威底本——孙诒让《墨子间诂》定本与明《道藏》本系统；电子对勘用 ctext.org《墨子》。
+- **解读引用**：优先采注家分级表上位者——研究级专门著作优于进阶级校注本，进阶级校注本优于入门级现代译注本。
+- **异文处理**：核心篇异文（如《公输》「起于鲁/起于齐」）须据 ≥2 个独立信源交叉核对，并如实记录。
