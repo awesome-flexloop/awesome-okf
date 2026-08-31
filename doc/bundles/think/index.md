@@ -2,30 +2,63 @@
 okf_version: "0.2"
 type: group
 title: "💭 思想与理论"
-description: "理论思想与哲学体系——自指递归理论、宇宙本论、经典思想著作、中外数学经典阅读与亲密关系人文知识的沉淀"
+description: "理论思想与哲学体系——自指递归理论、宇宙本论与经典思想著作（儒家、孔子、老子、庄子、墨子、阴阳家、佛家、鬼谷子、法家、黄帝经典、黄帝内经、道医、房中、性学经典、养生经典、古典文学经典）的知识沉淀"
 ---
 
 # 💭 思想与理论
 
-本域存放思想理论与哲学体系相关的知识包，覆盖 Ψhē 自指递归理论体系（哲学、数学、宇宙学、意识研究与 AI 应用）、《老子》经典思想著作的阅读知识包、国外数学经典著作（欧美数学原典）的系统阅读教程、中国传统数学典籍（算经）的系统阅读教程，以及两性关系经典著作的系统化中文教程，构成从形而上学、经典文本、中外数学传统到人文生活的多元思想谱系。
+本域存放思想理论与哲学体系相关的知识包，覆盖 Ψhē 自指递归理论体系（哲学、数学、宇宙学、意识研究与 AI 应用）与中国古典经典著作（孔子相关著作、儒家四书、《老子》《庄子》《墨子》、阴阳家、佛家经典、《鬼谷子》、法家经典、黄帝经典、《黄帝内经》、道医传统、房中典籍）的阅读知识包，兼收国外数学经典与中外算学传统的中外数学经典阅读（欧几里得至布尔巴基、中国算经）教程、两性关系经典著作知识包，以及中国古典文学经典（《浮生六记》）、性学/性文化经典与从《黄帝内经》到《老老恒言》的养生经典阅读教程，构成从形而上学、经典文本、中外数学传统到生命实践智慧的多元思想谱系。
 
 ## 域内分组导航
 
 | 分组 | 一句话简介 |
 |------|-----------|
-| [Ψhē 理论体系](psi/index.md) | ψ=ψ(ψ) 自指递归理论体系——哲学、数学、宇宙学、意识研究与 AI 应用 |
-| [📜 老子（Laozi）知识包](laozi/index.md) | 《老子》（《道德经》）相关知识包——帛书《老子》阅读教程 |
+| [Ψhē 理论体系](psi/index
+math/index
+suanxue/index
+relationships/index.md) | ψ=ψ(ψ) 自指递归理论体系——哲学、数学、宇宙学、意识研究与 AI 应用 |
 | [📐 数学（Math）知识包](math/index.md) | 国外数学经典阅读——欧美数学原著原文与解读教程（欧几里得到布尔巴基，五时段经典谱系） |
 | [🧮 算学（Suanxue）知识包](suanxue/index.md) | 中国传统数学典籍知识包——中国算经阅读教程（《九章算术》《周髀算经》、刘徽、宋元四大家） |
 | [💕 亲密关系与两性情感](relationships/index.md) | 两性关系经典著作知识包——学术实证、哲学经典与通俗实践三层谱系（6 束） |
+| [📜 儒家（Confucianism）知识包](confucian/index.md) | 儒家经典相关知识包——四书（大学·中庸·论语·孟子）权威阅读教程 |
+| [📜 孔子（Confucius）知识包](confucius/index.md) | 孔子本人相关著作（六经与《论语》）权威阅读教程——归属辨析、双源核对原文、注本分级 |
+| [📜 老子（Laozi）知识包](laozi/index.md) | 《老子》（《道德经》）相关知识包——帛书《老子》阅读教程 |
+| [📜 庄子（Zhuangzi）知识包](zhuangzi/index.md) | 《庄子》（《南华经》）相关知识包——三十三篇全文阅读教程（内篇自著 / 外杂篇后学分层） |
+| [📜 墨子（Mozi）知识包](mozi/index.md) | 《墨子》研读教程——十论、墨经、城守与三篇原文精读 |
+| [☯ 阴阳家（Yinyangjia）知识包](yinyangjia/index.md) | 先秦阴阳家学派（邹衍、五德终始、大九州）——书志著录、辑佚残篇与传世材料的存佚分层阅读 |
+| [🪷 佛家核心经典](buddhism/index.md) | 佛家核心经典汉译本——《心经》《金刚经》《六祖坛经》《阿弥陀经》《法华经》选读 |
+| [🗡️ 鬼谷子（Guiguzi）知识包](guiguzi/index.md) | 《鬼谷子》相关知识包——先秦纵横家经典原文与解读教程 |
+| [⚖️ 法家（Legalism）知识包](legalism/index.md) | 先秦法家经典——《管子》《商君书》《韩非子》实抓原文核对、概念谱系与校本信源 |
+| [📜 黄帝经典（Huangdi）知识包](huangdi/index.md) | 《黄帝阴符经》相关知识包——权威原文双源核对与历代解读教程 |
+| [📕 黄帝内经（Huangdi Neijing）知识包](huangdi-neijing/index.md) | 《黄帝内经》（《素问》《灵枢》）阅读教程——权威底本逐字原文、异文双录、三层解读与八篇精读 |
+| [💊 道医（Daoyi）知识包](daoyi/index.md) | 道家道教医学传统——医道同源经典阅读、道门医家、道藏医书、出土方技与辨伪信源 |
+| [🛏️ 房中（Fangzhong）知识包](fangzhong/index.md) | 中国古代性文化（房中）典籍——目录著录、马王堆出土文献、《医心方》辑佚链、医家性医学、道教房中与内丹双修、文学社会史料的文献学阅读 |
+| [📜 经典阅读（Classics）知识包](classics/index.md) | 中国古典文学经典阅读教程——沈复《浮生六记》阅读教程（版本源流·伪书考辨·闲情美学） |
+| [🧭 性学经典（Sexology）知识包](sexology/index.md) | 性学/性文化经典著作阅读教程——著作提要与阅读路径 |
+| [🌿 养生经典](yangsheng/index.md) | 养生经典阅读教程——六部核心经典、五脉谱系与选篇精读 |
 
 ```{toctree}
 :hidden:
 :maxdepth: 7
 
 psi/index
-laozi/index
 math/index
 suanxue/index
 relationships/index
+confucian/index
+confucius/index
+laozi/index
+zhuangzi/index
+mozi/index
+yinyangjia/index
+buddhism/index
+guiguzi/index
+legalism/index
+huangdi/index
+huangdi-neijing/index
+daoyi/index
+fangzhong/index
+classics/index
+sexology/index
+yangsheng/index
 ```

@@ -7,6 +7,7 @@
 | 知识包 | 定位 | 说明 |
 |--------|------|------|
 | [boshu-reading/](boshu-reading/index.md) | 帛书《老子》阅读教程 | 面向普通读者的实践性阅读指南，含版本对照、异文选读、注本选用、通读计划 |
+| [laozi-works/](laozi-works/index.md) | 老子著作（原文与解读） | 聚焦老子本人著作的原文与解读本体，以出土文献为主基准，三线并收校注与历代/现代注本 |
 
 ## 关联知识包
 
@@ -17,4 +18,5 @@
 :maxdepth: 7
 
 boshu-reading/index
+laozi-works/index
 ```
