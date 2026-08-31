@@ -35,6 +35,7 @@ description: "理论思想与哲学体系——自指递归理论、宇宙本论
 | [📜 经典阅读（Classics）知识包](classics/index.md) | 中国古典文学经典阅读教程——沈复《浮生六记》阅读教程（版本源流·伪书考辨·闲情美学） |
 | [🧭 性学经典（Sexology）知识包](sexology/index.md) | 性学/性文化经典著作阅读教程——著作提要与阅读路径 |
 | [🌿 养生经典](yangsheng/index.md) | 养生经典阅读教程——六部核心经典、五脉谱系与选篇精读 |
+| [☯ 道家（Daojia）知识包](daojia/index.md) | 道家著作全谱系导航——先秦诸子/黄老之学/魏晋玄学注疏/道教经典四段谱系，段—家—著三级分层（老子、庄子、阴符经既有分组交叉引用） |
 
 ```{toctree}
 :hidden:
@@ -62,4 +63,5 @@ fangzhong/index
 classics/index
 sexology/index
 yangsheng/index
+daojia/index
 ```
