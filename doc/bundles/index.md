@@ -3,16 +3,16 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程"
-total_bundles: 325
-groups: 62
-domains: 14
+total_bundles: 342
+groups: 67
+domains: 15
 ---
 
 # 知识包总索引（Bundles Index）
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **325 个知识包**，按技术生态分为 **14 个技术域、62 个分组**。
+> 当前共 **342 个知识包**，按技术生态分为 **15 个技术域、67 个分组**。
 
 ***
 
@@ -34,6 +34,9 @@ flowchart TD
     containers["📦 containers/ 容器生态：OCI运行时 · 存储驱动 · Podman工具链 · AI容器配方"]
     think["💭 think/ 思想与理论：psi · confucian · laozi · mozi · huangdi · neijing · daoyi · fangzhong · classics · sexology · yangsheng · hetu-luoshu 河图洛书"]
     tcm["🌿 tcm/ 中医经典与理论：典籍谱系总览 · 难经 · 伤寒杂病论 · 神农本草经 · 黄帝外经"]
+    science["🔬 science/ 自然科学经典：化学中西元典 · 物理学中西元典"]
+    data -->|"科学计算基础"| science
+    science -->|"科学元典传播"| think
     meta -->|"规范约束"| py
     py -->|"语言底座"| build
     rust -->|"工具链底座"| build
@@ -79,12 +82,13 @@ flowchart LR
     comm["📡 comm/：通信与网络生态（ZeroMQ 消息 · SSH 远程控制 · Protocol Buffers 序列化）"]
     think["💭 think/：思想与理论（psi · confucian · confucius · laozi · mozi · yinyangjia · hetu-luoshu 河图洛书 · legalism · huangdi · neijing · daoyi · fangzhong · classics · sexology · yangsheng 选读）"]
     tcm["🌿 tcm/：中医经典研读（典籍谱系总览·难经·伤寒·本草·外经——原文双源核对与注家谱系，人文选读）"]
-    meta --> py --> rust --> build --> doc --> data --> ml --> containers --> ai --> viz --> web --> comm --> think --> tcm
+    science["🔬 science/：自然科学经典（化学中西元典 · 物理学中西元典，经典选读）"]
+    meta --> py --> rust --> build --> doc --> data --> ml --> containers --> ai --> viz --> web --> comm --> science --> think --> tcm
 ```
 
 ***
 
-## 十四域分组导航
+## 十五域分组导航
 
 ### 📐 [规范与格式](meta/index.md) · 1 束 · 1 组
 
@@ -171,11 +175,14 @@ flowchart LR
 | [⚡ FastAPI Web 框架生态](web/fastapi/index.md) | 1  | FastAPI 高性能 ASGI Web 框架——类型注解驱动、依赖注入树、OpenAPI 自动生成 |
 | [📡 GraphQL 核心规范与生态](web/graphql/index.md) | 1  | GraphQL 查询语言系统化中文教程——语法、Schema 类型系统、验证执行管线、内省系统    |
 
-### 💭 [思想与理论](think/index.md) · 29 束 · 18 组
+### 💭 [思想与理论](think/index.md) · 37 束 · 21 组
 
 | 分组                                      | 束数 | 说明                                     |
 | --------------------------------------- | -- | -------------------------------------- |
 | [Ψhē 理论体系](think/psi/index.md)          | 4  | ψ=ψ(ψ) 自指递归理论体系——哲学、数学、宇宙学、意识研究与 AI 应用 |
+| [📐 数学（Math）知识包](think/math/index.md) | 1  | 国外数学经典阅读——欧美数学原著原文与解读教程（欧几里得到布尔巴基，五时段经典谱系） |
+| [🧮 算学（Suanxue）知识包](think/suanxue/index.md) | 1  | 中国传统数学典籍知识包——中国算经阅读教程（《九章算术》《周髀算经》、刘徽、宋元四大家） |
+| [💕 亲密关系与两性情感](think/relationships/index.md) | 6  | 两性关系经典著作知识包——学术实证、哲学经典与通俗实践三层谱系（6 束） |
 | [📜 儒家（Confucianism）知识包](think/confucian/index.md) | 1 | 儒家经典相关知识包——四书（大学·中庸·论语·孟子）权威阅读教程：原文双源核对、五条注疏脉络、三层解读 |
 | [📜 孔子（Confucius）知识包](think/confucius/index.md) | 1 | 孔子本人相关著作（六经与《论语》）权威阅读教程——归属辨析、双源核对原文、注本分级 |
 | [📜 老子（Laozi）知识包](think/laozi/index.md) | 2  | 《老子》（《道德经》）相关知识包——帛书《老子》阅读教程、老子著作原文与解读（出土文献基准、历代注本三线并收） |
@@ -193,6 +200,13 @@ flowchart LR
 | [📜 经典阅读（Classics）知识包](think/classics/index.md) | 1  | 中国古典文学经典阅读教程——沈复《浮生六记》阅读教程（版本源流·伪书考辨·闲情美学） |
 | [🧭 性学经典（Sexology）知识包](think/sexology/index.md) | 1  | 性学/性文化经典著作阅读教程——六大板块著作提要、译本选择指南与分阶段阅读计划 |
 | [🌿 养生经典（yangsheng 锚点）](think/yangsheng/index.md) | 1  | 养生经典阅读教程——《黄帝内经》至《老老恒言》六部核心经典与食养/导引/道教扩展脉络，五脉谱系导览与选篇精读 |
+
+### 🔬 [自然科学](science/index.md) · 9 束 · 2 组
+
+| 分组 | 束数 | 说明 |
+|------|------|------|
+| [⚗️ 化学经典](science/chemistry/index.md) | 7 | 中西化学经典双线索——西方（波义耳、拉瓦锡、道尔顿、门捷列夫）与中国（参同契、抱朴子、天工开物） |
+| [🔭 物理学经典](science/physics/index.md) | 2 | 中西物理学经典双线索——西方（伽利略至朗道 12 部元典）与中国（墨经、考工记、梦溪笔谈、革象新书、天工开物、物理小识、镜镜詅痴等九部典籍） |
 
 ### 🌿 [中医经典与理论](tcm/index.md) · 5 束 · 1 组
 
@@ -221,6 +235,7 @@ ml/index
 python/index
 rust/index
 tcm/index
+science/index
 think/index
 viz/index
 web/index

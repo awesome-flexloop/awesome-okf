@@ -1,7 +1,7 @@
 ---
 type: Example
 title: 3个内部流程实测
-description: "人间彷徨"团队用Qwen-UI-Agent实测3个内部流程：财务对账导出(40分钟→5分钟内)、运营日报搬运(85%成功率遇弹窗)、老CRM查单回复(无API场景最稳)
+description: "“人间彷徨”团队用Qwen-UI-Agent实测3个内部流程：财务对账导出(40分钟→5分钟内)、运营日报搬运(85%成功率遇弹窗)、老CRM查单回复(无API场景最稳)"
 tags: [Qwen-UI-Agent, 实测, 财务对账, 运营日报, CRM, RPA, 流程自动化]
 generated: { by: "blog-article-to-okf-bundle", at: "2026-08-28T23:45:00+08:00" }
 status: stable
