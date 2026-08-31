@@ -27,8 +27,8 @@ okf_version: "0.2"
 - [历代易学谱系](concepts/05-yixue-lineage.md) — 汉易象数、王弼义理、宋易图书、清代朴学、现代学术
 
 ### [经传原文](text/index.md) — 经文全本 + 十翼选读
-- [上经三十卦](text/jing-shang.md) — 乾至离，卦辞爻辞全本
-- [下经三十四卦](text/jing-xia.md) — 咸至未济，卦辞爻辞全本
+- 上经三十卦（text/jing-shang.md 待补）— 乾至离，卦辞爻辞全本
+- 下经三十四卦（text/jing-xia.md 待补）— 咸至未济，卦辞爻辞全本
 - [系辞传（上下）](text/zhuan-xici.md) — 十翼之哲学总纲，全录
 - [说卦传](text/zhuan-shuogua.md) — 八卦卦象与方位，全录
 - [序卦传、杂卦传](text/zhuan-xu-za.md) — 卦序理路与错杂要义，全录
@@ -51,9 +51,9 @@ okf_version: "0.2"
 
 ### 工作文档
 - [事实清单](facts.md) — 零推测事实（R 阶段，G1）
-- [架构洞察](insights.md) — 四元组洞察（I 阶段，G2）
-- [可复用模式](patterns.md) — 方法模式（E 阶段，G3）
-- [阅读指南](usage.md) — 三级阅读路径与注本选用决策树
+- 架构洞察（insights.md 待补）— 四元组洞察（I 阶段，G2）
+- 可复用模式（patterns.md 待补）— 方法模式（E 阶段，G3）
+- 阅读指南（usage.md 待补）— 三级阅读路径与注本选用决策树
 
 ## Bundle 定位
 
@@ -75,14 +75,11 @@ okf_version: "0.2"
 :hidden:
 :maxdepth: 7
 
-usage
 concepts/index
 text/index
 examples/index
 commentaries/index
 references/index
 facts
-insights
-patterns
 log
 ```
