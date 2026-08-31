@@ -2,9 +2,9 @@
 okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
-description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程"
-total_bundles: 286
-groups: 32
+description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程与经典著作阅读指南"
+total_bundles: 292
+groups: 33
 domains: 13
 ---
 
@@ -12,7 +12,7 @@ domains: 13
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **286 个知识包**，按技术生态分为 **13 个技术域、32 个分组**。
+> 当前共 **292 个知识包**，按技术生态分为 **13 个技术域、33 个分组**。
 
 ***
 
@@ -32,7 +32,7 @@ flowchart TD
     viz["📐 viz/ 数学可视化与创意编程：3b1b ManimGL · 视频场景 · 字幕工具链 · React官网"]
     web["🌐 web/ Web 开发生态：fastapi · graphql"]
     containers["📦 containers/ 容器生态：OCI运行时 · 存储驱动 · Podman工具链 · AI容器配方"]
-    think["💭 think/ 思想与理论：psi · laozi"]
+    think["💭 think/ 思想与理论：psi · laozi · relationships"]
     meta -->|"规范约束"| py
     py -->|"语言底座"| build
     rust -->|"工具链底座"| build
@@ -75,7 +75,7 @@ flowchart LR
     viz["📐 viz/：数学可视化与创意编程（ManimGL动画引擎 - 视频场景 - 字幕工具链 - React官网）"]
     web["🌐 web/：Web 开发生态（fastapi · graphql）"]
     comm["📡 comm/：通信与网络生态（ZeroMQ 消息 · SSH 远程控制 · Protocol Buffers 序列化）"]
-    think["💭 think/：思想与理论（psi · laozi 选读）"]
+    think["💭 think/：思想与理论（psi · laozi · relationships 选读）"]
     meta --> py --> rust --> build --> doc --> data --> ml --> containers --> ai --> viz --> web --> comm --> think
 ```
 
@@ -167,12 +167,13 @@ flowchart LR
 | [⚡ FastAPI Web 框架生态](web/fastapi/index.md) | 1  | FastAPI 高性能 ASGI Web 框架——类型注解驱动、依赖注入树、OpenAPI 自动生成 |
 | [📡 GraphQL 核心规范与生态](web/graphql/index.md) | 1  | GraphQL 查询语言系统化中文教程——语法、Schema 类型系统、验证执行管线、内省系统    |
 
-### 💭 [思想与理论](think/index.md) · 5 束 · 2 组
+### 💭 [思想与理论](think/index.md) · 11 束 · 3 组
 
 | 分组                                      | 束数 | 说明                                     |
 | --------------------------------------- | -- | -------------------------------------- |
 | [Ψhē 理论体系](think/psi/index.md)          | 4  | ψ=ψ(ψ) 自指递归理论体系——哲学、数学、宇宙学、意识研究与 AI 应用 |
 | [📜 老子（Laozi）知识包](think/laozi/index.md) | 1  | 《老子》（《道德经》）相关知识包——帛书《老子》阅读教程           |
+| [💕 亲密关系与两性情感](think/relationships/index.md) | 6  | 两性关系经典著作——亲密关系科学教材、《爱的艺术》、戈特曼婚姻研究、成人依恋、爱语模型与火星金星（通俗读物附学界评价） |
 
 ### 📐 [数学可视化与创意编程](viz/index.md) · 4 束 · 1 组
 
