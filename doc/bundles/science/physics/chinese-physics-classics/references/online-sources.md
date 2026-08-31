@@ -1,0 +1,40 @@
+---
+type: Reference
+title: 在线信源与核验记录
+generated: { by: "agent:seven-concepts-cmd", at: "2026-08-30T14:55:00+08:00" }
+status: draft
+stale_after: 2027-08-30
+---
+
+# 在线信源与核验记录（W-1 ～ W-14）
+
+> 全部 URL 于 2026-08-30 实测可达（标注例外者除外）。可信度分级：★★★ 学术机构/权威全文库（底本明确）；★★ 专业古籍站点（底本多为四库/通行本，质量参差需对读）；★ 科普/聚合站点（仅供定位与参考）。维基文库在本次调研环境全部抓取失败，如实记录，建议后续人工浏览器复核。
+
+| 编号 | 站点 | URL 与站内定位 | 收录内容 | 实测状态 | 可信度 |
+|------|------|----------------|----------|----------|--------|
+| W-1 | 中国哲学书电子化计划 ctext.org | https://ctext.org/mozi （/mozi/canon-i、/canon-ii、/exposition-of-canon-i、/exposition-of-canon-ii） | 《墨子》全文含《墨经》四篇，底本正统道藏 | 可达，逐字核对 23 条 | ★★★ |
+| W-2 | ctext.org | https://ctext.org/rites-of-zhou/dong-guan-kao-gong-ji | 《周礼·冬官考工记》全文 | 可达，逐字核对 8 段；注意勿试 /kaogongji、/zhouli 路径（不存在） | ★★★ |
+| W-3 | ctext.org | https://ctext.org/huainanzi （/lan-ming-xun 览冥训、/tian-wen-xun 天文训、/shuo-lin-xun 说林训、/shuo-shan-xun 说山训） | 《淮南子》全文 | 可达，逐字核对 | ★★★ |
+| W-4 | ctext.org | https://ctext.org/lunheng （/luan-long 乱龙、/shi-ying 是应、/lv-xing 率性、/bian-xu 变虚、/gan-xu 感虚、/bian-dong 变动、/lei-xu 雷虚） | 《论衡》全文；另有人物页 ctext:2385831（宋应星） | 可达，逐字核对 12 段 | ★★★ |
+| W-5 | 子夜星 | https://www.ziyexing.com/ （站内"梦溪笔谈"全卷，正编 26 卷 + 补笔谈 + 续笔谈）；汉典古籍 https://gj.zdic.net/zibu/410/ | 《梦溪笔谈》全文（ctext 仅存书目 res=125489） | 可达，13 条据此核对 | ★★ |
+| W-6 | 典藏网 | https://www.diancang.xyz/ （站内编号 83068） | 《革象新书》卷五"小罅光景"全文 | 可达，7 段据此核对 | ★★ |
+| W-7 | 识典古籍 | https://www.shidianguji.com/ （SK1516《革象新书》、NA06575《物理小识》、CADAL08001211《畴人传》） | 三部典籍全文 | 可达 | ★★★ |
+| W-8 | 中华文库 | http://www.zhonghuashu.com/ （四库本《革象新书》《物理小识》《古今图书集成》；《海国图志》卷九十五） | 四库本与晚清著作全文；《海国图志·作远镜法说略》为 C-9 卷五替代核对依据（F-060） | 可达 | ★★ |
+| W-9 | 五千年网 | http://tiangong.5000yan.com/ （/34974.html 冶铸钟、/34975.html 冶铸釜、/34979.html 锤锻、/34988.html 陶埏、/34953.html 乃服花机、/35007.html 舟车漕舫、/35013.html 佳兵弩）；Project Gutenberg https://www.gutenberg.org/ebooks/25273 | 《天工开物》各卷全文 | 可达，7 段据此核对 | ★★（Gutenberg ★★★） |
+| W-10 | 可可诗词网 | https://www.kekeshici.com/ （站内编号 224556《物理小识·指南说》；245398《镜镜詅痴·透镜成象》、245396 望远镜、145144 名著介绍） | 节选与译注 | 可达 | ★ |
+| W-11 | 典藏网 | https://www.diancang.xyz/xueshuzaji/16898/ （分页 325341—325347） | 《镜镜詅痴》译注连载 | 可达 | ★★ |
+| W-12 | 诗词汇 | https://www.shicihui.com/ （站内编号 237312—237318） | 《镜镜詅痴》译注分页 | 可达 | ★ |
+| W-13 | 《物理》杂志（中国物理学会） | https://wuli.iphy.ac.cn/cn/article/pdf/preview/27856.pdf （李鹏举《赵友钦对中国古代光度学的贡献》）；另参中国科学院西安光学精密机械研究所科普文章（赵友钦实验评价来源之一） | 现代研究论文 | 可达 | ★★★ |
+| W-14 | 维基文库 | https://zh.wikisource.org/ （《墨经》《梦溪笔谈》《天工开物》《镜镜詅痴》等页面） | 典籍全文 | **本次调研全部抓取失败（超时/转换失败，exit code 28），未在线核对**；所有维基文库链接不得作为已核信源 | — |
+
+## 补充信源
+
+- 劝学网 https://www.quanxue.cn/ 收录诸子与古籍白话对照（《墨子》《淮南子》《论衡》等），适合初学者定位，学术引用仍以 ctext 与整理本为准（★）。
+- F-059 所列替代信源均已实测可达；凡 facts 中引文来自 ★ 级站点的，均已用整理本信息或 ★★ 以上站点交叉核对。
+
+## 使用须知
+
+1. **底本意识**：ctext 用正统道藏底本（《墨子》）与通行本；四库本（中华文库）有清人改字传统，关键异文须回到现代整理本（见 [core-classics.md](core-classics.md)）。
+2. **站内编号定位**：典藏网、可可诗词网、诗词汇、识典古籍的深链随站点改版可能变动；表中给出的站内编号（如 83068、SK1516、224556）可在站内搜索框直接检索定位。
+3. **失败信源处理**：W-14 维基文库在网络条件改善后应人工复核；本包任何文件未引用维基文库作为已核事实来源。
+4. **转引层级**：《淮南万毕术》两条（冰透镜、潜望镜）的类书/辑佚出处见 [extended-bibliography.md](extended-bibliography.md) E-3、E-5，引用时必须写明"某书引某书"的层级（F-047、F-048）。
