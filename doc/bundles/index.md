@@ -3,8 +3,8 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程"
-total_bundles: 342
-groups: 67
+total_bundles: 343
+groups: 68
 domains: 15
 ---
 
@@ -12,7 +12,7 @@ domains: 15
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **342 个知识包**，按技术生态分为 **15 个技术域、67 个分组**。
+> 当前共 **343 个知识包**，按技术生态分为 **15 个技术域、68 个分组**。
 
 ***
 
@@ -175,7 +175,7 @@ flowchart LR
 | [⚡ FastAPI Web 框架生态](web/fastapi/index.md) | 1  | FastAPI 高性能 ASGI Web 框架——类型注解驱动、依赖注入树、OpenAPI 自动生成 |
 | [📡 GraphQL 核心规范与生态](web/graphql/index.md) | 1  | GraphQL 查询语言系统化中文教程——语法、Schema 类型系统、验证执行管线、内省系统    |
 
-### 💭 [思想与理论](think/index.md) · 37 束 · 21 组
+### 💭 [思想与理论](think/index.md) · 38 束 · 22 组
 
 | 分组                                      | 束数 | 说明                                     |
 | --------------------------------------- | -- | -------------------------------------- |
@@ -189,6 +189,7 @@ flowchart LR
 | [📜 庄子（Zhuangzi）知识包](think/zhuangzi/index.md) | 1 | 《庄子》（《南华经》）相关知识包——三十三篇全文阅读教程（内篇自著 / 外杂篇后学分层） |
 | [📜 墨子（Mozi）知识包](think/mozi/index.md) | 1 | 《墨子》研读教程——十论、墨经、城守与三篇原文精读 |
 | [☯ 阴阳家（Yinyangjia）知识包](think/yinyangjia/index.md) | 1 | 先秦阴阳家学派（邹衍、五德终始、大九州）——书志著录、辑佚残篇与传世材料的存佚分层阅读 |
+| [☰ 周易（Zhouyi）知识包](think/zhouyi/index.md) | 1 | 《周易》经传原文与权威解读——今本六十四卦经文全本（384 爻）、十翼选读、四大出土文本系统异文（马王堆帛书/上博楚简/阜阳汉简/王家台秦简归藏）、出土校注与历代注本、现代注本三线并收 |
 | [🔢 河图洛书（Hetu-Luoshu）知识包](think/hetu-luoshu/index.md) | 1 | 河图洛书与宋代图书学——名实三层框架（名物/图式/附会）、先秦原典双源核对、汉易数理零件、宋清图式考辨、出土文献与西传证据链；风水术数仅作学术辨析 |
 | [⚖️ 法家（Legalism）知识包](think/legalism/index.md) | 4 | 先秦法家经典——《韩非子》《商君书》《管子》及申不害·慎到辑佚的实抓原文核对、概念谱系与校本信源 |
 | [📜 黄帝经典（Huangdi）知识包](think/huangdi/index.md) | 1 | 《黄帝阴符经》知识包——权威原文双源核对版阅读教程 |

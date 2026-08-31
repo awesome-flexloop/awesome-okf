@@ -4,7 +4,7 @@ title: 陈抟与传授谱系：朱震《进周易表》及其现代献疑
 description: 录陈抟生平与朱震绍兴六年《进周易表》所载先天图／河图洛书／太极图三条传授线全文，并列刘缙 2019《周易研究》对该谱系师承真实性的献疑（邵伯温建构说），呈现宋代图书学谱系的史料现状
 tags: [hetu-luoshu, 河图洛书, 陈抟, 朱震, 进周易表, 传授谱系, 种放, 穆修, 李之才, 邵伯温, 图书学]
 version: "1.0.0"
-source: "《宋史·隐逸传》《宋史·朱震传》《汉上易传表》（朱震）及刘缙《"北宋先天易学师承谱系"献疑》（《周易研究》2019年第2期）等，原文经 chuimin.cn 论文与 ctext datawiki 核对（详见 bundle facts.md）"
+source: "《宋史·隐逸传》《宋史·朱震传》《汉上易传表》（朱震）及刘缙《“北宋先天易学师承谱系”献疑》（《周易研究》2019年第2期）等，原文经 chuimin.cn 论文与 ctext datawiki 核对（详见 bundle facts.md）"
 generated: { by: "agent:seven-concepts-cmd", at: "2026-08-31T21:30:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-31T21:30:00+08:00" }
 status: stable
