@@ -76,7 +76,7 @@ stale_after: 2027-09-01
 | 键 | 信源 | URL |
 |---|---|---|
 | R1 | 阳明文化网《王阳明先生年谱节选（1509—1528 年）》（《王文成公全书》年谱数字化，"阳明心学课堂"本） | http://www.wangyangming.org.cn/ClientPage/detail/1224.html |
-| R2 | 河南农业大学图书馆《王阳明全集·年谱二》全文（第 35 章，自正德己卯至正德辛巳） | https://jxlib.hnuahe.edu.cn/book/read/10872423/35/1 |
+| R2 | 河南农业大学图书馆《王阳明全集·年谱二》全文（第 35 章，自正德己卯至正德辛巳；注：该站对脚本直连返回 403 反爬拦截，浏览器/WebFetch 可正常取回全文，2026-09-01 实测可达，非死链） | https://jxlib.hnuahe.edu.cn/book/read/10872423/35/1 |
 | R3 | 古诗文网《明史·王守仁传》全文（《明史》卷一九五/列传八十三） | https://m.gushiwen.cn/guwen/bookv_f7bba4dcea32.aspx |
 | R4 | 国学导航《明儒学案·姚江学案·文成王阳明先生守仁》（黄宗羲） | http://www.guoxue123.com/other/xuean/mrxuean/mydoc058.htm |
 | R5 | 百科·王守仁词条（生卒、家世、进士、平濠 43 天、隆庆追谥） | https://m.baike.com/wiki/%E7%8E%8B%E5%AE%88%E4%BB%81/19972818 |
