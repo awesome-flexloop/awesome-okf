@@ -13,12 +13,18 @@ PowerShell 数组拆包、首元素翻倍、锚点组误判（把 concepts/ 当�
   树结构计数规则（与 check-toctrees 的 bundle-root 治理同向）：
   - 域（domain）= doc/bundles 下的直接子目录；
   - 组（group）= 域下的直接子目录；
-  - 束（bundle）：
-      * 锚点组——组目录直接含 concepts/examples/references 任一层目录时，
-        该组本身即 1 束（如 katex、cpython、rust 三组、containers 十一组）；
-      * 普通组——束数 = 组内含 index.md 的直接子目录数；
-      * marker 目录（concepts/examples/references）本身不计为束子目录；
+  - 束（bundle）——递归口径（支持任意层嵌套，如 jishu/ai/<org>/<repo>）：
+      * 锚点束——目录直接含 concepts/examples/references 任一层目录时，
+        该目录本身即 1 束（如 katex、cpython、rust 三组、containers 十一组）；
+      * 导航目录——目录不含 marker、但含「带 index.md 的内容子目录」时，
+        本身不计束，束数 = 各内容子目录递归求和（如 daojia 段/家导航、
+        jishu/ai 组织导航）；
+      * 叶子束——目录含 index.md、且无「带 index.md 的内容子目录」时计 1 束；
+      * marker 目录（concepts/examples/references）不参与子目录递归；
       * 组级 log.md、无 index.md 的存根目录不计束。
+    注：旧版浅层口径（组下含 index.md 的直接子目录=束）无法穿透 jishu 4 层
+    嵌套（会少计 ~185 束），且曾把 daojia 的 4 个段导航误计为 4 束（实为 19
+    叶子束）；递归口径以目录树为地面真值，机械导出真实束数。
 
   对账检查（任一不符即 CI 拦截）：
   1) frontmatter total_bundles/groups/domains == 树计数；
@@ -74,7 +80,7 @@ _TABLE_ROW = re.compile(
 )
 _FRONTMATTER_NUM = re.compile(r"^(total_bundles|groups|domains)\s*:\s*(\d+)\s*$")
 _COUNT_LINE_BUNDLES = re.compile(r"\*\*\s*(\d+)\s*个知识包\s*\*\*")
-_COUNT_LINE_SPLIT = re.compile(r"\*\*\s*(\d+)\s*个技术域、(\d+)\s*个分组\s*\*\*")
+_COUNT_LINE_SPLIT = re.compile(r"\*\*\s*(\d+)\s*个(?:技术|学科)域、(\d+)\s*个分组\s*\*\*")
 
 
 @dataclass
@@ -143,11 +149,36 @@ def _is_content_dir(p: Path) -> bool:
     return p.is_dir() and not p.name.startswith(".") and p.name not in EXCLUDE_DIRS
 
 
+def _count_bundles(d: Path) -> int:
+    """递归计数：目录 d 下的束数。
+
+    - 锚点束——目录直接含 concepts/examples/references 任一层目录时，该目录本身
+      即 1 束；其内部子目录（text/、spec/、patterns/、commentaries/ 等带
+      index.md 的组织性目录）属束内结构，**不**另行计束、不递归。
+    - 导航目录——不含 marker、但含「带 index.md 的内容子目录」时，本身不计束，
+      束数 = 各内容子目录递归求和（如 daojia 段/家导航、jishu/ai 组织导航）。
+    - 叶子束——含 index.md、且无「带 index.md 的内容子目录」时计 1 束。
+    """
+    if any((d / m).is_dir() for m in MARKER_DIRS):
+        return 1  # 锚点束：内部子目录属束内结构，不计
+    bundle_subs = [
+        sub.name
+        for sub in d.iterdir()
+        if _is_content_dir(sub)
+        and sub.name not in MARKER_DIRS
+        and (sub / INDEX_NAME).is_file()
+    ]
+    if bundle_subs:
+        return sum(_count_bundles(d / s) for s in bundle_subs)
+    return 1 if (d / INDEX_NAME).is_file() else 0
+
+
 def scan_tree(bundles_root: Path) -> TreeInfo:
     """机械导出目录树的域/组/束计数（地面真值）。
 
-    束计数规则见模块 docstring：锚点组（组目录直挂 concepts/examples/references
-    任一）计 1 束；否则束数 = 组内含 index.md 的直接子目录数。
+    束计数规则见模块 docstring 与 _count_bundles：递归口径——锚点（直挂
+    concepts/examples/references 任一）计 1 束；导航目录（含带 index.md 的内容
+    子目录）递归求和；叶子束计 1。
     """
     domains: dict[str, dict[str, int]] = {}
     anomalies: list[str] = []
@@ -160,26 +191,7 @@ def scan_tree(bundles_root: Path) -> TreeInfo:
         for grp in sorted(dom.iterdir()):
             if not _is_content_dir(grp):
                 continue
-            is_anchor = any((grp / m).is_dir() for m in MARKER_DIRS)
-            bundle_subs = [
-                sub.name
-                for sub in grp.iterdir()
-                if _is_content_dir(sub)
-                and sub.name not in MARKER_DIRS
-                and (sub / INDEX_NAME).is_file()
-            ]
-            if is_anchor:
-                groups[grp.name] = 1 + len(bundle_subs)
-                if bundle_subs:
-                    # 真混合结构：组本身是束、组下又有束子目录——两种口径都可能，
-                    # 禁止静默择一，报歧义强制人工确认（防御未来 OKF 结构变体）。
-                    anomalies.append(
-                        f"结构歧义: {dom.name}/{grp.name}/ 既是锚点组（含 "
-                        f"concepts/examples/references）又含束子目录 {bundle_subs}，"
-                        f"暂按 1+{len(bundle_subs)} 束计，请人工确认口径"
-                    )
-            else:
-                groups[grp.name] = len(bundle_subs)
+            groups[grp.name] = _count_bundles(grp)
         domains[dom.name] = groups
     return TreeInfo(domains, anomalies=anomalies)
 
@@ -290,7 +302,7 @@ def audit(bundles_root: Path, tree: TreeInfo, index: IndexInfo) -> list[str]:
         if cb != fm.get("total_bundles"):
             errors.append(f"计数漂移: 计数行声明 {cb} 个知识包，frontmatter total_bundles={fm.get('total_bundles')}")
         if cd != fm.get("domains"):
-            errors.append(f"计数漂移: 计数行声明 {cd} 个技术域，frontmatter domains={fm.get('domains')}")
+            errors.append(f"计数漂移: 计数行声明 {cd} 个域，frontmatter domains={fm.get('domains')}")
         if cg != fm.get("groups"):
             errors.append(f"计数漂移: 计数行声明 {cg} 个分组，frontmatter groups={fm.get('groups')}")
 
@@ -474,40 +486,53 @@ def self_test() -> bool:
             t = (p / INDEX_NAME).read_text(encoding="utf-8").replace("groups: 2", "groups: 8")
             (p / INDEX_NAME).write_text(t, encoding="utf-8")
 
-        def mutate_hybrid(p: Path) -> None:
-            # 真混合结构：锚点组 alpha/grpa（直挂 concepts/）下再建含 index.md
-            # 的非 marker 束子目录——两种束口径都可能，必须显式报「结构歧义」，
-            # 禁止静默择一（防御未来 OKF 结构变体）。
-            _write(p / "alpha" / "grpa" / "extra-bundle" / INDEX_NAME, "# extra\n")
+        def mutate_add_leaf(p: Path) -> None:
+            # 导航目录下新增一个叶子束（含 index.md）——递归口径应把它计入，
+            # 树总数 3→4 而索引仍声明 3，必须被「计数漂移」拦截。
+            _write(p / "beta" / "grpb" / "b3" / INDEX_NAME, "# b3\n")
 
-        # (名称, 变异函数, 期望错误关键词)——关键词 None 表示「有任意拦截即可」
+        def mutate_anchor_internal(p: Path) -> None:
+            # 锚点束内部新增带 index.md 的组织性子目录（如 text/、spec/）——
+            # 递归口径规定锚点束内部子目录不另行计束，树总数应保持 3，
+            # 索引与树仍一致，本变异**不应**产生任何错误（放行）。
+            _write(p / "alpha" / "grpa" / "text" / INDEX_NAME, "# text\n")
+
+        # (名称, 变异函数, 期望错误关键词, 期望是否拦截)
         cases = [
-            ("fm-total 漂移", mutate_fm, None),
-            ("fm-groups 漂移", mutate_groups_fm, None),
-            ("计数行漂移", mutate_count_line, None),
-            ("节标题漂移", mutate_header, None),
-            ("表束数和漂移", mutate_table_sum, None),
-            ("表行断链", mutate_bad_link, None),
-            ("分组未注册", mutate_unregistered, None),
-            ("toctree 缺条目", mutate_toctree, None),
-            ("锚点组混合结构歧义", mutate_hybrid, "结构歧义"),
+            ("fm-total 漂移", mutate_fm, None, True),
+            ("fm-groups 漂移", mutate_groups_fm, None, True),
+            ("计数行漂移", mutate_count_line, None, True),
+            ("节标题漂移", mutate_header, None, True),
+            ("表束数和漂移", mutate_table_sum, None, True),
+            ("表行断链", mutate_bad_link, None, True),
+            ("分组未注册", mutate_unregistered, None, True),
+            ("toctree 缺条目", mutate_toctree, None, True),
+            ("导航目录新增叶子束", mutate_add_leaf, None, True),
+            ("锚点束内部子目录不计束", mutate_anchor_internal, None, False),
         ]
-        for name, mutate, expect in cases:
+        for name, mutate, expect, should_block in cases:
             case_dir = tmp / name.replace(" ", "_")
             _build_pass_tree(case_dir)
             mutate(case_dir)
             errs = run_scan(case_dir)
-            if errs and (expect is None or any(expect in e for e in errs)):
-                print(f"自检: {name} → 拦截 正确（{errs[0]}）")
-            elif not errs:
-                ok = False
-                print(f"自检失败: {name} 应拦截，实际放行")
+            if should_block:
+                if errs and (expect is None or any(expect in e for e in errs)):
+                    print(f"自检: {name} → 拦截 正确（{errs[0]}）")
+                elif not errs:
+                    ok = False
+                    print(f"自检失败: {name} 应拦截，实际放行")
+                else:
+                    ok = False
+                    print(f"自检失败: {name} 应报含「{expect}」的错误，实际: {errs}")
             else:
-                ok = False
-                print(f"自检失败: {name} 应报含「{expect}」的错误，实际: {errs}")
+                if errs:
+                    ok = False
+                    print(f"自检失败: {name} 应放行，实际拦截: {errs}")
+                else:
+                    print(f"自检: {name} → 放行 正确")
 
         if ok:
-            print("自检通过: check-bundles-index.py 既能拦截计数漂移/断链/未注册/结构歧义，也能放行一致结构。")
+            print("自检通过: check-bundles-index.py 既能拦截计数漂移/断链/未注册，也能放行一致结构与锚点束内部子目录。")
         return ok
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
