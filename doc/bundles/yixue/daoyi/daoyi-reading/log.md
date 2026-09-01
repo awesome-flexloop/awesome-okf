@@ -1,5 +1,12 @@
 # 更新日志
 
+## 2026-09-02
+
+### 视觉增强（事实内容零变更）
+- 新增 8 张 AI 生成水墨意境插图：束首页 index.md（hero-daoyi）与概念 01-07（history-yidao、classics-roots、daoist-physicians、daozang-canon、neidan-cultivation、excavated-texts、yidao-schools）；图片存放于 doc/_static/bundles/yixue/daoyi/daoyi-reading/images/，以站点绝对路径 /_static/bundles/yixue/daoyi/daoyi-reading/images/ 引用，统一配图注"AI 生成意境图，非历史图像，仅作阅读氛围辅助"；插图位置均在各页开篇引言之后、第一个二级小节之前。
+- 新增 9 张 Mermaid 图表（概念 00/01/03-08 与示例 02）。
+- 以上均为视觉增强：正文事实文字、交叉链接、frontmatter、toctree、表格与引用块零变更。
+
 ## 2026-08-30
 
 ### 创建
