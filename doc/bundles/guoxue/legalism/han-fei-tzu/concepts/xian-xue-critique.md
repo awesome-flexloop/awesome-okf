@@ -2,7 +2,7 @@
 type: concept
 id: xian-xue-critique
 title: 显学批判
-description: "《显学》"儒分为八、墨离为三"的学派分裂考、"无参验而必之者，愚也"的认识论否定、《五蠹》历史进化论的支撑结构，与《六反》六誉六少的价值倒置清单"
+description: "《显学》“儒分为八、墨离为三”的学派分裂考、“无参验而必之者，愚也”的认识论否定、《五蠹》历史进化论的支撑结构，与《六反》六誉六少的价值倒置清单"
 bundle: ../index.md
 category: 政治哲学
 facts: [F-HF-017, F-HF-018, F-HF-019, F-HF-020, F-HF-023, F-HF-024, F-HF-030, F-HF-044]

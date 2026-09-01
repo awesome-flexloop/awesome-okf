@@ -1,7 +1,7 @@
 ---
 type: Concept
 title: 四大经典导读与关系——四经分述、1955 年建构史与组合争议
-description: 中医四大经典分述（《黄帝内经》《难经》《伤寒杂病论》《神农本草经》各自性质、体例与最早版本），"四大经典"一词的 1955 年教学计划建构史，各种组合方案并列登记不裁决，四经的医经/经方/本草知识功能关系
+description: "中医四大经典分述（《黄帝内经》《难经》《伤寒杂病论》《神农本草经》各自性质、体例与最早版本），“四大经典”一词的 1955 年教学计划建构史，各种组合方案并列登记不裁决，四经的医经/经方/本草知识功能关系"
 tags: [concept, 四大经典, 黄帝内经, 难经, 伤寒杂病论, 神农本草经, 组合争议, 医经, 经方, 本草]
 generated: { by: "agent:create-tcm-okf", at: "2026-08-30T12:00:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-30T12:00:00+08:00" }
@@ -10,13 +10,13 @@ stale_after: 2027-08-30
 sources:
   - id: nlc-wenjin
     resource: https://www.nlc.cn/migrated/www.nlc.cn/newhxjy/wjsy/wjls/wjqcsy/wjd34q/zhzgyy/201108/P020110826365963647132.pdf
-    title: 国家图书馆《文津流觞》第34期"中医典籍四大经典"专题
+    title: "国家图书馆《文津流觞》第34期“中医典籍四大经典”专题"
   - id: chinulture
     resource: https://www.chinulture.com/thread-327064-1-1.html
-    title: "四大经典"提法源流（chinulture）
+    title: "“四大经典”提法源流（chinulture）"
   - id: sdjyzyy
     resource: https://www.sdjyzyy.com/news/979.html
-    title: 《中国医学史》教材"三部说→四大经典"演变（sdjyzyy）
+    title: "《中国医学史》教材“三部说→四大经典”演变（sdjyzyy）"
   - id: ctext-neijing
     resource: https://ctext.org/huangdi-neijing/zh
     title: ctext.org《黄帝内经》

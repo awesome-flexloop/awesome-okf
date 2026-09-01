@@ -2,7 +2,7 @@
 type: concept
 id: xing-ming-doctrine
 title: 刑名之学
-description: "《定法》"循名而责实"的考核之术与《二柄》"侵官之害甚于寒"的越职之罪——君主以名实相符为纲课群臣之能的刑（形）名术及其师承背景"
+description: "《定法》“循名而责实”的考核之术与《二柄》“侵官之害甚于寒”的越职之罪——君主以名实相符为纲课群臣之能的刑（形）名术及其师承背景"
 bundle: ../index.md
 category: 治理哲学
 facts: [F-HF-006, F-HF-008, F-HF-011, F-HF-012, F-HF-031]

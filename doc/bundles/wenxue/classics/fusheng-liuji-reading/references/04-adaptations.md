@@ -18,7 +18,7 @@ sources:
     title: 绘画与网络传播
     resource: 当代网络传播生态
   - id: fusheng-rumeng-meixue
-    title: "浮生若梦"美学回响
+    title: "“浮生若梦”美学回响"
     resource: 当代生活美学
 ---
 

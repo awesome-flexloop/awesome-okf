@@ -10,7 +10,8 @@ sources:
   - https://ctext.org/guanzi/li-zheng/zhs
   - https://ctext.org/guanzi/zhs
 created: 2026-08-30
-status: stale_after: "P5Y"
+status: stable
+stale_after: "P5Y"
 ---
 
 # 管子校释传统

@@ -9,7 +9,8 @@ facts: [F-GZ-007, F-GZ-008, F-GZ-009, F-GZ-010, F-GZ-011, F-GZ-044, F-GZ-045, F-
 sources:
   - https://ctext.org/guanzi/zhs
 created: 2026-08-30
-status: stale_after: "P5Y"
+status: stable
+stale_after: "P5Y"
 ---
 
 # 管子稷下研究

@@ -1,7 +1,7 @@
 ---
 type: Concept
-title: "足本"伪书公案
-description: 1935年世界书局"足本"《浮生六记》补卷的作伪始末、五重考辨证据链、卷内时间矛盾，以及识别伪书的一般方法
+title: "“足本”伪书公案"
+description: "1935年世界书局“足本”《浮生六记》补卷的作伪始末、五重考辨证据链、卷内时间矛盾，以及识别伪书的一般方法"
 tags: [concept, forgery, 伪书, 辨伪, 足本, 版本考证]
 generated: { by: "agent:seven-concepts-sc", at: "2026-08-30T00:00:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-08-30T12:00:00+08:00" }

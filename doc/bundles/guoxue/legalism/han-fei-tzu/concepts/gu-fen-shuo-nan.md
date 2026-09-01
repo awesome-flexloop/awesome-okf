@@ -2,7 +2,7 @@
 type: concept
 id: gu-fen-shuo-nan
 title: 孤愤与说难
-description: "《孤愤》"不可两存之仇"的法术之士处境论与《说难》"知所说之心"的进言方法论——司马迁"知说之难，终死于秦，不能自脱"的人格注脚"
+description: "《孤愤》“不可两存之仇”的法术之士处境论与《说难》“知所说之心”的进言方法论——司马迁“知说之难，终死于秦，不能自脱”的人格注脚"
 bundle: ../index.md
 category: 政治哲学
 facts: [F-HF-025, F-HF-026, F-HF-027, F-HF-028, F-HF-029, F-HF-032, F-HF-034]

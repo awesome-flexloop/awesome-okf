@@ -2,7 +2,7 @@
 type: concept
 id: can-yan-verification
 title: 参验方法论
-description: "《显学》"无参验而必之者，愚也"的认识论标准——以参伍验证裁决言论真伪、以功用实效考核臣下言行的双重应用"
+description: "《显学》“无参验而必之者，愚也”的认识论标准——以参伍验证裁决言论真伪、以功用实效考核臣下言行的双重应用"
 bundle: ../index.md
 category: 认识论
 facts: [F-HF-024, F-HF-030, F-HF-019, F-HF-018]

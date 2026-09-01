@@ -16,7 +16,7 @@ sources:
     title: 北京大学中文系李零教授个人页（著作年表）
   - id: harper-1998
     resource: https://ia600700.us.archive.org/22/items/early-chinese-medical-literature-mawangdui-manuscripts-donald-harper/Early%20Chinese%20Medical%20Literature%20(Mawangdui%20Manuscripts)%20-%20Donald%20Harper%20(Editor).pdf
-    title: Donald Harper, Early Chinese Medical Literature: The Mawangdui Medical Manuscripts（Kegan Paul, 1998）
+    title: "Donald Harper, Early Chinese Medical Literature: The Mawangdui Medical Manuscripts（Kegan Paul, 1998）"
   - id: ihp-lijianmin
     resource: https://www1.ihp.sinica.edu.tw/en/Fellows/Jianmin_Li
     title: 中央研究院历史语言研究所李建民研究员个人页（著作列表）

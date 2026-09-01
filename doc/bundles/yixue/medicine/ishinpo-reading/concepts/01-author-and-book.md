@@ -15,7 +15,7 @@ sources:
   - url: https://kunishitei.bunka.go.jp/heritage/detail/201/832
     title: 日本文化厅国宝指定解说（医心方）
   - url: https://japanese-wiki-corpus.github.io/person/TANBA%20no%20Yasuyori.html
-    title: Japanese Wiki Corpus: TANBA no Yasuyori
+    title: "Japanese Wiki Corpus: TANBA no Yasuyori"
   - url: http://tcm.china.com.cn/m/2024-04/25/content_42768819.html
     title: 中国中医药网《与中国结缘的〈医心方〉》
   - url: https://gdcmm.gzucm.edu.cn/info/1010/5547.htm

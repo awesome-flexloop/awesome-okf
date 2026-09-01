@@ -219,3 +219,23 @@ sources:
 - **结构**：两卦互为综卦、错卦，与泰否同；既济六爻皆当位、未济六爻皆不当位而两卦刚柔皆应——「正」与「不正」各至其极，相对成义。
 - **经义**：终始之戒两面对照——既济「初吉终乱」，成于始者惧其终；未济「不续终也」，几于成者戒其怠。六十四卦终于未济而非既济，物不可穷、终则复始：《序卦》「物不可穷也，故受之以《未济》，终焉」[^xu-za]，《系辞》「易穷则变，变则通，通则久」「生生之谓易」与此义相通[^xici-qiongbian][^xici-shengsheng]。
 - **注史**：王弼、程颐以时义与终始相生说之，朱熹先占义而后义理，高亨归之筮辞与卦序——与泰否的分歧格局相呼应，可见注家分歧不在一卦一爻，而在解经立场之全体[^facts-090][^facts-095][^facts-096][^facts-100]。
+
+[^cross-cheng]: 程颐《伊川易传》，见 references/sources-cross-ref.md 的 `cheng-yichuan`。
+[^cross-gaogujing]: 高亨《周易古经今注》，见 references/sources-cross-ref.md 的 `gao-gujing`。
+[^cross-wangbi]: 王弼《周易注》，见 references/sources-cross-ref.md 的 `wangbi-hankangbo`。
+[^cross-zhuxi]: 朱熹《周易本义》，见 references/sources-cross-ref.md 的 `zhu-zhuxi-benyi`。
+[^facts-003]: 见《事实清单》F-003——六十四卦分上下两篇：上经三十卦、下经三十四卦。
+[^facts-090]: 见《事实清单》F-090——王弼著《周易注》，主扫象数、阐义理，开魏晋玄学解《易》风气。
+[^facts-095]: 见《事实清单》F-095——程颐著《伊川易传》，为义理派《易》学代表作。
+[^facts-096]: 见《事实清单》F-096——朱熹著《周易本义》，强调“《易》本卜筮之书”，恢复经传分列。
+[^facts-100]: 见《事实清单》F-100——高亨著《周易古经今注》，主“以经观经”、离传解经。
+[^facts-114]: 见《事实清单》F-114——汉代象数易学代表有孟喜、京房（卦气、纳甲）、郑玄、荀爽、虞翻。
+[^jing-text]: 《周易》经文（卦辞、爻辞），见 text/ 目录。
+[^wangbi-tai]: 王弼《周易注》泰卦注，见 `wangbi-hankangbo`。
+[^xici-baosang]: 《系辞下》释否卦九五“其亡其亡，系于苞桑”为“安而不忘危”。
+[^xici-laoqian]: 《系辞上》引谦卦九三“劳谦，君子有终，吉”。
+[^xici-qiongbian]: 《系辞下》“易穷则变，变则通，通则久”。
+[^xici-shengsheng]: 《系辞上》“生生之谓易”。
+[^xu-za]: 《序卦传》《杂卦传》，属《十翼》，见《事实清单》F-005。
+[^zhuxi-jiji]: 朱熹《周易本义》既济卦注，见 `zhu-zhuxi-benyi`。
+[^zhuxi-tai]: 朱熹《周易本义》泰卦注，见 `zhu-zhuxi-benyi`。

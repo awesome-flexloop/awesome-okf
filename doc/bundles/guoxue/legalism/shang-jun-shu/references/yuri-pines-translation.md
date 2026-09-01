@@ -2,7 +2,7 @@
 type: reference
 id: sjs-yuri-pines-translation
 title: Yuri Pines 译注与商鞅研究
-description: 《商君书》西学信源谱系：Yuri Pines 全译本 The Book of Lord Shang: Apologetics of State Power in Early China 及其分层断代研究，兼记李存山《商鞅评传》与历代评价史料。
+description: "《商君书》西学信源谱系：Yuri Pines 全译本 The Book of Lord Shang: Apologetics of State Power in Early China 及其分层断代研究，兼记李存山《商鞅评传》与历代评价史料。"
 created: 2026-08-30
 status: stable
 sources:
@@ -14,7 +14,7 @@ sources:
     title: BSOS（伦敦大学亚非学院学报）书评条目
   - id: sjs-pines-dating-paper
     resource: https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/199B57467F51A62EBD492DE47DA3360A/S0362502816000031a.pdf/dating_a_preimperial_text_the_case_study_of_the_book_of_lord_shang.pdf
-    title: Yuri Pines, Dating a Pre-Imperial Text: The Case Study of the Book of Lord Shang
+    title: "Yuri Pines, Dating a Pre-Imperial Text: The Case Study of the Book of Lord Shang"
   - id: sjs-wangzheng-review
     resource: http://philosophy.cssn.cn/kygz/xszm/zgzx/202301/t20230131_5585077.html
     title: 中国社会科学网王正书评（李存山《商鞅评传》及《开塞》引文）

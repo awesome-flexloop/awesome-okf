@@ -86,3 +86,5 @@ sources:
 [^facts-046]: 见《事实清单》F-046——上博楚简约当战国晚期，为最早《周易》写本。
 [^sources-ruan-ke]: 阮元校刻《十三经注疏》本《周易正义》，见 references/sources-cross-ref.md 的 `ruan-ke-shisanjing`。
 [^sources-gao]: 高亨《周易古经今注》"以经观经"立场，见 references/sources-cross-ref.md 的 `gao-gujing`。
+
+[^facts-006]: 见《事实清单》F-006——《汉书·艺文志》载“《易》道深矣，人更三圣，世历三古”之说。

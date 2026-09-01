@@ -2,7 +2,7 @@
 type: concept
 id: ji-da-cheng-lineage
 title: 集大成谱系
-description: "冯友兰"三派—集大成"叙事、郭沫若"法术家—势治派"反论、贾坤鹏"法术并用"驳论与江荣海"人治思想"定性之争——"法术势并用"概念史检讨"
+description: "冯友兰“三派—集大成”叙事、郭沫若“法术家—势治派”反论、贾坤鹏“法术并用”驳论与江荣海“人治思想”定性之争——“法术势并用”概念史检讨"
 bundle: ../index.md
 category: 学术史
 facts: [F-HF-006, F-HF-007, F-HF-022, F-HF-036, F-HF-037, F-HF-038, F-HF-039, F-HF-040, F-HF-041]
