@@ -30,6 +30,7 @@ description: "理论思想与哲学体系——自指递归理论、宇宙本论
 | [⚖️ 法家（Legalism）知识包](legalism/index.md) | 先秦法家经典——《管子》《商君书》《韩非子》实抓原文核对、概念谱系与校本信源 |
 | [📜 黄帝经典（Huangdi）知识包](huangdi/index.md) | 《黄帝阴符经》相关知识包——权威原文双源核对与历代解读教程 |
 | [📕 黄帝内经（Huangdi Neijing）知识包](huangdi-neijing/index.md) | 《黄帝内经》（《素问》《灵枢》）阅读教程——权威底本逐字原文、异文双录、三层解读与八篇精读 |
+| [🏥 医学经典（Medicine）知识包](medicine/index.md) | 东亚医学经典阅读——《医心方》成书结构、亡佚引书辑佚、写本刊本流传、中日研究史与选读方法 |
 | [💊 道医（Daoyi）知识包](daoyi/index.md) | 道家道教医学传统——医道同源经典阅读、道门医家、道藏医书、出土方技与辨伪信源 |
 | [🛏️ 房中（Fangzhong）知识包](fangzhong/index.md) | 中国古代性文化（房中）典籍——目录著录、马王堆出土文献、《医心方》辑佚链、医家性医学、道教房中与内丹双修、文学社会史料的文献学阅读 |
 | [📜 经典阅读（Classics）知识包](classics/index.md) | 中国古典文学经典阅读教程——沈复《浮生六记》阅读教程（版本源流·伪书考辨·闲情美学） |
@@ -60,6 +61,7 @@ guiguzi/index
 legalism/index
 huangdi/index
 huangdi-neijing/index
+medicine/index
 daoyi/index
 fangzhong/index
 classics/index

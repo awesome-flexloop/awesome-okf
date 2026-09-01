@@ -3,8 +3,8 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程与声乐教学教程"
-total_bundles: 359
-groups: 74
+total_bundles: 363
+groups: 75
 domains: 17
 ---
 
@@ -12,7 +12,7 @@ domains: 17
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **359 个知识包**，按技术生态分为 **17 个技术域、74 个分组**。
+> 当前共 **363 个知识包**，按技术生态分为 **17 个技术域、75 个分组**。
 
 ***
 
@@ -145,12 +145,12 @@ flowchart LR
 | ---------------------------------------- | -- | ------------------------------------------------------------------ |
 | [📦 容器运行时与工具链](containers/index.md) | 11 | conmon/conmon-rs OCI 监控 · fuse-overlayfs 存储驱动 · libocispec 规范库 · podman-py/compose Python/Compose 绑定 · olot/omlmd OCI 模型打包 · qm 虚拟机管理 · toolbox 开发环境 · ai-lab-recipes AI 容器配方 |
 
-### 🤖 [人工智能与大模型应用生态](ai/index.md) · 120 束 · 10 组
+### 🤖 [人工智能与大模型应用生态](ai/index.md) · 121 束 · 10 组
 
 | 分组                                                     | 束数 | 说明                                                          |
 | ------------------------------------------------------ | -- | ----------------------------------------------------------- |
 | [🤖 AgnesAI 大模型生态](ai/agnes-ai/index.md)               | 2  | AgnesAI 全模态 AI 平台——OpenAI 兼容 API、对话/图像/视频生成、Agent 工具调用      |
-| [🤖 AI Agent 框架](ai/ai-agent/index.md)                 | 34 | AI Agent 运行时框架与架构模式——工具调用循环、多代理编排、记忆系统、Coding Agent 源码解读、技能规范、产品资讯、技术评测、协议治理、产品实测、战略分析、行业分析、工具教程、工业Agent、语音智能体厂商动态、AI治理法学论文、Tongyi-MAI GUI Agent 生态源码精读    |
+| [🤖 AI Agent 框架](ai/ai-agent/index.md)                 | 35 | AI Agent 运行时框架与架构模式——工具调用循环、多代理编排、记忆系统、Coding Agent 源码解读、技能规范、产品资讯、技术评测、协议治理、产品实测、战略分析、行业分析、工具教程、工业Agent、语音智能体厂商动态、AI治理法学论文、Tongyi-MAI GUI Agent 生态源码精读、Agent公司操作系统    |
 | [🦜🔗 LangChain-AI LLM 应用框架](ai/langchain-ai/index.md) | 19 | LangChain/LangGraph 核心框架（Python+JS）、深度研究 Agent、可观测性、评测与基础设施 |
 | [🐳 Datawhale 开源 AI 学习社区](ai/datawhale/index.md)       | 18 | 国内最大开源 AI 学习社区——LLM 全栈/RAG/Agent/向量数据库/推荐系统/ML 理论           |
 | [🧩 Coze 扣子开发平台生态](ai/coze/index.md)                   | 3  | 字节跳动一站式 AI Agent 开发平台——Python SDK、开源平台、LLM 可观测性             |
@@ -181,7 +181,7 @@ flowchart LR
 |------|------|------|
 | [🖥️ Textualize 终端生态](terminal/textualize/index.md) | 1 | rich 终端渲染库与 textual TUI 框架及 7 个卫星工具的源码中文教程——渲染协议、异步消息泵、CSS/Worker/Driver 基础设施、TUI 变 Web 驱动替换 |
 
-### 💭 [思想与理论](think/index.md) · 48 束 · 25 组
+### 💭 [思想与理论](think/index.md) · 51 束 · 26 组
 
 | 分组                                      | 束数 | 说明                                     |
 | --------------------------------------- | -- | -------------------------------------- |
@@ -202,10 +202,11 @@ flowchart LR
 | [佛家核心经典](think/buddhism/index.md) | 5 | 《心经》《金刚经》《六祖坛经》《阿弥陀经》《法华经》选读——般若、禅宗、净土、天台诸宗核心经典阅读知识包 |
 | [🗡️ 鬼谷子（Guiguzi）知识包](think/guiguzi/index.md) | 1 | 《鬼谷子》相关知识包——先秦纵横家经典原文与解读教程 |
 | [📕 黄帝内经（Huangdi Neijing）知识包](think/huangdi-neijing/index.md) | 1 | 《黄帝内经》（《素问》《灵枢》）阅读教程——权威底本逐字原文、异文双录、三层解读与八篇精读 |
+| [🏥 医学经典（Medicine）知识包](think/medicine/index.md) | 1 | 东亚医学经典阅读教程——《医心方》成书结构、亡佚引书辑佚、写本刊本流传、中日研究史与选读方法 |
 | [💊 道医（Daoyi）知识包](think/daoyi/index.md) | 1 | 道医经典权威阅读教程——医道同源、道门医家、道藏医书、出土方技、医道流派与辨伪信源 |
 | [🛏️ 房中（Fangzhong）知识包](think/fangzhong/index.md) | 1 | 中国古代性文化（房中）典籍阅读教程——目录著录、马王堆出土文献、《医心方》辑佚链、医家性医学、道教房中与内丹双修、文学社会史料的文献学与学术史研究 |
 | [📜 经典阅读（Classics）知识包](think/classics/index.md) | 1  | 中国古典文学经典阅读教程——沈复《浮生六记》阅读教程（版本源流·伪书考辨·闲情美学） |
-| [🧭 性学经典（Sexology）知识包](think/sexology/index.md) | 1  | 性学/性文化经典著作阅读教程——六大板块著作提要、译本选择指南与分阶段阅读计划 |
+| [🧭 性学经典（Sexology）知识包](think/sexology/index.md) | 3  | 性学/性文化经典著作阅读教程（六大板块提要·译本指南）、《汉书·艺文志》房中八家专题研读（著录·辑佚·出土互证·现代解读）与马王堆房中简帛专题深读（出土文本·整理史·研究史） |
 | [🌿 养生经典（yangsheng 锚点）](think/yangsheng/index.md) | 1  | 养生经典阅读教程——《黄帝内经》至《老老恒言》六部核心经典与食养/导引/道教扩展脉络，五脉谱系导览与选篇精读 |
 | [☯ 道家（Daojia）知识包](think/daojia/index.md) | 4  | 道家著作全谱系导航——先秦诸子/黄老之学/魏晋玄学注疏/道教经典四段谱系，段—家—著三级分层；段下含淮南子、黄帝四经、抱朴子内篇、列子、文子、鹖冠子、管子四篇、河上公章句、严遵指归、太平经、关尹子、尹文子、慎到田骈、王弼、郭象、成玄英、参同契、黄庭经、清静经十九束，老子/庄子/阴符经既有分组交叉引用 |
 | [🎤 声乐教学（Vocal）知识包](think/vocal/index.md) | 1  | 声乐教学教程——美通唱法与咽音体系：林俊卿咽音练声八步骤（呼吸/喉位/共鸣/换声）、美通唱法（美声功底×通俗表达）、嗓音科学、常见毛病纠正、嗓音保健、教学法与每日练声清单 |
