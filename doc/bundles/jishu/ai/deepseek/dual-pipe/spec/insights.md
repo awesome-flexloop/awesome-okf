@@ -1,3 +1,8 @@
+---
+type: spec
+title: "DualPipe 架构洞察（I阶段产出）"
+---
+
 # DualPipe 架构洞察（I阶段产出）
 
 > 基于事实清单 facts.md 分析，提炼架构设计要点

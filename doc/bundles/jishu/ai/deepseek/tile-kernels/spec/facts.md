@@ -1,3 +1,8 @@
+---
+type: spec
+title: "TileKernels 项目事实清单"
+---
+
 # TileKernels 项目事实清单
 
 > R阶段（事实收集）产出。所有事实均为源码直接观察，不含推断。

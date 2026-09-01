@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Sphinx 源码事实清单"
+---
+
 # Sphinx 源码事实清单
 
 > R阶段产出：从零推测的源码采集事实，编号F-xxx。

@@ -1,3 +1,8 @@
+---
+type: spec
+title: "jupyterlite-sphinx 事实清单"
+---
+
 # jupyterlite-sphinx 事实清单
 
 > R阶段产出：零推测事实，每条指向源码路径。

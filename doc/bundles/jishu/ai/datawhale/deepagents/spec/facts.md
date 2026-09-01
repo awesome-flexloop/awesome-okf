@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Deep Agents 事实采集"
+---
+
 # Deep Agents 事实采集
 
 > 来源：https://github.com/datawhalechina/deepagents

@@ -1,3 +1,8 @@
+---
+type: spec
+title: "3b1b Videos 源码架构洞察"
+---
+
 # 3b1b Videos 源码架构洞察
 
 &gt; I阶段产出：基于facts.md提炼的核心洞察与知识地图设计

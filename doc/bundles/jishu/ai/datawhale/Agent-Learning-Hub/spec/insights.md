@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Insights - Agent-Learning-Hub"
+---
+
 # Insights - Agent-Learning-Hub
 
 > I阶段架构洞察，基于 facts.md 提炼。

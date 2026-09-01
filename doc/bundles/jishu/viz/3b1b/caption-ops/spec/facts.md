@@ -1,3 +1,8 @@
+---
+type: spec
+title: "caption_ops 字幕处理工具集源码事实采集（R阶段）"
+---
+
 # caption_ops 字幕处理工具集源码事实采集（R阶段）
 
 ## 模块概览表

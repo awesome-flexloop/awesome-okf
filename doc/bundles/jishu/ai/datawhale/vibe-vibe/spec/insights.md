@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Vibe Vibe 架构洞察（I阶段）"
+---
+
 # Vibe Vibe 架构洞察（I阶段）
 
 > 基于 spec/facts.md 的 F-xxx 事实，提炼 3 个核心洞察。

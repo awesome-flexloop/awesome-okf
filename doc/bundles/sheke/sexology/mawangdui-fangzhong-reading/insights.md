@@ -1,3 +1,8 @@
+---
+type: Insights
+title: "核心洞察（Architecture Insights）"
+---
+
 # 核心洞察（Architecture Insights）
 
 > 生成时间：2026-08-31 ｜ 基于 facts.md 的 127 条事实提炼（含补充调研新增 29 条） ｜ 每条洞察含四元组：陈述/证据/反常识/行动。事实编号（F-XX-NNN）指向 [facts.md](facts.md)。

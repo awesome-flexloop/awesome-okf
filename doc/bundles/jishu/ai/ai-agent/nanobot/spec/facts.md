@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Facts — nanobot"
+---
+
 # Facts — nanobot
 
 本文件记录从 nanobot 源码中提取的可验证事实。每条事实均标注源文件路径与行号。不含推断性词汇。

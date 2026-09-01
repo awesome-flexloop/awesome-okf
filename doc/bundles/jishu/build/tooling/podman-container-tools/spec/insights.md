@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Podman Container Tools 架构洞察"
+---
+
 # Podman Container Tools 架构洞察
 
 > I阶段产出：基于facts.md提炼的核心洞察与知识地图设计

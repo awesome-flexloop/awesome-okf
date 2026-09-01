@@ -1,3 +1,8 @@
+---
+type: spec
+title: "R 阶段：事实清单"
+---
+
 # R 阶段：事实清单
 
 > 来源：GraphQL Specification（Section 1–4）

@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Easy-Vibe 事实清单（R阶段）"
+---
+
 # Easy-Vibe 事实清单（R阶段）
 
 > 信源：https://github.com/datawhalechina/easy-vibe

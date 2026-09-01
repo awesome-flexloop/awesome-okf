@@ -1,3 +1,8 @@
+---
+type: Facts
+title: "事实清单（Facts Inventory）"
+---
+
 # 事实清单（Facts Inventory）
 
 > **采集时间**：2026-08-30

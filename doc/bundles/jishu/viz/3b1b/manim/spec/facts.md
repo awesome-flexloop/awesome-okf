@@ -1,3 +1,8 @@
+---
+type: spec
+title: "ManimGL 源码事实采集（R阶段）"
+---
+
 # ManimGL 源码事实采集（R阶段）
 
 ## 模块概览表

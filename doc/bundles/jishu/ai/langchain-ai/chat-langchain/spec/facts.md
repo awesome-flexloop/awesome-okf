@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Chat LangChain 事实清单"
+---
+
 # Chat LangChain 事实清单
 
 ## 项目元信息

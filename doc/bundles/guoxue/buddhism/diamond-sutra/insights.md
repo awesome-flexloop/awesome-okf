@@ -1,3 +1,8 @@
+---
+type: Insights
+title: "架构洞察（Architecture Insights）"
+---
+
 # 架构洞察（Architecture Insights）
 
 ## 洞察 1：《金刚经》的权威在于「译文稳定 + 分章可辨」而非「唯一原典」

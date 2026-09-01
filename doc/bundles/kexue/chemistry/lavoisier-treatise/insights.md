@@ -1,3 +1,8 @@
+---
+type: Insights
+title: "架构洞察"
+---
+
 # 架构洞察
 
 > 本文件为 seven-concepts I 阶段产物。每条洞察采用四元组结构：**陈述 / 证据 / 反常识 / 行动**；证据回溯 [facts.md](facts.md) 事实编号。

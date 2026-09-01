@@ -1,3 +1,8 @@
+---
+type: Insights
+title: "架构洞察（Architecture Insights）"
+---
+
 # 架构洞察（Architecture Insights）
 
 ## 洞察 1：《阿弥陀经》的权威在「译本稳定 + 行门简明」而非深奥义理

@@ -1,3 +1,8 @@
+---
+type: spec
+title: "事实清单 (Facts)"
+---
+
 # 事实清单 (Facts)
 
 > 采集自 torch-rechub v0.8.0 源码，零推测。每条事实可追溯到具体源文件。

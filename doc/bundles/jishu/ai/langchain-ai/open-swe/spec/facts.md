@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Open SWE 事实清单"
+---
+
 # Open SWE 事实清单
 
 > 信源根目录：`d:/spaces/SpecWeave/external/libs/ai/langchain-ai/open-swe/`

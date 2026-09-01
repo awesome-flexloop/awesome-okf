@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Facts — deepcode-cli"
+---
+
 # Facts — deepcode-cli
 
 > R 阶段事实清单。每条事实均引用确切文件路径与行号，不含推断性描述。

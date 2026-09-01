@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Deep Agents 核心洞察"
+---
+
 # Deep Agents 核心洞察
 
 > 基于 spec/facts.md 的事实提炼，形成对项目架构与设计哲学的深层理解。

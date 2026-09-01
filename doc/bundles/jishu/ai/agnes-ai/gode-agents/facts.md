@@ -1,3 +1,8 @@
+---
+type: Facts
+title: GodeAgents (codified-smolagents) 源码事实清单
+---
+
 # GodeAgents (codified-smolagents) 源码事实清单
 
 > R阶段产出：从 `d:\spaces\SpecWeave\external\libs\models\AgnesAI\GodeAgents\Multi-Agent-Task\src\codified-smolagents\` 采集的零推测事实，编号 F-001 ~ F-195。

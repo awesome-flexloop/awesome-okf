@@ -1,3 +1,8 @@
+---
+type: Insights
+title: "GodeAgents (codified-smolagents) 架构洞察"
+---
+
 # GodeAgents (codified-smolagents) 架构洞察
 
 > I阶段产出：基于F-001~F-161事实清单提炼的5个核心洞察四元组与知识地图。

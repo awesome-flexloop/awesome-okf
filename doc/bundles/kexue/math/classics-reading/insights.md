@@ -1,3 +1,8 @@
+---
+type: Insights
+title: "洞察与模式（Insights & Patterns）"
+---
+
 # 洞察与模式（Insights & Patterns）
 
 > 基于事实清单（facts.md，F-001–F-055）与 14 篇概念文档提炼。每条洞察遵循四元组结构（陈述/证据/反常识/行动）；模式遵循 G3 萃取规范（触发条件/核心步骤/反模式/迁移示例）。

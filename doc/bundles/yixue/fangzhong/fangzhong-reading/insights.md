@@ -1,3 +1,8 @@
+---
+type: Insights
+title: "架构洞察（Architecture Insights）"
+---
+
 # 架构洞察（Architecture Insights）
 
 > 基于事实清单（facts.md，135 条）与四路公开信源调研（目录学史料／出土整理本／传世辑佚文献／现代学术专著）得出，每条洞察遵循四元组结构（陈述/证据/反常识/行动），证据栏引用 facts.md 事实编号。

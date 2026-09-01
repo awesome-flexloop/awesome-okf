@@ -1,3 +1,8 @@
+---
+type: spec
+title: "CodeWhale Facts"
+---
+
 # CodeWhale Facts
 
 > 本文件包含从 CodeWhale 源码和官方文档中提取的 70 条编号事实。每条事实引用具体文件路径和行号。

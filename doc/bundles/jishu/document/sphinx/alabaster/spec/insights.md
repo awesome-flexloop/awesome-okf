@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Alabaster 架构洞察"
+---
+
 # Alabaster 架构洞察
 
 > I 阶段产出：基于事实清单提炼的核心洞察四元组。

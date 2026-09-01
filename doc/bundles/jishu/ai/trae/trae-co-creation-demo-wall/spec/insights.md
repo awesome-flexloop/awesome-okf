@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Demo Wall 核心洞察与知识地图"
+---
+
 # Demo Wall 核心洞察与知识地图
 
 I阶段产出：核心洞察四元组 + 知识地图设计

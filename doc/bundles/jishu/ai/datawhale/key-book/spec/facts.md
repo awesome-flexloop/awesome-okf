@@ -1,3 +1,8 @@
+---
+type: spec
+title: "facts"
+---
+
 # facts
 
 ## 来源

@@ -1,3 +1,8 @@
+---
+type: spec
+title: "jupyterlite-sphinx 架构洞察与知识地图"
+---
+
 # jupyterlite-sphinx 架构洞察与知识地图
 
 > I阶段产出：核心洞察四元组 + 知识地图 + 文档清单

@@ -1,3 +1,8 @@
+---
+type: spec
+title: "langsmith-sdk JS 架构洞察"
+---
+
 # langsmith-sdk JS 架构洞察
 
 ## I-001：RunTree 用 UUID7 与 dotted_order 同时表达父子关系和执行顺序

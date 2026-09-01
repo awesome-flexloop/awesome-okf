@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Facts — pi-cli"
+---
+
 # Facts — pi-cli
 
 > R Phase (Facts). 每条事实引用精确文件路径与行号。无推断词。

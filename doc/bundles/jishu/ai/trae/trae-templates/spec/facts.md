@@ -1,3 +1,8 @@
+---
+type: spec
+title: "trae-templates 源码事实清单"
+---
+
 # trae-templates 源码事实清单
 
 ## 项目信息

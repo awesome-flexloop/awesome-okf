@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Alabaster 源码事实清单"
+---
+
 # Alabaster 源码事实清单
 
 > R 阶段采集的零推测事实，每个事实可通过源码路径验证。

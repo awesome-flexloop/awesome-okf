@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Insights: tiny-universe"
+---
+
 # Insights: tiny-universe
 
 ## 洞察一：白盒构建的最小实现哲学

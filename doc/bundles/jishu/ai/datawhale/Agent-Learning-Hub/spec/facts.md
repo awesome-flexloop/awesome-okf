@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Facts - Agent-Learning-Hub"
+---
+
 # Facts - Agent-Learning-Hub
 
 > R阶段事实采集，零推测，每条事实指向源码位置。

@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Awesome TRAE 源码事实清单"
+---
+
 # Awesome TRAE 源码事实清单
 
 ## 项目基本信息

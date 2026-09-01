@@ -1,3 +1,8 @@
+---
+type: spec
+title: "insights"
+---
+
 # insights
 
 ## 洞察一：理论机器学习的七大支柱构成完整判据链

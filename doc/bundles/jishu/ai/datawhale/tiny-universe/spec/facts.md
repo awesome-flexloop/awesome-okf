@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Facts: tiny-universe"
+---
+
 # Facts: tiny-universe
 
 > 来源：https://github.com/datawhalechina/tiny-universe

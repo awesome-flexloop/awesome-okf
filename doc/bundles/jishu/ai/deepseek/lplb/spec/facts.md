@@ -1,3 +1,8 @@
+---
+type: spec
+title: "LPLB 事实清单"
+---
+
 # LPLB 事实清单
 
 ## 项目元信息

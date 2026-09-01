@@ -1,3 +1,8 @@
+---
+type: spec
+title: "核心洞察 (Insights)"
+---
+
 # 核心洞察 (Insights)
 
 > 基于 facts.md 中编号事实提炼，解释 torch-rechub 的架构设计与关键机制。

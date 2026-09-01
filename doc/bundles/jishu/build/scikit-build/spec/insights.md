@@ -1,3 +1,8 @@
+---
+type: spec
+title: "scikit-build-core 架构洞察与知识地图"
+---
+
 # scikit-build-core 架构洞察与知识地图
 
 > I阶段产出：基于 F-001~F-098 事实清单提炼的架构洞察四元组，知识地图与文档清单。

@@ -1,3 +1,8 @@
+---
+type: spec
+title: "DeepSpec 事实清单"
+---
+
 # DeepSpec 事实清单
 
 ## 项目入口与顶层结构

@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Facts — OpenAI Codex CLI"
+---
+
 # Facts — OpenAI Codex CLI
 
 > R-Phase facts extracted from the local source tree at

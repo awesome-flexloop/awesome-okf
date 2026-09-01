@@ -1,3 +1,8 @@
+---
+type: spec
+title: "DeepSeek-Reasonix 事实清单"
+---
+
 # DeepSeek-Reasonix 事实清单
 
 > R 阶段产出。每条事实标注源码路径与行号，不含推断性表述。

@@ -1,3 +1,8 @@
+---
+type: Insights
+title: "架构洞察（Architecture Insights）"
+---
+
 # 架构洞察（Architecture Insights）
 
 ## 洞察 1：《坛经》的「真实」在于版本异文而非单一通行本

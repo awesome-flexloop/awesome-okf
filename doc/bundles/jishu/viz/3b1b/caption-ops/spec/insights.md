@@ -1,3 +1,8 @@
+---
+type: spec
+title: "caption-ops 字幕工具集架构洞察"
+---
+
 # caption-ops 字幕工具集架构洞察
 
 &gt; I阶段产出：基于facts.md提炼的核心洞察与知识地图设计

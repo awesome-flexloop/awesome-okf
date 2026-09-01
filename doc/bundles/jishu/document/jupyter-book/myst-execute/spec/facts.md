@@ -1,3 +1,8 @@
+---
+type: spec
+title: "myst-execute + thebe 源码事实清单"
+---
+
 # myst-execute + thebe 源码事实清单
 
 > R阶段产出：编号事实清单 F-001~F-080，零推测纯客观描述

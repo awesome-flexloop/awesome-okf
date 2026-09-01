@@ -1,3 +1,8 @@
+---
+type: spec
+title: "facts.md — base-llm 知识包事实清单"
+---
+
 # facts.md — base-llm 知识包事实清单
 
 > 来源：https://github.com/datawhalechina/base-llm

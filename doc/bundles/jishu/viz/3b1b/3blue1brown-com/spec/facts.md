@@ -1,3 +1,8 @@
+---
+type: spec
+title: "3Blue1Brown.com 源码事实采集（R阶段）"
+---
+
 # 3Blue1Brown.com 源码事实采集（R阶段）
 
 ## 模块概览表

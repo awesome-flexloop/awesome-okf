@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Insights: Hello-Agents 核心洞察"
+---
+
 # Insights: Hello-Agents 核心洞察
 
 > 基于 facts.md 的深度提炼，揭示智能体技术演进的核心脉络

@@ -1,3 +1,8 @@
+---
+type: spec
+title: "scikit-build-core 源码事实清单"
+---
+
 # scikit-build-core 源码事实清单
 
 > R阶段产出：编号事实清单 F-001 ~ F-090，每条事实指向具体源码路径，无推断性表述。

@@ -1,3 +1,8 @@
+---
+type: spec
+title: "langchain-google 事实清单"
+---
+
 # langchain-google 事实清单
 
 ## 项目元信息与 Monorepo 结构

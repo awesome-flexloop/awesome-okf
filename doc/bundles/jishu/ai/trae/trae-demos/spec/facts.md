@@ -1,3 +1,8 @@
+---
+type: spec
+title: "TRAE Demos 源码事实清单"
+---
+
 # TRAE Demos 源码事实清单
 
 ## 项目基本信息

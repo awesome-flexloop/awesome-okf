@@ -1,3 +1,8 @@
+---
+type: Insights
+title: "架构洞察（Insights）"
+---
+
 # 架构洞察（Insights）
 
 > 基于事实清单（[facts.md](facts.md)）R 阶段采集的 96 条事实得出；每条洞察遵循四元组结构（现象描述/根因分析/影响评估/改进建议），证据以 F-xxx 回指 facts.md。

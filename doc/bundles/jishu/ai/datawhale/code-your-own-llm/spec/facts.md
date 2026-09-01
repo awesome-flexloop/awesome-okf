@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Facts - code-your-own-llm"
+---
+
 # Facts - code-your-own-llm
 
 > R阶段事实采集，零推测，每条事实指向源码位置。

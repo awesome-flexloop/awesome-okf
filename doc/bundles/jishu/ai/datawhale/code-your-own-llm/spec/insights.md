@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Insights - code-your-own-llm"
+---
+
 # Insights - code-your-own-llm
 
 > I阶段架构洞察，基于 facts.md 提炼。

@@ -1,3 +1,8 @@
+---
+type: spec
+title: "FlashMLA 源码事实清单（R-Phase）"
+---
+
 # FlashMLA 源码事实清单（R-Phase）
 
 > 源码路径：`d:\spaces\SpecWeave\external\libs\ai\deepseek-ai\FlashMLA`

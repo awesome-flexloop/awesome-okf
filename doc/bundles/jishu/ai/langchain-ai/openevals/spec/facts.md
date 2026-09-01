@@ -1,3 +1,8 @@
+---
+type: spec
+title: "OpenEvals 事实清单"
+---
+
 # OpenEvals 事实清单
 
 ## 项目元信息

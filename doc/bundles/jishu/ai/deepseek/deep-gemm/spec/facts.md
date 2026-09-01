@@ -1,3 +1,8 @@
+---
+type: spec
+title: "DeepGEMM 源码事实清单 (Facts)"
+---
+
 # DeepGEMM 源码事实清单 (Facts)
 
 > 收集时间: 2026-08-22

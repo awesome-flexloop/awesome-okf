@@ -1,3 +1,8 @@
+---
+type: Facts
+title: 事实清单（Facts Inventory）
+---
+
 # 事实清单（Facts Inventory）
 
 ## 基本与作者

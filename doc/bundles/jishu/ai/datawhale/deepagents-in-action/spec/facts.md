@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Facts - deepagents-in-action"
+---
+
 # Facts - deepagents-in-action
 
 > R阶段事实采集，零推测，每条事实指向源码位置。

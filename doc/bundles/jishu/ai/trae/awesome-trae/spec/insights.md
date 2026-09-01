@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Awesome TRAE 核心洞察与知识地图"
+---
+
 # Awesome TRAE 核心洞察与知识地图
 
 ## 核心洞察（四元组）

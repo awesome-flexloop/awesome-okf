@@ -1,3 +1,8 @@
+---
+type: spec
+title: "DualPipe 事实清单（R阶段产出）"
+---
+
 # DualPipe 事实清单（R阶段产出）
 
 > 源码路径：`external/libs/ai/deepseek-ai/DualPipe/`

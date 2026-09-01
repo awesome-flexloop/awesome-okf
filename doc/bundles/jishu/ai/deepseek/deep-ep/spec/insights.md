@@ -1,3 +1,8 @@
+---
+type: spec
+title: "DeepEP 架构洞察"
+---
+
 # DeepEP 架构洞察
 
 > I-Phase: 基于源码事实提取的深度洞察，从设计意图、架构决策、性能权衡三个维度理解 DeepEP。

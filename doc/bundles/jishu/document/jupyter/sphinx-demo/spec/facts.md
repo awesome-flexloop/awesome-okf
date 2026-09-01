@@ -1,3 +1,8 @@
+---
+type: spec
+title: "sphinx-demo 事实清单"
+---
+
 # sphinx-demo 事实清单
 
 > R阶段产出：零推测事实，每条指向源码路径。

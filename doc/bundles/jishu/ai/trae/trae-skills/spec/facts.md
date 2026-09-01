@@ -1,3 +1,8 @@
+---
+type: spec
+title: "trae-skills 源码事实清单"
+---
+
 # trae-skills 源码事实清单
 
 ## 项目信息

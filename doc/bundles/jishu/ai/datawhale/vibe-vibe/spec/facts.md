@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Vibe Vibe 事实清单（R阶段）"
+---
+
 # Vibe Vibe 事实清单（R阶段）
 
 > 信源：https://github.com/datawhalechina/vibe-vibe

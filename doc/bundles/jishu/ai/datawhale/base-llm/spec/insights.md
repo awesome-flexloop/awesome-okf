@@ -1,3 +1,8 @@
+---
+type: spec
+title: "insights.md — base-llm 核心洞察"
+---
+
 # insights.md — base-llm 核心洞察
 
 > 基于 facts.md 提炼，四阶段方法论 I 阶段产出。

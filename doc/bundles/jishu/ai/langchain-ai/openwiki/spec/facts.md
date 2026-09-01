@@ -1,3 +1,8 @@
+---
+type: spec
+title: "OpenWiki 事实清单"
+---
+
 # OpenWiki 事实清单
 
 ## 项目元信息

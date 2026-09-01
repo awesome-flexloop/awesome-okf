@@ -1,3 +1,8 @@
+---
+type: spec
+title: "trae-skills 核心洞察与知识地图"
+---
+
 # trae-skills 核心洞察与知识地图
 
 ## 核心洞察（四元组）

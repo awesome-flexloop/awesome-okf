@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Demo Wall 源码事实清单"
+---
+
 # Demo Wall 源码事实清单
 
 R阶段产出：编号事实清单 F-001~F-xxx，零推测纯客观描述

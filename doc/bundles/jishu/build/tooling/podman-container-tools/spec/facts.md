@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Podman Container Tools 源码事实清单"
+---
+
 # Podman Container Tools 源码事实清单
 
 > 本文件记录从源码中提取的可验证事实，零推断。每条事实标注源码路径。

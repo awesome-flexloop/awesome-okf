@@ -1,3 +1,8 @@
+---
+type: spec
+title: "ManimGL 架构洞察"
+---
+
 # ManimGL 架构洞察
 
 &gt; I阶段产出：基于facts.md提炼的核心洞察与知识地图设计

@@ -1,3 +1,8 @@
+---
+type: spec
+title: "Insights - deepagents-in-action"
+---
+
 # Insights - deepagents-in-action
 
 > I阶段架构洞察，基于 facts.md 提炼。

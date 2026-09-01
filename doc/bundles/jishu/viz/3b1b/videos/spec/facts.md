@@ -1,3 +1,8 @@
+---
+type: spec
+title: "3b1b Videos 源码事实采集（R阶段）"
+---
+
 # 3b1b Videos 源码事实采集（R阶段）
 
 ## 模块概览表

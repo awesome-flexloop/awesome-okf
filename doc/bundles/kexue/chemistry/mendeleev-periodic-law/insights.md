@@ -1,3 +1,8 @@
+---
+type: Insights
+title: "架构洞察（Architecture Insights）"
+---
+
 # 架构洞察（Architecture Insights）
 
 > **结构说明**：每条洞察采用四元组结构——**陈述**（核心判断）、**证据**（事实编号，见 [facts.md](facts.md)）、**反常识**（与直觉/常识相悖之处）、**行动**（可迁移的方法论动作）。洞察供概念文档与实践示例引用，不替代事实本身。
