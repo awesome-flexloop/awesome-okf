@@ -18,10 +18,10 @@ okf_version: "0.2"
 | 著作 | 状态 | 权威性 | 位置 |
 |------|------|--------|------|
 | 抱朴子内篇 | ✅ 本段新建 | A | [baopuzi/](baopuzi/index.md)（葛洪自著，道教方术集大成） |
-| 周易参同契 | 🔜 待建（P2） | C | 托名魏伯阳；会通周易/黄老/炉火三家 |
+| 周易参同契 | ✅ 本段新建（P2） | C | [cantongqi/](cantongqi/index.md)——托名魏伯阳；会通周易/黄老/炉火三家 |
 | 太平经 | ✅ 本段新建（P1） | B | [taipingjing/](taipingjing/index.md)——托天师传；东汉累积成形，王明《太平经合校》为通行辑校本 |
-| 黄庭经 | 🔜 待建（P2） | C | 托西王母/太上老君；存神守一内视养生 |
-| 太上老君说常清静经 | 🔜 待建（P2） | C | 托太上老君；全经约三百余字，遣欲澄心 |
+| 黄庭经 | ✅ 本段新建（P2） | C | [huangtingjing/](huangtingjing/index.md)——托西王母/太上老君；存神守一内视养生（内景/外景） |
+| 太上老君说常清静经 | ✅ 本段新建（P2） | C | [qingjingjing/](qingjingjing/index.md)——托太上老君；全经约三百余字，遣欲澄心 |
 
 ## 判读要点
 
@@ -34,4 +34,7 @@ okf_version: "0.2"
 
 baopuzi/index
 taipingjing/index
+cantongqi/index
+huangtingjing/index
+qingjingjing/index
 ```

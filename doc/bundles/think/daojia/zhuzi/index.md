@@ -22,7 +22,7 @@ okf_version: "0.2"
 | 列子《冲虚真经》 | ✅ 本段新建（P1） | B | [liezi/](liezi/index.md)——托名列御寇；主流魏晋伪托/辑缀说与含先秦材料说并载 |
 | 文子《通玄真经》 | ✅ 本段新建（P1） | B | [wenzi/](wenzi/index.md)——八角廊汉墓竹简证至迟西汉已流传；真伪翻案典型 |
 | 鹖冠子 | ✅ 本段新建（P1） | B | [heguanzi/](heguanzi/index.md)——道家兼法家刑名；柳宗元质疑与出土文献介入后的再评价 |
-| 关尹子《文始真经》 | 🔜 待建（P2） | C | 托名尹喜；主流唐宋伪托说 |
+| 关尹子《文始真经》 | ✅ 本段新建（P2） | C | [guanyinzi/](guanyinzi/index.md)——托名尹喜；主流唐宋伪托说与含先秦材料说并载 |
 | 管子道家四篇 | ✅ 本段新建（P1） | B | [guanzi-sipian/](guanzi-sipian/index.md)——《心术》上下、《白心》、《内业》：稷下黄老作品 |
 
 ## 判读要点
@@ -38,4 +38,5 @@ liezi/index
 wenzi/index
 heguanzi/index
 guanzi-sipian/index
+guanyinzi/index
 ```

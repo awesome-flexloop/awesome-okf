@@ -20,8 +20,8 @@ okf_version: "0.2"
 | 阴符经 | ✅ 既有独立分组 | C | [📜 黄帝经典（Huangdi）](../../huangdi/index.md)（yinfujing，双源核对全录） |
 | 黄帝四经 | ✅ 本段新建 | A | [huangdi-sijing/](huangdi-sijing/index.md)（马王堆帛书《经法》《十六经》《称》《道原》） |
 | 淮南子 | ✅ 本段新建 | A | [huainanzi/](huainanzi/index.md)（《淮南鸿烈》，道家为本兼综百家） |
-| 尹文子 | 🔜 待建（P2） | C | 形名之学；先秦古书说与魏晋伪托/辑佚说并载 |
-| 慎到·田骈 | 🔜 待建（P2） | C | 辑佚残本；《庄子·天下》为理解二家学旨的原始依据 |
+| 尹文子 | ✅ 本段新建（P2） | C | [yinwenzi/](yinwenzi/index.md)——形名之学；先秦古书说与魏晋伪托/辑佚说并载 |
+| 慎到·田骈 | ✅ 本段新建（P2） | C | [shendao-tianpian/](shendao-tianpian/index.md)——辑佚残本；《庄子·天下》为理解二家学旨的原始依据 |
 
 ## 判读要点
 
@@ -34,4 +34,6 @@ okf_version: "0.2"
 
 huangdi-sijing/index
 huainanzi/index
+yinwenzi/index
+shendao-tianpian/index
 ```
