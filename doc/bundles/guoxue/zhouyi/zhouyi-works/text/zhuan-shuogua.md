@@ -53,8 +53,6 @@ stale_after: 2027-08-31
 
 兑为泽，为少女，为巫，为口舌，为毁折，为附决。其于地也，为刚卤。为妾，为羊。
 
----
-
 [^ruan-ke-shisanjing]: （清）阮元校刻《十三经注疏·周易正义》本《说卦传》。
 [^ctext]: ctext.org《周易·说卦》，《武英殿十三经注疏》底本：https://ctext.org/book-of-changes/shuo-gua/zh
 [^wikisource]: 维基文库《周易/说卦》：https://zh.wikisource.org/wiki/周易

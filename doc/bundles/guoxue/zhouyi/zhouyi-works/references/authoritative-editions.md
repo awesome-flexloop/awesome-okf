@@ -32,6 +32,6 @@ stale_after: 2027-08-31
 - **文字基准**：经文、传文以 `ruan-ke-shisanjing`（阮刻本）为准；两个电子源同源于传世注疏系统，正文与阮刻高度一致。
 - **核对方式**：本 bundle [text/](../text/index.md) 经文转录后，对《乾》《坤》《屯》《泰》《谦》《咸》《既济》《未济》等分层抽样卦及《系辞》上下、《说卦》《序卦》《杂卦》全篇，逐字比对 `ctext-zhouyi` 与 `wikisource-zhouyi`；比对记录见 [log.md](../log.md)。
 - **异体字处理**：经文用传世规范字形（如"无妄"不作"旡妄"、"坤"不作"川"）；出土通假字（如帛书"键/川"）归入 [text/unearthed-variants.md](../text/unearthed-variants.md)，不窜入今本经文。
-- **传文界线**：[text/jing-shang.md](../text/jing-shang.md)、[text/jing-xia.md](../text/jing-xia.md) 只录卦辞爻辞（经），不录《彖》《象》《文言》；《彖》《象》《文言》乾坤部分随 [examples/qian-kun-jingdu.md](../examples/qian-kun-jingdu.md) 完整呈现，其余各卦传文给出 `ctext-zhouyi`/`wikisource-zhouyi` 分页指引。
+- **传文界线**：经文上下篇（text/jing-shang.md、text/jing-xia.md，待补）只录卦辞爻辞（经），不录《彖》《象》《文言》；《彖》《象》《文言》乾坤部分随 [examples/qian-kun-jingdu.md](../examples/qian-kun-jingdu.md) 完整呈现，其余各卦传文给出 `ctext-zhouyi`/`wikisource-zhouyi` 分页指引。
 
 [^ruan-ke-shisanjing]: 阮元校刻《十三经注疏》本《周易正义》，清代以后通行底本，见 references/sources-cross-ref.md 的 `ruan-ke-shisanjing`（A 级）。

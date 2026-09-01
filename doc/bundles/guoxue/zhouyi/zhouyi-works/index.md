@@ -53,7 +53,7 @@ okf_version: "0.2"
 - [事实清单](facts.md) — 零推测事实（R 阶段，G1）
 - 架构洞察（insights.md 待补）— 四元组洞察（I 阶段，G2）
 - 可复用模式（patterns.md 待补）— 方法模式（E 阶段，G3）
-- 阅读指南（usage.md 待补）— 三级阅读路径与注本选用决策树
+- [阅读指南](usage.md) — 三级阅读路径与注本选用决策树
 
 ## Bundle 定位
 
@@ -71,10 +71,11 @@ okf_version: "0.2"
 - **出土文献**：只著录与选录——四大文本系统的存佚范围、卦序差异与关键异文，释文片段全部溯源正式整理本，残损处显式标注，不编造。
 - **解读三线**：出土校注（文本层）→ 历代注本（义理/象数层）→ 现代注本（综合层），分歧显式化。
 
-```{toctree}
+``` {toctree}
 :hidden:
 :maxdepth: 7
 
+usage
 concepts/index
 text/index
 examples/index
