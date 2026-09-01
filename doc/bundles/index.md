@@ -3,16 +3,16 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程与声乐教学教程"
-total_bundles: 349
-groups: 71
-domains: 16
+total_bundles: 359
+groups: 74
+domains: 17
 ---
 
 # 知识包总索引（Bundles Index）
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **349 个知识包**，按技术生态分为 **16 个技术域、71 个分组**。
+> 当前共 **359 个知识包**，按技术生态分为 **17 个技术域、74 个分组**。
 
 ***
 
@@ -88,7 +88,7 @@ flowchart LR
 
 ***
 
-## 十六域分组导航
+## 十七域分组导航
 
 ### 📐 [规范与格式](meta/index.md) · 1 束 · 1 组
 
@@ -181,7 +181,7 @@ flowchart LR
 |------|------|------|
 | [🖥️ Textualize 终端生态](terminal/textualize/index.md) | 1 | rich 终端渲染库与 textual TUI 框架及 7 个卫星工具的源码中文教程——渲染协议、异步消息泵、CSS/Worker/Driver 基础设施、TUI 变 Web 驱动替换 |
 
-### 💭 [思想与理论](think/index.md) · 43 束 · 24 组
+### 💭 [思想与理论](think/index.md) · 48 束 · 25 组
 
 | 分组                                      | 束数 | 说明                                     |
 | --------------------------------------- | -- | -------------------------------------- |
@@ -209,6 +209,7 @@ flowchart LR
 | [🌿 养生经典（yangsheng 锚点）](think/yangsheng/index.md) | 1  | 养生经典阅读教程——《黄帝内经》至《老老恒言》六部核心经典与食养/导引/道教扩展脉络，五脉谱系导览与选篇精读 |
 | [☯ 道家（Daojia）知识包](think/daojia/index.md) | 4  | 道家著作全谱系导航——先秦诸子/黄老之学/魏晋玄学注疏/道教经典四段谱系，段—家—著三级分层；段下含淮南子、黄帝四经、抱朴子内篇、列子、文子、鹖冠子、管子四篇、河上公章句、严遵指归、太平经、关尹子、尹文子、慎到田骈、王弼、郭象、成玄英、参同契、黄庭经、清静经十九束，老子/庄子/阴符经既有分组交叉引用 |
 | [🎤 声乐教学（Vocal）知识包](think/vocal/index.md) | 1  | 声乐教学教程——美通唱法与咽音体系：林俊卿咽音练声八步骤（呼吸/喉位/共鸣/换声）、美通唱法（美声功底×通俗表达）、嗓音科学、常见毛病纠正、嗓音保健、教学法与每日练声清单 |
+| [🧑‍🏫 王阳明（Yangming）知识包](think/yangming/lineage/index.md) | 5 | 王阳明心学体系——《传习录》精读、生平年谱与龙场悟道、心即理·知行合一·致良知·四句教教义、功夫论实践、朱王异同与弟子流派及东亚近代传播 |
 
 ### 🔬 [自然科学](science/index.md) · 9 束 · 2 组
 
@@ -227,6 +228,13 @@ flowchart LR
 | 分组 | 束数 | 说明 |
 |------|------|------|
 | [🔵 3Blue1Brown 生态](viz/3b1b/index.md) | 4 | ManimGL数学动画引擎、视频场景源码、字幕自动化工具链、React Router v7官网前端架构 |
+
+### 🏢 [职场与管理](workplace/index.md) · 5 束 · 2 组
+
+| 分组 | 束数 | 说明 |
+|------|------|------|
+| [👔 人力资源（HR）](workplace/hr/index.md) | 3 | HR 职业地图与能力进阶、六大模块实操、劳动法合规——岗位谱系与三支柱 COE/HRBP/SSC、招聘配置·培训开发·绩效薪酬·员工关系、劳动合同/工时加班/社保假期/争议仲裁 |
+| [🏢 行政办公（Admin）](workplace/admin/index.md) | 2 | 行政运营与公文写作——采购资产、会议管理、印章证照档案、预算与安全文化；法定公文 15 文种与 18 格式要素、事务文书地图、商务邮件模板 |
 
 
 ```{toctree}
@@ -249,4 +257,5 @@ science/index
 think/index
 viz/index
 web/index
+workplace/index
 ```
