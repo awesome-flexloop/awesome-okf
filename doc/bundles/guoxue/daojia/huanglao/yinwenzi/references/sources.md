@@ -64,5 +64,5 @@ okf_version: "0.2"
 | 关联知识包 | 关系 | 路径 |
 |-----------|------|------|
 | 黄老分组 | 本 bundle 所在分组 | [../index.md](../index.md) → [../../index.md](../../index.md) |
-| 关尹子 | 道家诸子同域参照 | [../../zhuzi/guanyinzi/index.md](../../zhuzi/guanyinzi/index.md) |
-| 慎到田骈 | 稷下人物系统互证（田骈/彭蒙/宋钘） | [../shendao-tianpian/index.md](../shendao-tianpian/index.md) |
+| 关尹子 | 道家诸子同域参照 | [../../zhuzi/guanyinzi/index.md](../../../zhuzi/guanyinzi/index.md) |
+| 慎到田骈 | 稷下人物系统互证（田骈/彭蒙/宋钘） | [../shendao-tianpian/index.md](../../shendao-tianpian/index.md) |

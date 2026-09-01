@@ -96,7 +96,7 @@ with specialized agents
 
 即现有评测存在两层缺口：静态函数调用基准**不在持久环境中执行**预测调用；GUI 中心基准**低估**了高效结构化 API、个性化上下文、可复用流程与专才智能体协作。MobilePA-Bench 以 interactive、stateful、tool-centric 的 sandbox 补足这一空档（F-031），并重申 1,705 tasks / 212 tools / 13 domains 的规模（F-004）。
 
-它与同生态的 MobileWorld 是**互补层级而非竞品**：MobileWorld 考"端到端在真实 GUI 里做对"，MobilePA-Bench 考"规划器对结构化工具的调度与状态推理"。两套分数不可互相替代，选基准应按"被测能力层"判断。环境侧详见同生态在线评测环境束：[../mobile-world/index.md](../mobile-world/index.md)。
+它与同生态的 MobileWorld 是**互补层级而非竞品**：MobileWorld 考"端到端在真实 GUI 里做对"，MobilePA-Bench 考"规划器对结构化工具的调度与状态推理"。两套分数不可互相替代，选基准应按"被测能力层"判断。环境侧详见同生态在线评测环境束：[../mobile-world/index.md](../../mobile-world/index.md)。
 
 ## 7. News 时间线、论文与许可
 
@@ -110,4 +110,4 @@ with specialized agents
 - [02-verification-policy.md](02-verification-policy.md)——固定验证策略与六类 checker
 - [03-leaderboard-analysis.md](03-leaderboard-analysis.md)——v1.5 榜单权重公式与 13 模型解读
 - [04-qwenuiagent-website.md](04-qwenuiagent-website.md)——并入的 Qwen-UI-Agent 网站技术栈简析
-- [../mobile-world/index.md](../mobile-world/index.md)——同生态在线评测环境（互补层级）
+- [../mobile-world/index.md](../../mobile-world/index.md)——同生态在线评测环境（互补层级）

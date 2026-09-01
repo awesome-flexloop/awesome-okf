@@ -106,6 +106,6 @@ CHANGELOG 记录的关键节点（F-078）：
 - [/concepts/01-quickstart-installation.md](/concepts/01-quickstart-installation.md)——.env 配置、容器启动与 Windows/WSL/KVM 前置
 - [/concepts/02-architecture-layers.md](/concepts/02-architecture-layers.md)——四层架构地图与 CLI 八子命令
 - [/concepts/07-docker-environment.md](/concepts/07-docker-environment.md)——单容器全栈镜像的构建细节
-- [../mai-ui/index.md](../mai-ui/index.md)——MAI-UI 是 MobileWorld 排行榜上的模型提交方（F-078 记录其 41.7%），其导航 Agent 以 `mai_ui_agent` 注册进本框架注册表（F-011）
-- [../qwen-ui-agent/index.md](../qwen-ui-agent/index.md)——Qwen-UI-Agent 的 MobileWorld 82.1% 成绩即在本框架上取得
-- [../mobilepa-bench/index.md](../mobilepa-bench/index.md)——同属 MAI Team 生态的结构化工具规划基准，与本项目互补层级
+- [../mai-ui/index.md](../../mai-ui/index.md)——MAI-UI 是 MobileWorld 排行榜上的模型提交方（F-078 记录其 41.7%），其导航 Agent 以 `mai_ui_agent` 注册进本框架注册表（F-011）
+- [../qwen-ui-agent/index.md](../../qwen-ui-agent/index.md)——Qwen-UI-Agent 的 MobileWorld 82.1% 成绩即在本框架上取得
+- [../mobilepa-bench/index.md](../../mobilepa-bench/index.md)——同属 MAI Team 生态的结构化工具规划基准，与本项目互补层级

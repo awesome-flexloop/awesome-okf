@@ -95,5 +95,5 @@ README 声明 OSWorld-G、MMBench 已重排为 ScreenSpot-Pro 格式（F-048）�
 - [/concepts/03-grounding-agent.md](/concepts/03-grounding-agent.md)：评估 prompt 的同源模板（F-037）
 - [/concepts/05-prompt-action-space.md](/concepts/05-prompt-action-space.md)：999/1000 双口径对照表
 - [/references/source-registry.md](/references/source-registry.md)：evaluation/ 全部信源文件
-- [MobileWorld 评测环境束](../mobile-world/index.md)：端到端导航评测环境（MAI-UI 分数 41.7 的出处环境）
-- [MobilePA-Bench 规划基准束](../mobilepa-bench/index.md)：GUI 之外的工具规划维度基准（互补层级）
+- [MobileWorld 评测环境束](../../mobile-world/index.md)：端到端导航评测环境（MAI-UI 分数 41.7 的出处环境）
+- [MobilePA-Bench 规划基准束](../../mobilepa-bench/index.md)：GUI 之外的工具规划维度基准（互补层级）

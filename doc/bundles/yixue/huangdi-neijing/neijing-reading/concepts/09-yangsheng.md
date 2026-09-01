@@ -78,4 +78,4 @@ sources:
 
 - 养生诸篇的建议（作息、情志、劳逸节律）是文化与思想文本，本 bundle 仅作文献解读，不构成健康指导；个人健康问题请咨询执业医师
 - 女七男八、天癸等是古代观察模型，不能当作精确的生理时间表
-- 思想史线索：本篇"法于阴阳""恬惔虚无"与《老子》"致虚极，守静笃""见素抱朴，少私寡欲"高度呼应，可与 [think/laozi/boshu-reading](../../laozi/boshu-reading/index.md) 对读
+- 思想史线索：本篇"法于阴阳""恬惔虚无"与《老子》"致虚极，守静笃""见素抱朴，少私寡欲"高度呼应，可与 [think/laozi/boshu-reading](../../../../guoxue/laozi/boshu-reading/index.md) 对读

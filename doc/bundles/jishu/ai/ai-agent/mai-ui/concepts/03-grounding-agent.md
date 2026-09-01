@@ -95,4 +95,4 @@ self.llm.chat.completions.create(
 - [/concepts/04-navigation-agent.md](/concepts/04-navigation-agent.md)：predict 签名对照（F-020 vs F-032）
 - [/concepts/05-prompt-action-space.md](/concepts/05-prompt-action-space.md)：grounding prompt 与坐标口径对照表
 - [/examples/01-grounding-notebook.md](/examples/01-grounding-notebook.md)：cookbook 复现步骤
-- [Qwen-UI-Agent 技术评测束](../qwen-ui-agent/index.md)：grounding 失误问题的博客级讨论线索（见该束评测视角）
+- [Qwen-UI-Agent 技术评测束](../../qwen-ui-agent/index.md)：grounding 失误问题的博客级讨论线索（见该束评测视角）

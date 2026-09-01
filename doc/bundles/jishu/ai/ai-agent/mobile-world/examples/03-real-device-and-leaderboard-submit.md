@@ -54,7 +54,7 @@ uv run mw test "set an alarm at 8:00 am" --agent-type general_e2e \
 | Kimi K2.6 / K2.5 | 相对坐标 0–1 |
 | Claude Sonnet 4.5 | 需图像缩放至 1280×720 |
 
-Seed-2.0-Pro 使用 `seed_agent`（F-074）。CLI 的 `--scale-factor` 默认 1000（F-019），与相对 0–1000 口径对应；跨框架复用坐标代码时注意 MAI-UI 源码侧的 SCALE_FACTOR=999 与本框架评估口径 1000 不同（[../mai-ui/index.md](../mai-ui/index.md)）。
+Seed-2.0-Pro 使用 `seed_agent`（F-074）。CLI 的 `--scale-factor` 默认 1000（F-019），与相对 0–1000 口径对应；跨框架复用坐标代码时注意 MAI-UI 源码侧的 SCALE_FACTOR=999 与本框架评估口径 1000 不同（[../mai-ui/index.md](../../mai-ui/index.md)）。
 
 ## 第二部分：leaderboard 提交
 
@@ -96,4 +96,4 @@ runs / gui_only / user_int / mcp / agent_type / num_images_in_history / notes / 
 - [/examples/01-run-built-in-eval-scripts.md](/examples/01-run-built-in-eval-scripts.md)——全量评测的官方脚本模板
 - [/concepts/02-architecture-layers.md](/concepts/02-architecture-layers.md)——test 子命令与轨迹日志体系
 - [/concepts/00-project-overview.md](/concepts/00-project-overview.md)——site/ 提交机制与版本时间线（Seed-2.0-Pro 真机支持始于 2026-03-20，F-078）
-- [../qwen-ui-agent/index.md](../qwen-ui-agent/index.md)——Qwen-UI-Agent 在 MobileWorld 上 82.1% 的成绩与真机子集
+- [../qwen-ui-agent/index.md](../../qwen-ui-agent/index.md)——Qwen-UI-Agent 在 MobileWorld 上 82.1% 的成绩与真机子集

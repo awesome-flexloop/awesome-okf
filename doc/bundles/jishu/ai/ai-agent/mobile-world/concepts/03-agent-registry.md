@@ -66,7 +66,7 @@ sources:
 | `gui_owl_1_5` | GUIOWL15AgentMCP |
 | `memgui` | MemGUIAgent |
 
-注意 `mai_ui_agent`——MAI-UI 的导航 Agent `MAIUINaivigationAgent` 无需任何改造即成为 9 个内置 agent 之一（[../mai-ui/index.md](../mai-ui/index.md)）。
+注意 `mai_ui_agent`——MAI-UI 的导航 Agent `MAIUINaivigationAgent` 无需任何改造即成为 9 个内置 agent 之一（[../mai-ui/index.md](../../mai-ui/index.md)）。
 
 ## create_agent 双路径与文件后门
 
@@ -128,4 +128,4 @@ def create_agent(agent_type: str, model_name: str, llm_base_url: str,
 - [/concepts/05-runtime-controller.md](/concepts/05-runtime-controller.md)——predict 返回值 JSONAction 的定义与校验
 - [/concepts/02-architecture-layers.md](/concepts/02-architecture-layers.md)——runner 主循环如何消费 predict
 - [/concepts/06-eval-server-mcp.md](/concepts/06-eval-server-mcp.md)——MCPAgent 的 tools 从哪里来
-- [../mai-ui/index.md](../mai-ui/index.md)——`mai_ui_agent`（MAIUINaivigationAgent）的模型侧实现与上下文工程
+- [../mai-ui/index.md](../../mai-ui/index.md)——`mai_ui_agent`（MAIUINaivigationAgent）的模型侧实现与上下文工程

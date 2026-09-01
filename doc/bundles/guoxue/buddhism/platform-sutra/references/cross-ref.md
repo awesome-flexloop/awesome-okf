@@ -14,9 +14,9 @@ stale_after: 2027-08-30
 
 | 关联 | 关系 |
 |------|------|
-| [《金刚经》bundle](../diamond-sutra/index.md) | 惠能相传因闻「应无所住而生其心」悟入 |
-| [《心经》bundle](../heart-sutra/index.md) | 「本来无一物」与「色即是空」同为破执的般若/禅宗表达 |
-| [《法华经》选读 bundle](../lotus-sutra/index.md) | 「佛性」「一乘」在禅宗成佛论上的呼应 |
+| [《金刚经》bundle](../../diamond-sutra/index.md) | 惠能相传因闻「应无所住而生其心」悟入 |
+| [《心经》bundle](../../heart-sutra/index.md) | 「本来无一物」与「色即是空」同为破执的般若/禅宗表达 |
+| [《法华经》选读 bundle](../../lotus-sutra/index.md) | 「佛性」「一乘」在禅宗成佛论上的呼应 |
 
 ## 禅宗经系脉络
 

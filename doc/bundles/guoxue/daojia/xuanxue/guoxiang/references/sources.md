@@ -75,4 +75,4 @@ okf_version: "0.2"
 | 关联知识包 | 关系 | 路径 |
 |-----------|------|------|
 | 魏晋玄学注疏分组 | 本 bundle 所在分组 | 本束 [../index.md](../index.md) → 分组页 [../../index.md](../../index.md)（xuanxue 分组） |
-| 河上公《老子章句》 | 同组玄学注疏束 | [../heshanggong/index.md](../heshanggong/index.md) |
+| 河上公《老子章句》 | 同组玄学注疏束 | [../heshanggong/index.md](../../heshanggong/index.md) |

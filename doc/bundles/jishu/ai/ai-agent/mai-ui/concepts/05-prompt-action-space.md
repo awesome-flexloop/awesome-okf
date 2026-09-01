@@ -65,7 +65,7 @@ sources:
 - `MAI_MOBILE_SYS_PROMPT` / NO_THINKING 列出 **21 个 App**：Camera、Chrome、Clock、Contacts、Dialer、Files、Settings、Markor、Tasks、Simple Draw Pro、Simple Gallery Pro、Simple SMS Messenger、Audio Recorder、Pro Expense、Broccoli APP、OSMand、VLC、Joplin、Retro Music、OpenTracks、Simple Calendar Pro；
 - `ASK_USER_MCP` 模板列出 **14 个 App**：Contacts、Settings、Clock、Maps、Chrome、Calendar、files、Gallery、Taodian、Mattermost、Mastodon、Mail、SMS、Camera。
 
-两套列表的差异反映了两种运行环境：21 App 版对应 AndroidWorld 系应用生态，14 App 版对应含 Mattermost/Mastodon/Taodian（淘店）等的评测容器生态（见 [MobileWorld 束](../mobile-world/index.md) 的应用资源）。
+两套列表的差异反映了两种运行环境：21 App 版对应 AndroidWorld 系应用生态，14 App 版对应含 Mattermost/Mastodon/Taodian（淘店）等的评测容器生态（见 [MobileWorld 束](../../mobile-world/index.md) 的应用资源）。
 
 ## 坐标口径对照表（重要）
 
@@ -83,7 +83,7 @@ sources:
 
 ## 与 MobileWorld 的动作衔接
 
-本篇的 10/12 种动作（F-014）与 MobileWorld 服务端 `JSONAction` 的动作常量存在映射关系（如 `open` → OPEN_APP），详见 [MobileWorld 束的动作分发](../mobile-world/index.md)。
+本篇的 10/12 种动作（F-014）与 MobileWorld 服务端 `JSONAction` 的动作常量存在映射关系（如 `open` → OPEN_APP），详见 [MobileWorld 束的动作分发](../../mobile-world/index.md)。
 
 ## 相关概念
 
@@ -91,4 +91,4 @@ sources:
 - [/concepts/04-navigation-agent.md](/concepts/04-navigation-agent.md)：三个导航模板的切换逻辑与解析函数
 - [/concepts/06-evaluation-pipeline.md](/concepts/06-evaluation-pipeline.md)：评估端 1000 口径的完整上下文
 - [/examples/01-grounding-notebook.md](/examples/01-grounding-notebook.md)：answer 坐标如何换算回绝对像素
-- [MobileWorld 评测环境束](../mobile-world/index.md)：动作常量映射与 App 生态对齐
+- [MobileWorld 评测环境束](../../mobile-world/index.md)：动作常量映射与 App 生态对齐

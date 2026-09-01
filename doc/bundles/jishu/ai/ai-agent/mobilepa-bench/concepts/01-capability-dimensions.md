@@ -113,4 +113,4 @@ README 定义表四行原文（F-005），每行附站点锚点（#tool-use-exam
 - [00-benchmark-overview.md](00-benchmark-overview.md)——基准定义与仓库性质
 - [02-verification-policy.md](02-verification-policy.md)——六类 checker 与固定验证策略
 - [03-leaderboard-analysis.md](03-leaderboard-analysis.md)——维度权重与榜单解读
-- [../mai-ui/index.md](../mai-ui/index.md)——同生态 Agent 基座模型（本基准的被测对象形态之一）
+- [../mai-ui/index.md](../../mai-ui/index.md)——同生态 Agent 基座模型（本基准的被测对象形态之一）

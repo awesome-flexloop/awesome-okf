@@ -38,7 +38,7 @@ MAI-UI 的导航 Agent 之所以能做多步任务，靠的是一套统一的轨
 
 **默认字段（4 个，均 `= None`）**：`screenshot_bytes`（截图 bytes 副本）、`structured_action`（结构化动作，navigation Agent 写入 `{"action_json": ...}`）、`ask_user_response`、`mcp_response`（F-007）。
 
-注意 `ask_user_response`/`mcp_response` 两个字段由外部 runtime 回填而非 Agent 自身的 predict 写入（F-033）——在评测环境 MobileWorld 的 runner 主循环中，这两个观测键由外部宿主注入（见 [MobileWorld 束的 runtime 章节](../mobile-world/index.md)）。
+注意 `ask_user_response`/`mcp_response` 两个字段由外部 runtime 回填而非 Agent 自身的 predict 写入（F-033）——在评测环境 MobileWorld 的 runner 主循环中，这两个观测键由外部宿主注入（见 [MobileWorld 束的 runtime 章节](../../mobile-world/index.md)）。
 
 ## TrajMemory：任务级容器
 
@@ -102,4 +102,4 @@ draw_clicks_on_image(image_path: str, click_coords: Tuple[float, float],
 - [/concepts/04-navigation-agent.md](/concepts/04-navigation-agent.md)：BaseAgent 契约的具体实现者
 - [/concepts/05-prompt-action-space.md](/concepts/05-prompt-action-space.md)：TrajStep.action 字段的动作 JSON 从哪来
 - [/examples/02-navigation-trajectory-notebook.md](/examples/02-navigation-trajectory-notebook.md)：轨迹累积的最小可运行示例
-- [MobileWorld 评测环境束](../mobile-world/index.md)：`mai_ui_agent` 的注册与观测回填（ask_user_response/mcp_response 的外部宿主）
+- [MobileWorld 评测环境束](../../mobile-world/index.md)：`mai_ui_agent` 的注册与观测回填（ask_user_response/mcp_response 的外部宿主）

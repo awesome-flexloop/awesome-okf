@@ -76,4 +76,4 @@ okf_version: "0.2"
 |-----------|------|------|
 | 玄学分组 | 本 bundle 所在分组 | 本束 [../index.md](../index.md) → 分组页 [../../index.md](../../index.md)（xuanxue 分组） |
 | 庄子分组 | 本注疏所疏之经文属既有庄子分组 | [../../../../zhuangzi/index.md](../../../../zhuangzi/index.md) |
-| 郭象 | 成疏所依之郭象注（魏晋玄学代表作） | [../guoxiang/facts.md](../guoxiang/facts.md) |
+| 郭象 | 成疏所依之郭象注（魏晋玄学代表作） | [../guoxiang/facts.md](../../guoxiang/facts.md) |

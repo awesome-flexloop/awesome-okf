@@ -78,6 +78,6 @@ graph LR
 
 ## 相关知识包
 
-- [doubao-work](../doubao-work/index.md) — 豆包工作功能实测
-- [doubao-work-context-layer](../doubao-work-context-layer/index.md) — Context Layer 战略分析
-- [openai-codex](../openai-codex/index.md) — OpenAI Codex Agent 源码解读
+- [doubao-work](../../doubao-work/index.md) — 豆包工作功能实测
+- [doubao-work-context-layer](../../doubao-work-context-layer/index.md) — Context Layer 战略分析
+- [openai-codex](../../openai-codex/index.md) — OpenAI Codex Agent 源码解读

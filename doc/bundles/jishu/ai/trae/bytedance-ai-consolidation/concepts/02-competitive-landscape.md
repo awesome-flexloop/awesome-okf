@@ -121,7 +121,7 @@ sources:
 - TRAE Work 的办公能力与豆包工作场景深度融合（F-014）；
 - TRAE 的编程和任务执行能力是豆包能力拼图中"执行层"的关键一环（F-012）。
 
-TRAE 本身的产品学习资源可参考同分组的 [trae-learning](../trae-learning/index.md) 知识包。
+TRAE 本身的产品学习资源可参考同分组的 [trae-learning](../../trae-learning/index.md) 知识包。
 
 > 事实溯源：F-012、F-014、F-015
 
@@ -146,5 +146,5 @@ TRAE 本身的产品学习资源可参考同分组的 [trae-learning](../trae-le
 
 - [整合时间线与组织架构](00-consolidation-timeline.md) — 赵祺统管四条产品线的架构图
 - [算力成本驱动的组织变革](01-cost-driven-rationale.md) — 整合的财务逻辑
-- [trae-learning](../trae-learning/index.md) — TRAE 产品学习资源（同分组 bundle）
+- [trae-learning](../../trae-learning/index.md) — TRAE 产品学习资源（同分组 bundle）
 - [核验报告](../references/verification.md) — WorkBuddy 数据核验与"像抖音一样"引语标注

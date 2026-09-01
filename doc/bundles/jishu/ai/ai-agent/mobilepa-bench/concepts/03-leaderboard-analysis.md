@@ -96,4 +96,4 @@ hidden reasoning tokens are excluded.
 - [01-capability-dimensions.md](01-capability-dimensions.md)——四维定义与任务分布（权重的物理来源）
 - [02-verification-policy.md](02-verification-policy.md)——checker 类型与分数方差属性
 - [00-benchmark-overview.md](00-benchmark-overview.md)——基准性质与私有评测通道
-- [../qwen-ui-agent/index.md](../qwen-ui-agent/index.md)——Qwen-UI-Agent 技术评测束（其中 MobileWorld 82.1% 等分数与本榜单分属不同基准，不可混用）
+- [../qwen-ui-agent/index.md](../../qwen-ui-agent/index.md)——Qwen-UI-Agent 技术评测束（其中 MobileWorld 82.1% 等分数与本榜单分属不同基准，不可混用）

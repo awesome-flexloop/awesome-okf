@@ -17,9 +17,9 @@ description: "《周易》（《易经》《易传》）相关 OKF 知识包分�
 
 ## 关联知识包
 
-- [think/confucius/works](../../confucius/works/index.md)：孔子与六经关系专题，其中《05 周易与易传》处理"韦编三绝"与十翼归属问题，与本组交叉互链。
-- [think/yinyangjia/](../../yinyangjia/index.md)：先秦阴阳家学派（邹衍、五德终始）辑佚阅读，阴阳五行思想与《周易》经传同源互渗。
-- [think/laozi/](../../laozi/index.md)：《老子》出土文献阅读，马王堆帛书同出《老子》与《周易》，可对读。
+- [think/confucius/works](../confucius/works/index.md)：孔子与六经关系专题，其中《05 周易与易传》处理"韦编三绝"与十翼归属问题，与本组交叉互链。
+- [think/yinyangjia/](../yinyangjia/index.md)：先秦阴阳家学派（邹衍、五德终始）辑佚阅读，阴阳五行思想与《周易》经传同源互渗。
+- [think/laozi/](../laozi/index.md)：《老子》出土文献阅读，马王堆帛书同出《老子》与《周易》，可对读。
 
 ```{toctree}
 :hidden:

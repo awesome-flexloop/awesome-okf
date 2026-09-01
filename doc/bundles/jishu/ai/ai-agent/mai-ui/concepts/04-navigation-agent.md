@@ -84,7 +84,7 @@ def predict(self, instruction: str, obs: Dict[str, Any], **kwargs: Any) -> Tuple
 1. obs 读取 `obs["screenshot"]`（PIL 或 bytes）与 `obs.get("accessibility_tree")`；docstring 还声明可选 `ask_user_response`/`mcp_response` 键，但代码实际仅使用 screenshot 与 accessibility_tree（F-032）。
 2. 首次调用时 `if not self.traj_memory.task_goal: self.traj_memory.task_goal = instruction`（F-032）。
 3. 成功后构造 TrajStep 并追加：`TrajStep(screenshot=..., accessibility_tree=..., prediction=prediction, action=action_json, conclusion="", thought=thinking, step_index=len(self.traj_memory.steps), agent_type="MAIMobileAgent", model_name=self.model_name, screenshot_bytes=..., structured_action={"action_json": action_json})`，返回 `(prediction, action_json)`（F-033）。
-4. **回填边界**：`ask_user_response`/`mcp_response` 字段不被 predict 写入（保持默认 None，由外部赋值）（F-033）——评测环境 MobileWorld 的 runner 就是那个外部宿主（见 [MobileWorld 束](../mobile-world/index.md)）。
+4. **回填边界**：`ask_user_response`/`mcp_response` 字段不被 predict 写入（保持默认 None，由外部赋值）（F-033）——评测环境 MobileWorld 的 runner 就是那个外部宿主（见 [MobileWorld 束](../../mobile-world/index.md)）。
 5. LLM 调用 3 次重试失败返回 `("llm client error", {"action": None})`（F-033）。
 
 `reset` 被覆写为 `def reset(self, runtime_logger: Any = None) -> None`，调用 `super().reset()`；runtime_logger 未使用，docstring 注明 "unused, kept for API compatibility"（F-034）——这是为评测框架签名预留的兼容参数。
@@ -110,4 +110,4 @@ def predict(self, instruction: str, obs: Dict[str, Any], **kwargs: Any) -> Tuple
 - [/concepts/03-grounding-agent.md](/concepts/03-grounding-agent.md)：predict 签名对照（F-032 vs F-020）
 - [/concepts/05-prompt-action-space.md](/concepts/05-prompt-action-space.md)：system prompt 两模板与坐标口径
 - [/examples/02-navigation-trajectory-notebook.md](/examples/02-navigation-trajectory-notebook.md)：5 图循环的最小复现
-- [MobileWorld 评测环境束](../mobile-world/index.md)：`mai_ui_agent` 注册名与 ask_user_response/mcp_response 回填宿主
+- [MobileWorld 评测环境束](../../mobile-world/index.md)：`mai_ui_agent` 注册名与 ask_user_response/mcp_response 回填宿主

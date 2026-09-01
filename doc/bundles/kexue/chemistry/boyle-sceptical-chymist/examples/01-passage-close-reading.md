@@ -154,4 +154,4 @@ sources:
 
 [^1]: 原文出处：Project Gutenberg eBook #22914（1661 年第一版转录本），[../references/original-sources.md](../references/original-sources.md) O-1；页码依 Giunta 选读，[../references/modern-scholarship.md](../references/modern-scholarship.md) M-4。
 [^2]: 波义耳否认金、银、硫、碳等为元素，见 Britannica 条目（Principe 撰）M-1。
-[^3]: 拉瓦锡的元素操作化与元素表，见 [../lavoisier-treatise/index.md](../lavoisier-treatise/index.md)。
+[^3]: 拉瓦锡的元素操作化与元素表，见 [../lavoisier-treatise/index.md](../../lavoisier-treatise/index.md)。

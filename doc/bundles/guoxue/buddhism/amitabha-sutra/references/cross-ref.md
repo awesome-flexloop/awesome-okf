@@ -14,8 +14,8 @@ stale_after: 2027-08-30
 
 | 关联 | 关系 |
 |------|------|
-| [《金刚经》bundle](../diamond-sutra/index.md) | 同为鸠摩罗什译；般若重「理」、净土重「行」之对比 |
-| [《六祖坛经》bundle](../platform-sutra/index.md) | 禅宗「自性自度」与净土「他力接引」的成佛论对照 |
+| [《金刚经》bundle](../../diamond-sutra/index.md) | 同为鸠摩罗什译；般若重「理」、净土重「行」之对比 |
+| [《六祖坛经》bundle](../../platform-sutra/index.md) | 禅宗「自性自度」与净土「他力接引」的成佛论对照 |
 
 ## 净土经系脉络
 

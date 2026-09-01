@@ -94,4 +94,4 @@ navigation_agent = MAIUINaivigationAgent(
 - [/concepts/04-navigation-agent.md](/concepts/04-navigation-agent.md)：MAIUINaivigationAgent 的 runtime_conf 与 history_n 语义
 - [/concepts/06-evaluation-pipeline.md](/concepts/06-evaluation-pipeline.md)：评估侧独立环境（F-045）的完整说明
 - [/examples/01-grounding-notebook.md](/examples/01-grounding-notebook.md)：最小复现示例
-- [MobileWorld 评测环境束](../mobile-world/index.md)：把 MAI-UI Agent 跑在真实 Android 容器环境中的下一站
+- [MobileWorld 评测环境束](../../mobile-world/index.md)：把 MAI-UI Agent 跑在真实 Android 容器环境中的下一站

@@ -63,5 +63,5 @@
 | 关联知识包 | 关系 | 路径 |
 |-----------|------|------|
 | 先秦道家诸子分组 | 本 bundle 所在分组 | [../index.md](../index.md) → [../index.md](../index.md) |
-| 黄帝四经 | 同属黄老系统（"援法入道"与"以心受道"之别） | [../../huanglao/huangdi-sijing/index.md](../../huanglao/huangdi-sijing/index.md) |
-| 淮南子 | 稷下黄老之后学，因循思想承四篇 | [../../huanglao/huainanzi/index.md](../../huanglao/huainanzi/index.md) |
+| 黄帝四经 | 同属黄老系统（"援法入道"与"以心受道"之别） | [../../huanglao/huangdi-sijing/index.md](../../../huanglao/huangdi-sijing/index.md) |
+| 淮南子 | 稷下黄老之后学，因循思想承四篇 | [../../huanglao/huainanzi/index.md](../../../huanglao/huainanzi/index.md) |

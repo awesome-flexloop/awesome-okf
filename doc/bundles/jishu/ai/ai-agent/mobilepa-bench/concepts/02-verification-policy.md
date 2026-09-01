@@ -89,4 +89,4 @@ Illustrative public examples; hidden evaluation tasks and ground truth remain pr
 - [00-benchmark-overview.md](00-benchmark-overview.md)——评测器建模与四种成功形态的出处
 - [01-capability-dimensions.md](01-capability-dimensions.md)——各维度代表案例（BTU-204/BTU-622/MEM-0043 等）
 - [03-leaderboard-analysis.md](03-leaderboard-analysis.md)——分数如何按维度加权汇总
-- [../mobile-world/index.md](../mobile-world/index.md)——同生态在线评测环境（环境实测式判分的对照形态）
+- [../mobile-world/index.md](../../mobile-world/index.md)——同生态在线评测环境（环境实测式判分的对照形态）

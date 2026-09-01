@@ -82,5 +82,5 @@ okf_version: "0.2"
 | 关联知识包 | 关系 | 路径 |
 |-----------|------|------|
 | 黄老分组 | 本 bundle 所在分组 | [../index.md](../index.md) → [../../index.md](../../index.md) |
-| 尹文子 | 稷下人物系统互证（田子/宋子/彭蒙问答） | [../yinwenzi/index.md](../yinwenzi/index.md) |
-| 关尹子 | 道家诸子同域参照 | [../../zhuzi/guanyinzi/index.md](../../zhuzi/guanyinzi/index.md) |
+| 尹文子 | 稷下人物系统互证（田子/宋子/彭蒙问答） | [../yinwenzi/index.md](../../yinwenzi/index.md) |
+| 关尹子 | 道家诸子同域参照 | [../../zhuzi/guanyinzi/index.md](../../../zhuzi/guanyinzi/index.md) |

@@ -52,7 +52,7 @@ MAI-UI/
 
 伞仓 README（`Tongyi-MAI/MAI-UI/README.md`）标题为 "MAI-UI × Qwen-UI-Agent"，其 Projects 章节列出两个子目录：`Qwen-UI-Agent/` 标注为 "continuation work of MAI-UI"（arXiv:2607.28227），`MAI-UI 1.0/` 标注为 "original MAI-UI repository content"（F-053）。也就是说，**MAI-UI 是前代项目，Qwen-UI-Agent 是其续作**——已发布的 MAI-UI-2B/8B 权重属于 MAI-UI 1.0 这一代（F-001）。
 
-这一谱系关系对使用既有 [Qwen-UI-Agent 知识束](../qwen-ui-agent/index.md) 的读者尤为重要：该束记载的"MAI-UI 2B/8B 是 2025-12 前代权重、Qwen-UI-Agent 自身权重未发布"的勘误，可在本仓库的伞仓 README（F-053）与根 README（F-001）中找到仓库级权威出处。
+这一谱系关系对使用既有 [Qwen-UI-Agent 知识束](../../qwen-ui-agent/index.md) 的读者尤为重要：该束记载的"MAI-UI 2B/8B 是 2025-12 前代权重、Qwen-UI-Agent 自身权重未发布"的勘误，可在本仓库的伞仓 README（F-053）与根 README（F-001）中找到仓库级权威出处。
 
 ## 博客站（MAI-UI-blog）登记概览
 
@@ -76,5 +76,5 @@ MAI-UI 项目主页（`site/index.html`）标题为 "MAI-UI: Real-World Centric 
 - [/concepts/01-quickstart-installation.md](/concepts/01-quickstart-installation.md)：vLLM 服务部署与双 Agent 初始化
 - [/concepts/05-prompt-action-space.md](/concepts/05-prompt-action-space.md)：4 个 prompt 模板与 10/12 种动作空间
 - [/references/source-registry.md](/references/source-registry.md)：本篇引用的全部信源文件清单
-- [Qwen-UI-Agent 技术评测束](../qwen-ui-agent/index.md)：MAI-UI 的续作项目，含博文实测与版本谱系勘误
-- [MobileWorld 评测环境束](../mobile-world/index.md)：MAI-UI 导航 Agent 以注册名 `mai_ui_agent` 接入的评测环境
+- [Qwen-UI-Agent 技术评测束](../../qwen-ui-agent/index.md)：MAI-UI 的续作项目，含博文实测与版本谱系勘误
+- [MobileWorld 评测环境束](../../mobile-world/index.md)：MAI-UI 导航 Agent 以注册名 `mai_ui_agent` 接入的评测环境

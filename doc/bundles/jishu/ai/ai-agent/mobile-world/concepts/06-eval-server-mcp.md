@@ -96,4 +96,4 @@ routes 内 `@rt` 路由清单（F-042）：`/`、`/dashboard-content`、`/agent-
 - [/concepts/02-architecture-layers.md](/concepts/02-architecture-layers.md)——单机 runner 主循环（eval-server 编排的下一层）
 - [/concepts/05-runtime-controller.md](/concepts/05-runtime-controller.md)——MCP 动作常量与 call_tool_sync 的数据通路
 - [/concepts/04-tasks-registry.md](/concepts/04-tasks-registry.md)——task_tags 与用户代理配置的来源
-- [../mobilepa-bench/index.md](../mobilepa-bench/index.md)——同为工具调用维度但采用托管私有评测的规划基准（互补层级）
+- [../mobilepa-bench/index.md](../../mobilepa-bench/index.md)——同为工具调用维度但采用托管私有评测的规划基准（互补层级）

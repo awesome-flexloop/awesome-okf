@@ -63,6 +63,6 @@
 | 关联知识包 | 关系 | 路径 |
 |-----------|------|------|
 | 魏晋玄学注疏分组 | 本 bundle 所在分组 | 本束 [../index.md](../index.md) → 分组页 [../../index.md](../../index.md)（xuanxue 分组） |
-| 河上公《老子章句》 | 同为汉代《老子》注本，治身治国双线可对读 | [../heshanggong/index.md](../heshanggong/index.md) |
+| 河上公《老子章句》 | 同为汉代《老子》注本，治身治国双线可对读 | [../heshanggong/index.md](../../heshanggong/index.md) |
 | 老子著作 | 《老子指归》为《老子》注本 | [../../../../laozi/laozi-works/index.md](../../../../laozi/laozi-works/index.md) |
 | 淮南子 | 天地起源论承继关系（张岱年序谓为《淮南子》天地起源论之改造） | [../../../huanglao/huainanzi/index.md](../../../huanglao/huainanzi/index.md) |

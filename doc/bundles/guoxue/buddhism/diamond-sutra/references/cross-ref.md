@@ -14,9 +14,9 @@ stale_after: 2027-08-30
 
 | 关联 | 关系 |
 |------|------|
-| [《心经》bundle](../heart-sutra/index.md) | 同为般若系；《心经》为浓缩，《金刚经》为展开 |
-| [《六祖坛经》bundle](../platform-sutra/index.md) | 惠能因闻「应无所住而生其心」悟入，禅宗承《金刚经》 |
-| [《法华经》选读 bundle](../lotus-sutra/index.md) | 「会三归一」与般若「空」在成佛论上的互补 |
+| [《心经》bundle](../../heart-sutra/index.md) | 同为般若系；《心经》为浓缩，《金刚经》为展开 |
+| [《六祖坛经》bundle](../../platform-sutra/index.md) | 惠能因闻「应无所住而生其心」悟入，禅宗承《金刚经》 |
+| [《法华经》选读 bundle](../../lotus-sutra/index.md) | 「会三归一」与般若「空」在成佛论上的互补 |
 
 ## 般若经系脉络
 

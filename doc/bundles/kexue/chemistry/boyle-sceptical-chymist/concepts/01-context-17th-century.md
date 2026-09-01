@@ -87,9 +87,9 @@ sources:
 
 与波义耳大体同期，明朝宋应星的《天工开物》于 1637 年刊行，系统记录了五金、丹青、燔石、珠玉等部门的工艺实况；再往上溯，东汉魏伯阳《周易参同契》与晋代葛洪《抱朴子·内篇》代表了中国炼丹传统的理论与实践。这些文献与欧洲炼金术一样，既包含物质变化的操作记录，也包含各自的理论框架，可作平行对照阅读：
 
-- [../tiangong-kaiwu/index.md](../tiangong-kaiwu/index.md)
-- [../cantongqi/index.md](../cantongqi/index.md)
-- [../baopuzi/index.md](../baopuzi/index.md)
+- [../tiangong-kaiwu/index.md](../../tiangong-kaiwu/index.md)
+- [../cantongqi/index.md](../../cantongqi/index.md)
+- [../baopuzi/index.md](../../baopuzi/index.md)
 
 ## 相关概念
 

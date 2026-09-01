@@ -64,4 +64,4 @@
 
 ## 相关知识包
 
-- [doubao-work](../doubao-work/index.md) — APPSO对豆包工作的功能实测（多模态生成、文档/PPT/网页编辑、额度模型等）
+- [doubao-work](../../doubao-work/index.md) — APPSO对豆包工作的功能实测（多模态生成、文档/PPT/网页编辑、额度模型等）

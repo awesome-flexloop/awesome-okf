@@ -113,11 +113,11 @@ README 状态声明（WEB-A-24）：资源卡当前为 `Coming soon` 占位，�
 
 ## 10. 与既有评测束的互补视角
 
-本篇是**网站工程视角**：拆的是构建轨道、双语机制与数据结构；既有 qwen-ui-agent 束是**网站内容评测视角**：评的是 Qwen-UI-Agent 的能力、基准成绩与实测体验。两者互为补充，可对照阅读：[../qwen-ui-agent/index.md](../qwen-ui-agent/index.md)。本篇引用的 MobileWorld 82.1% / MobileWorld-Real 92.2% 等分数（WEB-A-15）为该站点登记的数据快照，与 MobilePA-Bench 榜单（[03-leaderboard-analysis.md](03-leaderboard-analysis.md)）分属不同基准，不可混用。
+本篇是**网站工程视角**：拆的是构建轨道、双语机制与数据结构；既有 qwen-ui-agent 束是**网站内容评测视角**：评的是 Qwen-UI-Agent 的能力、基准成绩与实测体验。两者互为补充，可对照阅读：[../qwen-ui-agent/index.md](../../qwen-ui-agent/index.md)。本篇引用的 MobileWorld 82.1% / MobileWorld-Real 92.2% 等分数（WEB-A-15）为该站点登记的数据快照，与 MobilePA-Bench 榜单（[03-leaderboard-analysis.md](03-leaderboard-analysis.md)）分属不同基准，不可混用。
 
 ## 相关概念
 
 - [00-benchmark-overview.md](00-benchmark-overview.md)——MobilePA-Bench 纯静态项目页工程（两种学术站点工程对照）
 - [03-leaderboard-analysis.md](03-leaderboard-analysis.md)——不同基准的分数不可混用
-- [../qwen-ui-agent/index.md](../qwen-ui-agent/index.md)——Qwen-UI-Agent 技术评测束（网站内容视角）
-- [../mai-ui/index.md](../mai-ui/index.md)——网站 README 指向的官方实现代码仓（Tongyi-MAI/MAI-UI）对应的束
+- [../qwen-ui-agent/index.md](../../qwen-ui-agent/index.md)——Qwen-UI-Agent 技术评测束（网站内容视角）
+- [../mai-ui/index.md](../../mai-ui/index.md)——网站 README 指向的官方实现代码仓（Tongyi-MAI/MAI-UI）对应的束

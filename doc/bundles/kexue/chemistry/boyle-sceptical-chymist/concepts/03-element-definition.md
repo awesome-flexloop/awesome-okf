@@ -63,9 +63,9 @@ sources:
 
 这一翻转的历史含义常被通俗读物抹平。常见说法是"波义耳确立了元素的近代定义"。更准确的表述是：**他确立了一个当时没有任何已知物质能够满足的定义**。这不是失败，而是把问题从"引经据典地断言世界由几种元素构成"改写成了"用分解实验去找有没有符合标准的物质"。问题形式一旦改变，后来的化学就有了入口：
 
-- 拉瓦锡 1789 年在《化学基础论》中把元素操作化为"尚未能分解的物质"，并列出第一张元素表（延伸阅读 [../lavoisier-treatise/index.md](../lavoisier-treatise/index.md)）；
-- 道尔顿 1808 年给元素配上原子量（[../dalton-new-system/index.md](../dalton-new-system/index.md)）；
-- 门捷列夫 1869 年用周期律组织已知元素（[../mendeleev-periodic-law/index.md](../mendeleev-periodic-law/index.md)）。
+- 拉瓦锡 1789 年在《化学基础论》中把元素操作化为"尚未能分解的物质"，并列出第一张元素表（延伸阅读 [../lavoisier-treatise/index.md](../../lavoisier-treatise/index.md)）；
+- 道尔顿 1808 年给元素配上原子量（[../dalton-new-system/index.md](../../dalton-new-system/index.md)）；
+- 门捷列夫 1869 年用周期律组织已知元素（[../mendeleev-periodic-law/index.md](../../mendeleev-periodic-law/index.md)）。
 
 波义耳没有抵达这张表，但他设定了进入这张表的门票规则。
 
@@ -78,7 +78,7 @@ sources:
 
 ## 与中国物质理论的一点对照
 
-波义耳把"元素"问题严格化为分解—还原的判据问题。在中国传统中，《周易参同契》《抱朴子》一系的炼丹思考关心的是"变化"本身——丹药如何炼制、物性如何转移，五行说更多作为分类与象征框架而非待实验判决的组分假说（参见 [../cantongqi/index.md](../cantongqi/index.md)、[../baopuzi/index.md](../baopuzi/index.md)）。两种提问方式的差异，比"谁先提出元素论"式的比较更值得注意。
+波义耳把"元素"问题严格化为分解—还原的判据问题。在中国传统中，《周易参同契》《抱朴子》一系的炼丹思考关心的是"变化"本身——丹药如何炼制、物性如何转移，五行说更多作为分类与象征框架而非待实验判决的组分假说（参见 [../cantongqi/index.md](../../cantongqi/index.md)、[../baopuzi/index.md](../../baopuzi/index.md)）。两种提问方式的差异，比"谁先提出元素论"式的比较更值得注意。
 
 ## 读完本篇应能回答的问题
 

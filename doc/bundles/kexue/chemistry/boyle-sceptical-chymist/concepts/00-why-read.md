@@ -75,7 +75,7 @@ sources:
 | 化学/化工专业学生 | 重点读第三、四节与 [03-element-definition.md](03-element-definition.md)，把元素概念史串到拉瓦锡、道尔顿 |
 | 科学史与科学哲学读者 | 全书通读，配合 [01-context-17th-century.md](01-context-17th-century.md) 与 [05-legacy.md](05-legacy.md) |
 | 工程与研发从业者 | 重点读第二节与 [02-dialogue-method.md](02-dialogue-method.md)，把对话程序迁移到评审场景 |
-| 中国科技史读者 | 读完后接 [../cantongqi/index.md](../cantongqi/index.md)、[../baopuzi/index.md](../baopuzi/index.md) 做中西对照 |
+| 中国科技史读者 | 读完后接 [../cantongqi/index.md](../../cantongqi/index.md)、[../baopuzi/index.md](../../baopuzi/index.md) 做中西对照 |
 
 ## 阅读前的三点提醒
 

@@ -102,4 +102,4 @@ notebook 对每个结果做与 grounding notebook 相同的坐标可视化（F-0
 - [/concepts/02-base-agent-traj-memory.md](/concepts/02-base-agent-traj-memory.md)：TrajStep/TrajMemory 与 save_traj
 - [/concepts/05-prompt-action-space.md](/concepts/05-prompt-action-space.md)：动作空间与输出协议
 - [/examples/01-grounding-notebook.md](/examples/01-grounding-notebook.md)：单图定位版 notebook
-- [MobileWorld 评测环境束](../mobile-world/index.md)：把这套循环接入真实 Android 容器的下一步
+- [MobileWorld 评测环境束](../../mobile-world/index.md)：把这套循环接入真实 Android 容器的下一步
