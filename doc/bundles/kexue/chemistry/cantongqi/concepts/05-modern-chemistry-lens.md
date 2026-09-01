@@ -88,7 +88,7 @@ sources:
 
 ### 中国线索与思想背景
 
-- 上承：本书的黄老思想背景（归根返元、自然、橐籥意象出自《老子》）可参 [帛书《老子》阅读教程](../../../../think/laozi/boshu-reading/index.md)。
+- 上承：本书的黄老思想背景（归根返元、自然、橐籥意象出自《老子》）可参 [帛书《老子》阅读教程](../../../../guoxue/laozi/boshu-reading/index.md)。
 - 下启：4 世纪葛洪《抱朴子》把炼丹理论落实为大量丹方与操作记录，见 [../../baopuzi/index.md](../../baopuzi/index.md)；明代宋应星《天工开物》（1637）把五金、丹砂、冶炼工艺纳入生产百科，见 [../../tiangong-kaiwu/index.md](../../tiangong-kaiwu/index.md)。[^11]
 
 ## 结语

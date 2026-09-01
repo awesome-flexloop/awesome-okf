@@ -18,7 +18,7 @@ okf_version: "0.2"
 
 > 📚 **文献学提示**："四大经典"并非自古固定的组合——该词正式提出于 1955 年教学计划，首提书目与今通行组合不同，至今多种组合并存（见[概念 01：四大经典导读](concepts/01-four-classics-guide.md)）。读中医典籍，先把"书是什么"与"怎么读"分开处理。
 
-本知识包（bundle）是中医典籍体系的**总览束**：回答"中医有哪些书、经典层如何构成、各层关系如何、按什么顺序读、用什么方法读"五个体系性问题。与单书精读束（如 [waijing-weiyan](../waijing-weiyan/index.md)、[huangdi-neijing](../../../think/huangdi-neijing/neijing-reading/index.md)）不同，本束不逐篇精读某一本书，而是提供整个谱系的地图、进门的文献学常识与可迁移的阅读方法。
+本知识包（bundle）是中医典籍体系的**总览束**：回答"中医有哪些书、经典层如何构成、各层关系如何、按什么顺序读、用什么方法读"五个体系性问题。与单书精读束（如 [waijing-weiyan](../waijing-weiyan/index.md)、[huangdi-neijing](../../../huangdi-neijing/neijing-reading/index.md)）不同，本束不逐篇精读某一本书，而是提供整个谱系的地图、进门的文献学常识与可迁移的阅读方法。
 
 ## 📚 快速导航
 

@@ -4,7 +4,7 @@ okf_version: "0.2"
 
 # scikit-build-core 知识库
 
-本知识包是基于 CMake 的 Python 包构建后端 [scikit-build-core](https://scikit-build-core.readthedocs.io/) 的系统化中文教程，基于源码深度阅读生成，覆盖从 PEP 517 接口到 CMake 集成、配置系统、editable 安装的完整知识体系。scikit-build-core 是一个符合 PEP 517 标准的独立构建后端，将 CMake 作为一等公民，通过 Init-Cache 文件与 CMake 通信、通过 CMake File API 程序化读取构建结果，提供三源配置合并（环境变量/config-settings/TOML）、条件覆盖、minimum-version 渐进式功能门控、redirect/inplace 双模式 editable 安装（含 rebuild-on-import）等特性。所有内容均溯源至 scikit-build-core 源码（`external/libs/tools/scikit-build/scikit-build-core/src/scikit_build_core/` 目录核心模块），遵循 [OKF v0.2 规范](../../meta/okf-spec/index.md)。
+本知识包是基于 CMake 的 Python 包构建后端 [scikit-build-core](https://scikit-build-core.readthedocs.io/) 的系统化中文教程，基于源码深度阅读生成，覆盖从 PEP 517 接口到 CMake 集成、配置系统、editable 安装的完整知识体系。scikit-build-core 是一个符合 PEP 517 标准的独立构建后端，将 CMake 作为一等公民，通过 Init-Cache 文件与 CMake 通信、通过 CMake File API 程序化读取构建结果，提供三源配置合并（环境变量/config-settings/TOML）、条件覆盖、minimum-version 渐进式功能门控、redirect/inplace 双模式 editable 安装（含 rebuild-on-import）等特性。所有内容均溯源至 scikit-build-core 源码（`external/libs/tools/scikit-build/scikit-build-core/src/scikit_build_core/` 目录核心模块），遵循 [OKF v0.2 规范](../../../meta/okf-spec/index.md)。
 
 ## 入门基础（concepts/）
 

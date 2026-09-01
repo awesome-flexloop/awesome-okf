@@ -48,7 +48,7 @@ tcm 域存放中医（Traditional Chinese Medicine）典籍体系的系统化阅
 | **神农本草经**<br>`shennong-bencaojing` | 《本经》为什么是"辑复本"？三品分类怎么分？365 药怎么对不上？ | 辑本系统（卢复/孙星衍/顾观光/森立之）与六类差异、三品理论、序录 13 句逐句精读、11 味代表药双源照录、363 条药目存目 | [束入口](classics/shennong-bencaojing/index.md) |
 | **黄帝外经**<br>`waijing-weiyan` | 《黄帝外经》不是佚失了吗？今本《外经微言》是什么？ | 九卷八十一篇双源核对、13 篇精读原文、命门水火与颠倒顺逆思想、文献学三层分离（著录/托名/文本）、真伪两派并列考辨 | [束入口](classics/waijing-weiyan/index.md) |
 
-> **《黄帝内经》在哪里？** 《素问》《灵枢》的阅读教程位于 think 域：[think/huangdi-neijing/neijing-reading](../think/huangdi-neijing/neijing-reading/index.md)（8 篇名篇逐字精读 + 12 周通读计划 + 异文双录）。tcm 域通过交叉引用与其贯通，内经的文献学事实（成书、底本、王冰注、运气七篇等）沉淀在总览束中。这样安排避免重复建设——四大经典在 tcm/think 两域协作覆盖。
+> **《黄帝内经》在哪里？** 《素问》《灵枢》的阅读教程位于 think 域：[think/huangdi-neijing/neijing-reading](../huangdi-neijing/neijing-reading/index.md)（8 篇名篇逐字精读 + 12 周通读计划 + 异文双录）。tcm 域通过交叉引用与其贯通，内经的文献学事实（成书、底本、王冰注、运气七篇等）沉淀在总览束中。这样安排避免重复建设——四大经典在 tcm/think 两域协作覆盖。
 
 ## 3. 按读者身份选择阅读路径
 
@@ -63,7 +63,7 @@ tcm 域存放中医（Traditional Chinese Medicine）典籍体系的系统化阅
 **阅读步骤**：
 
 1. [tcm-overview](classics/tcm-overview/index.md) concepts/00–01：典籍谱系分层 + 四大经典导读（约 2–3 小时，建立坐标系）
-2. 转入 [《黄帝内经》教程（think 域）](../think/huangdi-neijing/neijing-reading/index.md)：先读 8 篇名篇精读，有余力再跟 12 周通读计划
+2. 转入 [《黄帝内经》教程（think 域）](../huangdi-neijing/neijing-reading/index.md)：先读 8 篇名篇精读，有余力再跟 12 周通读计划
 3. 回到 tcm 域，凭兴趣任选一束深入（喜欢脉诊选难经，喜欢方药选伤寒/本草）
 
 > ⛔ **避坑**：不要一上来直接啃《伤寒论》398 条或本草 363 药目——没有谱系坐标会陷入条文迷宫。先读总览束。
@@ -172,15 +172,15 @@ tcm 域存放中医（Traditional Chinese Medicine）典籍体系的系统化阅
 
 | 主题 | 位置 |
 |---|---|
-| 《黄帝内经》精读教程 | [think/huangdi-neijing/neijing-reading](../think/huangdi-neijing/neijing-reading/index.md) |
-| 道家道教医学传统（医道同源、道藏医书、出土方技） | [think/daoyi](../think/daoyi/index.md) |
-| 《老子》《庄子》等道家经典（与中医理论互参） | [think/laozi](../think/laozi/index.md) |
-| OKF 知识包格式规范 | [meta/okf-spec](../meta/okf-spec/index.md) |
+| 《黄帝内经》精读教程 | [think/huangdi-neijing/neijing-reading](../huangdi-neijing/neijing-reading/index.md) |
+| 道家道教医学传统（医道同源、道藏医书、出土方技） | [think/daoyi](../daoyi/index.md) |
+| 《老子》《庄子》等道家经典（与中医理论互参） | [think/laozi](../../guoxue/laozi/index.md) |
+| OKF 知识包格式规范 | [meta/okf-spec](../../meta/okf-spec/index.md) |
 
 ## 8. 常见问题（FAQ）
 
 **Q1：为什么 tcm 域没有《黄帝内经》束？**
-A：内经教程已由 think 域 [huangdi-neijing/neijing-reading](../think/huangdi-neijing/neijing-reading/index.md) 承担（8 篇名篇精读、12 周通读计划、异文双录、三层解读）。为避免重复建设，tcm 域采用交叉引用贯通，内经的文献学事实（162 篇存目、顾从德本/史崧本、王冰注与运气七篇等）沉淀在 tcm-overview 总览束中。
+A：内经教程已由 think 域 [huangdi-neijing/neijing-reading](../huangdi-neijing/neijing-reading/index.md) 承担（8 篇名篇精读、12 周通读计划、异文双录、三层解读）。为避免重复建设，tcm 域采用交叉引用贯通，内经的文献学事实（162 篇存目、顾从德本/史崧本、王冰注与运气七篇等）沉淀在 tcm-overview 总览束中。
 
 **Q2：《神农本草经》不是 365 味药吗，为什么存目是 363 条？**
 A：序录自称"365 种"应周天之数，但今传辑复本的药目数目因辑本而异。本域存目据孙星衍辑本电子版誊录并经逐段复核：电子版目录标题 353 条，另有 10 味药以"嵌入"形式出现在正文中而无目录标题（如石胆、五色石脂、菟丝子、枸杞、茯苓、蠡鱼、翘根、山茱萸、赤小豆、雷丸），补入后实计 363 条（上经 146/中经 114/下经 103），与 365 之数仍差 2。这一差异在束内如实登记，不臆改凑数——古籍目录学问题本应如此呈现。

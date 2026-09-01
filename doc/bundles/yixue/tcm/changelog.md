@@ -54,7 +54,7 @@ sources:
 | [shennong-bencaojing](classics/shennong-bencaojing/index.md) 神农本草经 | 6 | 2 | 2 | 辑复性质显著标注、四辑本系统与六类差异、三品理论、序录 13 句逐句精读、11 味代表药双源照录、药目存目 | [log](classics/shennong-bencaojing/log.md) |
 | [waijing-weiyan](classics/waijing-weiyan/index.md) 黄帝外经（外经微言） | 9 | 5 | 3 | 九卷八十一篇双源核对、13 篇精读原文、68 篇一句提要、命门水火/颠倒顺逆/五行脏腑思想、著录-托名-文本三层分离、真伪两派并列 | [log](classics/waijing-weiyan/log.md) |
 
-> 《黄帝内经》（素问/灵枢）阅读教程按执行决议**交叉引用** think 域已有束 [think/huangdi-neijing/neijing-reading](../think/huangdi-neijing/neijing-reading/index.md)，不重复建设；内经文献学事实（NGJ 前缀 43 条）沉淀于 tcm-overview 束。
+> 《黄帝内经》（素问/灵枢）阅读教程按执行决议**交叉引用** think 域已有束 [think/huangdi-neijing/neijing-reading](../huangdi-neijing/neijing-reading/index.md)，不重复建设；内经文献学事实（NGJ 前缀 43 条）沉淀于 tcm-overview 束。
 
 ### 方法论摘要（seven-concepts 场景 4：R→I→E→V→C）
 

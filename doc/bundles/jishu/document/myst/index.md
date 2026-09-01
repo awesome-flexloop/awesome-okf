@@ -15,7 +15,7 @@ status: stable
 
 [Executable Books](https://executablebooks.org) 是 [Jupyter Book](https://jupyterbook.org) 和 [MyST Markdown](https://mystmd.org) 等现代技术文档工具链的核心开源组织，致力于构建"可执行的书籍"——将 Markdown 文本、Jupyter Notebook 代码执行、交互式组件融为一体的下一代出版平台。本组知识包收录其 19 个核心项目的系统化中文源码教程，覆盖从 Markdown 解析到 Sphinx 扩展、从 Notebook 执行缓存到主题设计的完整技术栈。
 
-所有知识包遵循 [OKF v0.2 规范](../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经 Grep 级源码验证。
+所有知识包遵循 [OKF v0.2 规范](../../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经 Grep 级源码验证。
 
 ## 📊 知识包概览
 

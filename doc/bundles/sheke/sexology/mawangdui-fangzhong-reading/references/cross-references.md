@@ -55,7 +55,7 @@ sources:
 
 ## 三、养生经典阅读教程（养生分组）
 
-**位置**：[think/yangsheng/yangsheng-classics-reading](../../../yangsheng/yangsheng-classics-reading/index.md)
+**位置**：[think/yangsheng/yangsheng-classics-reading](../../../../yixue/yangsheng/yangsheng-classics-reading/index.md)
 
 **关系**：马王堆《养生方》是现存最早的养生学专著，《十问》的养生问答与《却谷食气》《导引图》构成早期养生方技的实物谱系；该教程从《黄帝内经》《养生论》《备急千金要方》养性卷等传世养生经典切入，正好承接马王堆养生文献之后的传世传统。
 
@@ -63,7 +63,7 @@ sources:
 
 ## 四、帛书《老子》阅读教程（同一出土库藏）
 
-**位置**：[think/laozi/boshu-reading](../../../laozi/boshu-reading/index.md)
+**位置**：[think/laozi/boshu-reading](../../../../guoxue/laozi/boshu-reading/index.md)
 
 **关系**：帛书《老子》甲乙本与房中简帛同出马王堆三号墓东边箱漆奁盒，同由1974年成立的马王堆汉墓帛书整理小组整理，同收《长沙马王堆汉墓简帛集成》；裘锡圭既是《老子》甲乙本整理者，也是《集成》主编。两包共享同一出土背景与整理史。
 
@@ -71,7 +71,7 @@ sources:
 
 ## 五、《医心方》阅读教程（后世辑佚枢纽）
 
-**位置**：[think/medicine/ishinpo-reading](../../../medicine/ishinpo-reading/index.md)
+**位置**：[think/medicine/ishinpo-reading](../../../../yixue/medicine/ishinpo-reading/index.md)
 
 **关系**：日本丹波康赖《医心方》（984年撰成）卷二十八"房内"引录《素女经》《玄女经》《玉房秘诀》等中国房中文献佚文，是复原传世房中文献的最大辑佚来源；马王堆房中简帛则是出土一翼。出土与辑佚两翼合观，方能窥见汉唐房中文献的全貌。
 

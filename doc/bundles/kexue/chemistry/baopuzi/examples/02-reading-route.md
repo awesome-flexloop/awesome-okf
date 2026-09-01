@@ -78,7 +78,7 @@ sources:
    - 上承：[《周易参同契》阅读教程](../../cantongqi/index.md)；
    - 下启：[《天工开物》阅读教程](../../tiangong-kaiwu/index.md)；
    - 西学对照：[道尔顿《化学哲学新体系》阅读教程](../../dalton-new-system/index.md)；
-   - 思想背景：[帛书《老子》阅读教程](../../../../think/laozi/boshu-reading/index.md)；
+   - 思想背景：[帛书《老子》阅读教程](../../../../guoxue/laozi/boshu-reading/index.md)；
 3. 研究型读者按 [references/modern-scholarship.md](../references/modern-scholarship.md) 追溯王奎克（1982）、赵匡华（1984）原始论文与李约瑟《中国科学技术史》第五卷。
 
 ## 五、阅读中的注意事项

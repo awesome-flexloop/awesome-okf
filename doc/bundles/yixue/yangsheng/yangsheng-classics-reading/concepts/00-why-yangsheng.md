@@ -42,7 +42,7 @@ sources:
 
 ## 与帛书《老子》阅读教程的关系
 
-本 bundle 与 [boshu-reading](../../../laozi/boshu-reading/index.md)（帛书《老子》阅读教程）同为传统思想经典阅读教程系列，面向的都是普通读者、都强调以现代整理本为入门载体。差异在于：boshu-reading 围绕单一经典展开，核心问题是"版本怎么对照、德经在前怎么读"；本 bundle 覆盖六部经典与食养、导引、道教扩展脉络，核心问题是"这么多书从哪本读起、读哪些篇"——因此先立[五脉谱系](06-schools-lineage.md)地图，再按[选篇精读计划](../examples/02-reading-plan.md)进入原典。
+本 bundle 与 [boshu-reading](../../../../guoxue/laozi/boshu-reading/index.md)（帛书《老子》阅读教程）同为传统思想经典阅读教程系列，面向的都是普通读者、都强调以现代整理本为入门载体。差异在于：boshu-reading 围绕单一经典展开，核心问题是"版本怎么对照、德经在前怎么读"；本 bundle 覆盖六部经典与食养、导引、道教扩展脉络，核心问题是"这么多书从哪本读起、读哪些篇"——因此先立[五脉谱系](06-schools-lineage.md)地图，再按[选篇精读计划](../examples/02-reading-plan.md)进入原典。
 
 ## 相关概念
 

@@ -87,7 +87,7 @@ Pregadio 对这一结构有清晰解说：坎卦 ☵（阴中含一阳爻，true
 - [炼丹内容：药物、炉鼎与火候](03-alchemy-content.md)
 - [关键段落选读](04-key-passages.md)
 - [现代化学视角](05-modern-chemistry-lens.md)
-- 道家思想背景可参 [帛书《老子》阅读教程](../../../../think/laozi/boshu-reading/index.md)
+- 道家思想背景可参 [帛书《老子》阅读教程](../../../../guoxue/laozi/boshu-reading/index.md)
 - 信源：[公版原文信源登记](../references/original-sources.md)｜[现代研究与权威解读信源](../references/modern-scholarship.md)
 
 [^1]: 大易总叙章开篇原文，见 ctext 彭晓分章本，[original-sources.md](../references/original-sources.md) O-1；事实条目 F-013。

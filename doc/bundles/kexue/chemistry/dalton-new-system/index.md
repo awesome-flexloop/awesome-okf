@@ -60,7 +60,7 @@ okf_version: "0.2"
 3. 读[影响、证实与遗产](concepts/05-legacy.md)中盖-吕萨克、阿伏伽德罗与道尔顿的三方分歧
 4. 按[原典阅读路线](examples/02-reading-route.md)进入 Internet Archive 上的原书扫描本
 
-> 阅读经典文本的通用方法论（版本选择、短引规范、今译与注释的配合），可参照[帛书《老子》阅读教程](../../../think/laozi/boshu-reading/index.md)的读法框架。
+> 阅读经典文本的通用方法论（版本选择、短引规范、今译与注释的配合），可参照[帛书《老子》阅读教程](../../../guoxue/laozi/boshu-reading/index.md)的读法框架。
 
 ## 🎯 Bundle 定位
 

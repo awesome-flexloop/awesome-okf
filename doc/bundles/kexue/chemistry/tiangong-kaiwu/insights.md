@@ -81,4 +81,4 @@
   配合 facts.md 逐条溯源，参考 references/ 两类信源
 ```
 
-姊妹束衔接：中国线索上承 [《周易参同契》阅读教程](../cantongqi/index.md)（理论框架）与 [《抱朴子·内篇》阅读教程](../baopuzi/index.md)（丹方实践），本束为第三站（生产工艺）；思想背景参读 [帛书《老子》阅读教程](../../../think/laozi/boshu-reading/index.md)。
+姊妹束衔接：中国线索上承 [《周易参同契》阅读教程](../cantongqi/index.md)（理论框架）与 [《抱朴子·内篇》阅读教程](../baopuzi/index.md)（丹方实践），本束为第三站（生产工艺）；思想背景参读 [帛书《老子》阅读教程](../../../guoxue/laozi/boshu-reading/index.md)。

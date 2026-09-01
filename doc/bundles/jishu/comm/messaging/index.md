@@ -11,7 +11,7 @@ status: stable
 
 本知识包分组收录 ZeroMQ 消息通信生态及基于消息的分布式任务处理的系统化中文源码教程。内容涵盖 ZeroMQ 从 C 核心库到 C++/Python 语言绑定的完整技术栈，以及基于 Redis/RabbitMQ 的 Python 分布式任务队列 dramatiq——前者聚焦高性能异步消息传递的底层原理，后者聚焦消息驱动的任务分发与 worker 并发模型，共同构成"消息通信"从传输层到应用层的知识全景。
 
-所有知识包遵循 [OKF v0.2 规范](../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经 Grep 级源码验证。
+所有知识包遵循 [OKF v0.2 规范](../../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经 Grep 级源码验证。
 
 ## 📊 知识包概览
 

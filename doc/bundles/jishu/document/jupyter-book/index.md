@@ -15,7 +15,7 @@ status: stable
 
 Jupyter Book v2 与 MySTmd 是 Executable Books 组织推出的新一代技术文档工具链，采用 TypeScript 实现统一的 Markdown 解析引擎、多格式导出、Notebook 执行和交互式发布能力。本组知识包收录其核心项目的系统化中文源码教程，覆盖从 Markdown 解析到多格式发布的完整管线。
 
-所有知识包遵循 [OKF v0.2 规范](../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经 Grep 级源码验证。
+所有知识包遵循 [OKF v0.2 规范](../../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经 Grep 级源码验证。
 
 ## 🏗️ 生态架构管线
 

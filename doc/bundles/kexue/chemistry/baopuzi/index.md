@@ -34,7 +34,7 @@ okf_version: "0.2"
 
 - **零基础读者**：从 [为什么读《抱朴子·内篇》](concepts/00-why-read.md) 开始，再读 [葛洪其人与内外篇结构](concepts/01-gehong-context.md)，然后用 [阅读路线](examples/02-reading-route.md) 打开原文，精读 [核心段落选读](concepts/04-key-passages.md)。
 - **有化学基础的读者**：直读 [《金丹》篇](concepts/02-jindan-chapter.md) 与 [《黄白》篇](concepts/03-huangbai-chapter.md)，再以 [现代化学视角](concepts/05-modern-chemistry-lens.md) 收束，并对照 [道尔顿《化学哲学新体系》阅读教程](../dalton-new-system/index.md)。
-- **文史/道教兴趣读者**：先读 [葛洪生平](concepts/01-gehong-context.md) 与 [核心段落选读](concepts/04-key-passages.md) 中"我命在我"段，思想背景参读 [帛书《老子》阅读教程](../../../think/laozi/boshu-reading/index.md)。
+- **文史/道教兴趣读者**：先读 [葛洪生平](concepts/01-gehong-context.md) 与 [核心段落选读](concepts/04-key-passages.md) 中"我命在我"段，思想背景参读 [帛书《老子》阅读教程](../../../guoxue/laozi/boshu-reading/index.md)。
 
 ## 🎯 Bundle 定位
 
@@ -46,7 +46,7 @@ okf_version: "0.2"
 | **本束（实践记录）** | **《抱朴子·内篇》阅读教程** | **葛洪把理论落实为丹方、操作与观察记录** |
 | 下启（工艺百科） | [《天工开物》阅读教程](../tiangong-kaiwu/index.md) | 明代宋应星把矿物冶金工艺纳入生产百科 |
 | 西学对照（近代理论） | [道尔顿《化学哲学新体系》阅读教程](../dalton-new-system/index.md) | 元素—原子—化合理论与定量计量 |
-| 思想背景 | [帛书《老子》阅读教程](../../../think/laozi/boshu-reading/index.md) | "我命在我"的道家精神源头 |
+| 思想背景 | [帛书《老子》阅读教程](../../../guoxue/laozi/boshu-reading/index.md) | "我命在我"的道家精神源头 |
 
 同域兄弟束另有波义耳《怀疑的化学家》、拉瓦锡《化学基础论》、门捷列夫元素周期律等，共同构成化学史阅读网络。
 

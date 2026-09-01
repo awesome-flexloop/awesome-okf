@@ -73,6 +73,6 @@ $$
 - **体系完整性**：方田章围绕分数给出合分（加）、减分（减）、课分（比较大小）、平分（求平均）、乘分（乘）、经分（除）全套法则，是世界数学史上最早的系统分数运算体系（据 r-qian-history）。
 - **命名与表达**：中算称分子为"子"、分母为"母"，取母子相依之意；不用分数线，以"几分之几"的比率语言表达。分数被视为一对比率而非单一的数，这与"齐同原理"相通（见 [concepts/05](../concepts/05-liuhui-commentary.md)）。
 - **传播**：这套分数法则随十书体系东传朝鲜、日本，长期作为东亚通用算术语言。
-- **配套阅读**：分数概念的现代符号化处理可对照 [document/katex](../../../../document/katex/index.md) 的公式排版；想动手验证可参考 [references/cross-ref.md](../references/cross-ref.md) 中的 SymPy 用法。
+- **配套阅读**：分数概念的现代符号化处理可对照 [document/katex](../../../../jishu/document/katex/index.md) 的公式排版；想动手验证可参考 [references/cross-ref.md](../references/cross-ref.md) 中的 SymPy 用法。
 
 > 关联概念：[03 九章结构](../concepts/03-jiuzhang-structure.md)、[04 核心算法](../concepts/04-jiuzhang-key-methods.md)。

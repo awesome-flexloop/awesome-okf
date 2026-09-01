@@ -32,11 +32,11 @@ okf_version: "0.2"
 | 四书知识包（four-books） | [four-books](../../../confucian/four-books/index.md) | 朱熹《四书章句集注》与《周易本义》《易学启蒙》同为朱熹定本工程；理解"定本为何能定于一尊"（本包概念 05）可参四书形成史 |
 | 老子著作知识包（laozi-works） | [laozi-works](../../../laozi/laozi-works/index.md) | "无极"语源之争（F-044：陆九渊谓"无极二字出《老子·知其雄章》"）的对读方；陈抟—邵雍一系被清儒判为"道家者流杂以大易"（F-041），道家文献是渊源考据的必要参照 |
 | 庄子内篇阅读教程（chuang-tzu） | [chuang-tzu](../../../zhuangzi/chuang-tzu/index.md) | 《庄子·天下》"《易》以道阴阳"是先秦对易学定位的内部判断；"道术将为天下裂"的视角可用于观察三图系分化 |
-| 《黄帝内经》阅读教程（neijing-reading） | [neijing-reading](../../../huangdi-neijing/neijing-reading/index.md) | 《灵枢·九宫八风》（F-012）是九宫数术进入医学的实例；中医五运六气、藏象数术与河洛生成数共享象数思维，可对照看数术传统的医学分支 |
-| 道医阅读教程（daoyi-reading） | [daoyi-reading](../../../daoyi/daoyi-reading/index.md) | 陈抟《无极图》"逆则成丹"（F-042）是道教内丹图式；道医束的道藏医文献与内丹脉络可印证图书学与内丹图式的同源关系 |
-| 房中阅读教程（fangzhong-reading） | [fangzhong-reading](../../../fangzhong/fangzhong-reading/index.md) | 同属马王堆/出土数术方技文献群；理解出土文献的证据等级与辨伪方法可参其出土文本与真伪考辨篇 |
-| 养生经典阅读（yangsheng-classics） | [yangsheng-classics-reading](../../../yangsheng/yangsheng-classics-reading/index.md) | 术数—养生民俗化的下游样本；读本包概念 08 的"硬核/附会分界"时可对照养生文献中的同类层累现象 |
-| 易经六十四卦（psi-core 示例） | [yijing-64-hexagrams](../../../psi/psi-core/examples/yijing-64-hexagrams.md) | 六十四卦符号结构的入门演示，读邵雍加一倍法（F-029，1→2→4→8→…→64）前可先借此熟悉卦爻结构 |
+| 《黄帝内经》阅读教程（neijing-reading） | [neijing-reading](../../../../yixue/huangdi-neijing/neijing-reading/index.md) | 《灵枢·九宫八风》（F-012）是九宫数术进入医学的实例；中医五运六气、藏象数术与河洛生成数共享象数思维，可对照看数术传统的医学分支 |
+| 道医阅读教程（daoyi-reading） | [daoyi-reading](../../../../yixue/daoyi/daoyi-reading/index.md) | 陈抟《无极图》"逆则成丹"（F-042）是道教内丹图式；道医束的道藏医文献与内丹脉络可印证图书学与内丹图式的同源关系 |
+| 房中阅读教程（fangzhong-reading） | [fangzhong-reading](../../../../yixue/fangzhong/fangzhong-reading/index.md) | 同属马王堆/出土数术方技文献群；理解出土文献的证据等级与辨伪方法可参其出土文本与真伪考辨篇 |
+| 养生经典阅读（yangsheng-classics） | [yangsheng-classics-reading](../../../../yixue/yangsheng/yangsheng-classics-reading/index.md) | 术数—养生民俗化的下游样本；读本包概念 08 的"硬核/附会分界"时可对照养生文献中的同类层累现象 |
+| 易经六十四卦（psi-core 示例） | [yijing-64-hexagrams](../../../../zhexue/psi/psi-core/examples/yijing-64-hexagrams.md) | 六十四卦符号结构的入门演示，读邵雍加一倍法（F-029，1→2→4→8→…→64）前可先借此熟悉卦爻结构 |
 
 ## 主题关联说明
 

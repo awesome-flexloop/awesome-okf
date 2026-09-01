@@ -24,7 +24,7 @@ tags:
 
 # Helm Chart 部署配置
 
-本知识包是 [langchain-ai/helm](https://github.com/langchain-ai/helm)（Apache-2.0 许可证）的系统化中文参考文档。该仓库包含 LangChain-AI 官方维护的 5 个独立 Helm Chart，用于在 Kubernetes 上部署 LangGraph Cloud、LangSmith 可观测性平台及相关基础设施。所有内容均溯源至仓库源码（`external/libs/ai/langchain-ai/helm/`），遵循 [OKF v0.2 规范](../../../meta/okf-spec/index.md) 的 R→I→E 三阶段工作流生成。
+本知识包是 [langchain-ai/helm](https://github.com/langchain-ai/helm)（Apache-2.0 许可证）的系统化中文参考文档。该仓库包含 LangChain-AI 官方维护的 5 个独立 Helm Chart，用于在 Kubernetes 上部署 LangGraph Cloud、LangSmith 可观测性平台及相关基础设施。所有内容均溯源至仓库源码（`external/libs/ai/langchain-ai/helm/`），遵循 [OKF v0.2 规范](../../../../meta/okf-spec/index.md) 的 R→I→E 三阶段工作流生成。
 
 ## Chart 概览
 

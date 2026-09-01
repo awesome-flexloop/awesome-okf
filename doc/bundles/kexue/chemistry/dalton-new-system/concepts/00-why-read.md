@@ -66,7 +66,7 @@ sources:
 1. **短引对照，不求通读**：1808 年原文句式冗长、术语古旧。建议以[核心段落选读](04-key-passages.md)中的短引为入口，每段配今译与注释，需要时再进入 [Internet Archive 上的原书扫描本](../references/original-sources.md)。
 2. **带着现代化学知识去"挑错"**：读到水作 HO、氧＝7 时不要急于嘲笑，先问"他依据什么数据、做了什么假设"。把错误当作理解推理过程的钥匙。
 3. **沿问题链阅读，而非按章节阅读**：本书的思想主线是"气象观测→气体分压→气体溶解度→原子重量"，见[从气体研究到原子论](01-from-gases-to-atoms.md)。
-4. **串读化学史序列**：本束上承[拉瓦锡《化学基础论》阅读教程](../../lavoisier-treatise/index.md)（元素与质量守恒），下启[门捷列夫周期律阅读教程](../../mendeleev-periodic-law/index.md)（原子量排序）。经典阅读的通用方法论可参照[帛书《老子》阅读教程](../../../../think/laozi/boshu-reading/index.md)。
+4. **串读化学史序列**：本束上承[拉瓦锡《化学基础论》阅读教程](../../lavoisier-treatise/index.md)（元素与质量守恒），下启[门捷列夫周期律阅读教程](../../mendeleev-periodic-law/index.md)（原子量排序）。经典阅读的通用方法论可参照[帛书《老子》阅读教程](../../../../guoxue/laozi/boshu-reading/index.md)。
 
 ## 相关概念
 

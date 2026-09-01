@@ -57,7 +57,7 @@ okf_version: "0.2"
 
 **有中国哲学或化学史背景的读者**：
 
-- 哲学/道教方向：直读 [易理框架](concepts/02-theoretical-framework.md)，注意易—老—丹三家的接榫方式，思想背景参 [帛书《老子》阅读教程](../../../think/laozi/boshu-reading/index.md)；
+- 哲学/道教方向：直读 [易理框架](concepts/02-theoretical-framework.md)，注意易—老—丹三家的接榫方式，思想背景参 [帛书《老子》阅读教程](../../../guoxue/laozi/boshu-reading/index.md)；
 - 化学史方向：直读 [炼丹内容](concepts/03-alchemy-content.md) 与 [现代化学视角](concepts/05-modern-chemistry-lens.md)，再对照 [波义耳《怀疑的化学家》阅读教程](../boyle-sceptical-chymist/index.md)；
 - 文献方向：按 [阅读路线](examples/02-reading-route.md) 选朱熹《考异》进阶，注意外丹/内丹两套注本的诠释差异。
 
@@ -67,7 +67,7 @@ okf_version: "0.2"
 
 | 位置 | 知识束 | 关系 |
 |------|--------|------|
-| 思想上承 | [帛书《老子》阅读教程](../../../think/laozi/boshu-reading/index.md) | "橐籥""归根返元"等道家意象与养生思想的源头 |
+| 思想上承 | [帛书《老子》阅读教程](../../../guoxue/laozi/boshu-reading/index.md) | "橐籥""归根返元"等道家意象与养生思想的源头 |
 | **本束（理论框架）** | **《周易参同契》阅读教程** | **2 世纪：以易学符号统合炼丹经验的第一部体系化丹经** |
 | 实践下启 | [《抱朴子·内篇》阅读教程](../baopuzi/index.md) | 4 世纪：葛洪把理论落实为丹方、操作与物质变化记录 |
 | 工艺沉淀 | [《天工开物》阅读教程](../tiangong-kaiwu/index.md) | 1637 年：五金丹砂冶炼纳入生产工艺百科 |

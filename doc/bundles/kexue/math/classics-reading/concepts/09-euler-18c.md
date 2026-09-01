@@ -79,6 +79,6 @@ sources:
 
 ## 初学者建议
 
-第一周：E101 第 4 章（e 的定义）+ Sandifer 对应专栏 2 篇；第一个月：E101 前 8 章 + 微分学前 5 章（Bruce 英译免费）。用 SymPy 验证级数展开（见库内 [SymPy 知识包](../../../../data/pydata/sympy/index.md)）是低成本的正反馈循环。
+第一周：E101 第 4 章（e 的定义）+ Sandifer 对应专栏 2 篇；第一个月：E101 前 8 章 + 微分学前 5 章（Bruce 英译免费）。用 SymPy 验证级数展开（见库内 [SymPy 知识包](../../../../jishu/data/pydata/sympy/index.md)）是低成本的正反馈循环。
 
 相关概念：[17 世纪革命](08-early-modern-17c.md) · [世纪之交：高斯](10-gauss-turn.md) · [严格化与基础](12-rigor-and-foundations.md)

@@ -129,5 +129,5 @@ sources:
 
 - 上一篇：[丹波康赖与成书始末](01-author-and-book.md)
 - 下一篇：[版本流传与回传中国](03-editions-transmission.md)
-- 性学脉络中的房中书：[性学经典阅读教程](../../../sexology/classics-reading/index.md)
+- 性学脉络中的房中书：[性学经典阅读教程](../../../../sheke/sexology/classics-reading/index.md)
 - 养生脉络中的《养生要集》：[养生经典阅读教程](../../../yangsheng/yangsheng-classics-reading/index.md)

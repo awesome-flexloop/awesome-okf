@@ -7,7 +7,7 @@ okf_version: "0.2"
 
 # ONNX 纯 Python IR（onnx-ir）知识库
 
-本知识包是 [ONNX](https://onnx.ai) 生态中纯 Python 中间表示实现 `onnx-ir`（v1.1.0，BSD-3-Clause 许可证）的系统化中文源码教程，基于 `src/onnx_ir/` 源码深度阅读生成，覆盖从 protobuf-free 分层架构到张量体系、图结构、序列化、Tape 图变换的完整知识体系。所有内容均溯源至源码核心模块（`_core.py`/`_enums.py`/`_tape.py`/`serde.py`/`_io.py`/`_linked_list.py`/`_name_authority.py`/`_metadata.py`），遵循 [OKF v0.2 规范](../../../meta/okf-spec/index.md)。
+本知识包是 [ONNX](https://onnx.ai) 生态中纯 Python 中间表示实现 `onnx-ir`（v1.1.0，BSD-3-Clause 许可证）的系统化中文源码教程，基于 `src/onnx_ir/` 源码深度阅读生成，覆盖从 protobuf-free 分层架构到张量体系、图结构、序列化、Tape 图变换的完整知识体系。所有内容均溯源至源码核心模块（`_core.py`/`_enums.py`/`_tape.py`/`serde.py`/`_io.py`/`_linked_list.py`/`_name_authority.py`/`_metadata.py`），遵循 [OKF v0.2 规范](../../../../meta/okf-spec/index.md)。
 
 onnx-ir 是 ONNX 格式的纯 Python 中间表示，核心设计特点是 IR 层完全 protobuf-free——序列化/反序列化作为独立层次通过 Protocol 多态分发实现，五种张量实现（内存/mmap/字符串/延迟/亚字节打包）统一 TensorProtocol 协议，双向链表支持迭代中安全增删，Tape/Builder 提供声明式图构建 API。
 

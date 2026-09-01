@@ -49,7 +49,7 @@ stale_after: 2027-08-30
 
 | 资源 | 获取方式 | 配套经典 |
 |------|----------|----------|
-| 3Blue1Brown（Grant Sanderson） | YouTube/B站 官方账号；库内 [3b1b 资源包](../../../../viz/3b1b/videos/index.md) | 微积分本质、线性代数本质系列配合 17–18 世纪阅读 |
+| 3Blue1Brown（Grant Sanderson） | YouTube/B站 官方账号；库内 [3b1b 资源包](../../../../jishu/viz/3b1b/videos/index.md) | 微积分本质、线性代数本质系列配合 17–18 世纪阅读 |
 | Norman Wildberger「History of Mathematics」系列 | YouTube 频道 | 古希腊至近代命题逐讲 |
 | 各大学数学史公开课（OCW） | 各校 OpenCourseWare 检索 "history of mathematics" | 配合通史教材 |
 

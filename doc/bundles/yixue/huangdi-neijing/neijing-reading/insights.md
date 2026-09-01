@@ -90,5 +90,5 @@
 
 ## 跨包关联
 
-- 与 [think/laozi/boshu-reading](../../laozi/boshu-reading/index.md) 同属"中国古典文本阅读教程"类型，共享"原文逐字核对 + 注本导航 + 通读计划"的 bundle 结构方法论
+- 与 [think/laozi/boshu-reading](../../../guoxue/laozi/boshu-reading/index.md) 同属"中国古典文本阅读教程"类型，共享"原文逐字核对 + 注本导航 + 通读计划"的 bundle 结构方法论
 - 《黄帝内经》学术思想与道家关系密切（"恬惔虚无""真人至人"），阅读时可与《老子》对照

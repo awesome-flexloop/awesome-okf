@@ -96,7 +96,7 @@ sources:
 
 - 读《内篇》前先知道葛洪的双重身份：炼丹理论家与医药学家。后者留下的《肘后备急方》以"青蒿绞汁"条启示了青蒿素的发现（详见 [00-why-read.md](00-why-read.md) 与 [references/modern-scholarship.md](../references/modern-scholarship.md)）。
 - 《内篇》的论辩策略常以"物质可变"类比"人可成仙"：黄丹胡粉化铅所作、骡为驴马所生、水精碗合五种灰铸成——这些例子本身是准确的工艺观察，结论却是信仰跳跃。阅读时注意区分。
-- 道家思想背景可上溯《老子》，参读 [帛书《老子》阅读教程](../../../../think/laozi/boshu-reading/index.md)。
+- 道家思想背景可上溯《老子》，参读 [帛书《老子》阅读教程](../../../../guoxue/laozi/boshu-reading/index.md)。
 
 ## 相关概念
 

@@ -4,7 +4,7 @@ okf_version: "0.2"
 
 # protobuf 知识库
 
-本知识包是 Google [Protocol Buffers](https://github.com/protocolbuffers/protobuf) 主仓（v37.0-dev）的系统化中文教程，基于源码深度阅读生成。内容以五条架构主线贯穿：双运行时内核（C++ 全功能内核与 upb 轻量内核，多语言实为多绑定）、descriptor 单一事实源（protobuf 用 protobuf 描述 protobuf 的自举设计）、protoc 生成器统一接口（内置生成器与外部插件同构）、Editions 特性系统（proto2/proto3 被降维为 feature 预设）、双构建系统（Bazel 与 CMake 并列的一等公民路径）。所有内容均溯源至 protobuf 源码，遵循 [OKF v0.2 规范](../../../meta/okf-spec/index.md)。
+本知识包是 Google [Protocol Buffers](https://github.com/protocolbuffers/protobuf) 主仓（v37.0-dev）的系统化中文教程，基于源码深度阅读生成。内容以五条架构主线贯穿：双运行时内核（C++ 全功能内核与 upb 轻量内核，多语言实为多绑定）、descriptor 单一事实源（protobuf 用 protobuf 描述 protobuf 的自举设计）、protoc 生成器统一接口（内置生成器与外部插件同构）、Editions 特性系统（proto2/proto3 被降维为 feature 预设）、双构建系统（Bazel 与 CMake 并列的一等公民路径）。所有内容均溯源至 protobuf 源码，遵循 [OKF v0.2 规范](../../../../meta/okf-spec/index.md)。
 
 ## 入门组（concepts/）
 

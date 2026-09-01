@@ -57,4 +57,4 @@ sources:
 
 - 通读钱宝琮《中国数学史》或 Martzloff *A History of Chinese Mathematics*（书单见 [concepts/13](../concepts/13-reading-path.md)）；
 - 专题：李冶《测圆海镜》圆城图式、朱世杰垛积术、和算对天元术的继承；
-- 用代码把各"术"实现为可运行的算法库（盈不足、消元、求一术、增乘开方），对照 [data/pydata/sympy](../../../../data/pydata/sympy/index.md) 的现代实现。
+- 用代码把各"术"实现为可运行的算法库（盈不足、消元、求一术、增乘开方），对照 [data/pydata/sympy](../../../../jishu/data/pydata/sympy/index.md) 的现代实现。

@@ -84,7 +84,7 @@ okf_version: "0.2"
 
 ## 🔗 相关知识包
 
-- 道家思想参照：[think/laozi/boshu-reading](../../laozi/boshu-reading/index.md)（《老子》帛书教程，"恬惔虚无"对读）
+- 道家思想参照：[think/laozi/boshu-reading](../../../guoxue/laozi/boshu-reading/index.md)（《老子》帛书教程，"恬惔虚无"对读）
 - 同域说明：本域另有"黄帝经典"分组收录托名黄帝的道家经典（如《黄帝阴符经》），与《黄帝内经》（医学经典）性质不同，阅读时勿混
 
 ```{toctree}

@@ -76,6 +76,6 @@ sources:
 - [04 原典选读](04-key-passages.md)
 - [05 周期律的后续生命](05-legacy.md)
 - 前驱束：[道尔顿《化学哲学新体系》](../../dalton-new-system/index.md)
-- 方法论迁移：[帛书《老子》阅读教程](../../../../think/laozi/boshu-reading/index.md)
+- 方法论迁移：[帛书《老子》阅读教程](../../../../guoxue/laozi/boshu-reading/index.md)
 
 [^1]: 布瓦博德朗 1877 年镓发现论文（*Annales de Chimie* (5) 10, 100-141），ChemTeam 转录，见[公版原典信源](../references/original-sources.md)。

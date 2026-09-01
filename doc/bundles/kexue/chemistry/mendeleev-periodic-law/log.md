@@ -12,7 +12,7 @@
 ### 结构
 
 - 束目录共 17 个文件：束根 4 个（index.md、facts.md、insights.md、log.md）+ concepts/ 7 个（index.md + 00 至 05）+ examples/ 3 个（index.md + 01、02）+ references/ 3 个（index.md + original-sources、modern-scholarship）。
-- 链接关系：前驱束 [../dalton-new-system/index.md](../dalton-new-system/index.md)（道尔顿原子论）；中西对照 [../cantongqi/index.md](../cantongqi/index.md)（《周易参同契》）；阅读方法论迁移 [../../../think/laozi/boshu-reading/index.md](../../../think/laozi/boshu-reading/index.md)（帛书《老子》）。
+- 链接关系：前驱束 [../dalton-new-system/index.md](../dalton-new-system/index.md)（道尔顿原子论）；中西对照 [../cantongqi/index.md](../cantongqi/index.md)（《周易参同契》）；阅读方法论迁移 [../../../think/laozi/boshu-reading/index.md](../../../guoxue/laozi/boshu-reading/index.md)（帛书《老子》）。
 - 生命周期：信源访问日期 2026-08-30；`status: draft`；`stale_after: 2027-08-30`；`okf_version: "0.2"`。
 
 ### 已知限制

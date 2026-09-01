@@ -4,7 +4,7 @@ okf_version: "0.2"
 
 # protobuf-ci 知识库
 
-本知识包是 Google [protobuf-ci](https://github.com/protocolbuffers/protobuf-ci) 仓库（@v6）的系统化中文教程，基于源码深度阅读生成。protobuf-ci 是 protobuf 家族仓库共享的 GitHub Actions composite action 集合：9 个顶层动作 + 7 个 internal 动作，为主仓 14 个 workflow 提供 Bazel/CMake 构建执行、五层缓存（bazel 远程缓存 / ccache / sccache / repository cache / bazelisk cache）与跨平台容器底座。所有内容均溯源至 protobuf-ci 源码，遵循 [OKF v0.2 规范](../../../meta/okf-spec/index.md)。
+本知识包是 Google [protobuf-ci](https://github.com/protocolbuffers/protobuf-ci) 仓库（@v6）的系统化中文教程，基于源码深度阅读生成。protobuf-ci 是 protobuf 家族仓库共享的 GitHub Actions composite action 集合：9 个顶层动作 + 7 个 internal 动作，为主仓 14 个 workflow 提供 Bazel/CMake 构建执行、五层缓存（bazel 远程缓存 / ccache / sccache / repository cache / bazelisk cache）与跨平台容器底座。所有内容均溯源至 protobuf-ci 源码，遵循 [OKF v0.2 规范](../../../../meta/okf-spec/index.md)。
 
 ## 概念文档（concepts/）
 

@@ -70,7 +70,7 @@ okf_version: "0.2"
 ## 🔗 相关知识包
 
 - 儒家系统对读：[think/confucian/four-books](../../confucian/four-books/index.md)（《大学》《中庸》《论语》《孟子》四书教程）
-- 先秦思想对读：[think/laozi/boshu-reading](../../laozi/boshu-reading/index.md)（《老子》帛书教程）、[think/huangdi-neijing/neijing-reading](../../huangdi-neijing/neijing-reading/index.md)（《黄帝内经》教程）
+- 先秦思想对读：[think/laozi/boshu-reading](../../laozi/boshu-reading/index.md)（《老子》帛书教程）、[think/huangdi-neijing/neijing-reading](../../../yixue/huangdi-neijing/neijing-reading/index.md)（《黄帝内经》教程）
 - 详细交叉引用见[信源登记与交叉引用](references/03-sources-cross-ref.md)
 
 ```{toctree}

@@ -11,7 +11,7 @@ status: stable
 
 本知识包分组收录 Google Protocol Buffers 序列化生态的系统化中文源码教程。内容涵盖 protobuf 主仓的完整技术版图——双运行时内核（C++ 全功能内核与 upb 轻量 C 内核）、protoc 编译器管线（Parser/Importer/生成器/插件协议）、Editions 特性系统、九大语言绑定与双构建系统（Bazel/CMake），以及独立仓库 protobuf-ci 的 GitHub Actions composite action 复用体系与五层 CI 缓存治理。
 
-所有知识包遵循 [OKF v0.2 规范](../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经 Grep 级源码验证。
+所有知识包遵循 [OKF v0.2 规范](../../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经 Grep 级源码验证。
 
 ## 📊 知识包概览
 

@@ -62,7 +62,7 @@ okf_version: "0.2"
 | 前驱束 | [波义耳《怀疑的化学家》阅读教程](../boyle-sceptical-chymist/index.md)（1661，元素概念的先驱） |
 | 后继束 | [道尔顿《化学哲学新体系》阅读教程](../dalton-new-system/index.md)（1808，原子论）；[门捷列夫元素周期律](../mendeleev-periodic-law/index.md) |
 | 中西对照 | [《天工开物》阅读教程](../tiangong-kaiwu/index.md)（同时代中国工艺技术传统的知识形态对照） |
-| 方法论参照 | [帛书《老子》阅读教程](../../../think/laozi/boshu-reading/index.md)（经典细读方法范式） |
+| 方法论参照 | [帛书《老子》阅读教程](../../../guoxue/laozi/boshu-reading/index.md)（经典细读方法范式） |
 
 ## 📖 推荐学习路径
 

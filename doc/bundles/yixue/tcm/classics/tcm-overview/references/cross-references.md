@@ -33,9 +33,9 @@ sources:
 
 | 目标束 | 关系 | 协作建议 |
 |---|---|---|
-| [neijing-reading：《黄帝内经》阅读教程](../../../../think/huangdi-neijing/neijing-reading/index.md) | 四大经典之首的深入研读束（12 篇概念 + 9 篇精读示例），与本束构成"总览 → 单书"两级结构 | 按本束[通读计划](../examples/four-classics-reading-plan.md)阶段 1 进入《内经》时切换到该束；该束的版本与注家登记可视为本束[概念 03 五问法](../concepts/03-pseudepigrapha-dating.md)在《内经》上的完整答案 |
-| [boshu-reading：老子帛书阅读](../../../../think/laozi/boshu-reading/index.md) | 平行方法束：出土简帛本与传世本的**异文研读**（四本系统、避讳字、关键异文），是"双源逐字核读法"在子部文献上的同构实践 | 关心[概念 02 异文五分法](../concepts/02-philology-basics.md)的读者可对照该束的版本系统分析——医经的"版本系统差异"与子书的"简帛本/通行本差异"是同一现象的两个领域实例 |
-| [laozi-works：老子著作与研究](../../../../think/laozi/laozi-works/index.md) | 该束含出土本汇校（unerthed-collation）与历代注家研究，注家链存录体例与本束"注家异说并列不裁决"原则一致（INS-005） | 研究托名与注家谱系方法时可跨域参照 |
+| [neijing-reading：《黄帝内经》阅读教程](../../../../huangdi-neijing/neijing-reading/index.md) | 四大经典之首的深入研读束（12 篇概念 + 9 篇精读示例），与本束构成"总览 → 单书"两级结构 | 按本束[通读计划](../examples/four-classics-reading-plan.md)阶段 1 进入《内经》时切换到该束；该束的版本与注家登记可视为本束[概念 03 五问法](../concepts/03-pseudepigrapha-dating.md)在《内经》上的完整答案 |
+| [boshu-reading：老子帛书阅读](../../../../../guoxue/laozi/boshu-reading/index.md) | 平行方法束：出土简帛本与传世本的**异文研读**（四本系统、避讳字、关键异文），是"双源逐字核读法"在子部文献上的同构实践 | 关心[概念 02 异文五分法](../concepts/02-philology-basics.md)的读者可对照该束的版本系统分析——医经的"版本系统差异"与子书的"简帛本/通行本差异"是同一现象的两个领域实例 |
+| [laozi-works：老子著作与研究](../../../../../guoxue/laozi/laozi-works/index.md) | 该束含出土本汇校（unerthed-collation）与历代注家研究，注家链存录体例与本束"注家异说并列不裁决"原则一致（INS-005） | 研究托名与注家谱系方法时可跨域参照 |
 
 ## 域内规划中的束（占位）
 

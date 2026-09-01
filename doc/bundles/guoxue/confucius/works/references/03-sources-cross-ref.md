@@ -41,7 +41,7 @@ stale_after: 2027-08-31
 
 ### 黄帝内经（think/huangdi-neijing/neijing-reading）
 
-**链接**：[黄帝内经阅读教程](../../../huangdi-neijing/neijing-reading/index.md)
+**链接**：[黄帝内经阅读教程](../../../../yixue/huangdi-neijing/neijing-reading/index.md)
 
 **与本包的关系**：同属 think 域经典阅读；本包《周易》阴阳思想（F-043）与《黄帝内经》的阴阳五行理论（F-007 六经体系）可对观，本包不作比附。
 

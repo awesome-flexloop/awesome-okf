@@ -15,7 +15,7 @@ status: stable
 
 本知识包分组收录 [ONNX（Open Neural Network Exchange）](https://onnx.ai) 生态系统各核心项目的系统化中文源码教程。ONNX 是机器学习模型的开放标准格式，定义了可扩展的计算图模型、内置算子和标准数据类型，实现不同深度学习框架之间的互操作性。
 
-所有知识包遵循 [OKF v0.2 规范](../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有API引用均经Grep级源码验证。
+所有知识包遵循 [OKF v0.2 规范](../../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有API引用均经Grep级源码验证。
 
 ## 📊 知识包概览
 

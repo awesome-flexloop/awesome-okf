@@ -7,7 +7,7 @@ okf_version: "0.2"
 
 # ONNX-MLIR 编译器知识库
 
-本知识包是 [ONNX-MLIR](https://github.com/onnx/onnx-mlir)（Apache-2.0 许可证）——基于 LLVM/MLIR 技术栈的 ONNX 模型编译器——的系统化中文源码教程，基于 ONNX-MLIR 源码（`src/` 目录下核心模块）深度阅读生成，覆盖从多级 lowering 流水线架构、ONNX/Krnl 双 Dialect 设计、完整转换管线、自描述共享库运行时模型到编译选项调优的完整知识体系。所有内容均溯源至源码核心模块（`onnx-mlir.cpp`/`CompilerUtils.cpp`/`CompilerPasses.cpp`/`ONNX.td`/`Krnl.td`/`ExecutionSession.hpp`/`OnnxMlirRuntime.h` 等），遵循 [OKF v0.2 规范](../../../meta/okf-spec/index.md)。
+本知识包是 [ONNX-MLIR](https://github.com/onnx/onnx-mlir)（Apache-2.0 许可证）——基于 LLVM/MLIR 技术栈的 ONNX 模型编译器——的系统化中文源码教程，基于 ONNX-MLIR 源码（`src/` 目录下核心模块）深度阅读生成，覆盖从多级 lowering 流水线架构、ONNX/Krnl 双 Dialect 设计、完整转换管线、自描述共享库运行时模型到编译选项调优的完整知识体系。所有内容均溯源至源码核心模块（`onnx-mlir.cpp`/`CompilerUtils.cpp`/`CompilerPasses.cpp`/`ONNX.td`/`Krnl.td`/`ExecutionSession.hpp`/`OnnxMlirRuntime.h` 等），遵循 [OKF v0.2 规范](../../../../meta/okf-spec/index.md)。
 
 ONNX-MLIR 将 ONNX 计算图编译为最小运行时支持的原生共享库，核心创新是插入 Krnl Dialect 作为"编译策略层"——将循环 tiling、SIMD、并行等优化决策编码进 IR 本身，结合 MLIR Pass+外部 LLVM 工具链的分层架构，输出自描述的 .so/.dll 部署单元（内嵌模型签名和元数据查询函数）。
 
