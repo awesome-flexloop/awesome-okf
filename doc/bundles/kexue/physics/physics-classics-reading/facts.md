@@ -1,8 +1,13 @@
+---
+type: Facts
+title: "事实清单（Facts Inventory）"
+---
+
 # 事实清单（Facts Inventory）
 
-> 采集时间：2026-08-30
-> 采集范围：国外物理学经典原著 12 部核心元典、在线获取门户、权威中译本、版权状态、扩展书单
-> 核验方式：全部外部 URL 于 2026-08-30 经 WebFetch 实测（详见文末"URL 核验表"）；书目信息以馆藏著录（LoC/Internet Archive/HathiTrust）、出版社页面、Project Gutenberg 著录页为准
+> 采集时间：2026-08-30（F-001~F-104）；2026-08-31 扩充（F-105~F-136）
+> 采集范围：国外物理学经典原著 12 部核心元典 + 扩充调研 9 部著作（惠更斯、法拉第、普朗克、卡诺、居里、德布罗意、玻色、温伯格）、在线获取门户、权威中译本、版权状态、扩展书单
+> 核验方式：全部外部 URL 于 2026-08-30 经 WebFetch 实测（详见文末"URL 核验表"）；2026-08-31 扩充条目经 WebSearch + WebFetch 核验（详见"URL 核验表追加"）；书目信息以馆藏著录（LoC/Internet Archive/HathiTrust）、出版社页面、Project Gutenberg 著录页为准
 > 说明：本清单为纯客观事实登记，不含因果推断或主观评价
 
 ---
@@ -218,3 +223,102 @@
 | https://zbphysik.univie.ac.at/ausstellung/schroedinger/ebibliographie/publications.htm | ✅ 可达 | 维也纳大学物理系薛定谔电子书目（著作出版信息） |
 | https://www.damtp.cam.ac.uk/events/dirac/dirac/highlights.html | ✅ 可达 | 剑桥 DAMTP 狄拉克纪念页（生平与学术贡献） |
 | http://web.ihep.su/dbserv/compas/contents.html | ✅ 可达 | 量子力学原始论文摘引库（俄罗斯科学院 IHEP） |
+
+---
+
+## 十六、2026-08-31 扩充调研：从扩展书单升级的核心级事实（F-105 起）
+
+> 扩充调研范围：惠更斯、法拉第、普朗克量子论文、卡诺、居里、德布罗意、玻色、温伯格等 9 部著作的原文获取与解读信源。
+
+## 惠更斯《摆钟论》（1673）
+
+| 编号 | 事实内容 |
+|------|---------|
+| F-105 | 惠更斯（Christiaan Huygens，1629-1695）《摆钟论》拉丁原名 *Horologium Oscillatorium sive de Motu Pendulorum ad Horologia Aptato Demonstrationes Geometricae*，1673 年巴黎 F. Muguet 出版，题献路易十四。 |
+| F-106 | 全书分五部分：第一部分摆钟构造描述、第二部分重物下落与摆线（cycloid）运动（摆线等时性）、第三部分曲线的展开与渐屈线（evolute/involute）、第四部分摆动中心（center of oscillation）、第五部分另一种摆钟构造与离心力定理。 |
+| F-107 | 法国国家图书馆 Gallica 收录 1673 年原版全文扫描件（条目 bpt6k1523597w，ark:/12148/bpt6k1523597w）。 |
+| F-108 | 第四部分"摆动中心"命题的英译 "Center of Oscillation" 由 Princeton 大学科学史站点（www.princeton.edu/~hos）提供在线版本（1977-1995 年整理）；e-rara.ch 提供 1673 年版与 1724 年 *Opera varia* 修订版扫描（DOI 10.3931/e-rara-11164 与 10.3931/e-rara-3651）。 |
+
+## 法拉第《电学实验研究》
+
+| 编号 | 事实内容 |
+|------|---------|
+| F-109 | 法拉第（Michael Faraday，1791-1867）《电学实验研究》*Experimental Researches in Electricity* 系列论文载《哲学学报》（*Philosophical Transactions*）1831-1852 年；单行本三卷：第一卷 1839（收录 Series I-XIV）、第二卷 1844（Series XV-XVIII）、第三卷 1855（Series XIX-XXX）。 |
+| F-110 | Project Gutenberg 收录第一卷全文（eBook #14986），底本为伦敦 Richard and John Edward Taylor 1849 年第二版，2005-02-09 发布，E-text 由 BnF/Gallica 扫描件整理，著录页标注公有领域。 |
+| F-111 | Series I（1831-11-24 宣读）"On the Induction of Electric Currents" 以编号段落（para. 1-）组织实验叙述，开篇即电磁感应实验（26 英尺铜线绕木筒 helix 装置）。 |
+| F-112 | 史密森尼图书馆（library.si.edu）收录 1832 年《哲学学报》抽印本扫描（含 Series I-V），The Royal Society 出版。 |
+
+## 普朗克量子论文（1900-1901）
+
+| 编号 | 事实内容 |
+|------|---------|
+| F-113 | 普朗克黑体辐射谱定律论文德文原题 "Über das Gesetz der Energieverteilung im Normalspectrum"，载 *Annalen der Physik* 第 4 辑（vol. 4 / 306 系列）第 553-563 页，1901 年；另 "Über irreversible Strahlungsvorgänge" 载 *Ann. Phys.* 第 1 辑 p.69（1900）、第 4 辑 311:818-831（1901，DOI 10.1002/andp.19013111210）。 |
+| F-114 | 1901 论文英译 "On the Law of Distribution of Energy in the Normal Spectrum" 由不列颠哥伦比亚大学（UBC）物理系课程站点（theory.physics.ubc.ca/200-06/Planck-1901.html）提供全文 HTML；文中给出熵-能量关系推导与常数 h=6.55×10⁻²⁷ erg·s 的数值。 |
+| F-115 | Wiley Online Library 提供 1900/1901 年 *Ann. Phys.* 论文的德文原文 PDF（DOI 10.1002/andp.19013111210 等），作为德文原版获取渠道。 |
+
+## 卡诺《关于火的动力的思考》（1824）
+
+| 编号 | 事实内容 |
+|------|---------|
+| F-116 | 卡诺（Sadi Carnot，1796-1832）《关于火的动力的思考》法文原名 *Réflexions sur la Puissance Motrice du Feu et sur les Machines propres à Développer cette Puissance*，1824 年巴黎 Bachelier 出版，共 118 页；卡诺生前未发表其他著作。 |
+| F-117 | Robert Henry Thurston 英译本 *Reflections on the Motive Power of Heat*（New York: J. Wiley 1890 年初版/1897 年第二版修订版）含 Kelvin 勋爵长篇评述 "Account of Carnot's Theory" 与卡诺未刊手稿摘录；Project Gutenberg 收录该译本全文（eBook #78610，2026-05-05 发布）。 |
+| F-118 | 书中提出循环过程（两等温 + 两绝热）、可逆过程与"卡诺定理"雏形（动力仅取决于两个温度）；1834 年 Clapeyron 以 p-V 图解析重构该理论。 |
+
+## 居里《放射性物质研究》（1903）
+
+| 编号 | 事实内容 |
+|------|---------|
+| F-119 | 居里（Marie Skłodowska Curie，1867-1934）博士论文法文原名 *Recherches sur les substances radioactives*，1903 年 6 月 25 日于巴黎索邦答辩，答辩委员会含 Lippmann、Bouty、Moissan；1904 年刊行。 |
+| F-120 | 论文系统研究铀射线、钍的放射性（独立于 Becquerel 发现）、钋（1898-07）与镭（1898-12）的发现及"放射性"（radioactivité）术语的提出；提出放射性为原子性质而非化学性质的论断。 |
+| F-121 | 英译 "Researches on Radio-Active Substances" 1904 年载 *Chemical News*；Kronecker Wallis 出版社出有法英双语影印版；Benjamin/原版书数据库收录该英译选段（A Source Book in Chemistry, 1400-1900）。 |
+
+## 德布罗意物质波博士论文（1924）
+
+| 编号 | 事实内容 |
+|------|---------|
+| F-122 | 德布罗意（Louis de Broglie，1892-1987）博士论文法文原名 *Recherches sur la théorie des Quanta*，1924 年 11 月 25 日于巴黎理学院（Faculté des Sciences de Paris）答辩；期刊版载 *Annales de Physique* 第 10 辑第 3 卷第 22-128 页（1925）。 |
+| F-123 | 法国开放科学档案 HAL 收录论文法文全文 PDF（tel-00006807，6.79 MB，2004-09-16 归档，HAL Authorization 许可）；Fondation Louis de Broglie 官网（fondationlouisdebroglie.org）提供 1924 年原版重印信息与 A. F. Kracklauer 英译 *On the Theory of Quanta*。 |
+| F-124 | 论文提出相位波（phase wave）概念与 λ = h/p 物质波关系；德布罗意 1929 年因电子波动性发现获诺贝尔物理学奖。 |
+
+## 玻色光量子统计论文（1924）
+
+| 编号 | 事实内容 |
+|------|---------|
+| F-125 | 玻色（Satyendra Nath Bose，1894-1974）论文德文原题 "Plancks Gesetz und Lichtquantenhypothese"，载 *Zeitschrift für Physik* 第 26 卷第 178-181 页（1924 年 8 月刊出，DOI 10.1007/BF01327326）；1924 年 7 月 2 日收到。 |
+| F-126 | 爱因斯坦将玻色英文手稿亲自译为德文并以玻色名义投寄 *Zeitschrift für Physik*，附明信片称该文为重要贡献；玻色以相空间计数（光子不可分辨）直接导出普朗克定律。 |
+| F-127 | 爱因斯坦据此于 1924-1925 将该统计推广至单原子理想气体（"Quantentheorie des einatomigen idealen Gases"，*Sitzungsber. preuss. Akad. Wiss.* 1925, 3-14），预言玻色-爱因斯坦凝聚；英译见 K. C. Wali 编 *Satyendra Nath Bose: His Life and Times*（2009）。 |
+
+## 温伯格电弱统一论文（1967）
+
+| 编号 | 事实内容 |
+|------|---------|
+| F-128 | 温伯格（Steven Weinberg，1933-2021）论文 "A Model of Leptons" 载 *Physical Review Letters* 第 19 卷第 21 期第 1264-1266 页，1967 年 11 月 20 日发表，全文仅约 2.5 页，DOI 10.1103/PhysRevLett.19.1264。 |
+| F-129 | 论文构建 SU(2)×U(1) 电弱统一模型（轻子模型），预言 W、Z 玻色子与中性弱流；1979 年温伯格与 Salam、Glashow 共获诺贝尔物理学奖。 |
+| F-130 | 该文长期为高能物理最高引用论文之一（SLAC SPIRES 统计 1980 年单年引用 351 次、累计 6220 次）；原文经 American Physical Society（journals.aps.org）获取，处于版权保护期。 |
+
+## 扩充调研门户与补充事实
+
+| 编号 | 事实内容 |
+|------|---------|
+| F-131 | Gallica（gallica.bnf.fr）为法国国家图书馆数字馆藏，提供惠更斯《摆钟论》1673 原版等扫描件，URL 形如 ark:/12148/bpt6k1523597w。 |
+| F-132 | HAL（theses.hal.science）为法国开放博士论文库，提供德布罗意 1924 论文全文下载；许可为 HAL Authorization。 |
+| F-133 | e-rara.ch 为瑞士图书馆数字化古书平台，收录惠更斯 *Opera varia* 1724 版等。 |
+| F-134 | Project Gutenberg 惠更斯相关条目检索可通过 gutenberg.org 站内搜索 "Huygens"；卡诺 Thurston 译本条目 #78610 于 2026-05-05 发布，标注公有领域。 |
+| F-135 | adcs.home.xs4all.nl 站点提供惠更斯全集（Oeuvres Complètes）荷兰文整理版在线阅读，含《摆钟论》全文（Oeuvres XVIII）。 |
+| F-136 | arXiv physics.hist-ph 分类收录物理学史研究论文（如卡诺理论批判分析 arXiv:2508.17027），可作为现代解读信源参考。 |
+
+### URL 核验表追加（2026-08-31 WebSearch/WebFetch 核验）
+
+| URL | 实测结果 | 内容摘要 |
+|-----|---------|---------|
+| https://gallica.bnf.fr/ark:/12148/bpt6k1523597w | ✅ 检索确认 | Gallica 惠更斯《摆钟论》1673 原版扫描（经 encyclopedia.pub 引用与搜索结果确认条目存在） |
+| https://theory.physics.ubc.ca/200-06/Planck-1901.html | ✅ 可达 | 普朗克 1901 论文英译全文（Ann. Phys. vol.4 p.553 ff），含公式转写 |
+| https://onlinelibrary.wiley.com/doi/10.1002/andp.19013111210 | ✅ 可达 | Wiley 德文原文 "Ueber irreversible Strahlungsvorgänge"（Ann. Phys. 311:818-831, 1901） |
+| https://www.gutenberg.org/ebooks/14986 | ✅ 可达 | Faraday《电学实验研究》第一卷，Taylor 1849 第二版底本，BnF 扫描整理 |
+| https://www.gutenberg.org/ebooks/78610 | ✅ 可达 | Carnot *Reflections on the Motive Power of Heat*，Thurston 译 1890/1897，含 Kelvin 评述，2026-05-05 发布 |
+| https://theses.hal.science/tel-00006807 | ✅ 可达 | de Broglie 1924 博士论文法文全文（tel-00006807，6.79 MB PDF） |
+| https://fondationlouisdebroglie.org/oeuvres.html | ✅ 可达 | Fondation Louis de Broglie 著作页：1924 原版重印与 Kracklauer 英译入口 |
+| https://doi.org/10.1007/BF01327326 | ✅ DOI 解析 | Bose 1924 Z. Phys. 26:178-181 论文 DOI |
+| https://doi.org/10.1103/PhysRevLett.19.1264 | ✅ DOI 解析 | Weinberg 1967 PRL 19:1264-1266 论文 DOI（APS 版权，付费墙） |
+| https://library.si.edu/digital-library/book/oninductionofele00fara | ✅ 可达 | 史密森尼藏 Faraday Series I-V 1832 皇家学会抽印本扫描 |
+| https://arxiv.org/html/2508.17027 | ✅ 可达 | 卡诺理论现代批判分析（de Oliveira, arXiv:2508.17027, CC BY 4.0） |

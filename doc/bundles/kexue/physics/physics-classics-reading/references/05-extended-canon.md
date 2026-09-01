@@ -21,7 +21,9 @@ sources:
 
 # 扩展经典书单
 
-核心 12 部元典之外，按六个分支登记 30 余部延伸经典。标【PD】者为 1930 年及以前出版、按美国 2026 年界限进入公有领域且全文可获取（Gutenberg/archive.org/UPenn 聚合页检索；后续修订版另判）；标【版权】者请走图书馆或正规购书渠道。
+核心 12 部元典 + 扩充核心级 9 部之外，按六个分支登记延伸经典。标【PD】者为 1930 年及以前出版、按美国 2026 年界限进入公有领域且全文可获取（Gutenberg/archive.org/UPenn 聚合页检索；后续修订版另判）；标【版权】者请走图书馆或正规购书渠道。
+
+> **2026-08-31 升级说明**：惠更斯《摆钟论》《光论》、卡诺《火的动力思考》、德布罗意博士论文已升级为核心级（事实登记 F-105~F-136，见 [canon-map](../concepts/01-canon-map.md) 扩充表）；本节保留其余延伸条目，并新增法拉第《电学实验研究》、普朗克量子论文、居里博士论文、玻色论文、温伯格 "A Model of Leptons" 五条。
 
 ## 一、天文学与经典力学
 
@@ -36,6 +38,8 @@ sources:
 | *Treatise on Natural Philosophy*（1867）【PD】 | 汤姆孙与泰特 Thomson & Tait | "T&T"，19 世纪力学综合教程 |
 | *Die Mechanik in ihrer Entwicklung*（1883）【PD】 | 马赫 E. Mach | 《力学史评》，对牛顿绝对时空的批判 |
 
+> 惠更斯《摆钟论》（1673）已升级核心级：Gallica 1673 扫描 + e-rara 1724 版（F-105~F-108）。
+
 ## 二、热学与统计物理
 
 | 著作 | 作者/年代 | 说明 |
@@ -48,6 +52,8 @@ sources:
 | *Vorlesungen über die Theorie der Wärmestrahlung*（1906）【PD】 | 普朗克 | 热辐射理论讲义，量子常数 h 的诞生地 |
 | 吉布斯热力学论文（1873-1878）【PD】 | 吉布斯 J. W. Gibbs | 含 "On the Equilibrium of Heterogeneous Substances" |
 
+> 卡诺《火的动力思考》（1824）已升级核心级：Thurston 英译 Gutenberg #78610（F-116~F-118）；普朗克 1900-1901 量子论文已升级核心级（UBC 英译 + Wiley 德文，F-113~F-115）。
+
 ## 三、电磁学、光学与波
 
 | 著作 | 作者/年代 | 说明 |
@@ -55,7 +61,10 @@ sources:
 | *Traité de la Lumière*（1690）【PD】 | 惠更斯 | 光论，光的波动说 |
 | *The Theory of Sound*（1877）【PD】 | 瑞利 Lord Rayleigh | 声学理论两卷，波动问题的经典处理 |
 | *The Scientific Papers of J. C. Maxwell*（1890）【PD】 | 麦克斯韦（Niven 编） | 含 1865 电磁场动力学论文等全部论文 |
+| *Experimental Researches in Electricity* 三卷（1839/1844/1855）【PD】 | 法拉第 M. Faraday | 电磁感应系列论文（Series I-XXX），Gutenberg 第一卷 #14986 |
 | 爱因斯坦光电效应论文（1905）【PD】 | 爱因斯坦 | *Ann. Phys.* 322:132，光量子假说 |
+
+> 惠更斯《光论》（1690）已升级核心级；法拉第《电学实验研究》为本节新增核心级条目（1832 皇家学会抽印本见史密森尼藏件，F-109~F-112）。
 
 ## 四、相对论与引力
 
@@ -72,12 +81,15 @@ sources:
 | 著作 | 作者/年代 | 说明 |
 |------|----------|------|
 | *Atombau und Spektrallinien*（1919）【PD（美国，初版；后续修订版另判）】 | 索末菲 A. Sommerfeld | 原子结构与光谱线，旧量子论集成 |
-| 德布罗意博士论文（1924）【PD（美国）】 | 德布罗意 L. de Broglie | 物质波假说 |
+| 德布罗意博士论文（1924）【PD（美国）】 | 德布罗意 L. de Broglie | 物质波假说（HAL 法文全文 tel-00006807 + Kracklauer 英译，已升级核心级 F-122~F-124） |
+| 玻色论文（1924）【PD（美国）】 | 玻色 S. N. Bose | "Plancks Gesetz und Lichtquantenhypothese"，*Z. Phys.* 26:178，爱因斯坦亲手译稿（核心级 F-125~F-127） |
+| 居里博士论文（1903）【PD（美国）】 | 居里 M. Curie | *Recherches sur les substances radioactives*，放射性为原子性质（核心级 F-119~F-121） |
 | 泡利不相容原理论文（1925）【PD（美国）】 | 泡利 W. Pauli | *Z. Phys.* 31:765 |
 | 玻恩-约当矩阵力学论文（1925）【PD（美国）】 | 玻恩、约当 | *Z. Phys.* 34:858，矩阵力学数学化 |
 | "Dreimännerarbeit"（1925）【PD（美国）】 | 玻恩、海森堡、约当 | *Z. Phys.* 35:557，三人论文 |
 | *Mathematische Grundlagen der Quantenmechanik*（1932）【版权】 | 冯·诺依曼 J. von Neumann | 量子力学的数学基础，希尔伯特空间公理化 |
 | *The Quantum Theory of Fields* I-III（1995-2000）【版权】 | 温伯格 | 量子场论三卷 |
+| "A Model of Leptons"（1967）【版权】 | 温伯格 | 电弱统一论文，*PRL* 19:1264，APS 获取（核心级 F-128~F-130） |
 | *Quantum Mechanics and Path Integrals*（1965）【版权】 | Feynman & Hibbs | 路径积分专著（中译本高教社，ISBN 978-7-04-042411-9） |
 | *Quantum Electrodynamics*（讲义）【版权】 | 费曼 | 量子电动力学讲义（中译本张邦固译，ISBN 978-7-04-036960-1） |
 
