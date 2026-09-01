@@ -2,9 +2,9 @@
 okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
-description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程"
-total_bundles: 347
-groups: 69
+description: "awesome-okf-xs 知识包（bundles）分组导航——按技术域与分组组织的开源项目源码中文教程与声乐教学教程"
+total_bundles: 348
+groups: 70
 domains: 15
 ---
 
@@ -12,7 +12,7 @@ domains: 15
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与AI平台的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **347 个知识包**，按技术生态分为 **15 个技术域、69 个分组**。
+> 当前共 **348 个知识包**，按技术生态分为 **15 个技术域、70 个分组**。
 
 ***
 
@@ -32,7 +32,7 @@ flowchart TD
     viz["📐 viz/ 数学可视化与创意编程：3b1b ManimGL · 视频场景 · 字幕工具链 · React官网"]
     web["🌐 web/ Web 开发生态：fastapi · graphql"]
     containers["📦 containers/ 容器生态：OCI运行时 · 存储驱动 · Podman工具链 · AI容器配方"]
-    think["💭 think/ 思想与理论：psi · confucian · laozi · mozi · huangdi · neijing · daoyi · fangzhong · classics · sexology · yangsheng · hetu-luoshu 河图洛书"]
+    think["💭 think/ 思想与理论：psi · confucian · laozi · mozi · huangdi · neijing · daoyi · fangzhong · classics · sexology · yangsheng · hetu-luoshu 河图洛书 · vocal 声乐教学"]
     tcm["🌿 tcm/ 中医经典与理论：典籍谱系总览 · 难经 · 伤寒杂病论 · 神农本草经 · 黄帝外经"]
     science["🔬 science/ 自然科学经典：化学中西元典 · 物理学中西元典"]
     data -->|"科学计算基础"| science
@@ -80,7 +80,7 @@ flowchart LR
     viz["📐 viz/：数学可视化与创意编程（ManimGL动画引擎 - 视频场景 - 字幕工具链 - React官网）"]
     web["🌐 web/：Web 开发生态（fastapi · graphql）"]
     comm["📡 comm/：通信与网络生态（ZeroMQ 消息 · SSH 远程控制 · Protocol Buffers 序列化）"]
-    think["💭 think/：思想与理论（psi · confucian · confucius · laozi · mozi · yinyangjia · hetu-luoshu 河图洛书 · legalism · huangdi · neijing · daoyi · fangzhong · classics · sexology · yangsheng 选读）"]
+    think["💭 think/：思想与理论（psi · confucian · confucius · laozi · mozi · yinyangjia · hetu-luoshu 河图洛书 · legalism · huangdi · neijing · daoyi · fangzhong · classics · sexology · yangsheng · vocal 声乐教学 选读）"]
     tcm["🌿 tcm/：中医经典研读（典籍谱系总览·难经·伤寒·本草·外经——原文双源核对与注家谱系，人文选读）"]
     science["🔬 science/：自然科学经典（化学中西元典 · 物理学中西元典，经典选读）"]
     meta --> py --> rust --> build --> doc --> data --> ml --> containers --> ai --> viz --> web --> comm --> science --> think --> tcm
@@ -175,7 +175,7 @@ flowchart LR
 | [⚡ FastAPI Web 框架生态](web/fastapi/index.md) | 1  | FastAPI 高性能 ASGI Web 框架——类型注解驱动、依赖注入树、OpenAPI 自动生成 |
 | [📡 GraphQL 核心规范与生态](web/graphql/index.md) | 1  | GraphQL 查询语言系统化中文教程——语法、Schema 类型系统、验证执行管线、内省系统    |
 
-### 💭 [思想与理论](think/index.md) · 42 束 · 23 组
+### 💭 [思想与理论](think/index.md) · 43 束 · 24 组
 
 | 分组                                      | 束数 | 说明                                     |
 | --------------------------------------- | -- | -------------------------------------- |
@@ -202,6 +202,7 @@ flowchart LR
 | [🧭 性学经典（Sexology）知识包](think/sexology/index.md) | 1  | 性学/性文化经典著作阅读教程——六大板块著作提要、译本选择指南与分阶段阅读计划 |
 | [🌿 养生经典（yangsheng 锚点）](think/yangsheng/index.md) | 1  | 养生经典阅读教程——《黄帝内经》至《老老恒言》六部核心经典与食养/导引/道教扩展脉络，五脉谱系导览与选篇精读 |
 | [☯ 道家（Daojia）知识包](think/daojia/index.md) | 4  | 道家著作全谱系导航——先秦诸子/黄老之学/魏晋玄学注疏/道教经典四段谱系，段—家—著三级分层；段下含淮南子、黄帝四经、抱朴子内篇、列子、文子、鹖冠子、管子四篇、河上公章句、严遵指归、太平经、关尹子、尹文子、慎到田骈、王弼、郭象、成玄英、参同契、黄庭经、清静经十九束，老子/庄子/阴符经既有分组交叉引用 |
+| [🎤 声乐教学（Vocal）知识包](think/vocal/index.md) | 1  | 声乐教学教程——美通唱法与咽音体系：林俊卿咽音练声八步骤（呼吸/喉位/共鸣/换声）、美通唱法（美声功底×通俗表达）、嗓音科学、常见毛病纠正、嗓音保健、教学法与每日练声清单 |
 
 ### 🔬 [自然科学](science/index.md) · 9 束 · 2 组
 
