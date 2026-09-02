@@ -3,8 +3,8 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 417
-groups: 52
+total_bundles: 411
+groups: 49
 domains: 9
 ---
 
@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **417 个知识包**，按学科逻辑分为 **9 个学科域、52 个分组**（8 个学科域 + 1 个规范锚点）。
+> 当前共 **411 个知识包**，按学科逻辑分为 **9 个技术域、49 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -20,15 +20,15 @@ domains: 9
 
 ```mermaid
 flowchart TD
-    meta["📐 meta/ 规范与格式（2 束）：okf-spec 规范锚点 · okf-ecosystem 生态工具"]
-    guoxue["📜 guoxue/ 国学（46 束）：儒道释法墨易·河洛·阳明心学·算学"]
+    meta["📐 meta/ 规范与格式（1 束）：okf-spec 规范锚点"]
+    guoxue["📜 guoxue/ 国学（45 束）：儒道释法墨易·河洛·阳明心学·算学"]
     zhexue["💭 zhexue/ 哲学（4 束）：Ψhē 自指递归理论体系"]
     kexue["🔬 kexue/ 科学（15 束）：化学·物理学中西元典·国外数学经典·中西数学对读"]
-    wenxue["✒️ wenxue/ 文学（2 束）：中国古典文学经典 · 英语语法"]
+    wenxue["✒️ wenxue/ 文学（1 束）：中国古典文学经典"]
     yixue["🌿 yixue/ 医学与养生（10 束）：中医经典·黄帝内经·道医·养生·房中"]
     sheke["👥 sheke/ 社会科学（16 束）：职场管理·亲密关系·性学经典·理财·营销"]
     yishu["🎤 yishu/ 艺术（7 束）：艺术疗愈六束（总览·美术·音乐·舞动戏剧·表达性·中国）·声乐教学"]
-    jishu["⚙️ jishu/ 技术（314 束）：AI·文档工程·构建·通信·容器·数据·物联网等 16 生态分组"]
+    jishu["⚙️ jishu/ 技术（312 束）：AI·文档工程·构建·通信·容器·数据等 15 生态分组"]
     meta -->|"规范约束"| jishu
     jishu -->|"AI 辅助人文内容生成"| guoxue
     kexue -->|"科学元典与算学互参"| guoxue
@@ -49,20 +49,19 @@ flowchart TD
 
 ## 九域分组导航
 
-### 📐 [规范与格式](meta/index.md) · 2 束 · 2 组
+### 📐 [规范与格式](meta/index.md) · 1 束 · 1 组
 
 | 分组                                              | 束数 | 说明                                                 |
 | ----------------------------------------------- | -- | -------------------------------------------------- |
 | [📐 规范与格式（okf-spec 锚点）](meta/okf-spec/index.md) | 1  | OKF v0.2 规范本体——目录结构、文档类型、交叉引用、术语、版本、信任与验证；阅读知识包前必读 |
-| [🧰 OKF 生态系统（okf-ecosystem）](meta/okf-ecosystem/index.md) | 1 | OKF 生态工具源码教程——okf-kit Python CLI 核心与 okf-desktop 桌面阅读器（Bundle 数据模型、爬取构建流水线、增量同步、三模服务架构） |
 
-### 📜 [国学](guoxue/index.md) · 46 束 · 15 组
+### 📜 [国学](guoxue/index.md) · 45 束 · 15 组
 
 | 分组                                                  | 束数 | 说明                                                             |
 | --------------------------------------------------- | -- | -------------------------------------------------------------- |
 | [📜 儒家（Confucianism）](guoxue/confucian/index.md)    | 1  | 四书（大学·中庸·论语·孟子）权威阅读教程：原文双源核对、五条注疏脉络、三层解读                       |
 | [📜 孔子（Confucius）](guoxue/confucius/index.md)       | 1  | 孔子本人相关著作（六经与《论语》）权威阅读教程——归属辨析、双源核对原文、注本分级                      |
-| [📜 老子（Laozi）](guoxue/laozi/index.md)               | 3  | 《老子》（《道德经》）——帛书《老子》阅读教程、老子著作原文与解读（出土文献基准、历代注本三线并收）             |
+| [📜 老子（Laozi）](guoxue/laozi/index.md)               | 2  | 《老子》（《道德经》）——帛书《老子》阅读教程、老子著作原文与解读（出土文献基准、历代注本三线并收）             |
 | [📜 庄子（Zhuangzi）](guoxue/zhuangzi/index.md)         | 1  | 《庄子》（《南华经》）三十三篇全文阅读教程（内篇自著 / 外杂篇后学分层）                          |
 | [📜 墨子（Mozi）](guoxue/mozi/index.md)                 | 1  | 《墨子》研读教程——十论、墨经、城守与三篇原文精读                                      |
 | [☯ 阴阳家（Yinyangjia）](guoxue/yinyangjia/index.md)     | 1  | 先秦阴阳家学派（邹衍、五德终始、大九州）——书志著录、辑佚残篇与传世材料的存佚分层阅读                    |
@@ -90,12 +89,11 @@ flowchart TD
 | [🔭 物理学经典](kexue/physics/index.md)  | 6  | 中西物理学经典多线索——阅读指南（21 部元典）、原文逐段精读、量子/相对论/热统专题精读与中国九部典籍 |
 | [📐 数学（Math）](kexue/math/index.md)  | 2  | 国外数学经典阅读（欧几里得到布尔巴基，五时段经典谱系）与中西数学对读（六大对读主题、双源精读示范）    |
 
-### ✒️ [文学](wenxue/index.md) · 2 束 · 2 组
+### ✒️ [文学](wenxue/index.md) · 1 束 · 1 组
 
 | 分组                                            | 束数 | 说明                                         |
 | --------------------------------------------- | -- | ------------------------------------------ |
 | [📜 经典阅读（Classics）](wenxue/classics/index.md) | 1  | 中国古典文学经典阅读教程——沈复《浮生六记》阅读教程（版本源流·伪书考辨·闲情美学） |
-| [🔤 英语（English）](wenxue/english/index.md) | 1  | 英语语言学习——旋元佑《语法俱乐部》进阶语法（三层次句法认知框架·广读方法论） |
 
 ### 🌿 [医学与养生](yixue/index.md) · 10 束 · 6 组
 
@@ -116,7 +114,7 @@ flowchart TD
 | [💕 亲密关系与两性情感](sheke/relationships/index.md)    | 6  | 两性关系经典著作——学术实证、哲学经典与通俗实践三层谱系              |
 | [🧭 性学经典（Sexology）](sheke/sexology/index.md)    | 3  | 性学/性文化经典著作阅读教程、《汉书·艺文志》房中八家专题研读与马王堆房中简帛深读 |
 | [💰 个人理财与投资（Finance）](sheke/finance/index.md) | 1  | 个人投资实操通识——收益数学、资产类别、配置与行为纪律、中国市场制度，附配置算例与防骗自查清单 |
-| [📣 市场营销（Marketing）](sheke/marketing/index.md) | 1  | 营销实操通识——营销本质、STP 战略、定位与品牌、4P/4C 战术等跨周期方法论骨架（建设批次待补） |
+| [📣 市场营销（Marketing）](sheke/marketing/index.md) | 1  | 营销实操通识——营销本质、STP 战略、定位与品牌、4P/4C 战术、顾客旅程、AARRR 增长、内容私域与合规底线，附工作坊与算例清单 |
 
 ### 🎤 [艺术](yishu/index.md) · 7 束 · 2 组
 
@@ -125,16 +123,16 @@ flowchart TD
 | [🎨 艺术疗愈（Liaoyu）](yishu/liaoyu/index.md) | 6  | 艺术疗愈总览与五分支——术语分层、双信源史实核对、WHO/Cochrane 循证锚定、中西对读（美术·音乐·舞动戏剧·表达性艺术·中国脉络） |
 | [🎤 声乐教学（Vocal）](yishu/vocal/index.md)   | 1  | 美通唱法与咽音体系——林俊卿咽音练声八步骤、嗓音科学、常见毛病纠正与每日练声清单                               |
 
-### ⚙️ [技术](jishu/index.md) · 315 束 · 16 组
+### ⚙️ [技术](jishu/index.md) · 312 束 · 15 组
 
 | 分组                                               | 束数  | 说明                                                                                                         |
 | ------------------------------------------------ | --- | ---------------------------------------------------------------------------------------------------------- |
-| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 130 | agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security |
+| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 127 | agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security |
 | [📚 文档工程（document）](jishu/document/index.md)     | 107 | Sphinx · MyST · Jupyter Book · Jupyter · KaTeX 文档工程与交互式计算生态                                                |
 | [🔨 构建与包管理（build）](jishu/build/index.md)         | 15  | Conda 生态 · scikit-build · CMake · 通用开发工具（Ninja/Copier/PyInvoke/Nuitka 等）                                   |
 | [📡 通信与网络（comm）](jishu/comm/index.md)            | 12  | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化                                                               |
 | [📦 容器生态（containers）](jishu/containers/index.md) | 11  | OCI 运行时 · 存储驱动 · Podman 工具链 · AI 容器配方                                                                      |
-| [🧠 机器学习（ml）](jishu/ml/index.md)                 | 9   | ONNX 标准/转换器/编译器/推理后端 · Apache TVM 深度学习编译器                                                                  |
+| [🧠 机器学习（ml）](jishu/ml/index.md)                 | 8   | ONNX 标准/转换器/编译器/推理后端 · Apache TVM 深度学习编译器                                                                  |
 | [📊 数据科学（data）](jishu/data/index.md)             | 9   | PyData 科学计算全栈——NumPy/pandas/matplotlib/NetworkX/Pillow/Plotly/Dash/PyTables/SymPy                         |
 | [📐 可视化与创意编程（viz）](jishu/viz/index.md)           | 4   | 3Blue1Brown 生态——ManimGL 动画引擎 · 视频场景 · 字幕工具链 · React 官网                                                     |
 | [🦀 Rust 语言核心（rust）](jishu/rust/index.md)        | 3   | rustc 编译器流水线 · Cargo 构建系统 · RFC 设计决策                                                                       |
@@ -143,8 +141,7 @@ flowchart TD
 | [💻 终端渲染（terminal）](jishu/terminal/index.md)     | 1   | Textualize 终端生态——rich/textual 源码中文教程                                                                       |
 | [🔧 开发与协作（dev）](jishu/dev/index.md)            | 3   | Git 版本控制 · GitHub 平台（Gist/Actions）· 开源实践（参与/项目准备/README 模板）                                        |
 | [🚗 智能驾驶与无人驾驶（autonomous）](jishu/autonomous/index.md) | 4 | Autoware 安装与基础 · ROS2 概念 · DDS 与 QoS · 数据集/术语/资源生态                                            |
-| [🏠 物联网（iot）](jishu/iot/index.md) | 2 | Home Assistant 智能家居平台源码教程 · TuyaOpen 跨平台 IoT SDK |
-| [🖥️ GUI 桌面开发（gui）](jishu/gui/index.md) | 2 | Qt/PyQt 桌面开发——Qt for Python（PySide2）官方机制 · PyQt5 系统化实战 |
+| [🖥️ GUI 桌面开发（gui）](jishu/gui/index.md) | 5 | Qt/PyQt 桌面开发（Qt for Python 官方机制 · PyQt5 实战）· tkinter 标准库生态（GUI 设计 · 手册 · tkinterx 扩展库） |
 
 ```{toctree}
 :hidden:
