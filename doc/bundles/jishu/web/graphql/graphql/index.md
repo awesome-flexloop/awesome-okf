@@ -29,6 +29,12 @@ okf_version: "0.2"
 * [Python 生态：客户端与服务端实践](concepts/10-python-ecosystem.md) — Python GraphQL 生态全景：7 个客户端库与 6 个服务端库对比，graphql-core 作为底层实现的地位，以及基于 graphql-core 的测试服务器实现模式（Root 类、resolver 方法、make_handler）。
 * [GraphQL 与 AI：MCP、语义内省与 Agent](concepts/11-graphql-and-ai.md) — GraphQL 在 AI 领域的定位、AI WG MCP 服务器架构（FastMCP、list_types/run_query 工具、OpenAIEmbedder+EmbeddingStore 语义索引）、语义内省 RFC（__search/__definitions/__SearchResult）、GraphQL vs REST 在 AI 场景对比及 MCP/RAG/Agents 三大用例。
 
+## 工程实践篇（concepts/）
+
+* [前端客户端工程：库选型、HTTP 协议与缓存](concepts/12-client-engineering.md) — 原生 HTTP 的局限与专用客户端库优势，Apollo Client/Relay/urql 对比，POST/GET 请求格式与请求头，GraphiQL/Playground，规范化缓存与文档缓存，@client 本地状态与乐观更新。
+* [服务端工程：Schema 开发模式、Context 与 DataLoader](concepts/13-server-engineering.md) — 三大核心组成与请求执行流程，Schema First vs Code First，Context 请求级创建原则，Resolver 四参数与职责单一，N+1 问题与 DataLoader 批处理，错误处理策略，中间件/插件，HTTP/WebSocket 集成与部署安全。
+* [最佳实践与反模式](concepts/14-best-practices.md) — Schema 命名约定与字段设计、Connections 游标分页、@deprecated 无版本演进、输入类型与 Payload 模式、查询限制与持久化查询、认证授权与恶意查询防护、Union 业务错误模式，以及五大常见反模式。
+
 ## 实战示例（examples/）
 
 * [基础查询与变更](examples/basic-query.md) — query/mutation/subscription 三类操作的语法与使用场景。
@@ -47,14 +53,15 @@ okf_version: "0.2"
 * [规范 Section 7：Response + Appendix C](references/spec-section-7-response.md) — 响应格式与错误处理，附语法产生式汇总。
 * [AI WG MCP 服务器源码](references/mcp-server-source.md) — GraphQL AI WG 的 MCP 服务器实现，含 schema 索引器与语义嵌入。
 * [语义内省 RFC](references/semantic-introspection-rfc.md) — __search/__definitions 语义内省提议，扩展 GraphQL 自描述能力。
+* [MDX + GraphQL 指南系列](references/mdx-graphql-guide/index.md) — SpecWeave learning/04 mdx-graphql-guide 合并增量：可查询文档理念、MDX+GraphQL 快速上手、查询组件与最佳实践（4 章）。
 
 ## 信任与生命周期说明
 
-* **status 判定依据**：全部 25 个内容文档（12 个概念 + 4 个示例 + 9 个信源登记）均 `status: stable`。内容基于 GraphQL 官方规范（October 2021 Working Draft）7 个章节、AI WG MCP 服务器源码及语义内省 RFC 的逐节阅读与事实提取（669 条编号事实 F-001~F-669），经 seven-concepts 方法论 R→I→E→V 四阶段流程生成。
+* **status 判定依据**：全部 28 个内容文档（15 个概念 + 4 个示例 + 9 个信源登记）均 `status: stable`。规范篇内容基于 GraphQL 官方规范（October 2021 Working Draft）7 个章节、AI WG MCP 服务器源码及语义内省 RFC 的逐节阅读与事实提取（669 条编号事实 F-001~F-669），经 seven-concepts 方法论 R→I→E→V 四阶段流程生成；工程实践篇（12-14）于 2026-09-02 从 SpecWeave learning 侧 graphql-wiki 合并而来。
 * **stale_after 解释**：统一设置为 `2027-08-23`。GraphQL 规范自 October 2021 Working Draft 以来核心设计（类型系统/验证/执行/响应）保持稳定，AI 集成（MCP、语义内省）为活跃演进领域；该日期作为针对未来规范大版本或语义内省 RFC 正式落地的保守重新评估节点。
 * **核验链路**：`generated.at` 记录各文档原始生成时刻；`verified.at` 记录 V 阶段对抗审查核验事件，两者分离、可追溯。
 
-本知识包共收录 25 个内容文档（12 个概念 + 4 个示例 + 9 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
+本知识包共收录 28 个内容文档（15 个概念 + 4 个示例 + 9 个信源登记），另含 learning 合并增量 MDX+GraphQL 指南系列 4 章（references/mdx-graphql-guide/），以及 3 个子目录 index.md 与根 index.md、log.md。
 
 ```{toctree}
 :hidden:

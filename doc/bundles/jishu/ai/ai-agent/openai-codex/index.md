@@ -143,4 +143,5 @@ references/index
 spec/facts
 spec/insights
 log
+product-analysis/index
 ```

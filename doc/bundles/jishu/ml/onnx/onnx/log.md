@@ -10,6 +10,17 @@ stale_after: 2026-12-31
 
 # Bundle Update Log
 
+## 2026-09-02（时效核验）
+
+**Verification**: WebSearch 核验 ONNX 官方 Releases（github.com/onnx/onnx/releases，2026-09-02 抓取）
+
+* 官方 Latest 为 **v1.22.0**（2026-06-15 发布，Opset 27，新增 LinearAttention/CausalConvWithState 算子）；上一版 v1.21.0（2026-04-27，Opset 26）
+* 教程章中“onnx 1.23.0 / opset 28”表述**未能官方确认**（可能基于预发布版本），按内容保真原则保留原文待复核；构建 opset 27+ 模型前请以官方版本表为准
+
+## 2026-09-02
+
+**Migration**: 合并 learning 09/onnx-wiki（总览/核心概念/Python API 实战/快速上手/最佳实践与反模式/FAQ 资源 6 章），与既有源码级 concepts 互补（教程视角 vs 源码视角）。
+
 ## 2026-08-22
 
 * **Creation**: 建立 ONNX 核心项目知识包脚手架（concepts/examples/references 三目录），遵循 OKF v0.2 规范。

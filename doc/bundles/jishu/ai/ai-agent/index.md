@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 37
+total_bundles: 44
 ---
 
 # 🤖 AI Agent 框架
@@ -47,6 +47,14 @@ total_bundles: 37
 |--------|--------|-----------|
 | [ai-agent-fundamentals](ai-agent-fundamentals/index.md) | 6+3+1=10 | Agent跨项目架构模式——6大核心模式对比（核心循环/Provider/插件/多Agent/记忆/MCP-ACP），4框架代码级对比，框架选型指南 |
 
+### 📡 协议与接口规范
+
+| 知识包 | 类型 | 文档数 | 一句话简介 |
+|--------|------|--------|-----------|
+| [agent-communication-protocols](agent-communication-protocols/index.md) | 协议教程 | 14+0+0=14 | Agent 通信四大协议完整教程——MCP（工具连接层）、ACP（本地消息层）、A2A（跨平台协作层）、ANP（去中心化网络层）四层协议栈：协议详解、对比与分层架构、交互流程、技术实现、典型场景与快速参考 |
+| [agent-interface](agent-interface/index.md) | 概念深潜 | 7+0+0=7 | AI Agent 接口四层概念深潜——Agent Interface、Agent API、Agent ABI、Agent Protocol 的定义、层次关系、设计权衡与横向对比 |
+| [agent-runtime-protocol](agent-runtime-protocol/index.md) | 协议教程 | 14+0+0=14 | 生产级 Agent 运行时协议——六大 Protocol 对象（Agent/Thread/Run/Step/Checkpoint/Artifact）八大维度解析、五大框架对比与企业级选型指南 |
+
 ### ⚙️ Tier 1：大型框架/运行时
 
 | 知识包 | 语言 | 文档数 | 一句话简介 |
@@ -72,9 +80,13 @@ total_bundles: 37
 | [agency-agents-app](agency-agents-app/index.md) | 桌面应用 | 3+1+1=5 | Agency Agents桌面工作台——Tauri 2(Rust)+Svelte 5(Runes)、三源Catalog模型、五状态安装协调、35个Tauri命令、⌘K命令面板、Preset Teams策展 |
 | [anthropics-skills](anthropics-skills/index.md) | 技能规范 | 4+1+1=6 | Anthropic官方Skills参考——SKILL.md格式标准(6字段)、三级渐进式加载、.skill分发包、eval双slave评估基准、A/B盲比、17个内置Skill分类 |
 | [agent-skills-spec](agent-skills-spec/index.md) | 技能规范 | 8+2+2+1=13 | Agent Skills开放标准——SKILL.md权威格式规范(name五规则/description≤1024/compatibility≤500)、渐进式披露三阶段token预算、eval驱动迭代(evals/grading双臂对照)、description触发率优化(3次/0.5阈值/60-40切分)、46客户端三层加载契约、skills-ref参考实现(parser四类ParseError/validator校验序列/to_prompt XML/CLI三子命令) |
+| [ai-agent-skills](ai-agent-skills/index.md) | 技能规范 | 12+1+13=26 | AI Agent Skills 生态六项目——agency-agents 部门化人格、awesun-mcp/skill/ui-locator 向日葵远程控制三件套、jira-skill 工程化集成、retro-skill 会话复盘，涵盖 SKILL.md 开放标准、MCP 工具协议、插件架构与渐进式披露 |
+| [jira-skill](jira-skill/index.md) | 技能插件 | 10+3+3=16 | Jira 官方开源插件（Netresearch v3.29.0）完整技术教程——jira-communication（API 交互）与 jira-syntax（语法规范）双技能架构、JQL 查询语言与查询/创建/流转/看板/冲刺全操作 |
 | [book-to-skill](book-to-skill/index.md) | 知识工具 | 4+1+1=6 | 书籍→Agent Skill编译器——确定性文本提取、7种文档格式解析器、13语言章节检测、四层产出流水线、多层安全防护 |
 | [i-have-adhd](i-have-adhd/index.md) | 辅助技能 | 3+1+1=5 | ADHD认知辅助技能——10条ADHD友好输出规则、Session Hooks偏好持久化、10+IDE/Agent平台集成、Always-On跨应用模式 |
 | cli-anything | CLI框架 | 8+3+6=17 | Agent原生CLI接口框架——ReplSkin双语终端外壳、SKILL.md自动生成(AST+Jinja2)、PreviewBundle v1三层持久化协议、CLI-Hub包管理器(注册表+pip安装器)、Matrix技能矩阵、Cursor/Claude/Codex多平台插件适配、四层测试与真实软件原则 |
+| [eve](eve/index.md) | Web 框架 | 9+0+0=9 | Eve（Vercel 出品 nextjs-for-agents 框架）——目录即 Agent 设计（instructions.md/agent.ts/tools/skills）、生产能力、高级能力、快速上手与选型对比 |
+| [orca](orca/index.md) | 编排框架 | 7+0+0=7 | Orca 多 Agent 编排框架——核心架构、CLI 编排、受支持的 Agent 生态、快速上手与价值趋势分析 |
 
 ### 💻 Tier 4：Coding Agent 源码解读
 
@@ -136,13 +148,16 @@ total_bundles: 37
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：37 个知识包，共 321 个内容文档（209 概念 + 58 示例 + 54 信源），零推测事实底稿随束存放
+> **内容统计**：44 个知识包，共 321 个内容文档（209 概念 + 58 示例 + 54 信源），零推测事实底稿随束存放
 
 ```{toctree}
 :hidden:
 :maxdepth: 7
 
 ai-agent-fundamentals/index
+agent-communication-protocols/index
+agent-interface/index
+agent-runtime-protocol/index
 hermes-agent/index
 veadk-python/index
 zleap-agent/index
@@ -154,6 +169,10 @@ agency-agents/index
 agency-agents-app/index
 anthropics-skills/index
 agent-skills-spec/index
+ai-agent-skills/index
+jira-skill/index
+eve/index
+orca/index
 book-to-skill/index
 i-have-adhd/index
 codewhale/index

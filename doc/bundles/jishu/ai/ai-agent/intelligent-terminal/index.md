@@ -89,4 +89,12 @@ examples/develop-custom-agent
 examples/enable-autofix-osc133
 examples/use-agent-pane
 references/intelligent-terminal-sources
+wiki/index
+concepts/wta-master
+concepts/wta-helper-tui
+concepts/cpp-integration
+concepts/build-system
+concepts/logging-debugging
+concepts/design-patterns
+log
 ```

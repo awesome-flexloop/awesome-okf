@@ -91,4 +91,8 @@ examples/create-custom-workspace
 examples/schedule-cron-task
 examples/setup-zleap-agent
 references/zleap-agent-sources
+concepts/workspace-context
+concepts/skills-tools-permissions
+references/faq-glossary
+log
 ```

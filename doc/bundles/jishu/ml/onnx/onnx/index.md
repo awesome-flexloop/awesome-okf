@@ -66,4 +66,5 @@ concepts/index
 examples/index
 references/index
 log
+wiki/index
 ```

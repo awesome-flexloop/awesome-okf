@@ -30,12 +30,25 @@ okf_version: "0.2"
 
 * [OKF 设计原则](concepts/design-principles.md) - 三大设计原则（最小意见化/生产者-消费者独立/格式而非平台）驱动规范中每一个设计决策。
 * [OKF 实践指南](concepts/practical-guidance.md) - 10 条来自 v0.1 注释版和社区实践的使用建议：type 治理、扩展字段、自动化索引、断链即特性、结构化 Markdown、log vs git、Obsidian 对比、引用演进、目录放置、三规则验证。
+* [使用场景与落地实践](concepts/adoption-scenarios.md) - 三种典型使用场景（数据目录/Agent 知识库/运维 Runbook）、Agent 四层架构中的知识层定位、渐进式文档化五阶段、Git 工作流结合与 Bundle SemVer 版本管理建议。
 
 ### 生态工具
 
 * [OKF Validator](concepts/tooling-validator.md) - 官方在线验证工具（okf.md/validator），上传目录即可检查合规性，浏览器端运行保护隐私。
 * [OKF Agent Skill](concepts/tooling-agent-skill.md) - 为 AI 智能体（Claude Code/Codex/Gemini CLI）提供的技能包，含 SKILL.md 提示词和 validate.sh 验证脚本，支持"一句话创建知识包"。
 * [OKF Knowledge Catalog CLI](concepts/tooling-knowledge-catalog.md) - Google Cloud Platform 官方维护的工具链仓库（knowledge-catalog），含 npm 包 @okf/okf、CLI 工具和规范源码。
+
+### Knowledge Catalog 平台实践（learning 合并增量）
+
+* [Knowledge Catalog 平台概述与架构](concepts/knowledge-catalog-platform.md) - Google Cloud Knowledge Catalog（原 Dataplex）AI 驱动数据目录与元数据管理平台——三大设计哲学、核心概念体系、四层平台架构与知识生产-消费闭环定位。
+* [Knowledge Catalog 参考 Agent 实现](concepts/knowledge-catalog-reference-agent.md) - 参考 Agent 源码级解析——两阶段工作流、enrich 子命令、核心工具模块、Python 实现与 GCP 凭证配置。
+* [Knowledge Catalog 元数据即代码（mdcode）](concepts/knowledge-catalog-metadata-as-code.md) - mdcode 工具链——元数据制品结构、init/pull/push/diff 双向同步、开发者工作流与 BigQuery 集成。
+* [Knowledge Catalog 官方示例解析](concepts/knowledge-catalog-samples.md) - GA4/Stack Overflow/比特币区块链/Acme Retail 四个示例 Bundle 与 Discovery/Enrichment 示例智能体实战。
+* [Knowledge Catalog 集成模式与选型决策](concepts/knowledge-catalog-adoption.md) - 企业落地四阶段路径、三种集成场景、8 种替代方案对比、选型决策树与五大反模式。
+
+### 子知识包（learning 合并增量）
+
+* [okf-kit CLI 工具链](okf-kit/index.md) - okf-kit 命令行工具链中文学习教程——OKF 格式、安装、CLI 参考、核心架构、同步机制、聊天系统、MCP 服务、注册表可视化与扩展开发（learning/03 okf-kit-wiki 迁入子束）。
 
 ## 示例（examples/）
 
@@ -48,6 +61,7 @@ okf_version: "0.2"
 
 * [Open Knowledge Format (OKF) 规范 v0.2](references/okf-spec.md) - OKF 开放知识格式 v0.2 完整英文规范原文（vendored third-party spec，1006 行），本 bundle 的权威信源。
 * [OKF v0.1 注释版开发者指南](references/okf-annotated-v01.md) - v0.1 Draft 的带注释走查版，包含设计原则阐释、实践建议、代码示例与作者观点，作为 v0.2 规范的补充参考。
+* [Google Cloud Knowledge Catalog README 中文转译](references/knowledge-catalog-readme-zh.md) - GoogleCloudPlatform/knowledge-catalog 仓库 README 的中文转译信源登记。
 * [进程登记：seven-concepts-v（对抗审查）](references/processes/seven-concepts-v.md) - 本 bundle 各文档 `verified.by` 所用自动化进程的定义与复核路径，确立 machine-confirmed 信任层级。
 
 ## 信任与生命周期说明
@@ -56,7 +70,7 @@ okf_version: "0.2"
 * **stale_after 解释**：核心规范转译文档统一设置为 `2027-12-31T00:00:00Z`，内容锚定于已发布的 OKF v0.2 规范，该日期作为针对 SPEC 未来可能修订的保守重新评估节点。新增文档设置为 `2027-06-30T00:00:00Z`，因网站工具页面（validator/skill/quickstart）可能随版本更新而变化，设置较早的过期检查点。
 * **核验链路**：`generated.at` 记录各文档原始生成时刻（核心文档 2026-08-20，新增文档 2026-08-21）；核心文档 `verified.at` 为 2026-08-21 对抗审查核验时刻，新增文档待后续独立核验。
 
-本知识包共收录 27 个内容文档（20 个概念 + 4 个示例 + 3 个信源/进程登记），另含 4 个子目录 index.md 与根 index.md、log.md。
+本知识包共收录 34 个内容文档（26 个概念 + 4 个示例 + 4 个信源/进程登记），另含 4 个子目录 index.md 与根 index.md、log.md。
 
 ```{toctree}
 :hidden:
@@ -65,5 +79,6 @@ okf_version: "0.2"
 concepts/index
 examples/index
 references/index
+okf-kit/index
 log
 ```

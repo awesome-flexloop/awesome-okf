@@ -7,6 +7,12 @@ version: "0.1.0"
 
 # Changelog
 
+## 2026-09-02
+
+**Merge**: 从 SpecWeave docs/knowledge/learning/03-agent-platforms-tools/03-code-devtools/codewhale-wiki/ 合并独有内容
+
+- 重复确认，源侧待删除：learning 侧仅存空壳 `index.md`（toctree 引用 00-overview~07-topics 共 8 个文件均不存在）与一份 2026-08-22 的 OKF 格式转换日志，无任何实质知识内容；本束既有 8 概念 + 2 示例 + 110 条事实已完整覆盖 CodeWhale 主题，无需回填
+
 ## 0.1.0 — 2026-08-23
 
 ### 新增

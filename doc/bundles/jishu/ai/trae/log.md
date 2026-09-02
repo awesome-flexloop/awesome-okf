@@ -1,5 +1,12 @@
 # Bundle Update Log
 
+## 2026-09-02
+
+**Merge**: 从 SpecWeave learning 合并独有内容（03 分类迁移）
+
+新增 trae-v3-3-74-release-notes.md（2026-07-08 版本发布笔记：浏览器配置、Windows SDK/MSSDK 支持、Bug 修复；时效性内容，仅作版本历史记录）。
+
+
 ## 2026-04-22
 
 * **Creation**: 建立 TRAE Community 知识包脚手架，包含 12 个子知识包目录（awesome-trae, trae-agents, trae-co-creation-demo-wall, trae-co-creation-demo-wall-intl, trae-co-creation-projects, trae-demos, trae-discussions, trae-friends-events, trae-learning, trae-mcp, trae-skills, trae-templates），遵循 OKF v0.2 规范。

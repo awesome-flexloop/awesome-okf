@@ -33,6 +33,7 @@
 
 * [Editions 特性系统](15-editions-feature-system.md) — Edition 八值枚举、FeatureSet 数据模型、编译器与九生成器协商矩阵及默认值测试体系。
 * [公共契约层：Well-Known Types、Conformance 与 Benchmarks](16-wkt-conformance-benchmarks.md) — WKT 全家族与 BUILD 别名、Conformance 三层测试框架与十九语言失败清单。
+* [版本选型与迁移实践](17-version-selection-and-migration.md) — proto2/proto3/Editions 工程视角：版本演进速查表、选型决策树与场景矩阵、六大反模式、十项迁移检查清单、渐进式灰度迁移与 feature 映射。
 
 ```{toctree}
 :hidden:
@@ -55,4 +56,5 @@
 14-other-language-runtimes
 15-editions-feature-system
 16-wkt-conformance-benchmarks
+17-version-selection-and-migration
 ```

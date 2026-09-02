@@ -70,4 +70,6 @@ concepts/index
 examples/index
 references/index
 log
+dev-source/index
+dev-github/index
 ```

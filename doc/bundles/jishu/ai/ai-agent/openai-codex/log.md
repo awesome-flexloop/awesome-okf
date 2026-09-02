@@ -7,6 +7,10 @@ version: "0.1.0"
 
 # Changelog — openai-codex OKF Bundle
 
+## 2026-09-02
+
+**Migration**: 合并 learning 07/openai/chatgpt-codex-wiki（产品定位/界面设计/用户体验/多平台/定价/洞察等 16 章 + 原始内容采集），与既有源码架构束互补；舍弃空 page.html 与导航文件。
+
 ## 0.1.0 — 2026-08-23
 
 ### Added

@@ -4,4 +4,5 @@
 
 ```{toctree}
 agents-skills-index
+wechat-article-analysis
 ```

@@ -14,8 +14,8 @@ description: "数学经典原著阅读教程——国外经典谱系（欧几里
 
 | 统计项 | 数量 |
 |---|---|
-| 知识包 | 2 |
-| 概念文档 | 23 |
+| 知识包 | 3 |
+| 概念文档 | 32 |
 | 示例文档 | 6 |
 | 信源参考 | 7 |
 
@@ -25,6 +25,7 @@ description: "数学经典原著阅读教程——国外经典谱系（欧几里
 |---|---|---|---|
 | 国外数学经典阅读教程 | [classics-reading](classics-reading/index.md) | 国外数学经典原文获取渠道、权威译本注本谱系、五时段经典思想解读与分阶段阅读计划 | 14概念 · 3示例 · 4信源 |
 | 中西数学对读教程 | [east-west-dialogue](east-west-dialogue/index.md) | 六大对读主题（几何度量/数论代数/极限无穷小/符号化抽象/公理化算法化/接触互鉴）的平行发展与互鉴分析，含 3 篇双源精读示范与比较阅读方法论 | 9概念 · 3示例 · 3信源 |
+| 勾股定理教程 | [pythagorean-theorem](pythagorean-theorem/index.md) | 勾股定理——历史、证明方法、勾股数、推广、应用、文化意义、FAQ 与资源 | 9概念 |
 
 ## 推荐阅读路径
 
@@ -51,4 +52,5 @@ description: "数学经典原著阅读教程——国外经典谱系（欧几里
 
 classics-reading/index
 east-west-dialogue/index
+pythagorean-theorem/index
 ```

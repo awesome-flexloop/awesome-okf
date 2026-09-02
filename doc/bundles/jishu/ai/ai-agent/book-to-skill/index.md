@@ -63,4 +63,14 @@ concepts/multi-format-parsers
 concepts/security-sanitization
 examples/convert-book-to-skill
 references/book-to-skill-sources
+concepts/core-architecture
+concepts/extractor-deep-dive
+concepts/skill-md-generation-spec
+concepts/token-economics
+concepts/security-model
+concepts/installation-and-usage
+concepts/extending-development
+concepts/transferable-patterns
+concepts/summary-and-faq
+log
 ```

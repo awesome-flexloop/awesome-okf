@@ -44,6 +44,13 @@ VEADK（Volcano Engine Agent Development Kit）Python 是火山引擎推出的�
 ### CLI与工具
 - [cli-commands](concepts/cli-commands.md) — CLI命令系统：基于Click的15+子命令，覆盖初始化/调试/知识库/部署/评估/强化学习全生命周期
 
+### 构建与配置（合并自 chaos/veadk-python）
+- [agent-builder](concepts/agent-builder.md) — AgentBuilder 与 YAML 配置驱动构建
+- [agent-types](concepts/agent-types.md) — Agent 类型体系（Agent/SequentialAgent/ParallelAgent/LoopAgent/RemoteVeAgent）
+- [configuration-system](concepts/configuration-system.md) — 配置系统与 YAML schema
+- [evaluation-system](concepts/evaluation-system.md) — 评估系统：BaseEvaluator/EvalTestCase/MetricResult 与 ADK/DeepEval 双评估器
+- [advanced-features](concepts/advanced-features.md) — 高级特性：多模态系统、认证体系、Prompt 管理、Harness 扩展与运行时抽象
+
 ## 🎯 示例导航（Examples）
 
 - [quickstart-agent](examples/quickstart-agent.md) — 快速创建Agent并运行：使用Agent+Runner配置模型，执行多轮对话和流式输出
@@ -54,6 +61,9 @@ VEADK（Volcano Engine Agent Development Kit）Python 是火山引擎推出的�
 ## 📚 参考导航（References）
 
 - [veadk-python-sources](references/veadk-python-sources.md) — VEADK-Python 源码路径、版本信息、核心目录与关键文件清单
+- [facts](references/facts.md) — veadk-python 事实清单（131 条，R 阶段采集）
+- [insights](references/insights.md) — veadk-python 架构洞察（I 阶段）
+- [veadk-source](references/veadk-source.md) — veadk-python 源码信源登记（合并自 chaos/veadk-python）
 
 ## 🔗 关联 Bundle
 
@@ -69,7 +79,7 @@ VEADK（Volcano Engine Agent Development Kit）Python 是火山引擎推出的�
 > 
 > **生成时间**：2026-08-23 | **下次审查**：2026-11-23 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：10 个概念 + 4 个示例 + 1 个信源 = 15 个内容文档
+> **内容统计**：15 个概念 + 4 个示例 + 4 个信源 = 23 个内容文档（含合并自 chaos/veadk-python 的 5 概念 + 3 信源）
 
 ```{toctree}
 :hidden:
@@ -77,9 +87,14 @@ VEADK（Volcano Engine Agent Development Kit）Python 是火山引擎推出的�
 
 concepts/a2a-protocol
 concepts/a2ui-protocol
+concepts/advanced-features
 concepts/agent-and-runner
+concepts/agent-builder
+concepts/agent-types
 concepts/cli-commands
 concepts/composite-agents
+concepts/configuration-system
+concepts/evaluation-system
 concepts/knowledge-base
 concepts/memory-system
 concepts/model-configuration
@@ -89,5 +104,9 @@ examples/add-knowledge-base
 examples/build-sequential-workflow
 examples/expose-a2a-server
 examples/quickstart-agent
+references/facts
+references/insights
 references/veadk-python-sources
+references/veadk-source
+log
 ```

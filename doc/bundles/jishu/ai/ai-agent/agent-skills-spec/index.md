@@ -1,7 +1,7 @@
 ---
 okf_version: "0.2"
 title: "Agent Skills 开放标准与 skills-ref 参考实现"
-description: "Agent Skills 开放标准的格式规范、创作/评估/优化方法学与 skills-ref 参考实现——6 字段 frontmatter 契约、渐进式披露三层加载、46 客户端生态、宽松与严格双校验策略。"
+description: "Agent Skills 开放标准的格式规范、创作/评估/优化方法学与 skills-ref 参考实现——6 字段 frontmatter 契约、渐进式披露三层加载、46 客户端生态、宽松与严格双校验策略，附 Addy Osmani 生产级技能库实践案例。"
 tags:
   - agent-skills
   - skill-format
@@ -69,6 +69,9 @@ related:
 | [05-description-optimization](/concepts/05-description-optimization.md) | Description 优化 | 触发率测量、near-miss 负例、60/40 防过拟合切分 |
 | [06-client-integration](/concepts/06-client-integration.md) | 客户端集成 | 46 客户端、.agents/skills/ 惯例、宽松校验四规则、双激活路径 |
 | [07-skills-ref-reference-implementation](/concepts/07-skills-ref-reference-implementation.md) | skills-ref 参考实现 | 8 个公开 API、两种错误风格分工、CLI 三子命令 |
+| [08-scripts-guide](/concepts/08-scripts-guide.md) | 脚本使用指南 | 一次性命令版本固定、四种自包含脚本、面向智能体设计六原则 |
+| [09-osmani-agent-skills-practice](/concepts/09-osmani-agent-skills-practice.md) | 实践案例：Osmani agent-skills | 六阶段生命周期、20 技能索引、7 斜杠命令、五大应用场景 |
+| [10-google-engineering-culture](/concepts/10-google-engineering-culture.md) | Google 工程文化术语 | Hyrum 定律、测试金字塔、Chesterton 栅栏等 8 术语 |
 
 ## 🎯 示例导航（Examples）
 
@@ -83,16 +86,18 @@ related:
 |---|---|---|
 | [spec-sources](/references/spec-sources.md) | 规范文档信源登记 | 12 个规范/指南信源逐文件登记与 F-xxx 追溯 |
 | [skills-ref-sources](/references/skills-ref-sources.md) | skills-ref 源码信源登记 | 12 个源码/测试文件逐文件登记与 API 签名 |
+| [quick-reference](/references/quick-reference.md) | 快速参考卡 | SKILL.md 模板、验证命令、名称规则与检查清单 |
+| [osmani-extended-resources](/references/osmani-extended-resources.md) | 实践案例延伸资源 | Google 工程实践、Osmani 著作、Google 软件工程、Karpathy 观察 |
 
 ## 📊 文档统计
 
 | 目录 | 篇数 | 说明 |
 |---|---|---|
-| concepts/ | 8 | 按学习路径编号 00-07 |
+| concepts/ | 11 | 按学习路径编号 00-10 |
 | examples/ | 2 | 入门实战 + CLI 实战 |
-| references/ | 2 | 双信源登记表 |
+| references/ | 4 | 双信源登记表 + 速查卡 + 实践案例延伸资源 |
 | 索引与日志 | 5 | 根 index + 3 个子目录 index + log |
-| **合计** | **17** | 内容基于 68 条登记事实（F-001 ~ F-068） |
+| **合计** | **22** | 核心内容基于 68 条登记事实（F-001 ~ F-068）+ learning 合并回填 |
 
 ## 🔗 关联 Bundle
 

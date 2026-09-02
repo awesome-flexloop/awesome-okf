@@ -15,6 +15,7 @@ description: "Web 应用开发生态——高性能 ASGI Web 框架与 API 查�
 |------|-----------|
 | [⚡ FastAPI Web 框架生态](fastapi/index.md) | FastAPI 高性能 ASGI Web 框架——类型注解驱动、依赖注入树、OpenAPI 自动生成 |
 | [📡 GraphQL 核心规范与生态](graphql/index.md) | GraphQL 查询语言系统化中文教程——语法、Schema 类型系统、验证执行管线、内省系统 |
+| [🔄 HTML 声明式局部更新](declarative-partial-updates/index.md) | Chrome 声明式局部更新机制中文教程——乱序流式更新、与 SSE/WebSocket 对比、框架影响与 Declarative Shadow DOM 关联 |
 
 ```{toctree}
 :hidden:
@@ -22,4 +23,5 @@ description: "Web 应用开发生态——高性能 ASGI Web 框架与 API 查�
 
 fastapi/index
 graphql/index
+declarative-partial-updates/index
 ```

@@ -1,6 +1,6 @@
 # GraphQL 核心概念
 
-本目录包含 GraphQL 核心规范的 12 个概念文档，按学习路径排列：从语言概览到类型系统、验证执行，再到生态与 AI 集成逐步深入。
+本目录包含 GraphQL 核心规范的 15 个概念文档，按学习路径排列：从语言概览到类型系统、验证执行，再到生态、AI 集成与工程实践逐步深入。
 
 ## 入门篇
 
@@ -23,6 +23,12 @@
 * [10-python-ecosystem](10-python-ecosystem.md) — Python 生态：客户端与服务端实践
 * [11-graphql-and-ai](11-graphql-and-ai.md) — GraphQL 与 AI：MCP、语义内省与 Agent
 
+## 工程实践篇
+
+* [12-client-engineering](12-client-engineering.md) — 前端客户端工程：库选型、HTTP 协议与缓存
+* [13-server-engineering](13-server-engineering.md) — 服务端工程：Schema 开发模式、Context 与 DataLoader
+* [14-best-practices](14-best-practices.md) — 最佳实践与反模式
+
 ```{toctree}
 :hidden:
 :maxdepth: 7
@@ -39,4 +45,7 @@
 09-fragments-and-advanced-syntax
 10-python-ecosystem
 11-graphql-and-ai
+12-client-engineering
+13-server-engineering
+14-best-practices
 ```

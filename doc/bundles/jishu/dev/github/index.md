@@ -34,4 +34,5 @@ okf_version: "0.2"
 concepts/index
 references/index
 log
+github-cli/index
 ```

@@ -37,6 +37,7 @@ okf_version: "0.2"
 
 * [Editions 特性系统](concepts/15-editions-feature-system.md) — Edition 八值枚举、FeatureSet 数据模型与编译器/生成器协商矩阵。
 * [公共契约层：Well-Known Types、Conformance 与 Benchmarks](concepts/16-wkt-conformance-benchmarks.md) — WKT 全家族、Conformance 三层测试框架与基准函数族。
+* [版本选型与迁移实践](concepts/17-version-selection-and-migration.md) — proto2/proto3/Editions 工程视角：版本演进速查表、选型决策树、六大反模式、十项迁移检查清单与渐进式灰度迁移策略。
 
 ## 实战示例（examples/）
 
@@ -56,12 +57,12 @@ okf_version: "0.2"
 
 ## 信任与生命周期说明
 
-* **status 判定依据**：全部 27 个内容文档（17 个概念 + 5 个示例 + 5 个信源登记）均 `status: stable`。内容基于对 protobuf 主仓 v37.0-dev 源码（`external/libs/protocolbuffers/protobuf/`）的逐模块阅读与事实提取（5 份事实清单合计 486 条主仓事实），经 R→I→E→V→C 五阶段流程生成。
+* **status 判定依据**：全部 28 个内容文档（18 个概念 + 5 个示例 + 5 个信源登记）均 `status: stable`。源码篇内容基于对 protobuf 主仓 v37.0-dev 源码（`external/libs/protocolbuffers/protobuf/`）的逐模块阅读与事实提取（5 份事实清单合计 486 条主仓事实），经 R→I→E→V→C 五阶段流程生成；工程实践篇（17）于 2026-09-02 从 SpecWeave learning 侧 protobuf-wiki 合并而来。
 * **stale_after 解释**：统一设置为 `2027-06-30`。protobuf 处于 Editions 演进活跃期（EDITION_2026 已进入枚举），该日期作为针对 Edition 2026 正式发布后重新评估的保守节点。
 * **核验链路**：`generated.at` 记录各文档原始生成时刻（2026-08-28）；`verified.at` 记录 V 阶段 Grep 验证事件（2026-08-28），两者分离、可追溯。
 * **关联知识包**：CI 层面的 GitHub Actions 复用体系见姊妹束 [protobuf-ci](../protobuf-ci/index.md)。
 
-本知识包共收录 27 个内容文档（17 个概念 + 5 个示例 + 5 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
+本知识包共收录 28 个内容文档（18 个概念 + 5 个示例 + 5 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
 
 ```{toctree}
 :hidden:

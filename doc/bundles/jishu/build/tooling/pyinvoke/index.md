@@ -26,6 +26,7 @@ okf_version: "0.2"
 * [StreamWatcher 自动响应](concepts/09-watchers.md) — StreamWatcher、Responder 密码自动输入、FailingResponder 失败检测、自定义 watcher。
 * [终端与 IO](concepts/10-terminals-io.md) — 伪终端 PTY、输出控制、字符缓冲模式、平台兼容性。
 * [高级模式](concepts/11-advanced-patterns.md) — 自定义 Program/Executor/Runner、MockContext 测试、嵌入使用、大型项目组织。
+* [工具对比与选型](concepts/12-tool-comparison-and-selection.md) — 与 Make/Shell/Fabric/Nox/Tox/Poetry Scripts 的定位对比、选型决策树与适用场景边界。
 
 ## 实战示例（examples/）
 
@@ -41,11 +42,11 @@ okf_version: "0.2"
 
 ## 信任与生命周期说明
 
-* **status 判定依据**：全部 19 个内容文档（12 个概念 + 5 个示例 + 1 个信源登记 + 1 个信源索引）均 `status: stable`。内容基于对 PyInvoke 源码（`external/libs/pyinvoke/invoke/invoke/` 目录）的逐模块阅读与事实提取（70+ 源码事实），经 seven-concepts 方法论 R→I→E→V 四阶段流程生成。
+* **status 判定依据**：全部 20 个内容文档（13 个概念 + 5 个示例 + 1 个信源登记 + 1 个信源索引）均 `status: stable`。源码篇内容基于对 PyInvoke 源码（`external/libs/pyinvoke/invoke/invoke/` 目录）的逐模块阅读与事实提取（70+ 源码事实），经 seven-concepts 方法论 R→I→E→V 四阶段流程生成；对比选型篇（12）于 2026-09-02 从 SpecWeave learning 侧 pyinvoke-wiki 合并而来。
 * **stale_after 解释**：统一设置为 `2027-12-31`。PyInvoke v3.x API 相对稳定，主要核心类（Task/Context/Collection/Config/Runner/Executor/Program）自 1.x 以来变化不大；该日期作为针对未来大版本升级的保守重新评估节点。
 * **核验链路**：`generated.at` 记录各文档原始生成时刻（2026-08-21）；`verified.at` 记录 V 阶段对抗审查核验事件（2026-08-21），两者分离、可追溯。
 
-本知识包共收录 18 个内容文档（12 个概念 + 5 个示例 + 1 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
+本知识包共收录 19 个内容文档（13 个概念 + 5 个示例 + 1 个信源登记），另含 3 个子目录 index.md 与根 index.md、log.md。
 
 ```{toctree}
 :hidden:

@@ -1,5 +1,12 @@
 # 更新日志
 
+## 2026-09-02
+
+**Merge**: 从 SpecWeave learning 合并独有内容（03 分类迁移）
+
+新增 1 篇参考文档（LangGraph 生产级落地实施路线图：12-16 周四阶段、Demo-Prod 六层能力模型对齐）。
+
+
 ## 2026-08-23
 
 - 初始版本，基于 langgraph 源码生成 OKF v0.2 bundle

@@ -2,10 +2,10 @@
 okf_version: "0.2"
 type: group
 title: "📖 MyST Markdown 与 Executable Books 生态"
-description: "Executable Books 组织开源项目源码级中文教程——19个知识包、225篇内容文档（151概念+43示例+31信源）、360个.md文件，覆盖 MyST Markdown 解析器、Sphinx 集成、Jupyter Notebook 支持、主题设计、UI 组件扩展与基础设施工具"
-total_bundles: 19
-total_content_docs: 225
-total_md_files: 360
+description: "Executable Books 组织开源项目源码级中文教程——20个知识包、264篇内容文档（176概念+53示例+35信源）、401个.md文件，覆盖 MyST Markdown 解析器、Sphinx 集成、Jupyter Notebook 支持、主题设计、UI 组件扩展、基础设施工具与双教程整合（myst-tutorial）"
+total_bundles: 20
+total_content_docs: 264
+total_md_files: 401
 verified: grep-verified
 generated: true
 status: stable
@@ -40,9 +40,10 @@ status: stable
 | **基础设施** | [jupyter-cache](jupyter-cache/index.md) | 8 | 3 | 2 | 13 |
 | **基础设施** | [github-activity](github-activity/index.md) | 5 | 1 | 1 | 7 |
 | **基础设施** | [web-compile](web-compile/index.md) | 5 | 1 | 1 | 7 |
-| **合计** | **19 知识包** | **151** | **43** | **31** | **225** |
+| **教程整合** | [myst-tutorial](myst-tutorial/index.md) | 25 | 10 | 4 | 39 |
+| **合计** | **20 知识包** | **176** | **53** | **35** | **264** |
 
-> 注："内容文档"指 concepts/examples/references 目录下的实质性文档（不含各目录 index.md 导航页）。含导航索引、日志文件、spec 元数据共 **360 个 .md 文件**。
+> 注："内容文档"指 concepts/examples/references 目录下的实质性文档（不含各目录 index.md 导航页）。含导航索引、日志文件、spec 元数据共 **401 个 .md 文件**（含 myst-tutorial 迁入 41 个）。
 
 ## MyST 解析核心层
 
@@ -99,6 +100,12 @@ status: stable
 | [jupyter-cache](jupyter-cache/index.md) | Notebook 执行缓存——MyST-NB 的执行后端依赖、SQLite 数据库缓存层、Notebook 读取/执行/缓存命中、多项目隔离、CLI 管理工具 |
 | [github-activity](github-activity/index.md) | GitHub 活动 Changelog 生成器——CLI 工具、GitHub API 调用、按标签/PR/Issue 生成 Markdown 变更日志 |
 | [web-compile](web-compile/index.md) | Web 资源编译器——SCSS→CSS 编译、JS 压缩、主题开发构建工具 |
+
+## 教程整合（learning 合并增量）
+
+| 知识包 | 简介 |
+|--------|------|
+| [myst-tutorial](myst-tutorial/index.md) | MyST Markdown 双教程整合（myst-markdown-tutorial × executablebooks-myst-guide，互为补充）——快速上手、基础/进阶语法、指令角色、交叉引用、数学代码、组件、Sphinx/Jupyter Book/mystmd 工具链、案例研究与 MCP Server POC 资源 |
 
 ## 推荐学习路径
 
@@ -197,5 +204,6 @@ sphinx-external-toc/index
 jupyter-cache/index
 github-activity/index
 web-compile/index
+myst-tutorial/index
 log
 ```

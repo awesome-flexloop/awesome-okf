@@ -27,6 +27,7 @@ okf_version: "0.2"
 * [动态元数据](concepts/10-dynamic-metadata.md) — PEP 621 dynamic 字段、内置 provider（regex 版本提取/setuptools_scm/template/fancy-pypi-readme）、元数据提供者接口、动态字段与构建阶段依赖关系。
 * [插件与兼容层](concepts/11-plugins-and-compat.md) — Hatch 构建插件配置、setuptools 兼容层（build_cmake 命令/distutils entry-points）、配置提供者插件（scikit-build-core.config.default/override）、CMake 工具提供者、JSON Schema 验证。
 * [版本门控与向后兼容](concepts/12-version-gating.md) — minimum-version 机制、字段自动迁移（cmake.minimum_version → cmake.version 等）、默认值版本门控、功能启用版本检查、strict-mode 差异、`"build-system.requires"` 自动同步最佳实践。
+* [生态对比、工具链与术语表](concepts/13-ecosystem-glossary.md) — 八种 Python 二进制构建后端完整对比与选型建议、协同生态工具表、核心术语表（20+ 术语）、近期版本变更要点与延伸阅读方向。
 
 ## 实战示例（examples/）
 
@@ -41,11 +42,11 @@ okf_version: "0.2"
 
 ## 信任与生命周期说明
 
-* **status 判定依据**：全部 18 个内容文档（13 个概念 + 3 个示例 + 2 个信源参考）均 `status: stable`。内容基于对 scikit-build-core 源码（`scikit_build_core/` 目录，核心模块 build/settings/cmake/builder/file_api/program_search 等）的逐模块阅读与事实提取，经 seven-concepts 方法论 R→I→E→V 四阶段流程生成。
+* **status 判定依据**：全部 19 个内容文档（14 个概念 + 3 个示例 + 2 个信源参考）均 `status: stable`。源码篇内容基于对 scikit-build-core 源码（`scikit_build_core/` 目录，核心模块 build/settings/cmake/builder/file_api/program_search 等）的逐模块阅读与事实提取，经 seven-concepts 方法论 R→I→E→V 四阶段流程生成；生态术语篇（13）于 2026-09-02 从 SpecWeave learning 侧 scikit-build-core-wiki 合并而来。
 * **stale_after 解释**：统一设置为 `2026-12-01`。scikit-build-core 0.10+ API 相对稳定，核心类（CMaker/SettingsReader/SourceChain/CMake）自 0.5 以来的架构变化主要集中在配置迁移和 minimum-version 门控；该日期作为针对未来大版本升级（如 1.0）的保守重新评估节点。
 * **核验链路**：`generated: true` 标记各文档由源码→OKF 工作流生成；`verified: false` 标记 V 阶段对抗审查核验事件，两者分离、可追溯。
 
-本知识包共收录 18 个内容文档（13 个概念 + 3 个示例 + 2 个信源参考），另含 spec/ 目录下的 facts.md 与 insights.md（R/I 阶段中间产出）和根 index.md。
+本知识包共收录 19 个内容文档（14 个概念 + 3 个示例 + 2 个信源参考），另含 spec/ 目录下的 facts.md 与 insights.md（R/I 阶段中间产出）和根 index.md、log.md。
 
 ```{toctree}
 :hidden:
@@ -64,6 +65,7 @@ concepts/09-cmake-file-api
 concepts/10-dynamic-metadata
 concepts/11-plugins-and-compat
 concepts/12-version-gating
+concepts/13-ecosystem-glossary
 examples/basic-c-extension
 examples/editable-workflow
 examples/pybind11-module
@@ -71,4 +73,5 @@ references/config-entry-points
 references/skbuild-core-source
 spec/facts
 spec/insights
+log
 ```

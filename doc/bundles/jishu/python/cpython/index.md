@@ -51,4 +51,6 @@ concepts/index
 examples/index
 references/index
 log
+devguide/index
+python314/index
 ```

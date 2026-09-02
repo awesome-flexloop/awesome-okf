@@ -15,6 +15,8 @@ description: "面向行政人事岗位进修的职场知识域——人力资源
 |------|-----------|
 | [👔 人力资源（HR）](hr/index.md) | 人力资源岗位进修——职业地图与证书双轨、六大模块与三支柱、劳动法律合规（3 束） |
 | [🏢 行政办公（Admin）](admin/index.md) | 行政岗位进修——行政管理实务十二职能域、公文写作与职场文书模板（2 束） |
+| [🎯 OKR 目标管理（okr）](okr/index.md) | OKR 方法论知识库——核心概念、制定方法、实施指南、评分复盘、模板案例与工具使用 |
+| [🎓 论文写作（thesis-writing）](thesis-writing/index.md) | 论文写作全流程教程——选题开题、文献综述、研究方法、论文结构、答辩准备 |
 
 ```{toctree}
 :hidden:
@@ -22,4 +24,6 @@ description: "面向行政人事岗位进修的职场知识域——人力资源
 
 hr/index
 admin/index
+okr/index
+thesis-writing/index
 ```

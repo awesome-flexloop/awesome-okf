@@ -1,6 +1,6 @@
 # 概念文档
 
-本目录包含 PyInvoke 的 12 个核心概念文档，按学习路径排列：从入门到高级主题逐步深入。
+本目录包含 PyInvoke 的 13 个核心概念文档，按学习路径排列：从入门到高级主题逐步深入。
 
 ## 入门与基础
 
@@ -22,6 +22,7 @@
 * [09-StreamWatcher 自动响应](09-watchers.md) — Responder 密码自动输入、FailingResponder 失败检测、自定义 watcher。
 * [10-终端与 IO](10-terminals-io.md) — 伪终端 PTY、输出控制、字符缓冲模式、平台兼容性。
 * [11-高级模式](11-advanced-patterns.md) — 自定义 Program/Executor/Runner、MockContext 测试、嵌入使用。
+* [12-工具对比与选型](12-tool-comparison-and-selection.md) — 与 Make/Shell/Fabric/Nox/Tox/Poetry Scripts 的定位对比、选型决策树与适用场景边界。
 
 ```{toctree}
 :hidden:
@@ -39,4 +40,5 @@
 09-watchers
 10-terminals-io
 11-advanced-patterns
+12-tool-comparison-and-selection
 ```

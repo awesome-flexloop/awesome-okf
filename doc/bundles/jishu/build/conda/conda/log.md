@@ -1,5 +1,11 @@
 # Bundle Update Log
 
+## 2026-09-02
+
+**Migration**: 合并 learning 08/conda-dev-github-wiki（conda 组织 .github 元仓库：仓库结构/工作流/Issue 模板/社区文件/基础设施同步模型/Issue 分拣/运维指南 10 章）。
+
+**Migration**: 合并 learning 08/conda-dev-source-wiki（conda 源码架构/核心模块/CLI 命令/网关插件/关键 API/典型场景/FAQ/最佳实践 10 章）。
+
 ## 2026-08-21
 
 * **Creation**: 建立 Conda 知识包脚手架（concepts/examples/references 三目录），遵循 OKF v0.2 规范。

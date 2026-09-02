@@ -20,4 +20,5 @@ description: "数学可视化与创意编程生态——3Blue1Brown动画引擎M
 :maxdepth: 7
 
 3b1b/index
+animejs-threejs-adapter/index
 ```

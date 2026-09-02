@@ -20,4 +20,5 @@ description: "Python 解释器与语言运行时——所有 Python 生态知识
 :maxdepth: 7
 
 cpython/index
+stdlib/index
 ```

@@ -157,5 +157,6 @@ bytedance-ai-consolidation/index
 threeui/index
 tushare-ai-office/index
 spec/index
+trae-v3-3-74-release-notes
 log
 ```

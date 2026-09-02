@@ -31,6 +31,7 @@ Agency Agents（The Agency）是一个包含约270个专业AI Agent Persona的�
 - [persona-division-structure](concepts/persona-division-structure.md) — Persona部门分类体系：17个部门（divisions.json SSOT）、约270个Agent按专业领域分类、子目录层级组织
 - [nexus-orchestration](concepts/nexus-orchestration.md) — NEXUS多Agent编排框架：3种部署模式、7阶段流水线、质量门控、Playbook/Runbook体系、handoff交接协议
 - [integration-adapters](concepts/integration-adapters.md) — 工具集成适配体系：16种AI编码工具元数据、三种安装机制、convert.sh转换引擎、Hermes懒加载路由插件
+- [usage-and-best-practices](concepts/usage-and-best-practices.md) — 使用方式与最佳实践：四种使用方式、定位对比、Agent选择与多Agent流水线、按需安装与OpenCode上限规避、激活提示词四要素
 
 ## 🎯 示例导航（Examples）
 
@@ -61,6 +62,9 @@ concepts/agent-md-template
 concepts/integration-adapters
 concepts/nexus-orchestration
 concepts/persona-division-structure
+concepts/usage-and-best-practices
 examples/create-custom-persona
 references/agency-agents-sources
+concepts/the-agency-project-guide
+log
 ```

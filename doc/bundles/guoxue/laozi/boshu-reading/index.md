@@ -18,7 +18,7 @@ okf_version: "0.2"
 
 ## 📚 快速导航
 
-### [概念文档](concepts/index.md) — 7篇核心概念
+### [概念文档](concepts/index.md) — 9篇核心概念
 - [为什么读帛书本](concepts/00-why-boshu.md) — 帛书本的阅读价值与适用场景
 - [四大版本系统](concepts/01-four-systems.md) — 郭店楚简、帛书、北大汉简、传世本对照
 - [德经在前的阅读策略](concepts/02-de-before-dao.md) — 篇序差异与阅读顺序选择
@@ -26,6 +26,8 @@ okf_version: "0.2"
 - [核心异文选读](concepts/04-key-variants.md) — 6组最重要的哲学性异文
 - [如何使用历代注本](concepts/05-using-commentaries.md) — 注家立场、三阶段选用法
 - [资料库使用指南](concepts/06-collection-usage.md) — 223文件快速定位
+- [核心概念义理解读](concepts/07-core-concepts-interpretation.md) — 道/德/无为/自然/反/弱六概念的帛书义理解读
+- [可复用阅读模式](concepts/08-reusable-patterns.md) — 版本对照阅读法与出土文献认知框架
 
 ### [实践示例](examples/index.md) — 3篇实操指南
 - [开篇对照阅读](examples/01-first-chapters.md) — 德经首章与道经首章对照
@@ -40,7 +42,7 @@ okf_version: "0.2"
 
 ### 工作文档
 - [事实清单](facts.md) — 45条零推测事实
-- [架构洞察](insights.md) — 4条核心洞察与知识地图
+- [架构洞察](insights.md) — 6条核心洞察与知识地图
 
 ## 🚀 快速开始
 

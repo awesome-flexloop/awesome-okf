@@ -70,6 +70,7 @@ Anthropic开源生态围绕**Claude模型**构建，形成从基础API到垂直�
 | [**official-skills**](official-skills/index.md) | 🟡结构化整理 | 9文档，19个官方Skills分类索引，SKILL.md格式规范，skill-creator元技能，claude-api多语言参考 | Skill开发者、Claude Code高级用户 |
 | [**financial-services**](financial-services/index.md) | 🟢行业方案 | 9文档，10个金融Agents、7个垂直Skills、12个MCP数据连接器、双模式部署（Cowork+Managed Agents API） | 金融科技、投研/投行/PE/财富管理 |
 | [**system-prompts**](system-prompts/index.md) | 🟡结构化整理 | 13文档，官方系统提示词发布史：18模型×30日期条目（2024-07→2026-09）全景矩阵、四时代逐条目解析、设计思想演进分析 | 提示词工程师、AI产品研究者 |
+| [**agent-roadmap**](agent-roadmap/index.md) | 🟢行业方案 | 1文档，Anthropic Agent 开发路线图学习 Wiki——Agent 能力演进方向、产品矩阵与工程实践趋势（learning 03 合并增量） | AI 产品规划、Agent 开发者 |
 
 ## 学习路径建议
 
@@ -143,5 +144,7 @@ prompt-engineering/index
 official-skills/index
 financial-services/index
 system-prompts/index
+claude-tag/index
+agent-roadmap/index
 log
 ```

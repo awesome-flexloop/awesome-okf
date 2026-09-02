@@ -79,4 +79,12 @@ examples/build-bundle-app
 examples/create-basic-plugin
 examples/use-event-bus
 references/cordis-sources
+concepts/repo-structure
+concepts/effects-coeffects
+concepts/loader-config
+concepts/hmr
+references/background-paper
+references/aux-packages
+references/faq-notes
+log
 ```

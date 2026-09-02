@@ -22,4 +22,5 @@ description: "哲学理论体系知识包——自指递归哲学体系（Ψhē�
 :maxdepth: 7
 
 psi/index
+methodology/index
 ```

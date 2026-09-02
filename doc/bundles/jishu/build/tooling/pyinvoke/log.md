@@ -1,5 +1,13 @@
 # Bundle Update Log
 
+## 2026-09-02
+
+**Merge**: 从 SpecWeave docs/knowledge/learning/04-docs-markup-tooling/pyinvoke-wiki/ 合并独有内容
+
+* **Add**: concepts/12-tool-comparison-and-selection.md — 工具对比与选型：与 Make/Shell Script/Fabric/Nox/Tox/Poetry Scripts 的差异矩阵与各自结论、选型决策树、适用/不适用场景边界（源自 learning 侧 overview/comparison.md 与 overview/intro.md）
+* **Update**: concepts/index.md、根 index.md 导航与 toctree（12→13 概念）
+* **重复确认**：learning 侧 overview/intro（定位与设计哲学）与既有 00-introduction 重叠、overview/quickstart/installation 与 01-getting-started 重叠、overview/architecture 与 07/08 执行模型重叠、core-concepts/ 十篇（task/context/collection/config/parser/program/executor/runner/loader）与既有 02-08、11 概念文档逐一对应重叠，均未重复迁入
+
 ## 2026-08-21
 
 * **Creation**: 建立 PyInvoke 知识包脚手架（concepts/examples/references 三目录）与信源登记（PyInvoke 源码路径与核心模块清单）。

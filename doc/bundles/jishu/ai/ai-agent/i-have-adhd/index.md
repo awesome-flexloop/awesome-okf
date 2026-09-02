@@ -61,4 +61,14 @@ concepts/session-hooks-mechanism
 concepts/ten-output-rules
 examples/install-adhd-skill
 references/i-have-adhd-sources
+concepts/design-philosophy
+concepts/exceptions-and-checklist
+concepts/evaluation-framework
+concepts/customization-and-troubleshooting
+concepts/reusable-patterns
+concepts/action-first-paradigm
+concepts/reverse-adaptation-innovation
+concepts/design-tradeoffs-and-writing
+references/faq-and-resources
+log
 ```

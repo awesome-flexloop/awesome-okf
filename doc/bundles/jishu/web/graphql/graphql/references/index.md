@@ -11,6 +11,7 @@
 * [spec-section-7-response](spec-section-7-response.md) — 规范 Section 7：Response + Appendix C
 * [mcp-server-source](mcp-server-source.md) — AI WG MCP 服务器源码
 * [semantic-introspection-rfc](semantic-introspection-rfc.md) — 语义内省 RFC
+* [mdx-graphql-guide 系列](mdx-graphql-guide/index.md) — SpecWeave learning/04 mdx-graphql-guide 合并增量（可查询文档 MDX+GraphQL：概述/快速上手/查询组件/最佳实践，4 章）
 
 ```{toctree}
 :hidden:
@@ -18,6 +19,7 @@
 
 mcp-server-source
 semantic-introspection-rfc
+mdx-graphql-guide/index
 spec-section-1-overview
 spec-section-2-language
 spec-section-3-type-system

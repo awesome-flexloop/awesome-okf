@@ -1,5 +1,24 @@
 # Bundle Update Log
 
+## 2026-09-02
+
+**Merge**: 从 SpecWeave docs/knowledge/learning/ 合并 knowledge-catalog 双源独有内容（01-agent-protocols-interfaces/knowledge-catalog-wiki/ 11 文件 + 07-vendor-product-learning/google-cloud/ 11 文件，部分重叠 #4）
+
+* **Add**: concepts/knowledge-catalog-platform.md — 平台概述与架构（源自 01 侧 00-overview、01-core-concepts）
+* **Add**: concepts/knowledge-catalog-reference-agent.md — 参考 Agent 实现（源自 01 侧 03-reference-agent + 07 侧 02-reference-agent）
+* **Add**: concepts/knowledge-catalog-metadata-as-code.md — mdcode 元数据即代码工具链（源自 07 侧 03-metadata-as-code）
+* **Add**: concepts/knowledge-catalog-samples.md — 官方示例 Bundle 与示例智能体实战（源自 01 侧 05-samples-and-bundles + 07 侧 04-samples）
+* **Add**: concepts/knowledge-catalog-adoption.md — 集成模式与选型决策（源自 01 侧 06-integration-patterns、07-architecture-decisions + 07 侧 05-best-practices）
+* **Add**: references/knowledge-catalog-readme-zh.md — 官方 README 中文转译信源登记（源自 07 侧散文件 knowledge-catalog-readme-zh.md）
+* **Update**: 根 index.md、concepts/index.md、references/index.md 更新索引与 toctree（21→26 概念、3→4 信源登记，共 34 内容文档）
+* **重复确认**：01 侧 02-okf-specification（OKF 规范解析）与既有规范转译概念重叠、08-resources-and-glossary 术语表与 terminology.md 重叠、04 可视化节与 tooling-knowledge-catalog.md 重叠，均未重复迁入；两源 README/各级 index.md 为导航元数据，不迁入
+
+**Merge**: 从 SpecWeave docs/knowledge/learning/01-agent-protocols-interfaces/okf-wiki/ 合并独有内容
+
+* **Add**: concepts/adoption-scenarios.md — 使用场景与落地实践：三种典型场景（数据目录/Agent 知识库/运维 Runbook）、Agent 四层架构知识层定位、渐进式文档化五阶段、Git 工作流结合、Bundle SemVer 版本管理建议（源自 learning 侧 00-overview.md 与 03-usage-patterns.md；示例中的 v0.1 风格字段 timestamp/P7D 时长已按 v0.2 规范改写为绝对日期）
+* **Update**: 根 index.md、concepts/index.md 更新索引与 toctree（20→21 概念）
+* **重复确认**：learning 侧 01 章核心概念（Bundle/Concept/Frontmatter/链接/index/log 规范）与既有规范转译概念重叠，02 章快速入门与 examples/saas-metrics-quickstart 重叠，均未重复迁入；okf-topic-index.md 为 SpecWeave 内部导航文档，不迁入
+
 ## 2026-08-21
 
 * **Enrich**: 基于 okf.md 全站内容（主页 /spec /quickstart /validator /skill 子页面）与 GitHub SPEC.md 完整原文补充 bundle 细节。

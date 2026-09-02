@@ -1,5 +1,13 @@
 # protobuf 知识包生成日志
 
+## 2026-09-02
+
+**Merge**: 从 SpecWeave docs/knowledge/learning/01-agent-protocols-interfaces/protobuf-wiki/ 合并独有内容
+
+- 新增 `concepts/17-version-selection-and-migration.md`：版本选型与迁移实践（版本演进速查表、线格式兼容性边界、选型决策树与场景矩阵、六大反模式、最佳实践清单、proto2→proto3 十项迁移检查清单、渐进式灰度迁移五阶段、Editions feature 映射、可迁移通用模式），源自 learning 侧 00-overview.md、04-selection-guide.md、05-migration-guide.md
+- 更新 `concepts/index.md`、根 `index.md` 导航与 toctree（17→18 概念）
+- 重复确认：learning 侧仅存 00/04/05 三章实质内容，均已整合进 17 篇；其导航中引用的 01/02/03 章（版本时间轴、对比矩阵、功能演进）在源侧缺失，而 Editions 机制已由既有 15-editions-feature-system 从源码视角覆盖，无额外内容需迁入
+
 ## R 阶段（事实采集）
 
 - 逐模块阅读 protobuf 主仓 v37.0-dev 源码（`external/libs/protocolbuffers/protobuf/`），按五个主题并行采集，产出 5 份事实清单共 **486 条**编号事实（`.trae/specs/protocolbuffers-okf-wiki/`）：
