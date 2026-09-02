@@ -17,6 +17,8 @@ sources:
 
 # STP 战略：市场细分、目标选择与定位
 
+![人群被分成若干不同颜色的群组，一枚飞镖正中靶心红心，寓意选定目标市场。](/_static/bundles/sheke/marketing/marketing-fundamentals/images/stp-target-bullseye.jpg)
+
 ## 是什么
 
 STP 是营销战略的三步骨架：市场细分（Segmentation）、目标市场选择（Targeting）、定位（Positioning），由科特勒体系系统化（M-010）。S 和 T 决定“在哪个战场打”，P 决定“在顾客心里占什么位置”；定位定清楚之后，才轮到 4P 战术组合上场（M-010）。一句话总结：**先选人群，再谈打法**。

@@ -86,10 +86,10 @@ STP 定的是“在哪个战场打、在顾客心智里占什么词”，4P 是�
 
 ```mermaid
 flowchart LR
-    P1["产品 Product"] -->|换成顾客视角| C1["顾客需要 Consumer wants"]
-    P2["价格 Price"] -->|换成顾客视角| C2["顾客成本 Cost"]
-    P3["渠道 Place"] -->|换成顾客视角| C3["购买便利 Convenience"]
-    P4["促销 Promotion"] -->|换成顾客视角| C4["双向沟通 Communication"]
+    P1["产品 Product"] -->|"换成顾客视角"| C1["顾客需要 Consumer wants"]
+    P2["价格 Price"] -->|"换成顾客视角"| C2["顾客成本 Cost"]
+    P3["渠道 Place"] -->|"换成顾客视角"| C3["购买便利 Convenience"]
+    P4["促销 Promotion"] -->|"换成顾客视角"| C4["双向沟通 Communication"]
 ```
 
 ## 7P：服务业多出来的三块
