@@ -1,5 +1,15 @@
 # Anthropic 生态 Wiki 更新日志
 
+## 2026-09-02 — 新增 system-prompts 子束
+
+**新增 [system-prompts](system-prompts/index.md) 子束（13文档）**：Anthropic 官方系统提示词发布史中文 Wiki。
+
+- 信源：platform.claude.com 官方发布页 en 版 `.md` 端点，2026-09-02 全量快照（18 个模型子页、30 个日期条目，2024-07-12 → 2026-09-01，约 465KB raw markdown）
+- concepts 7 篇：公开机制与政策边界、18×30 全景矩阵、四时代逐条目解析（3.x / 4.0-4.1 / 4.5 / 固定快照）、设计思想演进分析
+- references 2 篇：信源索引（18 官方子页 + 采集方法）、条目事实登记表（61 条 F 编号索引）
+- 方法论：seven-concepts 知识沉淀链路（R→I→E→V）；关键引文逐字摘录、61 条 F 编号登记、6/6 抽查核验通过；版本对比以逐行 diff 实测为准（官方加粗标注执行不严）
+- 质量门：gates.utf8 / gates.toctrees / gates.bundles / sphinx build 全绿
+
 ## 2026-08-27 — 初始版本
 
 **初始版本发布**，覆盖Anthropic官方开源生态6大核心项目，共69个文档文件。

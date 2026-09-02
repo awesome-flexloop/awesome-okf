@@ -2,8 +2,8 @@
 okf_version: "0.2"
 type: index
 title: "Anthropic 生态中文 Wiki"
-description: "Anthropic官方开源生态中文文档——Python SDK深度源码解析、Claude Code CLI、官方Cookbooks、提示词工程教程、Skills库、金融服务Agents，覆盖Claude AI开发全栈。"
-tags: [anthropic, claude, python-sdk, claude-code, prompt-engineering, skills, agents, llm]
+description: "Anthropic官方生态中文文档——Python SDK深度源码解析、Claude Code CLI、官方Cookbooks、提示词工程教程、Skills库、金融服务Agents、系统提示词发布史，覆盖Claude AI开发全栈。"
+tags: [anthropic, claude, python-sdk, claude-code, prompt-engineering, skills, agents, llm, system-prompts]
 sources:
   - name: anthropic-sdk-python
     path: "external/libs/anthropics/anthropic-sdk-python"
@@ -26,7 +26,7 @@ stale_after: 2027-08-27
 
 # Anthropic 生态中文 Wiki
 
-Anthropic（[anthropic.com](https://www.anthropic.com)）是AI安全公司，Claude系列大模型的开发商。本Wiki覆盖Anthropic官方开源的6大核心项目，从底层SDK到上层应用生态，为中文开发者提供系统化的Claude开发参考。
+Anthropic（[anthropic.com](https://www.anthropic.com)）是AI安全公司，Claude系列大模型的开发商。本Wiki覆盖Anthropic官方开源的6大核心项目与官方系统提示词发布史文档，从底层SDK到上层应用生态，为中文开发者提供系统化的Claude开发参考。
 
 ## 生态全景
 
@@ -69,6 +69,7 @@ Anthropic开源生态围绕**Claude模型**构建，形成从基础API到垂直�
 | [**prompt-engineering**](prompt-engineering/index.md) | 🟡结构化整理 | 8文档，9章提示词工程教程，入门(结构/清晰/角色)→中级(数据分离/CoT/示例)→高级(防幻觉) | 提示词优化、Prompt工程师 |
 | [**official-skills**](official-skills/index.md) | 🟡结构化整理 | 9文档，19个官方Skills分类索引，SKILL.md格式规范，skill-creator元技能，claude-api多语言参考 | Skill开发者、Claude Code高级用户 |
 | [**financial-services**](financial-services/index.md) | 🟢行业方案 | 9文档，10个金融Agents、7个垂直Skills、12个MCP数据连接器、双模式部署（Cowork+Managed Agents API） | 金融科技、投研/投行/PE/财富管理 |
+| [**system-prompts**](system-prompts/index.md) | 🟡结构化整理 | 13文档，官方系统提示词发布史：18模型×30日期条目（2024-07→2026-09）全景矩阵、四时代逐条目解析、设计思想演进分析 | 提示词工程师、AI产品研究者 |
 
 ## 学习路径建议
 
@@ -118,7 +119,8 @@ Anthropic开源生态围绕**Claude模型**构建，形成从基础API到垂直�
 | prompt-engineering | 5 | 0 | 0 | 8 |
 | official-skills | 4 | 0 | 1 | 9 |
 | financial-services | 4 | 0 | 1 | 9 |
-| **合计** | **30** | **7** | **10** | **69** |
+| system-prompts | 7 | 0 | 2 | 13 |
+| **合计** | **37** | **7** | **12** | **82** |
 
 ## 版本说明
 
@@ -129,6 +131,7 @@ Anthropic开源生态围绕**Claude模型**构建，形成从基础API到垂直�
 - skills: 含19个官方Skills（含theme-factory、slack-gif-creator等）
 - financial-services: 含10个Agents、7个verticals、12个MCP连接器
 - prompt-eng-interactive-tutorial: 9章交互式教程
+- system-prompts: 官方系统提示词发布页（platform.claude.com），2026-09-02 快照（18模型×30条目）
 
 ```{toctree}
 :hidden:
@@ -139,5 +142,6 @@ cookbooks/index
 prompt-engineering/index
 official-skills/index
 financial-services/index
+system-prompts/index
 log
 ```
