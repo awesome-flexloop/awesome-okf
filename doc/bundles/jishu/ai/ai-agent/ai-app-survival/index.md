@@ -68,3 +68,11 @@ ai-app-survival/
 ## 时效声明
 
 财务数据与流量数据为 2024-2026 年上半年截面；大厂办公 Agent 品牌处于整合期（Workbuddy/千问办公/豆包办公与 QoderWork/TRAE 国内版存在更名映射）。建议 2026-12-31 后复核。
+
+```{toctree}
+:maxdepth: 1
+
+concepts/index
+references/index
+log
+```

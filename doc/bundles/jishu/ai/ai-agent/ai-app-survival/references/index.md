@@ -30,3 +30,10 @@
 
 - 完整事实登记表（F-001~F-080）：[article-source.md](article-source.md)
 - P0 核验报告与勘误清单：[verification.md](verification.md)
+
+```{toctree}
+:maxdepth: 1
+
+article-source
+verification
+```

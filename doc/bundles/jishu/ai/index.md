@@ -42,6 +42,4 @@ trae/index
 tencent/index
 pocketflow/index
 ai-security/index
-mobile-use/index
-tiktoken/index
 ```

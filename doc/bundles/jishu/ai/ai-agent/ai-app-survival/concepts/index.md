@@ -12,3 +12,14 @@
 | 05 | [两条逃生路线](05-two-escape-routes.md) | 下游卖结果（交付/重交付/收购改造）或上游做模型（场景-模型互强化） | F-059~F-080 |
 
 阅读顺序建议：00 建立全景 → 01/02/03 理解三股挤压的机制与数据 → 04 规避最常见的反应错误 → 05 落到路线选择与决策树。
+
+```{toctree}
+:maxdepth: 1
+
+00-triple-squeeze
+01-token-economics
+02-model-engulfment
+03-model-as-app
+04-avoidance-trap
+05-two-escape-routes
+```
