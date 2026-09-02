@@ -26,7 +26,7 @@ sources:
 - url: <https://kunishitei.bunka.go.jp/heritage/detail/201/832>
   title: 日本文化厅国宝指定解说（医心方）
 
-***
+---
 
 # 为什么读《医心方》
 
