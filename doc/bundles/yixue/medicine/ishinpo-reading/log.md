@@ -12,6 +12,13 @@ okf_version: "0.2"
 
 # 工作日志
 
+## 2026-09-02
+
+### 视觉增强（事实内容零变更）
+- 新增 9 张 AI 生成水墨意境插图：束首页 index.md（hero-heian-scroll-library）、概念 00-05（lost-scroll-fragments-rejoined、tanba-yasuyori-writing-scroll、qing-scholar-reconstructing-fragments、manuscripts-crossing-the-sea、edo-igakkan-scholars-collating、modern-desk-collated-editions）与示例 01-02（close-reading-with-vermilion-brush、reading-path-unrolling-scrolls）；图片存放于 doc/_static/bundles/yixue/medicine/ishinpo-reading/images/，以站点绝对路径 /_static/bundles/yixue/medicine/ishinpo-reading/images/ 引用，统一配图注"AI 生成意境图，非历史图像，仅作阅读氛围辅助"；插图位置均在各页开篇引言之后、第一个小节之前，风格统一为暖米色宣纸底、水墨淡彩、古典书斋氛围。
+- 新增 5 张 Mermaid 图表：概念 01（三十卷结构分组图）、概念 02（亡佚→保存→辑佚链路图）、概念 03（版本流传谱系图）、概念 04（研究史时间线图）、示例 02（四阶段阅读路线图）；图表事实锚定本束 facts.md，遵循 Mermaid 安全编码规则（节点标签引号包裹、边标签 `-->|"标签"|` 无空格、无特殊字符）。
+- 以上均为视觉增强：正文事实文字、交叉链接、frontmatter、toctree、表格与引用块零变更。
+
 ## 2026-08-31
 
 - 创建知识包：基于 Web 公开信源三路并行调研（本体/亡佚引书/版本研究史），按 seven-concepts 场景 4（知识沉淀）链路 R→I→E→V 产出

@@ -26,6 +26,10 @@ sources:
 
 # 如何选读整理本
 
+![现代书案上影印本校注本与放大镜书签](/_static/bundles/yixue/medicine/ishinpo-reading/images/modern-desk-collated-editions.png)
+
+*AI 生成意境图，非历史图像，仅作阅读氛围辅助*
+
 《医心方》自 1955 年影印入华以来，已有多部整理本行世，底本、整理深度、目标读者各不相同。本篇把五种主要通行本做成速查表，并给出四步选书法，帮助不同目的的读者各取所需。
 
 ## 一、五种通行本速查表

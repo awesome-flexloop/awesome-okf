@@ -30,7 +30,47 @@ sources:
 
 # 版本流传与回传中国
 
+![卷轴乘船渡海，多份抄本随书籍之路传承](/_static/bundles/yixue/medicine/ishinpo-reading/images/manuscripts-crossing-the-sea.png)
+
+*AI 生成意境图，非历史图像，仅作阅读氛围辅助*
+
 《医心方》的文本史本身就是一部传奇：它在日本以抄本形式秘传近千年，从未刊刻；直到江户幕末才被摹刻成书（安政本）；又因明治维新后汉学衰落、中国学者东渡访书，这部保存中国佚书的书反过来"回传"中土。理解这条版本链，是判断今天手里那个整理本可靠程度的前提。
+
+三抄本源头及其千年流变、清末回传路径如下图所示（虚线表示校勘关系，非传承关系）：
+
+```mermaid
+flowchart TD
+    ORIGIN["984年成书<br/>抄录三部"]
+    subgraph S1 ["御本系统（献皇室）"]
+        GYOBON["御本（秘府本）"]
+        NAKARAI["半井家本<br/>现存最古全帙·1984年国宝"]
+        ANSEI["安政本<br/>1854年借校·1860年刊行"]
+    end
+    subgraph S2 ["宇治本系统（献藤原赖通）"]
+        UJI["宇治本"]
+        NINNA["仁和寺本（再抄本）<br/>残卷5帖·1952年国宝"]
+        KANSEI["1791年宽政影写本<br/>医学馆·红叶山文库各一部"]
+        UJILOST["宇治本原本已佚"]
+    end
+    subgraph S3 ["医家本系统（丹波家自留）"]
+        IKA["医家本"]
+        IKALOST["原本已佚<br/>多纪家旧藏零本存卷二·卷八"]
+    end
+    YANG["杨守敬清末访书<br/>《日本访书志》回传中国"]
+    MODERN["现代整理本<br/>人卫1955影印·华夏1993与2023·学苑2001校释"]
+    ORIGIN --> GYOBON
+    ORIGIN --> UJI
+    ORIGIN --> IKA
+    GYOBON -->|"1145年点注·后赐半井家"| NAKARAI
+    NAKARAI -->|"底本"| ANSEI
+    UJI -->|"再抄本传世"| NINNA
+    UJI -->|"原本失传"| UJILOST
+    NINNA -->|"1791年影写两部"| KANSEI
+    NINNA -.->|"主校本"| ANSEI
+    IKA -->|"原件已佚"| IKALOST
+    ANSEI -->|"清末回传"| YANG
+    YANG --> MODERN
+```
 
 ## 一、三抄本源头
 
