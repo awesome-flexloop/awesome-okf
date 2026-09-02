@@ -1,5 +1,14 @@
 # 更新日志
 
+## 2026-09-02
+
+### 新增
+- 意象配图 1 张（水墨意象类，存 doc/_static/bundles/yixue/tcm/classics/shanghan-zabinglun/images/）：束封面 `shanghan-cover.jpg`（束根 index.md 首屏）
+- Mermaid 结构图 4 张：concepts/01-textual-history「文本流传史」、concepts/02-version-systems「版本四系统」、concepts/03-six-channels-framework「六经框架」、concepts/04-jingui-structure「金匮结构」
+
+### 合规
+- 纯视觉增量，知识内容零改动：正文、frontmatter、表格、链接、references 均未增删改；V 阶段独立对抗审查 A/B/C 全通过——4 张 Mermaid 图六规则机检合规、图中事实逐字核验通过、Sphinx 构建本束零错误零告警、单页配图 ≤2 配额达标
+
 ## 2026-08-30
 
 ### 创建

@@ -1,5 +1,14 @@
 # 更新日志
 
+## 2026-09-02
+
+### 新增
+- 意象配图 1 张（水墨意象类，存 doc/_static/bundles/yixue/tcm/classics/nanjing/images/）：束封面 `nanjing-cover.jpg`（束根 index.md 首屏）
+- Mermaid 结构图 3 张：concepts/01-structure-81「81 难六部结构」、concepts/02-relation-to-neijing「与内经关系」、concepts/04-commentators「注家谱」
+
+### 合规
+- 纯视觉增量，知识内容零改动：正文、frontmatter、表格、链接、references 均未增删改；V 阶段独立对抗审查 A/B/C 全通过——3 张 Mermaid 图六规则机检合规、图中事实逐字核验通过、Sphinx 构建本束零错误零告警、单页配图 ≤2 配额达标
+
 ## 2026-08-30
 
 ### 创建

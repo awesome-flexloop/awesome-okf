@@ -19,6 +19,26 @@ sources:
 
 ---
 
+## [v1.2.0] — 2026-09-02
+
+### 新增
+
+- **Mermaid 结构图 17 张（M1–M17）**，纯增量嵌入 5 束既有内容文档：
+  - [tcm-overview](classics/tcm-overview/index.md) 4 张：[concepts/00](classics/tcm-overview/concepts/00-genealogy-layering.md) 域级经典谱层 1 张、[concepts/01](classics/tcm-overview/concepts/01-four-classics-guide.md) 四大经典导读 2 张、[examples/four-classics-reading-plan](classics/tcm-overview/examples/four-classics-reading-plan.md) 四年共研路线 1 张；
+  - [nanjing](classics/nanjing/index.md) 3 张：[concepts/01](classics/nanjing/concepts/01-structure-81.md) 81 难六部结构、[concepts/02](classics/nanjing/concepts/02-relation-to-neijing.md) 与内经关系、[concepts/04](classics/nanjing/concepts/04-commentators.md) 注家谱；
+  - [shanghan-zabinglun](classics/shanghan-zabinglun/index.md) 4 张：[concepts/01](classics/shanghan-zabinglun/concepts/01-textual-history.md) 文本流传史、[concepts/02](classics/shanghan-zabinglun/concepts/02-version-systems.md) 版本四系统、[concepts/03](classics/shanghan-zabinglun/concepts/03-six-channels-framework.md) 六经框架、[concepts/04](classics/shanghan-zabinglun/concepts/04-jingui-structure.md) 金匮结构；
+  - [shennong-bencaojing](classics/shennong-bencaojing/index.md) 3 张：[concepts/01](classics/shennong-bencaojing/concepts/01-reconstruction-systems.md) 辑复层累链、[concepts/02](classics/shennong-bencaojing/concepts/02-three-grades.md) 三品理论数 365 与实计 363 分层、[examples/three-grades-comparison](classics/shennong-bencaojing/examples/three-grades-comparison.md) 水银雄黄两读并列；
+  - [waijing-weiyan](classics/waijing-weiyan/index.md) 3 张：[concepts/01](classics/waijing-weiyan/concepts/01-discovery-and-circulation.md) 流传时序 timeline、[concepts/04](classics/waijing-weiyan/concepts/04-structure-guide.md) 九卷主题地图、[concepts/06](classics/waijing-weiyan/concepts/06-mingmen-fire-water.md) 命门说承应谱系。
+- **水墨意象配图 8 张（I1–I8）**，存 `doc/_static/bundles/yixue/tcm/` 下对应 images/ 目录：域封面 1 张（[tcm/index.md](index.md) 首屏）、5 束封面各 1 张（各束 index.md 首屏）、tcm-overview 文献学章节意象图 1 张（[concepts/02](classics/tcm-overview/concepts/02-philology-basics.md)）、waijing-weiyan 颠倒顺逆章节意象图 1 张（[concepts/05](classics/waijing-weiyan/concepts/05-diandao-shunni.md)）。
+
+### 说明
+
+- 本次为**纯视觉增量，知识内容零改动**：未增删改正文、frontmatter、表格、链接与 references，各束 references/ 目录零资产变更。
+- 质量门：V 阶段独立对抗审查 A/B/C 全通过——17 张 Mermaid 图六规则机检合规、图中事实逐字核验通过、Sphinx 构建 tcm 域零错误零告警、references 零资产、单页配图 ≤2 配额达标。
+- 束级明细（含图片文件名与落位）见 5 束 log.md 的 2026-09-02 条目。
+
+---
+
 ## [v1.1.0] — 2026-08-31
 
 ### 新增

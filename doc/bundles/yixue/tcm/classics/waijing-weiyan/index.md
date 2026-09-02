@@ -20,6 +20,8 @@ okf_version: "0.2"
 
 本知识包（bundle）是《外经微言》（坊间多以《黄帝外经》之名印行）的阅读指南，以公共领域原文的**双信源逐字核对**为底，配合字词注解、白话大意、学术解读四板块精读 13 篇核心篇章，其余 68 篇提供一句提要与全文链接。成书、托名、真伪问题分层如实呈现，真伪两派证据并列不裁决。
 
+![外经微言束封面：云雾山中半卷展开的素白卷轴](/_static/bundles/yixue/tcm/classics/waijing-weiyan/images/waijing-cover.jpg)
+
 ## 📚 快速导航
 
 ### [概念文档](concepts/index.md) — 9 篇

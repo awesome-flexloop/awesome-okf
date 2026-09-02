@@ -20,6 +20,10 @@ okf_version: "0.2"
 
 本知识包（bundle）是中医典籍体系的**总览束**：回答"中医有哪些书、经典层如何构成、各层关系如何、按什么顺序读、用什么方法读"五个体系性问题。与单书精读束（如 [waijing-weiyan](../waijing-weiyan/index.md)、[huangdi-neijing](../../../huangdi-neijing/neijing-reading/index.md)）不同，本束不逐篇精读某一本书，而是提供整个谱系的地图、进门的文献学常识与可迁移的阅读方法。
 
+*下图为典籍总览束意象：*
+
+![典籍总览束封面：书案上并排陈列的四部素面典籍](/_static/bundles/yixue/tcm/classics/tcm-overview/images/tcm-overview-cover.jpg)
+
 ## 📚 快速导航
 
 ### [概念文档](concepts/index.md) — 6 篇

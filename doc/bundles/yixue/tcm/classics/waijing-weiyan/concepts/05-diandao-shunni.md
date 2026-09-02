@@ -20,6 +20,8 @@ sources:
 
 > 卷一是全书总纲，卷一前两篇又是总纲的总纲。陰陽顛倒篇与順逆探原篇提出的"逆向操作"思维，贯穿后面八十篇——从养生到命门，从五行到伤寒，读不通"逆"字，全书处处是悖论；读通了"逆"字，处处是功夫。
 
+![颠倒顺逆章节配图：山涧回旋的溪流与淡墨远山](/_static/bundles/yixue/tcm/classics/waijing-weiyan/images/shunni-mountain-stream.jpg)
+
 ## 核心命题（原文照录）
 
 陰陽顛倒篇（WJ-RES-02）：
