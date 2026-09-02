@@ -16,18 +16,25 @@ okf_version: "0.2"
 ## 实战示例（examples/）
 
 * [基础绑图](examples/basic-plotting.md) — 折线图（plot/格式字符串/fill_between）、散点图（scatter/颜色映射/大小映射/颜色条）、柱状图（bar/barh/分组/堆叠/误差棒/数值标签）、直方图（hist/累积/KDE/多分布对比）、饼图（pie/explode）、子图网格（subplots/sharex/sharey）、subplot_mosaic 复杂布局、样式与主题（plt.style/rcParams）、注释与箭头（annotate/text/bbox）、LaTeX 数学公式、imshow 图像显示（contour/colormap）、双 Y 轴（twinx）、savefig 保存图片（PNG/PDF/SVG/DPI/bbox_inches）、中文显示设置，全部代码可直接运行。
+* [事件处理](examples/event-handling.md) — 基于 2020 年前后教程的交互事件实战：`mpl_connect()` 事件回调与事件名、事件属性（Event/LocationEvent/MouseEvent）、可拖拽矩形（DraggableRectangle）、鼠标进入/离开事件、picker 对象拾取。
+* [形状与路径](examples/patches-and-path.md) — 基于 2020 年前后教程的特殊图形绘制：patches 形状（Ellipse/Arc/Circle/Wedge/RegularPolygon/Arrow/FancyBboxPatch 等）、PatchCollection 集合、Path 路径与 codes 顶点编码、心形与条形图路径。
+* [分形三角形](examples/fractal.md) — 基于 2020 年前后教程的 Chaos Game 分形三角形：随机取顶点取中点迭代十万次、plt.scatter 渲染。
 
 ## 信源登记簿（references/）
 
 * [Artist 层级体系源码参考](references/artist-hierarchy.md) — 基于源码逐类追踪 Artist 基类（artist.py:111）、FigureBase（figure.py:183）、Figure（figure.py:2511）、_AxesBase（axes/_base.py:558）、Axes（axes/_axes.py:89）、Line2D（lines.py:265）、Patch（patches.py:35）、Text（text.py:149）、AxesImage（image.py:880）、Container（container.py:5）等的完整继承树、核心属性表、方法签名、光栅化装饰器机制、set() 自动生成机制、事件类族（MouseEvent/KeyEvent/PickEvent 等）。
 * [信源索引](references/index.md) — 17 个源码信源登记（S-ARTIST 到 S-AXIS）、文件格式与后端映射表、信源核验方法说明。
+* [事件处理信源](references/source-18.md) — 简书《Matplotlib 事件处理》信源登记（F-162~F-169，2020 年前后）。
+* [形状与路径信源](references/source-19.md) — 简书《matplotlib 之形状与路径：patches和path》信源登记（F-184~F-191，2020 年前后）。
+* [分形信源](references/source-20.md) — 简书《画分形图的一个例子》信源登记（F-101~F-105，2020 年前后）。
 
 ## 学习路径建议
 
 1. **新手入门**：00-introduction → 01-artist-hierarchy → 运行 examples/basic-plotting.md 中的折线图/散点图/柱状图示例
 2. **架构理解**：02-backend-system → 03-pyplot-state-machine → 理解 OO 接口与 pyplot 接口的取舍
 3. **深入实践**：examples/basic-plotting.md 完整阅读 → 子图布局/注释/双Y轴/保存图片
-4. **源码溯源**：阅读 references/artist-hierarchy.md，结合源码目录理解类层次和方法定义位置
+4. **进阶交互与特殊图形**（基于 2020 年前后教程）：examples/event-handling.md → examples/patches-and-path.md → examples/fractal.md
+5. **源码溯源**：阅读 references/artist-hierarchy.md，结合源码目录理解类层次和方法定义位置
 
 ## 核心源码速查表
 
@@ -50,7 +57,7 @@ okf_version: "0.2"
 
 ## 信任与生命周期说明
 
-* **status 判定依据**：全部 10 个内容文档（4 个概念 + 1 个示例 + 2 个信源登记 + 3 个子目录 index + 根 index.md），非 index 文件均 `status: stable`。内容基于对 Matplotlib 3.x 源码（`external/libs/python/matplotlib/matplotlib/lib/matplotlib/` 目录）核心子系统的逐模块阅读与事实提取，所有类名、方法名、行号均通过 Grep 精确定位。
+* **status 判定依据**：全部 17 个内容文档（4 个概念 + 4 个示例 + 4 个信源登记 + 3 个子目录 index + 根 index.md + log.md），非 index 文件均 `status: stable`。核心内容基于对 Matplotlib 3.x 源码（`external/libs/python/matplotlib/matplotlib/lib/matplotlib/` 目录）核心子系统的逐模块阅读与事实提取，所有类名、方法名、行号均通过 Grep 精确定位；2026-09-02 增量（事件处理/形状路径/分形示例及其信源）基于 2020 年前后简书连载教程，引用编号事实 F-101~F-105、F-162~F-169、F-184~F-191，并给出「现状」标注过时 API。
 * **stale_after 解释**：统一设置为 `2027-12-31`。Matplotlib 核心架构（Artist 层次、后端抽象、pyplot 状态机）自 1.x 以来保持高度稳定；3.x 系列持续增强但核心 API 没有 Breaking Change，该日期作为对未来大版本变化的保守重新评估节点。
 * **核验链路**：`generated.at` 记录原始生成时刻（2026-08-22T15:00:00Z）；`verified.at` 记录过程核验事件（2026-08-22T15:30:00Z），所有类名、函数名、参数名、行号均通过源码 Grep 和类定义头部读取验证。
 

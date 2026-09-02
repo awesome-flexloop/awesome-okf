@@ -43,6 +43,16 @@
 | webp | WebP | `backend_agg` |
 | avif | AVIF | `backend_agg` |
 
+## 简书文章信源（2026-09-02 增量）
+
+以下信源登记 2020 年前后简书连载《matplotlib & pillow & networkx 手册(停止维护)》中的相关文章，供 examples/ 增量示例溯源：
+
+| 信源 | 文章标题 | 对应示例 |
+|------|---------|---------|
+| [事件处理](source-18.md) | Matplotlib 事件处理（F-162~F-169） | [event-handling](../examples/event-handling.md) |
+| [形状与路径](source-19.md) | matplotlib 之形状与路径：patches和path（F-184~F-191） | [patches-and-path](../examples/patches-and-path.md) |
+| [分形](source-20.md) | 画分形图的一个例子（F-101~F-105） | [fractal](../examples/fractal.md) |
+
 ## 信源核验方法
 
 本文档中所有类名、方法名、行号均通过以下方式核验：
@@ -56,4 +66,7 @@
 :maxdepth: 7
 
 artist-hierarchy
+source-18
+source-19
+source-20
 ```
