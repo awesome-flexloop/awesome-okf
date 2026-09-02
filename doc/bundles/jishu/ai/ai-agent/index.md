@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 36
+total_bundles: 37
 ---
 
 # 🤖 AI Agent 框架
@@ -112,6 +112,7 @@ total_bundles: 36
 | [llm-hallucination-governance](llm-hallucination-governance/index.md) | 法学论文 | 4+2+1=7 | 杨帆/吕士哲论大模型知识幻觉的软硬法协同治理——风险类型(谄媚+思维链/高密度编造/路径依赖)、治理多维困境(数据枯竭近半域名限爬虫·GPT-4约13万亿tokens超$100M·RAG难根除·宏观指引够不着)、软硬法协同(硬法三义务[显著标识/来源提示/动态审查]+责任界分+过错推定[个保法69条]+软法[自律/标准/红队/国际合作])、附带国际参照(日本治理创新2.0/加州SB1047→SB53)与三案(Mata v.Avianca/noyb诉OpenAI/杭州首例AI幻觉案)、⚠️5处勘误(杭州案年份/挪威案投诉年份/SB编号/GPT-4数据量/爬虫比例)、学术论文无examples/、8项P0核验(5✅3⚠️) |
 | [matrix-zero-person-company](matrix-zero-person-company/index.md) | 产品资讯 | 3+2+1=6 | 智潮笔记解析Matrix(matrix.build)Agent公司操作系统——0人公司叙事(造的成本趋零竞争转向运营)、CEO Office+部门化分工+领队路由+Agential OKR、durable work memory与proof可验证交付(反幻觉完成)、商业基建开箱即用(Stripe/matrix.site域名/Agent钱包/VPTD经济指标)、九模型接入矩阵(Neo/Claude Code/Codex/ChatGPT/Gemini/GLM/DeepSeek/Kimi/Qwen)、⚠️成效数字全为厂商自述(GDPval 95.45%口径未验证/aivideopro.io案例无独立佐证)、macOS单平台单源、6项P0核验(2✅3⚠️1单源0❌无勘误) |
 | [ai-app-survival](ai-app-survival/index.md) | 商业分析 | 6+0+2+1=9 | 晚点LatePost深度调研AI应用生存困境——三重挤压(模型吞噬/负毛利/上游入口)、Stripe 11.5月达100万ARR vs SaaS 15月、Bessemer AI均毛利25% vs SaaS 70%、Perplexity/Cursor负毛利会计口径、scaling to bankruptcy、Devv搜索窗口仅半年、a16z三年仅14家常驻、Epoch AI能力增速8到15指数点、Brookings模型厂下场归因、易观办公Agent三分之二流量集中大厂、下游卖结果与上游做模型(租客困境)、12项P0核验(9确认3存疑0证伪) |
+| [wigolo](wigolo/index.md) | 工具教程 | 3+4+2+1=10 | wigolo本地优先Agent网页能力工具——MCP/REST/SDK三面提供search/fetch/crawl/extract/cache/find_similar/research/agent/diff/watch十工具、18搜索引擎并行+本地重排、字节级source_span证据与evidence_score置信度、fetch三级升级路由、数据全在~/.wigolo、六核心工具零API Key零按量费用、--agents一键接线9客户端、n8n/TS/Python SDK/框架包/Docker、⚠️AGPL-3.0与research/agent需LLM、10项P0核验全✅(2项口径标注:Firecrawl免费额度单源/博文日期未检出) |
 
 ---
 
@@ -135,7 +136,7 @@ total_bundles: 36
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：36 个知识包，共 310 个内容文档（206 概念 + 54 示例 + 52 信源），零推测事实底稿随束存放
+> **内容统计**：37 个知识包，共 321 个内容文档（209 概念 + 58 示例 + 54 信源），零推测事实底稿随束存放
 
 ```{toctree}
 :hidden:
@@ -177,4 +178,5 @@ agora-gemini-transcribe/index
 llm-hallucination-governance/index
 matrix-zero-person-company/index
 ai-app-survival/index
+wigolo/index
 ```

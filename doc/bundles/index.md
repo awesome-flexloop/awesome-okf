@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 416
+total_bundles: 417
 groups: 52
 domains: 9
 ---
@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **416 个知识包**，按学科逻辑分为 **9 个学科域、52 个分组**（8 个学科域 + 1 个规范锚点）。
+> 当前共 **417 个知识包**，按学科逻辑分为 **9 个学科域、52 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -125,11 +125,11 @@ flowchart TD
 | [🎨 艺术疗愈（Liaoyu）](yishu/liaoyu/index.md) | 6  | 艺术疗愈总览与五分支——术语分层、双信源史实核对、WHO/Cochrane 循证锚定、中西对读（美术·音乐·舞动戏剧·表达性艺术·中国脉络） |
 | [🎤 声乐教学（Vocal）](yishu/vocal/index.md)   | 1  | 美通唱法与咽音体系——林俊卿咽音练声八步骤、嗓音科学、常见毛病纠正与每日练声清单                               |
 
-### ⚙️ [技术](jishu/index.md) · 314 束 · 16 组
+### ⚙️ [技术](jishu/index.md) · 315 束 · 16 组
 
 | 分组                                               | 束数  | 说明                                                                                                         |
 | ------------------------------------------------ | --- | ---------------------------------------------------------------------------------------------------------- |
-| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 129 | agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security |
+| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 130 | agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security |
 | [📚 文档工程（document）](jishu/document/index.md)     | 107 | Sphinx · MyST · Jupyter Book · Jupyter · KaTeX 文档工程与交互式计算生态                                                |
 | [🔨 构建与包管理（build）](jishu/build/index.md)         | 15  | Conda 生态 · scikit-build · CMake · 通用开发工具（Ninja/Copier/PyInvoke/Nuitka 等）                                   |
 | [📡 通信与网络（comm）](jishu/comm/index.md)            | 12  | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化                                                               |
