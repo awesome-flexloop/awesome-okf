@@ -19,6 +19,28 @@ stale_after: 2027-09-01
 
 ## 六层定义对照表
 
+下图把六层定义按外延从窄到宽排为三层——四个单模态临床职业、一个跨模态治疗模型与最宽的广义健康促进层，伞式术语 creative arts therapies 覆盖临床职业层。
+
+```mermaid
+flowchart TD
+  UMB ["伞式术语 creative arts therapies：NCCATA 五大专业协会联盟（facts OV-10）"]
+  subgraph L1 ["临床职业层：单模态专业，硕士级训练加独立认证"]
+    AT ["art therapy 美术治疗：AATA 定义为心理健康职业，资质 ATR 与 ATR-BC"]
+    MT ["music therapy 音乐治疗：AMTA 定义为临床与循证地运用音乐干预，资质 MT-BC（CBMT 颁发）"]
+    DMT ["dance/movement therapy 舞动治疗：ADTA 职业定义，资质 R-DMT"]
+    DT ["drama therapy 戏剧治疗：NADTA 定义为意向性运用戏剧过程，资质 RDT"]
+  end
+  subgraph L2 ["跨模态治疗模型层"]
+    EXA ["expressive arts therapy 表达性艺术治疗：IEATA 定义为以 intermodal 跨模态方式调动多种艺术模态、促成整合经验"]
+  end
+  subgraph L3 ["广义艺术健康促进层"]
+    AIH ["arts in health 艺术与健康：WHO 2019 HEN Report 67，覆盖预防、健康促进与管理治疗全谱系"]
+  end
+  UMB -.-> L1
+  L1 -->|"外延放宽：准入门槛逐层降低、证据强度逐层稀释"| L2
+  L2 --> L3
+```
+
 | 层级 | 术语 | 定义锚点 | 核心表述 | 外延边界 |
 |---|---|---|---|---|
 | 1 | art therapy（美术治疗） | AATA 官网 About 页（arttherapy.org/about/） | 一门心理健康职业（a mental health profession） | 单模态临床职业；从业者须硕士以上学位与 ATR/ATR-BC 资质（facts AT-13、AT-14，美术治疗束） |

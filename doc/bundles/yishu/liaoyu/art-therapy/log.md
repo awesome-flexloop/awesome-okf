@@ -46,3 +46,10 @@ stale_after: 2027-09-01
 
 - 本束文档集按原子提交规范待提交：建议单次原子提交（type: docs, scope: okf-bundles，主题：美术治疗知识包文档集成稿），提交范围限于 art-therapy/ 目录内 13 个新建文档；facts.md（R 阶段产物）如尚未入库，应作为独立原子提交先行（type: docs, scope: okf-bundles，主题：美术治疗事实登记）。
 - 提交边界：不触碰其他任何束（music-therapy、expressive-arts、dance-drama-therapy、china-art-therapy、liaoyu-overview）及组索引文件；V 阶段对抗审查通过后方可执行提交。
+
+## 2026-09-02 视觉增补（R/E/V 阶段）
+
+- 增补束封面配图 1 张：seedream 生成暖灰纸感编辑插画 `art-therapy-easel-mandala.jpg`（画架、半成品抽象画布、颜料画笔与曼陀罗纹样，意象化呈现以主动艺术创作为核心的工作方式），落 `doc/_static/bundles/yishu/liaoyu/art-therapy/images/`，以引导句＋图片行插入束根 [index.md](index.md)「⚠️ 免责声明」块之后、「📚 快速导航」之前。
+- 增补 Mermaid 图 2 张：M4 美术治疗先驱谱系（[concepts/01-founders.md](concepts/01-founders.md) 开篇导语段后、「一、Adrian Hill」前，四人谱系链至 AATA）；M5 绘画投射技术与美术治疗并行脉络（[concepts/03-projective-techniques.md](concepts/03-projective-techniques.md)「一、定位：评估传统与治疗传统的分野」小节末、「二、Goodenough」前，双 subgraph 并行脉络）。
+- 方法：seven-concepts 链路 R（视觉点盘点）→ I（高价值可视化点洞察）→ E（配图与图产出、插入）→ V（对抗验证）；图中全部人名、生卒年、书名、组织名均可溯源至本束正文与 facts（AT-01–AT-18；AATA 1969 引 OV-07），无新造事实、无因果演绎；M4 顺序为「术语—理论—平台—建制」谱系角色链而非严格生卒先后，引导句已显式声明；Mermaid 源码遵循主仓库门禁（单行标签、含中文标签双引号包裹、无 `<br/>`、块内无空行），逐字采用视觉方案单行版本，未作改写。
+- 增量边界：本次仅新增引导句、图片引用行与 Mermaid 围栏块，未改动 frontmatter、事实正文、免责声明、toctree、facts.md 与 references/。

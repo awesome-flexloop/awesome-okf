@@ -19,6 +19,19 @@ stale_after: 2027-09-01
 
 ## 六阶段时间线
 
+下图把六个阶段压成一条时间链——每格只登记该阶段最具标志意义的建制节点，完整史实见本节各小节与 facts 编号。
+
+```mermaid
+flowchart LR
+  S1 ["前史 1910s 至 1930s：1916 bibliotherapy 一词首用（Crothers）；1921 心理剧诞生（Moreno，维也纳）"]
+  S2 ["战时医院 1940s：1942 Hill 首用 art therapy 一词；1942 Chace 进驻 St. Elizabeths 医院；1944 首个大学音乐治疗课程；1947 首位全职舞动治疗师"]
+  S3 ["组织潮 1950s 至 1960s：1950 NAMT 成立；1961 首份美术治疗专门期刊（Ulman）；1966 ADTA 成立；1969 AATA 与诗歌治疗协会 APT 成立"]
+  S4 ["模型分化 1970s：GIM、Nordoff-Robbins、分析性音乐治疗三大音乐治疗模型成形"]
+  S5 ["建制补全与整合 1979 至 1990s：1979 戏剧治疗协会设立（NADTA 前身）；1983 音乐治疗认证委员会 CBMT；1993 美术治疗认证 ATCB；1994 IEATA 成立与 NCCATA 伞式联盟"]
+  S6 ["循证时代 2000s 至 2019：Cochrane 系统综述陆续收录；2019 WHO HEN Report 67 发布（Fancourt 与 Finn，赫尔辛基）"]
+  S1 --> S2 --> S3 --> S4 --> S5 --> S6
+```
+
 ### 前史（1910s–1930s）：剧场与阅读的先行词
 
 两个先行概念在此阶段出现。其一，bibliotherapy（阅读疗法）一词由 Samuel Crothers 于 1916 年首用（facts OV-08，NAPT 官网史）。其二，罗马尼亚裔美国精神病学家 Jacob Levy Moreno（1889–1974）于 1911 年在维也纳开展儿童 Stegreiftheater（自发性剧场）实验，并将 1921 年 4 月 1 日在维也纳 Komödienhaus 上演无演员戏剧定为心理剧诞生日；1922–1924 年在维也纳 Maysedergasse 2 继续导演自发性剧场；1925 年移居美国，1936 年建成 Beacon 疗养院附设的心理剧剧场，1942 年创立 American Society of Group Psychotherapy and Psychodrama（ASGPP）（facts OV-08）。心理剧由此成为戏剧治疗谱系的最深根系。

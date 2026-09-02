@@ -49,3 +49,10 @@ stale_after: 2027-09-01
 - 本束文档集按原子提交规范待提交：建议单次原子提交（type: docs, scope: okf-bundles，主题：艺术疗愈总览知识包文档集成稿），提交范围限于 liaoyu-overview/ 目录内 11 个文档（含既有 facts.md 与 insights.md 如尚未入库应先行独立提交）。
 - 提交边界：不触碰五个姊妹束（art-therapy、music-therapy、dance-drama-therapy、expressive-arts、china-art-therapy）及 liaoyu/yishu 组索引文件；V 阶段对抗审查通过后方可执行提交。
 - 六束协同待办：expressive-arts 与 china-art-therapy 两束的集成稿完成后，核对本束六束地图中该两束定位语与其目录结构的一致性。
+
+## 2026-09-02 视觉增补（R/E/V 阶段）
+
+- 增补束封面配图 1 张：seedream 生成暖灰纸感编辑插画 `overview-arts-circle.jpg`（画架、竖琴、舞鞋、双面具、羽毛笔与水墨卷轴围成圆环，呼应本束六束枢纽定位），落 `doc/_static/bundles/yishu/liaoyu/liaoyu-overview/images/`，以引导句＋图片行插入束根 [index.md](index.md)「三大特点」列表之后、「📚 快速导航」之前。
+- 增补 Mermaid 图 3 张：M1 术语六层分层图（[concepts/00-overview.md](concepts/00-overview.md)「六层定义对照表」标题后、表格前）；M2 六阶段历史时间线（[concepts/01-history.md](concepts/01-history.md)「六阶段时间线」标题后、「前史」小节前）；M3 四问分支选择决策树（[examples/01-branch-chooser.md](examples/01-branch-chooser.md) 开篇导语段后、「问题一：你想解决什么？」前）。
+- 方法：seven-concepts 链路 R（视觉点盘点）→ I（高价值可视化点洞察）→ E（配图与图产出、插入）→ V（对抗验证）；图中全部人名、年份、组织名、模型名、阶段名均可溯源至本束正文与 facts（OV 层及跨束 AT/MT/DD/EA/CN 编号），无新造事实、无因果演绎；Mermaid 源码遵循主仓库门禁（单行标签、含中文标签双引号包裹、无 `<br/>`、块内无空行），逐字采用视觉方案单行版本，未作改写。
+- 增量边界：本次仅新增引导句、图片引用行与 Mermaid 围栏块，未改动 frontmatter、事实正文、免责声明、toctree、facts.md 与 references/。

@@ -17,6 +17,19 @@ stale_after: 2027-09-01
 
 音乐治疗不是单一方法，而是多模型的家族。Bruscia 在 1989 年初版《Defining Music Therapy》中就收集了 44 条定义（facts MT-12），定义之多恰恰对应方法之多。本篇登记三个最具影响力的模型——分析性音乐治疗、引导想象与音乐（GIM）、创造性音乐治疗——各自的创始人、起源场景与代表文献。三位创始人的卒年与著作版次均有网络讹传，本篇以双源核对值为准，修正依据见[信源登记](../references/sources.md)。
 
+下图把三个最具影响力的模型并置——差异不在“是否属于音乐治疗”（三者均满足 AMTA 定义三要件），而在对“音乐如何起作用”的三种回答：关系内分析、聆听诱发意象、即兴共同创造。
+
+```mermaid
+flowchart TD
+  ROOT ["1970 年代前后三大模型成形：均满足 AMTA 定义三要件，即持证专业人员、治疗关系、个体化目标"]
+  AMTM ["分析性音乐治疗 AMT：Mary Priestley（1925 至 2017），1970 年代初于英国发展，综合 Freud、Jung、Klein 精神分析，核心为治疗关系内的即兴与分析，《Music Therapy in Action》1975"]
+  GIM ["引导想象与音乐 GIM：Helen Bonny（1921 至 2010），起源于马里兰精神病学研究中心，致幻剂研究的去药物化转化，核心为音乐聆听诱发意象，《Music and Your Mind》1973，AMI 1986"]
+  CMT ["创造性音乐治疗：Paul Nordoff（1909 至 1977）与 Clive Robbins（1927 至 2011），1958 Sunfield 相识、1959 开始合作，核心为即兴音乐的共同创造，《Creative Music Therapy》1977"]
+  ROOT --> AMTM
+  ROOT --> GIM
+  ROOT --> CMT
+```
+
 ## 分析性音乐治疗（AMT）：Mary Priestley
 
 Mary Priestley（**1925-03-04 至 2017-06-11**），英国音乐治疗师，分析性音乐治疗（Analytical Music Therapy，AMT）的开创者。该方法将音乐治疗与精神分析理论（Freud、Jung、Klein）综合。其卒年在两个独立信源中确认：Approaches 期刊 Vol. 10 No. 1（2018）所收 Kenneth Bruscia 撰写的纪念文《A tribute to Mary Priestley (4 March 1925 - 11 June 2017)》，与 Music Therapy Perspectives 的纪念文《A Tribute to Mary Priestley 1925–2017》（Scheiby, 2018）（facts MT-08）。网络资料中流传的其他卒年说法均以这两篇纪念文为准修正。

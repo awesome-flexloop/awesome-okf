@@ -55,3 +55,10 @@ stale_after: 2027-09-01
 
 - 本束 facts 编号体系为 CN-01 ~ CN-11（区别于姊妹束 MT-xx、OV-xx、NGJ-xx、FRG-xx、CAN-xx），正文引用一律“facts CN-xx”形态。
 - 古籍底本：ctext.org 所据《四部丛刊初编》本《重广补注黄帝内经素问》；简体行文，繁体底本用字（藏、徵）保持原字照录。
+
+## 2026-09-02 视觉增补（R/E/V 阶段）
+
+- 增补束封面配图 1 张：seedream 生成暖灰纸感水墨插画 `china-guqin-inkwash.jpg`（案头古琴置于长幅宣纸之上，旁有墨碟，纸上淡墨山水留白，传统文人书斋氛围），落 `doc/_static/bundles/yishu/liaoyu/china-art-therapy/images/`，以引导句＋图片行插入束根 [index.md](index.md) 免责声明 blockquote 之后、「📚 快速导航」之前。
+- 增补 Mermaid 图 1 张：M10 五志相胜循环（[concepts/02-qingzhi-xiangsheng.md](concepts/02-qingzhi-xiangsheng.md)「二、《素问·阴阳应象大论》情志相胜五句」小节内、五句表与异文提醒段后、「三、张从正」前；怒→思→恐→喜→忧（异文：悲）→怒 五志克制环）。
+- 方法：seven-concepts 链路 R（视觉点盘点）→ I（高价值可视化点洞察）→ E（配图与图产出、插入）→ V（对抗验证）；图中五志-五脏-五音-方位-五行对应与相胜五句均可溯源至本束正文与 facts（CN-01），环序严格依五行相克，无新造事实、无因果演绎；末边标签「悲胜怒」为东方段原文、西方段「忧/悲」两读并列，引导句已随图插入并声明本图属中医情志学说文献梳理、不构成现代临床建议；Mermaid 源码遵循主仓库门禁（单行标签、含中文标签双引号包裹、无 `<br/>`、块内无空行），逐字采用视觉方案单行版本，未作改写。
+- 增量边界：本次仅新增引导句、图片引用行与 Mermaid 围栏块，未改动 frontmatter、事实正文、免责声明、toctree、facts.md 与 references/。

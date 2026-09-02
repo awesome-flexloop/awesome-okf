@@ -19,6 +19,25 @@ stale_after: 2027-09-01
 
 谈论美术治疗历史时，Goodenough、Buck、Machover 三个名字常被提及，但网络资料往往把他们直接写成“美术治疗创始人”或“美术治疗技术发明者”。本篇依据 facts.md 已核对事实（AT-17、AT-10、AT-13、AT-07）澄清这段脉络：三人属于**心理评估（心理测验）传统**——他们的技术以测量与评估为目标，由心理学家发展；而美术治疗是以治疗关系与治疗目标界定的心理健康职业（facts AT-13）。两个传统共享一个前提——图画可以承载心理信息——但在目标、操作者与伦理框架上判然有别。理解这一分野，是判读任何“绘画测验”与“美术治疗”混杂叙述的前提。
 
+下图把 1940 年代“图画—心理”学术氛围下的两股脉络并排呈现——投射技术三作属心理评估传统，美术治疗在医疗机构独立生长，二者共享前提但目标、操作者与伦理框架不同。
+
+```mermaid
+flowchart TD
+  BASE ["共享前提：图画可以承载心理信息；两股脉络在 1940 年代时间交叠"]
+  subgraph EVAL ["心理评估传统：测量与评估，心理学家发展"]
+    GOOD ["Goodenough 1926：画人测验 Draw-a-Man，《Measurement of Intelligence by Drawings》，目标为儿童智力测量"]
+    BUCK ["Buck 1948/1949（年份异说并列）：房树人技术 H-T-P，目标为人格投射评估"]
+    MACH ["Machover 1949：《Personality Projection in the Drawing of the Human Figure》，目标为画人人格投射"]
+    GOOD --> BUCK --> MACH
+  end
+  subgraph THER ["美术治疗传统：治疗关系中促进改变，持 ATR 与 ATR-BC 资质"]
+    HUNT ["Huntoon 1946 至 1959：Winter VA 医院艺术治疗工作"]
+    ULMN ["Ulman 1955 至 1965：D.C. General Hospital 项目，UPAP 属最早一批标准化艺术治疗评估程序"]
+  end
+  BASE --> EVAL
+  BASE --> THER
+```
+
 ## 二、Goodenough（1926）：画人测验与智力测量
 
 Florence L. Goodenough 1926 年出版《Measurement of Intelligence by Drawings》（New York: World Book Co.），即画人测验（Draw-a-Man Test），以人物画测量儿童智力（facts AT-17）。这是绘画进入标准化心理计量的标志性起点：儿童按要求画一个人，画作细节被转换为可计分的指标，进而估算智力水平。

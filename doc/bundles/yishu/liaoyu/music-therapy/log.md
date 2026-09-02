@@ -42,3 +42,10 @@ stale_after: 2027-09-01
 - frontmatter 统一：Index 文档 type: Index；其余文档 type: OKF + version 1.0.0 + sources 指向 facts.md + generated（agent:general_purpose_task, 2026-09-01T20:00:00+08:00）+ status: stable + stale_after: 2027-09-01；束根携带 okf_version: "0.2"。
 - YAML 安全自查：全部 description 均未在双引号标量内使用 ASCII 双引号。
 - 遗留事项：7 项（单源待核）条目与 Guildhall 异说维持标注，待后续补源；facts.md 未做任何改动。
+
+## 2026-09-02 视觉增补（R/E/V 阶段）
+
+- 增补束封面配图 1 张：seedream 生成暖灰纸感编辑插画 `music-therapy-harp-listening.jpg`（窗边竖琴、椅上耳机与流动抽象音形，呈现安静聆听氛围），落 `doc/_static/bundles/yishu/liaoyu/music-therapy/images/`，以引导句＋图片行插入束根 [index.md](index.md) 免责声明 blockquote 之后、「📚 快速导航」之前。
+- 增补 Mermaid 图 2 张：M6 美国音乐治疗组织合并谱系（[concepts/01-professionalization.md](concepts/01-professionalization.md) 开篇导语段后、「战争与医院音乐：职业的起点」前，NAMT→AAMT→AMTA 主干加 Gaston 旁注）；M7 音乐治疗三大模型结构（[concepts/03-three-models.md](concepts/03-three-models.md) 开篇导语段后、「分析性音乐治疗（AMT）：Mary Priestley」前，AMT/GIM/CMT 三分支）。
+- 方法：seven-concepts 链路 R（视觉点盘点）→ I（高价值可视化点洞察）→ E（配图与图产出、插入）→ V（对抗验证）；图中全部人名、生卒年、年份、组织名、书名均可溯源至本束正文与 facts（MT-01–MT-16），无新造事实、无因果演绎；RMT 1956 等单源待核细节照束内登记值呈现；Mermaid 源码遵循主仓库门禁（单行标签、含中文标签双引号包裹、无 `<br/>`、块内无空行），逐字采用视觉方案单行版本，未作改写。
+- 增量边界：本次仅新增引导句、图片引用行与 Mermaid 围栏块，未改动 frontmatter、事实正文、免责声明、toctree、facts.md 与 references/。

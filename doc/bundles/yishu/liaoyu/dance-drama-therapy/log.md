@@ -54,3 +54,10 @@ stale_after: 2027-09-01
 - **生卒与年份**：双源者登记（Chace 1896-1970、Whitehouse 1911-1979、Moreno 1889-1974、Zerka 1917-2016）；单源者标注（Evan、Espenak）；双源分歧者并列（NYU 1982/1984）；未获双源的流行说法不登记（1921-04-01 开幕日、NADTA 更名年份）。
 - **未登记内容**：Trudi Schoop 仅作为"被广泛并称的先驱"提及，不写生卒与史事；心理剧技术（角色扮演/替身/镜观）与各模型阶段内涵均为文献性介绍，明确标注"非本束登记事实"；R-DMT/BC-DMT 与实践场景为官网通行概述／文献性概述，均已显式声明。
 - **任务说明勘误记录**：任务清单称"4 篇概念文档"但实际列出 5 篇（00–04），按列举清单执行 5 篇；Emunah《Acting for Real》年份按 facts.md 双源登记为 1994（非"约 1994"）；Chace 生卒按 DD-01 登记精确日期。
+
+## 2026-09-02 视觉增补（R/E/V 阶段）
+
+- 增补束封面配图 1 张：seedream 生成暖灰纸感编辑插画 `dance-drama-movement-masks.jpg`（舒展抽象舞者扬起绸带与喜剧悲剧双面具，呈现身体与行动取向），落 `doc/_static/bundles/yishu/liaoyu/dance-drama-therapy/images/`，以引导句＋图片行插入束根 [index.md](index.md)「⚠️ 免责声明」块之后、「📚 快速导航」之前。
+- 增补 Mermaid 图 1 张：M8 Emunah 整合五阶段流程（[concepts/03-drama-therapy-models.md](concepts/03-drama-therapy-models.md)「Renee Emunah 与整合五阶段模型」小节内、五阶段列表与「顺序相位」佐证段后、「文献性简述」段前；NADTA 职业化背景→《Acting for Real》→五阶段顺序链）。
+- 方法：seven-concepts 链路 R（视觉点盘点）→ I（高价值可视化点洞察）→ E（配图与图产出、插入）→ V（对抗验证）；图中全部人名、年份、组织名、阶段名均可溯源至本束正文与 facts（DD-09、DD-10），无新造事实、无因果演绎；引导句已声明五阶段为 Emunah 提出的整合模型而非 NADTA 官方流程；Mermaid 源码遵循主仓库门禁（单行标签、含中文标签双引号包裹、无 `<br/>`、块内无空行），逐字采用视觉方案单行版本，未作改写。
+- 增量边界：本次仅新增引导句、图片引用行与 Mermaid 围栏块，未改动 frontmatter、事实正文、免责声明、toctree、facts.md 与 references/。

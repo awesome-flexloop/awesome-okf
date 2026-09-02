@@ -36,6 +36,24 @@ Knill 提出 intermodality（跨模态性）理论概念，并在 1990 年代引
 
 **低技能、高敏感度（low skill / high sensitivity）**是 Knill 表达性艺术训练模型中的核心工作原则：EGS 官方课程页将其列为模块核心概念，柏林 Expressive Arts Institute 释义为**技术门槛低而感官敏感度高**（facts EA-02）。其含义是：工作坊与治疗情境中的艺术练习不要求参与者具备专业艺术技能（low skill），而强调对身体、感官与当下经验的敏锐觉察（high sensitivity），从而避免“因画得不好而不敢表达”的技能门槛，把艺术过程的参与面放到最宽。圣地亚哥 Expressive Arts Institute 的哲学页亦以低技能高敏感、跨学科与美学根基为信条（facts EA-06），可见此原则已成为整合取向教学机构的通用底色。
 
+下图把跨模态离心化画成一个循环——借助从一个艺术模态向另一个模态的转移离开对问题的固着焦点，再经感官与美学回应达致整合经验；low skill / high sensitivity 原则贯穿全程。
+
+```mermaid
+flowchart LR
+  LS ["贯穿原则：low skill / high sensitivity，低技能门槛、高感官敏感度（facts EA-02）"]
+  A ["模态一的创作：视觉艺术、音乐、舞动、戏剧、诗歌写作任一"]
+  B ["跨模态离心化转移 intermodal decentering：借助模态转换离开对问题的固着焦点"]
+  C ["模态二的回应：在新模态中形成感官回响与美学回应"]
+  D ["整合经验：模态交织促成整合（IEATA 定义，facts EA-05）"]
+  A -->|"创作表达"| B
+  B -->|"感官回响"| C
+  C -->|"美学回应"| D
+  D -->|"再转移、循环深化"| A
+  LS -.-> A
+  LS -.-> B
+  LS -.-> C
+```
+
 ## 四、著作书目（含异说并列）
 
 Knill 的主要著作如下（完整著录供查证，本文不整段摘引原书文字）：

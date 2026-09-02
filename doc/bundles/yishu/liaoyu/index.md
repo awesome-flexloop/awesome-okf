@@ -11,6 +11,10 @@ description: "艺术疗愈知识包——总览、美术治疗、音乐治疗、
 
 术语速览：art therapy（美术治疗，临床职业）→ music therapy / dance-movement therapy / drama therapy（同属 creative arts therapies 伞式术语下的临床分支）→ expressive arts therapy（跨模态治疗模型）→ arts in health / 艺术疗愈（广义健康促进）；详见总览束定义辨析篇。
 
+下图以六件艺术器物环绕成环，意象化呈现本组六束的分支结构。
+
+![暖灰纸感编辑插画：画笔与画架、竖琴、扬起的绸带、戏剧面具、羽毛笔与诗卷、古琴六件艺术器物沿环形路径环绕中央暖光，象征艺术疗愈六个分支](/_static/bundles/yishu/liaoyu/images/liaoyu-group-hero.jpg)
+
 ## 组内束导航
 
 | 束 | 一句话简介 |

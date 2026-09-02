@@ -51,3 +51,10 @@ stale_after: 2027-09-01
 - 定义引用：IEATA 术语表定义、NAPT 职业定义均为官网原文整段引用（组织公开定义属可直引范围），随附 URL；除此之外的现代著作文字一律不作整段摘引。
 - 异说处理：生月、书年、版权年、重组年、人物身份五组异说全部并列登记不裁决；讹传（Knill 卒年 2023）为“已证伪之记载”，与“尚未裁决之异说”分列（异说台账 vs 讹传修正记录两表）。
 - 单源与不予登记：单源待核项在正文引用处就地标注，并在信源登记集中披露；不予登记项（McNiff 出生年、NFBP/PT 年份）在 facts.md 与信源登记各声明一次，正文一律不出现相应数据。
+
+## 2026-09-02 视觉增补（R/E/V 阶段）
+
+- 增补束封面配图 1 张：seedream 生成暖灰纸感编辑插画 `expressive-arts-intermodal-table.jpg`（颜料画笔、铃鼓手鼓、墨迹纸页与软舞鞋错落的多媒介工作台，意象化呈现跨模态工作方式），落 `doc/_static/bundles/yishu/liaoyu/expressive-arts/images/`，以引导句＋图片行插入束根 [index.md](index.md)「⚠️ 免责声明」块之后、「📚 快速导航」之前。
+- 增补 Mermaid 图 1 张：M9 跨模态转移循环（[concepts/01-knill-intermodal.md](concepts/01-knill-intermodal.md)「三、跨模态理论核心概念」小节末（low skill / high sensitivity 段后）、「四、著作书目」前；创作→离心化转移→回应→整合→再转移循环加原则节点）。
+- 方法：seven-concepts 链路 R（视觉点盘点）→ I（高价值可视化点洞察）→ E（配图与图产出、插入）→ V（对抗验证）；图中全部概念名、原则名、组织名均可溯源至本束正文与 facts（EA-02、EA-05），无新造事实、无因果演绎；Mermaid 源码遵循主仓库门禁（单行标签、含中文标签双引号包裹、无 `<br/>`、块内无空行），逐字采用视觉方案单行版本，未作改写。
+- 增量边界：本次仅新增引导句、图片引用行与 Mermaid 围栏块，未改动 frontmatter、事实正文、免责声明、toctree、facts.md 与 references/。

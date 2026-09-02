@@ -17,6 +17,21 @@ stale_after: 2027-09-01
 
 美术治疗作为一个领域，通常被追溯到四位奠基者：英国的 Adrian Hill 提供了术语与最初的出版物，美国的 Margaret Naumburg 与 Edith Kramer 分别开创了两大理论取向，Elinor Ulman 则贡献了领域第一份期刊与最早的标准化评估程序之一。四人的生卒年、书目与主张，本篇全部依据 facts.md 已核对事实（AT-01–AT-11）展开；凡信源存在分歧之处，均在文末异说登记表中并列登记，不作裁决。
 
+下图按谱系角色串起四位奠基者与协会节点——四人工作在年代上互有交叠（如 Kramer 1958 年著作与 Ulman 1961 年期刊同期），图中顺序表示“术语—理论—平台—建制”的贡献链而非严格生卒先后。
+
+```mermaid
+flowchart LR
+  HILL ["Adrian Hill（1895 至 1977）：术语与出版物奠基，1942 首用 art therapy 一词，1945《Art Versus Illness》"]
+  NAUM ["Margaret Naumburg（1890 至 1983）：动力取向艺术治疗，1947 自由艺术表达研究，1966《Dynamically Oriented Art Therapy》"]
+  KRAM ["Edith Kramer（1916 至 2014）：艺术即治疗 art as therapy，1958《Art Therapy in a Children's Community》，1971《Art as Therapy with Children》"]
+  ULMA ["Elinor Ulman（1910 至 1991）：期刊、定义与评估，1961 创办 Bulletin of Art Therapy，UPAP 标准化评估程序"]
+  AATA ["1969 American Art Therapy Association（AATA）成立"]
+  HILL -->|"术语进入公共语言"| NAUM
+  NAUM -->|"动力取向传统"| KRAM
+  KRAM -->|"艺术即治疗取向并行"| ULMA
+  ULMA -->|"期刊平台推动领域自我讨论"| AATA
+```
+
 ## 一、Adrian Hill（1895-1977）：术语的奠基者
 
 Adrian Keith Graham Hill 1895 年生于伦敦 Charlton，1977 年逝世（facts AT-01）。他的艺术生涯始于第一次世界大战：1917 年获任官方战地艺术家（official war artist），其西线画作与素描现藏伦敦帝国战争博物馆（Imperial War Museum）；多年后他还曾任英国艺术治疗师协会（British Association of Art Therapists）主席（facts AT-01）——一位以战地绘画闻名的艺术家最终与“艺术治疗”的职业组织相连，这条线索勾勒出他后半生的转向。

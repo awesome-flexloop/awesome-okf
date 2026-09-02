@@ -37,6 +37,22 @@ Renée Emunah 为加州整体研究学院（California Institute of Integral Stu
 
 其"顺序相位"结构有第二信源佐证：Taylor & Francis 收录的章节即题作 *Stages: Five Sequential Phases in Drama Therapy*（1994）（facts DD-10 信源）。
 
+下图把 Emunah 整合五阶段模型画成顺序流程——从低结构的自发扮演推进到高结构的仪式化呈现；五阶段是 Emunah 提出的一个整合模型（facts DD-10），不是 NADTA 官方流程。
+
+```mermaid
+flowchart LR
+  ORG ["NADTA 1979 设立：注册戏剧治疗师 RDT 资格与职业标准"]
+  BOOK ["Emunah《Acting for Real》：1994 初版（2020 第二版），整合五阶段模型"]
+  P1 ["一、戏剧性游戏 Dramatic Play：自发、游戏性的扮演进入"]
+  P2 ["二、场景工作 Scenework：即兴场景的搭建与展开"]
+  P3 ["三、角色扮演 Role Play：特定角色的代入与探索"]
+  P4 ["四、高潮呈现 Culminating Enactment：以完整演出整合前期材料"]
+  P5 ["五、戏剧仪式 Dramatic Ritual：仪式化收束，赋予结构与意义"]
+  ORG -->|"职业化背景"| BOOK
+  BOOK -->|"顺序相位：低结构自发推向高结构仪式化"| P1
+  P1 --> P2 --> P3 --> P4 --> P5
+```
+
 **文献性简述（登记状态声明：以下为文献通行概述，具体论述以原书为准）**：通行文献把五阶段概括为从低结构自发活动向高结构仪式化呈现的推进——戏剧性游戏阶段以自发、游戏性的扮演进入；场景工作以即兴场景的搭建与展开为单元；角色扮演聚焦特定角色的代入与探索；高潮呈现以完整演出（enactment）的形式整合前期材料；戏剧仪式以仪式化的收束为疗程赋予结构与意义。"整合"（Integrative）之名，即取其综合前述各阶段工作方式之义。
 
 ## Robert Landy 与角色理论
