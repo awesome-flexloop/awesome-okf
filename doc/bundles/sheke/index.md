@@ -30,4 +30,6 @@ description: "社会科学知识包——职场与管理（人力资源·行政�
 workplace/index
 relationships/index
 sexology/index
+finance/index
+marketing/index
 ```

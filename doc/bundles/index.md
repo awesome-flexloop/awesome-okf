@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 414
+total_bundles: 416
 groups: 52
 domains: 9
 ---
@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **414 个知识包**，按学科逻辑分为 **9 个学科域、52 个分组**（8 个学科域 + 1 个规范锚点）。
+> 当前共 **416 个知识包**，按学科逻辑分为 **9 个学科域、52 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -26,7 +26,7 @@ flowchart TD
     kexue["🔬 kexue/ 科学（15 束）：化学·物理学中西元典·国外数学经典·中西数学对读"]
     wenxue["✒️ wenxue/ 文学（2 束）：中国古典文学经典 · 英语语法"]
     yixue["🌿 yixue/ 医学与养生（10 束）：中医经典·黄帝内经·道医·养生·房中"]
-    sheke["👥 sheke/ 社会科学（14 束）：职场管理·亲密关系·性学经典"]
+    sheke["👥 sheke/ 社会科学（16 束）：职场管理·亲密关系·性学经典·理财·营销"]
     yishu["🎤 yishu/ 艺术（7 束）：艺术疗愈六束（总览·美术·音乐·舞动戏剧·表达性·中国）·声乐教学"]
     jishu["⚙️ jishu/ 技术（314 束）：AI·文档工程·构建·通信·容器·数据·物联网等 16 生态分组"]
     meta -->|"规范约束"| jishu
@@ -108,13 +108,15 @@ flowchart TD
 | [🌿 养生经典（Yangsheng）](yixue/yangsheng/index.md)             | 1  | 养生经典阅读教程——《黄帝内经》至《老老恒言》六部核心经典与食养/导引/道教扩展脉络          |
 | [🛏️ 房中（Fangzhong）](yixue/fangzhong/index.md)              | 1  | 中国古代性文化（房中）典籍阅读教程——目录著录、马王堆出土文献、《医心方》辑佚链与学术史研究      |
 
-### 👥 [社会科学](sheke/index.md) · 14 束 · 5 组
+### 👥 [社会科学](sheke/index.md) · 16 束 · 5 组
 
 | 分组                                              | 束数 | 说明                                        |
 | ----------------------------------------------- | -- | ----------------------------------------- |
 | [🏢 职场与管理（Workplace）](sheke/workplace/index.md) | 5  | 人力资源（职业地图·六大模块·劳动法合规）与行政办公（行政运营·公文写作）     |
 | [💕 亲密关系与两性情感](sheke/relationships/index.md)    | 6  | 两性关系经典著作——学术实证、哲学经典与通俗实践三层谱系              |
 | [🧭 性学经典（Sexology）](sheke/sexology/index.md)    | 3  | 性学/性文化经典著作阅读教程、《汉书·艺文志》房中八家专题研读与马王堆房中简帛深读 |
+| [💰 个人理财与投资（Finance）](sheke/finance/index.md) | 1  | 个人投资实操通识——收益数学、资产类别、配置与行为纪律、中国市场制度，附配置算例与防骗自查清单 |
+| [📣 市场营销（Marketing）](sheke/marketing/index.md) | 1  | 营销实操通识——营销本质、STP 战略、定位与品牌、4P/4C 战术等跨周期方法论骨架（建设批次待补） |
 
 ### 🎤 [艺术](yishu/index.md) · 7 束 · 2 组
 

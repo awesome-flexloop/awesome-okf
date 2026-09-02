@@ -13,7 +13,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 
 | 分组 | 束数 | 一句话简介 |
 |------|------|-----------|
-| [🤖 人工智能与大模型（ai）](ai/index.md) | 128 | AI 与大模型应用生态——agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security |
+| [🤖 人工智能与大模型（ai）](ai/index.md) | 129 | AI 与大模型应用生态——agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security |
 | [📚 文档工程（document）](document/index.md) | 107 | Sphinx · MyST · Jupyter Book · Jupyter · KaTeX 文档工程与交互式计算生态 |
 | [🔨 构建与包管理（build）](build/index.md) | 15 | Conda 生态 · scikit-build · CMake · 通用开发工具（Ninja/Copier/PyInvoke/Nuitka 等） |
 | [📡 通信与网络（comm）](comm/index.md) | 12 | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 |
