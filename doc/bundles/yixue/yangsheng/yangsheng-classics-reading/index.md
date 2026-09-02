@@ -16,6 +16,8 @@ okf_version: "0.2"
 
 本知识包（bundle）是面向普通读者的养生经典阅读指南，基于 Web 公开信源调研整理。覆盖《黄帝内经》、嵇康《养生论》、《备急千金要方》养性篇、《遵生八笺》、《老老恒言》、《养老奉亲书》六部核心经典，并延伸至食养（《食疗本草》《饮膳正要》）、导引（《导引图》、五禽戏、六字诀、八段锦、易筋经）与道教（《黄庭经》《抱朴子内篇》《云笈七签》）扩展脉络。与[帛书《老子》阅读教程](../../../guoxue/laozi/boshu-reading/index.md)同为传统思想经典阅读教程系列，本 bundle 侧重"先立地图、再入原典"。
 
+![古代书斋案头摊开竹简与线装医书，旁置药葫芦与青瓷茶盏，窗外竹影透入暖光。](/_static/bundles/yixue/yangsheng/yangsheng-classics-reading/images/hero-reading-classics.jpg)
+
 ## 📚 快速导航
 
 ### [概念文档](concepts/index.md) — 8篇核心概念
@@ -63,15 +65,14 @@ okf_version: "0.2"
 
 ## 📖 推荐学习路径
 
-```
-零基础读者（第一次接触）：
-  概念00（动机）→ 概念06（五脉地图）→ 示例02（按计划起步）→ 概念01-05（逐部专论）→ 概念07（选本）
+三条阅读路径如下图所示，可按自己的兴趣与基础任选其一：
 
-版本关注型读者：
-  概念07 → references/core-editions 分级表 → insights 版本门槛与选篇策略
-
-谱系兴趣读者：
-  概念06 → 概念01-05 各部专论 → references/extended-reading 扩展信源
+```mermaid
+flowchart LR
+    start["开始阅读"]
+    start --> p1["零基础读者（第一次接触）<br/>概念00 动机 → 概念06 五脉地图 → 示例02 按计划起步 → 概念01-05 逐部专论 → 概念07 选本"]
+    start --> p2["版本关注型读者<br/>概念07 → references/core-editions 分级表 → insights 版本门槛与选篇策略"]
+    start --> p3["谱系兴趣读者<br/>概念06 → 概念01-05 各部专论 → references/extended-reading 扩展信源"]
 ```
 
 ```{toctree}
