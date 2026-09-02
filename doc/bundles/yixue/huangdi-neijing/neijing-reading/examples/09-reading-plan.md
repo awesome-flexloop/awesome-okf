@@ -63,6 +63,31 @@ sources:
 | 第 11 周 | 针刺体系 | [精读 7 九针十二原](07-jiuzhen-shier-yuan.md) + [精读 8 经脉](08-jingmai.md) + [05 经络与针刺](../concepts/05-meridians-and-nine-needles.md) | 九针名称与长度？"守神/守形"之辨？是动与所生病如何分？ |
 | 第 12 周 | 注本与版本收束 | [01 成书与版本](../concepts/01-authorship-and-editions.md) + [11 注本指南](../concepts/11-commentary-guide.md) + [references 全部](../references/index.md) | 王冰、林亿、史崧各贡献了什么？选定下一阶注本 |
 
+下图以甘特图并置四阶段、十二周的次第与每周主题，周次划分与主题均出上表。
+
+```mermaid
+gantt
+    title 十二周通读《黄帝内经》路线图
+    dateFormat YYYY-MM-DD
+    axisFormat %m-%d
+    section 第一阶段 入门与养生
+    第1周 总览与读法      :w1, 2026-01-05, 7d
+    第2周 养生总纲        :w2, after w1, 7d
+    第3周 四时调神        :w3, after w2, 7d
+    section 第二阶段 理论骨架
+    第4周 阳气与阴阳总纲  :w4, after w3, 7d
+    第5周 理论框架浓缩    :w5, after w4, 7d
+    第6周 藏象            :w6, after w5, 7d
+    第7周 病因            :w7, after w6, 7d
+    section 第三阶段 诊治疗则
+    第8周 诊法            :w8, after w7, 7d
+    第9周 治则巅峰        :w9, after w8, 7d
+    第10周 运气入门       :w10, after w9, 7d
+    section 第四阶段 灵枢与收束
+    第11周 针刺体系       :w11, after w10, 7d
+    第12周 注本与版本收束 :w12, after w11, 7d
+```
+
 ## 读完之后
 
 - 想读全本：按《素问》1~81 篇顺序，以《类经》对照（《类经》是拆散重组的索引，可作导航）
