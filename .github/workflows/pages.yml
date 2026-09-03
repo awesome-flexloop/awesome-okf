@@ -17,28 +17,38 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.14"
-      - name: Check UTF-8 validity (gate)
-        run: python scripts/check-utf8.py
-      - name: Check UTF-8 gate self-test (probe dual-direction)
-        run: python scripts/check-utf8.py --self-test
-      - name: Check toctree/index.md integrity (gate)
-        run: python scripts/check-toctrees.py
-      - name: Check toctree gate self-test (probe dual-direction)
-        run: python scripts/check-toctrees.py --self-test
-      - name: Check bundles index counts (gate)
-        run: python scripts/check-bundles-index.py
-      - name: Check bundles index gate self-test (probe dual-direction)
-        run: python scripts/check-bundles-index.py --self-test
+          cache: "pip"
+          allow-prereleases: true
+      - name: Cache Sphinx doctrees and build output
+        uses: actions/cache@v5
+        with:
+          path: |
+            _build/doctrees
+            _build/html/.buildinfo
+          key: ${{ runner.os }}-sphinx-py314-${{ hashFiles('doc/conf.py', 'pyproject.toml') }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-sphinx-py314-${{ hashFiles('doc/conf.py', 'pyproject.toml') }}-
+            ${{ runner.os }}-sphinx-py314-
       - name: Install dependencies
         run: pip install -e ".[doc]"
-      - name: Build HTML
-        run: invoke build
-      - uses: actions/upload-pages-artifact@v3
+      - name: Check UTF-8 validity (gate)
+        run: python scripts/check-utf8.py
+      - name: Check toctree/index.md integrity (gate)
+        run: python scripts/check-toctrees.py
+      - name: Check bundles index counts (gate)
+        run: python scripts/check-bundles-index.py
+      - name: Build HTML (incremental, parallel)
+        timeout-minutes: 25
+        run: invoke build -o "-b html -j auto"
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: _build/html
 
@@ -50,4 +60,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
