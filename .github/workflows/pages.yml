@@ -1,5 +1,17 @@
 name: Deploy docs to GitHub Pages
 
+# 2026-09 Node.js 24 兼容性清单：
+#   actions/checkout@v5                 (node24)
+#   actions/setup-python@v6             (node24)
+#   actions/cache@v5                    (node24)
+#   actions/download-artifact@v5        (node24)
+#   actions/upload-pages-artifact@v4    (node24)
+#   actions/deploy-pages@v5             (node24)
+#   rhysd/actionlint@v1                 (node24, lints YAML)
+# 每次 deprecation 周期（约 2 年）重跑一次 actionlint 校验：
+#   1) docker run --rm -v $PWD:/repo rhysd/actionlint
+#   2) 或 workflow 中 gates job 的 "Lint workflow files (actionlint)" step
+
 on:
   push:
     branches: [main]
@@ -15,45 +27,86 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  gates:
+    name: Quality gates (utf8 / toctrees / bundles / actionlint)
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
         with:
-          fetch-depth: 0
+          fetch-depth: 1
+      - name: Lint workflow files (actionlint) — 捕获 Node deprecated 与 YAML 错误
+        uses: rhysd/actionlint@v1
+        with:
+          files: .github/workflows
+          fail-on-error: true
       - uses: actions/setup-python@v6
         with:
           python-version: "3.14"
           cache: "pip"
           allow-prereleases: true
-      - name: Cache Sphinx doctrees and build output
+      - name: Install minimal deps for gates
+        run: python -m pip install --upgrade pip setuptools wheel
+      - name: Gate — UTF-8 validity across doc/** (含 BOM 检测)
+        run: python scripts/check-utf8.py
+      - name: Gate — toctree / index.md 完整性 (orphan / broken / missing bundle-root)
+        run: python scripts/check-toctrees.py
+      - name: Gate — bundles index 五面对账 (frontmatter / 计数行 / 分组表 / 域标题 / toctree)
+        run: python scripts/check-bundles-index.py
+
+  build:
+    name: Sphinx build (incremental doctree cache)
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    needs: gates
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        id: setup-python
+        with:
+          python-version: "3.14"
+          cache: "pip"
+          allow-prereleases: true
+      - name: Cache Sphinx doctrees + html 摘要
         uses: actions/cache@v5
         with:
           path: |
             _build/doctrees
             _build/html/.buildinfo
-          key: ${{ runner.os }}-sphinx-py314-${{ hashFiles('doc/conf.py', 'pyproject.toml') }}-${{ github.sha }}
+            _build/html/_static
+          # I-1 修复：不再拼接 github.sha，避免每次 push 100% cache miss。
+          # cache key = OS + py impl/version + hash(Sphinx配置 + pip锁定 + 域入口索引文件)
+          # 当 conf.py / pyproject.toml / bundles/index.md 任一变才失效；
+          # restore-keys 让 bundles/index.md 小变更仍能命中上次的 doctree 前缀。
+          key: >-
+            ${{ runner.os }}-py${{ steps.setup-python.outputs.python-version }}-doc-v1-
+            ${{ hashFiles('doc/conf.py', 'pyproject.toml', 'doc/bundles/index.md', 'doc/index.md', 'doc/_static/**') }}
           restore-keys: |
-            ${{ runner.os }}-sphinx-py314-${{ hashFiles('doc/conf.py', 'pyproject.toml') }}-
-            ${{ runner.os }}-sphinx-py314-
-      - name: Install dependencies
+            ${{ runner.os }}-py${{ steps.setup-python.outputs.python-version }}-doc-v1-${{ hashFiles('doc/conf.py', 'pyproject.toml') }}-
+            ${{ runner.os }}-py${{ steps.setup-python.outputs.python-version }}-doc-v1-
+      - name: Install doc dependencies
         run: pip install -e ".[doc]"
-      - name: Check UTF-8 validity (gate)
-        run: python scripts/check-utf8.py
-      - name: Check toctree/index.md integrity (gate)
-        run: python scripts/check-toctrees.py
-      - name: Check bundles index counts (gate)
-        run: python scripts/check-bundles-index.py
-      - name: Build HTML (incremental, parallel)
-        timeout-minutes: 25
-        run: invoke build -o "-b html -j auto"
+      - name: Build HTML (增量 doctree + 并行渲染)
+        # I-3 修复：留给 Sphinx 的单步预算提升到 55 min (job 总预算 60 - 预留 5 min 上传 artifact)
+        timeout-minutes: 55
+        # 解释 opts：
+        #   -b html         输出 html (默认)
+        #   -j auto         按 runner CPU 核数并行 (ubuntu-latest=2 → 2 worker)
+        #   -W --keep-going  warning→error 但收集完所有告警 (方便一次性修)
+        #   -d _build/doctrees 显式指定 doctree 目录，确保 cache@v5 路径与 Sphinx 写入一致
+        run: >-
+          invoke build
+          -o "-b html -j auto -d _build/doctrees --keep-going"
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _build/html
 
   deploy:
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     needs: build
     environment:
       name: github-pages
