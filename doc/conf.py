@@ -250,8 +250,67 @@ def _dedupe_injected_h1(app, doctree):
         doctree.remove(first)
 
 
-def setup(app):
+def setup(app: "Sphinx"):
     app.connect("source-read", _quote_frontmatter_dates)
     app.connect("doctree-read", _dedupe_injected_h1, priority=400)
 
+    # --- P0-A1 Sphinx 并行构建三件套（EXT-PARALLEL-GATE 模式）---------------
+    #
+    # 设计原则（来自七概念 V 阶段 V-1 采纳修正）：
+    #  1. CI 环境（OKF_FAIL_FAST_ON_PARALLEL_DISABLED=1 或非 Windows 平台）
+    #     遇到并行被禁用 → 直接 RuntimeError 崩溃，Fail-Fast 防静默退化
+    #  2. 本地 Windows 平台无显式开关 → 只输出 sphinx.util.logging WARNING，
+    #     不阻断开发者构建（Sphinx parallel 依赖 POSIX fork，Windows 天然不可用）
+    #
+    # _PARALLEL_SAFE_OVERRIDES 字典（中心化覆写表）：
+    #   - key = app.extensions 中扩展的注册名（如 "sphinx.ext.linkcode"）
+    #   - value = (parallel_read_safe: bool, parallel_write_safe: bool)
+    #   常用扩展填写示例（按需取消注释）：
+    #   "autoapi.extension":              (True, True),
+    #   "sphinx.ext.linkcode":            (True, True),
+    #   "_ext.gallery_directive":         (True, True),
+    _PARALLEL_SAFE_OVERRIDES: dict[str, tuple[bool, bool]] = {
+        # "autoapi.extension":      (True, True),
+        # "sphinx.ext.linkcode":    (True, True),
+        # "_ext.gallery_directive": (True, True),
+    }
+    for ext_name, (pr, pw) in _PARALLEL_SAFE_OVERRIDES.items():
+        if ext_name in getattr(app, "extensions", {}):
+            setattr(app.extensions[ext_name], "parallel_read_safe",  bool(pr))
+            setattr(app.extensions[ext_name], "parallel_write_safe", bool(pw))
 
+    def _assert_parallel_ready(_app, _env) -> None:
+        """env-before-read-docs 钩子：-j 传了但并行被禁用时，按环境/平台分支响应。"""
+        if _app.parallel <= 0 or _app.is_parallel_allowed("read"):
+            return
+
+        _blockers = sorted(
+            n for n, e in getattr(_app, "extensions", {}).items()
+            if (getattr(e, "parallel_read_safe",  None) is None
+                or getattr(e, "parallel_write_safe", None) is None)
+        )
+        _msg = (
+            "[okf] EXT-PARALLEL-GATE: Parallel read disabled despite -j=%d. "
+            "Extensions with None parallel_safe: %s. Re-run with -v for details."
+            % (_app.parallel, ", ".join(_blockers) if _blockers else "<none>")
+        )
+        _fail_fast = (
+            os.environ.get("OKF_FAIL_FAST_ON_PARALLEL_DISABLED") == "1"
+            or sys.platform != "win32"
+        )
+        if _fail_fast:
+            raise RuntimeError(_msg)
+        # Windows 本地、无显式开关 → 只 WARNING 不崩溃
+        from sphinx.util import logging as _sphinx_logging
+        _sphinx_logging.getLogger(__name__).warning(_msg)
+
+    app.connect("env-before-read-docs", _assert_parallel_ready)
+
+    # 向 Sphinx 声明本 conf.py 注册的所有钩子（_quote_frontmatter_dates /
+    # _dedupe_injected_h1 / _assert_parallel_ready）均支持并行读写；
+    # 这是 Sphinx 9.x parallel build 生效的三要件之一。
+    return {
+        "version": release,
+        "parallel_read_safe":  True,
+        "parallel_write_safe": True,
+    }
