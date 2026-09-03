@@ -279,8 +279,11 @@ def setup(app: "Sphinx"):
             setattr(app.extensions[ext_name], "parallel_read_safe",  bool(pr))
             setattr(app.extensions[ext_name], "parallel_write_safe", bool(pw))
 
-    def _assert_parallel_ready(_app, _env) -> None:
+    # Sphinx env-before-read-docs 事件签名是 handler(app, env, docnames)，
+    # 漏接第 3 个位置参数会抛 ExtensionError: takes 2 positional arguments but 3 were given。
+    def _assert_parallel_ready(_app, _env, _docnames) -> None:
         """env-before-read-docs 钩子：-j 传了但并行被禁用时，按环境/平台分支响应。"""
+        del _docnames
         if _app.parallel <= 0 or _app.is_parallel_allowed("read"):
             return
 
