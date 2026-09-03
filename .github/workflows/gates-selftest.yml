@@ -1,0 +1,40 @@
+name: Gates self-test (scripts/ 变更触发)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "tasks/gates.py"
+      - ".github/workflows/gates-selftest.yml"
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "tasks/gates.py"
+      - ".github/workflows/gates-selftest.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  self-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+          cache: "pip"
+          allow-prereleases: true
+      - name: Install minimal deps
+        run: pip install invoke
+      - name: UTF-8 gate self-test
+        run: python scripts/check-utf8.py --self-test
+      - name: Toctree gate self-test
+        run: python scripts/check-toctrees.py --self-test
+      - name: Bundles index gate self-test
+        run: python scripts/check-bundles-index.py --self-test
