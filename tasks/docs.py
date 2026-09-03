@@ -4,8 +4,6 @@
 使 `invoke build` 等价于 CI 原命令 `sphinx-build -E -b html doc _build/html`；
 `clean/browse/tree/doctest` 直接复用 `invocations.docs` 原任务。
 """
-from __future__ import annotations
-
 import os
 import sys
 
@@ -33,6 +31,11 @@ def build(
         docs._clean(c)
     if opts is None:
         opts = ""
+    # 对齐 xuanspace 行为：CI 可通过 SPHINXOPTS 环境变量传额外 flags，
+    # 例如 SPHINXOPTS="-v -j 8" 合并到默认 "-b html -j auto" 上，环境空则忽略。
+    env_sphinxopts = os.environ.get("SPHINXOPTS", "").strip()
+    if env_sphinxopts:
+        opts = (opts.strip() + " " + env_sphinxopts).strip()
     if nitpick:
         opts += " -n -W -T"
     cmd = "sphinx-build{} {} {}".format(
