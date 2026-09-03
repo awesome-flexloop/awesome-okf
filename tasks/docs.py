@@ -19,13 +19,14 @@ def build(
     clean: bool = False,
     browse: bool = False,
     nitpick: bool = False,
-    opts: str = "-b html -E",
+    opts: str = "-b html -j auto",
     source: str | None = None,
     target: str | None = None,
 ) -> None:
-    """构建 Sphinx HTML（等价 `sphinx-build -E -b html doc _build/html`）。
+    """构建 Sphinx HTML（默认等价 `sphinx-build -b html -j auto doc _build/html`，走增量构建缓存）。
 
-    <opts> 附加 sphinx-build 参数（默认 `-b html -E`，传空串 `-o ""` 可取消）；
+    <opts> 附加 sphinx-build 参数，默认 `-b html -j auto`（启用并行编译，按 CPU 核数自动并发）；
+    如需强制全量重建，显式传 `-o "-b html -E"` 即可追加 -E 参数；
     其余参数语义与 `invocations.docs.build` 一致（clean/browse/nitpick/source/target）。
     """
     if clean:
