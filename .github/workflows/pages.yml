@@ -69,23 +69,28 @@ jobs:
           python-version: "3.14"
           cache: "pip"
           allow-prereleases: true
-      - name: Cache Sphinx doctrees + html 摘要
+      - name: Cache Sphinx environment.pickle (V-3: 仅单文件 + 分支后缀 + 7d retention 防 LRU 击穿)
         uses: actions/cache@v5
         with:
+          # V-3 采纳修正：仅缓存 BuildEnv 根 pickle（串行瓶颈，≈200MB），
+          # 不缓存整个 doctrees/ 目录（500MB+ → 单仓 10GB LRU 快速 eviction → ROI 负）。
           path: |
-            _build/doctrees
-            _build/html/.buildinfo
-            _build/html/_static
-          # I-1 修复：不再拼接 github.sha，避免每次 push 100% cache miss。
-          # cache key = OS + py impl/version + hash(Sphinx配置 + pip锁定 + 域入口索引文件)
-          # 当 conf.py / pyproject.toml / bundles/index.md 任一变才失效；
-          # restore-keys 让 bundles/index.md 小变更仍能命中上次的 doctree 前缀。
+            _build/doctrees/environment.pickle
+          # V-3 分支后缀：不同 ref（main/feature/PR）各建独立命名空间，
+          # 防止跨分支 doctree schema 不兼容静默命中造成神秘崩溃。
+          # key 失效粒度：OS + Python 版本 + 分支 + 配置/主题/域入口索引哈希。
           key: >-
-            ${{ runner.os }}-py${{ steps.setup-python.outputs.python-version }}-doc-v1-
+            ${{ runner.os }}-${{ github.ref_name }}-py${{ steps.setup-python.outputs.python-version }}-env-v1-
             ${{ hashFiles('doc/conf.py', 'pyproject.toml', 'doc/bundles/index.md', 'doc/index.md', 'doc/_static/**') }}
           restore-keys: |
-            ${{ runner.os }}-py${{ steps.setup-python.outputs.python-version }}-doc-v1-${{ hashFiles('doc/conf.py', 'pyproject.toml') }}-
-            ${{ runner.os }}-py${{ steps.setup-python.outputs.python-version }}-doc-v1-
+            ${{ runner.os }}-${{ github.ref_name }}-py${{ steps.setup-python.outputs.python-version }}-env-v1-${{ hashFiles('doc/conf.py', 'pyproject.toml') }}-
+            ${{ runner.os }}-${{ github.ref_name }}-py${{ steps.setup-python.outputs.python-version }}-env-v1-
+          # V-3 retention：GitHub Actions 单仓缓存上限 10 GB，仅保留 7 天，
+          # 让长期未触及的旧分支 pickle 自动让位给主力 main 分支的热数据。
+          retention-days: 7
+          # Sphinx 构建中途 warning→error 崩溃时 pickle 仍完整（已完成 read 阶段），
+          # 失败也保存，避免下次失败重跑从零重建 9622 文件 BuildEnv。
+          save-always: true
       - name: Install doc dependencies
         run: pip install -e ".[doc]"
       - name: Build HTML (增量 doctree + 并行渲染)
