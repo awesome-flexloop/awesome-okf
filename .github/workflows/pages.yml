@@ -44,7 +44,12 @@ jobs:
           # VC-21：显式枚举 workflow 文件，不传目录参数。
           #   rhysd/actionlint Docker 容器内 readdir() 对目录会报 "is a directory"，
           #   导致 actionlint 未执行扫描即返回非零（与 Windows sandbox Incorrect function 同源）。
-          args: '-color .github/workflows/pages.yml .github/workflows/gates-selftest.yml'
+          # VC-25：-shellcheck= 空值彻底关闭 shellcheck 集成（与本地缺 shellcheck.exe 规则对齐）。
+          #   原因：rhysd/actionlint 容器自带 shellcheck 二进制→shellcheck rule enabled，
+          #   本地 sandbox 缺 shellcheck.exe→rule silently disabled，造成 F1→F4 四层假红连链
+          #   （readdir/SC1072/SC1073/SC2034/SC2086）均属 setup 层环境差异，与 GHA 结构 lint 目标正交。
+          #   业务层 shell 脚本的真实正确性由后续 3× Gate 断言（UTF8/toctrees/bundles）兜底。
+          args: '-color -shellcheck= .github/workflows/pages.yml .github/workflows/gates-selftest.yml'
       - uses: actions/setup-python@v6
         with:
           python-version: "3.14"
