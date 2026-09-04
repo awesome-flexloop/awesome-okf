@@ -41,8 +41,7 @@ jobs:
       - name: Lint workflow files (actionlint) — 捕获 Node deprecated 与 YAML 错误
         uses: rhysd/actionlint@v1.7.12
         with:
-          files: .github/workflows
-          fail-on-error: true
+          args: '-color .github/workflows'
       - uses: actions/setup-python@v6
         with:
           python-version: "3.14"
