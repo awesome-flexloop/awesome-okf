@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 44
+total_bundles: 45
 ---
 
 # 🤖 AI Agent 框架
@@ -125,6 +125,7 @@ total_bundles: 44
 | [matrix-zero-person-company](matrix-zero-person-company/index.md) | 产品资讯 | 3+2+1=6 | 智潮笔记解析Matrix(matrix.build)Agent公司操作系统——0人公司叙事(造的成本趋零竞争转向运营)、CEO Office+部门化分工+领队路由+Agential OKR、durable work memory与proof可验证交付(反幻觉完成)、商业基建开箱即用(Stripe/matrix.site域名/Agent钱包/VPTD经济指标)、九模型接入矩阵(Neo/Claude Code/Codex/ChatGPT/Gemini/GLM/DeepSeek/Kimi/Qwen)、⚠️成效数字全为厂商自述(GDPval 95.45%口径未验证/aivideopro.io案例无独立佐证)、macOS单平台单源、6项P0核验(2✅3⚠️1单源0❌无勘误) |
 | [ai-app-survival](ai-app-survival/index.md) | 商业分析 | 6+0+2+1=9 | 晚点LatePost深度调研AI应用生存困境——三重挤压(模型吞噬/负毛利/上游入口)、Stripe 11.5月达100万ARR vs SaaS 15月、Bessemer AI均毛利25% vs SaaS 70%、Perplexity/Cursor负毛利会计口径、scaling to bankruptcy、Devv搜索窗口仅半年、a16z三年仅14家常驻、Epoch AI能力增速8到15指数点、Brookings模型厂下场归因、易观办公Agent三分之二流量集中大厂、下游卖结果与上游做模型(租客困境)、12项P0核验(9确认3存疑0证伪) |
 | [wigolo](wigolo/index.md) | 工具教程 | 3+4+2+1=10 | wigolo本地优先Agent网页能力工具——MCP/REST/SDK三面提供search/fetch/crawl/extract/cache/find_similar/research/agent/diff/watch十工具、18搜索引擎并行+本地重排、字节级source_span证据与evidence_score置信度、fetch三级升级路由、数据全在~/.wigolo、六核心工具零API Key零按量费用、--agents一键接线9客户端、n8n/TS/Python SDK/框架包/Docker、⚠️AGPL-3.0与research/agent需LLM、10项P0核验全✅(2项口径标注:Firecrawl免费额度单源/博文日期未检出) |
+| [zhihu-cli](zhihu-cli/index.md) | 工具教程 | 6+3+3=12 | 知乎数据开放平台Zhihu CLI官方命令行工具——公共内容+个人数据双通道、搜索/热榜/直答/个人数据四大核心能力、API+Skill+MCP三种接入方式、供应链四道校验+Keychain凭证安全存储、五种实战玩法（创作出诊/风格蒸馏/选题雷达/硬件看板/飞书推送）、全平台Agent生态（Claude Code/Codex/Cursor/WorkBuddy）、105条事实可溯源、14项P0核验、3条勘误 |
 
 ---
 
@@ -148,7 +149,7 @@ total_bundles: 44
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：44 个知识包，共 321 个内容文档（209 概念 + 58 示例 + 54 信源），零推测事实底稿随束存放
+> **内容统计**：45 个知识包，共 333 个内容文档（215 概念 + 61 示例 + 57 信源），零推测事实底稿随束存放
 
 ```{toctree}
 :hidden:
@@ -198,4 +199,5 @@ llm-hallucination-governance/index
 matrix-zero-person-company/index
 ai-app-survival/index
 wigolo/index
+zhihu-cli/index
 ```
