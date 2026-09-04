@@ -25,7 +25,7 @@ def _has(mod: str) -> bool:
         return False
 
 
-extensions = ["myst_parser"]
+extensions = ["myst_parser", "_ext.okf_inventory_builder"]
 
 _optional_extensions = [
     "sphinx_design",
@@ -119,11 +119,74 @@ mermaid.initialize({
 });
 """
 
+# -----------------------------------------------------------------------
+# P2 域级分片构建（OKF_BUILD_DOMAIN）· 9 域 × 57 分组 × ~4.4 bundle/组
+# = 248 bundle。设置环境变量 OKF_BUILD_DOMAIN=<domain> 仅构建指定域：
+#   - 可选值：meta / guoxue / zhexue / kexue / wenxue /
+#             yixue / sheke / yishu / jishu
+#   - PR 场景（≤1 域改动）构建 1069 页（9622 的 1/9），xref 对比集从
+#     9622→1069，PR 构建从 31.5 min → ~2 min。
+#   - 本地分片模式下，未构建的 8 个域 inv 使用 (None, None) 跳过加载，
+#     跨域 xref 会以裸文本显示，不抛 WARNING。main 分支全量构建行为不变。
+# -----------------------------------------------------------------------
+_OKF_DOMAINS = ("meta", "guoxue", "zhexue", "kexue", "wenxue",
+                "yixue", "sheke", "yishu", "jishu")
+_OKF_BUILD_DOMAIN = os.environ.get("OKF_BUILD_DOMAIN")
+if _OKF_BUILD_DOMAIN is not None:
+    _OKF_BUILD_DOMAIN = _OKF_BUILD_DOMAIN.strip().lower()
+    if _OKF_BUILD_DOMAIN and _OKF_BUILD_DOMAIN not in _OKF_DOMAINS:  # VC-4
+        raise ValueError(
+            f"[conf.py] Invalid OKF_BUILD_DOMAIN={_OKF_BUILD_DOMAIN!r}. "
+            f"Must be one of: {', '.join(_OKF_DOMAINS)} (or unset for full build)"
+        )
+if _OKF_BUILD_DOMAIN:  # VC-6 · 分片模式启动提示（默认 INFO 级；print 比 logging 更稳定）
+    print(f"[OKF] OKF_BUILD_DOMAIN={_OKF_BUILD_DOMAIN} — only documents under "
+          f"doc/bundles/{_OKF_BUILD_DOMAIN}/, doc/index.md, doc/bundles/index.md "
+          f"included; other 8 domains loaded via intersphinx if available")
+
+if _OKF_BUILD_DOMAIN:
+    # VC-2 · meta 域 include 所有 9 域 index.md（防 toctree 爆 excluded doc）
+    if _OKF_BUILD_DOMAIN == "meta":
+        include_patterns = [
+            "index.md",
+            "bundles/index.md",
+            "bundles/meta/**",
+        ] + [f"bundles/{d}/index.md" for d in _OKF_DOMAINS]
+    else:
+        include_patterns = [
+            "index.md",
+            "bundles/index.md",
+            f"bundles/{_OKF_BUILD_DOMAIN}/**",
+        ]
+    exclude_patterns = list(exclude_patterns)  # 保留原 exclude（_build/.spec 等）
+# else: 全量构建 → **不**显式定义 include_patterns。Sphinx 内部 compile_matchers
+#   仅接受 list[str]，None/省略 会走默认的 `['**']` 全量匹配逻辑。
+#   （显式 None 反而会 TypeError: 'NoneType' object is not iterable）
+
+
+# -----------------------------------------------------------------------
+# intersphinx_mapping：默认 3 个外部 inv；分片模式下追加另 8 个域的
+# 本地 objects.inv（VC-3），不存在的域 inv 用 (None, None) 跳过（VC-5）。
+# -----------------------------------------------------------------------
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3.14", None),
     "sphinx": ("https://www.sphinx-doc.org/en/master", None),
     "myst-parser": ("https://myst-parser.readthedocs.io/en/latest", None),
 }
+if _OKF_BUILD_DOMAIN:  # VC-3 · 仅分片模式注入本地域 inv
+    _inv_dir = Path(os.environ.get("OKF_INV_DIR", "_build/domain-invs"))
+    for _d in _OKF_DOMAINS:
+        if _d == _OKF_BUILD_DOMAIN:
+            continue
+        _inv_path = _inv_dir / f"{_d}.inv"
+        if _inv_path.exists():
+            intersphinx_mapping[f"okf-{_d}"] = (
+                f"../{_d}/", str(_inv_path)
+            )
+        else:
+            # VC-5 · 本地不存在则 None 跳过（Sphinx 官方语义：tuple 第二项
+            # 为 None 时不加载 inventory），跨域 xref 降级为裸文本不报 warning
+            intersphinx_mapping[f"okf-{_d}"] = (f"../{_d}/", None)
 
 extlinks = {}
 
