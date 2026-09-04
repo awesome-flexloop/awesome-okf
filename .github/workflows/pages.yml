@@ -144,9 +144,21 @@ jobs:
           if [ "$PR_FULL_LABEL" = "true" ] || [ "$GLOBAL_CHANGED" = "true" ]; then
             unset OKF_BUILD_DOMAIN
           else
+            # VC-11 fix：GHA expression 解析阶段先于 bash，禁止在 ${{ }} 内嵌套 bash $d
+            # 先用字面量键名逐个展开，再由 bash 间接引用取值
+            CHANGED_meta="${{ steps.domain-filter.outputs.meta }}"
+            CHANGED_guoxue="${{ steps.domain-filter.outputs.guoxue }}"
+            CHANGED_zhexue="${{ steps.domain-filter.outputs.zhexue }}"
+            CHANGED_kexue="${{ steps.domain-filter.outputs.kexue }}"
+            CHANGED_wenxue="${{ steps.domain-filter.outputs.wenxue }}"
+            CHANGED_yixue="${{ steps.domain-filter.outputs.yixue }}"
+            CHANGED_sheke="${{ steps.domain-filter.outputs.sheke }}"
+            CHANGED_yishu="${{ steps.domain-filter.outputs.yishu }}"
+            CHANGED_jishu="${{ steps.domain-filter.outputs.jishu }}"
             DOMAINS=""
             for d in meta guoxue zhexue kexue wenxue yixue sheke yishu jishu; do
-              eval "CHANGED=\${{ steps.domain-filter.outputs.$d }}"
+              _varname="CHANGED_${d}"
+              CHANGED="${!_varname}"
               if [ "$CHANGED" = "true" ]; then DOMAINS="${DOMAINS}${d} "; fi
             done
             COUNT=$(echo $DOMAINS | wc -w)
