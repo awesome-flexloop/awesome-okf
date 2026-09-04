@@ -30,7 +30,12 @@ extensions = ["myst_parser", "_ext.okf_inventory_builder"]
 _optional_extensions = [
     "sphinx_design",
     "sphinx_copybutton",
-    "sphinx_tippy",
+    # VC-26：sphinx_tippy 0.4.3 ↔ Sphinx 9.x + Python 3.14 兼容性崩溃：
+    #   build-finished 事件 write_tippy_js 抛 ExtensionError(exception: None)，
+    #   CI 全量 248 bundle 构建 17m32s 后 EXIT=2。
+    #   sphinx_tippy 纯 UX 增强（悬停提示词），与三大核心产出物（HTML/SiteMap/inventory）
+    #   正交，禁用无损；未来 sphinx-tippy 新版本支持 Sphinx9+ 后可复启用。
+    # "sphinx_tippy",
     "sphinx_sitemap",
     "sphinx.ext.intersphinx",
     "sphinx.ext.extlinks",
