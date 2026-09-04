@@ -139,6 +139,9 @@ jobs:
       - name: Resolve OKF_BUILD_DOMAIN final value
         id: resolve-domain
         run: |
+          # VC-22：9 个 CHANGED_* 变量通过动态间接引用 ${!_varname} 使用，
+          #   shellcheck 静态分析无法识别动态引用，统一 disable SC2034(未使用变量)。
+          # shellcheck disable=SC2034
           PR_FULL_LABEL="${{ contains(github.event.pull_request.labels.*.name, 'pr-full') }}"
           GLOBAL_CHANGED="${{ steps.domain-filter.outputs.global }}"
           if [ "$PR_FULL_LABEL" = "true" ] || [ "$GLOBAL_CHANGED" = "true" ]; then
@@ -161,14 +164,15 @@ jobs:
               CHANGED="${!_varname}"
               if [ "$CHANGED" = "true" ]; then DOMAINS="${DOMAINS}${d} "; fi
             done
-            COUNT=$(echo $DOMAINS | wc -w)
+            # VC-22：$DOMAINS 双引号闭合（SC2086：避免 globbing / word-splitting）
+            COUNT=$(echo "$DOMAINS" | wc -w)
             if [ "$COUNT" -eq 1 ]; then
               OKF_BUILD_DOMAIN=$(echo "$DOMAINS" | xargs)
             else
               unset OKF_BUILD_DOMAIN
             fi
           fi
-          echo "OKF_BUILD_DOMAIN=${OKF_BUILD_DOMAIN}" >> $GITHUB_ENV
+          echo "OKF_BUILD_DOMAIN=${OKF_BUILD_DOMAIN}" >> "$GITHUB_ENV"
           echo "[OKF] final OKF_BUILD_DOMAIN='${OKF_BUILD_DOMAIN}' (empty = full build)"
       - uses: actions/setup-python@v6
         id: setup-python
