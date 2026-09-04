@@ -41,7 +41,10 @@ jobs:
       - name: Lint workflow files (actionlint) — 捕获 Node deprecated 与 YAML 错误
         uses: rhysd/actionlint@v1.7.12
         with:
-          args: '-color .github/workflows'
+          # VC-21：显式枚举 workflow 文件，不传目录参数。
+          #   rhysd/actionlint Docker 容器内 readdir() 对目录会报 "is a directory"，
+          #   导致 actionlint 未执行扫描即返回非零（与 Windows sandbox Incorrect function 同源）。
+          args: '-color .github/workflows/pages.yml .github/workflows/gates-selftest.yml'
       - uses: actions/setup-python@v6
         with:
           python-version: "3.14"
