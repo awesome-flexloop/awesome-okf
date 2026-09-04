@@ -154,6 +154,7 @@ else:
 
 html_title = "Awesome OKF for Xuanspace"
 html_static_path = ["_static"]
+
 html_css_files = ["local.css"]
 html_last_updated_fmt = '%Y-%m-%d, %H:%M:%S'
 
@@ -161,21 +162,21 @@ html_theme_options = {
     "repository_url": "https://github.com/awesome-flexloop/awesome-okf",
     "use_repository_button": True,
     "repository_branch": "main",
-    "use_source_button": True,
+    "use_source_button": False,
     "use_edit_page_button": False,
     "use_issues_button": True,
     "path_to_docs": "doc",
     "toc_title": "目录",
-    "show_navbar_depth": 10,
-    # 侧边栏导航深度：域(L2)→分组(L3)→bundle(L4)。
-    # 全深度（6-7 级）会令每页内嵌约 5000 条导航（5640 页 × ~1MB ≈ 5-6GB），
-    # 超出 GitHub Pages 1GB 站点限制导致部署失败；bundle 深层页面经各 bundle
-    # 首页的手工导航表进入。
-    "max_navbar_depth": 4,
-    "collapse_navbar": False,
-    "use_download_button": True,
-    "use_fullscreen_button": True,
-    "footer_content_items": "author.html, copyright.html, last-updated.html, extra-footer.html",
+    # --- Write 阶段 P0 navbar 三件套（I-2 根因 55% 权重）----
+    # show/max 同步收窄到 L2（域层），避免每页渲染 5000+ 节点 toctree。
+    # collapse=True 启用按需展开，未展开分支不参与 DOM 构建。
+    "show_navbar_depth": 2,
+    "max_navbar_depth": 2,
+    "collapse_navbar": True,
+    # ----------------------------------------------------------
+    "use_download_button": False,
+    "use_fullscreen_button": False,
+    "footer_content_items": "copyright.html",
     # 移除顶部导航栏搜索框（保留左侧边栏搜索框）
     "navbar_persistent": [],
 }
