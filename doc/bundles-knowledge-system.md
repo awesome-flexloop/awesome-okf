@@ -1,7 +1,7 @@
 ---
 type: Reference
-title: 我研究了一个开源知识库后，发现它不是资料库，而是一套“知识操作系统”
-description: 以 awesome-okf-xs 的 bundles 知识库为例，介绍结构化知识系统的组织方式、可信机制与可复现阅读路径，整理为独立可发布版本。
+title: 我研究了一个开源知识库，结果发现它更像一套“知识操作系统”
+description: 以 awesome-okf-xs 的 bundles 知识库为例，介绍结构化知识系统的组织方式、可信机制与可复现阅读路径，整理为更适合独立发布的版本。
 tags: [OKF, 知识库, bundles, knowledge-base, zhihu, knowledge-engineering]
 sources:
   - id: bundles-index
@@ -36,11 +36,15 @@ status: stable
 stale_after: 2027-09-03
 ---
 
-# 我研究了一个开源知识库后，发现它不是资料库，而是一套“知识操作系统”
+# 我研究了一个开源知识库，结果发现它更像一套“知识操作系统”
 
-很多知识库，表面上看内容很多，实际用起来却很痛苦：入口混乱、层级失控、可信度不明、更新历史不可追、同一个主题到处散落。
+很多知识库，刚建立时都很美好。
 
-最近我系统翻看了一个开源知识项目 `awesome-okf-xs`。其中最核心的部分，是一个名为 `bundles` 的知识包目录。它不是“把 Markdown 文件堆在一起”，而是在用一种叫 **OKF（Open Knowledge Format）** 的方式，把知识做成可导航、可溯源、可验证、可持续扩展的结构化知识包。[^okf-spec]
+目录清楚，文章也不少，标签看起来很完整。
+
+但只要时间一长，问题就会一起冒出来：入口越来越乱，层级越来越深，更新历史说不清，可信度没法判断，同一个主题到处重复，最后变成“看起来很多，实际上很难用”。
+
+最近我系统翻看了一个开源知识项目 `awesome-okf-xs`。其中最核心的部分，是一个名为 `bundles` 的知识包目录。它不是“把 Markdown 文件堆在一起”，而是在用一种叫 **OKF（Open Knowledge Format）** 的方式，把知识做成可导航、可溯源、可验证、可持续扩展的结构化知识包。
 
 如果只用一句话概括这个库，我会这样说：
 
@@ -48,7 +52,7 @@ stale_after: 2027-09-03
 
 ## 一、先说结论：这个知识库到底是什么
 
-这个知识库是 `awesome-okf-xs` 项目里的核心内容区，对应整个仓库的知识包总库。按总索引统计，它当前共有 **500 个知识包**，按 **9 个顶层知识域、57 个分组** 组织。[^bundles-index]
+这个知识库是 `awesome-okf-xs` 项目里的核心内容区，对应整个仓库的知识包总库。按总索引统计，它当前共有 **500 个知识包**，按 **9 个顶层知识域、57 个分组** 组织。
 
 这 9 个顶层域分别是：
 
@@ -70,7 +74,7 @@ stale_after: 2027-09-03
 
 ### 1. 它把“结构”放在了“内容”前面
 
-这个项目里有一个专门讲 OKF 规范的知识包，等于是“用知识包解释知识包”的自举样本。也就是说，这个库不是先写内容，再想办法整理；而是先定义知识包应该长什么样，再按这个结构扩展内容。[^okf-spec] [^bundle-structure]
+这个项目里有一个专门讲 OKF 规范的知识包，等于是“用知识包解释知识包”的自举样本。也就是说，这个库不是先写内容，再想办法整理；而是先定义知识包应该长什么样，再按这个结构扩展内容。
 
 比如在 OKF 的结构说明里，bundle 至少强调了几件事：
 
@@ -100,11 +104,11 @@ stale_after: 2027-09-03
 - 它有没有被核验
 - 它现在是不是还新鲜
 
-换句话说，这个库在解决一个普通文档系统几乎不解决的问题：**知识不是只要能看就行，还必须能判断“该信到什么程度”。**[^provenance]
+换句话说，这个库在解决一个普通文档系统几乎不解决的问题：**知识不是只要能看就行，还必须能判断“该信到什么程度”。**
 
 ### 3. 它把“知识生产过程”也沉淀进去了
 
-我翻样本时看到一个很典型的例子：它关于《老子》著作的一个知识包。[^laozi-works]
+我翻样本时看到一个很典型的例子：它关于《老子》著作的一个知识包。
 
 这个 bundle 不只有正文索引，还明确拆出了：
 
@@ -114,7 +118,7 @@ stale_after: 2027-09-03
 - `log.md`
 - `references/`
 
-其中 `facts.md` 是纯事实清单，按 `F-001`、`F-002` 这样的编号写；`log.md` 记录什么时候创建、改了什么；正文再组织概念、原文、解读和参考资料。[^laozi-facts] [^laozi-log]
+其中 `facts.md` 是纯事实清单，按 `F-001`、`F-002` 这样的编号写；`log.md` 记录什么时候创建、改了什么；正文再组织概念、原文、解读和参考资料。
 
 这说明它记录的不是“最后一篇文章”，而是“这篇文章是怎么长出来的”。这非常像一套面向长期协作的知识生产流水线。
 
@@ -139,7 +143,7 @@ stale_after: 2027-09-03
 - `kexue`：66 个索引页
 - `yixue`：48 个索引页
 
-其中，技术域的总索引展示的是一个横跨 AI、文档工程、构建、容器、通信、数据、物联网、系统与基础设施的超大知识树；而国学域则把儒、道、释、法、易、阳明心学、算学等传统知识门类纳入同一套结构中。[^jishu] [^guoxue]
+其中，技术域的总索引展示的是一个横跨 AI、文档工程、构建、容器、通信、数据、物联网、系统与基础设施的超大知识树；而国学域则把儒、道、释、法、易、阳明心学、算学等传统知识门类纳入同一套结构中。
 
 这背后其实是一个很清楚的设计取向：
 
@@ -211,7 +215,7 @@ invoke gates.all
 
 到这里，这套路径才算真正“可复现”。
 
-### 附：如果你在仓库里直接定位，对应路径如下
+### 如果你真想上手，再回到仓库路径
 
 - 规范锚点：`doc/bundles/meta/okf-spec/index.md`
 - 总索引：`doc/bundles/index.md`
@@ -241,17 +245,20 @@ invoke gates.all
 
 所以它最不像的，其实是传统 Wiki。它更像一套面向长期协作、面向 AI 消费、也面向人类阅读的 **知识操作系统**。
 
-如果你只是把它当资料库来读，会低估它。  
+如果你只是把它当资料库来读，会低估它。
+
 如果你把它当成一套“知识如何被组织、验证、演化”的方法论样本，它的价值就会一下子放大很多。
 
 **真正值得复用的，不只是这里面写了什么，而是它把知识变成了什么。**
 
-[^bundles-index]: 知识包总索引，项目内对应路径为 [bundles/index.md](bundles/index.md)。
-[^okf-spec]: OKF 规范知识包，项目内对应路径为 [bundles/meta/okf-spec/index.md](bundles/meta/okf-spec/index.md)。
-[^bundle-structure]: OKF 的 bundle 结构定义，项目内对应路径为 [bundles/meta/okf-spec/concepts/bundle-structure.md](bundles/meta/okf-spec/concepts/bundle-structure.md)。
-[^provenance]: OKF 的溯源字段设计，项目内对应路径为 [bundles/meta/okf-spec/concepts/provenance-sources.md](bundles/meta/okf-spec/concepts/provenance-sources.md)。
-[^jishu]: 技术域索引，项目内对应路径为 [bundles/jishu/index.md](bundles/jishu/index.md)。
-[^guoxue]: 国学域索引，项目内对应路径为 [bundles/guoxue/index.md](bundles/guoxue/index.md)。
-[^laozi-works]: 老子著作知识包，项目内对应路径为 [bundles/guoxue/laozi/laozi-works/index.md](bundles/guoxue/laozi/laozi-works/index.md)。
-[^laozi-facts]: 老子著作事实清单，项目内对应路径为 [bundles/guoxue/laozi/laozi-works/facts.md](bundles/guoxue/laozi/laozi-works/facts.md)。
-[^laozi-log]: 老子著作更新日志，项目内对应路径为 [bundles/guoxue/laozi/laozi-works/log.md](bundles/guoxue/laozi/laozi-works/log.md)。
+## 参考线索
+
+- 知识包总索引：[bundles/index.md](bundles/index.md)
+- OKF 规范知识包：[bundles/meta/okf-spec/index.md](bundles/meta/okf-spec/index.md)
+- OKF 的 bundle 结构定义：[bundles/meta/okf-spec/concepts/bundle-structure.md](bundles/meta/okf-spec/concepts/bundle-structure.md)
+- OKF 的溯源字段设计：[bundles/meta/okf-spec/concepts/provenance-sources.md](bundles/meta/okf-spec/concepts/provenance-sources.md)
+- 技术域索引：[bundles/jishu/index.md](bundles/jishu/index.md)
+- 国学域索引：[bundles/guoxue/index.md](bundles/guoxue/index.md)
+- 《老子》著作知识包：[bundles/guoxue/laozi/laozi-works/index.md](bundles/guoxue/laozi/laozi-works/index.md)
+- 《老子》知识包事实清单：[bundles/guoxue/laozi/laozi-works/facts.md](bundles/guoxue/laozi/laozi-works/facts.md)
+- 《老子》知识包更新日志：[bundles/guoxue/laozi/laozi-works/log.md](bundles/guoxue/laozi/laozi-works/log.md)

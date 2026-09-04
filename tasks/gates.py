@@ -7,8 +7,6 @@
     invoke gates.bundles       # 总索引计数与目录树三角对账
     invoke gates.all           # 运行全部质量门
 """
-from __future__ import annotations
-
 from pathlib import Path
 
 from invoke import task
