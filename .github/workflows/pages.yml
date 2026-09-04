@@ -144,8 +144,8 @@ jobs:
           if [ "$PR_FULL_LABEL" = "true" ] || [ "$GLOBAL_CHANGED" = "true" ]; then
             unset OKF_BUILD_DOMAIN
           else
-            # VC-11 fix：GHA expression 解析阶段先于 bash，禁止在 ${{ }} 内嵌套 bash $d
-            # 先用字面量键名逐个展开，再由 bash 间接引用取值
+            # VC-11 fix：GHA expression 解析阶段先于 bash 层，禁止把 bash 动态变量（如 $d）
+            # 写在 GHA expression 语法内；正确做法：先用字面量 key 展开为独立 bash 变量，再用间接引用
             CHANGED_meta="${{ steps.domain-filter.outputs.meta }}"
             CHANGED_guoxue="${{ steps.domain-filter.outputs.guoxue }}"
             CHANGED_zhexue="${{ steps.domain-filter.outputs.zhexue }}"
