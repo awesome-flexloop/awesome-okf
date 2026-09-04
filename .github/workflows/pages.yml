@@ -87,8 +87,6 @@ jobs:
           key: >-
             ${{ runner.os }}-${{ github.ref_name }}-py${{ steps.setup-python.outputs.python-version }}-dFULL-env-v1-
             ${{ hashFiles('doc/conf.py', 'pyproject.toml', 'doc/bundles/index.md', 'doc/index.md', 'doc/_static/**') }}
-          retention-days: 7
-          save-always: false
       - name: Install doc dependencies
         run: pip install -e ".[doc]"
       - name: Build HTML (full)
@@ -180,9 +178,9 @@ jobs:
       # PR · STEP 1 — WARMUP：9 域 objects.inv（P3 弥合 VC-5 裸文本）
       # VC-14：cache key 包含 doc/bundles/**/*.md 全量 hash（不放过任何事实页变更）
       # ==============================================================
-      - name: Cache domain-invs/*.inv (P3 WARMUP)
+      - name: Restore cache · domain-invs/*.inv (P3 WARMUP)
         id: cache-domain-invs
-        uses: actions/cache@v5
+        uses: actions/cache/restore@v5
         with:
           path: |
             _build/domain-invs
@@ -190,13 +188,20 @@ jobs:
           key: >-
             ${{ runner.os }}-py${{ steps.setup-python.outputs.python-version }}-dinv-v1-
             ${{ hashFiles('doc/bundles/**/*.md', 'doc/conf.py', 'pyproject.toml') }}
-          save-always: true
       - name: Install doc dependencies
         run: pip install -e ".[doc]"
       - name: WARMUP — Generate 9 domain invs (cache miss)
         if: steps.cache-domain-invs.outputs.cache-hit != 'true'
         timeout-minutes: 15
         run: invoke build-invs
+      # 等价替代 save-always:true — actions/cache/save + if: always() 功能完全对等且无 deprecated
+      - name: Save cache · domain-invs/*.inv（save-always 等价替换）
+        uses: actions/cache/save@v5
+        if: always()
+        with:
+          path: |
+            _build/domain-invs
+          key: ${{ steps.cache-domain-invs.outputs.cache-primary-key }}
 
       # ==============================================================
       # PR · STEP 2 — SHARD：按 OKF_BUILD_DOMAIN 分片/全量构建 HTML
@@ -210,8 +215,6 @@ jobs:
           key: >-
             ${{ runner.os }}-${{ github.ref_name }}-py${{ steps.setup-python.outputs.python-version }}-d${{ env.OKF_BUILD_DOMAIN || 'FULL' }}-env-v1-
             ${{ hashFiles('doc/conf.py', 'pyproject.toml', 'doc/bundles/index.md', 'doc/index.md', 'doc/_static/**') }}
-          retention-days: 7
-          save-always: false
       - name: SHARD — Build HTML (with cross-domain invs · VC-19 absolute path)
         timeout-minutes: 55
         run: |
