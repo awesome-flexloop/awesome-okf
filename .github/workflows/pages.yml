@@ -8,12 +8,15 @@ name: Deploy docs to GitHub Pages
 #   actions/upload-pages-artifact@v4    (node24)
 #   actions/deploy-pages@v5             (node24)
 #   rhysd/actionlint@v1                 (node24, lints YAML)
+#   dorny/paths-filter@v3               (node24, PR 域级 paths 分析)
 # 每次 deprecation 周期（约 2 年）重跑一次 actionlint 校验：
 #   1) docker run --rm -v $PWD:/repo rhysd/actionlint
 #   2) 或 workflow 中 gates job 的 "Lint workflow files (actionlint)" step
 
 on:
   push:
+    branches: [main]
+  pull_request:
     branches: [main]
   workflow_dispatch:
 
@@ -54,8 +57,15 @@ jobs:
       - name: Gate — bundles index 五面对账 (frontmatter / 计数行 / 分组表 / 域标题 / toctree)
         run: python scripts/check-bundles-index.py
 
-  build:
-    name: Sphinx build (incremental doctree cache)
+  # --------------------------------------------------------------------------
+  # P3 · VC-20：两 job 分流
+  #   build-main  — push main / dispatch 直接全量单步（不走 PR 三步法，省 6.8 min warmup）
+  #   build-pr    — PR 场景 3 步流水线 (WARMUP → SHARD → SAVE) 弥合 VC-5 裸文本
+  # --------------------------------------------------------------------------
+
+  build-main:
+    name: Build (main/dispatch · full HTML)
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 60
     needs: gates
@@ -69,50 +79,151 @@ jobs:
           python-version: "3.14"
           cache: "pip"
           allow-prereleases: true
-      - name: Cache Sphinx environment.pickle (V-3: 仅单文件 + 分支后缀 + 7d retention 防 LRU 击穿)
+      - name: Cache Sphinx environment.pickle (P1-D L2-A: 仅单文件 + 精确key + 7d)
         uses: actions/cache@v5
         with:
-          # V-3 采纳修正：仅缓存 BuildEnv 根 pickle（串行瓶颈，≈200MB），
-          # 不缓存整个 doctrees/ 目录（500MB+ → 单仓 10GB LRU 快速 eviction → ROI 负）。
           path: |
             _build/doctrees/environment.pickle
-          # V-3 分支后缀：不同 ref（main/feature/PR）各建独立命名空间，
-          # 防止跨分支 doctree schema 不兼容静默命中造成神秘崩溃。
-          # key 失效粒度：OS + Python 版本 + 分支 + 配置/主题/域入口索引哈希。
+          # VC-1 / VC-9：ref_name 分命名空间；pyproject.toml 版本变更自动 miss
           key: >-
-            ${{ runner.os }}-${{ github.ref_name }}-py${{ steps.setup-python.outputs.python-version }}-env-v1-
+            ${{ runner.os }}-${{ github.ref_name }}-py${{ steps.setup-python.outputs.python-version }}-dFULL-env-v1-
             ${{ hashFiles('doc/conf.py', 'pyproject.toml', 'doc/bundles/index.md', 'doc/index.md', 'doc/_static/**') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ github.ref_name }}-py${{ steps.setup-python.outputs.python-version }}-env-v1-${{ hashFiles('doc/conf.py', 'pyproject.toml') }}-
-            ${{ runner.os }}-${{ github.ref_name }}-py${{ steps.setup-python.outputs.python-version }}-env-v1-
-          # V-3 retention：GitHub Actions 单仓缓存上限 10 GB，仅保留 7 天，
-          # 让长期未触及的旧分支 pickle 自动让位给主力 main 分支的热数据。
           retention-days: 7
-          # Sphinx 构建中途 warning→error 崩溃时 pickle 仍完整（已完成 read 阶段），
-          # 失败也保存，避免下次失败重跑从零重建 9622 文件 BuildEnv。
-          save-always: true
+          save-always: false
       - name: Install doc dependencies
         run: pip install -e ".[doc]"
-      - name: Build HTML (增量 doctree + 并行渲染)
-        # I-3 修复：留给 Sphinx 的单步预算提升到 55 min (job 总预算 60 - 预留 5 min 上传 artifact)
+      - name: Build HTML (full)
         timeout-minutes: 55
-        # 解释 opts：
-        #   -b html         输出 html (默认)
-        #   -j auto         按 runner CPU 核数并行 (ubuntu-latest=2 → 2 worker)
-        #   -W --keep-going  warning→error 但收集完所有告警 (方便一次性修)
-        #   -d _build/doctrees 显式指定 doctree 目录，确保 cache@v5 路径与 Sphinx 写入一致
         run: >-
           invoke build
-          -o "-b html -j auto -d _build/doctrees --keep-going"
+          -o "-b html -d _build/doctrees --keep-going"
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _build/html
 
+  build-pr:
+    name: Build (PR · WARMUP invs → SHARD → SAVE)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    needs: gates
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      # PR · P2：dorny/paths-filter@v3 按 9 域+全局推断 OKF_BUILD_DOMAIN（VC-8 锁定版本）
+      - name: Analyze changed files → OKF_BUILD_DOMAIN
+        id: domain-filter
+        uses: dorny/paths-filter@v3
+        with:
+          list-files: 'none'
+          filters: |
+            global:
+              - 'doc/conf.py'
+              - 'doc/index.md'
+              - 'doc/bundles/index.md'
+              - 'doc/_static/**'
+              - 'pyproject.toml'
+              - 'tasks/**'
+              - '.github/workflows/**'
+            meta:   - 'doc/bundles/meta/**'
+            guoxue: - 'doc/bundles/guoxue/**'
+            zhexue: - 'doc/bundles/zhexue/**'
+            kexue:  - 'doc/bundles/kexue/**'
+            wenxue: - 'doc/bundles/wenxue/**'
+            yixue:  - 'doc/bundles/yixue/**'
+            sheke:  - 'doc/bundles/sheke/**'
+            yishu:  - 'doc/bundles/yishu/**'
+            jishu:  - 'doc/bundles/jishu/**'
+      # VC-9 / VC-10 / VC-11：后处理最终值
+      - name: Resolve OKF_BUILD_DOMAIN final value
+        id: resolve-domain
+        run: |
+          PR_FULL_LABEL="${{ contains(github.event.pull_request.labels.*.name, 'pr-full') }}"
+          GLOBAL_CHANGED="${{ steps.domain-filter.outputs.global }}"
+          if [ "$PR_FULL_LABEL" = "true" ] || [ "$GLOBAL_CHANGED" = "true" ]; then
+            unset OKF_BUILD_DOMAIN
+          else
+            DOMAINS=""
+            for d in meta guoxue zhexue kexue wenxue yixue sheke yishu jishu; do
+              eval "CHANGED=\${{ steps.domain-filter.outputs.$d }}"
+              if [ "$CHANGED" = "true" ]; then DOMAINS="${DOMAINS}${d} "; fi
+            done
+            COUNT=$(echo $DOMAINS | wc -w)
+            if [ "$COUNT" -eq 1 ]; then
+              OKF_BUILD_DOMAIN=$(echo "$DOMAINS" | xargs)
+            else
+              unset OKF_BUILD_DOMAIN
+            fi
+          fi
+          echo "OKF_BUILD_DOMAIN=${OKF_BUILD_DOMAIN}" >> $GITHUB_ENV
+          echo "[OKF] final OKF_BUILD_DOMAIN='${OKF_BUILD_DOMAIN}' (empty = full build)"
+      - uses: actions/setup-python@v6
+        id: setup-python
+        with:
+          python-version: "3.14"
+          cache: "pip"
+          allow-prereleases: true
+
+      # ==============================================================
+      # PR · STEP 1 — WARMUP：9 域 objects.inv（P3 弥合 VC-5 裸文本）
+      # VC-14：cache key 包含 doc/bundles/**/*.md 全量 hash（不放过任何事实页变更）
+      # ==============================================================
+      - name: Cache domain-invs/*.inv (P3 WARMUP)
+        id: cache-domain-invs
+        uses: actions/cache@v5
+        with:
+          path: |
+            _build/domain-invs
+          # P3 VC-14：doc/bundles/**/*.md（全量 md）+ 配置；inv 总 ~0.5MB，可忽略存储成本
+          key: >-
+            ${{ runner.os }}-py${{ steps.setup-python.outputs.python-version }}-dinv-v1-
+            ${{ hashFiles('doc/bundles/**/*.md', 'doc/conf.py', 'pyproject.toml') }}
+          save-always: true
+      - name: Install doc dependencies
+        run: pip install -e ".[doc]"
+      - name: WARMUP — Generate 9 domain invs (cache miss)
+        if: steps.cache-domain-invs.outputs.cache-hit != 'true'
+        timeout-minutes: 15
+        run: invoke build-invs
+
+      # ==============================================================
+      # PR · STEP 2 — SHARD：按 OKF_BUILD_DOMAIN 分片/全量构建 HTML
+      # VC-19：显式设置 OKF_INV_DIR 绝对路径（跨 cwd 共享）
+      # ==============================================================
+      - name: Cache Sphinx environment.pickle (per domain/full)
+        uses: actions/cache@v5
+        with:
+          path: |
+            _build/doctrees/environment.pickle
+          key: >-
+            ${{ runner.os }}-${{ github.ref_name }}-py${{ steps.setup-python.outputs.python-version }}-d${{ env.OKF_BUILD_DOMAIN || 'FULL' }}-env-v1-
+            ${{ hashFiles('doc/conf.py', 'pyproject.toml', 'doc/bundles/index.md', 'doc/index.md', 'doc/_static/**') }}
+          retention-days: 7
+          save-always: false
+      - name: SHARD — Build HTML (with cross-domain invs · VC-19 absolute path)
+        timeout-minutes: 55
+        run: |
+          export OKF_INV_DIR="${GITHUB_WORKSPACE}/_build/domain-invs"
+          invoke build \
+            -o "-b html -d _build/doctrees --keep-going"
+
+      # ==============================================================
+      # PR · STEP 3 — SAVE invs back to cache（VC-20+cache-always-true 自动）
+      # actions/cache@v5 已在 post step 执行 save；无需额外步骤
+      # ==============================================================
+      - name: Verify PR artifact — list inv + built HTML（非 upload，CI 红 debug 用）
+        run: |
+          ls -la _build/domain-invs || true
+          find _build/domain-invs -type f -name '*.inv' -exec wc -c {} \;
+          test -f _build/html/index.html && echo "✅ _build/html/index.html OK"
+
   deploy:
     name: Deploy to GitHub Pages
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    needs: build
+    needs: build-main
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
