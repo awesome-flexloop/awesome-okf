@@ -7,7 +7,7 @@ name: Deploy docs to GitHub Pages
 #   actions/download-artifact@v5        (node24)
 #   actions/upload-pages-artifact@v4    (node24)
 #   actions/deploy-pages@v5             (node24)
-#   rhysd/actionlint@v1                 (node24, lints YAML)
+#   rhysd/actionlint@v1.7.12            (node24, lints YAML; 注：该 Action 未发布 major tag，必须精确到 patch 级)
 #   dorny/paths-filter@v3               (node24, PR 域级 paths 分析)
 # 每次 deprecation 周期（约 2 年）重跑一次 actionlint 校验：
 #   1) docker run --rm -v $PWD:/repo rhysd/actionlint
@@ -39,7 +39,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: Lint workflow files (actionlint) — 捕获 Node deprecated 与 YAML 错误
-        uses: rhysd/actionlint@v1
+        uses: rhysd/actionlint@v1.7.12
         with:
           files: .github/workflows
           fail-on-error: true
