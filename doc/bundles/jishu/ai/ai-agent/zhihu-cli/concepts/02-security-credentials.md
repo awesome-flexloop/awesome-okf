@@ -2,15 +2,16 @@
 okf_version: "0.2"
 type: Concept
 title: "安全设计与凭证管理"
-description: "Zhihu CLI 的供应链安全校验机制、Access Secret 凭证管理方案、鉴权方式与安全审计结论。"
-tags: ["安全设计", "凭证管理", "供应链安全", "Bearer Token", "Keychain", "Access Secret"]
+description: "Zhihu CLI 的供应链安全校验机制、Access Secret 凭证管理方案、双重鉴权机制、OAuth 2.0 授权流程与安全审计结论。"
+tags: ["安全设计", "凭证管理", "供应链安全", "Bearer Token", "Keychain", "Access Secret", "OAuth"]
 generated: 2026-09-04
-verified: 2026-09-04
+verified: 2026-09-05
 status: verified
 stale_after: "2026-12-31"
 sources:
   - "F-035、F-036、F-043、F-045"
   - "F-061~F-070"
+  - "F-136~F-139"
   - "P0-006、P0-009"
 ---
 
@@ -86,13 +87,30 @@ Access Secret 存储在系统原生凭证管理中，**无明文落盘** [F-064]
 
 ### X-Request-Timestamp 时间戳校验
 
-官方宣称采用 **Bearer Token + X-Request-Timestamp 秒级时间戳双重校验** [厂商自述] [F-043] [F-058]。
+官方采用 **Bearer Token + X-Request-Timestamp 秒级时间戳双重校验** [官方文档确认] [F-043] [F-058]。
 
-> ⚠️ **核验说明** [P0-006]：Bearer Token 部分已通过技术文章确认；但 `X-Request-Timestamp` 头未在第三方技术文章中明确出现，需以官方文档为准。时间戳校验的目的通常是防止重放攻击。
+> ✅ **核验结论** [P0-006]：已通过官方 API 文档确认，所有开放平台 API 均要求 `X-Request-Timestamp` 请求头，与服务端时间相差不能超过 10 分钟。时间戳校验的目的是防止重放攻击。
+
+### 用户数据 API 的 X-OAuth-Token 扩展鉴权
+
+对于用户数据类 API（创作内容、关注、收藏等），在 Bearer Token + 时间戳的基础上，还支持通过 `X-OAuth-Token` 请求头传入 **OAuth 访问凭证**，用于查询已授权的其他用户数据 [F-141]：
+
+| 场景 | X-OAuth-Token | 查询对象 |
+|------|---------------|----------|
+| 查询本人数据 | 不传 | 当前调用方（即 Access Secret 所属账号） |
+| 查询授权用户数据 | 传入 OAuth access_token | 该 OAuth 凭证对应的已授权用户 |
 
 ### HTTPS 通信安全
 
 CLI 与开放平台通过 HTTPS 通信 [F-060]，确保传输过程中的数据加密和完整性保护。
+
+### OAuth 2.0 授权流程安全
+
+知乎 OAuth 服务采用标准 **OAuth 2.0 Authorization Code Flow** [F-137]，具有以下安全设计：
+
+1. **授权码模式**：使用 authorization_code 间接换取 access_token，避免令牌直接暴露在浏览器重定向中
+2. **后端交换**：authorization_code 的交换和 access_token 的使用应在应用后端完成，避免泄露 app_key 和用户令牌 [F-139]
+3. **授权页二次确认**：申请获取的用户权限会在用户授权时展示给用户进行二次确认
 
 ## 四、安全审计结论
 

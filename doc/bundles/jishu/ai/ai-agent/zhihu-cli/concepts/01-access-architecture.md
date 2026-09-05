@@ -2,16 +2,17 @@
 okf_version: "0.2"
 type: Concept
 title: "接入方式与技术架构"
-description: "知乎数据开放平台的三种接入方式（API、Skill+CLI、MCP）、调用链路详解、输出约定与技术架构要点。"
-tags: ["接入方式", "技术架构", "调用链路", "MCP", "Skill", "API"]
+description: "知乎数据开放平台的三种接入方式（API、Skill+CLI、MCP）、MCP over SSE 架构、一能力三入口模式、调用链路详解、输出约定与技术架构要点。"
+tags: ["接入方式", "技术架构", "调用链路", "MCP", "Skill", "API", "SSE", "一能力三入口"]
 generated: 2026-09-04
-verified: 2026-09-04
+verified: 2026-09-05
 status: verified
 stale_after: "2026-12-31"
 sources:
   - "F-037、F-046、F-051~F-060"
   - "F-099~F-102"
   - "E-001（勘误：三种接入方式）"
+  - "官方 API 参考：../references/official-api-reference.md"
 ---
 
 # 01 接入方式与技术架构
@@ -41,8 +42,42 @@ sources:
 ### 托管式 MCP 服务
 
 - 无需本地安装 CLI 二进制
-- 通过 MCP 协议直接对接知乎开放平台的托管服务
+- 通过 MCP 协议直接对接知乎托管的 MCP 服务
 - 与 Skill+CLI 方式共用同一套 Access Secret [F-047]
+- 采用 **MCP over SSE** 架构（Server-Sent Events + JSON-RPC 异步通信）[官方文档验证]
+- 当前仅提供工具（tools）能力，不提供 resources 与 prompts 能力 [官方文档验证]
+
+#### MCP 服务端点（以知乎搜索为例）
+
+| 端点 | URL | 说明 |
+|------|-----|------|
+| SSE 端点 | `https://developer.zhihu.com/api/mcp/zhihu_search/v1/sse` | 建立 SSE 连接，接收 endpoint 事件和异步响应 |
+| Message 端点 | 动态返回（含 sessionId） | 发送 initialize / tools/list / tools/call 请求 |
+
+> 每个核心能力（知乎搜索、全网搜索、直答、热榜）都有独立的 MCP 服务端点，命名模式为 `zhihu_search` / `global_search` / `zhida` / `hot_list`。
+
+#### MCP 接入四步流程
+
+```mermaid
+sequenceDiagram
+    participant Client as MCP 客户端
+    participant SSE as SSE 端点
+    participant Msg as Message 端点
+
+    Client->>SSE: 1. 建立 SSE 连接（带 Bearer 鉴权）
+    SSE-->>Client: endpoint 事件（含 sessionId 的 message 地址）
+    Client->>Msg: 2. POST initialize（JSON-RPC）
+    SSE-->>Client: initialize 响应（异步，经 SSE 返回）
+    Client->>Msg: 3. POST tools/list
+    SSE-->>Client: 工具列表（异步，经 SSE 返回）
+    Client->>Msg: 4. POST tools/call
+    SSE-->>Client: 工具结果（text 类型，XML 格式内容）
+```
+
+**关键特点**：
+- message 端点先返回 HTTP 202 Accepted，实际响应通过 SSE 异步送达
+- 工具调用结果为 text 类型，正文为面向大模型消费的 XML 结构化文本
+- 建议使用现成 MCP Client 接入，不手动实现协议细节
 
 ### API 直接调用
 
@@ -118,7 +153,57 @@ Zhihu CLI 遵循严格的输出约定 [F-022] [F-052]：
 
 answer（直答）命令支持流式输出（SSE/流式响应机制） [F-023] [F-059]，可以实现类似 ChatGPT 的逐字输出效果，提升用户体验。
 
-## 五、两种 Agent 接入方式对比
+## 五、一能力三入口模式
+
+知乎数据开放平台的每个核心能力都提供**三种接入方式**，形成标准化的"一能力三入口"模式：
+
+```mermaid
+graph TD
+    subgraph 核心能力层
+        C1[知乎搜索]
+        C2[全网搜索]
+        C3[知乎热榜]
+        C4[知乎直答]
+        C5[个人数据]
+    end
+
+    subgraph 接入方式层
+        API[API 直接调用]
+        Skill[Skill + CLI]
+        MCP[MCP 服务]
+    end
+
+    C1 --> API
+    C1 --> Skill
+    C1 --> MCP
+    C2 --> API
+    C2 --> Skill
+    C2 --> MCP
+    C3 --> API
+    C3 --> Skill
+    C3 --> MCP
+    C4 --> API
+    C4 --> Skill
+    C4 --> MCP
+```
+
+### 模式特点
+
+- **统一后端**：三种接入方式共用同一套后端接口和数据能力
+- **统一鉴权**：都使用 Access Secret 的 Bearer 鉴权
+- **统一额度**：都计入同一套额度体系（7 个额度项）
+- **定位分层**：API 面向开发者、Skill 面向 Agent 用户、MCP 面向 MCP 生态
+
+### 接入方式选择决策
+
+| 场景 | 推荐接入方式 | 原因 |
+|------|-------------|------|
+| 服务端集成 / 自定义开发 | API 直接调用 | 最灵活，可完全控制请求和响应 |
+| Claude Code / Cursor 等 Agent | Skill + CLI | 开箱即用，Skill 指令明确 |
+| 支持 MCP 的 Agent / 工作流 | MCP 服务 | 标准协议，无需本地二进制 |
+| 需要个人数据能力 | Skill + CLI | 个人数据命令最完整 |
+
+## 六、两种 Agent 接入方式对比
 
 | 维度 | Skill + CLI | 托管式 MCP |
 |------|-------------|------------|

@@ -2,10 +2,10 @@
 okf_version: "0.2"
 type: bundle
 title: "zhihu-cli——知乎数据开放平台官方命令行工具"
-description: "知乎数据开放平台 Zhihu CLI 完整知识包：平台定位、三种接入方式（API/Skill/MCP）、安全设计、四大核心能力（搜索/热榜/直答/个人数据）、五种实战玩法、Agent 生态集成。105 条事实，14 项 P0 核验，3 条勘误。"
-tags: ["知乎开放平台", "Zhihu CLI", "AI Agent", "MCP", "Skill", "搜索", "热榜", "直答", "个人数据", "命令行工具"]
+description: "知乎数据开放平台 Zhihu CLI 完整知识包：平台定位、三种接入方式（API/Skill/MCP）、MCP over SSE 架构、安全设计、四大核心能力（搜索/热榜/直答/个人数据）、7 项统一额度、五种实战玩法、Agent 生态集成、官方 API 接口参考。150 条事实，25 项 P0 核验，3 条勘误。"
+tags: ["知乎开放平台", "Zhihu CLI", "AI Agent", "MCP", "Skill", "搜索", "热榜", "直答", "个人数据", "命令行工具", "API参考"]
 generated: 2026-09-04
-verified: 2026-09-04
+verified: 2026-09-05
 status: verified
 stale_after: "2026-12-31"
 sources:
@@ -15,6 +15,7 @@ sources:
   - "S4: 知乎问题页"
   - "S5: 老狼知乎专栏"
   - "S6: 老狼知乎回答"
+  - "S7: 知乎开发者官方文档 (developer.zhihu.com/docs)"
 ---
 
 # zhihu-cli
@@ -23,8 +24,9 @@ sources:
 > **产品阶段**：邀测阶段（截至 2026 年 9 月）[F-005]
 > **免费额度**：5000 次/天（邀测阶段，2026 年 Q3 扩容至此）[F-006] [E-002]
 > **当前版本**：v0.5.0 [F-009]
-> **P0 核验**：14 项，3 ✅ 11 ⚠️ 0 ❌（详见 [verification.md](references/verification.md)）
-> **事实基数**：105 条（F-001 ~ F-105）
+> **P0 核验**：25 项，15 ✅ 10 ⚠️ 0 ❌（详见 [verification.md](references/verification.md)）
+> **事实基数**：150 条（F-001 ~ F-150）
+> **官方 API 参考**：[official-api-reference.md](references/official-api-reference.md)
 
 ## 项目一句话
 
@@ -61,14 +63,16 @@ zhihu-cli/
 │   ├── 03-core-capabilities.md       ← 核心能力与命令
 │   ├── 04-practical-playbooks.md     ← 实战玩法与创意应用
 │   └── 05-ecosystem-integration.md   ← 生态集成与兼容性
-├── examples/                         ← 操作层（3 篇）
+├── examples/                         ← 操作层（4 篇）
 │   ├── index.md
 │   ├── 01-setup-installation.md      ← 注册与安装
 │   ├── 02-core-commands.md           ← 核心命令使用
-│   └── 03-agent-integration.md       ← Agent 接入配置
-└── references/                       ← 参考层（3 篇）
+│   ├── 03-agent-integration.md       ← Agent 接入配置
+│   └── 04-mcp-integration.md         ← MCP 接入实操指南
+└── references/                       ← 参考层（4 篇）
     ├── index.md
-    ├── article-source.md             ← F-001~F-105 事实登记
+    ├── official-api-reference.md    ← 官方 API 接口参考手册
+    ├── article-source.md             ← F-001~F-135 事实登记
     └── verification.md               ← P0 核验报告
 ```
 
@@ -79,36 +83,39 @@ zhihu-cli/
 | 文档 | 核心内容 | 知识层级 |
 |------|----------|----------|
 | [00 平台与产品介绍](concepts/00-platform-overview.md) | 平台定位、六大产品、内容分级、邀测信息 | 事实层 |
-| [01 接入方式与技术架构](concepts/01-access-architecture.md) | 三种接入方式、调用链路、输出约定 | 机制层 |
+| [01 接入方式与技术架构](concepts/01-access-architecture.md) | 三种接入方式、MCP over SSE、一能力三入口、调用链路、输出约定 | 机制层 |
 | [02 安全设计与凭证管理](concepts/02-security-credentials.md) | 四道校验、Keychain 存储、鉴权机制 | 机制层 |
-| [03 核心能力与命令](concepts/03-core-capabilities.md) | 搜索/热榜/直答/个人数据详解 | 事实+机制 |
+| [03 核心能力与命令](concepts/03-core-capabilities.md) | 搜索/热榜/直答/个人数据/额度体系详解 | 事实+机制 |
 | [04 实战玩法与创意应用](concepts/04-practical-playbooks.md) | 五种实战玩法 + 创意方向 | 应用层 |
 | [05 生态集成与兼容性](concepts/05-ecosystem-integration.md) | Agent 支持、平台兼容、第三方生态 | 应用层 |
 
-### 操作层（3 篇）
+### 操作层（4 篇）
 
 | 文档 | 核心内容 |
 |------|----------|
 | [01 注册与安装](examples/01-setup-installation.md) | 开放平台注册、CLI 安装、Access Secret 配置、Windows 避坑 |
 | [02 核心命令使用](examples/02-core-commands.md) | search/hot/answer/me 四大命令实战示例 |
 | [03 Agent 接入配置](examples/03-agent-integration.md) | Claude Code Skill/MCP 接入配置流程 |
+| [04 MCP 接入实操指南](examples/04-mcp-integration.md) | zhihu_search_mcp / zhida_mcp 配置、curl 示例、排错指南 |
 
-### 信源层（3 篇）
+### 信源层（4 篇）
 
 | 文档 | 内容 | 条目数 |
 |------|------|--------|
-| [事实登记](references/article-source.md) | F-001~F-105 完整事实底账 | 105 条 |
-| [核验报告](references/verification.md) | 14 项 P0 核验 + 3 条勘误 + 时效边界 | - |
+| [官方 API 参考](references/official-api-reference.md) | 5 大核心接口 + 用户数据 5 接口 + OAuth + MCP + 鉴权 + 错误码完整规格 | - |
+| [事实登记](references/article-source.md) | F-001~F-150 完整事实底账 | 150 条 |
+| [核验报告](references/verification.md) | 25 项 P0 核验 + 3 条勘误 + 时效边界 | - |
 | [参考索引](references/index.md) | 外部信源与参考资源导航 | - |
 
 ## 信任与生命周期
 
 | 项目 | 状态 |
 |------|------|
-| **事实基数** | 105 条（F-001~F-105） |
-| **P0 核验** | 14 项：3 ✅ 确认 / 11 ⚠️ 部分确认 / 0 ❌ 错误 |
+| **事实基数** | 150 条（F-001~F-150） |
+| **P0 核验** | 25 项：15 ✅ 确认 / 10 ⚠️ 部分确认 / 0 ❌ 错误 |
 | **勘误项** | 3 条（E-001~E-003） |
-| **厂商自述数据** | 8 项（无法独立核验） |
+| **厂商自述数据** | 7 项（无法独立核验） |
+| **官方文档验证** | 45 条（F-106~F-150，来自 S7 官方技术文档） |
 | **status** | verified |
 | **stale_after** | 2026-12-31 |
 
@@ -126,11 +133,13 @@ zhihu-cli/
 ## 已知边界
 
 1. 平台六大产品中"工具""社区数据""知识库"的具体边界尚不清晰 [P0-014]
-2. X-Request-Timestamp 时间戳校验机制待官方文档确认 [P0-006]
-3. 全网搜索的百亿索引、600ms 延迟等数据为厂商自述，无独立第三方实测 [P0-002][P0-003]
-4. 安全审计 P2/安全为作者评估结论，非官方审计报告 [P0-009]
-5. 老狼创作数据存在 9年/430篇 vs 15年/49万字 两种口径（统计维度不同）[P0-010]
-6. uv 安装方式为社区推荐，未见官方明确推荐 [P0-011]
+2. 全网搜索的百亿索引、600ms 延迟等数据为厂商自述，无独立第三方实测 [P0-002][P0-003]
+3. 安全审计 P2/安全为作者评估结论，非官方审计报告 [P0-009]
+4. 老狼创作数据存在 9年/430篇 vs 15年/49万字 两种口径（统计维度不同）[P0-010]
+5. uv 安装方式为社区推荐，未见官方明确推荐 [P0-011]
+6. 全网+知乎双源融合架构的内部实现细节无法独立核验 [P0-013]
+
+> ✅ 2026-09-05 更新：Bearer Token + X-Request-Timestamp 双重校验机制（原第 2 条）已通过官方 API 文档确认，移出已知边界。直答三档模型、MCP over SSE 架构、统一额度体系、API 参数边界、用户数据 5 接口（内容/关注/收藏/收藏夹列表/收藏夹内容）、OAuth 2.0 集成流程等均已通过官方文档确认。
 
 ---
 

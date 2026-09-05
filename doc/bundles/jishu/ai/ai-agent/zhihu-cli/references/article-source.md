@@ -2,10 +2,10 @@
 okf_version: "0.2"
 type: Reference
 title: "文章信源事实登记"
-description: "Zhihu CLI 知识包信源事实底账，收录 F-001~F-105 共 105 条事实，与规划阶段 facts.md 保持双份一致。"
+description: "Zhihu CLI 知识包信源事实底账，收录 F-001~F-150 共 150 条事实，与规划阶段 facts.md 保持双份一致。"
 tags: ["信源事实", "F编号", "双份登记", "知乎开放平台", "Zhihu CLI"]
 generated: 2026-09-04
-verified: 2026-09-04
+verified: 2026-09-05
 status: verified
 stale_after: "2026-12-31"
 sources:
@@ -15,6 +15,7 @@ sources:
   - "S4: 知乎问题页"
   - "S5: 老狼知乎专栏"
   - "S6: 老狼知乎回答"
+  - "S7: 知乎开发者官方文档 (developer.zhihu.com/docs)"
 ---
 
 # 文章信源事实登记
@@ -169,9 +170,63 @@ sources:
 
 ---
 
+## 八、官方 API 接口规范（F-106~F-135）
+
+> 本章节事实均来自 S7 知乎开发者官方文档（developer.zhihu.com/docs），为一手官方权威信源，标记为 [官方文档验证]。
+
+| 编号 | 事实内容 | 来源 | 分类 |
+|------|----------|------|------|
+| F-106 | 官方 API 采用 Bearer Token 鉴权 + X-Request-Timestamp 秒级时间戳双重校验机制 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-107 | 知乎搜索 API URL: https://developer.zhihu.com/api/v1/zhihu_search/query，POST JSON 入参 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-108 | 全网搜索 API URL: https://developer.zhihu.com/api/v1/global_search/query，POST JSON 入参 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-109 | 知乎热榜 API URL: https://developer.zhihu.com/api/v1/hot_list/query，POST JSON 入参 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-110 | 知乎直答 API URL: https://developer.zhihu.com/v1/chat/completions，POST JSON 入参 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-111 | 额度查询 API URL: https://developer.zhihu.com/api/v1/quota，POST JSON 入参 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-112 | 统一额度体系共 7 项：global_search、zhihu_search、hot_list、user_data、zhida_openai、knowledge、tools | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-113 | 额度为日额度，自然日重置；额度查询本身不消耗业务额度 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-114 | 知识库系列（上传/列表/内容列表/检索）共用 knowledge 一个日额度池 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-115 | 工具系列（PDF 解析/PPT 生成）共用 tools 一个日额度池 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-116 | 知乎搜索 API 必填参数：Query（关键词） | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-117 | 知乎搜索 API 可选参数：Count（返回数，默认10，最大20）、Offset（偏移量） | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-118 | 全网搜索 API 支持 Filter 筛选语法：支持 host、publish_time 字段，AND/OR 逻辑，括号优先级 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-119 | 全网搜索 Filter 中不支持 host=="zhihu.com" 及其子域名，站内搜索请用 zhihu_search 接口 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-120 | 全网搜索 API 可选 SearchDB 参数：all（默认）/ realtime（实时库）/ static（静态库） | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-121 | 热榜 API Limit 默认 30，最大 30，<=0 或 >30 自动回退为 30 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-122 | 热榜仅返回问题和文章两类内容；无封面时 ThumbnailUrl 为空字符串 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-123 | 直答 API 必填参数：model（模型）、messages（消息列表） | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-124 | 直答 API 可选参数：stream（是否流式，默认 false） | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-125 | 直答提供 3 档模型：zhida-fast-1p5（快速）、zhida-thinking-1p5（深度思考带 reasoning_content）、zhida-agent（Agent 模式） | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-126 | MCP over SSE 架构：SSE 端点建立连接，返回 endpoint 事件（含 sessionId 的 message 地址），请求通过 message 端点发送 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-127 | MCP 服务当前仅提供 tools 能力，不提供 resources 和 prompts 能力 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-128 | MCP message 端点返回 HTTP 202 Accepted，实际响应通过 SSE 异步送达 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-129 | MCP 工具调用结果为 text 类型，正文为面向大模型消费的 XML 格式文本 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-130 | 每个核心能力都有独立 MCP 端点：zhihu_search、global_search、zhida、hot_list | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-131 | MCP 接入四步：1 建立 SSE 连接 → 2 initialize → 3 tools/list → 4 tools/call | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-132 | 直答流式响应（SSE）：data: {...} 逐块返回，data: [DONE] 结束，含 : keep-alive 心跳 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-133 | 官方 API 错误码：40001 参数错误、40101 鉴权失败、40301 额度不足、40401 资源不存在、50001 服务内部错误 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-134 | 官方 API 鉴权头：Authorization: Bearer <access_secret>，X-Request-Timestamp: <秒级时间戳> | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-135 | 直答非流式响应包含 reasoning_content（推理过程）和 content（最终回答）字段 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-136 | 知乎 OAuth 服务用于集成知乎第三方登录与获取授权用户的个人信息；仅使用通用 API 和本人数据无需接入 OAuth | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-137 | 知乎 OAuth API 采用标准 OAuth 2.0 Authorization Code Flow | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-138 | 接入 OAuth 需要申请 app_id 和 app_key，申请邮箱 openplatform@zhihu.com | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-139 | authorization_code 的交换和 access_token 的使用应在应用后端完成，避免泄露 app_key 和用户令牌 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-140 | 用户内容 API：/api/v1/user/contents，获取用户创作内容（回答/文章/视频/想法/问题），支持分页和排序 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-141 | 用户数据 API 支持 X-OAuth-Token 请求头：不传时查询本人数据，传入时查询已授权用户数据 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-142 | 用户关注 API：/api/v1/user/followees，获取用户关注列表，支持分页（默认20，最大50） | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-143 | 用户收藏 API：/api/v1/user/collections，获取近期收藏内容，包含 FavTime、Favlists 收藏夹列表、Author 作者信息 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-144 | 用户收藏夹列表 API：/api/v1/user/favlists，获取收藏夹列表（UrlToken/Title/Description/IsPublic） | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-145 | 收藏夹内容 API：/api/v1/user/favlist_contents，获取指定收藏夹内容，FavlistUrlToken 为必填参数，支持分页 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-146 | 用户数据 API 统一错误码：0成功/10001参数错误/20001鉴权失败/30001频率限制/30002配额限制/90001内部错误 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-147 | 用户内容 API 支持 6 种内容类型：all/answer/article/zvideo/pin/question | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-148 | 用户内容 API 支持按 like_count（点赞数）或 ts（时间）排序，支持 asc/desc 方向 | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-149 | 收藏内容 Item 统一结构：ContentType/Url/CreatedAt/FavTime/LikeCount/CommentCount/FavoriteCount/Title/Summary/Favlists/Author | S7 [官方文档验证] | 官方 API 接口规范 |
+| F-150 | 所有用户数据 API 均归属 user_data 额度项，共用一个日额度池 | S7 [官方文档验证] | 官方 API 接口规范 |
+
+---
+
 ## 统计
 
-- 总计 **105 条**事实（F-001 ~ F-105 连续无跳号）
+- 总计 **150 条**事实（F-001 ~ F-150 连续无跳号）
 - 分类分布：
   - 平台定位：10 条（F-001~F-010）
   - 产品能力：20 条（F-011~F-030）
@@ -180,5 +235,7 @@ sources:
   - 安全设计：10 条（F-061~F-070）
   - 实战玩法：25 条（F-071~F-095）
   - 生态集成：10 条（F-096~F-105）
+  - 官方 API 接口规范：45 条（F-106~F-150）
 - 📝 作者观点：约 10 条
 - [厂商自述]：约 15 条
+- ✅ [官方文档验证]：45 条
