@@ -20,8 +20,8 @@ sources:
 | 文档 | 内容 | 条目数 |
 |------|------|--------|
 | [official-api-reference.md](official-api-reference.md) | 官方 API 接口参考手册（5 大核心接口 + 用户数据 5 接口 + OAuth + MCP + 鉴权 + 错误码） | 11 接口 + 7 额度 + 5/6 错误码 |
-| [article-source.md](article-source.md) | 文章信源事实登记（F-001~F-150） | 150 条事实 |
-| [verification.md](verification.md) | P0 权威核验报告 + 勘误 + 时效边界 | 25 项核验，3 条勘误 |
+| [article-source.md](article-source.md) | 文章信源事实登记（F-001~F-235） | 235 条事实 |
+| [verification.md](verification.md) | P0 权威核验报告 + 勘误 + 时效边界 | 55 项核验，3 条勘误 |
 
 ## 外部信源
 

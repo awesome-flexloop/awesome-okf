@@ -5,11 +5,11 @@ title: "概念学习路径"
 description: "Zhihu CLI 知识包概念层导航，6 篇文档从平台定位到实战玩法逐层深入。"
 tags: ["概念层", "学习路径", "Zhihu CLI"]
 generated: 2026-09-04
-verified: 2026-09-04
+verified: 2026-09-05
 status: verified
 stale_after: "2026-12-31"
 sources:
-  - "F-001~F-105"
+  - "F-001~F-235"
 ---
 
 # 概念学习路径

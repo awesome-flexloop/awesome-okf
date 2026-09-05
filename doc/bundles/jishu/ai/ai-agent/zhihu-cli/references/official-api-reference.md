@@ -2,8 +2,8 @@
 okf_version: "0.2"
 type: Reference
 title: "官方 API 接口参考手册"
-description: "知乎数据开放平台官方 API 完整参考：鉴权方式、OAuth 2.0、5 大核心接口（搜索/热榜/直答/额度）、5 个用户数据接口（内容/关注/收藏/收藏夹）、MCP 接入规范的请求参数、响应字段、错误码与调用示例。"
-tags: ["API参考", "官方文档", "接口规范", "错误码", "鉴权", "OAuth", "用户数据"]
+description: "知乎数据开放平台官方 API 完整参考：鉴权方式、OAuth 2.0、5 大核心接口（搜索/热榜/直答/额度）、5 个用户数据接口、知识库 4 接口、小工具 2 接口（PDF 解析/PPT 生成）、MCP 接入规范的请求参数、响应字段、错误码与调用示例。"
+tags: ["API参考", "官方文档", "接口规范", "错误码", "鉴权", "OAuth", "用户数据", "知识库", "RAG", "PDF解析", "PPT生成"]
 generated: 2026-09-05
 verified: 2026-09-05
 status: verified
@@ -1020,8 +1020,660 @@ curl -G 'https://developer.zhihu.com/api/v1/user/favlist_contents' \
 
 ---
 
+## 十四、知识库列表 API
+
+### 接口信息
+
+获取当前用户创建或订阅的知识库。
+
+| 项目 | 值 |
+|------|-----|
+| HTTP URL | `https://developer.zhihu.com/api/v1/knowledge/bases` |
+| HTTP Method | `GET` |
+| API ID | `knowledge_bases` |
+
+### 请求头
+
+与统一鉴权规范相同（Authorization + X-Request-Timestamp）。
+
+### Query 参数
+
+| 名称 | 类型 | 必填 | 默认值 | 说明 |
+|------|------|------|--------|------|
+| `Scope` | String | 否 | `all` | 过滤范围：`all` / `created` / `subscribed` |
+
+### 响应结构（Data）
+
+| 字段 | 类型 | 必返 | 描述 |
+|------|------|------|------|
+| `Items` | Array[KnowledgeBase] | 是 | 符合条件的全部知识库 |
+
+### KnowledgeBase 结构
+
+| 字段 | 类型 | 必返 | 描述 |
+|------|------|------|------|
+| `KnowledgeBaseID` | String | 是 | 知识库 ID |
+| `Name` | String | 是 | 知识库名称 |
+| `Description` | String | 否 | 知识库描述 |
+| `Relation` | String | 是 | 当前用户与知识库关系：`created` / `subscribed` / `both` |
+| `IsDefault` | Bool | 是 | 是否为当前用户默认知识库 |
+| `Visibility` | String | 是 | 可见性：`private` / `public` |
+| `ContentCount` | Int64 | 是 | 内容数量 |
+| `UpdatedAt` | Int64 | 是 | 秒级更新时间戳 |
+
+### 响应示例
+
+```json
+{
+  "Code": 0,
+  "Message": "success",
+  "Data": {
+    "Items": [
+      {
+        "KnowledgeBaseID": "7526139256098382426",
+        "Name": "产品资料",
+        "Description": "产品相关文档",
+        "Relation": "created",
+        "IsDefault": false,
+        "Visibility": "private",
+        "ContentCount": 12,
+        "UpdatedAt": 1785902400
+      }
+    ]
+  }
+}
+```
+
+### 错误码
+
+| 错误码 | 说明 |
+|--------|------|
+| 0 | 成功 |
+| 10001 | 请求参数错误 |
+| 20001 | 鉴权失败或无访问权限 |
+| 30001 | 频率限制 |
+| 90001 | 请求失败 |
+
+### cURL 示例
+
+```bash
+curl -G 'https://developer.zhihu.com/api/v1/knowledge/bases' \
+  --data-urlencode 'Scope=all' \
+  -H 'Authorization: Bearer <your_access_secret>' \
+  -H "X-Request-Timestamp: $(date +%s)"
+```
+
+---
+
+## 十五、知识库内容列表 API
+
+### 接口信息
+
+分页获取指定知识库中的内容。
+
+| 项目 | 值 |
+|------|-----|
+| HTTP URL | `https://developer.zhihu.com/api/v1/knowledge/bases/{KnowledgeBaseID}/items` |
+| HTTP Method | `GET` |
+| API ID | `knowledge_base_items` |
+
+### Path 参数
+
+| 名称 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| `KnowledgeBaseID` | String | 是 | 知识库 ID |
+
+### Query 参数
+
+| 名称 | 类型 | 必填 | 默认值 | 说明 |
+|------|------|------|--------|------|
+| `Cursor` | String | 否 | 空 | 上一页返回的不透明游标；调用方不要解析或修改 |
+| `Limit` | Int32 | 否 | 20 | 每页数量，范围 1..20 |
+
+> 💡 **分页约定**：请以 `HasMore` 判断是否继续分页，不要根据本页条数推断是否结束。
+
+### 响应结构（Data）
+
+| 字段 | 类型 | 必返 | 描述 |
+|------|------|------|------|
+| `Items` | Array[KnowledgeItem] | 是 | 本页内容项 |
+| `Total` | Int64 | 是 | 当前条件下的内容总数 |
+| `HasMore` | Bool | 是 | 是否还有下一页 |
+| `NextCursor` | String | 否 | HasMore=true 时用于请求下一页 |
+
+### KnowledgeItem 结构
+
+| 字段 | 类型 | 必返 | 描述 |
+|------|------|------|------|
+| `RecallContentID` | String | 是 | 内容 ID（可能为空） |
+| `ContentType` | String | 是 | 内容类型：`unknown` / `file` / `answer` / `article` |
+| `Title` | String | 是 | 文件名/标题 |
+| `Abstract` | String | 否 | 摘要 |
+| `CreatedAt` | Int64 | 否 | 秒级创建时间戳 |
+| `UpdatedAt` | Int64 | 否 | 秒级更新时间戳 |
+| `OriginUrl` | String | 否 | 原始来源地址；回答/文章为原文地址，文件为源文件下载地址 |
+
+### 响应示例
+
+```json
+{
+  "Code": 0,
+  "Message": "success",
+  "Data": {
+    "Items": [
+      {
+        "RecallContentID": "MTAwMjMwMDAwNzUxODUxMDI0Nnw6fFpISV9EQV9VU0VSX1VQTE9BRA==",
+        "ContentType": "file",
+        "Title": "产品资料.pdf",
+        "Abstract": "文档摘要",
+        "CreatedAt": 1785900000,
+        "UpdatedAt": 1785902400,
+        "OriginUrl": "https://assets2.zhihu.com/example/product.pdf"
+      }
+    ],
+    "Total": 12,
+    "HasMore": true,
+    "NextCursor": "next-cursor"
+  }
+}
+```
+
+> 💡 **分页约定**：请以 `HasMore` 判断是否继续分页，不要根据本页条数推断是否结束。
+
+### 错误码
+
+| 错误码 | 说明 |
+|--------|------|
+| 0 | 成功 |
+| 10001 | 请求参数错误 |
+| 20001 | 鉴权失败或无访问权限 |
+| 30001 | 频率限制 |
+| 40004 | 知识库不存在 |
+| 90001 | 请求失败 |
+
+### cURL 示例
+
+```bash
+curl -G 'https://developer.zhihu.com/api/v1/knowledge/bases/7526139256098382426/items' \
+  --data-urlencode 'Limit=20' \
+  -H 'Authorization: Bearer <your_access_secret>' \
+  -H "X-Request-Timestamp: $(date +%s)"
+```
+
+---
+
+## 十六、知识库文件上传 API
+
+### 接口信息
+
+上传文件并同步完成解析和知识库挂载。不指定知识库时，文件进入当前用户的默认知识库。
+
+| 项目 | 值 |
+|------|-----|
+| HTTP URL | `https://developer.zhihu.com/api/v1/knowledge/files` |
+| HTTP Method | `POST` |
+| Content-Type | `multipart/form-data` |
+| API ID | `knowledge_file_upload` |
+
+> ⚠️ 不要手工设置带 boundary 的 Content-Type；使用 curl -F 时会自动生成正确的 multipart Header。
+
+### Form 参数
+
+| 名称 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| `File` | File | 是 | 文件内容不能为空，单文件最大 100 MB |
+| `KnowledgeBaseID` | String | 否 | 目标知识库 ID；不传时使用当前用户默认知识库 |
+
+### 支持的文件格式（15 种）
+
+`pdf`、`md`、`txt`、`ppt`、`pptx`、`xlsx`、`xls`、`docx`、`doc`、`webp`、`png`、`jpg`、`mobi`、`epub`、`csv`、`azw3`
+
+> 扩展名判断忽略大小写。文件名必须是合法 UTF-8，不能包含 NUL、换行或其他控制字符；清理路径和首尾空白后的文件名不能超过 255 个 UTF-8 字节。
+
+### 响应结构（Data）
+
+| 字段 | 类型 | 必返 | 描述 |
+|------|------|------|------|
+| `KnowledgeBaseID` | String | 是 | 文件实际进入的知识库 ID |
+| `RecallContentID` | String | 是 | 内容 ID |
+| `FileName` | String | 是 | 清理后的原始文件名 |
+| `FileSize` | Int64 | 是 | 文件大小，单位为字节 |
+| `Title` | String | 否 | 内容标题 |
+| `Abstract` | String | 否 | 内容摘要 |
+| `OriginUrl` | String | 否 | 源文件下载地址 |
+
+### 响应示例
+
+```json
+{
+  "Code": 0,
+  "Message": "success",
+  "Data": {
+    "KnowledgeBaseID": "7526139256098382426",
+    "RecallContentID": "recall-content-id",
+    "FileName": "产品资料.pdf",
+    "FileSize": 1048576,
+    "Title": "产品资料",
+    "Abstract": "文档主要介绍产品能力",
+    "OriginUrl": "https://assets2.zhihu.com/example/product.pdf"
+  }
+}
+```
+
+> 💡 **注意**：该接口是同步接口，较大文件可能需要较长时间。调用方取消请求不代表上传和解析一定同步取消，请不要对超时或未知结果自动重试。相同文件仅在前一次仍处于同步处理阶段时被拦截；前一次进入终态后可再次上传。
+
+### 错误码
+
+| 错误码 | 说明 |
+|--------|------|
+| 0 | 成功 |
+| 10001 | 文件、文件名、格式、大小或其他请求参数不合法 |
+| 20001 | 鉴权失败或无权向目标知识库上传 |
+| 30001 | 频率限制 |
+| 40004 | 知识库不存在 |
+| 40005 | 相同文件正在处理中 |
+| 40006 | 文件解析失败 |
+| 90001 | 请求失败 |
+
+### cURL 示例
+
+**上传到指定知识库：**
+
+```bash
+curl 'https://developer.zhihu.com/api/v1/knowledge/files' \
+  -F 'File=@./document.pdf' \
+  -F 'KnowledgeBaseID=7526139256098382426' \
+  -H 'Authorization: Bearer <your_access_secret>' \
+  -H "X-Request-Timestamp: $(date +%s)"
+```
+
+**上传到默认知识库（省略 KnowledgeBaseID）：**
+
+```bash
+curl 'https://developer.zhihu.com/api/v1/knowledge/files' \
+  -F 'File=@./document.pdf' \
+  -H 'Authorization: Bearer <your_access_secret>' \
+  -H "X-Request-Timestamp: $(date +%s)"
+```
+
+---
+
+## 十七、知识库检索 API
+
+### 接口信息
+
+使用 RAG 从指定知识库或召回范围中检索相关文档片段。
+
+| 项目 | 值 |
+|------|-----|
+| HTTP URL | `https://developer.zhihu.com/api/v1/knowledge/search` |
+| HTTP Method | `POST` |
+| Content-Type | `application/json` |
+| API ID | `knowledge_search` |
+
+> 首次使用请先登录直答知识库完成初始化：https://zhida.zhihu.com/repositories/square
+
+### 请求参数（JSON Body）
+
+| 名称 | 类型 | 必填 | 默认值 | 说明 |
+|------|------|------|--------|------|
+| `Query` | String | 是 | - | 检索问题，去除首尾空白后不能为空 |
+| `KnowledgeBaseIDs` | Array[String] | 条件必填 | `[]` | 指定知识库 ID 列表 |
+| `RecallScopes` | Array[String] | 条件必填 | `[]` | 召回范围：`personal` / `subscription` / `public` |
+| `Limit` | Int32 | 否 | 10 | 返回文档数量，范围 1..10 |
+
+> 💡 `KnowledgeBaseIDs` 和 `RecallScopes` 至少有一个非空，也可以同时传入；同时传入时搜索范围取二者并集。
+
+### 响应结构（Data）
+
+| 字段 | 类型 | 必返 | 描述 |
+|------|------|------|------|
+| `Items` | Array[SearchItem] | 是 | 按相关性返回的文档结果 |
+
+### SearchItem 结构
+
+| 字段 | 类型 | 必返 | 描述 |
+|------|------|------|------|
+| `Content` | Array[String] | 是 | 同一文档命中的有序正文片段列表 |
+| `KnowledgeBaseID` | String | 是 | 所属知识库 ID |
+| `DocName` | String | 是 | 文档名称 |
+| `RecallContentID` | String | 否 | 内容 ID |
+| `OriginUrl` | String | 否 | 原始来源地址；回答和文章为原文地址，文件等其他类型为源文件下载地址 |
+
+> 💡 `Limit` 按文档结果数计算，不按 Content 中的片段数计算。
+
+### 响应示例
+
+```json
+{
+  "Code": 0,
+  "Message": "success",
+  "Data": {
+    "Items": [
+      {
+        "Content": [
+          "退款申请需要在购买后七天内提交。",
+          "退款到账通常需要三个工作日。"
+        ],
+        "KnowledgeBaseID": "7526139256098382426",
+        "DocName": "退款规则",
+        "RecallContentID": "MTAwMjMwMDAwNzUxODUxMDI0Nnw6fFpISV9EQV9VU0VSX1VQTE9BRA==",
+        "OriginUrl": "https://assets2.zhihu.com/example/refund.md"
+      }
+    ]
+  }
+}
+```
+
+### 错误码
+
+| 错误码 | 说明 |
+|--------|------|
+| 0 | 成功 |
+| 10001 | 请求参数错误 |
+| 20001 | 鉴权失败或无访问权限 |
+| 30001 | 频率限制 |
+| 50002 | 检索失败，请稍后重试 |
+| 90001 | 请求失败 |
+
+### cURL 示例
+
+```bash
+curl 'https://developer.zhihu.com/api/v1/knowledge/search' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer <your_access_secret>' \
+  -H "X-Request-Timestamp: $(date +%s)" \
+  --data '{
+    "Query": "产品的退款规则是什么？",
+    "KnowledgeBaseIDs": ["7526139256098382426"],
+    "RecallScopes": ["personal"],
+    "Limit": 10
+  }'
+```
+
+---
+
+## 十八、PDF 解析 API
+
+### 接口说明
+
+该接口用于异步解析 PDF 文件。调用方先上传 PDF 文件获取 `file_id`，再使用 `file_id` 创建解析任务。任务创建后可通过查询接口轮询任务状态，任务成功后返回结果下载链接。
+
+### 调用流程（4 步）
+
+```mermaid
+flowchart LR
+    A[1. 上传 PDF 文件] --> B[2. 创建解析任务]
+    B --> C[3. 轮询任务状态]
+    C --> D{task_status=succeeded?}
+    D -->|是| E[4. 下载解析结果]
+    D -->|否| C
+```
+
+1. 上传 PDF 文件，获取 `file_id`
+2. 使用 `file_id` 创建 PDF 解析任务，获取 `task_id`
+3. 使用 `task_id` 轮询任务状态
+4. 当 `task_status=succeeded` 时，从 `result.url` 下载解析结果
+
+### 鉴权
+
+- `Authorization: Bearer <your_access_secret>`
+- `X-Request-Timestamp: <unix_seconds>`（秒级 Unix 时间戳）
+- 创建任务接口支持可选 Header：`Idempotency-Key`（同一个 Idempotency-Key 配合同一个请求参数重复调用时，会返回同一个 `task_id`）
+
+### 18.1 上传文件
+
+| 项目 | 值 |
+|------|-----|
+| HTTP URL | `https://developer.zhihu.com/resources/v1/files` |
+| HTTP Method | `POST` |
+| 请求类型 | `multipart/form-data` |
+| 响应类型 | `application/json` |
+
+**请求参数：**
+
+| 名称 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| `file` | File | 是 | PDF 文件，最大 100MB |
+
+**响应：**
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `file_id` | String | 文件资源 ID，用于创建 PDF 解析任务 |
+
+> ⚠️ 上传后的文件需在 24 小时内用于创建任务。
+
+### 18.2 创建 PDF 解析任务
+
+| 项目 | 值 |
+|------|-----|
+| HTTP URL | `https://developer.zhihu.com/api/v1/pdf-parse/tasks` |
+| HTTP Method | `POST` |
+| 请求类型 | `application/json` |
+
+**请求参数：**
+
+| 名称 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| `file_id` | String | 是 | 上传文件接口返回的文件资源 ID |
+
+**响应参数：**
+
+| 名称 | 类型 | 是否必返 | 说明 |
+|------|------|----------|------|
+| `task_id` | String | 是 | PDF 解析任务 ID |
+| `task_status` | String | 是 | 任务状态，初始通常为 `pending` |
+
+> 💡 如果命中幂等重放，响应 Header 会包含 `Idempotent-Replayed: true`。
+
+### 18.3 查询 PDF 解析任务
+
+| 项目 | 值 |
+|------|-----|
+| HTTP URL | `https://developer.zhihu.com/api/v1/pdf-parse/tasks/{task_id}` |
+| HTTP Method | `GET` |
+
+**Path 参数：**
+
+| 名称 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| `task_id` | String | 是 | 创建任务接口返回的任务 ID |
+
+**响应参数：**
+
+| 名称 | 类型 | 是否必返 | 说明 |
+|------|------|----------|------|
+| `task_id` | String | 是 | PDF 解析任务 ID |
+| `task_status` | String | 是 | 任务状态 |
+| `progress` | Number | 是 | 任务进度，范围 0 到 1 |
+| `result` | Object / Null | 是 | 任务成功后返回结果信息，未完成或失败时为 null |
+| `error` | Object / Null | 是 | 任务失败时返回错误信息，未失败时为 null |
+
+**task_status 取值：**
+
+| 值 | 说明 |
+|----|------|
+| `pending` | 任务已创建，等待处理 |
+| `running` | 任务处理中 |
+| `succeeded` | 任务已成功 |
+| `failed` | 任务失败 |
+
+**Result 结构（任务成功时）：**
+
+| 名称 | 类型 | 是否必返 | 说明 |
+|------|------|----------|------|
+| `url` | String | 是 | 解析结果下载链接 |
+| `summary` | String | 否 | PDF 摘要，可能为空 |
+| `expires_at_ms` | Int64 | 是 | 下载链接过期时间，毫秒级时间戳 |
+
+**Error 结构（任务失败时）：**
+
+| 名称 | 类型 | 是否必返 | 说明 |
+|------|------|----------|------|
+| `code` | String | 是 | 错误码 |
+| `message` | String | 是 | 错误信息 |
+
+### 18.4 解析结果文件格式
+
+访问 `result.url` 下载得到 JSON 格式的 PDF 解析结果：
+
+```json
+{
+  "schema_version": "v1",
+  "pages": [
+    {
+      "page": 0,
+      "blocks": [
+        {
+          "type": "text",
+          "box": [0.17, 0.30, 0.82, 0.44],
+          "content": "这是一段从 PDF 中解析出的正文。"
+        },
+        {
+          "type": "figure",
+          "box": [0.10, 0.55, 0.90, 0.78],
+          "image": {
+            "media_type": "image/jpeg",
+            "data": "/9j/4AAQSkZJRgABAQ..."
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+**结果结构说明：**
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `schema_version` | String | 结果结构版本，当前为 `v1` |
+| `pages` | Array | 按页组织的解析结果 |
+| `pages[].page` | Integer | 页码，从 0 开始 |
+| `pages[].blocks` | Array | 当前页解析出的内容块 |
+| `blocks[].type` | String | 内容块类型：`title` / `text` / `formula` / `figure` |
+| `blocks[].box` | Number Array | 内容块坐标，格式为 `[x1, y1, x2, y2]` |
+| `blocks[].content` | String | 文本内容；图片块没有文本时为空字符串 |
+| `blocks[].image` | Object | 图片信息，仅图片块可能返回 |
+| `blocks[].image.media_type` | String | 图片 MIME 类型，如 `image/jpeg`、`image/png` |
+| `blocks[].image.data` | String | 纯 Base64 图片数据，不包含 `data:image/...;base64,` 前缀 |
+
+> 💡 调用方应兼容未知的 type 和后续新增字段。普通文本块不返回 image。
+
+### 18.5 错误码
+
+| Code | 说明 |
+|------|------|
+| 10001 | 请求参数错误 |
+| 20001 | 鉴权失败或无权限访问 |
+| 30001 | 请求过于频繁 |
+| 30002 | 额度不足 |
+| 40001 | 幂等键与请求参数冲突 |
+| 40002 | 文件不存在、已过期或不可访问 |
+| 40003 | 活跃任务数超限，请等待已有任务完成后再提交 |
+| 90001 | 服务内部错误 |
+
+### 18.6 注意事项
+
+- 当前仅支持 PDF 文件解析
+- 文件大小最大 100MB
+- 查询接口返回的下载链接有效期较短；如果链接过期，重新查询任务可获得新的下载链接
+- 不要把同一个 `Idempotency-Key` 用于不同请求参数
+
+---
+
+## 十九、PPT 生成 API
+
+### 接口说明
+
+该接口用于根据知乎回答或文章链接异步生成 PPT。调用方创建任务后可通过查询接口轮询任务状态，任务成功后返回 PPTX 文件下载链接。
+
+### 调用流程（3 步）
+
+1. 提交知乎回答或文章链接，创建 PPT 生成任务，获取 `task_id`
+2. 使用 `task_id` 轮询任务状态
+3. 当 `task_status=succeeded` 时，从 `result.url` 下载 PPTX 文件
+
+### 鉴权
+
+- `Authorization: Bearer <your_access_secret>`
+- `X-Request-Timestamp: <unix_seconds>`
+- 创建任务接口支持可选 `Idempotency-Key` Header
+
+### 19.1 创建 PPT 生成任务
+
+| 项目 | 值 |
+|------|-----|
+| HTTP URL | `https://developer.zhihu.com/api/v1/ppt-generation/tasks` |
+| HTTP Method | `POST` |
+| 请求类型 | `application/json` |
+
+**请求参数（Body）：**
+
+| 名称 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| `resource_url` | String | 是 | 知乎回答或文章链接 |
+| `num_pages` | Int32 | 是 | 期望生成页数，范围 6 到 21 |
+
+**支持的 resource_url 格式：**
+
+- `https://www.zhihu.com/question/{question_id}/answer/{answer_id}`
+- `https://www.zhihu.com/answer/{answer_id}`
+- `https://zhuanlan.zhihu.com/p/{article_id}`
+
+**响应参数：**
+
+| 名称 | 类型 | 是否必返 | 说明 |
+|------|------|----------|------|
+| `task_id` | String | 是 | PPT 生成任务 ID |
+| `task_status` | String | 是 | 任务状态，初始通常为 `pending` |
+
+### 19.2 查询 PPT 生成任务
+
+| 项目 | 值 |
+|------|-----|
+| HTTP URL | `https://developer.zhihu.com/api/v1/ppt-generation/tasks/{task_id}` |
+| HTTP Method | `GET` |
+
+**Path 参数：**
+
+| 名称 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| `task_id` | String | 是 | 创建任务接口返回的任务 ID |
+
+**响应参数与 PDF 解析相同：** `task_id`、`task_status`（pending/running/succeeded/failed）、`progress`、`result`、`error`
+
+**Result 结构：**
+
+| 名称 | 类型 | 是否必返 | 说明 |
+|------|------|----------|------|
+| `url` | String | 是 | PPTX 文件下载链接 |
+| `expires_at_ms` | Int64 | 是 | 下载链接过期时间，毫秒级时间戳 |
+
+### 19.3 错误码
+
+| Code | 说明 |
+|------|------|
+| 10001 | 请求参数错误 |
+| 20001 | 鉴权失败或无权限访问 |
+| 30001 | 请求过于频繁 |
+| 30002 | 额度不足 |
+| 40001 | 幂等键与请求参数冲突 |
+| 40003 | 活跃任务数超限 |
+| 90001 | 服务内部错误 |
+
+### 19.4 注意事项
+
+- 当前仅支持知乎回答和知乎专栏文章链接
+- `num_pages` 必须在 6 到 21 之间
+- 查询接口返回的下载链接有效期较短；链接过期后重新查询任务可获得新的下载链接
+- 不要把同一个 `Idempotency-Key` 用于不同请求参数
+
+---
+
 ## 相关概念
 
 - [接入方式与技术架构](../concepts/01-access-architecture.md) — 三种接入方式对比与调用链路
-- [核心能力与命令](../concepts/03-core-capabilities.md) — 四大核心能力详解
+- [核心能力与命令](../concepts/03-core-capabilities.md) — 四大核心能力 + 知识库 + 工具详解
 - [安全设计与凭证管理](../concepts/02-security-credentials.md) — Access Secret 管理与安全机制
