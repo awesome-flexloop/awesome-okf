@@ -35,4 +35,10 @@ bundles/index
 
 知识包（bundle）是 OKF（Open Knowledge Format）规定的结构化知识单元，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。当前共收录 **500 个知识包**，按学科逻辑分为 **9 个学科域、57 个分组**。
 
+### 精选推荐
+
+| 知识包 | 所属域/组 | 亮点 |
+|--------|----------|------|
+| [知乎开放平台 CLI 教程](bundles/jishu/ai/ai-agent/zhihu-cli/index.md) | 技术 · AI · ai-agent | 235 条事实登记 + 55 项 P0 权威核验，覆盖搜索/热榜/直答/知识库/文档工具 6 大 API |
+
 详见 [知识包总索引](bundles/index.md)。

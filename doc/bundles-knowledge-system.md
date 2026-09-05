@@ -31,6 +31,15 @@ sources:
   - id: laozi-log
     resource: bundles/guoxue/laozi/laozi-works/log.md
     title: 老子著作更新日志
+  - id: zhihu-cli
+    resource: bundles/jishu/ai/ai-agent/zhihu-cli/index.md
+    title: 知乎开放平台 CLI 教程（AI 域案例）
+  - id: zhihu-article-source
+    resource: bundles/jishu/ai/ai-agent/zhihu-cli/references/article-source.md
+    title: 知乎 CLI 事实登记（235 条）
+  - id: zhihu-verification
+    resource: bundles/jishu/ai/ai-agent/zhihu-cli/references/verification.md
+    title: 知乎 CLI P0 核验报告（55 项）
 generated: { by: "agent:trae-default", at: "2026-09-03T00:00:00+08:00" }
 status: stable
 stale_after: 2027-09-03
@@ -121,6 +130,16 @@ stale_after: 2027-09-03
 其中 `facts.md` 是纯事实清单，按 `F-001`、`F-002` 这样的编号写；`log.md` 记录什么时候创建、改了什么；正文再组织概念、原文、解读和参考资料。
 
 这说明它记录的不是“最后一篇文章”，而是“这篇文章是怎么长出来的”。这非常像一套面向长期协作的知识生产流水线。
+
+不只国学域如此，技术域的 AI 知识包也是同样的生产方式。以「知乎开放平台 CLI 教程」这个知识包为例：
+
+- `references/article-source.md` 登记了 **235 条事实**（F-001 ~ F-235），每条都标注了来源章节和出处链接
+- `references/verification.md` 做了 **55 项 P0 级权威核验**，区分✅已验证和 ⚠️厂商自述，并给出跟进方案
+- `concepts/` 下的概念文档只负责用事实编号引用，不掺杂无来源表述
+- `examples/` 下有从安装到 MCP 接入再到性能测试的 5 篇实操指南
+- 每次迭代都用七概念方法论（事实采集 → 架构洞察 → 模式萃取 → 原子提交 → 原子化 → 第一性原理 → 对抗审查）推进，并留痕在 `log.md`
+
+也就是说，这套方法论不是为国学或技术某一类内容量身定制的，而是一套跨学科都能用的知识生产流水线。
 
 ## 三、从全局扫描看，这个库已经长成什么样了
 
@@ -262,3 +281,6 @@ invoke gates.all
 - 《老子》著作知识包：[bundles/guoxue/laozi/laozi-works/index.md](bundles/guoxue/laozi/laozi-works/index.md)
 - 《老子》知识包事实清单：[bundles/guoxue/laozi/laozi-works/facts.md](bundles/guoxue/laozi/laozi-works/facts.md)
 - 《老子》知识包更新日志：[bundles/guoxue/laozi/laozi-works/log.md](bundles/guoxue/laozi/laozi-works/log.md)
+- 知乎开放平台 CLI 教程（AI 域案例）：[bundles/jishu/ai/ai-agent/zhihu-cli/index.md](bundles/jishu/ai/ai-agent/zhihu-cli/index.md)
+- 知乎 CLI 事实登记（235 条）：[bundles/jishu/ai/ai-agent/zhihu-cli/references/article-source.md](bundles/jishu/ai/ai-agent/zhihu-cli/references/article-source.md)
+- 知乎 CLI P0 核验报告（55 项）：[bundles/jishu/ai/ai-agent/zhihu-cli/references/verification.md](bundles/jishu/ai/ai-agent/zhihu-cli/references/verification.md)
