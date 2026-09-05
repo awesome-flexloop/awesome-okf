@@ -121,7 +121,7 @@ zhihu-cli/
 - **版本号**：v0.5.0，产品快速迭代中 [F-009]
 - **接入方式**：API + Skill + MCP 三种，可能新增 [E-001]
 
-**建议**：关键数据以官方最新公告为准（https://developer.zhihu.com）。
+**建议**：关键数据以官方最新公告为准（<https://developer.zhihu.com>）。
 
 ## 已知边界
 
