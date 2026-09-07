@@ -56,7 +56,7 @@ BuildMixin    Manager
 | `list(**kwargs)` | name / all / filters={dangling,label} | `list[Image]`，404→`[]` 空列表 | `APIError` | **`name→reference` 映射**(L67)：name 参数自动转成 filters["reference"] |
 
 > **G2 洞察四元组 #3：隐式字段名映射陷阱**
-> docker-py 的 `images.list(name="postgres:16")` 直接走 name 参数；而 podman-py [images_manager.py#L67-68](../../../external/dao/action/Containers/podman-py/podman/domain/images_manager.py#L67-L68) 实际把 `name` 重写为 `filters["reference"]`。当你已经写了 `filters={"reference":"..."}` 又同时传 `name` 时，后者**覆盖**前者，导致过滤失效。
+> docker-py 的 `images.list(name="postgres:16")` 直接走 name 参数；而 podman-py [images_manager.py#L67-68](https://github.com/containers/podman-py/blob/main/podman/domain/images_manager.py#L67-L68) 实际把 `name` 重写为 `filters["reference"]`。当你已经写了 `filters={"reference":"..."}` 又同时传 `name` 时，后者**覆盖**前者，导致过滤失效。
 > **修复决策**：要么传 `name`，要么传 `filters={"reference":...}`，绝不同时传两个。
 
 ## 4.3 pull 四策略 + Rich Progress 优雅降级
@@ -83,7 +83,7 @@ if progress_bar:
     stream = True                 # 必须流式输出
 ```
 
-进度渲染逻辑 [images_manager.py#L401-L461](../../../external/dao/action/Containers/podman-py/podman/domain/images_manager.py#L401-L461)：
+进度渲染逻辑 [images_manager.py#L401-L461](https://github.com/containers/podman-py/blob/main/podman/domain/images_manager.py#L401-L461)：
 1. `Progress(TextColumn + BarColumn + TaskProgressColumn + TimeRemainingColumn)` 构建
 2. `response.iter_lines()` 迭代拉取事件流
 3. `status=="Downloading"` → `add_task(description, total=progressDetail.total)`
@@ -100,7 +100,7 @@ if progress_bar:
 
 **命名**：参数名仍叫 `dockerfile=`，但实际值**可以是 `Containerfile` 路径**（这是 podman-py 对 Docker SDK 兼容的刻意保留）。
 
-高频参数清单 [images_build.py#L29-L73](../../../external/dao/action/Containers/podman-py/podman/domain/images_build.py#L29-L73)：
+高频参数清单 [images_build.py#L29-L73](https://github.com/containers/podman-py/blob/main/podman/domain/images_build.py#L29-L73)：
 
 | 参数 | 类型 | 作用 | Podman-only 标注 |
 |---|---|---|---|
@@ -163,7 +163,7 @@ except APIError as e:
 不是 docker-py 里合并后的单 dict。统计被删 ID 时需遍历提取。
 
 ### 4.5.3 prune 空响应修复
-`images.prune()` 返回 `ImagesDeleted` 列表。libpod API 在没删除任何东西时返回 **`null`**（不是空数组），SDK 在 [images_manager.py#L203-L216](../../../external/dao/action/Containers/podman-py/podman/domain/images_manager.py#L203-L216) 用 `if response.json() is not None` 修复这个行为差异——这是对 libpod 的隐式兼容，用户无感知。
+`images.prune()` 返回 `ImagesDeleted` 列表。libpod API 在没删除任何东西时返回 **`null`**（不是空数组），SDK 在 [images_manager.py#L203-L216](https://github.com/containers/podman-py/blob/main/podman/domain/images_manager.py#L203-L216) 用 `if response.json() is not None` 修复这个行为差异——这是对 libpod 的隐式兼容，用户无感知。
 
 ### 4.5.4 scp 跨主机
 `images.scp(source, dest, quiet)` 对应 `podman image scp` CLI。

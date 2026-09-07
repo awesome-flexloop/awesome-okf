@@ -71,7 +71,7 @@ QuadletsManager(Manager)
         └── 返回 {"InstalledQuadlets":{}, "QuadletErrors":{}}
 ```
 
-**install 多形态示例**（对应 [quadlets.py#L276-L288](../../../external/dao/action/Containers/podman-py/podman/domain/quadlets.py#L276-L288)）：
+**install 多形态示例**（对应 [quadlets.py#L276-L288](https://github.com/containers/podman-py/blob/main/podman/domain/quadlets.py#L276-L288)）：
 
 ```python
 # 形态 a：磁盘路径
@@ -177,7 +177,7 @@ with PodmanClient() as client:
 
 ## 5.4 AGENTS.md 7 大 AI 陷阱（原文数字 1-7 → 本文档 R1-R7 锚定便于引用）
 
-[AGENTS.md L199-L207](../../../external/dao/action/Containers/podman-py/AGENTS.md#L199-L207) 明确定义了 AI 开发者最高频的 7 类错误（原文为 `1. ... 7.` 数字编号，本文档统一用 **R1-R7** 作为稳定锚点编号以便跨文档交叉引用）：
+[AGENTS.md L199-L207](https://github.com/containers/podman-py/blob/main/AGENTS.md#L199-L207) 明确定义了 AI 开发者最高频的 7 类错误（原文为 `1. ... 7.` 数字编号，本文档统一用 **R1-R7** 作为稳定锚点编号以便跨文档交叉引用）：
 
 | 编号 | 陷阱原文 | 典型场景 | 正确实践 |
 |---|---|---|---|
@@ -314,14 +314,14 @@ Python 层支持 Windows 11（pip 直接 `pip install podman`，纯 Python + OS 
 ### 6.2 8 条纯源码事实（G1 零脑补）
 | # | 事实内容 | 源码锚点 |
 |---|---|---|
-| W-R1 | 打包层：pyproject `classifiers = Operating System :: OS Independent`，`requires-python = >=3.9`，Windows 11 CPython 3.9-3.13 直接 pip 安装 | [pyproject.toml](../../../external/dao/action/Containers/podman-py/pyproject.toml#L22-L34) |
-| W-R2 | 传输层 6 scheme 固定清单：`unix / http+unix / ssh / http+ssh / tcp / http` → **没有 `npipe://`（Windows 命名管道）不在列表** | [APIClient.supported_schemes](../../../external/dao/action/Containers/podman-py/podman/api/client.py#L94-L101) |
-| W-R3 | 无参构造回退：优先 `config.active_service.is_machine`（PM-1：macOS/Windows Podman Machine 自动命中）→ 否则 `get_runtime_dir()=XDG_RUNTIME_DIR 或 /run/user/$UID`（纯 Linux 语义，无 win32 分支） | [PodmanClient.__init__](../../../external/dao/action/Containers/podman-py/podman/client.py#L72-L81) / [path_utils.py](../../../external/dao/action/Containers/podman-py/podman/api/path_utils.py#L9-L20) |
-| W-R4 | Win-only 参数：containers_create `cpu_count (int): Windows only` + `cpu_percent (int): Usable percentage Windows only` | [containers_create.py](../../../external/dao/action/Containers/podman-py/podman/domain/containers_create.py#L54-L55) |
-| W-R5 | tar 打包层：`sys.platform == "win32"` 有专门分支，补 Windows tar mode 缺的 0o111 执行位掩码 | [tar_utils.py](../../../external/dao/action/Containers/podman-py/podman/api/tar_utils.py#L95-L96) |
+| W-R1 | 打包层：pyproject `classifiers = Operating System :: OS Independent`，`requires-python = >=3.9`，Windows 11 CPython 3.9-3.13 直接 pip 安装 | [pyproject.toml](https://github.com/containers/podman-py/blob/main/pyproject.toml#L22-L34) |
+| W-R2 | 传输层 6 scheme 固定清单：`unix / http+unix / ssh / http+ssh / tcp / http` → **没有 `npipe://`（Windows 命名管道）不在列表** | [APIClient.supported_schemes](https://github.com/containers/podman-py/blob/main/podman/api/client.py#L94-L101) |
+| W-R3 | 无参构造回退：优先 `config.active_service.is_machine`（PM-1：macOS/Windows Podman Machine 自动命中）→ 否则 `get_runtime_dir()=XDG_RUNTIME_DIR 或 /run/user/$UID`（纯 Linux 语义，无 win32 分支） | [PodmanClient.__init__](https://github.com/containers/podman-py/blob/main/podman/client.py#L72-L81) / [path_utils.py](https://github.com/containers/podman-py/blob/main/podman/api/path_utils.py#L9-L20) |
+| W-R4 | Win-only 参数：containers_create `cpu_count (int): Windows only` + `cpu_percent (int): Usable percentage Windows only` | [containers_create.py](https://github.com/containers/podman-py/blob/main/podman/domain/containers_create.py#L54-L55) |
+| W-R5 | tar 打包层：`sys.platform == "win32"` 有专门分支，补 Windows tar mode 缺的 0o111 执行位掩码 | [tar_utils.py](https://github.com/containers/podman-py/blob/main/podman/api/tar_utils.py#L95-L96) |
 | W-R6 | SSH 方案：scheme 支持 `ssh://`，Windows 11 自带 OpenSSH Client（`ssh.exe` 默认 PATH 可见）→ 原生可调用 | Windows 11 22H2+ 默认安装 OpenSSH Client |
-| W-R7 | 回退 socket：`/run/user/$UID/podman/podman.sock` 在原生 Windows 文件系统下不存在 → 无参构造直接抛 `FileNotFoundError: [Errno 2] No such file or directory`（G2 洞察 #1） | 路径拼接在 `default_local_socket()` → [path_utils.py](../../../external/dao/action/Containers/podman-py/podman/api/path_utils.py#L9-L20) |
-| W-R8 | containers.conf 兼容：PodmanConfig `active_service.is_machine=True` 时 `PodmanClient()` 自动走 `podman-machine-default` 命名连接，无需 base_url（PM-1 PM-2） | [PodmanClient.__init__](../../../external/dao/action/Containers/podman-py/podman/client.py#L72-L81) L57-L59 |
+| W-R7 | 回退 socket：`/run/user/$UID/podman/podman.sock` 在原生 Windows 文件系统下不存在 → 无参构造直接抛 `FileNotFoundError: [Errno 2] No such file or directory`（G2 洞察 #1） | 路径拼接在 `default_local_socket()` → [path_utils.py](https://github.com/containers/podman-py/blob/main/podman/api/path_utils.py#L9-L20) |
+| W-R8 | containers.conf 兼容：PodmanConfig `active_service.is_machine=True` 时 `PodmanClient()` 自动走 `podman-machine-default` 命名连接，无需 base_url（PM-1 PM-2） | [PodmanClient.__init__](https://github.com/containers/podman-py/blob/main/podman/client.py#L72-L81) L57-L59 |
 
 ### 6.3 G2 洞察三坑（Windows 专属四元组）
 | # | 现象（What）| 根因（Why，源码级）| 影响（Impact）| 建议（Fix） |
