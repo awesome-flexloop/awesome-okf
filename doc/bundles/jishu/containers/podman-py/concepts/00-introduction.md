@@ -136,6 +136,7 @@ podman-py 约 12k 行代码按「分层调用」组织，每层单一职责，�
 | Windows 命名管道 `npipe:////./pipe/docker_engine` | ✅ | ❌（仅 unix/tcp/ssh；Windows 用 WSL2 + unix:///mnt/wsl/.../podman.sock 或 tcp://） | 见 01-connection「Windows 推荐路径」 |
 | `client.plugins.*` / `client.secrets.*`（Docker Swarm secrets） | ✅ | ✅（podman secrets_manager 有 CRUD，但语义是 Podman 本地 secret，非 Swarm 全局） | 迁移前评估使用场景 |
 | `.docker/config.json` 完全一致性 | ✅ | 🟡（login() 读写 `~/.config/containers/auth.json`，兼容格式但路径不同；from_env() 可识别两者） | 用 `podman login` 一次性同步即可 |
+| Windows 容器专属参数 `cpu_count / cpu_percent`（Job Object 配额） | ✅（Hyper-V Windows Container 扩展）| ✅（**仅限 Windows 原生容器**；Linux 容器传进去静默忽略，不抛错） | 见 03-containers §3 Create kwargs + 05-advanced §6.5 使用指南 |
 
 ## 5. 版本号双轨（与 Docker SDK 协议版本兼容）
 

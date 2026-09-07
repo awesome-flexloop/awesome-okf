@@ -303,3 +303,60 @@ make validate
 | **R6 Rootful/Rootless 双跑** | 一个模式过一个模式挂 | ① skipif 三元组显式标注 ② 两个模式 CI matrix 都跑 ③ 文档标注受限场景 | 测了 rootless 就说全部 pass |
 | **R7 单源 ignore** | `.vscode/ignore` / `.idea/ignore` 跟 `.gitignore` 不同步 | 公共规则只扩展 `.gitignore`，IDE ignore 只保留 IDE 专属目录 | copy-paste 几百行重复 |
 | **异常分层 9 行模板** | 裸 `except Exception` 无法定位 | `ContainerError→BuildError→NotFound→ImageNotFound→InvalidArgument→APIError 4xx→5xx→ConnectionError→Timeout` 顺序捕获 | `except Exception as e: log(e)` 吞细节 |
+
+---
+
+## 6. Windows 11 × podman-py 支持矩阵（源码锚定版 · OKF v0.2 追加 §6）
+
+### 6.1 结论先行（一句话）
+Python 层支持 Windows 11（pip 直接 `pip install podman`，纯 Python + OS Independent wheel）；**传输层不支持 Windows 命名管道 `npipe://`**；落地按推荐度三选一：⭐⭐⭐⭐⭐ **WSL2 内 unix socket 直连** > ⭐⭐⭐⭐ **Podman Machine (Podman Desktop) ssh://** > ⭐⭐⭐ **`tcp://` + TLS**。
+
+### 6.2 8 条纯源码事实（G1 零脑补）
+| # | 事实内容 | 源码锚点 |
+|---|---|---|
+| W-R1 | 打包层：pyproject `classifiers = Operating System :: OS Independent`，`requires-python = >=3.9`，Windows 11 CPython 3.9-3.13 直接 pip 安装 | [pyproject.toml](../../../external/dao/action/Containers/podman-py/pyproject.toml#L22-L34) |
+| W-R2 | 传输层 6 scheme 固定清单：`unix / http+unix / ssh / http+ssh / tcp / http` → **没有 `npipe://`（Windows 命名管道）不在列表** | [APIClient.supported_schemes](../../../external/dao/action/Containers/podman-py/podman/api/client.py#L94-L101) |
+| W-R3 | 无参构造回退：优先 `config.active_service.is_machine`（PM-1：macOS/Windows Podman Machine 自动命中）→ 否则 `get_runtime_dir()=XDG_RUNTIME_DIR 或 /run/user/$UID`（纯 Linux 语义，无 win32 分支） | [PodmanClient.__init__](../../../external/dao/action/Containers/podman-py/podman/client.py#L72-L81) / [path_utils.py](../../../external/dao/action/Containers/podman-py/podman/api/path_utils.py#L9-L20) |
+| W-R4 | Win-only 参数：containers_create `cpu_count (int): Windows only` + `cpu_percent (int): Usable percentage Windows only` | [containers_create.py](../../../external/dao/action/Containers/podman-py/podman/domain/containers_create.py#L54-L55) |
+| W-R5 | tar 打包层：`sys.platform == "win32"` 有专门分支，补 Windows tar mode 缺的 0o111 执行位掩码 | [tar_utils.py](../../../external/dao/action/Containers/podman-py/podman/api/tar_utils.py#L95-L96) |
+| W-R6 | SSH 方案：scheme 支持 `ssh://`，Windows 11 自带 OpenSSH Client（`ssh.exe` 默认 PATH 可见）→ 原生可调用 | Windows 11 22H2+ 默认安装 OpenSSH Client |
+| W-R7 | 回退 socket：`/run/user/$UID/podman/podman.sock` 在原生 Windows 文件系统下不存在 → 无参构造直接抛 `FileNotFoundError: [Errno 2] No such file or directory`（G2 洞察 #1） | 路径拼接在 `default_local_socket()` → [path_utils.py](../../../external/dao/action/Containers/podman-py/podman/api/path_utils.py#L9-L20) |
+| W-R8 | containers.conf 兼容：PodmanConfig `active_service.is_machine=True` 时 `PodmanClient()` 自动走 `podman-machine-default` 命名连接，无需 base_url（PM-1 PM-2） | [PodmanClient.__init__](../../../external/dao/action/Containers/podman-py/podman/client.py#L72-L81) L57-L59 |
+
+### 6.3 G2 洞察三坑（Windows 专属四元组）
+| # | 现象（What）| 根因（Why，源码级）| 影响（Impact）| 建议（Fix） |
+|---|---|---|---|---|
+| W-I1 | Windows 原生裸 `PodmanClient()` 启动即抛 FileNotFoundError，用户以为包安装失败 | 回退逻辑硬编码 Linux `/run/user/$UID/...`，未处理 win32 平台分支（W-R3 W-R7）| 90% 首次安装直接放弃 | **永远不要无参构造**，显式 `base_url=` 或 配 containers.conf `active_service` |
+| W-I2 | docker-py 老用户直接 paste `base_url="npipe:////./pipe/docker_engine"`（Docker Desktop 标准用法）→ 抛 `ValueError: Unsupported URL scheme` | APIClient 未实现 NamedPipeAdapter，6 scheme 清单无 npipe（W-R2）| docker→podman 迁移最常见挂起点 | 用 6.4 三路径替代，永远不要写 npipe:// |
+| W-I3 | ssh:// Podman Machine 集成测试一直挂 Waiting on podman-forward-*.sock 超 5s | Windows 11 首次 ssh 会弹 `Are you sure you want to continue connecting (yes/no/[fingerprint])?` 阻塞子进程 stdin，100ms 轮询永不通（SSH R5）| 自动化脚本无限等待 | 在命令行先手动 `ssh user@localhost -p <port> exit`（写入 known_hosts），再运行 Python 脚本 |
+
+### 6.4 Windows 11 三路径落地矩阵（推荐度排序）
+| 路径 | 推荐度 | podman-py 代码示例（base_url=）| Windows 11 前置准备（一行级）| 传输性能 | 完整度 | 适用人群 |
+|---|---|---|---|---|---|---|
+| ① **WSL2 内 Podman（本机 Linux 语义）** | ⭐⭐⭐⭐⭐ 首选 | 方案 A：Python 跑在 WSL2 内：`unix:///run/user/1000/podman/podman.sock`<br>方案 B：Windows 11 本机 CPython → `unix:///mnt/wsl/Ubuntu/run/user/1000/podman/podman.sock`（WSLg 文件互通） | `wsl --install Ubuntu` + WSL2 内 `sudo apt install podman` + `systemctl --user enable --now podman.socket` + `loginctl enable-linger $USER`（防登出杀 socket）| 本机 IPC 零拷贝 | 100% 同 Linux | Linux 栈开发者；迁移成本最低 |
+| ② **Podman Machine（Podman Desktop 一键式）** | ⭐⭐⭐⭐ | `PodmanClient()` **无参**（active_service.is_machine=True 自动命中） 或 `ssh://user@127.0.0.1:<machine_port>` | 安装 Podman Desktop → 图形界面点「Initialize Podman Machine」→ `podman machine ssh true` 第一次连写入 known_hosts | SSH 隧道 ~1ms 开销 | 95%+；自动身份 | 零配置；偏好图形化；不想碰 WSL |
+| ③ **`tcp://` + TLS（显式 system service）** | ⭐⭐⭐ 少用 | `tcp://127.0.0.1:8888`，额外传 `tlsclient_cert` + `tlsclient_key` 构造 APIClient TLSConfig | WSL2/Machine 内执行：`podman system service tcp://0.0.0.0:8888 --time=0`（生产必须加 TLS，不要裸监听）| 比 unix 多 ~10% 网络栈开销 | 内网调试场景 | 需要跨主机、CI matrix 分发 |
+| ❌ **npipe://**（Docker Desktop 老习惯）| ❌ 完全不支持 | 永远不要写，直接排除 | APIClient 无 NamedPipeAdapter（W-R2）| — | 0% | 反模式，写入代码前自查 |
+
+### 6.5 Win-only 参数使用指南（迁移 docker-py Windows 容器脚本）
+如果你的脚本跑在 Windows Server/Windows 11 原生 Windows 容器（不是 Hyper-V 隔离的 Linux 容器）上，`containers.create() / run()` 有两个仅 Windows 生效的资源限制参数，**Linux 环境直接忽略不会报错**：
+```python
+c = client.containers.run(
+    "mcr.microsoft.com/windows/servercore:ltsc2022",
+    ["powershell", "-Command", "echo Hello podman-py on Windows Container"],
+    # --↓↓↓ Windows only 参数（Linux 传进去静默忽略，不会抛异常，兼容脚本一套跨平台写）↓↓↓--
+    cpu_count=4,           # int，绑定几颗逻辑 CPU（对应 docker-py --cpus-count Windows 扩展）
+    cpu_percent=50,        # int 0-100，最大允许 CPU 占用百分比（Windows Job Object 配额）
+    # --↑↑↑ Windows only 参数，两个不要和 cpus="..." 同时用（cpus= 走 cgroup v2 Linux 语义）↑↑↑--
+    mem_limit="8g",        # 跨平台通用
+    name="win-build-2022",
+    detach=True,
+)
+```
+
+### 6.6 本节 G3 可迁移模式（Windows 专项 · 3 条）
+| 模式名 | 触发场景 | 核心步骤（3 步内）| 反模式 |
+|---|---|---|---|
+| **W-1 WSL2 零迁移模式** | docker-py 跑在 WSL2 上，切到 podman-py | ① 把 `docker.from_env()` → `PodmanClient()` 同 unix:///run/user/xxx/podman/podman.sock ② 修 sparse=False 补 NetworkSettings ③ 跑一次测试集（≈ 0.5 天完成中大型项目）| 重写所有 API 调用名（`client.containers` 无需动）|
+| **W-2 Machine 无参构造预检** | 团队多人使用 Podman Desktop，脚本写了就给别人跑 | ① 脚本前 3 行先 `from podman.config import PodmanConfig; s = PodmanConfig().active_service` 断言 `s is not None and s.is_machine` 否则提示「打开 Podman Desktop → Initialize Machine」② 失败时给安装链接 ③ ssh 首次登录前跑 `subprocess.run(["podman","machine","ssh","true"])` | 给用户看 FileNotFoundError 堆栈 |
+| **W-3 跨平台写资源参数** | 一套脚本既要跑 Linux/WSL2 也要跑 Windows 原生容器 | ① Linux/WSL2 统一用 `cpus="1.5"` + `mem_limit="4g"`（cgroup v2）② Windows 容器额外追加 `cpu_count` / `cpu_percent` 两参数（Linux 静默忽略）③ 用 os.name 或 platform.system() 判断选分支 | 同时写 cpus="2.0" + cpu_count=2（Windows 容器语义冲突） |

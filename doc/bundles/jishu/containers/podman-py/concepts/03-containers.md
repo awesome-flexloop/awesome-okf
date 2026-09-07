@@ -150,6 +150,9 @@ c = client.containers.create(
     cap_drop=["ALL"], cap_add=["NET_BIND_SERVICE"], security_opt=["no-new-privileges"],
     # 资源限制（cgroup v2）：
     mem_limit="512m", memswap_limit="512m", cpus="1.5", pids_limit=200,
+    # 资源限制（Windows Container 专属，Linux 容器传此二项静默忽略，不抛异常，跨平台兼容写法安全）：
+    # cpu_count=4,   # int，Windows Job Object 绑定逻辑 CPU 数
+    # cpu_percent=50,  # int 0-100，最大 CPU 百分比配额；cpus= 不要与 cpu_count= 同时传
     # 网络：
     network="backend", network_mode="bridge",
     # 健康检查（Containerfile 有 HEALTHCHECK 可省略）：

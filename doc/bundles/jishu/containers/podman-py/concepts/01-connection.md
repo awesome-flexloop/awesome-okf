@@ -195,3 +195,76 @@ client = PodmanClient.from_env(max_pool_size=128, timeout=120)
 | 401 Unauthorized / login 后仍 403 | CONTAINER_HOST 指向远端但 auth.json 未写入对应 registry | `client.login("registry.example.com", username="ci", password=...)`；检查 `~/.config/containers/auth.json` |
 | 抛 `ValueError: Unsupported URL scheme` | URL 错写为 npipe://、docker://、podman:// 等不支持的 scheme | 一定按 6 scheme 用；Windows 走 WSL2 ssh 或 tcp |
 | 并发下 requests 警告 `Connection pool is full, discarding connection` | `max_pool_size` 太小 | 加大 max_pool_size=64 / 128（不要默认 10） |
+
+---
+
+## 8. Windows 11 × podman-py 三路径落地指南（OKF v0.2 追加 §8）
+
+> 与 05-advanced §6 对应：05-advanced 讲为什么（源码锚定+洞察），本节讲怎么做（可粘贴代码）；读者按标题跳转任一即可。
+
+### 8.1 落地路径一（⭐⭐⭐⭐⭐ 首选）：WSL2 内 Podman 直连
+**场景：** 你用 Windows 11 做开发，安装了 WSL2（任何发行版）。
+```python
+# —— 方案 A：Python 进程直接跑在 WSL2 内（最稳定，100% 同 Linux 行为）——
+from podman import PodmanClient
+
+# 直接连 WSL2 里用户自己的 podman socket（用户空间 rootless）
+with PodmanClient(base_url="unix:///run/user/1000/podman/podman.sock") as client:
+    # 所有 API（containers/images/quadlets/system）与 Linux 完全一致
+    info = client.info()
+    print("host arch =", info["host"]["arch"], "os =", info["host"]["os"])
+
+# —— 方案 B：Python 跑在 Windows 11 本机（CPython 原生），通过 WSL 9P 文件互通 unix socket ——
+# 要求 WSL2 发行版名是 Ubuntu；改成你自己的发行版名
+with PodmanClient(base_url="unix:///mnt/wsl/Ubuntu/run/user/1000/podman/podman.sock") as client:
+    imgs = client.images.list(name="docker.io/library/alpine")
+    print("本地 Alpine 镜像数 =", len(imgs))
+```
+**前置准备一行记：** `wsl --install Ubuntu` → WSL 内 `sudo apt install podman` → `systemctl --user enable --now podman.socket` → `loginctl enable-linger $USER`（最后一条防登出杀 socket，跨 reboot 保留）。
+
+### 8.2 落地路径二（⭐⭐⭐⭐）：Podman Machine (Podman Desktop)
+**场景：** 装了 Podman Desktop（图形化客户端），不想碰 WSL2 命令行，零配置。
+```python
+from podman import PodmanClient
+from podman.config import PodmanConfig
+
+# —— 推荐写法：自动走 active_service（is_machine=True 自动命中 PM-1 PM-2）——
+# 要求：Podman Desktop 打开，初始化过一次 Podman Machine
+with PodmanClient() as client:            # 无参！不需要 base_url
+    try:
+        version = client.version()        # Ping 一下确认连通
+        print("Podman engine =", version["Version"])
+    except Exception as e:
+        cfg = PodmanConfig()
+        if cfg.active_service is None or not cfg.active_service.is_machine:
+            raise SystemExit(
+                "未检测到 Podman Machine，请打开 Podman Desktop → 'Initialize Podman Machine' "
+                "或命令行执行 'podman machine init && podman machine start'。错误详情：" + str(e)
+            )
+        raise
+```
+**第一次 ssh 必须手连（防 W-I3 挂死）：** 命令行执行 `podman machine ssh true` → 出现 `Are you sure you want to continue connecting?` 打 **yes** 回车（把 machine host key 写进 `known_hosts`，后面 Python 脚本不会卡）。
+
+### 8.3 落地路径三（⭐⭐⭐）：tcp:// + TLS
+**场景：** 跨主机调用 Podman，或 CI 里需要多个 runner 连一个 Podman 服务。
+```python
+# 生产必须加 TLS！不要裸监听 0.0.0.0
+from podman import PodmanClient
+
+# 仅本机 127.0.0.1 示例；跨主机把 127.0.0.1 改成对应网卡 + TLSConfig
+with PodmanClient(
+    base_url="tcp://127.0.0.1:8888",
+    # tls_verify=True + tlsclient_cert/tlsclient_key 传证书（APIClient TLSConfig 字段）
+    tls_verify=True,
+) as client:
+    ok = client.ping()
+    print("tcp ping =", ok)
+```
+**服务端启动一行记：** `podman system service tcp://0.0.0.0:8888 --time=0`；生产前务必配置 `containers.conf` `[engine] service_timeout` + 双向 TLS。
+
+### 8.4 Windows 常见踩坑速查表（3 条必背）
+| 坑 | 报错文案第一眼 | 为什么（源码级）| 30 秒修复 |
+|---|---|---|---|
+| ⚠️ **无参构造在 Windows 原生挂** | `FileNotFoundError: [Errno 2] No such file or directory: '/run/user/...` | default_local_socket() 拼的 Linux 路径，Windows 不存在（W-R3 W-R7）| 显式传 `base_url=` 或 走路径二 Machine |
+| ⚠️ **写 npipe:// 直接挂** | `ValueError: Unsupported URL scheme 'npipe'` | 6 scheme 无 npipe 适配器（W-R2）| 改成本节三种路径之一，永远别写 npipe |
+| ⚠️ **ssh 模式卡 5 秒后 Timeout** | `TimeoutExpired: Waiting on podman-forward-xxxx.sock` | 第一次 ssh host key 交互阻塞子进程 stdin（W-I3）| `podman machine ssh true` 先连一次写 known_hosts |
