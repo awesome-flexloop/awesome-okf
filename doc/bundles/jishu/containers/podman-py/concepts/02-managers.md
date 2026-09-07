@@ -1,189 +1,206 @@
 ---
 type: Concept
-title: "资源管理器架构"
-description: "PodmanClient 的 9 个资源管理器（Managers）设计模式、cached_property 懒加载、Manager 基类与资源模型关系。"
-tags: [podman-py, managers, architecture, ContainersManager, ImagesManager, cached_property, domain]
-generated: { by: "reference_agent/trae-cn", at: 2026-08-26T15:45:00+08:00 }
-verified: { by: "process:grep-v", at: 2026-08-26T15:45:00+08:00 }
+title: 02 - 资源管理器架构：Mixin + Manager
+description: Manager 基类骨架 + @property resource + prepare_model()、@cached_property 9个管理器懒加载（containers/images/manifests/networks/volumes/pods/secrets/system/+quadlets）、Mixin 横切扩展 RunMixin/CreateMixin/BuildMixin、PodmanResource 基类属性与实例方法、资源对象-管理器关系图
+tags: [Manager Pattern, Mixin, cached_property, PodmanResource, CRUD Skeleton, 三继承模式]
+generated:
+  by: method_orchestrator/seven-concepts-cmd
+  at: 2026-09-07T00:00:00Z
+verified:
+  by: process:podman-py-grep-20260907
+  at: 2026-09-07T00:00:00Z
 status: stable
-stale_after: 2027-08-26
+stale_after: 2027-09-07
 sources:
-  - id: client
-    resource: /references/client-source.md
-    title: client.py PodmanClient 核心客户端
-  - id: api
-    resource: /references/api-source.md
-    title: api/ HTTP 传输层实现
+  - id: src-manager-base
+    resource: ../../../../../external/dao/action/Containers/podman-py/podman/domain/manager.py
+    title: Manager 基类 list/get/exists + prepare_model + self.api + self.client 属性
+  - id: src-podmanresource
+    resource: ../../../../../external/dao/action/Containers/podman-py/podman/domain/manager.py
+    title: PodmanResource attrs / id / short_id / name / reload() / remove() 基类
+  - id: src-9managers
+    resource: ../../../../../external/dao/action/Containers/podman-py/podman/client.py
+    title: PodmanClient 9 个 @cached_property 管理器注册
+  - id: src-runmixin
+    resource: ../../../../../external/dao/action/Containers/podman-py/podman/domain/containers_run.py
+    title: RunMixin.run() image+command+detach/stream/remove 4语义
+  - id: src-createmixin
+    resource: ../../../../../external/dao/action/Containers/podman-py/podman/domain/containers_create.py
+    title: CreateMixin.create(** 30+ kwargs → /libpod/containers/create)
+  - id: src-buildmixin
+    resource: ../../../../../external/dao/action/Containers/podman-py/podman/domain/images_build.py
+    title: BuildMixin.build(path, containerfile, buildargs, stream, nocache, squahs, gzip → BuildError)
 ---
 
-# 资源管理器架构
+# 02 - 资源管理器架构：Mixin + Manager
 
-podman-py 采用**管理器模式（Manager Pattern）**组织各类容器资源的操作，通过 `@cached_property` 实现懒加载，将不同资源域的 API 隔离在独立的 Manager 类中。所有 Manager 继承自 `podman.domain.manager.Manager` 基类，负责与 APIClient HTTP 层交互并返回领域模型对象。
+podman-py 领域层（domain/）采用 **「Manager 基类（纵向 CRUD） + Mixin 扩展（横向语义）」** 双模式组合：所有 9 个资源类型共享同一套 Manager 骨架（list/get/exists/create/prepare_model），但 Containers 需要 `run()` 语义、Images 需要 `build()` 语义——通过 Mixin 在不变更基类的情况下追加扩展。
 
-## 管理器总览
+## 1. PodmanClient：9 个管理器懒加载（@cached_property）
 
-`PodmanClient` 通过 `@cached_property` 暴露 9 个资源管理器，首次访问时初始化并缓存：
+PodmanClient（薄门面）不 new 具体 Manager，首次访问时才实例化。源码中 9 个管理器的定义顺序（`podman/client.py` L146-L188）如下，实际使用时通过属性名访问，顺序不影响语义：
 
-```
-PodmanClient
-├── .containers    → ContainersManager   # 容器生命周期
-├── .images        → ImagesManager       # 镜像管理与构建
-├── .manifests     → ManifestsManager    # 镜像清单
-├── .networks      → NetworksManager     # 网络配置
-├── .volumes       → VolumesManager      # 数据卷
-├── .pods          → PodsManager         # Pod 容器组
-├── .secrets       → SecretsManager      # 密钥管理
-├── .quadlets      → QuadletsManager     # Quadlet 单元文件
-└── .system        → SystemManager       # 系统级操作
-```
+| # | @cached_property 名称 | 对应 Python 文件 | 继承组合 | 资源对象类 |
+|---|---|---|---|---|
+| 1 | **`containers`** | `domain/containers_manager.py` | **RunMixin + CreateMixin + Manager**（三继承，最多） | Container |
+| 2 | **`images`** | `domain/images_manager.py` | **BuildMixin + Manager**（二继承） | Image |
+| 3 | **`manifests`** | `domain/manifests.py` | Manager（纯） | Manifest |
+| 4 | **`networks`** | `domain/networks_manager.py` | Manager（纯） | Network |
+| 5 | **`volumes`** | `domain/volumes.py` | Manager（纯） | Volume |
+| 6 | **`quadlets`** | `domain/quadlets.py`（v5.8 **新增**） | Manager（纯） | Quadlet（6 个属性 + delete/get_contents/print_contents） |
+| 7 | **`pods`** | `domain/pods_manager.py` | Manager（纯） | Pod |
+| 8 | **`secrets`** | `domain/secrets.py` | Manager（纯） | Secret |
+| 9 | **`system`** | `domain/system.py` | Manager（纯，同时 7 个方法被挂 PodmanClient 门面：df/ping/version/info/events/login/close） | — |
 
-## Manager 基类设计
-
-所有管理器位于 `podman/domain/` 目录，继承自 `Manager` 基类：
-
-```python
-class Manager:
-    @property
-    def resource(self):
-        """返回此 Manager 管理的资源模型类，prepare_model() 使用"""
-        raise NotImplementedError
-
-    def prepare_model(self, attrs):
-        """将 API 返回的 JSON 字典转换为资源模型对象"""
-        return self.resource(attrs=attrs, client=self.api)
-```
-
-核心机制：
-- `resource` 属性：子类必须返回对应的模型类（如 `Container`、`Image`）
-- `prepare_model()`：将 API 响应的 JSON dict 实例化为领域模型对象
-- `self.api`：持有 `APIClient` 实例，用于发送 HTTP 请求
-
-## @cached_property 懒加载
-
-管理器使用 Python 3.8+ 内置的 `functools.cached_property` 装饰器：
+**懒加载模式源码示例**（client.py 任意一条 @cached_property）：
 
 ```python
 @cached_property
 def containers(self) -> ContainersManager:
-    return ContainersManager(client=self.api, podman_client=self)
+    return ContainersManager(client=self)  # Manager 构造时拿到 PodmanClient 引用
 ```
 
-特点：
-- **首次访问时初始化**：不访问的管理器不会实例化，减少启动开销
-- **实例级别缓存**：同一 PodmanClient 实例多次访问返回同一 Manager 对象
-- **持有 APIClient 引用**：所有 Manager 共享底层 HTTP 连接池
+懒加载的好处：
+- 你只用 `client.version()`、`client.ping()` 时，不会 import 任何 domain/*.py，启动快；
+- 任何管理器构造异常（比如缺依赖）只在首次访问时抛，不阻塞其他功能；
+- 新增资源类型（如 v5.8 quadlets）**只加一个 cached_property + 一个 Manager 文件**，零回归。
 
-## ContainersManager（容器管理器）
+## 2. Manager 基类骨架（podman/domain/manager.py Manager）
 
-文件：`podman/domain/containers_manager.py`，继承自 `RunMixin, CreateMixin, Manager`
-
-| 方法 | 说明 |
-|------|------|
-| `list(**kwargs)` | 列出容器，支持 `all`/`filters`/`sparse`/`compatible` 等参数 |
-| `get(key, **kwargs)` | 按名称或 ID 获取单个容器 |
-| `exists(key)` | 检查容器是否存在 |
-| `create(image, **kwargs)` | 创建容器（来自 CreateMixin） |
-| `run(image, **kwargs)` | 创建并启动容器（来自 RunMixin） |
-| `remove(container_id, **kwargs)` | 删除容器，支持 `force`/`v` 参数 |
-| `prune(filters=None)` | 清理已停止的容器 |
-
-**sparse 模式**：`list(sparse=True)`（libpod 默认）只返回基本信息，需要调用 `container.reload()` 获取完整属性，提高列表性能；`compatible=True`（Docker 兼容模式）默认 `sparse=False`。
-
-## ImagesManager（镜像管理器）
-
-文件：`podman/domain/images_manager.py`，继承自 `BuildMixin, Manager`
-
-| 方法 | 说明 |
-|------|------|
-| `list(**kwargs)` | 列出镜像，支持 `name`/`all`/`filters` |
-| `get(name)` | 按名称或 ID 获取镜像 |
-| `exists(key)` | 检查镜像是否存在 |
-| `pull(repository, tag=None, **kwargs)` | 拉取镜像，支持 `progress_bar`/`stream`/`platform` |
-| `push(repository, tag=None, **kwargs)` | 推送镜像到 registry |
-| `build(**kwargs)` | 从 Containerfile 构建镜像（来自 BuildMixin） |
-| `remove(image, force=None, noprune=False)` | 删除镜像 |
-| `load(data=None, file_path=None)` | 从 tar 包加载镜像 |
-| `prune(**kwargs)` | 清理未使用的镜像 |
-| `search(term, **kwargs)` | 搜索 registry 镜像 |
-| `scp(source, dest=None, quiet=False)` | 在主机间安全复制镜像 |
-| `get_registry_data(name, auth_config=None)` | 获取镜像 registry 元数据 |
-
-**pull 进度条**：安装 `rich` 后可使用 `pull(..., progress_bar=True)` 显示下载进度。
-
-## 其他管理器速查
-
-| 管理器 | 文件 | 核心操作 |
-|--------|------|---------|
-| `ManifestsManager` | `podman/domain/manifests.py` | 多架构清单创建/推送/查看 |
-| `NetworksManager` | `podman/domain/networks_manager.py` | 网络创建/列表/删除/连接/断开 |
-| `VolumesManager` | `podman/domain/volumes.py` | 数据卷创建/列表/删除/清理 |
-| `PodsManager` | `podman/domain/pods_manager.py` | Pod 组创建/启动/停止/删除 |
-| `SecretsManager` | `podman/domain/secrets.py` | Secret 创建/列表/删除 |
-| `QuadletsManager` | `podman/domain/quadlets.py` | Quadlet 单元文件管理（Podman 特有） |
-| `SystemManager` | `podman/domain/system.py` | `df()`/`info()`/`ping()`/`version()`/`login()` |
-
-## Mixin 组合模式
-
-部分管理器通过 Mixin 类扩展能力：
+Manager 是所有资源管理器的纵向基类，定义统一 CRUD 骨架 + 资源对象装配：
 
 ```
-ContainersManager
-├── Manager          # 基类：get/list/remove/prune/exists/prepare_model
-├── CreateMixin      # create() 方法
-└── RunMixin         # run() 方法（create + start）
-
-ImagesManager
-├── Manager          # 基类
-└── BuildMixin       # build() 方法
+Manager（抽象基类，不可直接 new）
+ ├── 构造：__init__(client, /) → self._client = client; self.collection = <HTTP path 前缀如 "/containers">
+ │
+ ├── self.client → PodmanClient 引用（用于跨 Manager 调用，如 container.exec_run 内部再拉 images.pull）
+ ├── self.api    → APIClient 引用（self.client.api，直接发 HTTP，不写 requests 代码）
+ │
+ ├── @property @abstractmethod resource → 返回"资源对象类"（如 Container/Image/Quadlet）
+ │     子类必须实现：
+ │       ContainersManager: return Container
+ │       ImagesManager:     return Image
+ │       QuadletsManager:   return Quadlet
+ │
+ ├── list(**kwargs) → 默认发 GET /{collection}/json，响应每个 dict 走 prepare_model 组装资源对象
+ ├── get(key, **kwargs) → GET /{collection}/{key}/json，404 → NotFound，prepare_model → 单个资源对象
+ ├── exists(key) → GET /{collection}/{key}/exists，返回 response.ok（True/False，永不抛 404）
+ │
+ └── prepare_model(attrs=resp.json, /) → 核心装配函数：
+        attrs["manager"] = self  # 资源对象能反向找到 manager，从而调 reload/remove/exec_run
+        attrs["client"]  = self._client
+        return self.resource(attrs)  # 调资源类构造函数
 ```
 
-这种组合模式将不同维度的操作分离到独立的 Mixin 类中，避免 Manager 类过于庞大。
-
-## 直接方法代理
-
-PodmanClient 上的系统级方法实际代理到对应管理器：
+关键示例（ContainersManager 真实 3 行模式）：
 
 ```python
-def df(self) -> dict[str, Any]:
-    return self.system.df()
+class ContainersManager(RunMixin, CreateMixin, Manager):  # ← 三继承：RunMixin/CreateMixin 横切 Manager
+    @property
+    def resource(self):  # 满足 abstractmethod，返回类对象（不是实例）
+        return Container
 
-def ping(self) -> bool:
-    return self.system.ping()
-
-def events(self, *args, **kwargs):
-    return EventsManager(client=self.api).list(*args, **kwargs)
+    def get(self, key, **kwargs):  # ← 可以覆盖基类，追加 compatible 参数、sparse 逻辑
+        compatible = kwargs.get("compatible", False)
+        cid = urllib.parse.quote_plus(key)
+        resp = self.api.get(f"/containers/{cid}/json", compatible=compatible)
+        resp.raise_for_status()
+        return self.prepare_model(attrs=resp.json())
 ```
 
-## 领域目录结构（podman/domain/）
+## 3. Mixin 横切扩展：RunMixin / CreateMixin / BuildMixin
 
-| 文件 | 说明 |
-|------|------|
-| `manager.py` | Manager 基类 |
-| `config.py` | PodmanConfig 配置解析（containers.conf） |
-| `containers.py` / `containers_create.py` / `containers_manager.py` / `containers_run.py` | 容器域模型与管理器 |
-| `images.py` / `images_build.py` / `images_manager.py` | 镜像域模型与管理器 |
-| `networks.py` / `networks_manager.py` | 网络模型与管理器 |
-| `volumes.py` / `pods.py` / `secrets.py` / `manifests.py` / `quadlets.py` | 其他资源模型 |
-| `system.py` | 系统管理器 |
-| `events.py` | 事件管理器 |
-| `json_stream.py` | JSON 流解析器 |
-| `ipam.py` | IP 地址管理配置 |
-| `registry_data.py` | Registry 元数据模型 |
+**Mixin 是不带构造、只带一个方法的纯逻辑类**（Go 语言 interface 默认方法等价物），插到继承链左端即被 Python 方法解析顺序（MRO）匹配为第一候选方法：
 
-## 资源模型对象
+| Mixin 名称 | 插入的 Manager | 提供方法 | 复杂度（行数） | 代码位置 |
+|---|---|---|---|---|
+| **RunMixin** | ContainersManager 左端 | `run(image, command, *, detach/stream/remove/auto_remove, **kwargs → Container or Generator[bytes] or Iterator[bytes] or raise ContainerError)` | ~90 行 | `containers_run.py` |
+| **CreateMixin** | ContainersManager 中间 | `create(image, command=None, **~30 kwargs → Container)` 调 `/libpod/containers/create` + 如果镜像不存在按 policy pull | ~50 行 | `containers_create.py` |
+| **BuildMixin** | ImagesManager 左端 | `build(path, containerfile="Containerfile", buildargs, tags, nocache, pull, rm, squash, platform, network, gzip, extra_hosts, stream → (Image, build_log) or stream=True→ Iterator[dict])` BuildError 抛错 | ~120 行 | `images_build.py` |
 
-每个 Manager 返回对应的资源模型实例（如 `Container`、`Image`、`Network`、`Volume`），模型对象持有 `client.api` 引用，可以执行实例级操作：
+> 为什么 **Mixin 左端继承顺序很重要**？Python MRO 从左到右匹配同名方法：
+> `class ContainersManager(RunMixin, CreateMixin, Manager):` → 当外部调 `cm.run()`，先查 RunMixin（命中，正确）；若顺序写反 `Manager, RunMixin` → 先查 Manager（无 run，AttributeError，失败）。
 
-```python
-container = client.containers.get("my-container")
-container.start()      # 实例方法：启动
-container.stop()       # 实例方法：停止
-container.reload()     # 重新加载属性
-container.logs()       # 获取日志
+### 3.1 Mixin 与 Manager 基类的协作（以 RunMixin.run 为例）
+
+RunMixin.run 的四返回语义完全依赖 Manager 基类的 prepare_model + 资源对象方法：
+
+```
+RunMixin.run(
+    image="docker.io/library/postgres:16",
+    command=["postgres"],
+    detach=True, remove=False,
+    ports={"5432/tcp": 5432}, environment={"POSTGRES_PASSWORD":"xxx"}
+)
+│
+├── ① isinstance(Image) 处理 → 归一化 image_id = str
+├── ② self.create(image=image_id, command=command, ports=ports, environment=...)
+│        │  这个 self.create 来自 CreateMixin（因为 MRO 左端第二），不是 Manager 基类
+│        └─→ return Container 对象（通过 Manager.prepare_model 装配）
+│
+├── ③ container.start()      ← Container 资源对象自身的实例方法（来自 PodmanResource 子类）
+├── ④ container.reload()     ← Container 资源对象方法，调 manager.get(key) 刷新 attrs
+│
+├── ⑤ if detach:
+│       if remove=True: 起 daemon thread 监控 container.wait() 退出后调 container.remove(v=True)
+│       return container  ← Case 1：返回 Container 对象（最常用）
+│   else:
+│       等待 container.wait()
+│       if exit_status != 0: raise ContainerError(container, exit_status, command, image, stderr)
+│       return logs(stream=True → Generator; stream=False → Iterator)
+│                    ← Case 2/3/4：日志流 or 错误
 ```
 
-## 相关概念
+这解释了一个常见困惑：**"containers.run() 代码在哪？"** — 不在 containers_manager.py，在左邻的 containers_run.py。查文档先看 MRO 继承链！
 
-- [/concepts/01-connection.md](01-connection.md)
-- [/concepts/03-containers.md](03-containers.md)
-- [/concepts/04-images.md](04-images.md)
+## 4. PodmanResource 基类：所有资源对象的骨架（manager.py 内定义）
+
+资源对象（Container/Image/Volume 等）构造时带 `attrs` dict + `manager` + `client` 反向引用，因此能自己发 API：
+
+```
+PodmanResource（抽象基类）
+ ├── __init__(attrs, /) → self.attrs = attrs; self.id = attrs["Id"]; self.short_id = id[:12]; self.name = attrs.get("Name", "")
+ ├── self.manager 反向引用 → 能调 manager.get(self.id) 做 reload
+ ├── self.client  反向引用 → 能调 client.* 或 client.images.* 等跨管理器
+ │
+ ├── reload(**kwargs) → 模板方法：GET /{collection}/{self.id}/json → 更新 self.attrs（子类覆盖 URL 路径）
+ ├── remove(**kwargs) → 模板方法：DELETE /{collection}/{self.id}（force/v 等 kwargs 透传）
+ │
+ └── 资源子类追加方法（举例）
+     Container: start / stop(timeout=10) / kill(signal="SIGKILL") / pause / unpause / restart
+                exec_run(cmd, stdout=True, stderr=True, stdin=False, tty=False,
+                         stream=False, detach=False, workdir, user, environment)
+                logs(stream, timestamps, tail, since, until, stdout, stderr)
+                wait(condition="exited" / "removed" / "stopped" / "running")
+                top(ps_args) / stats(stream, decode) / commit(repository, tag, ...) → Image
+                diff / rename(name) / resize(h, w) / attach / export(chunk_size) → tar stream
+     Image:     tag(repo, tag, force) / history / inspect_distribution
+                save(chunk_size) → tar stream  (配对：images_manager.load(tar))
+     Quadlet:   delete(force, ignore, reload_systemd) / get_contents → str / print_contents → None
+```
+
+**管理器-资源对象-API 三层关系（UML 风格文字图）**
+
+```
+PodmanClient (client.py)
+    │ @cached_property containers  ──── new ──▶  ContainersManager (domain/containers_manager.py)
+    │                                                       │ extends Manager (domain/manager.py)
+    │                                                       │   Manager.list/get/exists/prepare_model
+    │                                                       │ extends RunMixin (domain/containers_run.py)  → run(...)
+    │                                                       │ extends CreateMixin(domain/containers_create.py)→ create(...)
+    │                                                       │
+    │ .get(id) / .list() → prepare_model(attrs) ────── new ▼
+    │                                            Container (domain/containers.py extends PodmanResource)
+    │                                                         │ .start/stop/pause/exec_run/logs/reload/remove
+    │                                                         └──→ .manager = ContainersManager（反向回指）
+    │ .containers.get("abc").exec_run("ls -la")
+    └──────────────────────────────────────────────────────────────▶ exec_run 内部 .manager.api.post(f".../exec")
+```
+
+## 5. 模式可迁移（G3 触发条件/核心步骤/反模式）
+
+| 维度 | 内容（直接可复用到 docker SDK 编写、自建 API SDK、云 SDK 等场景） |
+|---|---|
+| **触发场景** | ①面向 RESTful/UDS 资源的 Python SDK；②需要对多个资源（container/image/network…）提供一致 CRUD；③需要追加高阶语义（run/build）又不想修改基类；④ 已有另一个 SDK（docker-py）要做兼容 API |
+| **核心步骤** | ① 定义 Thin Facade（PodmanClient），管理器通过 @cached_property 懒加载；② 建 Manager 基类：list/get/exists（默认） + 抽象 @property resource + prepare_model；③ 每个资源新建 XxxManager(extend Manager) + 对应 XxxResource(extend PodmanResource)；④ 高阶语义独立 Mixin 文件，按 MRO 左端顺序插入；⑤ 资源对象 attrs/manager/client 三属性，保证 reload/remove 等模板方法可复用 |
+| **反模式（切勿踩）** | ❌ 厚门面：管理器实现全写在 client.py，回归慢；❌ Mixin 顺序写反导致 AttributeError；❌ 资源对象不反向回指 manager，每次 reload 都让用户调 manager.get(id)（体验差）；❌ 所有管理器硬编码一个继承类，用 if-elif 分发 run/build（违反开闭，新增资源必须改基类）；❌ 不用 lazy property，启动时 9 个管理器全 import 全构造（冷启动慢 3-5 倍） |

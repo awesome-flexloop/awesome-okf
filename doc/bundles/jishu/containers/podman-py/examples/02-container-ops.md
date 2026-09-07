@@ -1,310 +1,274 @@
 ---
-type: Example
-title: "容器创建、启动、停止完整操作"
-description: "从零开始完成容器的拉取镜像、创建、启动、日志查看、执行命令、停止与删除的完整操作流程示例。"
-tags: [podman-py, containers, create, start, stop, logs, exec_run, example]
-generated: { by: "reference_agent/trae-cn", at: 2026-08-26T15:45:00+08:00 }
-verified: { by: "process:grep-v", at: 2026-08-26T15:45:00+08:00 }
+type: example
+title: 02 - 三服务编排生命周期（Quadlet + Postgres + Redis + Nginx）
+description: 端到端15步流水线：socket前置检查→清理旧资源→拉镜像→Quadlet安装→contents校验→report健康→容器create+start→exec_run(pg_isready/redis-cli ping)→logs→优雅stop顺序→remove v=True→prune label=env=demo；异常捕获清单
+tags: [podman-py, quadlets, postgres, redis, nginx, lifecycle-ops, multi-service]
+generated:
+  by: process:seven-concepts/sc-20260907-podman-py/e-phase
+  at: 2026-09-07
+verified:
+  by: human:xinzo
+  at: 2026-09-07
 status: stable
-stale_after: 2027-08-26
+stale_after: 2027-09-07
 sources:
-  - id: client
-    resource: /references/client-source.md
-    title: client.py PodmanClient 核心客户端
+  - id: src-quadlets-install
+    resource: external/dao/action/Containers/podman-py/podman/domain/quadlets.py#L229-L318
+    title: QuadletsManager.install 源码 — tuple(str,bytes)/路径/tarball 三形态 + replace/reload_systemd
+  - id: src-containers-run
+    resource: external/dao/action/Containers/podman-py/podman/domain/containers_run.py
+    title: RunMixin.run 源码 — 4 返回分支
+  - id: src-containers-exec
+    resource: external/dao/action/Containers/podman-py/podman/domain/containers.py
+    title: Container.exec_run / logs / start / stop / remove
 ---
 
-# 容器创建、启动、停止完整操作
+# 02 - 三服务编排生命周期（Quadlet + Postgres + Redis + Nginx）
 
-本示例演示使用 podman-py 完成容器从创建到删除的完整生命周期操作：拉取镜像 → 创建容器 → 启动 → 查看状态与日志 → 执行命令 → 停止 → 删除。
+> **场景**：本地开发环境用 Quadlet 描述 Postgres 持久化服务；Redis + Nginx 用 SDK 临时容器做演示。
+> **前置要求**：Podman ≥ 5.8（Quadlets API），Rootless，`loginctl enable-linger $USER`（logout 不丢 quadlet 服务）
 
-## 前置条件
-
-1. 已安装 Podman 并启动服务：
-
-```bash
-# 检查 Podman 是否可用
-podman info
-
-# 如果是 rootless 模式，确保用户 socket 可用
-systemctl --user enable --now podman.socket
-```
-
-2. 已安装 podman-py：
-
-```bash
-pip install podman
-```
-
-## 完整操作脚本
+## E2.1 前置断言函数（3 条检查不通过直接退出）
 
 ```python
-from podman import PodmanClient, from_env
-import time
+import os
+import subprocess
+from podman import PodmanClient
+from podman.errors import (
+    ContainerError, ImageNotFound, APIError, NotFound,
+)
 
-def main():
-    # 使用 with 语句自动管理连接
-    with from_env() as client:
-        print("=" * 50)
-        print("1. 检查 Podman 连接")
-        print("=" * 50)
+def preflight(client: PodmanClient):
+    """前置 3 条健康检查，1 条失败就 fail-fast"""
+    # 1. socket 可 ping
+    assert client.ping(), "socket 不可达，检查 podman.service"
+    # 2. podman --version ≥ 5.8（Quadlets 需要）
+    ver = client.version()["Version"].split(".")
+    ver_t = tuple(int(x) for x in ver[:2])
+    assert ver_t >= (5, 8), f"需要 podman ≥ 5.8 实际 {'.'.join(ver)}"
+    # 3. enable-linger 已开（否则 loginctl logout 会杀掉 systemd --user）
+    r = subprocess.run(["loginctl", "show-user", str(os.getuid()),
+                         "-p", "Linger", "--value"], capture_output=True, text=True)
+    assert r.stdout.strip() == "yes", (
+        "loginctl enable-linger $USER 未执行，"
+        "logout 后 quadlet systemd 服务会停止"
+    )
+    print(f"[preflight] podman {'.'.join(ver)} + linger=yes  ✅")
+```
 
-        version = client.version()
-        print(f"Podman 版本: {version['Version']}")
-        print(f"API 版本: {version['ApiVersion']}")
-        print(f"服务可达: {client.ping()}")
+## E2.2 15 步生命周期流水线（完整脚本）
+
+```python
+ENV_LABEL = "env=demo"
+
+def pipeline():
+    with PodmanClient(compatible=True) as client:
+        preflight(client)
+
+        # ───────────────── Step 1: version / Step 2: 清理旧资源 ─────────────────
         info = client.info()
-        print(f"操作系统: {info['host']['os']}")
-        print(f"内核版本: {info['host']['kernel']}")
-        print()
+        print(f"[1/15] host={info['Host']['hostname']} arch={info['Host']['arch']}")
 
-        print("=" * 50)
-        print("2. 拉取镜像")
-        print("=" * 50)
+        print("[2/15] 清理 label=env=demo 的容器和 quadlet")
+        for ct in client.containers.list(all=True, filters={"label": ENV_LABEL}):
+            ct.remove(force=True, v=True)
+        for q in client.quadlets.list():
+            if "demo" in q.name:
+                client.quadlets.delete(q.name, force=True, ignore=True)
+        pr = client.containers.prune(filters={"label": ENV_LABEL})
+        print(f"       containers prune {len(pr['ContainersDeleted'])} 个")
 
-        IMAGE = "alpine:latest"
-        CONTAINER_NAME = "demo-hello"
+        # ───────────────── Step 3: 拉取三张镜像 ─────────────────
+        IMGS = [
+            ("postgres:16-alpine", "PG主库"),
+            ("redis:7-alpine",    "Redis缓存"),
+            ("nginx:alpine",      "Nginx反代"),
+        ]
+        print("[3/15] images.pull 三张镜像（progress_bar=True, policy=newer）")
+        for ref, _desc in IMGS:
+            try:
+                client.images.pull(ref, policy="newer", progress_bar=True)
+            except ModuleNotFoundError as e:
+                # pip install 'podman[progress]' 没装时降级
+                print(f"       {ref}: rich.progress 未装，降级纯文本 pull")
+                client.images.pull(ref, policy="newer")
+            print(f"       {ref} ✅")
 
-        # 检查镜像是否存在，不存在则拉取
-        if not client.images.exists(IMAGE):
-            print(f"正在拉取镜像 {IMAGE} ...")
-            image = client.images.pull(IMAGE, progress_bar=False)
-            print(f"镜像拉取完成: {image.short_id}")
-        else:
-            print(f"镜像 {IMAGE} 已存在")
-            image = client.images.get(IMAGE)
-        print()
+        # ───────────────── Step 4-6: Quadlet 安装 postgres 持久化服务 ─────────────────
+        postgres_quadlet = ("demo-postgres.container", f"""[Container]
+Image=postgres:16-alpine
+ContainerName=demo-postgres
+PublishPort=5432:5432
+Volume=demo-pgdata:/var/lib/postgresql/data
+Environment=POSTGRES_PASSWORD=demo-pass
+Environment=POSTGRES_USER=demo
+Environment=POSTGRES_DB=demodb
+Label={ENV_LABEL}
+HealthCmd=CMD-SHELL pg_isready -U demo -d demodb
+HealthInterval=10s
 
-        print("=" * 50)
-        print("3. 清理同名旧容器（如果存在）")
-        print("=" * 50)
+[Service]
+Restart=always
+""")
+        print("[4/15] quadlets.install — demo-postgres.container (内存 tuple)")
+        r = client.quadlets.install(postgres_quadlet, replace=True, reload_systemd=True)
+        assert not r["QuadletErrors"], f"quadlet 安装失败: {r['QuadletErrors']}"
+        for src, dst in r["InstalledQuadlets"].items():
+            print(f"       {src} → {dst}")
 
+        print("[5/15] 等待 postgres 健康（重试 30 次 × 2s）")
+        import time
+        pg_healthy = False
+        for i in range(30):
+            q = client.quadlets.get("demo-postgres.container")
+            if q.status.lower() == "running":
+                # 用 SDK 连容器，exec pg_isready
+                ct = client.containers.get("demo-postgres")
+                ec, out = ct.exec_run("pg_isready -U demo -d demodb")
+                if ec == 0:
+                    pg_healthy = True
+                    break
+            time.sleep(2)
+        assert pg_healthy, f"Postgres 30 次重试后仍不健康 status={q.status}"
+        print("       pg_isready=accept connections ✅")
+
+        print("[6/15] quadlets.report + get_contents 校验")
         try:
-            old = client.containers.get(CONTAINER_NAME)
-            print(f"发现旧容器 {CONTAINER_NAME}，正在删除...")
-            old.remove(force=True)
-            print("旧容器已删除")
+            # 部分构建没实现 report 端点，容错
+            client.quadlets.report()
         except Exception:
-            print("没有旧容器需要清理")
-        print()
+            pass
+        content = client.quadlets.get_contents("demo-postgres.container")
+        assert "demo-postgres.container" in content or "[Container]" in content
+        print("       contents 校验 OK ✅")
 
-        print("=" * 50)
-        print("4. 创建容器")
-        print("=" * 50)
-
-        # 方式一：create() 创建后手动 start()
-        container = client.containers.create(
-            image=IMAGE,
-            command=["sh", "-c", "echo '容器已启动' && sleep 300 && echo '容器即将退出'"],
-            name=CONTAINER_NAME,
-            detach=True,
-            environment={
-                "DEMO_ENV": "hello-podman-py",
-                "PYTHONUNBUFFERED": "1",
+        # ───────────────── Step 7-9: Redis + Nginx 容器 create + start ─────────────────
+        print("[7/15] containers.create Redis (named volume demo-redis)")
+        redis_ct = client.containers.create(
+            "redis:7-alpine",
+            name="demo-redis",
+            ports={"6379/tcp": 6379},
+            volumes=["demo-redis:/data"],
+            labels={ENV_LABEL.split("=")[0]: ENV_LABEL.split("=")[1]},
+            healthcheck={
+                "test": ["CMD", "redis-cli", "ping"],
+                "interval": 10_000_000_000, "timeout": 2_000_000_000,
+                "retries": 5,
             },
-            labels={
-                "app": "podman-py-demo",
-                "env": "example",
-            },
-            hostname="demo-container",
-            working_dir="/tmp",
         )
-        print(f"容器已创建: {container.short_id}")
-        print(f"容器名称: {container.name}")
-        print(f"容器状态（创建后）: {container.status}")
-        print()
+        print(f"       redis id={redis_ct.short_id}")
 
-        print("=" * 50)
-        print("5. 启动容器")
-        print("=" * 50)
+        print("[8/15] containers.create Nginx 反代 8080→80, 日志卷")
+        nginx_ct = client.containers.create(
+            "nginx:alpine",
+            name="demo-nginx",
+            ports={"80/tcp": 8080},
+            volumes={
+                "demo-nginx-logs": {"bind": "/var/log/nginx", "mode": "rw"},
+            },
+            labels={ENV_LABEL.split("=")[0]: ENV_LABEL.split("=")[1]},
+        )
+        print(f"       nginx id={nginx_ct.short_id}")
 
-        container.start()
-        print("容器启动命令已发送")
+        print("[9/15] 按依赖顺序 start：redis → nginx")
+        redis_ct.start(); print("       redis.start() ✅")
+        nginx_ct.start(); print("       nginx.start() ✅")
+        # 让 services 初始化 3 秒（生产请用健康检查）
+        time.sleep(3)
 
-        # 等待容器进入运行状态
-        time.sleep(1)
-        container.reload()
-        print(f"容器状态（启动后）: {container.status}")
-        print(f"容器 PID: {container.attrs['State'].get('Pid')}")
-        print(f"启动时间: {container.attrs['State'].get('StartedAt')}")
-        print()
+        # ───────────────── Step 10-11: exec_run + logs tail ─────────────────
+        print("[10/15] exec_run 健康探测：redis-cli ping + curl nginx")
+        ec, out = redis_ct.exec_run("redis-cli ping")
+        assert ec == 0 and b"PONG" in out, f"redis 不 pong ec={ec} out={out}"
+        print("       redis-cli PING → PONG ✅")
 
-        print("=" * 50)
-        print("6. 列出运行中的容器")
-        print("=" * 50)
+        ec, out = nginx_ct.exec_run("wget -qO- http://127.0.0.1:80/")
+        assert ec == 0 and b"Welcome to nginx" in out
+        print("       nginx 默认页下载 OK ✅")
 
-        running = client.containers.list()
-        print(f"运行中容器数量: {len(running)}")
-        for c in running:
-            c.reload()
-            print(f"  - {c.short_id}  {c.name:20s}  {c.status:10s}  {c.image.tags[0] if c.image.tags else ''}")
-        print()
+        print("[11/15] 各取最后 10 行 logs")
+        for ct_name in ["demo-postgres", "demo-redis", "demo-nginx"]:
+            ct = client.containers.get(ct_name)
+            last = ct.logs(tail=10).decode(errors="replace")
+            print(f"       ── {ct_name} (last 10) ──")
+            for ln in last.splitlines():
+                print(f"         | {ln[:100]}")
 
-        print("=" * 50)
-        print("7. 在容器内执行命令")
-        print("=" * 50)
+        # ───────────────── Step 12: 批量 label=env=prod 启停演示 ─────────────────
+        print("[12/15] 批量演示：env=prod 标签的启动/停止/删除（dry-run 风格）")
+        # 只演示 label filter，不实际建 prod 容器
+        prod_cts = client.containers.list(all=True, filters={"label": "env=prod"})
+        print(f"       当前 env=prod 容器 {len(prod_cts)} 个（跳过操作）")
 
-        # 执行简单命令
-        exit_code, output = container.exec_run("echo $DEMO_ENV")
-        print(f"环境变量 DEMO_ENV: {output.decode().strip()} (exit code: {exit_code})")
+        # ───────────────── Step 13: 优雅停止顺序（反依赖）─────────────────
+        print("[13/15] 优雅 stop 顺序（依赖逆序）：nginx → redis → postgres")
+        nginx_ct.stop(timeout=15)
+        print("       nginx.stop(15s) ✅")
+        redis_ct.stop(timeout=5)
+        print("       redis.stop(5s) ✅")
+        # postgres 作为 quadlet 交给 systemd 管，不手动 stop
 
-        exit_code, output = container.exec_run("hostname")
-        print(f"主机名: {output.decode().strip()} (exit code: {exit_code})")
+        # ───────────────── Step 14: remove(v=True) 匿名卷一起删 ─────────────────
+        print("[14/15] remove(v=True) 临时容器；quadlet 交给 systemd 保活")
+        nginx_ct.remove(v=True)
+        redis_ct.remove(v=True)
+        print("       临时容器 remove(v=True) ✅")
+        # 列出 PG quadlet，确认它依然在运行（没被清理）
+        q = client.quadlets.get("demo-postgres.container")
+        print(f"       quadlet demo-postgres status={q.status}（保留）✅")
 
-        exit_code, output = container.exec_run("pwd")
-        print(f"当前目录: {output.decode().strip()} (exit code: {exit_code})")
+        # ───────────────── Step 15: prune label=env=demo ─────────────────
+        print("[15/15] prune containers + images dangling")
+        r1 = client.containers.prune(filters={"label": ENV_LABEL})
+        r2 = client.images.prune(filters={"dangling": True})
+        print(f"       containers pruned: {len(r1['ContainersDeleted'] or [])}")
+        print(f"       images pruned:     {len(r2['ImagesDeleted'] or [])} "
+              f"reclaimed {r2['SpaceReclaimed'] // 1024 // 1024} MB")
+        print("\n" + "=" * 60)
+        print("🎉 15步三服务编排生命周期演示 COMPLETE")
+        print("   持久化 Postgres (quadlet systemd) 仍在运行，下次可直接复用")
+        print("=" * 60)
+```
 
-        exit_code, output = container.exec_run("id")
-        print(f"用户信息: {output.decode().strip()} (exit code: {exit_code})")
+## E2.3 推荐异常捕获分层（8 类清单精修版）
 
-        exit_code, output = container.exec_run("cat /etc/os-release | head -2")
-        print("操作系统信息:")
-        print(output.decode())
-        print()
-
-        print("=" * 50)
-        print("8. 获取容器日志")
-        print("=" * 50)
-
-        logs = container.logs()
-        print("容器日志:")
-        print(logs.decode())
-        print()
-
-        print("=" * 50)
-        print("9. 停止容器")
-        print("=" * 50)
-
-        print("正在停止容器...")
-        container.stop(timeout=10)
-        container.reload()
-        print(f"容器状态（停止后）: {container.status}")
-        print(f"退出码: {container.attrs['State'].get('ExitCode')}")
-        print(f"结束时间: {container.attrs['State'].get('FinishedAt')}")
-        print()
-
-        print("=" * 50)
-        print("10. 查看所有容器（包括已停止）")
-        print("=" * 50)
-
-        all_containers = client.containers.list(all=True)
-        print(f"所有容器数量: {len(all_containers)}")
-        for c in all_containers:
-            c.reload()
-            print(f"  - {c.short_id}  {c.name:20s}  {c.status:10s}")
-        print()
-
-        print("=" * 50)
-        print("11. 删除容器")
-        print("=" * 50)
-
-        container.remove()
-        print(f"容器 {CONTAINER_NAME} 已删除")
-
-        # 验证删除
-        if not client.containers.exists(CONTAINER_NAME):
-            print("确认容器已不存在")
-        print()
-
-        print("=" * 50)
-        print("12. 清理已停止容器（prune）")
-        print("=" * 50)
-
-        prune_result = client.containers.prune()
-        print(f"清理了 {len(prune_result['ContainersDeleted'])} 个已停止容器")
-        print(f"回收空间: {prune_result['SpaceReclaimed']} bytes")
-        print()
-
-        print("=" * 50)
-        print("容器生命周期操作演示完成！")
-        print("=" * 50)
+```python
+def run_safe():
+    try:
+        pipeline()
+    except ContainerError as e:
+        print(f"❌ [容器业务失败] image={e.image} "
+              f"exit={e.exit_status} cmd={e.command}")
+        return 2
+    except ImageNotFound as e:
+        print(f"❌ [镜像缺失] 先拉取: {e}")
+        return 3
+    except NotFound as e:
+        print(f"❌ [资源 404] {e.status_code}: {e.explanation or e}")
+        return 4
+    except APIError as e:
+        print(f"❌ [HTTP {e.status_code}] {e} explanation={e.explanation}")
+        return 5
+    except AssertionError as e:
+        print(f"❌ [断言不通过] {e}")
+        return 10
+    except Exception as e:
+        # 兜底：避免未捕获的 exception 让 quadlet 孤儿进程跑着
+        print(f"💥 [未预期异常] {type(e).__name__}: {e}")
+        import traceback; traceback.print_exc()
+        return 99
+    return 0
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(run_safe())
 ```
 
-## 使用 run() 快捷方式
+## E2.4 常见报错速查
 
-如果不需要分步控制，`containers.run()` 可以一步完成 create + start：
-
-```python
-from podman import from_env
-
-with from_env() as client:
-    # 后台运行 Nginx 并映射端口
-    print("启动 Nginx 容器...")
-    nginx = client.containers.run(
-        image="nginx:alpine",
-        name="demo-nginx",
-        ports={"80/tcp": 8080},
-        detach=True,
-        remove=True,  # 停止后自动删除
-    )
-
-    nginx.reload()
-    print(f"Nginx 运行中: {nginx.status}")
-    print(f"访问 http://localhost:8080 查看 Nginx 欢迎页")
-    print()
-
-    # 获取 Nginx 访问日志（实时流）
-    print("Nginx 日志（前5秒）:")
-    import time
-    start = time.time()
-    for line in nginx.logs(stream=True, follow=True):
-        print(line.decode(), end="")
-        if time.time() - start > 5:
-            break
-    print()
-
-    # 停止容器（remove=True 会自动删除）
-    print("停止 Nginx...")
-    nginx.stop()
-    print("Nginx 已停止并自动删除")
-```
-
-## 批量操作示例
-
-```python
-from podman import from_env
-
-with from_env() as client:
-    # 启动多个 Alpine 容器
-    print("启动 3 个演示容器...")
-    for i in range(3):
-        client.containers.run(
-            "alpine:latest",
-            command=["sleep", "60"],
-            name=f"demo-batch-{i}",
-            detach=True,
-            labels={"demo": "batch"},
-        )
-    print()
-
-    # 列出带特定标签的容器
-    print("标签为 demo=batch 的容器:")
-    demo_containers = client.containers.list(
-        filters={"label": "demo=batch"}
-    )
-    for c in demo_containers:
-        c.reload()
-        print(f"  - {c.name}: {c.status}")
-    print()
-
-    # 批量停止
-    print("批量停止所有 demo-batch 容器...")
-    for c in demo_containers:
-        print(f"  停止 {c.name}...")
-        c.stop(timeout=5)
-
-    # 批量删除
-    print("批量删除所有 demo-batch 容器...")
-    result = client.containers.prune(
-        filters={"label": ["demo=batch"]}
-    )
-    print(f"删除了 {len(result['ContainersDeleted'])} 个容器")
-```
-
-## 相关概念
-
-- [/concepts/01-connection.md](../concepts/01-connection.md)
-- [/concepts/03-containers.md](../concepts/03-containers.md)
-- [/examples/01-migration.md](01-migration.md)
+| 异常/现象 | 根因 | 修复 |
+|---|---|---|
+| `NotFound: 404 Client Error: quadlet demo-postgres.container not found` | `install()` 返回成功但 systemd --user 没 reload | `reload_systemd=True` 默认 True 已传；加 `systemctl --user daemon-reload` shell 再试 |
+| `redis-cli` → `Connection refused` | create 后立刻 start + 立刻 exec，redis fork 没起完 | 健康检查 healthcheck + retry 5 次 |
+| Postgres `exec_run pg_isready` 失败 → `Permission denied` | quadlet Volume=demo-pgdata 第一次启动后 root 所有者 | 老 volume 先清 `client.volumes.get("demo-pgdata").remove()` 再重建 |
+| `client.quadlets.install([tarball])` 抛 `No such file: 'xxx.tar'` | 代码里写了相对路径，cwd 不对 | 传绝对 `pathlib.Path(tar_path).resolve()` |
+| 容器里 nslookup host 域名失败 | Rootless slirp4netns 默认 DNS 走宿主机 resolv.conf，nss-myhostname 没装 | `apt install libnss-myhostname` + `podman network create demo-net --dns=1.1.1.1` |

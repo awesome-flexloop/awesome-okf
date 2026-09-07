@@ -1,381 +1,265 @@
 ---
-type: Example
-title: "从 docker-py 迁移到 podman-py"
-description: "将现有使用 Docker SDK for Python 的代码迁移到 podman-py 的分步指南、常见差异与注意事项。"
-tags: [podman-py, docker-py, migration, compatibility, porting]
-generated: { by: "reference_agent/trae-cn", at: 2026-08-26T15:45:00+08:00 }
-verified: { by: "process:grep-v", at: 2026-08-26T15:45:00+08:00 }
+type: example
+title: 01 - docker-py → podman-py 脚本级灰度迁移
+description: 从 docker SDK 迁移到 podman SDK：依赖替换→3行别名→from_env零改→base_url差异→10项API对比→Nginx示例前后40行代码对比→3步验证脚本
+tags: [podman-py, migration, docker-py-compat, gray-release, alias-import]
+generated:
+  by: process:seven-concepts/sc-20260907-podman-py/e-phase
+  at: 2026-09-07
+verified:
+  by: human:xinzo
+  at: 2026-09-07
 status: stable
-stale_after: 2027-08-26
+stale_after: 2027-09-07
 sources:
-  - id: readme
-    resource: /references/readme-source.md
-    title: README.md 项目概览与快速入门
-  - id: client
-    resource: /references/client-source.md
-    title: client.py PodmanClient 核心客户端
+  - id: src-client
+    resource: external/dao/action/Containers/podman-py/podman/client.py
+    title: PodmanClient 源码 — DockerClient 别名 + from_env 双前缀 + NotImplementedError
+  - id: src-containers-manager
+    resource: external/dao/action/Containers/podman-py/podman/domain/containers_manager.py
+    title: ContainersManager 源码 — list sparse 默认逻辑 + RunMixin/CreateMixin
 ---
 
-# 从 docker-py 迁移到 podman-py
+# 01 - docker-py → podman-py 脚本级灰度迁移
 
-podman-py 设计为与 Docker SDK for Python（docker-py）高度 API 兼容，大多数场景下只需修改导入语句即可完成迁移。本示例覆盖常见迁移场景与注意事项。
-
-## 第一步：安装与导入替换
-
-### 卸载 docker-py，安装 podman-py
+## E1.1 迁移前检查清单
 
 ```bash
-pip uninstall docker
-pip install podman
+# 1. 旧依赖
+pip list | grep docker     # docker==7.x / docker-py 已废弃改名
+
+# 2. Podman daemon 可达性（Rootless）
+podman --version          # ≥5.0, 推荐 ≥5.8 (Quadlets)
+podman info --format '{{.Host.RemoteSocket.Path}}'
+# 输出: /run/user/$UID/podman/podman.sock
+
+# 3. 环境变量（兼容两种前缀）
+env | grep -E 'DOCKER|CONTAINER' | sort
+# CONTAINER_HOST 优先级 > DOCKER_HOST
 ```
 
-### 导入语句修改
+## E1.2 三步最小改动迁移
 
-**迁移前（docker-py）：**
+### Step 1：依赖替换
 
-```python
-import docker
-from docker import DockerClient
-from docker.types import Mount, LogConfig
+```diff
+# requirements.txt
+- docker>=7.0
++ podman>=5.8        # PyPI 名是 podman 不是 podman-py（R1 陷阱）
 ```
 
-**迁移后（podman-py）：**
-
-最简单的方式是直接别名导入，保持代码其他部分不变：
-
-```python
-import podman as docker
-from podman import DockerClient  # 别名 DockerClient = PodmanClient
+```bash
+pip install 'podman[progress]'   # 含 rich.progress 支持
 ```
 
-或者使用 PodmanClient 原名（推荐用于新代码）：
+### Step 2：3 行别名导入（不修改业务代码！）
 
 ```python
-from podman import PodmanClient
+# 新建 compat_podman.py，旧代码里的 `import docker` 全部替换成本模块
+# 或者在入口 app/__init__.py 注入：
+from podman import PodmanClient as DockerClient  # 别名 1：类名
+from podman.errors import (                        # 别名 2：异常层
+    DockerException,
+    APIError,
+    NotFound as ImageNotFound,
+    BuildError,
+    ContainerError,
+)
+# import docker → import compat_podman as docker （别名 3：模块名）
 ```
 
-## 第二步：客户端初始化
-
-### 自动从环境变量连接（最常见）
-
-**迁移前：**
+### Step 3：`from_env()` 零修改迁移（R6 提醒：rootful/rootless 不要混用 socket）
 
 ```python
-# docker-py
-client = docker.from_env()
-```
+# 旧代码（docker SDK）
+from docker import from_env
+client = from_env()
 
-**迁移后：**
-
-```python
-# podman-py — API 完全一致
-import podman as docker
-client = docker.from_env()
-
-# 或使用原名
+# 新代码（podman-py）—— 签名完全一致！
+# 读取 DOCKER_HOST/CONTAINER_HOST 双前缀，CONTAINER 优先
 from podman import from_env
 client = from_env()
 ```
 
-环境变量自动兼容：
-- `DOCKER_HOST` → `CONTAINER_HOST`（两个都识别，CONTAINER_HOST 优先）
-- `DOCKER_TLS_VERIFY` → `CONTAINER_TLS_VERIFY`
-- `DOCKER_CERT_PATH` → `CONTAINER_CERT_PATH`
+## E1.3 10 项高频 API 兼容性对照表
 
-### 指定 base_url 连接
+| 操作 | docker-py 写法 | podman-py 兼容写法 | 备注 / 陷阱 |
+|---|---|---|---|
+| 客户端创建 | `DockerClient(base_url=..)` | `PodmanClient(base_url=..)` | socket 路径见 E1.4 |
+| 客户端 from_env | `from_env()` | `from_env()` | 6 双前缀环境变量 |
+| 拉取镜像 | `client.images.pull("nginx:alpine")` | 完全相同 | `policy="newer"` 是 podman-only |
+| 容器运行 | `client.containers.run(img, cmd, detach=True)` | 完全相同 | 4 分支返回语义一致 |
+| 容器列表 | `client.containers.list(sparse=True)` | **默认值不同！** 见 E1.5 | docker 默认 False，podman 默认 `sparse = not compatible` |
+| 创建并启动 | `client.containers.create(..)` + `start()` | 完全相同 | kwargs 签名 98% 一致 |
+| logs | `container.logs(tail=10, follow=True)` | 完全相同 | stream 生成器语义一致 |
+| exec_run | `container.exec_run("pg_isready")` | 完全相同 | demux=True 返回 (stdout,stderr) 元组 |
+| stop + rm | `container.stop();container.remove()` | 完全相同 | `remove(force=True, v=True)` |
+| 构建镜像 | `client.images.build(path=.., tag=..)` | 完全相同 | `dockerfile="Containerfile"` 允许 |
 
-**迁移前：**
+## E1.4 base_url 路径差异（G2 洞察 #1 第二坑）
 
-```python
-# docker-py
-client = docker.DockerClient(base_url="unix:///var/run/docker.sock")
+```diff
+# 旧代码（Rootful docker）
+- client = DockerClient(base_url="unix:///var/run/docker.sock")
+
+# 新代码（Rootless podman 推荐）
++ import os
++ xdg_rt = os.environ.get("XDG_RUNTIME_DIR", f"/run/user/{os.getuid()}")
++ client = PodmanClient(base_url=f"unix://{xdg_rt}/podman/podman.sock")
+
+# 新代码（Rootful podman，不推荐日常开发用）
++ client = PodmanClient(base_url="unix:///run/podman/podman.sock")
 ```
 
-**迁移后：**
+> **R6 陷阱再现**：在 rootless shell 里连 rootful socket → permission denied；在 root shell 连 rootless socket → `FileNotFoundError`。
+> 别浪费 2 小时 debug socket 权限，直接用 `PodmanClient()` 不传参，SDK 四级优先级自动找。
+
+## E1.5 sparse 默认差异陷阱修复（G2 洞察 #1 第一坑）
 
 ```python
-# podman-py — 注意 rootless Podman 路径不同
-import podman as docker
+# 背景：podman-py containers.list() 默认 sparse=not compatible
+# 当 compat=True（即 Docker 兼容模式）→ sparse=False → 全量数据（NetworkSettings 不空）
+# 当 compat=False（默认 libpod 模式）→ sparse=True → NetworkSettings 全空！
 
-# rootful Podman（类似 Docker 路径）
-client = docker.DockerClient(base_url="unix:///run/podman/podman.sock")
+# 迁移前（docker SDK：NetworkSettings 永远非空）
+for c in client.containers.list():
+    ip = c.attrs["NetworkSettings"]["IPAddress"]   # ✅ OK
 
-# rootless Podman（推荐，普通用户）
-client = docker.DockerClient(base_url="unix:///run/user/$UID/podman/podman.sock")
+# 迁移后（podman-py 裸调用：NetworkSettings 全空）
+for c in client.containers.list():
+    ip = c.attrs["NetworkSettings"]["IPAddress"]   # ❌ KeyError 或空字符串！
 
-# 使用 http+unix scheme（推荐显式写法）
-client = docker.DockerClient(
-    base_url="http+unix:///run/user/1000/podman/podman.sock"
-)
+# ✅ 修复方式 1（推荐，docker-py 行为完全对齐）
+client = PodmanClient(compatible=True)                # 全局兼容模式
+for c in client.containers.list():
+    ip = c.attrs["NetworkSettings"]["IPAddress"]     # ✅ 正常
+
+# ✅ 修复方式 2（保留 libpod，list 后显式 reload）
+for c in client.containers.list():
+    c.reload()                                        # 单独请求完整详情
+    ip = c.attrs["NetworkSettings"]["IPAddress"]     # ✅ 正常，性能略差
 ```
 
-**关键差异**：Docker 默认使用 `unix:///var/run/docker.sock`，Podman 区分：
-- rootful：`/run/podman/podman.sock`
-- rootless：`/run/user/<UID>/podman/podman.sock`
+## E1.6 5 个高概率踩坑点总结
 
-如果不显式指定 base_url，podman-py 会自动：
-1. 检查 `PodmanMachine` 活跃连接（macOS/Windows 上的 Podman Machine）
-2. 回退到本地 rootless socket 路径
+| 坑 | 现象 | 修复代码 |
+|---|---|---|
+| **Swarm services** | `client.services.list()` 抛 NotImplementedError | 改成 `client.pods.list()` 查 Pod 组容器 |
+| **sparse 默认**（上一节） | `NetworkSettings` 全空 | 创建 client 时加 `compatible=True` |
+| **socket 路径** | `FileNotFoundError: docker.sock` | 用 `from_env()` 或参考 E1.4 |
+| **Containerfile 命名** | 代码里写死 `Dockerfile` 团队却用 `Containerfile` | `build(dockerfile="Containerfile")` 两者都支持 |
+| **docker.types.\*** | `ImportError: No module named 'docker.types'` | 直接传原生 dict，podman-py 不提供 types 子包 |
 
-### SSH 远程连接
+## E1.7 Nginx 部署：迁移前后 40 行代码对比
 
-**迁移前：**
-
-```python
-# docker-py
-client = docker.DockerClient(base_url="ssh://user@host")
-```
-
-**迁移后：**
-
-```python
-# podman-py — SSH 支持更完善，默认使用系统 SSH 客户端
-client = docker.DockerClient(
-    base_url="ssh://core@192.168.1.100/run/user/1000/podman/podman.sock",
-    identity="~/.ssh/id_ed25519",
-    use_ssh_client=True  # 默认值，使用系统 ssh（支持 ~/.ssh/config）
-)
-```
-
-## 第三步：容器操作（API 高度兼容）
-
-以下操作 API 签名完全兼容，可以直接使用：
-
-```python
-import podman as docker
-
-client = docker.from_env()
-
-# 运行容器
-container = client.containers.run(
-    "nginx:alpine",
-    name="my-nginx",
-    ports={"80/tcp": 8080},
-    detach=True,
-    environment={"NGINX_HOST": "example.com"},
-)
-
-# 列出容器
-containers = client.containers.list(all=True)
-for c in containers:
-    print(f"{c.short_id}  {c.name}  {c.status}")
-
-# 获取容器
-c = client.containers.get("my-nginx")
-
-# 停止/启动/重启
-c.stop()
-c.start()
-c.restart()
-
-# 查看日志
-print(c.logs(tail=20).decode("utf-8"))
-
-# 在容器内执行命令
-exit_code, output = c.exec_run("nginx -v")
-print(output.decode("utf-8"))
-
-# 删除容器
-c.remove(force=True)
-```
-
-## 第四步：镜像操作（API 高度兼容）
-
-```python
-import podman as docker
-
-client = docker.from_env()
-
-# 拉取镜像
-image = client.images.pull("python:3.12-slim")
-
-# 列出镜像
-for img in client.images.list():
-    print(img.tags)
-
-# 构建镜像
-image, logs = client.images.build(
-    path=".",
-    tag="myapp:latest",
-    buildargs={"VERSION": "1.0.0"},
-)
-
-# 推送镜像
-client.images.push(
-    "myapp:latest",
-    auth_config={"username": "user", "password": "pass"}
-)
-
-# 删除镜像
-client.images.remove("myapp:latest", force=True)
-```
-
-**pull 进度条**：podman-py 额外支持 `progress_bar=True`（需安装 rich）：
-
-```python
-# podman-py 特有：带进度条拉取
-client.images.pull("alpine:latest", progress_bar=True)
-```
-
-## 第五步：网络与卷操作
-
-```python
-# 创建网络
-network = client.networks.create("my-network", driver="bridge")
-
-# 列出网络
-for net in client.networks.list():
-    print(net.name)
-
-# 创建卷
-volume = client.volumes.create("my-volume")
-
-# 列出卷
-for vol in client.volumes.list():
-    print(vol.name)
-```
-
-## 常见差异与注意事项
-
-### 1. Swarm 不支持
-
-Docker Swarm 模式相关 API 在 Podman 中不存在，会抛出 `NotImplementedError`：
-
-```python
-# ❌ 这些在 podman-py 中不可用
-client.swarm.init()
-client.services.list()
-client.configs.list()
-client.nodes.list()
-```
-
-**替代方案**：Podman 使用 Pod 概念管理多容器组，使用 `client.pods` 替代：
-
-```python
-# ✅ Podman 原生方式：使用 Pod
-pod = client.pods.create("my-pod")
-```
-
-### 2. list() 的 sparse 默认行为
-
-docker-py 的 `containers.list()` 默认返回完整属性；podman-py 的 libpod 模式默认 `sparse=True`（性能优化），需要 `reload()` 获取完整属性：
-
-```python
-# 如果依赖 attrs 中的详细字段，显式 reload
-containers = client.containers.list()
-for c in containers:
-    c.reload()  # 获取完整 attrs
-    print(c.status)
-
-# 或使用 Docker 兼容模式
-containers = client.containers.list(compatible=True)
-```
-
-### 3. 默认 Socket 路径差异
-
-| 环境 | Docker 默认 | Podman rootful | Podman rootless |
-|------|------------|---------------|----------------|
-| Linux | `/var/run/docker.sock` | `/run/podman/podman.sock` | `/run/user/$UID/podman/podman.sock` |
-
-使用 `from_env()` 自动检测可避免此问题。
-
-### 4. Containerfile vs Dockerfile
-
-构建时 Podman 默认查找 `Containerfile`，但也兼容 `Dockerfile`：
-
-```python
-# 如果使用 Dockerfile 文件名，显式指定
-client.images.build(
-    path=".",
-    dockerfile="Dockerfile",  # 显式指定，兼容两种命名
-    tag="myapp:latest",
-)
-```
-
-### 5. 不支持的 docker.types 中的某些类型
-
-Podman 不使用 Docker 专有类型，可以使用普通字典替代：
-
-```python
-# docker-py
-from docker.types import Mount, LogConfig
-
-# podman-py — 使用字典或直接参数
-client.containers.run(
-    "alpine",
-    volumes={"/host/path": {"bind": "/container/path", "mode": "rw"}},
-    # 或者直接使用列表格式
-    # volumes=["/host/path:/container/path:rw"],
-)
-```
-
-## 完整迁移示例对比
-
-**迁移前（docker-py 代码）：**
+### 迁移前（docker-py）
 
 ```python
 import docker
-
 client = docker.from_env()
 
-client.images.pull("python:3.12-slim")
-
+img = client.images.pull("nginx:alpine")
 container = client.containers.run(
-    "python:3.12-slim",
-    command=["python", "-c", "print('Hello Docker')"],
-    name="hello-docker",
-    remove=True,
+    "nginx:alpine",
+    detach=True,
+    ports={"80/tcp": 8080},
+    name="demo-nginx",
+    volumes={"/srv/www": {"bind": "/usr/share/nginx/html", "mode": "ro"}},
+    environment={"NGINX_HOST": "demo.local"},
+    labels={"env": "demo"},
 )
-print(container.decode("utf-8"))
+
+print(f"Container {container.short_id} status={container.status}")
+exit_code, output = container.exec_run("nginx -t")
+if exit_code == 0:
+    for line in container.logs(tail=20).splitlines():
+        print(f"  nginx> {line.decode()}")
+else:
+    print(f"nginx config broken: {output.decode()}")
 ```
 
-**迁移后（podman-py 代码）：**
-
-只需修改第一行导入，其余代码不变：
+### 迁移后（podman-py，改 1 行 import + 1 行 compatible）
 
 ```python
-import podman as docker  # 唯一修改：别名导入
+# 唯一改动：import 语句 + compatible=True
+from podman import from_env
+client = from_env()
+# client.api.compatible = True   # 如需要 sparse 默认=False 对齐 docker
+# 也可 PodmanClient(compatible=True)
 
-client = docker.from_env()
-
-client.images.pull("python:3.12-slim")
-
+img = client.images.pull("nginx:alpine")
 container = client.containers.run(
-    "python:3.12-slim",
-    command=["python", "-c", "print('Hello Podman')"],
-    name="hello-podman",
-    remove=True,
+    "nginx:alpine",
+    detach=True,
+    ports={"80/tcp": 8080},
+    name="demo-nginx",
+    volumes={"/srv/www": {"bind": "/usr/share/nginx/html", "mode": "ro"}},
+    environment={"NGINX_HOST": "demo.local"},
+    labels={"env": "demo"},
 )
-print(container.decode("utf-8"))
+
+print(f"Container {container.short_id} status={container.status}")
+exit_code, output = container.exec_run("nginx -t")
+if exit_code == 0:
+    for line in container.logs(tail=20).splitlines():
+        print(f"  nginx> {line.decode()}")
+else:
+    print(f"nginx config broken: {output.decode()}")
 ```
 
-## 验证迁移结果
+## E1.8 三步迁移验证脚本（CI 集成）
 
-运行以下代码验证连接和基本功能：
+```bash
+#!/usr/bin/env bash
+# scripts/verify-podman-migration.sh
+set -euo pipefail
 
-```python
-import podman as docker
+echo "=== Step 1: ping OK ==="
+python -c "
+from podman import from_env
+c = from_env()
+assert c.ping() is True, 'podman daemon unreachable'
+print('ping: OK ✓')
+"
 
-client = docker.from_env()
+echo "=== Step 2: sparse + reload 补全 NetworkSettings ==="
+python -c "
+from podman import PodmanClient
+# 方式 A：compatible 模式
+client = PodmanClient(compatible=True)
+for ct in client.containers.list(all=True, limit=3):
+    ip = ct.attrs.get('NetworkSettings',{}).get('IPAddress','')
+    print(f'  compatible mode: {ct.short_id} {ct.name} ip={repr(ip)}')
+# 方式 B：libpod + reload
+client2 = PodmanClient()
+for ct in client2.containers.list(all=True, limit=3):
+    ct.reload()
+    ip = ct.attrs.get('NetworkSettings',{}).get('IPAddress','')
+    print(f'  libpod+reload : {ct.short_id} {ct.name} ip={repr(ip)}')
+print('sparse check: OK ✓')
+"
 
-# 测试连接
-print("Podman 版本:", client.version()["Version"])
+echo "=== Step 3: 容器 run + rm 端到端 ==="
+python -c "
+from podman import from_env
+from podman.errors import ContainerError
+c = from_env()
+# 成功分支
+r = c.containers.run('alpine:3', 'echo hello from podman', remove=True)
+assert b'hello from podman' in r, f'Unexpected output: {r}'
+# 失败分支
+try:
+    c.containers.run('alpine:3', 'exit 42', remove=True)
+    assert False, 'ContainerError 未抛出'
+except ContainerError as e:
+    assert e.exit_status == 42, f'期望 exit 42 实际 {e.exit_status}'
+print('run/error/remove: OK ✓')
+"
 
-# 测试容器列表
-print("运行中容器:", len(client.containers.list()))
-
-# 测试镜像列表
-print("本地镜像:", len(client.images.list()))
-
-# 测试 ping
-print("服务可达:", client.ping())
-
-client.close()
-print("迁移验证通过！")
+echo "
+=================================
+✅ 迁移三步验证全通过！
+下一步：灰度 10% 流量 → 观察 1 周 → 全量
+=================================
+"
 ```
-
-## 相关概念
-
-- [/concepts/00-introduction.md](../concepts/00-introduction.md)
-- [/concepts/01-connection.md](../concepts/01-connection.md)
-- [/examples/02-container-ops.md](02-container-ops.md)

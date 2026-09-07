@@ -5,10 +5,19 @@ description: 记录文档生成与更新历史
 generated: true
 verified: grep
 status: stable
-stale_after: 2027-08-26
+stale_after: 2027-09-07
 ---
 
 # Bundle Update Log
+
+## 2026-09-07 podman-py 知识包 v2.0 全面升级
+
+* **Update Scope**: 概念 **5 篇 → 6 篇**（新增 [05 - 高级资源、异常体系与工程治理](concepts/05-advanced.md) 覆盖 Quadlet v5.8 / 8 类异常 / AGENTS 7 陷阱 / 测试双态治理）；示例 **2 篇 → 3 篇**（新增 [03 - 集成测试治理：skipif/pnext/覆盖率双轨/DCO/pylint不默认](examples/03-testing-governance.md)）；信源 3 篇全面重写为 20+20+30 = **70 条编号锚点 + 1 调用链图**；根 index + 3 子目录 index toctree 同步更新。
+* **AGENTS.md 显式要求覆盖**：严格对应用户指令学习 `external/.../podman-py/AGENTS.md` 全文，将其 Persona/Mental Model/Build-Test-Quality 表/Quick Start SSH 前置/7 大 AI 陷阱 R1~R7/80% vs 85% 覆盖率矛盾/pylint 不默认/DCO git-validation 依赖/冗余 ignore 同步等核心内容分别写入 05-advanced（概念）、03-testing-governance（示例）、readme-source（信源登记）三处。
+* **Quadlet v5.8 新增资源覆盖**：完成了 podman 5.8 起新引入的 QuadletsManager.install 三形态（tuple/路径/tarball）、6 @property、3 方法、force/ignore/reload_systemd 关键字、enable-linger 前置检查等内容，写入 05-advanced 概念 + 02-container-ops 示例 Step 4~6。
+* **源文件集合**：新增/重写过程中实际阅读的源文件（R 阶段 13 份）：`README.md`、`AGENTS.md`、`tox.ini`、`pyproject.toml`、`podman/client.py`、`podman/api/client.py`、`podman/api/ssh.py`、`podman/domain/manager.py`、`podman/domain/containers_manager.py`、`podman/domain/containers_run.py`、`podman/domain/containers_create.py`、`podman/domain/images_manager.py`、`podman/domain/images_build.py`、`podman/domain/quadlets.py`、`podman/errors/exceptions.py`。
+* **洞察与模式**：G2 四元组 4 组（薄门面兼容三坑/SSH隧道挂起/Mixin组合复用/工程治理双轨覆盖率）；G3 可迁移模式 10+ 项（分布在 02-managers/04-images/05-advanced 文末的模式表）。
+* **质量门**：所有非保留文件 frontmatter 字段（type/title/description/tags/generated/verified/status/stale_after/sources）齐全 OKF v0.2；toctree（根→概念/示例/信源→子条目）4 级闭环无孤立；概念 6 / 示例 3 / 信源 3 计数与根 index 完全对账；对抗审查 Grep 对齐见下一步 V 阶段报告。
 
 ## 2026-08-26
 

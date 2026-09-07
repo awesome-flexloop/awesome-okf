@@ -1,16 +1,16 @@
 # 信源登记簿
 
-本目录登记 podman-py 知识包所有内容据以派生的源码信源。所有概念文档和示例文档的 `sources` 字段均指向此目录下的信源条目。信源基于 `external/dao/action/Containers/podman-py/` 源码核心文件。
+本目录登记 podman-py 知识包 v2.0 所有内容据以派生的源码+AGENTS信源。所有 12 篇内容文档（6 概念+3 示例+3 信源登记）的 frontmatter `sources` 字段均锚定本目录的条目。本目录合计 3 篇，覆盖 20+20+30=**70 条编号锚点 + 1 调用链图**，保证"每一个技术结论 → 一条可 grep 的源码锚点 → 一段可读原文"一一对应，可对抗审查（V 阶段）。
 
-* [README.md 项目概览与快速入门](readme-source.md) — `README.md`：项目基本信息、安装命令、运行时与可选依赖、基础使用示例、官方文档与源码仓库链接。
-* [PodmanClient 核心客户端](client-source.md) — `podman/__init__.py`、`podman/client.py`、`podman/version.py`：模块导出、Docker 兼容性别名、PodmanClient 类定义、构造参数、from_env 环境变量配置、默认连接逻辑、9 个资源管理器属性、直接方法、不支持的 Swarm 操作。
-* [HTTP 传输层实现](api-source.md) — `podman/api/` 目录：APIClient 继承 requests.Session、APIResponse 错误映射、6 种支持的 URL Scheme、UDSAdapter/SSHAdapter/HTTPAdapter 传输适配器选择、DEFAULT_CHUNK_SIZE=2MB、工具函数导出、异常体系。
+* [README.md + AGENTS.md 合成 20 锚点](readme-source.md) — README 4 组事实（RM-1 PyPI 名 podman / RM-2 4 extras / RM-3 Python 3.9+ / RM-4 7 行基础示例）+ AGENTS 18 条（Persona+Mental 3条 / Build-Test-Quality AG4~AG11 8项 / Quick start SSH 预断言 AG12 / 质量双轨+pylint+DCO+tox recreate AG13~AG16 / R1~R7 七陷阱 AG17 / 文档优先级 AG18）。
+* [PodmanClient + APIClient 20 锚点](client-source.md) — PodmanClient 薄门面 13 条（CL-1 组合不是继承 / CL-2 DockerClient 别名 / CL-3 四级连接优先级伪代码 / CL-4 from_env 6双前缀表 / CL-5 9管理器字母序 / CL-6 7直方法 / CL-7~CL-10 Swarm 4 NotImplementedError / CL-11 version 返回字段 / CL-12 containers.conf 读取路径 / CL-13 close 语义）+ APIClient 传输层 7 条（API-1 继承 requests.Session / API-2 6 scheme 路由表 / API-3 404→NotFound/ImageNotFound 精确映射 / API-4 chunk 2MB / API-5 双前缀端点 / API-6 连接池 / API-7 timeout 两级语义）。
+* [Manager + Mixin + 异常 + SSH + Quadlets 30+ 锚点 + 1 调用链图](api-source.md) — 8 大模块编号：Manager 基类 M-1~M-7（7条）+ Mixin 横切 MX-1~MX-3 + MRO 左端顺序 / RunMixin.run R-1~R-4 4 返回分支伪代码 / ImagesManager Rich I-1~I-6（优雅降级+progress_bar强制compat+policy 4选1+platform token+BuildError增量消费）/ Quadlet Q-1~Q-11（6属性+3方法+install A/B/C三形态）/ 8 类异常继承链 E-1~E-8 图 / SSHSocket S-1~S-8（本地mktemp+ssh命令拼接+StrictHostKeyChecking生产注意+身份文件权限+DEVNULL+100ms轮询+close SIGTERM→SIGKILL+SSH前置预断言）/ PodmanConfig.is_machine PM-1~PM-3 / images.pull(progress_bar=True) 端到端 7 步骤调用链 ASCII 图。
 
 ```{toctree}
 :hidden:
 :maxdepth: 7
 
-api-source
-client-source
 readme-source
+client-source
+api-source
 ```
