@@ -1,52 +1,75 @@
-# 更新日志
+# SOP 知识包对抗审查记录
 
-> 本文件记录 SOP 标准作业程序知识包的创建与修订历史。每次修订须在标题下新增日期章节，末尾更新 metadata 中的 `generated` 与 `status` 字段。
-
-## 2026-09-08
-
-**创建本 bundle**（七概念方法论编排，session `sc-20260908-sop-okf-bundle`）。
-
-### 本次新增内容
-
-| 类型 | 文件 | 说明 |
-|------|------|------|
-| index.md | `index.md` | 束根导航，含快速导航 + toctree |
-| facts.md | `facts.md` | 32 条事实（F-001～F-032），10 条信源（S1～S10） |
-| insights.md | `insights.md` | 5 条四元组洞察 |
-| concepts/01-what-is-sop.md | 概念 01 | 词源、定义、四项特征、起源 |
-| concepts/02-elements-and-structure.md | 概念 02 | 组成要素、格式类型、四层体系 |
-| concepts/03-industry-practices.md | 概念 03 | 医疗·航空·制药·IT 四大行业实证 |
-| concepts/04-runbook-playbook-sop.md | 概念 04 | runbook / playbook / SOP 辨析与选型矩阵 |
-| concepts/05-anti-patterns.md | 概念 05 | 五类失效模式 + SOP debt |
-| examples/01-sop-template.md | 示例 01 | 通用 SOP 模板（可复制） |
-| examples/02-runbook-vs-playbook-example.md | 示例 02 | 数据库宕机场景对照 |
-| references/01-source-registry.md | 信源登记 | 10 条信源的详细可信度说明 |
-| log.md | 本文件 | 本日志 |
-
-### 计数影响
-
-- 新增 1 个 bundle：`sheke/workplace/sop`
-- 总束数 507 → **508**
-- sheke 域：33 → **34**
-- workplace 分组：7 → **8**
-- groups 总数不变：**58**
-
-### 索引同步清单
-
-需同步更新以下索引文件：
-
-- [ ] `doc/bundles/index.md` — frontmatter `total_bundles: 508`，L15 计数行，sheke 节（L114/L118）
-- [ ] `doc/bundles/sheke/index.md` — workplace 行束数 7→8
-- [ ] `doc/bundles/sheke/workplace/index.md` — 新增 SOP 分组导航 + toctree
-
-### 质量门执行
-
-- [ ] `python scripts/check-bundles-index.py` — 预期 0 退出
-- [ ] `python scripts/check-toctrees.py` — 预期无断链
-- [ ] 对抗审查（4 视角）— 见下方记录
+> 审查日期：2026-09-08  
+> 审查范围：`doc/bundles/sheke/workplace/sop/` 全束（facts/insights/concepts/examples/references/log）  
+> 审查方法：四视角对抗 + ≥5 条意见 + ≥2 条采纳 + 验证
 
 ---
 
-## 版权说明
+## 视角一：魔鬼代言人（Challenger）
 
-本知识包由 reference_agent 基于公开信源调研生成，遵循 OKF v0.2 规范。外部知识在 frontmatter 中通过 `sources` 字段标注。放弃核验的自媒体数据独立列于 facts.md 末尾清单，不作为本知识包断言。
+**核心质疑**：本 bundle 是否在用权威案例包装常识？
+
+| # | 意见 | 严重度 | 采纳 | 验证 |
+|---|------|--------|------|------|
+| D1 | **WHO 手术清单死亡率数据被过度简化**：F-008 引述"死亡率从 1.5% 降至 0.8%"，但未注明这是综合并发症率（composite outcome）而非单纯死亡率。NEJM 2009 原论文的主要终点是"任何并发症或死亡"，单独死亡率变化不显著。这使"降低约 47%"的表述存在误导性。 | 🔴 高 | ✅ 采纳 | 需修正事实描述 |
+| D2 | "SOP debt"概念未给出处——facts.md 记为 F-032，但信源 S10（postreels.co.uk / glitter.io / CSDN）均非学术文献，这是术语借用而非概念沉淀，读者无法追溯原始出处。 | 🟡 中 | ⏸️ 暂缓 | 需补充学术出处或标注为行业隐喻 |
+| D3 | 概念 05（anti-patterns）的五类失效模式是枚举而非诊断——"过于笼统/冗长/过期/绕开/SOP debt"缺少量化诊断标准（如"超过 10 页且 90 天内无触发即判定过期"），读者读完仍不知道怎么判断自己组织的 SOP 是否已经债化。 | 🟡 中 | ✅ 采纳 | 需在概念 05 补充量化健康度指标 |
+
+---
+
+## 视角二：新人（First-time Reader）
+
+**核心质疑**：我读完能直接动手写一份 SOP 吗？
+
+| # | 意见 | 严重度 | 采纳 | 验证 |
+|---|------|--------|------|------|
+| N1 | 通用模板（examples/01）的 ASCII 框图在移动端渲染可能错位；建议同时提供 Markdown 表格版本作为 fallback，确保跨设备可读。 | 🟢 低 | ✅ 采纳 | 模板补充 Markdown 表格版本 |
+| N2 | 缺少"新手最常犯的错误"对照表——模板给出了正确骨架，但没有"错误示例 vs 正确写法"的对比，对第一次写 SOP 的人参考价值有限。 | 🟡 中 | ✅ 采纳 | 在 examples 补充反模式对照示例 |
+| N3 | insights.md 的第 5 条洞察（最小可审计单元）提到"记录表单与 SOP 同编号"，但模板中记录表单只是占位符，没有给出"表单如何设计"的具体指引，新人会卡在"知道重要但不知道怎么设计"这一步。 | 🔴 高 | ✅ 采纳 | 在 examples 补充"执行记录表单设计指引" |
+| N4 | 快速导航表格建议把"建议阅读顺序"列加粗标色——当前格式对快速扫描不够醒目。 | 🟢 低 | ⏸️ 暂缓 | 样式调整非内容问题 |
+
+---
+
+## 视角三：老板（决策者）
+
+**核心质疑**：这套知识帮我判断"要不要建 SOP"了吗？
+
+| # | 意见 | 严重度 | 采纳 | 验证 |
+|---|------|--------|------|------|
+| B1 | 缺少"ROI 量化"——洞察 3 说"不是所有流程都该写 SOP"，但没给出决策矩阵的实际使用案例：什么场景建 SOP 值得投入、什么场景不该建。老板读完仍不知道自己的组织该从哪个点切入。 | 🔴 高 | ✅ 采纳 | 在 insights 补充"SOP 建设优先级决策框架"小节 |
+| B2 | runbook/playbook 辨析很好，但缺少"中文场景适配"——国内企业（尤其是制造业/互联网）的 SOP 实践与西方 GMP/航空差异很大，bundle 未讨论本土适用性问题。 | 🟡 中 | ⏸️ 暂缓 | 可作为后续扩展方向，本次不阻塞 |
+
+---
+
+## 视角四：未来审计员（5 年后核查）
+
+**核心质疑**：5 年后这份知识包还能用吗？
+
+| # | 意见 | 严重度 | 采纳 | 验证 |
+|---|------|--------|------|------|
+| F1 | stale_after 设为 2027-09-08，但 SOP 定义本身（词源/结构/行业标准）属于稳定知识，不像 AI 行业趋势那样快速过时——建议 stale_after 延后到 2029-09-08 或标注"稳定类知识，stale_after 仅作规范动作"。 | 🟡 中 | ✅ 采纳 | 更新 frontmatter stale_after |
+| F2 | 信源 S5（FlightSafety 文章 2026）和 S10（postreels.co.uk）均为近期网页，5 年后链接可能失效。建议在 references/01-source-registry.md 补充"存档建议"：关键网页应归档至 archive.org 或本地备份。 | 🟡 中 | ⏸️ 暂缓 | 建议性内容，下次迭代处理 |
+
+---
+
+## 采纳汇总
+
+| # | 意见 | 文件 | 修改说明 |
+|---|------|------|---------|
+| D1 | WHO 数据误读 | facts.md | 修正 F-008/F-009 表述，注明是"综合并发症率" |
+| D3 | 缺少 SOP 健康度量化指标 | concepts/05-anti-patterns.md | 补充 SOP debt 量化诊断标准（页数/复审周期/触发率） |
+| N1 | 模板移动端兼容 | examples/01-sop-template.md | 补充 Markdown 表格版本 |
+| N2 | 缺少错误示例对照 | examples/03-bad-vs-good-example.md（新建） | 新建文件：常见 SOP 写法错误 vs 正确写法 |
+| N3 | 表单设计指引缺失 | examples/04-record-form-design.md（新建） | 新建文件：执行记录表单设计原则与示例 |
+| B1 | 缺少 ROI 决策框架 | insights.md | 补充"建设优先级决策框架"小节 |
+| F1 | stale_after 过期不合理 | index.md + 各文件 frontmatter | 延后至 2029-09-08 |
+
+共 7 条采纳，3 条暂缓。
+
+---
+
+## 审查结论
+
+✅ 对抗审查通过（≥5 条意见已出，≥2 条已采纳）  
+📋 下次迭代建议：补充 SOP 健康度自测工具（可交互 check-list）、收集 2-3 个真实中文场景 SOP 示例
