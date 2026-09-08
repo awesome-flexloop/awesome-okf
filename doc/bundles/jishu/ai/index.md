@@ -52,6 +52,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🧹 MopMonk 安全 Agent](mopmonk/index.md) | 安全领域 Agent 实践——核心概念、MiniMax M3 模型、核心技术、学习指南与 FAQ |
 | [🏢 Octo Platform 平台教程](octo-platform/index.md) | 明略科技 Octo 多 Agent 协作平台——平台架构、核心能力与使用指南 |
 | [🔍 Open Code Review 阿里 AI 代码评审 CLI](open-code-review/index.md) | 确定性工程 × Agent 混合驱动架构、六阶段审查流水线、MCP 工具与 Claude Code/CI 集成 |
+| [📁 planning-with-files 像 Manus 一样工作](planning-with-files/index.md) | AI Agent 上下文工程方法论——3-File Pattern 文件系统外存 + Hooks 自动化机制，源自 Manus（Meta 20 亿美元收购）的开源实践 |
 | [📈 QuantDinger 自托管 AI 量化交易平台](quantdinger/index.md) | 开源 AI 量化交易平台——MCP Agent Gateway、双轨策略开发、全流程闭环与多市场支持 |
 | [🌏 Rainman Translate 图书翻译](rainman-translate/index.md) | 图书翻译工具——核心概念、安装、使用、局限性与 FAQ（内容翻译方向的 Agent 工具） |
 | [📐 text-to-cad 用 AI 生成可编辑 CAD 源代码](text-to-cad/index.md) | 面向 Agent 的 CAD 技能库——AI 直接生成 build123d 参数化源码，导出 STEP/URDF/DXF/G-code 工程文件 |
@@ -100,6 +101,7 @@ monkeycode-vibe-coding/index
 mopmonk/index
 octo-platform/index
 open-code-review/index
+planning-with-files/index
 quantdinger/index
 rainman-translate/index
 text-to-cad/index
