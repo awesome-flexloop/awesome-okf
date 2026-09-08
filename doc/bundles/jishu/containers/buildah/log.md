@@ -1,0 +1,11 @@
+# 更新日志
+
+## 2026-09-08
+
+* **初始生成（OKF 知识包 v0.2 基准）**：首次创建 `buildah/` 知识包，基于对 Buildah v1.x 源码仓库（`external/dao/action/podman-container-tools/buildah/`）中 cmd/buildah/main.go、build.go、from.go、commit.go、run.go、images.go、push.go 与 README.md 共 8 条源码文件的 Grep 级事实登记，经 seven-concepts 方法论 **R（复盘）→ I（洞察）→ E（萃取）→ V（对抗审查）** 四阶段流程生成。
+  * **Concepts 2 篇**：00-introduction 与 Podman/Skopeo 定位差异 + working container 生命周期（from→run→commit→push）+ 存储隔离说明 + 22 命令 4 组分组 + Go API 可被 vendored 设计；01-build-flow from 命令 NewBuilder() 调用链 + ONBUILD 指令处理 + run 命令 RunOptions（隔离模式 chroot/nsenter/proot）+ commit 命令 CommitOptions 全字段（压缩/签名/加密/SBOM/配置覆盖）。
+  * **Examples 1 篇**：00-dockerfile-build 多阶段 Go 应用 Containerfile 构建 + 手工逐步构建等价操作（from→copy→run→config→commit）+ GPG 签名与 SBOM 扫描 + 多架构 manifest list 构建与推送 + 常用标志速查。
+  * **References 1 篇**：source 信源登记（README.md + 7 个 Go 源码文件 Grep 级事实）。
+* **溯源声明（sources 字段）**：全部 5 篇内容文档（2 Concept + 1 Example + 1 Reference）均携带 YAML frontmatter `sources` 字段，指向 references/source.md；每条事实带「事实编号 + 原始文件/路径锚点」，供 V 阶段对抗性核验逐点追溯。
+* **生命周期字段**：全部内容文档统一 `status: stable`、`stale_after: 2027-09-08`（一年后针对 v2.x 破坏性 API 变更的保守重新评估节点）；`generated.at` / `verified.at` 分别记录本次生成时刻与本次 Grep 对抗验证时刻，两者分离可追溯。
+* **域级注册**：本知识包注册于 `doc/bundles/jishu/containers/index.md` 容器生态域，与 podman、skopeo 同属 Podman Container Tools 三件套，对应 toctree 项已新增、项目列表表格已新增一行。

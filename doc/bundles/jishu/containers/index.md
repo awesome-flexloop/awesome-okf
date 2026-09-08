@@ -27,7 +27,7 @@ description: "容器技术生态——OCI 运行时、存储驱动、Podman 工�
 | [ai-lab-recipes](ai-lab-recipes/index.md) | AI 实验室容器配方——预构建的 AI/ML 工作负载容器镜像与最佳实践 |
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 3
 
 conmon/index
 conmon-rs/index
@@ -38,6 +38,8 @@ omlmd/index
 podman/index
 podman-py/index
 podman-compose/index
+skopeo/index
+buildah/index
 qm/index
 toolbox/index
 ai-lab-recipes/index
