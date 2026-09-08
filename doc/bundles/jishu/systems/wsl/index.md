@@ -8,7 +8,7 @@ description: WSL 中文教程——安装、快速上手、CLI 参考、架构�
 
 WSL 中文教程——安装、快速上手、CLI 参考、架构、文件系统互操作、WSLc API、网络与 systemd、调试开发环境、最佳实践与术语，含 CLI 架构解析与学习计划。
 
-* [concepts/（13 篇）](concepts/index.md)
+* [concepts/（14 篇）](concepts/index.md)
 
 ```{toctree}
 :hidden:

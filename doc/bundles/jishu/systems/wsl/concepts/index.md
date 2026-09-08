@@ -29,6 +29,7 @@
 08-debugging-dev-env
 09-best-practices-faq
 10-glossary-references
+11-wsl-containers-cli
 wsl-cli-and-architecture-wiki
 wsl-learning-plan
 ```
