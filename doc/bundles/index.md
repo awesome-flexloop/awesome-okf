@@ -3,8 +3,8 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 507
-groups: 57
+total_bundles: 508
+groups: 58
 domains: 9
 ---
 
@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **509 个知识包**，按学科逻辑分为 **9 个技术域、57 个分组**（8 个学科域 + 1 个规范锚点）。
+> 当前共 **508 个知识包**，按学科逻辑分为 **9 个技术域、58 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -28,7 +28,7 @@ flowchart TD
     yixue["🌿 yixue/ 医学与养生（10 束）：中医经典·黄帝内经·道医·养生·房中"]
     sheke["👥 sheke/ 社会科学（33 束）：职场管理·亲密关系·性学经典·理财·营销·AI 行业趋势"]
     yishu["🎤 yishu/ 艺术（9 束）：艺术疗愈六束（总览·美术·音乐·舞动戏剧·表达性·中国）·声乐教学两束（美通咽音·手势教学）·红歌教学一束（曲谱库·赏析·歌谱合规·柯尔文手势）"]
-    jishu["⚙️ jishu/ 技术（380 束）：AI·文档工程·构建·通信·容器·数据·物联网等 17 生态分组"]
+    jishu["⚙️ jishu/ 技术（381 束）：AI·文档工程·构建·通信·容器·数据·物联网等 17 生态分组"]
     meta -->|"规范约束"| jishu
     jishu -->|"AI 辅助人文内容生成"| guoxue
     kexue -->|"科学元典与算学互参"| guoxue
@@ -57,7 +57,7 @@ flowchart TD
 | [🔧 OKF 生态系统（okf-ecosystem）](meta/okf-ecosystem/index.md) | 1  | okf-kit Python CLI 核心与 okf-desktop 桌面阅读器——Bundle 数据模型、爬取构建流水线、增量同步、MCP/Chat/HTTP 三模服务架构 |
 | [🖥️ OKF 桌面应用（okf-desktop）](meta/okf-desktop/index.md) | 1  | OKF Desktop 桌面阅读器完整教程——架构总览、快速开始、UI 界面、API 与数据流、打包分发、FAQ |
 
-### 📜 [国学](guoxue/index.md) · 50 束 · 16 组
+### 📜 [国学](guoxue/index.md) · 48 束 · 16 组
 
 | 分组                                                  | 束数 | 说明                                                             |
 | --------------------------------------------------- | -- | -------------------------------------------------------------- |
@@ -76,7 +76,7 @@ flowchart TD
 | [☯ 道家（Daojia）](guoxue/daojia/index.md)              | 19 | 道家著作全谱系——先秦诸子/黄老之学/魏晋玄学注疏/道教经典四段谱系，段—家—著三级分层，段下十九束             |
 | [🧑‍🏫 王阳明心学（Yangming）](guoxue/yangming/index.md)   | 5  | 《传习录》精读、心即理·知行合一·致良知·四句教教义、功夫论实践、生平年谱与弟子流派及东亚传播                |
 | [🧮 算学（Suanxue）](guoxue/suanxue/index.md)           | 1  | 中国传统数学典籍——中国算经阅读教程（《九章算术》《周髀算经》、刘徽、宋元四大家）                      |
-| [📜 了凡（Liaofan）](guoxue/liaofan/index.md)           | 4  | 《了凡四训》古典层原文与阐释层现代解读双轨并收——立命改过之学与智然《了凡生意经》企业家研修课程对照阅读（含六想六思现代落地、十案例账本、核心概念溯源、执行摘要） |
+| [📜 了凡（Liaofan）](guoxue/liaofan/index.md)           | 2  | 《了凡四训》古典层原文与阐释层现代解读双轨并收——立命改过之学与智然《了凡生意经》企业家研修课程对照阅读         |
 
 ### 💭 [哲学](zhexue/index.md) · 5 束 · 2 组
 
@@ -130,11 +130,11 @@ flowchart TD
 | [🎤 声乐教学（Vocal）](yishu/vocal/index.md)   | 2  | 美通唱法与咽音体系（林俊卿咽音练声八步骤、嗓音科学、常见毛病纠正与每日练声清单）+ 手势辅助声乐教学（柯尔文手势、课堂五类手势、指挥基础、体态律动） |
 | [🚩 红歌教学（Hongge）](yishu/hongge/index.md)  | 1  | 红歌教学教程一束——曲谱库建设与版权合规、教学型赏析六步框架与三期曲目示范、歌谱正版获取、柯尔文手势与声乐合唱结合（完整教案·曲谱库指南·16 周路线） |
 
-### ⚙️ [技术](jishu/index.md) · 380 束 · 17 组
+### ⚙️ [技术](jishu/index.md) · 381 束 · 17 组
 
 | 分组                                               | 束数  | 说明                                                                                                         |
 | ------------------------------------------------ | --- | ---------------------------------------------------------------------------------------------------------- |
-| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 171 | agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security 及行业研究与工程方法论等直挂束 |
+| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 172 | agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security 及行业研究与工程方法论等直挂束 |
 | [📚 文档工程（document）](jishu/document/index.md)     | 110 | Sphinx · MyST · Jupyter Book · Jupyter · KaTeX 文档工程与交互式计算生态                                                |
 | [🔨 构建与包管理（build）](jishu/build/index.md)         | 15  | Conda 生态 · scikit-build · CMake · 通用开发工具（Ninja/Copier/PyInvoke/Nuitka 等）                                   |
 | [📡 通信与网络（comm）](jishu/comm/index.md)            | 16  | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析                                                               |
