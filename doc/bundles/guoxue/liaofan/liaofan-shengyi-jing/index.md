@@ -81,6 +81,7 @@ okf_version: "0.2"
 :hidden:
 :maxdepth: 7
 
+facts
 concepts/index
 references/index
 ```
