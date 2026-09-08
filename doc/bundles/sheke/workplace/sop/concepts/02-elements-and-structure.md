@@ -5,7 +5,7 @@ description: 一份完整 SOP 的常见组成字段、四种呈现格式，以�
 tags: [concept, SOP, 文档结构, ISO, 四层体系]
 generated: { by: "reference_agent/trae-research-agent", at: "2026-09-08T20:15:00+08:00" }
 status: stable
-stale_after: 2027-09-08
+stale_after: 2029-09-08
 sources:
   - id: facts
     resource: ../facts.md

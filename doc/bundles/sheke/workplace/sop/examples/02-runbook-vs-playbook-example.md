@@ -5,7 +5,7 @@ description: 以同一场景（主数据库宕机）展示 runbook（技术修�
 tags: [example, runbook, playbook, 故障响应, SRE]
 generated: { by: "reference_agent/trae-research-agent", at: "2026-09-08T20:40:00+08:00" }
 status: stable
-stale_after: 2027-09-08
+stale_after: 2029-09-08
 sources:
   - id: facts
     resource: ../facts.md

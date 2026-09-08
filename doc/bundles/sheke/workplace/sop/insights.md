@@ -5,7 +5,7 @@ description: 基于 32 条事实的 5 条四元组洞察：SOP 是组织外部�
 tags: [insights, SOP, 清单革命, 组织记忆, 知识管理, 反模式]
 generated: { by: "reference_agent/trae-research-agent", at: "2026-09-08T20:05:00+08:00" }
 status: stable
-stale_after: 2027-09-08
+stale_after: 2029-09-08
 sources:
   - id: facts
     resource: facts.md

@@ -5,7 +5,7 @@ description: 本知识包引用的 10 条信源（S1–S10）的详细登记、�
 tags: [reference, sources, SOP]
 generated: { by: "reference_agent/trae-research-agent", at: "2026-09-08T20:45:00+08:00" }
 status: stable
-stale_after: 2027-09-08
+stale_after: 2029-09-08
 sources: []
 ---
 

@@ -10,6 +10,8 @@
 
 01-sop-template
 02-runbook-vs-playbook-example
+03-bad-vs-good-example
+04-record-form-design
 ```
 
 | 示例 | 说明 | 对应洞察 |

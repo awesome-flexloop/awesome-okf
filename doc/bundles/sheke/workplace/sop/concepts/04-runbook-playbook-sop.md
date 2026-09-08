@@ -5,7 +5,7 @@ description: 三类"程序性文档"在 IT 与通用管理语境下的差异：r
 tags: [concept, SOP, runbook, playbook, 文档选型]
 generated: { by: "reference_agent/trae-research-agent", at: "2026-09-08T20:25:00+08:00" }
 status: stable
-stale_after: 2027-09-08
+stale_after: 2029-09-08
 sources:
   - id: facts
     resource: ../facts.md

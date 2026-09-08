@@ -5,7 +5,7 @@ description: 四大高可靠性行业的 SOP / 核查清单实践：WHO 手术�
 tags: [concept, SOP, 行业实践, WHO, 航空安全, GMP, SRE]
 generated: { by: "reference_agent/trae-research-agent", at: "2026-09-08T20:20:00+08:00" }
 status: stable
-stale_after: 2027-09-08
+stale_after: 2029-09-08
 sources:
   - id: facts
     resource: ../facts.md

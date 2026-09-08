@@ -5,7 +5,7 @@ description: SOP（Standard Operating Procedure）词源定义、起源历史、
 tags: [facts, SOP, 标准作业程序, 标准操作规程, 清单革命, GMP, runbook, 流程管理]
 generated: { by: "reference_agent/trae-research-agent", at: "2026-09-08T20:00:00+08:00" }
 status: stable
-stale_after: 2027-09-08
+stale_after: 2029-09-08
 sources:
   - id: refs
     resource: /references/01-source-registry.md

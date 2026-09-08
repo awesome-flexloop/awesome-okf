@@ -6,7 +6,7 @@ description: SOP（Standard Operating Procedure，标准作业程序/标准操�
 tags: [SOP, 标准作业程序, 标准操作规程, 清单革命, GMP, 程序性债务, runbook, playbook]
 generated: { by: "reference_agent/trae-research-agent", at: "2026-09-08T20:00:00+08:00" }
 status: stable
-stale_after: 2027-09-08
+stale_after: 2029-09-08
 sources:
   - id: s1
     title: Merriam-Webster 词典

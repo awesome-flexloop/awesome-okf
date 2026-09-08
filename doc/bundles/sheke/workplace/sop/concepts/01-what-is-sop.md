@@ -5,7 +5,7 @@ description: SOP 的词源、定义与四项内在特征（程序、作业程序
 tags: [concept, SOP, 标准作业程序, 定义]
 generated: { by: "reference_agent/trae-research-agent", at: "2026-09-08T20:10:00+08:00" }
 status: stable
-stale_after: 2027-09-08
+stale_after: 2029-09-08
 sources:
   - id: facts
     resource: ../facts.md

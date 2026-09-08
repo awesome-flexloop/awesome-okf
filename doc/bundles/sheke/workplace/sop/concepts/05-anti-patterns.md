@@ -5,7 +5,7 @@ description: SOP 失效的常见模式：过于笼统、过于冗长、过期版
 tags: [concept, SOP, 反模式, SOP debt, 失效模式]
 generated: { by: "reference_agent/trae-research-agent", at: "2026-09-08T20:30:00+08:00" }
 status: stable
-stale_after: 2027-09-08
+stale_after: 2029-09-08
 sources:
   - id: facts
     resource: ../facts.md
