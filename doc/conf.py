@@ -111,6 +111,15 @@ tippy_skip_urls = [
 copybutton_exclude = '.linenos, .gp'
 copybutton_selector = ":not(.prompt) > div.highlight pre"
 
+# 评论系统配置
+comments_config = {
+    "hypothesis": True,  # 启用 Hypothesis 注释
+    "utterances": {
+        "repo": "awesome-flexloop/awesome-okf",
+        "optional": "config",
+    },  # 启用 Utterances 评论
+}
+
 # --- sphinxcontrib-mermaid 配置 ------------------------------------------
 # 使用运行时 JS 渲染（CDN 加载 mermaid.min.js），零构建依赖；
 # 版本锁定以避免 CDN 更新导致的渲染不稳定
