@@ -130,7 +130,7 @@ flowchart TD
 | [🎤 声乐教学（Vocal）](yishu/vocal/index.md)   | 2  | 美通唱法与咽音体系（林俊卿咽音练声八步骤、嗓音科学、常见毛病纠正与每日练声清单）+ 手势辅助声乐教学（柯尔文手势、课堂五类手势、指挥基础、体态律动） |
 | [🚩 红歌教学（Hongge）](yishu/hongge/index.md)  | 1  | 红歌教学教程一束——曲谱库建设与版权合规、教学型赏析六步框架与三期曲目示范、歌谱正版获取、柯尔文手势与声乐合唱结合（完整教案·曲谱库指南·16 周路线） |
 
-### ⚙️ [技术](jishu/index.md) · 381 束 · 17 组
+### ⚙️ [技术](jishu/index.md) · 382 束 · 17 组
 
 | 分组                                               | 束数  | 说明                                                                                                         |
 | ------------------------------------------------ | --- | ---------------------------------------------------------------------------------------------------------- |
@@ -140,7 +140,7 @@ flowchart TD
 | [📡 通信与网络（comm）](jishu/comm/index.md)            | 16  | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析                                                               |
 | [📦 容器生态（containers）](jishu/containers/index.md) | 14  | OCI 运行时 · 存储驱动 · Podman 工具链 · podman-py Python SDK · AI 容器配方                                                                      |
 | [🧠 机器学习（ml）](jishu/ml/index.md)                 | 10   | ONNX 标准/转换器/编译器/推理后端 · Apache TVM 深度学习编译器                                                                  |
-| [📊 数据科学（data）](jishu/data/index.md)             | 9   | PyData 科学计算全栈——NumPy/pandas/matplotlib/NetworkX/Pillow/Plotly/Dash/PyTables/SymPy                         |
+| [📊 数据科学（data）](jishu/data/index.md)             | 10  | PyData 科学计算全栈——NumPy/pandas/matplotlib/NetworkX/Pillow/Plotly/Dash/PyTables/SymPy + Dolt 版本化数据库                         |
 | [📐 可视化与创意编程（viz）](jishu/viz/index.md)           | 5   | 3Blue1Brown 生态——ManimGL 动画引擎 · 视频场景 · 字幕工具链 · React 官网 · Anime.js×Three.js 适配器                                                     |
 | [🦀 Rust 语言核心（rust）](jishu/rust/index.md)        | 3   | rustc 编译器流水线 · Cargo 构建系统 · RFC 设计决策                                                                       |
 | [🌐 Web 开发（web）](jishu/web/index.md)             | 3   | FastAPI · GraphQL · HTML 声明式局部更新                                                                                          |
