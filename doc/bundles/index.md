@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 505
+total_bundles: 507
 groups: 57
 domains: 9
 ---
@@ -21,7 +21,7 @@ domains: 9
 ```mermaid
 flowchart TD
     meta["📐 meta/ 规范与格式（3 束）：okf-spec 规范锚点 · okf-ecosystem 生态工具 · okf-desktop 桌面阅读器"]
-    guoxue["📜 guoxue/ 国学（46 束）：儒道释法墨易·河洛·阳明心学·算学"]
+    guoxue["📜 guoxue/ 国学（48 束）：儒道释法墨易·河洛·阳明心学·算学·了凡"]
     zhexue["💭 zhexue/ 哲学（5 束）：Ψhē 自指递归理论体系 · 思维方法论"]
     kexue["🔬 kexue/ 科学（17 束）：化学·物理学中西元典·国外数学经典·中西数学对读·前沿资讯"]
     wenxue["✒️ wenxue/ 文学（2 束）：中国古典文学经典 · 英语语法"]
@@ -57,7 +57,7 @@ flowchart TD
 | [🔧 OKF 生态系统（okf-ecosystem）](meta/okf-ecosystem/index.md) | 1  | okf-kit Python CLI 核心与 okf-desktop 桌面阅读器——Bundle 数据模型、爬取构建流水线、增量同步、MCP/Chat/HTTP 三模服务架构 |
 | [🖥️ OKF 桌面应用（okf-desktop）](meta/okf-desktop/index.md) | 1  | OKF Desktop 桌面阅读器完整教程——架构总览、快速开始、UI 界面、API 与数据流、打包分发、FAQ |
 
-### 📜 [国学](guoxue/index.md) · 46 束 · 15 组
+### 📜 [国学](guoxue/index.md) · 48 束 · 16 组
 
 | 分组                                                  | 束数 | 说明                                                             |
 | --------------------------------------------------- | -- | -------------------------------------------------------------- |
@@ -76,6 +76,7 @@ flowchart TD
 | [☯ 道家（Daojia）](guoxue/daojia/index.md)              | 19 | 道家著作全谱系——先秦诸子/黄老之学/魏晋玄学注疏/道教经典四段谱系，段—家—著三级分层，段下十九束             |
 | [🧑‍🏫 王阳明心学（Yangming）](guoxue/yangming/index.md)   | 5  | 《传习录》精读、心即理·知行合一·致良知·四句教教义、功夫论实践、生平年谱与弟子流派及东亚传播                |
 | [🧮 算学（Suanxue）](guoxue/suanxue/index.md)           | 1  | 中国传统数学典籍——中国算经阅读教程（《九章算术》《周髀算经》、刘徽、宋元四大家）                      |
+| [📜 了凡（Liaofan）](guoxue/liaofan/index.md)           | 2  | 《了凡四训》古典层原文与阐释层现代解读双轨并收——立命改过之学与智然《了凡生意经》企业家研修课程对照阅读         |
 
 ### 💭 [哲学](zhexue/index.md) · 5 束 · 2 组
 
