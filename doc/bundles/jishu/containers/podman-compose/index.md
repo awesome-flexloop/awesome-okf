@@ -53,7 +53,7 @@ podman-compose/
 
 | 文档 | 描述 |
 |------|------|
-| [快速上手与 Compose Spec 兼容](concepts/00-introduction.md) | 安装、环境要求、版本说明、第一个命令 |
+| [快速上手与 Compose Spec 兼容](concepts/00-introduction.md) | 安装、环境要求、版本说明、命令参考 |
 
 ### 核心概念
 

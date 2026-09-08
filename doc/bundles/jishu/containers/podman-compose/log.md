@@ -1,5 +1,24 @@
 # 变更日志
 
+## v1.1.0 (2026-09-08)
+
+### 更新
+
+- 补充版本号 1.6.0（来源：`pyproject.toml`）
+- 补充全局参数表（`--in-pod`、`--pod-args`、`--parallel`、`--skip-missing-url`、`--skip-directory-validation` 等）
+- 新增 Pod 支持章节（`--in-pod` 用法）
+- 新增 systemd 集成章节（`compose_systemd` 命令：register/unregister/create-unit/list）
+- 新增 config 命令章节（输出合并后的 YAML 配置）
+- 补充 `links` 配置模式说明（服务间旧式显式依赖声明）
+- 更新项目信息：标注构建后端为 setuptools（vendor 豁免）
+
+### 事实来源
+
+- 源码：`external/dao/action/Containers/podman-compose/podman_compose.py`（v1.6.0）
+- 示例：`examples/hello-python/`、`examples/nodeproj/`
+
+---
+
 ## v1.0.0 (2026-08-26)
 
 ### 新增

@@ -101,6 +101,8 @@ podman-compose 实现了 Compose 规范，支持标准的 `docker-compose.yml`/`
 
 ## 版本说明
 
+**当前版本：1.6.0**
+
 | 分支 | 兼容 Podman 版本 | 说明 |
 |------|-----------------|------|
 | 1.x | >= 3.4 | 推荐版本，无需 workaround |
@@ -122,6 +124,102 @@ podman-compose 实现了 Compose 规范，支持标准的 `docker-compose.yml`/`
 
 ```bash
 podman-compose --version
+```
+
+## 命令参考
+
+### 核心命令
+
+| 命令 | 描述 |
+|------|------|
+| `up` | 创建并启动容器 |
+| `down` | 停止并移除容器、网络 |
+| `ps` | 列出容器 |
+| `run` | 在容器中运行命令 |
+| `exec` | 在运行中的容器内执行命令 |
+| `logs` | 查看容器日志 |
+| `pull` | 拉取镜像 |
+| `build` | 构建镜像 |
+| `start` / `stop` / `restart` | 管理容器生命周期 |
+| `pause` / `unpause` | 暂停/恢复容器 |
+| `kill` | 发送信号到容器 |
+| `wait` | 等待容器停止 |
+| `cp` | 在容器与本地文件系统间复制文件 |
+| `port` | 打印端口映射 |
+| `stats` | 显示资源统计 |
+| `images` | 列出镜像 |
+| `config` | 显示或验证 compose 配置 |
+| `systemd` | systemd 集成（注册/卸载 compose 栈） |
+| `version` | 显示版本信息 |
+
+### 全局参数
+
+| 参数 | 描述 |
+|------|------|
+| `-f, --file` | 指定 compose 文件（可多次使用） |
+| `-p, --project-name` | 项目名（默认为目录名） |
+| `--profile` | 指定启用的 profile（可多次使用） |
+| `--env-file` | 指定环境变量文件路径 |
+| `--in-pod` | Pod 支持：`true`/`false`/自定义 pod 名 |
+| `--pod-args` | 传递给 `podman pod` 的自定义参数 |
+| `--parallel` | 并行执行（默认：所有可用） |
+| `--skip-missing-url` | 跳过缺失的 URL 引用 |
+| `--skip-directory-validation` | 跳过目录校验 |
+| `-V, --verbose` | 详细输出 |
+| `--no-ansi` | 禁止 ANSI 控制字符 |
+
+### Pod 支持（`--in-pod`）
+
+从 v1.x 起支持 Podman Pod，可将所有服务容器放入同一个 Pod 中：
+
+```bash
+# 使用默认 pod_<project> 名称
+podman-compose --in-pod up -d
+
+# 指定自定义 Pod 名称
+podman-compose --in-pod mypod up -d
+
+# 不使用 Pod
+podman-compose --in-pod=false up -d
+```
+
+### systemd 集成
+
+`systemd` 命令用于将 compose 栈注册为 systemd 用户服务：
+
+```bash
+# 创建 systemd 单元文件
+sudo podman-compose systemd -a create-unit
+
+# 注册当前项目到 systemd
+podman-compose systemd -a register
+
+# 列出已注册项目
+podman-compose systemd -a list
+
+# 卸载注册
+podman-compose systemd -a unregister
+```
+
+注册后可使用 systemd 管理：
+```bash
+systemctl --user enable --now 'podman-compose@<project>'
+systemctl --user status 'podman-compose@<project>'
+```
+
+### config 命令
+
+输出解析后的 compose 配置，用于调试：
+
+```bash
+# 查看合并后的 YAML 配置
+podman-compose config
+
+# 仅列出服务名
+podman-compose config --services
+
+# 静默模式（仅验证，不输出）
+podman-compose config -q
 ```
 
 ## 相关概念

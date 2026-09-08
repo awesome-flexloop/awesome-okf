@@ -399,6 +399,25 @@ services:
     container_name: my-app  # 固定容器名（不推荐多副本场景）
 ```
 
+## 链接与旧式依赖（`links`）
+
+`links` 是 Compose v1 遗留的显式服务连接方式，会同时设置 DNS 别名和 `/etc/hosts` 条目。现代 Compose Spec 推荐使用 `depends_on` + 网络隐式连接，但 podman-compose 仍支持 `links`：
+
+```yaml
+services:
+  web:
+    image: myapp
+    links:
+      - db
+      - redis
+  db:
+    image: postgres
+```
+
+等效于将 `db` 服务的容器 IP 添加到 `web` 容器的 `/etc/hosts`，并创建别名 `db`。在 rootless 模式下 `links` 的行为与网络模式一致。
+
+> **注意**：`links` 不会替代 `depends_on`——前者只影响网络连通性，后者影响启动顺序。若需确保启动顺序，仍需显式声明 `depends_on`。
+
 ## 重启策略
 
 ```yaml
