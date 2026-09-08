@@ -43,6 +43,7 @@ _optional_extensions = [
     "sphinx_contributors",
     "sphinxext.opengraph",
     "sphinxcontrib.mermaid",
+    "sphinx_comments",
 ]
 for _ext in _optional_extensions:
     if _has(_ext):
