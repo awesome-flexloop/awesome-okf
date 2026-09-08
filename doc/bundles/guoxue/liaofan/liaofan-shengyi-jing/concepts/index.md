@@ -63,4 +63,6 @@ sources:
 08-ten-cases
 09-li-ming-jiufa
 10-gai-guo-sanxin
+11-core-concepts-analysis
+12-executive-summary
 ```

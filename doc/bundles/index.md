@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **505 个知识包**，按学科逻辑分为 **9 个技术域、57 个分组**（8 个学科域 + 1 个规范锚点）。
+> 当前共 **509 个知识包**，按学科逻辑分为 **9 个技术域、57 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -57,7 +57,7 @@ flowchart TD
 | [🔧 OKF 生态系统（okf-ecosystem）](meta/okf-ecosystem/index.md) | 1  | okf-kit Python CLI 核心与 okf-desktop 桌面阅读器——Bundle 数据模型、爬取构建流水线、增量同步、MCP/Chat/HTTP 三模服务架构 |
 | [🖥️ OKF 桌面应用（okf-desktop）](meta/okf-desktop/index.md) | 1  | OKF Desktop 桌面阅读器完整教程——架构总览、快速开始、UI 界面、API 与数据流、打包分发、FAQ |
 
-### 📜 [国学](guoxue/index.md) · 48 束 · 16 组
+### 📜 [国学](guoxue/index.md) · 50 束 · 16 组
 
 | 分组                                                  | 束数 | 说明                                                             |
 | --------------------------------------------------- | -- | -------------------------------------------------------------- |
@@ -76,7 +76,7 @@ flowchart TD
 | [☯ 道家（Daojia）](guoxue/daojia/index.md)              | 19 | 道家著作全谱系——先秦诸子/黄老之学/魏晋玄学注疏/道教经典四段谱系，段—家—著三级分层，段下十九束             |
 | [🧑‍🏫 王阳明心学（Yangming）](guoxue/yangming/index.md)   | 5  | 《传习录》精读、心即理·知行合一·致良知·四句教教义、功夫论实践、生平年谱与弟子流派及东亚传播                |
 | [🧮 算学（Suanxue）](guoxue/suanxue/index.md)           | 1  | 中国传统数学典籍——中国算经阅读教程（《九章算术》《周髀算经》、刘徽、宋元四大家）                      |
-| [📜 了凡（Liaofan）](guoxue/liaofan/index.md)           | 2  | 《了凡四训》古典层原文与阐释层现代解读双轨并收——立命改过之学与智然《了凡生意经》企业家研修课程对照阅读         |
+| [📜 了凡（Liaofan）](guoxue/liaofan/index.md)           | 4  | 《了凡四训》古典层原文与阐释层现代解读双轨并收——立命改过之学与智然《了凡生意经》企业家研修课程对照阅读（含六想六思现代落地、十案例账本、核心概念溯源、执行摘要） |
 
 ### 💭 [哲学](zhexue/index.md) · 5 束 · 2 组
 

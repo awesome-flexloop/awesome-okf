@@ -46,6 +46,8 @@ okf_version: "0.2"
 | [六想现代落地方法](concepts/06-liuxiang-modern-practice.md) | 想了凡六条：被算定/遇云谷/改命后/记功过格/行善/晚年成圣 | 《立命之学》原文延伸 |
 | [六思行为层落地](concepts/07-liusi-behavior-layer.md) | 思自己为何被算定/无子/功名有限/性格缺陷/改命之道/立命之法 | 《立命之学》原文延伸 |
 | [十案例家族账本](concepts/08-ten-cases.md) | 十个历史案例的施善行为与余庆结果对应 | 《积善之方》原文延伸 |
+| [三核心概念原文溯源解读](concepts/11-core-concepts-analysis.md) | 事上花开心上花不开、惜福、留余播种三核心概念溯源与对抗审查 | 《了凡四训》+《太上感应篇》 |
+| [执行摘要](concepts/12-executive-summary.md) | 全文执行摘要：三概念速览、六想六思对照、十案例速查、操作指南 | 全书综合 |
 | [谦德五案详解](concepts/02-qian-de.md) | 丁敬宇、杨荣、冯琦父、应大猷、周荣五个谦德案例现代解读 | 《谦德之效》 |
 
 ### [信源参考](references/index.md) — 可核查信源
