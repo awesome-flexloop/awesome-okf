@@ -15,7 +15,7 @@ description: OMLMD——利用 OCI Artifact 和容器注册表存储、分发 ML
 - **版本**：0.1.6
 - **作者**：Matteo Mortari (matteo.mortari@gmail.com)
 - **许可证**：Apache-2.0
-- **Python 支持**：3.9、3.10、3.11、3.12
+- **Python 支持**：3.9、3.10、3.11、3.12（来源：[pyproject.toml + README](references/python-version-constraint.md)）
 - **核心依赖**：oras >= 0.2.23, < 0.3.0、pyyaml ^6.0.1、click ^8.1.7、cloup ^3.0.5
 
 ## 核心特性

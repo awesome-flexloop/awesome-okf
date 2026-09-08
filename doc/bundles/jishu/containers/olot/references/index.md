@@ -9,6 +9,7 @@
 | [readme-source.md](readme-source.md) | 官方文档 | 项目 README，包含项目介绍、CLI 和 Python API 使用示例 |
 | [oci-source.md](oci-source.md) | 源码 | OCI 层操作核心逻辑、层注解常量、MediaType 定义 |
 | [backend-source.md](backend-source.md) | 源码 | 三种后端（skopeo/oras-py/oras-cp）实现与函数签名 |
+| [python-version-constraint.md](python-version-constraint.md) | 源码校准 | Python 版本约束证据链：为什么 requires-python = ">=3.10"，basics.py 裸管道注解分析，与 omlmd 的对比 |
 
 ## 信源使用说明
 
@@ -23,4 +24,5 @@
 backend-source
 oci-source
 readme-source
+python-version-constraint
 ```

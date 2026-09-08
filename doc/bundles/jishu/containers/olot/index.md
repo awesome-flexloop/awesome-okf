@@ -26,7 +26,7 @@ sources:
 **olot**（"oci layers on top"）是一个轻量级 Python 工具，用于向 OCI（Open Container Initiative）兼容镜像追加文件层。它是 KServe ModelCar 标准的参考实现，让 ML 模型打包无需 Docker 环境，直接操作标准 OCI image layout。
 
 - **版本**：1.2.2
-- **Python 要求**：>= 3.10
+- **Python 要求**：>= 3.10（来源：[pyproject.toml](references/python-version-constraint.md)）
 - **PyPI**：[https://pypi.org/p/olot](https://pypi.org/p/olot)
 - **核心依赖**：click, pydantic
 - **支持后端**：skopeo CLI、oras cp CLI、oras-py（纯 Python）
