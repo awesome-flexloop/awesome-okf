@@ -24,7 +24,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 | 分组 | 束数 | 一句话简介 |
 |------|------|-----------|
 | [📚 文档工程（document）](document/index.md) | 7 | Sphinx · MyST · Jupyter Book · Jupyter · KaTeX 文档工程与交互式计算生态 |
-| [📊 数据科学（data）](data/index.md) | 1 | PyData 科学计算全栈——NumPy/pandas/matplotlib/NetworkX/Pillow/Plotly/Dash/PyTables/SymPy |
+| [📊 数据科学（data）](data/index.md) | 10 | PyData 科学计算全栈——NumPy/pandas/matplotlib/NetworkX/Pillow/Plotly/Dash/PyTables/SymPy · Dolt 版本化数据库 |
 | [📐 可视化与创意编程（viz）](viz/index.md) | 2 | 3Blue1Brown 生态——ManimGL 动画引擎 · 视频场景 · 字幕工具链 · React 官网 · Anime.js×Three.js 适配器 |
 
 ### 🔨 构建与语言核心

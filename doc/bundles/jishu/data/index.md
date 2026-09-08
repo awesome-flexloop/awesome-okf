@@ -14,10 +14,12 @@ description: "Python 数据科学生态核心库——数值计算、数据分�
 | 分组 | 一句话简介 |
 |------|-----------|
 | [📊 PyData 科学计算生态](pydata/index.md) | Python 科学计算与数据科学生态——NumPy/pandas/matplotlib/Plotly/Dash/PyTables |
+| [🗄️ Dolt 版本化数据库](dolt/index.md) | Dolt——Git 式版本控制的 SQL 数据库：行级历史、分支/合并、MCP Server、MySQL 兼容 |
 
 ```{toctree}
 :hidden:
 :maxdepth: 7
 
 pydata/index
+dolt/index
 ```

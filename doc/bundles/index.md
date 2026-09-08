@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 508
+total_bundles: 510
 groups: 58
 domains: 9
 ---
@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **508 个知识包**，按学科逻辑分为 **9 个技术域、58 个分组**（8 个学科域 + 1 个规范锚点）。
+> 当前共 **510 个知识包**，按学科逻辑分为 **9 个技术域、58 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -111,11 +111,11 @@ flowchart TD
 | [🌿 养生经典（Yangsheng）](yixue/yangsheng/index.md)             | 1  | 养生经典阅读教程——《黄帝内经》至《老老恒言》六部核心经典与食养/导引/道教扩展脉络          |
 | [🛏️ 房中（Fangzhong）](yixue/fangzhong/index.md)              | 1  | 中国古代性文化（房中）典籍阅读教程——目录著录、马王堆出土文献、《医心方》辑佚链与学术史研究      |
 
-### 👥 [社会科学](sheke/index.md) · 33 束 · 6 组
+### 👥 [社会科学](sheke/index.md) · 34 束 · 6 组
 
 | 分组                                              | 束数 | 说明                                        |
 | ----------------------------------------------- | -- | ----------------------------------------- |
-| [🏢 职场与管理（Workplace）](sheke/workplace/index.md) | 7  | 人力资源（职业地图·六大模块·劳动法合规）与行政办公（行政运营·公文写作·OKR 目标管理·论文写作）     |
+| [🏢 职场与管理（Workplace）](sheke/workplace/index.md) | 8  | 人力资源（职业地图·六大模块·劳动法合规）与行政办公（行政运营·公文写作·OKR 目标管理·论文写作·SOP 标准作业程序）     |
 | [💕 亲密关系与两性情感](sheke/relationships/index.md)    | 6  | 两性关系经典著作——学术实证、哲学经典与通俗实践三层谱系              |
 | [🧭 性学经典（Sexology）](sheke/sexology/index.md)    | 3  | 性学/性文化经典著作阅读教程、《汉书·艺文志》房中八家专题研读与马王堆房中简帛深读 |
 | [💰 个人理财与投资（Finance）](sheke/finance/index.md) | 1  | 个人投资实操通识——收益数学、资产类别、配置与行为纪律、中国市场制度，附配置算例与防骗自查清单 |
