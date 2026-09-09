@@ -51,6 +51,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [📘 MiniTap 官方文档教程](minitap/index.md) | MiniTap 官方文档中文学习——产品能力、接入方式与核心场景 |
 | [🐒 Monkeycode Vibe Coding 七概念分析](monkeycode-vibe-coding/index.md) | 七概念方法论分析——七概念框架、深度解析、实践指南与评估 |
 | [🧹 MopMonk 安全 Agent](mopmonk/index.md) | 安全领域 Agent 实践——核心概念、MiniMax M3 模型、核心技术、学习指南与 FAQ |
+| [🦞 网易有道开源生态](netease-youdao/index.md) | 网易有道开源生态——双语 Embedding/RAG（BCEmbedding/QAnything）、语音合成（Confucius4-TTS/EmotiVoice）、AI Agent 桌面应用（LobsterAI）与学术搜索（ScholarClaw） |
 | [🏢 Octo Platform 平台教程](octo-platform/index.md) | 明略科技 Octo 多 Agent 协作平台——平台架构、核心能力与使用指南 |
 | [🔍 Open Code Review 阿里 AI 代码评审 CLI](open-code-review/index.md) | 确定性工程 × Agent 混合驱动架构、六阶段审查流水线、MCP 工具与 Claude Code/CI 集成 |
 | [📁 planning-with-files 像 Manus 一样工作](planning-with-files/index.md) | AI Agent 上下文工程方法论——3-File Pattern 文件系统外存 + Hooks 自动化机制，源自 Manus（Meta 20 亿美元收购）的开源实践 |
@@ -101,6 +102,7 @@ minitap/index
 mobile-use/index
 monkeycode-vibe-coding/index
 mopmonk/index
+netease-youdao/index
 octo-platform/index
 open-code-review/index
 planning-with-files/index
