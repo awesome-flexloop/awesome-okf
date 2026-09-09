@@ -68,6 +68,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 
 agnes-ai/index
 ai-agent/index
+agent-fundamentals/index
 langchain-ai/index
 datawhale/index
 coze/index
