@@ -1,35 +1,36 @@
 ---
 okf_version: "0.2"
 type: bundles-index
-title: "思维方法论"
-description: "可迁移的思维方法与理性实践工具——第一性原理、对抗性审查与跨学科推理"
+group_path: zhexue/methodology
+group_name: 思维方法论
+total_bundles: 2
+created_at: 2026-09-09
+updated_at: 2026-09-09
 ---
 
-# 思维方法论知识包
+```toctree
+:maxdepth: 2
+:caption: 思维方法论
 
-本分组收录具有普适迁移价值的思维方法论知识包。方法论不同于具体哲学体系：它是一套可操作、可验证、可跨领域复用的理性工具——从公理出发推理（第一性原理）、以红队视角自我审查（对抗性审查）、在多学科案例中检验边界。
+index
+feynman-ai-learning/index
+```
 
-| 统计项 | 数量 |
-|---|---|
-| 知识包 | 1 |
-| 概念文档 | 47 |
-| 可视化资源 | 2 |
+# 思维方法论
+
+本分组收录思维模型、学习方法论及相关实践指南。
 
 ## 知识包列表
 
-| 知识包 | 链接 | 描述 | 文档数 |
-|---|---|---|---|
-| 第一性原理 | [first-principles](first-principles/index.md) | 第一性原理思维系统化知识档案——哲学起源、物理学应用、商业创新案例、方法论框架、认知科学基础、AI 时代应用、跨学科案例与中国哲学对照，配套六步练习手册与知识图谱可视化 | 47概念 · 2资源 |
+| 知识包 | 概念数 | 资源数 | 说明 |
+|--------|--------|--------|------|
+| [费曼学习法+AI](feynman-ai-learning/index.md) | 2 | 2 | AI时代费曼学习法的实践指南，探讨AI作为"学生"角色的创新应用 |
 
-## 推荐阅读路径
+## 索引
 
-- **入门路径**：[哲学起源](first-principles/concepts/01-philosophy-origins.md) → [方法论框架](first-principles/concepts/08-methodology-framework.md) → [练习手册](first-principles/concepts/exercises/index.md)
-- **实践路径**：[商业创新案例](first-principles/concepts/03-business-innovation-cases.md) → [跨学科案例](first-principles/concepts/cross-domain-cases/index.md) → [边界条件](first-principles/concepts/16-boundary-conditions.md)
-- **对照路径**：[中国哲学对照](first-principles/concepts/chinese-philosophy-parallels/index.md) → [与西方第一性原理的比较](first-principles/concepts/chinese-philosophy-parallels/06-comparison-with-western-first-principles.md)
+```toctree
+:maxdepth: 1
+:glob:
 
-```{toctree}
-:hidden:
-:maxdepth: 7
-
-first-principles/index
+feynman-ai-learning/*
 ```
