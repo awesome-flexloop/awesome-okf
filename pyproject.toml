@@ -23,4 +23,5 @@ doc = [
     "sphinxext-opengraph",
     "sphinx-contributors",
     "sphinxcontrib-mermaid>=0.9",
+    "sphinx-comments",
 ]
