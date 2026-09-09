@@ -30,7 +30,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🚀 国产Token出海：低价算力如何碾压全球市场](domestic-model-token-export/index.md) | 国产AI模型通过OpenRouter以极低价格占领全球API市场（DeepSeek $0.09 vs Claude $5/MTok），但杰文斯悖论与WTO规则窗口构成隐患（含F-004勘误） |
 | [💥 Token经济大爆发：46.7万亿周调用量](token-economy-explosion/index.md) | 全球AI周调用量46.7T、中国18.81T连续八周超美国5.76T；ATH/Token Hub政策布局、汕头闭环工厂、高盛2030预测24倍增长、增长飞轮分析 |
 | [🧭 AI 工程方法论](ai-engineering-methodology/index.md) | AI 工程化方法论谱系——Harness 工程、提示词编程与七概念提示词工程、对抗性审查、Agent 评测体系与性能优化 |
-| [📝 Agent 平台散篇笔记](agent-platform-notes/index.md) | AI Agent 平台与工具散篇聚合——Anthropic Agent 路线图、AReaL 强化学习（2 篇）、AtomGit AI 实践、BrowserAct 自动化（2 篇）、Minitap 官方 Wiki、Octo 多 Agent 平台等独立成束不足的小主题 |
+| [📝 Agent 平台散篇笔记](agent-platform-notes/index.md) | AI Agent 平台与工具散篇聚合——Anthropic Agent 路线图、AReaL 强化学习（2 篇）、AtomGit AI 实践、BrowserAct 自动化（2 篇）、Minitap 官方 Wiki、Octo 多 Agent 平台、EvoX 国产蜂群自进化 Agent 平台分析等独立成束不足的小主题 |
 | [🎬 Agnes AI 与 Pavo 创作平台](agnes-pavo/index.md) | 免费多模态 API + 一站式 AI 短剧工作流——Pavo 四大核心模块、八步剧情短片流水线与 Agent 指挥系统 |
 | [🔁 AReaL 自演进 Agent 强化学习基础设施](areal/index.md) | AReaL 2.0 自演进三大支柱、Agent-compute 微服务架构与 Online RL 工作流实践 |
 | [🧪 AtomGit AI 最佳实践](atomgit-ai/index.md) | AtomGit AI 平台最佳实践——平台能力、使用模式与工程化建议 |
