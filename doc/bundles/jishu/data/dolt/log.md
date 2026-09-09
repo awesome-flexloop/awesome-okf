@@ -120,7 +120,7 @@
 | 1 | UTF-8 strict roundtrip | ✅ | 9 个文件均通过 |
 | 2 | F 编号双份一致 | ✅ | facts.md 72 条 = article-source.md 72 条（F-001~F-072 唯一编号集合一致，含二轮 F-061~F-070、三轮 F-071~F-072） |
 | 3 | toctree 完整 | ✅ | 根/concepts/references 三级均已生成 |
-| 4 | 无绝对路径引用 | ✅ | bundle 文件内无 file:/// 或 C:\Users\；log.md 描述性文字不存在于 bundle 内容 |
+| 4 | 无绝对路径引用 | ✅ | bundle 文件内无绝对路径引用（file 协议与本地绝对路径均零出现） |
 | 5 | 敏感路径零残留 | ✅ | 同上，已清理 log.md 描述避免误报 |
 | 6 | 三级计数同步 | ✅ | jishu/index.md data 行 `| 10 |`；bundles/index.md total_bundles: 510，文字已修正为 510 |
 | 7 | 根 index frontmatter 完整 | ✅ | okf_version/type/title/status/stale_after/sources/verified 均存在 |
@@ -128,7 +128,7 @@
 
 **总计**：8/8 通过 ✅
 
-**注**：log.md 第 86-87 行原含"无 file:///"和"无 C:\Users\"描述文字，经 V-1 复检确认仅为自检描述而非实际违规引用；已将描述改为中性表述避免未来机械门禁误报。
+**注**：V-1 自检表格检查项描述曾含绝对路径前缀字面量，导致机械门禁 Grep 自指误报，已改为中性表述；bundle 正文无任何实际违规引用。
 
 #### V-1b 四视角对抗审查
 
@@ -153,14 +153,13 @@
 **审计员视角**（溯源完整与可审计性）：
 - 所有事实编号均可追溯至 article-source.md，无悬空 F 编号
 - verification.md 提供勘误四张清单，来源明确可复现
-- 信源距离分布：①官方源 4 条 + ③第三方综述 6 条，混合信源结构合理
+- 信源距离分布：③第三方综述 71 条（61 客观事实 + 10 作者观点）+ ①官方发布 1 条（F-060 勘误补充），合计 72 条；P0/P1 核验信源覆盖 GitHub/docs.doltdb.com/dolthub.com 等多个官方源
 - log.md 记录完整生成链路，支持事后审计
 
-#### V-2 索引接入
-- 创建 `jishu/data/dolt/index.md` 后，需更新：
-  - `jishu/data/index.md`：导航表新增 dolt 条目，束数 +1
-  - `jishu/index.md`：data 行束数从 9 → 10
-  - `bundles/index.md`：total_bundles 从 509 → 510
+#### V-2 索引接入（已完成）
+- `jishu/data/index.md`：导航表新增 dolt 条目 ✅，toctree 追加 `dolt/index` ✅
+- `jishu/index.md`：data 行束数 9 → 10 ✅
+- `bundles/index.md`：total_bundles 509 → 510 ✅（frontmatter 与正文文字均同步）
 
 ### C 阶段（原子提交）
 - **顺序**：①子模块 bundle+索引 ②主仓库 spec ③主仓库子模块指针
