@@ -26,9 +26,9 @@ okf_version: "0.2"
 
 ```mermaid
 flowchart TD
-    YL["yuan-liaofan-sijun/\n《了凡四训》原文知识包\n（古典层：四篇原文 + 双源核对）"]
-    SYJ["liaofan-shengyi-jing/\n了凡生意经知识包\n（阐释层：智然五讲课程实录）"]
-    INS["insights.md\n架构洞察：2条核心洞察 + 2个可复用模式"]
+    YL["yuan-liaofan-sijun/<br/>《了凡四训》原文知识包<br/>（古典层：四篇原文 + 双源核对）"]
+    SYJ["liaofan-shengyi-jing/<br/>了凡生意经知识包<br/>（阐释层：智然五讲课程实录）"]
+    INS["insights.md<br/>架构洞察：2条核心洞察 + 2个可复用模式"]
 
     YL -->|"作为古典层底本"| SYJ
     YL -. 双源互参 .-> INS
