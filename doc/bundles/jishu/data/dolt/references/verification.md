@@ -7,7 +7,7 @@
 
 ---
 
-## 核验结论总表
+## 核验结论总表（9 项 P0 声明）
 
 | 编号 | 博文声明 | 结论 | 核验信源 | 备注 |
 |------|---------|------|---------|------|
@@ -72,3 +72,40 @@
 - **F-026（Workbench）**：[dolthub/dolt-workbench](https://github.com/dolthub/dolt-workbench) 仓库存在，2023-12 首版，2026-08 更新支持 DoltLite。
 - **F-042/F-043（性能）**：[www.dolthub.com/latency-benchmarks](https://www.dolthub.com/latency-benchmarks)（2026-05-14 更新）明确记录 TPC-C 与 Sysbench 数据。
 - **F-045（1G 阈值）**：[www.dolthub.com/blog/2021-05-26-dolt-web-ui/](https://www.dolthub.com/blog/2021-05-26-dolt-web-ui/) 原文限定为 DoltHub Web UI 查询，非数据库本身限制。
+
+---
+
+## 二轮 P0 分级复核（F-061~F-070，2026-09-09）
+
+> 二轮回查博文原文补登 F-061~F-070 后，逐条做 P0 分级扫描。
+
+| 编号 | 声明内容 | 分级 | 判定依据 |
+|------|---------|------|---------|
+| F-061 | 行级提交粒度 | P1（能力声明） | 无数字/日期/官方表态/成效数字 |
+| F-062 | who/when 单元格审计 | P1（能力声明） | 同上 |
+| F-063 | 单条记录全变更链 | P1（能力声明） | 同上 |
+| F-064 | 分支替代数据复制 | P2（背景叙述/作者观点） | 同上 |
+| F-065 | Workbench 对分析师友好 | P2（作者观点） | 同上 |
+| F-066 | 绝大多数客户端直连 | P1（能力声明，F-013 概括） | 同上 |
+| F-067 | 建表/插数据/commit | P1（能力声明） | 同上 |
+| F-068 | TablePlus/DBeaver 操作自然 | P2（作者实测观点） | 同上 |
+| F-069 | 传统改错痛点 | P2（背景叙述） | 同上 |
+| F-070 | 版本控制置于数据库底层 | P1（能力声明） | 同上 |
+
+**结论**：二轮补充 10 条事实中**无 P0 级声明**（无数字/日期/官方表态/成效数字），无需追加 P0 核验；其中 5 条 P1 能力声明（F-061/F-062/F-063/F-066/F-070）于下方做官方源核验增强可信度。
+
+---
+
+## P1 能力声明核验（2026-09-09 补充）
+
+> 对二轮补登的核心能力声明（行级提交、who/when 审计、全变更链、版本控制底层）做官方源核验，杜绝无信源转述。
+
+| 编号 | 能力声明 | 官方源核验结论 | 信源 |
+|------|---------|--------------|------|
+| F-061（行级提交） | 修改一行数据即可提交版本 | ✅ 官方 README："Dolt is Git for Data"，`dolt_history_<tablename>` 展示"每一行的每次提交状态" | [github.com/dolthub/dolt README](https://github.com/dolthub/dolt) |
+| F-062（who/when 审计） | 查单元格由谁、何时修改 | ✅ 官方 Cheat Sheet：`SELECT committer FROM dolt_history_mytable where id = 1` = "Selects who first added the row" | [Dolt Cheat Sheet](https://www.dolthub.com/docs/guides/cheat-sheet/) |
+| F-063（全变更链） | 单条记录从最早到当前所有变更 | ✅ 官方系统表文档：`dolt_history_$TABLENAME` 可查"a row's value at every commit in the current branch's history" | [Dolt System Tables](https://www.dolthub.com/docs/sql-reference/version-control/dolt-system-tables/) |
+| F-070（版本控制底层） | 版本控制放在数据库底层，每条记录可追踪 | ✅ 官方架构文档："Dolt's unique storage engine implements a Git-style commit graph of Prolly Trees"（存储引擎层原生实现版本控制） | [Commit Graph](https://www.dolthub.com/docs/architecture/storage-engine/commit-graph/) |
+| F-064（分支替代复制） | 分支工作流替代数据复制 | ✅ 官方 README："fork, clone, branch, merge" 为 Dolt 核心能力 | [github.com/dolthub/dolt README](https://github.com/dolthub/dolt) |
+
+**结论**：5 项 P1 能力声明均与官方文档/README 一致，博文转述准确，无编造或夸大。

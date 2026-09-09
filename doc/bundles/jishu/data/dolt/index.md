@@ -72,7 +72,7 @@ status: stable
 ### 信源与核验（references/）
 
 * [博文信源登记](references/article-source.md) — F-001 ~ F-070 全部事实编号登记
-* [P0 权威核验报告](references/verification.md) — 8 项 P0 声明核验结论 + 勘误四张清单
+* [P0 权威核验报告](references/verification.md) — 9 项 P0 声明核验结论 + 勘误四张清单
 
 ## 学习路径建议
 
@@ -88,7 +88,7 @@ status: stable
 
 ## 信任与生命周期说明
 
-- **status 判定依据**：`stable`。8 项 P0 声明核验完成，7 项 ✅，1 项 ⚠️（F-042 口径保守），1 项 ❌（F-045 勘误已补充官方正确口径 F-060）。
+- **status 判定依据**：`stable`。9 项 P0 声明核验完成，7 项 ✅，1 项 ⚠️（F-042 口径保守），1 项 ❌（F-045 勘误已补充官方正确口径 F-060）。
 - **stale_after 解释**：设为 `2026-12-31`。Dolt 为快速发展产品（v2.0+ 版本迭代频繁），性能数据（TPC-C 54%、Sysbench 基准）时效性强，年末重新评估。
 - **核验链路**：`generated.at` 与 `verified.at` 均为 2026-09-08（spec:okf-wiki-ecosystem 生成、process:seven-concepts-v 核验）。
 
