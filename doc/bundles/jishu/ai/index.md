@@ -28,6 +28,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🔢 tiktoken BPE 分词库](tiktoken/index.md) | OpenAI 官方 BPE 分词库源码教程——薄 Python 门面 + 重型 Rust 核心（PyO3）双层架构 |
 | [📊 AI Agent 行业研究（2026-08）](agent-industry-research/index.md) | AI Agent 行业研究三篇——知乎行业文章、最佳 Agent 系统研究、全球产业研究（市场规模口径、五场战争、头部系统对比） |
 | [🚀 国产Token出海：低价算力如何碾压全球市场](domestic-model-token-export/index.md) | 国产AI模型通过OpenRouter以极低价格占领全球API市场（DeepSeek $0.09 vs Claude $5/MTok），但杰文斯悖论与WTO规则窗口构成隐患（含F-004勘误） |
+| [💥 Token经济大爆发：46.7万亿周调用量](token-economy-explosion/index.md) | 全球AI周调用量46.7T、中国18.81T连续八周超美国5.76T；ATH/Token Hub政策布局、汕头闭环工厂、高盛2030预测24倍增长、增长飞轮分析 |
 | [🧭 AI 工程方法论](ai-engineering-methodology/index.md) | AI 工程化方法论谱系——Harness 工程、提示词编程与七概念提示词工程、对抗性审查、Agent 评测体系与性能优化 |
 | [📝 Agent 平台散篇笔记](agent-platform-notes/index.md) | AI Agent 平台与工具散篇聚合——Anthropic Agent 路线图、AReaL 强化学习（2 篇）、AtomGit AI 实践、BrowserAct 自动化（2 篇）、Minitap 官方 Wiki、Octo 多 Agent 平台等独立成束不足的小主题 |
 | [🎬 Agnes AI 与 Pavo 创作平台](agnes-pavo/index.md) | 免费多模态 API + 一站式 AI 短剧工作流——Pavo 四大核心模块、八步剧情短片流水线与 Agent 指挥系统 |
@@ -77,6 +78,7 @@ pocketflow/index
 ai-security/index
 agent-industry-research/index
 domestic-model-token-export/index
+token-economy-explosion/index
 agent-platform-notes/index
 agnes-pavo/index
 ai-engineering-methodology/index
