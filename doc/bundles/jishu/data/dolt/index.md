@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: bundle-index
 title: "Dolt — 版本化 SQL 数据库"
-description: "Dolt 知识包：从存储层原生支持 Git 式版本控制的 SQL 数据库——行级历史、分支/合并、MySQL 5.7 协议兼容、MCP Server 与 AI Agent 安全操作、Dolt Workbench，含 P0 权威核验与勘误"
+description: "Dolt 知识包：从存储层原生支持 Git 式版本控制的 SQL 数据库——行级历史、分支/合并、MySQL/PostgreSQL/SQLite/MongoDB 多协议生态、MCP Server 与 AI Agent 安全操作、Dolt Workbench，含博文 P0 核验、勘误与本地源码核验"
 tags:
   - dolt
   - git
@@ -15,10 +15,10 @@ tags:
 generated:
   at: "2026-09-08"
 verified:
-  at: "2026-09-08"
+  at: "2026-09-09"
   by: process:seven-concepts-v
   status: stable
-  noted: F-042 口径需细化（Sysbench 读写已超越 MySQL），F-045 勘误（Web UI 限制误读）
+  noted: F-042 口径需细化（Sysbench 读写已超越 MySQL），F-045 勘误（Web UI 限制误读）；2026-09-09 基于本地 DoltHub 源码补登 F-073~F-085（多协议生态 + 存储引擎架构）
 stale_after: "2026-12-31"
 sources:
   - url: "https://mp.weixin.qq.com/s/ES_KncqKLiQxIzaEZ-58gg"
@@ -52,12 +52,16 @@ sources:
     type: official
     title: "Dolt Web UI Blog (2021-05-26)"
     distance: 1
+  - url: "https://github.com/dolthub"
+    type: source-code
+    title: "dolthub 组织源码（dolt/dolt-mcp/dolt-workbench/doltgresql/doltlite/dumbodb/driver 等 12 仓库，本地克隆）"
+    distance: 1
 status: stable
 ---
 
 # Dolt — 版本化 SQL 数据库
 
-本知识包基于微信公众号「开源日记」博文《数据库也能像 Git 一样进行 fork、branch 和 merge 吗？》（2026-06-18）生成，经 [P0 权威核验报告](references/verification.md) 交叉验证，对勘误项标注官方正确口径。所有内容溯源至 [F-001 ~ F-072](references/article-source.md)，遵循 [OKF v0.2 规范](https://github.com/awesome-flexloop/awesome-okf)。
+本知识包基于微信公众号「开源日记」博文《数据库也能像 Git 一样进行 fork、branch 和 merge 吗？》（2026-06-18）生成，经 [P0 权威核验报告](references/verification.md) 交叉验证，对勘误项标注官方正确口径；并于 2026-09-09 基于本地 `dolthub` 组织源码（12 仓库）补登源码事实（F-073~F-085），将产品矩阵扩展为多协议生态。所有内容溯源至 [F-001 ~ F-085](references/article-source.md)，遵循 [OKF v0.2 规范](https://github.com/awesome-flexloop/awesome-okf)。
 
 > **⚠️ 勘误提示**：博文所述"超过 1G 数据会变慢"（F-045）为误读，系将 DoltHub Web UI 查询超时限制（约 1GB，2021 年过时信息）泛化为 Dolt 数据库本身能力限制。Dolt 生产环境可处理 TB 级数据。正确口径见 [F-060](references/article-source.md) 与 [verification.md](references/verification.md)。
 
@@ -71,7 +75,7 @@ status: stable
 
 ### 信源与核验（references/）
 
-* [博文信源登记](references/article-source.md) — F-001 ~ F-072 全部事实编号登记
+* [博文信源登记](references/article-source.md) — F-001 ~ F-085 全部事实编号登记（含源码事实 F-073~F-085）
 * [P0 权威核验报告](references/verification.md) — 9 项 P0 声明核验结论 + 勘误四张清单
 
 ## 学习路径建议

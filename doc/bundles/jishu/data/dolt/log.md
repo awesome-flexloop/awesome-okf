@@ -55,6 +55,17 @@
 - **双份登记**：facts.md 与 article-source.md 同步补登至 F-072，信源距离分布表更新为 61 客观事实 + 10 作者观点 + 1 官方源 = 72 条
 - **正文落实**：三轮补充为元信息/结构类事实，不涉及 concepts 正文改写
 
+#### R-5 源码事实采集（2026-09-09 基于本地 DoltHub 源码）
+- **信源**：用户克隆 `dolthub` 组织源码至 `external/dao/action/DoltHub`，含 12 个仓库（dolt/cli/dolt-mcp/dolt-workbench/doltgresql/doltlite/doltlite-android/doltlite-python/driver/dumbodb/go-mysql-server/vitess）
+- **动作**：读取各仓库 README + 存储引擎源码（`go/store/prolly/doc.go`、`go/store/datas/doc.go`、`go/store/nbs/README.md`、`go/serial/commit.fbs`）+ MCP 工具实现，系统采集源码事实
+- **新增数量**：13 条（F-073 ~ F-085），信源距离 ① 官方源码
+- **新增内容**：
+  - 产品矩阵（5 条）：12 仓库生态（F-073）、Doltgres Beta（F-074）、DoltLite（F-075）、DumboDB（F-076）、driver（F-077）
+  - 存储引擎架构（4 条）：Prolly Tree/NodeStore（F-078）、NBS（F-079）、Commit flatbuffer（F-080）、Noms 渊源（F-081）
+  - 机制澄清（4 条）：MySQL 兼容基于 Vitess（F-082）、客户端 8.4（F-083）、MCP 40+ 工具（F-084）、Workbench Agent Mode（F-085）
+- **信源升级**：从 ③ 第三方综述 → ① 官方源码（第一手），产品矩阵从 6 个扩展为 12 个生态组件、4 种数据库协议
+- **正文落实**：concepts/00 扩展产品矩阵 + 澄清 MySQL 兼容；concepts/01 深化存储引擎架构 + MCP 三方言；concepts/02 补充多协议生态趋势
+
 #### R-3 P0 权威核验
 - **方法**：WebSearch + 官方文档/GitHub README 交叉验证
 - **结果**：
@@ -118,7 +129,7 @@
 | # | 检查项 | 结果 | 说明 |
 |---|--------|------|------|
 | 1 | UTF-8 strict roundtrip | ✅ | 9 个文件均通过 |
-| 2 | F 编号双份一致 | ✅ | facts.md 72 条 = article-source.md 72 条（F-001~F-072 唯一编号集合一致，含二轮 F-061~F-070、三轮 F-071~F-072） |
+| 2 | F 编号双份一致 | ✅ | facts.md 85 条 = article-source.md 85 条（F-001~F-085 唯一编号集合一致，博文 72 条 + 源码 13 条） |
 | 3 | toctree 完整 | ✅ | 根/concepts/references 三级均已生成 |
 | 4 | 无绝对路径引用 | ✅ | bundle 文件内无绝对路径引用（file 协议与本地绝对路径均零出现） |
 | 5 | 敏感路径零残留 | ✅ | 同上，已清理 log.md 描述避免误报 |
@@ -141,7 +152,7 @@
 - OKF v0.2 frontmatter 完整，tags 合理，generated/verified 时间戳正确
 - toctree 三级结构完整，noexamples/ 目录存在但为预期行为
 - 勘误提示框置于根 index 第62行，醒目且易于发现
-- 事实编号（F-001~F-072）贯穿所有文档，引用一致
+- 事实编号（F-001~F-085）贯穿所有文档，引用一致
 
 **技术专家视角**（事实准确性与深度）：
 - P0 声明 9 项核验覆盖率达 100%，其中 F-042/F-045 两处偏差已识别并纠正
@@ -153,7 +164,7 @@
 **审计员视角**（溯源完整与可审计性）：
 - 所有事实编号均可追溯至 article-source.md，无悬空 F 编号
 - verification.md 提供勘误四张清单，来源明确可复现
-- 信源距离分布：③第三方综述 71 条（61 客观事实 + 10 作者观点）+ ①官方发布 1 条（F-060 勘误补充），合计 72 条；P0/P1 核验信源覆盖 GitHub/docs.doltdb.com/dolthub.com 等多个官方源
+- 信源距离分布：③第三方综述 71 条（61 客观事实 + 10 作者观点）+ ①官方发布 1 条（F-060 勘误补充）+ ①官方源码 13 条（F-073~F-085），合计 85 条；P0/P1 核验信源覆盖 GitHub/docs.dolthub.com/本地源码
 - log.md 记录完整生成链路，支持事后审计
 
 #### V-2 索引接入（已完成）

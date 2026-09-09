@@ -1,7 +1,7 @@
 # 行级版本控制机制
 
-> 本文档深入讲解 Dolt 的核心技术机制：Prolly Tree 存储引擎、行级历史视图、分支/合并/回滚原理、MySQL 5.7 兼容机制，以及 MCP Server 与 AI Agent 工作流。对应 F-017~F-029、F-061~F-064、F-070。
-> **信源距离**：③ 第三方综述；机制原理解释基于博文描述与官方文档交叉引用。
+> 本文档深入讲解 Dolt 的核心技术机制：Prolly Tree 存储引擎、行级历史视图、分支/合并/回滚原理、MySQL 5.7 兼容机制，以及 MCP Server 与 AI Agent 工作流。对应 F-017~F-029、F-061~F-064、F-070（博文事实）+ F-078~F-085（源码事实）。
+> **信源距离**：③ 第三方综述；机制原理解释基于博文描述与官方文档交叉引用，存储引擎架构经本地源码（①）核验。
 
 ---
 
@@ -10,6 +10,16 @@
 Dolt 的存储引擎基于 Prolly Tree（Proximity Lookup Tree），这是一种为版本控制优化的 BTree 变体。与传统 BTree 不同，Prolly Tree 通过内容的哈希值进行排序而非键值排序，这使得数据的增量变更能够以近似 O(log n) 的代价被追踪——相当于为每一行数据维护了一个不可变的版本链。
 
 这一设计使 Dolt 能够在不复制全量数据的情况下，高效地维护多个版本分支。Dolt 将版本控制放在数据库底层，每一条记录的变化都可以被追踪到（F-070）。
+
+### 源码架构（经本地源码核验，①）
+
+经 `dolt/go/store/prolly/doc.go` 与 `dolt/go/store/datas/doc.go` 核验，存储引擎的分层结构如下（F-078~F-081）：
+
+- **Prolly Tree 层**（`go/store/prolly`）：用 `NodeStore` 抽象构建树，序列化到/自 flatbuffer 消息（`go/serial`）。节点类型含 `AddressMap`、`ProllyTreeNode`、`CommitClosure`；节点通过内容哈希寻址，区分内部节点（值为子节点地址）与叶节点（值为实际数据）。
+- **NBS 存储层**（`go/store/nbs`，Noms Block Store）：提供内容寻址 DAG 存储，20 字节哈希寻址，只有 insert/update root/gc（无 update/delete），支持本地磁盘与 AWS S3/DynamoDB 后端（F-079）。
+- **Commit 数据结构**（`go/serial/commit.fbs`）：用 flatbuffer 序列化（file identifier "DCMT"），字段含 `root`（根值哈希）、`height`（提交高度）、`parent_addrs`（父提交）、`parent_closure`（父提交闭包，用于 pull/fetch/push 扇出与 FindCommonAncestor）、`signature`（签名）（F-080）。
+- **datas 桥接层**（`go/store/datas`）：桥接数据库事务与版本化 commit graph 逻辑；旧存储格式为 NomsBlockStore，新存储格式为 NodeStore。
+- **上游渊源**：Dolt 存储引擎源自 Noms 项目（Attic Labs，Apache-2.0）（F-081）。
 
 ---
 
@@ -62,11 +72,11 @@ Dolt 合并分支时如有冲突会检测并提示（F-023）。合并操作与�
 
 ---
 
-## MySQL 5.7 协议兼容
+## MySQL 协议兼容
 
 Dolt 兼容 MySQL 5.7 协议（F-013，✅ 官方确认），默认端口 3306（F-014，✅ 官方确认），默认用户名 root（F-015），默认密码为空（F-016）。
 
-这意味着所有基于 MySQL 协议的客户端工具（Navicat、DBeaver、DataGrip、TablePlus 等）均可直接连接 Dolt，无需额外配置（F-030~F-033）。这一兼容性大幅降低了迁移成本——现有 MySQL 应用只需更改连接地址即可接入 Dolt。
+经本地源码核验，Dolt 的 MySQL 兼容基于 **Vitess** 协议层 + **go-mysql-server** SQL 引擎（F-082），服务端版本显示 "5.7.9-Vitess"，客户端支持到 MySQL 8.4 LTS（F-083）。这意味着所有基于 MySQL 协议的客户端工具（Navicat、DBeaver、DataGrip、TablePlus 等）均可直接连接 Dolt，无需额外配置（F-030~F-033）。这一兼容性大幅降低了迁移成本——现有 MySQL 应用只需更改连接地址即可接入 Dolt。
 
 ---
 
@@ -76,12 +86,15 @@ Dolt 兼容 MySQL 5.7 协议（F-013，✅ 官方确认），默认端口 3306�
 
 Dolt 发布了 MCP Server（F-024，✅ 官方仓库 [dolthub/dolt-mcp](https://github.com/dolthub/dolt-mcp)，2025-08-14 正式发布），使 AI Agent 能通过标准协议操作数据库。
 
-MCP（Model Context Protocol）是 Anthropic 提出的 AI Agent 与外部工具交互的标准协议。Dolt 的 MCP Server 使 AI Agent 可以：
+MCP（Model Context Protocol）是 Anthropic 提出的 AI Agent 与外部工具交互的标准协议。经本地源码核验，MCP Server 提供 **40+ 工具**，支持 **Dolt/Doltgres/DoltLite 三种方言**，可运行于 HTTP 或 stdio 模式，DoltLite 模式可嵌入单文件数据库无需独立 server（F-084）。其工具按功能分类覆盖：
 
-1. 在独立分支上读取/写入数据（F-025）
-2. 执行 SQL 查询与分析
-3. 创建、合并、回退分支
-4. 查看所有历史变更记录
+1. **数据库管理**：list_databases、create_database、drop_database
+2. **表操作**：create_table、alter_table、drop_table、describe_table
+3. **版本控制**：create_dolt_commit、stage_table、create_dolt_branch、merge_dolt_branch、dolt_reset
+4. **远程操作**：clone_database、dolt_push_branch、dolt_pull_branch、dolt_fetch_all_branches
+5. **数据操作**：query（只读，带只读标注 + 只读查询校验）、exec（写入）
+
+AI Agent 可借助 MCP Server 在独立分支上操作数据（F-025），执行 SQL 查询、创建/合并/回退分支、查看历史变更。
 
 ### AI Agent 安全操作工作流
 
@@ -117,4 +130,4 @@ Dolt 通过 Prolly Tree 存储引擎实现了存储层的 Git 式版本控制，
 
 ---
 
-*本文档基于博文事实（F-017~F-029、F-061~F-064、F-070）生成，MCP Server 与 Workbench 已通过官方仓库核验 ✅。*
+*本文档基于博文事实（F-017~F-029、F-061~F-064、F-070）与源码事实（F-078~F-085）生成，MCP Server 与 Workbench 已通过官方仓库核验 ✅，存储引擎架构经本地源码核验 ✅。*
