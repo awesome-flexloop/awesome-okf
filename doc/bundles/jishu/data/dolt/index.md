@@ -57,7 +57,7 @@ status: stable
 
 # Dolt — 版本化 SQL 数据库
 
-本知识包基于微信公众号「开源日记」博文《数据库也能像 Git 一样进行 fork、branch 和 merge 吗？》（2026-06-18）生成，经 [P0 权威核验报告](references/verification.md) 交叉验证，对勘误项标注官方正确口径。所有内容溯源至 [F-001 ~ F-060](references/article-source.md)，遵循 [OKF v0.2 规范](https://github.com/awesome-flexloop/awesome-okf)。
+本知识包基于微信公众号「开源日记」博文《数据库也能像 Git 一样进行 fork、branch 和 merge 吗？》（2026-06-18）生成，经 [P0 权威核验报告](references/verification.md) 交叉验证，对勘误项标注官方正确口径。所有内容溯源至 [F-001 ~ F-070](references/article-source.md)，遵循 [OKF v0.2 规范](https://github.com/awesome-flexloop/awesome-okf)。
 
 > **⚠️ 勘误提示**：博文所述"超过 1G 数据会变慢"（F-045）为误读，系将 DoltHub Web UI 查询超时限制（约 1GB，2021 年过时信息）泛化为 Dolt 数据库本身能力限制。Dolt 生产环境可处理 TB 级数据。正确口径见 [F-060](references/article-source.md) 与 [verification.md](references/verification.md)。
 
@@ -71,7 +71,7 @@ status: stable
 
 ### 信源与核验（references/）
 
-* [博文信源登记](references/article-source.md) — F-001 ~ F-060 全部事实编号登记
+* [博文信源登记](references/article-source.md) — F-001 ~ F-070 全部事实编号登记
 * [P0 权威核验报告](references/verification.md) — 8 项 P0 声明核验结论 + 勘误四张清单
 
 ## 学习路径建议
