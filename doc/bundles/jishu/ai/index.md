@@ -61,6 +61,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🌋 火山引擎（Volcengine）AI 产品生态](volcengine/index.md) | Ark 大模型平台、Computer-Use/Mobile-Use Agent、Viking AI 搜索推荐、机器学习平台与云手机等产品分析（与 volcengine-agent Agent 生态束并存互补） |
 | [🤝 火山引擎 Agent 生态（AgentKit + 共建计划）](volcengine-agent/index.md) | AgentKit 产品与架构（VEADK 框架、SDK/CLI、应用场景）与 Agent 共建计划（贡献方向、参与指南、奖励认可） |
 | [💻 Codex Agent 工作流实践](codex-agent-workflow-practices/index.md) | Anthropic Codex CLI 四杠杆降本实践——并行工作流/大闭环/对抗提升/真实需求驱动，243亿 token / $12,213 实测数据 |
+| [📊 2026免费大模型API汇总（40家平台）](free-llm-api-roundup/index.md) | 知乎博文经OKF v0.2七阶段转化——国内23家+国际17家免费大模型API平台盘点，含完整免费额度、速率限制与选型指南（GitHub Models已退役） |
 
 ```{toctree}
 :hidden:
