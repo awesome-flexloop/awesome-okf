@@ -12,12 +12,14 @@
 02-runbook-vs-playbook-example
 03-bad-vs-good-example
 04-record-form-design
+05-runbook-playbook-tutorial
 ```
 
 | 示例 | 说明 | 对应洞察 |
 |------|------|---------|
 | [通用 SOP 模板（可复制）](01-sop-template.md) | 一页式 SOP 骨架 + 填写说明，含字段对齐 ALCOA+ 与四层体系 | 洞察 3 / 洞察 5 |
 | [runbook vs playbook 对照示例](02-runbook-vs-playbook-example.md) | 同一故障场景（如数据库宕机）的两种写法对照 | 概念 04（辨析）|
+| [runbook/playbook 写作教程](05-runbook-playbook-tutorial.md) | 从零掌握 runbook 8 组件模板 + 9 条设计原则 + 四级自动化路径；playbook 角色-沟通框架 + CISA 4 阶段模板 | 洞察 6 / 洞察 7 / 洞察 8 |
 
 ## 使用建议
 

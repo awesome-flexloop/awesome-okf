@@ -42,7 +42,7 @@ sources:
 
 # SOP 标准作业程序
 
-> **一句话摘要**：SOP（Standard Operating Procedure，标准作业程序/标准操作规程）是把关键控制点的操作步骤与要求以统一格式描述出来，使经培训的人员都能胜任该岗位的**组织级外部认知装置**。医学 RCT 证明核查清单可使手术死亡率降低约 47%（NEJM 2009）；合规行业用 meta-SOP 与 ALCOA+ 记录体系支撑可审计性；SOP debt（程序性债务）是最大隐性风险。
+> **一句话摘要**：SOP（Standard Operating Procedure，标准作业程序/标准操作规程）是把关键控制点的操作步骤与要求以统一格式描述出来，使经培训的人员都能胜任该岗位的**组织级外部认知装置**。医学 RCT 证明核查清单可使手术死亡率降低约 47%（NEJM 2009）；合规行业用 meta-SOP 与 ALCOA+ 记录体系支撑可审计性；SOP debt（程序性债务）是最大隐性风险。IT 运维场景下，runbook 与 playbook 按"可预测性"分工：runbook 处理已知故障，playbook 处理大型协调事件；自动化成熟度从 L1 到 L4 渐进推进，MTTR 可降低 40–60%，但破坏性操作须保留人工门禁。
 
 ## 快速导航
 
@@ -51,7 +51,7 @@ sources:
 | [事实清单](facts.md) | 32 条事实（F-001～F-032）+ 10 条信源（S1～S10）+ 放弃核验清单 | 🔍 第一读：建立事实锚点 |
 | [洞察笔记](insights.md) | 5 条四元组洞察（本质 / 生命周期 / 粒度 / 歧义 / 审计单元） | 💡 第二读：理解规律 |
 | [概念库](concepts/index.md) | 5 个核心概念（定义·结构·行业·辨析·误区） | 📖 第三读：掌握术语 |
-| [示例库](examples/index.md) | 2 个可直接参考的示例（通用模板 + runbook/playbook 对照） | 🛠️ 实践时查 |
+| [示例库](examples/index.md) | 3 个可直接参考的示例（通用模板 + runbook/playbook 对照 + runbook/playbook 写作教程） | 🛠️ 实践时查 |
 | [信源登记](references/01-source-registry.md) | 10 条信源的等级说明、访问状态、未来补充方向 | 🔎 核查时查 |
 | [更新日志](log.md) | 创建记录与索引同步清单 | 📋 修订时查 |
 
@@ -68,8 +68,8 @@ sources:
 ```
 sop/
 ├── index.md          ← 本文件（束根导航）
-├── facts.md          ← 32 条事实（F-001～F-032）
-├── insights.md       ← 5 条四元组洞察
+├── facts.md          ← 43 条事实（F-001～F-043）
+├── insights.md       ← 8 条四元组洞察
 ├── log.md            ← 更新日志
 ├── concepts/         ← 5 个核心概念
 │   ├── index.md
