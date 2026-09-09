@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 45
+total_bundles: 46
 ---
 
 # 🤖 AI Agent 框架
@@ -113,6 +113,7 @@ total_bundles: 45
 | 知识包 | 类型 | 文档数 | 一句话简介 |
 |--------|------|--------|-----------|
 | [qwen-creative-platform-news](qwen-creative-platform-news/index.md) | 资讯速报 | 1+2+1=4 | 阿里千问创作平台多Agent协同开测——5个Agent组成虚拟剧组(策划/编剧/视觉/分镜/成片)、Wan 3.0+Qwen-Image 3.0 Pro、书旗ManClaw漫剧Agent(Seedance 2.0)、导演视角解读 |
+| [deepseek-harness-mobile](deepseek-harness-mobile/index.md) | 技术实测 | 5+2+2=9 | DSH Mobile——腾讯程序员用Kuikly(Kotlin Multiplatform)开发DeepSeek Harness手机客户端(Android/iOS/鸿蒙一码三端)：直连Host协议(RPC+双WebSocket)、SSH/扫码Relay双通道、断线重连状态机、本地扫码连接与扩展开发上手 |
 | [qwen-ui-agent](qwen-ui-agent/index.md) | 技术评测 | 3+1+2+1=7 | 阿里通义开源GUI智能体Qwen-UI-Agent技术评测——真机训练(100+设备/150+App/400+任务)、MobileWorld 82.1%超GPT-5.6/Claude Opus 4.8、CLI批量动作、3个内部流程实测(财务对账/运营日报/老CRM)、3项勘误(MAI-UI权重混淆/58%以偏概全/硬件要求有误) |
 | [a2a-mcp-convergence](a2a-mcp-convergence/index.md) | 技术分析 | 4+2+1=7 | A2A与MCP协议合流分析——A2A转入AAIF与MCP共治、两协议正交分工(MCP连工具/A2A连Agent)、A2A技术架构(Agent Card/Task/Message+Part/三种交互模式)、AAIF三层Agent栈、归因授权追索三缺口、5项勘误(A2A时间线/1.1亿下载量/AWS GA日期硬性错误/四大工作流/引文意译) |
 | [doubao-work](doubao-work/index.md) | 产品实测 | 4+2+1=7 | 字节豆包工作实测评测——独立桌面客户端+飞书深度打通、Seedance 2.5+Seedream 5.0多模态生成、文档/PPT/网页/AI协同编辑(80+设计风格/带数据库网页)、飞书组织架构/群聊总结/多维表格/会议纪要→任务流、"由豆包发送"标签、滚动额度模型、核心论点"模型决定AI有多聪明，组织上下文决定它能不能成为同事"、8项P0核验全通过零勘误 |
@@ -149,7 +150,7 @@ total_bundles: 45
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：45 个知识包，共 333 个内容文档（215 概念 + 61 示例 + 57 信源），零推测事实底稿随束存放
+> **内容统计**：46 个知识包，共 334 个内容文档（216 概念 + 61 示例 + 57 信源），零推测事实底稿随束存放
 
 ```{toctree}
 :hidden:
@@ -187,6 +188,7 @@ mai-ui/index
 mobile-world/index
 mobilepa-bench/index
 qwen-creative-platform-news/index
+deepseek-harness-mobile/index
 qwen-ui-agent/index
 a2a-mcp-convergence/index
 doubao-work/index
