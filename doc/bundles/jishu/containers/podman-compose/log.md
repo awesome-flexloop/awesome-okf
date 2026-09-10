@@ -1,5 +1,24 @@
 # 变更日志
 
+## v1.6.0 (2026-09-10)
+
+### 新增
+
+- 跨束对比文档 `concepts/10-compose-vs-podman-py.md`：podman-compose（声明式 CLI 编排器，GPL-2.0）与 podman-py（命令式 Python SDK，Apache-2.0，v5.8.0）全面对比——控制路径对照（asyncio 子进程 vs requests/REST）、十维差异表（范式/执行机制/抽象边界/状态模型/配置能力/远程/错误处理/可测试性等）、Docker 兼容路径差异、选型决策表（9 个场景）、组合使用模式（compose 写标签 / SDK 按标签读），以及 compose 不依赖 podman-py 的事实核验
+
+### 更新
+
+- `concepts/index.md`：概念清单与架构学习路径补充 10，toctree 同步
+- 根 `index.md`：Bundle 结构树与源码精读导航补充对比文档
+- 跨束互链：podman-py 束根索引新增指向本文档的对比入口（反向链接）
+
+### 事实来源
+
+- podman-compose 束：本束 04-09 源码精读文档（v1.6.0，commit e3df104）
+- podman-py 束：`doc/bundles/jishu/containers/podman-py/`（v5.8.0，6 概念/3 示例/3 信源）
+
+---
+
 ## v1.5.0 (2026-09-10)
 
 ### 新增

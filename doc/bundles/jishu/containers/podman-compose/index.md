@@ -52,7 +52,8 @@ podman-compose/
 │   ├── 06-config-pipeline.md
 │   ├── 07-dependency-lifecycle.md
 │   ├── 08-x-podman-extensions.md
-│   └── 09-version-evolution.md
+│   ├── 09-version-evolution.md
+│   └── 10-compose-vs-podman-py.md
 ├── examples/             # 实战示例（03 图鉴 + 04-11 官方逐例详解）
 │   ├── index.md
 │   ├── 01-wordpress.md
@@ -100,6 +101,7 @@ podman-compose/
 | [依赖图与 up/down 生命周期](concepts/07-dependency-lifecycle.md) | 12 种依赖条件、重建判定三条件、拉取策略、pod 创建与 down 清理顺序 |
 | [x-podman 扩展字段全解](concepts/08-x-podman-extensions.md) | 容器/密钥/网络/Pod 扩展字段、podman 特有网络与挂载类型、Docker Compose 兼容开关 |
 | [版本演进与能力矩阵](concepts/09-version-evolution.md) | 7 份 Changelog 梳理 0.1.x→1.6.0 能力时间线、podman/Python 版本门槛、未发布变更与 bash 补全脚本 |
+| [podman-compose 与 podman-py 对比](concepts/10-compose-vs-podman-py.md) | 声明式 CLI 编排器 vs 命令式 Python SDK：架构/状态/远程/错误处理十维对比与选型决策表 |
 
 ### 实战示例
 

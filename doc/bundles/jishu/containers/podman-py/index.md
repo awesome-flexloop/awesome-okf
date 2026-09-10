@@ -44,6 +44,8 @@ sources:
 
 # podman-py Python SDK 知识库
 
+> 🔗 **相关束对比**：[podman-compose 与 podman-py 对比：编排器与 SDK 的选型](../podman-compose/concepts/10-compose-vs-podman-py.md)——声明式 CLI 编排器 vs 命令式 REST SDK 的十维对比与选型决策表。
+
 本知识包是 Podman 官方 Python SDK（[containers/podman-py](https://github.com/containers/podman-py)，Apache-2.0 许可证）的系统化中文源码教程，基于 podman-py v5.8.0 源码深度阅读生成。**特别**萃取了本仓库携带的 `AGENTS.md`（Podman-py AI Agent Guide）中的7大AI陷阱、80% vs 85%覆盖率双轨治理、SSH集成测试前置要求等独有工程治理信息，填补官方ReadTheDocs文档未覆盖的「开发流程合规」盲区。覆盖范围：Docker SDK 兼容入门→4级连接优先级（命名connection / base_url / active_service / 本地socket 回退）→ Mixin+Manager 三层资源架构→容器完整生命周期→Rich进度条镜像构建→Quadlet/Pod/Secrets v5新增资源→8类异常体系→测试双态治理（unit/integration + skipif 版本门控 + pnext 未来特性标记）。
 
 ## 概念层（concepts/ 6 篇，按学习路径递进）
