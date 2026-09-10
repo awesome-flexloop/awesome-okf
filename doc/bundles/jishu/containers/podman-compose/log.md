@@ -1,5 +1,29 @@
 # 变更日志
 
+## v1.2.0 (2026-09-10)
+
+### 新增
+
+- 基于 `podman_compose.py` 全量源码精读（约 5534 行）新增 4 篇源码级概念文档：
+  - `concepts/04-source-architecture.md`：单文件逻辑分层、`cmd_run/cmd_parse` 装饰器命令注册、`Podman` 类三种子进程调用（output/run/exec）、asyncio 信号量并发模型、日志流增量 UTF-8 解码与着色
+  - `concepts/05-cli-translation-layer.md`：`container_to_args` 翻译主函数（service dict → podman argv）、卷/网络/密钥/资源参数生成、标签即数据库的无状态设计、config-hash 变更检测
+  - `concepts/06-config-pipeline.md`：14 候选文件发现与递归向上查找、环境变量分层、6 操作符 bash 风格插值引擎、短语法归一化、`!override`/`!reset` 深合并、extends/include/profiles 语义、x-podman 兼容开关
+  - `concepts/07-dependency-lifecycle.md`：12 种依赖条件与 docker 条件映射、`_deps/_dependents` 依赖图、`podman wait --condition` 启动屏障、up 重建判定三条件、拉取策略优先级、pod 创建、down 清理顺序、systemd 集成
+- 新增信源文档 `references/source-code-map.md`：版本固定（`__version__=1.6.0`、git `v1.6.0-97-ge3df104`、commit `e3df10472e194ab6d547b5ad25542c5c79e1a5fb`）、10 层结构地图、核心符号行号索引、podman 版本门槛表
+
+### 更新
+
+- `concepts/index.md`：概念清单与架构学习路径补充 04-07，toctree 同步
+- `references/index.md`：信源清单与 toctree 补充 source-code-map
+- 根 `index.md`：Bundle 结构树、新增「源码精读」导航分区、信源表、frontmatter sources 补充源码信源
+
+### 事实来源
+
+- 源码：`external/dao/action/Containers/podman-compose/podman_compose.py`（v1.6.0，commit e3df104，2026-08-11）
+- 方法：source-code-to-okf-wiki 工作流 R→I→E→V→C（信源版本固定 + 逐行事实采集 + Grep 级符号核验）
+
+---
+
 ## v1.1.0 (2026-09-08)
 
 ### 更新

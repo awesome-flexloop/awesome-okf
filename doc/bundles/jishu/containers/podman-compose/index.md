@@ -12,6 +12,9 @@ sources:
   - id: readme
     resource: /references/readme-source.md
     title: podman-compose 官方 README
+  - id: source-code
+    resource: /references/source-code-map.md
+    title: podman_compose.py 源码信源登记（v1.6.0 / commit e3df104）
 ---
 
 # podman-compose
@@ -37,14 +40,19 @@ podman-compose/
 │   ├── 00-introduction.md
 │   ├── 01-daemonless-arch.md
 │   ├── 02-rootless.md
-│   └── 03-compose-patterns.md
+│   ├── 03-compose-patterns.md
+│   ├── 04-source-architecture.md
+│   ├── 05-cli-translation-layer.md
+│   ├── 06-config-pipeline.md
+│   └── 07-dependency-lifecycle.md
 ├── examples/             # 实战示例
 │   ├── index.md
 │   ├── 01-wordpress.md
 │   └── 02-multi-container.md
 └── references/           # 信源登记
     ├── index.md
-    └── readme-source.md
+    ├── readme-source.md
+    └── source-code-map.md
 ```
 
 ## 快速导航
@@ -63,6 +71,15 @@ podman-compose/
 | [rootless 模式下的网络与卷](concepts/02-rootless.md) | 无根模式的网络配置、卷管理、权限模型 |
 | [Compose 文件常见模式](concepts/03-compose-patterns.md) | YAML 配置模式、最佳实践、完整示例 |
 
+### 源码精读（基于 podman_compose.py v1.6.0）
+
+| 文档 | 描述 |
+|------|------|
+| [单文件架构与 asyncio 执行模型](concepts/04-source-architecture.md) | 逻辑分层、装饰器命令注册、三种子进程调用、信号量并发模型 |
+| [CLI 翻译层与标签状态](concepts/05-cli-translation-layer.md) | service dict → podman argv 翻译主函数、卷/网络/密钥映射、标签即数据库 |
+| [配置加载管线](concepts/06-config-pipeline.md) | 文件发现、bash 风格插值引擎、归一化、!override/!reset 深合并、extends/include |
+| [依赖图与 up/down 生命周期](concepts/07-dependency-lifecycle.md) | 12 种依赖条件、重建判定三条件、拉取策略、pod 创建与 down 清理顺序 |
+
 ### 实战示例
 
 | 文档 | 描述 | 难度 |
@@ -75,6 +92,7 @@ podman-compose/
 | 文档 | 描述 |
 |------|------|
 | [官方 README](references/readme-source.md) | podman-compose 项目官方文档信源 |
+| [源码信源登记](references/source-code-map.md) | podman_compose.py 版本固定、结构地图与核心符号索引 |
 
 ## 快速开始
 
