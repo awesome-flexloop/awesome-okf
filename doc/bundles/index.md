@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 515
+total_bundles: 527
 groups: 58
 domains: 9
 ---
@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **514 个知识包**，按学科逻辑分为 **9 个技术域、58 个分组**（8 个学科域 + 1 个规范锚点）。
+> 当前共 **527 个知识包**，按学科逻辑分为 **9 个技术域、58 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -22,7 +22,7 @@ domains: 9
 flowchart TD
     meta["📐 meta/ 规范与格式（3 束）：okf-spec 规范锚点 · okf-ecosystem 生态工具 · okf-desktop 桌面阅读器"]
     guoxue["📜 guoxue/ 国学（48 束）：儒道释法墨易·河洛·阳明心学·算学·了凡"]
-    zhexue["💭 zhexue/ 哲学（5 束）：Ψhē 自指递归理论体系 · 思维方法论"]
+    zhexue["💭 zhexue/ 哲学（6 束）：Ψhē 自指递归理论体系 · 思维方法论"]
     kexue["🔬 kexue/ 科学（17 束）：化学·物理学中西元典·国外数学经典·中西数学对读·前沿资讯"]
     wenxue["✒️ wenxue/ 文学（2 束）：中国古典文学经典 · 英语语法"]
     yixue["🌿 yixue/ 医学与养生（10 束）：中医经典·黄帝内经·道医·养生·房中"]
@@ -78,12 +78,12 @@ flowchart TD
 | [🧮 算学（Suanxue）](guoxue/suanxue/index.md)           | 1  | 中国传统数学典籍——中国算经阅读教程（《九章算术》《周髀算经》、刘徽、宋元四大家）                      |
 | [📜 了凡（Liaofan）](guoxue/liaofan/index.md)           | 2  | 《了凡四训》古典层原文与阐释层现代解读双轨并收——立命改过之学与智然《了凡生意经》企业家研修课程对照阅读         |
 
-### 💭 [哲学](zhexue/index.md) · 5 束 · 2 组
+### 💭 [哲学](zhexue/index.md) · 6 束 · 2 组
 
 | 分组                              | 束数 | 说明                                  |
 | ------------------------------- | -- | ----------------------------------- |
 | [Ψhē 理论体系](zhexue/psi/index.md) | 4  | ψ=ψ(ψ) 自指递归理论体系——哲学、数学形式化、宇宙本论、意识研究 |
-| [🧭 思维方法论（Methodology）](zhexue/methodology/index.md) | 1  | 可迁移的思维方法与理性实践工具——第一性原理系统化知识档案（哲学起源·物理学应用·商业创新案例·方法论框架·六步练习手册） |
+| [🧭 思维方法论（Methodology）](zhexue/methodology/index.md) | 2  | 可迁移的思维方法与理性实践工具——第一性原理系统化知识档案（哲学起源·物理学应用·商业创新案例·方法论框架·六步练习手册）|
 
 ### 🔬 [科学](kexue/index.md) · 17 束 · 3 组
 
@@ -130,17 +130,17 @@ flowchart TD
 | [🎤 声乐教学（Vocal）](yishu/vocal/index.md)   | 2  | 美通唱法与咽音体系（林俊卿咽音练声八步骤、嗓音科学、常见毛病纠正与每日练声清单）+ 手势辅助声乐教学（柯尔文手势、课堂五类手势、指挥基础、体态律动） |
 | [🚩 红歌教学（Hongge）](yishu/hongge/index.md)  | 1  | 红歌教学教程一束——曲谱库建设与版权合规、教学型赏析六步框架与三期曲目示范、歌谱正版获取、柯尔文手势与声乐合唱结合（完整教案·曲谱库指南·16 周路线） |
 
-### ⚙️ [技术](jishu/index.md) · 386 束 · 17 组
+### ⚙️ [技术](jishu/index.md) · 398 束 · 17 组
 
 | 分组                                               | 束数  | 说明                                                                                                         |
 | ------------------------------------------------ | --- | ---------------------------------------------------------------------------------------------------------- |
-| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 176 | agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security · agent-industry-research · domestic-model-token-export 及工程方法论等直挂束 |
+| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 180 | agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security · agent-industry-research · domestic-model-token-export 及工程方法论等直挂束 |
 | [📚 文档工程（document）](jishu/document/index.md)     | 110 | Sphinx · MyST · Jupyter Book · Jupyter · KaTeX 文档工程与交互式计算生态                                                |
 | [🔨 构建与包管理（build）](jishu/build/index.md)         | 15  | Conda 生态 · scikit-build · CMake · 通用开发工具（Ninja/Copier/PyInvoke/Nuitka 等）                                   |
 | [📡 通信与网络（comm）](jishu/comm/index.md)            | 16  | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析                                                               |
 | [📦 容器生态（containers）](jishu/containers/index.md) | 14  | OCI 运行时 · 存储驱动 · Podman 工具链 · podman-py Python SDK · AI 容器配方                                                                      |
 | [🧠 机器学习（ml）](jishu/ml/index.md)                 | 10   | ONNX 标准/转换器/编译器/推理后端 · Apache TVM 深度学习编译器                                                                  |
-| [📊 数据科学（data）](jishu/data/index.md)             | 12  | PyData 科学计算全栈——NumPy/pandas/matplotlib/NetworkX/Pillow/Plotly/Dash/PyTables/SymPy + Dolt 版本化数据库 + dh DoltHub CLI + Dolt MCP Server                         |
+| [📊 数据科学（data）](jishu/data/index.md)             | 18  | PyData 科学计算全栈——NumPy/pandas/matplotlib/NetworkX/Pillow/Plotly/Dash/PyTables/SymPy + Dolt 版本化数据库 + dh DoltHub CLI + Dolt MCP Server + DoltgreSQL + DoltHub SQL 引擎栈 + Dolt Go Driver + DumbodB + doltlite-python                   |
 | [📐 可视化与创意编程（viz）](jishu/viz/index.md)           | 5   | 3Blue1Brown 生态——ManimGL 动画引擎 · 视频场景 · 字幕工具链 · React 官网 · Anime.js×Three.js 适配器                                                     |
 | [🦀 Rust 语言核心（rust）](jishu/rust/index.md)        | 3   | rustc 编译器流水线 · Cargo 构建系统 · RFC 设计决策                                                                       |
 | [🌐 Web 开发（web）](jishu/web/index.md)             | 3   | FastAPI · GraphQL · HTML 声明式局部更新                                                                                          |
