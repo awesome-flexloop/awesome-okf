@@ -1,6 +1,6 @@
 # 示例文档索引
 
-本目录包含 podman-compose 的实战示例文档，每个示例都是可直接运行的完整用例。
+本目录包含 podman-compose 的实战文档：一篇零基础入门教程（00）与 11 篇示例文档，每个示例都是可直接运行的完整用例。**第一次使用请从 [00-getting-started.md](00-getting-started.md) 开始。**
 
 ## 示例列表
 
@@ -21,36 +21,17 @@
 
 ## 示例使用指南
 
-### 前置准备
-
-所有示例都假设你已经：
-
-1. 安装了 podman（>= 3.4）
-2. 安装了 podman-compose
-3. （CNI 网络）安装了 dnsname 插件
-4. 有一个工作目录用于存放 compose.yaml
-
-### 运行示例的通用步骤
+前置条件与安装步骤见 [00-getting-started.md](00-getting-started.md) 第 2、3 节（podman ≥ 3.4、Python ≥ 3.9、`pip install podman-compose`）。运行任何示例的通用循环：
 
 ```bash
-# 1. 创建工作目录
-mkdir example-dir && cd example-dir
-
-# 2. 创建 compose.yaml（参考示例中的 YAML）
-
-# 3. 启动服务（后台运行）
-podman-compose up -d
-
-# 4. 查看状态和日志
-podman-compose ps
-podman-compose logs -f
-
-# 5. 测试访问（根据示例）
-curl http://localhost:8080
-
-# 6. 停止并清理
-podman-compose down
+podman-compose up -d        # 后台启动示例栈
+podman-compose ps           # 查看状态
+podman-compose logs -f      # 跟踪日志
+curl http://localhost:8080  # 按示例说明测试访问
+podman-compose down         # 停止清理（加 -v 同时删除数据卷）
 ```
+
+完整命令速查与新手避坑见 [00-getting-started.md](00-getting-started.md) 第 7、9 节。
 
 ### 学习路径建议
 
