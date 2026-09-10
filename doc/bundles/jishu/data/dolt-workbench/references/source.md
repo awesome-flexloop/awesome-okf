@@ -483,3 +483,5 @@ export enum DatabaseType {
 - `saveTests()` 手动填充 generatedMaps（better-sqlite3 不自动填充）
 
 **来源**: `graphql-server/src/queryFactory/doltlite/index.ts`
+
+[^dolt-workbench-repo]: [Dolt Workbench GitHub 仓库](https://github.com/dolthub/dolt-workbench)（固定版本 v0.3.75，commit 8fb6757）
