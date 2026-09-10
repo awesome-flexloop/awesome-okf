@@ -9,13 +9,13 @@ generated:
   at: 2026-09-09T04:00:00Z
 sources:
   - id: conn-provider
-    resource: https://github.com/dolthub/dolt-workbench/blob/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f/graphql-server/src/connections/connection.provider.ts
+    resource: https://github.com/dolthub/dolt-workbench/blob/8fb67574a12509f009aa046f4a71e615078e7e4c/graphql-server/src/connections/connection.provider.ts
     title: ConnectionProvider 实现
   - id: data-store
-    resource: https://github.com/dolthub/dolt-workbench/blob/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f/graphql-server/src/dataStore/dataStore.service.ts
+    resource: https://github.com/dolthub/dolt-workbench/blob/8fb67574a12509f009aa046f4a71e615078e7e4c/graphql-server/src/dataStore/dataStore.service.ts
     title: DataStore 持久化服务
   - id: db-resolver
-    resource: https://github.com/dolthub/dolt-workbench/blob/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f/graphql-server/src/databases/database.resolver.ts
+    resource: https://github.com/dolthub/dolt-workbench/blob/8fb67574a12509f009aa046f4a71e615078e7e4c/graphql-server/src/databases/database.resolver.ts
     title: DatabaseResolver
 ---
 

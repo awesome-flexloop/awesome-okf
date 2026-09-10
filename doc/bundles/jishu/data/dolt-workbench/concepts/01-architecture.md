@@ -9,13 +9,13 @@ generated:
   at: 2026-09-09T04:00:00Z
 sources:
   - id: dolt-workbench-bg
-    resource: https://github.com/dolthub/dolt-workbench/blob/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f/web/main/background.ts
+    resource: https://github.com/dolthub/dolt-workbench/blob/8fb67574a12509f009aa046f4a71e615078e7e4c/web/main/background.ts
     title: Electron 主进程入口
   - id: dolt-workbench-app
-    resource: https://github.com/dolthub/dolt-workbench/blob/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f/graphql-server/src/app.module.ts
+    resource: https://github.com/dolthub/dolt-workbench/blob/8fb67574a12509f009aa046f4a71e615078e7e4c/graphql-server/src/app.module.ts
     title: NestJS AppModule
   - id: dolt-workbench-appx
-    resource: https://github.com/dolthub/dolt-workbench/blob/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f/web/renderer/pages/_app.tsx
+    resource: https://github.com/dolthub/dolt-workbench/blob/8fb67574a12509f009aa046f4a71e615078e7e4c/web/renderer/pages/_app.tsx
     title: Next.js App 组件
 ---
 

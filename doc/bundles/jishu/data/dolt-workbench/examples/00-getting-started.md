@@ -9,7 +9,7 @@ generated:
   at: 2026-09-09T04:00:00Z
 sources:
   - id: readme
-    resource: https://github.com/dolthub/dolt-workbench/blob/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f/README.md
+    resource: https://github.com/dolthub/dolt-workbench/blob/8fb67574a12509f009aa046f4a71e615078e7e4c/README.md
     title: Dolt Workbench README
 ---
 

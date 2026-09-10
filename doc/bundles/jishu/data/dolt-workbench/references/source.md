@@ -14,19 +14,19 @@ sources:
     resource: https://github.com/dolthub/dolt-workbench
     title: Dolt Workbench GitHub 仓库
     author: team:dolthub
-    last_modified: 2026-03-05
+    last_modified: 2026-08-24
   - id: dolt-workbench-v0375
-    resource: https://github.com/dolthub/dolt-workbench/tree/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f
+    resource: https://github.com/dolthub/dolt-workbench/tree/8fb67574a12509f009aa046f4a71e615078e7e4c
     title: v0.3.75 release tag (commit 8fb6757)
     author: team:dolthub
-    last_modified: 2026-03-05
+    last_modified: 2026-08-24
 ---
 
 # dolt-workbench 源码事实登记
 
 ## F-001: 项目概述
 
-DoltWorkbench 是 DoltHub 官方推出的现代浏览器 SQL 工作台，基于 Electron + NestJS GraphQL Server + Next.js (React) 构建。支持 MySQL、PostgreSQL、Dolt 和 Doltgres 四种数据库类型[^dolt-workbench-repo]。
+DoltWorkbench 是 DoltHub 官方推出的现代浏览器 SQL 工作台，基于 Electron + NestJS GraphQL Server + Next.js (React) 构建。连接层支持 MySQL、PostgreSQL、SQLite 三种数据库方言（`DatabaseType` 枚举），每种方言经自动探测再派生出 Dolt、Doltgres、DoltLite 三个 Dolt 版本化变体，共形成六个 QueryFactory（详见 F-009~F-011）[^dolt-workbench-repo]。
 
 **来源**: `README.md`
 

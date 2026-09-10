@@ -9,16 +9,16 @@ generated:
   at: 2026-09-09T04:00:00Z
 sources:
   - id: agent-src
-    resource: https://github.com/dolthub/dolt-workbench/blob/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f/web/main/agent/anthropicAgent.ts
+    resource: https://github.com/dolthub/dolt-workbench/blob/8fb67574a12509f009aa046f4a71e615078e7e4c/web/main/agent/anthropicAgent.ts
     title: ClaudeAgent 完整实现
   - id: agent-types
-    resource: https://github.com/dolthub/dolt-workbench/blob/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f/web/main/agent/types.ts
+    resource: https://github.com/dolthub/dolt-workbench/blob/8fb67574a12509f009aa046f4a71e615078e7e4c/web/main/agent/types.ts
     title: Agent 类型定义
   - id: agent-mcp
-    resource: https://github.com/dolthub/dolt-workbench/blob/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f/web/main/agent/mcpServerArgs.ts
+    resource: https://github.com/dolthub/dolt-workbench/blob/8fb67574a12509f009aa046f4a71e615078e7e4c/web/main/agent/mcpServerArgs.ts
     title: MCP Server 参数生成
   - id: agent-ipc
-    resource: https://github.com/dolthub/dolt-workbench/blob/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f/web/main/agent/ipcHandlers.ts
+    resource: https://github.com/dolthub/dolt-workbench/blob/8fb67574a12509f009aa046f4a71e615078e7e4c/web/main/agent/ipcHandlers.ts
     title: IPC Agent Handler
 ---
 

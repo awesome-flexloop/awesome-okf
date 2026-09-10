@@ -9,13 +9,13 @@ generated:
   at: 2026-09-09T04:00:00Z
 sources:
   - id: qf-index
-    resource: https://github.com/dolthub/dolt-workbench/blob/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f/graphql-server/src/queryFactory/index.ts
+    resource: https://github.com/dolthub/dolt-workbench/blob/8fb67574a12509f009aa046f4a71e615078e7e4c/graphql-server/src/queryFactory/index.ts
     title: QueryFactory 接口定义
   - id: qf-base
-    resource: https://github.com/dolthub/dolt-workbench/blob/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f/graphql-server/src/queryFactory/base.ts
+    resource: https://github.com/dolthub/dolt-workbench/blob/8fb67574a12509f009aa046f4a71e615078e7e4c/graphql-server/src/queryFactory/base.ts
     title: BaseQueryFactory 抽象基类
   - id: qf-conn
-    resource: https://github.com/dolthub/dolt-workbench/blob/8fb6757a8e6b3b3c0c3e4f8d3b6e2f1a5c9d8e7f/graphql-server/src/connections/connection.provider.ts
+    resource: https://github.com/dolthub/dolt-workbench/blob/8fb67574a12509f009aa046f4a71e615078e7e4c/graphql-server/src/connections/connection.provider.ts
     title: ConnectionProvider 工厂选择逻辑
 ---
 

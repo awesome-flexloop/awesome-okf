@@ -90,7 +90,7 @@ dolt-workbench/
 ## 信源信息
 
 - **信源距离**: ① 官方源码（GitHub 公开仓库）
-- **固定版本**: v0.3.75（commit `8fb6757`，2026-03-05）
+- **固定版本**: v0.3.75（commit `8fb6757`，2026-08-24）
 - **仓库地址**: https://github.com/dolthub/dolt-workbench
 
 ```{toctree}
