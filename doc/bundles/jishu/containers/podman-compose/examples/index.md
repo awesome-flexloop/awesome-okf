@@ -6,6 +6,7 @@
 
 | 序号 | 文档 | 描述 | 涉及概念 | 难度 |
 |------|------|------|---------|------|
+| 00 | [00-getting-started.md](00-getting-started.md) | podman-compose 入门教程：安装、单服务起步、数据库+命名卷、参数化、常用命令与 5 个新手坑（15 分钟上手） | 安装、up/down、命名卷、环境变量插值、exec | ⭐ 入门 |
 | 01 | [01-wordpress.md](01-wordpress.md) | WordPress + MariaDB 双服务部署：经典的 Web + 数据库模式，适合初学者 | 命名卷、端口映射、环境变量、服务发现 | ⭐ 入门 |
 | 02 | [02-multi-container.md](02-multi-container.md) | Web + Redis 集群多容器编排：网络隔离、依赖管理、多卷配置、参数化配置 | 自定义网络、服务依赖、多卷管理、环境变量插值、profiles、健康检查 | ⭐⭐ 进阶 |
 | 03 | [03-official-examples-gallery.md](03-official-examples-gallery.md) | 官方 12 个 examples/ 用例模式图鉴：从单服务到 6 节点集群、GPU、内联构建、extends 继承 | 插值、命名卷、links/extends、read_only、GPU、dockerfile_inline、一次性任务容器 | ⭐⭐ 进阶 |
@@ -53,7 +54,7 @@ podman-compose down
 
 ### 学习路径建议
 
-1. **新手入门**：先做 [04-echo-hello-app.md](04-echo-hello-app.md)（单服务最小用例），再做 [01-wordpress.md](01-wordpress.md) 与 [06-azure-vote.md](06-azure-vote.md) 理解双服务编排
+1. **零起点**：先读 [00-getting-started.md](00-getting-started.md)（15 分钟安装+跑通第一个应用），再做 [04-echo-hello-app.md](04-echo-hello-app.md)（单服务最小用例），然后 [01-wordpress.md](01-wordpress.md) 与 [06-azure-vote.md](06-azure-vote.md) 理解双服务编排
 2. **语法速查**：遇到字段写法疑问查 [07-busybox-syntax.md](07-busybox-syntax.md)；特殊场景看 [05-docker-inline-gpu.md](05-docker-inline-gpu.md)
 3. **进阶学习**：[08-hello-python.md](08-hello-python.md)（本地构建+只读根）、[02-multi-container.md](02-multi-container.md)（网络隔离与健康检查）
 4. **高级专题**：[09-redis-cluster.md](09-redis-cluster.md)（集群拓扑）、[10-nodeproj.md](10-nodeproj.md)（开发环境+extends）、[11-awx-large-app.md](11-awx-large-app.md)（企业级部署）
@@ -67,6 +68,7 @@ podman-compose down
 :hidden:
 :maxdepth: 2
 
+00-getting-started
 01-wordpress
 02-multi-container
 03-official-examples-gallery

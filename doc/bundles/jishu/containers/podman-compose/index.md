@@ -54,8 +54,9 @@ podman-compose/
 │   ├── 08-x-podman-extensions.md
 │   ├── 09-version-evolution.md
 │   └── 10-compose-vs-podman-py.md
-├── examples/             # 实战示例（03 图鉴 + 04-11 官方逐例详解）
+├── examples/             # 实战示例（00 入门教程 + 03 图鉴 + 04-11 官方逐例详解）
 │   ├── index.md
+│   ├── 00-getting-started.md
 │   ├── 01-wordpress.md
 │   ├── 02-multi-container.md
 │   ├── 03-official-examples-gallery.md
@@ -107,6 +108,7 @@ podman-compose/
 
 | 文档 | 描述 | 难度 |
 |------|------|------|
+| [入门教程（从零上手）](examples/00-getting-started.md) | 15 分钟安装并跑通第一个应用：单服务→数据库+命名卷→参数化→常用命令→新手坑 | ⭐ 入门 |
 | [WordPress 部署示例](examples/01-wordpress.md) | WordPress + MariaDB 双服务完整教程 | ⭐ 入门 |
 | [多容器应用编排](examples/02-multi-container.md) | Web + Redis 集群高级编排，网络隔离与依赖管理 | ⭐⭐ 进阶 |
 | [官方示例图鉴](examples/03-official-examples-gallery.md) | 12 个官方 examples/ 用例模式速查：集群/GPU/extends/内联构建 | ⭐⭐ 进阶 |
