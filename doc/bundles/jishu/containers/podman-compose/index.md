@@ -53,11 +53,19 @@ podman-compose/
 │   ├── 07-dependency-lifecycle.md
 │   ├── 08-x-podman-extensions.md
 │   └── 09-version-evolution.md
-├── examples/             # 实战示例
+├── examples/             # 实战示例（03 图鉴 + 04-11 官方逐例详解）
 │   ├── index.md
 │   ├── 01-wordpress.md
 │   ├── 02-multi-container.md
-│   └── 03-official-examples-gallery.md
+│   ├── 03-official-examples-gallery.md
+│   ├── 04-echo-hello-app.md
+│   ├── 05-docker-inline-gpu.md
+│   ├── 06-azure-vote.md
+│   ├── 07-busybox-syntax.md
+│   ├── 08-hello-python.md
+│   ├── 09-redis-cluster.md
+│   ├── 10-nodeproj.md
+│   └── 11-awx-large-app.md
 └── references/           # 信源登记
     ├── index.md
     ├── readme-source.md
@@ -100,6 +108,7 @@ podman-compose/
 | [WordPress 部署示例](examples/01-wordpress.md) | WordPress + MariaDB 双服务完整教程 | ⭐ 入门 |
 | [多容器应用编排](examples/02-multi-container.md) | Web + Redis 集群高级编排，网络隔离与依赖管理 | ⭐⭐ 进阶 |
 | [官方示例图鉴](examples/03-official-examples-gallery.md) | 12 个官方 examples/ 用例模式速查：集群/GPU/extends/内联构建 | ⭐⭐ 进阶 |
+| 04–11 逐例详解 | [examples/index.md](examples/index.md) | echo/hello-app、inline/GPU、azure-vote、busybox、hello-python、Redis 集群、nodeproj、awx 八篇详细教程 | ⭐→⭐⭐⭐ |
 
 ### 信源
 

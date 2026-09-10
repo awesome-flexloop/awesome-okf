@@ -1,5 +1,31 @@
 # 变更日志
 
+## v1.5.0 (2026-09-10)
+
+### 新增
+
+- 官方 examples/ 12 个示例由图鉴（03）进一步逐例详细展开，新增 8 篇示例教程（按 §6.5 多轮增量扩展规范编号续接）：
+  - `examples/04-echo-hello-app.md`：echo/hello-app 单服务最小用例——端口参数化三种用法、curl 回显探针、最小生命周期
+  - `examples/05-docker-inline-gpu.md`：dockerfile_inline 内联构建机制（临时 .containerfile 生命周期）与 GPU 预留（deploy.resources → --device CDI 翻译）
+  - `examples/06-azure-vote.md`：前端+Redis 双服务标准形态——服务名零配置发现、dict/list 两种 env 语法对照、项目级 .env 角色
+  - `examples/07-busybox-syntax.md`：配置语法参考卡——links 别名隐含依赖、空值 env 透传、labels、注释形式的 12 个可选字段目录（13 行注释计数已经脚本核实）
+  - `examples/08-hello-python.md`：aiohttp+aioredis 计数器——build/image 双轨与 is_local、read_only+命名卷写路径设计
+  - `examples/09-redis-cluster.md`：7 服务 6 节点 Bitnami Redis 集群——creator 初始化角色、REDIS_NODES 服务名发现、两层 depends_on 与 service_started 条件边界
+  - `examples/10-nodeproj.md`：Node 开发环境——extends 基服务合并、两层 env 分工、rootless UID 传递与 HOME 设计、read_only+tmpfs+bind mount、run --rm --no-deps 初始化
+  - `examples/11-awx-large-app.md`：awx3 五服务 links 组网与 awx17 Ansible Jinja2 模板生成（绝对路径 sed 改写 + run --rm --service-ports migrate）
+
+### 更新
+
+- `examples/index.md`：示例清单补 04-11（共 11 篇），学习路径改为入门/语法速查/进阶/高级/图鉴五级，toctree 同步
+- 根 `index.md`：Bundle 结构树展开 11 篇示例、实战示例导航增加逐例详解入口
+
+### 事实来源
+
+- 官方示例：`external/dao/action/Containers/podman-compose/examples/`（12 目录，commit e3df104）
+- 本轮补读应用代码：hello-python/app/web.py+requirements.txt、nodeproj Dockerfile+package.json+index.js、awx17 docker-compose.yml.j2
+
+---
+
 ## v1.4.0 (2026-09-10)
 
 ### 新增
