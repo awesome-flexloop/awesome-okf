@@ -28,6 +28,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🔢 tiktoken BPE 分词库](tiktoken/index.md) | OpenAI 官方 BPE 分词库源码教程——薄 Python 门面 + 重型 Rust 核心（PyO3）双层架构 |
 | [📊 AI Agent 行业研究（2026-08）](agent-industry-research/index.md) | AI Agent 行业研究三篇——知乎行业文章、最佳 Agent 系统研究、全球产业研究（市场规模口径、五场战争、头部系统对比） |
 | [🚀 国产Token出海：低价算力如何碾压全球市场](domestic-model-token-export/index.md) | 国产AI模型通过OpenRouter以极低价格占领全球API市场（DeepSeek $0.09 vs Claude $5/MTok），但杰文斯悖论与WTO规则窗口构成隐患（含F-004勘误） |
+| [💥 Token经济大爆发：46.7万亿周调用量](token-economy-explosion/index.md) | 全球AI周调用量46.7T、中国18.81T连续八周超美国5.76T；ATH/Token Hub政策布局、汕头闭环工厂、高盛2030预测24倍增长、增长飞轮分析 |
 | [🧭 AI 工程方法论](ai-engineering-methodology/index.md) | AI 工程化方法论谱系——Harness 工程、提示词编程与七概念提示词工程、对抗性审查、Agent 评测体系与性能优化 |
 | [📝 Agent 平台散篇笔记](agent-platform-notes/index.md) | AI Agent 平台与工具散篇聚合——Anthropic Agent 路线图、AReaL 强化学习（2 篇）、AtomGit AI 实践、BrowserAct 自动化（2 篇）、Minitap 官方 Wiki、Octo 多 Agent 平台等独立成束不足的小主题 |
 | [🎬 Agnes AI 与 Pavo 创作平台](agnes-pavo/index.md) | 免费多模态 API + 一站式 AI 短剧工作流——Pavo 四大核心模块、八步剧情短片流水线与 Agent 指挥系统 |
@@ -60,6 +61,9 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [📐 text-to-cad 用 AI 生成可编辑 CAD 源代码](text-to-cad/index.md) | 面向 Agent 的 CAD 技能库——AI 直接生成 build123d 参数化源码，导出 STEP/URDF/DXF/G-code 工程文件 |
 | [🌋 火山引擎（Volcengine）AI 产品生态](volcengine/index.md) | Ark 大模型平台、Computer-Use/Mobile-Use Agent、Viking AI 搜索推荐、机器学习平台与云手机等产品分析（与 volcengine-agent Agent 生态束并存互补） |
 | [🤝 火山引擎 Agent 生态（AgentKit + 共建计划）](volcengine-agent/index.md) | AgentKit 产品与架构（VEADK 框架、SDK/CLI、应用场景）与 Agent 共建计划（贡献方向、参与指南、奖励认可） |
+| [💻 Codex Agent 工作流实践](codex-agent-workflow-practices/index.md) | Anthropic Codex CLI 四杠杆降本实践——并行工作流/大闭环/对抗提升/真实需求驱动，243亿 token / $12,213 实测数据 |
+| [📊 2026免费大模型API汇总（40家平台）](free-llm-api-roundup/index.md) | 知乎博文经OKF v0.2七阶段转化——国内23家+国际17家免费大模型API平台盘点，含完整免费额度、速率限制与选型指南（GitHub Models已退役） |
+| [🤖 Matt Pocock Skills 生态解读](mattpocock-skills/index.md) | 微信公众号博文经OKF v0.2七阶段转化——skills.sh平台、Matt Pocock Skills范式解析、Agent Skills生态竞争格局与三条竞争路线分析 |
 
 ```{toctree}
 :hidden:
@@ -67,6 +71,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 
 agnes-ai/index
 ai-agent/index
+agent-fundamentals/index
 langchain-ai/index
 datawhale/index
 coze/index
@@ -78,6 +83,7 @@ pocketflow/index
 ai-security/index
 agent-industry-research/index
 domestic-model-token-export/index
+token-economy-explosion/index
 agent-platform-notes/index
 agnes-pavo/index
 ai-engineering-methodology/index
@@ -112,4 +118,7 @@ text-to-cad/index
 tiktoken/index
 volcengine/index
 volcengine-agent/index
+codex-agent-workflow-practices/index
+free-llm-api-roundup/index
+mattpocock-skills/index
 ```

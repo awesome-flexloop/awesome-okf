@@ -235,3 +235,60 @@
 |------|------|------|--------|------|
 | F-045 | "超过 1G 数据会变慢" | 误读：将 Web UI 限制泛化为数据库能力 | 该限制仅适用于 DoltHub Web UI 浏览器查询（2021 年过时信息），Dolt 生产环境可处理 TB 级数据 | F-060 / [dolthub.com/blog/2021-05-26-dolt-web-ui/](https://www.dolthub.com/blog/2021-05-26-dolt-web-ui/) |
 | F-042 | "Sysbench 接近 MySQL" | 措辞保守 | Sysbench 读写基准实际已超越 MySQL（read mult 0.83，write mult 0.91） | [dolthub.com/latency-benchmarks](https://www.dolthub.com/latency-benchmarks) |
+
+---
+
+## 深化扩展（2026-09-09）
+
+> 用户要求使用 seven-concepts-cmd + source-code-to-okf-wiki Skill，基于本地 `dolthub/dolt` 主仓源码（HEAD 65bd3306b0，tag v2.3.2）生成 OKF wiki 分层全景教程，深化扩展现有 dolt/ 束。
+
+### 决策记录
+
+| 决策项 | 选择 | 理由 |
+|--------|------|------|
+| 束归属 | 深化扩展现有 dolt/ 束 | 与既有 dolthub-cli/dolt-mcp 并列，保持知识连贯性 |
+| 覆盖深度 | 分层全景教程（CLI → SQL → 存储内核） | 博文层仅覆盖产品认知，源码层补全实现细节 |
+| 提交策略 | 完成后原子提交到 awesome-okf-xs | 遵守子模块提交规范 |
+
+### R 阶段（源码事实采集）
+
+- **动作**：三组并行子代理分别采 CLI 层/SQL 版本控制层/存储内核层源码事实
+- **信源**：本地 `d:\spaces\SpecWeave\external\dao\action\DoltHub\dolt` 主仓（HEAD 65bd3306b0，tag v2.3.2）
+- **新增数量**：107 条（F-086~F-192），信源距离 ① 官方源码
+- **核心发现**：
+  - CLI 层：main() 两行体、三组白名单（22/10/6 项）、DoltEnv 惰性加载、RefType 常量体系、Hash base32 {0-9,a-v}
+  - SQL 层：dprocedures(38)/dfunctions(10)/dtablefunctions(13) API 体系、HistoryTable 分区模型、三种冲突类型
+  - 存储层：NBS 内容寻址 DAG、Prolly Tree NodeStore/StaticMap/MutableMap/AddressMap、21 个 .fbs 文件、Commit 高度算法
+  - 生态层：DoltDB struct + Resolve 系列 API、12 仓库生态工作流、AGENT.md 源码阅读指南
+- **产出**：`references/source.md`（F-086~F-192 登记，29 章节）
+
+### I 阶段（骨架判定更新）
+
+- **一问**（有读者可照做的安装/配置/代码/调用流程？）：✅ 满足——examples/ 四篇提供完整源码对照工作流
+- **二问**（经作者实测、有版本/输入输出/步骤顺序？）：当前环境未安装 dolt，示例以源码对照形式呈现（非实测输出）
+- **结论**：bundle 从"技术综述"升级为"分层全景教程"，保留 examples/ 目录（源码对照形式）
+
+### E 阶段（生成）
+
+| 产出 | 路径 | 对应 F 编号 |
+|------|------|------------|
+| 源码事实登记 | `references/source.md` | F-086~F-192 |
+| CLI 命令层概念 | `concepts/03-dolt-cli-architecture.md` | F-086~F-111 |
+| SQL 版本控制层概念 | `concepts/04-sql-version-control-api.md` | F-112~F-153 |
+| 存储内核层概念 | `concepts/05-storage-kernel-architecture.md` | F-157~F-182 |
+| 生态与工作流层概念 | `concepts/06-dolt-ecosystem-and-workflows.md` | F-183~F-192 |
+| CLI 工作流示例 | `examples/00-cli-workflow.md` | F-086~F-111 |
+| SQL 版本控制示例 | `examples/01-sql-version-control.md` | F-112~F-153 |
+| 分支合并工作流示例 | `examples/02-branch-merge-workflow.md` | F-112~F-156 |
+| 系统表与测试示例 | `examples/03-system-tables-and-testing.md` | F-157~F-192 |
+| 索引更新 | `concepts/index.md`、`references/index.md`、`examples/index.md`、`index.md` | — |
+
+### 文件变更摘要
+
+- **新增文件**（9 个）：`references/source.md`、`concepts/03~06.md`、`examples/00~03.md`、`examples/index.md`
+- **更新文件**（4 个）：`concepts/index.md`（3→7 篇）、`references/index.md`（+source.md）、`index.md`（骨架判定更新 + examples 导航）、`log.md`（追加深化扩展记录）
+- **隔离变更**：不修改 `dolt-mcp/` 束（WIP 竞态风险），仅修改 dolt/ 束及相关索引
+
+---
+
+## G 质量门检查记录
