@@ -18,6 +18,9 @@ sources:
   - id: docs
     resource: /references/docs-source.md
     title: podman-compose 官方 docs/ 文档与 bash 补全脚本信源
+  - id: examples
+    resource: /references/examples-source.md
+    title: podman-compose 官方 examples/ 示例目录信源
 ---
 
 # podman-compose
@@ -53,12 +56,14 @@ podman-compose/
 ├── examples/             # 实战示例
 │   ├── index.md
 │   ├── 01-wordpress.md
-│   └── 02-multi-container.md
+│   ├── 02-multi-container.md
+│   └── 03-official-examples-gallery.md
 └── references/           # 信源登记
     ├── index.md
     ├── readme-source.md
     ├── source-code-map.md
-    └── docs-source.md
+    ├── docs-source.md
+    └── examples-source.md
 ```
 
 ## 快速导航
@@ -94,6 +99,7 @@ podman-compose/
 |------|------|------|
 | [WordPress 部署示例](examples/01-wordpress.md) | WordPress + MariaDB 双服务完整教程 | ⭐ 入门 |
 | [多容器应用编排](examples/02-multi-container.md) | Web + Redis 集群高级编排，网络隔离与依赖管理 | ⭐⭐ 进阶 |
+| [官方示例图鉴](examples/03-official-examples-gallery.md) | 12 个官方 examples/ 用例模式速查：集群/GPU/extends/内联构建 | ⭐⭐ 进阶 |
 
 ### 信源
 
@@ -102,6 +108,7 @@ podman-compose/
 | [官方 README](references/readme-source.md) | podman-compose 项目官方文档信源 |
 | [源码信源登记](references/source-code-map.md) | podman_compose.py 版本固定、结构地图与核心符号索引 |
 | [官方文档与补全脚本信源](references/docs-source.md) | 7 份版本 Changelog、Extensions 扩展说明、Mappings 历史与 bash 补全脚本 |
+| [官方示例信源](references/examples-source.md) | examples/ 目录 12 个示例应用的清单与演示特性索引 |
 
 ## 快速开始
 

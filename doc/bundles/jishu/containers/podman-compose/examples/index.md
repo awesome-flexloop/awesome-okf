@@ -8,6 +8,7 @@
 |------|------|------|---------|------|
 | 01 | [01-wordpress.md](01-wordpress.md) | WordPress + MariaDB 双服务部署：经典的 Web + 数据库模式，适合初学者 | 命名卷、端口映射、环境变量、服务发现 | ⭐ 入门 |
 | 02 | [02-multi-container.md](02-multi-container.md) | Web + Redis 集群多容器编排：网络隔离、依赖管理、多卷配置、参数化配置 | 自定义网络、服务依赖、多卷管理、环境变量插值、profiles、健康检查 | ⭐⭐ 进阶 |
+| 03 | [03-official-examples-gallery.md](03-official-examples-gallery.md) | 官方 12 个 examples/ 用例模式图鉴：从单服务到 6 节点集群、GPU、内联构建、extends 继承 | 插值、命名卷、links/extends、read_only、GPU、dockerfile_inline、一次性任务容器 | ⭐⭐ 进阶 |
 
 ## 示例使用指南
 
@@ -48,20 +49,9 @@ podman-compose down
 2. **进阶学习**：再做 [02-multi-container.md](02-multi-container.md)，掌握网络隔离、依赖管理等高级特性
 3. **实践项目**：结合 [concepts/](../concepts/03-compose-patterns.md) 中的模式，为自己的应用编写 Compose 文件
 
-## 更多官方示例
+## 官方示例图鉴
 
-podman-compose 源码仓库的 `examples/` 目录下还有更多示例可供参考：
-
-| 示例目录 | 描述 |
-|---------|------|
-| `busybox/` | 最小化 busybox 容器测试 |
-| `echo/` | 简单的 echo 服务示例 |
-| `hello-app/` | 单容器 Hello World 应用 |
-| `hello-python/` | Python Flask 应用构建示例 |
-| `nvidia-smi/` | NVIDIA GPU 容器示例 |
-| `azure-vote/` | Azure 投票应用（前端+Redis） |
-| `awx3/` | AWX/Ansible Tower 部署示例 |
-| `nodeproj/` | Node.js 项目开发环境配置 |
+仓库 `examples/` 目录的 12 个官方示例（echo、hello-app、azure-vote、busybox、wordpress、hello-python、hello-app-redis、nodeproj、nvidia-smi、docker-inline、awx3、awx17）已逐个拆解为模式速查，见 [03-official-examples-gallery.md](03-official-examples-gallery.md)。
 
 ```{toctree}
 :hidden:
@@ -69,4 +59,5 @@ podman-compose 源码仓库的 `examples/` 目录下还有更多示例可供参�
 
 01-wordpress
 02-multi-container
+03-official-examples-gallery
 ```

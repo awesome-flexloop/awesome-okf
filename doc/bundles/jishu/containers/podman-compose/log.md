@@ -1,5 +1,26 @@
 # 变更日志
 
+## v1.4.0 (2026-09-10)
+
+### 新增
+
+- 基于官方 `examples/` 目录 12 个示例应用精读，新增 1 篇示例文档：
+  - `examples/03-official-examples-gallery.md`：官方示例图鉴——按三级梯度拆解 12 个用例（单服务最小用例 echo/hello-app/docker-inline/nvidia-smi；双服务编排 azure-vote/wordpress/busybox/hello-python；多服务与高级模式 hello-app-redis/nodeproj/awx3/awx17），覆盖插值参数化、命名卷、links 别名、extends 继承、read_only+tmpfs、build+image 双轨、GPU 预留、dockerfile_inline、`run --rm` 一次性任务容器等模式，附横向模式对照表
+- 新增信源文档 `references/examples-source.md`：12 个示例的服务规模、核心演示特性与关键文件索引、事实注记（命名混用、插值惯例、短格式 env、extends 唯一用例等）
+
+### 更新
+
+- `examples/index.md`：示例清单补充 03，原「更多官方示例」简表替换为图鉴指引，toctree 同步
+- `references/index.md`：信源清单与 toctree 补充 examples-source
+- 根 `index.md`：Bundle 结构树、实战示例导航、信源表、frontmatter sources 补充示例信源
+
+### 事实来源
+
+- 官方示例：`external/dao/action/Containers/podman-compose/examples/`（12 个应用目录，v1.6.0 快照 commit e3df104）
+- 源码交叉印证：字段翻译与归一化逻辑（`rec_subs`、`container_to_build_args`、`is_local`、`resolve_extends`）
+
+---
+
 ## v1.3.0 (2026-09-10)
 
 ### 新增
