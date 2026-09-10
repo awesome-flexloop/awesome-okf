@@ -93,15 +93,11 @@ dolt-workbench/
 - **固定版本**: v0.3.75（commit `8fb6757`，2026-03-05）
 - **仓库地址**: https://github.com/dolthub/dolt-workbench
 
-{toctree}
-:maxdepth: 1
+```{toctree}
+:hidden:
+:maxdepth: 2
 
-concepts/00-dolt-workbench-overview
-concepts/01-architecture
-concepts/02-query-factory-pattern
-concepts/03-dolt-lite-revision-cache
-concepts/04-agent-mode
-examples/00-getting-started
-examples/01-connecting-databases
-examples/02-using-agent-mode
-references/source
+concepts/index
+examples/index
+references/index
+```

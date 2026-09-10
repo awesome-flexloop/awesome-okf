@@ -14,4 +14,5 @@
 article-source
 verification
 adversarial-review
+glossary
 ```

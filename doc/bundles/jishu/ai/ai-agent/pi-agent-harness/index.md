@@ -50,10 +50,7 @@
 :hidden:
 :maxdepth: 2
 
-concepts/00-pi-agent-harness-overview
-concepts/01-pi-coding-agent-capabilities
-concepts/02-pi-design-philosophy-and-comparisons
-references/article-source
-references/verification
+concepts/index
+references/index
 log
 ```

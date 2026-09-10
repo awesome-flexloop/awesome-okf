@@ -99,6 +99,7 @@ total_bundles: 47
 | [deepcode-cli](deepcode-cli/index.md) | TypeScript | 5+1+1=7 | DeepCode CLI——三包monorepo(cli/core/vscode-ide-companion)、10种权限作用域(read-in-cwd/network/git等)、MCP客户端(mcp__server__tool命名空间)、12个斜杠命令 |
 | [opencode](opencode/index.md) | TypeScript | 5+1+1=7 | OpenCode Terminal Coding Agent——Bun+Turbo+SST技术栈、SessionV2会话模型(Context Epoch)、V2配置规范、infra模块(app/console/lake/stage/stats/secret)、Cloudflare+AWS混合云部署 |
 | [pi-cli](pi-cli/index.md) | TypeScript | 5+1+1=7 | Pi AI CLI——9包monorepo(ai/tui/agent/client/server/evals等)、AI包(models/oauth/cli/compat/images)、TUI差分渲染引擎、5个内置prompt(cl/is/pr/sa/wr)、锁步版本控制 |
+| [pi-agent-harness](pi-agent-harness/index.md) | 博文综述 | 3+2+1=6 | Pi Agent Harness 高层定位与竞品综述——pi-ai/pi-agent-core/pi-coding-agent/pi-tui 四层架构、默认工具集与 Skill/Extension/Package 扩展、与 Claude Code/Codex/OpenCode/LangGraph 对比 |
 
 ### 🔬 Tongyi-MAI 生态源码精读
 
@@ -184,6 +185,7 @@ nanobot/index
 deepcode-cli/index
 opencode/index
 pi-cli/index
+pi-agent-harness/index
 mai-ui/index
 mobile-world/index
 mobilepa-bench/index

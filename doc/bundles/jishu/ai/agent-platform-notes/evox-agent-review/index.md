@@ -49,9 +49,12 @@ sources:
 - [参考与附件](references/index.md)
 
 ```{toctree}
+:hidden:
 :maxdepth: 2
 
-concepts/index
+concepts/00-evox-timeline
+concepts/01-swarm-self-evolution-mechanism
+concepts/02-competitive-positioning-and-cases
 references/index
 log
 ```

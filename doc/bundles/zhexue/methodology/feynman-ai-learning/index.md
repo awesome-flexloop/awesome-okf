@@ -11,11 +11,10 @@ total_concepts: 2
 total_references: 2
 ---
 
-```toctree
+```{toctree}
 :maxdepth: 2
 :caption: 费曼学习法+AI
 
-index
 concepts/feynman-technique
 concepts/ai-as-student
 references/article-source

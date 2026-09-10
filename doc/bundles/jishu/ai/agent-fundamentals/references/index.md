@@ -28,3 +28,11 @@ sources:
 
 - [知乎专栏原文](https://zhuanlan.zhihu.com/p/1969757810263856430) — 完整认知地图（需登录访问）
 - [CSDN 镜像](https://blog.csdn.net/king0007777777/article/details/160289884) — 可直接访问的转载版本
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+source
+insights
+```

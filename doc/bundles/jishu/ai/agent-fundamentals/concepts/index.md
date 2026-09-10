@@ -43,3 +43,18 @@ sources: []
 1. 先读 [00 概念全景与总结](00-overview.md) 建立整体认知
 2. 按 01→08 顺序逐层深入理解各概念
 3. 结合 [references/insights.md](../references/insights.md) 深化理解核心论点
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+00-overview
+01-token
+02-context
+03-prompt
+04-tool
+05-mcp
+06-skill
+07-agent
+08-llm
+```

@@ -5,3 +5,14 @@
 - [02-query-factory-pattern](./02-query-factory-pattern.md) — QueryFactory 工厂模式
 - [03-dolt-lite-revision-cache](./03-dolt-lite-revision-cache.md) — DoltLite Revision 缓存机制
 - [04-agent-mode](./04-agent-mode.md) — Agent Mode 实现
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+00-dolt-workbench-overview
+01-architecture
+02-query-factory-pattern
+03-dolt-lite-revision-cache
+04-agent-mode
+```
