@@ -25,7 +25,7 @@
 | **综合** | **⭐⭐⭐⭐ (4/5)** | 资讯汇总类bundle质量较高 |
 
 ### V阶段改进建议（非阻塞）
-1. 新增glossary.md：补充RPM/RPD/TPM/Credits等术语解释
+1. ~~新增glossary.md：补充RPM/RPD/TPM/Credits等术语解释~~ ✅ 已完成
 2. 新增examples/上手指南：新人注册流程和操作步骤
 3. 下次核验日期：2026-10-09
 
