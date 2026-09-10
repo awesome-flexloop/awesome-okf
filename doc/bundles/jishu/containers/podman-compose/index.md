@@ -15,6 +15,9 @@ sources:
   - id: source-code
     resource: /references/source-code-map.md
     title: podman_compose.py 源码信源登记（v1.6.0 / commit e3df104）
+  - id: docs
+    resource: /references/docs-source.md
+    title: podman-compose 官方 docs/ 文档与 bash 补全脚本信源
 ---
 
 # podman-compose
@@ -44,7 +47,9 @@ podman-compose/
 │   ├── 04-source-architecture.md
 │   ├── 05-cli-translation-layer.md
 │   ├── 06-config-pipeline.md
-│   └── 07-dependency-lifecycle.md
+│   ├── 07-dependency-lifecycle.md
+│   ├── 08-x-podman-extensions.md
+│   └── 09-version-evolution.md
 ├── examples/             # 实战示例
 │   ├── index.md
 │   ├── 01-wordpress.md
@@ -52,7 +57,8 @@ podman-compose/
 └── references/           # 信源登记
     ├── index.md
     ├── readme-source.md
-    └── source-code-map.md
+    ├── source-code-map.md
+    └── docs-source.md
 ```
 
 ## 快速导航
@@ -79,6 +85,8 @@ podman-compose/
 | [CLI 翻译层与标签状态](concepts/05-cli-translation-layer.md) | service dict → podman argv 翻译主函数、卷/网络/密钥映射、标签即数据库 |
 | [配置加载管线](concepts/06-config-pipeline.md) | 文件发现、bash 风格插值引擎、归一化、!override/!reset 深合并、extends/include |
 | [依赖图与 up/down 生命周期](concepts/07-dependency-lifecycle.md) | 12 种依赖条件、重建判定三条件、拉取策略、pod 创建与 down 清理顺序 |
+| [x-podman 扩展字段全解](concepts/08-x-podman-extensions.md) | 容器/密钥/网络/Pod 扩展字段、podman 特有网络与挂载类型、Docker Compose 兼容开关 |
+| [版本演进与能力矩阵](concepts/09-version-evolution.md) | 7 份 Changelog 梳理 0.1.x→1.6.0 能力时间线、podman/Python 版本门槛、未发布变更与 bash 补全脚本 |
 
 ### 实战示例
 
@@ -93,6 +101,7 @@ podman-compose/
 |------|------|
 | [官方 README](references/readme-source.md) | podman-compose 项目官方文档信源 |
 | [源码信源登记](references/source-code-map.md) | podman_compose.py 版本固定、结构地图与核心符号索引 |
+| [官方文档与补全脚本信源](references/docs-source.md) | 7 份版本 Changelog、Extensions 扩展说明、Mappings 历史与 bash 补全脚本 |
 
 ## 快速开始
 

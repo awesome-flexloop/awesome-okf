@@ -8,6 +8,7 @@
 |--------|------|------|
 | readme | [readme-source.md](readme-source.md) | podman-compose 官方 README 文档，包含项目概述、安装方法、依赖说明 |
 | source-code | [source-code-map.md](source-code-map.md) | podman_compose.py 源码信源登记：版本固定（v1.6.0 / commit e3df104）、结构地图与核心符号索引 |
+| docs | [docs-source.md](docs-source.md) | 官方 docs/ 文档信源：7 份版本 Changelog、Extensions 扩展说明、Mappings 历史映射与 bash 补全脚本 |
 
 ## 信源说明
 
@@ -19,4 +20,5 @@
 
 readme-source
 source-code-map
+docs-source
 ```

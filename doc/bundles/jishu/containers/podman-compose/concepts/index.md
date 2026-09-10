@@ -14,6 +14,8 @@
 | 05 | [05-cli-translation-layer.md](05-cli-translation-layer.md) | CLI 翻译层与标签状态：service dict 到 podman argv 的映射、标签即数据库 | 04-source-architecture |
 | 06 | [06-config-pipeline.md](06-config-pipeline.md) | 配置加载管线：文件发现、插值引擎、归一化、深合并与 extends/include | 04-source-architecture |
 | 07 | [07-dependency-lifecycle.md](07-dependency-lifecycle.md) | 依赖图与 up/down 生命周期：条件等待、重建判定、拉取策略与清理顺序 | 05-cli-translation-layer, 06-config-pipeline |
+| 08 | [08-x-podman-extensions.md](08-x-podman-extensions.md) | x-podman 扩展字段全解：容器/密钥/网络/Pod 扩展与 Docker Compose 兼容开关 | 00-introduction, 05-cli-translation-layer |
+| 09 | [09-version-evolution.md](09-version-evolution.md) | 版本演进与能力矩阵：0.1.x→1.6.0 时间线、版本门槛、未发布变更与 bash 补全 | 00-introduction, 08-x-podman-extensions |
 
 ## 学习路径建议
 
@@ -29,13 +31,17 @@
 4. [05-cli-translation-layer.md](05-cli-translation-layer.md) 理解 service dict 到 podman argv 的翻译层
 5. [06-config-pipeline.md](06-config-pipeline.md) 理解配置加载、插值与合并管线
 6. [07-dependency-lifecycle.md](07-dependency-lifecycle.md) 理解依赖图与 up/down 生命周期
-7. [02-rootless.md](02-rootless.md) 深入了解 rootless 安全模型
+7. [08-x-podman-extensions.md](08-x-podman-extensions.md) 掌握 Podman 独有扩展字段与兼容开关
+8. [09-version-evolution.md](09-version-evolution.md) 了解版本能力矩阵与升级注意事项
+9. [02-rootless.md](02-rootless.md) 深入了解 rootless 安全模型
 
 ### 生产使用路径
 1. [00-introduction.md](00-introduction.md) 安装部署
 2. [02-rootless.md](02-rootless.md) 理解安全边界和权限模型
 3. [03-compose-patterns.md](03-compose-patterns.md) 掌握配置最佳实践
-4. 参考 [examples/](../examples/index.md) 中的多容器示例
+4. [08-x-podman-extensions.md](08-x-podman-extensions.md) 用 x-podman 字段处理 Podman 特有需求与迁移兼容
+5. [09-version-evolution.md](09-version-evolution.md) 升级前核对版本能力门槛
+6. 参考 [examples/](../examples/index.md) 中的多容器示例
 
 ```{toctree}
 :hidden:
@@ -49,4 +55,6 @@
 05-cli-translation-layer
 06-config-pipeline
 07-dependency-lifecycle
+08-x-podman-extensions
+09-version-evolution
 ```

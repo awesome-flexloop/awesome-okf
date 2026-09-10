@@ -1,5 +1,28 @@
 # 变更日志
 
+## v1.3.0 (2026-09-10)
+
+### 新增
+
+- 基于官方 `docs/`（7 份 Changelog、Extensions、Mappings）与 `completion/bash` 补全脚本精读，新增 2 篇概念文档：
+  - `concepts/08-x-podman-extensions.md`：x-podman 扩展字段全解——容器级（uidmaps/gidmaps/rootfs/no_hosts/passwd）、密钥级（relabel）、网络级（disable_dns/dns/routes）、服务网络扩展（mac_address/interface_name）、podman 特有网络模式（slirp4netns/pasta/ns/private）与挂载类型（glob/image）、Docker Compose 兼容开关（docker_compose_compat 元开关与 3 个分项）、自定义 Pod 管理（in_pod/pod_args）
+  - `concepts/09-version-evolution.md`：版本演进与能力矩阵——0.1.x 六种网络映射模式与 1.x 架构断点、1.1.0→1.6.0 能力引入时间线、三条演进主线（方言退场/可靠性加固/双语标签）、podman 4.6.0/5.6.0 与 Python 版本门槛、1.6.0 后未发布的 newsfragments 变更、bash 补全脚本机制与已知漂移
+- 新增信源文档 `references/docs-source.md`：docs/ 9 文件与 completion/ 脚本内容索引、版本固定、补全脚本与代码漂移注记
+
+### 更新
+
+- `concepts/index.md`：概念清单、架构路径与生产路径补充 08-09，toctree 同步
+- `references/index.md`：信源清单与 toctree 补充 docs-source
+- 根 `index.md`：Bundle 结构树、源码精读导航、信源表、frontmatter sources 补充官方文档信源
+
+### 事实来源
+
+- 官方文档：`external/dao/action/Containers/podman-compose/docs/`（Changelog-1.1.0~1.6.0、Extensions.md、Mappings.md）
+- 补全脚本：`external/dao/action/Containers/podman-compose/completion/bash/podman-compose`（411 行）
+- 源码交叉印证：`podman_compose.py`（v1.6.0，commit e3df104）
+
+---
+
 ## v1.2.0 (2026-09-10)
 
 ### 新增
