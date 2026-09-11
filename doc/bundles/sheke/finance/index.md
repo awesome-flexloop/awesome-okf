@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "💰 个人理财与投资"
 description: "个人理财与投资通识知识包——以个人投资实操通识为起点，理论事实挂经典著作与诺贝尔奖官方记录，制度事实挂中国政府网与监管部门文件"
-total_bundles: 1
+total_bundles: 2
 ---
 
 # 💰 个人理财与投资
@@ -15,11 +15,13 @@ total_bundles: 1
 | 知识包 | 文档数 | 一句话简介 |
 |--------|--------|-----------|
 | [personal-investing](personal-investing/index.md) | 8+3+1 | 个人投资实操通识——收益数学与风险度量、投前优先级四道闸、资产类别谱系、配置与再平衡、指数基金与有效市场、行为纪律、中国市场制度，附三类风险画像配置算例与防骗自查清单 |
+| [pipeline-story](pipeline-story/index.md) | 5+3+1 | 《管道的故事》(Burke Hedges, 2000) 系统解读——提桶者与管道建造者的收入模式区别、时间杠杆与金钱杠杆、管道复利效应、电子管道与互联网时代、建造管道的五步行动指南 |
 
 ## 阅读路径
 
 ```
 📊 personal-investing   为什么投 → 能不能投 → 波动怎么管 → 用什么工具 → 怎么配置 → 怎么守纪律 → 制度规则
+🚰 pipeline-story       提桶vs管道 → 时间杠杆 → 复利效应 → 电子管道 → 五步行动
 ```
 
 - **零基础读者**按概念文档 00→07 顺序阅读，前四篇构成完整闭环；
@@ -33,4 +35,5 @@ total_bundles: 1
 :maxdepth: 7
 
 personal-investing/index
+pipeline-story/index
 ```
