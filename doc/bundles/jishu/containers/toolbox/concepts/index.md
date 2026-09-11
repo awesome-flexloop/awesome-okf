@@ -1,6 +1,6 @@
 # 概念文档
 
-按学习路径排列的 4 篇核心概念文档，建议按顺序阅读。
+按学习路径排列的 11 篇核心概念文档，建议按顺序阅读。前 4 篇为入门与工作流（基于 README 与命令表层），04-10 为实现层（基于 src/pkg、容器引导、构建测试源码）。
 
 ## 入门篇
 
@@ -12,6 +12,16 @@
 * [02-workflow.md](02-workflow.md) — 日常开发工作流：三大核心命令详解——`toolbox create`（创建容器，--distro/--release/--image/--container 选项，默认命名规则 `<distro>-toolbox-<release>`）、`toolbox enter`（交互式进入，提示符变化，exit 离开容器不删除）、`toolbox run`（非交互式单命令执行，适合脚本调用）；生命周期管理——`list -c/-i`、`rm [-f/-a]`、`rmi [-f/-a]`；最佳实践（单容器 vs 多容器策略、Shell 别名、进入即工作模式、脚本中使用、全局选项 -v/-vv 排障）；完整命令速查表。
 * [03-custom-images.md](03-custom-images.md) — 自定义镜像与高级用法：自定义镜像适用场景（团队统一环境、预装工具链、企业 CA、特殊发行版）；Toolbx 镜像必备特征（POSIX shell、sudo、useradd、/run/host 挂载点、com.github.containers.toolbox 标签）；三种构建方式（基于官方镜像扩展推荐、从基础镜像从头构建、社区工具）；Containerfile 编写示例；/run/host 逃生口 5 个高级场景（访问主机目录、chroot 故障排查、调用主机二进制、共享包缓存、跨容器共享）；自定义镜像版本标签、profile.d 环境配置、预装 vs dotfiles vs 手动安装决策矩阵；NVIDIA GPU 支持说明。
 
+## 实现层篇
+
+* [04-podman-argv-layer.md](04-podman-argv-layer.md) — Podman/Skopeo 调用层：Toolbx 本体不含容器运行时逻辑，是外部 CLI 的 argv 编排器；pkg/shell 执行模型；pkg/podman 命令映射全表；ps/inspect JSON 的 Podman V1/V2 双形态适配；新旧双标签识别；CheckVersion 运行时版本门控；flatpak-spawn 容器内命令转发。
+* [05-name-resolution.md](05-name-resolution.md) — 镜像与发行版名称解析：Distro 注册表（arch/fedora/rhel/ubuntu 七字段）；os-release 探测与 Fedora 44 兜底；CLI > toolbox.conf > 默认的三级优先级；全限定镜像构造（fedoraproject/quay/access.redhat 三个 registry）与 release 校验规则；容器命名正则；43 个环境变量白名单；libsubid cgo 子 UID/GID 校验。
+* [06-create-argv.md](06-create-argv.md) — `podman create` argv 全景解剖：14 个 namespace/安全参数（privileged/label=disable/host 系列命名空间）、6 条固定 volume、Avahi/KCM/pcsc 三类 socket 经 D-Bus systemd 运行时发现；/media、/mnt、/home 符号链接分支；skopeo 并发求镜像大小的拉取确认交互；用户视角透传与 argv 的对照表。
+* [07-init-container.md](07-init-container.md) — init-container 运行时引导：OCI 不可变性反转设计；引导八步（标记文件、关键配置链接、15 条 rbind、SELinux 置空、useradd/usermod、Kerberos KCM、PKCS#11 CA 透传三处配置、RPM netsharedpath）；fsnotify+ticker 常驻循环；container-initialized-<pid> 戳记握手（25 秒超时、轮询降级、logfmt 日志转发）。
+* [08-cross-distro-binary.md](08-cross-distro-binary.md) — 单二进制跨发行版：go-build-wrapper 用 `-I/-r /run/host/...` 让容器内入口加载主机 glibc/ld；`-z lazy` 与 NVIDIA dlopen 符号约束；8 架构动态链接器枚举；镜像无需预装 toolbox；migration_path_for_coreos_toolbox 双构建标签与裸命令=enter 的 CoreOS 兼容形态；-X 版本注入。
+* [09-nvidia-cdi.md](09-nvidia-cdi.md) — NVIDIA CDI 三段式：主机 go-nvlib/nvcdi 探测矩阵（DXCore/NVML/Tegra、驱动不匹配与未加载分流）生成 spec；经 $XDG_RUNTIME_DIR/toolbox/cdi-nvidia.json 绕开不可变性传入容器；入口用 CNCF CDI 库应用 mounts（HostPath 加 /run/host 前缀）与 create-symlinks/update-ldcache 钩子；无硬件全程静默降级；29 个 BATS JSON 夹具。
+* [10-build-and-tests.md](10-build-and-tests.md) — Meson 构建与工程体系：Meson 编排 Go、三 Shell 补全与 go-md2man；go fmt/vet/test、shellcheck、codespell 门禁；22 个 BATS 系统测试文件三组编号与 localhost:50000 认证 registry；GitHub Actions/Zuul CI 与 11 个 Ansible playbook；fedora/rhel/ubuntu/arch 四族官方 Containerfile。
+
 ```{toctree}
 :hidden:
 :maxdepth: 2
@@ -20,4 +30,11 @@
 01-pass-through
 02-workflow
 03-custom-images
+04-podman-argv-layer
+05-name-resolution
+06-create-argv
+07-init-container
+08-cross-distro-binary
+09-nvidia-cdi
+10-build-and-tests
 ```
