@@ -130,11 +130,11 @@ flowchart TD
 | [🎤 声乐教学（Vocal）](yishu/vocal/index.md)   | 2  | 美通唱法与咽音体系（林俊卿咽音练声八步骤、嗓音科学、常见毛病纠正与每日练声清单）+ 手势辅助声乐教学（柯尔文手势、课堂五类手势、指挥基础、体态律动） |
 | [🚩 红歌教学（Hongge）](yishu/hongge/index.md)  | 1  | 红歌教学教程一束——曲谱库建设与版权合规、教学型赏析六步框架与三期曲目示范、歌谱正版获取、柯尔文手势与声乐合唱结合（完整教案·曲谱库指南·16 周路线） |
 
-### ⚙️ [技术](jishu/index.md) · 404 束 · 17 组
+### ⚙️ [技术](jishu/index.md) · 405 束 · 17 组
 
 | 分组                                               | 束数  | 说明                                                                                                         |
 | ------------------------------------------------ | --- | ---------------------------------------------------------------------------------------------------------- |
-| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 186 | agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security · agent-industry-research · domestic-model-token-export 及工程方法论等直挂束 |
+| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 187 | agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security · agent-industry-research · domestic-model-token-export 及工程方法论等直挂束 |
 | [📚 文档工程（document）](jishu/document/index.md)     | 110 | Sphinx · MyST · Jupyter Book · Jupyter · KaTeX 文档工程与交互式计算生态                                                |
 | [🔨 构建与包管理（build）](jishu/build/index.md)         | 15  | Conda 生态 · scikit-build · CMake · 通用开发工具（Ninja/Copier/PyInvoke/Nuitka 等）                                   |
 | [📡 通信与网络（comm）](jishu/comm/index.md)            | 16  | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析                                                               |

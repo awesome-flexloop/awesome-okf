@@ -64,6 +64,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [💻 Codex Agent 工作流实践](codex-agent-workflow-practices/index.md) | Anthropic Codex CLI 四杠杆降本实践——并行工作流/大闭环/对抗提升/真实需求驱动，243亿 token / $12,213 实测数据 |
 | [📊 2026免费大模型API汇总（40家平台）](free-llm-api-roundup/index.md) | 知乎博文经OKF v0.2七阶段转化——国内23家+国际17家免费大模型API平台盘点，含完整免费额度、速率限制与选型指南（GitHub Models已退役） |
 | [🤖 Matt Pocock Skills 生态解读](mattpocock-skills/index.md) | 微信公众号博文经OKF v0.2七阶段转化——skills.sh平台、Matt Pocock Skills范式解析、Agent Skills生态竞争格局与三条竞争路线分析 |
+| [🖥️ ToDesk AI 跨设备 AI 助手产品教程](todesk-ai/index.md) | ToDesk 旗下跨设备 AI 助手官方文档教程化重组——Computer Use 五阶段操控机制、多智能体与技能体系、自定义模型接入与可照做实操流程 |
 
 ```{toctree}
 :hidden:
@@ -121,4 +122,5 @@ volcengine-agent/index
 codex-agent-workflow-practices/index
 free-llm-api-roundup/index
 mattpocock-skills/index
+todesk-ai/index
 ```
