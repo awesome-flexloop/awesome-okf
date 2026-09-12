@@ -1,5 +1,21 @@
 # 变更日志
 
+## v1.8.0 (2026-09-12)
+
+### 更新
+
+- `examples/08-hello-python.md`：hello-python 示例全面解读增量更新（按 §6.5 多轮扩展规范，不重写已验证结论）：
+  - 新增「应用层代码精读（app/web.py）」四小节——三个可配置环境变量（`REDIS_HOST`/`REDIS_PORT`/`REDIS_DB`，compose 仅注入 HOST）与连接串拼接、`RouteTableDef` 声明式路由 + `add_routes` 统一注册、`web.run_app(port=8080)` 硬编码端口与 `python -m app.web` 模块入口链、模块级连接单例
+  - Dockerfile 节补充：`requirements.txt` 的 `# aioredis[hiredis]` 注释说明（可选 C 加速）与 `python -m app.web` 的包执行机制（空 `app/__init__.py` 作为包标记）
+  - 新增「redis 参数与应用的消费情况」小节并修正原表述：`--notify-keyspace-events Ex` 对纯 `INCR` 计数应用**未消费**（无 pub/sub），属官方示例模板性配置，删除不影响功能——原"是应用需要的 Redis 功能开关"表述有误，按错误修复处理并记入本日志
+  - 「相关示例与概念」补充官方示例图鉴互链
+
+### 事实来源
+
+- 官方示例：`vendor/podman-compose/examples/hello-python/`（docker-compose.yaml 21 行、Dockerfile 12 行、requirements.txt 3 行、app/web.py 39 行、app/__init__.py 空文件、README.md，v1.6.0 快照 commit e3df104）
+
+---
+
 ## v1.7.0 (2026-09-10)
 
 ### 新增

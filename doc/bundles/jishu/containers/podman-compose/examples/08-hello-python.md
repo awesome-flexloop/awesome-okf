@@ -3,8 +3,8 @@ type: Example
 title: hello-python：本地构建 + 只读根文件系统
 description: 官方 hello-python 示例详解：build 与 image 双轨、read_only 安全加固、命名卷持久化、aiohttp+aioredis 计数器应用
 tags: [podman, compose, example, python, build, read-only, redis, named-volume]
-generated: { by: "source-code-to-okf-wiki", at: "2026-09-10T00:00:00Z" }
-verified: { by: "process:seven-concepts-v", at: "2026-09-10T00:00:00Z" }
+generated: { by: "source-code-to-okf-wiki", at: "2026-09-12T00:00:00Z" }
+verified: { by: "process:seven-concepts-v", at: "2026-09-12T00:00:00Z" }
 status: stable
 stale_after: "2027-09-10"
 sources:
@@ -37,7 +37,6 @@ hello-python/
 
 ```yaml
 ---
-version: '3'
 volumes:
   redis:
 services:
@@ -72,14 +71,31 @@ EXPOSE 8080
 
 标准分层：先 COPY requirements 再装依赖（利用构建缓存，依赖不变时不重装），最后 COPY 应用代码。
 
-## 应用代码如何使用 Redis
+`requirements.txt` 共 3 行，只声明两个顶层依赖：`aiohttp`（Web 框架）与 `aioredis`（Redis 客户端）；第三行 `# aioredis[hiredis]` 是**注释**——hiredis 是 Redis 的 C 语言解析加速器，取消注释即启用。示例默认走纯 Python 解析器（对计数这种细粒度请求，两者性能差异可忽略）。
 
-`app/web.py` 的核心逻辑：
+`CMD [ "python", "-m", "app.web" ]` 以**模块方式**启动应用：`python -m app.web` 把 `app.web` 当作模块执行，要求 `app/` 是可导入的包——目录下的空 `app/__init__.py` 正是包标记文件。相比直接 `python app/web.py` 跑文件，模块方式保证包上下文完整（`import` 相对解析正确），是 Python 应用容器镜像的惯例写法。
+
+## 应用层代码精读（app/web.py）
+
+`web.py` 共 39 行，按功能分三块：**配置读取 → 应用与路由构建 → 服务入口**。
+
+### 1. 三个可配置环境变量
 
 ```python
 REDIS_HOST = os.environ.get("REDIS_HOST", "localhost")
-# ...
-redis = aioredis.from_url(f"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}")
+REDIS_PORT = int(os.environ.get("REDIS_PORT", "6379"))
+REDIS_DB = int(os.environ.get("REDIS_DB", "0"))
+```
+
+- Redis 连接串由三者拼出：`redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}`；
+- compose 的 web 服务只注入了 `REDIS_HOST: redis`（服务名即主机名，与 [azure-vote](06-azure-vote.md) 同一套零配置服务发现），`REDIS_PORT` 与 `REDIS_DB` 使用默认值 6379/0；
+- 如需换端口或换库，在 compose 的 `environment:` 中加行覆盖即可，无需改代码。
+
+### 2. 路由声明与统一注册
+
+```python
+app = web.Application()
+routes = web.RouteTableDef()
 
 @routes.get("/")
 async def hello(request):
@@ -90,9 +106,28 @@ async def hello(request):
 async def hello_json(request):
     counter = await redis.incr("mycounter")
     return web.json_response({"counter": counter})
+
+app.add_routes(routes)
 ```
 
-两个路由都对 Redis 的 `mycounter` 键执行 `INCR`：每访问一次计数器加一。连接地址来自 `REDIS_HOST` 环境变量——compose 里注入的是服务名 `redis`，与 azure-vote（见[06](06-azure-vote.md)）同一套零配置服务发现。
+`RouteTableDef` 是 aiohttp 的**声明式路由表**：先用 `@routes.get(...)` 装饰器收集路由，最后 `app.add_routes(routes)` 一次性注册到 `Application`。两个路由共用同一个计数器键 `mycounter`，对 Redis 执行 `INCR`——每访问一次加一；`/` 返回纯文本 `counter=N`，`/hello.json` 返回 JSON `{"counter": N}`。
+
+### 3. 服务入口与端口
+
+```python
+def main() -> None:
+    web.run_app(app, port=8080)
+
+if __name__ == "__main__":
+    main()
+```
+
+- 应用监听端口**硬编码为 8080**，与 compose 的 `ports: [8080:8080]`（容器内 8080）对应——改端口需 compose 与应用两处同步；
+- Docker 启动链：`CMD ["python", "-m", "app.web"]` → 模块执行 → `__main__` 分支成立 → `main()` → `web.run_app`。
+
+### 4. Redis 连接是模块级单例
+
+`redis = aioredis.from_url(...)` 在**模块顶层**执行一次，进程内只有一个连接对象被两个路由共享；`aioredis` 2.x 的内部连接池由客户端自动管理，应用无需关心。
 
 ## 三个关键实践
 
@@ -135,9 +170,18 @@ services:
 
 - 顶层 `volumes.redis` 声明命名卷，实际卷名为 `<项目>_redis`，首次使用自动 `podman volume create`；
 - redis 的 `--appendonly yes` 开启 AOF 持久化，数据写入卷挂载的 /data，容器删除后数据保留；
-- `--notify-keyspace-events Ex` 配置键空间通知（键过期事件），是应用需要的 Redis 功能开关。
+- `--notify-keyspace-events Ex` 配置键空间与过期事件通知——但应用代码**并未订阅任何频道**（见下节），该参数属模板性配置。
 
 > 对照 nodeproj（[10](10-nodeproj.md)）：Node 服务还需要写 /tmp、/run 这类临时目录，它在 read_only 之外用 tmpfs 承接——read_only + 命名卷/tmpfs 组合是一套完整方案。
+
+### 4. redis 参数与应用的消费情况
+
+redis 服务的 command 带了两个参数，但只有一半被 hello-python 应用真正用到：
+
+- `--appendonly yes`：开启 AOF 持久化，配合命名卷 `/data` 让计数在容器重建后保留——**数据面必需**；
+- `--notify-keyspace-events Ex`：发布键空间与过期事件通知——`web.py` 只做 `INCR`，**没有任何 pub/sub 订阅**、没有 `KEYS`/`SCAN` 依赖，该参数是官方示例间的模板性配置，对纯计数器应用实际未消费，删除不影响功能。
+
+> 照抄官方示例时应带"这段配置服务于什么"的问题核对每个参数——[busybox 语法参考卡](07-busybox-syntax.md) 的字段目录视角提供了同样的检查思路。
 
 ## 运行（README 原始步骤）
 
@@ -170,6 +214,7 @@ podman-compose down -v  # 连同卷一起清理（计数归零）
 
 ## 相关示例与概念
 
+- [官方示例图鉴](03-official-examples-gallery.md)：hello-python 在 12 个示例中的模式定位（build+image 双轨、read_only）
 - [nodeproj Node 开发环境](10-nodeproj.md)：read_only + tmpfs + extends 的更复杂组合
 - [WordPress 部署示例](01-wordpress.md)：命名卷的入门讲解
 - [CLI 翻译层与标签状态](../concepts/05-cli-translation-layer.md)：is_local 与卷挂载参数生成
