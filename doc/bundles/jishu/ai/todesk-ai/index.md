@@ -24,7 +24,7 @@ sources:
 # ToDesk AI 跨设备 AI 助手产品教程
 
 > **类型**：产品使用教程（官方文档教程化重组，含可照做实操流程）
-> **信源**：官方产品文档（企业微信文档，9184 字，23 页 canvas 渲染页 OCR 逐字转录）
+> **信源**：官方产品文档（企业微信文档，9184 字，23 页 canvas 渲染页 OCR 逐字转录）+ todeskai.com 官网（2026-09-12 二次采集，补充浏览器插件等新功能）
 > **P0 核验**：7 类 P0 声明 ✅ 4 / ⚠️ 3 / ❌ 0（⚠️ 均为单源或时效项，无 ❌）
 
 ## 本文概要
@@ -41,6 +41,7 @@ ToDesk AI 是 ToDesk（远程控制软件）旗下的跨设备 AI 助手：以�
 | [01-core-capabilities.md](concepts/01-core-capabilities.md) | 三大核心能力：多端远程执行 / Computer Use / 过程可追溯，IM 集成 |
 | [02-computer-use.md](concepts/02-computer-use.md) | 五阶段感知-规划-执行循环、适用与不适用场景、系统级安全约束 |
 | [03-agent-skill-model.md](concepts/03-agent-skill-model.md) | 智能体与 AI 记忆、Skill 工具箱结构、内置与自定义模型体系 |
+| [04-browser-extension.md](concepts/04-browser-extension.md) | 浏览器插件——Chrome 扩展，免安装客户端，四大网页任务能力 |
 
 ### examples/ — 实操演练
 
@@ -49,12 +50,13 @@ ToDesk AI 是 ToDesk（远程控制软件）旗下的跨设备 AI 助手：以�
 | [00-install-and-first-run.md](examples/00-install-and-first-run.md) | 环境自检、三平台安装、登录、首次会话与任务建议 |
 | [01-daily-workflows.md](examples/01-daily-workflows.md) | 定时任务创建验证、设备权限管理、聊天工具绑定、文件上传两方式 |
 | [02-custom-model-and-skills.md](examples/02-custom-model-and-skills.md) | 第三方模型 API 五步接入、Key 类型约束、技能安装与显式调用 |
+| [03-browser-extension.md](examples/03-browser-extension.md) | Chrome 商店安装插件、一键唤起与四类网页任务实操 |
 
 ### references/ — 信源登记
 
 | 文档 | 说明 |
 |------|------|
-| [article-source.md](references/article-source.md) | 原文事实清单（F-001 至 F-058），含页码溯源与疑点登记 |
+| [article-source.md](references/article-source.md) | 原文事实清单（F-001 至 F-070），含页码溯源与疑点登记 |
 | [verification.md](references/verification.md) | P0 核验报告：官网可达性核验、内部一致性核对、勘误登记 |
 
 ## 主题关联

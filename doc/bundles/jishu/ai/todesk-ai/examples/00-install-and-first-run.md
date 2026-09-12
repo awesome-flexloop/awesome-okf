@@ -30,7 +30,13 @@ sources:
 
 ## 1. 下载
 
-访问 ToDesk 官网，按操作系统选择对应版本下载（F-004）。
+访问 ToDesk AI 官网（todeskai.com），按操作系统选择对应版本下载（F-004/F-070）。3.1.0.0 时点直链：
+
+| 平台 | 下载链接 |
+|------|---------|
+| Windows (x64) | `https://dl.todeskai.com/windows/ToDeskAI_Setup_3.1.0.0_142_x64.exe` |
+| macOS | `https://dl.todeskai.com/mac/ToDeskAI-v3.1.0.0_110.pkg` |
+| Android | `https://dl.todeskai.com/android/ToDeskAI_3.0.0.1.243.apk` |
 
 ## 2. 分平台安装
 
@@ -51,6 +57,10 @@ sources:
 1. 在下载页点击"在 App Store 中查看"，安装 TestFlight 后返回页面；
 2. 点击"在 TestFlight 中查看"，进入 ToDesk 下载页完成安装；
 3. 安装成功后打开应用即可使用。
+
+### Android
+
+官网提供独立 APK 下载（F-067），版本 3.0.0.1.243。在 todeskai.com 下载区直接下载 APK 安装包安装即可。
 
 ## 3. 登录
 

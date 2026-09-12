@@ -41,12 +41,13 @@ ToDesk AI 是 ToDesk（远程控制软件）旗下的 AI 助手产品（F-001/F-
 | 6月9日 | 3.0.0.3 | 全新移动应用发布 |
 | 6月25日 | 3.0.0.5 | AI 悬浮球消息通知；黑屏/隐私屏模式下仍支持远程操控 |
 | 7月6日 | 3.0.0.6 | Mac 系统最低支持版本调整至 macOS 10.15 |
+| — | 3.1.0.0 | 浏览器插件上线（Chrome 扩展，免安装客户端）；Windows _142 / MacOS _110（F-066） |
 
-> 演进脉络小结：产品以"模型切换 → 多智能体 → 自定义模型计费 → AI 记忆 → 移动端"的节奏，从单助手工具演进为可编排、可记忆、跨端的 Agent 平台。
+> 演进脉络小结：产品以"模型切换 → 多智能体 → 自定义模型计费 → AI 记忆 → 移动端 → 浏览器插件"的节奏，从单助手工具演进为可编排、可记忆、跨端、跨入口的 Agent 平台。
 
 ## 信源与文档形态说明
 
-本 bundle 的事实源为官方产品文档（企业微信文档分享页，"外部/只能查看"），页面字数标注 9184 字（F-006）。原文属官方一手信源，事实采集与核验过程见 [references/article-source.md](../references/article-source.md) 与 [references/verification.md](../references/verification.md)。
+本 bundle 的事实源为官方产品文档（企业微信文档分享页，"外部/只能查看"，9184 字，F-006）及 todeskai.com 官网（2026-09-12 二次采集，补充浏览器插件等新功能，F-059 起）。运营主体为上海久尺网络科技有限公司（F-068）。事实采集与核验过程见 [references/article-source.md](../references/article-source.md) 与 [references/verification.md](../references/verification.md)。
 
 ## 主题关联
 
