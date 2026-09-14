@@ -10,6 +10,15 @@ stale_after: 2027-09-07
 
 # Bundle Update Log
 
+## 2026-09-14 podman-py 知识包 v3.0 第 3 轮增量（vendor 全量源码深化）
+
+* **Update Scope**：概念 **6 篇 → 11 篇**（新增 [06 Pod/Network/Volume 组编排原语](concepts/06-pods-networks-volumes.md)、[07 Secret/Manifest/Registry 分发面](concepts/07-secrets-manifests-registry.md)、[08 事件与三套流协议](concepts/08-events-and-streams.md)、[09 构建上下文管线](concepts/09-build-context-pipeline.md)、[10 传输与配置深化](concepts/10-transport-deep-dive.md)）；示例 **3 篇 → 4 篇**（新增 [04 多容器 Pod 网络拓扑](examples/04-pod-network-topology.md)）；信源 **3 篇 → 4 篇**（新增 [source-code-map](references/source-code-map.md)）。新增 **7 个内容文档**，编号续接不重排；既有 12 篇结论未重写，仅各级 index/log 追加。
+* **信源固定（G0）**：首次锚定 SpecWeave vendor 稳定信源 `vendor/podman-py`（third_party git submodule，只读）：Git `v5.8.0-9-g5dd81b4`、commit `5dd81b49f35733a27b8051c47e23d3b4c85ea716`、2026-08-19、remote containers/podman-py；包内 `__version__="5.8.0"`/`__compatible_version__="1.40"`。前两轮基于 `external/dao/...` 路径快照的信源登记保留作历史基线，新文档一律引用 vendor 路径对应的 source-code-map。
+* **R 阶段事实来源（25 个文件逐行/分段精读，另含 3 个辅助文件）**：api 层 8 个新覆盖 `uds.py`/`tar_utils.py`/`http_utils.py`/`output_utils.py`/`parse_utils.py`/`path_utils.py`/`adapter_utils.py`/`api_versions.py`（`client.py` 全量复核）；domain 层 14 个全文 `config.py`/`events.py`/`json_stream.py`/`ipam.py`/`registry_data.py`/`system.py`/`pods.py`/`pods_manager.py`/`networks.py`/`networks_manager.py`/`volumes.py`/`secrets.py`/`manifests.py`/`images_build.py`，加 `images_manager.py`/`containers.py` 流式段复核；顶层 `tlsconfig.py`；辅助 `contrib/examples/demo.py`、`tests/integration/base.py`、`tests/utils.py`。facts.md 落盘 `.trae/specs/podman-py-wiki-r3/`（A-P 组编号事实，G1 零推断通过）。
+* **核心新事实（防虚构锚点）**：39 库文件 6078 行（api 11/1209 + domain 22/4455 + errors 2/197 + 顶层 4/217，独立计数复核）+ 测试 unit 26/integration 11；资源契约差异矩阵（Pod id 取 `ID`/Network get 无 `/json`/Secret exists 借 `/json`/prune 错误键 Err vs Error/Volume list 404→[]/Manifest.list 抛 NotImplementedError）；三套流协议（NDJSON 行流、8 字节多路复用帧 `>BxxxL`、HTTP Upgrade 裸 socket 且禁 SSH）；push 进度为客户端本地合成两条 dict 不消费响应体；构建三入口归约 x-tar 与 uid=0 脱敏；TLSConfig 为 currently ignored 空壳；containers.conf 新 JSON 覆盖旧 TOML；login `/auth` 唯一显式 compatible 前缀端点。
+* **洞察与模式（G2/G3）**：5 组四元组洞察（契约差异无类推/stream 一词三义/合成进度/客户端构建标准化/兼容优先折中）；各新概念文末累计 20+ 条可迁移模式（契约差异矩阵法、协议先判定再消费、传输四分层、双格式配置优先级、临时目录最小权限、404 异常参数化等）。
+* **质量门**：G0 信源 stable 无临时克隆；G3 信源先行（source-code-map 先于概念生成）、分批 ≤7（1+3+3）、index 最后写；G4 见同日 V 阶段报告（Grep 类名/方法/端点/常量存在性 + 计数断言 39 文件/6078 行/26/11 + toctree 4 级闭环）。
+
 ## 2026-09-07 podman-py 知识包 v2.0 全面升级
 
 * **Update Scope**: 概念 **5 篇 → 6 篇**（新增 [05 - 高级资源、异常体系与工程治理](concepts/05-advanced.md) 覆盖 Quadlet v5.8 / 8 类异常 / AGENTS 7 陷阱 / 测试双态治理）；示例 **2 篇 → 3 篇**（新增 [03 - 集成测试治理：skipif/pnext/覆盖率双轨/DCO/pylint不默认](examples/03-testing-governance.md)）；信源 3 篇全面重写为 20+20+30 = **70 条编号锚点 + 1 调用链图**；根 index + 3 子目录 index toctree 同步更新。
