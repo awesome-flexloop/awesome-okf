@@ -65,7 +65,18 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [📊 2026免费大模型API汇总（40家平台）](free-llm-api-roundup/index.md) | 知乎博文经OKF v0.2七阶段转化——国内23家+国际17家免费大模型API平台盘点，含完整免费额度、速率限制与选型指南（GitHub Models已退役） |
 | [🤖 Matt Pocock Skills 生态解读](mattpocock-skills/index.md) | 微信公众号博文经OKF v0.2七阶段转化——skills.sh平台、Matt Pocock Skills范式解析、Agent Skills生态竞争格局与三条竞争路线分析 |
 | [🖥️ ToDesk AI 跨设备 AI 助手产品教程](todesk-ai/index.md) | ToDesk 旗下跨设备 AI 助手官方文档教程化重组——Computer Use 五阶段操控机制、多智能体与技能体系、自定义模型接入与可照做实操流程 |
+| [🆓 免费大模型 API 接入实战（Agnes·dots3·AMD）](free-llm-api-hands-on/index.md) | 微信博文经 OKF v0.2 七阶段转化（flagged）——三家免费平台注册拿 Key、OpenAI 兼容接入 WorkBuddy/Trae、图像视频实操；31 项 P0 核验勘误（AMD 名单已变、dots 通道 9-30 关、价格表 6 处硬错） |
 
+| [🦙 llama.cpp 本地 LLM 推理](llama-cpp-local-inference/index.md) | 微信博文经 OKF v0.2 七阶段转化——C/C++ 本地推理、GGUF/Q4 与内存预算、CPU/Metal 后端、llama-server 与 OpenAI 兼容迁移（技术体验综述非操作教程，6✅/4⚠️/1❌，含 4GB/7B 勘误） |
+| [🕷️ Firecrawl 网页数据 API](firecrawl/index.md) | 微信博文经 OKF v0.2 七阶段转化（技术综述非操作教程）——18 万 Star 开源 web context API：七端点、Agent 与 /extract、spark-1 弃用→spark-2、九 SDK/CLI/MCP、开源 vs 云分界与 AGPL 边界（两轮 26 簇核验 20✅/5⚠️/2❌） |
+```{toctree}| [🚌 AITokenBus Token 共享与交换平台](aitokenbus/index.md) | 独立开发者自宣上线的 Token 共享/交换平台核验——共享池分包/Token 市场/TC 积分/免费矿池/GPU 贡献与请求路由；功能有实现但供给薄弱、无备案主体与协议（产品自述资讯，非操作教程） |
+| [🚀 GPT-6 Astra 官方使用指南中文解读](gpt6-astra-usage-guide/index.md) | 微信博文经OKF v0.2七阶段转化（核验自 OpenAI 官方文档）——五项新特性（异步工具调用/response.steer 中途引导/切推理强度保缓存/偏离检测/限制）、五大行为模式与 11 个官方 Prompt 配方（非操作教程） |
+| [🔥 Firecrawl 网页上下文 API](firecrawl/index.md) | 微信博文经 OKF v0.2 七阶段转化——Search/Scrape/Interact 等七端点、Agent（/extract 进化）结构化取数与 spark 模型（含默认模型勘误）、九 SDK/CLI/MCP 接入、AGPL-3.0 与自托管边界（17✅1❌，非一手实测教程） |
+| [🔎 wigolo 本地 Web 情报层](wigolo/index.md) | 微信博文经 OKF v0.2 七阶段转化——本地优先 MCP 搜索/抓取/研究工具，18 公共引擎适配器、十工具、核心功能零 API Key、字节级证据与本地缓存，含安装/CLI/REST/Docker 实操（18 项官方核验 14✅/4⚠️/0❌） |
+| [🛒 UUMit A2A 能力交易平台](uumit-a2a-marketplace/index.md) | 微信博文经 OKF v0.2 七阶段转化——UUMit（小龙人）能力网络平台事实、双边市场机制、A2A 交易层叙事与冷启动现实（第三方 5 天负 ROI 实测、厂商自述数字甄别、仿冒站提示） |
+| [🔁 LoopX 长程 Agent 控制面](loopx/index.md) | 国产开源本地优先状态内核——quota 计费闸门、人类门禁、dashboard 工作台、200h OpenViking 公开证据与安装实操（极客之家博文核验转化，10✅2⚠️） |
+| [🔑 inurl BYOK 密钥聚合与四个免费模型](inurl-byok-free-models/index.md) | 微信推广文经 OKF v0.2 七阶段转化——inurl 聚合 APIToken 的统一令牌/端到端加密/本地代理机制核验，Agnes/GLM-4-Flash/硅基流动/LongCat 免费政策官方口径对照（flagged：省钱数字无出处、Agnes 国籍与上下文硬错、产品匿名运营） |
+| [🔑 inurl 统一令牌与免费模型省钱实录核验](inurl-unified-token/index.md) | 同公众号 09-02《月付 500 到 0 元》软文转化（flagged）——多厂商 Key 收拢与本地自动路由核验、免费档 3 个密钥限制与付费档位、70 条事实勘误（DeepSeek 免费失实/GPT-4o 退役），含 Cursor 接入配置演练 |
 ```{toctree}
 :hidden:
 :maxdepth: 7
@@ -123,4 +134,14 @@ codex-agent-workflow-practices/index
 free-llm-api-roundup/index
 mattpocock-skills/index
 todesk-ai/index
+aitokenbus/index
+free-llm-api-hands-on/index
+llama-cpp-local-inference/index
+firecrawl/index
+gpt6-astra-usage-guide/index
+inurl-byok-free-models/index
+inurl-unified-token/index
+loopx/index
+uumit-a2a-marketplace/index
+wigolo/index
 ```
