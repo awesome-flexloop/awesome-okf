@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: Reference
 title: "WorkBuddy 沙箱公网端点博文事实登记"
-description: "微信公众号文章 F-001~F-039 双份事实登记，区分博文口径、官方核验与实时响应头证据。"
+description: "微信公众号文章 F-001~F-052 双份事实登记，区分博文口径、官方核验、实时响应头与横向对标证据。"
 tags: [workbuddy, cloudstudio, sandbox, public-endpoint, fact-registry, 博文转化]
 generated: { by: "blog-article-to-okf-wiki:R/E", at: "2026-09-16T22:00:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-09-16T22:40:00+08:00" }
@@ -27,12 +27,26 @@ sources:
     url: https://37ee2229152f4698848762ad5528a193.bj3.agentos-app.net
   - id: netease-repost
     url: https://m.163.com/dy/article/L6S4D18R05314EKW.html
+  - id: traecode-solo
+    url: https://docs.trae.ai/ide/solo-mode?_lang=en
+  - id: traecode-deployment
+    url: https://docs.trae.ai/ide/vercel-deployment
+  - id: traework
+    url: https://docs.trae.ai/solo/what-is-trae-solo?_lang=en
+  - id: byteplus-pages-traework
+    url: https://docs.byteplus.com/th/docs/byteplus-cdn/pages-trae_zh-cn
+  - id: trae-cn-iga-pages
+    url: https://www.volcengine.com/docs/6559/2387290?lang=zh
+  - id: doubao-work-notice
+    url: https://www.doubao.com/legal/DoubaoAgentModeNotice
+  - id: doubao-work-third-party-test
+    url: https://ai.lzw.me/best-blogs/article/5c76486940
 ---
 
 # WorkBuddy 沙箱公网端点博文事实登记
 
 > 主信源：微信公众号「AI工具实测派」《你敢相信吗？WorkBuddy 白送你一台「免费服务器」，90%的人却只会拿来写代码》，作者 wrokbuddy，2026-08-28 19:53。
-> F-001~F-027 为博文事实；F-028~F-039 为 2026-09-16 官方资料、公开案例与实时请求补充事实。
+> F-001~F-027 为博文事实；F-028~F-039 为 2026-09-16 官方资料、公开案例与实时请求补充事实；F-040~F-052 为 TraeCode、TraeWork 与豆包工作横向对标补充事实。
 
 ## A. 元信息
 
@@ -98,6 +112,24 @@ sources:
 | F-038 | E | 实时响应头可观测边缘网关为 CloudStudio Gateway，未观察到可直接证明 CLB 或 sandbox-proxy 的字段 | ⚠️ |
 | F-039 | O | 临时预览沙箱、CloudStudio 已部署环境、CodeBuddy Remote Control、WMA 托管 Runtime 是不同产品形态，生命周期和适用场景不能互相套用 | ✅ |
 
+## F. TraeCode / TraeWork / 豆包工作对标补充
+
+| F编号 | 类型 | 事实 | 核验状态 |
+|------|------|------|----------|
+| F-040 | O | TraeCode 官方 SOLO 模式文档称，SOLO 让 AI 自主完成需求理解、代码生成、测试、结果预览和部署的完整开发过程 | ✅ |
+| F-041 | O | TraeCode 国际版通过第三方服务 Vercel 在线部署 Web 应用；部署后可通过链接分享，更新后可部署新版本 | ✅ |
+| F-042 | O | TraeCode 部署入口包括 AI 聊天面板的 Deploy 按钮、Browser 工具右上角 Deploy 按钮，或自然语言触发部署任务 | ✅ |
+| F-043 | O | 火山引擎 IGA Pages 文档明确“TRAE 中国版当前未提供一键部署能力”，组合方案为 TRAE CN 负责生成迭代、IGA Pages 负责部署分发与运行时 | ✅ |
+| F-044 | O | IGA Pages 是火山引擎一站式 AI 应用部署与全球加速平台，提供零配置部署、全球边缘网络和 Serverless 函数能力，接管节点、证书、缓存等基础设施细节 | ✅ |
+| F-045 | O | IGA Pages 支持 Skill/CLI 部署、GitHub 仓库集成自动部署、自定义域名和 SSL 证书；不适合常驻后台服务、定时任务、数据库常连接和深度定制 Nginx/容器镜像 | ✅ |
+| F-046 | O | TraeWork 是 AI-native workspace，提供 Web、桌面、移动三端和 Work、Code、Design 三模式；Web 适合临时需求/快速验证，桌面支持本地与云任务，移动端可派发监控云任务 | ✅ |
+| F-047 | O | TraeWork Cloud agent 在云端稳定隔离环境执行代码分析、运行和调试，提供统一运行时与依赖管理 | ✅ |
+| F-048 | O | BytePlus Pages + Trae Work 指南称，Trae Work 生成网页后可通过 `byted-bp-cdn-pagesdeploy` Skill 上传 Pages 并返回分享链接 | ✅ |
+| F-049 | O | BytePlus Pages 支持静态 HTML/CSS/JavaScript、SPA、文档站、博客和 Git 持续部署前端项目，通过 BytePlus 全球边缘节点分发 | ✅ |
+| F-050 | O | Trae Work 经 Pages 部署后的临时预览地址约每 3 小时重置；长期对外分享应在 Pages 控制台绑定稳定自定义域名，并可查看部署记录和回滚历史版本 | ✅ |
+| F-051 | O | 豆包工作任务模式官方须知确认有本地电脑和云电脑两种环境；云电脑为独立隔离环境，默认不访问本地文件，本地关机后任务仍可后台运行，产物保存在云端；技能、连接器、工作伙伴扩展能力 | ✅ |
+| F-052 | O | AI Best 转载 Draco正在VibeCoding 的第三方实测文（2026-08-27）称豆包工作云电脑为 2 核 4G Debian 沙盒、提供公网 IP，并演示 EdgeOne 部署；该说法未在豆包官方任务功能须知中直接核验 | ⚠️ |
+
 ## 事实统计
 
 | 分组 | 编号范围 | 数量 |
@@ -107,4 +139,5 @@ sources:
 | 场景与生命周期 | F-012~F-022 | 11 |
 | 提示词与素材 | F-023~F-027 | 5 |
 | 官方/实时补充 | F-028~F-039 | 12 |
-| **合计** | F-001~F-039 | **39** |
+| 横向对标补充 | F-040~F-052 | 13 |
+| **合计** | F-001~F-052 | **52** |

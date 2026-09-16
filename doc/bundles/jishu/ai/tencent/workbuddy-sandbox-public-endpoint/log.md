@@ -12,3 +12,12 @@
 - 机械门禁：本束专项检查通过（9 文件、8 toctree 条目、39 对 F 编号、无断链/敏感绝对路径）；`python scripts/check-utf8.py` 通过（10412 个文件）。
 - 全库计数与 toctree 在并行会话工作树短暂收敛时曾通过（9 域 / 59 组 / 555 束；全部 index.md 引用有效）；最终复跑受其他会话未接入新增束影响再次失败，失败清单不含本束路径，需并行工作收敛后复跑全库门禁。
 - `invoke gates.*` 在当前 Anaconda 环境因 `invocations` 分发包元数据缺失无法导入，未声称 invoke 门禁通过；已直接运行任务底层脚本与本束专项脚本完成等效验证。
+
+## 2026-09-16：横向对标增强
+
+- 按用户要求对标 TraeCode、TraeWork、豆包工作，新增 F-040~F-052 共 13 条事实。
+- 新增 `concepts/03-platform-comparison.md`，区分 WorkBuddy/CloudStudio、TraeCode/Vercel、TRAE CN/IGA Pages、TraeWork/BytePlus Pages、豆包工作云电脑五种公网化路径。
+- 官方确认：TraeCode 国际版 SOLO 经 Vercel 部署；TRAE CN 当前未内置一键部署，需接 IGA Pages；TraeWork 经 BytePlus Pages Skill 发布且临时预览约 3 小时重置；豆包工作云电脑支持隔离后台执行。
+- 豆包工作“公网 IP / EdgeOne 部署”仅获得第三方实测支持，官方任务须知未直接确认，正文标记为 ⚠️。
+- 独立 V 审查结果 P0=0、P1=2；已补第三方实测 URL，并将全部导航中的事实范围同步为 F-001~F-052。
+- 增强后本束共 10 个 Markdown 文件；专项 toctree、链接、frontmatter 与 F-001~F-052 双份编号检查通过。

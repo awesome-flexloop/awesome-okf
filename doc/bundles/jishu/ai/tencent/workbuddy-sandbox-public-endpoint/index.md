@@ -2,8 +2,8 @@
 okf_version: "0.2"
 type: bundle
 title: "WorkBuddy 沙箱公网端点：临时 HTTPS 服务的能力与边界"
-description: "核验 WorkBuddy/CloudStudio 沙箱公网 HTTPS 能力、域名与网关证据，区分临时演示、Webhook 联调和生产托管边界。"
-tags: [workbuddy, cloudstudio, sandbox, https, public-endpoint, temporary-deployment, webhook, 博文转化]
+description: "核验 WorkBuddy/CloudStudio 沙箱公网 HTTPS 能力，并横向对比 TraeCode/Vercel、TRAE CN/IGA Pages、TraeWork/BytePlus Pages 与豆包工作云电脑。"
+tags: [workbuddy, cloudstudio, traecode, traework, doubao-work, vercel, iga-pages, byteplus-pages, sandbox, https, public-endpoint, 博文转化]
 generated:
   by: seven-concepts-cmd+blog-article-to-okf-wiki
   at: "2026-09-16T22:25:00+08:00"
@@ -31,12 +31,24 @@ sources:
     url: https://37ee2229152f4698848762ad5528a193.bj3.agentos-app.net
   - id: netease-repost
     url: https://m.163.com/dy/article/L6S4D18R05314EKW.html
+  - id: traecode-solo
+    url: https://docs.trae.ai/ide/solo-mode?_lang=en
+  - id: traecode-deployment
+    url: https://docs.trae.ai/ide/vercel-deployment
+  - id: traework
+    url: https://docs.trae.ai/solo/what-is-trae-solo?_lang=en
+  - id: byteplus-pages-traework
+    url: https://docs.byteplus.com/th/docs/byteplus-cdn/pages-trae_zh-cn
+  - id: trae-cn-iga-pages
+    url: https://www.volcengine.com/docs/6559/2387290?lang=zh
+  - id: doubao-work-notice
+    url: https://www.doubao.com/legal/DoubaoAgentModeNotice
 ---
 
 # WorkBuddy 沙箱公网端点：临时 HTTPS 服务的能力与边界
 
 > **类型**：技术综述/操作提示，非完整可复现 examples 教程。
-> **核验结论**：P0/P1 共 12 项，**7✅ / 5⚠️ / 0❌**。
+> **核验结论**：原 WorkBuddy P0/P1 共 12 项，**7✅ / 5⚠️ / 0❌**；对标扩展新增 13 条事实（F-040~F-052），其中 TraeCode/TraeWork/Pages 路径以官方文档为准，豆包工作公网 IP 说法仍为第三方实测。
 > **最重要边界**：公网 HTTPS 能力已获官方端口转发能力与实时页面证据支持；博文的固定域名后缀、CLB TLS 终止和 `sandbox-proxy` 内部链路未获官方公开文档证实。
 
 ## 本文回答什么
@@ -54,7 +66,8 @@ sources:
 | 1 | [公网端点机制：从沙箱端口到 HTTPS 域名](concepts/00-public-endpoint-mechanism.md) | 看懂可验证链路、CloudStudio Gateway 证据和产品形态差异 |
 | 2 | [临时服务的适用场景与边界](concepts/01-temporary-service-use-cases.md) | 判断 Demo、静态页、Webhook、Agent API 等场景是否适用 |
 | 3 | [会话保活、生产边界与提示词改写](concepts/02-lifecycle-and-operations.md) | 理解心跳/nohup 的局限，获得安全版 Agent 提示词 |
-| 参考 | [博文事实登记](references/article-source.md) | 查看 F-001~F-039 双份事实登记 |
+| 4 | [横向对标 WorkBuddy、TraeCode、TraeWork 与豆包工作](concepts/03-platform-comparison.md) | 区分沙箱端口、Vercel、IGA Pages、BytePlus Pages 与云电脑模式 |
+| 参考 | [博文事实登记](references/article-source.md) | 查看 F-001~F-052 双份事实登记 |
 | 参考 | [P0 核验报告](references/verification.md) | 查看 7✅/5⚠️/0❌、实时响应头和勘误四清单 |
 
 ## 核心事实速查
@@ -68,7 +81,10 @@ sources:
 | 未证实细节 | `sh1` 固定后缀、CLB TLS 终止、沙箱内 `sandbox-proxy`（F-037、F-038） |
 | 最适场景 | 临时 Demo、公开静态页、短时联调（F-012、F-034） |
 | 谨慎场景 | GitHub/支付 Webhook、长期 Agent API、含写入或敏感数据的接口（F-012、F-019~F-021） |
-| 生产替代 | WMA 托管 Runtime、云服务器、容器或正式应用托管平台（F-018、F-030、F-031） |
+| 生产替代 | WMA 托管 Runtime、云服务器、容器、Vercel、IGA/BytePlus Pages 等正式托管路径（F-018、F-030、F-031、F-041、F-045、F-050） |
+| TraeCode 路径 | 国际版 SOLO 经 Vercel 部署；TRAE CN 当前需另接 IGA Pages（F-041~F-045） |
+| TraeWork 路径 | 经 BytePlus Pages Skill 发布网页；临时预览约 3 小时重置，长期需自定义域名（F-048~F-050） |
+| 豆包工作边界 | 官方确认云电脑隔离和后台运行；公网 IP/EdgeOne 部署为第三方实测（F-051、F-052） |
 
 ## 已知边界与使用提示
 
@@ -94,7 +110,8 @@ workbuddy-sandbox-public-endpoint/
 │   ├── index.md
 │   ├── 00-public-endpoint-mechanism.md
 │   ├── 01-temporary-service-use-cases.md
-│   └── 02-lifecycle-and-operations.md
+│   ├── 02-lifecycle-and-operations.md
+│   └── 03-platform-comparison.md
 └── references/
     ├── index.md
     ├── article-source.md
