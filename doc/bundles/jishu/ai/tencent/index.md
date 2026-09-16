@@ -3,7 +3,7 @@ type: bundles-index
 okf_version: "0.2"
 scope: tencent
 title: "腾讯开源生态"
-description: "腾讯开源生态知识包分组，收录 CodeBuddy 产品矩阵等腾讯系开源与商业项目的 OKF 知识包。"
+description: "腾讯开源生态知识包分组，收录 CodeBuddy 产品矩阵、WorkBuddy/CloudStudio 沙箱端点等腾讯系开源与商业项目的 OKF 知识包。"
 status: stable
 ---
 
@@ -16,6 +16,7 @@ status: stable
 | 知识包 | 简介 |
 |--------|------|
 | [codebuddy](codebuddy/index.md) | CodeBuddy 产品矩阵——IDE/插件/CLI 三态一体 AI 编程工具，NPC 云端 AI 员工、WorkBuddy 在线助手、Security 安全审计，含 6 概念 + 2 示例 + 6 信源 |
+| [workbuddy-sandbox-public-endpoint](workbuddy-sandbox-public-endpoint/index.md) | WorkBuddy/CloudStudio 沙箱公网 HTTPS 端点核验——CloudStudio Gateway 实证、域名后缀漂移、临时 Demo/Webhook/Agent API 边界，含 3 概念 + 2 信源 |
 | [ai-infra-guard](ai-infra-guard/index.md) | 腾讯朱雀实验室 AI 红队平台——Go+Python 分布式 Server-Agent 架构，五种任务类型（AI 基础设施扫描/MCP 扫描/大模型安全体检/Agent 扫描/Skill 安全扫描），自研指纹 DSL，2000+ CVE 规则，含 7 概念 + 3 示例 + 5 信源 |
 | [octop](octop/index.md) | WorkBuddy/Octop 自托管多用户 AI 助手——Python 3.12+ 四层架构，OctopServer 编排器、AgentManager、Gateway 多通道、DI 容器、ACP 双向集成、20 CLI 子命令，基于 harness-agent 运行时，含 7 概念 + 3 示例 + 6 信源 |
 | [ncnn](ncnn/index.md) | 腾讯优图实验室高性能神经网络推理框架——纯 C++ 零依赖，CPU/Vulkan 双后端，Mat 引用计数张量、Layer 算子抽象、PoolAllocator 内存池、全架构 SIMD 优化（x86/ARM/MIPS/RISC-V/LoongArch）、Python 绑定，含 12 概念 + 4 示例 + 6 信源 |
@@ -28,11 +29,12 @@ status: stable
 
 ## 关于本分组
 
-本分分组当前包含 4 个已生成知识包，共 32 个概念文档、12 个示例文档、23 个信源登记，基于 2026-08-23 的源码阅读和网页抓取生成，总计 388 条编号事实（CodeBuddy 79 条 + AI-Infra-Guard 68 条 + Octop 133 条 + ncnn 108 条）。所有源码知识包均经过 Grep 级 API 真实性验证。
+本分分组当前包含 5 个已生成知识包，共 35 个概念文档、12 个示例文档、25 个信源登记，基于 2026-08-23 的源码阅读、网页抓取与 2026-09-16 的博文核验生成，总计 427 条编号事实（CodeBuddy 79 条 + WorkBuddy 沙箱公网端点 39 条 + AI-Infra-Guard 68 条 + Octop 133 条 + ncnn 108 条）。所有源码知识包均经过 Grep 级 API 真实性验证，博文转化束经过 P0 权威核验与实时响应头实证。
 
 ## 相关链接
 
 - [CodeBuddy 知识包](codebuddy/index.md) — CodeBuddy 产品矩阵完整知识库
+- [WorkBuddy 沙箱公网端点](workbuddy-sandbox-public-endpoint/index.md) — 临时 HTTPS 公网入口、域名漂移与生产边界核验
 - [AI-Infra-Guard 知识包](ai-infra-guard/index.md) — AI 红队平台源码教程
 - [Octop 知识包](octop/index.md) — 自托管 AI 助手源码教程
 - [ncnn 知识包](ncnn/index.md) — 神经网络推理框架源码教程
@@ -44,6 +46,7 @@ status: stable
 :maxdepth: 7
 
 codebuddy/index
+workbuddy-sandbox-public-endpoint/index
 ai-infra-guard/index
 octop/index
 ncnn/index
