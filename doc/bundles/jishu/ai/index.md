@@ -69,9 +69,8 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 
 | [🦙 llama.cpp 本地 LLM 推理](llama-cpp-local-inference/index.md) | 微信博文经 OKF v0.2 七阶段转化——C/C++ 本地推理、GGUF/Q4 与内存预算、CPU/Metal 后端、llama-server 与 OpenAI 兼容迁移（技术体验综述非操作教程，6✅/4⚠️/1❌，含 4GB/7B 勘误） |
 | [🕷️ Firecrawl 网页数据 API](firecrawl/index.md) | 微信博文经 OKF v0.2 七阶段转化（技术综述非操作教程）——18 万 Star 开源 web context API：七端点、Agent 与 /extract、spark-1 弃用→spark-2、九 SDK/CLI/MCP、开源 vs 云分界与 AGPL 边界（两轮 26 簇核验 20✅/5⚠️/2❌） |
-```{toctree}| [🚌 AITokenBus Token 共享与交换平台](aitokenbus/index.md) | 独立开发者自宣上线的 Token 共享/交换平台核验——共享池分包/Token 市场/TC 积分/免费矿池/GPU 贡献与请求路由；功能有实现但供给薄弱、无备案主体与协议（产品自述资讯，非操作教程） |
+| [🚌 AITokenBus Token 共享与交换平台](aitokenbus/index.md) | 独立开发者自宣上线的 Token 共享/交换平台核验——共享池分包/Token 市场/TC 积分/免费矿池/GPU 贡献与请求路由；功能有实现但供给薄弱、无备案主体与协议（产品自述资讯，非操作教程） |
 | [🚀 GPT-6 Astra 官方使用指南中文解读](gpt6-astra-usage-guide/index.md) | 微信博文经OKF v0.2七阶段转化（核验自 OpenAI 官方文档）——五项新特性（异步工具调用/response.steer 中途引导/切推理强度保缓存/偏离检测/限制）、五大行为模式与 11 个官方 Prompt 配方（非操作教程） |
-| [🔥 Firecrawl 网页上下文 API](firecrawl/index.md) | 微信博文经 OKF v0.2 七阶段转化——Search/Scrape/Interact 等七端点、Agent（/extract 进化）结构化取数与 spark 模型（含默认模型勘误）、九 SDK/CLI/MCP 接入、AGPL-3.0 与自托管边界（17✅1❌，非一手实测教程） |
 | [🔎 wigolo 本地 Web 情报层](wigolo/index.md) | 微信博文经 OKF v0.2 七阶段转化——本地优先 MCP 搜索/抓取/研究工具，18 公共引擎适配器、十工具、核心功能零 API Key、字节级证据与本地缓存，含安装/CLI/REST/Docker 实操（18 项官方核验 14✅/4⚠️/0❌） |
 | [🛒 UUMit A2A 能力交易平台](uumit-a2a-marketplace/index.md) | 微信博文经 OKF v0.2 七阶段转化——UUMit（小龙人）能力网络平台事实、双边市场机制、A2A 交易层叙事与冷启动现实（第三方 5 天负 ROI 实测、厂商自述数字甄别、仿冒站提示） |
 | [🔁 LoopX 长程 Agent 控制面](loopx/index.md) | 国产开源本地优先状态内核——quota 计费闸门、人类门禁、dashboard 工作台、200h OpenViking 公开证据与安装实操（极客之家博文核验转化，10✅2⚠️） |
