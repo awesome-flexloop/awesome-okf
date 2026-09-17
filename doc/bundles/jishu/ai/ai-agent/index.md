@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 47
+total_bundles: 52
 ---
 
 # 🤖 AI Agent 框架
@@ -127,7 +127,12 @@ total_bundles: 47
 | [matrix-zero-person-company](matrix-zero-person-company/index.md) | 产品资讯 | 3+2+1=6 | 智潮笔记解析Matrix(matrix.build)Agent公司操作系统——0人公司叙事(造的成本趋零竞争转向运营)、CEO Office+部门化分工+领队路由+Agential OKR、durable work memory与proof可验证交付(反幻觉完成)、商业基建开箱即用(Stripe/matrix.site域名/Agent钱包/VPTD经济指标)、九模型接入矩阵(Neo/Claude Code/Codex/ChatGPT/Gemini/GLM/DeepSeek/Kimi/Qwen)、⚠️成效数字全为厂商自述(GDPval 95.45%口径未验证/aivideopro.io案例无独立佐证)、macOS单平台单源、6项P0核验(2✅3⚠️1单源0❌无勘误) |
 | [ai-app-survival](ai-app-survival/index.md) | 商业分析 | 6+0+2+1=9 | 晚点LatePost深度调研AI应用生存困境——三重挤压(模型吞噬/负毛利/上游入口)、Stripe 11.5月达100万ARR vs SaaS 15月、Bessemer AI均毛利25% vs SaaS 70%、Perplexity/Cursor负毛利会计口径、scaling to bankruptcy、Devv搜索窗口仅半年、a16z三年仅14家常驻、Epoch AI能力增速8到15指数点、Brookings模型厂下场归因、易观办公Agent三分之二流量集中大厂、下游卖结果与上游做模型(租客困境)、12项P0核验(9确认3存疑0证伪) |
 | [wigolo](wigolo/index.md) | 工具教程 | 3+4+2+1=10 | wigolo本地优先Agent网页能力工具——MCP/REST/SDK三面提供search/fetch/crawl/extract/cache/find_similar/research/agent/diff/watch十工具、18搜索引擎并行+本地重排、字节级source_span证据与evidence_score置信度、fetch三级升级路由、数据全在~/.wigolo、六核心工具零API Key零按量费用、--agents一键接线9客户端、n8n/TS/Python SDK/框架包/Docker、⚠️AGPL-3.0与research/agent需LLM、10项P0核验全✅(2项口径标注:Firecrawl免费额度单源/博文日期未检出) |
-| [zhihu-cli](zhihu-cli/index.md) | 工具教程 | 6+3+3=12 | 知乎数据开放平台Zhihu CLI官方命令行工具——公共内容+个人数据双通道、搜索/热榜/直答/个人数据四大核心能力、API+Skill+MCP三种接入方式、供应链四道校验+Keychain凭证安全存储、五种实战玩法（创作出诊/风格蒸馏/选题雷达/硬件看板/飞书推送）、全平台Agent生态（Claude Code/Codex/Cursor/WorkBuddy）、105条事实可溯源、14项P0核验、3条勘误 |
+| [zhihu-cli](zhihu-cli/index.md) | 工具教程 | 6+3+3=12 | 知乎数据开放平台Zhihu CLI官方命令行工具——公共内容+个人数据双通道、搜索/热榜/直答/个人数据四大核心能力、API+Skill+MCP三种接入方式、供应链四道校验+Keychain凭证安全存储、五种实战玩法（创作出诊/风格蒸馏/选题雷达/能力看板/飞书推送）、全平台Agent生态（Claude Code/Codex/Cursor/WorkBuddy）、105条事实可溯源、14项P0核验、3条勘误 |
+| [openhuman](openhuman/index.md) | 产品介绍 | 4+0+2=6 | OpenHuman（TinyHumans）本地优先个人Agent Harness——GPL-3.0/Rust/Tauri、Memory Tree三树摘要记忆（≤3k分块/SQLite+Obsidian/20分钟auto-fetch）、TokenJuice最高省80%、Meet/Zoom/Teams/Webex真人参会、Signal E2E+x402、Ollama全本地可选、Early Beta；⚠️博文7,800star/118+OAuth/17渠道/10亿token等数字成组老化（现值39.8k/100+/15，10亿仅弱源）、12项P0核验(6✅6⚠️0❌)六条勘误 |
+| [openviking](openviking/index.md) | 工具教程 | 3+3+2+1=9 | 火山引擎开源Agent上下文数据库——viking://虚拟文件系统统一承载记忆/资源/技能、L0/L1/L2三层摘要按需加载、目录递归检索可回溯、会话异步沉淀长期记忆跨会话召回、15个MCP工具+Hooks接Claude Code/Codex/Cursor/TRAE；博文一手Docker部署+Web Studio双密钥+VikingBot跨会话记忆实测；48条事实、10项P0核验全✅0❌、2项口径差异（health字段/VikingBot工具名） |
+| [oracle](oracle/index.md) | 工具教程 | 3+2+2+1=8 | steipete/oracle第二大脑CLI——prompt+选定文件打包成上下文，Browser Mode复用已登录ChatGPT网页会话做第二模型评审、Codex本地执行；另有API六家/Gemini Web/Render/oracle-mcp；Node 24+、sessions可重连、Pro fail-closed；41条事实、10项P0核验全✅0硬勘误、5项博文缺口官方补充（平台/多Provider/MCP/版本时效/安全） |
+| [ai-agent-book](ai-agent-book/index.md) | 开源书推荐 | 5+2+1=8 | 李博杰《深入理解AI Agent：设计原理与工程实践》开源教材(bojieli/ai-agent-book,Apache-2.0)核验导览——Agent=LLM+上下文+工具公式(含Environment边界)与Harness工程主张、现代Agent三维对比表原书完整版、10章三口径地图(博文1.4/时点快照/2.0)、博文3图vs仓库5张fig1-wf工作流图、✅/📖/🚧三类实验与uv运行方式、1.4→2.0章节重组、13→15语言；41事实18项P0(13✅2❌3⚠️)含实验总数94→时点95/现行109、第6章11→12两处数字勘误，技术综述无examples |
+| [show-me-skill](show-me-skill/index.md) | 工具教程 | 3+1+2+1=7 | HumanLayer(2026-08-12 Dex Horthy)开源show-me——不教模型新能力、几行规则让Agent以组件树/调用栈/Mermaid/文件树/伪代码/类型签名/diff/HTML等9类视觉替代小作文；程序设计前置与大diff回顾两大用法；作者三轮实测(流程图/方案对比/html explainer五步讲解)；npx安装+三种调用+WorkBuddy路径实操；39条事实、7项P0全✅0❌(Grill Me为Matt Pocock出品防误读/SKILL.md仓库路径单源) |
 
 ---
 
@@ -151,7 +156,7 @@ total_bundles: 47
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：46 个知识包，共 334 个内容文档（216 概念 + 61 示例 + 57 信源），零推测事实底稿随束存放
+> **内容统计**：52 个知识包，共 368 个内容文档（234 概念 + 67 示例 + 67 信源；2026-09-16 openviking 入组时校正原 46/334 滞后，同日 ai-agent-book 入组 +5 概念 +2 信源、openhuman 入组 +4 概念 +2 信源、oracle 入组 +3 概念 +2 示例 +2 信源、show-me-skill 入组 +3 概念 +1 示例 +2 信源）；零推测事实底稿随束存放
 
 ```{toctree}
 :hidden:
@@ -204,4 +209,9 @@ matrix-zero-person-company/index
 ai-app-survival/index
 wigolo/index
 zhihu-cli/index
+openhuman/index
+openviking/index
+ai-agent-book/index
+oracle/index
+show-me-skill/index
 ```
