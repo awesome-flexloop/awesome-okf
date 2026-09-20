@@ -76,6 +76,8 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🔁 LoopX 长程 Agent 控制面](loopx/index.md) | 国产开源本地优先状态内核——quota 计费闸门、人类门禁、dashboard 工作台、200h OpenViking 公开证据与安装实操（极客之家博文核验转化，10✅2⚠️） |
 | [🔑 inurl BYOK 密钥聚合与四个免费模型](inurl-byok-free-models/index.md) | 微信推广文经 OKF v0.2 七阶段转化——inurl 聚合 APIToken 的统一令牌/端到端加密/本地代理机制核验，Agnes/GLM-4-Flash/硅基流动/LongCat 免费政策官方口径对照（flagged：省钱数字无出处、Agnes 国籍与上下文硬错、产品匿名运营） |
 | [🔑 inurl 统一令牌与免费模型省钱实录核验](inurl-unified-token/index.md) | 同公众号 09-02《月付 500 到 0 元》软文转化（flagged）——多厂商 Key 收拢与本地自动路由核验、免费档 3 个密钥限制与付费档位、70 条事实勘误（DeepSeek 免费失实/GPT-4o 退役），含 Cursor 接入配置演练 |
+| [📚 QBS 书籍驱动技能构建法](qbs-book-to-skill/index.md) | 微信博文经 OKF v0.2 七阶段转化（方法论非操作教程）——QBS（Question→Book→Skill）三段式与提示词模板、Make Time 官方四步循环（Highlight→Laser→Energize→Reflect）与两大注意力陷阱、作者开源仓库三个 skill（3 则勘误：切换成本 23 分 15 秒 / Time Craters 30 分钟 / Knapp 任职口径） |
+| [🐋 Orca ADE 多 Agent 桌面工作台](orca-ade/index.md) | 微信博文经 OKF v0.2 七阶段转化——Stably AI 开源（MIT）桌面 ADE：并行 git worktree 多 Agent 编排与择优合并、Design Mode、diff 批注、SSH 远程与移动端指挥、Orca CLI，含三平台安装实操与七项勘误（E-1 域名 `onnorca.dev`→`onorca.dev` 硬错误；8 条 P0 核验 2✅/6⚠️/0❌） |
 ```{toctree}
 :hidden:
 :maxdepth: 7
@@ -143,4 +145,6 @@ inurl-unified-token/index
 loopx/index
 uumit-a2a-marketplace/index
 wigolo/index
+qbs-book-to-skill/index
+orca-ade/index
 ```
