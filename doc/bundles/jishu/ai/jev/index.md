@@ -48,7 +48,7 @@ Jev由TypeSafe定位为面向软件的System One决策模型：接收状态，�
 
 ## 主题关联
 
-[上下文优化](../context-optimization/index.md)提供更广的上下文工程背景；本包仅讨论Jev相关性判断的证据与边界。[AI工程方法论](../ai-engineering-methodology/index.md)承载跨产品工程方法；本包聚焦具体模型的类型化接口与案例解读。
+[Jev 自动化决策引擎](../jev-automation-decision/index.md)对应另一篇更近期的公众号文章，聚焦客服、游戏、浏览器和安全调度四类自动化叙述；本包保留原先文章的十类案例与三种原语分析。[上下文优化](../context-optimization/index.md)提供更广的上下文工程背景；[AI工程方法论](../ai-engineering-methodology/index.md)承载跨产品工程方法。
 
 ```{toctree}
 :hidden:

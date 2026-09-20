@@ -21,7 +21,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🟠 Anthropic 官方生态](anthropic/index.md) | Anthropic Claude 官方生态——Python SDK、Claude Code CLI、提示词工程教程、官方Skills库、金融服务方案、Cookbook示例集、系统提示词发布史 |
 | [🧠 DeepSeek-AI 基础设施](deepseek/index.md) | DeepSeek 开源大模型基础设施——MoE 通信、GPU kernel 优化、注意力、流水线并行、负载均衡 |
 | [🚀 TRAE Community 生态](trae/index.md) | 字节跳动 AI 编程 IDE 社区——平台应用、技能/模板/MCP 扩展、学习资源、社区治理 |
-| [🐧 腾讯开源生态](tencent/index.md) | 腾讯系开源与商业项目——CodeBuddy 产品矩阵、AI 红队平台、ncnn 推理框架 |
+| [🐧 腾讯开源生态](tencent/index.md) | 腾讯系开源与商业项目——CodeBuddy、WeKnora、AI 红队平台、ncnn 推理框架 |
 | [⚡ PocketFlow 极简 LLM 应用框架](pocketflow/index.md) | 100 行代码的极简 LLM Agent 框架——节点+流程抽象、6 大设计模式、实战教程 |
 | [🛡️ AI 安全与红队研究（ai-security）](ai-security/index.md) | elder-plinius 红队研究三仓库——系统提示词透明档案（CL4R1T4S）、越狱攻击面研究库（L1B3RT4S）、拒绝行为消除研究工具包（OBLITERATUS） |
 | [📱 mobile-use 移动自动化框架](mobile-use/index.md) | minitap-mobile-use 多智能体移动自动化——LangGraph 多 Agent 协作、设备控制抽象层、工具系统与 SDK 双层 API |
@@ -30,7 +30,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🚀 国产Token出海：低价算力如何碾压全球市场](domestic-model-token-export/index.md) | 国产AI模型通过OpenRouter以极低价格占领全球API市场（DeepSeek $0.09 vs Claude $5/MTok），但杰文斯悖论与WTO规则窗口构成隐患（含F-004勘误） |
 | [💥 Token经济大爆发：46.7万亿周调用量](token-economy-explosion/index.md) | 全球AI周调用量46.7T、中国18.81T连续八周超美国5.76T；ATH/Token Hub政策布局、汕头闭环工厂、高盛2030预测24倍增长、增长飞轮分析 |
 | [🧭 AI 工程方法论](ai-engineering-methodology/index.md) | AI 工程化方法论谱系——Harness 工程、提示词编程与七概念提示词工程、对抗性审查、Agent 评测体系与性能优化 |
-| [📝 Agent 平台散篇笔记](agent-platform-notes/index.md) | AI Agent 平台与工具散篇聚合——Anthropic Agent 路线图、AReaL 强化学习（2 篇）、AtomGit AI 实践、BrowserAct 自动化（2 篇）、Minitap 官方 Wiki、Octo 多 Agent 平台等独立成束不足的小主题 |
+| [📝 Agent 平台散篇笔记](agent-platform-notes/index.md) | AI Agent 平台与工具散篇聚合——Anthropic Agent 路线图、AReaL 强化学习、BrowserAct、Octo、OpenMontage、free-claude-code 与 career-ops、华为云 AI Shell 等独立成束不足的小主题 |
 | [🎬 Agnes AI 与 Pavo 创作平台](agnes-pavo/index.md) | 免费多模态 API + 一站式 AI 短剧工作流——Pavo 四大核心模块、八步剧情短片流水线与 Agent 指挥系统 |
 | [🔁 AReaL 自演进 Agent 强化学习基础设施](areal/index.md) | AReaL 2.0 自演进三大支柱、Agent-compute 微服务架构与 Online RL 工作流实践 |
 | [🧪 AtomGit AI 最佳实践](atomgit-ai/index.md) | AtomGit AI 平台最佳实践——平台能力、使用模式与工程化建议 |
@@ -80,6 +80,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🐋 Orca ADE 多 Agent 桌面工作台](orca-ade/index.md) | 微信博文经 OKF v0.2 七阶段转化——Stably AI 开源（MIT）桌面 ADE：并行 git worktree 多 Agent 编排与择优合并、Design Mode、diff 批注、SSH 远程与移动端指挥、Orca CLI，含三平台安装实操与七项勘误（E-1 域名 `onnorca.dev`→`onorca.dev` 硬错误；8 条 P0 核验 2✅/6⚠️/0❌） |
 | [Jev 决策模型与十类应用](jev/index.md) | TypeSafe System One模型概念教程：Noul/Choice/Score、十案例的状态与执行分工、工程评测；flagged保留原帖和成效证据缺口，非操作教程 |
 | [🗣️ Verbi 单人 AI 口语陪练出海案例](verbi/index.md) | 微信博文经 OKF v0.2 七阶段转化（案例资讯非操作教程）——加拿大单人开发者 5.5 个月做到 30 天营收 $110,069/MRR $16,752（RevenueCat + TrustMRR 双锚核验）；「敢开口」错位定位、试用转化漏斗、ASO+内容+UGC 渠道勘误 E-1（8✅/6⚠️/1❌） |
+| [Jev 自动化决策引擎](jev-automation-decision/index.md) | 当前微信文章的 Jev 自动化场景解读——System One、客服/游戏/浏览器/安全四类模式与端到端评测边界；flagged，非操作教程 |
 
 ```{toctree}
 :hidden:
@@ -151,5 +152,6 @@ wigolo/index
 qbs-book-to-skill/index
 orca-ade/index
 jev/index
+jev-automation-decision/index
 verbi/index
 ```

@@ -2,14 +2,14 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、成本优化、大模型对比、能源管理、硬件设计、监管治理、平台生态、创业趋势与数字自由职业等 16 束行业分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、成本优化、大模型对比、能源管理、硬件设计、监管治理、平台生态、创业趋势与数字自由职业等 18 束行业分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
 
 本分组收录 AI 行业与商业趋势相关的知识包，覆盖四个方向：
 
-- **AI 商业化与数字机会**：AI 变现完整指南（商业模式·技术选型·三大场景·实施步骤）、抖音 Vibe Coding、Papi 酱个人 IP 与创业趋势、海外平台夜间副业的费率、资格和六周验证框架。
+- **AI 商业化与数字机会**：AI 变现完整指南（商业模式·技术选型·三大场景·实施步骤）、抖音 Vibe Coding、Papi 酱个人 IP 与创业趋势、WorkBuddy 全媒体内容系统，以及海外平台夜间副业的费率、资格和六周验证框架。
 - **成本与工具生态**：多模型时代 Copilot 成本分析、国产大模型对比、火山引擎 AI 产品生态、三个热门 AI 工具指南。
 - **行业与技术分析**：开源 EMS 能源管理系统、AI 硬件设计工具、华秋与星宸科技合作、RQNDD 专题、印度制造业七概念分析。
 - **监管与治理**：AI 拟人化服务暂行办法分析、AI 换脸治理专题。
@@ -36,6 +36,8 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、成本优
 | [ai-anthropomorphic-analysis](ai-anthropomorphic-analysis/index.md) | 1 | AI 拟人化服务暂行管理办法分析 |
 | [ai-switch-governance](ai-switch-governance/index.md) | 3 | AI 换脸治理专题——文章内容与洞察提取报告 |
 | [overseas-freelance-night-work](overseas-freelance-night-work/index.md) | 8 | 海外平台夜间副业——七类项目、平台费率与地区资格、第一晚行动剧本、六周验证 |
+| [ai-one-person-micro-product](ai-one-person-micro-product/index.md) | 7 | AI 一人公司与单点微型产品——单点痛点、窄产品经济性与十人验证循环（商业分析，非操作教程） |
+| [workbuddy-content-system](workbuddy-content-system/index.md) | 4+2 | 微信博文转化——WorkBuddy 全媒体内容系统：17 道工序、工作台、经验飞轮与一鱼多吃（商业分析，非操作教程） |
 
 ## 阅读建议
 
@@ -65,4 +67,6 @@ papi-jiang-solo-ip/index
 ai-anthropomorphic-analysis/index
 ai-switch-governance/index
 overseas-freelance-night-work/index
+ai-one-person-micro-product/index
+workbuddy-content-system/index
 ```

@@ -1,7 +1,7 @@
 ---
 okf_version: "0.2"
 title: "Agent 平台散篇笔记"
-description: "AI Agent 平台与工具散篇笔记聚合束——收录独立篇数不足（<5 篇）的小主题：Anthropic Agent 产品线路线图、AReaL 强化学习框架（2 篇）、AtomGit AI 最佳实践、BrowserAct 浏览器自动化（2 篇）、Minitap 官方 Wiki、明略科技 Octo 多 Agent 协作平台。"
+description: "AI Agent 平台与工具散篇笔记聚合束——收录独立篇数不足（<5 篇）的小主题，新增 OpenMontage Agent 视频生产系统。"
 ---
 
 # Agent 平台散篇笔记
@@ -20,6 +20,9 @@ AI Agent 平台与工具散篇笔记聚合束——收录独立篇数不足（<5
 - [明略科技 Octo 平台学习 Wiki：Private AI 时代的多 Agent 协作基础设施](concepts/octo-platform.md)
 - [EvoX 国产 Agent 平台分析：蜂群协作与自进化机制](concepts/evox-agent-review/index.md)
 - [五个开源项目：把订阅费迁移为可控的工程成本](open-source-subscription-alternatives/index.md)
+- [OpenMontage Agent 视频制作系统](openmontage-agent-video/index.md)
+- [🧩 free-claude-code 与 career-ops：模型接入与求职工作流组合](free-claude-code-career-ops/index.md)
+- [华为云 AI Shell 开发者空间学习教程](huawei-ai-shell-developer-space/index.md)
 
 ```{toctree}
 :hidden:
@@ -35,5 +38,8 @@ concepts/minitap-official
 concepts/octo-platform
 evox-agent-review/index
 open-source-subscription-alternatives/index
+openmontage-agent-video/index
+free-claude-code-career-ops/index
+huawei-ai-shell-developer-space/index
 log
 ```

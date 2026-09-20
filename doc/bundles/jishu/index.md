@@ -48,7 +48,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 
 | 分组 | 束数 | 一句话简介 |
 |------|------|-----------|
-| [🔧 开发与协作（dev）](dev/index.md) | 5 | Git 版本控制 · GitHub 平台（Gist/Actions）· 开源实践（参与/项目准备/README 模板） |
+| [🔧 开发与协作（dev）](dev/index.md) | 6 | Git 版本控制 · GitHub 平台（Gist/Actions）· 开源实践（参与/项目准备/README 模板）· public-apis 公共 API 清单 |
 | [💻 终端渲染（terminal）](terminal/index.md) | 1 | Textualize 终端生态——rich/textual 源码中文教程 |
 | [🌐 Web 开发（web）](web/index.md) | 3 | FastAPI · GraphQL · HTML 声明式局部更新 |
 | [🖥️ GUI 桌面开发（gui）](gui/index.md) | 5 | Qt/PyQt 桌面开发（Qt for Python 官方机制 · PyQt5 实战）· tkinter 标准库生态（tkinter GUI 设计 · tkinter 手册 · tkinterx 扩展库） |
