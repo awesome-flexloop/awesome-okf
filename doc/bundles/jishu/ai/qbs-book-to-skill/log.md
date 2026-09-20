@@ -41,3 +41,21 @@
 - **口径风险**：中文译名（"忙碌花车""无底洞""黄金搭档"）为作者意译，非官方译名，已在正文与 verification.md §五 标注。
 - **覆盖率风险**：Make Time 官方四步循环仅展开一步，已在 index.md 与 concepts/01 显式声明覆盖边界，避免读者误当全貌。
 - **cross-reference 有效性**：三条同级 bundle 互链（mattpocock-skills / ai-agent/book-to-skill / codex-agent-workflow-practices）均已确认文件存在。
+
+## 并行会话冲突与在途状态登记（重要）
+
+- 生成期间有并行会话在同一 `jishu/ai/index.md` 接入 **orca-ade** 等束，发生竞争写入：`orca-ade` 的表行与 toctree 条目落在本束条目之后，本会话按最小变更原则**保留其全部条目**，不予回退。
+- 本会话计数时点为 555→556（总索引）/ 422→423（jishu）/ 203→204（ai）；并行会话随后将总索引继续推至 **557**，`check-bundles-index.py` 复跑确认五面一致，说明增量已被正确吸收。
+- `check-toctrees.py` 另报 **`jishu/ai/jev/`**（缺 index.md、references 文件未接入）为在途束，由并行会话创建，本会话不代接，留待其收尾。
+- 本束自身 toctree、相对链接、frontmatter、F 编号四项门禁零遗留问题。
+
+## C（提交）
+
+| 序 | 仓库 | 提交 | 内容 |
+|---|------|------|------|
+| 1 | `projects/awesome-okf-xs`（子模块） | `9a53c2c5` | feat(bundles): 本束 9 文件 + `jishu/ai/index.md` + `bundles/index.md` |
+| 2 | SpecWeave（主仓库） | `f145d6539` | docs(spec): `qbs-book-to-skill-okf-wiki/` 的 spec.md + facts.md |
+| 3 | SpecWeave（主仓库） | `357b05903` | chore(submodule): 更新子模块指针至 `9a53c2c5` |
+
+- 按约定**不 push**（用户未要求）。子模块提交含并行会话的 `orca-ade` 索引条目（同一文件内的并发写入，无法按行拆分），已在本节登记。
+- 提交工具：`.agents/scripts/git-commit-utf8.py`（UTF-8 bytes 通道，显式列文件）。
