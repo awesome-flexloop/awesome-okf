@@ -34,3 +34,11 @@
 - ✅ **勘误落实核对**：`onnorca.dev` 全束共 10 处出现，**逐处确认全部位于勘误/核验语境**（index.md 先读提示、log.md E-1 记录、examples/00 安装坑位提醒、article-source.md 与 verification.md 核验记录）；所有运营性表述统一使用正确域名 `onorca.dev`，博文硬错误未原样照搬
 - ✅ **P0 统计一致**：index.md / verification.md / log.md 三处均为"8 条 P0（去重 7 项）→ 2✅/6⚠️/0❌"，与 spec `facts.md` 结论一致
 - 备注：本束内跨目录引用沿用 `jishu/ai` 分组的既有约定（`/concepts/...` 根绝对形式，同分组内已有 704 处先例），未单独改动；束间互链统一使用相对路径
+
+## 2026-09-20 · C 阶段原子提交
+
+- **子模块提交**：`7af4add5 feat(bundles): 新增 Orca ADE 多 Agent 桌面工作台知识包（极客之家博文核验转化）` —— 12 个文件、+1210 行
+- **索引面并发登记（重要）**：`doc/bundles/jishu/ai/index.md`（导航行 + toctree 追加）与 `doc/bundles/index.md`（`total_bundles` 556→557、jishu 节标题与 mermaid 节点 423→424、ai 分组束数 204→205）由**并发会话**在提交 `9a53c2c5`（`feat(bundles): 新增 QBS 书籍驱动技能构建法知识包`）中**一并纳入**，非本会话提交。经逐项比对，两文件在本会话工作树中的编辑内容与该提交版本**完全一致**，无需重提交；此处登记以保留归属可追溯性
+- **主仓库提交**：spec 四文件（`spec.md` / `facts.md` / `tasks.md` / `review.md`）并携带本子模块指针更新
+- **提交工具**：`python .agents/scripts/git-commit-utf8.py`，**显式列全 12 个文件路径**（未传目录参数）
+- **未 push**：用户未要求推送，提交仅存本地
