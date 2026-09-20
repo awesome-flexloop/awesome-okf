@@ -19,6 +19,7 @@ AI Agent 平台与工具散篇笔记聚合束——收录独立篇数不足（<5
 - [Minitap.ai 官方Wiki完整学习教程：零脚本AI QA工程师minitest深度解析、AndroidWorld 100%基准测试、开源mobile-use SDK与移动端测试革命](concepts/minitap-official.md)
 - [明略科技 Octo 平台学习 Wiki：Private AI 时代的多 Agent 协作基础设施](concepts/octo-platform.md)
 - [EvoX 国产 Agent 平台分析：蜂群协作与自进化机制](concepts/evox-agent-review/index.md)
+- [五个开源项目：把订阅费迁移为可控的工程成本](open-source-subscription-alternatives/index.md)
 
 ```{toctree}
 :hidden:
@@ -33,5 +34,6 @@ concepts/browseract-official
 concepts/minitap-official
 concepts/octo-platform
 evox-agent-review/index
+open-source-subscription-alternatives/index
 log
 ```

@@ -79,6 +79,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [📚 QBS 书籍驱动技能构建法](qbs-book-to-skill/index.md) | 微信博文经 OKF v0.2 七阶段转化（方法论非操作教程）——QBS（Question→Book→Skill）三段式与提示词模板、Make Time 官方四步循环（Highlight→Laser→Energize→Reflect）与两大注意力陷阱、作者开源仓库三个 skill（3 则勘误：切换成本 23 分 15 秒 / Time Craters 30 分钟 / Knapp 任职口径） |
 | [🐋 Orca ADE 多 Agent 桌面工作台](orca-ade/index.md) | 微信博文经 OKF v0.2 七阶段转化——Stably AI 开源（MIT）桌面 ADE：并行 git worktree 多 Agent 编排与择优合并、Design Mode、diff 批注、SSH 远程与移动端指挥、Orca CLI，含三平台安装实操与七项勘误（E-1 域名 `onnorca.dev`→`onorca.dev` 硬错误；8 条 P0 核验 2✅/6⚠️/0❌） |
 | [Jev 决策模型与十类应用](jev/index.md) | TypeSafe System One模型概念教程：Noul/Choice/Score、十案例的状态与执行分工、工程评测；flagged保留原帖和成效证据缺口，非操作教程 |
+| [🗣️ Verbi 单人 AI 口语陪练出海案例](verbi/index.md) | 微信博文经 OKF v0.2 七阶段转化（案例资讯非操作教程）——加拿大单人开发者 5.5 个月做到 30 天营收 $110,069/MRR $16,752（RevenueCat + TrustMRR 双锚核验）；「敢开口」错位定位、试用转化漏斗、ASO+内容+UGC 渠道勘误 E-1（8✅/6⚠️/1❌） |
 
 ```{toctree}
 :hidden:
@@ -150,4 +151,5 @@ wigolo/index
 qbs-book-to-skill/index
 orca-ade/index
 jev/index
+verbi/index
 ```
