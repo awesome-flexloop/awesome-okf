@@ -78,6 +78,8 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🔑 inurl 统一令牌与免费模型省钱实录核验](inurl-unified-token/index.md) | 同公众号 09-02《月付 500 到 0 元》软文转化（flagged）——多厂商 Key 收拢与本地自动路由核验、免费档 3 个密钥限制与付费档位、70 条事实勘误（DeepSeek 免费失实/GPT-4o 退役），含 Cursor 接入配置演练 |
 | [📚 QBS 书籍驱动技能构建法](qbs-book-to-skill/index.md) | 微信博文经 OKF v0.2 七阶段转化（方法论非操作教程）——QBS（Question→Book→Skill）三段式与提示词模板、Make Time 官方四步循环（Highlight→Laser→Energize→Reflect）与两大注意力陷阱、作者开源仓库三个 skill（3 则勘误：切换成本 23 分 15 秒 / Time Craters 30 分钟 / Knapp 任职口径） |
 | [🐋 Orca ADE 多 Agent 桌面工作台](orca-ade/index.md) | 微信博文经 OKF v0.2 七阶段转化——Stably AI 开源（MIT）桌面 ADE：并行 git worktree 多 Agent 编排与择优合并、Design Mode、diff 批注、SSH 远程与移动端指挥、Orca CLI，含三平台安装实操与七项勘误（E-1 域名 `onnorca.dev`→`onorca.dev` 硬错误；8 条 P0 核验 2✅/6⚠️/0❌） |
+| [Jev 决策模型与十类应用](jev/index.md) | TypeSafe System One模型概念教程：Noul/Choice/Score、十案例的状态与执行分工、工程评测；flagged保留原帖和成效证据缺口，非操作教程 |
+
 ```{toctree}
 :hidden:
 :maxdepth: 7
@@ -147,4 +149,5 @@ uumit-a2a-marketplace/index
 wigolo/index
 qbs-book-to-skill/index
 orca-ade/index
+jev/index
 ```
