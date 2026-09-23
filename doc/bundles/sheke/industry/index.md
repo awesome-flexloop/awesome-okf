@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、成本优化、大模型对比、能源管理、硬件设计、监管治理、平台生态、创业趋势与具身智能等 20 束行业分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比、能源管理、硬件设计、监管治理、平台生态、创业趋势与具身智能等 21 束行业分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
@@ -40,6 +40,7 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、成本优
 | [workbuddy-content-system](workbuddy-content-system/index.md) | 4+2 | 微信博文转化——WorkBuddy 全媒体内容系统：17 道工序、工作台、经验飞轮与一鱼多吃（商业分析，非操作教程） |
 | [zhihu-monetization](zhihu-monetization/index.md) | 10+2 | 知乎站内创作激励三层解析——AI Works 项目广场、创作打卡挑战赛第五十三期与科学季 2026 的 F 编号事实、盐粒机制洞察与三角色变现路径（flagged：奖池数字多为平台活动页单源） |
 | [zdtaichu5-0-9b](zdtaichu5-0-9b/index.md) | 7 | ZDTaichu5.0-9B 空间具身多模态模型——模型定位、空间推理、训练管线与部署边界（flagged：基准和场景效果尚无独立复现） |
+| [auto-money-system](auto-money-system/index.md) | 7 | 微信博文转化：AI 应用层、个人 IP 系统化与轻交付产品自动化（商业分析，非操作教程；flagged：作者单源观察） |
 
 ## 阅读建议
 
@@ -73,4 +74,5 @@ ai-one-person-micro-product/index
 workbuddy-content-system/index
 zhihu-monetization/index
 zdtaichu5-0-9b/index
+auto-money-system/index
 ```
