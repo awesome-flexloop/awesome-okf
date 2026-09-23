@@ -27,9 +27,9 @@ generated: { by: process:learning-to-okf-migration, at: 2026-09-02 }
 本指南由三条主线交织构成：纵向 8 大核心模块构成从概念到规模化的决策主流程；横向 3 类应用场景将方法论投射到 ToB、ToC、垂直行业三类典型落地形态；底部风险与资源体系为全流程提供横向支撑。
 
 ```mermaid
-flowchart TB
+flowchart LR
     subgraph CORE ["8大核心模块（纵向决策主流程）"]
-        direction TB
+        direction LR
         M1["①核心概念<br/>术语体系"] --> M2["②市场需求<br/>机会识别"]
         M2 --> M3["③商业模式<br/>盈利模式选择"]
         M3 --> M4["④技术选型<br/>技术栈决策"]
