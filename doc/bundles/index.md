@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 565
+total_bundles: 570
 groups: 59
 domains: 9
 ---
@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **565 个知识包**，按学科逻辑分为 **9 个技术域、59 个分组**（8 个学科域 + 1 个规范锚点）。
+> **当前共 **570 个知识包**，按学科逻辑分为 **9 个技术域、59 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -22,13 +22,13 @@ domains: 9
 flowchart TD
     meta["📐 meta/ 规范与格式（3 束）：okf-spec 规范锚点 · okf-ecosystem 生态工具 · okf-desktop 桌面阅读器"]
     guoxue["📜 guoxue/ 国学（48 束）：儒道释法墨易·河洛·阳明心学·算学·了凡"]
-    zhexue["💭 zhexue/ 哲学（6 束）：Ψhē 自指递归理论体系 · 思维方法论"]
+    zhexue["💭 zhexue/ 哲学（7 束）：Ψhē 自指递归理论体系 · 思维方法论 · Agent Session 协作"]
     kexue["🔬 kexue/ 科学（17 束）：化学·物理学中西元典·国外数学经典·中西数学对读·前沿资讯"]
     wenxue["✒️ wenxue/ 文学（2 束）：中国古典文学经典 · 英语语法"]
     yixue["🌿 yixue/ 医学与养生（10 束）：中医经典·黄帝内经·道医·养生·房中"]
-    sheke["👥 sheke/ 社会科学（42 束）：职场管理·亲密关系·性学经典·理财·营销·个人成长·AI 行业趋势·数字自由职业"]
+    sheke["👥 sheke/ 社会科学（43 束）：职场管理·亲密关系·性学经典·理财·营销·个人成长·AI 行业趋势·具身智能·数字自由职业"]
     yishu["🎤 yishu/ 艺术（9 束）：艺术疗愈六束（总览·美术·音乐·舞动戏剧·表达性·中国）·声乐教学两束（美通咽音·手势教学）·红歌教学一束（曲谱库·赏析·歌谱合规·柯尔文手势）"]
-    jishu["⚙️ jishu/ 技术（428 束）：AI·文档工程·构建·通信·容器·数据·物联网等 17 生态分组"]
+    jishu["⚙️ jishu/ 技术（431 束）：AI·文档工程·构建·通信·容器·数据·物联网等 17 生态分组"]
     meta -->|"规范约束"| jishu
     jishu -->|"AI 辅助人文内容生成"| guoxue
     kexue -->|"科学元典与算学互参"| guoxue
@@ -78,12 +78,12 @@ flowchart TD
 | [🧮 算学（Suanxue）](guoxue/suanxue/index.md)           | 1  | 中国传统数学典籍——中国算经阅读教程（《九章算术》《周髀算经》、刘徽、宋元四大家）                      |
 | [📜 了凡（Liaofan）](guoxue/liaofan/index.md)           | 2  | 《了凡四训》古典层原文与阐释层现代解读双轨并收——立命改过之学与智然《了凡生意经》企业家研修课程对照阅读         |
 
-### 💭 [哲学](zhexue/index.md) · 6 束 · 2 组
+### 💭 [哲学](zhexue/index.md) · 7 束 · 2 组
 
 | 分组                              | 束数 | 说明                                  |
 | ------------------------------- | -- | ----------------------------------- |
 | [Ψhē 理论体系](zhexue/psi/index.md) | 4  | ψ=ψ(ψ) 自指递归理论体系——哲学、数学形式化、宇宙本论、意识研究 |
-| [🧭 思维方法论（Methodology）](zhexue/methodology/index.md) | 2  | 可迁移的思维方法与理性实践工具——第一性原理系统化知识档案（哲学起源·物理学应用·商业创新案例·方法论框架·六步练习手册）|
+| [🧭 思维方法论（Methodology）](zhexue/methodology/index.md) | 3  | 可迁移的思维方法与理性实践工具——第一性原理、费曼学习法+AI，以及 Agent Session 版本化协作|
 
 ### 🔬 [科学](kexue/index.md) · 17 束 · 3 组
 
@@ -111,7 +111,7 @@ flowchart TD
 | [🌿 养生经典（Yangsheng）](yixue/yangsheng/index.md)             | 1  | 养生经典阅读教程——《黄帝内经》至《老老恒言》六部核心经典与食养/导引/道教扩展脉络          |
 | [🛏️ 房中（Fangzhong）](yixue/fangzhong/index.md)              | 1  | 中国古代性文化（房中）典籍阅读教程——目录著录、马王堆出土文献、《医心方》辑佚链与学术史研究      |
 
-### 👥 [社会科学](sheke/index.md) · 42 束 · 7 组
+### 👥 [社会科学](sheke/index.md) · 43 束 · 7 组
 
 | 分组                                              | 束数 | 说明                                        |
 | ----------------------------------------------- | -- | ----------------------------------------- |
@@ -121,7 +121,7 @@ flowchart TD
 | [💰 个人理财与投资（Finance）](sheke/finance/index.md) | 2  | 个人投资实操通识与《管道的故事》财富观念解读——收益数学、资产类别、配置与行为纪律、中国市场制度，以及提桶者vs管道建造者、时间杠杆、管道复利、电子管道与五步行动指南 |
 | [📣 市场营销（Marketing）](sheke/marketing/index.md) | 2  | 营销实操通识——营销本质、STP、定位与品牌、4P/4C、顾客旅程、AARRR、内容私域与合规底线；另含"先卖后做"需求验证博文转化（案例 P0 核验、一周验证法与批判边界） |
 | [🌱 个人成长与自我提升（Personal Growth）](sheke/personal-growth/index.md) | 2  | 女性魅力与情商综合教程（吸引力科学、魅力模型、第一印象、情商能力/混合模型、情绪觉察与调节、共情、界限与自信，附 30 天实操路线）；男性魅力与情商综合教程（吸引力科学、男性气质、男性情绪社会化、情商模型与男性圈批判、界限与自信，附 30 天实操路线） |
-| [🏭 AI 行业与商业趋势（Industry）](sheke/industry/index.md) | 19 | AI 行业快照分析——AI 变现指南、Copilot 成本、国产大模型对比、EMS 能源、硬件设计工具、印度制造业、监管治理、平台生态、AI 内容系统与数字自由职业 |
+| [🏭 AI 行业与商业趋势（Industry）](sheke/industry/index.md) | 20 | AI 行业快照分析——AI 变现指南、Copilot 成本、国产大模型对比、EMS 能源、硬件设计工具、印度制造业、监管治理、平台生态、AI 内容系统、具身智能与数字自由职业 |
 
 ### 🎤 [艺术](yishu/index.md) · 9 束 · 3 组
 
@@ -131,11 +131,11 @@ flowchart TD
 | [🎤 声乐教学（Vocal）](yishu/vocal/index.md)   | 2  | 美通唱法与咽音体系（林俊卿咽音练声八步骤、嗓音科学、常见毛病纠正与每日练声清单）+ 手势辅助声乐教学（柯尔文手势、课堂五类手势、指挥基础、体态律动） |
 | [🚩 红歌教学（Hongge）](yishu/hongge/index.md)  | 1  | 红歌教学教程一束——曲谱库建设与版权合规、教学型赏析六步框架与三期曲目示范、歌谱正版获取、柯尔文手势与声乐合唱结合（完整教案·曲谱库指南·16 周路线） |
 
-### ⚙️ [技术](jishu/index.md) · 428 束 · 17 组
+### ⚙️ [技术](jishu/index.md) · 431 束 · 17 组
 
 | 分组                                               | 束数  | 说明                                                                                                         |
 | ------------------------------------------------ | --- | ---------------------------------------------------------------------------------------------------------- |
-| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 208 | agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security · agent-industry-research · domestic-model-token-export 及工程方法论等直挂束 |
+| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 211 | agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security · agent-industry-research · domestic-model-token-export 及工程方法论等直挂束 |
 | [📚 文档工程（document）](jishu/document/index.md)     | 110 | Sphinx · MyST · Jupyter Book · Jupyter · KaTeX 文档工程与交互式计算生态                                                |
 | [🔨 构建与包管理（build）](jishu/build/index.md)         | 15  | Conda 生态 · scikit-build · CMake · 通用开发工具（Ninja/Copier/PyInvoke/Nuitka 等）                                   |
 | [📡 通信与网络（comm）](jishu/comm/index.md)            | 16  | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析                                                               |
