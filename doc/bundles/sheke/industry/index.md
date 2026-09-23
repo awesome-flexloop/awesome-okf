@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、成本优化、大模型对比、能源管理、硬件设计、监管治理、平台生态、创业趋势与数字自由职业等 18 束行业分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、成本优化、大模型对比、能源管理、硬件设计、监管治理、平台生态、创业趋势与数字自由职业等 19 束行业分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
@@ -38,6 +38,7 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、成本优
 | [overseas-freelance-night-work](overseas-freelance-night-work/index.md) | 8 | 海外平台夜间副业——七类项目、平台费率与地区资格、第一晚行动剧本、六周验证 |
 | [ai-one-person-micro-product](ai-one-person-micro-product/index.md) | 7 | AI 一人公司与单点微型产品——单点痛点、窄产品经济性与十人验证循环（商业分析，非操作教程） |
 | [workbuddy-content-system](workbuddy-content-system/index.md) | 4+2 | 微信博文转化——WorkBuddy 全媒体内容系统：17 道工序、工作台、经验飞轮与一鱼多吃（商业分析，非操作教程） |
+| [zhihu-monetization](zhihu-monetization/index.md) | 10+2 | 知乎站内创作激励三层解析——AI Works 项目广场、创作打卡挑战赛第五十三期与科学季 2026 的 F 编号事实、盐粒机制洞察与三角色变现路径（flagged：奖池数字多为平台活动页单源） |
 
 ## 阅读建议
 
@@ -69,4 +70,5 @@ ai-switch-governance/index
 overseas-freelance-night-work/index
 ai-one-person-micro-product/index
 workbuddy-content-system/index
+zhihu-monetization/index
 ```
