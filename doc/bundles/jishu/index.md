@@ -7,7 +7,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 
 # ⚙️ 技术
 
-本域是全部技术类知识包的超类，按技术生态组织为 **17 个分组、111 个一级束**，覆盖开源项目源码解读、语言核心、构建工具链、文档工程、开发与协作、智能驾驶、物联网、系统基础设施与 AI 应用生态。
+本域是全部技术类知识包的超类，按技术生态组织为 **17 个分组**，覆盖开源项目源码解读、语言核心、构建工具链、文档工程、开发与协作、智能驾驶、物联网、系统基础设施与 AI 应用生态。递归束数以[知识包总索引](../index.md)为准，不再将历史一级目录计数当作全量束数。
 
 > 💡 **浏览建议**：17 个组按主题归纳为 6 大类，先找大类再进具体组，效率更高。
 
@@ -17,7 +17,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 
 | 分组 | 束数 | 一句话简介 |
 |------|------|-----------|
-| [🤖 人工智能与大模型（ai）](ai/index.md) | 45 | AI 与大模型应用生态——agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security 及行业研究与工程方法论等直挂束 |
+| [🤖 人工智能与大模型（ai）](ai/index.md) | [递归束数](../index.md) | AI 与大模型应用生态——agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security 及行业研究、Jev 决策模型与工程方法论等直挂束 |
 
 ### 📚 文档与数据工程
 
@@ -48,7 +48,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 
 | 分组 | 束数 | 一句话简介 |
 |------|------|-----------|
-| [🔧 开发与协作（dev）](dev/index.md) | 5 | Git 版本控制 · GitHub 平台（Gist/Actions）· 开源实践（参与/项目准备/README 模板） |
+| [🔧 开发与协作（dev）](dev/index.md) | 6 | Git 版本控制 · GitHub 平台（Gist/Actions）· 开源实践（参与/项目准备/README 模板）· public-apis 公共 API 清单 |
 | [💻 终端渲染（terminal）](terminal/index.md) | 1 | Textualize 终端生态——rich/textual 源码中文教程 |
 | [🌐 Web 开发（web）](web/index.md) | 3 | FastAPI · GraphQL · HTML 声明式局部更新 |
 | [🖥️ GUI 桌面开发（gui）](gui/index.md) | 5 | Qt/PyQt 桌面开发（Qt for Python 官方机制 · PyQt5 实战）· tkinter 标准库生态（tkinter GUI 设计 · tkinter 手册 · tkinterx 扩展库） |

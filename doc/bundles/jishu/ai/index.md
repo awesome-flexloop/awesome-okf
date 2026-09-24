@@ -14,14 +14,14 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | 分组 | 一句话简介 |
 |------|-----------|
 | [🤖 AgnesAI 大模型生态](agnes-ai/index.md) | AgnesAI 全模态 AI 平台——OpenAI 兼容 API、对话/图像/视频生成、Agent 工具调用 |
-| [🤖 AI Agent 框架](ai-agent/index.md) | AI Agent 运行时框架与架构模式——工具调用循环、多代理编排、记忆系统、Coding Agent 源码解读、Tongyi-MAI GUI Agent 生态源码精读 |
+| [🤖 AI Agent 框架](ai-agent/index.md) | AI Agent 运行时框架与架构模式——工具调用循环、多代理编排、记忆系统、Coding Agent 源码解读、Hypit 视频复刻工作流与 Tongyi-MAI GUI Agent 生态源码精读 |
 | [🦜🔗 LangChain-AI LLM 应用框架](langchain-ai/index.md) | LangChain/LangGraph 核心框架（Python+JS）、深度研究 Agent、可观测性、评测与基础设施 |
 | [🐳 Datawhale 开源 AI 学习社区](datawhale/index.md) | 国内最大开源 AI 学习社区——LLM 全栈/RAG/Agent/向量数据库/推荐系统/ML 理论 |
 | [🧩 Coze 扣子开发平台生态](coze/index.md) | 字节跳动一站式 AI Agent 开发平台——Python SDK、开源平台、LLM 可观测性 |
 | [🟠 Anthropic 官方生态](anthropic/index.md) | Anthropic Claude 官方生态——Python SDK、Claude Code CLI、提示词工程教程、官方Skills库、金融服务方案、Cookbook示例集、系统提示词发布史 |
 | [🧠 DeepSeek-AI 基础设施](deepseek/index.md) | DeepSeek 开源大模型基础设施——MoE 通信、GPU kernel 优化、注意力、流水线并行、负载均衡 |
 | [🚀 TRAE Community 生态](trae/index.md) | 字节跳动 AI 编程 IDE 社区——平台应用、技能/模板/MCP 扩展、学习资源、社区治理 |
-| [🐧 腾讯开源生态](tencent/index.md) | 腾讯系开源与商业项目——CodeBuddy 产品矩阵、AI 红队平台、ncnn 推理框架 |
+| [🐧 腾讯开源生态](tencent/index.md) | 腾讯系开源与商业项目——CodeBuddy、WeKnora、AI 红队平台、ncnn 推理框架、Buddy 系列与 MusicBuddy 产品观察 |
 | [⚡ PocketFlow 极简 LLM 应用框架](pocketflow/index.md) | 100 行代码的极简 LLM Agent 框架——节点+流程抽象、6 大设计模式、实战教程 |
 | [🛡️ AI 安全与红队研究（ai-security）](ai-security/index.md) | elder-plinius 红队研究三仓库——系统提示词透明档案（CL4R1T4S）、越狱攻击面研究库（L1B3RT4S）、拒绝行为消除研究工具包（OBLITERATUS） |
 | [📱 mobile-use 移动自动化框架](mobile-use/index.md) | minitap-mobile-use 多智能体移动自动化——LangGraph 多 Agent 协作、设备控制抽象层、工具系统与 SDK 双层 API |
@@ -30,7 +30,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🚀 国产Token出海：低价算力如何碾压全球市场](domestic-model-token-export/index.md) | 国产AI模型通过OpenRouter以极低价格占领全球API市场（DeepSeek $0.09 vs Claude $5/MTok），但杰文斯悖论与WTO规则窗口构成隐患（含F-004勘误） |
 | [💥 Token经济大爆发：46.7万亿周调用量](token-economy-explosion/index.md) | 全球AI周调用量46.7T、中国18.81T连续八周超美国5.76T；ATH/Token Hub政策布局、汕头闭环工厂、高盛2030预测24倍增长、增长飞轮分析 |
 | [🧭 AI 工程方法论](ai-engineering-methodology/index.md) | AI 工程化方法论谱系——Harness 工程、提示词编程与七概念提示词工程、对抗性审查、Agent 评测体系与性能优化 |
-| [📝 Agent 平台散篇笔记](agent-platform-notes/index.md) | AI Agent 平台与工具散篇聚合——Anthropic Agent 路线图、AReaL 强化学习（2 篇）、AtomGit AI 实践、BrowserAct 自动化（2 篇）、Minitap 官方 Wiki、Octo 多 Agent 平台等独立成束不足的小主题 |
+| [📝 Agent 平台散篇笔记](agent-platform-notes/index.md) | AI Agent 平台与工具散篇聚合——Anthropic Agent 路线图、AReaL 强化学习、BrowserAct、Octo、OpenMontage、free-claude-code 与 career-ops、华为云 AI Shell 等独立成束不足的小主题 |
 | [🎬 Agnes AI 与 Pavo 创作平台](agnes-pavo/index.md) | 免费多模态 API + 一站式 AI 短剧工作流——Pavo 四大核心模块、八步剧情短片流水线与 Agent 指挥系统 |
 | [🔁 AReaL 自演进 Agent 强化学习基础设施](areal/index.md) | AReaL 2.0 自演进三大支柱、Agent-compute 微服务架构与 Online RL 工作流实践 |
 | [🧪 AtomGit AI 最佳实践](atomgit-ai/index.md) | AtomGit AI 平台最佳实践——平台能力、使用模式与工程化建议 |
@@ -76,6 +76,13 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🔁 LoopX 长程 Agent 控制面](loopx/index.md) | 国产开源本地优先状态内核——quota 计费闸门、人类门禁、dashboard 工作台、200h OpenViking 公开证据与安装实操（极客之家博文核验转化，10✅2⚠️） |
 | [🔑 inurl BYOK 密钥聚合与四个免费模型](inurl-byok-free-models/index.md) | 微信推广文经 OKF v0.2 七阶段转化——inurl 聚合 APIToken 的统一令牌/端到端加密/本地代理机制核验，Agnes/GLM-4-Flash/硅基流动/LongCat 免费政策官方口径对照（flagged：省钱数字无出处、Agnes 国籍与上下文硬错、产品匿名运营） |
 | [🔑 inurl 统一令牌与免费模型省钱实录核验](inurl-unified-token/index.md) | 同公众号 09-02《月付 500 到 0 元》软文转化（flagged）——多厂商 Key 收拢与本地自动路由核验、免费档 3 个密钥限制与付费档位、70 条事实勘误（DeepSeek 免费失实/GPT-4o 退役），含 Cursor 接入配置演练 |
+| [📚 QBS 书籍驱动技能构建法](qbs-book-to-skill/index.md) | 微信博文经 OKF v0.2 七阶段转化（方法论非操作教程）——QBS（Question→Book→Skill）三段式与提示词模板、Make Time 官方四步循环（Highlight→Laser→Energize→Reflect）与两大注意力陷阱、作者开源仓库三个 skill（3 则勘误：切换成本 23 分 15 秒 / Time Craters 30 分钟 / Knapp 任职口径） |
+| [🐋 Orca ADE 多 Agent 桌面工作台](orca-ade/index.md) | 微信博文经 OKF v0.2 七阶段转化——Stably AI 开源（MIT）桌面 ADE：并行 git worktree 多 Agent 编排与择优合并、Design Mode、diff 批注、SSH 远程与移动端指挥、Orca CLI，含三平台安装实操与七项勘误（E-1 域名 `onnorca.dev`→`onorca.dev` 硬错误；8 条 P0 核验 2✅/6⚠️/0❌） |
+| [Jev 决策模型与十类应用](jev/index.md) | TypeSafe System One模型概念教程：Noul/Choice/Score、十案例的状态与执行分工、工程评测；flagged保留原帖和成效证据缺口，非操作教程 |
+| [🗣️ Verbi 单人 AI 口语陪练出海案例](verbi/index.md) | 微信博文经 OKF v0.2 七阶段转化（案例资讯非操作教程）——加拿大单人开发者 5.5 个月做到 30 天营收 $110,069/MRR $16,752（RevenueCat + TrustMRR 双锚核验）；「敢开口」错位定位、试用转化漏斗、ASO+内容+UGC 渠道勘误 E-1（8✅/6⚠️/1❌） |
+| [Jev 自动化决策引擎](jev-automation-decision/index.md) | 当前微信文章的 Jev 自动化场景解读——System One、客服/游戏/浏览器/安全四类模式与端到端评测边界；flagged，非操作教程 |
+| [🤖 GPT-6 Sol/Luna 成本效率与 Agent 任务经济性](gpt6-sol-luna-cost-efficiency/index.md) | 微信博文经 OKF v0.2 七阶段转化——GPT-6 Sol/Luna 模型分工与价格、DeepSeek 价格对照、Agent 每任务成本模型与选型边界；非操作教程，benchmark 与内部统计按厂商/第三方口径标注 |
+
 ```{toctree}
 :hidden:
 :maxdepth: 7
@@ -143,4 +150,10 @@ inurl-unified-token/index
 loopx/index
 uumit-a2a-marketplace/index
 wigolo/index
+qbs-book-to-skill/index
+orca-ade/index
+jev/index
+jev-automation-decision/index
+verbi/index
+gpt6-sol-luna-cost-efficiency/index
 ```

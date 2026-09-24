@@ -2,16 +2,16 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、成本优化、大模型对比、能源管理、硬件设计、监管治理、平台生态与创业趋势等 15 束行业分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比、能源管理、硬件设计、监管治理、平台生态、创业趋势与具身智能等 21 束行业分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
 
 本分组收录 AI 行业与商业趋势相关的知识包，覆盖四个方向：
 
-- **AI 商业化**：AI 变现完整指南（商业模式·技术选型·三大场景·实施步骤）、抖音 Vibe Coding、Papi 酱个人 IP 与创业趋势。
+- **AI 商业化与数字机会**：AI 变现完整指南（商业模式·技术选型·三大场景·实施步骤）、抖音 Vibe Coding、Papi 酱个人 IP 与创业趋势、WorkBuddy 全媒体内容系统，以及海外平台夜间副业的费率、资格和六周验证框架。
 - **成本与工具生态**：多模型时代 Copilot 成本分析、国产大模型对比、火山引擎 AI 产品生态、三个热门 AI 工具指南。
-- **行业与技术分析**：开源 EMS 能源管理系统、AI 硬件设计工具、华秋与星宸科技合作、RQNDD 专题、印度制造业七概念分析。
+- **行业与技术分析**：开源 EMS 能源管理系统、AI 硬件设计工具、华秋与星宸科技合作、RQNDD 专题、印度制造业七概念分析、ZDTaichu5.0-9B 具身智能模型。
 - **监管与治理**：AI 拟人化服务暂行办法分析、AI 换脸治理专题。
 
 **收录边界**：本组聚焦行业趋势、商业模式与产品生态分析；AI 技术实现类教程归 [技术域](../../jishu/index.md)。
@@ -35,6 +35,12 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、成本优
 | [papi-jiang-solo-ip](papi-jiang-solo-ip/index.md) | 9 | Papi 酱关闭公司回归个人 IP——创业趋势观察 |
 | [ai-anthropomorphic-analysis](ai-anthropomorphic-analysis/index.md) | 1 | AI 拟人化服务暂行管理办法分析 |
 | [ai-switch-governance](ai-switch-governance/index.md) | 3 | AI 换脸治理专题——文章内容与洞察提取报告 |
+| [overseas-freelance-night-work](overseas-freelance-night-work/index.md) | 8 | 海外平台夜间副业——七类项目、平台费率与地区资格、第一晚行动剧本、六周验证 |
+| [ai-one-person-micro-product](ai-one-person-micro-product/index.md) | 7 | AI 一人公司与单点微型产品——单点痛点、窄产品经济性与十人验证循环（商业分析，非操作教程） |
+| [workbuddy-content-system](workbuddy-content-system/index.md) | 4+2 | 微信博文转化——WorkBuddy 全媒体内容系统：17 道工序、工作台、经验飞轮与一鱼多吃（商业分析，非操作教程） |
+| [zhihu-monetization](zhihu-monetization/index.md) | 10+2 | 知乎站内创作激励三层解析——AI Works 项目广场、创作打卡挑战赛第五十三期与科学季 2026 的 F 编号事实、盐粒机制洞察与三角色变现路径（flagged：奖池数字多为平台活动页单源） |
+| [zdtaichu5-0-9b](zdtaichu5-0-9b/index.md) | 7 | ZDTaichu5.0-9B 空间具身多模态模型——模型定位、空间推理、训练管线与部署边界（flagged：基准和场景效果尚无独立复现） |
+| [auto-money-system](auto-money-system/index.md) | 7 | 微信博文转化：AI 应用层、个人 IP 系统化与轻交付产品自动化（商业分析，非操作教程；flagged：作者单源观察） |
 
 ## 阅读建议
 
@@ -63,4 +69,10 @@ india-manufacturing/index
 papi-jiang-solo-ip/index
 ai-anthropomorphic-analysis/index
 ai-switch-governance/index
+overseas-freelance-night-work/index
+ai-one-person-micro-product/index
+workbuddy-content-system/index
+zhihu-monetization/index
+zdtaichu5-0-9b/index
+auto-money-system/index
 ```

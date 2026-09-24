@@ -17,7 +17,7 @@ description: "开发工具与开源协作实践——Git 版本控制与团队�
 | **Git 进阶** | git clone 高级用法等进阶主题（浅克隆/镜像/部分克隆/性能调优） | [git-advanced/](git-advanced/index.md) |
 | **Git + 网盘同步** | Git 裸仓库 + 百度网盘跨设备同步工作流（目录结构/锁机制/冲突检测/备份恢复） | [git-baidu-sync/](git-baidu-sync/index.md) |
 | **GitHub** | Gist 代码片段分享、GitHub Actions 工作流、GitHub CLI 命令行工具 | [github/](github/index.md) |
-| **Opensource** | 开源参与指南、开启开源项目、README 模板、无版权图库、程序员常用网站 | [opensource/](opensource/index.md) |
+| **Opensource** | 开源参与指南、开启开源项目、README 模板、无版权图库、程序员常用网站、public-apis 公共 API 清单 | [opensource/](opensource/index.md) |
 
 ## 学习路径建议
 

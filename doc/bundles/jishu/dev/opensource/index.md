@@ -13,6 +13,10 @@ okf_version: "0.2"
 * [无版权图库使用指引](concepts/03-no-copyright-images.md) — 原文仅列出 3 篇参考资料，未直接列出图库名称；如实转述信源边界。
 * [程序员常用网站](concepts/04-programmer-websites.md) — W3Schools 等六个重点网站及资讯、在线学习、社区工具、竞赛四类网站盘点（2020 年前后资源盘点，非操作教程）。
 
+## 独立资源束
+
+* [public-apis 公共 API 清单](public-apis/index.md) — GitHub 公共 API 目录的结构、Auth/HTTPS/CORS 筛选、配套查询 API 与生产使用边界（资源综述，非操作教程）。
+
 ## 信源登记簿（references/）
 
 * [《1.1 开源项目指南》（部分抓取）](references/source-1.md) — F-260 ~ F-265。
@@ -42,4 +46,11 @@ okf_version: "0.2"
 concepts/index
 references/index
 log
+```
+
+```{toctree}
+:hidden:
+:maxdepth: 7
+
+public-apis/index
 ```
