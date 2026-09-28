@@ -11,6 +11,7 @@
 - **结构**：沿用信源 A 束 13 文件骨架（4 concepts + 1 example + 3 references + 各级 index/log），束名变更但目录深度不变，跨束相对链接全部仍可达；5 张 mermaid 图按仓库六规则统一合规化（信源距离图、BYOK 对比图随并迁入，原有 3 图 `<br/>` 改单行、边标签补引号）。
 - **索引与入站**：删除 byok 束后全库 575→574 束（jishu 434→433、ai 组 214→213），组索引两旧行合一、总索引四面计数同步；`free-llm-api-roundup`、`token-economy-explosion` 两处入站链接改指新束。
 - **历史日志处理**：他束 log.md 中对两旧束名的历史提及（aitokenbus/openhuman/free-llm-api-hands-on/llama-cpp/ai-agent-book）为 append-only 史实，一律不改；本文件下方完整保留两束各自的创建与复核记录。
+- **R1 独立审查勘误（2026-09-28 同日补记，以本条为准）**：上文「18 条重复」应为 **14 条重复 + 21 条独有原文归并为 17 条 F-106~F-122**（权威口径以 [references/article-source.md](references/article-source.md) H.2 映射表为准）；「第三方独立证据为零（F-116）」应为 **F-117**；「Agnes 国籍硬错与阶段性 $0 定价（F-117~F-119）」应为 **F-118~F-119**（F-117=第三方证据真空）；「concepts/02 新增 §7/§8」应为仅新增 **§7**（§6–§8 属 examples/01）；「核心勘误并集 E1–E6」应作 **E1–E9**（合并新增 E7「5000 块」查无、E8 Agnes 新加坡国籍、E9 Agnes 阶段性 $0）。
 
 ### 三次复核 G5：四目标页面深度学习（/app、/#why、/models#paid、/guide）
 

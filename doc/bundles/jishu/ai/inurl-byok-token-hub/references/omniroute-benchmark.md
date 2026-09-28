@@ -29,6 +29,8 @@ related_facts: [F-095, F-104]
 # 开源对标信源：OmniRoute
 
 > 本页为 G5 三次复核（2026-09-28）新增信源。inurl `/app` 设置页在路由策略、提示词压缩与 Combo 三处**主动写出**「OmniRoute 同款思路，规则式实现」「与 OmniRoute 的 Combo 路由链一致」（事实登记见 [article-source.md](article-source.md) F-095/F-104）。本页核实 OmniRoute 是什么、两者机制口径何处相同何处不同。
+>
+> 时效说明：本页对象为外部开源实体 OmniRoute（`status: verified`），按外部信源独立复核周期设 `stale_after: 2026-12-31`；束内 inurl 自身条目的统一时效为 2026-12-16，两者互不覆盖。
 
 ## 1. 实体卡（四源交叉，2026-09-28 访问）
 
