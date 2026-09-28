@@ -1,7 +1,7 @@
 ---
 type: Reference
-title: "博文事实清单（F-001~F-070 双份登记）"
-description: "微信推广博文《一个程序员的省钱实录》逐条事实登记——博文原事实 F-001~F-043 与 2026-09-16 权威核验补充事实 F-044~F-070，与 spec facts.md 编号集合一一对应。"
+title: "博文事实清单（F-001~F-087 双份登记）"
+description: "微信推广博文《一个程序员的省钱实录》逐条事实登记——博文原事实 F-001~F-043、2026-09-16 权威核验 F-044~F-070、2026-09-28 站点直证二次复核 F-071~F-087，与 spec facts.md 编号集合一一对应。"
 tags: [事实登记, 双份登记, 推广软文, 信源]
 sources:
   - id: blog
@@ -12,14 +12,19 @@ sources:
   - id: product-site
     resource: https://token.inurl.link/
     title: "inurl · 聚合 APIToken · 端到端加密密钥库（推广对象官网）"
+  - id: site-refresh
+    resource: https://token.inurl.link/
+    title: "2026-09-28 二次复核：四页面 HTML + 公开 GET 接口（curl 直打，未注册未下载）"
+    last_modified: 2026-09-28
 ---
 
 # 博文事实清单（双份登记）
 
-> 本文件是 F 编号双份登记的 bundle 侧副本，与 spec `.trae/specs/okf-wiki-ecosystem/inurl-free-models-blog-okf-wiki/facts.md` 编号集合**完全一致（F-001 ~ F-070，连续无跳号）**。
+> 本文件是 F 编号双份登记的 bundle 侧副本，与 spec `.trae/specs/okf-wiki-ecosystem/inurl-free-models-blog-okf-wiki/facts.md` 编号集合**完全一致（F-001 ~ F-087，连续无跳号）**。
 >
 > 类型：**O**=客观事实　**V**=作者观点/体验/推断　**P**=产品（token.inurl.link）或厂商声明。
-> 核验结论（2026-09-16）：✅ 通过　⚠️ 口径差异/风险　❌ 失实或矛盾　📝 作者自述（不判真伪）。
+> 核验结论：✅ 通过　⚠️ 口径差异/风险　❌ 失实或矛盾　📝 作者自述（不判真伪）　🔄 对前轮事实的修订（2026-09-28）。
+> 时间截点：F-001~F-070 为首轮（2026-09-16）；**F-071~F-087 为 2026-09-28 站点直证二次复核（G4）**。
 
 ## 信源距离预判
 
@@ -102,7 +107,7 @@ sources:
 | F-042 | V | 「10 分钟配置，省的钱够吃好几顿好的」「强烈建议试试」 | 📝 作者推荐（软文 CTA） |
 | F-043 | O | 推广 URL：https://token.inurl.link/ 、/guide、/models | ✅ 三者均可达（F-044） |
 
-## G. 核验补充事实（F-044 ~ F-070）
+## G. 核验补充事实（F-044 ~ F-087）
 
 > 权威口径全文与来源 URL 见 [verification.md](verification.md)；本处保留与 spec 一致的完整登记，编号连续。
 
@@ -147,3 +152,27 @@ sources:
 | F-068 | Groq 免费层主力 30 RPM/1000 RPD/6K–30K TPM，compound 250 RPD，无需信用卡 | ✅ F-016 |
 | F-069 | GPT-4o 2026-02-13 退役，现旗舰 GPT-5.6 Sol；Claude 现旗舰 Opus 5（2026-07-24） | ❌ F-036 过时 |
 | F-070 | 「17 家 Key + 0 元」与产品定价（免费档 3 密钥、¥9.9/¥29.9）不可兼得；叠加 DeepSeek 付费、百万上下文付费化 → 主结论仅在收窄口径成立 | ❌ 核心勘误（flagged 依据） |
+
+**G4 2026-09-28 二次复核·站点直证（F-071 ~ F-087；curl 直打公开页面/接口，未注册未下载）**
+
+> 详细实测口径与来源以 spec facts.md G4 为准；本处为一一对应的 bundle 侧摘要，编号集合完全一致。
+
+| 编号 | 事实摘要 | 结论 |
+|------|---------|------|
+| F-071 | 四 URL（/、/app、/guide、/models）09-28 全部可达，首页 title/定位未变 | ✅ F-044 持续 |
+| F-072 | 定价三档与免费档 3 密钥上限原样（¥0/¥9.9/¥29.9、邀请送 7 天）；专业档功能新增「早期功能内测」 | ✅ F-051 持续（核心勘误证据仍成立） |
+| F-073 | Turnstile 仍 enabled:false（siteKey 与 09-16 相同），/guide 仍写「请完成 Cloudflare 验证框」 | ⚠️ F-054 脱节持续 |
+| F-074 | 博文点名 5 个模型 id 当日逐一 EXISTS | ✅ F-049 持续 |
+| F-075 | 前端加密链未变（PBKDF2 10 万/SHA-256/AES-GCM-256、双 escrow）；/api/recover、/api/password 恢复/改密流程与设计自洽 | ✅ F-052 持续 |
+| F-076 | DeepSeek 仍在 tier=paid（v4-flash/v4-pro/reasoner） | ❌ F-064 持续 |
+| F-077 | catalog 428,592 字节、46 家 = 17 free + 29 paid；10 家 paid 为 public:false（含 mock 本地测试商、通用 openai-compatible），随公开接口与 /api/provider-meta 无鉴权下发（?all=1 与默认响应字节级相同） | ⚠️ 测试/预留条目进入生产公开目录 |
+| F-078 | /models 计数牌仍为「免费 17 / 付费 19」并渲染 19 张公开付费卡；免费 17 家名单与 09-16 相同 | ✅/⚠️ F-050 页面口径未变（未反映后台 29 条 paid） |
+| F-079 | 站点目录继续重复 Agnes「百万级上下文」、百度「每月 100 万」、LongCat-2.0「1M/送千万」三处已被官方勘误口径 | ❌ 站点 12 天内未修正（F-061/F-062/F-059） |
+| F-080 | 免费目录陈旧：硅基免费通道仍列 DeepSeek-V2.5、Agnes 仍挂已废弃 2.0-flash、gemini-free 落后一代；OpenRouter 免费已轮换为 gemini-2.5-flash:free 等 | ⚠️ 维护频率不均 |
+| F-081 | /guide 迭代：跨平台启动器（.bat/.sh，Node 18+）、FAQ 扩至 6 条、额度手填与用量统计、/v1/models 兼容说明、catalog 更新需重启代理 | ✅ 产品持续迭代 |
+| F-082 | capabilities 仅有 text/code/image 三类标签（12 模型），inurl-video/inurl-audio 当前必然落入「无该类别厂商」提示 | ⚠️ 文档承诺超出现行目录数据 |
+| F-083 | 首页新增「实时演示」浏览器内模拟流式区；hero 文案更新；6/8+/0 等自述数字未随目录更新 | ✅（自述口径，F-045 持续） |
+| F-084 | 四页均加载主域 track.js：运营者自研多租户分析器，上报 page/referer/语言/时长至 inurl.link/api/track（同主体第一方统计） | ⚠️ F-056 信任画像增量 |
+| F-085 | 修订 F-057：随机路径实为 HTTP 401 裸 JSON（非 404，未鉴权 API 一律 401）；Vite HMR 残留已消失；models 页常驻空状态占位 | 🔄 F-057 部分修订 |
+| F-086 | 主域已变为「互联网精选导航」门户（不再直接呈现 lixiaoxin.com）；36 张公开卡仅 5 个「获取 Key」直连官方域（Google/网易/华为/Cohere/Upstage），其余均走 inurl.link 短链；catalog 全量 46 家 website 为 38 短链 + 8 其他域（含 mock localhost 等） | ⚠️ F-056 增量（匿名结论不变） |
+| F-087 | 四页页脚仍无公司名/ICP/公安备案/邮箱/GitHub；机场广告 mojie-inurl 仍在 | ⚠️ F-056 持续 |

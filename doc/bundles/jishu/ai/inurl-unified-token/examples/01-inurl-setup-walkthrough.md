@@ -22,20 +22,20 @@ sources:
 > 1. 本篇步骤整理自产品**官方教程**与博文描述，本束生产者**未注册、未运行该代理**，不构成推荐；
 > 2. 免费档（¥0）**只允许录入 3 个厂商密钥**——博文「17 家 + 0 元」不成立（勘误 E1，F-070）；
 > 3. 本地代理闭源、运行时下载、启动器内嵌令牌与主密钥（F-053）；运营主体匿名（F-056）。**只建议录入低额度、可随时作废的免费 Key**；
-> 4. 页面/接口状态以 2026-09-16 实测为准（F-044/F-047），实际界面可能已变化。
+> 4. 页面/接口状态以 2026-09-16 实测为准，并经 **2026-09-28 二次复核**（F-071~F-087；定价/3 密钥上限/端口均未变，启动器已跨平台），实际界面可能继续变化。
 
 ## 1. 前置条件
 
 - 已持有至少 1 个免费模型厂商的 API Key（推荐从「限速不限量/免费档稳定」的厂商起步，如智谱 BigModel、Groq、百度千帆 ERNIE 免费模型，额度现状见 [/concepts/01-free-model-landscape.md](/concepts/01-free-model-landscape.md)）；
-- 本机有 Node.js（手动启动方式需要；一键启动器为 Windows `byok-launch.bat`）；
+- 本机有 **Node.js 18+**（2026-09-28 教程明示；一键启动器 Windows 为 `byok-launch.bat`，macOS/Linux 为 `byok-launch.sh`，F-081）；
 - 客户端支持自定义 OpenAI 兼容端点（Cursor、OpenWebUI、WorkBuddy 等；WorkBuddy 是**第三方**客户端，非该产品组件，F-055）。
 
 ## 2. 五步流程（对应官方教程）
 
-1. **注册账户**：打开 `https://token.inurl.link/app`，邮箱 + 密码（注册表单含选填邀请码；Cloudflare 人机验证组件已集成但实测当日处于关闭状态，F-054）；
+1. **注册账户**：打开 `https://token.inurl.link/app`，邮箱 + 密码（注册表单含选填邀请码；Cloudflare 人机验证组件已集成但两次实测 [2026-09-16/09-28] 均处于关闭状态，F-054/F-073）；
 2. **离线保存两类凭证**：注册成功页只显示一次——🔑 **统一令牌（Unified Token）**（登录 + 本地代理凭证）与 🛡️ **恢复密语（Recovery Secret）**（忘密码时恢复密钥库）。站点声称端到端加密、云端无明文、无法代为找回（F-023，前端双份 escrow 实现经核验属实，F-052）；
 3. **录入厂商 Key**：在控制台密钥库添加厂商密钥（浏览器端经 PBKDF2 派生 AES-GCM-256 加密后上传，云端只存密文，F-052）。**免费档最多 3 个厂商**；
-4. **启动本地代理**：下载并运行 `byok-launch.bat`（或手动 `AGENT_TOKEN=你的令牌 AGENT_MASTERKEY=你的主密钥 node local-agent.js`，F-047）；控制台会轮询本机 `/v1/metrics` 显示代理状态；
+4. **启动本地代理**：下载并运行一键启动器（Windows `byok-launch.bat` / macOS·Linux `byok-launch.sh`，需 Node.js 18+；或手动 `AGENT_TOKEN=你的令牌 AGENT_MASTERKEY=你的主密钥 node local-agent.js`，F-047/F-081）；控制台会轮询本机 `/v1/metrics` 显示代理状态；
 5. **客户端填入三参数**（以 Cursor 为例，F-028）：
    - Base URL：`http://localhost:3003/v1`
    - API Key：统一令牌
@@ -47,7 +47,7 @@ sources:
 |--------------|---------|
 | `inurl` / `inurl-text` | 文本对话默认池（旧名 `auto` 仍兼容） |
 | `inurl-code` | 仅在带代码能力标签、且你已录入 Key 的厂商间选 |
-| `inurl-image` / `inurl-video` / `inurl-audio` | 对应多模态厂商 |
+| `inurl-image` / `inurl-video` / `inurl-audio` | 对应多模态厂商（⚠️ 2026-09-28 复核：目录能力标签仅覆盖 text/code/image，video/audio 当前无可路由厂商，F-082） |
 
 - 故障切换：厂商返回 429/5xx 自动切下一家（F-048）；切换耗时「0.1 秒」为博文自述、未证实（F-025）；
 - 想限定池：设环境变量 `AUTO_MODELS` / `AUTO_PROVIDER_ORDER`；
