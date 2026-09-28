@@ -21,7 +21,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🟠 Anthropic 官方生态](anthropic/index.md) | Anthropic Claude 官方生态——Python SDK、Claude Code CLI、提示词工程教程、官方Skills库、金融服务方案、Cookbook示例集、系统提示词发布史 |
 | [🧠 DeepSeek-AI 基础设施](deepseek/index.md) | DeepSeek 开源大模型基础设施——MoE 通信、GPU kernel 优化、注意力、流水线并行、负载均衡 |
 | [🚀 TRAE Community 生态](trae/index.md) | 字节跳动 AI 编程 IDE 社区——平台应用、技能/模板/MCP 扩展、学习资源、社区治理 |
-| [🐧 腾讯开源生态](tencent/index.md) | 腾讯系开源与商业项目——CodeBuddy、WeKnora、AI 红队平台、ncnn 推理框架、Buddy 系列与 MusicBuddy 产品观察 |
+| [🐧 腾讯开源生态](tencent/index.md) | 腾讯系开源与商业项目——CodeBuddy、WeKnora、AI 红队平台、ncnn 推理框架、Buddy 系列与 MusicBuddy、LightVela Personal Agent 产品观察 |
 | [⚡ PocketFlow 极简 LLM 应用框架](pocketflow/index.md) | 100 行代码的极简 LLM Agent 框架——节点+流程抽象、6 大设计模式、实战教程 |
 | [🛡️ AI 安全与红队研究（ai-security）](ai-security/index.md) | elder-plinius 红队研究三仓库——系统提示词透明档案（CL4R1T4S）、越狱攻击面研究库（L1B3RT4S）、拒绝行为消除研究工具包（OBLITERATUS） |
 | [📱 mobile-use 移动自动化框架](mobile-use/index.md) | minitap-mobile-use 多智能体移动自动化——LangGraph 多 Agent 协作、设备控制抽象层、工具系统与 SDK 双层 API |

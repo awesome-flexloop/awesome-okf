@@ -23,6 +23,7 @@ status: stable
 | [weknora](weknora/index.md) | 腾讯开源 WeKnora 技术综述——AI、数据接入、知识管理三项基础，RAG/Agent/Wiki 组合机制与开源知识库选型维度，含 3 概念 + 2 信源 |
 | [tencent-buddy-family](tencent-buddy-family/index.md) | 腾讯 Buddy 系列与 MusicBuddy 产品观察——Buddy AI 统称、WorkBuddy/CodeBuddy/DataBuddy 场景矩阵、腾讯音乐 AI 能力背景与证据边界，非操作教程 |
 | [workbuddy-one-sentence-mvp](workbuddy-one-sentence-mvp/index.md) | WorkBuddy「一句话做 MVP」实测软文核验——需求澄清/多 Agent 迭代/用户画像/连接器/微信小程序发布五阶段拆解，沙利文双榜与 5.6.1 小程序发布能力核验（6✅/2⚠️/0❌），含 3 概念 + 2 信源，非操作教程 |
+| [lightvela-personal-agent](lightvela-personal-agent/index.md) | LightVela 与 Personal Agent 赛道观察——腾讯轻量云托管开源 Hermes Agent、微信/QQ/企微/飞书/钉钉五通道，对标 Meta Muse；事实/机制/Context 锁定论点三层拆解，含 3 概念 + 2 信源、62 条编号事实与 5 处口径勘误，非操作教程 |
 
 ## 生态项目
 
@@ -32,7 +33,7 @@ status: stable
 
 ## 关于本分组
 
-本分组当前包含 8 个已生成知识包，共 45 个概念文档、12 个示例文档、31 个信源登记，基于 2026-08-23 的源码阅读、网页抓取、2026-09-23 与 2026-09-28 的博文核验生成，总计 502 条编号事实（原有 470 条 + WorkBuddy MVP 软文 32 条；概念数含 workbuddy-sandbox 横向对标增强后补登的 1 篇）。所有源码知识包均经过 Grep 级 API 真实性验证，博文转化束经过 P0/P1 权威核验。
+本分组当前包含 9 个已生成知识包，共 48 个概念文档、12 个示例文档、33 个信源登记，基于 2026-08-23 的源码阅读、网页抓取、2026-09-23 与 2026-09-28 的博文核验生成，总计 564 条编号事实（原有 502 条 + LightVela/Personal Agent 博文 62 条；概念数含 workbuddy-sandbox 横向对标增强后补登的 1 篇）。所有源码知识包均经过 Grep 级 API 真实性验证，博文转化束经过 P0/P1 权威核验。
 
 ## 相关链接
 
@@ -57,4 +58,5 @@ ncnn/index
 weknora/index
 tencent-buddy-family/index
 workbuddy-one-sentence-mvp/index
+lightvela-personal-agent/index
 ```
