@@ -2,6 +2,17 @@
 
 ## 2026-09-28
 
+### 三次复核 G5：四目标页面深度学习（/app、/#why、/models#paid、/guide）
+
+- **触发与方法**：用户指定对四目标「全面学习」（Spec Mode + seven-concepts 场景 4，session=`sc-20260928-inurl-g5`）。沿用 **curl 直打**（Chrome UA、GET 只读、未注册、未下载、未运行代理），新增：① catalog 全量计数 + SHA-256 哈希审计；② /app 前端渲染文本与内联 JS 接口枚举（证据形态限定为「界面显示」）；③ 对页面自认的外部参照 OmniRoute 做四源 WebSearch 交叉（官网/npm/GitHub/媒体）。四目标 HTTP 全 200。
+- **新增事实 F-088~F-105（18 条，✅8/⚠️8/❌2/🔄0）**，双份登记于 spec `facts.md` G5 与本束 `references/article-source.md` G5，集合机械比对：两份均 105 条、001~105 连续、集合相等、与旧编号零交集。
+- **裁决：`flagged` 第三次维持**（`stale_after: 2026-12-31` 不变）。catalog 与 G4 **字节级同一文件**（428,592 字节，SHA-256 `3F689C…BD0F1`，F-088）：定价/3 密钥（F-089）、46=17+29 结构与 10 家隐藏（F-090）、三处错误口径三审未改（F-092 ❌）、turnstile/短链/track.js（F-093/F-105）全部零迭代。
+- **主要新增点**：① /app 仪表盘四组件（F-094）、19 路由策略 + 5 档压缩（Lite≈15%/Standard≈30%/Aggressive≈50%/Ultra≈75%/RTK 60–90%，均自述估算）+ Combo（F-095）、自定义厂商 OpenAI/Anthropic/Gemini 三协议（F-096）；② 系统管理后台八模块，含个人收款码人工核销与待核销订单（F-097）；③ 套餐页 `/api/billing/mock-paid` 与支付宝 checkout 并存、源同步 shared/catalog.json + refresh_catalog.mjs 自述（F-098）；④ 用户类 401/admin 类 403 分层，ads/news 无鉴权公开；news 首条标题（千问 3.8-MAX 首发）与摘要（GPT-4o 生图）文不对题（F-100 ❌）；⑤ /models#paid 付费卡整体落后当期旗舰 ≥1 大版本（F-103）；⑥ OmniRoute 开源对标实体经四源核实为真（MIT、npm v3.8.49、:20128、19 策略/RTK+Caveman 自述 15–95%，F-104）；⑦ guide 细化 AUTO_MODELS/AUTO_PROVIDER_ORDER、auto/default/inurl 别名、shell:startup/taskkill 保活停止（F-102）。
+- **文件变更（11 个，其中新增 1 个）**：**新增** references/`omniroute-benchmark.md`（唯一新文件，四源信源专页，related_facts [F-095,F-104]）；根 `index.md`（reverified 双条 + G5 横幅 + 导航 + 边界 5–8）、`log.md`；concepts `00`（§3.2 G5 补注）、`01`（§5④ 付费区陈旧）、`02`（§3.1 路由/压缩/自定义厂商 + §6 OmniRoute 对标）、`03`（§5.1 三审时效指针）；examples `01`（§6–§8 路由变量/自定义厂商/保活停止）；references `article-source.md`（G5 双份登记）、`verification.md`（§8 三次复核全节）、`index.md`（OmniRoute 行 + toctree）。spec 侧同步更新 `facts.md`、`spec.md`（§10 G5 段）与 `tasks.md`。
+- **纪律**：/app 一切能力均写「界面显示提供」未写后端实测；自述数字标「估算/约」；OmniRoute 小节显式不作抄袭/侵权判定；姊妹束 `inurl-byok-free-models/` 与三级索引计数一律不动；改动**未提交**，待 review 后给原子提交建议。
+
+### 二次复核 G4：站点直证（用户指令驱动，提前于 stale_after）
+
 - **二次复核（用户指令驱动，提前于 stale_after）**：按 seven-concepts 场景 4（R→I→E→V）对产品站 `token.inurl.link` 做**直接实测式增量更新**（CMD-LOG session=`sc-20260928-inurl-site-refresh`），不再依赖推广博文。browser_use 子代理受站点防护拦截零产出，改用 **curl 直打**（Chrome UA；未注册、未下载、未填信息）抓取四页面 HTML 与公开 GET 接口（`/api/catalog[?all=1]`、`/api/billing/plans`、`/api/turnstile`、`/api/provider-meta`）及主域 `inurl.link/track.js`、inurl.link 根页，本地 HTMLParser/JSON 解析。
 - **新增事实 F-071~F-087（17 条，✅6/⚠️8/❌2/🔄1）**，双份登记于 spec `facts.md` G4 与本束 `references/article-source.md` G4，编号连续无跳号。
 - **复核裁决：维持 `flagged`**——核心 ❌ 原样成立：免费档 3 密钥与 ¥9.9/¥29.9 定价未变（F-072）、DeepSeek 仍 tier=paid（F-076）；站点目录继续重复 Agnes 百万上下文/百度每月 100 万/LongCat-2.0 免费 1M 三处已勘误口径且 12 天未修正（F-079 ❌）。

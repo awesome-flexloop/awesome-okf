@@ -1,7 +1,7 @@
 ---
 type: Reference
-title: "博文事实清单（F-001~F-087 双份登记）"
-description: "微信推广博文《一个程序员的省钱实录》逐条事实登记——博文原事实 F-001~F-043、2026-09-16 权威核验 F-044~F-070、2026-09-28 站点直证二次复核 F-071~F-087，与 spec facts.md 编号集合一一对应。"
+title: "博文事实清单（F-001~F-105 双份登记）"
+description: "微信推广博文《一个程序员的省钱实录》逐条事实登记——博文原事实 F-001~F-043、2026-09-16 权威核验 F-044~F-070、2026-09-28 站点直证二次复核 F-071~F-087（G4）、2026-09-28 四目标三次复核 F-088~F-105（G5），与 spec facts.md 编号集合一一对应。"
 tags: [事实登记, 双份登记, 推广软文, 信源]
 sources:
   - id: blog
@@ -16,15 +16,23 @@ sources:
     resource: https://token.inurl.link/
     title: "2026-09-28 二次复核：四页面 HTML + 公开 GET 接口（curl 直打，未注册未下载）"
     last_modified: 2026-09-28
+  - id: site-refresh-g5
+    resource: https://token.inurl.link/app
+    title: "2026-09-28 三次复核（G5）：/app、/#why、/models#paid、/guide 四目标深度学习（curl 直打，未注册未下载）"
+    last_modified: 2026-09-28
+  - id: omniroute-benchmark
+    resource: https://www.omniroute.online/
+    title: "OmniRoute 对标四源（官网/npm/GitHub/媒体），详见 [omniroute-benchmark.md](omniroute-benchmark.md)"
+    last_modified: 2026-09-28
 ---
 
 # 博文事实清单（双份登记）
 
-> 本文件是 F 编号双份登记的 bundle 侧副本，与 spec `.trae/specs/okf-wiki-ecosystem/inurl-free-models-blog-okf-wiki/facts.md` 编号集合**完全一致（F-001 ~ F-087，连续无跳号）**。
+> 本文件是 F 编号双份登记的 bundle 侧副本，与 spec `.trae/specs/okf-wiki-ecosystem/inurl-free-models-blog-okf-wiki/facts.md` 编号集合**完全一致（F-001 ~ F-105，连续无跳号）**。
 >
 > 类型：**O**=客观事实　**V**=作者观点/体验/推断　**P**=产品（token.inurl.link）或厂商声明。
 > 核验结论：✅ 通过　⚠️ 口径差异/风险　❌ 失实或矛盾　📝 作者自述（不判真伪）　🔄 对前轮事实的修订（2026-09-28）。
-> 时间截点：F-001~F-070 为首轮（2026-09-16）；**F-071~F-087 为 2026-09-28 站点直证二次复核（G4）**。
+> 时间截点：F-001~F-070 为首轮（2026-09-16）；F-071~F-087 为 2026-09-28 站点直证二次复核（G4）；**F-088~F-105 为 2026-09-28 四目标三次复核（G5）**。
 
 ## 信源距离预判
 
@@ -107,7 +115,7 @@ sources:
 | F-042 | V | 「10 分钟配置，省的钱够吃好几顿好的」「强烈建议试试」 | 📝 作者推荐（软文 CTA） |
 | F-043 | O | 推广 URL：https://token.inurl.link/ 、/guide、/models | ✅ 三者均可达（F-044） |
 
-## G. 核验补充事实（F-044 ~ F-087）
+## G. 核验补充事实（F-044 ~ F-105）
 
 > 权威口径全文与来源 URL 见 [verification.md](verification.md)；本处保留与 spec 一致的完整登记，编号连续。
 
@@ -176,3 +184,28 @@ sources:
 | F-085 | 修订 F-057：随机路径实为 HTTP 401 裸 JSON（非 404，未鉴权 API 一律 401）；Vite HMR 残留已消失；models 页常驻空状态占位 | 🔄 F-057 部分修订 |
 | F-086 | 主域已变为「互联网精选导航」门户（不再直接呈现 lixiaoxin.com）；36 张公开卡仅 5 个「获取 Key」直连官方域（Google/网易/华为/Cohere/Upstage），其余均走 inurl.link 短链；catalog 全量 46 家 website 为 38 短链 + 8 其他域（含 mock localhost 等） | ⚠️ F-056 增量（匿名结论不变） |
 | F-087 | 四页页脚仍无公司名/ICP/公安备案/邮箱/GitHub；机场广告 mojie-inurl 仍在 | ⚠️ F-056 持续 |
+
+**G5 2026-09-28 三次复核·四目标深度学习（F-088 ~ F-105；curl 直打 /app、/#why、/models#paid、/guide，未注册未下载）**
+
+> 完整实测口径、来源与裁决以 spec facts.md G5 及 [verification.md](verification.md) §8 为准；本处为一一对应的 bundle 侧摘要，编号集合完全一致。/app 条目均为未注册状态下的前端界面/JS 证据，非运行验证。
+
+| 编号 | 事实摘要 | 结论 |
+|------|---------|------|
+| F-088 | 四目标全 200；catalog 428,592 字节、SHA-256 `3F689C…BD0F1`，与 G4（F-077）字节级同一文件；机器计数全部一致 | ✅ 站点目录零迭代 |
+| F-089 | 定价三档与免费档 3 密钥上限原样（¥0/¥9.9/¥29.9、邀请送 7 天 standard） | ✅ 持续（F-072）；F-070 勘误证据第三次成立 |
+| F-090 | 机器审计：46=17 free+29 paid（19 公开+10 隐藏）、133 模型；隐藏 10 家名单与 mock(localhost:3002) 同 G4 | ⚠️ 持续（F-077） |
+| F-091 | capabilities 仍 12 键：text=12/code=5/image=7，无 video/audio | ⚠️ 持续（F-082）：video/audio 仍空转 |
+| F-092 | Agnes「百万级上下文」、百度「每月 100 万」、LongCat「1M/注册送 1000 万」三处勘误口径三审仍在 | ❌ 持续（F-079），站点 12+ 天未改 |
+| F-093 | Turnstile 仍 enabled:false（同 siteKey）、guide 仍写需验证；provider-meta 38 条短链结构不变 | ⚠️ 持续（F-073/F-086） |
+| F-094 | /app 仪表盘四组件：调用量排行、实时请求活动（4 秒采样）、厂商用量、每 Key 延迟；数据来自本机代理 :3003 | ✅ 界面证据（未实测运行） |
+| F-095 | 设置面板显示 19 路由策略、5 档压缩（15/30/50/75%、RTK 60–90%）、Combo（`>` 分层流转）；页面自认「OmniRoute 同款思路/Combo 一致」；偏好下发代理保存即生效 | ✅ 功能界面可证；⚠️ 压缩率自述估算（对标见 F-104） |
+| F-096 | 自定义厂商 3 类型（OpenAI 兼容/Anthropic/Gemini）+ baseUrl/路径/模型 ID/鉴权头前缀；保存后进目录与模型下拉 | ✅ 界面+教程双证 |
+| F-097 | 系统管理后台八模块：Turnstile 配置、邀请码、用户管理、广告、资讯(1+4)、官网链接、catalog-overrides（仅覆盖展示）、个人收款码待核销订单（人工核销） | ⚠️ 小规模手工运营信号（界面证据） |
+| F-098 | 源同步页自述 catalog 由 shared/catalog.json 构建期生成、refresh_catalog.mjs 索引；套餐页并存「模拟支付成功」（mock-paid）与支付宝 checkout | ⚠️ 生产控制台保留测试支付入口 |
+| F-099 | 用户类 API 401 unauthorized、admin 类 403 forbidden；/api/ads、/api/news 无鉴权公开返回运营内容 | ⚠️ 运营接口公开扩大指纹面 |
+| F-100 | /api/news 首条「千问3.8-MAX 首发」标题配「GPT-4o 生图替代 DALL·E」摘要（文不对题）；共 4 条 news+1 条 ads，跳转全为 inurl.link 短链 | ❌ 运营内容失配（新证据） |
+| F-101 | #why「不是中转，是 BYOK」三论据（云端不调厂商/厂商看到你的 Key/令牌只在本地）；演示令牌 byok_live_9f3a…；自述统计 6/8+/0/256/100% 未变 | ✅/⚠️ 持续（F-045/F-083），数字未随 46 家更新 |
+| F-102 | guide 细化：自定义厂商图文、AUTO_MODELS/AUTO_PROVIDER_ORDER、auto/default/inurl 同义向后兼容、shell:startup 自启、taskkill 停止、Node 18+ | ✅ 持续并细化（F-048/F-081） |
+| F-103 | 付费公开卡仍列 gpt-4o/4o-mini/3.5-turbo、claude-3-5-sonnet-latest/3-5-haiku-latest/3-opus-latest、grok-2/2-mini、gemini-1.5-flash/1.5-pro/2.0-flash-exp（付费卡 1.5-pro 无 -002）；对照 F-069 当期旗舰落后 ≥1 大版本 | ⚠️ F-080 陈旧信号扩至付费区 |
+| F-104 | OmniRoute 四源核实为真：MIT 开源本地优先网关，npm `omniroute` v3.8.49、localhost:20128、官网自称 352 providers/19 策略、GitHub diegosouzapw/OmniRoute、RTK+Caveman 压缩自述 15–95% | ✅ 对标实体真实；口径差异见 [omniroute-benchmark.md](omniroute-benchmark.md)；不作抄袭/侵权判定 |
+| F-105 | track.js 四页仍加载；页脚仍无公司名/ICP/备案；机场广告仍在 | ⚠️ 持续（F-084/F-087） |
