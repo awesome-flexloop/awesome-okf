@@ -43,4 +43,3 @@ sources:
 | F-016 | 官方 README 列出 RAG 快速问答、ReAct Agent、Wiki Mode、知识图谱、编辑、修订历史和回滚。 | 官方 README |
 | F-017 | 官方 README 列出多源接入和 10+ 文档格式支持。 | 官方 README |
 | F-018 | 官方 API 文档列出知识库、检索、模型、分块、Agent、聊天 API，基础路径 `/api/v1`，认证头 `X-API-Key`。 | 官方 API 文档 |
-

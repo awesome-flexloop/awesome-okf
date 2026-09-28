@@ -40,4 +40,3 @@ flowchart LR
 3. 让 Wiki 层承担跨文档组织，而不是只展示单次回答。
 
 官方 API 文档还显示，WeKnora 将知识库、知识内容、分块、Agent 和聊天暴露为 RESTful API（F-018），因此该闭环既有 UI 形态，也有程序化入口。
-

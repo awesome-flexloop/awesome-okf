@@ -7,7 +7,7 @@ tags: [relationships, intimacy, love, marriage, attachment, psychology]
 
 # 💕 亲密关系与两性情感
 
-本分组收录两性关系与亲密关系领域经典著作的系统化中文知识包。六本著作在亲密关系的知识谱系中分属三个层次：**学术实证层**（米勒《亲密关系》、戈特曼《幸福的婚姻》、莱文《依恋》——以实证研究与临床科学为基础）、**哲学经典层**（弗洛姆《爱的艺术》——人本主义哲学对爱的本质追问）与**通俗实践层**（查普曼《爱的五种语言》、格雷《男人来自火星，女人来自金星》——长销大众读物，附学界评价与批判视角）。
+本分组收录两性关系与亲密关系领域经典著作及公开文章转化的系统化中文知识包。六本著作在亲密关系的知识谱系中分属三个层次，另增一束公开文章原创教程：**学术实证层**（米勒《亲密关系》、戈特曼《幸福的婚姻》、莱文《依恋》——以实证研究与临床科学为基础）、**哲学经典层**（弗洛姆《爱的艺术》——人本主义哲学对爱的本质追问）与**通俗实践层**（查普曼《爱的五种语言》、格雷《男人来自火星，女人来自金星》——长销大众读物，附学界评价与批判视角）。
 
 > **阅读提示**：本分组知识包以**原创中文转述与解读**为主体，著作原文受版权保护，直接引用仅限标注出处的关键概念短句；书目事实均经公开权威信源核验，信源清单见各束 `references/`。通俗类读物的学术争议已在相应知识包中如实呈现。
 
@@ -21,6 +21,7 @@ tags: [relationships, intimacy, love, marriage, attachment, psychology]
 | [five-love-languages/](five-love-languages/index.md) | 通俗实践 · 爱的表达模型 | 爱箱隐喻、五种爱语、爱语错位与适配（含学界评价） |
 | [attached/](attached/index.md) | 学术实证 · 成人依恋理论 | 依恋三类型、依恋系统、焦虑-回避陷阱、安全基地 |
 | [mars-venus/](mars-venus/index.md) | 通俗实践 · 性别差异话语 | 火星/金星隐喻、沟通差异论（含学界批评与性别相似性证据） |
+| [aidomain-wechat-relationship-practice/](aidomain-wechat-relationship-practice/index.md) | 公开文章转化 · 沟通实践 | 爱域研究社单篇公开文章的原创教程与事实索引（单源边界） |
 
 ## 跨书知识地图
 
@@ -78,4 +79,5 @@ gottman-seven-principles/index
 five-love-languages/index
 attached/index
 mars-venus/index
+aidomain-wechat-relationship-practice/index
 ```
