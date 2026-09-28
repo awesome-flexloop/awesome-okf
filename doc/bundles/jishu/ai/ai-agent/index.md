@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 53
+total_bundles: 54
 ---
 
 # 🤖 AI Agent 框架
@@ -134,6 +134,7 @@ total_bundles: 53
 | [ai-agent-book](ai-agent-book/index.md) | 开源书推荐 | 5+2+1=8 | 李博杰《深入理解AI Agent：设计原理与工程实践》开源教材(bojieli/ai-agent-book,Apache-2.0)核验导览——Agent=LLM+上下文+工具公式(含Environment边界)与Harness工程主张、现代Agent三维对比表原书完整版、10章三口径地图(博文1.4/时点快照/2.0)、博文3图vs仓库5张fig1-wf工作流图、✅/📖/🚧三类实验与uv运行方式、1.4→2.0章节重组、13→15语言；41事实18项P0(13✅2❌3⚠️)含实验总数94→时点95/现行109、第6章11→12两处数字勘误，技术综述无examples |
 | [show-me-skill](show-me-skill/index.md) | 工具教程 | 3+1+2+1=7 | HumanLayer(2026-08-12 Dex Horthy)开源show-me——不教模型新能力、几行规则让Agent以组件树/调用栈/Mermaid/文件树/伪代码/类型签名/diff/HTML等9类视觉替代小作文；程序设计前置与大diff回顾两大用法；作者三轮实测(流程图/方案对比/html explainer五步讲解)；npx安装+三种调用+WorkBuddy路径实操；39条事实、7项P0全✅0❌(Grill Me为Matt Pocock出品防误读/SKILL.md仓库路径单源) |
 | [hypit-video-replication](hypit-video-replication/index.md) | 工具教程 | 3+2+2+1=8 | Hypit 开源视频复刻工作流——Agent 分析参考视频并以词级语义关系复用字幕、B-roll、动画和组件，含 Skill 安装、20 秒足球榜单示例、成本与版权边界 |
+| [agent-knowledge-base](agent-knowledge-base/index.md) | 方法论 | 4+0+2+1=7 | Datawhale王大鹏《给项目建Agent知识库，一套完整方法来了》——判断先于检索：HTTP 500误判案例、问题槽位结构、正常过程流程核对法、事实验证三要素、专家底座与求证方法、知识按更新速度五分类、用新问题走偏反查迭代；60条事实P0核验零勘误；方法论综述无examples |
 
 ---
 
@@ -157,7 +158,7 @@ total_bundles: 53
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：53 个知识包，共 376 个内容文档（237 概念 + 69 示例 + 69 信源；2026-09-23 Hypit 入组 +3 概念 +2 示例 +2 信源 +1 日志）；零推测事实底稿随束存放
+> **内容统计**：54 个知识包，共 382 个内容文档（241 概念 + 69 示例 + 71 信源；2026-09-23 Hypit 入组 +3 概念 +2 示例 +2 信源 +1 日志；2026-09-28 agent-knowledge-base 入组 +4 概念 +2 信源 +1 日志）；零推测事实底稿随束存放
 
 ```{toctree}
 :hidden:
@@ -216,4 +217,5 @@ ai-agent-book/index
 oracle/index
 show-me-skill/index
 hypit-video-replication/index
+agent-knowledge-base/index
 ```
