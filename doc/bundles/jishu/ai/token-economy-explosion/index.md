@@ -30,7 +30,7 @@ source:
 
 ## 主题关联
 
-- [inurl BYOK 密钥聚合与四个免费模型（推广文核验）](../inurl-byok-free-models/index.md)：宏观叙事的微观消费侧对照——个人用户如何用 BYOK 聚合与免费模型应对 Token 开支（推广文核验，flagged）
+- [inurl 统一令牌（BYOK）与免费模型核验](../inurl-byok-token-hub/index.md)：宏观叙事的微观消费侧对照——个人用户如何用 BYOK 聚合与免费模型应对 Token 开支（双软文核验合并束，flagged）
 
 ```{toctree}
 :maxdepth: 2

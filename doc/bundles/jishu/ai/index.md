@@ -74,8 +74,7 @@ description: "AI 与大模型应用生态——从多模态模型平台、Agent 
 | [🔎 wigolo 本地 Web 情报层](wigolo/index.md) | 微信博文经 OKF v0.2 七阶段转化——本地优先 MCP 搜索/抓取/研究工具，18 公共引擎适配器、十工具、核心功能零 API Key、字节级证据与本地缓存，含安装/CLI/REST/Docker 实操（18 项官方核验 14✅/4⚠️/0❌） |
 | [🛒 UUMit A2A 能力交易平台](uumit-a2a-marketplace/index.md) | 微信博文经 OKF v0.2 七阶段转化——UUMit（小龙人）能力网络平台事实、双边市场机制、A2A 交易层叙事与冷启动现实（第三方 5 天负 ROI 实测、厂商自述数字甄别、仿冒站提示） |
 | [🔁 LoopX 长程 Agent 控制面](loopx/index.md) | 国产开源本地优先状态内核——quota 计费闸门、人类门禁、dashboard 工作台、200h OpenViking 公开证据与安装实操（极客之家博文核验转化，10✅2⚠️） |
-| [🔑 inurl BYOK 密钥聚合与四个免费模型](inurl-byok-free-models/index.md) | 微信推广文经 OKF v0.2 七阶段转化——inurl 聚合 APIToken 的统一令牌/端到端加密/本地代理机制核验，Agnes/GLM-4-Flash/硅基流动/LongCat 免费政策官方口径对照（flagged：省钱数字无出处、Agnes 国籍与上下文硬错、产品匿名运营） |
-| [🔑 inurl 统一令牌与免费模型省钱实录核验](inurl-unified-token/index.md) | 同公众号 09-02《月付 500 到 0 元》软文转化（flagged）——多厂商 Key 收拢与本地自动路由核验、免费档 3 个密钥限制与付费档位、70 条事实勘误（DeepSeek 免费失实/GPT-4o 退役），含 Cursor 接入配置演练 |
+| [🔑 inurl 统一令牌（BYOK）与免费模型核验](inurl-byok-token-hub/index.md) | 同公众号两篇软文（09-02《月付 500 到 0 元》/09-04《一年省下 5000 块》）经 OKF v0.2 七阶段转化并合并（flagged）——多厂商 Key 收拢、端到端加密/本地代理与自动路由核验，免费档 3 密钥限制与付费档位，Agnes/GLM-4-Flash/硅基流动/LongCat 免费政策官方口径对照，F-001~F-122 含九条勘误（DeepSeek 免费失实/GPT-4o 退役/两笔省钱账均查无实据/Agnes 国籍），含 Cursor 接入配置演练 |
 | [📚 QBS 书籍驱动技能构建法](qbs-book-to-skill/index.md) | 微信博文经 OKF v0.2 七阶段转化（方法论非操作教程）——QBS（Question→Book→Skill）三段式与提示词模板、Make Time 官方四步循环（Highlight→Laser→Energize→Reflect）与两大注意力陷阱、作者开源仓库三个 skill（3 则勘误：切换成本 23 分 15 秒 / Time Craters 30 分钟 / Knapp 任职口径） |
 | [🐋 Orca ADE 多 Agent 桌面工作台](orca-ade/index.md) | 微信博文经 OKF v0.2 七阶段转化——Stably AI 开源（MIT）桌面 ADE：并行 git worktree 多 Agent 编排与择优合并、Design Mode、diff 批注、SSH 远程与移动端指挥、Orca CLI，含三平台安装实操与七项勘误（E-1 域名 `onnorca.dev`→`onorca.dev` 硬错误；8 条 P0 核验 2✅/6⚠️/0❌） |
 | [Jev 决策模型与十类应用](jev/index.md) | TypeSafe System One模型概念教程：Noul/Choice/Score、十案例的状态与执行分工、工程评测；flagged保留原帖和成效证据缺口，非操作教程 |
@@ -145,8 +144,7 @@ free-llm-api-hands-on/index
 llama-cpp-local-inference/index
 firecrawl/index
 gpt6-astra-usage-guide/index
-inurl-byok-free-models/index
-inurl-unified-token/index
+inurl-byok-token-hub/index
 loopx/index
 uumit-a2a-marketplace/index
 wigolo/index

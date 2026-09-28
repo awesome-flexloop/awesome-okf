@@ -41,7 +41,7 @@ stale_after: 2026-08-17
 
 ## 主题关联
 
-- [inurl BYOK 密钥聚合与四个免费模型（推广文核验）](../inurl-byok-free-models/index.md)：同主题微信软文转化束——4 家免费模型（Agnes/GLM-4-Flash/硅基流动/LongCat）2026-09 官方口径复核 + BYOK 聚合工具的安全机制与匿名运营风险（flagged）
+- [inurl 统一令牌（BYOK）与免费模型核验](../inurl-byok-token-hub/index.md)：同主题双软文转化合并束——多厂商 Key 收拢与本地自动路由、4 家免费模型（Agnes/GLM-4-Flash/硅基流动/LongCat）2026-09 官方口径复核 + BYOK 聚合工具的安全机制与匿名运营风险（flagged，两笔省钱账均勘误）
 
 ```{toctree}
 :maxdepth: 2
