@@ -39,6 +39,6 @@ bundles/index
 
 | 知识包 | 所属域/组 | 亮点 |
 |--------|----------|------|
-| [知乎开放平台 CLI 教程](bundles/jishu/ai/ai-agent/zhihu-cli/index.md) | 技术 · AI · ai-agent | 235 条事实登记 + 55 项 P0 权威核验，覆盖搜索/热榜/直答/知识库/文档工具 6 大 API |
+| [知乎开放平台 CLI 教程](bundles/jishu/ai/frameworks/ai-agent/zhihu-cli/index.md) | 技术 · AI · ai-agent | 235 条事实登记 + 55 项 P0 权威核验，覆盖搜索/热榜/直答/知识库/文档工具 6 大 API |
 
 详见 [知识包总索引](bundles/index.md)。

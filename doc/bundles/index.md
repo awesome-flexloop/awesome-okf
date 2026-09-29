@@ -135,7 +135,7 @@ flowchart TD
 
 | 分组                                               | 束数  | 说明                                                                                                         |
 | ------------------------------------------------ | --- | ---------------------------------------------------------------------------------------------------------- |
-| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 213 | agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security · agent-industry-research · domestic-model-token-export 及工程方法论等直挂束 |
+| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 214 | 214 束按读者意图归为六大类——ecosystems 厂商社区生态（trae/anthropic/deepseek/tencent/datawhale 等 84 束）、frameworks 框架（ai-agent/langchain-ai 等 83 束）、practice 工程实践与行业洞察 16 束、products 产品工具 19 束、models 模型多模态 6 束、learning 学习教程 6 束 |
 | [📚 文档工程（document）](jishu/document/index.md)     | 110 | Sphinx · MyST · Jupyter Book · Jupyter · KaTeX 文档工程与交互式计算生态                                                |
 | [🔨 构建与包管理（build）](jishu/build/index.md)         | 15  | Conda 生态 · scikit-build · CMake · 通用开发工具（Ninja/Copier/PyInvoke/Nuitka 等）                                   |
 | [📡 通信与网络（comm）](jishu/comm/index.md)            | 16  | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析                                                               |
@@ -147,7 +147,7 @@ flowchart TD
 | [🌐 Web 开发（web）](jishu/web/index.md)             | 3   | FastAPI · GraphQL · HTML 声明式局部更新                                                                                          |
 | [🐍 Python 语言核心（python）](jishu/python/index.md)  | 2   | CPython 解释器核心架构 · Python 3.14 标准库新特性                                                                                            |
 | [💻 终端渲染（terminal）](jishu/terminal/index.md)     | 1   | Textualize 终端生态——rich/textual 源码中文教程                                                                       |
-| [🔧 开发与协作（dev）](jishu/dev/index.md)            | 6   | Git 版本控制 · GitHub 平台（Gist/Actions）· 开源实践（参与/项目准备/README 模板）· public-apis 公共 API 清单                                        |
+| [🔧 开发与协作（dev）](jishu/dev/index.md)            | 5   | Git 版本控制 · GitHub 平台（Gist/Actions）· 开源实践（参与/项目准备/README 模板）· public-apis 公共 API 清单                                        |
 | [🚗 智能驾驶与无人驾驶（autonomous）](jishu/autonomous/index.md) | 4 | Autoware 安装与基础 · ROS2 概念 · DDS 与 QoS · 数据集/术语/资源生态                                            |
 | [🖥️ GUI 桌面开发（gui）](jishu/gui/index.md) | 5 | Qt/PyQt 桌面开发（Qt for Python 官方机制 · PyQt5 实战）· tkinter 标准库生态（GUI 设计 · 手册 · tkinterx 扩展库） |
 | [🏠 物联网（IoT）](jishu/iot/index.md) | 6 | Home Assistant 源码解读 · TuyaOpen IoT SDK · 向日葵远控产品矩阵 · 贝锐生态 · 厂商与工具横向对比 · 星辰300 端侧 AI 资讯核验 |

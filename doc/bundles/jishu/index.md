@@ -17,7 +17,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 
 | 分组 | 束数 | 一句话简介 |
 |------|------|-----------|
-| [🤖 人工智能与大模型（ai）](ai/index.md) | [递归束数](../index.md) | AI 与大模型应用生态——agnes-ai · ai-agent · langchain-ai · datawhale · coze · deepseek · trae · tencent · pocketflow · anthropic · mobile-use · tiktoken · ai-security 及行业研究、Jev 决策模型与工程方法论等直挂束 |
+| [🤖 人工智能与大模型（ai）](ai/index.md) | [递归束数](../index.md) | AI 与大模型应用生态，214 束按读者意图归为六大类：ecosystems 厂商社区生态 · frameworks 框架与代码库 · practice 工程实践与行业洞察 · products 产品工具 · models 模型多模态 · learning 学习教程 |
 
 ### 📚 文档与数据工程
 
