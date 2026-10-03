@@ -24,6 +24,7 @@ status: stable
 | [tencent-buddy-family](tencent-buddy-family/index.md) | 腾讯 Buddy 系列与 MusicBuddy 产品观察——Buddy AI 统称、WorkBuddy/CodeBuddy/DataBuddy 场景矩阵、腾讯音乐 AI 能力背景与证据边界，非操作教程 |
 | [workbuddy-one-sentence-mvp](workbuddy-one-sentence-mvp/index.md) | WorkBuddy「一句话做 MVP」实测软文核验——需求澄清/多 Agent 迭代/用户画像/连接器/微信小程序发布五阶段拆解，沙利文双榜与 5.6.1 小程序发布能力核验（6✅/2⚠️/0❌），含 3 概念 + 2 信源，非操作教程 |
 | [lightvela-personal-agent](lightvela-personal-agent/index.md) | LightVela 与 Personal Agent 赛道观察——腾讯轻量云托管开源 Hermes Agent、微信/QQ/企微/飞书/钉钉五通道，对标 Meta Muse；事实/机制/Context 锁定论点三层拆解，含 3 概念 + 2 信源、62 条编号事实与 5 处口径勘误，非操作教程 |
+| [tencent-meeting-cli](tencent-meeting-cli/index.md) | 腾讯会议官方 CLI（tmeet）v1.0.18——CLI + CLI-Skill 双件架构、OAuth2 设备码授权、10 命令域 44 子命令、录制与元宝双纪要体系、Agent 安全契约、per-host 实时事件总线，含 9 概念 + 4 示例 + 6 信源、98 条编号事实 |
 
 ## 生态项目
 
@@ -33,7 +34,7 @@ status: stable
 
 ## 关于本分组
 
-本分组当前包含 9 个已生成知识包，共 48 个概念文档、12 个示例文档、33 个信源登记，基于 2026-08-23 的源码阅读、网页抓取、2026-09-23 与 2026-09-28 的博文核验生成，总计 564 条编号事实（原有 502 条 + LightVela/Personal Agent 博文 62 条；概念数含 workbuddy-sandbox 横向对标增强后补登的 1 篇）。所有源码知识包均经过 Grep 级 API 真实性验证，博文转化束经过 P0/P1 权威核验。
+本分组当前包含 10 个已生成知识包，共 57 个概念文档、16 个示例文档、39 个信源登记，基于 2026-08-23 的源码阅读、网页抓取、2026-09-23 与 2026-09-28 的博文核验、2026-10-03 的官方文档学习生成，总计 662 条编号事实（原有 502 条 + LightVela/Personal Agent 博文 62 条 + 腾讯会议 CLI 官方文档 98 条；概念数含 workbuddy-sandbox 横向对标增强后补登的 1 篇）。所有源码知识包均经过 Grep 级 API 真实性验证，博文转化束经过 P0/P1 权威核验。
 
 ## 相关链接
 
@@ -43,6 +44,7 @@ status: stable
 - [AI-Infra-Guard 知识包](ai-infra-guard/index.md) — AI 红队平台源码教程
 - [Octop 知识包](octop/index.md) — 自托管 AI 助手源码教程
 - [ncnn 知识包](ncnn/index.md) — 神经网络推理框架源码教程
+- [腾讯会议 CLI 知识包](tencent-meeting-cli/index.md) — 腾讯会议官方 CLI 完整使用教程（v1.0.18）
 - [CodeBuddy 官网](https://www.codebuddy.cn/) — CodeBuddy 产品入口
 - [腾讯开源](https://opensource.tencent.com/) — 腾讯开源项目总览
 
@@ -59,4 +61,5 @@ weknora/index
 tencent-buddy-family/index
 workbuddy-one-sentence-mvp/index
 lightvela-personal-agent/index
+tencent-meeting-cli/index
 ```
