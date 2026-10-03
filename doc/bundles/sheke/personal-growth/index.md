@@ -2,8 +2,8 @@
 okf_version: "0.2"
 type: group
 title: "🌱 个人成长与自我提升"
-description: "个人成长与自我提升主题的知识包——收录综合方法论与实操教程（区别于 relationships 分组的经典著作解读）：《女性魅力与情商》魅力科学 × 情商理论 × 可执行实操的整合框架（81 条事实三级可信度溯源）；《男性魅力与情商》男性气质研究 × 情商能力模型 × 男性圈批判的整合框架（106 条事实四级可信度溯源）；《高性价比人生指南》HowToLiveBetter 开源循证生活决策手册精读（89 条事实、19 项 P0 独立核验+本地全书审计）"
-total_bundles: 3
+description: "个人成长与自我提升主题的知识包——收录综合方法论与实操教程（区别于 relationships 分组的经典著作解读）：《女性魅力与情商》魅力科学 × 情商理论 × 可执行实操的整合框架（81 条事实三级可信度溯源）；《男性魅力与情商》男性气质研究 × 情商能力模型 × 男性圈批判的整合框架（106 条事实四级可信度溯源）；《高性价比人生指南》HowToLiveBetter 开源循证生活决策手册精读（89 条事实、19 项 P0 独立核验+本地全书审计）；榜样学习专题四束（陶行知生活教育与每日四问·79 条事实 / 游本昌济世为公·90 条事实 / 胡歌功夫与重建·85 条事实 / 三人关联洞察枢纽包·真问题真需求真目标·品质技能身份·正面解读师三框架）"
+total_bundles: 7
 ---
 
 # 🌱 个人成长与自我提升
@@ -17,6 +17,10 @@ total_bundles: 3
 | [female-charm-eq](female-charm-eq/index.md) | 10+6+2+2 | 女性魅力与情商整合框架——吸引力科学与魅力模型、情商能力/混合模型之争、情绪觉察与调节、界限与自信，附 30 天实操路线与 81 条三级可信度事实 |
 | [male-charm-eq](male-charm-eq/index.md) | 10+7+2+2 | 男性魅力与情商整合框架——吸引力科学与男性气质研究、男性情绪社会化、情商模型与男性圈批判、界限与自信，附 30 天实操路线与 106 条四级可信度事实 |
 | [how-to-live-better](how-to-live-better/index.md) | 7+2 | 开源书 HowToLiveBetter《高性价比人生指南》精读——证据 A/B/C × 四资源性价比双轴决策法、33 章导览、21 条标杆条目（急救/健康/反诈/职场/婚育）逐条核验、检索页与 AI skill 用法；89 条事实双份登记、19 项 P0 核验+本地全书审计（含 498→615 版本演进对照） |
+| [taoxingzhi-life-education](taoxingzhi-life-education/index.md) | 6+4+3 | 陶行知生活教育精读——生平六次关键抉择、三大命题（生活即教育/社会即学校/教学做合一）、每天四问、六大解放创造力诊断表；附 30 天实操等 4 篇可填写工作表与 79 条四级分层事实 |
+| [youbenchang-jigong](youbenchang-jigong/index.md) | 6+3+3 | 游本昌方法论精读——79 个龙套到 52 岁主角的慢成复利、「不能爱艺术中的自己」护栏、济世为公的三次杠杆决策、种子计划可复制公益机制、86 岁触网转型；附复利台账与 90 天试点工作表，90 条四级分层事实 |
+| [huge-actor-craft](huge-actor-craft/index.md) | 6+3+3 | 胡歌方法论精读——2006 车祸不可逆性与三重重建（生存/能力/意义）、话剧慢功夫、影响他人四路径、从偶像到戏骨转型判据、与游本昌师承四形式；附反励志化预警，85 条四级分层事实 |
+| [taoxingzhi-youbenchang-huge](taoxingzhi-youbenchang-huge/index.md) | 7+2 | 三人关联洞察枢纽包——陶行知/游本昌/胡歌的共同机制四层结构、差异坐标与六条桥接证据，三个自定义框架（真问题真需求真目标 / 品质技能身份 / 正面解读师）与五阶段学习路径 |
 
 ## 阅读路径
 
@@ -24,6 +28,10 @@ total_bundles: 3
 🌱 female-charm-eq   魅力科学 → 情商模型 → 情绪管理 → 人际实操（沟通/界限/自信/职场/亲密）
 🌱 male-charm-eq     魅力科学 → 男性气质 → 情绪社会化 → 人际实操（倾听/脆弱/界限/自信/职场/亲密）
 🌱 how-to-live-better 项目全貌 → 证据分级 → 性价比模型 → 33 章地图 → 21 条精读 → 使用法 → 边界与迁移
+🌱 youbenchang-jigong 职业轨迹 → 慢成复利 → 济世为公 → 种子计划 → 触网转型 → 边界
+🌱 huge-actor-craft   车祸与三重重建 → 话剧慢功夫 → 影响路径 → 转型判据 → 师承 → 边界
+🌱 taoxingzhi-life-education 关键抉择 → 三大命题 → 每天四问 → 六大解放 → 实操工作表
+🌱 taoxingzhi-youbenchang-huge 共同机制 → 差异坐标 → 三框架 → 五阶段学习路径（枢纽包，建议读完前三包再读）
 ```
 
 > 第三束的方法论链路与前两束不同：how-to-live-better 是**开源项目多信源核验转化**（R 事实采集与 P0 核验 → I 三层拆分 → E 信源先行 → V 对抗审查），引用其条目数字时应以包内核验报告为准。
@@ -42,4 +50,8 @@ total_bundles: 3
 female-charm-eq/index
 male-charm-eq/index
 how-to-live-better/index
+youbenchang-jigong/index
+huge-actor-craft/index
+taoxingzhi-life-education/index
+taoxingzhi-youbenchang-huge/index
 ```
