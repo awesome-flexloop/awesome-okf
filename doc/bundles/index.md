@@ -3,8 +3,8 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 585
-groups: 60
+total_bundles: 586
+groups: 61
 domains: 9
 ---
 
@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **585 个知识包**，按学科逻辑分为 **9 个技术域、60 个分组**（8 个学科域 + 1 个规范锚点）。
+> 当前共 **586 个知识包**，按学科逻辑分为 **9 个技术域、61 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -28,7 +28,7 @@ flowchart TD
     yixue["🌿 yixue/ 医学与养生（10 束）：中医经典·黄帝内经·道医·养生·房中"]
     sheke["👥 sheke/ 社会科学（53 束）：职场管理·亲密关系·性学经典·理财·营销·个人成长·AI 行业趋势·具身智能·数字自由职业·民间信俗"]
     yishu["🎤 yishu/ 艺术（9 束）：艺术疗愈六束（总览·美术·音乐·舞动戏剧·表达性·中国）·声乐教学两束（美通咽音·手势教学）·红歌教学一束（曲谱库·赏析·歌谱合规·柯尔文手势）"]
-    jishu["⚙️ jishu/ 技术（436 束）：AI·文档工程·构建·通信·容器·数据·物联网等 17 生态分组"]
+    jishu["⚙️ jishu/ 技术（437 束）：AI·文档工程·构建·通信·容器·数据·云API·物联网等 18 生态分组"]
     meta -->|"规范约束"| jishu
     jishu -->|"AI 辅助人文内容生成"| guoxue
     kexue -->|"科学元典与算学互参"| guoxue
@@ -132,7 +132,7 @@ flowchart TD
 | [🎤 声乐教学（Vocal）](yishu/vocal/index.md)   | 2  | 美通唱法与咽音体系（林俊卿咽音练声八步骤、嗓音科学、常见毛病纠正与每日练声清单）+ 手势辅助声乐教学（柯尔文手势、课堂五类手势、指挥基础、体态律动） |
 | [🚩 红歌教学（Hongge）](yishu/hongge/index.md)  | 1  | 红歌教学教程一束——曲谱库建设与版权合规、教学型赏析六步框架与三期曲目示范、歌谱正版获取、柯尔文手势与声乐合唱结合（完整教案·曲谱库指南·16 周路线） |
 
-### ⚙️ [技术](jishu/index.md) · 436 束 · 17 组
+### ⚙️ [技术](jishu/index.md) · 437 束 · 18 组
 
 | 分组                                               | 束数  | 说明                                                                                                         |
 | ------------------------------------------------ | --- | ---------------------------------------------------------------------------------------------------------- |
@@ -153,6 +153,7 @@ flowchart TD
 | [🖥️ GUI 桌面开发（gui）](jishu/gui/index.md) | 5 | Qt/PyQt 桌面开发（Qt for Python 官方机制 · PyQt5 实战）· tkinter 标准库生态（GUI 设计 · 手册 · tkinterx 扩展库） |
 | [🏠 物联网（IoT）](jishu/iot/index.md) | 6 | Home Assistant 源码解读 · TuyaOpen IoT SDK · 向日葵远控产品矩阵 · 贝锐生态 · 厂商与工具横向对比 · 星辰300 端侧 AI 资讯核验 |
 | [🖥️ 系统与基础设施（systems）](jishu/systems/index.md) | 2 | WSL 子系统中文教程 · PowerShell 5 困境防御 |
+| [☁️ 云厂商开放 API SDK（cloud）](jishu/cloud/index.md) | 1 | 腾讯云 Python SDK（tencentcloud-sdk-python）源码精读——TC3 签名 · 凭证提供链 · 重试熔断 · httpx 异步栈 · 代码生成产品层 |
 
 ```{toctree}
 :hidden:
