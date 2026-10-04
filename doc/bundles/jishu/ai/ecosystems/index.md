@@ -9,7 +9,7 @@ description: "以厂商、品牌与开源社区为中心的生态级知识包集
 
 以厂商、品牌与开源社区为中心的生态级知识包集群——多仓库组织目录（trae、anthropic、deepseek、tencent、datawhale 等）与单厂产品束并存。
 
-本类共 **85 个知识包**，分布于 **15 个生态/项目目录**。
+本类共 **86 个知识包**，分布于 **15 个生态/项目目录**。
 
 ## 束导航
 
@@ -23,7 +23,7 @@ description: "以厂商、品牌与开源社区为中心的生态级知识包集
 | [🧠 DeepSeek-AI 基础设施](deepseek/index.md) | 13 | DeepSeek 开源大模型基础设施——MoE 通信、GPU kernel 优化、注意力、流水线并行、负载均衡 |
 | [💳 DeepSeek-V4 免费方案与 API 定价](deepseek-pricing/index.md) | 1 | 网页/App 免费、API 赠送额度、峰谷定价、自托管与免费 vs 付费选型 FAQ（与 deepseek 基础设施技术束互补区分） |
 | [🦞 网易有道开源生态](netease-youdao/index.md) | 6 | 网易有道开源生态——双语 Embedding/RAG（BCEmbedding/QAnything）、语音合成（Confucius4-TTS/EmotiVoice）、AI Agent 桌面应用（LobsterAI）与学术搜索（ScholarClaw） |
-| [🐧 腾讯开源生态](tencent/index.md) | 10 | 腾讯系开源与商业项目——CodeBuddy、WeKnora、AI 红队平台、ncnn 推理框架、Buddy 系列与 MusicBuddy、LightVela Personal Agent 产品观察、腾讯会议 CLI |
+| [🐧 腾讯开源生态](tencent/index.md) | 11 | 腾讯系开源与商业项目——CodeBuddy、WeKnora、AI 红队平台、ncnn 推理框架、Buddy 系列与 MusicBuddy、LightVela Personal Agent 产品观察、腾讯会议 CLI、TencentDB Agent Memory 记忆系统 |
 | [🚀 TRAE Community 生态](trae/index.md) | 16 | 字节跳动 AI 编程 IDE 社区——平台应用、技能/模板/MCP 扩展、学习资源、社区治理 |
 | [🌋 火山引擎（Volcengine）AI 产品生态](volcengine/index.md) | 1 | Ark 大模型平台、Computer-Use/Mobile-Use Agent、Viking AI 搜索推荐、机器学习平台与云手机等产品分析（与 volcengine-agent Agent 生态束并存互补） |
 | [🤝 火山引擎 Agent 生态（AgentKit + 共建计划）](volcengine-agent/index.md) | 1 | AgentKit 产品与架构（VEADK 框架、SDK/CLI、应用场景）与 Agent 共建计划（贡献方向、参与指南、奖励认可） |
