@@ -17,6 +17,9 @@ sources:
   - id: skill-manifest
     resource: /references/skill-manifest.md
     title: CLI-SKILL 清单
+  - id: user-manual-qqdoc
+    resource: /references/user-manual-qqdoc.md
+    title: 腾讯文档官方用户手册《腾讯会议 CLI使用说明》
 ---
 
 # 命令体系与全局约定
@@ -41,6 +44,20 @@ tmeet
 ```
 
 依据 README 命令树与 command.md 逐命令清点（F-033）。腾讯云文档的「19 命令」旧清单见 F-034。
+
+### v1.0.0 的 19 命令面（用户手册冻结版）：全部沿用至今
+
+腾讯文档官方用户手册（2026-06-25 保存）记录了 v1.0.0 时期对用户公开的 19 个命令（F-104 逐名表；「v1.0.0 时期」为依据源码构建示例 Version=v1.0.0 与保存时间的推断，见 F-106 注），按授权 3 / 会议 7 / 录制 6 / 参会报告 2 / 排查 1 分组：
+
+| 组 | 命令 | v1.0.18 是否存活 |
+|----|------|:---:|
+| 授权 3 | `auth login` / `auth status` / `auth logout` | ✅✅✅ |
+| 会议 7 | `meeting create` / `update` / `cancel` / `get` / `list` / `list-ended` / `invitees-list` | ✅ 全部 |
+| 录制 6 | `record list` / `address` / `smart-minutes` / `transcript-get` / `transcript-paragraphs` / `transcript-search` | ✅ 全部 |
+| 参会报告 2 | `report participants` / `waiting-room-log` | ✅✅ |
+| 排查 1 | `tshoot log` | ✅ |
+
+与 v1.0.18 的 44 子命令逐一核对（F-105）：**19 个旧名无一重命名或移除，44 = 19 + 25**；新增的 25 个全部是新命令名（meeting search/invitees-add/remove/replace、record search/permission-apply-*、report participants-export/job-result 等）或五个全新域（contact/control/minutes/app/event）。对自动化资产的含义：基于 19 旧命令写的脚本与教程无需改名即可在 v1.0.18 运行；新域命令仍处快速迭代期，使用时建议锁版本。
 
 ## 三个全局标志
 

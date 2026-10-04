@@ -14,6 +14,9 @@ sources:
   - id: github-readme
     resource: /references/github-readme.md
     title: tencentmeeting-cli GitHub README
+  - id: user-manual-qqdoc
+    resource: /references/user-manual-qqdoc.md
+    title: 腾讯文档官方用户手册《腾讯会议 CLI使用说明》
 ---
 
 # Agent 安全契约
@@ -35,6 +38,8 @@ sources:
 | `record permission-apply-commit` | 正式提交权限申请 |
 
 （F-072；v1.0.18 起另含 `event stop --force` 这类破坏性总线操作，F-082）
+
+> 演进注：2026-06-25 保存的官方用户手册中，二次确认范围只有 `meeting create` / `meeting update` / `meeting cancel` 三个写命令（F-106）；v1.0.18 的 9 命令清单新增了受邀者变更、会中控制、权限申请、登出六类。这印证了安全策略在 SKILL.md 提示词层独立加厚、无需改动命令二进制契约（见[洞察五](../spec/insights.md)）。
 
 ### 确认流程的三个动作
 
@@ -118,6 +123,14 @@ sources:
 - 不输出 Access/Refresh Token（`auth status` 的剩余有效期可以转述，Token 值不回显）；
 - 不把 `~/.tmeet/` 内容、Keychain 数据贴进对话或上传；
 - 怀疑泄露：立即 `auth logout` + 账号安全中心吊销（F-031）。
+
+## 十一、官方用户手册的用户面安全指引
+
+面向普通用户（而非 Agent 作者），官方用户手册的三条补充边界（F-108、F-109、F-110）：
+
+- **规则依据**：使用须知链接[腾讯用户规则中心](https://rule.tencent.com/rule/202603130003)（F-108）；
+- **第三方客户端风险**：CLI 只把数据传给宿主 Agent；使用 Cursor、Claude Code、ChatGPT 等第三方 AI 客户端时，会议内容可能被对应平台模型处理，须遵循该平台隐私政策（F-110）——换言之，SKILL.md 红线只约束 Agent「怎么操作会议」，不覆盖平台方「怎么处理看到的内容」，后者是独立的数据合规面；
+- **漏洞与问题上报分流**：安全漏洞走仓库 [SECURITY.md](https://github.com/TencentCloud/tencentmeeting-cli/blob/main/SECURITY.md)，体验问题走 [GitHub Issues](https://github.com/TencentCloud/tencentmeeting-cli/issues)，另有内测体验互助群（F-109）。
 
 ## 为什么这些规则能成立（也为什么不能只靠它）
 

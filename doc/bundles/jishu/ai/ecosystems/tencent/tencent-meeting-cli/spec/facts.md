@@ -28,11 +28,17 @@ sources:
   - id: s-changelog
     resource: https://raw.githubusercontent.com/TencentCloud/tencentmeeting-cli/main/CHANGELOG.md
     title: 项目变更日志 CHANGELOG.md（Keep a Changelog 约定）
+  - id: s-qqdoc
+    resource: https://docs.qq.com/doc/DVUNDV0trdUdqeW5X
+    title: 腾讯文档官方用户手册《腾讯会议 CLI使用说明》（页面最后保存 2026-06-25）
+  - id: s-code
+    resource: https://github.com/TencentCloud/tencentmeeting-cli/tree/v1.0.18
+    title: tencentmeeting-cli 源码主体（tag v1.0.18，commit e631b355da2b001d24b82f453b65d96f39c59865，2026-09-11）
 ---
 
 # 腾讯会议 CLI（tmeet）Facts
 
-> 本文件登记从 8 个官方公开信源提取的 72 条编号事实，抓取日期 2026-10-03。每条事实标注信源编号，作为本知识包唯一事实来源；信源间口径差异以「⚠️ 口径」条目并列登记，不做裁决式删改。
+> 本文件登记从 10 个官方公开信源提取的 199 条编号事实：F-001 ~ F-098 基于首批 8 信源（2026-10-03），F-099 ~ F-112 基于腾讯文档官方用户手册（s-qqdoc，2026-10-03），F-113 ~ F-199 基于第三轮源码主体学习（s-code：tag v1.0.18 @ commit e631b35，2026-10-04 采集，事实均带文件/行号锚点，关键计数经 Glob/Grep 机械复核）。每条事实标注信源编号，作为本知识包唯一事实来源；信源间口径差异以「⚠️ 口径」条目并列登记，不做裁决式删改。
 
 ## 一、产品定位与分发
 
@@ -161,3 +167,135 @@ sources:
 - **F-096**: 云文档给出的调用链路为：Agent 加载 CLI-Skill（触发词+调用范例+安全约束）→ 拼出 tmeet 命令在终端执行 → CLI 自动注入 OAuth Token → 调腾讯会议开放平台 REST API → JSON 响应返回（信源：s-cloud）。
 - **F-097**: README「安全与风险提示」声明：AI 可能因模型幻觉、提示词注入、投毒攻击、执行偏差等导致数据泄露、越权操作；安装使用 CLI 即视为自愿承担相关责任（信源：s-readme）。
 - **F-098**: v1.0.18 新增事件相关客户端错误码 4000（EventInternal）、4001（EventBus）、4002（EventBusNotRunning）与 WSS token 过期服务端码 200010203、10006（信源：s-changelog）。
+
+## 十一、官方用户手册（腾讯文档，最后保存 2026-06-25）补充事实与跨源比对
+
+- **F-099**: 腾讯文档平台存在官方用户手册《腾讯会议 CLI使用说明》（https://docs.qq.com/doc/DVUNDV0trdUdqeW5X ），页面元数据 lastSaveTimestamp 为「2026年06月25日 16:00」，面向最终用户、以「对 AI 说话」叙事组织，正文含安装与操作截图（截图以图片对象存在，文本接口未返回其 URL）；公开可读、无需登录。手册开篇「风险提示」原文：「接入腾讯会议CLI后，AI Agent 将获得你预约会议、查询日程、读取录制和纪要等能力」「AI 系统可能因模型幻觉、提示词注入等原因产生非预期操作」（与 F-097 README 风险提示同源表述）（信源：s-qqdoc）。
+- **F-100**: 手册用户面定位话术为「腾讯会议 CLI 就是给 AI Agent 的那双手」「你不需要自己敲命令」，与首页标语（F-002）的表述不同但定位一致（信源：s-qqdoc）。
+- **F-101**: 手册点名的兼容 AI 工具为 Workbuddy、Qclaw、Cursor、Claude Code、Codex；与首页名单（F-005，含 DeepSeek Harness、GitHub Copilot）不一致，其中写作「Qclaw」（首页 FAQ 另作 OpenClaw，F-006）（信源：s-qqdoc）。
+- **F-102**: 手册「本地依赖」写「Node.js ≥ 16，以及一个支持执行 Shell 命令的 AI Agent」，构成 ≥16 口径的第二信源（与 F-015 腾讯云文档一致；并列于 F-013/F-014 的 `>=14` 口径）（信源：s-qqdoc）。
+- **F-103**: 商业版/企业版开通路径为填写「腾讯会议Skills企业账号灰度申请」在线表单（腾讯文档智能表格），URL 为 https://doc.weixin.qq.com/smartsheet/form/1_wpyz5ICgAAWDugasO-Q2tZhXBbuwRBgQ_d25881 ，表单说明为填写后由官方同学联系（细化 F-093）（信源：s-qqdoc）。
+- **F-104**: 手册「工具清单」按五类登记 19 个命令并逐条给出一句话职责：授权 3——`auth login`（OAuth2 授权登录，可选 --no-browser）、`auth status`（查看登录状态与凭证有效期）、`auth logout`（登出清除本地凭证）；会议 7——`meeting create`（创建会议，支持普通/周期性）、`meeting update`（修改会议，需 Agent 二次确认）、`meeting cancel`（取消会议或某一场子会议，需确认）、`meeting get`（按 --meeting-id 或 --meeting-code 查详情）、`meeting list`（查待开始/进行中会议）、`meeting list-ended`（按时间范围查已结束）、`meeting invitees-list`（查受邀者名单）；录制 6——`record list`（按 ID/会议号/时间范围三选一）、`record address`（拿录制文件下载链接和 record_file_id）、`record smart-minutes`（拿 AI 纪要）、`record transcript-get`（拿转写全文）、`record transcript-paragraphs`（分页浏览转写段落）、`record transcript-search`（在转写中搜关键词）；参会报告 2——`report participants`（参会人明细含入会/离会时间）、`report waiting-room-log`（等候室成员记录）；排查 1——`tshoot log`（导出本地日志，可选 --upload 上传服务器）（信源：s-qqdoc；分组计数与 F-034 一致，本条补全逐命令名与职责原文）。
+- **F-105**: 对照 v1.0.18 command.md 子命令清单（F-033）逐一核对，F-104 中 19 个旧命令名在 v1.0.18 中全部保留（含 `record address`、`record smart-minutes`、`transcript-*` 三命令、`meeting invitees-list`、`report waiting-room-log`、`tshoot log`）；44 = 19 + 25，25 个新增命令均为新命令名或新域（contact/control/minutes/app/event），未见旧命令被重命名或移除（信源：s-qqdoc × s-command 跨版本比对）。
+- **F-106**: 手册安全建议写「CLI-Skill 内置了 create / update / cancel 的二次确认行为约束」，即该版本（v1.0.0 时期，2026-06-25 保存）二次确认范围为 3 个写命令；v1.0.18 SKILL.md 的确认清单已扩展至 9 个命令（F-072），新增项全部来自新域能力（受邀者变更、会中控制、权限申请）（信源：s-qqdoc × s-skill 跨版本比对）。
+- **F-107**: 手册同一句表述为「腾讯会议CLI 凭证使用 AES-256-GCM 加密，存入系统 Keychain，与设备绑定，无法在另一台机器上解密」，在同一官方文本内同时包含 F-024（AES-256-GCM 本地加密）与 F-025（系统 Keychain、设备绑定）两种措辞（信源：s-qqdoc）。
+- **F-108**: 手册「使用须知」给出腾讯用户规则中心链接 https://rule.tencent.com/rule/202603130003 （信源：s-qqdoc）。
+- **F-109**: 手册「反馈与支持」登记三个入口：体验问题走 GitHub Issues（https://github.com/TencentCloud/tencentmeeting-cli/issues ）、安全漏洞走仓库 SECURITY.md（https://github.com/TencentCloud/tencentmeeting-cli/blob/main/SECURITY.md ）、另有「内测体验互助群」（以二维码图片给出，文本载荷中不含群号或链接）（信源：s-qqdoc）。
+- **F-110**: 手册「AI 工具本身的风险」节提示：CLI 只负责把数据传给 AI Agent，数据如何使用取决于接入的 AI 工具；使用第三方 AI 客户端（点名 Cursor、Claude Code、ChatGPT）时会议内容可能被该平台模型处理，应参考对应平台隐私政策（信源：s-qqdoc）。
+- **F-111**: 手册给出四个高频用户场景的对话式样例：①快速预约会议（产出会议号 123456789 与加入链接）；②会后获取纪要（产出含会议总结、关键决策、待办事项的结构化纪要）；③查看谁参加了会议（完整参会清单并与受邀名单对比谁缺席）；④修改会议时间带二次确认（AI 先 `tmeet meeting get --meeting-code 123456789` 查详情 → 告知「原定 14:00-15:00，是否改到 16:00-17:00」→ 等用户确认后才执行 `tmeet meeting update`）（信源：s-qqdoc）。
+- **F-112**: 手册安装节提供「用 agent 安装（对 agent 说）」路径，示例一句话 prompt 为「按照文档帮我装一下所有的东西：https://github.com/TencentCloud/tencentmeeting-cli 」；命令行路径按序串联 npm 全局安装或 go/make 源码构建（F-011、F-017）、`npx skills add` 安装 Skill（F-012）、`tmeet auth login` 授权（F-021），并附 meeting create/list/list-ended/logout 的最小示例（时间参数示例精确到秒：`2026-03-12T14:00:00+08:00`）（信源：s-qqdoc）。
+
+## 十二、源码主体事实（tag v1.0.18 @ e631b35，2026-10-04 采集；信源 s-code）
+
+> 本节为第三轮增量：对 tencentmeeting-cli 源码主体（Go module `tmeet`）的结构化学习结果。锚点格式为 `文件:行号`，计数类事实均经 Glob/Grep/PowerShell 机械复核；与前 9 个文档信源的口径差异以「⚠️ 口径深化/纠正」并列，不覆盖旧条目。
+
+### 十二-1 工程骨架、构建与分发
+
+- **F-113**: Go module 名为 `tmeet`、`go 1.22.0`（go.mod:1-3）；直接依赖仅 8 个：spf13/cobra v1.10.2、spf13/pflag v1.0.10、gorilla/websocket v1.5.3、itchyny/gojq v0.12.17、zalando/go-keyring v0.2.8、golang.org/x/sys v0.30.0、google.golang.org/protobuf v1.34.2、Microsoft/go-winio v0.6.2（go.mod:5-14）。
+- **F-114**: 程序入口 main.go 仅一行 `os.Exit(cmd.Execute())`，全部命令装配位于 cmd 包；Execute 使用具名返回值以便根 defer 的 crash recover 改写退出码（cmd/root.go）。
+- **F-115**: 版本变量仅 `var Version = "dev"`（cmd/root.go:31），发布版本由 `-ldflags "-X tmeet/cmd.Version=..."` 注入；⚠️ Go 源码中**不存在** `BuildTime` 变量声明，而 Makefile/build.sh 同时传入 `-X tmeet/cmd.BuildTime=...`——该 -X 指向不存在的符号（Go 链接器静默忽略），不会进入二进制。
+- **F-116**: 四个后端主机常量定义于 internal/core/endpoints.go:14-17：Open=`api.meeting.qq.com`（REST 开放平台）、CGI=`work.medialab.qq.com`（OAuth/代理）、Auth=`meeting.tencent.com`（授权页）、WSS=`meeting.tencent.com`（事件长连）。
+- **F-117**: `Tmeet` 容器结构含 7 个字段（internal/core/tmeet.go:17-25）；NewTmeet 同时构造 RestClient（Open 主机）与 CGIClient（CGI 主机），配置目录以 MkdirAll(0700) 创建。
+- **F-118**: 全仓（排除 vendor）实测 252 个 `.go` 文件，其中 64 个 `_test.go`、188 个非测试文件；测试分布于 21 个包。
+- **F-119**: Makefile 提供 5 个交叉构建目标：darwin amd64/arm64、linux amd64/arm64、windows amd64；统一 `CGO_ENABLED=0 -trimpath -ldflags "-s -w -X ..."`，产出纯静态二进制。
+- **F-120**: build.sh 的构建顺序为：先 `go test -count=1 ./...` 全量测试，再交叉编译，并执行产物 0755 权限自检、用 sed 把版本号同步进 package.json。
+- **F-121**: npm 包的可执行入口 scripts/tmeet.js（实测 125 行）是 Node 包装器：Node 主版本 <14 直接拒绝；PLATFORM_MAP 维护 5 项平台→dist 二进制名映射；ensureExecutable 三层兜底（access X_OK 探测 → chmod +x → 拷贝到 tmpdir 下 tmeet-cache）；以 execFileSync 启动、stdio inherit、透传子进程退出码。
+- **F-122**: ⚠️ 反直觉：postinstall 钩子 scripts/cleanup.js **不删除其他平台二进制**，其实际行为是对当前平台二进制执行一次 `tmeet auth logout` 清理登录态；任何失败均 exit 0，不阻断 npm 安装。
+- **F-123**: .gitignore 忽略 tmeet 本机构建产物、.idea/、`/log` 与 `/logs` 两目录及全局 `*.log`、dist/、*.enc、master.key、*.out、node_modules、package-lock.json。
+- **F-124**: Skill 安装脚本 skills/tmeet-skill/scripts/agent_init.py（实测 122 行）负责写入 agent.json（TMEET_AGENT/TMEET_MODEL 的落盘来源之一）。
+
+### 十二-2 命令装配、中间件与精简输出
+
+- **F-125**: cmd/root.go 启动顺序固定：registerResourceReleaseHook（类型名 ResourceReleaseHook；首个注册的是 event-bus 的 cleanup.OnUserCleared，root.go:172-178）→ NewTmeet → log.Init → crash recover defer → 10 个 AddCommand（auth/meeting/contact/record/report/control/minutes/tshoot/app/event）。
+- **F-126**: 全局持久标志为 `--format`（默认 `json`）与 `--compact`（默认 false）；`-V/--version` 是根命令本地标志；root 设置 SilenceUsage: true，错误时不打印整段 Usage。
+- **F-127**: 登录前置检查 preCheck 由 cobra annotation 驱动：`skipPreCheck=="true"` 跳过整条命令，`skipPreCheckFlag` 按 flag 名豁免（供 `--help` 等场景）；event 查询类与 auth 命令据此免登录，与 F-029 的用户面规则一致。
+- **F-128**: 各业务域在 internal/<domain> 或 cmd/<domain> 的 base.go 导出 NewBaseCmd；叶子命令采用「opts 结构 + 洋葱中间件」装配：`middleWare.Chain(opts.Run, WithApiCmd(StaticApiCmd(...)), ...)`，业务 Run 在内层。
+- **F-129**: internal/cmdutil/api_schema.go:17-100 定义**实测 38 个** ApiCmd* 字符串常量，分布：meeting 12、record 9、report 4、contact 3、control 3、tshoot 2、minutes 3、app 2。
+- **F-130**: ⚠️ 关键架构事实：ApiCmd 常量**不生成任何 cobra 命令或 flag**，仅用于①请求头 `Tmeet-Cli-Name`；②compact 精简字段拉取的 cmd 参数。各叶子命令的 REST 路径硬编码在各自 Run 中；全部 flag 也是手工 StringVar/IntVar/StringSliceVar/StringArrayVar 声明。
+- **F-131**: 自研 EnumValue 实现 pflag.Value 做枚举校验，全仓**仅 2 处使用**：`control waiting-room --operate-type` 与 `app set --layout-style`（cmd/app/set.go、cmd/control/waiting_room.go）。
+- **F-132**: FlagSwitch/FlagSwitchWithDefault 支持一个叶子命令按 flag 出现情况切换多个 ApiCmd，例如 `meeting get` 按 `--meeting-id`/`--meeting-code` 在 ApiCmdMeetingGetById 与 ApiCmdMeetingGetByCode 间切换（与 F-046 的优先级规则互为实现侧）。
+- **F-133**: `--compact` 的完整链路：远程 `GET /v1/api/compact-schema`（query: operator_id、operator_id_type=2、cmd=<apiCmd>、source=CLI）取 CompactFields → filecache 磁盘缓存（cache/schema，TTL 由服务端下发，per-apiCmd 互斥锁 + double-check）→ 输出层 `KeepFields(data, depth=10, fields)` 裁剪；远程失败透明放行（实现侧印证 F-077）。
+- **F-134**: 新旧分页兼容位于 internal/cmdutil/pagination.go：PageTypeOld=0/PageTypeToken=1；page-size 上限 meeting/record 为 30、report 为 100；ChoosePageOrToken/ChoosePosOrToken 自动识别调用方传入的是旧页码还是新 token；`--page/--pos/--size` 经 MarkDeprecated 标记（实测 7 个调用点：report 3、meeting 2、record 2）。
+- **F-135**: internal/cmdutil/hints 包定义的 `HintProvider` 接口（Hints(string) []string）所在包**零 import**——接口类型本身无引用；但 meeting create/update 以同签名方法（cmd/meeting/create.go:80、update.go:117）直接作为函数值传给 `output.WithHints`（internal/output/options.go:80），属结构化（鸭子类型）使用；提示内容由 GenerateMeetingSettingsHints 解析响应 corp_lock_mask 位掩码生成。
+- **F-136**: 两个隐藏命令：`event _bus`（Hidden:true + skipPreCheck，其 `--interval`(5s)/`--idle-timeout` 也 MarkHidden）与 `tshoot commands`（DFS 遍历命令树列出叶子命令，供 Agent 自举获取机器可读命令清单）。
+- **F-137**: annotation 键常量共 3 个：`apiCmd`、`skipPreCheck`、`skipPreCheckFlag`，均挂在 cobra.Command.Annotations 上。
+
+### 十二-3 OAuth 设备码流与配置存储
+
+- **F-138**: 设备码授权三 endpoint 均在 CGI 主机：`POST /v2/oauth2/oauth/cli-oauth-init`（internal/auth/auth_code.go:18，请求体含 device_id=MachineID）→ 浏览器打开 `https://meeting.tencent.com/marketplace/tencentmeeting-cli-auth.html?code=<auth_code>` → 轮询 `/v2/oauth2/oauth/cli-oauth-poll`（auth_token.go:22）。
+- **F-139**: 轮询参数：间隔 loopPollTime=5s、总超时 authorizationTimeout=5 分钟（实现侧印证 F-021/F-023 的 300s）；刷新 endpoint 为 `/v2/oauth2/oauth/cli-refresh-token`（auth_token.go:40），过期判断预留 60s leeway 提前刷新。
+- **F-140**: AuthTokenData 含 6 个字段：access_token、refresh_token、access_token_expire_time、refresh_token_expire_time、open_id、sdk_id。
+- **F-141**: login 包整个写盘过程包在 filelock.WithLock(token.lock) 中；已登录再次登录返回 UserHasBeenInitializedError（用户面文案 `user has been initialized`，与 F-040 对应）。
+- **F-142**: 代码中**不存在统一 Config 类型**，而是三份分离结构：UserConfig（sdk_id/open_id/access_token/refresh_token + int64 过期时间，加密落盘——macOS/Linux 为 `.enc` 文件，Windows 为注册表值，见 F-149）、AppMeta{active_open_id}（明文 config.json，仅用于定位当前账号的密文；源码注释沿用历史 `.enc` 泛化措辞）、AgentConfig（明文 agent.json）。
+- **F-143**: 目录解析：`TMEET_CLI_CONFIG_DIR` 默认 `~/.tmeet`；`TMEET_CLI_DATA_DIR` 平台默认值为 darwin `~/Library/Application Support/tmeet`、windows `%LOCALAPPDATA%\tmeet`、unix `~/.local/share/tmeet`。
+- **F-144**: 所有敏感配置写入均为原子写：同目录临时文件 + Sync + Rename；配置目录权限 0700。
+- **F-145**: ResourceReleaseHook 按注册顺序执行、fail-fast；单个 hook 的 panic 被 recover 转为 error；任一 hook 失败则保留凭证与 active_open_id 供重试（实现侧印证 F-032）；事件总线在 OnAuthFailed 场景走 ClearUserConfigUnResource，不执行 hook。
+- **F-146**: 唤起浏览器三平台分叉：darwin `open`、windows `rundll32 url.dll,FileProtocolHandler`、unix `xdg-open`（需 DISPLAY）；`--no-browser` 退化为仅打印授权 URL。
+- **F-147**: 设备指纹 SystemInfo.MachineID 持久化在配置目录 `.machine_id`：48 字符随机串，以 O_EXCL 方式首写者胜；设备唯一 ID 构造为 `<openId>*<machineId>`（即 Tmeet-Unique-ID 头）。
+
+### 十二-4 三平台 Keychain、加密与文件安全原语
+
+- **F-148**: keychain 常量 ServiceName=`"tmeet"`、MasterKeyAccount=`"master.key"`（internal/core/keychain/keychain.go:31-35）。
+- **F-149**: ⚠️ 口径深化（对 F-025/F-107 的实现侧修正）：凭证存储三平台并不相同——**darwin**：仅主密钥存入系统 Keychain（go-keyring），业务数据经 AES-256-GCM 加密后写 `<dataDir>/<open_id>.enc`（keychain_darwin.go:7-10）；**unix/linux**：主密钥就是权限 0600 的 `master.key` 文件（进程 umask 0077），**不使用任何系统 keyring**，业务数据同样写 `.enc`；**windows**：主密钥存注册表 `HKCU\Software\TmeetCli\keychain` 并经 DPAPI 保护，**业务数据（AES-256-GCM 密文 base64 后）也写在同一注册表键下以 open_id 命名的值中（keychain_windows.go:338-361 SetStringValue，全程无文件操作），不落 `.enc` 文件，且业务值不经过 DPAPI**。官方文档「存入系统 Keychain」仅在 macOS 字面上成立。注意 keychain.go:3-5 泛化头注释与 config.go/user.go 沿用的 ".enc" 措辞为历史注释，平台注释与平台 Get/Set 实现才是权威。
+- **F-150**: 加密原语（crypto.go）：AES-256-GCM；主密钥为 32 字节随机数，无 KDF/无口令派生；nonce 12 字节；密文字节布局为 `nonce || ciphertext || tag`（macOS/Linux 即 `.enc` 文件布局，Windows 为注册表值经 base64 解码后的字节布局）。
+- **F-151**: GCM 的 AAD（附加认证数据）绑定 account（open_id 字节），防止跨账号替换密文（macOS/Linux 为替换 `.enc` 文件，Windows 为改写他人注册表值）（代码注释 SEC-009，keychain_darwin.go:89、keychain_windows.go:317/344）；decryptWithAADFallback 先以 account 作 AAD 解密、失败再以 nil AAD 重试一次，用于自动迁移历史密文。
+- **F-152**: windows DPAPI 的 entropy 为 `service + "\x00" + account`；仅当主密钥解密命中 NTE_BAD_KEY_STATE(0x8009000B)/ERROR_INVALID_DATA(0xD)/NTE_BAD_DATA(0x80090005) 三个错误码、且新旧 entropy 两次尝试均失败时，才 purge 整个注册表键并重新生成（keychain_windows.go:152-170,240-241,409-420），非任意读取失败都自愈。
+- **F-153**: filelock 跨平台互斥：unix flock(LOCK_EX|LOCK_NB)，windows LockFileEx；获取不到时 50ms 轮询、5s 超时。
+- **F-154**: filecheck（unix）在读取 .enc 等敏感文件前拒绝符号链接、非常规文件与非属主文件；windows 因走注册表存储而为 no-op（filecheck_windows.go:5 注释 SEC-010）。
+- **F-155**: 配置层注释明确「plaintext is never persisted to disk」：明文 token 只存在于内存，config.json 仅含非敏感的 active_open_id（internal/config/config.go:14,28-29）。
+
+### 十二-5 HTTP 传输、代理头、错误码与重试
+
+- **F-156**: thttp DefaultHttpClient 整体 Timeout=3s、MaxIdleConns=200；业务响应统一信封 `{trace_id, message, data, hints}`。
+- **F-157**: cgi-proxy 使用泛型 ProxyRsp{code,message,nonce,data}；网络失败时以 DefaultNoProxyHttpClient（绕过代理配置）新建 Request 重试 1 次。
+- **F-158**: rest-proxy 每次请求前先 RefreshToken；请求最多 retry 3 次；TokenExpired/NotRetry 分类不重试；服务端码 200190303 被判定为 token 过期。
+- **F-159**: REST 请求注入的诊断/安全头包括：Tmeet-Unique-ID（openId*machineId）、Tmeet-Device-Info（os;agent;model）、Tmeet-Open-Source: CLI、Tmeet-Cli-Ver、Tmeet-Trace（cmdPath;traceID）、Tmeet-Cli-Name（apiCmd）；链路 trace 优先取响应头 X-TC-Trace。
+- **F-160**: 客户端错误码分段：1000-1007、2000-2008、3000-3002、4000-4002（事件域，与 F-098 对应）、9000（Panic）；错误判定走 exception 包的包级函数 `exception.Is(err, target)`——两个参数均为 `*TmeetError` 时只比较 Code 字段（errors.go:31-39）；TmeetError 本身没有 Is 方法。
+- **F-161**: 通用退避重试参数：MaxAttempts=3（即最多执行 4 次）、初始间隔 100ms、倍率 2.0、单步封顶 3s、±25% jitter。
+- **F-162**: OAuth2Authenticator 为请求附加 X-TC-Nonce 等鉴权头。
+
+### 十二-6 事件总线（per-host bus）内核
+
+- **F-163**: 事件子系统共七个组件：source（Source 接口 Name/Run，可选 Subscribable）→ bus（Bus.Run + Hub fan-out，每个 Conn 的 sendCh 容量实测 sendChCap=100，bus/conn.go:39）→ IPC transport → busctl（Ping/QueryStatus/SendShutdown）→ spawner → busdiscover 为守护进程侧六个组件，consume_runner 为 consume 客户端侧的第七个组件（消费适配/输出/退出码）。
+- **F-164**: IPC 端点：unix 为 `<configDir>/event/bus.sock`；windows 为命名管道 `\\.\pipe\tmeet-event-bus`（go-winio），管道缓冲 pipeBufferSize=65536（transport_windows.go:30），代码中无显式 SDDL（默认 ACL）。
+- **F-165**: bus 自举由 spawner 以 exec 再调用自身隐藏命令 `event _bus` 完成：unix  Setsid 脱离控制终端；windows 用 CREATE_NEW_PROCESS_GROUP(0x200)+HideWindow（注意不是 DETACHED_PROCESS）；子进程 stdio 全 nil；ready 等待 5s、就绪探测 ping 间隔 20ms；Release 时不 Wait 子进程。
+- **F-166**: bus 存活判据是 `bus.alive.lock` 文件锁的非阻塞 TryLock（busdiscover），而非探测 PID；另有 bus.pid（pid + RFC3339 时间，tmp+rename 原子写）、bus.meta（meta_version=1/openid_hash/started_at/bus_version/pid）、bus.fork.lock（并发 fork 串行化）、ws.state（source 状态持久化）。
+- **F-167**: WSS 入口 `wss://meeting.tencent.com/wemeet-socket/mercury-wss-cli/connection`；协议 wsspb 基于 protobuf，Head 字段含 frame_type/cmd_type/cmd/seq_no/msg_id/module/status。
+- **F-168**: 鉴权帧 AuthBindReq/AuthRefreshReq 携带 biz_id/token_type/token/open_id/cli_uniq_id；常量 biz_id=`web_hook_cli`、token_type=`access-token`；cmd 常量包括 `/conn/ping`、`/conn/access-token-auth-bind`、WsCLISubscribeEvent、WsCLIPushEvent。
+- **F-169**: 心跳是**应用层** `/conn/ping`（非 websocket control ping），默认间隔 defaultHeartbeatInterval=25s（source/wssource.go:102），服务端 HeartRsp.heart_interval 可下发覆盖；握手超时 10s、读超时 5min、重连退避 1-30s、连续失败 30 次放弃、稳态持续 >60s 后重置失败计数；关闭码 1006 触发重连，鉴权错误不重连；token 轮换时 AuthRefresh 优先于下一次 ping 发出。
+- **F-170**: IPC 为 NDJSON 行协议，消息类型共 8 种：hello/hello_ack/event/control/bye/status_query/status_response/shutdown。
+- **F-171**: source 状态机 6 态：connecting/reconnecting/steady/auth_failed/auth_expired/disconnected；状态写 ws.state 文件供重连/诊断读取。
+- **F-172**: consumer 接入时的 Hello 校验链：owner hash = `sha256(openId)` 前 12 字节的 hex（24 字符），不匹配拒绝；必须恰好声明 1 个 EventKey 且该 key 已注册；错误分类 WrongOwner/UnknownEventKey/InvalidParams。
+- **F-173**: 事件注册表实测**恰好 8 个 key**（internal/event/schemas.go 中 8 次 RegisterKey，行 106/196/294/378/462/563/675/768）：meeting.created、meeting.updated、meeting.canceled、meeting.started、meeting.end（domain=meeting，5 个）、recording.completed（recording）、smart.transcripts、smart.minutes（smart）；8 个 key 的 jq_root_path 全部为 `.payload`，params 均为可选 meeting_id，线上 payload 形态为 `array<object>`；**长度恒为 1 的服务端契约仅覆盖 meeting.started / meeting.end 两个 key**（schemas.go:32-39 注释：数组形态为未来批量推送预留、当前未启用），其余 6 key 无此保证。
+- **F-174**: ⚠️ 纠正：schemas.go 头注释提到的 `recording.failed` **未注册**，`event list` 实际只暴露 F-173 的 8 个 key；注册表不是开放扩展点，新增事件类型必须改代码发版本。另：结束事件官方拼写为 **`meeting.end`**（非 `meeting.ended`；schemas.go:44-45、docs/command.md:1472 双重一致，后者示例形式为 `--event-id meeting.end`），写错返回 UnknownEventKey；v0.3.0 复核据此更正示例 04 的 4 处旧写法。
+- **F-175**: 订阅引用计数 subRegistry：同一 EventKey 首个消费者 0→1 时向 WSS 发 SUBSCRIBE；**最后一个消费者 1→0 时不发 UNSUBSCRIBE**——Remove() 虽返回 1→0 布尔值但 bus 不据此动作（subreg.go:13-15,57-61；source.go:63-66 注释 "There is intentionally NO Unsubscribe"），契约为「消费者消失后由服务端按 TTL 自动取消」；重连后以 Snapshot() 全量 Replay 重订阅（subreg.go:84-90）；多消费者复用同一服务端订阅。
+- **F-176**: 慢消费者背压：dropped 计数按订阅者每 1s 聚合；单 Conn 队列满时 PushDropOldest 丢最旧事件保新事件（bus/conn.go:220-254）。
+- **F-177**: bus 空闲退出 IdleTimeout=30s（无消费者）；`_bus --interval 5s --idle-timeout` 两个参数对用户隐藏（与 F-136/F-086 对应）。
+- **F-178**: 事件去重环 DefaultDedupCapacity=512（dedup.go:31），去重键为 RawEvent.TraceID，用于吸收重连窗口内的重复推送。
+- **F-179**: consume 就绪标记 `[event] ready event_key=%s` 写 stderr 且 `--quiet` 不屏蔽（实现侧印证 F-081）；内部 frameCh 容量 8；事件输入全部来自 IPC netConn，**不读 stdin**（印证 F-084）；Hello 帧 trace_id 格式为 `consume-<pid>-<nanos>`。
+- **F-180**: consume 退出 reason 是**字符串**而非数字枚举：limit/timeout/signal/shutdown；退出码 2 仅出现在 `status --fail-on-orphan` 与 `stop` 被拒绝/出错两处（印证 F-081/F-082）。
+- **F-181**: `--output-dir` 安全约束：仅允许相对路径、拒绝绝对路径与包含 `..` 的路径段、对 traceID 做 sanitizeTraceID 清洗、文件权限 0o600；落盘内容为原始事件，**不受 `--jq` 投影影响**。
+- **F-182**: `event stop` 优雅关闭等待 10s；仍有消费者且未带 `--force` 时拒绝（refused, exit 2）；`--force` 清理 bus.pid/bus.meta/bus.sock 三件，**不删除 alive lock**。
+- **F-183**: 登出钩子 cleanup.OnUserCleared：仅 owner hash 匹配才动作 → 发 Shutdown 并等 3s → 进程仍存活则按 PID 在 unix 发 SIGKILL、windows 调 TerminateProcess → 清理 sock/meta/pid（F-032 两阶段清理在事件域的具体实现）。
+- **F-184**: jq 过滤基于 gojq Parse/Compile；Apply 得到零结果时 dropped=true（静默丢弃，印证 F-085 的用户面现象）；消费端 jq_root_path 为 `.payload` 时喂给 jq 的输入是 ev.Payload。
+
+### 十二-7 枚举、输出管道、日志与崩溃上报
+
+- **F-185**: internal/utils/enumerate 实测 16 个非测试枚举文件；CorpLockMask 为 uint32 位掩码：0x1 文字水印、0x2 音频水印、0x4 自动录制、0x8 自动 ASR（hints 解析的依据）；ExportJobStatus=1/2/3 对应导出任务三态。
+- **F-186**: InstanceType 实测 **23 个成员**（instanceid.go:7-29）：取值 0-10、12、20-22、30、32、33、81-84、86；其中 12=Vision Pro，81-84/86 为 HarmonyOS 手机/平板/PC/座舱/AR-VR；11、31、85 等缺号。
+- **F-187**: 其他业务枚举：MeetingJoinType(1/2/3)、MeetingRecurringType(0-4)、MeetingRecurringUntilType(0/1)、MeetingType(0/1/2/4/5/6)、MeetingUserRole(0-7)、MeetingUserJoinRole(creator/hoster/invitee)、RecordState(1/2/3)、RecordType(0/2/3/4/5)、RecordAudioDetect(0/1)、ShowAllSubMeetings(0/1)、WaitingRoomOperateType(1/2/3，双向映射)。
+- **F-188**: converter 包对 JSON 字节树做字段变换（点路径/同名双模式、maxDepth 限深）；TimestampConverter 以 1e11 为阈值自动判别秒/毫秒时间戳（支撑 F-038 的时间展示转换）。
+- **F-189**: ⚠️ 代码与 CHANGELOG 不一致：Base64DecodeConverter 源码实际只处理 3 种编码标识，而 CHANGELOG v1.0.18 称支持 4 种；本知识包以源码 3 种为准，并列登记差异。
+- **F-190**: 输出层：formatOutput 组装统一信封（F-156）；event 经 EventPrint 输出 bare JSON NDJSON（印证 F-037）；业务中间件包括 WithConvert、WithContactSearchLogic（users 恰好 1 条时仅保留 open_id）、WithMetaFieldFilter（按 filter_field 裁剪）、WithTotalCountLogic（total_count=0 时移除该字段）。
+- **F-191**: 日志为自研实现（未用第三方日志库）：文件名 tmeet-YYYY-MM-DD.log，单文件 10MB 滚动、保留 7 天，写入经容量 4096 的异步 channel；bus 经 InitNamed 写 logs/bus-*.log；trace_id 为 32 字符 hex（8 字符秒级时间戳 + 4 字符 PID + 20 字符随机）。
+- **F-192**: panic 恢复后 POST `/v1/cli/crash` 上报（1s 超时；body: operator_id、operator_id_type:2、crash_stack、error_code），栈截断 8192 字符，PanicExitCode=2；recover 必须由调用方 defer 触发；运行不产生 coredump 文件。
+- **F-193**: 环境变量 TMEET_AGENT/TMEET_MODEL 优先于 agent.json 配置，最终进入 Tmeet-Device-Info 请求头。
+- **F-194**: 工程纪律：CONTRIBUTING.md 要求 gofmt、go test 通过、中文注释、新功能必须附测试；SECURITY.md 承诺仅维护 latest 版本、漏洞私域上报、7 个工作日首次响应、30 天修复。
+
+### 十二-8 版本沿革与仓库统计
+
+- **F-195**: CHANGELOG.md 实测 **18 个**版本条目：v1.0.1（2026-04-07）至 v1.0.18（2026-09-11），**不存在 v1.0.0**；README/Makefile 中的 `v1.0.0` 仅为构建命令示例值。⚠️ 旧条目 F-106 中「v1.0.0 时期」系依据手册保存日期（2026-06-25）的推断措辞，源码版本序列自 v1.0.1 开始。
+- **F-196**: tag v1.0.18 快照内 docs/command.md 与 docs/command_en.md 实测均为 1594 行，与 s-command 信源（main 分支 raw，1594 行）一致。
+- **F-197**: skills/tmeet-skill/SKILL.md 实测 401 行、9 个 `##` 二级章节；frontmatter 为 name=tmeet-skill、version 1.0.18，metadata.requires 声明 bins 与 cliHelp；无 license 字段。
+- **F-198**: skills/tmeet-skill/references/ 下实测 10 个分命令参考 Markdown，随 Skill 一起分发。
+- **F-199**: 分发链路事实串联：Go 侧 5 目标静态二进制（F-119）→ package.json files 仅收 scripts/ 与 dist/、bin 指向 scripts/tmeet.js（F-008）→ tmeet.js 按 PLATFORM_MAP 5 项映射选二进制并做可执行位兜底（F-121）→ postinstall 执行 auth logout 清登录态（F-122）；版本号单一注入点为 tmeet/cmd.Version，BuildTime 注入为空操作（F-115）。

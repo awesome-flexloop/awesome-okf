@@ -17,6 +17,9 @@ sources:
   - id: cloud-doc
     resource: /references/cloud-doc.md
     title: 腾讯云文档《腾讯会议 CLI 说明》
+  - id: user-manual-qqdoc
+    resource: /references/user-manual-qqdoc.md
+    title: 腾讯文档官方用户手册《腾讯会议 CLI使用说明》
   - id: skill-manifest
     resource: /references/skill-manifest.md
     title: CLI-SKILL 清单与变更日志
@@ -63,7 +66,7 @@ CLI 本身不包含大模型，也不做意图识别；Agent 宿主（Claude Cod
 
 ## 兼容的 Agent 宿主
 
-产品首页列出的兼容工具包括 WorkBuddy、DeepSeek Harness、Claude Code、Codex、Cursor、GitHub Copilot，FAQ 另提到 Qclaw/OpenClaw（F-005、F-006）。CLI 本体是标准命令行程序，任何能执行 shell 命令并读取其 stdout 的 Agent 框架都可集成。
+产品首页列出的兼容工具包括 WorkBuddy、DeepSeek Harness、Claude Code、Codex、Cursor、GitHub Copilot，FAQ 另提到 Qclaw/OpenClaw（F-005、F-006）。官方用户手册（2026-06-25）的点名名单则是 Workbuddy、Qclaw、Cursor、Claude Code、Codex（F-101）——两处名单措辞不同，但共同条件是：CLI 本体是标准命令行程序，任何能执行 shell 命令并读取其 stdout 的 Agent 框架都可集成；用户手册把这一条件直接写进环境要求——「一个支持执行 Shell 命令的 AI Agent」（F-102）。
 
 ## 能做什么：覆盖会议核心业务域
 
@@ -82,17 +85,17 @@ CLI 本身不包含大模型，也不做意图识别；Agent 宿主（Claude Cod
 | `app` | 自己的 CLI 应用在会中的展示配置（2，v1.0.17+） |
 | `event` | 实时会议事件订阅与总线管理（5，v1.0.18+） |
 
-> ⚠️ 口径提示：腾讯云文档（页面更新时间 2026-07-08）写的是「19 个命令」，且不含 contact/control/minutes/app/event 域（F-034）。该文档反映的是较早版本；最新权威清单以仓库 `docs/command.md`（对应 v1.0.18，2026-09-11）为准。约两个月内子命令数从 19 增长到 44，本产品处于月级甚至周级迭代节奏，引用时务必标注版本与日期。
+> ⚠️ 口径提示：腾讯云文档（页面更新时间 2026-07-08，F-034）与腾讯文档官方用户手册（最后保存 2026-06-25，F-104）写的都是「19 个命令」，且不含 contact/control/minutes/app/event 域，反映的是 v1.0.0 时期形态（版本时期推断见 F-106 注）；最新权威清单以仓库 `docs/command.md`（对应 v1.0.18，2026-09-11）为准。约两个月内子命令数从 19 增长到 44。已逐一核对：19 个旧命令名在 v1.0.18 全部保留、无一重命名，44 = 19 + 25 纯增量（F-105）——对外命令契约严格向后兼容。本产品处于月级甚至周级迭代节奏，引用时务必标注版本与日期（详见[洞察五](../spec/insights.md)）。
 
 ## 账号条件与能力边界
 
-- **套餐**：个人版、专业版已开放；商业版/企业版需填写灰度申请表，专人联系开通（F-093）。
+- **套餐**：个人版、专业版已开放；商业版/企业版需填写「腾讯会议Skills企业账号灰度申请」智能表格，专人联系开通（F-093；申请表精确 URL 见 F-103：[灰度申请表](https://doc.weixin.qq.com/smartsheet/form/1_wpyz5ICgAAWDugasO-Q2tZhXBbuwRBgQ_d25881)）。
 - **单账号**：CLI 以 OAuth 授权账号身份操作，只能访问该账号下数据，不能跨账号或访问企业级数据；同一时刻只支持单账号登录，切换需先 `tmeet auth logout`（F-094）。
 - **平台**：macOS、Linux、Windows（F-018）。
 
 ## 官方明示的风险
 
-README 的「安全与风险提示」明确指出：AI 可能因模型幻觉、提示词注入、投毒攻击、执行偏差等导致数据泄露、越权操作；安装使用 CLI 即视为自愿承担相关责任（F-097）。这也是官方为什么要把细粒度安全约束（二次确认、隐私字段、通讯录场景白名单）写进 Skill 的原因——详见 [06 - Agent 安全契约](05-agent-safety-contract.md)。
+README 的「安全与风险提示」明确指出：AI 可能因模型幻觉、提示词注入、投毒攻击、执行偏差等导致数据泄露、越权操作；安装使用 CLI 即视为自愿承担相关责任（F-097）。官方用户手册也在开篇风险提示中点名「模型幻觉、提示词注入等原因产生非预期操作」（F-099），并单列「AI 工具本身的风险」：CLI 只负责把数据传给 Agent，使用 Cursor、Claude Code、ChatGPT 等第三方客户端时会议内容可能被该平台模型处理，应参考对应平台隐私政策（F-110）；使用须知另给出[腾讯用户规则中心](https://rule.tencent.com/rule/202603130003)（F-108）。这也是官方为什么要把细粒度安全约束（二次确认、隐私字段、通讯录场景白名单）写进 Skill 的原因——详见 [06 - Agent 安全契约](06-agent-safety-contract.md)。
 
 ## 延伸阅读
 

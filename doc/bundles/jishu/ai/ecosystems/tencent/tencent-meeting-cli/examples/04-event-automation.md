@@ -77,7 +77,7 @@ tmeet event consume meeting.started --jq '.[0].subject'
 也可按参数过滤：
 
 ```bash
-tmeet event consume meeting.ended --param meeting_code=412345678
+tmeet event consume meeting.end --param meeting_code=412345678
 ```
 
 常驻模式不读 stdin，下列后台化方式都不会导致它退出（F-084）：
@@ -116,7 +116,7 @@ stderr 会出现：
 
 ```bash
 tmeet event consume meeting.started --jq '.[0].meeting_code' > started.log &
-tmeet event consume meeting.ended   --jq '.[0].meeting_code' > ended.log &
+tmeet event consume meeting.end     --jq '.[0].meeting_code' > ended.log &
 ```
 
 注意：事件**不回放历史**，只投递订阅建立后新产生的事件（F-084），所以先起消费者再等待会议发生。
@@ -151,13 +151,15 @@ tmeet event consume meeting.started --jq '.[0].meeting_id' | \
   done
 
 # 终端 2：结束事件 → 触发 minutes get（纪要路由逻辑见示例 02）
-tmeet event consume meeting.ended --jq '.[0] | [.meeting_code,.meeting_id] | @tsv' | \
+tmeet event consume meeting.end --jq '.[0] | [.meeting_code,.meeting_id] | @tsv' | \
   while IFS=$'\t' read -r code mid; do
     tmeet minutes get --meeting-id "$mid" >> "minutes_${code}.jsonl"
   done
 ```
 
-> 实际 `meeting.started` / `meeting.ended` payload 字段以 `tmeet event schema <EventKey>` 输出为准（已确认 jq_root_path 为 `.payload` 且为长度 1 的数组）；上例为演示管道组合方式。注意 `report participants`、`participants-export`、`waiting-room-log` 均以 `--meeting-id` 为必填标识，需要会议号时先用事件中的 meeting_id，或 `meeting get --meeting-code` 转换。
+> 实际 `meeting.started` / `meeting.end` payload 字段以 `tmeet event schema <EventKey>` 输出为准（已确认 jq_root_path 为 `.payload`，且长度 1 的数组契约目前仅覆盖这两个 key，见 F-173）；上例为演示管道组合方式。注意 `report participants`、`participants-export`、`waiting-room-log` 均以 `--meeting-id` 为必填标识，需要会议号时先用事件中的 meeting_id，或 `meeting get --meeting-code` 转换。
+>
+> ⚠️ **v0.3.0 源码复核更正**：结束事件的 EventKey 拼写是 **`meeting.end`**（command.md:1472 与 schemas.go:44-45 一致），不是 `meeting.ended`；写错会收到 UnknownEventKey（F-173/F-174）。
 
 ## 检查单
 
