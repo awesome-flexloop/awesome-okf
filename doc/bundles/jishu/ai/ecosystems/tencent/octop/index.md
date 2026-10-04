@@ -40,11 +40,34 @@ okf_version: "0.2"
 * [源码事实清单](spec/facts.md) — R 阶段产出：133 条编号事实 F-001~F-133，零推测纯客观描述。
 * [架构洞察](spec/insights.md) — I 阶段产出：5 个核心架构洞察 I-01~I-05（Greenfield 延迟绑定、组合根独占、Harness 委托、CLI 延迟加载+三层传输、单进程有界并行热重载）。
 
+## v1.0.2b5 增量轮（2026-10-04）
+
+2026-10-04 基于上游 GA 后版本 **v1.0.2b5**（commit `e473dd3c`，信源 `external/dao/runtime/tencent/Octop/`；旧信源 `external/libs/ai/Tencent/WorkBuddy/Octop/` 已失效）完成增量扩展：新增 **459 条事实**（F-134~F-592，全量 592 条）与 **10 个洞察**（I-06~I-15），新增 4 篇信源登记、15 篇概念（07-21）、5 篇示例。1.0 系列品牌独立，AI 能力委托包更名为 `octop-harness`/`octop-memory`/`octop-gateway`/`octop-browser`（`>=1.0.0`），数据库 schema 演进至 v19，`_boot_runtime` 装配由 12 步扩为 17 步、RepoBundle 由 22 扩为 25。上文 00-06 旧文档描述的 v0.9.25 口径作为历史版本事实保留，新口径以 07-21 与四篇新信源为准。
+
+### 新概念（concepts/07-21）
+
+* [07 连接器系统：25 连接器与 MCP 三模式网关](concepts/07-connector-system.md) · [08 知识库 RAG：每库 SQLite 与全表内存余弦](concepts/08-knowledge-rag.md) · [09 消息网关进阶](concepts/09-gateway-advanced.md) · [10 专家团队：主持人剥权隔离](concepts/10-agent-teams.md) · [11 专家市场、子代理库与 MBTI](concepts/11-agent-marketplace.md)
+* [12 Agent 运行时内部](concepts/12-agent-runtime-internals.md) · [13 插件与技能包](concepts/13-plugin-system.md) · [14 Octop↔Octop 联邦桥接](concepts/14-bridge-federation.md) · [15 自动备份与存储后端](concepts/15-backup-and-storage.md) · [16 版本化历史与轨迹流](concepts/16-history-trajectory.md)
+* [17 用户、RBAC、SSO 与验证码](concepts/17-users-auth-security.md) · [18 云手机、桌面会话与主动关怀](concepts/18-mobile-desktop-proactive.md) · [19 Dashboard 前端架构](concepts/19-dashboard-frontend.md) · [20 API 装配面与 CLI 22 命令](concepts/20-api-cli-surface.md) · [21 打包与部署](concepts/21-packaging-deployment.md)
+
+### 新示例（examples/）
+
+* [插件开发：tool 插件从骨架到 UI 卡片](examples/plugin-development.md) · [知识库实战：建库、入库、检索调参](examples/knowledge-base-use.md) · [联邦桥接：远程专家接入本地](examples/bridge-remote-expert.md) · [组建专家团队](examples/expert-team-setup.md) · [Docker Compose 部署三套环境](examples/docker-compose-deploy.md)
+
+### 新信源（references/）
+
+* [v1.0.2b5 源码地图与构建清单](references/source-v1-map.md)（F-134~F-205、F-556~F-592） · [HTTP API 挂载总表与端点计数](references/api-surface.md)（F-503~F-555） · [连接器目录与 MCP 三模式网关](references/connectors-catalog.md)（F-276~F-315、F-382~F-383） · [Octop↔Octop 桥接协议](references/bridge-protocol.md)（F-384~F-401）
+
+### 新洞察（I-06~I-15）
+
+品牌独立更名 octop-* · 17 步装配膨胀与不可逆服务 · 25 连接器三模式 MCP 网关 · 每库 SQLite 全表内存余弦 RAG · team host 剥权 5 工具 · bridge 影子 ID+白名单 SSRF 联邦 · history v2 内容寻址归档 · 插件三 API 官方只用 tool · SSO×验证码×26 权限 · 异构数据面统一容灾。详见 [spec/insights.md](spec/insights.md)。
+
 ## 信任与生命周期说明
 
 * **status 判定依据**：全部 16 个内容文档（7 个概念 + 3 个示例 + 6 个信源登记）均 `status: stable`。内容基于对 Octop v0.9.25 源码核心模块的逐文件阅读与事实提取（133 条事实），经 R→I→E→V 四阶段流程生成，V 阶段通过 Grep 验证关键类名、命令数和 ACP runner 一致性。
 * **stale_after 解释**：统一设置为 `2027-08-23`。Octop 核心架构（四层依赖禁令、组合根独占、Harness 委托、Greenfield 延迟绑定、单进程 asyncio）在 0.9.x 系列保持稳定；该日期作为对未来大版本（如 1.0 引入 breaking change 或 harness 包 API 重构）的保守重新评估节点。
 * **外部包边界**：harness-agent/gateway/memory/browser 是腾讯内部包，本文档只描述 Octop 如何调用它们的公共 API，不虚构其内部实现。
+* **v1.0.2b5 增量轮信任说明（2026-10-04）**：新增 24 个内容文档（15 概念 + 5 示例 + 4 信源登记）均 `status: stable`、`stale_after: 2027-10-04`，基于 v1.0.2b5（commit e473dd3c）源码逐文件取证（F-134~F-592，459 条），V 阶段经 Grep 验证关键类名、逐表计数（25 连接器、28 桥接白名单、60 router 挂载、472 HTTP+9 WS、26 权限、CLI 22 命令）与相对链接。旧 16 个文档维持 `2027-08-23` 生命周期不变；其 v0.9.25 口径（harness-* 包名、schema v7、12 步装配、22 Repo、20 CLI 命令）作为历史版本事实保留，与 v1 新口径并存，阅读时以文档标注的版本为准。
 
 ```{toctree}
 :hidden:

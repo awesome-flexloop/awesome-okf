@@ -10,6 +10,15 @@ stale_after: 2027-08-23
 
 # Bundle Update Log
 
+## 2026-10-04
+
+* **Update**: 信源升级——基于上游 v1.0.2b5（commit `e473dd3c4a4741618ffde1a42a3492341a189e8e`，MIT）完成多轮增量扩展，新信源 `external/dao/runtime/tencent/Octop/`，旧信源 `external/libs/ai/Tencent/WorkBuddy/Octop/` 已失效；1.0 系列品牌独立（外部包更名为 octop-harness/octop-memory/octop-gateway/octop-browser，钉扎 `>=1.0.0`，旧 harness_* 包名零命中），schema v7→v19，`_boot_runtime` 12→17 步，RepoBundle 22→25，CLI 20→22 命令。
+* **Add**: R 阶段增量——五路分工采集 459 条事实 F-134~F-592（全量 F-001~F-592 共 592 条，机械校验 total=uniq=592）；G1 禁词全量清零（含旧轮 F-033/F-081/F-117 与本轮 F-146 措辞修复）。
+* **Add**: I 阶段增量——10 个四元组洞察 I-06~I-15：品牌独立更名、17 步装配膨胀与不可逆服务、25 连接器三模式 MCP 网关、每库 SQLite 全表内存余弦 RAG、team host 剥权 5 工具、bridge 影子 ID+28 白名单 SSRF 联邦、history v2 内容寻址归档、插件三 API 官方仅用 tool、SSO×验证码×26 权限、异构数据面统一容灾；附增量知识地图。
+* **Add**: E 阶段增量——references 4 篇（source-v1-map/api-surface/connectors-catalog/bridge-protocol），concepts 15 篇（07-connector-system 至 21-packaging-deployment），examples 5 篇（plugin-development/knowledge-base-use/bridge-remote-expert/expert-team-setup/docker-compose-deploy）；concepts/examples/references 三个子目录 index 与束根 index 同步登记（旧 16 文档内容一字不改，新旧口径分段并存）。
+* **Fix**: F-138 extras 计数由「4 个」订正为 5 组（dev/browser/desktop/local-embedding/knowledge-ocr，源码为准）；F-414 BackupConfig 路径由 `infra/backup/config.py` 订正为 `src/octop/config.py`。
+* **Verify**: V 阶段——24 个新文档 frontmatter 完整性与 stale_after: 2027-10-04、相对链接零 file:///、关键类名 Grep、计数断言对账（25 连接器/13 适配器、28 桥接白名单、入站扩展名 142+别名 37、60 router 挂载、472 HTTP+9 WS、26 权限、CLI 22 命令、docker 透传 18 键等）。
+
 ## 2026-08-23
 
 * **Creation**: 建立 Octop（v0.9.25，MIT）源码 OKF 知识包脚手架（spec/concepts/examples/references 四目录），遵循 OKF v0.2 规范。
