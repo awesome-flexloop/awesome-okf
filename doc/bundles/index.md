@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 586
+total_bundles: 587
 groups: 61
 domains: 9
 ---
@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **586 个知识包**，按学科逻辑分为 **9 个技术域、61 个分组**（8 个学科域 + 1 个规范锚点）。
+> 当前共 **587 个知识包**，按学科逻辑分为 **9 个技术域、61 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -21,7 +21,7 @@ domains: 9
 ```mermaid
 flowchart TD
     meta["📐 meta/ 规范与格式（3 束）：okf-spec 规范锚点 · okf-ecosystem 生态工具 · okf-desktop 桌面阅读器"]
-    guoxue["📜 guoxue/ 国学（48 束）：儒道释法墨易·河洛·阳明心学·算学·了凡"]
+    guoxue["📜 guoxue/ 国学（49 束）：儒道释法墨易·河洛·阳明心学·算学·了凡"]
     zhexue["💭 zhexue/ 哲学（7 束）：Ψhē 自指递归理论体系 · 思维方法论 · Agent Session 协作"]
     kexue["🔬 kexue/ 科学（17 束）：化学·物理学中西元典·国外数学经典·中西数学对读·前沿资讯"]
     wenxue["✒️ wenxue/ 文学（2 束）：中国古典文学经典 · 英语语法"]
@@ -57,13 +57,13 @@ flowchart TD
 | [🔧 OKF 生态系统（okf-ecosystem）](meta/okf-ecosystem/index.md) | 1  | okf-kit Python CLI 核心与 okf-desktop 桌面阅读器——Bundle 数据模型、爬取构建流水线、增量同步、MCP/Chat/HTTP 三模服务架构 |
 | [🖥️ OKF 桌面应用（okf-desktop）](meta/okf-desktop/index.md) | 1  | OKF Desktop 桌面阅读器完整教程——架构总览、快速开始、UI 界面、API 与数据流、打包分发、FAQ |
 
-### 📜 [国学](guoxue/index.md) · 48 束 · 16 组
+### 📜 [国学](guoxue/index.md) · 49 束 · 16 组
 
 | 分组                                                  | 束数 | 说明                                                             |
 | --------------------------------------------------- | -- | -------------------------------------------------------------- |
 | [📜 儒家（Confucianism）](guoxue/confucian/index.md)    | 1  | 四书（大学·中庸·论语·孟子）权威阅读教程：原文双源核对、五条注疏脉络、三层解读                       |
 | [📜 孔子（Confucius）](guoxue/confucius/index.md)       | 1  | 孔子本人相关著作（六经与《论语》）权威阅读教程——归属辨析、双源核对原文、注本分级                      |
-| [📜 老子（Laozi）](guoxue/laozi/index.md)               | 3  | 《老子》（《道德经》）——帛书《老子》阅读教程、老子著作原文与解读（出土文献基准、历代注本三线并收）             |
+| [📜 老子（Laozi）](guoxue/laozi/index.md)               | 4  | 《老子》（《道德经》）——帛书《老子》阅读教程、老子著作原文与解读（出土文献基准、历代注本三线并收）             |
 | [📜 庄子（Zhuangzi）](guoxue/zhuangzi/index.md)         | 1  | 《庄子》（《南华经》）三十三篇全文阅读教程（内篇自著 / 外杂篇后学分层）                          |
 | [📜 墨子（Mozi）](guoxue/mozi/index.md)                 | 1  | 《墨子》研读教程——十论、墨经、城守与三篇原文精读                                      |
 | [☯ 阴阳家（Yinyangjia）](guoxue/yinyangjia/index.md)     | 1  | 先秦阴阳家学派（邹衍、五德终始、大九州）——书志著录、辑佚残篇与传世材料的存佚分层阅读                    |
