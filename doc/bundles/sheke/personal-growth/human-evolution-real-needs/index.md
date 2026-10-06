@@ -1,0 +1,111 @@
+---
+type: OKF
+title: 人的进化六阶段真需求
+description: 基于用户提供的三页笔记照片的知识包——把「情绪内耗/财富关系/核心价值/活出真我/盘活资源/价值投资」六条目读作从自我到联合创造的有向进化链，以「学会不如教会」为每阶检验装置、「实事求是」为合一底座；以同日笔记所录诸葛亮《诫子书》（verified 公版经典）为古典锚点，给出淫慢/险躁两类内耗分型；并借同库姊妹包 dao-san-triads 的品质·技能·身份三元组辨析「真我 vs 合一」（被技能证据撑住的身份叙事 vs 校准动作），附真需求两方向、时态检验与三之位连接工具。54 条五层可信度事实、7 条四元组洞察、9 篇概念文档与 3 张可填写工作表。六阶提纲出处经三轮公开检索未定位，状态 draft/provenance=flagged。
+tags: [人的进化, 真需求, 情绪内耗, 正面解读, 财富关系, 商业定位, 活出真我, 合一, 盘活资源, 联合创造, 实事求是, 教学相长, 诫子书, 淫慢, 险躁, 古为今用, 品质技能身份]
+version: "0.1.2"
+okf_version: "0.2"
+sources:
+  - id: s1
+    resource: "用户提供的笔记照片（早期版/最新版/诫子书页），2026-10-06 上传"
+    title: 笔记照片三页
+    provenance: flagged
+  - id: s3
+    resource: "2026-10-06 三轮公开网络检索记录（详见 references/01）"
+    title: 出处核验记录
+  - id: s14
+    resource: "诸葛亮《诫子书》传世文本（《艺文类聚》卷二十三、《太平御览》卷四百五十九引）"
+    title: 诫子书传世文本
+    provenance: verified
+  - id: s16
+    resource: "同库姊妹知识包 guoxue/laozi/dao-san-triads/（本仓库自建资产，C 级）"
+    title: 三元组探究知识包
+    provenance: self-built
+  - id: s17
+    resource: "2026-10-05「如何找到真需求Day5」腾讯会议元宝纪要（AI 加工产物，非逐字稿，弱信源，经 s16 转引）"
+    title: Day5 课程 AI 纪要
+    provenance: flagged
+generated: { by: "seven-concepts-cmd/okf-archive", at: "2026-10-06T21:00:00+08:00" }
+status: draft
+stale_after: 2027-10-06
+---
+
+# 人的进化有哪些真需求？
+
+本知识包解读一份两版笔记照片中的个人成长提纲。经用户裁定，标题为 **「人的进化有哪些真需求？」**（最新版照片写作「人性的进化」，按画面异文登记）。提纲正文是六个「主题词——动作短语」条目：
+
+> 1、情绪内耗——正面解读　2、财富关系——找到真需求（练）　3、核心价值——商业定位
+> 4、活出真我——陪跑（合一）　5、盘活资源——10倍好组织事情　6、价值投资——联合创造
+>
+> 学会不如教会！！！　　【实事求是】合一
+
+> **信任提示（先读）**：提纲仅有照片、无作者署名，用户声明其出自公开文章/书籍，但 2026-10-06 三轮公开检索未能定位出处（F-HE-009）。因此本包中**提纲字面事实**可信（逐字登记），**所有机制解读均标注「本包解读」**，外部理论只作独立锚点、不互相背书。完整核验见 [出处与版本核验](references/01-source-provenance.md)。
+
+## 核心读法：六阶进化链（本包解读装置）
+
+本包把六个条目读作一条有向链：作用半径从「自己内部」逐级扩展到「与伙伴联合创造」，前一阶是后一阶的条件；「学会不如教会」是每一阶的检验装置，「实事求是」是合一状态的底座。
+
+```mermaid
+flowchart LR
+    S1["1 情绪内耗<br/>信号解码"] --> S2["2 财富关系<br/>真需求练习"]
+    S2 --> S3["3 核心价值<br/>定位收敛"]
+    S3 --> S4["4 活出真我<br/>身份合一"]
+    S4 --> S5["5 盘活资源<br/>组织杠杆"]
+    S5 --> S6["6 价值投资<br/>伙伴共创"]
+    S6 -. 教会即检验：每一阶都要能教会外行 .-> S1
+    F["底座：实事求是（事实→研究→校准）→ 合一（说信做一致）"] -. 校验每一阶 .-> S4
+```
+
+## 快速导航
+
+### [概念文档](concepts/index.md) — 9 篇
+
+- [00 总览](concepts/00-overview.md) — 提纲原貌、六阶链读法、使用方法与四条边界
+- [01 情绪内耗](concepts/01-stage-emotion.md) — 内耗信号论、三行书写、反刍/重评对照、安全边界
+- [02 财富关系](concepts/02-stage-wealth.md) — 财富即关系、真需求三证据、练的最小单元
+- [03 核心价值](concepts/03-stage-value.md) — 定位一句话公式、价值三来源、检验问题
+- [04 活出真我](concepts/04-stage-self.md) — 真我 vs 合一辨析、品质技能身份三层自测、空谈/工具/表演三失败模式、陪跑的身份机制
+- [05 盘活资源](concepts/05-stage-resources.md) — 两版措辞修订（传播→组织）、资源三分类、10 倍修辞纪律
+- [06 价值投资](concepts/06-stage-cocreation.md) — 共创四条件、合作三级台阶、退出设计
+- [07 实事求是与合一](concepts/07-foundation-heyi.md) — 词源、三条校验、底座在全链中的位置
+- [08 古为今用：《诫子书》与六阶链](concepts/08-ancient-jiezishu.md) — 86 字原文（verified）、逐句白话、同构映射、淫慢/险躁两类内耗分型与每日 5 分钟静功课
+
+### [实践工作表](examples/index.md) — 3 张
+
+- [六阶自检工作表](examples/01-six-stage-self-check.md) — 60 分钟定位主卡点阶 + 4 周练习表
+- [正面解读三行书写](examples/02-positive-reframing-practice.md) — 阶段一配套，含范例与失败样式
+- [教会测试](examples/03-teaching-test.md) — 15 分钟教学闭环，含六阶题库（不使用学习金字塔伪数字）
+
+### [信源参考](references/index.md) — 3 篇
+
+- [出处与版本核验](references/01-source-provenance.md) — 三轮检索记录、两版异文、flagged 状态
+- [外部概念锚点对照](references/02-external-anchors.md) — 九组对照与逐条禁用方式
+- [知识边界与延伸阅读](references/03-boundaries-further-reading.md) — 五类边界与姊妹包分工
+
+### 工作文档
+
+- [事实清单](facts.md) — 54 条五层可信度事实（素材/逐字/外部锚点/诫子书/跨包方法论对照分离）
+- [架构洞察](insights.md) — 7 条四元组洞察 + Mermaid 知识地图
+- [更新日志](log.md)
+
+## 快速开始
+
+- **总觉得内耗、动不起来**：读 [01](concepts/01-stage-emotion.md) + 做 [三行书写](examples/02-positive-reframing-practice.md)；先做 [淫慢/险躁 30 秒分型](concepts/08-ancient-jiezishu.md)（瘫 vs 乱，用药相反）。
+- **想变现但不知道别人要什么**：读 [02](concepts/02-stage-wealth.md)，配合姊妹包 [真需求发现通识](../real-needs-discovery/index.md)。
+- **会做不会卖、定位模糊**：读 [03](concepts/03-stage-value.md)。
+- **事业与自我感撕裂**：读 [04](concepts/04-stage-self.md) 的「真我 vs 合一」三层自测 + [07 底座](concepts/07-foundation-heyi.md)。
+- **一个人干不动、想放大**：读 [05](concepts/05-stage-resources.md)。
+- **在考虑深度合伙/共创**：读 [06](concepts/06-stage-cocreation.md)，先小事再绑定。
+- **不确定自己卡在哪**：先做 [六阶自检工作表](examples/01-six-stage-self-check.md)。
+
+```{toctree}
+:hidden:
+:maxdepth: 7
+
+concepts/index
+examples/index
+references/index
+facts
+insights
+log
+```
