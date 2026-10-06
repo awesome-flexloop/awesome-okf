@@ -3,9 +3,9 @@ type: Reference
 title: 外部概念锚点对照
 description: 提纲通俗用词与外部理论/出版物的对照表——六需求、需求层次、反刍、认知重评、10x、实事求是、知行合一、学习金字塔争议，逐条标注证据距离与禁用方式。
 tags: [reference, 外部锚点, 概念对照, 证据分级, 学习金字塔]
-version: "0.1.2"
+version: "0.2.0"
 okf_version: "0.2"
-generated: { by: "seven-concepts-cmd/okf-archive", at: "2026-10-06T21:00:00+08:00" }
+generated: { by: "seven-concepts-cmd/okf-archive", at: "2026-10-06T23:25:00+08:00" }
 status: draft
 stale_after: 2027-10-06
 ---

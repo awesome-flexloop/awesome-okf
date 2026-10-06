@@ -3,9 +3,9 @@ type: Index
 title: 信源参考索引
 description: 出处与版本核验、外部概念锚点对照、知识边界与延伸阅读三篇参考文档。
 tags: [reference, 索引, 信源, 边界]
-version: "0.1.2"
+version: "0.2.0"
 okf_version: "0.2"
-generated: { by: "seven-concepts-cmd/okf-archive", at: "2026-10-06T21:00:00+08:00" }
+generated: { by: "seven-concepts-cmd/okf-archive", at: "2026-10-06T23:25:00+08:00" }
 status: draft
 stale_after: 2027-10-06
 ---
