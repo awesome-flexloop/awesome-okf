@@ -3,9 +3,9 @@ type: "Worksheet"
 title: 教会测试：15 分钟教学闭环练习
 description: 「学会不如教会」的可执行版本——15 分钟教会测试流程、四句讲解脚本、复述评分表与回炉规则，含对学习金字塔伪数字的证据纪律。
 tags: [example, worksheet, 教会, 教学相长, 以教为学, 检验]
-version: "0.1.2"
+version: "0.2.0"
 okf_version: "0.2"
-generated: { by: "seven-concepts-cmd/okf-archive", at: "2026-10-06T21:00:00+08:00" }
+generated: { by: "seven-concepts-cmd/okf-archive", at: "2026-10-06T23:25:00+08:00" }
 status: draft
 stale_after: 2027-10-06
 ---

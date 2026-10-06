@@ -3,9 +3,9 @@ type: "Worksheet"
 title: 正面解读三行书写练习
 description: 阶段一配套练习——三行书写空白模板、一个完整填写范例、书写纪律与常见失败样式对照。
 tags: [example, worksheet, 正面解读, 情绪内耗, 三行书写]
-version: "0.1.2"
+version: "0.2.0"
 okf_version: "0.2"
-generated: { by: "seven-concepts-cmd/okf-archive", at: "2026-10-06T21:00:00+08:00" }
+generated: { by: "seven-concepts-cmd/okf-archive", at: "2026-10-06T23:25:00+08:00" }
 status: draft
 stale_after: 2027-10-06
 ---

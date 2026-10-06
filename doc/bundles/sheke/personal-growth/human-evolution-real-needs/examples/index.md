@@ -3,9 +3,9 @@ type: Index
 title: 实践示例索引
 description: 三张可填写工作表——六阶自检定位、正面解读三行书写、15 分钟教会测试。
 tags: [example, 索引, 工作表, 实操]
-version: "0.1.2"
+version: "0.2.0"
 okf_version: "0.2"
-generated: { by: "seven-concepts-cmd/okf-archive", at: "2026-10-06T21:00:00+08:00" }
+generated: { by: "seven-concepts-cmd/okf-archive", at: "2026-10-06T23:25:00+08:00" }
 status: draft
 stale_after: 2027-10-06
 ---
