@@ -67,6 +67,7 @@ flowchart TB
 - **问题驱动（按需进入）**：在关系中反复感到不安、过度在意对方回应 → 先读 [attached](attached/index.md)；频繁争吵或冷战 → 先读 [gottman-seven-principles](gottman-seven-principles/index.md)；觉得"我表达了爱但对方收不到" → [five-love-languages](five-love-languages/index.md) 并配合其评价篇；想追问"爱到底是什么、为何现代社会爱如此艰难" → [art-of-loving](art-of-loving/index.md)。
 - **体系路径（系统学习）**：以 [intimate-relationships](intimate-relationships/index.md) 教材总览建立关系科学地图，再按兴趣进入 attached（依恋专题）与 gottman（婚姻互动专题）两个实证纵深，最后以 art-of-loving 收束哲学层面的理解。
 - **批判路径（通俗读物读法）**：mars-venus 与 five-love-languages 是长销通俗读物，阅读时务必配套各束的"学界评价 / 批评"概念篇，把"经验共鸣"与"科学证据"分开评估；证据分级方法见 [批判性阅读指南](mars-venus/concepts/04-critical-reading.md)。
+- **相亲初识场景**：经介绍人引荐、刚加微信尚未见面，需要的是初次聊天行动手册而非著作解读 → 见 personal-growth 分组的 [blind-date-first-wechat](../personal-growth/blind-date-first-wechat/index.md)（先认后约五步法 + 应用回填机制）。
 
 ```{toctree}
 :glob:
