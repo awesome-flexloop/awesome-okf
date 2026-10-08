@@ -1,0 +1,13 @@
+# Git 行尾与二进制属性（全仓单一事实源）
+#
+# 默认规则：自动识别文本文件，仓库 blob 与工作区统一使用 LF。
+# 根治 Windows 下 core.autocrlf=true 时 checkout 翻转为 CRLF、
+# 导致 git status 对未修改文件报脏（假阳性）的问题。
+* text=auto eol=lf
+
+# 二进制图片资源：禁止任何行尾转换
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.gif   binary
