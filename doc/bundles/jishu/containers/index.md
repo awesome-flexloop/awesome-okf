@@ -25,6 +25,7 @@ description: "容器技术生态——OCI 运行时、存储驱动、Podman 工�
 | [qm](qm/index.md) | QEMU 虚拟机管理工具——容器中运行虚拟机的管理接口 |
 | [toolbox](toolbox/index.md) | 容器化开发环境工具——在容器中搭建隔离的开发与调试环境 |
 | [ai-lab-recipes](ai-lab-recipes/index.md) | AI 实验室容器配方——预构建的 AI/ML 工作负载容器镜像与最佳实践 |
+| [cubesandbox](cubesandbox/index.md) | 腾讯 AI Agent 安全微沙箱——RustVMM + KVM、60ms 冷启动、E2B 兼容、eBPF 网络与 L7 出向管控 |
 
 ```{toctree}
 :maxdepth: 3
@@ -43,4 +44,5 @@ buildah/index
 qm/index
 toolbox/index
 ai-lab-recipes/index
+cubesandbox/index
 ```
