@@ -7,7 +7,7 @@ tags: [relationships, intimacy, love, marriage, attachment, psychology]
 
 # 💕 亲密关系与两性情感
 
-本分组收录两性关系与亲密关系领域经典著作及公开文章转化的系统化中文知识包。六本著作在亲密关系的知识谱系中分属三个层次，另有两束单篇公开文章原创教程：**学术实证层**（米勒《亲密关系》、戈特曼《幸福的婚姻》、莱文《依恋》——以实证研究与临床科学为基础）、**哲学经典层**（弗洛姆《爱的艺术》——人本主义哲学对爱的本质追问）与**通俗实践层**（查普曼《爱的五种语言》、格雷《男人来自火星，女人来自金星》——长销大众读物，附学界评价与批判视角）。
+本分组收录两性关系与亲密关系领域经典著作及公开文章转化的系统化中文知识包。六本著作在亲密关系的知识谱系中分属三个层次，另有三束单篇公开文章原创教程：**学术实证层**（米勒《亲密关系》、戈特曼《幸福的婚姻》、莱文《依恋》——以实证研究与临床科学为基础）、**哲学经典层**（弗洛姆《爱的艺术》——人本主义哲学对爱的本质追问）与**通俗实践层**（查普曼《爱的五种语言》、格雷《男人来自火星，女人来自金星》——长销大众读物，附学界评价与批判视角）。
 
 > **阅读提示**：本分组知识包以**原创中文转述与解读**为主体，著作原文受版权保护，直接引用仅限标注出处的关键概念短句；书目事实均经公开权威信源核验，信源清单见各束 `references/`。通俗类读物的学术争议已在相应知识包中如实呈现。
 
@@ -23,6 +23,7 @@ tags: [relationships, intimacy, love, marriage, attachment, psychology]
 | [mars-venus/](mars-venus/index.md) | 通俗实践 · 性别差异话语 | 火星/金星隐喻、沟通差异论（含学界批评与性别相似性证据） |
 | [aidomain-wechat-relationship-practice/](aidomain-wechat-relationship-practice/index.md) | 公开文章转化 · 沟通实践 | 爱域研究社单篇公开文章的原创教程与事实索引（单源边界） |
 | [wechat-relationship-understanding/](wechat-relationship-understanding/index.md) | 公开文章转化 · 倾听与理解 | 金啊花《不信还有男人不懂》的原创沟通教程与传播吸引力假设（单源边界） |
+| [wechat-probability-mindset-dating/](wechat-probability-mindset-dating/index.md) | 公开文章转化 · 概率思维 | 斯惟云《普通人找对象，需要尽早认清这种关系》的概率归因、四类努力杠杆与合作命题（单源观点，非关系科学结论） |
 
 ## 跨书知识地图
 
@@ -66,7 +67,7 @@ flowchart TB
 ## 阅读路径
 
 - **问题驱动（按需进入）**：在关系中反复感到不安、过度在意对方回应 → 先读 [attached](attached/index.md)；频繁争吵或冷战 → 先读 [gottman-seven-principles](gottman-seven-principles/index.md)；觉得"我表达了爱但对方收不到" → [five-love-languages](five-love-languages/index.md) 并配合其评价篇；想追问"爱到底是什么、为何现代社会爱如此艰难" → [art-of-loving](art-of-loving/index.md)。
-- **公开文章补充**：将 [爱域研究社的沟通实践](aidomain-wechat-relationship-practice/index.md) 与[倾听和理解教程](wechat-relationship-understanding/index.md)作为单篇文章的观点转化阅读；两束均非关系科学证据。
+- **公开文章补充**：将 [爱域研究社的沟通实践](aidomain-wechat-relationship-practice/index.md)、[倾听和理解教程](wechat-relationship-understanding/index.md) 与[择偶概率思维教程](wechat-probability-mindset-dating/index.md)作为单篇文章的观点转化阅读；三束均非关系科学证据，其中概率思维束另含作者付费咨询利益相关披露与刻板印象去标签化处理。
 - **体系路径（系统学习）**：以 [intimate-relationships](intimate-relationships/index.md) 教材总览建立关系科学地图，再按兴趣进入 attached（依恋专题）与 gottman（婚姻互动专题）两个实证纵深，最后以 art-of-loving 收束哲学层面的理解。
 - **批判路径（通俗读物读法）**：mars-venus 与 five-love-languages 是长销通俗读物，阅读时务必配套各束的"学界评价 / 批评"概念篇，把"经验共鸣"与"科学证据"分开评估；证据分级方法见 [批判性阅读指南](mars-venus/concepts/04-critical-reading.md)。
 - **相亲初识场景**：经介绍人引荐、刚加微信尚未见面，需要的是初次聊天行动手册而非著作解读 → 见 personal-growth 分组的 [blind-date-first-wechat](../personal-growth/blind-date-first-wechat/index.md)（先认后约五步法 + 应用回填机制）。
@@ -84,4 +85,5 @@ attached/index
 mars-venus/index
 aidomain-wechat-relationship-practice/index
 wechat-relationship-understanding/index
+wechat-probability-mindset-dating/index
 ```
