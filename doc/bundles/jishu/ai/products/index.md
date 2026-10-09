@@ -9,7 +9,7 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 
 面向终端任务的 AI 产品与工具——浏览器/移动端自动化、Agent 桌面工作台、网页数据采集、垂直创作工具、量化/翻译/CAD 等任务型产品与能力交易平台。
 
-本类共 **19 个知识包**，分布于 **19 个生态/项目目录**。
+本类共 **21 个知识包**，分布于 **21 个生态/项目目录**。
 
 ## 束导航
 
@@ -34,6 +34,8 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 | [📘 MiniTap 官方文档教程](minitap/index.md) | 1 | MiniTap 官方文档中文学习——产品能力、接入方式与核心场景 |
 | [📐 text-to-cad 用 AI 生成可编辑 CAD 源代码](text-to-cad/index.md) | 1 | 面向 Agent 的 CAD 技能库——AI 直接生成 build123d 参数化源码，导出 STEP/URDF/DXF/G-code 工程文件 |
 | [🖼️ 小嘿插图（Ian Xiaohei Illustrations）](ian-xiaohei-illustrations/index.md) | 1 | 开源 AI Skill 中文文章配图工具——为认知锚点生成 16:9 白底手绘线稿配图 |
+| [🎬 Pixelle-Video 开源 AI 短视频引擎](pixelle-video/index.md) | 1 | 微信截图短帖（赛博煎蛋 134 期，未点名项目，flagged 高置信推断）经 OKF v0.2 七阶段转化——阿里 AIDC-AI（现 ATH-MaaS）28.7k star 全自动短视频引擎：五步流水线、本地 ComfyUI/RunningHub/直连 API 三路径、25 模板、数字人/动作迁移/批量、Windows 整合包与零成本本地方案（13 项 P0：10✅/2⚠️/1 flagged/0❌） |
+| [👁️ Agent Reach Agent 互联网能力层 CLI](agent-reach/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——Python/MIT、16 平台能力层（不抓取只选型/安装/体检/路由）：有序后端列表+active_backend 故障无感切换、doctor 真跑三态、默认只读授权、随包 SKILL.md 给 Agent，含安装与零配置/登录态渠道实操（21 项 P0/P1：16✅/5⚠️/0❌，含 6/7 零配置口径与 SKILL.md 路径五项勘误） |
 
 ```{toctree}
 :hidden:
@@ -58,4 +60,6 @@ baidu-ocr/index
 minitap/index
 text-to-cad/index
 ian-xiaohei-illustrations/index
+pixelle-video/index
+agent-reach/index
 ```

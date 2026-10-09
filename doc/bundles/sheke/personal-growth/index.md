@@ -2,8 +2,8 @@
 okf_version: "0.2"
 type: group
 title: "🌱 个人成长与自我提升"
-description: "个人成长与自我提升主题的知识包——收录综合方法论与实操教程（区别于 relationships 分组的经典著作解读）：《女性魅力与情商》魅力科学 × 情商理论 × 可执行实操的整合框架（81 条事实三级可信度溯源）；《男性魅力与情商》男性气质研究 × 情商能力模型 × 男性圈批判的整合框架（106 条事实四级可信度溯源）；《高性价比人生指南》HowToLiveBetter 开源循证生活决策手册精读（89 条事实、19 项 P0 独立核验+本地全书审计）；榜样学习专题四束（陶行知生活教育与每日四问·79 条事实 / 游本昌济世为公·90 条事实 / 胡歌功夫与重建·85 条事实 / 三人关联洞察枢纽包·真问题真需求真目标·品质技能身份·正面解读师三框架）；「人的进化六阶段真需求」笔记提纲教程（情绪内耗→联合创造六阶链·教会检验·实事求是合一底座，36 条三层事实，出处 flagged/draft）"
-total_bundles: 9
+description: "个人成长与自我提升主题的知识包——收录综合方法论与实操教程（区别于 relationships 分组的经典著作解读）：《女性魅力与情商》魅力科学 × 情商理论 × 可执行实操的整合框架（81 条事实三级可信度溯源）；《男性魅力与情商》男性气质研究 × 情商能力模型 × 男性圈批判的整合框架（106 条事实四级可信度溯源）；《高性价比人生指南》HowToLiveBetter 开源循证生活决策手册精读（89 条事实、19 项 P0 独立核验+本地全书审计）；榜样学习专题四束（陶行知生活教育与每日四问·79 条事实 / 游本昌济世为公·90 条事实 / 胡歌功夫与重建·85 条事实 / 三人关联洞察枢纽包·真问题真需求真目标·品质技能身份·正面解读师三框架）；「人的进化六阶段真需求」笔记提纲教程（情绪内耗→联合创造六阶链·教会检验·实事求是合一底座，36 条三层事实，出处 flagged/draft）、微信博文转化的行为设计教程（确定性误区×福格行为模型 B=MAP 转述勘误×提示与遗忘机制，30 条事实，福格模型已独立溯源、应用偏差显式勘误，行业声明降级，商业转化已披露，draft/单源）"
+total_bundles: 13
 ---
 
 # 🌱 个人成长与自我提升
@@ -23,6 +23,10 @@ total_bundles: 9
 | [taoxingzhi-youbenchang-huge](taoxingzhi-youbenchang-huge/index.md) | 7+2 | 三人关联洞察枢纽包——陶行知/游本昌/胡歌的共同机制四层结构、差异坐标与六条桥接证据，三个自定义框架（真问题真需求真目标 / 品质技能身份 / 正面解读师）与五阶段学习路径 |
 | [human-evolution-real-needs](human-evolution-real-needs/index.md) | 9+4+3 | 人的进化六阶段真需求——三页笔记照片提纲解读：情绪内耗→财富关系→核心价值→活出真我→盘活资源→价值投资的有向链，「学会不如教会」检验装置与「实事求是→合一」底座，诸葛亮《诫子书》古典锚点（淫慢/险躁两类内耗分型），借同库姊妹包三元组辨析真我vs合一（品质技能身份三层、空谈/工具/表演、真需求两方向、时态检验、三之位）；**v0.2.0 增补「如何找到真需求Day6」课程纪要**：确认存在与提纲逐条对应的讲解并引入四条增补判据（放下≠放弃/点线面/乙方陷阱/感恩与敬畏）；99 条六层事实、8 条四元组洞察、3 张可填写工作表与 1 份对外群发说明稿（六阶×道三七条判据对照、三种失败形态落位、三处「三之位」暗线）；提纲出处三轮检索未定位（flagged/draft，课程对应关系不解除），诫子书文本 verified，跨包层 C 级只借工具不互相背书 |
 | [blind-date-first-wechat](blind-date-first-wechat/index.md) | 4+3 | 相亲初次微信聊天行动知识包——24 条事实（8 情境结构 + 16 条 URT/SPT/EVT 理论锚点，S01~S06 联网核验）、4 条四元组洞察与「先认后约」五步法（身份锚定→自我介绍交换→锚点话题→高点收尾→一周内邀约）；附应用回填机制（统一结果指标、修订触发、L1→L2→L3 升级判据）；行动建议未经实证，draft |
+| [naval-learn-build-link](naval-learn-build-link/index.md) | 3+2 | 📰 纳瓦尔"学造连"对勘（微信博文转化，flagged）——27 条事实双份登记、7 项 P0 核验（3✅/3❌/1⚠️）：三字诀无 Naval 原始出处，原文框架为特定知识+担责+杠杆（Productize Yourself、四类杠杆、股权、build and sell、5–20 年复利）；附事实/观点/话术三层拆解与五条二手财富内容阅读纪律 |
+| [wechat-presence-joy-meditation](wechat-presence-joy-meditation/index.md) | 3+2 | 🧘 存在性的快乐·醒后冥想愉悦体验三层解读（微信博文转化，stable）——33 条事实双份登记、6 项核验零勘误（3✅/2⚠️/1ℹ️）：群友两年静坐后醒转期自发柔软温柔爱与温暖体感；pīti/sukha 现象学相容但不符禅那安住判准、放松反应平行解释不归因、半醒过渡期时点相关、"内在阴阳融合"系 AI 生成非传统术语；附三层语言模型、冥想不良反应就医边界与非医疗声明 |
+| [wechat-public-expression-lift](wechat-public-expression-lift/index.md) | 3+3 | 📰 普通人的公开表达（微信博文转化，draft，单源/flagged）——28 条事实双份登记、10 项对抗审查：可发现性瓶颈、说（同步在场）与写（异步复用）的分发结构差异、写作借平台/他人/读者三种力、从"写我"到"写对别人有用的我"；自述月入 5000→5 万与 2000+/50+ 人数全部 flagged 不可核验，识别幸存者偏差与文末获客漏斗，不构成变现承诺、不推荐任何付费产品 |
+| [wechat-certainty-fogg-prompt](wechat-certainty-fogg-prompt/index.md) | 3+3 | 📰 确定性误区与福格行为模型（微信博文转化，draft，单源/flagged）——30 条事实双份登记、9 项对抗审查："100% 确定才行动"的刹车效应、福格模型 B=MAP 完整框架与源文转述勘误（Fogg"缩小行为"vs 作者"能力无法快速提升"）、提示与遗忘机制；行业声明（教师缩招/编制转合同/公务员竞争翻倍/AI 裁员）全部降级不可核验，文末「行动实验室」商业转化已披露，非行为效果承诺、不推荐任何付费产品 |
 
 ## 阅读路径
 
@@ -36,6 +40,10 @@ total_bundles: 9
 🌱 taoxingzhi-youbenchang-huge 共同机制 → 差异坐标 → 三框架 → 五阶段学习路径（枢纽包，建议读完前三包再读）
 🌱 human-evolution-real-needs 六阶自检定位 → 主卡点分阶（内耗/财富/定位/真我/资源/共创）→ 教会测试毕业 → 实事求是底座校验
 🌱 blind-date-first-wechat 情境画像 → 身份锚定开场 → 先己后人交换 → 锚点话题高点收尾 → 一周内邀约
+📰 naval-learn-build-link Naval 原始框架（特定知识/担责/杠杆） → 学造连逐项对勘 → 二手财富内容的可信边界与阅读纪律（flagged）
+🧘 wechat-presence-joy-meditation 现象还原（醒转期柔软/温暖/爱） → 三套参照定位（pīti/sukha·放松反应·半醒过渡期） → 读者边界与冥想安全线（stable，非医疗）
+📰 wechat-public-expression-lift 可发现性瓶颈 → 说vs写的分发结构 → 写作三种借力 → 写"有用的我" → 幸存者偏差与获客漏斗识别（draft，单源/flagged，非变现承诺）
+📰 wechat-certainty-fogg-prompt 确定性误区（小实验替代大承诺） → 福格模型 B=MAP 三要素 → 源文转述勘误（缩小行为/锚点提示/庆祝） → 提示与遗忘的可靠性设计（draft，单源/flagged，非行为效果承诺）
 ```
 
 > 第三束的方法论链路与前两束不同：how-to-live-better 是**开源项目多信源核验转化**（R 事实采集与 P0 核验 → I 三层拆分 → E 信源先行 → V 对抗审查），引用其条目数字时应以包内核验报告为准。
@@ -60,4 +68,8 @@ taoxingzhi-life-education/index
 taoxingzhi-youbenchang-huge/index
 human-evolution-real-needs/index
 blind-date-first-wechat/index
+naval-learn-build-link/index
+wechat-presence-joy-meditation/index
+wechat-public-expression-lift/index
+wechat-certainty-fogg-prompt/index
 ```
