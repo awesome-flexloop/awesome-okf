@@ -9,7 +9,7 @@ description: "AI 工程方法论、上下文工程、安全红队与行业趋势
 
 AI 工程方法论、上下文工程、安全红队与行业趋势研究——Token 经济与成本、免费 API 生态、Agent 工作流实践、行业研究及博文核验转化束。
 
-本类共 **16 个知识包**，分布于 **14 个生态/项目目录**。
+本类共 **19 个知识包**，分布于 **17 个生态/项目目录**。
 
 ## 束导航
 
@@ -22,6 +22,7 @@ AI 工程方法论、上下文工程、安全红队与行业趋势研究——To
 | [🗣️ Verbi 单人 AI 口语陪练出海案例](verbi/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化（案例资讯非操作教程）——加拿大单人开发者 5.5 个月做到 30 天营收 $110,069/MRR $16,752（RevenueCat + TrustMRR 双锚核验）；「敢开口」错位定位、试用转化漏斗、ASO+内容+UGC 渠道勘误 E-1（8✅/6⚠️/1❌） |
 | [🚀 GPT-6 Astra 官方使用指南中文解读](gpt6-astra-usage-guide/index.md) | 1 | 微信博文经OKF v0.2七阶段转化（核验自 OpenAI 官方文档）——五项新特性（异步工具调用/response.steer 中途引导/切推理强度保缓存/偏离检测/限制）、五大行为模式与 11 个官方 Prompt 配方（非操作教程） |
 | [🤖 GPT-6 Sol/Luna 成本效率与 Agent 任务经济性](gpt6-sol-luna-cost-efficiency/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——GPT-6 Sol/Luna 模型分工与价格、DeepSeek 价格对照、Agent 每任务成本模型与选型边界；非操作教程，benchmark 与内部统计按厂商/第三方口径标注 |
+| [🖥️ GPT-6 Intelligent UI：从"回答问题"到"交付可交互对象"](gpt6-intelligent-ui/index.md) | 1 | APPSO 博文经 OKF v0.2 转化（产品功能测评/行业洞察，非操作教程）——Intelligent UI 定义、能力场景、组件库+界面编译器机制、黑盒随机性、局限（暂不支持 Pro effort/Astra）与交互范式转变；含诺奖书单实测案例（安妮·卡森经诺奖官网核验；13 项 P0/P1 核验 9✅/4⚠️/0❌） |
 | [💰 Fable5 成本优化](fable5-cost-optimization/index.md) | 1 | Fable5 定价背景、社区方案、官方优化与选型指南（AI 编程工具成本优化专题） |
 | [💻 Codex Agent 工作流实践](codex-agent-workflow-practices/index.md) | 1 | Anthropic Codex CLI 四杠杆降本实践——并行工作流/大闭环/对抗提升/真实需求驱动，243亿 token / $12,213 实测数据 |
 | [🧭 AI 工程方法论](ai-engineering-methodology/index.md) | 1 | AI 工程化方法论谱系——Harness 工程、提示词编程与七概念提示词工程、对抗性审查、Agent 评测体系与性能优化 |
@@ -29,6 +30,8 @@ AI 工程方法论、上下文工程、安全红队与行业趋势研究——To
 | [📁 planning-with-files 像 Manus 一样工作](planning-with-files/index.md) | 1 | AI Agent 上下文工程方法论——3-File Pattern 文件系统外存 + Hooks 自动化机制，源自 Manus（Meta 20 亿美元收购）的开源实践 |
 | [🗜️ 上下文优化（Context Optimization）](context-optimization/index.md) | 1 | 上下文窗口与 Token 成本优化——Headroom 压缩、LLM Token 优化全景与 Trae IDE 实战 |
 | [📝 模板驱动报告生成 Skill 设计](docx-report-skill/index.md) | 1 | 从 Word 模板 + 结构化数据确定性生成统一格式 .docx 报告的技能设计（单一职责、互斥关系） |
+| [🌐 answer-me-with-html：让 Agent 交付可视化页面](answer-me-with-html/index.md) | 1 | 公众号「开源星探」博文经 OKF v0.2 转化——Agent Skill 让模型写内容、程序做排版：九种组件、CLI 渲染可读 HTML / 3Blue1Brown 讲解视频、基准（token 6.1×/17.8× 更少）、三安装、Always-on 与勘误 E-1（操作教程，权威源 GitHub README） |
+| [🖥️ 微软 MXC：Windows 的 AI Agent 执行隔离](microsoft-mxc-agent-containment/index.md) | 1 | 腾讯科技博文经 OKF v0.2 转化（产品发布/商业分析，非源码教程）——MXC 执行隔离原理、Agent 安全动因（93%批准/致命三要素/执行隔离）、Windows 平台竞争格局；12 项 P0/P1 核验 + 名单口径勘误 |
 
 ```{toctree}
 :hidden:
@@ -41,6 +44,7 @@ token-economy-explosion/index
 verbi/index
 gpt6-astra-usage-guide/index
 gpt6-sol-luna-cost-efficiency/index
+gpt6-intelligent-ui/index
 fable5-cost-optimization/index
 codex-agent-workflow-practices/index
 ai-engineering-methodology/index
@@ -48,4 +52,6 @@ agent-platform-notes/index
 planning-with-files/index
 context-optimization/index
 docx-report-skill/index
+answer-me-with-html/index
+microsoft-mxc-agent-containment/index
 ```
