@@ -9,13 +9,14 @@ description: "基础模型能力与多模态生成——强化学习基础设施
 
 基础模型能力与多模态生成——强化学习基础设施、因果世界模型、实时音视频基础模型、极速音频/文生图/OCR 与生成式算法哲学。
 
-本类共 **6 个知识包**，分布于 **6 个生态/项目目录**。
+本类共 **7 个知识包**，分布于 **7 个生态/项目目录**。
 
 ## 束导航
 
 | 知识包 | 束数 | 一句话简介 |
 |--------|------|-----------|
 | [🔁 AReaL 自演进 Agent 强化学习基础设施](areal/index.md) | 1 | AReaL 2.0 自演进三大支柱、Agent-compute 微服务架构与 Online RL 工作流实践 |
+| [⚡ Agent Lightning v1.0：把真实 Agent 接进强化学习](agent-lightning/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化（产品发布资讯/技术综述非操作教程）——微软开源约 3,500 行 Agentic RL 框架，Harnessed Agentic RL 范式 + OpenAI 兼容代理 + Collocated Async RL，Qwen3.5-9B 在 SWE-bench Verified 41.8%→56.4%（10 项 P0 官方核验全通过，F-046 硬件型号待复核） |
 | [🔮 因果 AI 与世界模型](causal-ai/index.md) | 1 | 零犀科技六年押注因果 AI——世界模型因果内核、Pearl 三级因果阶梯工程化与 Agentic Sales 落地 |
 | [🎥 MaineCoon 实时音视频基础模型](mainecoon/index.md) | 1 | catnip.ai 22B 实时音视频基础模型——Social World Model 范式与 Agentic Streaming Inference 框架 |
 | [🎵 AudioX-Turbo 极速音频生成](audiox-turbo/index.md) | 1 | Anything-to-Audio 框架——4 步极速推理、6 种任务统一与 DMD 师生蒸馏（港科大·清华·Noiz AI 联合开源） |
@@ -27,6 +28,7 @@ description: "基础模型能力与多模态生成——强化学习基础设施
 :maxdepth: 7
 
 areal/index
+agent-lightning/index
 causal-ai/index
 mainecoon/index
 audiox-turbo/index

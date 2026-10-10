@@ -17,7 +17,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 
 | 分组 | 束数 | 一句话简介 |
 |------|------|-----------|
-| [🤖 人工智能与大模型（ai）](ai/index.md) | [递归束数](../index.md) | AI 与大模型应用生态，218 束按读者意图归为六大类：ecosystems 厂商社区生态 · frameworks 框架与代码库 · practice 工程实践与行业洞察 · products 产品工具 · models 模型多模态 · learning 学习教程 |
+| [🤖 人工智能与大模型（ai）](ai/index.md) | [递归束数](../index.md) | AI 与大模型应用生态，232 束按读者意图归为六大类：ecosystems 厂商社区生态 · frameworks 框架与代码库 · practice 工程实践与行业洞察 · products 产品工具 · models 模型多模态 · learning 学习教程 |
 
 ### 📚 文档与数据工程
 
@@ -39,7 +39,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 
 | 分组 | 束数 | 一句话简介 |
 |------|------|-----------|
-| [📡 通信与网络（comm）](comm/index.md) | 7 | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析 |
+| [📡 通信与网络（comm）](comm/index.md) | 8 | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析 · WiFi 安全审计（wifit3） |
 | [📦 容器生态（containers）](containers/index.md) | 11 | OCI 运行时 · 存储驱动 · Podman 工具链 · AI 容器配方 |
 | [🧠 机器学习（ml）](ml/index.md) | 3 | ONNX 标准/转换器/编译器/推理后端 · Apache TVM 深度学习编译器 |
 | [🖥️ 系统与基础设施（systems）](systems/index.md) | 2 | WSL 子系统中文教程 · PowerShell 5 困境防御 |

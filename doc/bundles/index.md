@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 598
+total_bundles: 612
 groups: 61
 domains: 9
 ---
@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **598 个知识包**，按学科逻辑分为 **9 个技术域、61 个分组**（8 个学科域 + 1 个规范锚点）。
+> 当前共 **612 个知识包**，按学科逻辑分为 **9 个技术域、61 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -26,9 +26,9 @@ flowchart TD
     kexue["🔬 kexue/ 科学（17 束）：化学·物理学中西元典·国外数学经典·中西数学对读·前沿资讯"]
     wenxue["✒️ wenxue/ 文学（2 束）：中国古典文学经典 · 英语语法"]
     yixue["🌿 yixue/ 医学与养生（10 束）：中医经典·黄帝内经·道医·养生·房中"]
-    sheke["👥 sheke/ 社会科学（61 束）：职场管理·亲密关系·性学经典·理财·营销·个人成长·AI 行业趋势·具身智能·数字自由职业·民间信俗"]
+    sheke["👥 sheke/ 社会科学（59 束）：职场管理·亲密关系·性学经典·理财·营销·个人成长·AI 行业趋势·具身智能·数字自由职业·民间信俗"]
     yishu["🎤 yishu/ 艺术（9 束）：艺术疗愈六束（总览·美术·音乐·舞动戏剧·表达性·中国）·声乐教学两束（美通咽音·手势教学）·红歌教学一束（曲谱库·赏析·歌谱合规·柯尔文手势）"]
-    jishu["⚙️ jishu/ 技术（439 束）：AI·文档工程·构建·通信·容器·数据·云API·物联网等 18 生态分组"]
+    jishu["⚙️ jishu/ 技术（456 束）：AI·文档工程·构建·通信·容器·数据·云API·物联网等 18 生态分组"]
     meta -->|"规范约束"| jishu
     jishu -->|"AI 辅助人文内容生成"| guoxue
     kexue -->|"科学元典与算学互参"| guoxue
@@ -111,17 +111,17 @@ flowchart TD
 | [🌿 养生经典（Yangsheng）](yixue/yangsheng/index.md)             | 1  | 养生经典阅读教程——《黄帝内经》至《老老恒言》六部核心经典与食养/导引/道教扩展脉络          |
 | [🛏️ 房中（Fangzhong）](yixue/fangzhong/index.md)              | 1  | 中国古代性文化（房中）典籍阅读教程——目录著录、马王堆出土文献、《医心方》辑佚链与学术史研究      |
 
-### 👥 [社会科学](sheke/index.md) · 61 束 · 8 组
+### 👥 [社会科学](sheke/index.md) · 59 束 · 8 组
 
 | 分组                                              | 束数 | 说明                                        |
 | ----------------------------------------------- | -- | ----------------------------------------- |
 | [🏢 职场与管理（Workplace）](sheke/workplace/index.md) | 8  | 人力资源（职业地图·六大模块·劳动法合规）与行政办公（行政运营·公文写作·OKR 目标管理·论文写作·SOP 标准作业程序）     |
-| [💕 亲密关系与两性情感](sheke/relationships/index.md)    | 9  | 两性关系经典著作与公开文章转化教程——学术实证、哲学经典、通俗实践与单源观点边界              |
+| [💕 亲密关系与两性情感](sheke/relationships/index.md)    | 8  | 两性关系经典著作与公开文章转化教程——学术实证、哲学经典、通俗实践与单源观点边界              |
 | [🧭 性学经典（Sexology）](sheke/sexology/index.md)    | 3  | 性学/性文化经典著作阅读教程、《汉书·艺文志》房中八家专题研读与马王堆房中简帛深读 |
 | [💰 个人理财与投资（Finance）](sheke/finance/index.md) | 2  | 个人投资实操通识与《管道的故事》财富观念解读——收益数学、资产类别、配置与行为纪律、中国市场制度，以及提桶者vs管道建造者、时间杠杆、管道复利、电子管道与五步行动指南 |
 | [📣 市场营销（Marketing）](sheke/marketing/index.md) | 4  | 营销实操通识——营销本质、STP、定位与品牌、4P/4C、顾客旅程、AARRR、内容私域与合规底线；另含"先卖后做"需求验证博文转化（案例 P0 核验、一周验证法与批判边界）、真需求发现通识（问/看/算/试四路径、MVP 验证谱系与名言勘误）与梁宁《真需求》全书精读（价值—共识—模式三角、三个30年商业故事） |
-| [🌱 个人成长与自我提升（Personal Growth）](sheke/personal-growth/index.md) | 13  | 女性魅力与情商综合教程（吸引力科学、魅力模型、第一印象、情商能力/混合模型、情绪觉察与调节、共情、界限与自信，附 30 天实操路线）；男性魅力与情商综合教程（吸引力科学、男性气质、男性情绪社会化、情商模型与男性圈批判、界限与自信，附 30 天实操路线）；开源循证生活决策手册 HowToLiveBetter《高性价比人生指南》精读（证据分级×性价比模型、33 章导览、21 条核验精读、19 项 P0 核验）；榜样人物方法论精读簇（游本昌/胡歌/陶行知+三人关联洞察枢纽包）；「人的进化六阶段真需求」笔记提纲教程（情绪内耗→联合创造六阶链+教会检验+实事求是合一底座+《诫子书》古典锚点，48 条四层事实，提纲出处 flagged/draft）；纳瓦尔"学造连"微信博文对勘（flagged，27 条事实/7 项核验，还原特定知识+担责+杠杆原始框架）；冥想醒后愉悦体验三层解读（stable，33 条事实/6 项核验零勘误：pīti/sukha 现象学相容但不符禅那安住判准·放松反应平行解释·半醒过渡期时点相关·"内在阴阳融合"系 AI 生成非传统术语，非医疗建议）；普通人公开表达教程（draft/单源，28 条事实/10 项对抗审查：可发现性瓶颈·说vs写分发结构·写作三种借力·写"有用的我"，自述收入 5000→5 万与 2000+/50+ 人数全部 flagged 不可核验，识别幸存者偏差与获客漏斗，非变现承诺、不推荐付费产品）；确定性误区与福格行为模型教程（draft/单源，30 条事实/9 项对抗审查：确定性误区·福格模型 B=MAP 完整框架与源文转述勘误·提示与遗忘机制，福格模型经独立来源溯源为真实模型、作者"只调提示/能力无法快速提升"断言已显式勘误，行业声明全部降级 flagged，文末社群活动商业转化已披露，非行为效果承诺、不推荐付费产品） |
-| [🏭 AI 行业与商业趋势（Industry）](sheke/industry/index.md) | 21 | AI 行业快照分析——AI 变现指南、自动赚钱系统、Copilot 成本、国产大模型对比、EMS 能源、硬件设计、印度制造业、监管治理、平台生态、AI 内容系统、具身智能与数字自由职业 |
+| [🌱 个人成长与自我提升（Personal Growth）](sheke/personal-growth/index.md) | 9  | 女性魅力与情商综合教程（吸引力科学、魅力模型、第一印象、情商能力/混合模型、情绪觉察与调节、共情、界限与自信，附 30 天实操路线）；男性魅力与情商综合教程（吸引力科学、男性气质、男性情绪社会化、情商模型与男性圈批判、界限与自信，附 30 天实操路线）；开源循证生活决策手册 HowToLiveBetter《高性价比人生指南》精读（证据分级×性价比模型、33 章导览、21 条核验精读、19 项 P0 核验）；榜样人物方法论精读簇（游本昌/胡歌/陶行知+三人关联洞察枢纽包）；「人的进化六阶段真需求」笔记提纲教程（情绪内耗→联合创造六阶链+教会检验+实事求是合一底座+《诫子书》古典锚点，48 条四层事实，提纲出处 flagged/draft） |
+| [🏭 AI 行业与商业趋势（Industry）](sheke/industry/index.md) | 24 | AI 行业快照分析——AI 变现指南、自动赚钱系统、Copilot 成本、国产大模型对比、EMS 能源、硬件设计、运营商 Token 经营、AI 中试基地采购趋势、Ling 3.1 Flash 首测、监管治理、平台生态、AI 内容系统、具身智能与数字自由职业 |
 | [🏮 民间信俗与民俗场景（Minsu）](sheke/minsu/index.md) | 1  | 民俗场景实地指南——源流先行、官方口径优先、冲突口径并列；首束杭州求姻缘地点指南（月老民俗·寺院参拜·黄龙洞月老祠·相亲角，78 条事实内嵌信源） |
 
 ### 🎤 [艺术](yishu/index.md) · 9 束 · 3 组
@@ -132,16 +132,16 @@ flowchart TD
 | [🎤 声乐教学（Vocal）](yishu/vocal/index.md)   | 2  | 美通唱法与咽音体系（林俊卿咽音练声八步骤、嗓音科学、常见毛病纠正与每日练声清单）+ 手势辅助声乐教学（柯尔文手势、课堂五类手势、指挥基础、体态律动） |
 | [🚩 红歌教学（Hongge）](yishu/hongge/index.md)  | 1  | 红歌教学教程一束——曲谱库建设与版权合规、教学型赏析六步框架与三期曲目示范、歌谱正版获取、柯尔文手势与声乐合唱结合（完整教案·曲谱库指南·16 周路线） |
 
-### ⚙️ [技术](jishu/index.md) · 439 束 · 18 组
+### ⚙️ [技术](jishu/index.md) · 456 束 · 18 组
 
 | 分组                                               | 束数  | 说明                                                                                                         |
 | ------------------------------------------------ | --- | ---------------------------------------------------------------------------------------------------------- |
-| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 219 | 219 束按读者意图归为六大类——ecosystems 厂商社区生态（trae/anthropic/deepseek/tencent/datawhale 等 86 束）、frameworks 框架（ai-agent/langchain-ai 等 83 束）、practice 工程实践与行业洞察 16 束、products 产品工具 21 束、models 模型多模态 6 束、learning 学习教程 6 束 |
+| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 232 | 232 束按读者意图归为六大类——ecosystems 厂商社区生态（trae/anthropic/deepseek/tencent/datawhale 等 87 束）、frameworks 框架（ai-agent/langchain-ai 等 83 束）、practice 工程实践与行业洞察 20 束、products 产品工具 29 束、models 模型多模态 7 束、learning 学习教程 6 束 |
 | [📚 文档工程（document）](jishu/document/index.md)     | 110 | Sphinx · MyST · Jupyter Book · Jupyter · KaTeX 文档工程与交互式计算生态                                                |
 | [🔨 构建与包管理（build）](jishu/build/index.md)         | 15  | Conda 生态 · scikit-build · CMake · 通用开发工具（Ninja/Copier/PyInvoke/Nuitka 等）                                   |
-| [📡 通信与网络（comm）](jishu/comm/index.md)            | 16  | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析                                                               |
+| [📡 通信与网络（comm）](jishu/comm/index.md)            | 17  | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析                                                               |
 | [📦 容器生态（containers）](jishu/containers/index.md) | 15  | OCI 运行时 · 存储驱动 · Podman 工具链 · podman-py Python SDK · AI 容器配方                                                                      |
-| [🧠 机器学习（ml）](jishu/ml/index.md)                 | 10   | ONNX 标准/转换器/编译器/推理后端 · Apache TVM 深度学习编译器                                                                  |
+| [🧠 机器学习（ml）](jishu/ml/index.md)                 | 11   | ONNX 标准/转换器/编译器/推理后端 · Apache TVM 深度学习编译器 · PyTorch 张量布局（view/reshape/contiguous）                                                                  |
 | [📊 数据科学（data）](jishu/data/index.md)             | 18  | PyData 科学计算全栈——NumPy/pandas/matplotlib/NetworkX/Pillow/Plotly/Dash/PyTables/SymPy + Dolt 版本化数据库 + dh DoltHub CLI + Dolt MCP Server + DoltgreSQL + DoltHub SQL 引擎栈 + Dolt Go Driver + DumbodB + doltlite-python                   |
 | [📐 可视化与创意编程（viz）](jishu/viz/index.md)           | 5   | 3Blue1Brown 生态——ManimGL 动画引擎 · 视频场景 · 字幕工具链 · React 官网 · Anime.js×Three.js 适配器                                                     |
 | [🦀 Rust 语言核心（rust）](jishu/rust/index.md)        | 3   | rustc 编译器流水线 · Cargo 构建系统 · RFC 设计决策                                                                       |
@@ -150,7 +150,7 @@ flowchart TD
 | [💻 终端渲染（terminal）](jishu/terminal/index.md)     | 1   | Textualize 终端生态——rich/textual 源码中文教程                                                                       |
 | [🔧 开发与协作（dev）](jishu/dev/index.md)            | 5   | Git 版本控制 · GitHub 平台（Gist/Actions）· 开源实践（参与/项目准备/README 模板）· public-apis 公共 API 清单                                        |
 | [🚗 智能驾驶与无人驾驶（autonomous）](jishu/autonomous/index.md) | 4 | Autoware 安装与基础 · ROS2 概念 · DDS 与 QoS · 数据集/术语/资源生态                                            |
-| [🖥️ GUI 桌面开发（gui）](jishu/gui/index.md) | 5 | Qt/PyQt 桌面开发（Qt for Python 官方机制 · PyQt5 实战）· tkinter 标准库生态（GUI 设计 · 手册 · tkinterx 扩展库） |
+| [🖥️ GUI 桌面开发（gui）](jishu/gui/index.md) | 6 | Qt/PyQt 桌面开发（Qt for Python 官方机制 · PyQt5 实战）· tkinter 标准库生态（GUI 设计 · 手册 · tkinterx 扩展库） |
 | [🏠 物联网（IoT）](jishu/iot/index.md) | 6 | Home Assistant 源码解读 · TuyaOpen IoT SDK · 向日葵远控产品矩阵 · 贝锐生态 · 厂商与工具横向对比 · 星辰300 端侧 AI 资讯核验 |
 | [🖥️ 系统与基础设施（systems）](jishu/systems/index.md) | 2 | WSL 子系统中文教程 · PowerShell 5 困境防御 |
 | [☁️ 云厂商开放 API SDK（cloud）](jishu/cloud/index.md) | 1 | 腾讯云 Python SDK（tencentcloud-sdk-python）源码精读——TC3 签名 · 凭证提供链 · 重试熔断 · httpx 异步栈 · 代码生成产品层 |
