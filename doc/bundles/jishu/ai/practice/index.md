@@ -9,7 +9,7 @@ description: "AI 工程方法论、上下文工程、安全红队与行业趋势
 
 AI 工程方法论、上下文工程、安全红队与行业趋势研究——Token 经济与成本、免费 API 生态、Agent 工作流实践、行业研究及博文核验转化束。
 
-本类共 **19 个知识包**，分布于 **17 个生态/项目目录**。
+本类共 **18 个知识包**，分布于 **16 个生态/项目目录**。
 
 ## 束导航
 
@@ -31,7 +31,6 @@ AI 工程方法论、上下文工程、安全红队与行业趋势研究——To
 | [🗜️ 上下文优化（Context Optimization）](context-optimization/index.md) | 1 | 上下文窗口与 Token 成本优化——Headroom 压缩、LLM Token 优化全景与 Trae IDE 实战 |
 | [📝 模板驱动报告生成 Skill 设计](docx-report-skill/index.md) | 1 | 从 Word 模板 + 结构化数据确定性生成统一格式 .docx 报告的技能设计（单一职责、互斥关系） |
 | [🌐 answer-me-with-html：让 Agent 交付可视化页面](answer-me-with-html/index.md) | 1 | 公众号「开源星探」博文经 OKF v0.2 转化——Agent Skill 让模型写内容、程序做排版：九种组件、CLI 渲染可读 HTML / 3Blue1Brown 讲解视频、基准（token 6.1×/17.8× 更少）、三安装、Always-on 与勘误 E-1（操作教程，权威源 GitHub README） |
-| [🖥️ 微软 MXC：Windows 的 AI Agent 执行隔离](microsoft-mxc-agent-containment/index.md) | 1 | 腾讯科技博文经 OKF v0.2 转化（产品发布/商业分析，非源码教程）——MXC 执行隔离原理、Agent 安全动因（93%批准/致命三要素/执行隔离）、Windows 平台竞争格局；12 项 P0/P1 核验 + 名单口径勘误 |
 
 ```{toctree}
 :hidden:
@@ -53,5 +52,4 @@ planning-with-files/index
 context-optimization/index
 docx-report-skill/index
 answer-me-with-html/index
-microsoft-mxc-agent-containment/index
 ```
