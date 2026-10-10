@@ -19,7 +19,7 @@ description: "AI 与大模型应用生态——232 束按读者意图归为六�
 | [🧩 Agent 与 LLM 应用框架](frameworks/index.md) | 83 | 8 | Agent 与 LLM 应用的开发框架、运行时与代码库源码教程——以 ai-agent（54 束）与 langchain-ai（19 束）两大仓库集群为核心，辅以极简框架与分词、推理、决策模型等基础库。 |
 | [🛠️ 工程实践、方法论与行业洞察](practice/index.md) | 20 | 18 | AI 工程方法论、上下文工程、安全红队与行业趋势研究——Token 经济与成本、免费 API 生态、Agent 工作流实践、行业研究及博文核验转化束。 |
 | [📱 AI 产品与终端工具](products/index.md) | 29 | 29 | 面向终端任务的 AI 产品与工具——浏览器/移动端自动化、Agent 桌面工作台、网页数据采集、垂直创作工具、量化/翻译/CAD 等任务型产品与能力交易平台。 |
-| [🎨 模型能力与多模态](models/index.md) | 7 | 7 | 基础模型能力与多模态生成——Agent 强化学习基础设施（AReaL、Agent Lightning）、因果世界模型、实时音视频基础模型、极速音频/文生图/OCR 与生成式算法哲学。 |
+| [🎨 模型能力与多模态](models/index.md) | 8 | 8 | 基础模型能力与多模态生成——Agent 强化学习基础设施（AReaL、Agent Lightning）、因果世界模型、实时音视频基础模型、极速音频/文生图/OCR、分块 KV 缓存相位敏感性研究与生成式算法哲学。 |
 | [📚 学习路径与实战教程](learning/index.md) | 6 | 6 | 体系化学习路径与上手教程——Agent 九层认知地图、免费大模型 API 盘点与实操、书籍驱动技能构建、Skills 生态解读与 Vibe Coding 方法论。 |
 
 ```{toctree}

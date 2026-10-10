@@ -9,7 +9,7 @@ description: "基础模型能力与多模态生成——强化学习基础设施
 
 基础模型能力与多模态生成——强化学习基础设施、因果世界模型、实时音视频基础模型、极速音频/文生图/OCR 与生成式算法哲学。
 
-本类共 **7 个知识包**，分布于 **7 个生态/项目目录**。
+本类共 **8 个知识包**，分布于 **8 个生态/项目目录**。
 
 ## 束导航
 
@@ -22,6 +22,7 @@ description: "基础模型能力与多模态生成——强化学习基础设施
 | [🎵 AudioX-Turbo 极速音频生成](audiox-turbo/index.md) | 1 | Anything-to-Audio 框架——4 步极速推理、6 种任务统一与 DMD 师生蒸馏（港科大·清华·Noiz AI 联合开源） |
 | [🎨 MiniT2I 极简文生图模型](minit2i/index.md) | 1 | 何恺明团队极简像素空间文生图——三大减法（无 VAE/无 AdaLN/无私有数据）、MM-JiT 架构与范式转移启示 |
 | [🌊 Atomic Emergence 原子涌现](atomic-emergence/index.md) | 1 | 生成美学运动——p5.js 流场粒子可视化与深度学习架构涌现的算法哲学 |
+| [🔄 周期弱点：分块 KV Cache 压缩的相位敏感性](phase-sensitive-kv-cache/index.md) | 1 | 字节 Seed 发现分块 KV Cache 压缩使 DeepSeek-V4 检索保真度随相位周期起伏（最大 40.2 个百分点），并解释相位专门化机理 |
 
 ```{toctree}
 :hidden:
@@ -34,4 +35,5 @@ mainecoon/index
 audiox-turbo/index
 minit2i/index
 atomic-emergence/index
+phase-sensitive-kv-cache/index
 ```
