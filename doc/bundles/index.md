@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 597
+total_bundles: 598
 groups: 61
 domains: 9
 ---
@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **597 个知识包**，按学科逻辑分为 **9 个技术域、61 个分组**（8 个学科域 + 1 个规范锚点）。
+> 当前共 **598 个知识包**，按学科逻辑分为 **9 个技术域、61 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -136,7 +136,7 @@ flowchart TD
 
 | 分组                                               | 束数  | 说明                                                                                                         |
 | ------------------------------------------------ | --- | ---------------------------------------------------------------------------------------------------------- |
-| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 218 | 218 束按读者意图归为六大类——ecosystems 厂商社区生态（trae/anthropic/deepseek/tencent/datawhale 等 86 束）、frameworks 框架（ai-agent/langchain-ai 等 83 束）、practice 工程实践与行业洞察 16 束、products 产品工具 21 束、models 模型多模态 6 束、learning 学习教程 6 束 |
+| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 219 | 219 束按读者意图归为六大类——ecosystems 厂商社区生态（trae/anthropic/deepseek/tencent/datawhale 等 86 束）、frameworks 框架（ai-agent/langchain-ai 等 83 束）、practice 工程实践与行业洞察 16 束、products 产品工具 21 束、models 模型多模态 6 束、learning 学习教程 6 束 |
 | [📚 文档工程（document）](jishu/document/index.md)     | 110 | Sphinx · MyST · Jupyter Book · Jupyter · KaTeX 文档工程与交互式计算生态                                                |
 | [🔨 构建与包管理（build）](jishu/build/index.md)         | 15  | Conda 生态 · scikit-build · CMake · 通用开发工具（Ninja/Copier/PyInvoke/Nuitka 等）                                   |
 | [📡 通信与网络（comm）](jishu/comm/index.md)            | 16  | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析                                                               |
