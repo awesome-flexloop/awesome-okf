@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🌱 个人成长与自我提升"
 description: "个人成长与自我提升主题的知识包——收录综合方法论与实操教程（区别于 relationships 分组的经典著作解读）：《女性魅力与情商》魅力科学 × 情商理论 × 可执行实操的整合框架（81 条事实三级可信度溯源）；《男性魅力与情商》男性气质研究 × 情商能力模型 × 男性圈批判的整合框架（106 条事实四级可信度溯源）；《高性价比人生指南》HowToLiveBetter 开源循证生活决策手册精读（89 条事实、19 项 P0 独立核验+本地全书审计）；榜样学习专题四束（陶行知生活教育与每日四问·79 条事实 / 游本昌济世为公·90 条事实 / 胡歌功夫与重建·85 条事实 / 三人关联洞察枢纽包·真问题真需求真目标·品质技能身份·正面解读师三框架）；「人的进化六阶段真需求」笔记提纲教程（情绪内耗→联合创造六阶链·教会检验·实事求是合一底座，36 条三层事实，出处 flagged/draft）、微信博文转化的行为设计教程（确定性误区×福格行为模型 B=MAP 转述勘误×提示与遗忘机制，30 条事实，福格模型已独立溯源、应用偏差显式勘误，行业声明降级，商业转化已披露，draft/单源）"
-total_bundles: 13
+total_bundles: 14
 ---
 
 # 🌱 个人成长与自我提升
@@ -27,6 +27,7 @@ total_bundles: 13
 | [wechat-presence-joy-meditation](wechat-presence-joy-meditation/index.md) | 3+2 | 🧘 存在性的快乐·醒后冥想愉悦体验三层解读（微信博文转化，stable）——33 条事实双份登记、6 项核验零勘误（3✅/2⚠️/1ℹ️）：群友两年静坐后醒转期自发柔软温柔爱与温暖体感；pīti/sukha 现象学相容但不符禅那安住判准、放松反应平行解释不归因、半醒过渡期时点相关、"内在阴阳融合"系 AI 生成非传统术语；附三层语言模型、冥想不良反应就医边界与非医疗声明 |
 | [wechat-public-expression-lift](wechat-public-expression-lift/index.md) | 3+3 | 📰 普通人的公开表达（微信博文转化，draft，单源/flagged）——28 条事实双份登记、10 项对抗审查：可发现性瓶颈、说（同步在场）与写（异步复用）的分发结构差异、写作借平台/他人/读者三种力、从"写我"到"写对别人有用的我"；自述月入 5000→5 万与 2000+/50+ 人数全部 flagged 不可核验，识别幸存者偏差与文末获客漏斗，不构成变现承诺、不推荐任何付费产品 |
 | [wechat-certainty-fogg-prompt](wechat-certainty-fogg-prompt/index.md) | 3+3 | 📰 确定性误区与福格行为模型（微信博文转化，draft，单源/flagged）——30 条事实双份登记、9 项对抗审查："100% 确定才行动"的刹车效应、福格模型 B=MAP 完整框架与源文转述勘误（Fogg"缩小行为"vs 作者"能力无法快速提升"）、提示与遗忘机制；行业声明（教师缩招/编制转合同/公务员竞争翻倍/AI 裁员）全部降级不可核验，文末「行动实验室」商业转化已披露，非行为效果承诺、不推荐任何付费产品 |
+| [guard-quality-life](guard-quality-life/index.md) | 7+2 | 🌈 守护品质生活生活方式方案库（自有主题整合，stable）——以五要素（目的/步骤/成本收益/证据级·禁忌边界）组织 11 域可执行建议（家居/健康/饮食/睡眠/效率/财务/关系/心理/出行/数字生活/安全），证据分层 A·B·C（官方通识/通用常识/经验优选）、46 条事实双份登记、官方通识 P0 核验；配套 FastAPI 变现 MVP 网站 |
 
 ## 阅读路径
 
@@ -44,6 +45,7 @@ total_bundles: 13
 🧘 wechat-presence-joy-meditation 现象还原（醒转期柔软/温暖/爱） → 三套参照定位（pīti/sukha·放松反应·半醒过渡期） → 读者边界与冥想安全线（stable，非医疗）
 📰 wechat-public-expression-lift 可发现性瓶颈 → 说vs写的分发结构 → 写作三种借力 → 写"有用的我" → 幸存者偏差与获客漏斗识别（draft，单源/flagged，非变现承诺）
 📰 wechat-certainty-fogg-prompt 确定性误区（小实验替代大承诺） → 福格模型 B=MAP 三要素 → 源文转述勘误（缩小行为/锚点提示/庆祝） → 提示与遗忘的可靠性设计（draft，单源/flagged，非行为效果承诺）
+🌈 guard-quality-life 框架层（五要素/证据分级） → 11 域总览 → 分域可执行方案（家居/健康/效率/财务关系心理） → 使用与迁移（评估任意建议 + 网站在线检索）
 ```
 
 > 第三束的方法论链路与前两束不同：how-to-live-better 是**开源项目多信源核验转化**（R 事实采集与 P0 核验 → I 三层拆分 → E 信源先行 → V 对抗审查），引用其条目数字时应以包内核验报告为准。
@@ -72,4 +74,5 @@ naval-learn-build-link/index
 wechat-presence-joy-meditation/index
 wechat-public-expression-lift/index
 wechat-certainty-fogg-prompt/index
+guard-quality-life/index
 ```
