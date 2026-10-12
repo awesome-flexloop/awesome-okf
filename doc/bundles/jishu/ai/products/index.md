@@ -9,7 +9,7 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 
 面向终端任务的 AI 产品与工具——浏览器/移动端自动化、Agent 桌面工作台、网页数据采集、垂直创作工具、量化/翻译/CAD 等任务型产品与能力交易平台。
 
-本类共 **29 个知识包**，分布于 **29 个生态/项目目录**。
+本类共 **30 个知识包**，分布于 **30 个生态/项目目录**。
 
 ## 束导航
 
@@ -31,6 +31,7 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 | [🐙 Octop 腾讯云本地 AI 工作空间](octop/index.md) | 1 | 腾讯云开源（MIT）自托管多用户多 Agent 平台——单进程 + Harness 四组件、AI 专家团队与长期记忆、RAG 知识库、Browser/Terminal/远程桌面/ACP 工具与多渠道接入，含安装实操（微信博文经官方核验 17✅/3⚠️/0❌） |
 | [🎬 OpenCreator 本地优先创作者 AI 工作台](opencreator/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——开源（Apache-2.0）本地优先创作者工作台（前身 KrillinAI）：以 Codex CLI 为 Agent 执行引擎、10 可用 + 2 开发中创作工具（视频翻译 14 源/101 语言为老本行）、双模式状态机与本地数据纪律（18 项官方核验 18✅/5⚠️/1❌） |
 | [🌏 Rainman Translate 图书翻译](rainman-translate/index.md) | 1 | 图书翻译工具——核心概念、安装、使用、局限性与 FAQ（内容翻译方向的 Agent 工具） |
+| [🔬 REA Reverse Engineer Anything（统一 MCP 契约的本地逆向编排器）](rea/index.md) | 1 | npm 包 rea-agents v6.4.0（MIT）——不自己反编译的适配编排层：把 Ghidra/IDA/Hopper/JADX/EVM/WASM/.NET/固件/网站/进程等用户自备逆向工具经 Provider 适配器接入统一 MCP 契约（单 MCP 服务 io.github.morluto/rea、100+ 契约化工具、129 CLI 命令），含八大目标域工具矩阵与 CLI/MCP 双入口实操 |
 | [📽️ LibTV AI 短剧创作工具](libtv-shortdrama/index.md) | 1 | 以按钮替代提示词的设计哲学——人像/情绪调节、虚拟角色、脚本六步工作流与 3D 导演台 |
 | [🚌 AITokenBus Token 共享与交换平台](aitokenbus/index.md) | 1 | 独立开发者自宣上线的 Token 共享/交换平台核验——共享池分包/Token 市场/TC 积分/免费矿池/GPU 贡献与请求路由；功能有实现但供给薄弱、无备案主体与协议（产品自述资讯，非操作教程） |
 | [🛒 UUMit A2A 能力交易平台](uumit-a2a-marketplace/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——UUMit（小龙人）能力网络平台事实、双边市场机制、A2A 交易层叙事与冷启动现实（第三方 5 天负 ROI 实测、厂商自述数字甄别、仿冒站提示） |
@@ -67,6 +68,7 @@ quantdinger/index
 octop/index
 opencreator/index
 rainman-translate/index
+rea/index
 libtv-shortdrama/index
 aitokenbus/index
 uumit-a2a-marketplace/index
