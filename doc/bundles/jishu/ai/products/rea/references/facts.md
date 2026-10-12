@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: Reference
 title: "REA 源码事实清单（facts）"
-description: "REA rea-agents v6.4.0（main@eaf88aca）源码与官方文档的编号事实登记 F-001~F-131：产品身份、CLI 层、MCP 契约层、Provider 适配器、分析目标域、关键领域类型，及 docs/ 全量文档深层的 JavaScript/Native/专项 Ghidra/平台/工程事实"
+description: "REA rea-agents v6.4.0（main@eaf88aca）源码与官方文档的编号事实登记 F-001~F-135：产品身份、CLI 层、MCP 契约层、Provider 适配器、分析目标域、关键领域类型，docs/ 全量文档深层的 JavaScript/Native/专项 Ghidra/平台/工程事实，及 README_zh 的 showcase 案例/前置依赖/更新机制/运行时权限口径"
 tags: [rea, facts, mcp, reverse-engineering, source-code]
 generated:
   by: source-code-to-okf-wiki:R
@@ -16,12 +16,14 @@ sources:
     url: "https://rea.tools/zh-CN/"
   - id: docs-full
     url: "file" # 本地官方文档全量：external/dao/rea/docs/（49 个 .md，F-067~F-131 来源）
+  - id: readme-zh
+    url: "file" # 本地 README 简体中文版：external/dao/rea/README_zh.md（F-132~F-135 来源）
 ---
 
 # REA 源码事实清单（facts.md）
 
 > **信源**：本地源码 `external/dao/rea`（固定 commit `eaf88aca`，npm 包 `rea-agents` v6.4.0，MIT）+ 官方文档 `docs/`。所有文件名/命令名/工具名称保留英文原文；断言为客观描述，无推断词。
-> **F-001~F-066** 基于源码 `src/` 与 `docs/` 目标域概述（提取于 2026-10-12 09:30）；**F-067 起**为 2026-10-12 docs 全量深层扩展（覆盖 `docs/` 全部 49 个 `.md` 文件，含 JS/Web、Native/Ghidra 专项、平台、工程与管理文档），来源行号为各文档文件相对行号。
+> **F-001~F-066** 基于源码 `src/` 与 `docs/` 目标域概述（提取于 2026-10-12 09:30）；**F-067 起**为 2026-10-12 docs 全量深层扩展（覆盖 `docs/` 全部 49 个 `.md` 文件，含 JS/Web、Native/Ghidra 专项、平台、工程与管理文档），来源行号为各文档文件相对行号；**F-132 起**为 README_zh.md（README 简体中文版）补充扩展（官方 showcase 案例、前置依赖聚合、更新机制、运行时权限口径）。
 > **计数纪律**：凡「X 个」数量断言均标注计数方法与独立 Grep 输出数字，实施者与独立审查者可复跑。四条核心计数已经实施者独立复核：CLI 顶层命令 129、TOOL_CONTRACTS spread 24 组、官方桥接工具 38、`*ToolContracts.ts` 中 `name:` 工具名 100 处/21 文件。
 
 ## A. 产品身份
@@ -193,3 +195,12 @@ sources:
 - **F-129** 重建就绪（reconstruction-readiness）共 9 阶段：`discover-classify`/`diagnose-environment`/`declare-request`/`static-analysis`/`reactive-scenarios`/`compare-authority-candidate`/`preserve-contradictions`/`verify-reconstruction-closure`/`export-replay`。来源：`reconstruction-readiness.md:35-43`。
 - **F-130** 义务台账（reconstruction-obligation-ledgers）：`build_reconstruction_obligation_ledger`（CLI `rea build-reconstruction-obligation-ledger`）接受含 `artifacts`/`providers`/`environments`/`scenarios`/`captures`/`unknowns`/`records` 数组的 `evidence_bundle`；结果含 `ledger_id`/`closure_digest`。来源：`reconstruction-obligation-ledgers.md:7,27,323`。
 - **F-131** 义务台账 `manifest` 对象含 `bindings`/`contradictions` 数组；`required_case_kinds` 数组可含 `positive`/`negative`/`malformed`/`cancellation`；`reviewed_obligations` 含 `obligation_id`/`obligation_version`/`title`/`application_layer`/`family` 字段。来源：`reconstruction-obligation-ledgers.md:39,62,74`。
+
+## O. README_zh 补充（showcase 案例 / 前置依赖 / 更新机制 / 运行时口径）
+
+> 本节事实来自 `README_zh.md`（README 简体中文版），与 docs/ 全量同 commit `eaf88aca`。行号为 README_zh.md 各文档文件相对行号；英文目标/工具名保留原文。README 的「能力总表」绝大部分目标域细节已由 docs 深挖覆盖（F-067~F-131），本节仅登记 README_zh 独有的、facts 未覆盖的新增点。
+
+- **F-132** 官方 showcase 案例共三例（README_zh.md 第五节）：① **DX-Ball**——沿声音调用追踪到按位置计算声像的辅助函数，检查指令、将不完整伪代码转为 C；重建结果通过 **3,205 个**原始 x86 测试用例、复现编译后函数的全部 **63 个**字节，重建仓库 `github.com/N0zoM1z0/dx-ball`。② **Notion**——沿渲染进程剪贴板 API → preload → IPC → 主进程追踪 Electron 剪贴板桥，并检查富格式剪贴板数据。③ **TH04**——检查原始 PC-98 游戏 **16 位**指令，恢复固定角度/瞄准角度计算，重建 C++ 并与当年编译器输出对比，重建仓库 `github.com/N0zoM1z0/th04`。来源：`README_zh.md:161-181`。
+- **F-133** README 能力总表补充 docs 深挖细分的前置依赖聚合口径：离线 ELF 布局与已记录 Linux 崩溃均需 Linux x64 上「调用方提供的 pwntools」，记录崩溃另可选 GDB/pwndbg；已保存网络捕获需 HAR 输入，原生 mitmproxy 捕获需 Linux 上的 `mitmdump`。来源：`README_zh.md:136,138,141`。
+- **F-134** 更新机制两条路径：npm 全局安装的 CLI 用 `rea update`；用 `npx` 时通过 `npx rea-agents@latest setup` 更新智能体注册与 skill（含检查设置变更并重启智能体）；单次 CLI 操作可用 `npx rea-agents@latest <command>`。来源：`README_zh.md:99-117`。
+- **F-135** 运行时安全口径（README 明示）：静态 JavaScript 与 .NET 检查读取提供的文件、**不运行应用**；运行时捕获（进程/浏览器/运行时观测）会**以你的用户权限**运行目标或与之交互。来源：`README_zh.md:151`。

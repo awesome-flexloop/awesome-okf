@@ -1,5 +1,13 @@
 # REA 知识包更新日志
 
+## 2026-10-12（第三轮：README_zh.md 增量扩展）
+
+- 将 `external/dao/rea/README_zh.md`（官方 README 简体中文版，同 commit `eaf88aca`，287 行）纳入信源，登记 `readme-zh`（source-manifest 信源数六→七）。
+- 事实清单新增 F-132~F-135（共 4 条，新增 O 章）：F-132 官方 showcase 三案例（DX-Ball 声像计算 / Notion Electron 剪贴板桥 / TH04 DOS 环形子弹）、F-133 能力总表前置依赖聚合、F-134 npm 更新机制、F-135 运行时安全口径。
+- 新增实操示例 1 篇（examples/showcase-cases-example.md，三案例详解 + CLI 初探），examples/index 追加该行与 toctree。
+- 同步更新 bundle 根 index（sources 新增 `readme-zh`、facts 计数 F-001~F-135、阅读路径补 showcase 示例、核心事实速查补 showcase/运行时口径两行）。
+- 遵循 §6.5 多轮增量扩展：新增事实续编号，不重排/不重写前两轮已验证内容。
+
 ## 2026-10-12（第二轮：docs/ 全量深度重建）
 
 - 将 `external/dao/rea/docs/`（固定 commit `eaf88aca`）视为完整信源做全量深挖，覆盖全部 49 个 `.md`（登记信源 `docs-full`）。

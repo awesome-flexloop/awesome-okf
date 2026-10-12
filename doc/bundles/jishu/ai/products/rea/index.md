@@ -14,12 +14,14 @@ sources:
     url: "https://rea.tools/zh-CN/"
   - id: docs-full
     url: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a/docs @ 49 个 .md"
+  - id: readme-zh
+    url: "https://github.com/morluto/rea/blob/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a/README_zh.md"
 ---
 
 # REA：Reverse Engineer Anything
 
 > **类型**：可安装工具包（含可照做 examples/；命令经源码/官方文档核对，未在本机实跑）
-> **信源**：本地源码 `external/dao/rea`（npm 包 `rea-agents` v6.4.0，MIT，固定 commit `eaf88aca`）+ 官方文档 `rea.tools` + `docs/` 全量 49 个 `.md`（facts.md 登记 F-001~F-131）
+> **信源**：本地源码 `external/dao/rea`（npm 包 `rea-agents` v6.4.0，MIT，固定 commit `eaf88aca`）+ 官方文档 `rea.tools` + `docs/` 全量 49 个 `.md` + `README_zh.md`（facts.md 登记 F-001~F-135）
 > **口径**：事实唯一来源为 `references/facts.md`；动态数字（Star 等）不作为规范事实，仅按快照登记（见 [references/source-manifest.md](references/source-manifest.md)）
 
 ## 本文概要
@@ -54,6 +56,7 @@ sources:
 
 11. [CLI 与 MCP 使用示例](examples/cli-and-mcp-usage.md) / [分析工具安装与 Provider 接入](examples/provider-setup.md)——可照做流程
 12. [JS 应用重建示例](examples/js-reconstruction-example.md) / [平台深挖示例](examples/platform-deep-example.md) / [重建工程工作流示例](examples/reconstruction-workflow-example.md)——对照 docs 可复现路径
+13. [官方 showcase 逆向重建案例](examples/showcase-cases-example.md)——DX-Ball / Notion / TH04 三类代表性逆向重建（F-132）
 
 ## 核心事实速查
 
@@ -72,6 +75,8 @@ sources:
 | 专项 Ghidra | 逐格式/逐 ABI 适配矩阵 + 版本钉扎（DOS/MIPS32r2/PSP/NativeAOT/Windows，F-088~F-096） |
 | 平台域深挖 | Android jadx/ADB、.NET Managed、固件 Binwalk、Apple/Electron/HarmonyOS、EVM/WASM（F-103~F-118） |
 | 工程工作流 | 9 阶段可审计重建 + 义务台账 + closure_digest（F-125~F-131） |
+| 官方 showcase | DX-Ball 声像计算 / Notion Electron 剪贴板桥 / TH04 DOS 环形子弹恢复（F-132） |
+| 运行时口径 | 离线 ELF/崩溃需 Linux x64+pwntools；网络捕获需 HAR+mitmdump；静态分析不运行应用（F-133/135） |
 
 ## ⚠️ 阅读前必知的三条口径要点
 
@@ -89,7 +94,7 @@ sources:
 
 ## 信源与可信度
 
-- 事实清单（F-001~F-131）：[references/facts.md](references/facts.md)
+- 事实清单（F-001~F-135）：[references/facts.md](references/facts.md)
 - 架构洞察与知识地图：[references/insights.md](references/insights.md)
 - 信源登记与公开性预检：[references/source-manifest.md](references/source-manifest.md)
 
