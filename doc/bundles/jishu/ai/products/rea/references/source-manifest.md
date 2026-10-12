@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: Reference
 title: "REA 信源登记（source-manifest）"
-description: "REA（Reverse Engineer Anything）五个信源的 URL、归属、公开性预检、访问时点、版本固定与关系核实结论"
+description: "REA（Reverse Engineer Anything）六个信源的 URL、归属、公开性预检、访问时点、版本固定与关系核实结论"
 tags: [rea, source-manifest, public-gate, mcp, reverse-engineering]
 generated:
   by: source-code-to-okf-wiki:R
@@ -20,11 +20,13 @@ sources:
     url: "https://rea.tools/zh-CN/"
   - id: local-source
     url: "file" # 本地 vendor 镜像：external/dao/rea（主仓库 morluto/rea 的本地副本）
+  - id: docs-full
+    url: "file" # 本地官方文档全量：external/dao/rea/docs/
 ---
 
 # REA 信源登记（source-manifest）
 
-> 公开性预检：本 bundle 的四个网络信源均为公开内容（公开展示页 / 公开文章 / 公开仓库 / 公开文档站），无登录墙、无验证码、无邀请码，可通过公开 URL 直接访问，符合公有内容落地标准。本地源码信源为 `external/dao/rea`（MIT 许可），可追溯、可复现。未复制任何页面全文，仅在 facts.md 中登记可验证的结构事实、命令与能力声明。
+> 公开性预检：本 bundle 的四个网络信源均为公开内容（公开展示页 / 公开文章 / 公开仓库 / 公开文档站），无登录墙、无验证码、无邀请码，可通过公开 URL 直接访问，符合公有内容落地标准。本地源码信源为 `external/dao/rea`（MIT 许可）、`external/dao/rea/docs/`（官方文档源，与源码同 commit `eaf88aca`），可追溯、可复现。未复制任何页面全文，仅在 facts.md 中登记可验证的结构事实、命令与能力声明。
 > 采集通道：WebFetch 解析公开 URL + 本地源码读取（2026-10-12）。
 
 ## 关系核实结论（spec 中 Open Questions）
@@ -45,6 +47,7 @@ sources:
 | rea-run | 教学/整理站 | rea.run 社区指南（中文） | https://rea.run/zh/ | ylwl1997（第三方，非 REA 官方） | 2026-10-12 | ✅ 公开 | 站点首页自述「非官方中英双语站点」，操作为自有教学实验（GitHub Actions 演示 / Codespaces） | 二手 | collected |
 | rea-research-repo | GitHub 调研仓库 | REA 深度技术调研 | https://github.com/ringozzt/rea-research | ringozzt（第三方研究者） | 2026-10-12 | ✅ 公开 | README 自述「本报告为独立第三方调研，与原项目无关」；2026-10-11 调研 | 二手 | collected |
 | zhihu-article | 知乎专栏文章 | 前端 Hardy ·《GitHub 31.2K Star！AI开始搞逆向工程了？》 | https://zhuanlan.zhihu.com/p/2091916182064456398 | 前端Hardy（知乎用户 wang-yan-hui-35-43） | 2026-10-12 | ✅ 公开 | 文章正文署名与作者主页；文章发布于 2026-10-09 | 二手 | collected |
+| docs-full | 本地官方文档全量 | REA 官方文档源码 `docs/`（49 个 `.md`，VitePress 站源） | external/dao/rea/docs/（同步于上游 `morluto/rea @ eaf88aca`） | morluto（REA 官方） | 2026-10-12 | ✅ 公开 | 与本地源码同 commit `eaf88aca`，为官方 rea.tools 文档站源文件 | 一手 | verified |
 
 ## 本地源码版本固定（G0 信源稳定性门）
 
@@ -56,6 +59,7 @@ sources:
 - **固定提交**：**`eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a`**（2026-10-12 捕获）
 - **不锚定浮动 `main` 名**：本 bundle 所有对本地源码的引用以 commit hash `eaf88aca` 为追溯固定点；若上游 main 前进，本 bundle 的 facts 仍指向该固定提交可复现。
 - **G0 判定**：本地源码位于 `external/`（非 git submodule、非临时目录），为**可追溯副本**；以 commit hash 登记即可满足信源稳定性门。
+- **docs 文档全量**：`external/dao/rea/docs/`（49 个 `.md` + VitePress 配置 + `releases/6.4.0.contributions.json`）与本地源码同 commit `eaf88aca`，为官方文档站（rea.tools）源文件；F-067~F-131 全部引用该目录文件名+行号，行号相对于各文档文件，可复现（同 commit 下逐行核对）。
 
 ## 访问时点与动态口径
 

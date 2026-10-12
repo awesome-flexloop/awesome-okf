@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: Reference
 title: "REA 架构洞察（insights）"
-description: "REA（Reverse Engineer Anything）rea-agents v6.4.0 的 4 个核心架构洞察（陈述+证据+反常识+行动）与知识地图/学习路径，用于指引 concepts 文档分组与覆盖事实"
+description: "REA（Reverse Engineer Anything）rea-agents v6.4.0 的 6 个核心架构洞察（陈述+证据+反常识+行动）与知识地图/学习路径，用于指引 concepts 文档分组与覆盖事实"
 tags: [rea, insights, mcp, reverse-engineering, knowledge-map]
 generated:
   by: source-code-to-okf-wiki:I
@@ -20,8 +20,9 @@ sources:
 
 # REA 架构洞察（insights.md）
 
-> I 阶段分析。基于 R 阶段事实清单 F-001~F-066（`references/facts.md`）。四元组结构：**陈述 → 证据（引用具体 F-xxx）→ 反常识 → 行动**。
+> I 阶段分析。基于 R 阶段事实清单 F-001~F-131（`references/facts.md`）。四元组结构：**陈述 → 证据（引用具体 F-xxx）→ 反常识 → 行动**。
 > 信源：本地源码 `external/dao/rea`（固定 commit `eaf88aca`，npm 包 `rea-agents` v6.4.0）+ 官方文档 `rea.tools` + 补充信源 `rea.run`。
+> **范围说明**：洞察一~四于 2026-10-12 首轮生成（依据 F-001~F-066）；同日 docs/ 全量深层扩展后（F-067~F-131），在既有论述上追加洞察五（专项工具适配深度与版本钉扎）与洞察六（重建工程工作流），并更新知识地图。
 
 > **已沉淀模式**：洞察一（统一契约工具编排层）及其支撑机制（洞察二契约单一事实源、洞察三前端投影）已于 2026-10-12 独立化为方法论模式库正式条目 [统一契约工具编排层](../../../../../../../../../docs/retrospective/patterns/methodology-patterns/product-growth/unified-contract-tool-orchestration-layer.md)（L1-draft）。本页保留为**案例版**（含具体 F-xxx 证据与八大目标域明细）；跨场景可复用版见模式库条目。
 
@@ -108,6 +109,45 @@ sources:
 
 ---
 
+## 洞察五：对「分析工具」不是浅接一层，而是做深——专项 Ghidra 呈现逐格式/逐 ABI 的深度适配矩阵与版本钉扎
+
+**陈述**：洞察一指出 REA 是「适配编排器」、不绑定分析引擎。docs 全量深层扩展进一步证明：REA 对每个被适配工具的接入**深度可观**，尤其 Ghidra 体现为「逐文件格式/逐架构/逐 ABI」的专项支撑矩阵——有 DOS MZ/COM 专项（`MzLoader` + `x86:LE:16:Real Mode`，F-090）、MIPS32r2/FPMips16/semi-float 专项（F-091/F-092）、PSP Allegrex 专项（`PspElfLoader` + `Allegrex:LE:32:default`，F-093）、.NET 8 NativeAOT（Washi1337/ghidra-nativeaot 上游分支，F-094）、Windows x64 P0 只读（25 个只读操作，F-096）。同时 IDA/JEB/Apktool/JADX 各有文档化的版本与 endpoint（F-097~F-102）。
+
+**证据**：
+- F-090：DOS 用 `MzLoader`/`BinaryLoader`、语言 `x86:LE:16:Real Mode`、COM offset zero→`1000:0100`。
+- F-091/F-092：MIPS 要求 `EF_MIPS_ARCH_32R2`、拒 `EF_MIPS_FP64`/`EF_MIPS_NAN2008`，soft-float 原型策略键 `o32-soft-float-prototype-v1`。
+- F-093：PSP 用 PSPDEV v20261001 + Ghidra 12.1.3 + extension v21.4 + `PspElfLoader`。
+- F-094：NativeAOT 钉到上游 commit `effeb734…`，交叉核对 .NET MethodTable.h commit `a3b2d403…`。
+- F-096：Windows P0 提供 25 个只读操作、MCP `timeoutMs` 默认 300000。
+- F-097~F-102：IDA 钉上游 `1.4.0 legacy tools`、JEB 默认 `127.0.0.1:8425/mcp`、Apktool 2.7.0 等验证版本。
+
+**反常识**：以为 REA 对工具只是「调用一下」是低估——它对排他性工具做了**多轮验证环境**（版本、语言、loader、上游 commit 全部文档化钉死，既能 `npm run verify:ghidra:windows` 等回归，又能防止上游行为漂移破坏解析）。这种「版本钉扎 + 专项 loader + 逐 ABI」的深度，是 REA 能稳定跨格式的关键，也是它比直接让 agent 调 Ghidra 脚本更有价值的原因之一——它把「血泪踩坑」沉淀为可复现的固化配置。
+
+**行动**：
+- 想给某个排他性格式（DOS/PSP/NativeAOT…）加支持时，参照既有专项文档模式：固定 loader + 语言/compiler + 上游 commit + `verify` 命令 + 资源限制，四件套齐备才算「适配完成」。
+- 升级被适配工具（如 Ghidra 12.1.x）前，注意 REA 的专项文档与 `npm run verify:*` 是否仍通过——版本进度可能导致专项语言/loader 失配。
+
+---
+
+## 洞察六：REA 正从「一次性逆向工具」走向「可审计的重建工程工作流」——有就绪阶段、义务台账与闭包摘要
+
+**陈述**：docs 深层揭示了 REA 文档中大量「工程过程」性质的能力：重建就绪分 **9 阶段**（`discover-classify`→`export-replay`，F-129）；有「重建义务台账」`build_reconstruction_obligation_ledger`，接受含 `artifacts/providers/environments/scenarios/captures/unknowns/records` 的 `evidence_bundle`，输出 `ledger_id`/`closure_digest`（F-130），台账里的 `required_case_kinds` 可含 `positive/negative/malformed/cancellation`（F-131）；MCP 契约输入 schema 有 `compact`/`full` 分档（`REA_MCP_INPUT_SCHEMA_PROFILE`，compact 预算 13,312 字节，F-120）；6.2 迁移中 `evidence` wrapper 移除、`analysis_profile` 变必填（F-126）；发布用 Release Please `always-bump-minor`（F-125）。这些共同构成一套「声明式重建请求 → 分阶段执行 → 义务核对 → 闭包摘要 → 可重放」的工程闭环。
+
+**证据**：
+- F-129：reconstruction-readiness 9 阶段命名（verify-reconstruction-closure / export-replay 等）。
+- F-130/F-131：义务台账输入输出 schema、`required_case_kinds` 多态、binding/contradiction 清单。
+- F-120：`REA_MCP_INPUT_SCHEMA_PROFILE` compact/full 分档 + 字节预算。
+- F-126：6.2 迁移固化 `analysis_profile`。
+- F-125：`always-bump-minor` 保证每次新能力都上 minor，契约演进节奏统一。
+
+**反常识**：把一个「逆向 CLI」文档写得像**工程规范**（阶段、义务、闭包、迁移）是很反直觉的——多数逆向工具只给「命令参考」。REA 的文档层明显借鉴了「重建即工程」的思维：它把「逆向结果是否可信」形式化为可检查的**义务/证据/闭包**，让 agent 知道「做到哪一步算完成、什么算证明、什么仍未解决」。这与洞察二「契约单一事实源」一脉相承：不止工具签名是契约，**重建过程本身也是契约**。
+
+**行动**：
+- 把 REA 用于「理解一个应用」时，建议按 9 阶段（F-129）走一个完整的 `verify-reconstruction-closure`——比随意调几条 inspect 命令更能得到一个可审计的、有 `closure_digest` 的结论。
+- 长流程分析优先用 `evidence_bundle` + `reconstruction-obligation-ledger`（F-130）收口，把「未知项」「矛盾」显式留痕，而不是只拿一条 `binary_overview` 结果当结论。
+
+---
+
 ## 知识地图
 
 ### 概念文档分组规划
@@ -120,8 +160,12 @@ sources:
 | 04 | 04-analysis-domains.md | 支持的分析目标域与工具矩阵 | F-043~F-056 | 03 |
 | 05 | 05-cli-and-setup.md | 安装、setup 与 CLI/MCP 双入口 | F-010~F-018, F-056 | 01, 02 |
 | 06 | 06-domain-types-and-evidence.md | 领域类型与证据模型 | F-057~F-066, F-058, F-043 | 02, 03 |
+| 07 | 07-js-web-domains.md | JavaScript 应用图与 Web/浏览器域 | F-067~F-082 | 04 |
+| 08 | 08-native-ghidra-specialty.md | Native 与专项 Ghidra 深度适配 | F-083~F-096 | 03 |
+| 09 | 09-platform-domains-deep.md | 平台分析域深层（Android/ADB/.NET/固件/Apple/Electron/Harmony） | F-103~F-118, F-097~F-102 | 03, 04 |
+| 10 | 10-engineering-workflow.md | 工程与管理/重建工作流 | F-119~F-131 | 06 |
 
-> **说明**：concepts 文档以「Facts 聚合 + 学习路径」为依据划分，覆盖是什么（01）、怎么工作（02/03/06）、能分析什么（04）、怎么用（05）。
+> **说明**：concepts 文档以「Facts 聚合 + 学习路径」为依据划分，覆盖是什么（01）、怎么工作（02/03/06）、能分析什么（04/07/08/09）、怎么用（05）、工程过程（10）。文档 07~10 为 2026-10-12 docs/ 全量深层扩展后追加，吸收 F-067~F-131（docs 深层事实）；01~06 覆盖范围保持不变。
 
 ### 学习路径
 
@@ -133,6 +177,10 @@ sources:
    - 按目标域（native/EVM/WASM/Android/.NET/固件/网站/进程）查工具矩阵与边界。
 4. **实践（理解怎么用）**：05
    - 最后看安装、setup 与 CLI/MCP 双入口，把前面理解落地成一条实际可跑的流程。
+5. **深层（docs 全量扩展）**：07 → 08 → 09
+   - 分别深入 JavaScript/Web 域、Native/专项 Ghidra、平台分析域的精确工具/版本/限制/环境变量细节；08 与 09 需以 03/04 为基础。
+6. **工程（理解过程可信度）**：10
+   - 掌握重建就绪 9 阶段、义务台账、evidence_bundle 收口与 MCP profile 机制，把「分析」提升为「可审计重建」。
 
 ### 示例文档规划
 
@@ -140,3 +188,6 @@ sources:
 |--------|------|---------|
 | cli-and-mcp-usage.md | CLI 与 MCP 使用示例 | `npx rea-agents setup`、`rea analyze <path>`、`rea inspect-decompile-*` 实践 + 接入 agent 的 MCP 配置要点 |
 | provider-setup.md | 分析工具安装与 Provider 接入 | Ghidra/IDA/Hopper/JADX/ADB/EVM/WASM/固件工具链的本地准备与 doctor 校验 |
+| js-reconstruction-example.md | JavaScript 应用重建示例 | `analyze_javascript_application` + 应用图 + 运行时协同 + 完整性策略的实际走查（F-067~F-076） |
+| platform-deep-example.md | 平台深层分析示例 | Apple bundle / Electron / HarmonyOS / Android / 固件 的代表性 CLI 命令与限制（F-103~F-118） |
+| reconstruction-workflow-example.md | 重建工程工作流示例 | 按 9 阶段走一个 `evidence_bundle` + 义务台账 + `closure_digest` 的完整流程（F-129~F-131） |

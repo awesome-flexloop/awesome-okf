@@ -12,12 +12,14 @@ sources:
     url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
   - id: rea-tools-doc
     url: "https://rea.tools/zh-CN/"
+  - id: docs-full
+    url: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a/docs @ 49 个 .md"
 ---
 
 # REA：Reverse Engineer Anything
 
 > **类型**：可安装工具包（含可照做 examples/；命令经源码/官方文档核对，未在本机实跑）
-> **信源**：本地源码 `external/dao/rea`（npm 包 `rea-agents` v6.4.0，MIT，固定 commit `eaf88aca`）+ 官方文档 `rea.tools`（facts.md 登记 F-001~F-066）
+> **信源**：本地源码 `external/dao/rea`（npm 包 `rea-agents` v6.4.0，MIT，固定 commit `eaf88aca`）+ 官方文档 `rea.tools` + `docs/` 全量 49 个 `.md`（facts.md 登记 F-001~F-131）
 > **口径**：事实唯一来源为 `references/facts.md`；动态数字（Star 等）不作为规范事实，仅按快照登记（见 [references/source-manifest.md](references/source-manifest.md)）
 
 ## 本文概要
@@ -41,9 +43,17 @@ sources:
 5. [支持的分析目标域与工具矩阵](concepts/04-analysis-domains.md)——八大目标域边界与要求
 6. [安装、setup 与 CLI/MCP 双入口](concepts/05-cli-and-setup.md)——安装一次、两端同源
 
+**深入指定域**
+
+7. [JavaScript / Web 浏览器域](concepts/07-js-web-domains.md)——应用图、模块追溯、浏览器 ADB/CDP 捕获
+8. [Native 二进制与专项 Ghidra](concepts/08-native-ghidra-specialty.md)——Mach-O/dylib、逐格式 Ghidra 适配矩阵
+9. [平台分析域深挖](concepts/09-platform-domains-deep.md)——Android/.NET/固件/Apple/Electron/HarmonyOS
+10. [从逆向工具到可审计重建工程](concepts/10-engineering-workflow.md)——9 阶段工作流与义务台账
+
 **再动手实操**
 
-7. [CLI 与 MCP 使用示例](examples/cli-and-mcp-usage.md) / [分析工具安装与 Provider 接入](examples/provider-setup.md)——可照做流程
+11. [CLI 与 MCP 使用示例](examples/cli-and-mcp-usage.md) / [分析工具安装与 Provider 接入](examples/provider-setup.md)——可照做流程
+12. [JS 应用重建示例](examples/js-reconstruction-example.md) / [平台深挖示例](examples/platform-deep-example.md) / [重建工程工作流示例](examples/reconstruction-workflow-example.md)——对照 docs 可复现路径
 
 ## 核心事实速查
 
@@ -58,6 +68,10 @@ sources:
 | MCP 工具契约 | `TOOL_CONTRACTS` = 24 组 spread、100 处 `*ToolContracts.ts` 工具名、38 个官方桥接工具、15 种 kind（F-020/024/023/028） |
 | 目标域 | native / JavaScript+Electron / .NET / Android(APK+设备) / EVM / WASM / 固件 / 网站 / 进程（F-055） |
 | 架构 | 不沙箱、不托管运行；本地优先、显式选择、有界证据（F-050/051/053/045） |
+| JS 域核心 | `JavaScriptApplicationGraph` 应用图、12 关系词汇、runtime 观测/协同（F-067/068/076） |
+| 专项 Ghidra | 逐格式/逐 ABI 适配矩阵 + 版本钉扎（DOS/MIPS32r2/PSP/NativeAOT/Windows，F-088~F-096） |
+| 平台域深挖 | Android jadx/ADB、.NET Managed、固件 Binwalk、Apple/Electron/HarmonyOS、EVM/WASM（F-103~F-118） |
+| 工程工作流 | 9 阶段可审计重建 + 义务台账 + closure_digest（F-125~F-131） |
 
 ## ⚠️ 阅读前必知的三条口径要点
 
@@ -75,7 +89,7 @@ sources:
 
 ## 信源与可信度
 
-- 事实清单（F-001~F-066）：[references/facts.md](references/facts.md)
+- 事实清单（F-001~F-131）：[references/facts.md](references/facts.md)
 - 架构洞察与知识地图：[references/insights.md](references/insights.md)
 - 信源登记与公开性预检：[references/source-manifest.md](references/source-manifest.md)
 

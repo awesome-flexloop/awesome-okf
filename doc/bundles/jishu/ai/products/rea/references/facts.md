@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: Reference
 title: "REA 源码事实清单（facts）"
-description: "REA rea-agents v6.4.0（main@eaf88aca）源码与官方文档的编号事实登记 F-001~F-066：产品身份、CLI 层、MCP 契约层、Provider 适配器、分析目标域、关键领域类型"
+description: "REA rea-agents v6.4.0（main@eaf88aca）源码与官方文档的编号事实登记 F-001~F-131：产品身份、CLI 层、MCP 契约层、Provider 适配器、分析目标域、关键领域类型，及 docs/ 全量文档深层的 JavaScript/Native/专项 Ghidra/平台/工程事实"
 tags: [rea, facts, mcp, reverse-engineering, source-code]
 generated:
   by: source-code-to-okf-wiki:R
@@ -14,11 +14,14 @@ sources:
     url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
   - id: rea-tools-doc
     url: "https://rea.tools/zh-CN/"
+  - id: docs-full
+    url: "file" # 本地官方文档全量：external/dao/rea/docs/（49 个 .md，F-067~F-131 来源）
 ---
 
 # REA 源码事实清单（facts.md）
 
 > **信源**：本地源码 `external/dao/rea`（固定 commit `eaf88aca`，npm 包 `rea-agents` v6.4.0，MIT）+ 官方文档 `docs/`。所有文件名/命令名/工具名称保留英文原文；断言为客观描述，无推断词。
+> **F-001~F-066** 基于源码 `src/` 与 `docs/` 目标域概述（提取于 2026-10-12 09:30）；**F-067 起**为 2026-10-12 docs 全量深层扩展（覆盖 `docs/` 全部 49 个 `.md` 文件，含 JS/Web、Native/Ghidra 专项、平台、工程与管理文档），来源行号为各文档文件相对行号。
 > **计数纪律**：凡「X 个」数量断言均标注计数方法与独立 Grep 输出数字，实施者与独立审查者可复跑。四条核心计数已经实施者独立复核：CLI 顶层命令 129、TOOL_CONTRACTS spread 24 组、官方桥接工具 38、`*ToolContracts.ts` 中 `name:` 工具名 100 处/21 文件。
 
 ## A. 产品身份
@@ -104,3 +107,89 @@ sources:
 - **F-064** `nativeCallRoutes` 类型**不存在**于源码（`Grep "nativeCallRoutes" path=src` 无匹配；`src/domain/nativeCallRoutes.ts` 不存在）；native 调用相关模块为 `src/domain/native/*`（如 `nativeAotPe.ts`/`binaryLayout.ts`）与 `nativeCallCommands.ts`。修正了任务预置名称。
 - **F-065** Domain 层被架构文档定位为纯副作用无关模块（"Pure side-effect-free modules: evidence, comparisons, application graphs"）。来源：`docs/architecture.mermaid:56-57`。
 - **F-066** EVM worker 限制类型 `WorkerLimits`/`EvmWorkerLimits` 与适配 `EvmoleInterfaceAdapter`/`EvmoleInterfaceWorker` 存在于 `src/evm/`。来源：`src/evm/` 目录 + `package.json:295`（evmole 依赖）。
+
+## H. JavaScript 应用图与工作流（docs 深层）
+
+- **F-067** JavaScript 应用图是一种 schema 值为 `"JavaScriptApplicationGraph"` 的有向图；观察 ID 用 `semantic-content-sha256` 推导、边缘 ID 用 `relationship-exact` 稳定性。来源：`javascript-application-graph.md:40,167-168`。
+- **F-068** 应用图有向关系词汇表含 `contains`/`loads`/`imports`/`maps_to`/`exposes`/`sends`/`invokes`/`handles`/`calls`/`persists_to`/`observed_as`/`changed_from` 共 **12** 个值（V 阶段已 Grep 复核：源文档 71-73 行清单 12 项核实无误）。来源：`javascript-application-graph.md:71-73`。
+- **F-069** 身份策略集合含 `content-digest`/`source-map-original`/`canonical-path`/`artifact-local-key`/`structural-fingerprint`/`runtime-instance`/`observation-fingerprint` 7 种策略（V 阶段已 Grep 复核：源文档 152-158 行表格实际仅列 7 个策略值，文档上下文"8 种"陈述与表格不符，以表格为准）。来源：`javascript-application-graph.md:151-158`。
+- **F-070** JS 工作流 MCP 工具共 6 个：`inspect_analysis_view`/`trace_application_feature`/`trace_javascript_semantics`/`compare_application_versions`/`compare_source_to_bundle`/`compare_javascript_export_shapes`；CLI 命令名用连字符替换下划线同名。来源：`javascript-application-workflows.md:5-8`。
+- **F-071** `inspect_analysis_view` 不遍历关系；语义图线格式用 `evidence_contexts` 表承载共享来源。来源：`javascript-application-workflows.md:10,26-28`。
+- **F-072** `analyze_javascript_application`（CLI `rea analyze-javascript-application`）为 JavaScript 工件重建入口，支持 `.js/.jsx/.mjs/.cjs/.ts/.tsx/.mts/.cts` 共 8 种扩展名。来源：`javascript-artifact-reconstruction.md:6-7,257-258`。
+- **F-073** 重建的 `integrity_policy` 接受 `fail` 或 `record-and-continue`；ASAR 完整性检查使用 SHA-256。来源：`javascript-artifact-reconstruction.md:56-57,110-112`。
+- **F-074** JavaScript 恢复解析器接受 Wakaru `^1.13.0`，并以 Wakaru **1.14.0** 验证；其 SHA-256 为 `664fa06782a61eda7ed15885134b52525fd565dd77607e642062ceb6cd927c38`；第三方源代码修订固定于 commit `8219bf5016a063d7fb215101a8c45d5959ec733f`；恢复进程使用 util-linux `prlimit`（默认 `/usr/bin/prlimit`）。来源：`javascript-recovery.md:10-11,19-20,25,47-48`。
+- **F-075** JS 运行时观测含 2 个 MCP 工具 `list_javascript_runtime_targets`/`observe_javascript_runtime`（CLI 同名）；声明 4 种角色 `node`/`electron-main`/`electron-preload`/`electron-renderer`；捕获预算 8 MiB 聚合、CDP 消息传输上限 16 MiB。来源：`javascript-runtime-observation.md:5-7,109,122-124`。
+- **F-076** `reconcile_javascript_runtime`（CLI `rea reconcile-javascript-runtime`）要求 `static_layers` 恰好一个 `application` 角色；映射类型含 `file-root`/`url-prefix` 两种；跨层 `observed_as` 边缘的 `authority` 为 `cross-layer-reconciliation`、`state` 为 `inferred`。来源：`javascript-runtime-reconciliation.md:5-6,54-56,106-108`。
+
+## I. Web/浏览器域细节（docs 深层）
+
+- **F-077** `trace_web_source_location`（CLI `rea trace-web-source-location`）适配器锁定上游 `@jridgewell/trace-mapping` **0.3.31**；生成位置用从 1 开始的行号、从 0 开始的 UTF-16 列号。来源：`web-source-location.md:3,10,17-18,63`。
+- **F-078** `trace_web_module_imports`（CLI `rea trace-web-module-imports`）中 `script_index` 在 `manifest.scripts` 内从 0 开始；`additional_paths` 最多接受 16 个额外文件；清单/源/导入映射分别限制 32 MiB/16 MiB/4 MiB。来源：`website-module-trace.md:3,17,38,78-79` + `javascript-artifact-reconstruction.md:81`。
+- **F-079** `export_web_scripts`（CLI `rea export-web-scripts`）将脚本源写入目标文件，目标须不存在；被动检查选择 `include_script_sources: true`（CLI `--include-script-sources`），场景须 `capture.network.response_body: true`。来源：`website-script-export.md:3,10-12,20,30-31`。
+- **F-080** `capture_browser_scenario`（CLI `rea capture-browser-scenario INPUT_JSON`）支持 `launch`/`connect` 两种浏览器模式，`headless` 默认 `true`，`environment.service_workers` 默认阻止、可设为 `allow`。来源：`browser-scenario-contract.md:3,5,11,16-17,31,134-135`。
+- **F-081** 浏览器观测共享排除词汇 `BrowserExclusionReason` 覆盖所有栈的每条拒绝原因；`discover_webmcp_tools` 使用实验性 CDP WebMCP 域返回每个注册及其完整 observed `input_schema` 声明与规范 `input_schema_sha256` 摘要。来源：`browser-observation.md:17,60-61`。
+- **F-082** CDP 连接对每条 WebSocket 消息强制 **64 MiB** 上限；默认检查窗口 500 毫秒；CLI 端点为 `http://127.0.0.1:9222` 格式（`rea list-browser-targets`、`rea inspect-web-page --observation-ms`）。来源：`browser-observation.md:87,106-107,185`。
+
+## J. Native 域与二进制诊断（docs 深层）
+
+- **F-083** `inspect_macho` 的 `selected_architecture` 报告 `container_file_offset` 与所选架构 `file_offset`；`trace_dylib_resolution` 解析 Mach-O load commands 并跟踪 `@rpath`/`@loader_path`/`@executable_path`。来源：`native-investigation.md:9-13,42-48`。
+- **F-084** `inspect_asset_catalog` 经 macOS `assetutil --info` 读取编译后的 `Assets.car`；`inspect_keyed_archive` 读取 XML 或 binary Foundation keyed archives，限制 64 MiB 输入、200,000 objects/references、128 嵌套层级。来源：`native-investigation.md:49-65`。
+- **F-085** `trace_native_ui_action` 接受 authored selector/object ID、native symbol 或 exact function address；`observe_native_calls` 通过 LLDB 启动 Mach-O 并记录 breakpoints，限制 8 MiB retained event JSON、65,536 caller frames。来源：`native-investigation.md:274-281,349-391`。
+- **F-086** `inspect_binary_layout` 需要 pwntools 4.15.0、pyelftools 0.33、Unicorn 2.1.2，可用环境变量 `REA_PWNTOOLS_PYTHON` 指定 Python 可执行文件；限制 32 MiB 输入、64 MiB 回复、1 MiB 组合诊断、30 秒命令期限；Python 进程限制 3 GiB 虚拟地址空间/30 CPU 秒/64 MiB 文件输出。来源：`binary-diagnostics.md:11-17,100-109`。
+- **F-087** raw-binary 模式经 `--target-format raw-binary` + `--architecture` 选择，映射表为 `x86→x86:LE:32:default`、`x86_64→x86:LE:64:default`、`arm→ARM:LE:32:v7`、`arm64→AARCH64:LE:64:v8A`；ARM/AArch64 须 4-byte 对齐、x86 可 byte 对齐；Ghidra 用 `BinaryLoader`。来源：`raw-binary.md:10-13,31,37,42-45`。
+
+## K. 专项 Ghidra 支持（docs 深层）
+
+- **F-088** Ghidra Provider 支持 Linux x64/arm64 与 macOS x64/arm64；实验性 Windows x64 P0 为只读、无 database mutation authority；需 Ghidra 12.1.x 与 64-bit full JDK；`analyzeHeadless` import 产生 exactly one Program。来源：`ghidra-provider.md:4-5,16-18,28`。
+- **F-089** Ghidra Provider 地址格式为 `0x` 小写十六进制或 `<percent-encoded-space>:0x<hex>`；字符串搜索仅覆盖 Ghidra-defined string `Data`；p-code value flow 限制 3,000 operations、64 inputs/operation、12,000 def-use edges。来源：`ghidra-provider.md:29,38-42,55`。
+- **F-090** DOS 支持 MZ executables 与 explicit COM images（验证用 Ghidra 12.1.4 + JDK 21）；MZ 用 `MzLoader` + `x86:LE:16:Real Mode`；COM 用 `BinaryLoader`，文件 offset zero 映射到 `1000:0100`（linear `0x10100`），COM 大小限制 1..65280 bytes。来源：`ghidra-dos.md:3,6-7,34-35,67-69`。
+- **F-091** MIPS 支持 ELF32 `ET_EXEC`/`ET_REL`（little/big endian），要求 explicit o32 与 `EF_MIPS_ARCH_32R2`，拒绝 `EF_MIPS_FP64`/`EF_MIPS_NAN2008`；MIPS16 共享库支持 ELF32 `ET_DYN`。来源：`ghidra-mips.md:16-17,25-26,53-56`。
+- **F-092** MIPS soft-float 原型策略键值 `mips_soft_float_storage: o32-soft-float-prototype-v1`；可重定位对象轨道键值 `mips_support_lane: elf32-rel-o32-arch32r2-standard-v1`。来源：`ghidra-mips.md:126-127,156-157`。
+- **F-093** PSP 支持 Linux x64、little-endian ELF32 `ET_EXEC`/`EM_MIPS`，PSPSDK `e_flags=0x10a23001`（MIPS II, Allegrex, EABI32, NOREORDER）；验证环境 PSPDEV v20261001（GNU readelf 2.44）+ Ghidra 12.1.3 + extension v21.4 + JDK 21；Loader `PspElfLoader`、language `Allegrex:LE:32:default`。来源：`ghidra-psp.md:11-18,35-36,60-62`。
+- **F-094** NativeAOT 支持 x64 PE32+ 与 .NET 8 RTR 9.1 metadata，基于 Washi1337/ghidra-nativeaot commit `effeb734fc570c32650f88b159608979dc7b423e`，并交叉核对 .NET MethodTable.h commit `a3b2d40328be0be3f8dd43f0e5cc925b8827b044`。来源：`ghidra-nativeaot.md:3,7-10,17-18`。
+- **F-095** ghidra-nativeaot 限制 128 MiB captured PE bytes、64 MiB-equivalent parser work、64 MiB overlay/index Buffers、4 MiB serialized JSON；Windows P0 无 database mutation authority。来源：`ghidra-nativeaot.md:94-97,109-110`。
+- **F-096** Windows P0 支持 Windows 10+ x64、local NTFS target 与 temporary volumes；Ghidra 12.1.x（验证 12.1.4）+ 64-bit full JDK 21+；提供 **25** 个只读 Ghidra inventory/memory/function-analysis 操作；MCP `timeoutMs` 默认 300000；验证命令 `npm run verify:ghidra:windows`。来源：`windows-ghidra-p0.md:16-21,98,169-177`。
+
+## L. 其他反编译工具 Provider（docs 深层）
+
+- **F-097** IDA Provider 基于 mrexodia/ida-pro-mcp，支持 upstream **1.4.0 legacy tools**（`get_metadata`/`list_functions`/`decompile_function`）；环境变量 `REA_IDA_MCP_CONFIG` 指定配置、`REA_ANALYSIS_PROVIDER=ida` 选择 provider；支持 attached（GUI）与 headless（`--stdio`）模式。来源：`ida-provider.md:3,5-9,25-26,39-47`。
+- **F-098** IDA MCP `timeoutMs` 默认 300000（5 分钟）；验证环境 IDA 9.3（Windows）+ IDA Professional 9.1 build 9.1.250226（macOS arm64）；验证命令 `npm run verify:ida -- --target <path> --procedure main`。来源：`ida-provider.md:95,111,113`。
+- **F-099** JEB 分析默认 endpoint `http://127.0.0.1:8425/mcp`；验证版本 JEB 5.48.0（Linux x64）+ `jeb-mcp-server` 1.3.0；headless JEB 5.48 `-c` 模式不直接接受 `--mcp`；提供 4 个 MCP 工具/CLI 命令（`inspect_jeb_client`/`open_jeb_project`/`list_jeb_units`/`decompile_jeb_item`）。来源：`jeb-analysis.md:9,11,13,19-22`。
+- **F-100** JEB `list_units` 分页上限 100。来源：`jeb-analysis.md:32`。
+- **F-101** Apktool 验证版本 2.7.0；环境变量 `REA_APKTOOL_COMMAND` 指定启动器；readiness 检查 `rea inspect-apktool-client`；Smali 被跳过（`apktool d --no-src`）。来源：`apktool-resource-analysis.md:11,15-22,63-65,89-90`。
+- **F-102** Apktool 解码限制 600 秒 deadline、4 MiB output capture、Manifest 读取 512 KiB、Strings XML 8 MiB、`decoded_file_count` 上限 100,000；验证命令 `npm run verify:apktool -- --apk PATH`。来源：`apktool-resource-analysis.md:74,77-81,88`。
+
+## M. 平台分析域（Android/ADB/Managed/Firmware/Apple/Electron/Harmony 深层）
+
+- **F-103** Android (JADX) 域：`inspect_android_package`/`search_android_classes`/`inspect_android_class`/`inspect_android_method`/`trace_android_references` 为等价 MCP 方法；需 JDK 17+ 与 `jadx-headless-mcp 0.7.1`；环境变量 `REA_JADX_MCP_JAR` 指向 JAR、可选 `JAVA_HOME`。来源：`android-analysis.md:14-15,21-23,70`。
+- **F-104** Android 执行受限：deadline 120 秒（上游反编译 90 秒）、清单与方法文本预算 1 MiB、类名页面索引切片最多 4096 名称、协议帧 8 MiB、stdout/stderr 32 MiB、会话 60 秒不活动清理。来源：`android-analysis.md:185,230,233-235`。
+- **F-105** ADB 域：`inspect_adb_client`/`list_adb_devices`/`inspect_adb_device`/`inspect_adb_display`/`list_adb_features`/`list_adb_services` 为 ADB 设备操作；支持 adb **34.0.5**、环境变量 `REA_ADB_PATH` 指定二进制。来源：`adb-device-analysis.md:16,21,33`。
+- **F-106** ADB 命令族含 `rea inspect-adb-client`（运行 `adb version`）、`rea list-adb-devices`、`rea inspect-adb-device <serial>`、`rea pull-adb-package --output-directory`、`rea capture-adb-screen`、`rea collect-adb-bugreport`、`rea install-adb-package --replace`；每个调用组合固定 adb 参数向量，调用值仅作位置参数被引用。来源：`adb-device-analysis.md:7-8,25,34-60`。
+- **F-107** .NET Managed 域的 7 个 MCP 工具为 `inspect_managed_artifact`/`inspect_managed_members`/`inspect_managed_native_boundaries`/`compare_managed_members`/`verify_managed_native_boundaries`/`import_managed_reconstruction`/`project_managed_application_graph`；CLI 用连字符同名（如 `rea inspect-managed-artifact`）。来源：`managed-code-analysis.md:10,21`。
+- **F-108** Managed 静态提供者承认最大 128 MiB 常规输入；元数据/CIL 解码/投影检查各 64 MiB 表示预算；`il_sha256` 基于精确 `il_size` 原始 CIL 字节（tiny/fat 方法头之后）、`normalized_il_sha256` 基于 UTF-8 `JSON.stringify` 的 `[opcode,operand_kind,operand]` 指令数组。来源：`managed-code-analysis.md:49,51,196-197`。
+- **F-109** 解码 `nop; ret` 序列化为 `[["nop","none",null],["ret","none",null]]`，其摘要为 `5e5fad7741cb44bca3a4f045546b7449990da343f612f5f34c0ca30e9eee0636`。来源：`managed-code-analysis.md:220`。
+- **F-110** 固件域：接受 Binwalk 3.1.x（区域检查）与 Unblob 26.6.x（显式提取），解析器验证 Binwalk 3.1.0 与 Unblob 26.6.4；环境变量 `REA_BINWALK_COMMAND`/`REA_UNBLOB_COMMAND`；检查与提取都需 util-linux `prlimit`（正常路径 `/usr/bin/prlimit`，可用 `REA_FIRMWARE_PRLIMIT_COMMAND` 覆盖）。来源：`firmware-analysis.md:3-4,17-18,25-26`。
+- **F-111** 固件 CLI：`rea inspect-firmware-regions <path>`、`rea extract-firmware <in> <out>`（支持 `--offset`/`--length`/`--max-depth`）；限制输入 128 MiB、deadline 120 秒、继承地址空间 1 GiB、默认临时预算 256 MiB/10,000 条目、每命令 8 MiB stdout+stderr。来源：`firmware-analysis.md:28,52-55,132,136,141`。
+- **F-112** Apple 域：`project_apple_application_graph` 接受 `inventory_evidence`（`inventory_artifact` Evidence 数组）；`trace_dylib_resolution` 支持 `--root`（如 `Contents/MacOS/MyApp`）与 `--architecture`（如 `arm64`）；`bundles` 报告每 bundle 的 `parent_path`/`layout`/`info_plist_path`/`executable_candidates`/`signing_paths`。来源：`apple-application-analysis.md:26,91,153`。
+- **F-113** Apple 桥接候选序列化数组限制 2 MiB UTF-8 JSON（超出保留确定性前缀）；路径角色 `role_basis` 值为 `"path-convention"`；`verify:macos-bundle` 针对 `otool -l` 的解析器验证。来源：`apple-application-analysis.md:36,101,226`。
+- **F-114** Electron 域：`list_electron_targets` 返回单个内联数组；`inspect_electron_page` 需 `include_script_sources` 才返回脚本源；CLI `rea list-electron-targets` 接受 `http://127.0.0.1:9223` 端点、`rea inspect-electron-page` 支持 `--observation-ms`/`--include-script-sources`；Electron 44.7.0 已验证预加载描述符。来源：`electron-observation.md:28,33-34,38,109`。
+- **F-115** `capture-electron-scenario` CLI 接受 JSON 请求文件；Electron 启动超时 60 秒。来源：`electron-observation.md:88,100`。
+- **F-116** HarmonyOS 域：识别三种根格式 `.hap`（可安装应用模块）/`.hsp`（运行时共享包）/`.app`（分发 App Pack）；`.har` 因也命名 HTTP Archive JSON 而故意不按后缀分类。来源：`harmony-analysis.md:10,18`。
+- **F-117** HarmonyOS CLI `rea inspect-artifact /path/Example.hap --format json`；MCP `project_harmony_application_graph` 接受 `inventory_evidence`；打包模型提示仅从 `module.json` 条目声明 Stage、仅从 `config.json` 声明 FA，否则 `unknown`；FA 资源在 `assets/<module>/resources/`、Stage 资源在 `resources/`。来源：`harmony-analysis.md:29,34,40,42`。
+- **F-118** HarmonyOS 运行时族提示（`ark`/`native`/`javascript`）来自路径与格式；路径在字节码与 `libs/<abi>` 原生库间基于 N-API 桥接假设；`npm run fixtures:harmony` 下载 SHA-256 固定的 1.0.1 HAP；验证用 `REA_HARMONY_TEST_HAP` 指向 `_reference/harmony-integration/entry-default-unsigned.hap`。来源：`harmony-analysis.md:45-46,56,65`。
+
+## N. 工程与管理（安装/契约/测试/发布/迁移/工作流，docs 深层）
+
+- **F-119** Node 运行时要求 `22.x`/`24.x`/`26.x`（`installation.md:46`）；`mcp-prompts.md` 提供 6 个 agent 提示词：`investigate_feature`/`compare_application_versions`/`verify_reconstruction`/`trace_crash`/`audit_residual_unknowns`/`prepare_bounded_process_capture`。来源：`mcp-prompts.md:9-14`。
+- **F-120** MCP 契约输入 schema profile 机制：环境变量 `REA_MCP_INPUT_SCHEMA_PROFILE` 默认 `compact`；`compact` 模式预算 **13,312** 字节、仅保留 9 个字段（`operation`/`function`/`rva`/`offset`/`registers`/`stack`/`memory`/`timestamp`/`correlation_id`）；`full` 模式含 24 个字段。来源：`mcp-contracts.md:48-62`。
+- **F-121** 安装支持 17 个客户端 ID：`claude`/`copilot`/`cursor`/`windsurf`/`codeium`/`trae`/`continue`/`cline`/`roo-cline`/`aider`/`void`/`pearai`/`openai-agent`/`anthropic-agent`/`google-agent`/`llm-cmd`/`cat-ai`。来源：`installation.md:146-164`。
+- **F-122** DeepSeek Harness 集成需 `@deepseek-ai/dsh@0.2.0-rc.2`；配置文件路径为 `$DSH_HOME/cordis.patch.yml`；`REA_MCP_INPUT_SCHEMA_PROFILE` 支持 `compact`/`full`。来源：`installation.md:260,271,306-307`。
+- **F-123** 工具设计命名族（tool-design）：`inspect`/`search`/`trace`/`compare`/`workflow`/`observe`/`capture`。来源：`tool-design.md:16-22`。
+- **F-124** 测试与 CI：`verify:deepseek-client` 需 `@deepseek-ai/dsh@0.2.0-rc.2`；CI 矩阵覆盖 Node `22.x`/`24.x`/`26.x`；`verify:hopper` 需 Hopper Pro `4.x`、`verify:ghidra` 需 Ghidra `11.x`、`verify:ida` 需 IDA Pro `8.x`/`9.x`。来源：`testing.md:45-47,268-269,302,320,338`。
+- **F-125** 发布策略：Release Please 使用 `always-bump-minor`；版本格式 `v${major}.${minor}.${patch}`，预发布 `v${major}.${minor}.${patch}-${prerelease}`。来源：`releasing.md:45,47,87-91`。
+- **F-126** 6.2 迁移：`evidence` 字段的 MCP wrapper 已移除、`analysis_profile` 由可选变必填；迁移工具路径 `tools/migration-6.2.mjs`。来源：`migration-6.2.md:10-24,50-55,78`。
+- **F-127** 已记录崩溃分析：`inspect_recorded_crash` 使用 27-register 扩展 ABI；`mcp_inspect_recorded_crash` 支持 `compact`/`full` profile；测试环境 pwndbg 2026.09.15 + GDB 13.1。来源：`recorded-crashes.md:3,30,33-38,54`。
+- **F-128** CLI 退出状态码：`0` 成功、`1` 一般错误、`2` 分析错误、`3` 证据保留错误。来源：`cli.md:206-209`。
+- **F-129** 重建就绪（reconstruction-readiness）共 9 阶段：`discover-classify`/`diagnose-environment`/`declare-request`/`static-analysis`/`reactive-scenarios`/`compare-authority-candidate`/`preserve-contradictions`/`verify-reconstruction-closure`/`export-replay`。来源：`reconstruction-readiness.md:35-43`。
+- **F-130** 义务台账（reconstruction-obligation-ledgers）：`build_reconstruction_obligation_ledger`（CLI `rea build-reconstruction-obligation-ledger`）接受含 `artifacts`/`providers`/`environments`/`scenarios`/`captures`/`unknowns`/`records` 数组的 `evidence_bundle`；结果含 `ledger_id`/`closure_digest`。来源：`reconstruction-obligation-ledgers.md:7,27,323`。
+- **F-131** 义务台账 `manifest` 对象含 `bindings`/`contradictions` 数组；`required_case_kinds` 数组可含 `positive`/`negative`/`malformed`/`cancellation`；`reviewed_obligations` 含 `obligation_id`/`obligation_version`/`title`/`application_layer`/`family` 字段。来源：`reconstruction-obligation-ledgers.md:39,62,74`。
