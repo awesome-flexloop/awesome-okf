@@ -23,6 +23,8 @@ sources:
 > I 阶段分析。基于 R 阶段事实清单 F-001~F-066（`references/facts.md`）。四元组结构：**陈述 → 证据（引用具体 F-xxx）→ 反常识 → 行动**。
 > 信源：本地源码 `external/dao/rea`（固定 commit `eaf88aca`，npm 包 `rea-agents` v6.4.0）+ 官方文档 `rea.tools` + 补充信源 `rea.run`。
 
+> **已沉淀模式**：洞察一（统一契约工具编排层）及其支撑机制（洞察二契约单一事实源、洞察三前端投影）已于 2026-10-12 独立化为方法论模式库正式条目 [统一契约工具编排层](../../../../../../../../../docs/retrospective/patterns/methodology-patterns/product-growth/unified-contract-tool-orchestration-layer.md)（L1-draft）。本页保留为**案例版**（含具体 F-xxx 证据与八大目标域明细）；跨场景可复用版见模式库条目。
+
 ---
 
 ## 洞察一：REA 不自做反编译——它是一层「逆向工具统一证据契约」编排器，不是逆向工具本身
