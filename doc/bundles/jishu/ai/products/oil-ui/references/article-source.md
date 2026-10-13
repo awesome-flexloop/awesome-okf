@@ -2,15 +2,24 @@
 okf_version: "0.2"
 type: reference
 title: "事实清单"
-description: "oil-ui 博文事实登记 F-001~F-030，含来源、类型与核验状态"
+description: "oil-ui 事实登记 F-001~F-041，含来源、类型与核验状态（F-001~F-030 博文初始，F-031~F-041 官方一手增量）"
 sources:
   - id: blog
     resource: https://mp.weixin.qq.com/s/JqY_1JW1FSMQU3XAQyTRPA
   - id: github-repo
     resource: https://github.com/oil-oil/oil-ui
+  - id: skillmd
+    resource: https://github.com/oil-oil/oil-ui/blob/main/SKILL.md
+  - id: gallery
+    resource: https://ui.oiloil.org
+  - id: pro
+    resource: https://ui.oiloil.org/pro
 generated:
   by: seven-concepts-cmd+wechat-public-okf
   at: "2026-10-10T00:00:00+08:00"
+extended:
+  by: seven-concepts-cmd
+  at: "2026-10-13T00:00:00+08:00"
 status: stable
 stale_after: 2027-03-31
 ---
@@ -49,14 +58,26 @@ stale_after: 2027-03-31
 | F-028 | "老项目"行与 Pro 能力分界在官方对照表可查 | page_fact | pro | README 对照表 | ✅ |
 | F-029 | 相邻工具 draw-ui、oil-motion存在 | page_fact | github-repo | 官方推荐 | ✅ |
 | F-030 | 八步法与五刻度以 README 为唯一权威口径 | page_fact | github-repo | README §方法 | ✅ |
+| F-031 | SKILL.md 定义五步工作流：探索并收敛方向 → 建立视觉与交互结构 → 制作并取得实际证据 → 独立评审与修正 → 验证与交付 | page_fact | skillmd | SKILL.md §1-5 | ✅ |
+| F-032 | 范围分流：按"小改动/新界面/单组件打磨/存量项目/截图还原/UI评审"决定是否需要完整走步骤1-5 | page_fact | skillmd | SKILL.md §选择范围 | ✅ |
+| F-033 | 原则"只在缺失信息会改变核心方向时才提问"，不把设计探索变成强制问卷或逐步审批 | page_fact | skillmd | SKILL.md §选择范围 | ✅ |
+| F-034 | 自动更新：使用触发版本检查，最多每10分钟联网一次，有新版本即尝试自动更新（需 Python 3 + Node 18+） | page_fact | github-repo | README §安装 | ✅ |
+| F-035 | 环境变量 `OIL_NO_AUTO_UPDATE=1` 只提醒不自动更新；`OIL_NO_UPDATE_CHECK=1` 完全关闭检查 | page_fact | github-repo | README §安装 | ✅ |
+| F-036 | 恢复提示命令：`npx github:oil-oil/oil-cli update oil-ui --path "<安装路径>"`；离线时不提示新版本 | page_fact | github-repo | README §安装 | ✅ |
+| F-037 | SKILL.md 核心为宿主中立的文本流程，不依赖其他 Skill 或指定模型；对比页生成器需 Python 3.10+ 标准库 | page_fact | skillmd | SKILL.md metadata | ✅ |
+| F-038 | references 参考文件体系：design-direction / visual-language / media / imagery / motion / style-explorer / layout-and-viewport / visual-review | page_fact | skillmd | SKILL.md §各步引用 | ✅ |
+| F-039 | 独立评审机制：方向探索阶段对比页先交用户、评审为推荐流程；每阶段一轮；Pro 以 9 分为目标最多评审三轮 | page_fact | github-repo | README 对照表 | ✅ |
+| F-040 | 评审以"这一体裁里顶尖设计团队会怎么做"为参照、按 10 分制给出差距；评审者不看作史/代码/旧评分 | page_fact | skillmd | SKILL.md §4 独立评审 | ✅ |
+| F-041 | 能力边界：无看图能力时明确"未验证实际视觉"、不生成虚假视觉评分；不管理密钥、不安装工具、不发布网站 | page_fact | skillmd | SKILL.md §能力边界 | ✅ |
 
-> **状态说明**：`✅` 官方核验一致；`⚠️` 时效快照或口径差异（详见 [verification.md](verification.md)）；无 `❌` 硬错误。
+> **状态说明**：`✅` 官方核验一致；`⚠️` 时效快照或口径差异（详见 [verification.md](verification.md)）；无 `❌` 硬错误。F-031~F-041 为 2026-10-13 官方一手增量（SKILL.md / README.md 直接核验）。
 
 ## 核验状态汇总
 
-- 博文 F-001~F-020，官方核验补充 F-021~F-030。
-- **9✅ / 2⚠️ / 0❌**（11 项 P0/P1 关键声明）。
+- 博文 F-001~F-020，官方核验补充 F-021~F-030，官方一手增量 F-031~F-041。
+- **9✅ / 2⚠️ / 0❌**（11 项博文 P0/P1 关键声明）。
 - 两条勘误：作品数 52→65（F-012→F-026 时效）、模型名是画廊标签非能力背书（F-014→F-027 口径）。
+- F-031~F-041 全部为官方一手文件（SKILL.md / README.md）直接摘取，无时效类待复核项。
 
 ---
 **核验结论**：[verification.md](verification.md)。

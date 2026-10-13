@@ -2,11 +2,14 @@
 okf_version: "0.2"
 type: bundle
 title: "oil-ui：AI Agent 用的界面设计 Skill（八步设计法）"
-description: "开源星探公众号博文经官方仓库核验转化——给 AI 编程 Agent 装的 UI 设计方法论 Skill：八步设计法、五种调性刻度、风格对比页、老项目改造与 Oil UI Pro 边界（核心声明官方核验一致，作品数 52→65 时效勘误）"
-tags: [oil-ui, agent-skill, ui-design, eight-step-design, design-method, ai-agent, claude-code, cursor, codex, style-comparison, 博文转化]
+description: "开源星探公众号博文经官方仓库/SKILL.md 核验转化——给 AI 编程 Agent 装的 UI 设计方法论 Skill：八步设计法、五种调性刻度、风格对比页、五步工作流、自动更新机制与 Pro 边界（核心声明官方核验一致，作品数 52→65 时效勘误；2026-10-13 增量扩展至官方一手机制层）"
+tags: [oil-ui, agent-skill, ui-design, eight-step-design, design-method, ai-agent, claude-code, cursor, codex, style-comparison, skill-engineering, 博文转化]
 generated:
   by: seven-concepts-cmd+wechat-public-okf
   at: "2026-10-10T00:00:00+08:00"
+extended:
+  by: seven-concepts-cmd
+  at: "2026-10-13T00:00:00+08:00"
 verified:
   by: process:seven-concepts-v
   at: "2026-10-10T00:00:00+08:00"
@@ -19,6 +22,9 @@ sources:
   - id: github-repo
     url: https://github.com/oil-oil/oil-ui
     title: oil-oil/oil-ui GitHub 仓库（MIT，v0.14.0，作者 Zhihuang Lin）
+  - id: skillmd
+    url: https://github.com/oil-oil/oil-ui/blob/main/SKILL.md
+    title: oil-ui 官方 SKILL.md（五步工作流/范围分流/自动更新/能力边界的一手权威）
   - id: gallery
     url: https://ui.oiloil.org
     title: oil-ui 官方作品画廊（含 65 作品与模型标签）
@@ -53,14 +59,16 @@ sources:
 2. [八步设计法与五种调性刻度](concepts/01-eight-step-design-method.md)——方法论核心：八步逐一"做什么/不做什么"，五刻度把审美形容词翻成数字
 3. [安装、使用与风格对比页](concepts/02-install-usage-and-comparison.md)——两种安装法、六个可直接复制的提示、对比页交互
 
-**再深入边界**
+**再深入边界与机制（进阶）**
 
-4. [Oil UI Pro、老项目改造与版本检查](concepts/03-pro-legacy-and-update.md)——免费/Pro 功能图谱、老项目"先分清再体检"、版本检查与相邻工具
+4. [SKILL.md 工程结构与五步工作流](concepts/04-skill-engineering-and-workflow.md)——作为 Agent Skill 如何被执行：范围分流表、五步工作流、references 参考体系（F-031~F-038）
+5. [Oil UI Pro、老项目改造与版本检查](concepts/03-pro-legacy-and-update.md)——免费/Pro 功能图谱、老项目"先分清再体检"、自动更新机制
+6. [自动更新、独立评审与能力边界](concepts/05-auto-update-and-capacity.md)——自动更新 v2 与环境变量、10 分制独立评审、不看图不评分的纪律（F-039~F-041）
 
 **动手落**（examples/）
 
-5. [六条可直接复制给 Agent 的提示](examples/00-quickstart-prompts.md)
-6. [用风格对比页在多方向间决策](examples/01-style-comparison-page.md)
+7. [六条可直接复制给 Agent 的提示](examples/00-quickstart-prompts.md)
+8. [用风格对比页在多方向间决策](examples/01-style-comparison-page.md)
 
 ## 核心事实速查
 
@@ -70,7 +78,9 @@ sources:
 | 开源时间 / 许可 | 2026-09-30 / MIT / Python 53.3% + HTML 45.6% |
 | 社区数据 | Star 203、Fork 6、（**2026-10-10 时点**） |
 | 安装 | `npx skills add oil-oil/oil-ui`（Node.js 18+）或自然语言交给 Agent |
-| 核心资产 | 八步设计法 + 五种调性刻度 + 自带风格对比页（HTML/图片/运行页） |
+| 核心资产 | 八步设计法 + 五种调性刻度 + 自带风格对比页（HTML/图片/运行页）+ 五步工作流 |
+| 机制层 | 范围分流表、宿主中立 SKILL.md、references 参考体系（F-031~F-038） |
+| 运行期 | 检查+自动更新（`OIL_NO_AUTO_UPDATE`/`OIL_NO_UPDATE_CHECK`）、10 分制独立评审（F-034~F-040） |
 | 作品画廊 | [ui.oiloil.org](https://ui.oiloil.org)——当前 65 作品、6 种模型标签 |
 | Pro 版本 | [ui.oiloil.org/pro](https://ui.oiloil.org/pro)（69 元买断、永久更新） |
 | 先决条件 | 版本检查需 Python 3（`python3`/`python`/Windows `py -3`） |
@@ -89,7 +99,7 @@ sources:
 
 ## 信源与可信度
 
-- 事实清单与逐条核验状态：[references/article-source.md](references/article-source.md)（F-001 ~ F-030）
+- 事实清单与逐条核验状态：[references/article-source.md](references/article-source.md)（F-001 ~ F-041）
 - P0 核验报告与勘误说明：[references/verification.md](references/verification.md)
 - 信源距离：第三方开源推介号「开源星探」→ 已升级为 GitHub 官方仓库 + 官方画廊一手核验；方法论陈述以官方 README 为唯一权威口径
 
