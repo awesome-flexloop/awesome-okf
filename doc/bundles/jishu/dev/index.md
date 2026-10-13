@@ -18,13 +18,15 @@ description: "开发工具与开源协作实践——Git 版本控制与团队�
 | **Git + 网盘同步** | Git 裸仓库 + 百度网盘跨设备同步工作流（目录结构/锁机制/冲突检测/备份恢复） | [git-baidu-sync/](git-baidu-sync/index.md) |
 | **GitHub** | Gist 代码片段分享、GitHub Actions 工作流、GitHub CLI 命令行工具 | [github/](github/index.md) |
 | **Opensource** | 开源参与指南、开启开源项目、README 模板、无版权图库、程序员常用网站、public-apis 公共 API 清单 | [opensource/](opensource/index.md) |
+| **Plane** | 开源项目管理平台自托管教程——Community/Commercial/Airgapped 三套版本与 AGPL 边界、Work Items/Cycles/Modules 三层时间尺度、五视图与 Pages/Wiki、部署运维与选型边界 | [plane/](plane/index.md) |
 
 ## 学习路径建议
 
 1. **版本控制**：git（学习路线 → 分支模型导论 → 团队实战）→ git-advanced（clone 进阶）→ git-baidu-sync（跨设备同步工作流）
 2. **平台协作**：github（Gist 轻量分享 → Actions 自动化 → GitHub CLI 命令行）
 3. **开源实践**：opensource（参与贡献 → 开启项目 → README 写作 → 图库与网站资源）
-4. **交叉阅读**：git 的分支模型配合 github 的 Actions 触发事件、opensource 的贡献流程构成「开源协作全链路」
+4. **项目协作平台**：plane（定版本 → 建三层工作模型 → 配视图与文档 → 部署与生产加固）
+5. **交叉阅读**：git 的分支模型配合 github 的 Actions 触发事件、opensource 的贡献流程构成「开源协作全链路」；plane 承接「代码协作之上的任务与进度协作」，其 GitHub/GitLab 集成与 github 束互补
 
 ```{toctree}
 :hidden:
@@ -35,4 +37,5 @@ git-advanced/index
 git-baidu-sync/index
 github/index
 opensource/index
+plane/index
 ```
