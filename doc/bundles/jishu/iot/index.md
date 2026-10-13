@@ -24,6 +24,7 @@ description: "物联网与远程连接知识包——开源智能家居平台源
 | 知识包 | 定位 | 说明 |
 |--------|------|------|
 | [xingchen-300-edge-ai/](xingchen-300-edge-ai/index.md) | 端侧 AI 平台资讯核验 | 安谋科技星辰300（STAR-MC2/Cortex-M52 + Ethos-U55，MPS3 FPGA）原型平台——四大实测用例、CPU+NPU 异构机制、Helium 性能数字与 Transformer 能力勘误、五个开源模型档案与厂商自述可信边界 |
+| [embedded-weekly-03/](embedded-weekly-03/index.md) | 端侧 AI 资讯周报核验 | 《嵌入式周报·第三期》全量学习——openTPU AI 设计芯片、NPU 下沉 MCU、Zephyr 版本节奏/CVE-2026-19569/白金会员、RVA23 软件栈、社区硬件与打假，事实 F-001~F-052 与 17 项 P0 核验 |
 
 ```{toctree}
 :hidden:
@@ -35,4 +36,5 @@ sunlogin/index
 oray/index
 comparison/index
 xingchen-300-edge-ai/index
+embedded-weekly-03/index
 ```

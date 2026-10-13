@@ -58,7 +58,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 | 分组 | 束数 | 一句话简介 |
 |------|------|-----------|
 | [🚗 智能驾驶与无人驾驶（autonomous）](autonomous/index.md) | 4 | Autoware 安装与基础 · ROS2 概念 · DDS 与 QoS · 数据集/术语/资源生态 |
-| [🏠 物联网（IoT）](iot/index.md) | 6 | Home Assistant 源码解读 · TuyaOpen IoT SDK · 向日葵远控产品矩阵 · 贝锐生态 · 厂商与工具横向对比 · 星辰300 端侧 AI 资讯核验 |
+| [🏠 物联网（IoT）](iot/index.md) | 7 | Home Assistant 源码解读 · TuyaOpen IoT SDK · 向日葵远控产品矩阵 · 贝锐生态 · 厂商与工具横向对比 · 星辰300 端侧 AI 资讯核验 · 嵌入式周报·第三期资讯核验 |
 
 ### ☁️ 云厂商开放 API
 
