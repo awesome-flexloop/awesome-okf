@@ -1,5 +1,4 @@
 ---
-okf_version: "0.2"
 type: Concept
 title: "MCP 契约层：单一事实源与工具全集"
 description: "REA 的能力边界集中在 src/contracts/ —— TOOL_CONTRACTS 以只读 as const 数组聚合 24 组工具契约、统一 ToolContract 类型、15 种 kind、38 个官方代理工具，CLI 命令与 MCP 运行时都由此派生（证据：F-019~F-029, F-004）"
@@ -9,9 +8,9 @@ status: stable
 stale_after: 2026-12-31
 sources:
   - id: local-source
-    url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
   - id: rea-tools-doc
-    url: "https://rea.tools/zh-CN/"
+    resource: "https://rea.tools/zh-CN/"
 ---
 
 # MCP 契约层：单一事实源与工具全集

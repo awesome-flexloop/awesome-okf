@@ -1,5 +1,4 @@
 ---
-okf_version: "0.2"
 type: Concept
 title: "支持的分析目标域与工具矩阵"
 description: "REA 八大分析目标域的边界与工具要求 —— native 二进制、EVM 字节码、WASM 工制、Android APK/设备（ADB）、.NET managed、固件（Binwalk/Unblob）、进程行为捕获、网站/browser（CDP），含各域的离线/附着/不执行边界（证据：F-043~F-056）"
@@ -9,9 +8,9 @@ status: stable
 stale_after: 2026-12-31
 sources:
   - id: local-source
-    url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
   - id: rea-tools-doc
-    url: "https://rea.tools/zh-CN/"
+    resource: "https://rea.tools/zh-CN/"
 ---
 
 # 支持的分析目标域与工具矩阵

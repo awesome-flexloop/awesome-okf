@@ -1,5 +1,4 @@
 ---
-okf_version: "0.2"
 type: Example
 title: "REA：重建工程工作流示例"
 description: "按重建就绪 9 阶段走查一条可审计的重建流程：构造含 artifacts/providers/environments/scenarios/captures/unknowns/records 的 evidence_bundle、调用 rea build-reconstruction-obligation-ledger 生成义务台账得到 ledger_id/closure_digest，并说明 required_case_kinds 与 manifest、REA_MCP_INPUT_SCHEMA_PROFILE=compact（证据 F-129/130/131/120）"
@@ -9,22 +8,22 @@ status: stable
 stale_after: 2026-12-31
 sources:
   - id: docs-full
-    url: "file" # 本地官方文档全量：external/dao/rea/docs/（49 个 .md，F-119~F-131 来源）
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a/docs"
   - id: local-source
-    url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
 ---
 
 # 示例：重建工程工作流
 
-> ⚠️ **可复现性说明**：本示例的**输入（命令）/步骤明确**，理论上可独立复现。命令来自源码与官方文档核对（references/facts.md），**未在本机实际运行**。执行时以官方文档、`rea build-reconstruction-obligation-ledger --help`、`rea doctor` 当前输出为准。
+> **范围说明**：本页是九阶段说明与空台账客户端集成示例，不提供真实应用的完整重建输入链。命令已对照固定源码和官方文档，**未在本机实跑**；空请求的`unknown`为官方预期，不是本机观测。
 
 ## 目标
 
-演示一条完整的重建工程闭环：按重建就绪 **9 阶段**（F-129）逐步走查一次重建请求，将其过程中的证据收拢进一个 `evidence_bundle`（F-130），调用义务台账命令生成 `ledger_id`/`closure_digest`（F-130），说明台账的多态用例与内部结构（F-131），以及用 `compact` schema profile 压缩 agent 侧输入（F-120）。每条断言后标注对应 F-xxx。
+理解重建就绪九阶段（F-129）和义务台账结构（F-130/F-131），使用官方合法空请求检查客户端接线，并区分广告schema兼容性与真实Evidence（F-120）。真实重建还需目标证据、原始用例、候选fixtures和相当authority的验证器，本页未提供这些产物。
 
 ## 输入
 
-- 一台满足 Node 支持范围的机器（`22.x` / `24.x` / `26.x`，F-119）。
+- 一台满足 Node 精确支持范围的机器（`^22.19.0 || ^24.11.0 || >=26.0.0`，F-007）。
 - 一个可分析的目标（待重建的应用目录 / `.asar` / native 二进制等）。
 - 若走 native 等静态分析阶段，需已装相应分析工具（Ghidra/IDA/Hopper 等），见 [provider-setup.md](provider-setup.md)。
 
@@ -114,16 +113,16 @@ rea build-reconstruction-obligation-ledger \
 
 举例：一个协议取消义务可把 `required_case_kinds` 声明为 `["positive","negative","malformed","cancellation"]`，并在 manifest binding 里用四类 `original_cases` 与四类重建 `fixtures` 覆盖它们，再附一个 authority 相当的 `verifier`（其 status 为 `pass`），从而闭合该项义务（F-130/F-131，`reconstruction-obligation-ledgers.md` 中 `protocol.rpc.cancel` 示例）。
 
-## 阶段五：用 compact profile 压缩 agent 侧输入
+## 阶段五：可选 compact 广告schema兼容配置
 
-整条重建流程是长流程，agent 每步都携带输入 schema。为压缩体积，REA 提供 **MCP 契约输入 schema profile** 机制（F-120）：
+模型提供方可能限制单工具输入schema大小。REA提供可选广告profile，默认保持完整定义（F-120）：
 
-- 环境变量 `REA_MCP_INPUT_SCHEMA_PROFILE`，默认 `compact`。
-- `compact` 模式：预算 **13,312** 字节，仅保留 9 个字段：`operation` / `function` / `rva` / `offset` / `registers` / `stack` / `memory` / `timestamp` / `correlation_id`（F-120）。
-- `full` 模式：含 **24** 个字段（F-120）。
+- `REA_MCP_INPUT_SCHEMA_PROFILE`默认`full`。
+- 可选`compact`将每个广告输入JSON Schema限制在**13,312字节**，并非固定9字段。
+- 工具全集、输出schema、annotations及canonical服务端验证不变；真实Evidence与实际必填参数不因此减少。
 
 ```bash
-# 启动 MCP 服务前设置，默认 compact：
+# POSIX shell；仅在提供方大小限制需要时选择compact，默认full：
 REA_MCP_INPUT_SCHEMA_PROFILE=compact rea --mcp
 ```
 
@@ -131,11 +130,11 @@ REA_MCP_INPUT_SCHEMA_PROFILE=compact rea --mcp
 
 ## 输出 / 验收
 
-- [ ] 走查 9 个重建就绪阶段并映射到具体动作（F-129）
-- [ ] 构造含 `artifacts` / `providers` / `environments` / `scenarios` / `captures` / `unknowns` / `records` 的 `evidence_bundle`（F-130）
-- [ ] 调用 `rea build-reconstruction-obligation-ledger` 得到 `ledger_id` / `closure_digest`（F-130）
-- [ ] 说明 `manifest` 的 `bindings` / `contradictions` 与 `required_case_kinds` 的多态（F-131）
-- [ ] 用 `REA_MCP_INPUT_SCHEMA_PROFILE=compact` 控制输入 schema（F-120）
+- [ ] 能区分九阶段名称与实际命令；不把阶段表当执行记录（F-129）。
+- [ ] 空请求按官方契约返回零义务`unknown`，而非重建`pass`（本机未实跑）。
+- [ ] 能解释`ledger_id`/`closure_digest`存在不等于义务闭合（F-130）。
+- [ ] 真实重建逐项核对`manifest`绑定、原始用例、fixtures、验证器与矛盾（F-131）。
+- [ ] 需要时配置compact并重启服务；不认为它压缩Evidence或免除canonical校验（F-120）。
 
 ## 反模式提醒
 

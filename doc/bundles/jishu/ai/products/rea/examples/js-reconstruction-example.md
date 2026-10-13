@@ -1,5 +1,4 @@
 ---
-okf_version: "0.2"
 type: Example
 title: "REA：JavaScript 应用重建示例"
 description: "用 rea analyze-javascript-application 对给定 Electron/JavaScript 应用目录走通一次静态重建，配合 compare_application_versions / trace_application_feature 工作流、trace_web_source_location Web 源定位，以及 observe-javascript-runtime / reconcile-javascript-runtime 运行时观测与协同（证据 F-067/069/070/072/073/074/075/076/077）"
@@ -9,14 +8,14 @@ status: stable
 stale_after: 2026-12-31
 sources:
   - id: docs-full
-    url: "file" # external/dao/rea/docs/: javascript-artifact-reconstruction.md / javascript-application-workflows.md / javascript-recovery.md / javascript-runtime-observation.md / javascript-runtime-reconciliation.md / web-source-location.md
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a/docs"
   - id: local-source
-    url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
 ---
 
 # 示例：JavaScript 应用重建示例
 
-> ⚠️ **可复现性说明**：本示例的**输入（命令）/步骤明确**，理论上可独立复现。命令与其他数值来自源码与官方文档核对（references/facts.md），**未在本机实际运行**。执行时以官方文档、`rea analyze-javascript-application --help`、`rea setup --help`、`rea doctor` 当前输出为准。
+> 命令与输入契约经固定源码和官方文档核对，未在本机运行 REA。静态分析、版本对比与特性追踪给出输入生成步骤；Web 定位与运行时协同仅展示调用接口，需按对应官方 schema 准备真实证据，不能把整页当作独立端到端脚本。
 
 ## 目标
 
@@ -85,16 +84,19 @@ JS 工作流共有 6 个 MCP 工具，CLI 名用连字符替换下划线同名�
 # 先独立重建两个版本，再喂给对比命令
 rea analyze-javascript-application /absolute/path/to/version-a --json > version-a-evidence.json
 rea analyze-javascript-application /absolute/path/to/version-b --json > version-b-evidence.json
-rea compare-application-versions ./compare-input.json --json
 ```
 
-其中 `compare-input.json` 携带两个版本 Evidence，例如：
+其中 `compare-input.json` 携带完整 Evidence 记录。以下脚本读取上一步保存的真实结果，不添加不存在的 `from` 字段：
 
-```json
-{
-  "left": { "kind": "inline", "evidence": { "from": "version-a-evidence.json 的完整记录" } },
-  "right": { "kind": "inline", "evidence": { "from": "version-b-evidence.json 的完整记录" } }
-}
+```bash
+node --input-type=module -e '
+import { readFileSync, writeFileSync } from "node:fs";
+const read = path => JSON.parse(readFileSync(path, "utf8"));
+writeFileSync("compare-input.json", JSON.stringify({
+  left: read("version-a-evidence.json"),
+  right: read("version-b-evidence.json")
+}));'
+rea compare-application-versions ./compare-input.json --json
 ```
 
 **说明**：
@@ -109,15 +111,16 @@ rea compare-application-versions ./compare-input.json --json
 ```bash
 # 先对给定树分析一次并按保存的 Evidence 构造输入（可仿照官方 workflow 文档做法）
 rea analyze-javascript-application /absolute/path/to/app --json > application-evidence.json
-rea trace-application-feature ./trace-input.json --json
 ```
 
-```json
-{
-  "application": { "kind": "inline", "evidence": { "from": "application-evidence.json 的完整记录" } },
-  "seed": { "kind": "string", "value": "search-result" },
-  "direction": "both"
-}
+```bash
+node --input-type=module -e '
+import { readFileSync, writeFileSync } from "node:fs";
+const application = JSON.parse(readFileSync("application-evidence.json", "utf8"));
+writeFileSync("trace-input.json", JSON.stringify({
+  application, seed: { kind: "string", value: "search-result" }, direction: "both"
+}));'
+rea trace-application-feature ./trace-input.json --json
 ```
 
 **说明**：
@@ -129,12 +132,19 @@ rea trace-application-feature ./trace-input.json --json
 
 对被动捕获的 Web 或 Electron 源做原始源映射定位：
 
+CLI 接受六个位置参数，不接受单个 JSON 请求文件。准备真实 `export_web_scripts` 导出 manifest 与本地 source map 后，按以下形态调用；路径和位置须替换为该次导出的实际值，本节未生成这些文件。
+
 ```bash
-rea trace-web-source-location ./source-location-input.json --json
+rea trace-web-source-location \
+  "D:/analysis/export-manifest.json" 0 \
+  "D:/analysis/app.js.map" "https://example.test/app.js.map" \
+  1 0 --json
 ```
 
 **说明**：
 - `trace_web_source_location`（CLI `rea trace-web-source-location`）适配器锁定上游 `@jridgewell/trace-mapping` **0.3.31**（F-077）。
+- 参数依次为 manifest 路径、从零开始的 script index、本地 source map 路径、source map URL 上下文、生成行号、生成列号；script index 必须指向 manifest 中精确的脚本。
+- URL 仅作为解析上下文，不触发 fetch。manifest 和 map 必须真实存在；不能把普通应用 Evidence 文件当作导出 manifest。
 - 生成位置用从 1 开始的行号、从 0 开始的 UTF-16 列号（F-077）。
 
 ### 9. 运行时观测：observe_javascript_runtime
@@ -142,17 +152,20 @@ rea trace-web-source-location ./source-location-input.json --json
 静态图工作流不执行恢复出的代码。当需要运行时语义时，通过运行时观测获取被动观察：
 
 ```bash
-rea observe-javascript-runtime ...   # 运行时观测（与 MCP 同名，CLI 用连字符）
-rea list-javascript-runtime-targets ...  # 枚举运行时目标
+rea list-javascript-runtime-targets http://127.0.0.1:9229 --json
+rea observe-javascript-runtime http://127.0.0.1:9229 TARGET_ID --runtime-kind node --json
 ```
 
 **说明**：
 - JS 运行时观测含 2 个 MCP 工具 `list_javascript_runtime_targets`/`observe_javascript_runtime`（CLI 同名，连字符化；F-075）。
+- 前提是调用方已经启动 Inspector 目标；`TARGET_ID` 替换为发现结果中的精确 ID。REA 不启动、暂停、恢复或结束该目标。
 - 声明 4 种角色 `node`/`electron-main`/`electron-preload`/`electron-renderer`；捕获预算 8 MiB 聚合、CDP 消息传输上限 16 MiB（F-075）。
 
 ### 10. 协同：reconcile_javascript_runtime
 
 把静态重建的 Evidence 与被动运行时捕获 Evidence 合并——第二操作不重跑静态分析、不接触 CDP，保留静态、运行时与跨层推断三者的独立 authority：
+
+`reconcile-input.json` 须按固定 `docs/javascript-runtime-reconciliation.md` 准备完整静态层、运行时层及映射。本节未生成这些输入。
 
 ```bash
 rea reconcile-javascript-runtime ./reconcile-input.json --json

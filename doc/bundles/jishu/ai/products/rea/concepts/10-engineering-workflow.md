@@ -1,5 +1,4 @@
 ---
-okf_version: "0.2"
 type: Concept
 title: "工程与管理：可审计的重建工作流"
 description: "REA 的工程层能力 —— 重建就绪 9 阶段、重建义务台账 build_reconstruction_obligation_ledger、MCP 契约输入 schema profile、安装/Node/客户端/DeepSeek Harness、agent 提示词、工具命名族、测试/CI/发布、6.2 迁移、崩溃记录分析与 CLI 退出码（事实层）"
@@ -9,14 +8,14 @@ status: stable
 stale_after: 2026-12-31
 sources:
   - id: docs-full
-    url: "file" # 本地官方文档全量：external/dao/rea/docs/（49 个 .md，F-119~F-131 来源）
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a/docs"
   - id: local-source
-    url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
 ---
 
 # 工程与管理：可审计的重建工作流
 
-> 事实层（How it stays auditable / 工程过程）。本文覆盖 N 章（F-119~F-131）的工程与管理事实。只陈述可核验的事实；方法论侧的推导见本文末尾的勾连。
+> 事实层（How it stays auditable / 工程过程）。本页覆盖事实清单 N 节（F-119~F-131）的工程与管理事实；方法论推导见末尾的事实对应。
 
 ## 一句话定位
 
@@ -35,7 +34,7 @@ REA 文档把「重建一个应用」拆成 9 个就绪阶段（`reconstruction-
 为把「未知」「矛盾」显式留痕，REA 提供义务台账机制：
 
 - **输入**：`evidence_bundle`，内含 `artifacts` / `providers` / `environments` / `scenarios` / `captures` / `unknowns` / `records` 数组（F-130）。
-- **输出**：结果含 `ledger_id` 与 `closure_digest`（F-130）——`closure_digest` 是「重建闭包已完成」的摘要凭证。
+- **输出**：结果含 `ledger_id` 与 `closure_digest`（F-130），标识包括限制与未闭合义务在内的完整结果。摘要存在不证明闭包完成；空 Evidence 请求也会返回零义务的 `unknown` 台账。
 - **入口**：`build_reconstruction_obligation_ledger`（MCP 工具），CLI 侧为 `rea build-reconstruction-obligation-ledger`（F-130）。
 - **内部结构**：台账的 `manifest` 对象含 `bindings` / `contradictions` 数组；`required_case_kinds` 数组可含 `positive` / `negative` / `malformed` / `cancellation`（多态用例种类，F-131）；`reviewed_obligations` 含 `obligation_id` / `obligation_version` / `title` / `application_layer` / `family` 字段（F-131）。
 
@@ -43,18 +42,18 @@ REA 文档把「重建一个应用」拆成 9 个就绪阶段（`reconstruction-
 
 ## MCP 契约输入 schema profile（F-120）
 
-为压缩 agent 侧每步输入体积，REA 对 MCP 契约输入 schema 提供 profile 分档（`mcp-contracts.md:48-62`，F-120）：
+为适配模型提供方的工具定义大小限制，REA对广告输入JSON Schema提供profile分档（F-120）：
 
-- 环境变量 `REA_MCP_INPUT_SCHEMA_PROFILE`，默认 `compact`。
-- `compact` 模式：预算 **13,312** 字节，仅保留 9 个字段：`operation` / `function` / `rva` / `offset` / `registers` / `stack` / `memory` / `timestamp` / `correlation_id`。
-- `full` 模式：含 **24** 个字段。
+- `REA_MCP_INPUT_SCHEMA_PROFILE`默认`full`，完整广告保持不变。
+- 可选`compact`将每个广告输入schema限制在**13,312字节**；删除嵌套描述、examples、defaults、titles，保留根描述，并在预算内展开schema-local refs。
+- 六个复杂工具可约化嵌套验证广告，但工具全集、输出schema、annotations和canonical服务端验证不变；不是固定“9字段/24字段”分档。
 
-即默认尽量压缩单步输入量，按需切 `full` 获取完整字段。
+设置在服务启动时读取，改动需重启。它不压缩真实Evidence，也不减少canonical请求的必填参数。
 
 ## 安装 / Node / 17 客户端 / DeepSeek Harness（F-119 / F-121 / F-122）
 
-- **Node 运行时**要求 `22.x` / `24.x` / `26.x`（`installation.md:46`，F-119）。
-- **客户端覆盖**：安装支持 **17** 个客户端 ID——`claude` / `copilot` / `cursor` / `windsurf` / `codeium` / `trae` / `continue` / `cline` / `roo-cline` / `aider` / `void` / `pearai` / `openai-agent` / `anthropic-agent` / `google-agent` / `llm-cmd` / `cat-ai`（`installation.md:146-164`，F-121）。
+- **Node运行时**要求`^22.19.0 || ^24.11.0 || >=26.0.0`，不能只按主版本判断（F-119）。
+- **客户端覆盖**：17个文件型ID为`claude_code`/`claude_desktop`/`codex`/`cursor`/`gemini_cli`/`windsurf`/`devin`/`opencode`/`antigravity`/`copilot_cli`/`commandcode`/`qwen_code`/`vscode`/`grok_build`/`omp`/`pi`/`hermes`。源码额外登记`grok_bot`，但其连接器需账户内手动配置，故是18登记而非18文件型配置（F-121）。
 - **DeepSeek Harness 集成**：需 `@deepseek-ai/dsh@0.2.0-rc.2`；配置文件路径为 `$DSH_HOME/cordis.patch.yml`；`REA_MCP_INPUT_SCHEMA_PROFILE` 支持 `compact` / `full`（`installation.md:260,271,306-307`，F-122）。
 
 ## agent 提示词 6 个（F-119）
@@ -77,8 +76,10 @@ REA 文档把「重建一个应用」拆成 9 个就绪阶段（`reconstruction-
 
 - **测试与 CI**（`testing.md`，F-124）：
   - `verify:deepseek-client` 需 `@deepseek-ai/dsh@0.2.0-rc.2`。
-  - CI 矩阵覆盖 Node `22.x` / `24.x` / `26.x`。
-  - 专项验证版本：`verify:hopper` 需 Hopper Pro `4.x`、`verify:ghidra` 需 Ghidra `11.x`、`verify:ida` 需 IDA Pro `8.x` / `9.x`。
+  - 多数job读取`.nvmrc`的Node24.18.0，路径边界专项另用22.19.0；package矩阵按变更选择Linux/macOS的x64/arm64。
+  - Ghidra接受12.1.x，记录基线12.1.4/JDK21；JDK上下界以安装中的`application.java.min/max`为准。
+  - Hopper FAT/FAT64轨道记录6.1.0-demo，仅证明REA prepared FAT64 workflow，不证明Hopper原生FAT64 loader支持。
+  - IDA已记录Windows x64 9.3、macOS arm64 headless Professional9.1 build9.1.250226；modern supervisor固定`c133c3853faa111a9b00ee615c013b720d0c4acd`，legacy attached GUI为upstream1.4.0。Linux headless、modern attached GUI、其他版本/架构及真实HTTP supervisor仍未验证。
 - **发布策略**（`releasing.md`，F-125）：Release Please 使用 `always-bump-minor`；版本格式 `v${major}.${minor}.${patch}`，预发布 `v${major}.${minor}.${patch}-${prerelease}`。
 
 ## 6.2 迁移（F-126）
@@ -115,13 +116,13 @@ CLI 退出状态码约定（`cli.md:206-209`，F-128）：
 - 重建就绪 9 阶段（F-129）→ 声明式重建请求与分阶段执行
 - 义务台账 `build_reconstruction_obligation_ledger` + `ledger_id`/`closure_digest`（F-130）→ 义务核对与闭包摘要
 - 台账 `required_case_kinds` 多态、`manifest` 的 `bindings`/`contradictions` 与 `reviewed_obligations`（F-131）→ 义务与矛盾显式留痕
-- MCP 输入 schema profile（F-120）→ 长流程的输入压缩/完整分档
+- MCP输入schema profile（F-120）→ 广告schema的兼容性分档，不改变真实Evidence与canonical验证
 - 6.2 迁移固化 `analysis_profile` 必填（F-126）→ 契约演进与迁移治理
 - Release Please `always-bump-minor`（F-125）→ 每次新能力上 minor，契约演进节奏统一
 
-若需要一条带具体步骤的重建工作流示例走查，可参见 [examples/index.md](../../examples/index.md)。
+若需要带具体步骤的重建工作流走查，可参见 [示例索引](../examples/index.md)。
 
 ## 阅读下一篇
 
 - [回到 REA 概念索引](index.md)——按知识地图回到 01~09 各篇
-- 示例侧：[examples/index.md](../../examples/index.md)——含 CLI/MCP 使用与 Provider 接入示例；重建工作流按 9 阶段 + 义务台账的具体走查规划见 `examples/reconstruction-workflow-example.md`（2026-10-12 规划中，未生成时回退 examples/index.md）
+- 示例侧：[重建工作流](../examples/reconstruction-workflow-example.md)提供 9 阶段与义务台账的走查，命令未在本机实跑。

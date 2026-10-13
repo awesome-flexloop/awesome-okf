@@ -1,5 +1,4 @@
 ---
-okf_version: "0.2"
 type: Concept
 title: "Native 域与专项 Ghidra 深度适配"
 description: "REA 的 Native 调查能力与专项 Ghidra 支持 —— Mach-O 静态检查与运行时观测、离线二进制诊断、raw-binary 架构映射，以及 DOS/MIPS/PSP/.NET NativeAOT/Windows P0 专项 Ghidra 适配，外加 IDA/JEB/Apktool 等其他反编译 Provider（事实层 F-083~F-102）"
@@ -9,9 +8,9 @@ status: stable
 stale_after: 2026-12-31
 sources:
   - id: docs-full
-    url: "file" # 本地官方文档全量：external/dao/rea/docs/
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a/docs"
   - id: local-source
-    url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
 ---
 
 # Native 域与专项 Ghidra 深度适配

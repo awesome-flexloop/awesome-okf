@@ -1,5 +1,4 @@
 ---
-okf_version: "0.2"
 type: Concept
 title: "安装、setup 与 CLI/MCP 双入口"
 description: "REA 的安装与双入口 —— npm 包 rea-agents 的 bin 双命令、scripts/rea.mjs 双层路由、129 顶层命令、命令↔工具别名映射、官方 npx rea-agents setup、CLI/MCP 双端同源（证据：F-010~F-018, F-056）"
@@ -9,9 +8,9 @@ status: stable
 stale_after: 2026-12-31
 sources:
   - id: local-source
-    url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
   - id: rea-tools-doc
-    url: "https://rea.tools/zh-CN/"
+    resource: "https://rea.tools/zh-CN/"
 ---
 
 # 安装、setup 与 CLI/MCP 双入口

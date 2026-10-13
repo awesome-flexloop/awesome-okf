@@ -1,17 +1,16 @@
 ---
-okf_version: "0.2"
 type: Concept
 title: "领域类型与证据模型"
-description: "REA 的分析结果如何被结构化 —— AnalysisSnapshot 快照、Evidence<Result> 泛型与 EvidenceLocation 证据定位、各目标域领域类型（BrowserScenario/EvmInterface/BinaryTarget/Harmony），以及 Domain 层"纯副作用无关"设计；含 nativeCallRoutes 不存在的勘误（证据：F-057~F-066, F-058, F-043）"
+description: "REA 的 AnalysisSnapshot、Evidence 泛型、各目标域类型与 Domain 层纯副作用无关设计，含 nativeCallRoutes 不存在的勘误"
 tags: [rea, domain, evidence, analysis-snapshot, typescript, pure-functions, reverse-engineering]
 generated: { by: "source-code-to-okf-wiki:E", at: "2026-10-12T10:30:00+08:00" }
 status: stable
 stale_after: 2026-12-31
 sources:
   - id: local-source
-    url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
   - id: rea-tools-doc
-    url: "https://rea.tools/zh-CN/"
+    resource: "https://rea.tools/zh-CN/"
 ---
 
 # 领域类型与证据模型
@@ -20,7 +19,7 @@ sources:
 
 ## 核心：结果以「证据 + 覆盖率 + unknowns」结构化
 
-洞察四反复强调：一条结果的「可信度」看它的 `evidence` 与 `unknowns` 字段（F-043）——证据非空、unknowns 小的结果才适合直接交给 agent 后续推理。本文梳理承载这一模型的领域类型定义。
+一条结果报告 `evidence`、目标身份、覆盖范围与 `unknowns`（F-043）。推理还须核对来源、适用范围与矛盾；证据非空或未知项少不能单独证明可靠性。以下类型承载这些信息。
 
 ## AnalysisSnapshot：一次快照
 

@@ -1,8 +1,7 @@
 ---
-okf_version: "0.2"
 type: Reference
 title: "REA 架构洞察（insights）"
-description: "REA（Reverse Engineer Anything）rea-agents v6.4.0 的 6 个核心架构洞察（陈述+证据+反常识+行动）与知识地图/学习路径，用于指引 concepts 文档分组与覆盖事实"
+description: "REA 的十项架构与官网调查洞察，以及基础、上手、实验和重建验证学习路径"
 tags: [rea, insights, mcp, reverse-engineering, knowledge-map]
 generated:
   by: source-code-to-okf-wiki:I
@@ -11,16 +10,18 @@ status: stable
 stale_after: 2026-12-31
 sources:
   - id: local-source
-    url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
   - id: rea-tools-doc
-    url: "https://rea.tools/zh-CN/"
+    resource: "https://rea.tools/zh-CN/"
   - id: rea-run
-    url: "https://rea.run/zh/"
+    resource: "https://rea.run/zh/"
+  - id: official-site-full
+    resource: official-site-source.md
 ---
 
 # REA 架构洞察（insights.md）
 
-> I 阶段分析。基于 R 阶段事实清单 F-001~F-131（`references/facts.md`）。四元组结构：**陈述 → 证据（引用具体 F-xxx）→ 反常识 → 行动**。
+> I 阶段分析。基于 R 阶段事实清单 F-001~F-180（`references/facts.md`）。四元组结构：**陈述 → 证据（引用具体 F-xxx）→ 反常识 → 行动**。
 > 信源：本地源码 `external/dao/rea`（固定 commit `eaf88aca`，npm 包 `rea-agents` v6.4.0）+ 官方文档 `rea.tools` + 补充信源 `rea.run`。
 > **范围说明**：洞察一~四于 2026-10-12 首轮生成（依据 F-001~F-066）；同日 docs/ 全量深层扩展后（F-067~F-131），在既有论述上追加洞察五（专项工具适配深度与版本钉扎）与洞察六（重建工程工作流），并更新知识地图。
 
@@ -56,7 +57,7 @@ sources:
 - F-020 / F-021：`TOOL_CONTRACTS` = 24 组 spread，聚合自 24 个导入变量（`OFFICIAL_TOOL_CONTRACTS`、`ENHANCED_TOOL_CONTRACTS`、`NATIVE_TOOL_CONTRACTS`、`EVM_TOOL_CONTRACTS`…）。
 - F-022：统一类型 `ToolContract<Name, InputSchema, OutputSchema>` 定义契约字段。
 - F-013 / F-016：CLI 顶层命令 129 个，`CLI_COMMAND_TOOL_ALIASES` 把 `analyze→binary_overview`、`decompile→procedure_pseudo_code` 等命令映射到契约工具。
-- F-017：存在 `MCP_TOOLS_WITHOUT_DEDICATED_CLI`——约 50+ 个工具仅经 MCP 暴露、无专用 CLI 命令，说明**契约全集 ⊇ CLI 子集**。
+- F-017：存在`MCP_TOOLS_WITHOUT_DEDICATED_CLI`，说明工具与专用命令不一一对应；CLI另含setup等管理入口，不能把两种对象简单作包含集合比较。
 - F-029：`binary_session` 是运行中服务目录身份与「当前哪些工具可用」的权威来源。
 
 **反常识**：多数 CLI 工具的架构是「命令是主体，内部调用共享函数」。REA 反其道而行——**契约（MCP 工具定义）是主体，CLI 只是契约的一个前端投影**。证据是存在大量「只有 MCP 工具、没有 CLI 命令」的能力（F-017），以及 CLI 命令名与 MCP 工具名并不一一对应、需要别名映射（F-016）。这意味着：真正理解 REA 能力全集，应读 `src/contracts/` 而非 `src/cliCommandNames.ts`；CLI 只是为了让习惯终端的用户能手动触达部分能力，MCP 才是 agent 的主通道。
@@ -64,7 +65,7 @@ sources:
 **行动**：
 - 查看 REA 支持「什么」，以 `TOOL_CONTRACTS` 聚合清单为准（F-019~F-024），按 kind/子域分组浏览，而非数 CLI 命令。
 - 写一步分析任务时，优先通过 MCP 工具名（如 `binary_overview`、`procedure_pseudo_code`）而非 CLI 命令来思考——后者只是前者的别名投影。
-- 需要完整工具清单与可用性判断时，调用 `binary_session`（F-029），它返回包括「当前不可用工具」在内的全集。
+- 完整工具定义及输入/输出schema读`tools/list`；活动服务身份、Provider绑定和分组可用性读`binary_session`（F-029），两者不可替代。
 
 ---
 
@@ -77,12 +78,12 @@ sources:
 - F-011：`scripts/rea.mjs` 双层路由（`--mcp`/`mcp` 进 MCP，其余进 CLI），MCP doctor 单独加载。
 - F-004 / F-006：最终对外只有**一个** MCP 服务名 + 统一 CLI，符合「二端一端」语义。
 - F-018：CLI 命令族通过 `registerXxxCommands()` 注册，与 MCP Provider 同层复用。
-- 官方安装/接入多客户端路径：`docs/`（README_zh 佐证 `npx rea-agents setup` 与接入 Claude Code/Codex/Cursor/Gemini CLI/Grok Build）。
+- 官方安装/接入多客户端路径：`docs/`（README_zh 佐证 `npx rea-agents@latest setup` 与接入 Claude Code/Codex/Cursor/Gemini CLI/Grok Build）；直接执行 `rea` 另要求 PATH 中有全局安装入口。
 
 **反常识**：业界常把「CLI 版」和「MCP 版/服务版」拆成两个产品两个安装（甚至两个 npm 包）。REA 用一个包、一次 `setup` 覆盖两条入口，且命令名与工具名同源映射。对用户的价值是**低迁移成本**：可以先在终端手动 `rea analyze ./target`（F-056）实验，再把它接入 IDE/agent 走 MCP，命令与工具语义保持一致，学习一次即可两处使用。
 
 **行动**：
-- 上手顺序：`npx rea-agents setup` 初始化 → 先 CLI 单次 `rea analyze <path>` 验证工具链（含 Ghidra 等）装好 → 再接入你的 agent 客户端走 MCP 批量分析。
+- 上手顺序：`npx rea-agents@latest setup`配置并重启客户端；没有全局安装时，单次CLI用`npx rea-agents@latest analyze <path>`。只有已全局安装且bin在PATH中时才直接用`rea`；setup不等于获得全局CLI。
 - 若你只用自动化/agent 场景，仍建议先跑一次 CLI 冒烟——它能暴露 Provider 是否就绪（doctor 类命令），比直接走 MCP 更好排障。
 - 记住命令名与 MCP 工具名的映射并非 1:1（F-016/F-017）；在 agent 端应直接使用工具名全集，而非依赖 CLI 命令名。
 
@@ -100,12 +101,12 @@ sources:
 - F-045：WASM 工制检查「不执行 WASM」，用 WABT 静态检查。
 - F-043：结果报告 evidence、目标身份、覆盖率与 unknowns。
 
-**反常识**：一个「逆向一切」的工具最容易被设想成「自己加载二进制/自己开沙箱执行/自己爬网页」。REA 反其道：它**不做运行时托管**，让二进制留在用户的分析工具进程、让网站在用户的浏览器、让捕获命令在用户的临时有界环境里跑；REA 只负责发起、收束、把产出规整成证据返回给 agent。这是一种**「不动用户资产」的可信边界设计**——把敏感动作留在用户侧，REA 侧不持有文件、不设沙箱、不主动联网。代价是能力上限受用户自备工具与环境的约束（这也是为什么它要求安装 Ghidra/IDA/Hopper、要你有 Chrome 端点等）。
+**反常识**：本地优先不等于无副作用。静态读取、附着已有运行时与主动启动目标是不同契约：Process Capture启动命令，Electron/Browser场景可管理生命周期与动作，ADB可安装或传输文件；导出也会写入文件。应按所选命令评估权限、网络、资源与清理，不能统称“不动资产、不托管、不联网”。本地工具部署也不保证模型客户端不上传证据。
 
 **行动**：
 - 安全评估时注意：REA 本身不虚拟化/沙箱化目标；分析目标的可信性与隔离由「你选的分析工具 + 你的命令」决定（F-050 非沙箱）。
-- 网站/进程类分析默认离线、附着而非拉取（F-051/F-053）；需要真实运行时行为时显式走 Process Capture，并对命令与文件系统边界负责。
-- 一条结果的「可信度」看它的 evidence 与 unknowns 字段（F-043）：证据非空、unknowns 小的结果才适合直接交给 agent 后续推理。
+- 网站观察附着已启动浏览器，HAR检查读取保存文件；Process Capture则启动选定命令，不能统称“默认离线附着”（F-050/F-051/F-053）。
+- 判断结果时核对目标身份、覆盖范围、推断来源和矛盾；unknowns数量少不能单独证明结论可靠。
 
 ---
 
@@ -136,14 +137,14 @@ sources:
 **证据**：
 - F-129：reconstruction-readiness 9 阶段命名（verify-reconstruction-closure / export-replay 等）。
 - F-130/F-131：义务台账输入输出 schema、`required_case_kinds` 多态、binding/contradiction 清单。
-- F-120：`REA_MCP_INPUT_SCHEMA_PROFILE` compact/full 分档 + 字节预算。
+- F-120：默认full，可选compact限制广告输入schema预算；不改变真实Evidence、工具全集或canonical服务端校验。
 - F-126：6.2 迁移固化 `analysis_profile`。
 - F-125：`always-bump-minor` 保证每次新能力都上 minor，契约演进节奏统一。
 
 **反常识**：把一个「逆向 CLI」文档写得像**工程规范**（阶段、义务、闭包、迁移）是很反直觉的——多数逆向工具只给「命令参考」。REA 的文档层明显借鉴了「重建即工程」的思维：它把「逆向结果是否可信」形式化为可检查的**义务/证据/闭包**，让 agent 知道「做到哪一步算完成、什么算证明、什么仍未解决」。这与洞察二「契约单一事实源」一脉相承：不止工具签名是契约，**重建过程本身也是契约**。
 
 **行动**：
-- 把 REA 用于「理解一个应用」时，建议按 9 阶段（F-129）走一个完整的 `verify-reconstruction-closure`——比随意调几条 inspect 命令更能得到一个可审计的、有 `closure_digest` 的结论。
+- 按9阶段（F-129）核对重建义务。`verify-reconstruction-closure`是阶段名称，不在此当作已核对的CLI命令；`closure_digest`可标识未闭合台账，须继续检查状态、未知项与矛盾。
 - 长流程分析优先用 `evidence_bundle` + `reconstruction-obligation-ledger`（F-130）收口，把「未知项」「矛盾」显式留痕，而不是只拿一条 `binary_overview` 结果当结论。
 
 ---
@@ -186,8 +187,57 @@ sources:
 
 | 文件名 | 标题 | 内容要点 |
 |--------|------|---------|
-| cli-and-mcp-usage.md | CLI 与 MCP 使用示例 | `npx rea-agents setup`、`rea analyze <path>`、`rea inspect-decompile-*` 实践 + 接入 agent 的 MCP 配置要点 |
+| cli-and-mcp-usage.md | CLI 与 MCP 使用示例 | `npx rea-agents@latest setup`、带实际目标路径的 analyze/inspect/decompile/function 调用与 PATH 条件；接入 agent 的 MCP 配置 |
 | provider-setup.md | 分析工具安装与 Provider 接入 | Ghidra/IDA/Hopper/JADX/ADB/EVM/WASM/固件工具链的本地准备与 doctor 校验 |
 | js-reconstruction-example.md | JavaScript 应用重建示例 | `analyze_javascript_application` + 应用图 + 运行时协同 + 完整性策略的实际走查（F-067~F-076） |
 | platform-deep-example.md | 平台深层分析示例 | Apple bundle / Electron / HarmonyOS / Android / 固件 的代表性 CLI 命令与限制（F-103~F-118） |
-| reconstruction-workflow-example.md | 重建工程工作流示例 | 按 9 阶段走一个 `evidence_bundle` + 义务台账 + `closure_digest` 的完整流程（F-129~F-131） |
+| reconstruction-workflow-example.md | 重建工程工作流示例 | 九阶段说明与合法空台账集成请求，不是实际应用完整重建（F-129~F-131） |
+| showcase-cases-example.md | 五项官网案例证据 | 对照目标版本、输入集、检查对象及剩余义务（F-153~F-172） |
+| notes-first-investigation.md | Notes首次调查 | 静态IPC路径与独立formatter验证（F-141~F-144） |
+| official-site-labs.md | 官网教学实验 | 计算器、恐龙与TOTP的规则、固定输入及重建范围 |
+
+## 第四轮官网洞察
+
+### 洞察七 先选证据问题再选目标域
+
+- 陈述：入门从“导出后文件在哪里、字段是什么”开始，比从工具目录开始更容易检验答案。
+- 证据：F-137~F-145。Notes把按钮、IPC、文件写入与formatter各自放到可检查的位置；浏览器例只证明窗口内请求。
+- 反常识：静态关系图能帮助定位，但不会自动证明按钮完整执行；返回零歧义也不等于运行成功。
+- 行动：安装完成后先走Notes静态调查，再独立执行formatter；涉及网页时先定义需要观察的动作与窗口。
+
+### 洞察八 验证必须带对象和输入范围
+
+- 陈述：相同“通过”字样背后可能是函数行为、编译字节或目标运行，不能合并成一种成功。
+- 证据：F-155的DX-Ball函数用例，F-157~F-158的Notion partial/stub，F-162的Aegis Java harness，F-169的CTF原程序，F-172的TH04完整extent。
+- 反常识：133例一致不等于APK运行，2139字节匹配不等于全游戏；候选满足约束不等于唯一解。
+- 行动：每个案例列目标版本、原始证据、外加假设、检查对象、输入集和剩余义务。
+
+### 洞察九 比较器也需要被证伪
+
+- 陈述：检查器漏掉数据引用会把错误常量判为精确匹配，验证器的通过记录本身需要反例约束。
+- 证据：F-175~F-177。TH08旧比较器重定位后只比指令，0.0对128.0曾通过；后续补引用数据审计和故意无效literal测试。
+- 反常识：机器码一致不能独立支持名字含义、共享状态归属或现代移植正确性。
+- 行动：加入应失败的常量/重定位负例，重审历史通过记录，保留原compiler与原平台运行两条验证路径。
+
+### 洞察十 教学重建应保持声明粒度
+
+- 陈述：从目标恢复一条规则，适合以小模块教学，但新UI与新控制逻辑需要单独归属。
+- 证据：F-147~F-151的计算器和恐龙，F-161~F-164的Aegis，F-171的TH04摘要。
+- 反常识：可玩的恐龙教学页并非原游戏源码恢复；可读aimed_ring_angle不能替代历史compiler-sensitive helper。
+- 行动：公开模块采用固定输入验证，源码归属、许可证及未重建组件明确记录，不把教学演示包装成原应用。
+
+## 第四轮知识地图
+
+新手路径：[官网上手](../concepts/11-official-site-getting-started.md) → [Notes首次调查](../examples/notes-first-investigation.md) → [三类调查指南](../concepts/12-evidence-driven-investigation.md)。
+进阶路径：[官网实验](../examples/official-site-labs.md) → [五案例证据](../examples/showcase-cases-example.md) → [重建验证](../concepts/13-reconstruction-verification.md)。
+
+| 文档 | 主要事实 | 页面覆盖 |
+|---|---|---|
+| 11 官网上手 | F-137~F-140 | W01/W02/W04 |
+| Notes首次调查 | F-141~F-144 | W03/W07 |
+| 12 三类调查指南 | F-145/F-153~F-159 | W05~W08 |
+| 官网实验 | F-146~F-151/F-160~F-164 | W01/W13/W15 |
+| 五案例证据 | F-153~F-172 | W09~W14 |
+| 13 重建验证 | F-173~F-178 | W16/W17 |
+
+以上主题续接旧编号，不重复已有API目录。索引页W05/W09/W16作为路径连接材料，不人为生成独立“概念”。全部页面的原始归属见[逐页台账](official-site-source.md)。

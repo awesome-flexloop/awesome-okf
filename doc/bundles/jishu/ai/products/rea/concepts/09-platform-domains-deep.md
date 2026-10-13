@@ -1,5 +1,4 @@
 ---
-okf_version: "0.2"
 type: Concept
 title: "平台分析域深层：Android/ADB/.NET/固件/Apple/Electron/Harmony 的精确版本、环境变量与命令族"
 description: "REA 平台类分析域的深层细化 —— Android(JADX)、ADB 设备、.NET Managed、固件、Apple、Electron、HarmonyOS 七域的精确工具版本、环境变量、资源预算、生命周期限制与 CLI 命令族（证据：F-103~F-118）"
@@ -9,9 +8,9 @@ status: stable
 stale_after: 2026-12-31
 sources:
   - id: docs-full
-    url: "file" # 本地官方文档全量：external/dao/rea/docs/
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a/docs"
   - id: local-source
-    url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
 ---
 
 # 平台分析域深层：精确版本、环境变量与命令族
@@ -20,7 +19,7 @@ sources:
 
 ## 一句话定位
 
-REA 的平台类分析域通过**不加载、不执行工制**的原则统一起来——Android(JADX)、.NET Managed、固件（Binwalk/Unblob）、Apple、HarmonyOS 均为静态盘点与投影，ADB 与 Electron 则附加到既有设备/运行时做有界观测；本页把七域的**精确版本、环境变量、内存/时间预算、deadline 与命令族**逐条登记为 F-103~F-118 的可核验断言。
+Android(JADX)、.NET Managed、固件（Binwalk/Unblob）、Apple 与 HarmonyOS 的静态路径不执行目标代码。ADB 还包含安装与传输等设备操作；Electron 的被动观察附着既有运行时，主动场景则启动目标并管理生命周期。各命令的副作用须分别判断，不能将七域统称为被动观察。
 
 ## Android(JADX) 域（F-103 / F-104）
 
@@ -81,6 +80,7 @@ REA 接受 **Binwalk 3.1.x** 做分区检查、**Unblob 26.6.x** 做显式提取
 ### CLI 与资源限制（F-111）
 
 - CLI：`rea inspect-firmware-regions <path>`、`rea extract-firmware <in> <out>`（支持 `--offset` / `--length` / `--max-depth`）（F-111）。
+- `--offset`与`--length`须成对；提取写文件，输出绝对路径须不存在且父目录已存在。CLI先解析相对路径，不覆盖已有目录；`complete`仅说明声明范围内提取完成，不是完整固件重建（F-111）。
 - 输入上限 **128 MiB**（复制并哈希进私有工作区）、deadline **120 秒**、继承地址空间 **1 GiB**/进程、默认临时预算 **256 MiB** / **10,000 条目**、每命令合并 stdout+stderr **8 MiB**（F-111）。
 
 ## Apple 域（F-112 / F-113）
@@ -101,7 +101,7 @@ REA 把一或多个认证的 `inventory_artifact` Evidence 投影为 Apple 应�
 
 ## Electron 域（F-114 / F-115）
 
-REA 附加到 Electron/Chromium CDP 端点，只检查既有 `file://` 渲染页面，不执行 JS、不调用 Electron API；接受仅字面端口 loopback HTTP 端点（源文档 electron-observation.md:3）。
+被动inspect附加到Electron/Chromium CDP端点，检查既有`file://`渲染页面，不执行JS或调用IPC；接受字面端口loopback HTTP端点。下方主动场景是另一条启动与生命周期契约，不受被动边界概括。
 
 ### 工具与参数（F-114）
 
@@ -111,7 +111,7 @@ REA 附加到 Electron/Chromium CDP 端点，只检查既有 `file://` 渲染页
 
 ### 场景捕获与超时（F-115）
 
-- `capture-electron-scenario` CLI 接受 JSON 请求文件（`rea capture-electron-scenario scenario.json --json`）（F-115）。
+- `capture-electron-scenario`接受符合契约的内联JSON或JSON请求文件，按请求启动应用并管理生命周期；`scenario.json`须先构造，不能把文件名当完整输入（F-115）。
 - Electron 主动启动超时 **60 秒**（含启动 deadline）（F-115）。
 
 ## HarmonyOS 域（F-116 ~ F-118）

@@ -1,5 +1,4 @@
 ---
-okf_version: "0.2"
 type: Concept
 title: "REA 是什么：产品身份与定位"
 description: "REA（Reverse Engineer Anything）的产品身份 —— npm 包 rea-agents v6.4.0（MIT）、MCP 服务名、官方定位语、Node 支持、目标域概览与『编排器而非反编译器』的定位（事实层）"
@@ -9,9 +8,9 @@ status: stable
 stale_after: 2026-12-31
 sources:
   - id: local-source
-    url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
   - id: rea-tools-doc
-    url: "https://rea.tools/zh-CN/"
+    resource: "https://rea.tools/zh-CN/"
 ---
 
 # REA 是什么：产品身份与定位
@@ -54,7 +53,7 @@ REA（Reverse Engineer Anything）官方定位语为：
 ## 断言口径
 
 - facts.md 中关于「X 个」的数量断言（如 129 命令、100 处工具名等）均标注计数方法与独立 Grep 输出，可复跑核验。
-- 本包不把动态数字（Star 等）作为规范事实；版本与功能以本地源码 `main@eaf88aca`（v6.4.0）为准（见 [references/source-manifest.md](../references/source-manifest.md)）。
+- 本包不把动态数字（Star 等）作为规范事实；本页源码结构对应固定 `eaf88aca`（v6.4.0），官网快照与历史案例版本另行登记（见 [references/source-manifest.md](../references/source-manifest.md)）。
 
 ## 阅读下一篇
 

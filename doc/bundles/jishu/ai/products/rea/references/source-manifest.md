@@ -1,8 +1,7 @@
 ---
-okf_version: "0.2"
 type: Reference
 title: "REA 信源登记（source-manifest）"
-description: "REA（Reverse Engineer Anything）七个信源的 URL、归属、公开性预检、访问时点、版本固定与关系核实结论"
+description: "REA 信源的归属、公开性、固定版本与中文官网全站覆盖"
 tags: [rea, source-manifest, public-gate, mcp, reverse-engineering]
 generated:
   by: source-code-to-okf-wiki:R
@@ -11,19 +10,21 @@ status: stable
 stale_after: 2026-12-31
 sources:
   - id: rea-run
-    url: "https://rea.run/zh/"
+    resource: "https://rea.run/zh/"
   - id: zhihu-article
-    url: "https://zhuanlan.zhihu.com/p/2091916182064456398"
+    resource: "https://zhuanlan.zhihu.com/p/2091916182064456398"
   - id: rea-research-repo
-    url: "https://github.com/ringozzt/rea-research"
+    resource: "https://github.com/ringozzt/rea-research"
   - id: rea-tools-doc
-    url: "https://rea.tools/zh-CN/"
+    resource: "https://rea.tools/zh-CN/"
   - id: local-source
-    url: "file" # 本地 vendor 镜像：external/dao/rea（主仓库 morluto/rea 的本地副本）
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
   - id: docs-full
-    url: "file" # 本地官方文档全量：external/dao/rea/docs/
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a/docs"
   - id: readme-zh
-    url: "file" # 本地 README 简体中文版：external/dao/rea/README_zh.md
+    resource: "https://github.com/morluto/rea/blob/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a/README_zh.md"
+  - id: official-site-full
+    resource: official-site-source.md
 ---
 
 # REA 信源登记（source-manifest）
@@ -38,7 +39,7 @@ sources:
 | Q-A：`rea.run/zh/` 与 `rea.tools/zh-CN/` 是否为同一站点的不同域名/版本？ | **否。二者为不同站点。** `rea.run/zh/` 是**非官方**中英双语教学/整理站；`rea.tools/zh-CN/` 是 REA **官方**文档站。 | rea.run 首页原文明示「rea.run 是非官方中英双语站点，整理 REA（Reverse Engineer Anything）的 MCP／CLI 工作流、安装说明与原创教学示例。行为以 [GitHub 上游](https://github.com/morluto/rea)为准」；rea.tools 首页无此声明且为官方文档引导。 |
 | Q-B：`github.com/ringozzt/rea-research` 与 `github.com/morluto/rea` 的关系？ | **独立第三方调研仓库，非主仓库。** `ringozzt/rea-research` 是用户 `ringozzt` 于 2026-10-11 发布的**独立技术调研仓库**（研究笔记，3 stars / 4 commits / 0 forks，含 README + report.html + mindmap.html）；主仓库为 `morluto/rea`。 | rea-research README 明示「**本报告为独立第三方调研，与原项目无关**」并「原项目：[morluto/rea](https://github.com/morluto/rea)（MIT）· 官网 [rea.tools](https://rea.tools/)」。 |
 
-> **口径取舍**：由于 Q-A/Q-B 结论，本 bundle 的「产品事实」以**官方信源（rea.tools 文档站 + 本地源码 main@eaf88aca）**为一手权威；`rea.run/zh/` 与 `ringozzt/rea-research` 作为**教学/调研补充信源**，标注为二手/衍生，仅在 facts 中登记可复核的结构性声明，不作前瞻性（timeline/预估）依据。
+> **口径取舍**：当前接口以固定6.4.0源码核对，官网声明按2026-10-12在线快照，历史案例按其运行版本与证据对象分别登记。三者不互相覆盖。`rea.run/zh/` 与 `ringozzt/rea-research` 是二手教学/调研补充，不作前瞻性依据。
 
 ## 信源清单
 
@@ -49,8 +50,10 @@ sources:
 | rea-run | 教学/整理站 | rea.run 社区指南（中文） | https://rea.run/zh/ | ylwl1997（第三方，非 REA 官方） | 2026-10-12 | ✅ 公开 | 站点首页自述「非官方中英双语站点」，操作为自有教学实验（GitHub Actions 演示 / Codespaces） | 二手 | collected |
 | rea-research-repo | GitHub 调研仓库 | REA 深度技术调研 | https://github.com/ringozzt/rea-research | ringozzt（第三方研究者） | 2026-10-12 | ✅ 公开 | README 自述「本报告为独立第三方调研，与原项目无关」；2026-10-11 调研 | 二手 | collected |
 | zhihu-article | 知乎专栏文章 | 前端 Hardy ·《GitHub 31.2K Star！AI开始搞逆向工程了？》 | https://zhuanlan.zhihu.com/p/2091916182064456398 | 前端Hardy（知乎用户 wang-yan-hui-35-43） | 2026-10-12 | ✅ 公开 | 文章正文署名与作者主页；文章发布于 2026-10-09 | 二手 | collected |
-| docs-full | 本地官方文档全量 | REA 官方文档源码 `docs/`（49 个 `.md`，VitePress 站源） | external/dao/rea/docs/（同步于上游 `morluto/rea @ eaf88aca`） | morluto（REA 官方） | 2026-10-12 | ✅ 公开 | 与本地源码同 commit `eaf88aca`，为官方 rea.tools 文档站源文件 | 一手 | verified |
+| docs-full | 本地官方技术文档 | REA 技术文档 `docs/`（48 个 `.md`，固定 Git 树计数） | external/dao/rea/docs/（同步于上游 `morluto/rea @ eaf88aca`） | morluto（REA 官方） | 2026-10-12 | 公开 | 与源码同 commit；文件数不代表逐文件覆盖声明，也不代表中文官网部署源 | 一手 | verified |
 | readme-zh | 本地 README 简体中文 | REA 项目 README_zh.md（README 简体中文版，含 showcase 案例/能力总表/更新机制/FAQ/权限口径） | external/dao/rea/README_zh.md（同步于上游 `morluto/rea @ eaf88aca`） | morluto（REA 官方） | 2026-10-12 | ✅ 公开 | 与本地源码同 commit `eaf88aca`，为 README.md 的官方简体中文翻译 | 一手 | verified |
+
+第四轮官网全量覆盖与 `website/evidence/` 的固定证据另见 [官网全站台账](official-site-source.md)。该登记扩展原有官网信源，不将同上游页面与证据文件重复计算为独立信源。
 
 ## 本地源码版本固定（G0 信源稳定性门）
 
@@ -62,14 +65,14 @@ sources:
 - **固定提交**：**`eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a`**（2026-10-12 捕获）
 - **不锚定浮动 `main` 名**：本 bundle 所有对本地源码的引用以 commit hash `eaf88aca` 为追溯固定点；若上游 main 前进，本 bundle 的 facts 仍指向该固定提交可复现。
 - **G0 判定**：本地源码位于 `external/`（非 git submodule、非临时目录），为**可追溯副本**；以 commit hash 登记即可满足信源稳定性门。
-- **docs 文档全量**：`external/dao/rea/docs/`（49 个 `.md` + VitePress 配置 + `releases/6.4.0.contributions.json`）与本地源码同 commit `eaf88aca`，为官方文档站（rea.tools）源文件；F-067~F-131 全部引用该目录文件名+行号，行号相对于各文档文件，可复现（同 commit 下逐行核对）。
+- **docs 文档范围**：`external/dao/rea/docs/`（48 个 `.md` + VitePress 配置 + `releases/6.4.0.contributions.json`）与源码同 commit。48来自固定提交Git树的递归`.md`计数，不将计数等同逐文件全读。F-067~F-131引用该目录文件名与相对行号；实际中文官网教学资产和证据位于`website/`。先前“docs为rea.tools站源”的归属表述已收窄。
 - **README_zh 简体中文**：`external/dao/rea/README_zh.md`（287 行）与本地源码同 commit `eaf88aca`，为 README.md 的官方简体中文翻译；F-132~F-135 引用该文件相对行号，可复现。
 
 ## 访问时点与动态口径
 
 - **当日**：2026-10-12。
 - **动态数字口径**：GitHub Star/Forks、npm 周下载量等为**快速变化**的动态指标，各信源之间数值不一致（rea.tools 首页显示 105,209；知乎文写 31.2K；rea-research 调研写 79K）。本 bundle **不把任何动态数字作为规范事实**，仅在 facts.md 中记录「快照时点 + 来源」的原始数字，不进行跨源裁决。
-- **版本口径**：产品功能以本地源码 `main@eaf88aca`（package.json version 6.4.0）为准。
+- **版本口径**：接口核对锚定提交`eaf88aca`的6.4.0；多数官网实验为4.1.0，Aegis为6.1.0，不能把历史成绩改标6.4.0。
 - **信源时间线**：README/文档为 2026-10 期间；知乎文发布于 2026-10-09；rea-research 调研于 2026-10-11。
 
 ## 停止规则 / 失败记录
@@ -84,6 +87,6 @@ sources:
 
 ## 未采集项
 
-- 不保存任何页面全文、HTML 转储；仅在本 bundle 内登记结构化事实与必要命令（符合版权最小引用原则）。
+- 本bundle不保存页面全文或HTML转储，只登记结构化事实与必要命令。工作区外保留本轮采集缓存用于复核，不作为永久来源链接。
 - 网络页面内嵌图片文字不经 OCR 采集；以正文文字事实为准。
 - rea-research 调研中的「未验证 / 待核实项」（如约 97 CLI commands、150MB→577MB JSON、ghidra-mcp tool 数）**不采用**，需以本地源码或官方文档一手核验为准。

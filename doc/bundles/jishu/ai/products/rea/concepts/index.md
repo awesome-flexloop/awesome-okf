@@ -1,13 +1,6 @@
----
-okf_version: "0.2"
-type: category
-title: "REA 概念教程"
-description: "REA（Reverse Engineer Anything）从『是什么』到『怎么工作』再到『能分析什么 / 怎么用』——产品身份与定位、MCP 契约层单一事实源、Provider 适配器、目标域与工具矩阵、CLI/MCP 双入口、领域类型与证据模型，以及 docs/ 全量深层的 JS/Web、专项 Ghidra、平台深层与工程重建工作流"
----
-
 # REA 概念教程
 
-按从「是什么」到「怎么工作」再到「能分析什么 / 怎么用」的路径组织（依据 insights.md 知识地图的 10 个规划文档，01~06 为基础，07~10 为 docs/ 全量深层扩展）：
+共 13 篇：01~06 建立基础，07~10 深入技术域，11~13 衔接官网上手、调查和重建验证。
 
 | 文档 | 内容 |
 |------|------|
@@ -21,6 +14,9 @@ description: "REA（Reverse Engineer Anything）从『是什么』到『怎么�
 | [08 · Native 与专项 Ghidra 深度适配](08-native-ghidra-specialty.md) | Native 调查、二进制诊断、raw-binary 映射、DOS/MIPS/PSP/NativeAOT/Windows P0 专项 Ghidra、IDA/JEB/Apktool |
 | [09 · 平台分析域深层](09-platform-domains-deep.md) | Android/JADX、ADB、.NET Managed、固件、Apple、Electron、HarmonyOS 的精确版本与环境变量/资源限制 |
 | [10 · 工程与管理/重建工作流](10-engineering-workflow.md) | 重建就绪 9 阶段、义务台账、MCP 输入 schema profile、测试/CI/发布、6.2 迁移 |
+| [11 · 官网上手与安装边界](11-official-site-getting-started.md) | setup 计划、PATH、目标类型、官网与固定源码的版本差异 |
+| [12 · 三类证据驱动调查](12-evidence-driven-investigation.md) | Native、JavaScript 与浏览器观察的输入、证据和范围 |
+| [13 · 重建验证与比较器风险](13-reconstruction-verification.md) | code/data 核对、负例、原平台运行与现代移植边界 |
 
 ```{toctree}
 :maxdepth: 2
@@ -36,4 +32,7 @@ description: "REA（Reverse Engineer Anything）从『是什么』到『怎么�
 08-native-ghidra-specialty
 09-platform-domains-deep
 10-engineering-workflow
+11-official-site-getting-started
+12-evidence-driven-investigation
+13-reconstruction-verification
 ```

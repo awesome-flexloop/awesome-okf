@@ -1,5 +1,4 @@
 ---
-okf_version: "0.2"
 type: Concept
 title: "Provider 适配器：如何接入分析工具"
 description: "REA 为什么不自做反编译 —— 通过可插拔的 Provider 适配器把用户自备的分析工具接入统一 MCP 契约：AnalysisProviderCandidate 接口、Ghidra/IDA/Hopper/JEB/ADB/JADX/Apktool/EVM/WASM/.NET/Browser/Firmware 十二类 Provider 与桥接脚本（证据：F-030~F-042, F-023）"
@@ -9,9 +8,9 @@ status: stable
 stale_after: 2026-12-31
 sources:
   - id: local-source
-    url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
   - id: rea-tools-doc
-    url: "https://rea.tools/zh-CN/"
+    resource: "https://rea.tools/zh-CN/"
 ---
 
 # Provider 适配器：如何接入分析工具

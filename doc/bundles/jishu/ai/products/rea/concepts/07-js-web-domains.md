@@ -1,5 +1,4 @@
 ---
-okf_version: "0.2"
 type: Concept
 title: "JavaScript 应用图与 Web/浏览器域"
 description: "REA 的 JavaScript 应用图（JavaScriptApplicationGraph schema、12 关系词汇、身份策略）、JS 工作流 6 工具、工件重建 analyze_javascript_application、Wakaru 恢复、运行时观测与协同，以及 Web 源定位 / 模块追踪 / 脚本导出 / 浏览器场景契约与观测（事实层 F-067~F-082）"
@@ -9,9 +8,9 @@ status: stable
 stale_after: 2026-12-31
 sources:
   - id: docs-full
-    url: "file" # 本地官方文档全量：external/dao/rea/docs/
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a/docs"
   - id: local-source
-    url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
 ---
 
 # JavaScript 应用图与 Web/浏览器域
@@ -52,7 +51,7 @@ Provider 名称刻意不出现在该词汇表中（F-068）。其中 `loads`/`ex
 | `runtime-instance` | One capture only | targets、frames、运行时脚本与 workers |
 | `observation-fingerprint` | One observation scope | 无更强合理身份的事实 |
 
-F-069 文档声称共 **8** 种身份策略，实际仅列出上述 7 名，数字断言待 V 阶段 Grep 复核。
+固定文档的身份策略表列出上述 **7** 种；本轮机械计数回验一致。此前“8 种”及“待复核”是知识包的陈旧表述，不归因于上游。
 
 ## JS 工作流：跨层应用图上的 6 个 MCP 工具
 

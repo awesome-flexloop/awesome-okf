@@ -1,5 +1,4 @@
 ---
-okf_version: "0.2"
 type: Example
 title: "REA：分析工具安装与 Provider 接入"
 description: "Ghidra/IDA/Hopper/JADX/ADB/EVM/WASM/固件工具链的本地准备与 REA doctor 校验——按目标域安装自备分析工具并让 Provider 可被 REA 识别（证据 F-030~F-041, F-049）"
@@ -9,9 +8,9 @@ status: stable
 stale_after: 2026-12-31
 sources:
   - id: local-source
-    url: "https://github.com/morluto/rea @ eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
+    resource: "https://github.com/morluto/rea/tree/eaf88aca2af2b8ad7a277c09d0b45f6e2de8ac4a"
   - id: rea-tools-doc
-    url: "https://rea.tools/zh-CN/"
+    resource: "https://rea.tools/zh-CN/"
 ---
 
 # 示例：分析工具安装与 Provider 接入
@@ -70,11 +69,13 @@ rea mcp doctor    # 若走 MCP，单独校验 MCP doctor（F-011）
 ### 4. 校验目标域特定命令可用
 
 ```bash
-rea inspect-evm-interface   # EVM（F-044）
-rea inspect-wasm-artifact   # WASM（F-045）
-rea inspect-web-network-capture  # WEB 网络捕获（离线，F-053）
+rea inspect-evm-interface "D:/analysis/bytecode.hex" hex --json
+rea inspect-wasm-artifact "D:/analysis/module.wasm" --json
+rea inspect-web-network-capture "D:/analysis/capture.har" har --json
 rea list-adb-devices        # ADB 设备（F-047）
 ```
+
+路径须替换为真实文件。EVM 的第二位置参数是 `raw` 或 `hex`；网络捕获的第二位置参数是 `har` 或 `mitmproxy`。这些调用处理实际输入，不是仅查询命令是否注册，本轮未执行。
 
 ## 输出 / 验收
 
