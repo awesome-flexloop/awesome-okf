@@ -26,6 +26,8 @@ status: stable
 | [lightvela-personal-agent](lightvela-personal-agent/index.md) | LightVela 与 Personal Agent 赛道观察——腾讯轻量云托管开源 Hermes Agent、微信/QQ/企微/飞书/钉钉五通道，对标 Meta Muse；事实/机制/Context 锁定论点三层拆解，含 3 概念 + 2 信源、62 条编号事实与 5 处口径勘误，非操作教程 |
 | [tencent-meeting-cli](tencent-meeting-cli/index.md) | 腾讯会议官方 CLI（tmeet）v1.0.18——CLI + CLI-Skill 双件架构、OAuth2 设备码授权、10 命令域 44 子命令、录制与元宝双纪要体系、Agent 安全契约、per-host 实时事件总线；含 14 概念（9 用户面 + 5 源码内部机制）+ 4 示例 + 8 信源、199 条编号事实（含腾讯文档用户手册、19→44 命令跨版本比对与 v1.0.18 固定 tag 源码 F-113~F-199） |
 | [tencentdb-agent-memory](tencentdb-agent-memory/index.md) | TencentDB Agent Memory 源码学习（commit 8b86874 截面）——MemoryCore/Knowledge/Panel/Proxy 四件架构，L0-L3 跨会话沉淀与 offload 上下文压缩双管线，Skill/Wiki/CodeGraph 资产，v3 三元组强隔离，双协议代理零插件接入；含 13 概念 + 4 示例 + 5 信源、300 条编号事实与 6 条四元组洞察 |
+| [wecom-5-0-10-release](wecom-5-0-10-release/index.md) | 企业微信 5.0.10 版本新功能官方介绍页核验——CLI/MCP 双通道开放办公模块（发布页 7/媒体 10/官方现状 11 三时点口径）、wecom-unified 与 @wecom/cli 安装命令核验（npm v1.3.4）、安全四机制、智能表格大圆 AI 分析报告（灰度中）、智能文档导出 Word/PDF/Markdown；含 3 概念 + 2 信源、33 条编号事实，版本资讯非操作教程 |
+| [wecom-5-0-12-release](wecom-5-0-12-release/index.md) | 企业微信 5.0.12 版本更新官方介绍页核验——WorkBuddy 深度融合与机器人双领用入口（侧边栏+通讯录）、智能幻灯片/CLI/MCP 前瞻口径、频道与知识库协作、对外管理与 AI 安全治理；四类存疑口径分层登记，含 4 概念 + 2 信源、51 条编号事实，版本资讯非操作教程 |
 
 ## 生态项目
 
@@ -35,7 +37,7 @@ status: stable
 
 ## 关于本分组
 
-本分组当前包含 11 个已生成知识包，共 90 个概念文档、25 个示例文档、50 个信源登记，基于 2026-08-23 的源码阅读、网页抓取、2026-09-23 与 2026-09-28 的博文核验、2026-10-03 的官方文档与腾讯文档用户手册学习、2026-10-04 的腾讯会议 CLI v1.0.18 固定 tag 源码主体学习、TencentDB Agent Memory（commit 8b86874，feat/server_team 分支）源码学习与 Octop v1.0.2b5（commit e473dd3c，新信源 external/dao/runtime/tencent/Octop/）固定 tag 增量学习生成，总计 1522 条编号事实（原有 763 条 + TencentDB Agent Memory 300 条 + Octop v1.0.2b5 增量 459 条；概念数含 workbuddy-sandbox 横向对标增强后补登的 1 篇、tencent-meeting-cli v0.3.0 源码概念 5 篇与 Octop v1.0.2b5 增量 15 篇 07-21）。所有源码知识包均经过 Grep 级 API 真实性验证，博文转化束经过 P0/P1 权威核验。
+本分组当前包含 13 个已生成知识包，共 97 个概念文档、25 个示例文档、54 个信源登记，基于 2026-08-23 的源码阅读、网页抓取、2026-09-23 与 2026-09-28 的博文核验、2026-10-03 的官方文档与腾讯文档用户手册学习、2026-10-04 的腾讯会议 CLI v1.0.18 固定 tag 源码主体学习、TencentDB Agent Memory（commit 8b86874，feat/server_team 分支）源码学习与 Octop v1.0.2b5（commit e473dd3c，新信源 external/dao/runtime/tencent/Octop/）固定 tag 增量学习、2026-10-14 的企业微信 5.0.10 与 5.0.12 官方版本介绍页学习生成，总计 1619 条编号事实（按各束 references/ 与 spec/facts.md 登记文件的 F 编号并集机械复算；其中企业微信 5.0.12 版本页 51 条；本次复算同时修正旧计数 1555 相对逐束登记并集 1568 的 13 条历史投影漂移；概念数含 workbuddy-sandbox 横向对标增强后补登的 1 篇、tencent-meeting-cli v0.3.0 源码概念 5 篇与 Octop v1.0.2b5 增量 15 篇 07-21）。所有源码知识包均经过 Grep 级 API 真实性验证，博文转化束经过 P0/P1 权威核验。
 
 ## 相关链接
 
@@ -47,6 +49,8 @@ status: stable
 - [ncnn 知识包](ncnn/index.md) — 神经网络推理框架源码教程
 - [腾讯会议 CLI 知识包](tencent-meeting-cli/index.md) — 腾讯会议官方 CLI 完整使用教程（v1.0.18）
 - [TencentDB Agent Memory 知识包](tencentdb-agent-memory/index.md) — 四件架构记忆系统源码教程（commit 8b86874 截面）
+- [企业微信 5.0.10 版本新功能](wecom-5-0-10-release/index.md) — CLI/MCP 开放与大圆 AI 分析报告版本快照（33 条事实，非操作教程）
+- [企业微信 5.0.12 版本更新](wecom-5-0-12-release/index.md) — WorkBuddy 深度融合、机器人双领用入口、智能幻灯片前瞻口径与对外管理/AI 安全治理版本快照（51 条事实，非操作教程）
 - [CodeBuddy 官网](https://www.codebuddy.cn/) — CodeBuddy 产品入口
 - [腾讯开源](https://opensource.tencent.com/) — 腾讯开源项目总览
 
@@ -65,4 +69,6 @@ workbuddy-one-sentence-mvp/index
 lightvela-personal-agent/index
 tencent-meeting-cli/index
 tencentdb-agent-memory/index
+wecom-5-0-10-release/index
+wecom-5-0-12-release/index
 ```
