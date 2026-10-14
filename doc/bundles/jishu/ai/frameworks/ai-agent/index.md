@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 55
+total_bundles: 56
 ---
 
 # 🤖 AI Agent 框架
@@ -60,6 +60,7 @@ total_bundles: 55
 | 知识包 | 语言 | 文档数 | 一句话简介 |
 |--------|------|--------|-----------|
 | [hermes-agent](hermes-agent/index.md) | Python | 10+4+1=15 | 渐进式披露多Agent框架——Think-Act-Observe循环、ToolRegistry(100+工具)、34+模型Provider、8种记忆插件、MCP/ACP双协议、Gateway多平台网关(22+消息平台)、Cron调度 |
+| [kylin-agent-runtime](kylin-agent-runtime/index.md) | Python | 10+2+2=14 | openKylin 麒麟智能体运行时（Hermes 下游分支）——三代架构、自注册工具体系(31工具集/8终端环境)、4类模型传输、curator技能策展、画像加密治理、Gateway 21平台适配器(含钉钉/飞书/企微/微信/QQ/元宝)、ACP/MCP/LSP |
 | [veadk-python](veadk-python/index.md) | Python | 10+4+1=15 | 火山引擎Agent SDK——Agent/Runner双层架构、豆包/方舟原生集成、A2A/A2UI协议、RAG知识库(8种向量后端)、双层记忆、Sequential/Parallel/Loop/Supervisor组合模式、Tunnel内网桥接 |
 | [zleap-agent](zleap-agent/index.md) | TS/Rust | 10+4+1=15 | Workspace-first Agent——Run→Work→WorkStep三级Fiber状态机、PostgreSQL+pgvector双线记忆(A/B线+RRF融合)、飞书/微信/Feishu CLI网关、子Agent委派、pg-boss定时任务 |
 | [deepseek-harness](deepseek-harness/index.md) | TypeScript | 10+4+1=15 | DeepSeek Agent框架——Cordis插件架构(50+包)、Phase状态机+Inbox双队列、defineTool类型安全工具、Event-Sourcing会话、MCP/ACP双协议、Skill分层系统 |
@@ -159,7 +160,7 @@ total_bundles: 55
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：55 个知识包，共 391 个内容文档（247 概念 + 69 示例 + 73 信源；2026-09-23 Hypit 入组 +3 概念 +2 示例 +2 信源 +1 日志；2026-09-28 agent-knowledge-base 入组 +4 概念 +2 信源 +1 日志；2026-10-10 cua 入组 +6 概念 +2 信源 +1 日志）；零推测事实底稿随束存放
+> **内容统计**：56 个知识包，共 405 个内容文档（257 概念 + 71 示例 + 75 信源；2026-09-23 Hypit 入组 +3 概念 +2 示例 +2 信源 +1 日志；2026-09-28 agent-knowledge-base 入组 +4 概念 +2 信源 +1 日志；2026-10-10 cua 入组 +6 概念 +2 信源 +1 日志；2026-10-14 kylin-agent-runtime 入组 +10 概念 +2 示例 +2 信源 +1 日志）；零推测事实底稿随束存放
 
 ```{toctree}
 :hidden:
@@ -170,6 +171,7 @@ agent-communication-protocols/index
 agent-interface/index
 agent-runtime-protocol/index
 hermes-agent/index
+kylin-agent-runtime/index
 veadk-python/index
 zleap-agent/index
 deepseek-harness/index
