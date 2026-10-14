@@ -31,6 +31,7 @@ description: "物联网与远程连接知识包——开源智能家居平台源
 | 知识包 | 定位 | 说明 |
 |--------|------|------|
 | [opentpu/](opentpu/index.md) | AI 加速器源码教程 | openTPU 固定提交 ffe997e 一手精读——17 条指令 ISA、四列脉动 MXU、fp32 数值契约、FP4 量化（4.25 bits/weight）、ol 编译器、STREAM 状态引擎、MoE 专家流、Kintex-7 板卡与 NanGate45 ASIC、三端位精确验证；17 概念 + 3 示例 + F-001~F-123 pinned 溯源 |
+| [hwe-bench/](hwe-bench/index.md) | LLM 硬件基准源码教程 | HWE Bench（auto-arch-tournament）固定提交 4a137bb 一手精读——LLM 自主进化 RISC-V CPU 的七门验证器：假设 schema、worktree 沙箱与契约指纹、RVFI NRET=2、riscv-formal/ALTOPS 分层、22% 反压 cosim、3-seed FPGA fitness、严格接受规则；v1 九胜场进化史、16 模型 V1 排行榜、V2 holdout 与 harness 故障方向工程；17 概念 + 3 示例 + F-001~F-126 + K-1~K-6 口径勘误 |
 
 ```{toctree}
 :hidden:
@@ -44,4 +45,5 @@ comparison/index
 xingchen-300-edge-ai/index
 embedded-weekly-03/index
 opentpu/index
+hwe-bench/index
 ```
