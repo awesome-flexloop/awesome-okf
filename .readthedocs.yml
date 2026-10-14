@@ -1,0 +1,38 @@
+# .readthedocs.yaml
+# Read the Docs configuration file
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+
+# Required
+version: 2
+
+# Set the version of Python and other tools you might need
+build:
+  # ubuntu-24.04 是 Read the Docs 当前推荐的 LTS 构建镜像；
+  # 本项目仅需 pip 依赖（pyproject.toml 的 [project.optional-dependencies].doc），
+  # 与 .github/workflows/pages.yml 一致直接使用 CPython，不走 conda/mamba。
+  os: ubuntu-24.04
+  tools:
+    # 项目 requires-python >= 3.14，RTD 支持矩阵已提供 CPython 3.14
+    # （与 GitHub Actions 的 setup-python "3.14" 保持一致）
+    python: "3.14"
+
+# Build documentation in the doc/ directory with Sphinx
+sphinx:
+   configuration: doc/conf.py
+
+# If using Sphinx, optionally build your docs in additional formats such as PDF
+# Build PDF & ePub * HTML
+formats:
+  - htmlzip
+  - epub
+  - pdf
+
+# Optionally declare the Python requirements required to build your docs
+python:
+  install:
+    - method: pip
+      path: .
+      extra_requirements:
+        # 注意：本项目 extras 名为 doc（非 docs），与 pyproject.toml
+        # [project.optional-dependencies].doc 及 GHA 的 pip install -e ".[doc]" 对齐
+        - doc
