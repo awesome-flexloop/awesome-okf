@@ -17,7 +17,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 
 | 分组 | 束数 | 一句话简介 |
 |------|------|-----------|
-| [🤖 人工智能与大模型（ai）](ai/index.md) | [递归束数](../index.md) | AI 与大模型应用生态，239 束按读者意图归为六大类：ecosystems 厂商社区生态 · frameworks 框架与代码库 · practice 工程实践与行业洞察 · products 产品工具 · models 模型多模态 · learning 学习教程 |
+| [🤖 人工智能与大模型（ai）](ai/index.md) | [递归束数](../index.md) | AI 与大模型应用生态，241 束按读者意图归为六大类：ecosystems 厂商社区生态 · frameworks 框架与代码库 · practice 工程实践与行业洞察 · products 产品工具 · models 模型多模态 · learning 学习教程 |
 
 ### 📚 文档与数据工程
 
@@ -42,7 +42,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 | [📡 通信与网络（comm）](comm/index.md) | 8 | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析 · WiFi 安全审计（wifit3） |
 | [📦 容器生态（containers）](containers/index.md) | 11 | OCI 运行时 · 存储驱动 · Podman 工具链 · AI 容器配方 |
 | [🧠 机器学习（ml）](ml/index.md) | 3 | ONNX 标准/转换器/编译器/推理后端 · Apache TVM 深度学习编译器 |
-| [🖥️ 系统与基础设施（systems）](systems/index.md) | 2 | WSL 子系统中文教程 · PowerShell 5 困境防御 |
+| [🖥️ 系统与基础设施（systems）](systems/index.md) | 3 | WSL 子系统中文教程 · PowerShell 5 困境防御 · openKylin kylin-wlcom Wayland 合成器（wlroots 0.17）源码精读 |
 
 ### 🔧 开发与协作工具
 
@@ -58,7 +58,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 | 分组 | 束数 | 一句话简介 |
 |------|------|-----------|
 | [🚗 智能驾驶与无人驾驶（autonomous）](autonomous/index.md) | 4 | Autoware 安装与基础 · ROS2 概念 · DDS 与 QoS · 数据集/术语/资源生态 |
-| [🏠 物联网（IoT）](iot/index.md) | 8 | Home Assistant 源码解读 · TuyaOpen IoT SDK · 向日葵远控产品矩阵 · 贝锐生态 · 厂商与工具横向对比 · 星辰300 端侧 AI 资讯核验 · 嵌入式周报·第三期资讯核验 · openTPU 加速器源码精读 |
+| [🏠 物联网（IoT）](iot/index.md) | 9 | Home Assistant 源码解读 · TuyaOpen IoT SDK · 向日葵远控产品矩阵 · 贝锐生态 · 厂商与工具横向对比 · 星辰300 端侧 AI 资讯核验 · 嵌入式周报·第三期资讯核验 · openTPU 加速器源码精读 · HWE Bench LLM 硬件基准源码精读 |
 
 ### ☁️ 云厂商开放 API
 
