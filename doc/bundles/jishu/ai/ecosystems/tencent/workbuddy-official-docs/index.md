@@ -69,6 +69,7 @@ WorkBuddy 是腾讯出品的全场景 AI 办公工作台：用自然语言描述
 - [腾讯 Buddy 系列产品观察](../tencent-buddy-family/index.md)——Buddy 品牌矩阵；本束的企业版三产品结构（CodeBuddy / WorkBuddy / WorkBuddy Managed Agents，F-478）是矩阵在云侧的组织方式。
 - [CodeBuddy 产品矩阵](../codebuddy/index.md)——同一账号体系与积分共享（F-071），企业版 Skill 管理同时覆盖 CodeBuddy 与 WorkBuddy 能力扩展（F-493）。
 - [Octop 自托管多用户多 Agent](../octop/index.md)——同为腾讯系 Agent 平台，可对照「云端托管（CloudAgent）vs 自托管（Octop）」两种形态。
+- [WorkBuddy 开放平台分享能力接入与推广管理](../workbuddy-open-platform-sharing-and-promotion/index.md)——同产品开放平台侧两篇平台公告（分享能力接入、推广管理）；本束记录产品与四端文档，该束记录面向开发者/资产作者的开放平台能力，构成「产品本体能力」与「平台分发能力」的互补读法；本束核验到的版本线止于 5.7.7 与该束公告要求的 5.8.0 门槛形成口径落差互证。
 
 ## 一句话结论
 

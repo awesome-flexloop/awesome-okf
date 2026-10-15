@@ -1,0 +1,25 @@
+# 变更日志
+
+## 2026-10-15
+
+- 使用 `seven-concepts-cmd` 执行知识沉淀链路：R（事实台账）→ I（洞察归属）→ E（知识生成）→ V（独立 Review 承担）。本次为 E 阶段收尾：生成 bundle 根 `index.md` 与 `log.md`。
+- 信源与制品口径：**W0** 分享页 SPA 壳页（4 526 B，仅解析出制品基址与 `publishVersion: 4`）；**P0** 页面 HTML 制品 `opc-whitepaper-mobile.html`（262 925 B → 提取 Markdown 32 页 / 25 508 字符，**正文提取基准**）；**P1** 正文数据源 `janus.data.json`（717 277 B，仅作节点级交叉参照，**不作事实来源**）；**X1** 白皮书 PDF 原册**未取得**（显式登记，不据版式推断内容）。制品快照统一绑定 `publishVersion: 4`。
+- 登记事实 **F-001 ~ F-357（共 357 条）**，编号连续、无跳号、无重复；spec 侧 `facts.md` 与本束 `references/article-source.md` **双份登记**，两文件正则 `^\|\s*F-(\d{3})\s*\|` 提取的编号集合机械相等（各 357 条，零差集）。类型实际使用六类：元信息 / 厂商自述 / 第三方研究口径 / 官方或协会口径 / 白皮书观点 / 合作邀约语汇；**`page_fact` 未单列**——白皮书正文的纯客观陈述并入其来源口径类别（官方或协会口径 / 第三方研究口径），该口径决策已在 spec 侧 `facts.md` 的 G1 段显式说明。
+- 操作可复现性两问判定：**两问皆否**——本白皮书为趋势报告与产品能力罗列，**无**读者可照做的安装 / 配置 / 代码 / 调用 / 实测流程，也未提供版本、输入输出、步骤顺序等可复现要素 → **不设 `examples/`**；bundle `description` 标注「**行业白皮书解读，非操作教程**」。
+- 口径分层（六类，一律不抹平）：① **来源层级**——厂商自述（平台能力 F-215/216/218/220/241、认证 F-322~F-327、三层架构 F-208~F-212/236/315~F-319）、官方/协会（存量与立信 F-009/F-013~F-019/F-162、政策资金 F-122~F-136/F-138~F-161/F-172~F-181）、第三方研究（Anthropic / HDSR / HACR / smartcity.team / Carta / 腾讯研究院 / 拓端）、行业报告（中关村人才协会、清华沈阳团队）；② **文档内部自相矛盾**；③ **案例数字为受访者自述**（F-273~F-293，声明 F-297）；④ **口号式/单一来源比例**（5%/10%/70%/15%、80% AI + 20% 品味、Polsia 周增 9% 等）；⑤ **合作邀约属性**（F-331~F-349、邀约 F-328/F-357，保留「双方各自提供什么」框架性定位）；⑥ **时效口径**（政策与平台数字截至 2026 年 6 月）。
+- 勘误摘要 **11 项**（另含 §5.1 自洽性核对 9a）：1）存量数据时点偏移（白皮书「2025 年底」vs 多来源「2025-06」）；2）《法治日报》2026.5.14 报道未检索到；3）朝阳「生产工具平台」资金 500 万 vs 官方 1000 万；4）《财经》2026.6 报道未检索到、杭州「2 万㎡」与江苏「苏州 OPC 创业城市」未核到、海南「双 15%」非 OPC 专项；5）认证费 800 元/次 vs 腾讯云官网 ¥330（原 ¥600）；6）联创 5 年存活率高约 45% vs 来源原文 35%；7）独角兽「80% 有 2+ 联创」未核到；8）Polsia 领投存疑、「8,700+」「周增长 9%」未核到；9）专区专家团「20（§4.4.1）」vs「13（§5.1）」内部冲突（合计 86 vs 79 亦不一致）；10）平台能力数字（235 / 250）与厂商官网现口径「100+ 领域专家」不符；11）目录与正文标题微差（第三章「园区」vs「产业园区」、第四章「到超级团队」vs「到超级团队的 AI 操作系统」）。
+- `status` 裁决为 **`flagged`** 的理由：核心商业声明——平台能力数字（内部自相矛盾且与厂商官网现口径不符）、认证费用（与官网现价不符）、政策资金上限（与官方原文冲突）、效率倍数与 Polsia / 联创数据（多为单一来源或未核到）——**并非全部有独立多源支撑，部分与官方口径冲突**，故由 spec 目标的 `stable` 转 `flagged`（详见 `references/verification.md` 第五节）。
+- 并行在途观测：E 阶段收尾时未运行 `git status`（该阶段未授权 git 操作），跟踪留待 V 阶段；**V 阶段已实际运行**，结果见下方「并行在途观测（V 阶段）」行——**未观测到冲突**。本阶段仅写入本束 `index.md` 与 `log.md`，未触碰任何其他文件与共享索引。
+- 门禁与验证（V 阶段**实测**结论，2026-10-15 执行）：
+  - **官方三脚本（子模块根直接运行底层脚本）**：`python scripts/check-utf8.py` → 退出码 0，末行「UTF-8 检查通过: 11651 个文件均为有效 UTF-8。」；`python scripts/check-toctrees.py` → 退出码 0，末行「toctree 检查通过: 全部 index.md 引用有效，所有内容文档均可达。」，输出中 `workbuddy-opc-whitepaper` 命中 **0**；`python scripts/check-bundles-index.py` → 退出码 0，末行「bundles 总索引对账通过: 9 域 / 61 组 / 639 束，frontmatter、计数行、节标题、分组表、toctree 五面一致。」。
+  - **`invoke gates.*` 可用性**：环境**不可用**——`invoke --version` 可得（Invoke 3.0.3），但 `invoke --list` 因 `tasks/docs.py` 导入 `invocations` 时抛 `PackageNotFoundError: No package metadata was found for invocations` 而失败（退出码 1）；故全量机械门禁**改用直接运行底层脚本 `scripts/*.py`**（上述三脚本），未谎报 invoke 通过。
+  - **本束 14 文件 UTF-8 严格校验**：以 `strict` 解码并检查无 BOM（`\xef\xbb\xbf` 前缀），**14 / 14 通过**。
+  - **双份 F 编号集合比对**：`facts.md` ↔ `article-source.md` 正则 `^\|\s*F-(\d{3})\s*\|` 提取，双方各 **357** 条、唯一 357、min=F-001 / max=F-357、缺号 0、重复 0、双向差集为空，集合机械相等（`SET_EQUAL: True`）。
+  - **全束相对链接可达性**：提取本束 14 个 .md 的全部 Markdown 相对链接（跳过 `http(s)` 与纯锚点），按所在文件目录规范化后逐一校验：**checked=58 / broken=0**。
+  - **敏感内容 Grep（本束 14 文件 + 本次 3 个索引，共 17 文件）**：`file:///`、`C:\Users`、`/Users/`、`C:/Users` 四类**命中均为 0**。
+  - **frontmatter 完整性**：根 `index.md` 含 `okf_version/type/title/description/tags/generated/verified/status/stale_after/sources` 九字段（无缺失）；`concepts/00~06` 与 `references/` 三个内容文件（article-source / source-manifest / verification）均含 `type/title/description/tags/generated/verified/status/stale_after/sources` 且**不含** `okf_version`；`concepts/index.md`、`references/index.md`、`log.md` **均无 frontmatter**。逐类全部符合，无不符合项。
+  - **统计口径复查**：本束**不存在** `examples/` 目录；束内共 14 个文件，非 .md 文件 **0**。
+  - **定向 Sphinx dummy 构建**：子模块根 `sphinx-build -b dummy -E doc _build/dummy` → **退出码 0**（末行「build succeeded, 268 warnings」）；**与本束路径 `workbuddy-opc-whitepaper` 相关的 error/warning 行数为 0**（仅出现正常读写进度行）；全库其余告警分类计数为 `: ERROR:` 55 行、`: WARNING:` 184 行，均为其他束既存/并行问题，非本束引入。
+  - **并行在途观测（V 阶段实际运行 `git -C projects/awesome-okf-xs status --short`）**：本次新增/修改——未跟踪 `doc/bundles/sheke/industry/workbuddy-opc-whitepaper/`，已修改 `doc/bundles/sheke/industry/index.md`、`doc/bundles/sheke/index.md`、`doc/bundles/index.md`；并行会话在途改动**仅披露不改动**——已修改 `doc/bundles/jishu/index.md`、`doc/bundles/jishu/ai/index.md`、`doc/bundles/jishu/ai/ecosystems/index.md`、`doc/bundles/jishu/ai/ecosystems/tencent/index.md`、`doc/bundles/jishu/ai/ecosystems/tencent/workbuddy-official-docs/index.md`，未跟踪 `doc/bundles/jishu/ai/ecosystems/tencent/workbuddy-hardware-integration-whitepaper/`、`doc/bundles/jishu/ai/ecosystems/tencent/workbuddy-open-platform-sharing-and-promotion/`。
+- 临时采集缓存 `d:\spaces\SpecWeave\.temp\workbuddy-opc\`（壳页 HTML、制品 HTML、`janus.data.json`、提取脚本与提取文本、外部核验原始记录）**已于独立审查（Review）通过后清理删除**——延后原因是独立审查需与源文提取文本逐字比对；临时文本全程不入库、不入 bundle。
+- 本轮**未执行 `git commit` / `git push`**，等待用户明确授权后再行提交（产出位于 git submodule `projects/awesome-okf-xs/`）。

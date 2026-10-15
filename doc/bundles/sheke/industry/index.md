@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）等 25 束行业分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）等 26 束行业分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
@@ -45,6 +45,7 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 | [ling-3-1-flash-first-test](ling-3-1-flash-first-test/index.md) | 5 | 蚂蚁 Ling 3.1 Flash 首测整理——560B MoE 规格、测试亮点与槽点、"对标 DeepSeek"读法与三类陈述分层（flagged：第三方评测演绎快报、权重未开放无法复现） |
 | [telecom-ai-pilot-base](telecom-ai-pilot-base/index.md) | 6 | 中国电信独家中标国家 AI 中试基地文旅全栈项目——三重门槛、四项胜出机制与采购总包化/份额集中趋势（flagged：中标金额与业绩门槛为博文单源） |
 | [telecom-token-operation](telecom-token-operation/index.md) | 6 | 中国电信 Token 经营：天府词元智造工厂——平台模式（做电网不做发电厂）、政企分工与运营商复制路径（flagged：补贴额度与共创名单为博文单源） |
+| [workbuddy-opc-whitepaper](workbuddy-opc-whitepaper/index.md) | 7+3 | 腾讯云《WorkBuddy OPC 白皮书》解读——OPC 规模数据与超级个体、硅基员工与六大商业模式、中国政策园区、WorkBuddy 三层架构与生态认证（厂商白皮书解读，非操作教程；flagged：平台能力数字为厂商自述、用户案例为受访者自述，357 条事实 F-001~F-357、22 项外部核验与 11 项勘误，六类口径分层） |
 
 ## 阅读建议
 
@@ -83,4 +84,5 @@ ai-solo-company-truth/index
 ling-3-1-flash-first-test/index
 telecom-ai-pilot-base/index
 telecom-token-operation/index
+workbuddy-opc-whitepaper/index
 ```
