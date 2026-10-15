@@ -7,6 +7,77 @@ version: "0.3.0"
 
 # Changelog
 
+## 复核轮 2026-10-15（全信源零漂移，内容版本保持 0.3.0）
+
+### 触发与方法
+
+- 触发：用户要求"全面学习产品首页（meeting-cli/index.html）并生成教程"，核查发现本束已存在且完整覆盖该页全部业务域，经用户批准改为**全信源增量复核轮**（规格：主仓 `.trae/specs/okf-wiki-ecosystem/tencent-meeting-cli-reaudit-okf-wiki/`，含 13 行漂移矩阵 drift-matrix.md）。规格名中的"v0.4.0"是**条件增补路径名**；本轮裁决 `VERDICT=zero-drift`，增补路径未触发，故内容版本保持 0.3.0，不 bump。
+- 方法：七概念场景 4（知识沉淀）R 阶段——版本面四证 + 10 信源逐源机械比对（结论只允许零漂移/漂移引原文/不可达三类）；采集窗口北京时 09:47–09:57（UTC+8）≈ UTC 01:47–01:57Z（时区口径 R1 P2-1 勘误：本机 Windows 为北京时钟，初稿采集时间曾误标 Z；除 QQ 行时间为服务端 epoch 原生 UTC 外，本节时间均按"北京时（≈UTC）"双标注；npm/GitHub 返回的发布时间戳为服务端原生 UTC）。
+- 语义边界：网页类信源"零漂移"指**已登记事实锚点全部命中**（8 业务域/5 FAQ/6 Agent/19 命令分组/页面时间戳等），非网页逐字节哈希一致（产品页/安装指南无服务端时间戳）；tag 内文件为不可变 git 对象，附 SHA256 强证明。
+
+### 版本面证据（V 审查后由三证补强为四证）
+
+| 证 | 通道 | 实测值（2026-10-15） | 结论 |
+|----|------|----------------------|------|
+| npm | `npm view @tencentcloud/tmeet version time --json` | latest=1.0.18；1.0.18=2026-09-11T09:17:53.445Z；time 序列 v1.0.0~v1.0.18 共 19 条无新版 | 一致 |
+| 分支提交 | GitHub Commits API `since=2026-09-11T10:00:00Z` | `[]`（零提交；注：since 比 tag commit 08:48:38Z 晚 71 分钟，盲区由下两证关闭） | 一致 |
+| tag 锚点 | GitHub API `commits/v1.0.18` | sha=`e631b355da2b001d24b82f453b65d96f39c59865`，message/日期逐字一致 | 一致 |
+| HEAD 直证（V 审查补强） | GitHub API `commits?per_page=1` + tags 列表 | 默认分支 HEAD sha 恰为 e631b355（**main==tag 直证**，不再依赖推断）；tags 恰 18 个（v1.0.1~v1.0.18）无新 tag | 一致 |
+
+### 10 信源复核结论与持久锚点
+
+- **tag 内 5 文件**（main HEAD==v1.0.18 直证后，2026-10-03 从 main 抓取与本轮同一性成立）：raw.githubusercontent.com 在本机被连接重置，改用 `https://cdn.jsdelivr.net/gh/TencentCloud/tencentmeeting-cli@v1.0.18/<path>` 钉 tag 下载，package.json 另经 GitHub contents API 跨通道验证。完整 SHA256（本轮唯一随库持久的物证）：
+
+| 文件 | 字节数 | 行数 | SHA256 |
+|------|-------:|-----:|--------|
+| README.md | 10523 | 265 | `ac526a6878512e126ef85286f529c4e32865ee2cd66e330b498066ec3a6344d2` |
+| docs/command.md | 59259 | 1594 | `a82289befb18950c49fac094cfaf3221c61dcf5190e7019ef583fdaee3e09d36` |
+| skills/tmeet-skill/SKILL.md | 34265 | 401 | `63d331e97588eceae18e9403c081a5768f257b506395fc63d2e2b36d327a9182` |
+| CHANGELOG.md | 95634 | 512 | `c7654ed1d45e9c06905b01926bd31e5b36a040365da6506898cd41fbf4ce47ae` |
+| package.json | 438 | 23 | `7d641d467b58934830043aba543ab7a3a2e8d53bcdd9a03d2b35bdc3ff2c34ca` |
+
+  package.json GitHub blob sha1 = `609470997aa1444424d082fda436fd3c42828e94`（contents API 与本地按 git blob 规则手工复算一致）；6 字段逐值一致：version v1.0.18、bin.tmeet=./scripts/tmeet.js、engines.node>=14、postinstall=node scripts/cleanup.js、files=[scripts/,dist/]、MIT。
+  行数口径：PowerShell `Get-Content` 元素数（SKILL.md/CHANGELOG.md 无尾换行，Linux `wc -l` 分别为 400/511）；Grep 命中数为行级、大小写不敏感计数。
+  锚点命中：command.md 1594 行精确一致、`### ` 域标题 10、event 五子命令（list/schema/consume/status/stop）与 app get/set 全在、page-token 29 行、meeting.started 10 行、meeting.end 3 处（L1321/L1472/L1478，jq_root_path=.payload 契约在 L1478 示例块）；SKILL.md 401 行/9 个 H2 精确一致、meeting_code 5 行 6 次、二次确认 7 行、300 秒超时 1 行；CHANGELOG 18 个版本标题，前三 `[v1.0.18]-2026-09-11`/`[v1.0.17]-2026-09-09`/`[v1.0.16]-2026-09-02`；README 命令树（行 171-222）十域齐、行 238 风险长文（幻觉/提示词注入/投毒/执行偏差）一致。计数口径勘误：README "MIT" 实际命中 2 行（徽章与 LICENSE 行；早期粗数 4 含 `--limit`、`permission-apply-commit` 子串误含）；`--no-browser` 为 1 行 2 次。
+- **产品首页 S1**（北京 09:49≈01:49Z，WebFetch）：slogan、6 Agent（WorkBuddy/DeepSeek Harness/Claude Code/Codex/Cursor/GitHub Copilot）、3 场景、8 业务域标题、5 条 FAQ 与 F-002~F-009 逐字一致。
+- **安装指南 S2**（北京 09:50≈01:50Z，WebFetch）：Node.js >= 14、两条安装命令（Skill 标注必需）、重启 AI 工具 + tmeet auth status、两条帮助链接与 F-012/F-013/F-019 一致。渲染限制：该页为 SPA（原始 HTML 仅 1733 字节外壳），F-020 一句话 prompt 本轮在安装指南页渲染未直接取到，由产品页同源逐字持续命中兜底，不构成事实悬空。
+- **腾讯云文档 133827 S8**（北京 09:49≈01:49Z，WebFetch，336 行）：页面时间 **2026-07-08 15:50:30 原样**；19 命令分组 3/7/6/2/1、Node ≥16、4 条常见报错、灰度智能表 URL、单账号限制、rule/202603130003、Workbuddy/Qclaw 点名、4 高频场景全部在位（F-004/F-015/F-021/F-025/F-029/F-030/F-034/F-040/F-067/F-093/F-094/F-096）。
+- **QQ 用户手册 S9**（dop-api/opendoc 路径复现，约 UTC 01:56–01:57Z＝北京 09:56–09:57；响应 `serverTimestamp=1792029377`＝2026-10-15T01:56:17Z，证明实时非缓存）：`clientVars.lastModifyTime=1782374442912`＝2026-06-25T08:00:42.912Z＝北京 16:00:42，基线登记的 lastSaveTimestamp（同字段异名）为分钟级"北京 16:00"，二者**分钟级一致**（基线只持久化到分钟，非逐秒比对；R1 P2-2 勘误）；metaCreateTime=1777453837667＝2026-04-29T09:10:37.667Z。正文递归 protobuf 解析得 3649 文本块/66923 字，锚点命中：Workbuddy 1、Qclaw 1、Cursor 2、Claude Code 2、Codex 1、"19 个命令"1、AES-256-GCM 1、Keychain 2、灰度 1、202603130003 1、"给 AI Agent 的那双手"1、tshoot log/waiting-room-log/smart-minutes 各 1、transcript 3、meeting invitees-list 1、auth login 4、auth logout 3、auth status 1（F-099~F-112）。抓取方法仍见 [user-manual-qqdoc.md](references/user-manual-qqdoc.md)「抓取方式（可复现）」三步，本轮独立复跑有效。
+- **源码主体 S10**：tag commit SHA 逐字符一致（不可变对象），F-113~F-199 的全部 `文件:行号` 锚点持续有效，本轮不重数；252/64 Go 文件、38 ApiCmd、8 EventKey 等计数的有效性以 SHA 同一性为充分证据。
+
+### 结论与计数
+
+- `VERDICT=zero-drift`：不新增事实（仍 F-001~F-199 共 199 条，无 F-200）、不增信源/概念/示例，facts/insights/concepts/examples/references 正文零改动；tencent 分组计数（13 束/97 概念/25 示例/54 信源/1619 事实）全部不变。
+- stale_after（2027-04-03/04）策略：复核只验证新鲜度、**不滚动续期**；到期点绑定原始采集日，续期需改 frontmatter，与最小变更原则权衡后维持原样。
+- 本轮落盘仅 2 文件：本 log.md 与 tencent 组 index.md 一句留痕；无 commit/push，提交待用户指令。
+
+### V 阶段对抗审查记录（四视角，2026-10-15，fresh context 独立子代理，未参与实施）
+
+| # | 视角 | 级别 | 意见 | 处置 |
+|---|------|------|------|------|
+| V-1 | 未来 | P1 | 矩阵在未跟踪的 spec 目录、物证在 %TEMP% 会被清理，log 复核节是唯一随库持久证据，必须内联完整 64 位 SHA256、URL 模板、blob sha、UTC 时间、QQ 锚点表与方法指针 | **采纳（落盘必办）**：本节完整内联上述全部物证 |
+| V-2 | 魔鬼 | P2 | since 参数晚于 tag commit 71 分钟有理论盲区，main==tag 原属推断 | **采纳**：审查员以 HEAD sha==tag sha 直证关闭盲区，已补为版本面第四证；tags 列表 18 个无新 tag |
+| V-3 | 魔鬼 | P2 | 网页无基线快照，"零漂移"须防止被误读为逐字节证明 | **采纳**：本节「语义边界」显式声明锚点级判定 |
+| V-4 | 魔鬼 | P2 | F-020 prompt 在安装指南 SPA 渲染未取到 | **采纳**：登记渲染限制，产品页单源持续命中兜底 |
+| V-5 | 新人 | P2 | Grep 计数口径未声明；MIT 粗数 4 含子串误含；meeting_code/--no-browser 行次与次数不同 | **采纳**：本节统一声明行级大小写不敏感口径并逐项勘误（MIT 2 行、meeting_code 5 行 6 次、--no-browser 1 行 2 次） |
+| V-6 | 新人 | P2 | Get-Content 行数与 wc -l 在无尾换行文件差 1 | **采纳**：本节注明 SKILL 401/CHANGELOG 512 为 Get-Content 元素数（wc -l 为 400/511） |
+| V-7 | 魔鬼 | P2 | "行 1472 jq_root_path"微偏，原文在 L1478 | **采纳**：更正为 meeting.end 三处 L1321/L1472/L1478，jq_root_path 在 L1478 |
+| V-8 | 新人 | P2 | lastModifyTime 与基线 lastSaveTimestamp 字段名差异；01:57Z 与 09:4xZ 易误读 | **采纳**：本节注明同字段异名同值、UTC 与北京时区换算、serverTimestamp 实时性 |
+| V-9 | 新人 | P2 | 规格名含 v0.4.0 却不 bump，新人可能误读为漏改 | **采纳**：本节首段写明条件路径名与未触发事实 |
+| V-10 | 老板 | P1 | V 审查先于落盘，AC-3/AC-6（恰 2 文件、不 bump、正文零 diff）须 C 阶段机械验收 | **采纳（落盘必办）**：C 阶段以 git status/diff 机械验收白名单并回填 tasks 证据 |
+| V-11 | 老板 | P2 | 版本语义/变更范围/frontmatter verified 不更新/计数是否恰当 | 复核通过：零内容变化不 bump 恰当；verified 过程事件入 log 与 0.3.0 先例一致；独立复算 13/97/25/54/1619 闭合（1620 中 +1 为 tencentdb log 文本幻影），原样不动 |
+| V-12 | 未来 | P2 | 不滚动 stale_after 可能被误读为遗漏 | **采纳**：本节写明"复核不续期"策略 |
+| V-13 | 未来 | P2 | 通道替代事实与 QQ 方法持久化 | **采纳**：jsDelivr+contents API 双替代已登记；QQ 三步法本就在信源文档入库 |
+| V-14 | 魔鬼 | P2 | 反向检查"为留痕虚构漂移" | 未发现：束工作树零 diff、零假差异；HEAD/tags/哈希三重独立证据，存档 |
+
+V 结论：**pass（P0=0；V-1、V-10 两项 P1 已作为落盘必办条件吸收）**。
+
+### 落盘后独立评审（R1，2026-10-15，fresh context）
+
+- 结论：**R1 = pass（P0=0，P1=1，P2=5）**。评审者独立实跑 npm/GitHub 四项版本面 API、jsDelivr 下载 5 文件重算 SHA256（5/5 精确一致）、云文档实时页时间复核、Sphinx dummy 全量构建（exit 0，本束两路径 0 告警）。
+- 本节据 R1 完成两处精度修订（P2-1 时区标注、P2-2 QQ 毫秒换算与"分钟级一致"表述）；AC-6 留痕可审计性评分 **4/5**（阈值 ≥4，扣分点即上述两处，已修）。
+- 遗留 P1（提交隔离，非本束内容缺陷）：评审窗口内另一并行工作流在同一工作树落盘新束 workbuddy-official-docs 并改动 tencent 分组索引等 7 个跟踪文件；本束复核句在合并段中逐字幸存。后续提交须 hunk 级选择性暂存，仅取本 log.md 与 tencent/index.md 复核句，勿整文件裹挟外来变更。
+
 ## 0.3.0 — 2026-10-04
 
 ### 新增
