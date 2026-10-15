@@ -2,12 +2,12 @@
 okf_version: "0.2"
 type: group
 title: "📡 通信与网络生态"
-description: "消息通信与远程控制生态——ZeroMQ 消息栈、分布式任务队列、SSH 与网络自动化、Protocol Buffers 数据序列化"
+description: "消息通信与远程控制生态——ZeroMQ 消息栈、分布式任务队列、SSH 与网络自动化、Protocol Buffers 数据序列化、跨平台 WiFi 安全审计"
 ---
 
 # 📡 通信与网络生态
 
-本域存放通信与网络相关的知识包，覆盖 ZeroMQ 消息通信生态（libzmq/cppzmq/pyzmq/dramatiq）、Python SSH/远程控制生态与 Protocol Buffers 数据序列化生态，从底层传输协议、语言绑定、结构化数据编码到高层自动化框架，构成"消息传递 + 远程控制 + 数据序列化"的完整通信范式谱。
+本域存放通信与网络相关的知识包，覆盖 ZeroMQ 消息通信生态（libzmq/cppzmq/pyzmq/dramatiq）、Python SSH/远程控制生态与 Protocol Buffers 数据序列化生态，从底层传输协议、语言绑定、结构化数据编码到高层自动化框架，构成"消息传递 + 远程控制 + 数据序列化"的完整通信范式谱；另收录 WiFiT3 跨平台 USB WiFi 安全审计束（仅限自有机或经授权的网络环境使用）。
 
 ## 域内分组导航
 
@@ -20,6 +20,7 @@ description: "消息通信与远程控制生态——ZeroMQ 消息栈、分布�
 | [📜 IDL 接口描述语言](idl/index.md) | IDL 接口描述语言系统教程——CORBA/COM/Protobuf/Thrift/gRPC/GraphQL Schema 主流规范、横向对比、工具链与现代格式关系辨析 |
 | [📺 Apache TVM FFI](tvm-ffi/index.md) | TVM FFI 跨语言调用层完整教程——C++ 核心 API、类型系统、反射机制、DLPack 集成与 Python 绑定 |
 | [🧭 接口·API·ABI·协议](interface-api-abi/index.md) | Interface/API/ABI/Protocol 四大基础概念辨析——定义、层次关系、稳定性规则与软件边界设计概念坐标系 |
+| [📶 WiFiT3 跨平台 WiFi 安全审计](wifit3/index.md) | 独立 USB Wi-Fi 审计器单束——公众号文章与官方 GitHub 仓库双信源原创教程、事实索引与合法使用边界（draft） |
 
 ```{toctree}
 :hidden:
@@ -32,4 +33,5 @@ ffi/index
 idl/index
 tvm-ffi/index
 interface-api-abi/index
+wifit3/index
 ```

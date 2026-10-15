@@ -2,9 +2,9 @@
 okf_version: "0.2"
 type: group
 title: "🖥️ GUI 桌面开发"
-description: "Python 桌面 GUI 开发知识包分组——Qt/PyQt 技术栈（Qt for Python 官方机制与 PyQt5 系统化实战）与 Python 标准库 tkinter 技术栈（tkinter 设计教程、tkinter 手册、tkinterx 扩展库）"
-total_bundles: 5
-completed_bundles: 5
+description: "桌面 GUI 开发知识包分组——Qt/PyQt 技术栈（Qt for Python 官方机制与 PyQt5 系统化实战）、Python 标准库 tkinter 技术栈（tkinter 设计教程、tkinter 手册、tkinterx 扩展库），另收 Tauri 2.0 vs Electron 的 Web 桌面选型束"
+total_bundles: 6
+completed_bundles: 6
 groups: "GUI桌面开发"
 ---
 
@@ -20,6 +20,8 @@ groups: "GUI桌面开发"
 
 - **tkinter 技术栈**（Python 标准库内置，零安装、轻量稳定，适合工具与教学场景）：[tkinter-gui-design](tkinter-gui-design/index.md)（系统设计教程）+ [tkinter-handbook](tkinter-handbook/index.md)（API 手册深挖）+ [tkinterx-handbook](tkinterx-handbook/index.md)（扩展库实战）
 
+- **Tauri/Electron 技术栈**（Web 技术栈 + 系统 WebView / Rust 后端，跨平台轻量桌面应用）：[tauri](tauri/index.md)（Tauri 2.0 与 Electron 对比选型教程）
+
 ## 知识包清单
 
 | 知识包                                               | 技术栈          | 定位                                 | 内容                                                                                                                                                            |
@@ -29,14 +31,17 @@ groups: "GUI桌面开发"
 | [tkinter-gui-design](tkinter-gui-design/index.md) | tkinter（标准库） | **系统设计教程**（文集《tkinter GUI 设计》34 篇） | 三大概念、ttk 主题化部件、grid/pack/place、菜单/多窗口/对话框、ToolTip、事件绑定与变量联动、Text 富文本、Canvas 2D 绘图、ttk.Style 与 MVC；10 篇概念 + 12 篇实战（登录窗口/画图工具/计算器/文本编辑器/Matplotlib 嵌入）+ 142 张截图 |
 | [tkinter-handbook](tkinter-handbook/index.md)     | tkinter（标准库） | **API 手册深挖**（文集《tkinter 手册》21 篇）   | Tcl/Tk 关系与微件体系、样式、三种布局管理器、事件四级绑定、变量追踪与对话框调度、Canvas 全集（选项/画图函数/图片坑/拖曳缩放）、Toplevel 多窗口传值、ttk 主题部件；12 篇概念 + 3 篇实战 + 30 张截图                                       |
 | [tkinterx-handbook](tkinterx-handbook/index.md)   | tkinter 扩展库  | **扩展库实战**（文集《tkinterx 手册》5 篇）      | 作者自研 tkinterx 库：统一画图接口 CanvasMeta、可传值对话框 WindowMeta、图形设计工具 canvas\_design、交互式几何画板 painter、颜色工具与电子限速示例；6 篇概念 + 3 篇实战 + 15 张截图（PyPI 0.0.9 / Pre-Alpha 已外部核验）    |
+| [tauri](tauri/index.md)                           | Tauri/Electron（Rust+系统 WebView） | **跨框架选型对比**（公众号「前端之神」单篇转化） | Tauri 2.0 架构与性能真相、相比 1.0 四大升级点、Tauri vs Electron 选型决策；4 篇概念 + F-001~F-018 事实登记与 8 项 P0 核验（draft：单源公众号文章，性能数值未独立复测） |
 
-## 五束关系
+## 束间关系
 
 - **Qt 技术栈内**：qt-for-python 回答"Qt 机制是什么、为什么"（官方文档视角，偏原理）；pyqt5-gui 回答"桌面应用怎么一步步做出来"（控件手册 + 实战视角，偏工程）；两束共享同一套 Qt 底层机制（信号槽、事件、绘图），概念文档互相交叉引用。
 
 - **tkinter 技术栈内**：tkinter-gui-design 是从零到项目的学习主线（概念递进 + 12 组实战）；tkinter-handbook 是同一作者对 tkinter API 的深挖手册（Canvas/Toplevel/ttk 全集速查），两束内容互补、互为参照；tkinterx-handbook 介绍作者在 tkinter 之上自研的扩展库，阅读前建议先掌握 tkinter-gui-design 的 Canvas 与事件基础。
 
 - **跨技术栈**：tkinter 与 Qt 是 Python 桌面开发的轻量/重量两条路线——tkinter 零安装、API 稳定、适合教学与小工具；Qt 控件丰富、性能强、适合工程化产品。同作者的 GUI 学习路径建议为：tkinter-gui-design 建立 GUI 核心概念（主循环/事件/布局）→ tkinter-handbook 深挖 → qt-for-python / pyqt5-gui 迁移到 Qt 生态。
+
+- **跨框架选型**：tauri 束回答"Web 技术栈做桌面应用时选 Tauri 还是 Electron"——系统 WebView + Rust 后端的轻量路线与打包 Chromium 的重量路线对比，与 Qt/tkinter 同属桌面 GUI 技术选型坐标系，但面向 Web 技术栈读者；内容源自单篇公众号文章（draft），与简书系五束的多文集证据等级不同。
 
 ## 知识地图
 
@@ -63,6 +68,11 @@ flowchart TB
     T --> C["tkinter-gui-design<br/>系统设计教程"]
     T --> D["tkinter-handbook<br/>API 手册深挖"]
     T --> E["tkinterx-handbook<br/>扩展库实战"]
+    R["Tauri / Electron<br/>Web 桌面技术栈"]
+    G --> R
+    R --> F0["tauri<br/>2.0 对比选型教程"]
+    F0 --> F1["系统 WebView + Rust 后端<br/>性能真相"]
+    F0 --> F2["2.0 四大升级点<br/>选型决策"]
     C --> C1["ttk 主题化部件"]
     C --> C2["几何管理与事件变量"]
     C --> C3["Text 富文本与 MVC"]
@@ -87,5 +97,6 @@ pyqt5-gui/index
 tkinter-gui-design/index
 tkinter-handbook/index
 tkinterx-handbook/index
+tauri/index
 ```
 

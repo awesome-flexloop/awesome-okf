@@ -2,15 +2,15 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比、能源管理、硬件设计、监管治理、平台生态、创业趋势与具身智能等 22 束行业分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）等 25 束行业分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
 
 本分组收录 AI 行业与商业趋势相关的知识包，覆盖四个方向：
 
-- **AI 商业化与数字机会**：AI 变现完整指南（商业模式·技术选型·三大场景·实施步骤）、抖音 Vibe Coding、Papi 酱个人 IP 与创业趋势、WorkBuddy 全媒体内容系统，以及海外平台夜间副业的费率、资格和六周验证框架。
-- **成本与工具生态**：多模型时代 Copilot 成本分析、国产大模型对比、火山引擎 AI 产品生态、三个热门 AI 工具指南。
+- **AI 商业化与数字机会**：AI 变现完整指南（商业模式·技术选型·三大场景·实施步骤）、抖音 Vibe Coding、Papi 酱个人 IP 与创业趋势、WorkBuddy 全媒体内容系统，以及海外平台夜间副业的费率、资格和六周验证框架；另含中国电信运营商样本两束——独家中标国家 AI 中试基地文旅全栈项目、天府词元智造工厂 Token 经营。
+- **成本与工具生态**：多模型时代 Copilot 成本分析、国产大模型对比、火山引擎 AI 产品生态、三个热门 AI 工具指南，以及蚂蚁 Ling 3.1 Flash 首测类模型评测快报。
 - **行业与技术分析**：开源 EMS 能源管理系统、AI 硬件设计工具、华秋与星宸科技合作、RQNDD 专题、印度制造业七概念分析、ZDTaichu5.0-9B 具身智能模型。
 - **监管与治理**：AI 拟人化服务暂行办法分析、AI 换脸治理专题。
 
@@ -42,6 +42,9 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 | [zdtaichu5-0-9b](zdtaichu5-0-9b/index.md) | 7 | ZDTaichu5.0-9B 空间具身多模态模型——模型定位、空间推理、训练管线与部署边界（flagged：基准和场景效果尚无独立复现） |
 | [auto-money-system](auto-money-system/index.md) | 7 | 微信博文转化：AI 应用层、个人 IP 系统化与轻交付产品自动化（商业分析，非操作教程；flagged：作者单源观察） |
 | [ai-solo-company-truth](ai-solo-company-truth/index.md) | 7 | 微信博文转化：AI 一人公司 110 万自述的结构化拆解——双口径账本、健康代价时间线、四真相框架与三建议假设化（商业分析，非操作教程；flagged：经营数字全部单源、110 万/180 万口径冲突） |
+| [ling-3-1-flash-first-test](ling-3-1-flash-first-test/index.md) | 5 | 蚂蚁 Ling 3.1 Flash 首测整理——560B MoE 规格、测试亮点与槽点、"对标 DeepSeek"读法与三类陈述分层（flagged：第三方评测演绎快报、权重未开放无法复现） |
+| [telecom-ai-pilot-base](telecom-ai-pilot-base/index.md) | 6 | 中国电信独家中标国家 AI 中试基地文旅全栈项目——三重门槛、四项胜出机制与采购总包化/份额集中趋势（flagged：中标金额与业绩门槛为博文单源） |
+| [telecom-token-operation](telecom-token-operation/index.md) | 6 | 中国电信 Token 经营：天府词元智造工厂——平台模式（做电网不做发电厂）、政企分工与运营商复制路径（flagged：补贴额度与共创名单为博文单源） |
 
 ## 阅读建议
 
@@ -77,4 +80,7 @@ zhihu-monetization/index
 zdtaichu5-0-9b/index
 auto-money-system/index
 ai-solo-company-truth/index
+ling-3-1-flash-first-test/index
+telecom-ai-pilot-base/index
+telecom-token-operation/index
 ```
