@@ -84,6 +84,7 @@ sources:
 - [腾讯 Buddy 家族产品观察](../tencent-buddy-family/index.md)：WorkBuddy/CodeBuddy/DataBuddy 品牌矩阵与定位，本束是其中 WorkBuddy 单次产品叙事的专题补充。
 - [WorkBuddy 沙箱公网端点：能力与边界](../workbuddy-sandbox-public-endpoint/index.md)：同主体的技术能力核验束（沙箱/公网链路，含实时响应头证据），与本束的市场叙事视角互补。
 - [CodeBuddy 产品矩阵](../codebuddy/index.md)：腾讯开发侧产品线，其 concepts/04 覆盖 WorkBuddy 与 CodeBuddy 的分工。
+- [WorkBuddy 官方站点与四区文档](../workbuddy-official-docs/index.md)：同主体的官方文档全站知识包（产品定位、任务模型、权限、功能面、连接器与 MCP、知识库、发布、三端差异、积分套餐、企业版管控），520 条编号事实与 190 条页级覆盖台账；本束记录的是某一时段的市场叙事，该束记录的是官方能力全貌与口径分层。
 
 ## 目录结构
 
