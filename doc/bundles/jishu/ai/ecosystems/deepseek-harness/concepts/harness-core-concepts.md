@@ -1,7 +1,7 @@
 ---
 type: concept
 title: "Harness 核心概念——模型外层执行壳"
-description: "Harness（模型外面那层壳）的定义与职责边界（想/干分工）、运行位置、关键能力，以及"App 在本机≠模型在本地"的反直觉边界。"
+description: "Harness（模型外面那层壳）的定义与职责边界（想/干分工）、运行位置、关键能力，以及“App 在本机≠模型在本地”的反直觉边界。"
 tags: [DeepSeek, Harness, 执行壳, Agent]
 generated: { by: "process:seven-concepts-cmd+wechat-public-okf", at: "2026-10-10T00:00:00Z" }
 status: draft

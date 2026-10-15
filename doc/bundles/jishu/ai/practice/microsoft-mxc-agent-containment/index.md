@@ -14,7 +14,7 @@ sources:
     title: 《微软给Agent立规矩，Windows要管AI了》（微信公众号"腾讯科技"，作者晓静，编辑徐青阳，2026-10-08）
   - id: official-mxc
     resource: https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/
-    title: Microsoft Execution Containers: Policy-driven containment for AI agents（微软 Windows Developer Blog，2026-10-07）
+    title: "Microsoft Execution Containers: Policy-driven containment for AI agents（微软 Windows Developer Blog，2026-10-07）"
   - id: official-hybrid
     resource: https://blogs.windows.com/windowsexperience/2026/10/07/building-windows-for-hybrid-intelligence/
     title: Building Windows for hybrid intelligence（Pavan Davuluri，2026-10-07）
