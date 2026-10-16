@@ -214,7 +214,7 @@ sources:
 | 17 | 废弃包与 cuabot 安全警告措辞 | ✅ 通过 | F-126/F-127 → F-147 | https://cdn.jsdelivr.net/gh/trycua/cua@main/README.md、https://cua.ai/docs/cua-sdk/guides/migrate-from-deprecated-packages |
 | 18 | Cua Fleets 单价 CPU $0.044625/vCPU/小时、内存 $0.0223125/GiB/小时 | ⚠️ 未获官方页核验（仅第二篇单源） | F-132 → F-153 | https://cua.ai/docs/concepts/sandbox-lifecycle（间接） |
 | 19 | 采用者 Hermes、Clicky、H Company、Factory Droid | ⚠️ 未获官方页核验（仅第二篇单源） | F-131 | — |
-| 20 | Cua Spaces 个人免费 | ✅ 通过 | F-133 → F-151 | https://cua.ai/ |
+| 20 | 成本口径：框架本地开源免费、Spaces 对个人免费，规模化才用 Fleets 托管计费且支持跑在自有云账号/私有环境 | ✅ 通过 | F-133 → F-151 | https://cua.ai/ |
 
 **计数：✅ 通过 14 项，⚠️ 时点/口径差异或未核验 6 项，❌ 失败 0 项。**
 
