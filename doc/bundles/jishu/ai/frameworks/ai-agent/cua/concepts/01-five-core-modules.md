@@ -94,3 +94,4 @@ Cua Bench 用于构建 computer-use 任务、评估 Agent 表现、导出训练�
 - 核验报告：[references/verification.md](../references/verification.md)
 - 项目概览：[00-project-overview.md](00-project-overview.md)
 - 快速上手：[04-getting-started.md](04-getting-started.md)
+- cua × okw 组合最优解（合成设计）：[06-cua-okw-solution.md](06-cua-okw-solution.md)

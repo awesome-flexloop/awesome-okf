@@ -58,3 +58,4 @@ Cua 押注的是**「卖水人」逻辑**：无论谁家 Agent 胜出，都需�
 - 核验报告：[references/verification.md](../references/verification.md)
 - 快速上手：[04-getting-started.md](04-getting-started.md)
 - 返回知识包首页：[../index.md](../index.md)
+- cua × okw 组合最优解（合成设计）：[06-cua-okw-solution.md](06-cua-okw-solution.md)

@@ -2,10 +2,10 @@
 okf_version: "0.2"
 type: bundle
 title: "Cua：给 AI Agent 一台能用的电脑，Computer-Use 2.0 开源全栈"
-description: "Cua（trycua/cua）Computer-Use 开源基础设施全栈——项目身份、Computer-Use 2.0 理念、五大核心模块（Driver/Fleets/Lume/CUA-S1/Bench）、许可证透明度、Stars 趋势、快速上手路径、适用场景与局限"
-tags: [Cua, Computer-Use, AI Agent, trycua, 开源, 桌面自动化, 云桌面, 评测基准]
-generated: { by: "blog-article-to-okf-bundle", at: "2026-10-10T10:50:00+08:00" }
-verified: { by: "process:seven-concepts-v", at: "2026-10-10T10:50:00+08:00" }
+description: "Cua（trycua/cua）Computer-Use 开源基础设施全栈——项目身份、Computer-Use 2.0 理念、五大核心模块（Driver/Fleets/Lume/CUA-S1/Bench）、许可证透明度、Stars 趋势、快速上手路径、适用场景与局限；第二信源补充六组件构成、Bench v1 榜单、Driver 权限三档、命令族与许可分层；含 cua × okw 三层组合合成设计（未实测）"
+tags: [Cua, Computer-Use, AI Agent, trycua, 开源, 桌面自动化, 云桌面, 评测基准, okw, openKylin, WSL2, 合成设计]
+generated: [{ by: "blog-article-to-okf-bundle", at: "2026-10-10T10:50:00+08:00" }, { by: "okf-wiki-ecosystem/extend-cua-bundle-with-okw-solution", at: "2026-10-16T00:00:00+08:00" }]
+verified: [{ by: "process:seven-concepts-v", at: "2026-10-10T10:50:00+08:00" }, { by: "process:seven-concepts-v", at: "2026-10-16T00:00:00+08:00", note: "第二轮（第二信源）" }]
 status: stable
 stale_after: 2026-12-31
 sources:
@@ -18,15 +18,18 @@ sources:
   - id: newreleases-cua
     resource: https://newreleases.io/project/github/trycua/cua
     title: newreleases.io：trycua/cua Releases
+  - id: wechat-article-2-cua
+    resource: https://mp.weixin.qq.com/s/vEGTwWZ8Mws2fwAQyvm0Yg
+    title: 《别再让 Agent 用你的电脑了「Cua：2.8 万 Star 的开源项目」》（微信公众号"极限编程驿站"，2026-10-08）
 ---
 
 # Cua：给 AI Agent 一台能用的电脑，Computer-Use 2.0 开源全栈
 
-> **⚠️ 性质声明**：本 bundle 为**产品资讯/技术综述类知识包**，以微信公众号"FinOps实战"博文为事实基础，结合 GitHub API、newreleases.io、piwheels、官方文档页等权威来源核验。博文为第三方开源项目推介，非官方文档；作者明确声明快速上手章节的命令"全部来自官方 README"，**未提供本人实测结果**。核验发现 **0 项硬性事实错误、6 项时点/口径差异**（开发主体名称、Stars/Forks/Issues 快照、主语言、日增/Trending），已在 [references/verification.md](references/verification.md) 中如实记录。
+> **⚠️ 性质声明**：本 bundle 为**产品资讯/技术综述类知识包**，以**两篇微信公众号博文**为事实基础——第一篇"FinOps实战"（2026-09-26）从 FinOps 视角综述 Cua，第二篇"极限编程驿站"（2026-10-08）补充六组件构成、Bench v1 榜单、Driver 权限三档等；两篇均为第三方开源项目推介，非官方文档。第一篇作者明确声明快速上手章节的命令"全部来自官方 README"，**未提供本人实测结果**。结合 GitHub API、newreleases.io、piwheels、官方文档页等权威来源两轮核验，发现 **0 项硬性事实错误、第一篇 6 项 + 第二篇 6 项时点/口径差异**（开发主体名称、Stars/Forks/Issues 快照、主语言、日增/Trending、榜单名次等），已在 [references/verification.md](references/verification.md) 中如实记录。此外，本束第 7 章（[concepts/06](concepts/06-cua-okw-solution.md)）为 **cua × okw 合成设计，未在本机实测**，不构成可用性承诺。
 
 Cua 是最近冲上 GitHub Trending 日榜前列的 AI 基础设施项目（F-018）。一句话概括它的野心：**给 AI Agent 一台它们真正能用的电脑**（F-004）。当大模型开始学会"用电脑"而不是只会"聊天"，这个项目就是那条赛道上最完整的开源工具箱（F-041）。
 
-本知识包梳理 Cua 的项目身份、五大核心模块、许可证透明度、Stars 趋势、快速上手路径，以及作者给出的适用场景、局限与展望。
+本知识包梳理 Cua 的项目身份、五大核心模块、许可证透明度、Stars 趋势、快速上手路径，以及作者给出的适用场景、局限与展望；并收束第二篇信源补充的六组件、Bench v1 榜单与权限模型，最后给出 cua × okw 三层组合的合成设计（未实测）。
 
 ---
 
@@ -34,13 +37,15 @@ Cua 是最近冲上 GitHub Trending 日榜前列的 AI 基础设施项目（F-01
 
 | 信源 | 类型 | 覆盖范围 |
 |------|------|---------|
-| 微信公众号"FinOps实战"博文 | 主信源（第三方综述） | F-001 ~ F-053（博文全部事实与观点） |
+| 微信公众号"FinOps实战"博文（第一篇） | 主信源（第三方综述） | F-001 ~ F-053（博文全部事实与观点） |
 | GitHub API：trycua/cua | 官方核验 | 仓库身份/创建时间/许可证/README 引语/动态数据（F-054~F-057） |
 | newreleases.io + piwheels | 官方核验 | sandbox 版本日期、nightly 发布节奏（F-058~F-060） |
 | 官方文档页（libraries.io 摘要） | 官方核验 | 安装命令、6×7 教程、Computer-Use 2.0 定义（F-061~F-062） |
 | 第三方报道 | 交叉验证 | CUA-S1 开源事件、第三方组件许可证（F-063~F-064） |
+| 微信公众号"极限编程驿站"博文（第二篇） | 第二主信源（第三方推介） | F-066 ~ F-139（第二篇全部事实与观点） |
+| GitHub API / README / 官网（第二轮核验） | 官方核验 | 六组件构成、Bench v1 榜单、权限三档、许可分层、未核验项（F-140~F-154） |
 
-核验发现 **6 项时点/口径差异（⚠️）、0 项硬性错误（❌）**，完整核验报告见 [references/verification.md](references/verification.md)。
+两轮核验共发现 **第一篇 6 项 + 第二篇 6 项时点/口径差异（⚠️）、0 项硬性错误（❌）**，另含跨信源对账 4 条，完整核验报告见 [references/verification.md](references/verification.md)。
 
 ---
 
@@ -48,16 +53,18 @@ Cua 是最近冲上 GitHub Trending 日榜前列的 AI 基础设施项目（F-01
 
 ```
 cua/
-├── concepts/              # 核心概念文档（6篇）
+├── concepts/              # 核心概念文档（7篇）
 │   ├── 00-project-overview.md        # 项目身份、Computer-Use 2.0 理念、三大难题
 │   ├── 01-five-core-modules.md       # 五大核心模块详解
 │   ├── 02-ecosystem-and-licensing.md # 许可证透明度、语言构成、工程化成熟度
 │   ├── 03-stars-and-momentum.md      # Stars 趋势、社区活跃度、发布节奏
 │   ├── 04-getting-started.md         # 快速上手路径（安装命令、建议顺序）
-│   └── 05-scenarios-and-limitations.md  # 适用场景、局限与展望
-├── references/            # 信源登记簿（2篇）
-│   ├── article-source.md  # F-001~F-065 事实完整登记
-│   └── verification.md    # 18 项核验结论与 6 项时点差异说明
+│   ├── 05-scenarios-and-limitations.md  # 适用场景、局限与展望
+│   └── 06-cua-okw-solution.md        # cua × okw 三层组合合成设计（未实测）
+├── references/            # 信源登记簿（3篇）
+│   ├── article-source.md  # 第一篇 F-001~F-065 事实完整登记
+│   ├── second-article-facts.md  # 第二篇 F-066~F-154 事实登记与核验补充
+│   └── verification.md    # 两轮核验结论与跨信源对账
 ├── index.md               # 本文件
 └── log.md                 # 生成日志
 ```
@@ -76,24 +83,26 @@ cua/
 | [Stars 趋势与社区活跃度](concepts/03-stars-and-momentum.md) | 博文快照 vs 官方时点对比、增长态势解读、每日 nightly 发布节奏 |
 | [快速上手](concepts/04-getting-started.md) | Driver/Lume/Bench/Fleets 四条路径安装命令、6×7 任务、作者建议顺序 |
 | [适用场景、局限与展望](concepts/05-scenarios-and-limitations.md) | 四类适用场景、四点风险、2026 Computer-Use 展望、"卖水人"逻辑 |
+| [cua × okw 最优解（合成设计）](concepts/06-cua-okw-solution.md) | 三层分工架构、模块选型判据表、组合路径（设计）、前置条件、8 项风险与未验证项 |
 
 ### 信源层（references/）
 
 | 文档 | 核心内容 |
 |------|---------|
 | [博文信源事实清单](references/article-source.md) | F-001~F-053 博文事实登记 + F-054~F-065 核验补充与时点勘误 |
-| [核验报告](references/verification.md) | 18 项核验逐项结论表（12✅ + 6⚠️ + 0❌），6 项时点差异详解，权威来源 URL |
+| [第二篇信源事实清单](references/second-article-facts.md) | F-066~F-154（第二篇 74 条 + 核验补充 15 条） |
+| [核验报告](references/verification.md) | 两轮核验（第一篇 18 项 + 第二篇 20 项）+ 跨信源对账 4 条，时点差异详解，权威来源 URL |
 
 ---
 
 ## ✅ 信任与生命周期说明
 
-- **文档版本**：基于 2026-09-26 发布的博文与 2026-10-10 完成的核验生成
-- **覆盖事实**：共 65 条事实（F-001 ~ F-053 来自博文，F-054 ~ F-065 为核验补充）
-- **核验情况**：18 项声明经权威来源核验，12 项通过，6 项时点/口径差异，0 项失败
+- **文档版本**：基于 2026-09-26 发布的第一篇博文、2026-10-08 发布的第二篇博文，与 2026-10-10 / 2026-10-16 完成的两轮核验生成
+- **覆盖事实**：共 154 条事实（F-001 ~ F-053 第一篇博文，F-054 ~ F-065 第一篇核验补充，F-066 ~ F-139 第二篇博文，F-140 ~ F-154 第二篇核验补充）
+- **核验情况**：两轮核验——第一篇 18 项（12✅ + 6⚠️ + 0❌）+ 第二篇 20 项（14✅ + 6⚠️ + 0❌）+ 跨信源对账 4 条
 - **status**：stable — 项目存在且活跃，核心身份/协议/模块事实已确认
 - **stale_after**：2026-12-31 — 项目每日 nightly、组件版本高频迭代，年末复核
-- **方法论链路**：R（事实采集）→ I（洞察提炼）→ E（信源先行成文）→ V（核验），详见 [log.md](log.md)
+- **方法论链路**：R（事实采集）→ I（洞察提炼）→ E（信源先行成文）→ V（核验），含第二轮 R→I→E→V，详见 [log.md](log.md)
 
 ### 已知边界
 
@@ -104,10 +113,12 @@ cua/
 5. **CUA-S1 为 source-only 早期研究性发布**：生产环境慎用（F-049/F-063）。
 6. **Fleets 为付费服务**：池保留容量需按教程清理（F-038/F-048）。
 7. **快照后演进**：cua-sandbox 0.9.0（2026-10-01）、Cua Spaces 0.1.0 等为博文未覆盖的新动态（F-059/F-065）。
+8. **第二篇为第三方公众号推介**：媒体「极限编程驿站」，发布于 2026-10-08，非官方文档；其中的动态数据（Star/Fork 数、Bench 榜单名次等）为发布时点快照，引用须带时点。
+9. **第 7 章为合成设计**：[concepts/06-cua-okw-solution.md](concepts/06-cua-okw-solution.md) 为 cua × okw 的组合方案设计，**未在本机实测**，不构成可用性承诺（相关前提与风险项在 F-140~F-154 中标注为未验证）。
 
 ---
 
-**本知识包共收录 9 个内容文档（6 个概念 + 2 个信源 + 1 个生成日志），外加 2 个子目录索引与根索引，合计 12 个文件。**
+**本知识包共收录 11 个内容文档（7 个概念 + 3 个信源 + 1 个生成日志），外加 2 个子目录索引与根索引，合计 14 个文件。**
 
 ```{toctree}
 :hidden:

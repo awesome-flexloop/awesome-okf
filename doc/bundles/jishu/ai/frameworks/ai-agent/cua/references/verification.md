@@ -25,6 +25,30 @@ sources:
   - id: openai-hub-cua-s1
     resource: https://www.openai-hub.com/news/2096/
     title: OpenAI Hub：CUA-S1 开源报道（2026-09-19）
+  - id: wechat-article-2-cua
+    resource: https://mp.weixin.qq.com/s/vEGTwWZ8Mws2fwAQyvm0Yg
+    title: 《别再让 Agent 用你的电脑了「Cua：2.8 万 Star 的开源项目」》（极限编程驿站，2026-10-08）
+  - id: github-api-cua-20261016
+    resource: https://api.github.com/repos/trycua/cua
+    title: GitHub API：trycua/cua 仓库元数据（2026-10-16）
+  - id: cua-readme-main
+    resource: https://cdn.jsdelivr.net/gh/trycua/cua@main/README.md
+    title: 官方 README（trycua/cua main 分支，经 jsDelivr 镜像）
+  - id: cuabench-leaderboard
+    resource: https://cua.ai/cuabench/leaderboard
+    title: Cua-Bench EDA Leaderboard（v1）
+  - id: cua-home
+    resource: https://cua.ai/
+    title: Cua 官网首页（Cua Spaces 许可与定价）
+  - id: cua-docs
+    resource: https://cua.ai/docs
+    title: Cua 官方文档中心
+  - id: cua-docs-deprecated
+    resource: https://cua.ai/docs/cua-sdk/guides/migrate-from-deprecated-packages
+    title: 官方文档：从废弃包迁移
+  - id: cua-docs-lifecycle
+    resource: https://cua.ai/docs/concepts/sandbox-lifecycle
+    title: 官方文档：Sandbox lifecycle（Fleet 池容量与费用）
 ---
 
 # 事实核验报告
@@ -161,3 +185,81 @@ sources:
 | 腾讯云开发者社区 | https://cloud.tencent.com/developer/article/2746885 | 五模块架构、AGPL 系组件交叉验证 |
 | 今日头条（闲人野鹤） | http://m.toutiao.com/group/7691121640284897834/ | 五模块、安装命令、CUA-S1 权重授权交叉验证 |
 | 博文原文 | https://mp.weixin.qq.com/s/6FaVJOhGomsSn43RdFMRlg | 主信源事实与观点 |
+
+## 6. 第二轮核验（第二篇文章 P0）
+
+> 核验对象：第二篇文章《别再让 Agent 用你的电脑了「Cua：2.8 万 Star 的开源项目」》（极限编程驿站，2026-10-08，对应事实 F-066~F-154，见 [second-article-facts.md](second-article-facts.md)）。
+> 核验日期：2026-10-16。
+> 结论口径：`✅ 通过`=与权威源一致 / `⚠️ 时点或口径差异`（含「未获官方页核验，仅第二篇单源」）/ `❌ 失败`。
+> 结果：**14 项通过（✅）、6 项时点/口径差异或未核验（⚠️）、0 项失败（❌）**。
+
+| # | 声明 | 结论 | 对应事实 | 来源 |
+|---|------|------|---------|------|
+| 1 | 仓库 github.com/trycua/cua、MIT、2025 年 1 月建仓 | ✅ 通过 | F-070/F-074/F-075 → F-141 | https://api.github.com/repos/trycua/cua |
+| 2 | Star 超 2.8 万 | ⚠️ 时点/口径差异（约数偏低：2026-10-16 实测 29,926） | F-071 → F-140 | https://api.github.com/repos/trycua/cua |
+| 3 | Fork 超 2,000 | ✅ 通过（2,142） | F-072 → F-140 | https://api.github.com/repos/trycua/cua |
+| 4 | Rust 约占仓库代码量 47% | ⚠️ 口径差异（languages API 实测 42.31%） | F-073 → F-142 | https://api.github.com/repos/trycua/cua/languages |
+| 5 | 130+ 位贡献者 | ✅ 通过（149/155） | F-076 → F-143 | https://api.github.com/repos/trycua/cua/contributors |
+| 6 | 六组件（Driver/Spaces/Lume/SDK-CLI/CUA-S1/Bench） | ✅ 通过 | F-077~F-086 → F-144/F-148/F-152 | https://cdn.jsdelivr.net/gh/trycua/cua@main/README.md、https://cua.ai/docs |
+| 7 | Cua Spaces：macOS 26+、个人免费 | ✅ 通过 | F-079 → F-151 | https://cua.ai/ |
+| 8 | SDK 提供 Python/TypeScript/Swift/Kotlin 四语言 | ✅ 通过 | F-081 → F-148 | https://cdn.jsdelivr.net/gh/trycua/cua@main/README.md |
+| 9 | CUA-S1 System 1、源码 MIT、权重在 Hugging Face | ✅ 通过 | F-082 → F-148（官方 README） | https://cdn.jsdelivr.net/gh/trycua/cua@main/README.md |
+| 10 | 权限三档 standard/bounded/unrestricted 与 `--dangerously-bypass-approvals` | ⚠️ 未获官方页核验（仅第二篇单源） | F-089~F-091 | — |
+| 11 | 安装/沙箱/Lume/Driver 命令族 | ✅ 通过 | F-112~F-120 → F-148 | https://cdn.jsdelivr.net/gh/trycua/cua@main/README.md |
+| 12 | `cua sb create ubuntu` 起 gVisor 容器而非虚拟机 | ✅ 通过 | F-113 → F-148 | https://cdn.jsdelivr.net/gh/trycua/cua@main/README.md |
+| 13 | 榜单 v1：25 个 KiCad 任务、200 次操作、netlist 比对 | ✅ 通过 | F-097~F-100 → F-149 | https://cua.ai/cuabench/leaderboard |
+| 14 | 名次与通过数 6/6/5/5/5/1（前五名与第 10 名） | ✅ 通过 | F-101~F-106 → F-149 | https://cua.ai/cuabench/leaderboard |
+| 15 | `*`=function-calling；Claude 经 Bedrock；「每个完全通过的任务都是对已有原理图的修改」 | ✅ 通过 | F-107~F-109 → F-150 | https://cua.ai/cuabench/leaderboard |
+| 16 | 许可分层 MIT / FSL-1.1-MIT / cua-perception AGPL-3.0-only | ⚠️ 口径差异（FSL 范围文中「音视频流」对应官方 streaming client/codecs/viewers，官方 wire protocol 仍 MIT；文中漏 Cua Driver Bench 亦为 FSL） | F-121~F-125 → F-144/F-145/F-146 | https://cdn.jsdelivr.net/gh/trycua/cua@main/README.md、https://cua.ai/ |
+| 17 | 废弃包与 cuabot 安全警告措辞 | ✅ 通过 | F-126/F-127 → F-147 | https://cdn.jsdelivr.net/gh/trycua/cua@main/README.md、https://cua.ai/docs/cua-sdk/guides/migrate-from-deprecated-packages |
+| 18 | Cua Fleets 单价 CPU $0.044625/vCPU/小时、内存 $0.0223125/GiB/小时 | ⚠️ 未获官方页核验（仅第二篇单源） | F-132 → F-153 | https://cua.ai/docs/concepts/sandbox-lifecycle（间接） |
+| 19 | 采用者 Hermes、Clicky、H Company、Factory Droid | ⚠️ 未获官方页核验（仅第二篇单源） | F-131 | — |
+| 20 | Cua Spaces 个人免费 | ✅ 通过 | F-133 → F-151 | https://cua.ai/ |
+
+**计数：✅ 通过 14 项，⚠️ 时点/口径差异或未核验 6 项，❌ 失败 0 项。**
+
+> **未核验项如实呈现**：第 10、18、19 项（F-089~F-091 权限三档命名与 `--dangerously-bypass-approvals`、F-132 Cua Fleets 单价、F-131 采用者名单）在可达官方页**未检出逐字依据**，仅为第二篇单源，按原样呈现，不作提升；F-154 另记「第二篇正文无法经 WebFetch 提取、以 PowerShell 抓取 HTML 替代」这一提取限制。
+
+## 7. 跨信源对账（第一篇 vs 第二篇）
+
+> 对账对象：第一篇（[article-source.md](article-source.md) F-001~F-065，2026-09-26）与第二篇（[second-article-facts.md](second-article-facts.md) F-066~F-154，2026-10-08）在同一知识束内的表述差异。共 **4 条**，每条按「现象—差异—影响—处置」四元组登记。
+
+### 对账 ①：模块命名 —— 第一篇「Fleets」vs 第二篇「Cua Spaces / sandbox」
+
+- **现象**：第一篇五模块含 `Cua Fleets`（隔离云桌面集群，F-011）；第二篇六组件把对应位置写作 `Cua Spaces`，并在命令族中使用 `cua sb`（sandbox 沙箱）。
+- **差异**：三个名称指向不同对象——`Cua Spaces` = macOS 桌面 App / 共享桌面产品线（source-available，FSL-1.1-MIT）；`Cua Fleets` = 托管云桌面集群付费服务（按用量计费，官方 SDK 中的 `Pool`/`@trycua/fleet`）；`sandbox`（`cua sb`）= gVisor 沙箱本地运行时。
+- **影响**：若沿用单一名词，会把「本地沙箱 / 自有机器 Space / 托管 Fleet 池」三类资源混为一谈，F-011 与 F-079 有被误读为同一组件的风险；成本与许可结论随之错位（Fleets 付费、Spaces 个人免费、sandbox 开源 MIT）。
+- **处置**：在正文与概念页按「三类资源」并列呈现，标注各自许可与计费；保留第一篇 F-011 原编号，不改写，仅补注第二篇对应名称为 Cua Spaces / sandbox。
+
+### 对账 ②：接口命名 —— 第一篇「Sandbox SDK」vs 第二篇「Cua SDK 与 CLI（四语言）」
+
+- **现象**：第一篇称云端与本地区共享 `Sandbox SDK`（F-011/F-036/F-037）；第二篇称 `Cua SDK 与 CLI`，提供 Python/TypeScript/Swift/Kotlin 四种语言接口（F-081）。
+- **差异**：`Sandbox SDK` 是 `cua` SDK 中面向沙箱生命周期的高层子集（官方文档 `Sandbox SDK reference` 仍在使用该标题，见 F-152）；`Cua SDK 与 CLI` 是整体产品名，其 Rust 核心 + 四语言绑定由官方 README 的 Packages 表确认（F-148）。
+- **影响**：两名称并非替代关系而是包含关系；若视作改名，会遗漏「同一 API 在本地与 Fleet 之间迁移」这一第一篇核心结论（F-037）。
+- **处置**：正文采用「Cua SDK（含 Sandbox SDK 子集与四语言绑定）」的总分表述，两篇编号各自保留。
+
+### 对账 ③：主语言 —— 第一篇快照 HTML vs 第二篇 Rust（约 47%）vs GitHub API 当前值
+
+- **现象**：第一篇 2026-09-20 快照称主语言标记 HTML（F-026）；第二篇称以 Rust 为主、约占代码量 47%（F-073）；本轮 2026-10-16 GitHub API `language` 字段为 Rust，languages API 计算 Rust 字节占比 42.31%（F-141/F-142）。
+- **差异**：GitHub 主语言字段按仓库字节占比动态变化，属时点口径；两篇文章的百分比口径（47%）与当前实测（42.31%）存在差距。
+- **影响**：主语言与占比不能作为稳定事实引用，缺少时点会误导读者。
+- **处置**：三版数值并列并标注各自时点与口径；正文以「Rust 为当前主语言」表述，占比仅作时点参考。
+
+### 对账 ④：Stars 四版快照 —— 24,432 / 29,189 / 「2.8 万」/ 29,926
+
+- **现象**：第一篇 2026-09-20 快照 24,432（F-016）；2026-10-10 API 29,189（F-055）；第二篇本文称「超过 2.8 万」（F-071）；本轮 2026-10-16 API 29,926（F-140）。
+- **差异**：均为同一仓库不同时点的快照；第二篇「2.8 万」是作者约数，相对其发布日（2026-10-08）前后的实测水平偏低。
+- **影响**：若把任一行销数当现值，会低估项目动量；跨文档引用易产生陈旧数据。
+- **处置**：正文统一采用「时点 + 数值」格式，给出 2026-10-16 现值 29,926 作为当前口径，其余三版作为历史时点登记。
+
+## 8. 新增权威来源（第二轮）
+
+| 来源 | URL | 用途 |
+|------|-----|------|
+| 第二篇文章 | https://mp.weixin.qq.com/s/vEGTwWZ8Mws2fwAQyvm0Yg | 第二信源事实与观点（F-066~F-139） |
+| 官方 README（main，jsDelivr 镜像） | https://cdn.jsdelivr.net/gh/trycua/cua@main/README.md | 六组件、四语言 SDK、gVisor 语义、许可分层、废弃包与 cuabot 警告 |
+| Cua-Bench EDA Leaderboard | https://cua.ai/cuabench/leaderboard | 榜单 v1 任务数/步数/netlist 判分、名次与 `*` 口径 |
+| Cua 官网首页 | https://cua.ai/ | Cua Spaces 许可（FSL-1.1-MIT）、macOS 26+、个人免费 |
+| Cua 官方文档中心 | https://cua.ai/docs | 文档导航与 Sandbox SDK reference（F-152） |
+| 官方文档：从废弃包迁移 | https://cua.ai/docs/cua-sdk/guides/migrate-from-deprecated-packages | 废弃清单（含 cuabot）与措辞 |
+| 官方文档：Sandbox lifecycle | https://cua.ai/docs/concepts/sandbox-lifecycle | Fleet 池 warm capacity 与费用（F-153 间接） |
