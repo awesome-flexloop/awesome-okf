@@ -56,6 +56,7 @@ sources:
 - [WorkBuddy 沙箱公网端点](../workbuddy-sandbox-public-endpoint/index.md)——WorkBuddy/CloudStudio 运行环境边界核验，可与本束企业侧管控（F-042）对照。
 - [腾讯 Buddy 系列产品观察](../tencent-buddy-family/index.md)——WorkBuddy/CodeBuddy/DataBuddy 品牌矩阵；5.0.12 的互通是该矩阵在企微入口的落地。
 - [腾讯会议 CLI](../tencent-meeting-cli/index.md)——同属「腾讯办公 + 官方 CLI/Agent」主题：会议纪要能力也是企微 CLI/MCP 开放模块之一。
+- [企业微信「话题」场景最佳示例](../wecom-topic-scenarios/index.md)——同分组 2026-10-16 场景示例页核验束：其源页与本束 F-019 登记的「频道场景示例页」同形（padId 不同、`?p=HXPk2x` 相同、场景集重合 3/5），「话题」与「频道」命名张力及二者关系**官方未给**，两束按并置登记、均不单方断言。
 
 ## 一句话结论
 
