@@ -1,0 +1,14 @@
+# 更新日志
+
+## 2026-10-18
+
+**New Bundle**: 新增知识束 `miaowu-product-guide`（秒悟 Meoo 产品功能全景指南）
+
+* **R 阶段（事实采集）**：WebFetch 匿名采集 14 个官方页面（均 HTTP 200、无重定向）——首页 `/`、`/features/agent-modes`、`/features/models`、`/features/web-apps`、`/features/wechat-miniprogram`、`/features/visual-editing`、`/features/cloud-services`、`/features/ai`、`/features/asset-center`、`/features/file-storage`、`/features/project-config`、`/features/skills`、`/features/skill-marketplace`、`/features/connectors`，转存于会话暂存区并逐页通读；另采集的 CLI 四源（`/features/cli`、`/features/cli-aliyun`、`/open`、`/open/guides/cli`）划入姊妹束 `miaowu-cli-open-guide`，本束不重复建账。G1 事实门：传参值、端点、环境变量、限额数字、模型参数一律逐字摘录，营销性表述逐条标「厂商自述」。
+* **I 阶段（洞察）**：冻结 7 条跨页四元组洞察——①「对话即控制台」主线（建库 F-038/按需启用云服务 F-068/存储桶 F-115/微信登录 F-054/根目录文件 F-119 同构）；②「构建期 13 模型 vs 运行时 9 传参值」双清单冲突不调和（F-016–F-029 vs F-074–F-076，技能页 F-129 作第三处旁证）；③「5MB/50MB 是通道差异非矛盾」（对话通道 F-108 vs 运行时存储通道 F-070，CDN 四步法 F-115 为官方桥接）；④「无代码对话流内嵌最小版本控制」（自动单测 F-041/回滚 F-043/代码对比 F-044）；⑤「平台主权三分」（账号/备案/审核归微信 F-055、共享域信誉隔离挡默认域名 SEO F-123、MCP 连接器为规划项 F-143）；⑥「Skill 质量双判据」（构建期写边界 F-128、迭代期守拒识 F-134）；⑦「连接资源/项目绑定两层模型」（F-144/F-145/F-148）解释凭证与解绑行为。
+* **E 阶段（萃取）**：落盘 14 篇概念页（00 平台总览、01 四模式、02 模型图谱、03 网页主线、04 小程序、05 可视化、06 云服务、07 AI 服务、08 素材中心、09 文件存储、10 根目录文件、11 技能、12 技能市场、13 连接器）+ concepts 索引、references 三件套（F-001–F-150 共 150 条事实 + 13 项 P0 核验）。07 页三段官方 fetch 示例按 F-087 规则还原缩进换行，字符串/端点/参数零改写，保留「参考示例，实际代码由 Meoo 生成」源页声明；`size: "1024*1024"` 星号原样保留。无 `examples/`（产品操作为对话/界面驱动，不产生命令流）。
+* **V 阶段（对抗核验）**：P0 核验 13 项——两端点与 `MEOO_PROJECT_API_KEY` 逐字通过；9 传参值（含大小写与星号）通过；13 模型参数登记但统一标厂商自述；核验项四判 **conflicting 双源并存**（定位差异：构建器选模型 vs API 传参值，禁止单方面纠正）；5MB vs 50MB 判语境并列；计数枚举（六类应用/七步/十格式/五配置/七清单/六 FAQ/八类型 vs 七标签）逐项通过；微信权责 10 行表与 4 条外链通过；截图边界（含 2:01 视频、doubaocdn 直链）隔离；源页原文缺陷（「餐普规划」、多余右括号、「使用技」漏字）保留加注；转写残片（视频时间轴、`On this page`、截图直链、「（原文配图」标注）全部隔离在台账「转写噪声登记」，禁入正文；独立 fresh-context 评审结果见 spec 目录 review.md。
+* **V 阶段整改闭环（独立评审后）**：fresh-context 独立评审首轮结论 fail（7 issue，无 P0），归属本束 4 项当日全部整改——① I-07：本束 verification.md frontmatter `- S7` 补为 `- id: S7`（PyYAML 复解析 34/34 通过，`sphinx-build -E -W` 两新束告警归零）；② I-03：06/09 概念页与 index/log 共 23 处 F 标签硬错配 + 2 处宽挂按台账权威映射重挂（F-069 CSV / F-070 50MB / F-071 Secrets / F-072 GoTrue / F-078 自动注入 / F-111 下载限制 / F-112 阈值 / F-113 适用范围 / F-114 销毁 / F-115 CDN 四步），逐号回台账对账无错配；③ I-06：06 页把 zip/json「不支持下载」误写成「不支持上传」的语义反转按源稿 F-111 订正；④ I-02：束根 index 两处姊妹束死链前缀 `../../`→`../`。整改明细与复审命令记录见本束 verification.md「独立评审整改复审记录」。
+* **C 阶段**：四层索引注册与计数对账见组/分类/域/总索引（miaowu 3→5、ecosystems 95→97、jishu/ai 247→249、total 645→647，`check-bundles-index.py` 五面对账 exit 0；与姊妹束 `miaowu-cli-open-guide` 同批两行一起注册）。
+* **缺口声明**：pricing 价格与免费额度、模型上下文窗口全表与倍率、微信备案材料与审核时限、服务类目全表、连接器凭证存储机制、技能 zip 包结构、素材图片参数全表、协作专页、自定义域名专页均在本束 14 源之外，登记于 source-ledger「放弃核验清单」（14 项），未做推断补全。
+* **方法局限**：WebFetch HTML→Markdown 转换丢失全部截图、GIF 与演示视频内容；全部为厂商单源，无第三方评测交叉；模型代次命名时效风险高，`stale_after` 2027-01-18。
