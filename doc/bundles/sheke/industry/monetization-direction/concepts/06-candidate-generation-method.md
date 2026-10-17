@@ -13,7 +13,7 @@ sources:
     title: "核验报告：P0 核验与勘误（F 编号结论与单源清单）"
   - id: article-source
     resource: "../references/article-source.md"
-    title: "信源事实清单（F-001~F-082）"
+    title: "信源事实清单（F-001~F-099）"
 ---
 
 # 步骤 2 候选方向生成：画布、特定知识×杠杆与问题优先
