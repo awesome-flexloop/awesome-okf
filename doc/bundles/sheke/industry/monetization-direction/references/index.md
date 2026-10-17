@@ -1,0 +1,14 @@
+# 信源与核验
+
+本目录承载「个人变现方向发现方法论」知识包的**信源先行层**产出：先落盘可核验的原始事实与权威核验记录，再由 `concepts/` 与 `examples/` 引用。阅读顺序建议：先读事实清单掌握 82 条 F 编号的来源与结论分布，再读核验报告了解勘误、单源标注与 `stable` 判定依据。
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+article-source
+verification
+```
+
+- [信源事实清单（F-001~F-082）](article-source.md) — 与 spec 区 `facts.md` 双份登记的 F 编号事实（声明 / 信源 / 信源距离 / 核验级 / 核验结论 / 证据 URL）
+- [核验报告：P0 权威核验与勘误记录](verification.md) — 核验结论表（✅58 / ⚠️21 / 单源 3 / ❌0）、勘误四张清单、E-01~E-05 勘误小节、单源清单、status 判定与 stale_after

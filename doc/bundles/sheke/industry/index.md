@@ -2,14 +2,14 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）等 26 束行业分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、个人变现方向发现方法论等 27 束行业分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
 
 本分组收录 AI 行业与商业趋势相关的知识包，覆盖四个方向：
 
-- **AI 商业化与数字机会**：AI 变现完整指南（商业模式·技术选型·三大场景·实施步骤）、抖音 Vibe Coding、Papi 酱个人 IP 与创业趋势、WorkBuddy 全媒体内容系统，以及海外平台夜间副业的费率、资格和六周验证框架；另含中国电信运营商样本两束——独家中标国家 AI 中试基地文旅全栈项目、天府词元智造工厂 Token 经营。
+- **AI 商业化与数字机会**：AI 变现完整指南（商业模式·技术选型·三大场景·实施步骤）、抖音 Vibe Coding、Papi 酱个人 IP 与创业趋势、WorkBuddy 全媒体内容系统，以及海外平台夜间副业的费率、资格和六周验证框架；另含个人变现方向发现方法论（三类误区 + 自我盘点/候选生成/需求验证/决策启动四步法 + 四种起点的人群路径），作为变现簇的「方向发现」入口；另含中国电信运营商样本两束——独家中标国家 AI 中试基地文旅全栈项目、天府词元智造工厂 Token 经营。
 - **成本与工具生态**：多模型时代 Copilot 成本分析、国产大模型对比、火山引擎 AI 产品生态、三个热门 AI 工具指南，以及蚂蚁 Ling 3.1 Flash 首测类模型评测快报。
 - **行业与技术分析**：开源 EMS 能源管理系统、AI 硬件设计工具、华秋与星宸科技合作、RQNDD 专题、印度制造业七概念分析、ZDTaichu5.0-9B 具身智能模型。
 - **监管与治理**：AI 拟人化服务暂行办法分析、AI 换脸治理专题。
@@ -45,6 +45,7 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 | [ling-3-1-flash-first-test](ling-3-1-flash-first-test/index.md) | 5 | 蚂蚁 Ling 3.1 Flash 首测整理——560B MoE 规格、测试亮点与槽点、"对标 DeepSeek"读法与三类陈述分层（flagged：第三方评测演绎快报、权重未开放无法复现） |
 | [telecom-ai-pilot-base](telecom-ai-pilot-base/index.md) | 6 | 中国电信独家中标国家 AI 中试基地文旅全栈项目——三重门槛、四项胜出机制与采购总包化/份额集中趋势（flagged：中标金额与业绩门槛为博文单源） |
 | [telecom-token-operation](telecom-token-operation/index.md) | 6 | 中国电信 Token 经营：天府词元智造工厂——平台模式（做电网不做发电厂）、政企分工与运营商复制路径（flagged：补贴额度与共创名单为博文单源） |
+| [monetization-direction](monetization-direction/index.md) | 22 | 个人变现方向发现方法论——三类误区、自我盘点→候选生成→需求验证→决策启动四步法与四种起点路径矩阵，82 条 F 编号事实（stable：核心为学术理论与出版物出处归属，误传已逐条勘误） |
 | [workbuddy-opc-whitepaper](workbuddy-opc-whitepaper/index.md) | 7+3 | 腾讯云《WorkBuddy OPC 白皮书》解读——OPC 规模数据与超级个体、硅基员工与六大商业模式、中国政策园区、WorkBuddy 三层架构与生态认证（厂商白皮书解读，非操作教程；flagged：平台能力数字为厂商自述、用户案例为受访者自述，357 条事实 F-001~F-357、22 项外部核验与 11 项勘误，六类口径分层） |
 
 ## 阅读建议
@@ -85,4 +86,5 @@ ling-3-1-flash-first-test/index
 telecom-ai-pilot-base/index
 telecom-token-operation/index
 workbuddy-opc-whitepaper/index
+monetization-direction/index
 ```
