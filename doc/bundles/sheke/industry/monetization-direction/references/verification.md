@@ -305,7 +305,7 @@ sources:
 
 ## 8. V 阶段对抗审查（2026-10-17）
 
-> 本节记载对**本 bundle 全部 22 个 `.md`** 的独立对抗审查（Task 7 / V-2）。审查立场为「不预设作者做对了」，对照基准为 spec 区 AC-1 ~ AC-10 与 checklist CP-1 ~ CP-22。完整记录见 spec 区 `.trae/specs/create-monetization-direction-okf-wiki/adversarial-review.md`（不随本包分发）。
+> 本节记载对**本 bundle 全部 22 个 `.md`** 的独立对抗审查（Task 7 / V-2）。审查立场为「不预设作者做对了」，对照基准为 spec 区 `spec.md` 的 AC-1 ~ AC-10 与 `review.md` 的 CP-1 ~ CP-22。完整记录见 spec 区 `.trae/specs/create-monetization-direction-okf-wiki/adversarial-review.md`（不随本包分发）。
 
 ### 8.1 四视角结论
 
