@@ -9,7 +9,7 @@ description: "以厂商、品牌与开源社区为中心的生态级知识包集
 
 以厂商、品牌与开源社区为中心的生态级知识包集群——多仓库组织目录（trae、anthropic、deepseek、tencent、datawhale 等）与单厂产品束并存。
 
-本类共 **97 个知识包**，分布于 **16 个生态/项目目录**。
+本类共 **98 个知识包**，分布于 **17 个生态/项目目录**。
 
 ## 束导航
 
@@ -23,6 +23,7 @@ description: "以厂商、品牌与开源社区为中心的生态级知识包集
 | [🧠 DeepSeek-AI 基础设施](deepseek/index.md) | 13 | DeepSeek 开源大模型基础设施——MoE 通信、GPU kernel 优化、注意力、流水线并行、负载均衡 |
 | [🛠️ DeepSeek Harness 2.0 桌面应用](deepseek-harness/index.md) | 1 | DeepSeek 官方桌面 App——模型外层执行壳、四种工作模式（Standard/PTC/Minimal/Creator）、MIT 开源免费+模型单独计费与峰谷定价（公众号单源，draft） |
 | [💳 DeepSeek-V4 免费方案与 API 定价](deepseek-pricing/index.md) | 1 | 网页/App 免费、API 赠送额度、峰谷定价、自托管与免费 vs 付费选型 FAQ（与 deepseek 基础设施技术束互补区分） |
+| [🔎 DeepSeek 网页搜索与抓取 API](deepseek-search-fetch/index.md) | 1 | Search/Fetch 双原始 JSON API——实时网页搜索与单页 Markdown 抓取、搜索语法、质量评分、错误重试、按次计费与账号级 QPS（与 deepseek 基础设施技术束互补区分） |
 | [🦞 网易有道开源生态](netease-youdao/index.md) | 6 | 网易有道开源生态——双语 Embedding/RAG（BCEmbedding/QAnything）、语音合成（Confucius4-TTS/EmotiVoice）、AI Agent 桌面应用（LobsterAI）与学术搜索（ScholarClaw） |
 | [🐧 腾讯开源生态](tencent/index.md) | 18 | 腾讯系开源与商业项目——CodeBuddy、WeKnora、AI 红队平台、ncnn 推理框架、Buddy 系列与 MusicBuddy、LightVela Personal Agent 产品观察、腾讯会议 CLI、TencentDB Agent Memory 记忆系统、企业微信 5.0.10/5.0.12 版本快照与「话题」场景示例页核验、WorkBuddy 官方站点与四区文档全站知识包、WorkBuddy 开放平台「分享能力接入」与「推广管理」公告知识包、WorkBuddy 智能硬件接入白皮书知识包 |
 | [🚀 TRAE Community 生态](trae/index.md) | 16 | 字节跳动 AI 编程 IDE 社区——平台应用、技能/模板/MCP 扩展、学习资源、社区治理 |
@@ -44,6 +45,7 @@ datawhale/index
 deepseek/index
 deepseek-harness/index
 deepseek-pricing/index
+deepseek-search-fetch/index
 netease-youdao/index
 tencent/index
 trae/index
