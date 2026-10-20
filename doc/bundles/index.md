@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 648
+total_bundles: 651
 groups: 62
 domains: 9
 ---
@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **648 个知识包**，按学科逻辑分为 **9 个技术域、62 个分组**（8 个学科域 + 1 个规范锚点）。
+> 当前共 **651 个知识包**，按学科逻辑分为 **9 个技术域、62 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -22,13 +22,13 @@ domains: 9
 flowchart TD
     meta["📐 meta/ 规范与格式（3 束）：okf-spec 规范锚点 · okf-ecosystem 生态工具 · okf-desktop 桌面阅读器"]
     guoxue["📜 guoxue/ 国学（49 束）：儒道释法墨易·河洛·阳明心学·算学·了凡"]
-    zhexue["💭 zhexue/ 哲学（7 束）：Ψhē 自指递归理论体系 · 思维方法论 · Agent Session 协作"]
+    zhexue["💭 zhexue/ 哲学（8 束）：Ψhē 自指递归理论体系 · 思维方法论 · Agent Session 协作"]
     kexue["🔬 kexue/ 科学（17 束）：化学·物理学中西元典·国外数学经典·中西数学对读·前沿资讯"]
     wenxue["✒️ wenxue/ 文学（2 束）：中国古典文学经典 · 英语语法"]
     yixue["🌿 yixue/ 医学与养生（10 束）：中医经典·黄帝内经·道医·养生·房中"]
     sheke["👥 sheke/ 社会科学（72 束）：职场管理·亲密关系·性学经典·理财·营销·个人成长·AI 行业趋势·具身智能·数字自由职业·数字经济与数字资产·民间信俗"]
     yishu["🎤 yishu/ 艺术（9 束）：艺术疗愈六束（总览·美术·音乐·舞动戏剧·表达性·中国）·声乐教学两束（美通咽音·手势教学）·红歌教学一束（曲谱库·赏析·歌谱合规·柯尔文手势）"]
-    jishu["⚙️ jishu/ 技术（479 束）：AI·文档工程·构建·通信·容器·数据·云API·物联网等 18 生态分组"]
+    jishu["⚙️ jishu/ 技术（481 束）：AI·文档工程·构建·通信·容器·数据·云API·物联网等 18 生态分组"]
     meta -->|"规范约束"| jishu
     jishu -->|"AI 辅助人文内容生成"| guoxue
     kexue -->|"科学元典与算学互参"| guoxue
@@ -78,12 +78,12 @@ flowchart TD
 | [🧮 算学（Suanxue）](guoxue/suanxue/index.md)           | 1  | 中国传统数学典籍——中国算经阅读教程（《九章算术》《周髀算经》、刘徽、宋元四大家）                      |
 | [📜 了凡（Liaofan）](guoxue/liaofan/index.md)           | 2  | 《了凡四训》古典层原文与阐释层现代解读双轨并收——立命改过之学与智然《了凡生意经》企业家研修课程对照阅读         |
 
-### 💭 [哲学](zhexue/index.md) · 7 束 · 2 组
+### 💭 [哲学](zhexue/index.md) · 8 束 · 2 组
 
 | 分组                              | 束数 | 说明                                  |
 | ------------------------------- | -- | ----------------------------------- |
 | [Ψhē 理论体系](zhexue/psi/index.md) | 4  | ψ=ψ(ψ) 自指递归理论体系——哲学、数学形式化、宇宙本论、意识研究 |
-| [🧭 思维方法论（Methodology）](zhexue/methodology/index.md) | 3  | 可迁移的思维方法与理性实践工具——第一性原理、费曼学习法+AI，以及 Agent Session 版本化协作|
+| [🧭 思维方法论（Methodology）](zhexue/methodology/index.md) | 4  | 可迁移的思维方法与理性实践工具——第一性原理、费曼学习法+AI、教与学（定义谱系/教学法/学习科学/本质与真需求），以及 Agent Session 版本化协作|
 
 ### 🔬 [科学](kexue/index.md) · 17 束 · 3 组
 
@@ -133,11 +133,11 @@ flowchart TD
 | [🎤 声乐教学（Vocal）](yishu/vocal/index.md)   | 2  | 美通唱法与咽音体系（林俊卿咽音练声八步骤、嗓音科学、常见毛病纠正与每日练声清单）+ 手势辅助声乐教学（柯尔文手势、课堂五类手势、指挥基础、体态律动） |
 | [🚩 红歌教学（Hongge）](yishu/hongge/index.md)  | 1  | 红歌教学教程一束——曲谱库建设与版权合规、教学型赏析六步框架与三期曲目示范、歌谱正版获取、柯尔文手势与声乐合唱结合（完整教案·曲谱库指南·16 周路线） |
 
-### ⚙️ [技术](jishu/index.md) · 479 束 · 18 组
+### ⚙️ [技术](jishu/index.md) · 481 束 · 18 组
 
 | 分组                                               | 束数  | 说明                                                                                                         |
 | ------------------------------------------------ | --- | ---------------------------------------------------------------------------------------------------------- |
-| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 250 | 250 束按读者意图归为六大类——ecosystems 厂商社区生态（trae/anthropic/deepseek/tencent/datawhale 等）、frameworks 框架（ai-agent/langchain-ai 等）、practice 工程实践与行业洞察、products 产品工具、models 模型多模态、learning 学习教程（各类别实时计数以 jishu/ai/index.md 为准） |
+| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 252 | 252 束按读者意图归为六大类——ecosystems 厂商社区生态（trae/anthropic/deepseek/tencent/datawhale 等）、frameworks 框架（ai-agent/langchain-ai 等）、practice 工程实践与行业洞察、products 产品工具、models 模型多模态、learning 学习教程（各类别实时计数以 jishu/ai/index.md 为准） |
 | [📚 文档工程（document）](jishu/document/index.md)     | 110 | Sphinx · MyST · Jupyter Book · Jupyter · KaTeX 文档工程与交互式计算生态                                                |
 | [🔨 构建与包管理（build）](jishu/build/index.md)         | 15  | Conda 生态 · scikit-build · CMake · 通用开发工具（Ninja/Copier/PyInvoke/Nuitka 等）                                   |
 | [📡 通信与网络（comm）](jishu/comm/index.md)            | 17  | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析                                                               |

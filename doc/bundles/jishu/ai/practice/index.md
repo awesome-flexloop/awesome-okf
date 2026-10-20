@@ -9,7 +9,7 @@ description: "AI 工程方法论、上下文工程、安全红队与行业趋势
 
 AI 工程方法论、上下文工程、安全红队与行业趋势研究——Token 经济与成本、免费 API 生态、Agent 工作流实践、行业研究及博文核验转化束。
 
-本类共 **20 个知识包**，分布于 **18 个生态/项目目录**。
+本类共 **21 个知识包**，分布于 **19 个生态/项目目录**。
 
 ## 束导航
 
@@ -26,6 +26,7 @@ AI 工程方法论、上下文工程、安全红队与行业趋势研究——To
 | [💰 Fable5 成本优化](fable5-cost-optimization/index.md) | 1 | Fable5 定价背景、社区方案、官方优化与选型指南（AI 编程工具成本优化专题） |
 | [💻 Codex Agent 工作流实践](codex-agent-workflow-practices/index.md) | 1 | Anthropic Codex CLI 四杠杆降本实践——并行工作流/大闭环/对抗提升/真实需求驱动，243亿 token / $12,213 实测数据 |
 | [🧭 AI 工程方法论](ai-engineering-methodology/index.md) | 1 | AI 工程化方法论谱系——Harness 工程、提示词编程与七概念提示词工程、对抗性审查、Agent 评测体系与性能优化 |
+| [🧪 Kaggle SAE 标准化 Agent 考试](standardized-agent-exams/index.md) | 1 | Kaggle SAE 产品案例：区分博文时点、官方 Skill 规则与评测证据边界；非操作教程，评测分组保留交叉入口 |
 | [📝 Agent 平台散篇笔记](agent-platform-notes/index.md) | 1 | AI Agent 平台与工具散篇聚合——Anthropic Agent 路线图、AReaL 强化学习、BrowserAct、Octo、OpenMontage、free-claude-code 与 career-ops、华为云 AI Shell 等独立成束不足的小主题 |
 | [📁 planning-with-files 像 Manus 一样工作](planning-with-files/index.md) | 1 | AI Agent 上下文工程方法论——3-File Pattern 文件系统外存 + Hooks 自动化机制，源自 Manus（Meta 20 亿美元收购）的开源实践 |
 | [🗜️ 上下文优化（Context Optimization）](context-optimization/index.md) | 1 | 上下文窗口与 Token 成本优化——Headroom 压缩、LLM Token 优化全景与 Trae IDE 实战 |
@@ -49,6 +50,7 @@ gpt6-intelligent-ui/index
 fable5-cost-optimization/index
 codex-agent-workflow-practices/index
 ai-engineering-methodology/index
+standardized-agent-exams/index
 agent-platform-notes/index
 planning-with-files/index
 context-optimization/index

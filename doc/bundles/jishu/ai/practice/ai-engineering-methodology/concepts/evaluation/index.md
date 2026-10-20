@@ -6,4 +6,5 @@
 
 agent-eval-methodology-wiki/index
 agent-evaluation-wiki/index
+../../../standardized-agent-exams/index
 ```
