@@ -1,7 +1,7 @@
 ---
 type: reference
 title: "VISTA 博文事实清单（F 编号登记）"
-description: "量子位《何恺明团队发布多模态Harness框架》事实登记表——F-001~F-044 为博文事实，F-045~F-076 为权威核验补充事实。"
+description: "量子位《何恺明团队发布多模态Harness框架》事实登记表——F-001~F-044 为博文事实，F-045~F-084 为权威核验补充事实。"
 tags: [vista, fact-registry, wechat, arxiv, harness, multimodal]
 generated: { by: "opencode/minimax-m3.1-flash-free", at: "2026-10-20" }
 verified:
@@ -37,7 +37,7 @@ sources:
 
 # VISTA 博文事实清单（F 编号登记）
 
-> 本表与 Spec `facts.md` 的 F 编号集合**逐条对应**（V 阶段机械比对项）。F-001~F-044 为博文事实，F-045~F-076 为权威核验补充事实。
+> 本表与 Spec `facts.md` 的 F 编号集合**逐条对应**（V 阶段机械比对项）。F-001~F-044 为博文事实，F-045~F-084 为权威核验补充事实。
 > 核验级别：P0=必核验；P1=选核验；P2=可单源（作者观点）。标注"作者观点"者仅代表博文叙述者的判断，不作事实结论使用。
 
 ## 一、博文客观事实（F-001 ~ F-044）
@@ -89,7 +89,7 @@ sources:
 | F-043 | 名单 | Qiushi Han（Josh Han）现为 MIT 运筹研究中心博士生，导师为 Cathy Wu | P1 | ✅ MIT ORC 名录（登记名 Josh Han） |
 | F-044 | 名单 | Keya Hu 现为 MIT 电气工程与计算机科学系博士生，由何恺明和 Jacob Andreas 联合指导，本科毕业于上海交通大学 ACM 班 | P1 | ✅ 作者个人主页 + MIT CSAIL 名录 |
 
-## 二、权威核验补充事实（F-045 ~ F-076）
+## 二、权威核验补充事实（F-045 ~ F-084）
 
 | F | 类别 | 声明 | 来源 | 核验 |
 |---|------|------|------|------|
@@ -125,6 +125,15 @@ sources:
 | F-074 | 数字 | ARC-AGI-3 数据集构成：公开演示集 25、半私有集 55、完全私有集 55；私有集刻意与公开集分布外 | arXiv:2603.24621 表1 + §3.6 | ✅ |
 | F-075 | 事实 | 代码已开源：github.com/joshhhhhan/VISTA，MIT License；运行需 Linux x86_64 + Python 3.12 + Docker Engine + Codex CLI 0.145.0 或 Claude Code 2.1.220，批量运行另需 tmux；提供 online / competition / offline 三种操作模式 | GitHub README + pyproject.toml | ✅ |
 | F-076 | 事实 | ARC Prize 官方记分卡可独立核验：Opus 5.0 对应 RHAE 100，GPT-5.6 Sol 对应 RHAE 99；三基准出处为 GameWorld(ECCV 2026)、AI GameStore(arXiv:2602.17594)、BabyVision(ICML 2026) | arcprize.org/scorecards + 基准论文 | ✅ |
+| F-077 | 数字 | 论文表 1 系统级对比（25 个公开游戏）：官方实现（无程序合成）——GPT-5.6 Sol **max** 13.33、Opus 5.0 **high** 40.68（表注 †：由官方公布的 25 局逐局分数计算得出，非重跑）；程序合成类——Schema 95.35、Schema 回退行 Opus 4.8→Fable 5 **max** 98.98、ewma_sv_v1.6 98.97、Retrodict 99.86、Tycho 100.00；VISTA（无程序合成）——GPT-5.6 Sol **max** 99.00、Opus 5.0 **xhigh** 100.00 | arXiv §4.2 表 1 | ✅ |
+| F-078 | 概念 | 论文表 1 题注与 §1/§4.2 的定位声明："VISTA is, to our knowledge, the first system to achieve perfect or near-perfect performance **without program synthesis**"；§1/§4.2 另表述为 "the first **vision-based** system to achieve perfect or near-perfect performance on ARC-AGI-3 without program synthesis"；§4.2 同时指出 Opus 5.0 的 100.00 是 "matching other state-of-the-art systems" | arXiv §1 + §4.2 表 1 题注 | ✅ |
+| F-079 | 数字 | 论文 §4.3 消融六步的真实标签与得分：官方实现（文本网格）13.33、10,619 动作 → **(i) 图像观测**（以渲染 PNG 替代文本网格）47.32 → **(ii) 提高动作与时间上限**（每局至多 2,000 动作、48 小时，取代官方停止标准）51.66 → **(iii) 连续对话**（最小 agent harness，连续会话 + 模型原生 compaction）65.82 → **(iv) 双笔记**（GUIDE.md + WORKING.md，并鼓励建立紧凑可复用的游戏模型）70.05 → **(v) 无损视觉记忆 + 模型引导的视觉检查** 94.10 → **(vi) 精确像素读出**（数值 RGB）99.00；配置 (i)–(iv) 按官方协议每次动作自动获得至多 7 帧，(v)–(vi) 改为只给最后一帧并可主动检视；论文注明 (i) 的低动作数部分源于许多 run 在完成游戏前即触及动作/时间上限 | arXiv §4.3 + 附录 A.2 + 图 5 题注 | ✅ |
+| F-080 | 数字 | 成本与 token 口径（论文 §4.3）：每帧图像观测约 **308** 个图像 token，而等效 64×64 文本网格约 **4K** 文本 token；含 7 帧的请求约 28K token（文本）vs 约 2.2K（图像）；单局平均 token 用量 **71.9M**（文本网格）vs **30.7M**（图像观测）；**780K** 上下文为 105.7M token/局，**200K** 为 30.7M，降至 **100K** 时 RHAE 仅降 **0.4** 而 token 用量约减半；输入图像放大倍率 **4×** 比默认 **8×** 少用 **75%** 图像 token 且性能相当，**2×** 会降低性能 | arXiv §4.3 + 图 6b/图 7b | ✅ |
+| F-081 | 数字 | 人类参考样本构成：GameWorld 的两名人类玩家**均为计算机科学研究生**，各自尝试全部 170 项任务，预算与智能体相同（每任务 100 个动作），其中一名新手此前无相关经验；BabyVision 人类准确率为 Maze 子类 **95.0%**、连线子类 **89.5%**，图 11 的 **92.3%** 为两子类按权重平均；AI GameStore 的人类参考来自 Prolific 参与者（平均年龄 38…），取人类中位数归一化为 100 | arXiv 附录 A.6 + §5.1 | ✅ |
+| F-082 | 数字 | 官方项目页（2026-08-05 blogpost 版本）的数字与论文不同：Opus 5.0 共用 **7,542** 个动作、"**56%** fewer than humans"、GPT-5.6 Sol 平均局分 **98.27**、官方实现 Opus 5.0(high) 基线 **30.16** | vista-research.github.io 排行榜与说明 | ✅ |
+| F-083 | 机制 | 工具集完整签名（附录 A.4 算法 1）：`inspect(question, views) -> images`，其中 `view = {label, turn, frame=final, region=full}`、`region = {x, y, w, h}`，每个 view 返回一张图；另有 `read_pixels`（返回选中像素的精确 RGB 数值）与 `history`（无损保存并允许 Agent 主动回看任意历史帧） | arXiv 附录 A.4 算法 1 + §3.1 | ✅ |
+| F-084 | 事实 | ARC-AGI-3 基准规格与官方榜政策：每帧为 **64×64** 网格、每格取自 **16** 种颜色之一、每个环境**至少 6 关**、动作空间含 **Undo**（回到上一状态）；ARC Prize 明确 "we will **never report public set scores** of any system on the official leaderboard"、公开集评估 "is emphatically **not a valid measure of progress towards AGI**"、社区榜分数**自报且不予核验**，官方另开源一个以人类回放即可在全部公开环境上取得 100% 的 harness | arXiv:2603.24621 §2.3/§3.4/§4.3.1/§4.3.2 | ✅ |
+| F-085 | 数字 | 论文图 11 与附录 B.1 的补充数值：GameWorld **进度**指标 VISTA 79.3%、官方实现 62.9%、新玩家 64.1%（此前最好 39.8%）；AI GameStore 三次运行的原始聚合值 **119.99 / 148.58 / 140.06**（对应 140.3 为官方聚合协议下的代表值，波动约 ±14） | arXiv 图11 + 附录 B.1 | ✅ |
 
 ## 三、关联
 
