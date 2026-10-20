@@ -6,6 +6,7 @@
 |---|---|
 | [SST v4.17.2 固定源码快照](source-v4.17.2.md) | 上游仓库、tag、commit 与核心源码路径 |
 | [SST 官方文档（2026-10-20 采集）](official-docs-2026-10-20.md) | 官网页面 URL、W 编号与采集时点边界 |
+| [需求—事实—覆盖度矩阵](coverage-matrix.md) | 逐条需求（FR-2 系列）到 F/CF/W/CW 事实编号与落点文档的可追溯矩阵，及每条需求的未验证边界 |
 
 ```{toctree}
 :hidden:
@@ -13,4 +14,5 @@
 
 source-v4.17.2
 official-docs-2026-10-20
+coverage-matrix
 ```

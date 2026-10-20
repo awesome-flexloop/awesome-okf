@@ -1,5 +1,10 @@
 # SST Bundle 变更日志
 
+## 2026-10-20 — 归档覆盖度矩阵到 references
+
+- **变更**：把任务过程件 `coverage-matrix.md`（需求—事实—覆盖度矩阵）从 spec 规划目录移入本束 `references/`，并在 `references/index.md` 登记与补 toctree 条目。
+- **原因**：spec 目录只保留过程件（spec/tasks/review/facts/insights），覆盖度矩阵属交付侧证据，归档到对应知识包才是它的自然归属；同时避免给 spec 目录白名单检查新增一条违规。
+
 ## 2026-10-20 — 初始版本（R→I→E→V→C）
 
 - **源码基线**：SST `v4.17.2`，commit `e49ac31411f63ab4ed0d802b7e15d95f6b827e47`；正文源码链接均指向固定提交。
