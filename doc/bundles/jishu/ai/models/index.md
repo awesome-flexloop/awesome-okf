@@ -24,7 +24,7 @@ description: "基础模型能力与多模态生成——强化学习基础设施
 | [🎨 MiniT2I 极简文生图模型](minit2i/index.md) | 1 | 何恺明团队极简像素空间文生图——三大减法（无 VAE/无 AdaLN/无私有数据）、MM-JiT 架构与范式转移启示 |
 | [🌊 Atomic Emergence 原子涌现](atomic-emergence/index.md) | 1 | 生成美学运动——p5.js 流场粒子可视化与深度学习架构涌现的算法哲学 |
 | [🔄 周期弱点：分块 KV Cache 压缩的相位敏感性](phase-sensitive-kv-cache/index.md) | 1 | 字节 Seed 发现分块 KV Cache 压缩使 DeepSeek-V4 检索保真度随相位周期起伏（最大 40.2 个百分点），并解释相位专门化机理 |
-| [👁️ VISTA 视觉原生 Harness](vista-visual-harness/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化（论文解读/技术综述，非操作教程）——MIT 何恺明团队 VISTA：视觉观测/无损视觉记忆/视觉检查三组件 + 对交互历史的显式注意力，ARC-AGI-3 公开 25 局 RHAE 满分 100（官方实现基线 40.68，动作数比人类少 57.4%），GPT-5.6 Sol 99.00；含 8 项勘误与数据污染限定（18 项 P0 声明全通过） |
+| [👁️ VISTA 视觉原生 Harness](vista-visual-harness/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化 + 源码轮增量扩展（论文解读 + 源码导读）——MIT 何恺明团队 VISTA：视觉观测/无损视觉记忆/视觉检查三组件 + 对交互历史的显式注意力，ARC-AGI-3 公开 25 局 RHAE 满分 100（官方实现基线 40.68），GPT-5.6 Sol 99.00；固定 commit c97c354f 源码层（104 文件 / 18,754 行 / 九个工具）+ 11 篇概念 + 3 篇可执行示例，F-001~F-130 事实登记与 14 项勘误 |
 
 ```{toctree}
 :hidden:

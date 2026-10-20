@@ -1,6 +1,28 @@
 # 更新日志
 
-## 2026-10-20
+## 2026-10-20（第二轮：源码与论文补充）
+
+- **本轮性质**：既有束的**多轮增量扩展**（source-code-to-okf-wiki §6.5）——新信源登记 + 文档编号续接 + index/log 末尾追加，**不改写第一轮已通过 V 阶段的结论**。
+- **新信源**：VISTA 代码仓库固定 commit `c97c354f0a8948256545a3e8850a1848f8e5b8c1`（2026-10-04；仓库**无任何 release tag**，故按 commit 固定）[F-086]；本地只读检出位于 `external/libs/joshhhhhan/VISTA/`，bundle 内**不引用任何本机路径**。
+- **事实登记**：`references/article-source.md` 扩至 **F-001~F-140**（新增 F-086~F-140 为源码事实与论文谱系事实），与 Spec `facts.md` 双份一致。
+- **新增 references（2 篇）**：`source-code-map.md`（源码快照登记：commit 坐标、目录结构、脚本计数口径、九个工具实现坐标、版本锚点）、`paper-reading-map.md`（论文谱系与阅读地图：九份文献的角色、可信度分层、论文结构导航）。
+- **新增 concepts（5 篇，编号续接 06~10）**：`06-source-architecture`、`07-tooling-and-memory-implementation`、`08-reproduction-and-operations`、`09-paper-source-mapping`、`10-paper-lineage`。
+- **新增 examples（3 篇 + 索引）**：`00-setup-and-auth`、`01-arc3-single-and-batch`、`02-other-benchmarks`。**骨架变更**：第一轮因博文无读者可照做的流程而不设 `examples/`；本轮源码提供完整可复现路径（固定版本、前置命令、参数语义、故障模式），故设立 [F-130]。
+- **新增勘误 E-10~E-14**：
+  - **E-10（需更正）** ARC-AGI-3 动作空间实为"五个关键动作 + Undo **+ 一类坐标选择动作**"——F-084 遗漏该类，已按 F-126 更正；源码 `ACTION6` 正是这一类。
+  - **E-11（需注明来源）** 论文消融称 200K 上下文，源码常量 `DEFAULT_MODEL_CONTEXT_WINDOW = 272000`（回落 128000）[F-127]。
+  - **E-12（需精确）** 像素读出实现为 **4 位/通道量化** + 64 符号调色板，非原始 8 位通道值 [F-099]。
+  - **E-13（粒度差异）** `history` 在源码中返回动作/事件流（`attempts`/`events` 视图），比论文"回看任意历史帧"的措辞更偏向事件 [F-095]。
+  - **E-14（源码更细）** 压缩策略**按后端分叉**：Claude 原生压缩、Codex 注入式检查点交接；论文 §3.2 未区分 [F-108][F-122][F-128]。
+- **结论性变化**：引用"ARC-AGI-3 满分 100"时的限定清单由**三条**扩展为**八条**（新增基准方官方立场、分数非唯一、方差、成本、同 effort 对照）[F-067][F-077][F-078][F-080][F-084]。
+- **计数纪律**：仓库规模、模块分布、符号数量、25 个游戏 ID、10 个公开游戏、工具数量等全部由脚本对固定 commit 计数，原始匹配数与去重名数分列 [F-087][F-088][F-089][F-095][F-112][F-115]。
+- **第三轮独立复核闭环**：全新上下文的独立代理用**自写脚本**复算 13 项计数、Grep 验证约 120 个符号/常量/参数、逐字比对 17 段引文、逐条比对 18 条命令——结论 **0 项 P0、2 项 P1、9 项 P2、6 项 P3**，全部属「引用精度」而非事实错误。
+  - **P1 修正**：① AI GameStore 按键数 10 → **11**（`KEY_VALUES` 11 项，`MODEL_ACTIONS` 23 项）[F-136]（E-16）；② `history` **拆为两套语义**——通用 `TaskContext` 用 `start`/`end`/`limit` 返回 `{"events","truncated"}`，ARC-AGI-3 控制器用**必填** `view`（`attempts`/`events`）+ `start_turn`/`end_turn`/`limit` [F-135]（E-15）。
+  - **P2 修正**：新增 **F-131~F-140** 为 9 类计数类声明补独立背书（契约层构成、固定版本与镜像常量、并发默认值、竞争模式符号、`history` 双实现、按键集、人类样本量、逐局动作数、答案协议、调色板校验），并在正文逐处挂接。
+  - **P3 修正**：像素读出错误串补回原文 "The pixel readout color limit has been reached."；`save_compact_checkpoint` 指针改为 `dispatcher.py:98` 派发 + `:187` 回执；四基准同构性限定到三个非 arc3 包；`start_turn`/`end_turn` 参数名更正；F-086 补注提交总数经 GitHub API 取得、本地浅克隆不可复核。
+- **未执行**：未运行 VISTA（需付费模型 API + Docker + ARC 平台授权）；未采集 ARC-AGI-3 私有/半私有集；未修改任何已提交的第一轮文档结论。
+
+## 2026-10-20（第一轮：博文 → OKF 知识包）
 
 - **创建**：本 bundle 依据量子位公众号《何恺明团队发布多模态Harness框架》（作者 henry，2026-10-09）经 OKF v0.2 七阶段工作流转化创建。
 - **归属**：`jishu/ai/models/vista-visual-harness`（模型能力与多模态组），与同组 `minit2i`（何恺明团队同源研究）、`agent-lightning`（同为 harness 范式 + 博文转化）互为同主题参照。
