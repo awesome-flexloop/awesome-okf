@@ -2,14 +2,14 @@
 okf_version: "0.2"
 type: category
 title: "🧩 Agent 与 LLM 应用框架"
-description: "Agent 与 LLM 应用的开发框架、运行时与代码库源码教程——以 ai-agent（56 束）与 langchain-ai（19 束）两大仓库集群为核心，辅以极简框架与分词、推理、决策模型等基础库。"
+description: "Agent 与 LLM 应用的开发框架、运行时与代码库源码教程——以 ai-agent（56 束）与 langchain-ai（19 束）两大仓库集群为核心，辅以极简框架、分词、决策模型与 AI 原生搜索引擎（XERJ）等基础库。"
 ---
 
 # 🧩 Agent 与 LLM 应用框架
 
-Agent 与 LLM 应用的开发框架、运行时与代码库源码教程——以 ai-agent（56 束）与 langchain-ai（19 束）两大仓库集群为核心，辅以极简框架与分词、推理、决策模型等基础库。
+Agent 与 LLM 应用的开发框架、运行时与代码库源码教程——以 ai-agent（56 束）与 langchain-ai（19 束）两大仓库集群为核心，辅以极简框架、分词、决策模型与 AI 原生搜索引擎（XERJ）等基础库。
 
-本类共 **84 个知识包**，分布于 **8 个生态/项目目录**。
+本类共 **86 个知识包**，分布于 **9 个生态/项目目录**。
 
 ## 束导航
 
@@ -23,6 +23,7 @@ Agent 与 LLM 应用的开发框架、运行时与代码库源码教程——以
 | [🦙 llama.cpp 本地 LLM 推理](llama-cpp-local-inference/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——C/C++ 本地推理、GGUF/Q4 与内存预算、CPU/Metal 后端、llama-server 与 OpenAI 兼容迁移（技术体验综述非操作教程，6✅/4⚠️/1❌，含 4GB/7B 勘误） |
 | [Jev 决策模型与十类应用](jev/index.md) | 1 | TypeSafe System One模型概念教程：Noul/Choice/Score、十案例的状态与执行分工、工程评测；flagged保留原帖和成效证据缺口，非操作教程 |
 | [Jev 自动化决策引擎](jev-automation-decision/index.md) | 1 | 当前微信文章的 Jev 自动化场景解读——System One、客服/游戏/浏览器/安全四类模式与端到端评测边界；flagged，非操作教程 |
+| [🔎 XERJ AI 原生搜索引擎](xerj/index.md) | 1 | Rust 从零实现的 AI 原生搜索引擎——18 crate 架构、autoindex 零配置摄取流水线、17 个 MCP 工具、向量与混合检索、第二大脑与参考编码，附诚实的边界与基准 |
 
 ```{toctree}
 :hidden:
@@ -36,4 +37,5 @@ tiktoken/index
 llama-cpp-local-inference/index
 jev/index
 jev-automation-decision/index
+xerj/index
 ```

@@ -3,8 +3,8 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 651
-groups: 62
+total_bundles: 654
+groups: 63
 domains: 9
 ---
 
@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **651 个知识包**，按学科逻辑分为 **9 个技术域、62 个分组**（8 个学科域 + 1 个规范锚点）。
+> 当前共 **654 个知识包**，按学科逻辑分为 **9 个技术域、63 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -28,7 +28,7 @@ flowchart TD
     yixue["🌿 yixue/ 医学与养生（10 束）：中医经典·黄帝内经·道医·养生·房中"]
     sheke["👥 sheke/ 社会科学（72 束）：职场管理·亲密关系·性学经典·理财·营销·个人成长·AI 行业趋势·具身智能·数字自由职业·数字经济与数字资产·民间信俗"]
     yishu["🎤 yishu/ 艺术（9 束）：艺术疗愈六束（总览·美术·音乐·舞动戏剧·表达性·中国）·声乐教学两束（美通咽音·手势教学）·红歌教学一束（曲谱库·赏析·歌谱合规·柯尔文手势）"]
-    jishu["⚙️ jishu/ 技术（481 束）：AI·文档工程·构建·通信·容器·数据·云API·物联网等 18 生态分组"]
+    jishu["⚙️ jishu/ 技术（484 束）：AI·文档工程·构建·通信·容器·数据·云API·IaC·物联网等 19 生态分组"]
     meta -->|"规范约束"| jishu
     jishu -->|"AI 辅助人文内容生成"| guoxue
     kexue -->|"科学元典与算学互参"| guoxue
@@ -133,11 +133,11 @@ flowchart TD
 | [🎤 声乐教学（Vocal）](yishu/vocal/index.md)   | 2  | 美通唱法与咽音体系（林俊卿咽音练声八步骤、嗓音科学、常见毛病纠正与每日练声清单）+ 手势辅助声乐教学（柯尔文手势、课堂五类手势、指挥基础、体态律动） |
 | [🚩 红歌教学（Hongge）](yishu/hongge/index.md)  | 1  | 红歌教学教程一束——曲谱库建设与版权合规、教学型赏析六步框架与三期曲目示范、歌谱正版获取、柯尔文手势与声乐合唱结合（完整教案·曲谱库指南·16 周路线） |
 
-### ⚙️ [技术](jishu/index.md) · 481 束 · 18 组
+### ⚙️ [技术](jishu/index.md) · 484 束 · 19 组
 
 | 分组                                               | 束数  | 说明                                                                                                         |
 | ------------------------------------------------ | --- | ---------------------------------------------------------------------------------------------------------- |
-| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 252 | 252 束按读者意图归为六大类——ecosystems 厂商社区生态（trae/anthropic/deepseek/tencent/datawhale 等）、frameworks 框架（ai-agent/langchain-ai 等）、practice 工程实践与行业洞察、products 产品工具、models 模型多模态、learning 学习教程（各类别实时计数以 jishu/ai/index.md 为准） |
+| [🤖 人工智能与大模型（ai）](jishu/ai/index.md)             | 253 | 253 束按读者意图归为六大类——ecosystems 厂商社区生态（trae/anthropic/deepseek/tencent/datawhale 等）、frameworks 框架（ai-agent/langchain-ai 等）、practice 工程实践与行业洞察、products 产品工具、models 模型多模态、learning 学习教程（各类别实时计数以 jishu/ai/index.md 为准） |
 | [📚 文档工程（document）](jishu/document/index.md)     | 110 | Sphinx · MyST · Jupyter Book · Jupyter · KaTeX 文档工程与交互式计算生态                                                |
 | [🔨 构建与包管理（build）](jishu/build/index.md)         | 15  | Conda 生态 · scikit-build · CMake · 通用开发工具（Ninja/Copier/PyInvoke/Nuitka 等）                                   |
 | [📡 通信与网络（comm）](jishu/comm/index.md)            | 17  | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析                                                               |
@@ -148,13 +148,14 @@ flowchart TD
 | [🦀 Rust 语言核心（rust）](jishu/rust/index.md)        | 3   | rustc 编译器流水线 · Cargo 构建系统 · RFC 设计决策                                                                       |
 | [🌐 Web 开发（web）](jishu/web/index.md)             | 3   | FastAPI · GraphQL · HTML 声明式局部更新                                                                                          |
 | [🐍 Python 语言核心（python）](jishu/python/index.md)  | 2   | CPython 解释器核心架构 · Python 3.14 标准库新特性                                                                                            |
-| [💻 终端渲染（terminal）](jishu/terminal/index.md)     | 1   | Textualize 终端生态——rich/textual 源码中文教程                                                                       |
+| [💻 终端渲染（terminal）](jishu/terminal/index.md)     | 2   | Textualize 终端生态（rich/textual）与 OpenTUI 终端 UI（TypeScript API + Zig native core）源码中文教程                                                                       |
 | [🔧 开发与协作（dev）](jishu/dev/index.md)            | 6   | Git 版本控制 · GitHub 平台（Gist/Actions）· 开源实践（参与/项目准备/README 模板）· public-apis 公共 API 清单 · Plane 开源项目管理平台自托管教程（三套版本/三层时间尺度/部署运维）                                        |
 | [🚗 智能驾驶与无人驾驶（autonomous）](jishu/autonomous/index.md) | 4 | Autoware 安装与基础 · ROS2 概念 · DDS 与 QoS · 数据集/术语/资源生态                                            |
 | [🖥️ GUI 桌面开发（gui）](jishu/gui/index.md) | 6 | Qt/PyQt 桌面开发（Qt for Python 官方机制 · PyQt5 实战）· tkinter 标准库生态（GUI 设计 · 手册 · tkinterx 扩展库） |
 | [🏠 物联网（IoT）](jishu/iot/index.md) | 9 | Home Assistant 源码解读 · TuyaOpen IoT SDK · 向日葵远控产品矩阵 · 贝锐生态 · 厂商与工具横向对比 · 星辰300 端侧 AI 资讯核验 · 嵌入式周报·第三期资讯核验 · openTPU 加速器源码精读 · HWE Bench LLM 硬件基准源码精读 |
 | [🖥️ 系统与基础设施（systems）](jishu/systems/index.md) | 3 | WSL 子系统中文教程 · PowerShell 5 困境防御 · openKylin kylin-wlcom Wayland 合成器（wlroots 0.17）源码精读 |
 | [☁️ 云厂商开放 API SDK（cloud）](jishu/cloud/index.md) | 1 | 腾讯云 Python SDK（tencentcloud-sdk-python）源码精读——TC3 签名 · 凭证提供链 · 重试熔断 · httpx 异步栈 · 代码生成产品层 |
+| [🏗️ 基础设施即代码与云应用部署（iac）](jishu/iac/index.md) | 1 | SST v4.17.2 源码与官方文档教程——配置模型、Pulumi 执行路径、provider/组件、runtime、资源链接与 Live/Mosaic 开发边界 |
 
 ```{toctree}
 :hidden:

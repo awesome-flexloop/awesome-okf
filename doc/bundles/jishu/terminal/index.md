@@ -14,10 +14,12 @@ description: "终端渲染与 TUI 生态——富文本渲染库、终端 UI 框
 | 分组 | 一句话简介 |
 |------|-----------|
 | [🖥️ Textualize 终端生态](textualize/index.md) | rich 终端渲染库与 textual TUI 框架及 7 个卫星工具的源码中文教程——渲染协议、消息泵、CSS/Worker/Driver 基础设施 |
+| [⌨️ OpenTUI 终端 UI](opentui/index.md) | TypeScript API 与 Zig native core 协作的终端 UI 技术栈——Core、React/Solid bindings、布局渲染、交互与测试 |
 
 ```{toctree}
 :hidden:
 :maxdepth: 7
 
 textualize/index
+opentui/index
 ```

@@ -1,10 +1,37 @@
 ---
 type: Changelog
 scope: opencode
-version: "0.1.0"
+version: "0.2.0"
 ---
 
 # 变更日志
+
+## 0.2.0 — 2026-10-20
+
+### 新增
+
+- 固定 OpenCode `2.0.32` 源码基线：`anomalyco/opencode@6ec56821d63100fe5bda45b759364f561c56b359`
+- **spec/facts-2.0.32.md**：续接 F-081～F-114，共 34 条事实；加入 39 个 workspace manifest 覆盖矩阵，并明确深读、入口/接口读取与清单级边界
+- **spec/insights-2.0.32.md**：新增 5 条架构洞察及 5 篇概念、1 篇示例的增量学习地图
+- **references/source-code-map-2.0.32.md**：登记固定 commit、workspace 范围、覆盖等级与关键源码路径
+- **concepts/05-monorepo-package-map.md**：workspace 包图与覆盖等级
+- **concepts/06-session-execution-lifecycle.md**：prompt 接纳、唤醒、协调器、runner 与事件投影
+- **concepts/07-model-tool-extensibility.md**：Agent/Provider、工具 runtime、MCP、Permission 与 Plugin host
+- **concepts/08-protocol-server-client-sdk.md**：Protocol、Server、Client contract 生成与 SDK 导出边界
+- **concepts/09-product-surfaces-and-delivery.md**：CLI/TUI/App/Desktop 入口及测试、构建、发布 workflow
+- **examples/02-session-prompt-trace.md**：session prompt 固定源码追踪导读（非可运行示例）
+
+### 导航与元数据
+
+- 更新根 index 与 concepts/examples/references/spec 子目录索引的人类导航及 `{toctree}`
+- bundle 版本由 `0.1.0` 更新为 `0.2.0`；根索引标注 1.18.21 历史快照与 2.0.32 固定快照的并存边界
+- 父级 `ai-agent/index.md` 已包含 `opencode/index`，本轮未改动该父级索引
+
+### 数据源
+
+- 本轮教程及新增事实只依据固定 commit `6ec56821d63100fe5bda45b759364f561c56b359`
+- 原有 `concepts/00`～`04`、`examples/01`、`spec/facts.md`、`spec/insights.md` 与 `references/source.md` 保留为 1.18.21 历史快照；本轮未重排旧编号或重写旧结论
+- 索引、frontmatter、事实编号和内部链接的独立质量门将在后续验证阶段记录
 
 ## 0.1.0 — 2026-08-23
 
