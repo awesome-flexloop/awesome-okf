@@ -103,7 +103,7 @@ VISTA 的双笔记结构与 Anthropic 2025-11 的 harness 做法在**结构上�
 | 已完成工作 | `claude-progress.txt` 进度文件 + git 提交历史 | GUIDE.md：跨关卡可复用的规则与经验 [F-030] |
 | 跨窗口衔接 | "finding a way for agents to quickly understand the state of work when starting with a fresh context window" | 交接摘要 + 笔记与视觉档案全部保留 [F-031] |
 
-**归因边界（勘误 E-2）**：Anthropic 该文确实发布于 2025-11-26，内容与上述表述吻合 [F-072]——博文的"去年 11 月"表述**成立**。但必须指出：**VISTA 论文并未引用该文**，其 64 条参考文献中唯一的 Anthropic 出处是 Claude Opus 5 的模型公告 [F-071]。因此"Anthorpic 的 harness → VISTA 的视觉 harness"是**博主的叙事承接**，不是论文主张的引用关系。
+**归因边界（勘误 E-2）**：Anthropic 该文确实发布于 2025-11-26，内容与博文的转述吻合——该 Harness "通过任务清单记录尚未完成的事项，通过进度文件和代码记录保存已经完成的工作"[F-011][F-012] [F-072]——博文的"去年 11 月"表述**成立**。但必须指出：**VISTA 论文并未引用该文**，其 64 条参考文献中唯一的 Anthropic 出处是 Claude Opus 5 的模型公告 [F-071]。因此"Anthropic 的 harness → VISTA 的视觉 harness"是**博主的叙事承接**，不是论文主张的引用关系。博文进一步断言这类文字/代码 harness "在一定程度上推动了这一波 Agent 能力的爆发"[F-013]——这是**作者观点**，本束不作事实结论使用。
 
 > **解读（假设 M4 的迁移）**：把 VISTA 的三层结构与 Anthropic 的两层笔记法并置，可以看出一个可复用的设计模式——**凡是需要跨上下文窗口/跨任务存活的信息，都应该落在外部文件而非上下文里**；而落在外部之后，仍需按"结论 vs 证据"分层，因为两者的压缩比与清理时机完全不同。
 

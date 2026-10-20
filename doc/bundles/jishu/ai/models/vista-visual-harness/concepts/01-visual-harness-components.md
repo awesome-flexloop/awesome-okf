@@ -48,7 +48,7 @@ flowchart TB
 让 Agent 通过渲染出的图像直接感知环境。
 
 - **分辨率处理**：在 ARC-AGI-3 实验中，VISTA 会把官方提供的 **64×64** 画面放大为 **512×512** 的 PNG 图像，同时保留物体的颜色、外观和空间关系 [F-025]。论文 §4.3 给出精确口径：Agent 接收当前渲染状态的 512×512 PNG 图像，由官方 64×64 帧经 **8× 最近邻放大**得到 [F-055]。
-  - 为什么是最近邻而非插值：最近邻不引入新颜色值，网格边界与原始像素值一一对应，避免模型看到"插值出来的颜色"后按不存在的规则推理。项目页另提到单元格之间加一像素网格线，**该细节论文未载**。
+  - **解读（假设）**：为什么是最近邻而非插值——最近邻不引入新颜色值，网格边界与原始像素值一一对应，避免模型看到"插值出来的颜色"后按不存在的规则推理。这是本束的推断；论文只给出"8× 最近邻"这一事实，未解释选择理由。项目页另提到单元格之间加一像素网格线，**该细节论文未载**。
 - **上下文侧成本**：默认每次动作后**只向模型呈现最后一帧** [F-032][F-070]。
 
 ## ② 无损视觉记忆（lossless visual memory）
@@ -69,7 +69,15 @@ flowchart TB
 
 模型主动调取历史视觉证据的工具集。附录 A.4 算法 1 给出 `inspect(question, views) -> images` 的签名，每个 view 形如 `{label, turn, frame=final, region=full}`，其中 `region = {x, y, w, h}`，每个 view 返回一张图。
 
-论文 §3.1 把能力分成两个维度：
+工具集完整清单（附录 A.4 算法 1）[F-083]：
+
+| 工具 | 作用 |
+|------|------|
+| `inspect(question, views) -> images` | 取回历史帧；`view = {label, turn, frame=final, region=full}`，`region = {x, y, w, h}`，**每个 view 返回一张图** |
+| `read_pixels` | 返回选中像素的**精确 RGB 数值** |
+| `history` | 无损保存并允许 Agent **主动回看任意历史帧** |
+
+论文 §3.1 把 `inspect` 的能力分成两个维度：
 
 | 维度 | 能力 | 论文表述 |
 |------|------|---------|
@@ -86,7 +94,7 @@ flowchart TB
 
 > "an **explicit attention mechanism over the interaction history**, allowing it to select which frames and regions to examine during reasoning." [F-059]
 
-§4.4 进一步称之为 **re-attention mechanism**，并以定性案例说明 Agent 如何从中获益。
+§4.4 进一步称之为 **re-attention mechanism**，并以定性案例说明 Agent 如何从中获益。博文把这一机制的价值概括为：视觉经验成为模型"随时调用、反复检查的上下文"[F-005]，而"既保留了完整的视觉信息，也避免大量历史图片持续占用上下文空间"[F-033]（作者观点）。
 
 ```mermaid
 flowchart LR

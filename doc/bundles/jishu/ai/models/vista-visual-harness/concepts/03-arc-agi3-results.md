@@ -36,7 +36,7 @@ sources:
 
 > "VISTA improves Claude Opus 5.0's Relative Human Action Efficiency score from **40.68** to a perfect **100.00**, with the model completing all **25** public games using **57.4% fewer actions** than first-time human participants." [F-047]
 
-动作数对照：VISTA 共用 **7,302** 个动作，比人类参考的 **17,135** 个动作少 **57.4%** [F-048]。
+动作数对照：VISTA 共用 **7,302** 个动作，比人类参考的 **17,135** 个动作少 **57.4%** [F-007][F-048]。
 
 > **限定（勘误 E-5 + E-9）**：博文只说"满分 100"，未给基线。补上基线才能看清提升幅度：Opus 5.0 从 40.68 → 100.00，GPT-5.6 Sol 从 13.33 → 99.00。
 > **但这两个数字并非同条件对照**：40.68 是 Opus 5.0 在 **high** 推理强度、官方协议（每关 5× 人类基线动作预算 / 12 小时上限）下**由官方公布的逐局分数换算**得出；100.00 则是 Opus 5.0 在 **xhigh**、2,000 动作 / 48 小时协议下取得 [F-077][F-079]。差值里同时混入了 **harness、推理强度、评测协议**三项变化。严格同模型同 effort 的对照是 **GPT-5.6 Sol（max）：13.33 → 99.00** [F-077]。
