@@ -7,5 +7,6 @@
 - **R 阶段**：登记 F-001–F-034 源码事实和 W-001–W-015 官网事实；事实清单不包含未核实的源码数量断言。
 - **I 阶段**：形成五条架构洞察与教程知识地图，指导产品模型、CLI、组件、runtime、Link 与开发体验的阅读顺序。
 - **E 阶段**：先登记源码与官网 references；分两批生成 7 篇 concepts 与 3 篇 examples；随后创建各级索引、日志和验证记录。所有示例均明确未进行真实云部署。
-- **V 阶段进度**：固定 commit 的 Link 示例 API 已由 `git show` 独立复核；正文 frontmatter 与 bundle 内链接预检通过。项目 toctree、目录计数、全量 gates 与构建结果待最终回填到 `verification.md`。
-- **C 阶段**：待 V 阶段质量门完成后关闭本次交付；按批准范围不创建 Git commit。
+- **V 阶段**：固定 commit 的 Link 示例 API 已由 `git show` / `git grep` 独立复核；18 篇 Markdown 的元数据与 74 个本地链接通过检查；SST bundle 与父级 toctree、UTF-8、实时目录计数及 `py314 -m invoke gates.all` 全部通过。最终完整 HTML 构建退出码为 0，Sphinx 报告 268 条全库 warning；日志中未发现 SST 文档告警，定向严格构建的告警来自其他 bundle，具体边界见 `verification.md`。
+- **计数说明**：实时索引对账为 9 域 / 63 组 / 654 束，`jishu` 为 484 束 / 19 组。相较规格初始预期多 2 束，来自 OpenCode/OpenTUI 并行工作；索引与实时目录树一致，本任务未修改并行 bundle。
+- **C 阶段**：R→I→E→V→C 闭环完成；未执行真实云部署，未创建 Git commit。
