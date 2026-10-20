@@ -9,12 +9,13 @@ description: "AI 工程方法论、上下文工程、安全红队与行业趋势
 
 AI 工程方法论、上下文工程、安全红队与行业趋势研究——Token 经济与成本、免费 API 生态、Agent 工作流实践、行业研究及博文核验转化束。
 
-本类共 **21 个知识包**，分布于 **19 个生态/项目目录**。
+本类共 **23 个知识包**，分布于 **21 个生态/项目目录**。
 
 ## 束导航
 
 | 知识包 | 束数 | 一句话简介 |
 |--------|------|-----------|
+| [🚀 DeepSeek V4.1-Flash-1017 发布解读](deepseek-v41-flash-1017/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化（核验自 DeepSeek 官方公告与 API 定价页）——发布事实与 11 项基准全景、单任务成本账（16 模型对照，¥3.3→¥1.3）、许愿式编程与自反馈 RL、Search/Fetch 搜索 API 开放（¥5/千次，11-01 起计费）与 Harness 0.2.1 适配清单；非操作教程 |
 | [🛡️ AI 安全与红队研究（ai-security）](ai-security/index.md) | 3 | elder-plinius 红队研究三仓库——系统提示词透明档案（CL4R1T4S）、越狱攻击面研究库（L1B3RT4S）、拒绝行为消除研究工具包（OBLITERATUS） |
 | [📊 AI Agent 行业研究（2026-08）](agent-industry-research/index.md) | 1 | AI Agent 行业研究三篇——知乎行业文章、最佳 Agent 系统研究、全球产业研究（市场规模口径、五场战争、头部系统对比） |
 | [🚀 国产Token出海：低价算力如何碾压全球市场](domestic-model-token-export/index.md) | 1 | 国产AI模型通过OpenRouter以极低价格占领全球API市场（DeepSeek $0.09 vs Claude $5/MTok），但杰文斯悖论与WTO规则窗口构成隐患（含F-004勘误） |
@@ -34,11 +35,13 @@ AI 工程方法论、上下文工程、安全红队与行业趋势研究——To
 | [🌐 answer-me-with-html：让 Agent 交付可视化页面](answer-me-with-html/index.md) | 1 | 公众号「开源星探」博文经 OKF v0.2 转化——Agent Skill 让模型写内容、程序做排版：九种组件、CLI 渲染可读 HTML / 3Blue1Brown 讲解视频、基准（token 6.1×/17.8× 更少）、三安装、Always-on 与勘误 E-1（操作教程，权威源 GitHub README） |
 | [📈 Agent 自我进化评测：LIFT 与 Loaded Impact](agent-self-evolution-evaluation/index.md) | 1 | 微信博文 + LIFT 官方仓库/论文核验——配对 Holdout 评测协议、Loaded Impact 指标、排行榜快照读法与迁移边界（技术综述非教程；flagged：仓库许可证未确认） |
 | [🪟 微软 MXC：Windows 的 AI Agent 执行隔离](microsoft-mxc-agent-containment/index.md) | 1 | Microsoft Execution Containers GA——四种隔离后端、Agent 安全动因（最小权限/致命三要素）与 Windows 平台竞争格局（商业分析非操作教程，微软/Anthropic 官方博客核验） |
+| [🔎 XERJ × DeepSeek Search/Fetch 对比](xerj-vs-deepseek-search/index.md) | 1 | 自建本地检索栈（XERJ）与托管搜索 API（DeepSeek Search/Fetch）的九轴对比——语料归属是第一决策轴、上下文成本的两种实现、404 五因合并的可诊断性差距、固定 vs 线性成本曲线与选型决策树 |
 
 ```{toctree}
 :hidden:
 :maxdepth: 7
 
+deepseek-v41-flash-1017/index
 ai-security/index
 agent-industry-research/index
 domestic-model-token-export/index
@@ -58,4 +61,5 @@ docx-report-skill/index
 answer-me-with-html/index
 agent-self-evolution-evaluation/index
 microsoft-mxc-agent-containment/index
+xerj-vs-deepseek-search/index
 ```
