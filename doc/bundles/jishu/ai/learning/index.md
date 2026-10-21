@@ -2,14 +2,14 @@
 okf_version: "0.2"
 type: category
 title: "📚 学习路径与实战教程"
-description: "体系化学习路径与上手教程——Agent 九层认知地图、免费大模型 API 盘点与实操、书籍驱动技能构建、Skills 生态解读与 Vibe Coding 方法论。"
+description: "体系化学习路径与上手教程——Agent 九层认知地图、免费大模型 API 盘点与实操、书籍驱动技能构建、Skills 生态解读、Vibe Coding 方法论与 AI 变现课程导学材料核验。"
 ---
 
 # 📚 学习路径与实战教程
 
-体系化学习路径与上手教程——Agent 九层认知地图、免费大模型 API 盘点与实操、书籍驱动技能构建、Skills 生态解读与 Vibe Coding 方法论。
+体系化学习路径与上手教程——Agent 九层认知地图、免费大模型 API 盘点与实操、书籍驱动技能构建、Skills 生态解读、Vibe Coding 方法论与 AI 变现课程导学材料核验。
 
-本类共 **6 个知识包**，分布于 **6 个生态/项目目录**。
+本类共 **7 个知识包**，分布于 **7 个生态/项目目录**。
 
 ## 束导航
 
@@ -21,6 +21,7 @@ description: "体系化学习路径与上手教程——Agent 九层认知地图
 | [📚 QBS 书籍驱动技能构建法](qbs-book-to-skill/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化（方法论非操作教程）——QBS（Question→Book→Skill）三段式与提示词模板、Make Time 官方四步循环（Highlight→Laser→Energize→Reflect）与两大注意力陷阱、作者开源仓库三个 skill（3 则勘误：切换成本 23 分 15 秒 / Time Craters 30 分钟 / Knapp 任职口径） |
 | [🤖 Matt Pocock Skills 生态解读](mattpocock-skills/index.md) | 1 | 微信公众号博文经OKF v0.2七阶段转化——skills.sh平台、Matt Pocock Skills范式解析、Agent Skills生态竞争格局与三条竞争路线分析 |
 | [🐒 Monkeycode Vibe Coding 七概念分析](monkeycode-vibe-coding/index.md) | 1 | 七概念方法论分析——七概念框架、深度解析、实践指南与评估 |
+| [🎓 AI 变现课程课前导学材料（核验版）](ai-monetization-course-primer/index.md) | 1 | 飞书课前导学文档经 OKF v0.2 七阶段转化（flagged）——三天 AI 变现课程形态、四类变现与六平台清单、深圳政务 AI 与政策三件套等产业信号；13 项 P0 核验 7 则勘误，并萃取「自宣材料五步核验」可迁移模式 |
 
 ```{toctree}
 :hidden:
@@ -32,4 +33,5 @@ free-llm-api-hands-on/index
 qbs-book-to-skill/index
 mattpocock-skills/index
 monkeycode-vibe-coding/index
+ai-monetization-course-primer/index
 ```
