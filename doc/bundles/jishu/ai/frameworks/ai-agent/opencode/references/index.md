@@ -2,6 +2,7 @@
 
 - [历史源码参考](source.md) — 原有 1.18.21 快照的关键源文件索引与事实 ID 映射
 - [2.0.32 固定源码地图](source-code-map-2.0.32.md) — commit、workspace 范围、覆盖等级与本轮重点源码入口
+- [2.0.32 同快照深化信源](source-deepening-2.0.32.md) — 六主题实现、对照测试与未读边界（2026-10-21）
 
 ```{toctree}
 :hidden:
@@ -9,4 +10,5 @@
 
 source
 source-code-map-2.0.32
+source-deepening-2.0.32
 ```

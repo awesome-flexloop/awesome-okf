@@ -18,7 +18,7 @@ description: "从 OpenCode 2.0.32 固定源码事实提炼的架构洞察与增�
 - **陈述**：Server 收到 `session.prompt` 后将请求交给对应 session；Core 先准备输入并写入 admission，再按 `resume` 决定是否唤醒执行。唤醒后的工作由按 session key 管理的协调器排空，执行事件再参与持久化投影。
 - **证据**：F-093～F-100、F-114。
 - **反常识**：一次 prompt API 调用不是“把文本同步塞进模型并等到回答”的同义词。默认 `resume` 会触发执行唤醒，但 `resume: false` 允许只接纳输入；因此“输入已接收”“执行已开始”“执行已结束”是不同状态。
-- **行动**：学习或排查会话时沿 `handler → Session.prompt → admission → execution.wake → coordinator/runner → event projector` 分段定位，不以 HTTP 请求完成推断模型 turn 已完成。
+- **行动**：学习或排查会话时沿 `handler → Session.prompt → admission → execution.wake → coordinator/runner → event projector` 分段定位，不以 HTTP 请求完成推断模型 step 已完成。
 
 ### 洞察二：模型流与工具副作用之间有显式运行时边界
 

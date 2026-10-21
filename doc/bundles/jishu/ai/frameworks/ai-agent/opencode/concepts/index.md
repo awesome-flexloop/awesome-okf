@@ -16,6 +16,15 @@
 - [08 - Protocol、Server、Client 与 SDK 边界](08-protocol-server-client-sdk.md) — API 契约、handler 接线、客户端生成与 SDK 导出
 - [09 - 产品入口与工程交付](09-product-surfaces-and-delivery.md) — CLI/TUI/App/Desktop 与测试、构建、发布边界
 
+## 同快照深化（2026-10-21）
+
+- [10 - 配置与上下文解析](10-config-context-resolution.md) — 来源顺序、技能、指令与压缩
+- [11 - Codemode运行时边界](11-codemode-runtime-boundaries.md) — 解释执行、宿主工具、schema与预算接线
+- [12 - 插件契约与生命周期](12-plugin-contract-lifecycle.md) — Schema、policy、activation与Scope释放
+- [13 - 三端状态持久化](13-product-state-persistence.md) — TUI/App/Desktop各自确认点
+- [14 - 模拟与录制回放](14-simulation-record-replay.md) — Drive、Timeline、HTTP cassette与claim
+- [15 - 云端与更新边界](15-cloud-update-boundaries.md) — proxy、Stats、files与updater
+
 ```{toctree}
 :hidden:
 :maxdepth: 7
@@ -30,4 +39,10 @@
 07-model-tool-extensibility
 08-protocol-server-client-sdk
 09-product-surfaces-and-delivery
+10-config-context-resolution
+11-codemode-runtime-boundaries
+12-plugin-contract-lifecycle
+13-product-state-persistence
+14-simulation-record-replay
+15-cloud-update-boundaries
 ```
