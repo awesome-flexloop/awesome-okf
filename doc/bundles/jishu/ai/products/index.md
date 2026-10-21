@@ -22,7 +22,7 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 | [📱 mobile-use 移动自动化框架](mobile-use/index.md) | 1 | minitap-mobile-use 多智能体移动自动化——LangGraph 多 Agent 协作、设备控制抽象层、工具系统与 SDK 双层 API |
 | [🔎 wigolo 本地 Web 情报层](wigolo/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——本地优先 MCP 搜索/抓取/研究工具，18 公共引擎适配器、十工具、核心功能零 API Key、字节级证据与本地缓存，含安装/CLI/REST/Docker 实操（18 项官方核验 14✅/4⚠️/0❌） |
 | [🖥️ ToDesk AI 跨设备 AI 助手产品教程](todesk-ai/index.md) | 1 | ToDesk 旗下跨设备 AI 助手官方文档教程化重组——Computer Use 五阶段操控机制、多智能体与技能体系、自定义模型接入与可照做实操流程 |
-| [🔍 Open Code Review 阿里 AI 代码评审 CLI](open-code-review/index.md) | 1 | 确定性工程 × Agent 混合驱动架构、六阶段审查流水线、MCP 工具与 Claude Code/CI 集成 |
+| [🔍 Open Code Review 阿里 AI 代码评审 CLI](open-code-review/index.md) | 1 | 官方运行时模型（确定性前置×语义后置）+ 集成契约 + 3 个可迁移模式与验证手册 + 100 条官方事实清单与 11 条勘误（open-codereview.ai 16 页核验） |
 | [🎨 oil-ui 界面设计 Skill（八步设计法）](oil-ui/index.md) | 1 | 开源星探公众号博文经官方仓库核验转化——给 AI 编程 Agent 装的 UI 设计方法论：八步设计法、五种调性刻度、风格对比页、老项目改造与 Pro 边界（11 项 P0 核验 9✅/2⚠️/0❌，作品数 52→65 时效勘误） |
 | [🧩 腾讯 OK 平台 AI 端到端研发流程](ok-platform/index.md) | 1 | 腾讯技术工程公开文核验转化——零基思维重建研发流程、九阶段「需求即交付」、需求/方案双质量门、编码三纪律、改善即批准审查与人的角色重定位（10 项 P0 核验 3✅/7⚠️/0❌） |
 | [📇 Knocket 会聊天的个人名片（腾讯 RTC）](knocket/index.md) | 1 | 微信公众号博文经 OKF v0.2 七阶段转化——腾讯云 Tencent RTC 网页实时通信/接待产品：Web Widget/Contact Page/Mobile Widget 三功能、Unified Inbox 多渠道统一收件、AI Agent 知识库自动应答，面向一人公司/OPC 的个人业务总入口（12 项 P0 核验 8✅/4⚠️/0❌） |
