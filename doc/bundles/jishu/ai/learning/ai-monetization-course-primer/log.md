@@ -57,7 +57,19 @@
 
 ## C（提交）
 
-- **提交范围**：子模块 `projects/awesome-okf-xs` 内新增 9 个文件（bundle）+ 3 个三级索引文件修改；主仓 `SpecWeave` 提交 submodule 指针变更
+- **提交范围**：子模块 `projects/awesome-okf-xs` 内新增 10 个文件（bundle）+ 4 个三级/域级索引文件修改；主仓 `SpecWeave` 提交 submodule 指针变更
 - **提交策略**：先子模块（内容 + 索引），再主仓（指针），**不 push**（按约定由用户自行推送）
-- **原子粒度**：`feat(bundles)` 子模块提交（单一职责：新增一个知识包并同步索引）→ `chore(submodule)` 主仓指针提交（仅 gitlink 变更）
+- **原子粒度**：`docs(bundle)` 子模块提交（单一职责：新增一个知识包并同步索引）→ `chore(submodule)` 主仓指针提交（仅 gitlink 变更）
+
+| 仓库 | 提交 | 内容 |
+|------|------|------|
+| `projects/awesome-okf-xs` | `d4e7a56e` | `docs(bundle): 新增 AI 变现课程课前导学材料核验版知识包并接入五级索引` — 14 files changed, 1146 insertions(+), 12 deletions(-) |
+| `SpecWeave`（主仓） | `07ffda13e` | `chore(submodule): 前移 awesome-okf-xs 指针至 d4e7a56e（AI 变现课程导学材料核验束）` — 1 file changed（gitlink） |
+
+- **提交集点名**：两次提交均以文件清单显式点名（子模块 14 个文件 / 主仓 1 个路径），未使用 `git add .`，未误带并行会话在途改动（主仓 `.trae/` 下 5 个文件的并行变更保持在工作区外）
+- **编码回验**：主仓 `git cat-file -p HEAD` 确认中文主题与正文存储字节无乱码（UTF-8 bytes 通道提交）
+- **推送状态**：**未 push**（子模块与主仓均留在本地，等待用户确认后推送）
+- **本节的回填**：上表两条 hash 指内容提交与其配套的主仓指针提交，二者均稳定不变；本段（门禁实测 + 提交证据）作为紧随其后的独立原子提交回填，其自身 hash 按惯例不写入本文档（文档不能包含自身提交的 hash）
+
+
 
