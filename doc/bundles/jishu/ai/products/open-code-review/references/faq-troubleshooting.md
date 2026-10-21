@@ -318,12 +318,12 @@ rmdir /s "%USERPROFILE%\.opencodereview"  # Windows
 
 ```mermaid
 flowchart TD
-    A["评论 start_line: 0"] --> B{检查 diff 格式}
-    B -->|CRLF 换行| C["统一为 LF 换行"]
-    B -->|混合 tabs/spaces| D["统一缩进风格"]
-    B -->|格式正常| E{检查 existing_code}
-    E -->|模型改写代码| F["调整提示词，要求原样引用"]
-    E -->|引用正确| G["检查 git config diff.algorithm"]
+    A["评论 start_line: 0"] --> B{"检查 diff 格式"}
+    B -->|"CRLF 换行"| C["统一为 LF 换行"]
+    B -->|"混合 tabs/spaces"| D["统一缩进风格"]
+    B -->|"格式正常"| E{"检查 existing_code"}
+    E -->|"模型改写代码"| F["调整提示词，要求原样引用"]
+    E -->|"引用正确"| G["检查 git config diff.algorithm"]
     G --> H["尝试 --diff-algorithm minimal"]
     C --> I["重新审查"]
     D --> I
@@ -461,19 +461,19 @@ ocr review --from main --to HEAD --resume <session-id>
 
 ```mermaid
 flowchart TD
-    START["遇到问题"] --> Q1{错误信息?}
+    START["遇到问题"] --> Q1{"错误信息?"}
     Q1 -->|"no valid LLM endpoint"| A1["检查 config.json 或环境变量"]
     Q1 -->|"401/403"| A2["检查 API token"]
     Q1 -->|"start_line: 0"| A3["检查 diff 格式与模型输出"]
     Q1 -->|"resume requires..."| A4["改用 range/commit 模式"]
     Q1 -->|"unsupported protocol"| A5["检查协议名拼写"]
-    Q1 -->|其他| Q2{问题类型?}
-    Q2 -->|配置问题| B1["ocr config provider"]
-    Q2 -->|连接问题| B2["ocr llm test"]
-    Q2 -->|规则问题| B3["ocr rules check"]
-    Q2 -->|会话问题| B4["ocr session list"]
-    Q2 -->|性能问题| B5["检查 --max-tokens-budget"]
-    Q2 -->|文件过滤| B6["ocr review --preview"]
+    Q1 -->|"其他"| Q2{"问题类型?"}
+    Q2 -->|"配置问题"| B1["ocr config provider"]
+    Q2 -->|"连接问题"| B2["ocr llm test"]
+    Q2 -->|"规则问题"| B3["ocr rules check"]
+    Q2 -->|"会话问题"| B4["ocr session list"]
+    Q2 -->|"性能问题"| B5["检查 --max-tokens-budget"]
+    Q2 -->|"文件过滤"| B6["ocr review --preview"]
     A1 --> RESOLVE["问题解决"]
     A2 --> RESOLVE
     A3 --> RESOLVE
@@ -485,9 +485,9 @@ flowchart TD
     B4 --> RESOLVE
     B5 --> RESOLVE
     B6 --> RESOLVE
-    RESOLVE --> Q3{已解决?}
-    Q3 -->|是| DONE["✅ 完成"]
-    Q3 -->|否| REPORT["提交 GitHub Issue<br/>附 Manifest 与会话 ID"]
+    RESOLVE --> Q3{"已解决?"}
+    Q3 -->|"是"| DONE["✅ 完成"]
+    Q3 -->|"否"| REPORT["提交 GitHub Issue 附 Manifest 与会话 ID"]
 ```
 
 ---

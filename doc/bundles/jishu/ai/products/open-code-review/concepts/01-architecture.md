@@ -50,33 +50,28 @@ graph TB
     subgraph CLI["CLI 层（确定性）"]
         CMD["ocr review 命令"]
     end
-
     subgraph Bootstrap["Bootstrap 层（确定性）"]
         CFG["配置加载"]
         RES["Endpoint 解析"]
         REG["Provider/工具注册"]
     end
-
     subgraph Pipeline["审查流水线（混合）"]
-        DIFF["Diff Provider<br/>确定性"]
-        FILTER["Filter & Rules<br/>确定性"]
-        DISPATCH["Subtask Dispatch<br/>确定性调度 + Agent 执行"]
-        OUTPUT["Output Writer<br/>确定性"]
+        DIFF["Diff Provider 确定性"]
+        FILTER["Filter & Rules 确定性"]
+        DISPATCH["Subtask Dispatch 确定性调度 + Agent 执行"]
+        OUTPUT["Output Writer 确定性"]
     end
-
     subgraph Agent["Agent 执行层"]
-        PLAN["Phase 1: Plan<br/>Agent"]
-        MAIN["Phase 2: Main Loop<br/>Agent"]
-        COMP["Memory Compression<br/>确定性 + Agent 摘要"]
+        PLAN["Phase 1: Plan Agent"]
+        MAIN["Phase 2: Main Loop Agent"]
+        COMP["Memory Compression 确定性 + Agent 摘要"]
     end
-
     CMD --> CFG --> RES --> REG
     REG --> DIFF --> FILTER --> DISPATCH
     DISPATCH --> PLAN --> MAIN
     MAIN --> COMP
     COMP --> MAIN
     MAIN --> OUTPUT
-
     style DIFF fill:#e8f5e9
     style FILTER fill:#e8f5e9
     style DISPATCH fill:#fff3e0
@@ -98,26 +93,23 @@ OCR 的审查流水线由六个明确阶段构成，每个阶段都有清晰的�
 
 ```mermaid
 flowchart LR
-    A["1. ocr review<br/>CLI 入口"] --> B["2. Bootstrap<br/>配置/Endpoint/注册"]
-    B --> C["3. Diff Provider<br/>提取变更"]
-    C --> D["4. Filter & Rules<br/>过滤与规则匹配"]
-    D --> E["5. Subtask Dispatch<br/>并发 Agent 审查"]
-    E --> F["6. Output Writer<br/>格式化输出"]
-
-    subgraph 阶段3详情
+    A["1. ocr review CLI 入口"] --> B["2. Bootstrap 配置/Endpoint/注册"]
+    B --> C["3. Diff Provider 提取变更"]
+    C --> D["4. Filter & Rules 过滤与规则匹配"]
+    D --> E["5. Subtask Dispatch 并发 Agent 审查"]
+    E --> F["6. Output Writer 格式化输出"]
+    subgraph STAGE3 ["阶段 3 详情"]
         C1["Workspace 模式"]
         C2["Commit 模式"]
         C3["Range 模式"]
     end
-
-    subgraph 阶段5详情
+    subgraph STAGE5 ["阶段 5 详情"]
         E1["Phase 1: Plan"]
         E2["Phase 2: Main Loop"]
         E3["executeReviewFilter"]
     end
-
-    C --> 阶段3详情
-    E --> 阶段5详情
+    C --> STAGE3
+    E --> STAGE5
 ```
 
 ### 2.2 各阶段职责
@@ -199,13 +191,12 @@ type Args struct {
 
 ```mermaid
 flowchart TD
-    Start["Run() 入口"] --> S1["Step 1: loadDiffs<br/>加载变更内容"]
-    S1 --> S2["Step 2: injectDiffMap +<br/>Tools.Freeze()"]
-    S2 --> S3["Step 3: filterDiffs<br/>规则过滤"]
-    S3 --> S4["Step 4: 估算成本<br/>预算前瞻"]
-    S4 --> S5["Step 5: dispatchSubtasks<br/>并发调度"]
+    Start["Run() 入口"] --> S1["Step 1: loadDiffs 加载变更内容"]
+    S1 --> S2["Step 2: injectDiffMap + Tools.Freeze()"]
+    S2 --> S3["Step 3: filterDiffs 规则过滤"]
+    S3 --> S4["Step 4: 估算成本 预算前瞻"]
+    S4 --> S5["Step 5: dispatchSubtasks 并发调度"]
     S5 --> End["返回结果"]
-
     S4 -.->|"预算不足"| Abort["中止并报告"]
 ```
 
@@ -300,12 +291,11 @@ func (a *Args) dispatchSubtasks(ctx context.Context, subtasks []Subtask) []Revie
 
 ```mermaid
 flowchart LR
-    Start["遍历 Subtask"] --> Check{"used + estimate<br/>> MaxTokensBudget?"}
-    Check -->|"是"| Break["break<br/>停止调度"]
+    Start["遍历 Subtask"] --> Check{"used + estimate > MaxTokensBudget?"}
+    Check -->|"是"| Break["break 停止调度"]
     Check -->|"否"| Run["执行 Subtask"]
     Run --> Update["used += actual"]
     Update --> Start
-
     style Break fill:#ffcdd2
     style Run fill:#c8e6c9
 ```
@@ -336,11 +326,11 @@ for _, st := range subtasks {
 flowchart TD
     ST["Subtask 启动"] --> Check{"changeLines < 50?"}
     Check -->|"是"| Skip["跳过 Plan 阶段"]
-    Check -->|"否"| Plan["Phase 1: Plan<br/>生成审查计划"]
-    Plan --> Filter1["executeReviewFilter<br/>(Plan 后)"]
-    Filter1 --> Main["Phase 2: Main Loop<br/>runner.RunPerFile"]
+    Check -->|"否"| Plan["Phase 1: Plan 生成审查计划"]
+    Plan --> Filter1["executeReviewFilter (Plan 后)"]
+    Filter1 --> Main["Phase 2: Main Loop runner.RunPerFile"]
     Skip --> Main
-    Main --> Filter2["executeReviewFilter<br/>(Main 后)"]
+    Main --> Filter2["executeReviewFilter (Main 后)"]
     Filter2 --> Done["Subtask 完成"]
 ```
 
@@ -394,19 +384,19 @@ Main Loop 是 Agent 与 LLM 交互的核心循环，定义了"何时调用工具
 ```mermaid
 flowchart TD
     Start["Main Loop 启动"] --> Iter["迭代轮次 round++"]
-    Iter --> Call["调用 LLM<br/>addNextMessage"]
-    Call --> Check1{"addNextMessage<br/>返回 false?"}
+    Iter --> Call["调用 LLM addNextMessage"]
+    Call --> Check1{"addNextMessage 返回 false?"}
     Check1 -->|"是"| Exit1["退出条件 5"]
     Check1 -->|"否"| Check2{"ctx.Done()?"}
-    Check2 -->|"是"| Exit3["退出条件 4<br/>上下文取消"]
+    Check2 -->|"是"| Exit3["退出条件 4 上下文取消"]
     Check2 -->|"否"| Parse["解析 LLM 响应"]
     Parse --> Check3{"包含 task_done?"}
-    Check3 -->|"是"| Exit2["退出条件 1<br/>任务完成"]
-    Check3 -->|"否"| Check4{"round >=<br/>MaxToolRequestTimes?"}
-    Check4 -->|"是"| Exit4["退出条件 2<br/>轮次耗尽"]
+    Check3 -->|"是"| Exit2["退出条件 1 任务完成"]
+    Check3 -->|"否"| Check4{"round >= MaxToolRequestTimes?"}
+    Check4 -->|"是"| Exit4["退出条件 2 轮次耗尽"]
     Check4 -->|"否"| Exec["执行工具调用"]
-    Exec --> Check5{"连续 3 轮<br/>空轮?"}
-    Check5 -->|"是"| Exit5["退出条件 3<br/>空轮退出"]
+    Exec --> Check5{"连续 3 轮 空轮?"}
+    Check5 -->|"是"| Exit5["退出条件 3 空轮退出"]
     Check5 -->|"否"| Iter
 ```
 
@@ -482,16 +472,14 @@ func (l *LLMLoop) Run(ctx context.Context, st Subtask) []ReviewComment {
 
 ```mermaid
 graph LR
-    subgraph 消息序列
-        F["frozen 区<br/>前 2 条消息<br/>（系统+用户原始指令）"]
-        C["compress 区<br/>LLM 摘要<br/>（异步/同步生成）"]
-        A["active 区<br/>最近 K 轮<br/>（保持原样）"]
+    subgraph MSGSEQ ["消息序列"]
+        F["frozen 区 前 2 条消息 （系统+用户原始指令）"]
+        C["compress 区 LLM 摘要 （异步/同步生成）"]
+        A["active 区 最近 K 轮 （保持原样）"]
     end
-
     F -.->|"不可压缩"| F2["保留原样"]
     C -.->|"已被摘要替代"| C2["压缩为 1 条摘要消息"]
     A -.->|"近期上下文"| A2["保留原样"]
-
     style F fill:#e8f5e9
     style C fill:#fce4ec
     style A fill:#e3f2fd
@@ -520,11 +508,10 @@ const (
 ```mermaid
 flowchart LR
     Check["每轮检查 Token 占用"] --> Q1{"占用 > 80%?"}
-    Q1 -->|"是"| Sync["同步压缩<br/>阻塞当前轮次"]
+    Q1 -->|"是"| Sync["同步压缩 阻塞当前轮次"]
     Q1 -->|"否"| Q2{"占用 > 60%?"}
-    Q2 -->|"是"| Async["异步压缩<br/>后台 goroutine"]
+    Q2 -->|"是"| Async["异步压缩 后台 goroutine"]
     Q2 -->|"否"| Pass["继续执行"]
-
     style Sync fill:#ffcdd2
     style Async fill:#fff3e0
     style Pass fill:#c8e6c9
@@ -611,10 +598,9 @@ Diff 模块负责提取代码变更，是审查流水线的输入源头。
 ```mermaid
 flowchart TD
     Mode{"DiffMode"}
-    Mode -->|"Workspace"| WS["Workspace 模式<br/>工作区 vs HEAD"]
-    Mode -->|"Commit"| CT["Commit 模式<br/>单个 commit 的变更"]
-    Mode -->|"Range"| RG["Range 模式<br/>BaseRef..HeadRef"]
-
+    Mode -->|"Workspace"| WS["Workspace 模式 工作区 vs HEAD"]
+    Mode -->|"Commit"| CT["Commit 模式 单个 commit 的变更"]
+    Mode -->|"Range"| RG["Range 模式 BaseRef..HeadRef"]
     WS --> WSOut["未提交的修改"]
     CT --> CTOut["单次提交内容"]
     RG --> RGOut["多次提交累计变更"]
@@ -728,10 +714,9 @@ Scan 模块支持三种 Batch 策略：
 ```mermaid
 graph TD
     Batch["Batch 策略"]
-    Batch --> N["none<br/>逐文件扫描"]
-    Batch --> L["by-language<br/>按语言分批"]
-    Batch --> D["by-directory<br/>按目录分批"]
-
+    Batch --> N["none 逐文件扫描"]
+    Batch --> L["by-language 按语言分批"]
+    Batch --> D["by-directory 按目录分批"]
     N --> N1["每个文件独立 Subtask"]
     L --> L1["同语言文件合并扫描"]
     D --> D1["同目录文件合并扫描"]
@@ -858,10 +843,9 @@ type Manifest struct {
 graph LR
     Comment["一条 ReviewComment"] --> ST["所属 Subtask"]
     ST --> Manifest["Manifest"]
-    Manifest --> SA["SourceArtifact<br/>（审查的代码）"]
-    Manifest --> RC["RuleConfig<br/>（应用的规则）"]
-    Manifest --> RT["RuntimeConfig<br/>（运行环境）"]
-
+    Manifest --> SA["SourceArtifact （审查的代码）"]
+    Manifest --> RC["RuleConfig （应用的规则）"]
+    Manifest --> RT["RuntimeConfig （运行环境）"]
     SA --> Replay["可复现审查"]
     RC --> Audit["可审计决策"]
     RT --> Repro["可复现环境"]

@@ -173,15 +173,15 @@ plugin 方式注册为 `/open-code-review:review`，直接复制方式注册为 
 
 ```mermaid
 flowchart TD
-    A[要接入代码评审] --> B{宿主已有 LLM 订阅额度?}
-    B -->|是，且要做自定义 Agent 流水线| C[委托模式<br/>OCR 不调 LLM]
-    B -->|否| D{是否在 Claude Code 内?}
-    D -->|是| E{要自动修复吗?}
-    E -->|是| F[Claude Code Command]
-    E -->|否| G[Agent Skill]
-    D -->|否| H{要进 CI 门禁吗?}
-    H -->|是| I[CLI 模式<br/>--audience agent --format json]
-    H -->|否| J[Agent Skill 或 CLI 模式]
+    A["要接入代码评审"] --> B{"宿主已有 LLM 订阅额度?"}
+    B -->|"是，且要做自定义 Agent 流水线"| C["委托模式 OCR 不调 LLM"]
+    B -->|"否"| D{"是否在 Claude Code 内?"}
+    D -->|"是"| E{"要自动修复吗?"}
+    E -->|"是"| F["Claude Code Command"]
+    E -->|"否"| G["Agent Skill"]
+    D -->|"否"| H{"要进 CI 门禁吗?"}
+    H -->|"是"| I["CLI 模式 --audience agent --format json"]
+    H -->|"否"| J["Agent Skill 或 CLI 模式"]
 ```
 
 补充规则：

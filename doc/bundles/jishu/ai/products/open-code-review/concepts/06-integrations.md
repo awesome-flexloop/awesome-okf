@@ -30,29 +30,24 @@ graph TB
         GE["Gerrit CI"]
         GF["GitFlic CI"]
     end
-
     subgraph AGENT["Agent 工具链"]
         CC["Claude Code"]
         CX["Codex"]
         CU2["Cursor"]
     end
-
     subgraph MODE["集成模式"]
         SKILL["Agent Skill"]
         CMD["Command / 斜杠命令"]
         DELEG["Delegation Mode"]
     end
-
     subgraph EXT["扩展点"]
         VSC["VS Code 扩展"]
         MCP["MCP 服务器"]
     end
-
-    CI --> CORE["OCR Core<br/>ocr review"]
+    CI --> CORE["OCR Core ocr review"]
     AGENT --> CORE
     MODE --> CORE
     EXT --> CORE
-
     style CORE fill:#e3f2fd
     style CI fill:#fff3e0
     style AGENT fill:#e8f5e9
@@ -233,9 +228,8 @@ Claude Code 是 Anthropic 的命令行编码 Agent，OCR 提供原生插件集�
 
 ```mermaid
 flowchart LR
-    S1["1. 运行审查<br/>ocr review --audience agent"] --> S2["2. 评论分类<br/>High / Medium / Low"]
-    S2 --> S3["3. 自动修复<br/>默认自动修复 High"]
-
+    S1["1. 运行审查 ocr review --audience agent"] --> S2["2. 评论分类 High / Medium / Low"]
+    S2 --> S3["3. 自动修复 默认自动修复 High"]
     style S1 fill:#e3f2fd
     style S2 fill:#fff3e0
     style S3 fill:#c8e6c9
@@ -273,15 +267,12 @@ graph LR
         FS["文件选择"]
         RR["规则解析"]
     end
-
     subgraph HOST["Host Agent（审查者）"]
-        LLM["host 自身 LLM<br/>执行审查"]
+        LLM["host 自身 LLM 执行审查"]
     end
-
     FS --> LLM
     RR --> LLM
     LLM --> RESULT["审查结果"]
-
     style OCR fill:#e8f5e9
     style HOST fill:#e3f2fd
     style LLM fill:#fff3e0
@@ -347,13 +338,12 @@ npx skills add alibaba/open-code-review --skill open-code-review
 
 ```mermaid
 flowchart TD
-    S1["1. 前置检查<br/>CLI/git 可用性"] --> S2["2. 自动安装 CLI<br/>若未安装"]
-    S2 --> S3["3. LLM 配置检查<br/>endpoint/token/model"]
-    S3 --> S4["4. 提取业务上下文<br/>--background / --background-file"]
-    S4 --> S5["5. 运行 review<br/>ocr review --audience agent"]
-    S5 --> S6["6. 分类报告<br/>High/Medium/Low"]
-    S6 --> S7["7. 按需修复<br/>High 优先"]
-
+    S1["1. 前置检查 CLI/git 可用性"] --> S2["2. 自动安装 CLI 若未安装"]
+    S2 --> S3["3. LLM 配置检查 endpoint/token/model"]
+    S3 --> S4["4. 提取业务上下文 --background / --background-file"]
+    S4 --> S5["5. 运行 review ocr review --audience agent"]
+    S5 --> S6["6. 分类报告 High/Medium/Low"]
+    S6 --> S7["7. 按需修复 High 优先"]
     style S1 fill:#e3f2fd
     style S5 fill:#fff3e0
     style S7 fill:#c8e6c9
@@ -414,28 +404,24 @@ OCR 提供 VS Code 扩展，在编辑器内集成审查。
 ```mermaid
 graph TB
     subgraph UI["Webview UI"]
-        WV["Webview 组件<br/>评论/配置/侧边栏"]
+        WV["Webview 组件 评论/配置/侧边栏"]
     end
-
     subgraph EXT["扩展主进程"]
         CP["CommentProvider"]
         CFP["ConfigPanelProvider"]
         SBP["SidebarProvider"]
     end
-
     subgraph SVC["Service 层"]
         CLI["CliService"]
         GIT["GitService"]
         RS["ReviewSession"]
         CFG["ConfigService"]
     end
-
     WV --> EXT
     CP --> SVC
     CFP --> SVC
     SBP --> SVC
-    CLI -->|调用| OCR["ocr CLI"]
-
+    CLI -->|"调用"| OCR["ocr CLI"]
     style UI fill:#e3f2fd
     style EXT fill:#fff3e0
     style SVC fill:#e8f5e9
@@ -462,15 +448,12 @@ Webview UI 通过 Provider 与 Service 通信，Service 调用 `ocr` CLI 完成�
 ```mermaid
 flowchart TD
     START["选择集成模式"] --> Q1{"有独立 LLM endpoint?"}
-    Q1 -->|有| Q2{"是否在 CI 中?"}
-    Q1 -->|无| DELEG["Delegation Mode<br/>复用 host LLM"]
-
-    Q2 -->|是| CI["CI/CD 直接集成<br/>ocr review --format json"]
-    Q2 -->|否| Q3{"使用 Claude Code?"}
-
-    Q3 -->|是| CC["Claude Code 插件"]
-    Q3 -->|否| SKILL["Agent Skill / Cursor"]
-
+    Q1 -->|"有"| Q2{"是否在 CI 中?"}
+    Q1 -->|"无"| DELEG["Delegation Mode 复用 host LLM"]
+    Q2 -->|"是"| CI["CI/CD 直接集成 ocr review --format json"]
+    Q2 -->|"否"| Q3{"使用 Claude Code?"}
+    Q3 -->|"是"| CC["Claude Code 插件"]
+    Q3 -->|"否"| SKILL["Agent Skill / Cursor"]
     style DELEG fill:#c8e6c9
     style CI fill:#fff3e0
     style CC fill:#e3f2fd
@@ -532,10 +515,9 @@ OCR 支持通过 MCP（Model Context Protocol）服务器扩展自定义工具�
 
 ```mermaid
 flowchart LR
-    AGENT["Agent<br/>Claude/Cursor/Codex"] --> MCP["MCP 服务器<br/>自定义工具"]
+    AGENT["Agent Claude/Cursor/Codex"] --> MCP["MCP 服务器 自定义工具"]
     MCP --> OCR["OCR Core"]
-    MCP --> CUSTOM["自定义工具<br/>lint/build/test"]
-
+    MCP --> CUSTOM["自定义工具 lint/build/test"]
     style AGENT fill:#e3f2fd
     style MCP fill:#fff3e0
     style OCR fill:#e8f5e9

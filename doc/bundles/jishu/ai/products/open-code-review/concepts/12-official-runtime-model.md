@@ -37,18 +37,18 @@ verified: { by: process:seven-concepts-v, at: 2026-10-21 }
 
 ```mermaid
 flowchart TD
-    A[diff provider<br/>Workspace / Commit / Range] --> B[providerDirIgnoreDirs<br/>噪声目录剔除]
-    B --> C[五重门过滤<br/>binary → user_exclude → user_include → unsupported_ext → default_path]
-    C --> D[selectFiles 追加<br/>deleted / too_large]
-    D --> E[GROUPING_TASK<br/>语义分组 ≤10 文件/组]
-    E --> F{组 token 预算<br/>超限则拆单文件组}
-    F --> G[per-group 子 agent<br/>并发 --concurrency 8]
-    G --> H{plan 触发?<br/>≥50 行 或 组内≥2文件且合计≥100 行}
-    H -->|是| I[PLAN_TASK 单次调用<br/>只读工具纯文本注入]
-    H -->|否| J
-    I --> J[MAIN_TASK 工具调用循环<br/>1-3 轮 by effort]
-    J --> K[评论处理五步<br/>行解析→重定位→过滤→二轮解析→渲染]
-    K --> L[输出 text / json / sarif]
+    A["diff provider Workspace / Commit / Range"] --> B["providerDirIgnoreDirs 噪声目录剔除"]
+    B --> C["五重门过滤 binary -> user_exclude -> user_include -> unsupported_ext -> default_path"]
+    C --> D["selectFiles 追加 deleted / too_large"]
+    D --> E["GROUPING_TASK 语义分组 ≤10 文件/组"]
+    E --> F{"组 token 预算 超限则拆单文件组"}
+    F --> G["per-group 子 agent 并发 --concurrency 8"]
+    G --> H{"plan 触发? ≥50 行 或 组内≥2文件且合计≥100 行"}
+    H -->|"是"| I["PLAN_TASK 单次调用 只读工具纯文本注入"]
+    H -->|"否"| J
+    I --> J["MAIN_TASK 工具调用循环 1-3 轮 by effort"]
+    J --> K["评论处理五步 行解析->重定位->过滤->二轮解析->渲染"]
+    K --> L["输出 text / json / sarif"]
 ```
 
 **逐段要点**：

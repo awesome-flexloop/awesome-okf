@@ -25,28 +25,23 @@ OCR 的规则系统并非“单一配置文件”，而是采用**四层优先�
 ```mermaid
 graph TB
     subgraph P1["优先级 1（最高）"]
-        FLAG["--rule 标志<br/>命令行显式传入"]
+        FLAG["--rule 标志 命令行显式传入"]
     end
-
     subgraph P2["优先级 2"]
-        PROJ["项目配置<br/>&lt;repoDir&gt;/.opencodereview/rule.json"]
+        PROJ["项目配置 &lt;repoDir&gt;/.opencodereview/rule.json"]
     end
-
     subgraph P3["优先级 3"]
-        GLOBAL["全局配置<br/>~/.opencodereview/rule.json"]
+        GLOBAL["全局配置 ~/.opencodereview/rule.json"]
     end
-
     subgraph P4["优先级 4（最低）"]
-        SYS["系统默认<br/>嵌入式 system_rules.json"]
+        SYS["系统默认 嵌入式 system_rules.json"]
     end
-
-    FLAG --> CHECK{"首个匹配<br/>获胜？"}
+    FLAG --> CHECK{"首个匹配 获胜？"}
     PROJ --> CHECK
     GLOBAL --> CHECK
     SYS --> CHECK
-    CHECK -->|是| RES["使用该规则文件"]
-    CHECK -->|否，继续| NEXT["下沉到下一层"]
-
+    CHECK -->|"是"| RES["使用该规则文件"]
+    CHECK -->|"否，继续"| NEXT["下沉到下一层"]
     style P1 fill:#ffebee
     style P2 fill:#fff3e0
     style P3 fill:#fffde7
@@ -199,19 +194,17 @@ Glob 匹配在路径匹配前会**统一小写化**（路径与模式都小写�
 
 ```mermaid
 flowchart LR
-    subgraph 文件树
+    subgraph FILETREE ["文件树"]
         A["a.go"]
         B["b/a.go"]
         C["c/d/a.go"]
     end
-
-    P1["模式: *.go"] -.->|匹配| A
-    P1 -.->|不匹配| B
-    P1 -.->|不匹配| C
-
-    P2["模式: **/*.go"] -.->|匹配| A
-    P2 -.->|匹配| B
-    P2 -.->|匹配| C
+    P1["模式: *.go"] -.->|"匹配"| A
+    P1 -.->|"不匹配"| B
+    P1 -.->|"不匹配"| C
+    P2["模式: **/*.go"] -.->|"匹配"| A
+    P2 -.->|"匹配"| B
+    P2 -.->|"匹配"| C
 ```
 
 ### 3.4 大括号扩展
@@ -327,19 +320,18 @@ YAML 文件被区分为两类，分别映射不同规则：
 
 ```mermaid
 flowchart TD
-    IN["文件输入"] --> G1{"门 1: binary?<br/>二进制文件"}
-    G1 -->|是| R1["排除: binary"]
-    G1 -->|否| G2{"门 2: user_exclude?<br/>命中 exclude"}
-    G2 -->|是| R2["排除: user_exclude"]
-    G2 -->|否| G3{"门 3: user_include?<br/>命中 include 放行"}
-    G3 -->|命中 include| PASS1["放行（绕过默认排除）"]
-    G3 -->|未命中| G4{"门 4: unsupported_ext?<br/>扩展名不在白名单"}
-    G4 -->|是| R4["排除: unsupported_ext"]
-    G4 -->|否| G5{"门 5: default_path?<br/>命中默认排除"}
-    G5 -->|是| R5["排除: default_path"]
-    G5 -->|否| OK["通过，进入审查"]
+    IN["文件输入"] --> G1{"门 1: binary? 二进制文件"}
+    G1 -->|"是"| R1["排除: binary"]
+    G1 -->|"否"| G2{"门 2: user_exclude? 命中 exclude"}
+    G2 -->|"是"| R2["排除: user_exclude"]
+    G2 -->|"否"| G3{"门 3: user_include? 命中 include 放行"}
+    G3 -->|"命中 include"| PASS1["放行（绕过默认排除）"]
+    G3 -->|"未命中"| G4{"门 4: unsupported_ext? 扩展名不在白名单"}
+    G4 -->|"是"| R4["排除: unsupported_ext"]
+    G4 -->|"否"| G5{"门 5: default_path? 命中默认排除"}
+    G5 -->|"是"| R5["排除: default_path"]
+    G5 -->|"否"| OK["通过，进入审查"]
     PASS1 --> OK
-
     style R1 fill:#ffcdd2
     style R2 fill:#ffcdd2
     style R4 fill:#ffcdd2
@@ -458,14 +450,13 @@ OCR 会调用 `EvalSymlinks` 解析符号链接到真实路径，再套用路径
 
 ```mermaid
 sequenceDiagram
-    participant CLI as CLI(--rule flag)
+    participant CLI as "CLI(--rule flag)"
     participant Boot as Bootstrap
     participant NR as NewResolver
     participant FR as flagResolver
     participant PR as projectResolver
     participant GR as globalResolver
     participant SR as systemResolver
-
     CLI->>Boot: 传入 --rule / 项目配置 / 全局配置
     Boot->>NR: NewResolver(repoDir, project, global, flag)
     NR->>FR: 若 flag 非空，构造 flagResolver
@@ -473,7 +464,6 @@ sequenceDiagram
     NR->>GR: 若 global 非空，构造 globalResolver(repoDir)
     NR->>SR: 始终构造 systemResolver(嵌入规则)
     NR-->>Boot: 返回 composedResolver{[FR, PR, GR, SR]}
-
     Note over FR,SR: Resolve 时按数组顺序调用，首个非空返回获胜
 ```
 

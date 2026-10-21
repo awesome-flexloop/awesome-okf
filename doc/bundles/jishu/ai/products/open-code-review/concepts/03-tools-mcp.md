@@ -26,15 +26,13 @@ OCR 的工具系统采用“**Registry + Provider**”双层架构，统一管�
 graph TB
     subgraph Registry["Registry（注册表）"]
         FREEZE["Freeze() 冻结机制"]
-        MAP["工具名 → Provider 映射"]
+        MAP["工具名对应 Provider 映射"]
     end
-
-    subgraph Provider接口["Provider 接口"]
+    subgraph PROVIDER ["Provider 接口"]
         TOOL["Tool() ToolDef"]
         EXEC["Execute(ctx, args) Result"]
     end
-
-    subgraph 内置工具["6 个内置工具"]
+    subgraph BUILTIN ["6 个内置工具"]
         TD["task_done"]
         CC["code_comment"]
         FR["file_read"]
@@ -42,20 +40,17 @@ graph TB
         FF["file_find"]
         CS["code_search"]
     end
-
-    subgraph MCP工具["MCP 工具"]
+    subgraph MCPTOOLS ["MCP 工具"]
         MCP1["stdio 子进程工具"]
         MCP2["Streamable HTTP 工具"]
     end
-
-    Registry --> Provider接口
-    Provider接口 --> 内置工具
-    Provider接口 --> MCP工具
-
+    Registry --> PROVIDER
+    PROVIDER --> BUILTIN
+    PROVIDER --> MCPTOOLS
     style Registry fill:#e8f5e9
-    style Provider接口 fill:#e3f2fd
-    style 内置工具 fill:#fff3e0
-    style MCP工具 fill:#fce4ec
+    style PROVIDER fill:#e3f2fd
+    style BUILTIN fill:#fff3e0
+    style MCPTOOLS fill:#fce4ec
 ```
 
 ### 1.2 设计要点
@@ -154,8 +149,7 @@ flowchart LR
     MCP --> Inject["注入 DiffMap"]
     Inject --> Freeze["Freeze() 冻结"]
     Freeze --> Run["Agent 执行阶段"]
-    Run --> Query["只能查询<br/>不能注册"]
-
+    Run --> Query["只能查询 不能注册"]
     style Freeze fill:#ffcdd2
     style Run fill:#c8e6c9
 ```
@@ -352,10 +346,10 @@ func (t *CodeSearchTool) Execute(ctx context.Context, args json.RawMessage) Resu
 
 ```mermaid
 flowchart LR
-    Search["代码搜索"] --> Try1["git grep<br/>(默认)"]
+    Search["代码搜索"] --> Try1["git grep (默认)"]
     Try1 --> Q1{"成功?"}
     Q1 -->|"是"| Result["返回结果"]
-    Q1 -->|"否"| Try2["git grep --no-index<br/>(回退)"]
+    Q1 -->|"否"| Try2["git grep --no-index (回退)"]
     Try2 --> Result
 ```
 
@@ -418,7 +412,7 @@ func (p *CommentWorkerPool) Start() {
 
 ```mermaid
 graph LR
-    Model["模型调用<br/>code_comment"] --> Parse["ParseComments<br/>参数解析"]
+    Model["模型调用 code_comment"] --> Parse["ParseComments 参数解析"]
     Parse --> Queue["queue channel"]
     Queue --> W1["Worker 1"]
     Queue --> W2["Worker 2"]
@@ -525,25 +519,22 @@ func (c *CommentCollector) RemoveByPathAndIndices(path string, indices []int)   
 
 ```mermaid
 graph TB
-    subgraph 并发写入
+    subgraph CONCURRENT_WRITE ["并发写入"]
         W1["Worker 1 Add"]
         W2["Worker 2 Add"]
         W3["Worker 3 Add"]
     end
-
-    subgraph 并发读取
+    subgraph CONCURRENT_READ ["并发读取"]
         R1["Main Loop Snapshot"]
         R2["executeReviewFilter CommentsForPath"]
         R3["Output Writer Comments"]
     end
-
     W1 --> Lock["sync.RWMutex"]
     W2 --> Lock
     W3 --> Lock
     R1 --> RLock["RLock"]
     R2 --> RLock
     R3 --> RLock
-
     Lock --> Data["comments + pathIndex"]
     RLock --> Data
 ```
@@ -572,13 +563,12 @@ OCR 通过 MCP（Model Context Protocol）协议集成外部工具服务器，�
 
 ```mermaid
 graph LR
-    subgraph stdio传输
+    subgraph STDIO ["stdio 传输"]
         CMD["启动子进程"] --> STDIN["stdin 发送请求"]
         STDIN --> STDOUT["stdout 接收响应"]
         STDOUT --> STDERR["stderr 日志"]
     end
-
-    subgraph HTTP传输
+    subgraph HTTP_TRANSPORT ["HTTP 传输"]
         HTTP["Streamable HTTP"] --> URL["POST /mcp"]
         URL --> RESP["HTTP Response"]
         RESP --> SSE["SSE 流式响应"]
@@ -806,9 +796,9 @@ const (
 ```mermaid
 flowchart LR
     Config["读取 MCP 配置"] --> Check1{"有 setup?"}
-    Check1 -->|"是"| Setup["执行 setup<br/>5分钟超时"]
+    Check1 -->|"是"| Setup["执行 setup 5分钟超时"]
     Check1 -->|"否"| Start
-    Setup --> Start["启动 MCP 服务器<br/>30秒初始化超时"]
+    Setup --> Start["启动 MCP 服务器 30秒初始化超时"]
     Start --> Handshake["MCP 握手"]
     Handshake --> List["ListTools"]
     List --> Register["RegisterAll"]
@@ -891,10 +881,10 @@ func (r *Result) IsError() bool {
 flowchart TD
     Call["模型调用工具"] --> Exec["Execute 执行"]
     Exec --> Q{"执行成功?"}
-    Q -->|"是"| Success["Result.Content<br/>返回给模型"]
-    Q -->|"否"| Error["Result.Error<br/>错误信息"]
+    Q -->|"是"| Success["Result.Content 返回给模型"]
+    Q -->|"否"| Error["Result.Error 错误信息"]
     Error --> Return["作为常规结果返回给模型"]
-    Return --> Model["模型决定下一步<br/>(重试/换工具/放弃)"]
+    Return --> Model["模型决定下一步 (重试/换工具/放弃)"]
     Success --> Model
 ```
 

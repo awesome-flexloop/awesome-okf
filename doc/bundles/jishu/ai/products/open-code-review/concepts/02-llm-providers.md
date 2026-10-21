@@ -80,19 +80,17 @@ const (
 
 ```mermaid
 graph LR
-    subgraph Anthropic协议
+    subgraph ANTHROPIC ["Anthropic 协议"]
         A1["POST /v1/messages"]
         A2["x-api-key 鉴权"]
         A3["cache_control 支持"]
     end
-
-    subgraph OpenAI协议
+    subgraph OPENAI ["OpenAI 协议"]
         O1["POST /v1/chat/completions"]
         O2["Authorization: Bearer 鉴权"]
         O3["streaming 支持"]
     end
-
-    subgraph OpenAI-Responses协议
+    subgraph OPENAI_RESPONSES ["OpenAI-Responses 协议"]
         R1["POST /v1/responses"]
         R2["Authorization: Bearer 鉴权"]
         R3["Responses API"]
@@ -172,18 +170,15 @@ func NewLLMClient(cfg ClientConfig) (LLMClient, error) {
 
 ```mermaid
 flowchart TD
-    Cfg["ClientConfig<br/>(protocol, url, token, model)"] --> Normalize["NormalizeProtocol"]
+    Cfg["ClientConfig (protocol, url, token, model)"] --> Normalize["NormalizeProtocol"]
     Normalize --> Validate["ValidateProtocol"]
     Validate --> Switch{"switch protocol"}
-
     Switch -->|"anthropic"| Anthropic["NewAnthropicClient"]
     Switch -->|"openai"| OpenAI["NewOpenAIClient"]
     Switch -->|"openai-responses"| Responses["NewOpenAIResponsesClient"]
-
     Anthropic --> Impl1["AnthropicClient 实现"]
     OpenAI --> Impl2["OpenAIClient 实现"]
     Responses --> Impl3["OpenAIResponsesClient 实现"]
-
     Impl1 --> LLMClient["LLMClient 接口"]
     Impl2 --> LLMClient
     Impl3 --> LLMClient
@@ -481,19 +476,19 @@ OCR 的 Endpoint 解析是“多源发现”的典型实现，按优先级尝试
 
 ```mermaid
 flowchart TD
-    Start["Endpoint 解析启动"] --> S1["策略 1: tryOCRConfig<br/>读取 config.json"]
-    S1 --> Q1{"完整三元组<br/>(URL, Token, Model)?"}
+    Start["Endpoint 解析启动"] --> S1["策略 1: tryOCRConfig 读取 config.json"]
+    S1 --> Q1{"完整三元组 (URL, Token, Model)?"}
     Q1 -->|"是"| Win1["胜出"]
-    Q1 -->|"否"| S2["策略 2: tryOCREnv<br/>读取 OCR_LLM_* 环境变量"]
+    Q1 -->|"否"| S2["策略 2: tryOCREnv 读取 OCR_LLM_* 环境变量"]
     S2 --> Q2{"完整三元组?"}
     Q2 -->|"是"| Win2["胜出"]
-    Q2 -->|"否"| S3["策略 3: tryCCEnv<br/>读取 ANTHROPIC_* 环境变量"]
+    Q2 -->|"否"| S3["策略 3: tryCCEnv 读取 ANTHROPIC_* 环境变量"]
     S3 --> Q3{"完整三元组?"}
     Q3 -->|"是"| Win3["胜出"]
-    Q3 -->|"否"| S4["策略 4: tryShellRC<br/>读取 shell 配置文件"]
+    Q3 -->|"否"| S4["策略 4: tryShellRC 读取 shell 配置文件"]
     S4 --> Q4{"完整三元组?"}
     Q4 -->|"是"| Win4["胜出"]
-    Q4 -->|"否"| Fail["解析失败<br/>提示用户配置"]
+    Q4 -->|"否"| Fail["解析失败 提示用户配置"]
 ```
 
 ### 7.2 策略 1: tryOCRConfig
@@ -733,9 +728,9 @@ func isReasoningModel(model string) bool {
 
 ```mermaid
 graph LR
-    CountTokens["CountTokens"] --> Budget["预算前瞻<br/>估算 Subtask 成本"]
-    CountTokens --> Compress["压缩触发<br/>计算上下文占用"]
-    CountTokens --> Limit["上下文限制<br/>防止超出模型窗口"]
+    CountTokens["CountTokens"] --> Budget["预算前瞻 估算 Subtask 成本"]
+    CountTokens --> Compress["压缩触发 计算上下文占用"]
+    CountTokens --> Limit["上下文限制 防止超出模型窗口"]
 ```
 
 > **关键洞察**：Token 计数是“确定性工程”的基础设施——预算控制、压缩触发、Manifest 记录都依赖准确的 Token 计数。tiktoken 的本地计算避免了“调用 API 才知道 Token 数”的滞后。
@@ -873,11 +868,11 @@ func buildRequestBody(req CompletionRequest, cfg ClientConfig) map[string]interf
 
 ```mermaid
 flowchart TD
-    URL["BaseURL"] --> Check1{"包含<br/>/v1/messages?"}
+    URL["BaseURL"] --> Check1{"包含 /v1/messages?"}
     Check1 -->|"是"| Anthropic["使用 AnthropicClient"]
-    Check1 -->|"否"| Check2{"包含<br/>/v1/chat/completions?"}
+    Check1 -->|"否"| Check2{"包含 /v1/chat/completions?"}
     Check2 -->|"是"| OpenAI["使用 OpenAIClient"]
-    Check2 -->|"否"| Check3{"包含<br/>/v1/responses?"}
+    Check2 -->|"否"| Check3{"包含 /v1/responses?"}
     Check3 -->|"是"| Responses["使用 OpenAIResponsesClient"]
     Check3 -->|"否"| Default["按 protocol 字段决定"]
 ```

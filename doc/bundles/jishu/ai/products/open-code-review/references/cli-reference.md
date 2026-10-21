@@ -24,44 +24,35 @@ OCR 采用 Cobra 框架构建命令行接口，根命令为 `ocr`，下设 10 �
 
 ```mermaid
 graph TB
-    ocr["ocr<br/>根命令"]
-
-    ocr --> version["version<br/>显示版本信息"]
-    ocr --> review["review, r<br/>运行代码审查"]
-    ocr --> scan["scan, s<br/>全文件扫描"]
-    ocr --> delegate["delegate, d<br/>委托模式"]
-    ocr --> session["session, sessions<br/>会话管理"]
-    ocr --> config["config<br/>配置管理"]
-    ocr --> llm["llm<br/>LLM 工具"]
-    ocr --> rules["rules<br/>规则自查"]
-    ocr --> viewer["viewer, v<br/>Web 查看器"]
-    ocr --> completion["completion<br/>Shell 补全"]
-
-    review --> reviewWS["workspace 模式<br/>默认"]
-    review --> reviewRange["range 模式<br/>--from --to"]
-    review --> reviewCommit["commit 模式<br/>--commit"]
-
+    ocr["ocr 根命令"]
+    ocr --> version["version 显示版本信息"]
+    ocr --> review["review, r 运行代码审查"]
+    ocr --> scan["scan, s 全文件扫描"]
+    ocr --> delegate["delegate, d 委托模式"]
+    ocr --> session["session, sessions 会话管理"]
+    ocr --> config["config 配置管理"]
+    ocr --> llm["llm LLM 工具"]
+    ocr --> rules["rules 规则自查"]
+    ocr --> viewer["viewer, v Web 查看器"]
+    ocr --> completion["completion Shell 补全"]
+    review --> reviewWS["workspace 模式 默认"]
+    review --> reviewRange["range 模式 --from --to"]
+    review --> reviewCommit["commit 模式 --commit"]
     scan --> scanAll["全仓库扫描"]
-    scan --> scanPath["指定路径扫描<br/>--path"]
-    scan --> scanResume["恢复扫描<br/>--resume"]
-
-    delegate --> delegatePreview["preview<br/>预览文件+规则"]
-    delegate --> delegateRule["rule<br/>查看特定文件规则"]
-
-    session --> sessionList["list, ls<br/>列出会话"]
-    session --> sessionShow["show<br/>查看会话详情"]
-    session --> sessionComments["comments<br/>查看会话评论"]
-
-    config --> configSet["set<br/>设置配置值"]
-    config --> configUnset["unset<br/>删除配置项"]
-    config --> configProvider["provider<br/>交互式 provider 配置"]
-    config --> configModel["model<br/>交互式 model 选择"]
-
-    llm --> llmTest["test<br/>连接测试"]
-    llm --> llmProviders["providers<br/>列出内置 provider"]
-
-    rules --> rulesCheck["check<br/>查看文件命中规则"]
-
+    scan --> scanPath["指定路径扫描 --path"]
+    scan --> scanResume["恢复扫描 --resume"]
+    delegate --> delegatePreview["preview 预览文件+规则"]
+    delegate --> delegateRule["rule 查看特定文件规则"]
+    session --> sessionList["list, ls 列出会话"]
+    session --> sessionShow["show 查看会话详情"]
+    session --> sessionComments["comments 查看会话评论"]
+    config --> configSet["set 设置配置值"]
+    config --> configUnset["unset 删除配置项"]
+    config --> configProvider["provider 交互式 provider 配置"]
+    config --> configModel["model 交互式 model 选择"]
+    llm --> llmTest["test 连接测试"]
+    llm --> llmProviders["providers 列出内置 provider"]
+    rules --> rulesCheck["check 查看文件命中规则"]
     style review fill:#fff3e0,stroke:#ef6c00
     style scan fill:#fff3e0,stroke:#ef6c00
     style delegate fill:#e8f5e9,stroke:#2e7d32
@@ -461,16 +452,15 @@ ocr delegate rule src/main.go src/handler.go
 
 ```mermaid
 sequenceDiagram
-    participant Host as 宿主 Agent<br/>(Claude Code/Cursor)
-    participant OCR as OCR CLI
-    participant LLM as 宿主 LLM
-
+    participant Host as "宿主 Agent (Claude Code/Cursor)"
+    participant OCR as "OCR CLI"
+    participant LLM as "宿主 LLM"
     Host->>OCR: ocr delegate preview
     OCR->>OCR: 文件选择 + 规则匹配
     OCR-->>Host: 返回文件列表 + 规则
     Host->>OCR: ocr delegate rule <files>
     OCR-->>Host: 返回特定文件规则
-    Host->>LLM: 用自己的 LLM 审查<br/>(OCR 不参与)
+    Host->>LLM: 用自己的 LLM 审查 (OCR 不参与)
     LLM-->>Host: 审查评论
     Host->>Host: 应用/展示评论
 ```

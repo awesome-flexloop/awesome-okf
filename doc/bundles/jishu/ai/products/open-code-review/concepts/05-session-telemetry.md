@@ -77,12 +77,12 @@ JSONL 每行一个 JSON 对象，`type` 字段区分记录类型：
 
 ```mermaid
 flowchart LR
-    SS["session_start<br/>uuid=A"] --> RID1["review_item_done<br/>uuid=B, parent=A"]
-    RID1 --> LR1["llm_request<br/>uuid=C, parent=B"]
-    LR1 --> LSP1["llm_response<br/>uuid=D, parent=C"]
-    LSP1 --> TC1["tool_call<br/>uuid=E, parent=D"]
-    TC1 --> RID2["review_item_done<br/>uuid=F, parent=A"]
-    RID2 --> SE["session_end<br/>uuid=G, parent=A"]
+    SS["session_start uuid=A"] --> RID1["review_item_done uuid=B, parent=A"]
+    RID1 --> LR1["llm_request uuid=C, parent=B"]
+    LR1 --> LSP1["llm_response uuid=D, parent=C"]
+    LSP1 --> TC1["tool_call uuid=E, parent=D"]
+    TC1 --> RID2["review_item_done uuid=F, parent=A"]
+    RID2 --> SE["session_end uuid=G, parent=A"]
 ```
 
 ### 1.6 WriteLLMResponse 的 usage 字段
@@ -184,17 +184,15 @@ Manifest 用五个集合描述覆盖情况：
 
 ```mermaid
 graph TB
-    SEL["Selected<br/>= Completed ∪ Reused ∪ Failed ∪ Waived"]
+    SEL["Selected = Completed ∪ Reused ∪ Failed ∪ Waived"]
     COM["Completed"]
     REU["Reused"]
     FAL["Failed"]
     WAI["Waived"]
-
     SEL --- COM
     SEL --- REU
     SEL --- FAL
     SEL --- WAI
-
     style SEL fill:#e3f2fd
     style COM fill:#c8e6c9
     style REU fill:#fff9c4
@@ -215,11 +213,10 @@ graph TB
 
 ```mermaid
 flowchart LR
-    OPEN["开放<br/>可添加 selected"] -->|SealSelected| SEALED["sealed<br/>selected 锁定"]
-    SEALED -->|写入结果| WRITING["写入中<br/>completed/failed/reused"]
-    WRITING -->|Finalize| FROZEN["frozen<br/>全量锁定"]
+    OPEN["开放 可添加 selected"] -->|SealSelected| SEALED["sealed selected 锁定"]
+    SEALED -->|"写入结果"| WRITING["写入中 completed/failed/reused"]
+    WRITING -->|Finalize| FROZEN["frozen 全量锁定"]
     FROZEN --> MANIFEST["输出 Manifest"]
-
     style OPEN fill:#e8f5e9
     style SEALED fill:#fff3e0
     style WRITING fill:#fffde7
@@ -280,15 +277,14 @@ resume 时必须校验当前 options 与原会话一致，否则拒绝：
 ```mermaid
 flowchart TD
     START["resume 请求"] --> CHK1{"InputMode == workspace?"}
-    CHK1 -->|是| REJ1["拒绝: workspace 模式不支持 resume<br/>（工作区内容易变化）"]
-    CHK1 -->|否| CHK2{"InputMode == range?"}
-    CHK2 -->|是| CHK3{"DiffFrom/DiffTo 与原会话匹配?"}
-    CHK3 -->|否| REJ2["拒绝: range 范围不一致"]
-    CHK3 -->|是| OK["通过校验，继续 resume"]
-    CHK2 -->|否 commit| CHK4["校验 commit 一致"]
-    CHK4 -->|否| REJ3["拒绝: commit 不一致"]
-    CHK4 -->|是| OK
-
+    CHK1 -->|"是"| REJ1["拒绝: workspace 模式不支持 resume （工作区内容易变化）"]
+    CHK1 -->|"否"| CHK2{"InputMode == range?"}
+    CHK2 -->|"是"| CHK3{"DiffFrom/DiffTo 与原会话匹配?"}
+    CHK3 -->|"否"| REJ2["拒绝: range 范围不一致"]
+    CHK3 -->|"是"| OK["通过校验，继续 resume"]
+    CHK2 -->|"否 commit"| CHK4["校验 commit 一致"]
+    CHK4 -->|"否"| REJ3["拒绝: commit 不一致"]
+    CHK4 -->|"是"| OK
     style REJ1 fill:#ffcdd2
     style REJ2 fill:#ffcdd2
     style REJ3 fill:#ffcdd2
@@ -338,19 +334,17 @@ OCR 集成 OpenTelemetry，提供 Span 与 Metric 两类可观测信号。遥测
 
 ```mermaid
 graph TB
-    RUN["review.run<br/>根 Span"]
-    RUN --> DIFF["diff.parse<br/>解析变更"]
-    RUN --> SUB1["subtask.execute.fileA<br/>文件 A 审查"]
-    RUN --> SUB2["subtask.execute.fileB<br/>文件 B 审查"]
+    RUN["review.run 根 Span"]
+    RUN --> DIFF["diff.parse 解析变更"]
+    RUN --> SUB1["subtask.execute.fileA 文件 A 审查"]
+    RUN --> SUB2["subtask.execute.fileB 文件 B 审查"]
     RUN --> EV1["event.review.started"]
     RUN --> EV2["event.no.files.changed"]
     RUN --> EV3["event.plan.skipped"]
     RUN --> EV4["event.plan.failed"]
     RUN --> EV5["event.token.threshold.exceeded"]
     RUN --> EV6["event.subtask.error"]
-
     SUB1 --> EV7["event.* 子事件"]
-
     style RUN fill:#e3f2fd
     style SUB1 fill:#fff3e0
     style SUB2 fill:#fff3e0
@@ -387,10 +381,9 @@ graph TB
 
 ```mermaid
 flowchart LR
-    DEF["defaults<br/>内置默认"] -->|被覆盖| CFG["config.json<br/>配置文件"]
-    CFG -->|被覆盖| ENV["env vars<br/>环境变量"]
+    DEF["defaults 内置默认"] -->|"被覆盖"| CFG["config.json 配置文件"]
+    CFG -->|"被覆盖"| ENV["env vars 环境变量"]
     ENV --> RESULT["生效配置"]
-
     style ENV fill:#c8e6c9
     style RESULT fill:#e3f2fd
 ```
@@ -436,11 +429,10 @@ OCR 内置一个嵌入式 HTTP 查看器，用于浏览会话日志与 Manifest�
 
 ```mermaid
 flowchart LR
-    REQ["HTTP 请求"] --> HG["hostGuard<br/>Host 头校验"]
+    REQ["HTTP 请求"] --> HG["hostGuard Host 头校验"]
     HG --> WL{"Host 在白名单?"}
-    WL -->|是| OK["允许访问"]
-    WL -->|否| REJ["拒绝 403"]
-
+    WL -->|"是"| OK["允许访问"]
+    WL -->|"否"| REJ["拒绝 403"]
     style WL fill:#fff3e0
     style OK fill:#c8e6c9
     style REJ fill:#ffcdd2
@@ -477,16 +469,13 @@ graph TB
     CARD["任务卡片"]
     CARD --> HEAD["Header"]
     CARD --> BODY["Body"]
-
     HEAD --> H1["请求号"]
     HEAD --> H2["model"]
     HEAD --> H3["token"]
     HEAD --> H4["duration"]
     HEAD --> H5["error 徽章（若有）"]
-
-    BODY --> RESP["Response<br/>LLM 响应内容"]
-    BODY --> TOOLS["Tool calls<br/>工具调用列表"]
-
+    BODY --> RESP["Response LLM 响应内容"]
+    BODY --> TOOLS["Tool calls 工具调用列表"]
     style HEAD fill:#e3f2fd
     style BODY fill:#fff3e0
 ```
@@ -554,10 +543,9 @@ Jaeger 原生支持 OTLP，是最简单的 trace 后端：
 
 ```mermaid
 flowchart LR
-    OCR["OCR<br/>otel SDK"] -->|OTLP gRPC:4317| COLL["Jaeger Collector<br/>内置 OTLP"]
+    OCR["OCR otel SDK"] -->|"OTLP gRPC:4317"| COLL["Jaeger Collector 内置 OTLP"]
     COLL --> STORE["Jaeger Storage"]
-    STORE --> UI["Jaeger UI<br/>:16686"]
-
+    STORE --> UI["Jaeger UI :16686"]
     style OCR fill:#e3f2fd
     style COLL fill:#fff3e0
     style UI fill:#c8e6c9
@@ -589,10 +577,9 @@ Datadog Agent 的 OTLP ingestion 端口同样为 4318（HTTP）：
 
 ```mermaid
 flowchart LR
-    OCR["OCR"] -->|OTLP HTTP:4318| DD["Datadog Agent"]
+    OCR["OCR"] -->|"OTLP HTTP:4318"| DD["Datadog Agent"]
     DD -->|forward| DDOG["Datadog 后端"]
-    DDOG --> DASH["Dashboards<br/>APM/Traces/Logs"]
-
+    DDOG --> DASH["Dashboards APM/Traces/Logs"]
     style OCR fill:#e3f2fd
     style DD fill:#732bbb
     style DASH fill:#c8e6c9
