@@ -9,7 +9,7 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 
 面向终端任务的 AI 产品与工具——浏览器/移动端自动化、Agent 桌面工作台、网页数据采集、垂直创作工具、量化/翻译/CAD 等任务型产品与能力交易平台。
 
-本类共 **30 个知识包**，分布于 **30 个生态/项目目录**。
+本类共 **33 个知识包**，分布于 **33 个生态/项目目录**。
 
 ## 束导航
 
@@ -47,6 +47,7 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 | [📖 InkOS 开源 AI 小说创作智能体系统](inkos/index.md) | 1 | 枫音AI推文经 OKF v0.2 核验转化——开源（AGPL-3.0）AI 小说创作：10 个 Agent 接力流水线、7 真相文件与三层记忆（JSON+Markdown+SQLite）、去 AI 味与文风仿写、守护进程挂机写书、续写与同人，含从零建书实操（4 项 P0 核验 0✅/4⚠️/0❌，星标 10K→5.6K 勘误） |
 | [🧰 Skills Manager 跨 AI 编程工具技能库](skills-manager/index.md) | 1 | 微信公开文章经官方 README、Release API 与实现源码核验——集中式 Skills 管理、Agent 集成、Windows/WSL 链接边界、Git 备份同步与凭证限制（非实机操作教程） |
 | [VidBee 视频下载与本地转录](vidbee/index.md) | 1 | 微信公开文章经官方资料核验转化：本地 ASR、AI 提示词、RSS 与自托管；版本、隐私及授权边界明确，操作未实测 |
+| [🎬 VibeKnow CLI 文档转视频终端工具](vibeknow-cli/index.md) | 1 | 源码级核验转化（tag v0.9.2 @ 93a26eca）——把文档/文本变成视频的 Cobra CLI：两阶段工作流、八档退出码契约、付费动作授权门（exit 8）、`--output` 三格式与 `vk_event=` 事件通道、preset 契约、预览产物与运行账本（104 条编号事实） |
 
 ```{toctree}
 :hidden:
@@ -84,4 +85,5 @@ image-blaster/index
 inkos/index
 skills-manager/index
 vidbee/index
+vibeknow-cli/index
 ```
