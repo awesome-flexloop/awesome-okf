@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论、零基础 AI 实操赚钱项目教程等 29 束行业分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论、零基础 AI 实操赚钱项目教程、AI 科学创新工坊双赛道活动规则等 30 束行业分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
@@ -49,6 +49,7 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 | [workbuddy-opc-whitepaper](workbuddy-opc-whitepaper/index.md) | 7+3 | 腾讯云《WorkBuddy OPC 白皮书》解读——OPC 规模数据与超级个体、硅基员工与六大商业模式、中国政策园区、WorkBuddy 三层架构与生态认证（厂商白皮书解读，非操作教程；flagged：平台能力数字为厂商自述、用户案例为受访者自述，357 条事实 F-001~F-357、22 项外部核验与 11 项勘误，六类口径分层） |
 | [big-tech-pontzi-track-selection](big-tech-pontzi-track-selection/index.md) | 8 | 知乎专栏转化：互联网大厂从业者的增量判据与赛道选择——「广义庞氏」拆为增量三问判据，串联圈层资源互换、蓝海成本打穿与行业拆解读表路径（方法论学习包，非操作教程；flagged：8 篇同源单源，196 条事实 F-001~F-196、22 项 P0 核验与 23 条勘误，机制层可用、数据层不可迁移） |
 | [ai-side-hustle-playbook](ai-side-hustle-playbook/index.md) | 12+2 | 微信博文转化：零基础 AI 实操赚钱项目教程——三种赚钱模式、工具成本地板、六条项目路径、定价交付 SOP 与合规红线（实操方法论，非源码教程；flagged：92 条事实 F-001~F-092、10 项 P0 核验，橱窗门槛/版权/AIGC 标识三处已按官方口径勘误） |
+| [zhihu-ai-science-workshop](zhihu-ai-science-workshop/index.md) | 9+3 | 知乎专栏转化：AI 科学创新工坊第二弹——双赛道工具绑定、40,000 元奖池、4 条投稿要求与 6 条评选规则的完整事实解构（活动规则分析包，非操作教程；flagged：第二弹全部细节为平台单源、7 处内链 href 不可复核、83 条事实 F-001~F-083、19 项 P0 核验与 5 项源文勘误） |
 
 ## 阅读建议
 
@@ -92,4 +93,5 @@ workbuddy-opc-whitepaper/index
 monetization-direction/index
 big-tech-pontzi-track-selection/index
 ai-side-hustle-playbook/index
+zhihu-ai-science-workshop/index
 ```
