@@ -9,7 +9,7 @@ description: "以厂商、品牌与开源社区为中心的生态级知识包集
 
 以厂商、品牌与开源社区为中心的生态级知识包集群——多仓库组织目录（trae、anthropic、deepseek、tencent、datawhale 等）与单厂产品束并存。
 
-本类共 **99 个知识包**，分布于 **17 个生态/项目目录**。
+本类共 **101 个知识包**，分布于 **17 个生态/项目目录**。
 
 ## 束导航
 
@@ -20,7 +20,7 @@ description: "以厂商、品牌与开源社区为中心的生态级知识包集
 | [🟠 Anthropic 官方生态](anthropic/index.md) | 9 | Anthropic Claude 官方生态——Python SDK、Claude Code CLI、提示词工程教程、官方Skills库、金融服务方案、Cookbook示例集、系统提示词发布史 |
 | [🧩 Coze 扣子开发平台生态](coze/index.md) | 3 | 字节跳动一站式 AI Agent 开发平台——Python SDK、开源平台、LLM 可观测性 |
 | [🐳 Datawhale 开源 AI 学习社区](datawhale/index.md) | 18 | 国内最大开源 AI 学习社区——LLM 全栈/RAG/Agent/向量数据库/推荐系统/ML 理论 |
-| [🧠 DeepSeek-AI 基础设施](deepseek/index.md) | 13 | DeepSeek 开源大模型基础设施——MoE 通信、GPU kernel 优化、注意力、流水线并行、负载均衡 |
+| [🧠 DeepSeek-AI 基础设施](deepseek/index.md) | 15 | DeepSeek 开源大模型基础设施——推理框架（DeepInfer）、Token 编解码（deepseek-recipe）、MoE 通信、GPU kernel 优化、注意力、流水线并行、负载均衡 |
 | [🛠️ DeepSeek Harness 2.0 桌面应用](deepseek-harness/index.md) | 1 | DeepSeek 官方桌面 App——模型外层执行壳、四种工作模式（Standard/PTC/Minimal/Creator）、MIT 开源免费+模型单独计费与峰谷定价（公众号单源，draft） |
 | [💳 DeepSeek-V4 免费方案与 API 定价](deepseek-pricing/index.md) | 1 | 网页/App 免费、API 赠送额度、峰谷定价、自托管与免费 vs 付费选型 FAQ（与 deepseek 基础设施技术束互补区分） |
 | [🔎 DeepSeek 网页搜索与抓取 API](deepseek-search-fetch/index.md) | 1 | Search/Fetch 双原始 JSON API——实时网页搜索与单页 Markdown 抓取、搜索语法、质量评分、错误重试、按次计费与账号级 QPS（与 deepseek 基础设施技术束互补区分） |

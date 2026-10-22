@@ -2,8 +2,8 @@
 okf_version: "0.2"
 type: bundles-index
 title: "DeepSeek-AI 基础设施"
-description: "DeepSeek-AI 开源大模型基础设施项目源码中文教程——MoE通信、GPU kernel优化、注意力机制、投机解码、流水线并行、负载均衡"
-total_bundles: 13
+description: "DeepSeek-AI 开源大模型基础设施项目源码中文教程——推理框架、Token 编解码、MoE通信、GPU kernel优化、注意力机制、投机解码、流水线并行、负载均衡"
+total_bundles: 15
 ---
 
 # DeepSeek-AI 基础设施（DeepSeek-AI Infrastructure）
@@ -17,6 +17,11 @@ total_bundles: 13
 │                  🧠 DeepSeek-AI 基础设施生态                   │
 │                                                              │
 │  ┌────────────────────────────────────────────────────────┐  │
+│  │              推理服务层（2026-10-20 新增）               │  │
+│  │  DeepInfer(推理引擎)   deepseek-recipe(Token 编解码)   │  │
+│  └───────────────────────┬────────────────────────────────┘  │
+│                          │ 调用                              │
+│  ┌───────────────────────▼────────────────────────────────┐  │
 │  │                  训练与推理系统层                        │  │
 │  │  DeepSpec(投机解码)  DualPipe(双向流水线)  LPLB(负载均衡)│  │
 │  └───────────────────────┬────────────────────────────────┘  │
@@ -63,6 +68,7 @@ total_bundles: 13
 | 知识包 | 简介 |
 |--------|------|
 | [deep-spec](deep-spec/index.md) | 投机解码训练框架——DSpark（块级锚点+Markov 头）、Eagle3（TTT+融合损失）、FSDP+BF16 训练管线 |
+| [deepinfer](deepinfer/index.md) | 大规模生产推理框架——ZOS 零开销调度、DSpark 变长验证、SWA Bounded Replay、结构化输出、EP/DP/EPLB 并行、NVIDIA SM100 与昇腾 950 双平台；含生产部署实践（四层负载均衡/KVCache 存储/自动扩缩容） |
 
 ### 应用模型与资源
 
@@ -72,6 +78,7 @@ total_bundles: 13
 | [deepseek-ocr2](deepseek-ocr2/index.md) | 文档 OCR 模型 V2——deepencoderv2 增强编码器、Qwen2 D2E 模块、GPU 加速图像处理 |
 | [deepseek-math-v2](deepseek-math-v2/index.md) | 数学推理模型——IMO/Putnam/CMO 竞赛数学、自验证推理管线、数学模板 prompt |
 | [engram](engram/index.md) | 条件记忆机制——n-gram 哈希门控、记忆读写融合、稀疏记忆路由、长上下文扩展 |
+| [deepseek-recipe](deepseek-recipe/index.md) | 生产级 Token 编解码组件——三协议（Messages/Chat Completions/Responses）统一转换、special token 双向防注入、分段并行 tokenize、跨 chunk KMP 流式解析、OpenCV 图片管线；Rust + Python 绑定，与官方 API 处理逻辑完整对齐 |
 | [awesome-deepseek-agent](awesome-deepseek-agent/index.md) | Agent 生态资源列表——28+ Agent 工具/平台集成指南（Cline/Claude Code/Cherry Studio 等） |
 | [vision-model-selection](vision-model-selection/index.md) | 跨厂商多模态视觉模型选型指南——DeepSeek-V4-Flash-Vision-Exp 切入、五类场景选型矩阵、价格对比、视觉-推理双模型协作架构 |
 
@@ -99,13 +106,14 @@ deep-gemm (JIT编译kernel架构)
 
 ```
 deep-spec (投机解码草稿模型训练评估)
-    → dual-pipe (流水线并行减少气泡)
+    → deepinfer (生产推理引擎与部署实践)
+    → deepseek-recipe (API 协议↔Token 编解码)
     → flash-mla (高效注意力解码)
 ```
 
 ## 版本信息
 
-- **文档生成日期**：2026-08-23
+- **文档生成日期**：2026-08-23（2026-10-22 增补 DeepInfer 与 deepseek-recipe 两束）
 - **源码来源**：https://github.com/deepseek-ai
 - **许可证**：各项目采用 MIT 或其他开源许可（详见各 bundle）
 
@@ -120,6 +128,8 @@ deep-ep/index
 dual-pipe/index
 lplb/index
 deep-spec/index
+deepinfer/index
+deepseek-recipe/index
 deepseek-ocr/index
 deepseek-ocr2/index
 deepseek-math-v2/index
