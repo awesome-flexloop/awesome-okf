@@ -61,7 +61,7 @@
 
 ### 门禁执行
 
-- `python scripts/check-bundles-index.py`：五面计数对账通过（frontmatter / 计数行 / 域节标题 / 分组表束数列 / toctree 一致）——实测输出「9 域 / 63 组 / 670 束，五面一致」。**口径说明**：本束自身对全库总束数的贡献为 **+1（668 → 669）**；实测 670 中的另 +1 来自并行在途、尚未提交的 `sheke/finance/ponzi-scheme/` 束，本束未回退该并行改动。
+- `python scripts/check-bundles-index.py`：五面计数对账通过（frontmatter / 计数行 / 域节标题 / 分组表束数列 / toctree 一致）——实测输出「9 域 / 63 组 / 670 束，五面一致」。**口径说明**：本束自身对总束数的贡献为 **+1**（提交基线 HEAD `total_bundles=664` → 本束提交后 **665**）；工作树实测 670 中的另 +5 束为并行在途、尚未提交的变更（`jishu/ai/frameworks/{deepseek-harness-0-2,humming,vllm,zvec}` 与 `sheke/finance/ponzi-scheme/`），本束既未回退也未携带这些并行改动。
 - `python scripts/check-toctrees.py`：本束零命中；报告的 2 处问题均属他人在途未提交的 `sheke/finance/ponzi-scheme/zhihu-column-draft.md`（未收录 + 缺 toctree 条目），本束未触碰。
 - `python scripts/check-utf8.py`：UTF-8 严格 roundtrip 通过（12239 个文件）。
 - `python .agents/scripts/check-links.py --path doc/bundles/sheke/industry/ai-side-hustle-playbook`（以子模块为工作根执行，主仓脚本按绝对路径调用）：本束 18 个 md、90 个本地引用，**零断链、零 `file:///` 绝对路径**。首轮曾报 2 处断链（`concepts/01-mental-models-and-market-window.md` 中 `../monetization-direction/`、`../auto-money-system/` 层级少一级），已改为 `../../` 并复跑通过。
@@ -82,3 +82,15 @@
 ### 提交
 
 - 原子提交顺序：子模块（本束 18 个文件 + 三级索引同步）→ 主仓库（spec 两件套）→ 子模块指针。**不 push**。
+
+| 仓库 | 提交 | 内容 |
+|------|------|------|
+| `projects/awesome-okf-xs` | `09b4d303` | `docs(bundle): 新增零基础 AI 实操赚钱项目教程知识包并接入五级索引` — 21 files changed, 1603 insertions(+), 8 deletions(-) |
+| `SpecWeave`（主仓） | `40a090a49` | `docs(specs): 新增零基础 AI 实操赚钱项目教程转 OKF Wiki 的规格与事实登记` — 2 files changed, 308 insertions(+) |
+| `SpecWeave`（主仓） | `b816c6075` | `chore(submodule): 前移 awesome-okf-xs 指针至 09b4d303（零基础 AI 实操赚钱项目教程束）` — 1 file changed（gitlink） |
+
+- **提交集点名**：子模块提交显式点名 21 个路径（本束 18 个文件 + `doc/bundles/index.md`、`doc/bundles/sheke/index.md`、`doc/bundles/sheke/industry/index.md`），未使用 `git add .`。
+- **共享索引的混合改动处理**：`doc/bundles/index.md` 与 `doc/bundles/sheke/index.md` 同时含有并行会话的在途改动（finance 2→3 束、jishu 493→497 束、ai 261→265 束、ponzi-scheme 入表）。为不误带他人改动，这两个文件改以 `git hash-object` + `git update-index --cacheinfo` 精确构造「HEAD + 仅本束增量」的索引条目，工作树文件保持原样未动；并行改动全部保留为未暂存状态，由其所属会话自行提交。
+- **编码回验**：`git cat-file -p HEAD` 确认中文主题与正文存储字节无乱码（UTF-8 bytes 通道提交）。
+- **推送状态**：**未 push**（子模块与主仓均留在本地，等待用户确认后推送）。
+- **本节的回填**：上表三条 hash 指内容提交与其配套的主仓提交，二者均稳定不变；本段（提交证据）作为紧随其后的独立原子提交回填，其自身 hash 按惯例不写入本文档（文档不能包含自身提交的 hash）。
