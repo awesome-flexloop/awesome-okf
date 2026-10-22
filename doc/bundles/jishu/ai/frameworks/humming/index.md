@@ -138,9 +138,10 @@ Humming 解决的核心问题是**量化 GEMM 的覆盖度与性能二选一**�
 
 ## 主题关联
 
-- [vLLM 高吞吐推理引擎](../vllm/index.md)：Humming 的宿主框架——本束讲内核，vLLM 束讲引擎与服务化全谱
 - [DeepGEMM 源码精读](../../ecosystems/deepseek/deep-gemm/index.md)：同为量化 GEMM 内核，AOT 预编译路线，是官方性能对标的主要基线
 - [AI Agent 框架](../ai-agent/index.md)：上层编排视角（跨域关联，弱耦合）
+
+> **宿主框架**：Humming 是 vLLM 的推理内核层依赖（`--linear-backend humming` / `--moe-backend humming` / `--quantization humming`），本束讲内核实现，宿主引擎与服务化全谱见 vLLM 官方文档与源码仓库。
 
 ```{toctree}
 :hidden:
