@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、个人变现方向发现方法论等 27 束行业分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论等 28 束行业分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
@@ -47,12 +47,14 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 | [telecom-token-operation](telecom-token-operation/index.md) | 6 | 中国电信 Token 经营：天府词元智造工厂——平台模式（做电网不做发电厂）、政企分工与运营商复制路径（flagged：补贴额度与共创名单为博文单源） |
 | [monetization-direction](monetization-direction/index.md) | 22 | 个人变现方向发现方法论——三类误区、自我盘点→候选生成→需求验证→决策启动四步法与四种起点路径矩阵，82 条 F 编号事实（stable：核心为学术理论与出版物出处归属，误传已逐条勘误） |
 | [workbuddy-opc-whitepaper](workbuddy-opc-whitepaper/index.md) | 7+3 | 腾讯云《WorkBuddy OPC 白皮书》解读——OPC 规模数据与超级个体、硅基员工与六大商业模式、中国政策园区、WorkBuddy 三层架构与生态认证（厂商白皮书解读，非操作教程；flagged：平台能力数字为厂商自述、用户案例为受访者自述，357 条事实 F-001~F-357、22 项外部核验与 11 项勘误，六类口径分层） |
+| [big-tech-pontzi-track-selection](big-tech-pontzi-track-selection/index.md) | 8 | 知乎专栏转化：互联网大厂从业者的增量判据与赛道选择——「广义庞氏」拆为增量三问判据，串联圈层资源互换、蓝海成本打穿与行业拆解读表路径（方法论学习包，非操作教程；flagged：8 篇同源单源，196 条事实 F-001~F-196、22 项 P0 核验与 23 条勘误，机制层可用、数据层不可迁移） |
 
 ## 阅读建议
 
 - **关注 AI 商业化路径**：从 [ai-monetization](ai-monetization/index.md) 入门，配合 [douyin-vibecoding](douyin-vibecoding/index.md) 与 [papi-jiang-solo-ip](papi-jiang-solo-ip/index.md) 案例对照；
 - **关注成本与选型**：[copilot-cost](copilot-cost/index.md) 与 [domestic-llm-comparison](domestic-llm-comparison/index.md) 互为补充；
 - **关注监管动态**：[ai-anthropomorphic-analysis](ai-anthropomorphic-analysis/index.md) 与 [ai-switch-governance](ai-switch-governance/index.md) 覆盖 2026 年拟人化与换脸治理两条监管线。
+- **关注职业与赛道选择**：[big-tech-pontzi-track-selection](big-tech-pontzi-track-selection/index.md) 给出「有没有增量 → 成本结构 → 圈层资源」的判据顺序与读表路径，配合 [monetization-direction](monetization-direction/index.md) 的方向发现四步法使用。
 
 > **时效性提示**：本组内容多为 2026-07 前后的行业快照，定价、产品与监管条款请以官方最新发布为准。
 
@@ -87,4 +89,5 @@ telecom-ai-pilot-base/index
 telecom-token-operation/index
 workbuddy-opc-whitepaper/index
 monetization-direction/index
+big-tech-pontzi-track-selection/index
 ```
