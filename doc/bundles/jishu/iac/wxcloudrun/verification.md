@@ -39,7 +39,7 @@ sources:
 | 部署边界声明 | PASS | 4 篇 examples 与根 `index.md` 均明确声明「未在任何真实云托管环境部署验证」。 |
 | 术语自解释 | PASS | 「结单」「webshell」两处在首次出现的概念文档中已补一句释义；「预发」仅出现在逐字引用 F-091 的表格单元中，保留原文口径。 |
 | 计数口径一致性 | PASS | F-163 的 7 项「暂不支持的场景」在 `concepts/05`、`concepts/06`、`examples/04` 三处均按 7 条对齐：表格已把原文的「仅支持 HTTP」与「不支持 tcp/udp/mqtt」拆为两行，使表行数与 F-163 条目数一一对应，正文不再出现「表 6 行却称 7 条」的矛盾。 |
-| 表格列数与渲染 | PASS | 脚本扫描本包全部 Markdown：按「忽略 `\\|` 转义」规则切分单元格，逐表比对表头列数与数据行列数，**不一致 0 处**。代码 span 内的 `|` 会切分单元格（MyST/markdown-it 严格按表头列数渲染，超出列被静默丢弃），已全部转义为 `\|`（F-068 的 `--releaseType=FULL\|GRAY`、本文件导航路径记法等）。 |
+| 表格列数与渲染 | PASS | 脚本扫描本包全部 Markdown 的所有表格：按 markdown-it `escapedSplit` 语义切分单元格（判据为**竖线的前一个字符是否为反斜杠**，与是否处于 code span 内无关；连续两个反斜杠同样算转义、渲染时保留一个），逐表比对表头列数与每个数据行的列数，**不一致 0 处**。MyST/docutils 渲染层复核确认：超出表头列数的数据行会被**静默截断**（多余单元格内容直接丢弃且不报错），因此列数比对只能做在源码层，渲染层只能证明截断确实发生。包内所有竖线字符均已加反斜杠转义（F-068 的 `--releaseType=FULL\|GRAY`、本文件导航路径记法等）。 |
 | 事实陈述归属 | PASS | 全部表格的「依据/事实」列均指向登记表中真实存在的 F 编号：脚本提取全包 F 引用集合并与 F-001~F-190 求差，**越界 0 个**；前置条件表中「被调服务需有线上版本」一条已改挂 F-060（版本分线上/线下两种状态），不再借用 F-053（发布单三子流程）充当依据。 |
 | 计数口径（覆盖矩阵） | PASS | 脚本统计：`concepts/` 覆盖 175 个不重复 F 编号、`examples/` 覆盖 91 个、并集 181 个、全包 190 个；coverage-matrix 第三节列出的 9 条（F-032、F-033、F-036、F-037、F-041、F-042、F-046、F-050、F-051）经复核在 concepts/ 与 examples/ 中**确实均未出现**，与矩阵陈述一致。 |
 
@@ -51,7 +51,7 @@ sources:
 | 全库 bundle/group/domain 计数 | PASS | `python scripts/check-bundles-index.py` 退出码 0，输出「9 域 / 63 组 / 661 束，五面一致」。 |
 | UTF-8 与全部项目质量门 | PASS | `python scripts/check-utf8.py` 退出码 0，输出「UTF-8 检查通过: 12066 个文件均为有效 UTF-8」；`check-toctrees.py` 与 `check-bundles-index.py` 均退出码 0（见上表）。 |
 | 完整文档构建 | 未执行 | 本次任务未运行 `invoke build`（Sphinx 完整构建），因此**不主张**构建通过；Sphinx 侧的 toctree 可达性已由 `check-toctrees.py` 的可达性检查覆盖。 |
-| 复核方式 | — | 复核本记录可执行 `python scripts/check-utf8.py`、`python scripts/check-toctrees.py`、`python scripts/check-bundles-index.py`（工作目录为本子模块根），三者输出即为本页所述结论的复现方式。 |
+| 复核方式 | — | 复核本记录可执行 `python scripts/check-utf8.py`、`python scripts/check-toctrees.py`、`python scripts/check-bundles-index.py`（工作目录为本子模块根），三者输出即为本页所述结论的复现方式；表格列数比对使用一次性脚本（未入库），其切分判据已在「表格列数与渲染」行完整写明，可按同判据复现。 |
 
 ## 范围与限制
 
