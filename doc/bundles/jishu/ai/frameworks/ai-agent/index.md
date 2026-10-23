@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 56
+total_bundles: 57
 ---
 
 # 🤖 AI Agent 框架
@@ -23,6 +23,7 @@ total_bundles: 56
 │  🐍 veadk-python      火山引擎SDK（豆包+A2A/A2UI）         │
 │  📘 zleap-agent       Workspace-first（TS+Rust Tauri）    │
 │  📘 deepseek-harness  Cordis插件架构（50+包TS monorepo）  │
+│  📘 dsh-0-2           DSH 0.2 官方源码（一切皆插件+组合包）  │
 │  💻 intelligent-terminal Windows Terminal（C++/Rust+ACP） │
 └────────────────────────────────────────────────────────────┘
   ↓
@@ -63,7 +64,8 @@ total_bundles: 56
 | [kylin-agent-runtime](kylin-agent-runtime/index.md) | Python | 10+2+2=14 | openKylin 麒麟智能体运行时（Hermes 下游分支）——三代架构、自注册工具体系(31工具集/8终端环境)、4类模型传输、curator技能策展、画像加密治理、Gateway 21平台适配器(含钉钉/飞书/企微/微信/QQ/元宝)、ACP/MCP/LSP |
 | [veadk-python](veadk-python/index.md) | Python | 10+4+1=15 | 火山引擎Agent SDK——Agent/Runner双层架构、豆包/方舟原生集成、A2A/A2UI协议、RAG知识库(8种向量后端)、双层记忆、Sequential/Parallel/Loop/Supervisor组合模式、Tunnel内网桥接 |
 | [zleap-agent](zleap-agent/index.md) | TS/Rust | 10+4+1=15 | Workspace-first Agent——Run→Work→WorkStep三级Fiber状态机、PostgreSQL+pgvector双线记忆(A/B线+RRF融合)、飞书/微信/Feishu CLI网关、子Agent委派、pg-boss定时任务 |
-| [deepseek-harness](deepseek-harness/index.md) | TypeScript | 10+4+1=15 | DeepSeek Agent框架——Cordis插件架构(50+包)、Phase状态机+Inbox双队列、defineTool类型安全工具、Event-Sourcing会话、MCP/ACP双协议、Skill分层系统 |
+| [deepseek-harness](deepseek-harness/index.md) | TypeScript | 10+4+1=15 | DeepSeek Agent框架——Cordis插件架构(50+包)、Phase状态机+Inbox双队列、defineTool类型安全工具、Event-Sourcing会话、MCP/ACP双协议、Skill分层系统（0.1.0-rc.5 旧版，架构已换代） |
+| [deepseek-harness-0-2](deepseek-harness-0-2/index.md) | TypeScript/Python | 11+5+2=18 | DeepSeek Harness 0.2 官方源码精读——一切皆插件的 Cordis 四抽象、profile/组合包四层叠加、Agent turn/step 状态机、SessionEvent 事件日志与两套 generation、工具执行流水线、LLM 抽象层、22 个能力 seam、沙箱/审批/权限预设三层安全模型，以及 CLI/Web/Desktop/Headless/ACP/Python SDK 六形态 |
 | [intelligent-terminal](intelligent-terminal/index.md) | C++/Rust | 10+4+1=15 | Windows Terminal原生Agent——双进程架构(Helper+Master)、COM协议服务器、命名管道传输、ACP JSON-RPC 2.0、OSC 133自动修复、Agent Pane XAML UI、wtcli命令工具 |
 
 ### 🔌 Tier 2：中型框架/库
@@ -160,7 +162,7 @@ total_bundles: 56
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：56 个知识包，共 405 个内容文档（257 概念 + 71 示例 + 75 信源；2026-09-23 Hypit 入组 +3 概念 +2 示例 +2 信源 +1 日志；2026-09-28 agent-knowledge-base 入组 +4 概念 +2 信源 +1 日志；2026-10-10 cua 入组 +6 概念 +2 信源 +1 日志；2026-10-14 kylin-agent-runtime 入组 +10 概念 +2 示例 +2 信源 +1 日志）；零推测事实底稿随束存放
+> **内容统计**：57 个知识包，共 423 个内容文档（268 概念 + 76 示例 + 77 信源；2026-09-23 Hypit 入组 +3 概念 +2 示例 +2 信源 +1 日志；2026-09-28 agent-knowledge-base 入组 +4 概念 +2 信源 +1 日志；2026-10-10 cua 入组 +6 概念 +2 信源 +1 日志；2026-10-14 kylin-agent-runtime 入组 +10 概念 +2 示例 +2 信源 +1 日志；2026-10-22 deepseek-harness-0-2 入组 +11 概念 +5 示例 +2 信源 +1 日志）；零推测事实底稿随束存放
 
 ```{toctree}
 :hidden:
@@ -175,6 +177,7 @@ kylin-agent-runtime/index
 veadk-python/index
 zleap-agent/index
 deepseek-harness/index
+deepseek-harness-0-2/index
 intelligent-terminal/index
 cordis/index
 second-me/index
