@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论、零基础 AI 实操赚钱项目教程、AI 科学创新工坊双赛道活动规则、千问Go!「我的应用」厂商公告等 31 束行业分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论、零基础 AI 实操赚钱项目教程、AI 科学创新工坊双赛道活动规则、千问Go!「我的应用」厂商公告、头条号变现体系等 32 束行业分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
@@ -51,6 +51,7 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 | [ai-side-hustle-playbook](ai-side-hustle-playbook/index.md) | 12+2 | 微信博文转化：零基础 AI 实操赚钱项目教程——三种赚钱模式、工具成本地板、六条项目路径、定价交付 SOP 与合规红线（实操方法论，非源码教程；flagged：92 条事实 F-001~F-092、10 项 P0 核验，橱窗门槛/版权/AIGC 标识三处已按官方口径勘误） |
 | [zhihu-ai-science-workshop](zhihu-ai-science-workshop/index.md) | 9+3 | 知乎专栏转化：AI 科学创新工坊第二弹——双赛道工具绑定、40,000 元奖池、4 条投稿要求与 6 条评选规则的完整事实解构（活动规则分析包，非操作教程；flagged：第二弹全部细节为平台单源、7 处内链 href 不可复核、83 条事实 F-001~F-083、19 项 P0 核验与 5 项源文勘误） |
 | [qianwen-go-my-apps](qianwen-go-my-apps/index.md) | 10 | 千问Go!「我的应用」公告解构——接入秒悟 Meoo、五类场景、云端 Pro 数据授权、邀测与计费边界（厂商公告解读，非操作教程；flagged：能力均为厂商口径、无独立实测，51 条事实 F-001~F-051、18 项 P0 核验与 10 项缺口） |
+| [toutiao-monetization](toutiao-monetization/index.md) | 15 | 头条号变现体系——今日头条创作者变现规则级拆解：首发激励计划六档演进、文字分成公式三乘数与三次升级、创作者计划权益阶梯与信用分熔断、中视频计划存量处置、新锐领航认证权益点值、90 天推进节奏与八组社区口径勘误（平台规则分析包，非操作教程；flagged：121 条事实 F-001~F-121 挂 18 个官方源、15 条单源对照、3 项官方口径缺口、26 项对抗审查） |
 
 ## 阅读建议
 
@@ -96,4 +97,5 @@ big-tech-pontzi-track-selection/index
 ai-side-hustle-playbook/index
 zhihu-ai-science-workshop/index
 qianwen-go-my-apps/index
+toutiao-monetization/index
 ```
