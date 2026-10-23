@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论、零基础 AI 实操赚钱项目教程、AI 科学创新工坊双赛道活动规则等 30 束行业分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论、零基础 AI 实操赚钱项目教程、AI 科学创新工坊双赛道活动规则、千问Go!「我的应用」厂商公告等 31 束行业分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
@@ -50,6 +50,7 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 | [big-tech-pontzi-track-selection](big-tech-pontzi-track-selection/index.md) | 8 | 知乎专栏转化：互联网大厂从业者的增量判据与赛道选择——「广义庞氏」拆为增量三问判据，串联圈层资源互换、蓝海成本打穿与行业拆解读表路径（方法论学习包，非操作教程；flagged：8 篇同源单源，196 条事实 F-001~F-196、22 项 P0 核验与 23 条勘误，机制层可用、数据层不可迁移） |
 | [ai-side-hustle-playbook](ai-side-hustle-playbook/index.md) | 12+2 | 微信博文转化：零基础 AI 实操赚钱项目教程——三种赚钱模式、工具成本地板、六条项目路径、定价交付 SOP 与合规红线（实操方法论，非源码教程；flagged：92 条事实 F-001~F-092、10 项 P0 核验，橱窗门槛/版权/AIGC 标识三处已按官方口径勘误） |
 | [zhihu-ai-science-workshop](zhihu-ai-science-workshop/index.md) | 9+3 | 知乎专栏转化：AI 科学创新工坊第二弹——双赛道工具绑定、40,000 元奖池、4 条投稿要求与 6 条评选规则的完整事实解构（活动规则分析包，非操作教程；flagged：第二弹全部细节为平台单源、7 处内链 href 不可复核、83 条事实 F-001~F-083、19 项 P0 核验与 5 项源文勘误） |
+| [qianwen-go-my-apps](qianwen-go-my-apps/index.md) | 10 | 千问Go!「我的应用」公告解构——接入秒悟 Meoo、五类场景、云端 Pro 数据授权、邀测与计费边界（厂商公告解读，非操作教程；flagged：能力均为厂商口径、无独立实测，51 条事实 F-001~F-051、18 项 P0 核验与 10 项缺口） |
 
 ## 阅读建议
 
@@ -94,4 +95,5 @@ monetization-direction/index
 big-tech-pontzi-track-selection/index
 ai-side-hustle-playbook/index
 zhihu-ai-science-workshop/index
+qianwen-go-my-apps/index
 ```
