@@ -8,10 +8,10 @@ status: stable
 stale_after: 2027-08-22
 sources:
   - id: skill-creator
-    resource: ../../../../../../external/libs/models/ai/anthropics/skills/skills/skill-creator/SKILL.md
+    resource: ../../../../../../external/libs/anthropics/skills/skills/skill-creator/SKILL.md
     title: Skill创建元技能（评估流程定义）
   - id: schemas
-    resource: ../../../../../../external/libs/models/ai/anthropics/skills/skills/skill-creator/references/schemas.md
+    resource: ../../../../../../external/libs/anthropics/skills/skills/skill-creator/references/schemas.md
     title: 评估JSON Schema定义
 ---
 

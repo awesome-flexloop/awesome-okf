@@ -1,29 +1,29 @@
 ---
 type: Concept
 title: Skill 打包格式
-description: Anthropic Skills的.skill分发包格式——ZIP压缩包规范（DEFLATED压缩）、打包前自动验证、排除规则（__pycache__/node_modules/evals/.DS_Store/*.pyc）、打包命令（package_skill.py）、17个内置Skill分类、.claude-plugin marketplace分组机制（document-skills/example-skills/claude-api三个插件包）。
+description: Anthropic Skills的.skill分发包格式——ZIP压缩包规范（DEFLATED压缩）、打包前自动验证、排除规则（__pycache__/node_modules/evals/.DS_Store/*.pyc）、打包命令（package_skill.py）、19个内置Skill分类、.claude-plugin marketplace分组机制（document-skills/example-skills/claude-api/academy-guide/discernment-nudge五个插件包）。
 tags: [anthropics-skills, packaging, zip, distribution, marketplace, plugin, exclude, skill-file]
 generated: { by: "agent:okf-doc-generator", at: "2026-08-22T22:44:00+08:00" }
 status: stable
 stale_after: 2027-08-22
 sources:
   - id: package-skill
-    resource: ../../../../../../external/libs/models/ai/anthropics/skills/skills/skill-creator/scripts/package_skill.py
+    resource: ../../../../../../external/libs/anthropics/skills/skills/skill-creator/scripts/package_skill.py
     title: Skill打包脚本
   - id: marketplace
-    resource: ../../../../../../external/libs/models/ai/anthropics/skills/.claude-plugin/marketplace.json
+    resource: ../../../../../../external/libs/anthropics/skills/.claude-plugin/marketplace.json
     title: Claude Code插件市场配置
   - id: quick-validate
-    resource: ../../../../../../external/libs/models/ai/anthropics/skills/skills/skill-creator/scripts/quick_validate.py
+    resource: ../../../../../../external/libs/anthropics/skills/skills/skill-creator/scripts/quick_validate.py
     title: 验证脚本
   - id: skill-creator
-    resource: ../../../../../../external/libs/models/ai/anthropics/skills/skills/skill-creator/SKILL.md
+    resource: ../../../../../../external/libs/anthropics/skills/skills/skill-creator/SKILL.md
     title: Skill创建元技能
 ---
 
 # Skill 打包格式
 
-Anthropic Skills 使用 `.skill` 文件作为分发格式，本质是 ZIP 压缩包，包含 SKILL.md 和所有捆绑资源。打包前自动执行格式验证，内置排除规则过滤掉不应分发的文件。`.claude-plugin/marketplace.json` 将 17 个内置 Skill 组织为 3 个插件包，支持 Claude Code 的插件市场机制。
+Anthropic Skills 使用 `.skill` 文件作为分发格式，本质是 ZIP 压缩包，包含 SKILL.md 和所有捆绑资源。打包前自动执行格式验证，内置排除规则过滤掉不应分发的文件。`.claude-plugin/marketplace.json` 将 19 个内置 Skill 组织为 5 个插件包，支持 Claude Code 的插件市场机制。
 
 ## 设计原理
 
@@ -187,16 +187,16 @@ graph TD
 
 解压后的目录结构与源目录一致（保留相对路径）。最小的 `.skill` 文件仅包含一个 `SKILL.md`。
 
-## 17 个内置 Skill 清单
+## 19 个内置 Skill 清单
 
-仓库共包含 17 个可用 Skill（不含 template/）：
+仓库共包含 19 个可用 Skill（不含 template/）：
 
 ```mermaid
 graph LR
-    ALL["17 Skills"] --> CREATIVE["创意设计类<br/>(6个)"]
+    ALL["19 Skills"] --> CREATIVE["创意设计类<br/>(6个)"]
     ALL --> DOCS["文档处理类<br/>(4个)"]
     ALL --> DEV["开发技术类<br/>(5个)"]
-    ALL --> COMM["企业沟通类<br/>(2个)"]
+    ALL --> COMM["企业沟通类<br/>(4个)"]
 
     CREATIVE --> C1["algorithmic-art"]
     CREATIVE --> C2["brand-guidelines"]
@@ -218,6 +218,8 @@ graph LR
 
     COMM --> M1["doc-coauthoring"]
     COMM --> M2["internal-comms"]
+    COMM --> M3["academy-guide"]
+    COMM --> M4["discernment-nudge"]
 
     style CREATIVE fill:#ec4899,color:#fff
     style DOCS fill:#f97316,color:#000
@@ -227,33 +229,37 @@ graph LR
 
 | Skill | 类型 | 脚本数 | 许可证 |
 |-------|------|--------|--------|
+| academy-guide | 企业沟通 | 0 | Apache 2.0 |
 | algorithmic-art | 创意设计 | templates/ | Apache 2.0 |
 | brand-guidelines | 创意设计 | 0 | Apache 2.0 |
 | canvas-design | 创意设计 | canvas-fonts/ | Apache 2.0 |
-| doc-coauthoring | 企业沟通 | 0 | Apache 2.0 |
-| docx | 文档处理 | 14 | Proprietary |
+| discernment-nudge | 企业沟通 | 0 | Apache 2.0 |
+| doc-coauthoring | 企业沟通 | 0 | 无 LICENSE.txt |
+| docx | 文档处理 | 15 | Proprietary |
 | frontend-design | 创意设计 | 0 | Apache 2.0 |
 | internal-comms | 企业沟通 | 0 | Apache 2.0 |
 | claude-api | 开发技术 | references/ (8 SDK) | Apache 2.0 |
 | mcp-builder | 开发技术 | 2 | Apache 2.0 |
 | pdf | 文档处理 | 8 | Proprietary |
-| pptx | 文档处理 | 14 | Proprietary |
+| pptx | 文档处理 | 15 | Proprietary |
 | skill-creator | 开发技术 | 10 | Apache 2.0 |
 | slack-gif-creator | 创意设计 | 4 | Apache 2.0 |
 | theme-factory | 创意设计 | 0 | Apache 2.0 |
 | web-artifacts-builder | 开发技术 | 0 | Apache 2.0 |
 | webapp-testing | 开发技术 | 4 | Apache 2.0 |
-| xlsx | 文档处理 | 11 | Proprietary |
+| xlsx | 文档处理 | 12 | Proprietary |
 
 ## Marketplace 插件分组
 
-`.claude-plugin/marketplace.json` 将 17 个 Skill 组织为 3 个 plugin（插件包），支持 Claude Code 的插件市场机制：
+`.claude-plugin/marketplace.json` 将 19 个 Skill 组织为 5 个 plugin（插件包），支持 Claude Code 的插件市场机制：
 
 ```mermaid
 graph TB
     MP["marketplace.json"] --> P1["document-skills<br/>文档处理套件"]
     MP --> P2["example-skills<br/>示例技能集"]
     MP --> P3["claude-api<br/>独立插件"]
+    MP --> P4["academy-guide<br/>独立插件"]
+    MP --> P5["discernment-nudge<br/>独立插件"]
 
     P1 --> PD1["xlsx"]
     P1 --> PD2["docx"]
@@ -274,11 +280,15 @@ graph TB
     P2 --> PE12["webapp-testing"]
 
     P3 --> PC1["claude-api<br/>(8语言SDK文档)"]
+    P4 --> PA1["academy-guide"]
+    P5 --> PN1["discernment-nudge"]
 
     style MP fill:#1e293b,color:#fff
     style P1 fill:#f97316,color:#000
     style P2 fill:#06b6d4,color:#000
     style P3 fill:#8b5cf6,color:#fff
+    style P4 fill:#8b5cf6,color:#fff
+    style P5 fill:#8b5cf6,color:#fff
 ```
 
 ### Plugin 配置结构

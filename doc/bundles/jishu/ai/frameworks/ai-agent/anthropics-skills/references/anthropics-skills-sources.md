@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: Anthropic Skills 参考实现源码信源登记
-description: Anthropic Agent Skills 参考实现仓库结构、SKILL.md 格式规范、Progressive Disclosure 加载机制、.skill 打包格式、17 个 Skill 清单与 Python 工具脚本信源
+description: Anthropic Agent Skills 参考实现仓库结构、SKILL.md 格式规范、Progressive Disclosure 加载机制、.skill 打包格式、19 个 Skill 清单与 Python 工具脚本信源
 tags: [anthropic-skills, agent-skills, skill.md, claude-code, progressive-disclosure, source, reference]
 generated: { by: "source-code-to-okf-wiki/trae", at: "2026-08-22T23:10:00+08:00" }
 status: stable
@@ -22,12 +22,12 @@ sources:
 | 属性 | 值 |
 |------|-----|
 | 项目名 | Anthropic Skills（参考实现） |
-| 描述 | Anthropic 官方 Agent Skills 参考实现仓库，包含 17 个可用 Skill 和 Skill 创建/验证/打包工具 |
+| 描述 | Anthropic 官方 Agent Skills 参考实现仓库，包含 19 个可用 Skill 和 Skill 创建/验证/打包工具 |
 | 仓库 | <https://github.com/anthropics/skills> |
 | 规范地址 | <https://agentskills.io/specification> |
-| Skill 总数 | 17 个 |
-| Python 文件数 | 67 个（各 Skill 自带领域工具脚本） |
-| 源码位置 | `d:\spaces\SpecWeave\external\libs\models\ai\anthropics\skills\` |
+| Skill 总数 | 19 个 |
+| Python 文件数 | 72 个（各 Skill 自带领域工具脚本） |
+| 源码位置 | `d:\spaces\SpecWeave\external\libs\anthropics\skills\` |
 
 ## 目录结构
 
@@ -37,52 +37,58 @@ skills/
 ├── THIRD_PARTY_NOTICES.md       # 第三方声明
 ├── .gitignore
 ├── .claude-plugin/
-│   └── marketplace.json         # Claude Code 插件市场配置（3 个 plugin 分组）
+│   └── marketplace.json         # Claude Code 插件市场配置（5 个 plugin 分组）
 ├── spec/
 │   └── agent-skills-spec.md     # 规范指针（指向 agentskills.io）
 ├── template/
 │   └── SKILL.md                 # 最小 Skill 模板（6行）
-└── skills/                      # 17 个 Skill 实现目录
+└── skills/                      # 19 个 Skill 实现目录
+    ├── academy-guide/            # Claude Academy 课程推荐
     ├── algorithmic-art/         # p5.js 算法艺术生成
     ├── brand-guidelines/        # Anthropic 品牌色彩/字体
     ├── canvas-design/           # Canvas 视觉艺术设计
     ├── claude-api/              # Claude API/SDK 参考文档（8 语言 SDK，最大 skill）
+    ├── discernment-nudge/       # 实质性回答后的针对性追问
     ├── doc-coauthoring/         # 文档协作写作工作流
-    ├── docx/                    # Word 文档创建/编辑/分析（14 个 Python 脚本）
+    ├── docx/                    # Word 文档创建/编辑/分析（15 个 Python 脚本）
     ├── frontend-design/         # 前端 UI 设计指导
     ├── internal-comms/          # 内部沟通文档写作
     ├── mcp-builder/             # MCP 服务器开发指南
     ├── pdf/                     # PDF 处理（8 个 Python 脚本）
-    ├── pptx/                    # PowerPoint 创建/编辑（14 个 Python 脚本）
+    ├── pptx/                    # PowerPoint 创建/编辑（15 个 Python 脚本）
     ├── skill-creator/           # 元技能：创建/改进/评估 Skill（10 个 Python 脚本）
     ├── slack-gif-creator/       # Slack 优化 GIF 动画（4 个 Python 脚本）
     ├── theme-factory/           # 主题/样式工厂（10 预设主题）
     ├── web-artifacts-builder/   # React+Tailwind+shadcn HTML 构件
     ├── webapp-testing/          # Playwright Web 应用测试（4 个 Python 脚本）
-    └── xlsx/                    # Excel 电子表格（11 个 Python 脚本）
+    └── xlsx/                    # Excel 电子表格（12 个 Python 脚本）
 ```
 
-## 17 个 Skill 清单
+## 19 个 Skill 清单
 
 | # | Skill 名 | 类别 | Python 脚本数 | 说明 |
 |---|---------|------|-------------|------|
-| 1 | `algorithmic-art` | 创意设计 | 0 | p5.js 算法艺术生成，含 templates/ |
-| 2 | `brand-guidelines` | 创意设计 | 0 | Anthropic 品牌色彩/字体规范 |
-| 3 | `canvas-design` | 创意设计 | 0 | Canvas 视觉艺术，含 canvas-fonts/ |
-| 4 | `claude-api` | 开发技术 | 0 | Claude API/SDK 文档（8 语言 SDK + 20+ shared 参考文件） |
-| 5 | `doc-coauthoring` | 企业沟通 | 0 | 文档协作写作纯指令工作流 |
-| 6 | `docx` | 文档处理 | 14 | Word 文档（accept_changes/comment/merge_runs + office/） |
-| 7 | `frontend-design` | 创意设计 | 0 | 前端 UI 设计哲学与原则 |
-| 8 | `internal-comms` | 企业沟通 | 0 | 内部沟通文档写作纯指令 |
-| 9 | `mcp-builder` | 开发技术 | 2 | MCP 服务器开发（连接测试/评估脚本） |
-| 10 | `pdf` | 文档处理 | 8 | PDF 提取/合并/拆分/表单/OCR |
-| 11 | `pptx` | 文档处理 | 14 | PowerPoint（add_slide/clean/thumbnail + office/） |
-| 12 | `skill-creator` | 开发技术 | 10 | 元技能：创建/验证/评估/打包/优化 Skill |
-| 13 | `slack-gif-creator` | 创意设计 | 4 | GIF 构建/验证/缓动/帧合成（含 core/gif_builder.py） |
-| 14 | `theme-factory` | 创意设计 | 0 | 10 个预设主题 |
-| 15 | `web-artifacts-builder` | 开发技术 | 0 | React+Tailwind+shadcn 复杂 HTML 构件 |
-| 16 | `webapp-testing` | 开发技术 | 4 | Playwright 服务器管理+示例 |
-| 17 | `xlsx` | 文档处理 | 11 | Excel（recalc + office/helpers + office/validators） |
+| 1 | `academy-guide` | 企业沟通 | 0 | Claude Academy 课程推荐纯指令 |
+| 2 | `algorithmic-art` | 创意设计 | 0 | p5.js 算法艺术生成，含 templates/ |
+| 3 | `brand-guidelines` | 创意设计 | 0 | Anthropic 品牌色彩/字体规范 |
+| 4 | `canvas-design` | 创意设计 | 0 | Canvas 视觉艺术，含 canvas-fonts/（54 TTF） |
+| 5 | `claude-api` | 开发技术 | 2 | Claude API/SDK 文档（8 语言 SDK + shared/ 参考文件） |
+| 6 | `discernment-nudge` | 企业沟通 | 0 | 实质性回答后追加针对性追问纯指令 |
+| 7 | `doc-coauthoring` | 企业沟通 | 0 | 文档协作写作纯指令工作流（唯一无 LICENSE.txt） |
+| 8 | `docx` | 文档处理 | 15 | Word 文档（accept_changes/comment/merge_runs + office/ + templates/） |
+| 9 | `frontend-design` | 创意设计 | 0 | 前端 UI 设计哲学与原则 |
+| 10 | `internal-comms` | 企业沟通 | 0 | 内部沟通写作纯指令（正文仅 32 行，路由到 examples/） |
+| 11 | `mcp-builder` | 开发技术 | 2 | MCP 服务器开发（连接测试/评估脚本 + reference/ 4 篇） |
+| 12 | `pdf` | 文档处理 | 8 | PDF 提取/合并/拆分/表单/OCR |
+| 13 | `pptx` | 文档处理 | 15 | PowerPoint（add_slide/clean/thumbnail + office/） |
+| 14 | `skill-creator` | 开发技术 | 10 | 元技能：创建/验证/评估/打包/优化 Skill（+ 3 个子代理 + eval-viewer/） |
+| 15 | `slack-gif-creator` | 创意设计 | 4 | GIF 构建/验证/缓动/帧合成（含 core/gif_builder.py） |
+| 16 | `theme-factory` | 创意设计 | 0 | 10 个预设主题（**Markdown 格式**） |
+| 17 | `web-artifacts-builder` | 开发技术 | 0 | React+Tailwind+shadcn 复杂 HTML 构件（shell 脚本） |
+| 18 | `webapp-testing` | 开发技术 | 4 | Playwright 服务器管理+示例 |
+| 19 | `xlsx` | 文档处理 | 12 | Excel（recalc + office/helpers + office/validators） |
+
+> 📌 **共享子树**：docx / pptx / xlsx 三者的 `scripts/office/` **逐字节完全相同**（各 50 文件，含 39 个 XSD：27 ISO-IEC 29500-4 + 1 ECMA + 1 MCE + 7 Microsoft）。详细拆解见 [official-skills bundle 的文档处理类详解](../../../../ecosystems/anthropic/official-skills/concepts/05-document-skills.md)。
 
 ## Skill 目录结构规范
 
@@ -113,7 +119,7 @@ skill-name/
 | 文件 | 内容 |
 |------|------|
 | `README.md` | 项目总览、基础 Skill 创建教程 |
-| `.claude-plugin/marketplace.json` | 插件市场配置，将 17 个 Skill 分为 3 个 plugin |
+| `.claude-plugin/marketplace.json` | 插件市场配置，将 19 个 Skill 分为 5 个 plugin |
 | `spec/agent-skills-spec.md` | 规范指针，内容仅一行指向 `https://agentskills.io/specification` |
 | `template/SKILL.md` | 最小可用 Skill 模板（6 行） |
 
@@ -129,35 +135,45 @@ skill-name/
 
 ### 文档处理三套件共享模块
 
+> 🔑 **关键事实**：docx / pptx / xlsx 三者的 `scripts/office/` 子树**逐字节完全相同**（逐文件 md5 比对一致），各 50 个文件。
+
 | 文件 | 内容 |
 |------|------|
-| `skills/xlsx/scripts/office/helpers/` | OOXML 辅助：pptx_chart.py、pptx_slide.py、pptx_theme.py |
-| `skills/xlsx/scripts/office/validators/` | XSD 验证：base.py、docx.py、pptx.py、redlining.py |
-| `skills/xlsx/scripts/office/soffice.py` | LibreOffice 封装（沙箱环境适配） |
-| `skills/xlsx/scripts/office/validate.py` | OOXML 文件验证入口 |
-| `skills/docx/scripts/` | 14 个脚本：accept_changes.py、comment.py、merge_runs.py 等 |
-| `skills/pptx/scripts/` | 14 个脚本：add_slide.py、clean.py、thumbnail.py 等 |
+| `skills/{docx,pptx,xlsx}/scripts/office/helpers/` | OOXML 辅助：`pptx_chart.py`、`pptx_slide.py`、`pptx_theme.py`（**三件套共享的是 PPTX 专用 helper**） |
+| `skills/{docx,pptx,xlsx}/scripts/office/validators/` | XSD 验证：`base.py`、`docx.py`、`pptx.py`、`redlining.py` |
+| `skills/{docx,pptx,xlsx}/scripts/office/soffice.py` | LibreOffice 封装（沙箱环境适配） |
+| `skills/{docx,pptx,xlsx}/scripts/office/validate.py` | OOXML 文件验证入口 |
+| `skills/{docx,pptx,xlsx}/scripts/office/schemas/` | **39 个 XSD**：27 ISO-IEC29500-4_2016 + 1 ECMA + 1 MCE + 7 Microsoft |
+| `skills/docx/scripts/` | 4 个顶层脚本：`accept_changes.py`、`comment.py`、`merge_runs.py`、`__init__.py` |
+| `skills/docx/scripts/templates/` | 5 个 Word 批注 XML：`comments.xml`、`commentsExtended.xml`、`commentsExtensible.xml`、`commentsIds.xml`、`people.xml`（**与 office/ 是兄弟目录**） |
+| `skills/pptx/scripts/` | 4 个顶层脚本：`add_slide.py`、`clean.py`、`thumbnail.py`、`__init__.py` |
+| `skills/xlsx/scripts/` | 1 个顶层脚本：`recalc.py`（**无 `__init__.py`**，与另两者不对称） |
 
 ### 其他 Skill 的核心代码
 
 | 文件 | 内容 |
 |------|------|
-| `skills/slack-gif-creator/core/gif_builder.py` | `GIFBuilder` 类：add_frame/add_frames/optimize_colors/deduplicate_frames/save（依赖 PIL/imageio/numpy） |
+| `skills/slack-gif-creator/core/gif_builder.py` | `GIFBuilder` 类：add_frame/add_frames/optimize_colors/deduplicate_frames/save（依赖 PIL/imageio/numpy，默认 480×480 @ 15fps） |
+| `skills/slack-gif-creator/core/easing.py` | 缓动函数库，经 `EASING_FUNCTIONS.update({...})` 注册（含 `back_out`） |
 | `skills/pdf/scripts/` | 8 个 PDF 处理脚本 |
-| `skills/webapp-testing/scripts/` | 4 个 Playwright 服务器管理脚本 |
-| `skills/mcp-builder/scripts/` | 2 个连接测试/评估脚本 |
+| `skills/webapp-testing/scripts/with_server.py` | 环境编排器：起服务 → 探端口就绪 → 跑命令 → 清理（`--server`/`--port` 可重复） |
+| `skills/webapp-testing/examples/` | 3 个可执行示例：`console_logging.py`、`element_discovery.py`、`static_html_automation.py` |
+| `skills/mcp-builder/scripts/` | 2 个连接测试/评估脚本（`evaluation.py` 用 XML `<summary>` 标签约束输出结构） |
 
 ## Plugin/Marketplace 分组
 
-`.claude-plugin/marketplace.json` 将 17 个 Skill 分为 3 个 plugin：
+`.claude-plugin/marketplace.json` 将 19 个 Skill 分为 5 个 plugin：
 
 | Plugin | Skills | 说明 |
 |--------|--------|------|
-| **document-skills** | xlsx, docx, pptx, pdf | 文档处理套件 |
+| **document-skills** | xlsx, docx, pptx, pdf | 文档处理套件（4 个） |
 | **example-skills** | algorithmic-art, brand-guidelines, canvas-design, doc-coauthoring, frontend-design, internal-comms, mcp-builder, skill-creator, slack-gif-creator, theme-factory, web-artifacts-builder, webapp-testing | 示例技能集（12 个） |
-| **claude-api** | claude-api | 独立插件 |
+| **claude-api** | claude-api | 独立插件（1 个） |
+| **academy-guide** | academy-guide | 独立插件（1 个） |
+| **discernment-nudge** | discernment-nudge | 独立插件（1 个） |
 
 每个 plugin 配置：`name`、`description`、`source: "./"`、`strict: false`、`skills: [paths...]`。
+marketplace 元数据：`name: anthropic-agent-skills`、`owner: Keith Lazuka`、`metadata.version: 1.0.0`。
 
 ## SKILL.md 格式规范
 
@@ -211,10 +227,10 @@ description: Replace with description of the skill and when Claude should use it
 | Level 3 | Bundled resources（scripts/references/assets/...） | 按需加载 | 无限制 |
 
 **长度指南**：
-- SKILL.md 推荐 ≤500 行
+- SKILL.md 推荐 ≤500 行（**建议，非硬性要求**——`quick_validate.py` 不含任何行数检查；官方 `claude-api` 616 行、`skill-creator` 485 行、`algorithmic-art` 404 行均可正常加载）
 - >500 行时增加分层结构，添加 references 指引
 - 大参考文件(>300 行)应包含目录
-- reference 文件应明确标注何时读取
+- reference 文件应明确标注何时读取（实测仅 `mcp-builder` 完整做到标注 "Load First" / "Load During Phase 1/2" / "Load During Phase 4"）
 - 多领域支持按变体组织（如 aws.md, gcp.md, azure.md）
 
 **资源引用约定**：
@@ -226,18 +242,18 @@ description: Replace with description of the skill and when Claude should use it
 ## .skill 打包格式
 
 - **本质**：ZIP 压缩包，使用 `zipfile.ZIP_DEFLATED` 压缩
-- **打包命令**：`python -m scripts.package_skill <skill-folder> [output-dir]`
-- **输出文件名**：`<skill-name>.skill`（使用目录名，非 frontmatter name）
-- **前置验证**：打包前先运行 `validate_skill()`
+- **打包命令**：`python scripts/package_skill.py <skill-folder> [output-dir]`（在 `skills/skill-creator/` 目录下执行——脚本用 `from scripts.quick_validate import validate_skill` 相对导入）
+- **输出文件名**：`<skill-name>.skill`（使用**目录名**，非 frontmatter name）
+- **前置验证**：打包前自动运行 `validate_skill()`，校验失败直接中止并打印修复提示
 - **排除规则**：
   - 目录：`__pycache__`、`node_modules`
-  - 根目录专属：`evals/`（测试用例不打包）
+  - 根目录专属：`evals/`（**仅在 skill 根目录这一层排除**，嵌套更深的不排除）
   - 文件：`.DS_Store`
   - Glob：`*.pyc`
 
 ## Python 代码模式
 
-仓库中 **无通用 Skill 运行时/加载器**。67 个 Python 文件全部是各 Skill 自带的领域工具脚本：
+仓库中 **无通用 Skill 运行时/加载器**。72 个 Python 文件全部是各 Skill 自带的领域工具脚本：
 - 不存在通用 Skill 加载器/解析器（除 skill-creator 中的验证/打包工具外）
 - 不存在 Skill 执行引擎或运行时框架
 - 不存在插件系统或动态发现机制

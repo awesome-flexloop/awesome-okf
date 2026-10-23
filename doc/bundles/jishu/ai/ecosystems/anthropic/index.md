@@ -67,7 +67,7 @@ Anthropic开源生态围绕**Claude模型**构建，形成从基础API到垂直�
 | [**claude-code**](claude-code/index.md) | 🟡结构化整理 | 9文档，CLI Agent框架、插件体系（commands/agents/skills/hooks/MCP）、13个官方插件、SDK开发 | Claude Code用户、插件开发者 |
 | [**cookbooks**](cookbooks/index.md) | 🟡结构化整理 | 10文档，30+实战食谱索引，覆盖Agent SDK/Tool Use/Multimodal/Advanced/Third-party/Third-party-API | 快速上手、实战参考 |
 | [**prompt-engineering**](prompt-engineering/index.md) | 🟡结构化整理 | 8文档，9章提示词工程教程，入门(结构/清晰/角色)→中级(数据分离/CoT/示例)→高级(防幻觉) | 提示词优化、Prompt工程师 |
-| [**official-skills**](official-skills/index.md) | 🟡结构化整理 | 9文档，19个官方Skills分类索引，SKILL.md格式规范，skill-creator元技能，claude-api多语言参考 | Skill开发者、Claude Code高级用户 |
+| [**official-skills**](official-skills/index.md) | 🟡结构化整理 | 14文档，19个官方Skills逐个剖析（用途/结构/编写规范/可复用模式），SKILL.md格式规范，skill-creator元技能，claude-api多语言参考，实测事实登记表F-001~F-098 | Skill开发者、Claude Code高级用户 |
 | [**financial-services**](financial-services/index.md) | 🟢行业方案 | 9文档，10个金融Agents、7个垂直Skills、12个MCP数据连接器、双模式部署（Cowork+Managed Agents API） | 金融科技、投研/投行/PE/财富管理 |
 | [**system-prompts**](system-prompts/index.md) | 🟡结构化整理 | 13文档，官方系统提示词发布史：18模型×30日期条目（2024-07→2026-09）全景矩阵、四时代逐条目解析、设计思想演进分析 | 提示词工程师、AI产品研究者 |
 | [**agent-roadmap**](agent-roadmap/index.md) | 🟢行业方案 | 1文档，Anthropic Agent 开发路线图学习 Wiki——Agent 能力演进方向、产品矩阵与工程实践趋势（learning 03 合并增量） | AI 产品规划、Agent 开发者 |
@@ -112,16 +112,18 @@ Anthropic开源生态围绕**Claude模型**构建，形成从基础API到垂直�
 
 ## 文档统计
 
+> 📐 **口径**：概念/示例/参考三列统计**内容文档**（不含各层的 `index.md` 导航页）；"总文件"= 三列之和 + 根 `index.md` + `log.md`。2026-10-24 按实测重算，原表 claude-code / cookbooks / prompt-engineering / financial-services / system-prompts 五行与实测有偏差，已一并校正。
+
 | 子Bundle | 概念文档 | 示例/食谱 | 参考文档 | 总文件 |
 |---------|---------|----------|---------|-------|
 | python-sdk | 10 | 6 | 6 | 24 |
-| claude-code | 2 | 1 | 1 | 9 |
-| cookbooks | 5 | 0 | 1 | 10 |
-| prompt-engineering | 5 | 0 | 0 | 8 |
-| official-skills | 4 | 0 | 1 | 9 |
-| financial-services | 4 | 0 | 1 | 9 |
-| system-prompts | 7 | 0 | 2 | 13 |
-| **合计** | **37** | **7** | **12** | **82** |
+| claude-code | 2 | 1 | 1 | 6 |
+| cookbooks | 5 | 0 | 1 | 8 |
+| prompt-engineering | 5 | 0 | 0 | 7 |
+| official-skills | 9 | 2 | 3 | 16 |
+| financial-services | 4 | 0 | 2 | 8 |
+| system-prompts | 7 | 0 | 2 | 11 |
+| **合计** | **42** | **9** | **15** | **80** |
 
 ## 版本说明
 

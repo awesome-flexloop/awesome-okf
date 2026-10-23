@@ -8,13 +8,13 @@ status: stable
 stale_after: 2027-08-22
 sources:
   - id: skill-creator
-    resource: ../../../../../../external/libs/models/ai/anthropics/skills/skills/skill-creator/SKILL.md
+    resource: ../../../../../../external/libs/anthropics/skills/skills/skill-creator/SKILL.md
     title: Skill创建元技能（加载机制权威定义）
   - id: webapp-testing
-    resource: ../../../../../../external/libs/models/ai/anthropics/skills/skills/webapp-testing/SKILL.md
+    resource: ../../../../../../external/libs/anthropics/skills/skills/webapp-testing/SKILL.md
     title: Web应用测试Skill（资源引用示例）
   - id: xlsx
-    resource: ../../../../../../external/libs/models/ai/anthropics/skills/skills/xlsx/SKILL.md
+    resource: ../../../../../../external/libs/anthropics/skills/skills/xlsx/SKILL.md
     title: Excel Skill（脚本引用示例）
 ---
 
@@ -82,7 +82,7 @@ description: >     # 触发决策的唯一依据
 
 ### 元数据规模估算
 
-以 17 个内置 Skill 计算：
+以 19 个内置 Skill 计算：
 - 平均 name：~15 字符
 - 平均 description：~200 字符
 - 总计元数据：~3.6K 字符 ≈ 500-800 tokens
@@ -234,7 +234,7 @@ graph TD
 
 ### 实际资源分布
 
-以 17 个内置 Skill 的 Python 脚本分布为例：
+以 19 个内置 Skill 的 Python 脚本分布为例：
 
 | Skill | Python 文件数 | 资源类型 |
 |-------|-------------|---------|

@@ -8,19 +8,19 @@ status: stable
 stale_after: 2027-08-22
 sources:
   - id: readme
-    resource: ../../../../../../external/libs/models/ai/anthropics/skills/README.md
+    resource: ../../../../../../external/libs/anthropics/skills/README.md
     title: 项目说明
   - id: skill-creator
-    resource: ../../../../../../external/libs/models/ai/anthropics/skills/skills/skill-creator/SKILL.md
+    resource: ../../../../../../external/libs/anthropics/skills/skills/skill-creator/SKILL.md
     title: Skill创建元技能（格式权威定义）
   - id: quick-validate
-    resource: ../../../../../../external/libs/models/ai/anthropics/skills/skills/skill-creator/scripts/quick_validate.py
+    resource: ../../../../../../external/libs/anthropics/skills/skills/skill-creator/scripts/quick_validate.py
     title: Frontmatter验证脚本
   - id: utils
-    resource: ../../../../../../external/libs/models/ai/anthropics/skills/skills/skill-creator/scripts/utils.py
+    resource: ../../../../../../external/libs/anthropics/skills/skills/skill-creator/scripts/utils.py
     title: SKILL.md解析工具
   - id: template
-    resource: ../../../../../../external/libs/models/ai/anthropics/skills/template/SKILL.md
+    resource: ../../../../../../external/libs/anthropics/skills/template/SKILL.md
     title: 最小Skill模板
 ---
 
@@ -256,7 +256,7 @@ def validate_skill(skill_path: Path) -> list[str]:
 
 ## SKILL.md Body 内容模式
 
-17 个内置 Skill 的 body 呈现 4 种内容模式：
+19 个内置 Skill 的 body 呈现 4 种内容模式：
 
 ```mermaid
 graph TB
@@ -265,7 +265,7 @@ graph TB
     BODY --> DESIGN["设计指导型"]
     BODY --> HYBRID["混合型"]
 
-    INSTR --> I1["doc-coauthoring<br/>internal-comms"]
+    INSTR --> I1["doc-coauthoring<br/>internal-comms<br/>academy-guide<br/>discernment-nudge"]
     I1 --> I2["分步骤工作流<br/>触发条件→操作步骤→退出条件"]
 
     CODE --> C1["pdf, xlsx<br/>docx, pptx"]
@@ -290,7 +290,9 @@ graph TB
 | 创意设计类 | algorithmic-art, canvas-design, brand-guidelines, frontend-design, theme-factory, slack-gif-creator | 输出视觉产物，含字体/模板资源，强调工艺感 |
 | 文档处理类 | pdf, docx, pptx, xlsx | Source-available，专有许可证，含 office/ 共享模块，依赖 LibreOffice |
 | 开发技术类 | claude-api, mcp-builder, webapp-testing, web-artifacts-builder, skill-creator | 面向开发者，大量参考文档和代码示例 |
-| 企业沟通类 | doc-coauthoring, internal-comms | 纯指令型工作流，无 scripts，指导写作流程 |
+| 企业沟通类 | doc-coauthoring, internal-comms, academy-guide, discernment-nudge | 纯指令型工作流，无 scripts，指导写作/推荐/追问流程 |
+
+> 📌 逐个 skill 的用途、结构、编写规范与可复用模式剖析见 [official-skills bundle](../../../../ecosystems/anthropic/official-skills/index.md)——本 bundle 聚焦**格式规范本身**，该 bundle 聚焦**官方 19 个 skill 的实例**。
 
 ## 指令写作风格原则
 

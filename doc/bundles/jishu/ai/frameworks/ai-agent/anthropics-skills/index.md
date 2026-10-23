@@ -22,13 +22,15 @@ related:
 
 # Anthropic Skills
 
-Anthropic Skills 是 Anthropic 官方发布的 Agent Skills 参考实现，定义了 SKILL.md 文件格式标准（6个YAML frontmatter字段、kebab-case命名、description触发机制、body<500行长度指南）、三级渐进式加载架构（Metadata→Body→Bundled Resources）、.skill分发包格式（ZIP/DEFLATED、自动验证、排除规则），以及内置的评估基准框架（双slave对比运行、A/B盲比、description自动优化循环、三环境适配）。包含17个内置Skill分类。
+Anthropic Skills 是 Anthropic 官方发布的 Agent Skills 参考实现，定义了 SKILL.md 文件格式标准（6个YAML frontmatter字段、kebab-case命名、description触发机制、body<500行长度指南）、三级渐进式加载架构（Metadata→Body→Bundled Resources）、.skill分发包格式（ZIP/DEFLATED、自动验证、排除规则），以及内置的评估基准框架（双slave对比运行、A/B盲比、description自动优化循环、三环境适配）。包含19个内置Skill分类。
+
+> 📌 **配套 bundle**：本 bundle 聚焦**格式规范本身**；逐个 skill 的用途/结构/编写规范/可复用模式剖析见 [official-skills](../../ecosystems/anthropic/official-skills/index.md)。两者互补，不重复。
 
 ## 🧩 概念导航（Concepts）
 
 - [skill-md-format-spec](concepts/skill-md-format-spec.md) — SKILL.md格式规范：6个frontmatter字段、kebab-case命名、description触发、body 4种内容模式、<500行指南
 - [progressive-loading](concepts/progressive-loading.md) — 渐进式加载机制：三级加载（Metadata~100词→Body<500行→Resources按需）、资源引用约定、大文件分层
-- [skill-packaging](concepts/skill-packaging.md) — Skill打包格式：.skill ZIP规范、DEFLATED压缩、排除规则、package_skill.py、17个内置Skill分类
+- [skill-packaging](concepts/skill-packaging.md) — Skill打包格式：.skill ZIP规范、DEFLATED压缩、排除规则、package_skill.py、19个内置Skill分类
 - [eval-benchmark-framework](concepts/eval-benchmark-framework.md) — 评估基准框架：evals.json测试用例、双slave对比、grading.json评分、A/B盲比、三环境适配（Claude Code/Claude.ai/Cowork）
 
 ## 🎯 示例导航（Examples）
@@ -37,7 +39,7 @@ Anthropic Skills 是 Anthropic 官方发布的 Agent Skills 参考实现，定�
 
 ## 📚 参考导航（References）
 
-- [anthropics-skills-sources](references/anthropics-skills-sources.md) — Anthropic Agent Skills参考实现仓库结构、SKILL.md规范、Progressive Disclosure机制、17个Skill清单与工具脚本信源
+- [anthropics-skills-sources](references/anthropics-skills-sources.md) — Anthropic Agent Skills参考实现仓库结构、SKILL.md规范、Progressive Disclosure机制、19个Skill清单与工具脚本信源
 
 ## 🔗 关联 Bundle
 
