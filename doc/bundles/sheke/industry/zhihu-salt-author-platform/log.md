@@ -14,7 +14,8 @@
 | 2026-10-23 | V | 四视角对抗审查（4 个独立代理并发）：去重后 40 条意见，P0×9 / P1×21 / P2×7 / P3×3 |
 | 2026-10-23 | V | 采纳修正 17 项 + 连带一致性修正 4 项 + 全包 `status`/`stale_after` 统一；未采纳项登记为剩余风险 R1~R7 |
 | 2026-10-23 | E | 补齐 references/02-verification.md 与 log.md；三级索引对账（industry 32→33、sheke 78→79、bundles 673→675，计数按目录树地面真值，含并行会话在途束） |
-| 2026-10-23 | C | 子模块内原子提交（Conventional Commits，中文主体） |
+| 2026-10-23 | C | 子模块内原子提交：commit `a4e64270`（`feat(bundles): 新增知乎盐言作者平台知识包`），24 个文件（21 个新增 md + 3 个索引文件），提交范围已隔离并行会话在途改动 |
+| 2026-10-23 | 质量门 | 提交态复测（对暂存树快照实测）：bundles-index 674 束五面一致、toctree 全部可达无断链、utf8 12289 个文件有效、相对链接 170 条全通 |
 
 ## R 阶段记录（事实采集）
 
@@ -43,16 +44,18 @@
   - **references/**：01 信源清单与采集边界／02 对抗审查报告。
 - **落位判断**：`doc/bundles/sheke/industry/`——与既有 `zhihu-monetization`（站内创作激励）、`zhihu-ai-science-workshop`（AI 活动样本）、`big-tech-pontzi-track-selection`（赛道选择）同属知乎平台簇可互链；`sheke/marketing/` 组收录原则明确排除「平台玩法等时效性内容」，故不落 marketing。
 - **索引对账**：industry/index.md（32→33 束）、sheke/index.md（78→79 束）、bundles/index.md（673→675 束）三级同步更新；计数一律以 `check-bundles-index.py` 的目录树递归口径为地面真值（含并行会话在途束）。
+- **提交口径隔离**：本次提交只含本束 + 本束索引增量，故提交态计数为 industry 33 / sheke 79 / bundles **674**（工作树 675 束含并行会话在途的 `kanshan-workbench`，该增量留在工作树不并入本提交）。
 
 ## 质量门记录
 
-三门脚本实测（2026-10-23，awesome-okf-xs 仓库根执行）：
+门禁脚本实测（2026-10-23，awesome-okf-xs 仓库根执行；工作树与提交态暂存树快照各一轮）：
 
 | 门禁 | 结果 |
 |------|------|
-| `scripts/check-utf8.py` | ✅ 12334 个文件均为有效 UTF-8 |
-| `scripts/check-toctrees.py` | ⚠️ 本束 21 个文件全部可达、无断链；剩余 14 条报错全部属并行会话在途的 `jishu/ai/frameworks/ai-agent/zhihu-open-platform`（该束根与 examples/ 尚未生成 index.md），非本束问题 |
-| `scripts/check-bundles-index.py` | ✅ 9 域 / 63 组 / 675 束；frontmatter、计数行、节标题、分组表、toctree 五面一致 |
+| `scripts/check-utf8.py` | ✅ 工作树 12334 个文件均为有效 UTF-8；提交态暂存树快照复测 12289 个文件均有效 |
+| `scripts/check-toctrees.py` | ⚠️ 工作树：本束 21 个文件全部可达、无断链，剩余 14 条报错全部属并行会话在途的 `jishu/ai/frameworks/ai-agent/zhihu-open-platform`（该束根与 examples/ 尚未生成 index.md），非本束问题；✅ 提交态暂存树快照复测全部通过（无断链、内容文档均可达） |
+| `scripts/check-bundles-index.py` | ✅ 工作树 9 域 / 63 组 / 675 束（含并行会话在途束）；提交态暂存树快照 9 域 / 63 组 / 674 束，frontmatter、计数行、节标题、分组表、toctree 五面一致 |
+| `check-links.py`（SpecWeave 侧） | ✅ 本束 21 个 md、170 条内联链接全部有效（提交态暂存树快照实测） |
 
 手动等效补充检查：本 bundle 内 `file:///` 零出现；保留文件名仅 index.md / log.md；`okf_version` 仅出现在 bundle 根 index.md；`sources[].resource` 与 `generated.by` 全文件齐备；全包 F 编号引用种类 111，未定义引用 0。
 
