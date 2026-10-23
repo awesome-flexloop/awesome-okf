@@ -77,7 +77,7 @@ sources:
 | [ai-monetization](../ai-monetization/index.md) | 总论：AI 变现模式全景 → 本包是「内容平台广告分成 + 独家版权补贴」这一具体形态的规则级拆解 |
 | [monetization-essence](../monetization-essence/index.md) | 方法论：变现本质公理 → 本包提供「平台规则如何决定收益结构」的平台实例 |
 | [monetization-direction](../monetization-direction/index.md) | 方向发现：个人变现方向发现四步法 → 本包是「选定内容平台赛道后如何落地规则层」的下一环 |
-| [ai-side-hustle-playbook](../ai-side-hustle-playbook/index.md) | 旁证：零基础 AI 实操赚钱项目 → 本包的原创首发红线与 AI 辅助边界（[06 篇](../concepts/06-risk-and-boundaries.md) 第四节）互为约束 |
+| [ai-side-hustle-playbook](../ai-side-hustle-playbook/index.md) | 旁证：零基础 AI 实操赚钱项目 → 本包的原创首发红线与 AI 辅助边界（[06 篇](concepts/06-risk-and-boundaries.md) 第四节）互为约束 |
 | [workbuddy-content-system](../workbuddy-content-system/index.md) | 工具侧：一鱼多用的内容生产流水线 → 本包提供分发侧的平台规则约束（72 小时独家窗口 F-006、自动同步陷阱 F-026） |
 
 ## 已知边界
