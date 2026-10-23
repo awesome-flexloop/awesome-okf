@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 57
+total_bundles: 58
 ---
 
 # 🤖 AI Agent 框架
@@ -131,6 +131,7 @@ total_bundles: 57
 | [ai-app-survival](ai-app-survival/index.md) | 商业分析 | 6+0+2+1=9 | 晚点LatePost深度调研AI应用生存困境——三重挤压(模型吞噬/负毛利/上游入口)、Stripe 11.5月达100万ARR vs SaaS 15月、Bessemer AI均毛利25% vs SaaS 70%、Perplexity/Cursor负毛利会计口径、scaling to bankruptcy、Devv搜索窗口仅半年、a16z三年仅14家常驻、Epoch AI能力增速8到15指数点、Brookings模型厂下场归因、易观办公Agent三分之二流量集中大厂、下游卖结果与上游做模型(租客困境)、12项P0核验(9确认3存疑0证伪) |
 | [wigolo](wigolo/index.md) | 工具教程 | 3+4+2+1=10 | wigolo本地优先Agent网页能力工具——MCP/REST/SDK三面提供search/fetch/crawl/extract/cache/find_similar/research/agent/diff/watch十工具、18搜索引擎并行+本地重排、字节级source_span证据与evidence_score置信度、fetch三级升级路由、数据全在~/.wigolo、六核心工具零API Key零按量费用、--agents一键接线9客户端、n8n/TS/Python SDK/框架包/Docker、⚠️AGPL-3.0与research/agent需LLM、10项P0核验全✅(2项口径标注:Firecrawl免费额度单源/博文日期未检出) |
 | [zhihu-cli](zhihu-cli/index.md) | 工具教程 | 6+3+3=12 | 知乎数据开放平台Zhihu CLI官方命令行工具——公共内容+个人数据双通道、搜索/热榜/直答/个人数据四大核心能力、API+Skill+MCP三种接入方式、供应链四道校验+Keychain凭证安全存储、五种实战玩法（创作出诊/风格蒸馏/选题雷达/能力看板/飞书推送）、全平台Agent生态（Claude Code/Codex/Cursor/WorkBuddy）、105条事实可溯源、14项P0核验、3条勘误 |
+| [zhihu-open-platform](zhihu-open-platform/index.md) | 官方文档教程 | 10+5+2=17 | 知乎数据开放平台官方文档全集精读（31篇）——鉴权双头与10分钟窗口、9额度组16项价格计费、站内/全网搜索与热榜、直答三档模型SSE、问题发现、创作能力四接口、直答知识库RAG、PDF/PPT异步小工具、OAuth用户数据、MCP/Skill/CLI三接入面、120条编号事实+11条文档缺口登记 |
 | [openhuman](openhuman/index.md) | 产品介绍 | 4+0+2=6 | OpenHuman（TinyHumans）本地优先个人Agent Harness——GPL-3.0/Rust/Tauri、Memory Tree三树摘要记忆（≤3k分块/SQLite+Obsidian/20分钟auto-fetch）、TokenJuice最高省80%、Meet/Zoom/Teams/Webex真人参会、Signal E2E+x402、Ollama全本地可选、Early Beta；⚠️博文7,800star/118+OAuth/17渠道/10亿token等数字成组老化（现值39.8k/100+/15，10亿仅弱源）、12项P0核验(6✅6⚠️0❌)六条勘误 |
 | [openviking](openviking/index.md) | 工具教程 | 3+3+2+1=9 | 火山引擎开源Agent上下文数据库——viking://虚拟文件系统统一承载记忆/资源/技能、L0/L1/L2三层摘要按需加载、目录递归检索可回溯、会话异步沉淀长期记忆跨会话召回、15个MCP工具+Hooks接Claude Code/Codex/Cursor/TRAE；博文一手Docker部署+Web Studio双密钥+VikingBot跨会话记忆实测；48条事实、10项P0核验全✅0❌、2项口径差异（health字段/VikingBot工具名） |
 | [oracle](oracle/index.md) | 工具教程 | 3+2+2+1=8 | steipete/oracle第二大脑CLI——prompt+选定文件打包成上下文，Browser Mode复用已登录ChatGPT网页会话做第二模型评审、Codex本地执行；另有API六家/Gemini Web/Render/oracle-mcp；Node 24+、sessions可重连、Pro fail-closed；41条事实、10项P0核验全✅0硬勘误、5项博文缺口官方补充（平台/多Provider/MCP/版本时效/安全） |
@@ -162,7 +163,7 @@ total_bundles: 57
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：57 个知识包，共 423 个内容文档（268 概念 + 76 示例 + 77 信源；2026-09-23 Hypit 入组 +3 概念 +2 示例 +2 信源 +1 日志；2026-09-28 agent-knowledge-base 入组 +4 概念 +2 信源 +1 日志；2026-10-10 cua 入组 +6 概念 +2 信源 +1 日志；2026-10-14 kylin-agent-runtime 入组 +10 概念 +2 示例 +2 信源 +1 日志；2026-10-22 deepseek-harness-0-2 入组 +11 概念 +5 示例 +2 信源 +1 日志）；零推测事实底稿随束存放
+> **内容统计**：58 个知识包，共 440 个内容文档（278 概念 + 81 示例 + 79 信源；2026-09-23 Hypit 入组 +3 概念 +2 示例 +2 信源 +1 日志；2026-09-28 agent-knowledge-base 入组 +4 概念 +2 信源 +1 日志；2026-10-10 cua 入组 +6 概念 +2 信源 +1 日志；2026-10-14 kylin-agent-runtime 入组 +10 概念 +2 示例 +2 信源 +1 日志；2026-10-22 deepseek-harness-0-2 入组 +11 概念 +5 示例 +2 信源 +1 日志；2026-10-23 zhihu-open-platform 入组 +10 概念 +5 示例 +2 信源 +1 日志）；零推测事实底稿随束存放
 
 ```{toctree}
 :hidden:
@@ -217,6 +218,7 @@ matrix-zero-person-company/index
 ai-app-survival/index
 wigolo/index
 zhihu-cli/index
+zhihu-open-platform/index
 openhuman/index
 openviking/index
 ai-agent-book/index

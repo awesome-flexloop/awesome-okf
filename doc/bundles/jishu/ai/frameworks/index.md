@@ -2,20 +2,20 @@
 okf_version: "0.2"
 type: category
 title: "🧩 Agent 与 LLM 应用框架"
-description: "Agent 与 LLM 应用的开发框架、运行时与代码库源码教程——以 ai-agent（57 束）与 langchain-ai（19 束）两大仓库集群为核心，辅以极简框架、分词、推理、决策模型、AI 原生搜索引擎（XERJ）、嵌入式向量检索库（Zvec）与 JIT 编译量化 GEMM 内核库（Humming）等基础库。"
+description: "Agent 与 LLM 应用的开发框架、运行时与代码库源码教程——以 ai-agent（58 束）与 langchain-ai（19 束）两大仓库集群为核心，辅以极简框架、分词、推理、决策模型、AI 原生搜索引擎（XERJ）、嵌入式向量检索库（Zvec）与 JIT 编译量化 GEMM 内核库（Humming）等基础库。"
 ---
 
 # 🧩 Agent 与 LLM 应用框架
 
-Agent 与 LLM 应用的开发框架、运行时与代码库源码教程——以 ai-agent（57 束）与 langchain-ai（19 束）两大仓库集群为核心，辅以极简框架、分词、推理、决策模型、AI 原生搜索引擎（XERJ）、嵌入式向量检索库（Zvec）与 JIT 编译量化 GEMM 内核库（Humming）等基础库。
+Agent 与 LLM 应用的开发框架、运行时与代码库源码教程——以 ai-agent（58 束）与 langchain-ai（19 束）两大仓库集群为核心，辅以极简框架、分词、推理、决策模型、AI 原生搜索引擎（XERJ）、嵌入式向量检索库（Zvec）与 JIT 编译量化 GEMM 内核库（Humming）等基础库。
 
-本类共 **90 个知识包**，分布于 **12 个生态/项目目录**。
+本类共 **91 个知识包**，分布于 **12 个生态/项目目录**。
 
 ## 束导航
 
 | 知识包 | 束数 | 一句话简介 |
 |--------|------|-----------|
-| [🤖 AI Agent 框架](ai-agent/index.md) | 57 | AI Agent 运行时框架与架构模式——工具调用循环、多代理编排、记忆系统、Coding Agent 源码解读、Hypit 视频复刻工作流与 Tongyi-MAI GUI Agent 生态源码精读 |
+| [🤖 AI Agent 框架](ai-agent/index.md) | 58 | AI Agent 运行时框架与架构模式——工具调用循环、多代理编排、记忆系统、Coding Agent 源码解读、知乎开放平台官方文档全集精读、Hypit 视频复刻工作流与 Tongyi-MAI GUI Agent 生态源码精读 |
 | [🦜🔗 LangChain-AI LLM 应用框架](langchain-ai/index.md) | 19 | LangChain/LangGraph 核心框架（Python+JS）、深度研究 Agent、可观测性、评测与基础设施 |
 | [⚡ PocketFlow 极简 LLM 应用框架](pocketflow/index.md) | 5 | 100 行代码的极简 LLM Agent 框架——节点+流程抽象、6 大设计模式、实战教程 |
 | [🕷️ Firecrawl 网页数据 API](firecrawl/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化（技术综述非操作教程）——18 万 Star 开源 web context API：七端点、Agent 与 /extract、spark-1 弃用→spark-2、九 SDK/CLI/MCP、开源 vs 云分界与 AGPL 边界（两轮 26 簇核验 20✅/5⚠️/2❌） |
