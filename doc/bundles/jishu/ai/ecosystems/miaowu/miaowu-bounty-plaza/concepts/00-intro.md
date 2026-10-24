@@ -63,8 +63,8 @@ sources:
 
 | 既有束 | 关注点 | 与本束的互补关系 |
 |---|---|---|
-| [miaowu-ambassador-guide](../miaowu-ambassador-guide/index.md) | 秒悟大使入驻与**推广返现**体系 | 阿里云官网秒悟页含「加入 Meoo 大使，推广得返现激励」、返现比例最高 30%（F-008），构成创作者激励的「返现」一侧；本束的共创计划则是「技能征集」一侧 |
-| [miaowu-meoo-practice-cases](../miaowu-meoo-practice-cases/index.md) | 秒悟**怎么搭**（实训案例与搭建方法） | 与本束形成「怎么搭」↔「搭完怎么增长」的互补：前者解决产品做出来，后者 25 条技能面向做出来之后 |
+| [miaowu-ambassador-guide](../../miaowu-ambassador-guide/index.md) | 秒悟大使入驻与**推广返现**体系 | 阿里云官网秒悟页含「加入 Meoo 大使，推广得返现激励」、返现比例最高 30%（F-008），构成创作者激励的「返现」一侧；本束的共创计划则是「技能征集」一侧 |
+| [miaowu-meoo-practice-cases](../../miaowu-meoo-practice-cases/index.md) | 秒悟**怎么搭**（实训案例与搭建方法） | 与本束形成「怎么搭」↔「搭完怎么增长」的互补：前者解决产品做出来，后者 25 条技能面向做出来之后 |
 
 ## 5. 本页属于索引型知识，而非教程型知识
 
