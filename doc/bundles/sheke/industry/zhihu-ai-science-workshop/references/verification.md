@@ -1,11 +1,11 @@
 ---
 okf_version: "0.2"
 type: Reference
-title: "P0 核验报告：AI 科学创新工坊第二弹"
-description: "AI 科学创新工坊第二弹的 P0 权威核验结论——19 项逐条结论表、四张勘误清单过筛记录、5 项源文错误与勘误、flagged 判定依据与证据 URL 全量清单。"
+title: "P0 核验报告：AI 科学创新工坊第二弹（含 AI Works 一键代部署）"
+description: "AI 科学创新工坊第二弹及 AI Works 一键代部署公告的 P0 权威核验结论——28 项逐条结论表（C1–C28）、四张勘误清单过筛记录、5 项源文错误与勘误、flagged 判定依据与证据 URL 全量清单。"
 tags: ["zhihu-ai-science-workshop", "P0核验", "勘误", "flagged"]
-generated: { by: "seven-concepts-cmd", at: "2026-10-22T00:00:00Z" }
-verified: [{ by: "process:seven-concepts-v", at: "2026-10-22T00:00:00Z" }]
+generated: { by: "seven-concepts-cmd", at: "2026-10-23T00:00:00Z" }
+verified: [{ by: "process:seven-concepts-v", at: "2026-10-22T00:00:00Z" }, { by: "process:seven-concepts-v", at: "2026-10-23T00:00:00Z" }]
 status: flagged
 stale_after: "2026-12-31"
 sources:
@@ -15,21 +15,26 @@ sources:
     resource: "/references/article-source.md"
   - id: raw
     resource: ".trae/specs/zhihu-ai-science-workshop-okf-wiki/raw/article-raw.md"
+  - id: ai-works-deploy-article
+    url: "https://zhuanlan.zhihu.com/p/2079176428197603018"
+    title: "🚀 Vibe coding作品能直接上线？AI Works 一键代部署来了！（知乎产品情报局，2026-10-19）"
 ---
 
 # P0 核验报告：AI 科学创新工坊第二弹
 
 > **⚠️ flagged 结论**：活动的**存在性、时间窗、双赛道奖励结构、奖池算术**获多源或自证确认；但**第二弹本身无独立媒体转载**（权威媒体仅覆盖「2026 知乎科学季」及第一期工坊），且 **7 处内链 href 全部不可复核**、**看山工作台的商汤关联仅为平台自述**、**诺奖相关表述存在跨语境简化与年份误标**。引用本报告涉及的数字与产品名，须连同单源标注与勘误说明转述。
+>
+> **增补说明（2026-10-23）**：新增 AI Works 一键代部署官方公告作为补充源文（F-084~F-108），补齐「上传源码」后的部署链路；该文为平台自述、未真机实测，且未提及「科学季」项目类型，**不改变本包 flagged 判定**。
 
 ## 一、核验范围与方法
 
 | 项 | 内容 |
 |---|---|
-| 核验对象 | 知乎专栏文章 https://zhuanlan.zhihu.com/p/2091930347550109878 的全部核心声明 |
-| 核验基准 | 原文逐字正文（`raw/article-raw.md`，CLI 滑窗拼接全文，13 窗口命中） |
-| 核验轮次 | 两轮。第一轮 C1–C19 结构化核验；第二轮补齐证据 URL 并复核三组具体事实 |
-| 核验手段 | 知乎开放平台 CLI（`zhihu-cli search zhihu`，多锚点滑窗）、非知乎站点 WebFetch/WebSearch 直取官方页面 |
-| 通道限制 | 直连 `zhuanlan.zhihu.com` 与 `www.zhihu.com/api/v4/articles/<id>` 均 403（code 40362）；Playwright 无头 Chromium 亦 403。CLI 返回的 `ContentText` 为纯文本片段（每次约 1021–1202 字符），**不含正文内链 href 与图片 src** → 源文 7 处超链接目标不可逐字复核 |
+| 核验对象 | 知乎专栏文章 https://zhuanlan.zhihu.com/p/2091930347550109878 的全部核心声明；补充源文 https://zhuanlan.zhihu.com/p/2079176428197603018 的部署流程声明（F-084~F-108） |
+| 核验基准 | 原文逐字正文（`raw/article-raw.md`，CLI 滑窗拼接全文，13 窗口命中）；补充源文由 browser_use 渲染读取全文 |
+| 核验轮次 | 三轮。第一轮 C1–C19 结构化核验；第二轮补齐证据 URL 并复核三组具体事实；第三轮（2026-10-23）增补 AI Works 一键代部署公告，新增 C20–C28 |
+| 核验手段 | 知乎开放平台 CLI（`zhihu-cli search zhihu`，多锚点滑窗）、非知乎站点 WebFetch/WebSearch 直取官方页面；补充源文用 browser_use 渲染读取 |
+| 通道限制 | 直连 `zhuanlan.zhihu.com` 与 `www.zhihu.com/api/v4/articles/<id>` 均 403（code 40362）；Playwright 无头 Chromium 亦 403。CLI 返回的 `ContentText` 为纯文本片段（每次约 1021–1202 字符），**不含正文内链 href 与图片 src** → 源文 7 处超链接目标不可逐字复核；补充源文的视频 href 亦未登记（G13） |
 | 独立性判定 | 同一作者、同一署名、正文同句的多篇参赛作品**不计入多源**（见 F-072 去重） |
 
 ## 二、P0 核验结论表
@@ -44,9 +49,9 @@ sources:
 | C6 | ⚠️ **部分确认**。「由商汤科技提供技术支持」为平台自述；商汤官网产品栏仅见「代码小浣熊 Raccoon」「办公小浣熊 Raccoon」，**无看山工作台条目**；小浣熊 IP 吻合仅作旁证；「活动邀请使用阶段」见参赛者作品 | 平台自述 + 官方一手（反向） | https://www.sensetime.com/cn/index ；https://www.sensetime.com/cn/product-detail?categoryId=51134384 ；https://www.sensetime.com/cn/news/raccoon-work-app |
 | C7 | ⚠️ **部分确认**。三种安装包（Windows / macOS AS / macOS Intel）属平台口径，**href 因通道限制不可复核** | 平台自述 | 同 C1 原文 |
 | C8 | ✅ **确认**。豆包下载页实测 HTTP 200 且页面正常渲染 | 官方一手 | https://www.doubao.com/download/desktop |
-| C9 | ⚠️ **部分确认**。项目广场实测 200（49,433 字节），但 raw HTML 中**「科学季」不可见**（前端渲染/JS 注入），**不可判定筛选项缺失**；「上传源码」确有官方教程 | 官方一手 | https://www.zhihu.com/project-square ；https://zhuanlan.zhihu.com/p/2079176428197603018 ；https://zhuanlan.zhihu.com/p/2063690450469491823 |
+| C9 | ⚠️ **部分确认**。项目广场实测 200（49,433 字节），但 raw HTML 中**「科学季」不可见**（前端渲染/JS 注入），**不可判定筛选项缺失**；「上传源码」确有官方教程（该文已登记为补充源文 F-084~F-108） | 官方一手 | https://www.zhihu.com/project-square ；https://zhuanlan.zhihu.com/p/2079176428197603018 ；https://zhuanlan.zhihu.com/p/2063690450469491823 |
 | C10 | ✅ **确认**。上一期文章正文逐字含「9 月 3 日 - 9 月 30 日活动期间」 | 平台自述 | https://zhuanlan.zhihu.com/p/2080694756279939656 |
-| C11 | ✅ **确认**。一键代部署教程可访问，正文含「选择『源码发布』」及 ZIP 打包流程 | 官方一手 | https://www.zhihu.com/p/2079176428197603018 |
+| C11 | ✅ **确认**。一键代部署教程可访问，正文含「选择『源码发布』」及 ZIP 打包流程；本包已将同文登记为补充源文（F-084~F-108），并新增 C20–C28 细化核验 | 官方一手 | https://www.zhihu.com/p/2079176428197603018 |
 | C12 | ✅ **确认**。「20 个工作日内公布名单，公布后 20 个工作日内发放奖励」逐字 | 平台自述（属规则条款，**非已兑现事实**） | 同 C1 原文 |
 | C13 | ✅ **确认**。6 条评选规则 + 4 条活动说明条件逐字存在 | 平台自述 | 同 C1 原文 |
 | C14 | ⚠️ **部分确认**。原文含问卷 + 24 小时 + 退出重登流程；参赛者独立复述「看山工作台处在活动邀请使用阶段初始积分36500…耗费1599积分」，佐证「内测/邀请制」定性 | 平台自述 + 第三方 | 同 C1 原文；https://zhuanlan.zhihu.com/p/2093028032369932182 |
@@ -55,8 +60,24 @@ sources:
 | C17 | ⚠️ **部分确认**。官方名为「标准套餐」，四档购买价；**官方文档全无「标准模式会员卡」**；「专家模式」确为官方功能名 | 官方一手 | https://lf9-cdn-tos.draftstatic.com/obj/ies-hotsoon-draft/grace_legal/doubao_member_copywrite_for_ai.html ；https://www.doubao.com/legal/ey01 ；https://m.gmw.cn/2026-06/24/content_1304508098.htm |
 | C18 | ✅ **确认**。独立参赛作品 **6 篇**（检出 10+ 篇含赛道标注，去重后 6 篇） | 第三方 | 见第六节清单 |
 | C19 | ✅ **确认**。上一期文章 CLI `EditTime=1789461014` → 2026-09-15 16:30 | 平台自述 | https://zhuanlan.zhihu.com/p/2080694756279939656 |
+| C20 | ✅ **确认**。补充源文发布方「知乎产品情报局」标注「已认证机构号」；编辑时间 2026-10-19 17:53（北京） | 官方一手（页面元信息） | https://zhuanlan.zhihu.com/p/2079176428197603018 |
+| C21 | ✅ **确认**（平台自述）。AI Works 上线「一键代部署」：上传 ZIP 源码包，平台自动完成代码检测、构建并拉起云端服务 | 平台自述；未独立实测 | 同上 |
+| C22 | ✅ **确认**（平台自述）。支持 Agent 举例为 Codex、ClaudeCode、WorkBuddy 等；「等」为非穷尽列举 | 平台自述 | 同上 |
+| C23 | ⚠️ **部分确认**。当前代部署不支持独立数据库托管；数据库需改为 JSON 数据文件 | 平台自述；无独立复现 | 同上 |
+| C24 | ⚠️ **部分确认**。秘钥写入文件直接构建、代码不会上传到仓库 | 平台自述；安全承诺未独立验证 | 同上 |
+| C25 | ✅ **确认**（平台自述）。部署后先生成带 preview 的预览地址；仅作者本人登录状态可访问；审核通过前按钮均为预览链接 | 平台自述；未实测 | 同上 |
+| C26 | ✅ **确认**（平台自述）。审核通过后生成不带 preview 的正式公网链接 | 平台自述；未实测 | 同上 |
+| C27 | ⚠️ **部分确认**。每位用户最多部署 10 个应用；未说明统计口径与可调整性 | 平台自述 | 同上 |
+| C28 | ✅ **确认**（本包核验）。补充源文未提及看山工作台/飞书/lark-cli/服务域；属 AI Works 部署公告 | 本包核验（全文关键词检索） | 同上 |
 
 > **C1 备注（重要）**：央广网 / 环球网 / 新浪财经报道的是「2026 知乎科学季」及**第一期**工坊，**非第二弹本身**。第二弹目前仅见知乎站内发布与评论，**无独立媒体转载**。故 C1 的证据层级对「机构号与活动系列真实性」成立，对「第二弹细节」不成立。
+
+### 2.1 AI Works 一键代部署核验说明
+
+- 新增源文为官方机构号公告，C20–C28 以平台自述为主；本包**未真机执行**打包、构建、预览、审核与发布。
+- 工程细节缺口：构建环境/运行时/超时/日志/重试/ZIP 限制（G10）、审核标准与时长（G11）、10 个应用上限的统计口径（G12）、视频 href（G13）。
+- 公告未提及「科学季」项目类型，**不能据此推断**一键代部署自动适用于本届工坊（F-108、G7）。
+- C20–C28 只补充部署链路，**不改变 C1–C19 的 flagged 结论**，也不修正既有 5 项源文勘误。
 
 ## 三、勘误四张清单 · 过筛记录
 

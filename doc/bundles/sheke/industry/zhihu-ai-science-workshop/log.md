@@ -1,5 +1,28 @@
 # 更新日志
 
+## 2026-10-23 · 增补 AI Works 一键代部署
+
+- **触发**：用户提供知乎专栏文章 `https://zhuanlan.zhihu.com/p/2079176428197603018`，要求学习并更新本 wiki。
+- **公开性预检**：文章位于 `zhuanlan.zhihu.com`，无 `share?code=`/`token=`/邀请码，无需登录、无付费墙/验证码 → **Public**；产出落 `doc/bundles/`。
+- **采集**：browser_use 渲染读取全文；页面标题《🚀 Vibe coding作品能直接上线？AI Works 一键代部署来了！》，发布方「知乎产品情报局」（已认证机构号），编辑于 2026-10-19 17:53（北京）；全文无「看山工作台/飞书/lark-cli/服务域」关键词（F-108）。
+- **事实登记**：新增 F-084~F-108 共 25 条，双份登记于 spec 区 `facts.md` 与本 bundle `references/article-source.md`；两侧编号集合均为 F-001~F-108，连续无跳号。新增口径缺口 G10~G13（工程细节、审核标准与时长、10 个应用上限统计口径、视频 href）。
+- **结构更新**：新增概念页 `concepts/09-ai-works-one-click-deploy.md`（部署更新层），`concepts/index.md` 9→10 篇并追加 toctree；`concepts/07-participation-path.md` 增加 3.5 节，链到 09；`concepts/00-overview.md` 阅读地图增加 09 与读取顺序第 5 条。
+- **核验**：新增 C20–C28 共 9 项（6✅ / 3⚠️ / 0❌），P0 总数 19→28。C23（数据库）、C24（秘钥/代码不上传仓库）、C27（10 个应用上限）为 ⚠️ 平台自述、无独立复现；C28 为本包关键词检索确认该文不涉及看山工作台/飞书/服务域。
+- **flag 状态**：保持 `status: flagged`。新源文只补部署链路，不解决第二弹活动规则的单源问题，不修正既有 5 项源文勘误；公告亦未提及「科学季」项目类型（F-108、G7）。
+- **无 examples/**：公告提供的是平台操作指引，无命令文本、无版本、无实际输出，未满足「操作可复现」两问；部署流程以概念页承载，并在页内标注「未真机执行」。
+- **文件**：15 → **16** 个（根 index + log + concepts 10 + references 3）。束数不变（仍为 1 束），故 `bundles/index.md` 计数面无需调整。
+- **门禁**：随本轮更新复跑 check-bundles-index / check-toctrees / check-utf8 / check-links，结果见本轮最终验证记录。
+
+**Verification（2026-10-23 增补后复跑）**：
+
+- ✅ `scripts/check-bundles-index.py`：9 域 / 63 组 / 672 束，五面一致（本束仍为 1 束，计数面不变）。
+- ✅ `scripts/check-toctrees.py`：全部 index.md 引用有效，09 经 `concepts/index` 可达。
+- ✅ `scripts/check-utf8.py`：12273 个文件均为有效 UTF-8。
+- ✅ 主仓 `check-links.py`（本束）：16 个 Markdown、89 个本地引用，0 断链。
+- ✅ 双份 F 编号比对：`facts.md` 与 `article-source.md` 各 108 行，F-001~F-108 连续无跳号、无重复，声明列逐字一致（0 处差异）。
+- ✅ 新页 frontmatter 齐备：`okf_version/type/title/description/tags/generated/verified/status/stale_after/sources`；`status: flagged`、`stale_after: 2026-12-31`。
+- ✅ 勘误与缺口落实：G10~G13 已写入双份事实表；09 页显式标注「未真机执行」「项目类型待核」；根 index 与 verification 均保留 flagged 说明。
+
 ## 2026-10-22
 
 **Generation**：由 spec 区 `zhihu-ai-science-workshop-okf-wiki`（Task 1~5）生成 AI 科学创新工坊第二弹知识包（Task 6）。

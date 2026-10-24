@@ -2,10 +2,10 @@
 okf_version: "0.2"
 type: index
 title: "概念文档"
-description: "AI 科学创新工坊第二弹知识包的概念文档目录——事实层 6 篇、机制层 1 篇、路径层 2 篇。"
+description: "AI 科学创新工坊第二弹知识包的概念文档目录——事实层 6 篇、机制层 1 篇、路径层 2 篇、部署更新 1 篇。"
 tags: ["zhihu-ai-science-workshop", "概念文档"]
-generated: { by: "seven-concepts-cmd", at: "2026-10-22T00:00:00Z" }
-verified: [{ by: "process:seven-concepts-v", at: "2026-10-22T00:00:00Z" }]
+generated: { by: "seven-concepts-cmd", at: "2026-10-23T00:00:00Z" }
+verified: [{ by: "process:seven-concepts-v", at: "2026-10-22T00:00:00Z" }, { by: "process:seven-concepts-v", at: "2026-10-23T00:00:00Z" }]
 status: flagged
 stale_after: "2026-12-31"
 sources:
@@ -17,7 +17,7 @@ sources:
 
 # 概念文档
 
-本目录按「事实 → 机制 → 路径」三层组织，共 9 篇：
+本目录按「事实 → 机制 → 路径 → 部署更新」组织，共 10 篇：
 
 ## 事实层（只登记源文明示内容，逐条挂 F 编号，零因果推断）
 
@@ -43,6 +43,12 @@ sources:
 | [07 · 参赛路径](07-participation-path.md) | 选题路径、执行路径、评审路径与退出条件 |
 | [08 · 风险与边界](08-risks-and-boundaries.md) | 资格风险、规则风险、信源风险、口径混用风险 |
 
+## 部署更新（2026-10-19 官方公告）
+
+| 文档 | 覆盖 |
+|---|---|
+| [09 · AI Works 一键代部署](09-ai-works-one-click-deploy.md) | 本地开发、源码发布打包、ZIP 上传、自动构建、预览审核与正式发布；数据库/秘钥/10 个应用上限三条约边界（F-084~F-108） |
+
 ```{toctree}
 :hidden:
 :maxdepth: 2
@@ -56,4 +62,5 @@ sources:
 06-mechanism-insights
 07-participation-path
 08-risks-and-boundaries
+09-ai-works-one-click-deploy
 ```

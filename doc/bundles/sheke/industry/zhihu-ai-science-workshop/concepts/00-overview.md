@@ -66,14 +66,15 @@ sources:
 | **事实层** | [01](01-campaign-facts.md) ~ [05](05-participant-works.md) | 逐条挂 F 编号，**零因果推断**。要引用规则与数字，从这里取 |
 | **机制层** | [06](06-mechanism-insights.md) | 每条解读带「洞察/推断」标记，**不伪装成平台口径**。要理解「为什么这样设计」，从这里取 |
 | **路径层** | [07](07-participation-path.md)、[08](08-risks-and-boundaries.md) | 收益一律挂 F 或标「待验证」，**零收益承诺**。要评估参与与否，从这里取 |
+| **部署更新** | [09](09-ai-works-one-click-deploy.md) | 2026-10-19 官方公告的操作层增补；平台指引、未实测，项目类型适用性待核 |
 
-**F 编号的单一事实来源**：[事实清单 F-001~F-083](../references/article-source.md)。任何数字、名称、条款，以该表为准。
+**F 编号的单一事实来源**：[事实清单 F-001~F-108](../references/article-source.md)。任何数字、名称、条款，以该表为准。
 
 ## 五、时效与复核
 
 | 项 | 值 |
 |---|---|
-| 登记时点 | 2026-10-22（活动期内，源文最后编辑 2026-10-19 15:51） |
+| 登记时点 | 2026-10-22（原始）；2026-10-23（AI Works 一键代部署增补） |
 | `status` | **flagged** —— 平台单源为主、无独立媒体转载、关键外部实体未独立确认 |
 | `stale_after` | **2026-12-31** |
 | 复核触发点 | ① 获奖名单公布后；② 活动页面改版或规则更新后；③ 2026-12-31 前例行复核 |
@@ -84,3 +85,4 @@ sources:
 2. **要评估是否值得参与**：读 [02](02-track-rules.md)（拿到什么）+ [08](08-risks-and-boundaries.md)（可能失去什么）+ [06](06-mechanism-insights.md)（为什么这样设门槛）。
 3. **要做作品选题**：读 [04](04-science-challenges.md)（8 题 + 自主命题 + 诺奖事实边界）+ [05](05-participant-works.md)（已有作品的形态参考）。
 4. **要引用本包内容**：读 [事实清单](../references/article-source.md) + [核验报告](../references/verification.md)，并按 flagged 要求连同证据层级转述。
+5. **要把作品真正上线**：读 [09 · AI Works 一键代部署](09-ai-works-one-click-deploy.md)——源码发布、ZIP 打包、预览与审核、数据库/秘钥处理。
