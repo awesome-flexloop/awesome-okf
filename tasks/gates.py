@@ -5,6 +5,7 @@
     invoke gates.utf8          # UTF-8 有效性检查
     invoke gates.toctrees      # toctree 导航完整性检查
     invoke gates.bundles       # 总索引计数与目录树三角对账
+    invoke gates.assetbaseline # 库规模基线口径校验（HEAD 锚定 + 三处规模数字一致）
     invoke gates.all           # 运行全部质量门
 """
 from pathlib import Path
@@ -36,12 +37,20 @@ def bundles(c, self_test: bool = False):
     c.run(f"python {SCRIPTS / 'check-bundles-index.py'}{flag}")
 
 
+@task
+def assetbaseline(c, print_only: bool = False):
+    """检查库规模基线口径（HEAD 锚定 + 三处规模数字一致 + .spec 泄漏守卫）。"""
+    flag = " --print-only" if print_only else ""
+    c.run(f"python {SCRIPTS / 'check-asset-baseline.py'}{flag}")
+
+
 @task(default=True)
 def all(c):
-    """运行全部 CI 质量门（utf8 + toctrees + bundles 计数对账，含自检探针）。"""
+    """运行全部 CI 质量门（utf8 + toctrees + bundles 计数对账 + 资产基线口径，含自检探针）。"""
     c.run(f"python {SCRIPTS / 'check-utf8.py'}")
     c.run(f"python {SCRIPTS / 'check-utf8.py'} --self-test")
     c.run(f"python {SCRIPTS / 'check-toctrees.py'}")
     c.run(f"python {SCRIPTS / 'check-toctrees.py'} --self-test")
     c.run(f"python {SCRIPTS / 'check-bundles-index.py'}")
     c.run(f"python {SCRIPTS / 'check-bundles-index.py'} --self-test")
+    c.run(f"python {SCRIPTS / 'check-asset-baseline.py'}")

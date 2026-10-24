@@ -66,10 +66,11 @@ awesome-okf-xs/
 ├── tasks/              # Invoke 任务包（命名空间组织）
 │   ├── __init__.py     # 命名空间入口
 │   ├── docs.py         # 文档构建任务（build/clean/browse/...）
-│   └── gates.py        # CI 质量门任务（utf8/toctrees/bundles）
+│   └── gates.py        # CI 质量门任务（utf8/toctrees/bundles/assetbaseline）
 ├── scripts/            # CI 检查脚本（被 tasks/gates.py 调用）
 │   ├── check-toctrees.py      # toctree 完整性检查（含 bundle-root 检测与自检探针）
 │   ├── check-bundles-index.py # 总索引计数对账（锚点组识别 + 束/组/域三角校验）
+│   ├── check-asset-baseline.py # 库规模基线口径校验（HEAD 锚定 + 三处规模数字一致 + .spec 泄漏守卫）
 │   ├── check-utf8.py          # UTF-8 编码检查
 │   └── scan-history-utf8.py   # Git 历史 UTF-8 扫描
 ├── .agents/            # AI 智能体规范目录（本规范所在目录）
