@@ -1,5 +1,15 @@
 # 更新日志
 
+## 2026-10-24
+
+**New Bundle**: 新增 `miaowu-growth-skills`（秒悟 Meoo 产品增长 Skill 包：选型与使用教程）
+
+* 微信公众号「秒悟Meoo」2026-10-15 公开文章转化：五类 22 条技能清单 + 七行场景速查 + 六个重点技能实战 + 三步开始/五阶段闭环
+* 结构：`concepts/`（00-overview / 01-skill-catalog / 02-six-skills-in-practice / 03-growth-loop / 04-insights-and-boundaries）+ `references/`（source-ledger F-001–F-096 + verification 24 项 P0：18✅/5⚠️/1❌）；**不设 `examples/`**（技能依赖平台账号与详情页，不可独立复现）
+* 口径归一：22 条精选 + 空格的键盘 2 个额外平台变体 = 24；再 + 一起Vibe 1 条重复投稿 = 25（24 集合页未直接观测，标 modeled）
+* 命名统一：文章共创博主显示名 ↔ 平台技能作者 handle 两层映射，15/22 已匹配（塔斯海条目 likely）
+* 计数同步：`miaowu` 组 5 → 6 束
+
 ## 2026-10-17
 
 **New Bundle**: 新增 `miaowu-bounty-plaza`（秒悟应用赏金广场 · AI Builder Growth 共创计划）
