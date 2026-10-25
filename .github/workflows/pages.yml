@@ -63,8 +63,10 @@ jobs:
         run: python scripts/check-toctrees.py
       - name: Gate — bundles index 五面对账 (frontmatter / 计数行 / 分组表 / 域标题 / toctree)
         run: python scripts/check-bundles-index.py
-      - name: Gate — 库规模基线口径 (HEAD 锚定 / 三处规模数字一致 / .spec 泄漏守卫)
+      - name: Gate — 库规模基线口径 (HEAD 锚定 / 三处规模数字一致 / 行尾归一 / .spec 泄漏守卫)
         run: python scripts/check-asset-baseline.py
+      - name: Gate — 基线口径门自检探针 (证明校验规则本身可命中)
+        run: python scripts/check-asset-baseline.py --self-test
 
   # --------------------------------------------------------------------------
   # P3 · VC-20：两 job 分流

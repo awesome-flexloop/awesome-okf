@@ -5,7 +5,7 @@
     invoke gates.utf8          # UTF-8 有效性检查
     invoke gates.toctrees      # toctree 导航完整性检查
     invoke gates.bundles       # 总索引计数与目录树三角对账
-    invoke gates.assetbaseline # 库规模基线口径校验（HEAD 锚定 + 三处规模数字一致）
+    invoke gates.assetbaseline # 库规模基线口径校验（HEAD 锚定 + 三处规模数字一致 + 行尾归一）
     invoke gates.all           # 运行全部质量门
 """
 from pathlib import Path
@@ -38,9 +38,9 @@ def bundles(c, self_test: bool = False):
 
 
 @task
-def assetbaseline(c, print_only: bool = False):
-    """检查库规模基线口径（HEAD 锚定 + 三处规模数字一致 + .spec 泄漏守卫）。"""
-    flag = " --print-only" if print_only else ""
+def assetbaseline(c, self_test: bool = False):
+    """检查库规模基线口径（HEAD 锚定 + 三处规模数字一致 + 行尾归一 + .spec 泄漏守卫）。"""
+    flag = " --self-test" if self_test else ""
     c.run(f"python {SCRIPTS / 'check-asset-baseline.py'}{flag}")
 
 
@@ -54,3 +54,4 @@ def all(c):
     c.run(f"python {SCRIPTS / 'check-bundles-index.py'}")
     c.run(f"python {SCRIPTS / 'check-bundles-index.py'} --self-test")
     c.run(f"python {SCRIPTS / 'check-asset-baseline.py'}")
+    c.run(f"python {SCRIPTS / 'check-asset-baseline.py'} --self-test")
