@@ -35,8 +35,6 @@
 
 仅 stdlib；不依赖 git 之外的外部工具；git 不可用时降级为跳过（不误伤 CI）。
 """
-from __future__ import annotations
-
 import re
 import subprocess
 import sys

@@ -51,8 +51,6 @@ PowerShell 数组拆包、首元素翻倍、锚点组误判（把 concepts/ 当�
     0  总索引与目录树完全一致（CI 通过）；或自检通过
     1  存在计数漂移/断链/未注册组/缺失 toctree（CI gate 拦截）；或自检失效
 """
-from __future__ import annotations
-
 import re
 import shutil
 import sys

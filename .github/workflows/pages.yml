@@ -31,7 +31,7 @@ concurrency:
 
 jobs:
   gates:
-    name: Quality gates (utf8 / toctrees / bundles / actionlint)
+    name: Quality gates (utf8 / toctrees / bundles / assetbaseline / redline / actionlint)
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -67,6 +67,10 @@ jobs:
         run: python scripts/check-asset-baseline.py
       - name: Gate — 基线口径门自检探针 (证明校验规则本身可命中)
         run: python scripts/check-asset-baseline.py --self-test
+      - name: Install pytest for redline gate
+        run: python -m pip install pytest
+      - name: Gate — Python 红线守护 (禁止 PEP 563 future import, AST 检测)
+        run: python -m pytest tests/unit/test_no_future_annotations.py -v
 
   # --------------------------------------------------------------------------
   # P3 · VC-20：两 job 分流

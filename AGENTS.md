@@ -66,13 +66,14 @@ awesome-okf-xs/
 ├── tasks/              # Invoke 任务包（命名空间组织）
 │   ├── __init__.py     # 命名空间入口
 │   ├── docs.py         # 文档构建任务（build/clean/browse/...）
-│   └── gates.py        # CI 质量门任务（utf8/toctrees/bundles/assetbaseline）
+│   └── gates.py        # CI 质量门任务（utf8/toctrees/bundles/assetbaseline/redline）
 ├── scripts/            # CI 检查脚本（被 tasks/gates.py 调用）
 │   ├── check-toctrees.py      # toctree 完整性检查（含 bundle-root 检测与自检探针）
 │   ├── check-bundles-index.py # 总索引计数对账（锚点组识别 + 束/组/域三角校验）
-│   ├── check-asset-baseline.py # 库规模基线口径校验（HEAD 锚定 + 三处规模数字一致 + .spec 泄漏守卫）
+│   ├── check-asset-baseline.py # 库规模基线口径校验（HEAD 锚定 + 三处规模数字一致 + 行尾归一 + .spec 泄漏守卫）
 │   ├── check-utf8.py          # UTF-8 编码检查
 │   └── scan-history-utf8.py   # Git 历史 UTF-8 扫描
+├── tests/unit/         # pytest 单元测试（AST 守护：Python 红线）
 ├── .agents/            # AI 智能体规范目录（本规范所在目录）
 ├── .github/workflows/  # CI/CD 工作流（GitHub Pages 自动部署）
 ├── pyproject.toml      # 项目元数据与依赖声明
@@ -95,10 +96,11 @@ awesome-okf-xs/
 |---|---|---|
 | 构建 HTML 文档 | `invoke build` | Sphinx 构建输出到 `_build/html/` |
 | 清理构建产物 | `invoke clean` | 清理 `_build/` 目录 |
-| 运行全部质量门 | `invoke gates.all` | UTF-8 编码 + toctree 完整性 + 总索引计数对账 |
+| 运行全部质量门 | `invoke gates.all` | UTF-8 编码 + toctree 完整性 + 总索引计数对账 + 资产基线口径 + Python 红线 |
 | 仅检查 toctree | `invoke gates.toctrees` | 验证无断链、无孤立文档、bundle 根 index 完整 |
 | 仅检查计数对账 | `invoke gates.bundles` | 总索引束/组/域计数与目录树三角一致（新增束后必跑） |
 | 仅检查 UTF-8 | `invoke gates.utf8` | 验证所有文件 UTF-8 编码无 BOM |
+| 仅检查 Python 红线 | `invoke gates.redline` | AST 检测禁止 `from __future__ import annotations`（本仓 requires-python >= 3.14，PEP 649 已默认） |
 | 本地预览文档 | `invoke browse` | 构建后启动本地服务器预览 |
 
 ## 关键规则速查
@@ -107,7 +109,9 @@ awesome-okf-xs/
 
 - **Bundle 导航完整性**：含子目录的 bundle 根目录必须生成 `index.md`，并以 `{toctree}` 引用全部内容文档；新增/迁移 bundle 后必须运行 `invoke gates.toctrees` 验证
 - **总索引计数对账**：新增/迁移 bundle 或分组后，必须运行 `invoke gates.bundles` 验证总索引（frontmatter/计数行/域节标题/分组表束数列/toctree 五面）与目录树计数一致；锚点组（组目录直挂 concepts/examples/references）按 1 束计，禁止手工估算
-- **修复落地验证**：修复完成后必须用 `git diff`/`git status` 核对变更实际写入，并运行构建/测试验证；禁止仅凭过程描述自认为"已完成"
+- **修复落地验证**：修复完成后必须用 `git diff`/`git status` 核对变更实际写入，并运行构建/测试验证；禁止仅凭过程描述自认为"已完成"。**修复声明不构成修复证据**——必须以 HEAD 中的实际文件内容为准（2026-10-25 实测：曾被记录为"已移除"的 `from __future__ import annotations` 实际仍存在于 HEAD）
+- **Python 红线**：本仓 `requires-python >= 3.14`，注解默认按 PEP 649 惰性求值，禁止 `from __future__ import annotations`（PEP 563 样板，冗余且语义有别）；`invoke gates.redline` 以 AST 检测硬阻断，加回即红
+- **库规模基线口径**：资产数字一律锚定 HEAD 已提交事实（`git ls-tree -r -l HEAD -- doc/bundles`），禁用工作区 `find` 快照（含他方未提交 WIP、被 gitignore 的 `.spec/` 内部工作稿、CRLF 行尾膨胀）；字节数只在 HEAD 口径内引用，跨行尾口径不可比；`invoke gates.assetbaseline` 强制校验并自带行尾归一自证
 - **Frontmatter 日期兼容性**：OKF v0.2 的裸日期格式（如 `stale_after: 2026-09-23`）在 Sphinx 构建时由 `doc/conf.py` 的钩子自动处理，无需手动加引号
 - **路径引用**：Markdown 交叉引用使用相对路径，禁止 `file:///` 绝对路径
 - **派生产物溯源**：源自外部（如 xuanspace 或其他项目）的知识文档须在 frontmatter 中标注 `sources` 字段

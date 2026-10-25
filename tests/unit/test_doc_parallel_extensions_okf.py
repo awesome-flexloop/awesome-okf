@@ -12,8 +12,6 @@
     cd projects/awesome-okf-xs
     python -m pytest tests/unit/test_doc_parallel_extensions_okf.py -v
 """
-from __future__ import annotations
-
 import os
 import sys
 from pathlib import Path
