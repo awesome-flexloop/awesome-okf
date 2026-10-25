@@ -30,7 +30,7 @@ sources:
 | OKF 知识包总数 | **679 束**（含本束） | `python scripts/check-bundles-index.py` → 「9 域 / 63 组 / 679 束」 |
 | Markdown 文件总数 | **12,376 个**（含 index.md / log.md） | `git ls-tree -r --name-only HEAD -- doc/bundles \| grep -c '\.md$'` |
 | 内容文档数 | **9,314 篇**（不含 index.md / log.md） | `git ls-tree -r --name-only HEAD -- doc/bundles \| grep '\.md$' \| grep -v -E '/(index\|log)\.md$' \| wc -l` |
-| 正文体积 | **96,235,012 字节 ≈ 91.78 MiB** | `git ls-tree -r -l HEAD -- doc/bundles \| grep '\.md$' \| awk '{s+=$4} END {print s}'`——⚠️ 这是**字节数**；字符数须用 `wc -m` 统计，**两者不可混用**；⚠️ **必须取自 HEAD 口径**——工作区字节含 CRLF 行尾（3,423 个文件 / 520,050 个 `\r\n`），与提交态**跨口径不可比**（见下方勘误 E-05） |
+| 正文体积 | **约 91.8 MiB**（HEAD 口径实测 **96,239,422 字节**，2026-10-25） | `python scripts/check-asset-baseline.py --print-only` → 实时输出当前 HEAD 字节数——⚠️ **精确值会随每次入库漂移，故本文只记量级 + 实测日期**；⚠️ 这是**字节数**；字符数须用 `wc -m` 统计，**两者不可混用**；⚠️ **必须取自 HEAD 口径**——工作区字节含 CRLF 行尾（3,422 个文件 / 519,986 个 `\r\n`），与提交态**跨口径不可比**（见下方勘误 E-05） |
 | 覆盖领域 | 9 大技术/学科域 | 以 `doc/bundles/index.md` 的域节标题为准（该文件为唯一同步源，勿手抄） |
 | 在线站点 | **部分上线** | `awesome-flexloop.github.io/awesome-okf`（GitHub Pages，CI 自动部署，根页 200）；⚠️ ReadTheDocs 两个域名均不可用：`awesome-okf.readthedocs.io` → 302 → `/zh-cn/latest/` → **404**，`awesome-okf-xs.readthedocs.io`（`pyproject.toml` 声明的那个）→ **404**。**不可作为作品链接或备选链接** |
 | 构建流水线 | **已就绪** | `.github/workflows/pages.yml`：**四道**质量门（actionlint / utf8 / toctrees / bundles）→ Sphinx 构建 → Pages 部署；main 分支单次全量实测约 **20 分钟**（gates 49s + build 18m56s + upload + deploy） |

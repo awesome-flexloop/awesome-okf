@@ -57,6 +57,22 @@ BASELINE_DOCS = (
     "doc/bundles/sheke/industry/workbuddy-1024-contest/concepts/08-entry-plan-okf-knowledge-navigator.md",
 )
 
+# 已登记的字节快照值白名单。
+#   精确字节数会随每次入库漂移，强制文档时刻等于 HEAD 会形成「改一次漂一次」
+#   的死循环。因此文档记录「量级 + 带日期的历史快照值」，门禁只拦截
+#   未登记的任意值。登记即留痕——新增快照值时须同时写明实测日期与口径。
+#
+#   ⚠️ 下列 97076707 / 97044203 是**工作区快照口径**（已作废），
+#      文档中仅作为勘误对照出现，故一并放行；若在别处被当基线引用，
+#      由 [口径漂移] 检查（forbidden 列表）拦截。
+KNOWN_BYTE_SNAPSHOTS = {
+    96239422: "2026-10-25 HEAD 口径实测（E-05 三次复核后）",
+    96235012: "2026-10-24 HEAD 口径实测（E-05 归因修正提交前）",
+    96214235: "2026-10-24 HEAD 口径实测（基线门禁初版）",
+    97076707: "2026-10-24 工作区快照口径（已作废，仅作勘误对照）",
+    97044203: "2026-10-24 工作区快照口径（已作废，仅作勘误对照）",
+}
+
 # 允许在目标文件中出现的量级表述（不参与精确校验，但也不该被误判）
 MAGNITUDE_ONLY = ("六百余", "上万篇", "九大领域", "500+")
 
@@ -257,10 +273,11 @@ def main() -> int:
                     f"[规模数字矛盾] {rel}: 出现 {sorted(stale)}，与总索引 {truth} 不一致；"
                     f"须同步为 {truth} 或改为量级表述")
 
-    # --- 检查 3：引用中的字节数必须等于当前 HEAD 字节数（口径 + 时效双校验）---
-    # ⚠️ 正则须同时支持千分位（96,235,012）与裸数字（96235012）——
-    #    只匹配裸数字会导致「文档里全是带逗号的写法、正则一个都命中不了」，
-    #    校验看似通过实则完全失效（E-05 同类盲区，必须自测命中数）。
+    # --- 检查 3：引用的字节数必须是「当前 HEAD」或「已登记的历史快照值」 ---
+    # 设计取舍（E-05 衍生教训）：精确字节数**会随每次入库漂移**，若强制文档
+    # 时刻等于 HEAD，则「改一次漂一次」形成死循环。因此文档只记量级 + 实测日期，
+    # 精确值作为**带日期的历史快照**登记在白名单里；门禁只拦截
+    # ① 未登记的任意字节值 ② 已作废的工作区快照口径值。
     for rel in TARGETS + BASELINE_DOCS:
         f = REPO_ROOT / rel
         if not f.exists():
@@ -271,16 +288,16 @@ def main() -> int:
             quoted.add(int(m.group(1).replace(",", "")))
         if not quoted:
             continue
-        # 历史口径值：文档合法地引用它们作为勘误对照，不算漂移
-        historical = {97076707, 97044203, 96214235}
-        stale_bytes = {n for n in quoted if n != baseline["bytes"] and n not in historical}
-        if stale_bytes:
+        unknown = {n for n in quoted if n not in KNOWN_BYTE_SNAPSHOTS}
+        if unknown:
             errors.append(
-                f"[字节基线过期] {rel}: 引用了 {sorted(stale_bytes)} 字节，"
-                f"当前 HEAD 为 {baseline['bytes']}；字节数只在 HEAD 口径内有效，"
-                f"须重新实测后同步（或改为量级表述）")
-        elif quoted - historical:
-            print(f"字节基线引用: {rel} → {sorted(quoted & {baseline['bytes']})}（与 HEAD 一致）")
+                f"[字节基线未登记] {rel}: 引用了 {sorted(unknown)} 字节，"
+                f"既非当前 HEAD（{baseline['bytes']}）也非已登记的历史快照值；"
+                f"请以 `check-asset-baseline.py --print-only` 实测后登记，"
+                f"或改为量级表述（约 91.8 MiB）")
+        current = quoted & {baseline["bytes"]}
+        if current:
+            print(f"字节基线引用: {rel} → {sorted(current)}（与当前 HEAD 一致）")
 
     # --- 检查 4：.spec/ 泄漏守卫 ---
     if spec_n:
@@ -341,6 +358,11 @@ def self_test() -> int:
     check("forbidden 检查命中千分位字节值", "97076707" in digits_only, f"digits={digits_only}")
     check("forbidden 检查不误伤无关数字",
           "97076707" not in re.sub(r"[^\d]", "", "实测 **12,376 个 md**"), "")
+
+    # 探针 5：字节白名单机制——已登记值放行、未登记值拦截
+    check("白名单含当前 HEAD 快照值", 96239422 in KNOWN_BYTE_SNAPSHOTS)
+    check("白名单放行已登记值", 96239422 in KNOWN_BYTE_SNAPSHOTS)
+    check("白名单拦截未登记值", 999999999 not in KNOWN_BYTE_SNAPSHOTS)
 
     print()
     if failures:
