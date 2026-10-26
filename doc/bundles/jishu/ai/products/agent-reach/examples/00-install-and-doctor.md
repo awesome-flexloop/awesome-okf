@@ -1,123 +1,138 @@
 ---
 okf_version: "0.2"
 type: Example
-title: "安装 Agent Reach 并完成首次体检"
-description: "Python 3.10+ 前置检查、pipx/venv 安装、一句话安装、install 三档授权、doctor/--json 体检、OpenClaw 前置与干净卸载的可照做流程"
-tags: [agent-reach, install, pipx, doctor, openclaw, uninstall]
-generated: { by: "blog-article-to-okf-wiki:E", at: "2026-10-08T12:30:00+08:00" }
+title: "安装 Agent Reach 并完成首次体检（v1.6.0）"
+description: "uv 安装与一句话安装、agent-reach setup、doctor --text/JSON 体检、从 1.5 迁移、按需加渠道与干净卸载的可照做流程"
+tags: [agent-reach, install, uv, upgrade, doctor, uninstall]
+generated: { by: "blog-article-to-okf-wiki:E", at: "2026-10-26T11:35:00+08:00" }
 status: stable
-stale_after: 2026-12-31
+stale_after: 2027-01-31
 sources:
   - id: blog
     url: https://mp.weixin.qq.com/s/1JfmyVydF2ZMJe131Kp-3w
+  - id: blog2
+    url: https://mp.weixin.qq.com/s/kk4iSX6xdk3IsNKO4eVy9w
   - id: official-install
     url: https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md
   - id: official-readme
     url: https://raw.githubusercontent.com/Panniantong/agent-reach/main/README.md
 ---
 
-# 示例 00：安装 Agent Reach 并完成首次体检
+# 示例 00：安装 Agent Reach 并完成首次体检（v1.6.0）
 
-> 可复现流程。命令以官方 docs/install.md 与 README 为准（F-065/F-066），博文命令（F-045~F-047）经逐字核验。
-> ⚠️ 本知识包未在本机实际执行安装，以下为官方文档口径的照做流程；动手前建议先通读，先 dry-run 再真装。
+> 可复现流程，以 **v1.6.0** 的 docs/install.md 为准（F-109）。1.5 时代的 pipx 命令仍保留在文末作历史对照，但**不要再用**。
+> ⚠️ 本知识包未在本机实际执行安装，以下为官方文档口径的照做流程；第一次装建议先看 `--dry-run` 再真装。
 
 ## 前置条件
 
-- **Python 3.10+**（F-006/F-059）。检查：
+- **能执行终端命令**。若 Agent 说自己不能跑命令，先在它的设置里开启命令执行（OpenClaw 为 `openclaw config set tools.profile "coding"`）。
+- **不需要预装 pipx**。v1.6.0 用 uv 管理工具环境；仓库徽章仍标 Python 3.10+，uv 会处理解释器。
+- **不要从 PyPI 装**：`pip install agent-reach` 装到的是别人的同名包（F-095/F-109）。
 
-```bash
-python3 --version    # macOS/Linux
-py -3 --version      # Windows（见下方 Windows 说明）
-```
+## 第一步：两条安装路径
 
-- 推荐用 **pipx** 安装以避免污染系统 Python（F-045）。没有 pipx 时先装 pipx（`pip install --user pipx` 后 `pipx ensurepath`），或使用虚拟环境：
+### 路径 A：一句话安装（官方主推）
 
-```bash
-python3 -m venv .venv && source .venv/bin/activate   # macOS/Linux
-py -3 -m venv .venv; .venv\Scripts\Activate.ps1      # Windows PowerShell
-```
-
-- **Windows 特别说明（F-048）**：如果敲 `python3` 弹出 Microsoft Store，那是 Windows 的 Store alias，不是真正的 Python，请改用 **`py -3`** 调用 Python 启动器。
-
-> 🚫 **供应链警告（F-069）**：官方明确**不要从 PyPI 安装同名包**。请使用下面的 GitHub archive 地址，或让 Agent 读取官方 install.md 安装。
-
-## 第一步：安装 CLI（两条路任选）
-
-### 路径 A：pipx 直接装（博文推荐，F-045）
-
-```bash
-pipx install https://github.com/Panniantong/agent-reach/archive/main.zip
-```
-
-> 该命令逐字出自官方 **docs/install.md**（F-066）。README 正文本身不出现 pipx 字样，它主推路径 B。
-
-### 路径 B：把"一句话"发给 Agent（官方主推，F-041）
-
-在 Claude Code / Cursor / OpenClaw 中直接发送：
+在 Claude Code / Cursor / OpenClaw 里直接发送：
 
 ```text
-帮我安装 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md
+帮我安装 Agent Reach：https://raw.githubusercontent.com/Panniantong/Agent-Reach/main/docs/install.md
 ```
 
-Agent 会读取该文档，自行决定安装内容、顺序与失败重试路径（F-041）。
+Agent 会读文档、装 uv（如缺）、安装 CLI、跑 `setup`，最后把程序生成的安装报告原样贴给你（F-081/F-109）。
 
-**OpenClaw 用户前置（F-068）**：OpenClaw 需要先开启 exec 权限，Agent 才能执行安装命令：
+### 路径 B：手动执行（想自己掌控每一步时）
 
 ```bash
-openclaw config set tools.profile "coding"
+# 1) 没有 uv 先装 uv
+curl -LsSf https://astral.sh/uv/install.sh | sh                 # macOS / Linux
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"   # Windows
+
+# 2) 安装最新 release
+uv tool install https://github.com/Panniantong/Agent-Reach/releases/latest/download/agent-reach.zip
+
+# 3) 初始化：启用默认渠道 + 安装给 Agent 的 skill
+agent-reach setup
 ```
 
-## 第二步：按三档授权执行 install
+装完若提示 `agent-reach: command not found`，执行 `uv tool update-shell` 并新开一个终端（F-109）。
 
-安装 CLI 本体后，执行环境检查与上游工具接线。务必理解三档语义（F-034/F-035，见 [概念 02](../concepts/02-doctor-health-and-security-model.md)）：
+> **版本锁定提示**：`latest/download/...` 会随版本漂移。团队基线建议把 URL 中的 `latest` 换成具体 release（如 `v1.6.0`），并在变更记录里写明（见 [04](../concepts/04-team-rollout-and-compliance.md)）。
+
+## 第二步：从 1.5 或更早升级
+
+1.5 是 pipx/pip 装的，1.6 改成 uv，官方要求显式迁移（F-109）：
 
 ```bash
-agent-reach install --env=auto               # ① 默认只读：只列出缺什么，不装包、不写配置
-agent-reach install --env=auto --dry-run     # ② 预览：把将执行的全部动作列出，一个字节不改
-agent-reach install --env=auto --system      # ③ 显式授权：确认预览无误后，才真正动系统安装
+uv tool install --force https://github.com/Panniantong/Agent-Reach/releases/latest/download/agent-reach.zip
+# 新开终端确认
+agent-reach version        # 1.6+ 输出 JSON；1.5 输出一行纯文本
+agent-reach setup          # 保留 ~/.agent-reach/config.yaml，移除旧程序，刷新各 Agent 的 skill
 ```
 
-建议顺序：先跑①看缺口 → 再跑②看计划 → 确认后才跑③。`--env=auto` 表示自动探测当前 shell/Agent 环境；README 另有 `--safe` 开关（F-065）。
+`setup` 会保留你的 `~/.agent-reach/config.yaml`（含密钥与设置），只移除旧版 Agent Reach 自身，不动你其他工具（F-109）。
 
-## 第三步：体检（文本 + JSON 两种看法）
+## 第三步：体检
 
 ```bash
-agent-reach doctor         # 人读的文本报告
-agent-reach doctor --json  # 给 Agent 的结构化报告
+agent-reach doctor --text      # 人读：每个渠道通不通、当前走哪个后端、坏了怎么修
+agent-reach doctor             # JSON：给 Agent 读 ok / result / error.hint
+agent-reach check bilibili --text   # 实测单一渠道
 ```
 
-doctor 会**真实执行**各渠道上游命令，按 `missing` / `broken` / `timeout` 三态报告并给出安装/重装/网络凭据处方（F-020）。JSON 中的 `active_backend` 标明每个渠道当前实际使用的后端，为 `null` 表示该渠道暂无可用后端（F-021/F-065）。
+v1.6.0 起所有命令默认输出单个 JSON（F-111）。`doctor` 的价值在于**真实执行**上游命令，而不是只看命令是否存在：missing / broken / timeout 三态对应不同处方（F-084，见 [概念 02](../concepts/02-doctor-health-and-security-model.md)）。
 
-在 Agent 工作流中，官方 SKILL.md 定的纪律是"动手调用某渠道前先 `doctor --json` 确认 `active_backend`"（F-040）。
+## 第四步：按需加渠道
 
-## 第四步：按需解锁渠道
-
-默认激活的 6 个零配置渠道（网页/YouTube/GitHub/RSS/Exa/V2EX）体检通过即可用，见 [示例 01](01-zero-config-channels.md)。其余渠道直接对 Agent 说"帮我配 XXX"，按引导完成：
-
-- 一句话解锁：Twitter/X、雪球、小宇宙、LinkedIn、Boss直聘
-- 需登录态：小红书、Reddit、Facebook、Instagram（配置与 Cookie 安全见 [示例 02](02-login-channels-and-cookie-safety.md)）
-
-## 干净卸载
+默认装好的是 5 个：web、youtube、github、bilibili、v2ex（F-108）。其余按需加：
 
 ```bash
-agent-reach uninstall --dry-run      # 先预览会删除什么
-agent-reach uninstall                # 确认后真删：配置目录、各 Agent 的 skill 文件、MCP 配置
+agent-reach add xiaohongshu     # 加渠道，依赖自动装
+agent-reach remove v2ex         # 去掉渠道，同时清该站登录与存储
+agent-reach channels            # 看每个渠道支持的动作与参数
 ```
 
-需要保留凭据以便日后重装时加 `--keep-config`（F-037/F-047）。凭据文件位于 `~/.agent-reach/config.yaml`（Windows 为 `%USERPROFILE%\.agent-reach\config.yaml`），权限 600（F-036）。
+也可以直接对 Agent 说"帮我加上小红书""去掉 V2EX"（F-119）。需要登录的渠道见 [示例 02](02-login-channels-and-cookie-safety.md)；转文字需要 Key 的渠道用：
+
+```bash
+agent-reach configure groq-key   # 由用户本人在终端填写，不要发聊天里
+```
+
+## 第五步：日常升级与卸载
+
+```bash
+agent-reach update                        # 升级程序 + 已加渠道的工具 + skill
+agent-reach uninstall --dry-run           # 先列出会删什么
+agent-reach uninstall                     # 确认后删除
+```
+
+卸载只删 Agent Reach 自己装的东西；你的其他文件与浏览器不受影响（F-118）。需要保留凭据方便重装时，先备份 `~/.agent-reach/config.yaml`（Windows：`%USERPROFILE%\.agent-reach\config.yaml`），权限应为 600（F-115）。
+
+## 历史对照：1.5 的安装命令（不要再用）
+
+```bash
+# v1.5.0 及更早
+pipx install https://github.com/Panniantong/agent-reach/archive/main.zip
+agent-reach install --env=auto [--safe | --dry-run]
+```
+
+> ⚠️ 两个常见错误：一是 `pip install agent-reach`（PyPI 同名包，非本项目）；二是 `--system`（**该参数从未存在**，见 F-092/F-110）。旧教程里的这两条都要改。
 
 ## 排障速查
 
 | 现象 | 处理 |
 |------|------|
-| `python3` 弹出 Microsoft Store | Windows Store alias，改用 `py -3`（F-048） |
-| doctor 报某后端 `missing` | 按输出给出的安装命令装对应上游（如 bili-cli/gh），或对 Agent 说"帮我配 XX" |
-| doctor 报 `broken`（如 shebang 失效） | 按输出的重装处方重建上游工具的虚拟环境（F-020） |
-| doctor 报 `timeout` | 检查网络/代理；登录态渠道检查 Cookie/Token 是否过期（F-020/F-068） |
-| OpenClaw 中 Agent 不执行安装 | 先 `openclaw config set tools.profile "coding"` 开 exec 权限（F-068） |
-| 装了 PyPI 同名包 | 官方警告该渠道不可信，卸载后改用 GitHub archive / install.md 重装（F-069） |
+| `agent-reach` 找不到 | `uv tool update-shell` 后新开终端；确认 `uv tool list` 里有它 |
+| `version` 还是旧的一行文本 | 仍是 1.5，按"第二步"迁移 |
+| doctor 报某后端 missing | 按输出给的安装命令装上游，或对 Agent 说"帮我配 XX" |
+| doctor 报 broken | 按重装处方重建该上游工具环境（如 shebang 失效） |
+| doctor 报 timeout | 检查网络/代理；登录态渠道检查会话是否过期（F-118） |
+| 平台要求验证/风控 | 停下，由本人在官方页面处理；不换账号、不换后端重试（F-119） |
+| `setup` 后 Agent 仍不会用 | 确认 skill 已注册：`agent-reach skill`；需要给另一个 AI 用时 `agent-reach skill link <目录>` |
+| 装了 PyPI 同名包 | 卸载后用官方 release zip / install.md 重装（F-109） |
 
 ## 下一步
 
-- [示例 01：零配置渠道实操](01-zero-config-channels.md)
+- [示例 01：默认渠道实操](01-zero-config-channels.md)
 - [示例 02：登录态渠道与 Cookie 安全](02-login-channels-and-cookie-safety.md)
+- [概念 05：版本漂移与迁移清单](../concepts/05-version-drift-and-channel-matrix.md)

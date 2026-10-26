@@ -42,7 +42,7 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 | [📐 text-to-cad 用 AI 生成可编辑 CAD 源代码](text-to-cad/index.md) | 1 | 面向 Agent 的 CAD 技能库——AI 直接生成 build123d 参数化源码，导出 STEP/URDF/DXF/G-code 工程文件 |
 | [🖼️ 小嘿插图（Ian Xiaohei Illustrations）](ian-xiaohei-illustrations/index.md) | 1 | 开源 AI Skill 中文文章配图工具——为认知锚点生成 16:9 白底手绘线稿配图 |
 | [🎬 Pixelle-Video 开源 AI 短视频引擎](pixelle-video/index.md) | 1 | 微信截图短帖（赛博煎蛋 134 期，未点名项目，flagged 高置信推断）经 OKF v0.2 七阶段转化——阿里 AIDC-AI（现 ATH-MaaS）28.7k star 全自动短视频引擎：五步流水线、本地 ComfyUI/RunningHub/直连 API 三路径、25 模板、数字人/动作迁移/批量、Windows 整合包与零成本本地方案（13 项 P0：10✅/2⚠️/1 flagged/0❌） |
-| [👁️ Agent Reach Agent 互联网能力层 CLI](agent-reach/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——Python/MIT、16 平台能力层（不抓取只选型/安装/体检/路由）：有序后端列表+active_backend 故障无感切换、doctor 真跑三态、默认只读授权、随包 SKILL.md 给 Agent，含安装与零配置/登录态渠道实操（21 项 P0/P1：16✅/5⚠️/0❌，含 6/7 零配置口径与 SKILL.md 路径五项勘误） |
+| [👁️ Agent Reach Agent 互联网能力层 CLI](agent-reach/index.md) | 1 | 两篇微信博文经 OKF v0.2 七阶段转化并交叉核验（v1.6.0）——Python/MIT、能力层（不抓取只选型/安装/体检/路由）：有序后端列表+active_backend 故障无感切换、doctor 真跑三态、默认只读授权、随包 SKILL.md 给 Agent；含 14 渠道（5 默认/6 可选/3 实验）矩阵、团队落地与合规、安装与登录态实操，41 项 P0/P1（✅ 26/⚠️ 11/❌ 4）与版本漂移勘误 |
 | [🎨 huashu-art-motion 纯代码艺术动画 Skill](huashu-art-motion/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——花叔开源的艺术动画 Skill：35 风格配方卡、9 解说语法、8 参数化片段、拆解/QA 工程闭环与版权合规范式（15 项 P0/P1 核验 12✅/1⚠️/2❌） |
 | [🖼️ image-blaster 图像→3D 世界 Claude 技能集](image-blaster/index.md) | 1 | 微信博文+官方仓库核验转化——开源（MIT）图像到 3D 世界多模型编排：World Labs Marble 环境重建、Hunyuan 3D 物体建模、Nano Banana/GPT-Image-2 图片编辑、ElevenLabs 音效，8 技能流水线、人类在环、三类可进引擎资产（8 项 P0 核验 6✅/2⚠️/0❌，Star 6.9K→2.7k 时效勘误） |
 | [📖 InkOS 开源 AI 小说创作智能体系统](inkos/index.md) | 1 | 枫音AI推文经 OKF v0.2 核验转化——开源（AGPL-3.0）AI 小说创作：10 个 Agent 接力流水线、7 真相文件与三层记忆（JSON+Markdown+SQLite）、去 AI 味与文风仿写、守护进程挂机写书、续写与同人，含从零建书实操（4 项 P0 核验 0✅/4⚠️/0❌，星标 10K→5.6K 勘误） |

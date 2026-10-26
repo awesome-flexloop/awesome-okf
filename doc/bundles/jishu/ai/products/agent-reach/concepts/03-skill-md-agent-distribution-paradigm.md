@@ -2,14 +2,16 @@
 okf_version: "0.2"
 type: Concept
 title: "SKILL.md 与 Agent 时代的分发范式"
-description: "给 AI Agent 的操作手册 SKILL.md（实际路径勘误）、一句话安装模式、check-update 规则、博文五条设计启示的观点分层与作者自用维护承诺"
+description: "给 AI Agent 的操作手册 SKILL.md（实际路径勘误）、一句话安装模式、meta.update 更新规则、博文五条设计启示的观点分层与作者自用维护承诺"
 tags: [agent-reach, skill-md, agent-distribution, design-lessons, opinions]
 generated: { by: "blog-article-to-okf-wiki:E", at: "2026-10-08T12:20:00+08:00" }
 status: stable
-stale_after: 2026-12-31
+stale_after: 2027-01-31
 sources:
   - id: blog
     url: https://mp.weixin.qq.com/s/1JfmyVydF2ZMJe131Kp-3w
+  - id: blog2
+    url: https://mp.weixin.qq.com/s/kk4iSX6xdk3IsNKO4eVy9w
   - id: github-repo
     url: https://github.com/Panniantong/Agent-Reach
   - id: official-readme
@@ -22,7 +24,7 @@ sources:
 
 ## 1. 最妙的一笔：给 Agent 写的"使用说明书"
 
-Agent Reach 在仓库里放了一份面向 AI Agent 的操作手册，内容包括路由表、常用命令、重试链、失败处理规则，以及"动手前先跑 `doctor --json` 看 `active_backend`"这样的工作纪律（F-040）。
+Agent Reach 在仓库里放了一份面向 AI Agent 的操作手册，内容包括路由表、常用命令、重试链、失败处理规则，以及"动手前先确认渠道的 `active_backend`"这样的工作纪律（v1.6.0 起命令默认输出 JSON，人读用 `--text`，F-111）。
 
 > ⚠️ **路径勘误**：博文的语境像是仓库根目录下有 SKILL.md（F-040），但经 git tree 核验，**根目录并不存在 SKILL.md**；实际路径为 `agent_reach/skill/SKILL.md`，同目录还有英文版 `SKILL_en.md` 以及 `references/` 下 7 个分类说明文件（F-062）。"项目带了一份给 Agent 的手册"这一功能事实成立，只是不在根目录。
 
@@ -36,11 +38,11 @@ Agent Reach 在仓库里放了一份面向 AI Agent 的操作手册，内容包�
 
 ## 2. 版本更新也交给 Agent 提醒
 
-SKILL.md 里还写了一条自我维护规则（F-043）：
+SKILL.md 里写了一条自我维护规则（F-119）：结果里出现 `meta.update` 就说明有新版本，每轮对话只提醒一次，用大白话告诉用户新版本号与 1–3 个变更要点，**用户同意后才**跑 `agent-reach update`。
 
-> "完成一次较大的调研任务后，顺手跑 `agent-reach check-update`，有新版就在收尾汇报里附一句。"
+也就是说，项目把"发现新版本并提醒用户"这件事编码进了给 Agent 的说明书，而不是靠人去盯 release 页。
 
-也就是说，项目把"发现新版本并提醒用户"这件事也编码进了给 Agent 的说明书，而不是靠人去盯 release 页。
+> ⚠️ **口径变更**：v1.5 时代的写法是"完成大任务后随手跑 `agent-reach check-update`"。v1.6.0 改为结果内嵌 `meta.update`，并由 SKILL 约束"普通查询不自动更新依赖"（F-119）。若你看到 `check-update` 的教程，那是旧版。
 
 ## 3. 分发范式判断（作者观点 V）
 
@@ -90,7 +92,9 @@ SKILL.md 里还写了一条自我维护规则（F-043）：
 
 > "这个项目我自己每天在用，所以我会一直维护它。"
 
-该表述可在 README 找到对应出处（S 项目方自述）。推介作者随后的归因——"维护动力来自自用而非流量，这大概是它能持续追着平台变化跑的原因"（F-054，V）——属推测，无法证伪也无法证实。客观可核验的维护信号是：36 位贡献者、最近 commit 在 2026-10-07、共 7 个 release（F-055/F-056/F-058），截至核验日维护活跃。
+该表述可在 README 找到对应出处（S 项目方自述）。推介作者随后的归因——"维护动力来自自用而非流量，这大概是它能持续追着平台变化跑的原因"（F-054，V）——属推测，无法证伪也无法证实。客观可核验的维护信号是：38 位贡献者、最近 push 在 2026-10-25、共 8 个 release（F-102/F-103）、最新 v1.6.0，截至核验日维护活跃。
+
+> 渠道集也在这期间变过：v1.5.0 tag 13 个渠道 → main@10-08 的 16 个 → v1.6.0 的 14 个（5/6/3 分级）。"持续维护"的代价与证据都在这里：[05](05-version-drift-and-channel-matrix.md)。
 
 ## 阅读导航
 
