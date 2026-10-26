@@ -9,7 +9,7 @@ description: "AI 工程方法论、上下文工程、安全红队与行业趋势
 
 AI 工程方法论、上下文工程、安全红队与行业趋势研究——Token 经济与成本、免费 API 生态、Agent 工作流实践、行业研究及博文核验转化束。
 
-本类共 **24 个知识包**，分布于 **22 个生态/项目目录**。
+本类共 **25 个知识包**，分布于 **23 个生态/项目目录**。
 
 ## 束导航
 
@@ -35,6 +35,7 @@ AI 工程方法论、上下文工程、安全红队与行业趋势研究——To
 | [📝 模板驱动报告生成 Skill 设计](docx-report-skill/index.md) | 1 | 从 Word 模板 + 结构化数据确定性生成统一格式 .docx 报告的技能设计（单一职责、互斥关系） |
 | [🌐 answer-me-with-html：让 Agent 交付可视化页面](answer-me-with-html/index.md) | 1 | 公众号「开源星探」博文经 OKF v0.2 转化——Agent Skill 让模型写内容、程序做排版：九种组件、CLI 渲染可读 HTML / 3Blue1Brown 讲解视频、基准（token 6.1×/17.8× 更少）、三安装、Always-on 与勘误 E-1（操作教程，权威源 GitHub README） |
 | [📈 Agent 自我进化评测：LIFT 与 Loaded Impact](agent-self-evolution-evaluation/index.md) | 1 | 微信博文 + LIFT 官方仓库/论文核验——配对 Holdout 评测协议、Loaded Impact 指标、排行榜快照读法与迁移边界（技术综述非教程；flagged：仓库许可证未确认） |
+| [?? Designer-RSI：用外部程序记忆演化图形设计 Agent](designer-rsi-procedural-memory/index.md) | 1 | 微信博文 + arXiv:2609.22086 全文核验——程序记忆与 SKILL.md 技能库、两阶段检索、Widening/Deepening 双轴演化、匹配回放门控、Graphic-Eval 三轴评分；105 条事实、17 组 P0 核验（2 处 ⚠️ 次级勘误），非操作教程 |
 | [🪟 微软 MXC：Windows 的 AI Agent 执行隔离](microsoft-mxc-agent-containment/index.md) | 1 | Microsoft Execution Containers GA——四种隔离后端、Agent 安全动因（最小权限/致命三要素）与 Windows 平台竞争格局（商业分析非操作教程，微软/Anthropic 官方博客核验） |
 | [🔎 XERJ × DeepSeek Search/Fetch 对比](xerj-vs-deepseek-search/index.md) | 1 | 自建本地检索栈（XERJ）与托管搜索 API（DeepSeek Search/Fetch）的九轴对比——语料归属是第一决策轴、上下文成本的两种实现、404 五因合并的可诊断性差距、固定 vs 线性成本曲线与选型决策树 |
 
@@ -61,6 +62,7 @@ context-optimization/index
 docx-report-skill/index
 answer-me-with-html/index
 agent-self-evolution-evaluation/index
+designer-rsi-procedural-memory/index
 microsoft-mxc-agent-containment/index
 xerj-vs-deepseek-search/index
 u2flash-free-month/index
