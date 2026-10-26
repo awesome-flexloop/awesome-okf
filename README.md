@@ -49,6 +49,8 @@ sources:
 
 👉 **[📖 Read the Docs 文档站](https://awesome-okf-xs.readthedocs.io/)** — 直接浏览搜索，无需下载。
 
+👉 **[🔍 知识保鲜台 · 轻量检索站](https://ai-agent-kepu-kit.app.workbuddy.host/)** — 基于本库内容文档的预生成索引：中文复合词可命中，支持 9 大学科域快捷入口、保鲜度（待复核队列）筛选、证据等级与信源跳转原文（WorkBuddy 1024 参赛作品）。
+
 ### ② 本地预览文档
 
 ```bash
@@ -134,6 +136,7 @@ invoke gates.all
 ## 链接
 
 - 📖 **在线文档**：[awesome-okf-xs.readthedocs.io](https://awesome-okf-xs.readthedocs.io/)
+- 🔍 **轻量检索站（知识保鲜台）**：[ai-agent-kepu-kit.app.workbuddy.host](https://ai-agent-kepu-kit.app.workbuddy.host/) — 基于本库的在线检索与保鲜度看板（WorkBuddy 1024 参赛作品）
 - 🏠 **基底项目（玄境代码）**：[xinetzone/xuanspace](https://github.com/xinetzone/xuanspace)（承载"器"的代码与工具）
 - 💾 **本仓库**：[awesome-flexloop/awesome-okf](https://github.com/awesome-flexloop/awesome-okf)
 - 🐛 **问题反馈**：[GitHub Issues](https://github.com/awesome-flexloop/awesome-okf/issues)
