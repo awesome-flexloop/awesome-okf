@@ -2,13 +2,15 @@
 okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
-description: "AI Agent 运行时框架与架构模式——从工具调用循环到多代理编排、记忆系统、插件架构的源码级中文教程"
-total_bundles: 58
+description: "AI Agent 运行时框架与架构模式——工具调用、多代理编排、记忆与插件的源码教程，以及参考架构与治理学习"
+total_bundles: 59
 ---
 
 # 🤖 AI Agent 框架
 
 本组存放 AI Agent 运行时框架与架构模式的源码中文教程，覆盖 Python/TypeScript/C++/Rust/Go 五种语言生态中 21 个开源项目的核心架构设计。从 Agent 基础概念到生产级框架实现，从插件架构到多Agent编排，从通信协议到 Coding Agent 源码解读，构建完整的 AI Agent 知识体系。
+
+本组也容纳官方文档驱动的架构学习包；资讯转化采用 R→I→E→V 核验，不等同于源码分析或部署实测。
 
 ## 推荐学习路径
 
@@ -116,6 +118,7 @@ total_bundles: 58
 
 | 知识包 | 类型 | 文档数 | 一句话简介 |
 |--------|------|--------|-----------|
+| [openshell-reference-architecture](openshell-reference-architecture/index.md) | 架构学习 | 6+0+2+1=9 | NVIDIA OpenShell 软件边界、企业工作区与 Sentry 分层教程；66 条事实、业务批准与撤销验收、3 条洞察及 L1 候选模式；非部署实测，成效数字为厂商自述 |
 | [qwen-creative-platform-news](qwen-creative-platform-news/index.md) | 资讯速报 | 1+2+1=4 | 阿里千问创作平台多Agent协同开测——5个Agent组成虚拟剧组(策划/编剧/视觉/分镜/成片)、Wan 3.0+Qwen-Image 3.0 Pro、书旗ManClaw漫剧Agent(Seedance 2.0)、导演视角解读 |
 | [deepseek-harness-mobile](deepseek-harness-mobile/index.md) | 技术实测 | 5+2+2=9 | DSH Mobile——腾讯程序员用Kuikly(Kotlin Multiplatform)开发DeepSeek Harness手机客户端(Android/iOS/鸿蒙一码三端)：直连Host协议(RPC+双WebSocket)、SSH/扫码Relay双通道、断线重连状态机、本地扫码连接与扩展开发上手 |
 | [qwen-ui-agent](qwen-ui-agent/index.md) | 技术评测 | 3+1+2+1=7 | 阿里通义开源GUI智能体Qwen-UI-Agent技术评测——真机训练(100+设备/150+App/400+任务)、MobileWorld 82.1%超GPT-5.6/Claude Opus 4.8、CLI批量动作、3个内部流程实测(财务对账/运营日报/老CRM)、3项勘误(MAI-UI权重混淆/58%以偏概全/硬件要求有误) |
@@ -159,11 +162,11 @@ total_bundles: 58
 
 ---
 
-> **信任声明**：本分组索引基于 22 个 AI Agent 开源项目源码逐模块分析生成，所有知识包均经 OKF 五阶段流程（R→I→E→V→C）验证。
+> **信任声明**：本分组包含源码、协议、官方文档及资讯转化等不同形态；来源、审查状态、实测与交付边界以各知识包的核验记录为准。
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：58 个知识包，共 440 个内容文档（278 概念 + 81 示例 + 79 信源；2026-09-23 Hypit 入组 +3 概念 +2 示例 +2 信源 +1 日志；2026-09-28 agent-knowledge-base 入组 +4 概念 +2 信源 +1 日志；2026-10-10 cua 入组 +6 概念 +2 信源 +1 日志；2026-10-14 kylin-agent-runtime 入组 +10 概念 +2 示例 +2 信源 +1 日志；2026-10-22 deepseek-harness-0-2 入组 +11 概念 +5 示例 +2 信源 +1 日志；2026-10-23 zhihu-open-platform 入组 +10 概念 +5 示例 +2 信源 +1 日志）；零推测事实底稿随束存放
+> **内容统计**：59 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
 
 ```{toctree}
 :hidden:
@@ -227,4 +230,5 @@ show-me-skill/index
 hypit-video-replication/index
 agent-knowledge-base/index
 cua/index
+openshell-reference-architecture/index
 ```

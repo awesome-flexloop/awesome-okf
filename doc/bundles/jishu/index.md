@@ -17,7 +17,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 
 | 分组 | 束数 | 一句话简介 |
 |------|------|-----------|
-| [🤖 人工智能与大模型（ai）](ai/index.md) | [递归束数](../index.md) | AI 与大模型应用生态，270 束按读者意图归为六大类：ecosystems 厂商社区生态 · frameworks 框架与代码库 · practice 工程实践与行业洞察 · products 产品工具 · models 模型多模态 · learning 学习教程 |
+| [🤖 人工智能与大模型（ai）](ai/index.md) | [递归束数](../index.md) | AI 与大模型应用生态，274 束按读者意图归为六大类：ecosystems 厂商社区生态 · frameworks 框架与代码库 · practice 工程实践与行业洞察 · products 产品工具 · models 模型多模态 · learning 学习教程 |
 
 ### 📚 文档与数据工程
 
@@ -58,7 +58,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 | 分组 | 束数 | 一句话简介 |
 |------|------|-----------|
 | [🚗 智能驾驶与无人驾驶（autonomous）](autonomous/index.md) | 4 | Autoware 安装与基础 · ROS2 概念 · DDS 与 QoS · 数据集/术语/资源生态 |
-| [🏠 物联网（IoT）](iot/index.md) | 9 | Home Assistant 源码解读 · TuyaOpen IoT SDK · 向日葵远控产品矩阵 · 贝锐生态 · 厂商与工具横向对比 · 星辰300 端侧 AI 资讯核验 · 嵌入式周报·第三期资讯核验 · openTPU 加速器源码精读 · HWE Bench LLM 硬件基准源码精读 |
+| [🏠 物联网（IoT）](iot/index.md) | 10 | Home Assistant 源码解读 · TuyaOpen IoT SDK · 向日葵远控产品矩阵 · 贝锐生态 · 厂商与工具横向对比 · 星辰300 端侧 AI 资讯核验 · 嵌入式周报·第三期资讯核验 · openTPU 加速器源码精读 · HWE Bench LLM 硬件基准源码精读 · RTX Spark Windows本地AI PC概念教程 |
 
 ### 🏗️ 基础设施即代码与云应用部署
 
