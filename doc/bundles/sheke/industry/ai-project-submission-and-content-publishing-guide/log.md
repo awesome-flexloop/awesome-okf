@@ -54,3 +54,28 @@
 - R2为`blocked`：独立内容评分4/5、无遗留内容缺陷；CP1/3/4/5/6 pass，CP2/7因早期关键条款历史原文及首次Task6三索引写前快照缺失blocked。根入口保持`draft`，不宣告完整验收；历史R1及作者自验逐项保留。
 - 已有独立机械结果：15页、83F/24G/7C/6E，67本地链接、导航、计数9域/63组/687束及Sphinx status0、15源/19HTML通过；35输入文件前后指纹相同，依赖弃用警告保留。详见[独立R2记录](references/verification.md#独立task7-vr2-blocked)。
 - 本次仅同步index.md、references/verification.md和本日志；不改内容编号、共享索引、规格或检查表，不新建页面，不安装、暂存、提交、推送或执行外部发布。
+
+## 2026-10-28
+
+### 包目录更名（命名修正，不改内容与验收结论）
+
+- 目录：`doc/bundles/sheke/industry/contest-writing-guide/` → `doc/bundles/sheke/industry/ai-project-submission-and-content-publishing-guide/`（`git mv`，15 个 Markdown 文件，正文未改写）。
+- 标题：frontmatter `title` 与 H1 由「知乎、WorkBuddy与头条参赛和写作综合指南」改为「AI作品参赛准备与内容发布指南」，H1 下新增副标题「知乎、WorkBuddy与头条｜2026-10-27研究快照，含待核项」；`description` 同步。
+- 理由：`contest` 与包内[入口性质](concepts/00-platforms-and-current-status.md)「三入口不得统一称为三场比赛」冲突（头条仅有同平台关联规则、入口身份未确认）；`writing` 窄于实际范围（作品选题、工具资格、材料、宣传与首发时序）。事实编号 `83F/24G/7C/6E`、`draft`、R1 fail 与 R2 blocked 均不变。
+- 同步引用：`sheke/industry/index.md` 表格行与 toctree；根仓 `docs/retrospective/patterns/methodology-patterns/governance-strategy/` 下三份模式文档及 `.meta/toml` 副本的 `source_report` 与正文链接。索引行括号内 `待R2` 同步为 `R2 blocked`，与[验证记录](references/verification.md#独立task7-vr2-blocked)既有结论一致。
+- 保留原名不改写：本日志历史 CMD-LOG 的 `scope`、`references/verification.md` 中的临时目录名、`.trae/specs` 历史规格与其他旧包检索记录中的原路径，均属历史记录，改写会伪造当时状态。
+
+### 门禁结果（2026-10-28 实跑）
+
+| 命令 | 退出码 | 结果 |
+|---|---|---|
+| `invoke gates.toctrees` | 0（复跑） | 首次运行 20 处问题全部来自他方未跟踪包 `jishu/ai/practice/live-transcription-agent`；该包补齐入口后复跑 0 处，本包全程 0 处 |
+| `invoke gates.bundles` | 0 | 9 域 / 63 组 / 689 束，五面一致（含他方未跟踪包；改名不改变束数） |
+| `invoke gates.utf8` | 0 | 12549 个文件 |
+| `invoke gates.redline` | 0 | 11 passed |
+| `invoke gates.assetbaseline` | 1 | 既有失败：`doc/index.md` 与 `README.md` 的 679 与总索引 689 不一致；字节残差 +78344 来自含 WIP 的工作树，非本次改名引入 |
+| 范围 Sphinx `-b html`（本包为源目录，`-c doc`） | 0 | 15 源 / 19 HTML，无告警 |
+| 本地相对链接解析（15 文件） | — | 69 条，0 断链 |
+
+- `check-links.py --path` 在该子树报告 0 个本地引用，属工具默认扫描范围未覆盖 bundle，不作为通过证据。
+- 未暂存、未提交、未推送；未改事实编号、共享计数或验收状态。

@@ -1,8 +1,8 @@
 ---
 okf_version: "0.2"
 type: Playbook
-title: "知乎、WorkBuddy与头条参赛和写作综合指南"
-description: "先核工具、权利与时序，再选作品和独立写作；83条事实、24条缺口、三条洞察与两项L1-draft候选方法。"
+title: "AI作品参赛准备与内容发布指南"
+description: "知乎、WorkBuddy与头条｜2026-10-27研究快照，含待核项；先核工具、权利与时序，再选作品和独立写作；83条事实、24条缺口、三条洞察与两项L1-draft候选方法。"
 status: draft
 date: "2026-10-27"
 security_level: public
@@ -13,7 +13,9 @@ sources:
     resource: references/facts.md
 ---
 
-# 知乎、WorkBuddy与头条参赛和写作综合指南
+# AI作品参赛准备与内容发布指南
+
+**知乎、WorkBuddy与头条｜2026-10-27研究快照，含待核项**
 
 **先核资格与权利，再做可体验成果，最后按不同读者问题写文章。** 本包整合2026-10-27三路公开研究，不开发参赛应用、不生成真实投稿成稿、不代报名或接受协议。知乎、WorkBuddy是有征集期的活动；头条实际入口身份与个人权益未确认，只能使用关联规则研究。
 
