@@ -16,16 +16,16 @@ sources:
 
 ![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-green)
 ![OKF Version: 0.2](https://img.shields.io/badge/OKF-v0.2-blue)
-![Bundles: 679](https://img.shields.io/badge/Bundles-679-orange)
+![Bundles: 690](https://img.shields.io/badge/Bundles-690-orange)
 ![Domains: 9](https://img.shields.io/badge/Domains-9-purple)
 
 ## 这是什么
 
 **awesome-okf-xs** 是 [XuanSpace（玄境）](https://github.com/xinetzone/xuanspace) 项目的**开源知识格式（Open Knowledge Format，OKF）文档库**。
 
-它承载玄境项目"道"的一面——以 OKF bundle（知识包）为单元，系统化组织 **679 个知识包、9 大学科域、63 个分组**的中文教程，涵盖开源项目源码解读与人文经典/自然科学/社会科学著作的结构化阅读指南；与承载"器"（代码与工具）的 xuanspace 正反向协同，共同实践"器以载道"的理念。
+它承载玄境项目"道"的一面——以 OKF bundle（知识包）为单元，系统化组织 **690 个知识包、9 大学科域、63 个分组**的中文教程，涵盖开源项目源码解读与人文经典/自然科学/社会科学著作的结构化阅读指南；与承载"器"（代码与工具）的 xuanspace 正反向协同，共同实践"器以载道"的理念。
 
-> 📊 规模数据以 [知识包总索引](doc/bundles/index.md) frontmatter 为单一真相源，当前实际值：**679 束 / 63 组 / 9 域**。
+> 📊 规模数据以 [知识包总索引](doc/bundles/index.md) frontmatter 为单一真相源，当前实际值：**690 束 / 63 组 / 9 域**。
 
 ---
 
@@ -86,12 +86,12 @@ invoke gates.all
 
 ## 内容总览（9 大学科域）
 
-按知识包束数降序排列（完整 679 束清单 → [知识包总索引](doc/bundles/index.md#九域分组导航)）：
+按知识包束数降序排列（完整 690 束清单 → [知识包总索引](doc/bundles/index.md#九域分组导航)）：
 
 | # | 学科域 | 束数 | 组数 | 代表内容 |
 |:-:|--------|:---:|:---:|---------|
-| 1 | ⚙️ **技术（jishu）** | 500 | 19 | AI & 大模型 · 文档工程 · 构建/通信/容器/ML/PyData/Rust/Web/GUI/IoT/自动驾驶 等技术生态 |
-| 2 | 👥 **社会科学（sheke）** | 81 | 9 | 职场管理 · 亲密关系 · 性学 · 理财 · 营销 · **AI 行业趋势** |
+| 1 | ⚙️ **技术（jishu）** | 509 | 19 | AI & 大模型 · 文档工程 · 构建/通信/容器/ML/PyData/Rust/Web/GUI/IoT/自动驾驶 等技术生态 |
+| 2 | 👥 **社会科学（sheke）** | 83 | 9 | 职场管理 · 亲密关系 · 性学 · 理财 · 营销 · **AI 行业趋势** |
 | 3 | 📜 **国学（guoxue）** | 49 | 16 | 儒道释法墨易 · 河洛 · 老子/庄子/鬼谷子/周易 · 法家 · 道家 · 阳明心学 · 算学 |
 | 4 | 🔬 **科学（kexue）** | 17 | 3 | 中西化学经典对读 · 中西物理学经典 · 中外数学经典 |
 | 5 | 🌿 **医学与养生（yixue）** | 10 | 6 | 中医经典 · 黄帝内经 · 道医 · 养生 · 房中 · 东亚医学 |
@@ -99,7 +99,7 @@ invoke gates.all
 | 7 | 💭 **哲学（zhexue）** | 8 | 2 | Ψhē 自指递归理论体系 · 思维方法论(第一性原理等) |
 | 8 | 📐 **规范与格式（meta）** | 3 | 3 | OKF v0.2 规范本体 · OKF 生态工具链 · OKF 桌面阅读器 |
 | 9 | ✒️ **文学（wenxue）** | 2 | 2 | 中国古典文学（浮生六记等） · 英语语法学习 |
-| **合计** | | **679** | **63** | 8 个学科域 + 1 个规范锚点 = **9 域** |
+| **合计** | | **690** | **63** | 8 个学科域 + 1 个规范锚点 = **9 域** |
 
 > ⚠️ 本表数据以 [doc/bundles/index.md](doc/bundles/index.md) frontmatter（`total_bundles` / `groups` / `domains`）为单一真相源。新增 / 删除 bundle 或分组后，请同步更新本表；`python scripts/check-bundles-index.py` 校验总索引自身五面一致，`python scripts/check-asset-baseline.py` 校验本表与 `doc/index.md` 的规模数字不与总索引矛盾。
 
