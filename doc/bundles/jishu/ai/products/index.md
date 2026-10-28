@@ -9,7 +9,7 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 
 面向终端任务的 AI 产品与工具——浏览器/移动端自动化、Agent 桌面工作台、网页数据采集、垂直创作工具、量化/翻译/CAD 等任务型产品与能力交易平台。
 
-本类共 **35 个知识包**，分布于 **35 个生态/项目目录**。
+本类共 **36 个知识包**，分布于 **36 个生态/项目目录**。
 
 ## 束导航
 
@@ -50,6 +50,7 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 | [VidBee 视频下载与本地转录](vidbee/index.md) | 1 | 微信公开文章经官方资料核验转化：本地 ASR、AI 提示词、RSS 与自托管；版本、隐私及授权边界明确，操作未实测 |
 | [🎬 CreatorHub 多平台内容运营本地面板](creatorhub/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——Python/FastAPI 本地面板：抖音/小红书/快手/视频号监控·采集·下载·发布·自动回复，CDP/Patchright、SQLite+独立 Profile、conservative 风控（无 LICENSE 与视频号边界两项核心勘误，flagged） |
 | [🎬 VibeKnow CLI 文档转视频终端工具](vibeknow-cli/index.md) | 1 | 源码级核验转化（tag v0.9.2 @ 93a26eca）——把文档/文本变成视频的 Cobra CLI：两阶段工作流、八档退出码契约、付费动作授权门（exit 8）、`--output` 三格式与 `vk_event=` 事件通道、preset 契约、预览产物与运行账本（104 条编号事实） |
+| [🎓 AgentMore × OpenMAIC 学习搭子教学 Skill](agentmore-openmaic/index.md) | 1 | 智谱清言 AgentMore 官方公告经 OpenMAIC 官方仓库交叉核验——学习搭子新增费曼学习/习题带练两项技能（各三轮法），同步上新 8 个面向教师/培训者的 OpenMAIC 教学 Skill（13 项 P0/P1 核验 7✅/6⚠️/0❌，Star 多口径与 License 三源互斥并列登记） |
 
 ```{toctree}
 :hidden:
@@ -90,4 +91,5 @@ skills-manager/index
 vidbee/index
 creatorhub/index
 vibeknow-cli/index
+agentmore-openmaic/index
 ```

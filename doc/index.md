@@ -7,7 +7,7 @@ title: Awesome OKF for Xuanspace 文档首页
 
 > 技术为器、思想为道，器以载道
 
-欢迎来到 **Awesome OKF for Xuanspace** 文档站。本库是 [XuanSpace（玄境）](https://github.com/xinetzone/xuanspace) 项目的开源知识格式（OKF）文档库，以 OKF bundle（知识包）形式组织 690 个知识包的系统化中文教程——涵盖开源项目源码解读与人文经典/自然科学著作阅读指南。
+欢迎来到 **Awesome OKF for Xuanspace** 文档站。本库是 [XuanSpace（玄境）](https://github.com/xinetzone/xuanspace) 项目的开源知识格式（OKF）文档库，以 OKF bundle（知识包）形式组织 691 个知识包的系统化中文教程——涵盖开源项目源码解读与人文经典/自然科学著作阅读指南。
 
 ## 文档导航
 
@@ -33,7 +33,7 @@ bundles/index
 
 ## 关于知识包
 
-知识包（bundle）是 OKF（Open Knowledge Format）规定的结构化知识单元，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。当前共收录 **690 个知识包**，按学科逻辑分为 **9 个学科域、63 个分组**（8 个学科域 + 1 个规范锚点）。规模数字以 [知识包总索引](bundles/index.md) frontmatter 为单一真相源。
+知识包（bundle）是 OKF（Open Knowledge Format）规定的结构化知识单元，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。当前共收录 **691 个知识包**，按学科逻辑分为 **9 个学科域、63 个分组**（8 个学科域 + 1 个规范锚点）。规模数字以 [知识包总索引](bundles/index.md) frontmatter 为单一真相源。
 
 ### 精选推荐
 
