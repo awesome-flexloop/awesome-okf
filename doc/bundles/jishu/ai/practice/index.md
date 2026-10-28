@@ -9,12 +9,14 @@ description: "AI 工程方法论、上下文工程、安全红队与行业趋势
 
 AI 工程方法论、上下文工程、安全红队与行业趋势研究——Token 经济与成本、免费 API 生态、Agent 工作流实践、行业研究及博文核验转化束。
 
-本类共 **25 个知识包**，分布于 **23 个生态/项目目录**。
+本类共 **27 个知识包**，分布于 **25 个生态/项目目录**。
 
 ## 束导航
 
 | 知识包 | 束数 | 一句话简介 |
 |--------|------|-----------|
+| [直播本地转录与 Agent 证据分析](live-transcription-agent/index.md) | 1 | 授权录制、本地 ASR、时轴与 JSONL、只读 Agent 引用核查；7 篇概念与 3 篇实践，28 条事实；flagged：真实录制与 ASR 未实测 |
+| [🧩 WSL + Python 打造 Agent 插件体系](wsl-python-agent-plugin-stack/index.md) | 1 | Win11 WSL2 + uv + 插件机制工程方案——环境自由三层栈（WSL 快照/uv 解释器/workspace 拓扑）、包可组合双轴（进程内 entry points/进程间 MCP）、插件三形态选型（Skills/Tools/Hooks）与端到端实战；架构教程，关键事实经官方文档核验 |
 | [🎁 云知声 U2Flash 免费月活动解读与接入排障](u2flash-free-month/index.md) | 1 | 群公告+官方模型页+官方教程+官方飞书 Q&A（rev.490）四源核验——免费资格三检（实名/余额非负/模型名）、512K 规格与 RPM100 真实限流、OpenAI 双协议与腾讯 WorkBuddy 五步接入、八问排障（欠费联锁/Base URL 两口径）、5 亿 token 赠品与限免淘金五查法；非操作实测教程（官方文档汇编），时效至 2026-11-15 |
 | [🚀 DeepSeek V4.1-Flash-1017 发布解读](deepseek-v41-flash-1017/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化（核验自 DeepSeek 官方公告与 API 定价页）——发布事实与 11 项基准全景、单任务成本账（16 模型对照，¥3.3→¥1.3）、许愿式编程与自反馈 RL、Search/Fetch 搜索 API 开放（¥5/千次，11-01 起计费）与 Harness 0.2.1 适配清单；非操作教程 |
 | [🛡️ AI 安全与红队研究（ai-security）](ai-security/index.md) | 3 | elder-plinius 红队研究三仓库——系统提示词透明档案（CL4R1T4S）、越狱攻击面研究库（L1B3RT4S）、拒绝行为消除研究工具包（OBLITERATUS） |
@@ -43,6 +45,8 @@ AI 工程方法论、上下文工程、安全红队与行业趋势研究——To
 :hidden:
 :maxdepth: 7
 
+live-transcription-agent/index
+wsl-python-agent-plugin-stack/index
 deepseek-v41-flash-1017/index
 ai-security/index
 agent-industry-research/index
