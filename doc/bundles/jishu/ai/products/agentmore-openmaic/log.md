@@ -55,4 +55,8 @@
 
 - 索引收尾（已完成）：`products/index.md`（35→36，含 nav 表 + toctree + 计数）、`jishu/ai/index.md`（description 与正文 276→277、products 行 35→36）、`jishu/index.md`（ai 行 276→277）、`doc/bundles/index.md`（`total_bundles` 690→691、正文计数、mermaid jishu 509→510、jishu 节标题 509→510、ai 表行 276→277）、`doc/index.md`（两处 690→691）、`README.md`（badge、L26、L28、L89、jishu 510、合计 691）三处规模数字一致
 - 门禁复跑：`check-utf8.py` / `check-toctrees.py` / `check-bundles-index.py` / `check-asset-baseline.py` 全部通过；双份 F 编号（spec `facts.md` ↔ 本束 `article-source.md`）各 46 条、F-001~F-046 连续且集合相等；束内 F 编号全覆盖；无 `file:///` 绝对路径
-- **提交状态：待用户授权**。原子提交顺序：子模块 `projects/awesome-okf-xs`（本束 9 文件 + products/ai/bundles 索引）→ 主仓库 spec（`.trae/specs/okf-wiki-ecosystem/agentmore-openmaic-okf-wiki/`）→ 主仓库 gitlink；push 依用户指令，默认不推送
+- **提交记录**（用户授权「提交但不推送」）：
+  - 子模块 `projects/awesome-okf-xs`：`d2191171 docs(okf): 新增 AgentMore × OpenMAIC 学习搭子教学 Skill 知识包并同步各级索引计数` —— 15 个文件、+618/-18
+  - 主仓库 `SpecWeave`：`5c9292faa docs(okf): 登记 AgentMore × OpenMAIC 知识包 spec 并前移 awesome-okf-xs 子模块指针` —— spec.md + facts.md + gitlink
+- **提交工具**：`python .agents/scripts/git-commit-utf8.py`，**显式列全文件路径**（未传目录参数——传目录会因脚本「暂存区与指定列表一致性」校验而失败）
+- **推送状态**：未推送（依用户指令）
