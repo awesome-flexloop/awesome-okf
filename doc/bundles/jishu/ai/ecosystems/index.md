@@ -9,7 +9,7 @@ description: "以厂商、品牌与开源社区为中心的生态级知识包集
 
 以厂商、品牌与开源社区为中心的生态级知识包集群——多仓库组织目录（trae、anthropic、deepseek、tencent、datawhale 等）与单厂产品束并存。
 
-本类共 **103 个知识包**，分布于 **18 个生态/项目目录**。
+本类共 **104 个知识包**，分布于 **18 个生态/项目目录**。
 
 ## 束导航
 
@@ -30,7 +30,7 @@ description: "以厂商、品牌与开源社区为中心的生态级知识包集
 | [🌋 火山引擎（Volcengine）AI 产品生态](volcengine/index.md) | 1 | Ark 大模型平台、Computer-Use/Mobile-Use Agent、Viking AI 搜索推荐、机器学习平台与云手机等产品分析（与 volcengine-agent Agent 生态束并存互补） |
 | [🤝 火山引擎 Agent 生态（AgentKit + 共建计划）](volcengine-agent/index.md) | 1 | AgentKit 产品与架构（VEADK 框架、SDK/CLI、应用场景）与 Agent 共建计划（贡献方向、参与指南、奖励认可） |
 | [🧪 AtomGit AI 最佳实践](atomgit-ai/index.md) | 1 | AtomGit AI 平台最佳实践——平台能力、使用模式与工程化建议 |
-| [⚡ 秒悟（Miaowu/Meoo）AI 平台](miaowu/index.md) | 6 | 秒悟 AI 应用平台——大使入驻指南、实训案例（7 实操场景 + 5 步应用搭建法）、应用赏金广场（AI Builder Growth 共创计划：25 条共创技能清单）、产品增长 Skill 包选型与使用教程（22 条清单 + 六技能实战 + 五阶段闭环）、CLI 部署与开放平台集成指南、产品功能全景指南（14 官方页 150 条事实） |
+| [⚡ 秒悟（Miaowu/Meoo）AI 平台](miaowu/index.md) | 7 | 秒悟 AI 应用平台——大使入驻指南、实训案例（7 实操场景 + 5 步应用搭建法）、应用赏金广场（AI Builder Growth 共创计划：25 条共创技能清单）、产品增长 Skill 包选型与使用教程（22 条清单 + 六技能实战 + 五阶段闭环）、CLI 部署与开放平台集成指南、产品功能全景指南（14 官方页 150 条事实）、「豆掌柜」拼豆店门店管理副业案例拆解 |
 | [🏢 Octo Platform 平台教程](octo-platform/index.md) | 1 | 明略科技 Octo 多 Agent 协作平台——平台架构、核心能力与使用指南 |
 | [Kanzan AI 场景与应用工程](kanzan/index.md) | 1 | 公开中文站点概念与方法教程——场景与知识治理、MCP/Skills、工作事件、产品边界、成本交付与研究验证；作者自述分层，非生产操作教程 |
 

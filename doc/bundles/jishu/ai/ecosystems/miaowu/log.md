@@ -1,5 +1,14 @@
 # 更新日志
 
+## 2026-10-29
+
+**New Bundle**: 新增 `miaowu-douzhanggui-case`（秒悟 Meoo 副业案例：「豆掌柜」拼豆店门店管理应用）
+
+* 微信公众号「秒悟Meoo」2026-10-29 公开文章《纳尼?！真有人靠 Meoo 做副业月入过万！》转化：02 年出生的王玉丹为上海一家拼豆店做出门店管理应用「豆掌柜」，跑 5 家店 → 1 家愿试 → 免费试用一个月 + 驻店一周 + 累计数百次迭代 → 2026 年 8 月底以 1 万元成交（含一年内免费维护及需求修改）
+* 结构：`index.md` + `log.md` + `concepts/`（00-case-overview / 01-need-discovery-and-tooling / 02-customer-development-and-trial / 03-deal-boundaries-and-insights）+ `references/`（source-ledger F-001–F-060 + verification 19 项 P0：9✅/9⚠️/1❌）；**不设 `examples/`**（源文无可复现操作流程）
+* 性质：平台方自述**单源案例**（发布账号即 Meoo 官方公众号）；5 条四元组洞察 + 2 个可迁移模式；「可复制到第二三家」源文明确无答案，判 ❌
+* 计数同步：`miaowu` 组 6 → 7 束
+
 ## 2026-10-24
 
 **New Bundle**: 新增 `miaowu-growth-skills`（秒悟 Meoo 产品增长 Skill 包：选型与使用教程）
