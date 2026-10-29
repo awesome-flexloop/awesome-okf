@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论、零基础 AI 实操赚钱项目教程、AI 科学创新工坊双赛道活动规则、千问Go!「我的应用」厂商公告、头条号变现体系、知乎盐言作者平台、WorkBuddy 1024 造物挑战大赛规则等 35 束行业分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论、零基础 AI 实操赚钱项目教程、AI 科学创新工坊双赛道活动规则、千问Go!「我的应用」厂商公告、头条号变现体系、知乎盐言作者平台、WorkBuddy 1024 造物挑战大赛规则、豆包直播间嵌入抖音电商等 36 束行业分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
@@ -55,6 +55,7 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 | [zhihu-salt-author-platform](zhihu-salt-author-platform/index.md) | 21 | 知乎盐言作者平台官方口径拆解——平台导航与创作五步流程、中长篇签约与完结双字数闸门、曝光与选题信号，以及一次征稿活动的完整规则解剖（字数区间·奖项结构·评审标准·流量激励·权利条款）（平台规则分析包，非操作教程；flagged：111 条事实 F-001~F-111 全平台单源、无第三方复核源、采集快照 2026-10-23） |
 | [workbuddy-1024-contest](workbuddy-1024-contest/index.md) | 8+2 | WorkBuddy「1024 造物挑战」程序员节应用创作大赛规则解构与定制参赛方案——117 条事实、三维评分 35/40/25、四档奖项与 130 分算术、13 项投稿表单字段全解、五条机制洞察，以及基于 OKF 知识库真实资产的定制参赛方案（平台赛事规则分析包，非操作教程；flagged：全部事实为活动页单源、18 条官方口径缺口、1 项推导待确认） |
 | [ai-project-submission-and-content-publishing-guide](ai-project-submission-and-content-publishing-guide/index.md) | 15 | AI作品参赛准备与内容发布指南——知乎、WorkBuddy与头条｜2026-10-27研究快照，含待核项；83F/24G/7C/6E、三类选题、差异化写作、版权时序、三洞察与两项L1-draft方法（draft：头条实际入口未确认、R1未通过、R2 blocked，不生成真实投稿正文） |
+| [doubao-douyin-livestream-ecommerce](doubao-douyin-livestream-ecommerce/index.md) | 3+2 | 微信博文转化：豆包把抖音电商直播间嵌进 AI 回答——近一年电商功能时间线、4.19 亿月活与双 11 补贴实例、阿里/美团/京东 AI 电商对标（商业分析，非源码教程；flagged：核心新功能无官方口径、价格实例单次实测不可复核，43 条事实 F-001~F-043、9 项 P0 核验通过/8 项未能核验、10 项缺口） |
 
 ## 阅读建议
 
@@ -104,4 +105,5 @@ toutiao-monetization/index
 zhihu-salt-author-platform/index
 workbuddy-1024-contest/index
 ai-project-submission-and-content-publishing-guide/index
+doubao-douyin-livestream-ecommerce/index
 ```
