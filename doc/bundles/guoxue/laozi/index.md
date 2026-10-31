@@ -10,6 +10,7 @@
 | [laozi-works/](laozi-works/index.md) | 老子著作（原文与解读） | 聚焦老子本人著作的原文与解读本体，以出土文献为主基准，三线并收校注与历代/现代注本 |
 | [laozi-lineage/](laozi-lineage/index.md) | 《老子》传本源流谱系 | 学术性传本谱系梳理——8 种传本、2 个考古语境、4 组关键异文、避讳断代与源流重建方法论 |
 | [dao-san-triads/](dao-san-triads/index.md) | 「道生一」三元组探究 | 从《道德经》第四十二章出发，探究「三」的本体论（六类解释 + 第五义「三= 关系位」）、时间三分（奥古斯丁）、两组行动三元组，收敛为七条可当场判定的行动原则；含 F/I/E/V 探索留痕 |
+| [laozi-culture-ecosystem/](laozi-culture-ecosystem/index.md) | 老子文化生态圈（现金流闭环） | 从帛书《老子》价值基线出发，构建「流量变现 + 渠道变现 + 利他现金流」的多形态商业圈现金流闭环与「现金流有效场域」；理论 10 篇 + 算例 4 篇双轨，与「市场与有效市场」知识包深度耦合 |
 
 ## 关联知识包
 
@@ -23,4 +24,5 @@ boshu-reading/index
 laozi-works/index
 laozi-lineage/index
 dao-san-triads/index
+laozi-culture-ecosystem/index
 ```
