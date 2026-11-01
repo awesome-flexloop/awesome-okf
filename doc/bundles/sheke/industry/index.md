@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论、零基础 AI 实操赚钱项目教程、AI 科学创新工坊双赛道活动规则、千问Go!「我的应用」厂商公告、头条号变现体系、知乎盐言作者平台、WorkBuddy 1024 造物挑战大赛规则、豆包直播间嵌入抖音电商、抖音算力扩张与 AI 电商、AI 图像服务与内容变现、壁纸主题选择与上传判断、微信小店（入驻/保证金/结算/全域场景/优选联盟/合规）、剪流AI 员工手机（官网全站解构·四档定价·证据分层·三账验收）等 41 束行业与平台分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论、零基础 AI 实操赚钱项目教程、AI 科学创新工坊双赛道活动规则、千问Go!「我的应用」厂商公告、头条号变现体系、知乎盐言作者平台、WorkBuddy 1024 造物挑战大赛规则、豆包直播间嵌入抖音电商、抖音算力扩张与 AI 电商、AI 图像服务与内容变现、壁纸主题选择与上传判断、微信小店（入驻/保证金/结算/全域场景/优选联盟/合规）、剪流AI 员工手机（官网全站解构·四档定价·证据分层·三账验收）、快手发布壁纸作品引流（口令·发布·作业交付，ASR 转写讲师演示口径）等 42 束行业与平台分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
@@ -61,12 +61,15 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 | [wallpaper-selection-directions](wallpaper-selection-directions/index.md) | 13 | 壁纸主题选择与上传判断——课程日更分享转化的九类主题清单、主题到上传的三问筛选、单源主张与术语勘误（32 条事实 F-001~F-032；flagged：源文无上传步骤与平台规则，“第四次科技革命”已改述为“第四次工业革命”，2 个视频未转录；非操作教程） |
 | [wechat-mini-shop](wechat-mini-shop/index.md) | 9+2+4 | 微信小店平台规则级拆解——从视频号小店升级、企业店/个体户店入驻、2000+ 类目与类目/浮动保证金取高、0 保证金试运营、技术服务费与确认收货+7 天结算、视频号/公众号/小程序/搜一搜/送礼物场景、关联账号与优选联盟 10% 联盟服务费、违规与信用分 12 分制；104 条事实 F-001~F-104、8 组口径冲突、4 条机制洞察与 90 天路径（flagged：规则高频修订、增长数据为媒体转述，非操作教程） |
 | [jianliu-ai-employee-phone](jianliu-ai-employee-phone/index.md) | 16 | 剪流AI 员工手机官网全站解构——8 模块 46 条目去重 40 功能、四档单机价与三级合伙、7 层漏斗与 12 案例、L0~L3 证据分层与五处矛盾，附六问 + 三账验收 + 一周试点教程（厂商官网解读，非操作教程；flagged：65 条事实 F-001~F-065、16 项 P0 核验✅6/⚠️5/❌5、10 项缺口，效果数字全部厂商自述） |
+| [kuaishou-wallpaper-publish-traffic](kuaishou-wallpaper-publish-traffic/index.md) | 16 | 快手发布壁纸作品引流——推图社小程序口令 → 发快手 → 选图编辑 → 引流文案与话题 → 发布前设置 → 发布交付的全流程还原；53 条事实 F-001~F-053、C1~C9 核验结论、勘误四张清单与 G1~G4 缺口（信源为源页面内嵌视频音轨的本地离线 ASR 转写，属讲师口播口径而非平台规则；flagged：图片数量三口径冲突无官方口径、「允许下载」效果无官方文档、UI 版本未标注） |
 
 ## 阅读建议
 
 - [AI 图像服务与内容变现](ai-image-service-monetization/index.md)：18 篇 Markdown（9 教程、5 参考正文、3 索引、1 日志），48 条事实 F-001～F-048；四条商业路径、成本交付、分层授权与学习反馈。flagged：收益和平台 AI 准入未获实证，视频部分核读，L1 模式待验证。
 
 - [壁纸主题选择与上传判断](wallpaper-selection-directions/index.md)：13 篇 Markdown（4 教程、5 参考正文、3 索引、1 日志），32 条事实 F-001～F-032；九类壁纸主题清单、上传前三问与小批量试验框架。flagged：源文为课程日更、无上传步骤与平台规则，术语已勘误，2 个视频未转录。
+
+- [快手发布壁纸作品引流](kuaishou-wallpaper-publish-traffic/index.md)：16 篇 Markdown（8 概念、3 示例、3 参考、1 索引、1 日志），53 条事实 F-001～F-053；推图社口令 → 发快手 → 选图编辑 → 文案话题 → 发布设置 → 截图交作业的六阶段流程。flagged：唯一知识载体是源页面内嵌视频音轨的本地 ASR 转写（讲师口播口径，非平台规则），图片数量三口径冲突、「允许下载」效果与 UI 版本均无官方口径；建议与 [壁纸主题选择与上传判断](wallpaper-selection-directions/index.md) 上下游连读。
 
 - **关注平台规则与交易成本**：[wechat-mini-shop](wechat-mini-shop/index.md) 给出「准入—保证金—费率—结算—场景—分销—合规」的完整规则地图，适合与 [toutiao-monetization](toutiao-monetization/index.md)（内容平台分钱规则）对照阅读。
 - **关注 AI 商业化路径**：从 [ai-monetization](ai-monetization/index.md) 入门，配合 [douyin-vibecoding](douyin-vibecoding/index.md) 与 [papi-jiang-solo-ip](papi-jiang-solo-ip/index.md) 案例对照；
@@ -121,4 +124,5 @@ ai-image-service-monetization/index
 wallpaper-selection-directions/index
 wechat-mini-shop/index
 jianliu-ai-employee-phone/index
+kuaishou-wallpaper-publish-traffic/index
 ```
