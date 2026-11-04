@@ -3,12 +3,14 @@ okf_version: "0.2"
 type: bundles-index
 title: "DeepSeek-AI 基础设施"
 description: "DeepSeek-AI 开源大模型基础设施项目源码中文教程——推理框架、Token 编解码、MoE通信、GPU kernel优化、注意力机制、投机解码、流水线并行、负载均衡"
-total_bundles: 15
+total_bundles: 16
 ---
 
 # DeepSeek-AI 基础设施（DeepSeek-AI Infrastructure）
 
 本分组提供 DeepSeek-AI 组织开源的大模型基础设施项目的源码级中文学习文档。这些项目是 DeepSeek-V3/R1 等模型高性能训练与推理的核心技术支撑，涵盖 MoE 专家并行通信、GPU Tensor Core 优化、MLA 注意力解码、投机解码、双向流水线并行、基于线性规划的负载均衡等关键系统层技术。
+
+另收录公开文章核验转化的架构概念教程；该类内容按来源与研究边界单独标记，不属于源码级复现。
 
 ## 生态关系概览
 
@@ -82,6 +84,12 @@ total_bundles: 15
 | [awesome-deepseek-agent](awesome-deepseek-agent/index.md) | Agent 生态资源列表——28+ Agent 工具/平台集成指南（Cline/Claude Code/Cherry Studio 等） |
 | [vision-model-selection](vision-model-selection/index.md) | 跨厂商多模态视觉模型选型指南——DeepSeek-V4-Flash-Vision-Exp 切入、五类场景选型矩阵、价格对比、视觉-推理双模型协作架构 |
 
+### 架构概念解读
+
+| 知识包 | 简介 |
+|--------|------|
+| [Super-agent 双层协作架构](super-agent-architecture/index.md) | Router/Worker、事件、恢复、评估与安全；30项事实；二手来源概念教程，非源码或部署教程，flagged：上游与实验待核验 |
+
 ## 推荐学习路径
 
 ### 路径1：理解 DeepSeek-V3 核心基础设施
@@ -136,4 +144,5 @@ deepseek-math-v2/index
 engram/index
 awesome-deepseek-agent/index
 vision-model-selection/index
+super-agent-architecture/index
 ```

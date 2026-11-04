@@ -9,7 +9,7 @@ description: "AI 工程方法论、上下文工程、安全红队与行业趋势
 
 AI 工程方法论、上下文工程、安全红队与行业趋势研究——Token 经济与成本、免费 API 生态、Agent 工作流实践、行业研究及博文核验转化束。
 
-本类共 **27 个知识包**，分布于 **25 个生态/项目目录**。
+本类共 **29 个知识包**，分布于 **27 个生态/项目目录**。
 
 ## 束导航
 
@@ -40,6 +40,8 @@ AI 工程方法论、上下文工程、安全红队与行业趋势研究——To
 | [?? Designer-RSI：用外部程序记忆演化图形设计 Agent](designer-rsi-procedural-memory/index.md) | 1 | 微信博文 + arXiv:2609.22086 全文核验——程序记忆与 SKILL.md 技能库、两阶段检索、Widening/Deepening 双轴演化、匹配回放门控、Graphic-Eval 三轴评分；105 条事实、17 组 P0 核验（2 处 ⚠️ 次级勘误），非操作教程 |
 | [🪟 微软 MXC：Windows 的 AI Agent 执行隔离](microsoft-mxc-agent-containment/index.md) | 1 | Microsoft Execution Containers GA——四种隔离后端、Agent 安全动因（最小权限/致命三要素）与 Windows 平台竞争格局（商业分析非操作教程，微软/Anthropic 官方博客核验） |
 | [🔎 XERJ × DeepSeek Search/Fetch 对比](xerj-vs-deepseek-search/index.md) | 1 | 自建本地检索栈（XERJ）与托管搜索 API（DeepSeek Search/Fetch）的九轴对比——语料归属是第一决策轴、上下文成本的两种实现、404 五因合并的可诊断性差距、固定 vs 线性成本曲线与选型决策树 |
+| [🛡️ ub-mode：用可打分的检查约束 AI 编码纪律](ub-mode-coding-discipline/index.md) | 1 | 公众号「开源日记」博文经 OKF v0.2 转化——unclebob 的 ub-mode 是只有 3 个文件的 agent skill，把 AI 编码纪律压成三步（Make it Work → Make it Right → Practice）+ 四个可打分工具（CRAP<10 / 相似度≥0.8）；勘误 E-1~E-4（概念解读非操作教程） |
+| [🐟 DeepSeek Harness 养鱼教程](dsh-pet-raising-tutorial/index.md) | 1 | 微信博文经 OKF v0.2 转化——把 DSH 接进 QQ／微信／飞书并放养到 B站抖音：四层运行时（模型/Harness/通道/平台）、人设五段结构（身份·性格·主人判定·说话风格·底线）、四通道证据等级与共享记忆成本、三层安全边界（工具白名单·不可说清单·指令来源）与「彩排—请示—正式」闸门；54 条事实，flagged：单源、零独立运行 |
 
 ```{toctree}
 :hidden:
@@ -70,4 +72,6 @@ designer-rsi-procedural-memory/index
 microsoft-mxc-agent-containment/index
 xerj-vs-deepseek-search/index
 u2flash-free-month/index
+ub-mode-coding-discipline/index
+dsh-pet-raising-tutorial/index
 ```

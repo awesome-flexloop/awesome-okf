@@ -9,12 +9,13 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 
 面向终端任务的 AI 产品与工具——浏览器/移动端自动化、Agent 桌面工作台、网页数据采集、垂直创作工具、量化/翻译/CAD 等任务型产品与能力交易平台。
 
-本类共 **37 个知识包**，分布于 **37 个生态/项目目录**。
+本类共 **38 个知识包**，分布于 **38 个生态/项目目录**。
 
 ## 束导航
 
 | 知识包 | 束数 | 一句话简介 |
 |--------|------|-----------|
+| [书童 Pagekin 小说创作与人工审校](pagekin/index.md) | 1 | 开源星探公开文章经维护者文档核验：章节蓝图、连续性、审稿差异、模型与数据边界，44 条事实与两篇练习；百章效果未证实，flagged，操作未实测 |
 | [🌐 BrowserAct 浏览器自动化 Agent](browseract/index.md) | 1 | 官方能力与产品解析——架构、核心场景、使用指南与生态对比 |
 | [🐦 EchoBird 百灵鸟 AI Agent 桌面管理工具](echobird/index.md) | 1 | Model Nexus 模型枢纽、本地 LLM、Codex Proxy 与工具注册表（Tauri + Rust 桌面端） |
 | [🔁 LoopX 长程 Agent 控制面](loopx/index.md) | 1 | 国产开源本地优先状态内核——quota 计费闸门、人类门禁、dashboard 工作台、200h OpenViking 公开证据与安装实操（极客之家博文核验转化，10✅2⚠️） |
@@ -94,4 +95,5 @@ creatorhub/index
 vibeknow-cli/index
 agentmore-openmaic/index
 craft-anything/index
+pagekin/index
 ```

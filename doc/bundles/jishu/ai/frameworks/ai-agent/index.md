@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——工具调用、多代理编排、记忆与插件的源码教程，以及参考架构与治理学习"
-total_bundles: 59
+total_bundles: 61
 ---
 
 # 🤖 AI Agent 框架
@@ -88,6 +88,7 @@ total_bundles: 59
 | [ai-agent-skills](ai-agent-skills/index.md) | 技能规范 | 12+1+13=26 | AI Agent Skills 生态六项目——agency-agents 部门化人格、awesun-mcp/skill/ui-locator 向日葵远程控制三件套、jira-skill 工程化集成、retro-skill 会话复盘，涵盖 SKILL.md 开放标准、MCP 工具协议、插件架构与渐进式披露 |
 | [jira-skill](jira-skill/index.md) | 技能插件 | 10+3+3=16 | Jira 官方开源插件（Netresearch v3.29.0）完整技术教程——jira-communication（API 交互）与 jira-syntax（语法规范）双技能架构、JQL 查询语言与查询/创建/流转/看板/冲刺全操作 |
 | [book-to-skill](book-to-skill/index.md) | 知识工具 | 4+1+1=6 | 书籍→Agent Skill编译器——确定性文本提取、7种文档格式解析器、13语言章节检测、四层产出流水线、多层安全防护 |
+| [learn-from-materials](learn-from-materials/index.md) | 学习工具 | 4+2+2+1=9 | 把 PDF/EPUB/DOCX/PPTX 材料转成可追溯、可测验、可做笔记的交互式学习网页——六板块机制、两种学习深度、宿主安装与三步实操，41 条事实与 10 项 P0 核验 |
 | [i-have-adhd](i-have-adhd/index.md) | 辅助技能 | 3+1+1=5 | ADHD认知辅助技能——10条ADHD友好输出规则、Session Hooks偏好持久化、10+IDE/Agent平台集成、Always-On跨应用模式 |
 | cli-anything | CLI框架 | 8+3+6=17 | Agent原生CLI接口框架——ReplSkin双语终端外壳、SKILL.md自动生成(AST+Jinja2)、PreviewBundle v1三层持久化协议、CLI-Hub包管理器(注册表+pip安装器)、Matrix技能矩阵、Cursor/Claude/Codex多平台插件适配、四层测试与真实软件原则 |
 | [eve](eve/index.md) | Web 框架 | 9+0+0=9 | Eve（Vercel 出品 nextjs-for-agents 框架）——目录即 Agent 设计（instructions.md/agent.ts/tools/skills）、生产能力、高级能力、快速上手与选型对比 |
@@ -126,6 +127,7 @@ total_bundles: 59
 | [doubao-work](doubao-work/index.md) | 产品实测 | 4+2+1=7 | 字节豆包工作实测评测——独立桌面客户端+飞书深度打通、Seedance 2.5+Seedream 5.0多模态生成、文档/PPT/网页/AI协同编辑(80+设计风格/带数据库网页)、飞书组织架构/群聊总结/多维表格/会议纪要→任务流、"由豆包发送"标签、滚动额度模型、核心论点"模型决定AI有多聪明，组织上下文决定它能不能成为同事"、8项P0核验全通过零勘误 |
 | [doubao-work-context-layer](doubao-work-context-layer/index.md) | 战略分析 | 4+2+1=7 | AI产品阿颖对豆包工作的Context Layer战略分析——飞书作为Agent组织上下文层、个人效率vs组织效率、Claude Tag(Slack)参照、Cat Wu上下文观(引语勘误)、Context竞争论、企业Agent四阶段演进、6项P0核验(4✅1⚠️1❌含10倍效率数据归因失实勘误) |
 | [doubao-work-org-productivity](doubao-work-org-productivity/index.md) | 行业分析 | 4+2+1=7 | 36氪深度分析豆包工作组织生产力——Agent=Model+Harness能力商品化、Deloitte 34%/37%企业AI落地落差、飞书账号级集成、理解→执行→协作→沉淀组织闭环、BCG 42%员工周省8h但组织价值未转化、权限治理分界线、信通院双项认证(⚠️待佐证)、6项P0核验(5✅1⚠️0❌本系列最高通过率) |
+| [doubao-work-remotion-photo-video](doubao-work-remotion-photo-video/index.md) | 工作流教程 | 4+0+5+1=10 | 豆包工作与 Remotion 照片视频制作：素材、分镜、静帧、声音及项目交付；36 条事实、官方文档核验与原创需求练习，flagged 保留安装、质检及成片复现缺口 |
 | [claude-vision-skill](claude-vision-skill/index.md) | 工具教程 | 3+2+2+1=8 | claude-vision-skill给纯文本模型装眼睛——视觉转录架构(图片→qwen-vl-max→文字→DeepSeek推理)、Claude Code Skill自动触发机制、安装避坑(SKILL.md硬编码路径3处/dotenv静默失败)、本地/URL/剪贴板三场景+回退逻辑、⏰博文当天DeepSeek官方视觉模型上线、6项P0核验全✅ |
 | [siemens-industrial-agent](siemens-industrial-agent/index.md) | 行业分析 | 4+2+1=7 | 量子位解析西门子工业Agent——工业Agent为何不能套壳(43%未部署/IT-OT断层)、Eigen工程智能体(ECAD集成/PLC标签/端到端执行/WAIC SAIL之星)、ICX编排层(下连PLM-ERP-MES-OT+Skill/Agent/Workflow)、Xcelerator三层生态与验证-沉淀-开发-分发飞轮、⚠️平台数字勘误(官方800款/500家非900/600)、报告系西门子联合发布、6项P0核验(3✅3⚠️) |
 | [agora-gemini-transcribe](agora-gemini-transcribe/index.md) | 资讯速报 | 4+2+1=7 | 声网(Agora官方)官宣集成Google Gemini 3.5 Transcribe——双API(Live流式`gemini-3.5-transcribe-live`亚秒延迟/Interactions预录音+说话人归属)、WER流式4.0%/非流式2.6%(Artificial Analysis)、85+语言、Agents SDK三语言(Python/TS/Go)与链式ASR+LLM+TTS/MLLM端到端两架构、Smart Transcription计划支持CRM/信息采集场景、⚠️"全球首个Realtime API"措辞勘误(API为OpenAI产品/Agora为首发语音合作方)、厂商自宣稿无成效数字、6项P0核验(5✅1⚠️) |
@@ -166,7 +168,7 @@ total_bundles: 59
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：59 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
+> **内容统计**：61 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
 
 ```{toctree}
 :hidden:
@@ -213,6 +215,7 @@ a2a-mcp-convergence/index
 doubao-work/index
 doubao-work-context-layer/index
 doubao-work-org-productivity/index
+doubao-work-remotion-photo-video/index
 claude-vision-skill/index
 siemens-industrial-agent/index
 agora-gemini-transcribe/index
@@ -231,4 +234,5 @@ hypit-video-replication/index
 agent-knowledge-base/index
 cua/index
 openshell-reference-architecture/index
+learn-from-materials/index
 ```
