@@ -58,7 +58,7 @@ sources:
 | 移动热点具备状态防火墙 | Windows 防火墙在 ICS 主机上启用时保护 ICS 客户端；官方建议始终启用 | F-016 |
 | 移动热点不做端口转发 | ICS 对报文做的是源地址改写，不是端口映射 | F-018 |
 
-**修正后口径**（已在[总览](../concepts/overview.md#三勘误索引本包最重要的一条)、[ICS 机制](../concepts/ics-mechanism.md)、[边界与风险](../concepts/boundaries-and-risks.md)三处就地写入）：
+**修正后口径**（已在[总览](../concepts/overview.md#errata-index)、[ICS 机制](../concepts/ics-mechanism.md)、[边界与风险](../concepts/boundaries-and-risks.md)三处就地写入）：
 
 > Windows 11 移动热点**自带** DHCP 地址分配、DNS 代理与状态防火墙——这些不是「专业路由器才有的东西」。它与家用路由器的真实差距在于：依赖主机常开不休眠；提供 NAT 共享出口而非端口转发；缺少访客网络、设备分组、家长控制、QoS 等管理面。
 
@@ -92,13 +92,15 @@ sources:
 
 | 编号 | 未闭环内容 | 层级现状 | 复核触发条件 | 对应正文位置 |
 |---|---|---|---|---|
-| U-1 | 6 GHz 移动热点的可用状态 | L1/L3/L6 三方冲突 | 官方公告或 KB 条目清单出现明确表述 | [频段与兼容性 §2](../concepts/frequency-and-compatibility.md#二6-ghz证据冲突本包不作断言) |
-| U-2 | ICS 默认网段与 `SharedAccess\Parameters` 注册表键 | 仅 L5 社区口径 | 官方文档出现 ICS 网段与注册表配置章节 | [ICS 机制 §4](../concepts/ics-mechanism.md#四客户端视角接入后到底拿到了什么) |
-| U-3 | `WifiMaxPeers` 的跨版本实际效果 | L3 给了方法，未给效果承诺 | 官方文档补充该参数的适用版本与取值范围 | [频段与兼容性 §4.3](../concepts/frequency-and-compatibility.md#43-本包的审慎表述) |
-| U-4 | `Hosted network supported` 与移动热点可用性确无关联 | 仅 L5 + 官方文档沉默 | 微软正面说明移动热点与 Hosted Network 的关系 | [频段与兼容性 §6](../concepts/frequency-and-compatibility.md#六hosted-network-辨析) |
-| U-5 | 「节能：无设备连接时自动关闭」的存在与触发条件 | 未核实 | 官方文档或实机观察补充 | [边界与风险 §2.2](../concepts/boundaries-and-risks.md#22-不能在主机休眠关机时工作) |
+| U-1 | 6 GHz 移动热点的可用状态 | L1/L3/L6 三方冲突 | 官方公告或 KB 条目清单出现明确表述 | [频段与兼容性 §2](../concepts/frequency-and-compatibility.md#band-6ghz-conflict) |
+| U-2 | ICS 默认网段与 `SharedAccess\Parameters` 注册表键 | 仅 L5 社区口径 | 官方文档出现 ICS 网段与注册表配置章节 | [ICS 机制 §4](../concepts/ics-mechanism.md#client-perspective) |
+| U-3 | `WifiMaxPeers` 的跨版本实际效果 | L3 给了方法，未给效果承诺 | 官方文档补充该参数的适用版本与取值范围 | [频段与兼容性 §4.3](../concepts/frequency-and-compatibility.md#cautious-wording) |
+| U-4 | `Hosted network supported` 与移动热点可用性确无关联 | 仅 L5 + 官方文档沉默 | 微软正面说明移动热点与 Hosted Network 的关系 | [频段与兼容性 §6](../concepts/frequency-and-compatibility.md#hosted-network) |
+| U-5 | 「节能：无设备连接时自动关闭」的存在与触发条件 | 未核实 | 官方文档或实机观察补充 | [边界与风险 §2.2](../concepts/boundaries-and-risks.md#no-work-while-host-sleeps) |
 
 ## 四、可迁移模式：共享出口型能力归因校验
+
+<a id="transferable-pattern"></a>
 
 > **模式名**：共享出口型能力归因校验（Shared-Egress Capability Attribution Check）
 > **来源**：本包 C2 勘误的抽象化，适用于「操作系统做不到 X」这类断言的普遍性检验。
@@ -147,7 +149,7 @@ sources:
 | 门禁 | 要求 | 本包执行情况 | 缺口 |
 |---|---|---|---|
 | **G1** | 事实无因果词 | 事实登记簿 38 条全部为陈述句，因果判断归入概念层 | 无 |
-| **G2** | 洞察四元组（陈述 / 证据 / 反常识 / 行动） | 3 条洞察均含四元组，见 [总览 §4](../concepts/overview.md#四三条结论的推导链) | 无 |
+| **G2** | 洞察四元组（陈述 / 证据 / 反常识 / 行动） | 3 条洞察均含四元组，见 [总览 §4](../concepts/overview.md#three-conclusions-derivation) | 无 |
 | **G3** | 模式可迁移 | 含触发场景 + 5 步做法 + 5 条反模式 + 4 条检验标准 + 2 个跨领域示例 | 无 |
 | **G4** | 行动项原子化 | 本包无独立行动项清单；行动项分散在概念层与示例层，均为单一动作 | **缺口 G4**：本包**未在真实设备上复跑流程**，界面措辞未经实机核对；`examples/` 的分步流程为文档复述版，非实拍操作录像 |
 

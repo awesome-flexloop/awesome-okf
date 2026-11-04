@@ -40,7 +40,7 @@ sources:
 
 > **失败即停 A：整页找不到「移动热点」**
 > 可能原因：① 系统不是 Windows 11；② 页面被策略隐藏（域环境 / 组策略）；③ 无线网卡驱动不支持 SoftAP。
-> 处置：先在「网络和 Internet」列表里确认是否存在该项；再更新无线网卡驱动。**不要**改用 `netsh wlan set hostednetwork` —— 那是另一代技术（见 [Hosted Network 辨析](../concepts/frequency-and-compatibility.md#六hosted-network-辨析)）。
+> 处置：先在「网络和 Internet」列表里确认是否存在该项；再更新无线网卡驱动。**不要**改用 `netsh wlan set hostednetwork` —— 那是另一代技术（见 [Hosted Network 辨析](../concepts/frequency-and-compatibility.md#hosted-network)）。
 
 ### 步骤 2 — 选「共享我的 Internet 连接来源」
 
@@ -105,8 +105,8 @@ sources:
 | ② IP 层 | 客户端拿到的地址 | 是 `192.168.137.x` 一类的私网地址，**不是** `169.254.x.x` |
 | ③ 出口层 | 能否打开网页 | 网页能加载，域名能解析 |
 
-> **只过了 ① 没过 ②** → DHCP 层有问题（见 [排障清单 · 症状 S2](troubleshooting-checklist.md#s2-连上了但拿不到-ip)）。
-> **过了 ② 没过 ③** → DNS 或 NAT 层有问题（见 [症状 S3](troubleshooting-checklist.md#s3-拿到-ip-但解析不了域名) / [S4](troubleshooting-checklist.md#s4-域名能解析但打不开网页)）。
+> **只过了 ① 没过 ②** → DHCP 层有问题（见 [排障清单 · 症状 S2](troubleshooting-checklist.md#s2-connected-no-ip)）。
+> **过了 ② 没过 ③** → DNS 或 NAT 层有问题（见 [症状 S3](troubleshooting-checklist.md#s3-ip-no-dns) / [S4](troubleshooting-checklist.md#s4-dns-no-web)）。
 
 ## 阶段 3 · 收尾
 

@@ -33,7 +33,7 @@ sources:
 | **状态防火墙**（stateful firewall） | 记住连接状态，允许「由内向外发起的会话的回包」通过，而不只是按端口放行 |
 | **SoftAP / Wi-Fi Direct** | 让无线网卡自身变成一个接入点（AP），供其他设备连入 |
 | **STA** | 无线网卡作为客户端去连接上游路由器 |
-| **Hosted Network** | Windows 7 时代的「承载网络」，与当前的移动热点是两套独立技术（见 [辨析](frequency-and-compatibility.md#六hosted-network-辨析)） |
+| **Hosted Network** | Windows 7 时代的「承载网络」，与当前的移动热点是两套独立技术（见 [辨析](frequency-and-compatibility.md#hosted-network)） |
 
 ## 二、四项能力及其官方出处
 
@@ -119,6 +119,8 @@ flowchart LR
 
 ## 四、客户端视角：接入后到底拿到了什么
 
+<a id="client-perspective"></a>
+
 一台设备连上热点后，从它的视角能观察到这些（这决定了排障时该看什么）：
 
 | 客户端观察到的现象 | 对应主机侧角色 | 若不正常，先查 |
@@ -131,7 +133,7 @@ flowchart LR
 
 关于 `192.168.137.x`：这是社区普遍观察到的 ICS 默认网段，**但本包未找到微软官方文档确认**（F-036，L5，3 源一致；未闭环项 U-2）。相关注册表键 `HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters` 下的 `ScopeAddress` / `ScopeAddressBackup` / `StandaloneDhcpAddress` 可用于调整网段——**同样属社区口径**。
 
-> **操作建议**：在企业网络、VPN 或与既有局域网网段重叠的环境里，网段冲突是真实存在的故障模式。但**默认不要动注册表**；先确认冲突是否真的发生（客户端拿到的是不是 `192.168.137.x`、上游是否同段），确认后再按 [未闭环项 U-2](boundaries-and-risks.md#五未闭环项) 的复核条件处理。
+> **操作建议**：在企业网络、VPN 或与既有局域网网段重叠的环境里，网段冲突是真实存在的故障模式。但**默认不要动注册表**；先确认冲突是否真的发生（客户端拿到的是不是 `192.168.137.x`、上游是否同段），确认后再按 [未闭环项 U-2](boundaries-and-risks.md#open-items) 的复核条件处理。
 
 ## 五、端口转发的真实边界
 

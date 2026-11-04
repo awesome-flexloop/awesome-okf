@@ -45,11 +45,13 @@ sources:
 | 1.4 | 检查「共享方式」是否为 Wi-Fi | 若为蓝牙，改回 Wi-Fi（F-026） |
 | 1.5 | 确认其他设备未开启 Wi-Fi 过滤 | 部分手机有「扫描结果排序」「隐藏」选项 |
 
-> **不要做**：`netsh wlan set hostednetwork mode=allow`。它配置的是 Hosted Network，与当前移动热点不是同一条技术路径（F-037，见 [辨析](../concepts/frequency-and-compatibility.md#六hosted-network-辨析)）。
+> **不要做**：`netsh wlan set hostednetwork mode=allow`。它配置的是 Hosted Network，与当前移动热点不是同一条技术路径（F-037，见 [辨析](../concepts/frequency-and-compatibility.md#hosted-network)）。
 
 ---
 
 ## S2 · 连上了但拿不到 IP
+
+<a id="s2-connected-no-ip"></a>
 
 **症状**：Wi-Fi 已连接，地址是 `169.254.x.x`（APIPA），或客户端显示「正在获取 IP 地址」。
 
@@ -68,6 +70,8 @@ sources:
 
 ## S3 · 拿到 IP 但解析不了域名
 
+<a id="s3-ip-no-dns"></a>
+
 **症状**：能 ping 通 `192.168.137.x` 网关，能 ping 通具体 IP，但 ping 域名失败。
 
 **对应机制**：DNS 代理（ICS 内建，F-019）未正常应答。
@@ -82,6 +86,8 @@ sources:
 ---
 
 ## S4 · 域名能解析但打不开网页
+
+<a id="s4-dns-no-web"></a>
 
 **症状**：域名解析成功，浏览器打不开页面或极慢。
 
@@ -129,7 +135,7 @@ sources:
 | 情形 | 更好的方案 |
 |---|---|
 | 需要**长期**稳定运行 | 买一个路由器，或用软路由 |
-| 需要**对外暴露**内网服务（端口映射/穿透） | 内网穿透方案（本包不提供，见 [互链：贝锐](../../iot/oray/index.md)） |
+| 需要**对外暴露**内网服务（端口映射/穿透） | 内网穿透方案（本包不提供，见 [互链：贝锐](../../../iot/oray/index.md)） |
 | 需要**大量设备**接入（远超 8 台） | 企业级 AP |
 | 需要**访客网络 / 家长控制 / QoS** | 家用路由器的管理面 |
 | 办公设备且组织有明确网络规范 | **先问 IT**（合规优先） |
