@@ -47,6 +47,8 @@ sources:
 | doubao-work-context-layer | AI产品阿颖战略分析：飞书作为组织 Context Layer、个人 vs 组织效率、Context 竞争论 | 4✅ 1⚠️ 1❌ | [进入](../doubao-work-context-layer/index.md) |
 | doubao-work-org-productivity | 36氪行业分析：Deloitte/BCG 数据、组织 ROI、权限治理与组织闭环 | 5✅ 1⚠️ 0❌ | [进入](../doubao-work-org-productivity/index.md) |
 
+2026-11-04 增补：[豆包工作与 Remotion 照片视频制作](../doubao-work-remotion-photo-video/index.md)聚焦素材、分镜、静帧、声音和项目交付。该包保留安装、质检与成片复现缺口，不改变本包历史实测的时点与结论。
+
 ## 知识结构
 
 本知识包含 **4 篇概念文档**和 **2 篇信源参考**：

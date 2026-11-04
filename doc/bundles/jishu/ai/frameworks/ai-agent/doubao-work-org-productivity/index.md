@@ -45,6 +45,8 @@ tags: ["豆包工作", "飞书", "组织生产力", "Agent Harness", "Deloitte",
 | P0核验 | 8✅ 全通过 | 4✅1⚠️1❌ | **5✅1⚠️0❌** |
 | 核心概念 | 多模态生成/额度模型 | Context Layer/个人vs组织 | Harness商品化/组织闭环/权限治理 |
 
+2026-11-04 增补：[豆包工作与 Remotion 照片视频制作](../doubao-work-remotion-photo-video/index.md)讨论个人视频创作的输入、审核、声音与交付。其单案例叙述不能用来证明组织 ROI，亦不改变本包既有数据和核验记录。
+
 ## 知识结构
 
 ```
