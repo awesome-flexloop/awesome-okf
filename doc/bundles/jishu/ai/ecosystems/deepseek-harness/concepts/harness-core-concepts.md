@@ -3,7 +3,7 @@ type: concept
 title: "Harness 核心概念——模型外层执行壳"
 description: "Harness（模型外面那层壳）的定义与职责边界（想/干分工）、运行位置、关键能力，以及“App 在本机≠模型在本地”的反直觉边界。"
 tags: [DeepSeek, Harness, 执行壳, Agent]
-generated: { by: "process:seven-concepts-cmd+wechat-public-okf", at: "2026-10-10T00:00:00Z" }
+generated: { by: "process:seven-concepts-cmd+wechat-public-okf", at: "2026-11-04T10:15:04+08:00" }
 status: draft
 stale_after: 2026-12-05
 sources:
@@ -13,6 +13,8 @@ sources:
 ---
 
 # Harness 核心概念：模型外层执行壳
+
+本页保留 2026-10-05 文章的概念解读，本次仅补历史边界，不代表当前模型配置或计费契约；最新学习入口见[创造模式](creator-mode.md)。
 
 ## 1. 定义
 
@@ -31,8 +33,8 @@ sources:
 
 > App 跑在你电脑上 **≠** 模型在本地跑。[^wx-pjfnnu][F-015]
 
-- Desktop App 的**执行层**部署在本机（文件读写、命令、UI 生成落在本地），但**模型推理仍在远端**。
-- 这意味着使用有网络依赖，且调用消耗 Token（见 [定价](pricing-model.md)）。
+- 旧文章描述本机执行、远端模型服务的使用方式，不代表所有配置都采用远端推理。
+- 是否需要网络及如何计费，应核对实际模型端点；[定价页](pricing-model.md)只保留历史快照。
 
 ## 4. 一句话定位
 
