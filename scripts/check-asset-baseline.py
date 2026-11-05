@@ -38,6 +38,7 @@
 import re
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -127,7 +128,7 @@ def worktree_spec_md() -> int:
     return n
 
 
-def worktree_line_ending_delta() -> tuple[int, int, int]:
+def worktree_line_ending_delta(root: Path | None = None) -> tuple[int, int, int]:
     """工作区相对 HEAD 的行尾差异：(CRLF 行数, 带 CRLF 的文件数, .spec 字节)。
 
     行尾是「文件增减」看不见的维度——同一份内容，CRLF 每行比 LF 多 1 字节，
@@ -136,12 +137,17 @@ def worktree_line_ending_delta() -> tuple[int, int, int]:
 
     三次复核实测（2026-10-25）：字节差 ÷ CRLF 行数 = 1.0000；工作区字节
     减去 CRLF 行数后与 HEAD 的残差恰为 +310,001 = .spec 字节，一位不差。
+
+    root 仅供自检探针注入夹具（默认校验真实工作区）。CI 是 LF 检出且 .spec/
+    被 .gitignore 忽略（不存在），直接读工作区时两个维度恒为 0，不能据此
+    判断规则是否可命中。
     """
+    base = BUNDLES if root is None else root
     crlf_lines = 0
     crlf_files = 0
     spec_bytes = 0
-    for p in BUNDLES.rglob("*.md"):
-        rel = p.relative_to(BUNDLES).as_posix()
+    for p in base.rglob("*.md"):
+        rel = p.relative_to(base).as_posix()
         raw = p.read_bytes()
         c = raw.count(b"\r\n")
         if c:
@@ -339,10 +345,21 @@ def self_test() -> int:
     check("字节正则命中裸数字写法", 96235012 in hits, f"hits={hits}")
     check("字节正则不误抓数字片段", len(hits) == 1, f"hits={hits}")
 
-    # 探针 2：行尾归一公式可算出正确残差
-    crlf_lines, crlf_files, spec_bytes = worktree_line_ending_delta()
-    check("行尾归一读取到 CRLF 行数", crlf_lines > 0, f"crlf_lines={crlf_lines}")
-    check("行尾归一读取到 .spec 字节", spec_bytes > 0, f"spec_bytes={spec_bytes}")
+    # 探针 2：行尾归一必须能命中 CRLF 与 .spec 两个维度（用自建夹具，与宿主平台解耦）
+    #   CI 是 LF 检出、且 .spec/ 被 .gitignore 忽略（干净检出里不存在），若直接读
+    #   真实工作区，两个维度恒为 0，探针会在 ubuntu 上永久假红（2026-10-24 起实测）。
+    with tempfile.TemporaryDirectory() as tmp:
+        fixture = Path(tmp) / "bundles"
+        (fixture / "concepts").mkdir(parents=True)
+        (fixture / "concepts" / "plain.md").write_bytes(b"alpha\nbeta\n")
+        (fixture / "concepts" / "crlf.md").write_bytes(b"x\r\ny\r\n")
+        (fixture / ".spec").mkdir(parents=True)
+        spec_payload = b"draft\r\n"
+        (fixture / ".spec" / "draft.md").write_bytes(spec_payload)
+        crlf_lines, crlf_files, spec_bytes = worktree_line_ending_delta(fixture)
+        check("行尾归一读取到 CRLF 行数", crlf_lines == 3, f"crlf_lines={crlf_lines}")
+        check("行尾归一识别带 CRLF 的文件数", crlf_files == 2, f"crlf_files={crlf_files}")
+        check("行尾归一读取到 .spec 字节", spec_bytes == len(spec_payload), f"spec_bytes={spec_bytes}")
 
     # 探针 3：束数抽取能命中三种写法
     sample2 = ("当前实际值：**503 束 / 57 组**；共收录 **500 个知识包**；"
