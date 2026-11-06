@@ -78,4 +78,5 @@ sources:
 - [成本结构塌陷](01-cost-structure-collapse.md)
 - [注意力第一性原理](03-attention-economics-first-principles.md)
 - [判据清单：读行业预测的四问](../examples/02-decision-checklist.md)
+- [补篇：把「内容判断力」写进方程](../examples/04-judgement-as-parameter.md)
 - [P0 核验报告 E-06](../references/verification.md)

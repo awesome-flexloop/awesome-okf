@@ -105,3 +105,5 @@ sources:
 - [OPC 转向与组织职能](04-opc-transition-and-organization.md)
 - [历史类比与预测边界](05-historical-analogy-and-prediction-boundary.md)
 - [单位经济算例](../examples/01-unit-economics-worksheet.md)
+- [进阶算例：两层单位经济](../examples/03-two-layer-unit-economics.md)
+- [补篇：把「内容判断力」写进方程（替换 H3 均匀分配假设）](../examples/04-judgement-as-parameter.md)

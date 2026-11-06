@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: bundle
 title: "「明年，AI漫剧机构会在国内消失」：一篇行业访谈的结构化学习与预测边界"
-description: "知乎专栏/娱乐资本论单篇报道的 OKF wiki 教程：62 条 F 编号事实台账、22 项 P0 核验（✅9/⚠️7/⭕6/❌0）、12 条入库必标勘误、六篇递进概念教程与两份编者构造的可复算工具。核心是成本结构塌陷、内容判断力成为稀缺资产、注意力第一性原理的总量/分配两层模型、OPC 转向的职能上移检查表，以及把强预测降级为可检验命题。flagged：单源、预测与假设计算不得当事实。"
+description: "知乎专栏/娱乐资本论单篇报道的 OKF wiki 教程：62 条 F 编号事实台账、22 项 P0 核验（✅9/⚠️7/⭕6/❌0）、12 条入库必标勘误、六篇递进概念教程与四份编者构造的可复算工具（含总量/分配两层模型的进阶方程组与差异化份额补篇）。核心是成本结构塌陷、内容判断力成为稀缺资产、注意力第一性原理的总量/分配两层模型、OPC 转向的职能上移检查表，以及把强预测降级为可检验命题。flagged：单源、预测与假设计算不得当事实。"
 tags: [AI漫剧, OPC, 一人公司, 注意力经济, 供给爆炸, 信源分层, 预测边界, 知乎专栏]
 generated: { by: "reference_agent/okf-writer", at: "2026-11-06T00:00:00Z" }
 verified: [{ by: "process:seven-concepts-v", at: "2026-11-06T00:00:00Z" }]
@@ -32,7 +32,7 @@ sources:
 | 类别 | 数量 | 内容 |
 |---|---|---|
 | 概念教程 | 6 | 证据边界 → 成本 → 稀缺资产 → 第一性原理 → 组织职能 → 预测边界 |
-| 示例工具 | 2 | 单位经济算例、读行业预测的四问（均为编者构造，非原文复现） |
+| 示例工具 | 4 | 单位经济算例、两层单位经济进阶算例、内容判断力份额补篇、读行业预测的四问（均为编者构造，非原文复现） |
 | 信源参考 | 3 | 事实台账、P0 核验报告、信源清单 |
 | 索引与日志 | 5 | 根索引、三层目录索引、变更日志 |
 
@@ -42,7 +42,7 @@ sources:
 2. **再走现象到公理**：[01 成本结构](concepts/01-cost-structure-collapse.md)（6:3:1 → 算力主导）→ [02 内容判断力](concepts/02-content-judgement-as-scarce-asset.md)（筛选能力，非写稿技能）→ [03 第一性原理](concepts/03-attention-economics-first-principles.md)（注意力固定 + 总量/分配两层模型）。
 3. **然后收窄结论**：[04 OPC 转向](concepts/04-opc-transition-and-organization.md) 用六项组织职能清单把「机构消失」限定回制作环节，并检查平台与机构两种叙事为何不独立。
 4. **最后做预测降级**：[05 历史类比与预测边界](concepts/05-historical-analogy-and-prediction-boundary.md) 把强预测改写为带主体、口径、判据与时点的待检验命题，并留下 2027 年的事后检验清单。
-5. **动手**：[单位经济算例](examples/01-unit-economics-worksheet.md) 练习口径分离；[四问判据清单](examples/02-decision-checklist.md) 练习引用前核对。
+5. **动手**：[单位经济算例](examples/01-unit-economics-worksheet.md) 练习口径分离；[两层单位经济进阶算例](examples/03-two-layer-unit-economics.md) 把总量/分配模型写成可复算方程并列出证伪条件；[内容判断力份额补篇](examples/04-judgement-as-parameter.md) 替换均匀分配假设、给出差异化何时失效的判据；[四问判据清单](examples/02-decision-checklist.md) 练习引用前核对。三条参数化路径互不代入数值。
 
 ## 五条核心洞察（均带失效条件）
 
