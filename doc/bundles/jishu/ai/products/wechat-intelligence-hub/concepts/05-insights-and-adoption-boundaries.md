@@ -64,6 +64,8 @@ README 精确写 **`GNU Affero General Public License v3.0 only（AGPL-3.0-only�
 - 四个入口名、四种视图、移动端、回复草稿、检索五维度均为**截图图注/博文单源**（F-011~F-024 中的 ⚠️ 项）。
 - 演示数据全虚构，界面截图**不构成真实数据可用性证据**（F-032、F-049）。
 
+> **🔬 源码轮修订指向（2026-11-06，commit `fb6a42c`）**：上面第 2 条是**首轮「图注单源」口径**，已在源码轮逐项复核——四个入口名、移动端、定向检索五维度、重点联系人与回复草稿**坐实**（回复草稿为官方文档 + 代码双源）；**「四种视图风格」改判为设计期候选方案**，运行时不存在四套可切换主题。逐项状态见 [../references/verification.md](../references/verification.md)「🔬 源码轮追记」，实现依据见 [07-flagship-renderer-and-view-model.md](07-flagship-renderer-and-view-model.md) 与 [09-safety-and-adoption-boundaries-from-source.md](09-safety-and-adoption-boundaries-from-source.md)。本节首轮原文按「不改写已验证结论」原则保留。
+
 ## 4. 什么情况下不该采用
 
 - 需要**云端全量历史**或跨设备同步——官方只覆盖本机已同步数据（F-054）。
@@ -74,3 +76,5 @@ README 精确写 **`GNU Affero General Public License v3.0 only（AGPL-3.0-only�
 ## 5. 复核安排
 
 `stale_after: 2027-03-06`；复核项见 [../references/verification.md](../references/verification.md)「核验方法与局限」第 3 条。若届时 ⚠️ 项取得官方逐字证据或 ❌ 级反证，应把 bundle 状态从 `stable` 调整为 `flagged` 并在 [../log.md](../log.md) 登记。
+
+下一站：[06-readonly-contract-and-code-evidence.md](06-readonly-contract-and-code-evidence.md)（🔬 源码轮增量首篇，顺读序列 00→…→09）。

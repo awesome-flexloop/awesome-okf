@@ -62,4 +62,4 @@ tags: [wechat-intelligence-hub, search, follow-ups, commitments, codex, 状态�
 
 博文把这一点归纳为「在 Codex 里直接说人话，不用记命令行参数」（F-030，✅ 核验项 #14）。但要分清：**自然语言降低的是调用门槛，真正决定结果质量的是底层索引、去重与状态抽取**。同一句提问，在全虚构 Demo 与真实数据下的表现差异，见 [04-official-workflow-and-demo-gap.md](04-official-workflow-and-demo-gap.md)。
 
-下一站：[05-insights-and-adoption-boundaries.md](05-insights-and-adoption-boundaries.md)。
+下一站：[04-official-workflow-and-demo-gap.md](04-official-workflow-and-demo-gap.md)（接上节已提到的真实数据差距；原 03→05 跳读已按顺读序列 00→…→09 对齐）。

@@ -62,5 +62,6 @@ tags: [wechat-intelligence-hub, identity, star-count, source-distance, 时效勘
 
 ## 5. 阅读下一站
 
-- 架构与只读边界 → [01-local-first-readonly-architecture.md](01-local-first-readonly-architecture.md)
+下一站：[01-local-first-readonly-architecture.md](01-local-first-readonly-architecture.md)（架构与只读边界；本页为 00→01→…→09 顺读起点）。
+
 - 事实全集与核验结论 → [../references/article-source.md](../references/article-source.md)、[../references/verification.md](../references/verification.md)
