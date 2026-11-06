@@ -4,7 +4,7 @@
 
 - **来源**：微信公众号「开源食谱」《5 天攒 2000 星！让微信聊天变情报库，相见恨晚！》（原创，豆芽菜小萌，2026-09-24 07:02 北京）
 - **方法论**：`/七概念` 场景 4 知识沉淀链路 **R→I→E→V→入库**，由 `blog-article-to-okf-wiki` 七阶段工作流承载；指令经 `specweave-slash-alias-resolution` 解析（`.agents/commands/seven-concepts.md` + `seven-concepts-cmd`）
-- **规模**：10 个 Markdown 文件（6 concepts + 2 references + 2 目录 index + 根 index + 本日志）；F 编号事实 **57 条**（博文 40 + 官方核验 17）
+- **规模**：12 个 Markdown 文件（6 concepts + 2 references + 2 目录 index + 根 index + 本日志）；F 编号事实 **57 条**（博文 40 + 官方核验 17）
 - **骨架**：概念骨架，**无 `examples/`**（操作可复现性两问皆「否」）
 - **归属**：`jishu/ai/products/wechat-intelligence-hub/`
 
@@ -40,25 +40,34 @@
 3. 🔵 未来视角 → 强化时效与复核（`stale_after: 2027-03-06`，复核 Star、preview→GA、macOS/Windows 首次接入进展）。
 4. 🟣 证据强度 → 区分「官方可核验事实 / 官方截图经博文转述 / 博主观点」四层；标题 hook 与 UI 命名显著标注未独立核验。
 
-机械门禁（2026-11-06，详见下方表格，结果以最终复跑为准）：
+机械门禁（2026-11-06 终检）：
 
 | 检查项 | 结果 |
 |--------|------|
-| 双份 F 编号正则核对（spec `facts.md` ↔ `references/article-source.md`） | ✅ 各 57，F-001~F-057 连续无跳号、集合相等 |
-| 总索引计数对账 `check-bundles-index.py` | 见 V 阶段最终复跑记录 |
-| toctree 完整性 `check-toctrees.py` | 见 V 阶段最终复跑记录 |
-| UTF-8 严格编码 `check-utf8.py` | 见 V 阶段最终复跑记录 |
-| 资产基线 `check-asset-baseline.py` | 见 V 阶段最终复跑记录 |
-| 相对链接可达 / 无 `file:///` | ✅ 本束内与跨束链接逐一核对（跨束仅引用已存在的 wigolo / agent-reach / inkos / creatorhub） |
-| frontmatter 完整 | ✅ 根 `okf_version`/`type`/`title`/`description`/`tags`/`generated`/`verified`/`status`/`stale_after`/`sources` 齐备，3 个信源 |
-| 敏感信息 | ✅ 无家目录绝对路径、无密钥、无真实聊天数据 |
+| 双份 F 编号正则核对（spec `facts.md` ↔ `references/article-source.md`） | ✅ 各 57，F-001~F-057 连续无跳号、集合相等、双向差集为空 |
+| 总索引计数对账 `check-bundles-index.py` | ✅ rc=0：9 域 / 64 组 / **715 束**，五面一致 |
+| toctree 完整性 `check-toctrees.py` | ✅ 本束入库当次 rc=0（全部 index.md 引用有效、内容文档可达）；**终检复跑 rc=1**，4 处报错全部来自并行在途束（见下节），本束命中 0 处 |
+| UTF-8 严格编码 `check-utf8.py` | ✅ rc=0：12919 个文件均为有效 UTF-8 |
+| 资产基线 `check-asset-baseline.py` | ⚠️ rc=1「行尾归一失效，残差 +299202」——工作树已干净、无 WIP 可 stash，属 Windows `core.autocrlf=true` 环境级假红；其规模数字校验（total_bundles=715）已通过 |
+| 全局锚点 `check-section-anchors.py` | ⚠️ rc=1：全库 6557 处既有断链 / 413 处 MyST 锚点警告；报告检索本束名命中 **0** 处，未引入新断链 |
+| 相对链接可达 / 无 `file:///` | ✅ 本束 12 文件 / 42 条相对链接，断链 0、绝对路径 0、锚点引用 0；跨束仅引用已存在的 wigolo / agent-reach / inkos / creatorhub |
+| frontmatter 完整 | ✅ 根 `okf_version` 唯一，`type`/`title`/`description`/`tags`/`generated`/`verified`/`status`/`stale_after`/`sources`(3) 齐备 |
+| 敏感信息 | ✅ 无家目录绝对路径、无密钥、无真实聊天数据；示例路径均为占位符 |
 | 勘误落实 | ✅ 8 项 ⚠️ 在正文均呈现官方口径并标注博文来源 |
 
-### 并行会话计数登记
+### 并行会话计数与提交登记
 
-- 本次开工时总索引 `total_bundles` 已由并行会话更新为 **714**（此前记录为 713）；`check-bundles-index.py` 复跑确认地面真值为 **9 域 / 64 组 / 714 束**、五面一致，故本束入库后按地面真值记为 **715**（jishu 524 / ai 288 / products 39），不追加第三次数。
+- 本次开工时总索引 `total_bundles` 已由并行会话更新为 **714**（更早记录为 713）；`check-bundles-index.py` 复跑确认地面真值为 **9 域 / 64 组 / 714 束**、五面一致，故本束入库后按地面真值记为 **715**（jishu 524 / ai 288 / products 39），不追加第三次数。
+- 生成期间**并行会话把在途文件一并提交**：子模块 HEAD `12efe455 docs(bundles): 新增三束 OKF 知识包并同步计数（712→715）` 已包含本束 12 个文件与各级索引改动，说明同期另有两束并行入库；绝对值以地面真值脚本为准。本会话不重复提交、不改写该提交。
+- 终检时又出现两个**并行在途束**：`jishu/ai/products/wechatbridge/`（缺 index.md）与 `jishu/ai/products/workbuddy-wechat-chat-forward-skills/`（缺 index.md，且 `references/article-source.md`、`verification.md` 未收录），使 `check-toctrees.py` 由 rc=0 转 rc=1 并报 4 处问题。这 4 处**均不属于本束**，按「谁添加谁接线」不代修；`check-bundles-index.py` 仍 rc=0（715 束，二者因无 index.md 尚未计入树），若二者完工需再各 +1 并同步计数。
 - `jishu/index.md` 域导航页的多数分组束数为历史过期值，页面自身声明「递归束数以知识包总索引为准」；本会话仅同步其 AI 行描述中的 287→288，不扩大变更范围。
 
 ### C（提交）
 
-- 待原子提交（用户未要求执行，本会话不 commit / 不 push）：① 子模块 `projects/awesome-okf-xs` 内提交 bundle 10 文件 + `products/index.md` + `ai/index.md` + `jishu/index.md` + `bundles/index.md` + `README.md` + `doc/index.md` → ② 主仓库提交 spec（`.trae/specs/okf-wiki-ecosystem/wechat-intelligence-hub-blog-okf-wiki/`）→ ③ 主仓库更新子模块 gitlink。
+用户随后下达「提交」指令，本会话按原子提交「单一职责」收尾，**仅提交本任务范围内的文件**：
+
+- **① 子模块**：`12efe455` 已由并行会话收录 bundle 12 文件与四级索引；本会话单独提交 `log.md` 的 V 阶段门禁结果与规模修正（10→12 文件），使记录与实际产物一致。
+- **② 主仓库**：提交 spec 四件（`.trae/specs/okf-wiki-ecosystem/wechat-intelligence-hub-blog-okf-wiki/` 下的 `spec.md` / `facts.md` / `tasks.md` / `review.md`），并把子模块 gitlink 指向 ① 产生的新 HEAD。
+- **③ 排除范围**：工作区中并行会话的在途改动（`products/wechatbridge/`、`products/wechatbridge-ios-relay/`、`sheke/industry/ai-comic-drama-opc-transition/`、716→718 计数，以及主仓库 3 个并行 spec 目录）**不属于本任务，未纳入提交**。
+- **④ 推送**：未执行，是否 `git push` 由用户决定。
+- **提交哈希**：共三笔（子模块 `docs` 1 笔；主仓库 `docs(spec)` 与 `chore(submodule)` 各 1 笔），以 `git log` 为准；提交信息遵循 Conventional Commits。
