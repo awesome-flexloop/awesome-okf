@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——工具调用、多代理编排、记忆与插件的源码教程，以及参考架构与治理学习"
-total_bundles: 61
+total_bundles: 62
 ---
 
 # 🤖 AI Agent 框架
@@ -119,6 +119,7 @@ total_bundles: 61
 
 | 知识包 | 类型 | 文档数 | 一句话简介 |
 |--------|------|--------|-----------|
+| [agent-autoloop](agent-autoloop/index.md) | 架构教程 | 4+3+2+1=10 | 卡兹克开源 Agent-Autoloop 事件驱动自动化中台——确定性内核四禁令与四机制（挂起零消耗/事件溯源/指令数据分离/跳数熔断）、五步流程、四类插件与回执协议、安装·规则·交付三篇实战；68 条事实、10 项 P0 核验 5✅5⚠️0❌，含「1.5ms→p99 1.82ms」口径与「整机断电未单独测过」等 8 项边界，非部署实测 |
 | [openshell-reference-architecture](openshell-reference-architecture/index.md) | 架构学习 | 6+0+2+1=9 | NVIDIA OpenShell 软件边界、企业工作区与 Sentry 分层教程；66 条事实、业务批准与撤销验收、3 条洞察及 L1 候选模式；非部署实测，成效数字为厂商自述 |
 | [qwen-creative-platform-news](qwen-creative-platform-news/index.md) | 资讯速报 | 1+2+1=4 | 阿里千问创作平台多Agent协同开测——5个Agent组成虚拟剧组(策划/编剧/视觉/分镜/成片)、Wan 3.0+Qwen-Image 3.0 Pro、书旗ManClaw漫剧Agent(Seedance 2.0)、导演视角解读 |
 | [deepseek-harness-mobile](deepseek-harness-mobile/index.md) | 技术实测 | 5+2+2=9 | DSH Mobile——腾讯程序员用Kuikly(Kotlin Multiplatform)开发DeepSeek Harness手机客户端(Android/iOS/鸿蒙一码三端)：直连Host协议(RPC+双WebSocket)、SSH/扫码Relay双通道、断线重连状态机、本地扫码连接与扩展开发上手 |
@@ -168,7 +169,7 @@ total_bundles: 61
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：61 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
+> **内容统计**：62 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
 
 ```{toctree}
 :hidden:
@@ -235,4 +236,5 @@ agent-knowledge-base/index
 cua/index
 openshell-reference-architecture/index
 learn-from-materials/index
+agent-autoloop/index
 ```

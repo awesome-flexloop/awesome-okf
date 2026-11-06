@@ -9,12 +9,13 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 
 面向终端任务的 AI 产品与工具——浏览器/移动端自动化、Agent 桌面工作台、网页数据采集、垂直创作工具、量化/翻译/CAD 等任务型产品与能力交易平台。
 
-本类共 **38 个知识包**，分布于 **38 个生态/项目目录**。
+本类共 **39 个知识包**，分布于 **39 个生态/项目目录**。
 
 ## 束导航
 
 | 知识包 | 束数 | 一句话简介 |
 |--------|------|-----------|
+| [💬 WeChat Intelligence Hub 本地微信个人情报库](wechat-intelligence-hub/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——本地优先只读 Reader + 两个 Codex Skill、旗舰交互式日报与 Markdown/HTML 双报告、定向检索与承诺/待回复/商机信号、全虚构 Demo 与真实接入差距；22 项 P0/P1 核验 14✅/8⚠️/0❌（星标 1976/2000→2764 时效勘误、「不重签名」仅限 Reader 核心、UI 命名图注单源），概念骨架无 examples |
 | [书童 Pagekin 小说创作与人工审校](pagekin/index.md) | 1 | 开源星探公开文章经维护者文档核验：章节蓝图、连续性、审稿差异、模型与数据边界，44 条事实与两篇练习；百章效果未证实，flagged，操作未实测 |
 | [🌐 BrowserAct 浏览器自动化 Agent](browseract/index.md) | 1 | 官方能力与产品解析——架构、核心场景、使用指南与生态对比 |
 | [🐦 EchoBird 百灵鸟 AI Agent 桌面管理工具](echobird/index.md) | 1 | Model Nexus 模型枢纽、本地 LLM、Codex Proxy 与工具注册表（Tauri + Rust 桌面端） |
@@ -96,4 +97,5 @@ vibeknow-cli/index
 agentmore-openmaic/index
 craft-anything/index
 pagekin/index
+wechat-intelligence-hub/index
 ```

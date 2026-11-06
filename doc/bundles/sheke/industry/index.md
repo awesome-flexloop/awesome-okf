@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论、零基础 AI 实操赚钱项目教程、AI 科学创新工坊双赛道活动规则、千问Go!「我的应用」厂商公告、头条号变现体系、知乎盐言作者平台、WorkBuddy 1024 造物挑战大赛规则、豆包直播间嵌入抖音电商、抖音算力扩张与 AI 电商、AI 图像服务与内容变现、壁纸主题选择与上传判断、微信小店（入驻/保证金/结算/全域场景/优选联盟/合规）、剪流AI 员工手机（官网全站解构·四档定价·证据分层·三账验收）、快手发布壁纸作品引流（口令·发布·作业交付，ASR 转写讲师演示口径）等 42 束行业与平台分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论、零基础 AI 实操赚钱项目教程、AI 科学创新工坊双赛道活动规则、千问Go!「我的应用」厂商公告、头条号变现体系、知乎盐言作者平台、WorkBuddy 1024 造物挑战大赛规则、豆包直播间嵌入抖音电商、抖音算力扩张与 AI 电商、AI 图像服务与内容变现、壁纸主题选择与上传判断、微信小店（入驻/保证金/结算/全域场景/优选联盟/合规）、剪流AI 员工手机（官网全站解构·四档定价·证据分层·三账验收）、快手发布壁纸作品引流（口令·发布·作业交付，ASR 转写讲师演示口径）、AI 漫剧 OPC 转向（知乎专栏转化：成本结构塌陷·内容判断力·注意力两层模型·组织职能上移·预测边界，flagged 单源访谈）等 43 束行业与平台分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
@@ -62,6 +62,7 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 | [wechat-mini-shop](wechat-mini-shop/index.md) | 9+2+4 | 微信小店平台规则级拆解——从视频号小店升级、企业店/个体户店入驻、2000+ 类目与类目/浮动保证金取高、0 保证金试运营、技术服务费与确认收货+7 天结算、视频号/公众号/小程序/搜一搜/送礼物场景、关联账号与优选联盟 10% 联盟服务费、违规与信用分 12 分制；104 条事实 F-001~F-104、8 组口径冲突、4 条机制洞察与 90 天路径（flagged：规则高频修订、增长数据为媒体转述，非操作教程） |
 | [jianliu-ai-employee-phone](jianliu-ai-employee-phone/index.md) | 16 | 剪流AI 员工手机官网全站解构——8 模块 46 条目去重 40 功能、四档单机价与三级合伙、7 层漏斗与 12 案例、L0~L3 证据分层与五处矛盾，附六问 + 三账验收 + 一周试点教程（厂商官网解读，非操作教程；flagged：65 条事实 F-001~F-065、16 项 P0 核验✅6/⚠️5/❌5、10 项缺口，效果数字全部厂商自述） |
 | [kuaishou-wallpaper-publish-traffic](kuaishou-wallpaper-publish-traffic/index.md) | 16 | 快手发布壁纸作品引流——推图社小程序口令 → 发快手 → 选图编辑 → 引流文案与话题 → 发布前设置 → 发布交付的全流程还原；53 条事实 F-001~F-053、C1~C9 核验结论、勘误四张清单与 G1~G4 缺口（信源为源页面内嵌视频音轨的本地离线 ASR 转写，属讲师口播口径而非平台规则；flagged：图片数量三口径冲突无官方口径、「允许下载」效果无官方文档、UI 版本未标注） |
+| [ai-comic-drama-opc-transition](ai-comic-drama-opc-transition/index.md) | 16 | 知乎专栏转化：AI 漫剧 OPC 转向的结构化学习——成本结构塌陷、内容判断力、注意力第一性原理与总量/分配两层模型、组织职能上移、强预测降级（方法论学习包，非制作教程、非建议；flagged：单篇访谈单源，62 条事实 F-001~F-062、22 项 P0 核验 ✅9/⚠️7/⭕6/❌0、12 条勘误，预测与假设计算不得当事实） |
 
 ## 阅读建议
 
@@ -76,6 +77,7 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 - **关注成本与选型**：[copilot-cost](copilot-cost/index.md) 与 [domestic-llm-comparison](domestic-llm-comparison/index.md) 互为补充；
 - **关注监管动态**：[ai-anthropomorphic-analysis](ai-anthropomorphic-analysis/index.md) 与 [ai-switch-governance](ai-switch-governance/index.md) 覆盖 2026 年拟人化与换脸治理两条监管线。
 - **关注职业与赛道选择**：[big-tech-pontzi-track-selection](big-tech-pontzi-track-selection/index.md) 给出「有没有增量 → 成本结构 → 圈层资源」的判据顺序与读表路径，配合 [monetization-direction](monetization-direction/index.md) 的方向发现四步法使用。
+- **关注产业结构与预测读法**：[ai-comic-drama-opc-transition](ai-comic-drama-opc-transition/index.md) 用一篇单源访谈演示「成本塌陷 → 稀缺性迁移 → 注意力公理 → 组织职能上移 → 预测降级」的完整链条，适合与 [workbuddy-opc-whitepaper](workbuddy-opc-whitepaper/index.md)（厂商口径）和 [ai-solo-company-truth](ai-solo-company-truth/index.md)（个人自述）对照阅读三类不同主体的叙事。
 
 > **时效性提示**：本组内容多为 2026-07 前后的行业快照，定价、产品与监管条款请以官方最新发布为准。
 
@@ -125,4 +127,5 @@ wallpaper-selection-directions/index
 wechat-mini-shop/index
 jianliu-ai-employee-phone/index
 kuaishou-wallpaper-publish-traffic/index
+ai-comic-drama-opc-transition/index
 ```
