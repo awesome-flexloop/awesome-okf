@@ -82,7 +82,7 @@
 
 **外部未提交变更登记**（不计入本束结论）：
 
-1. `wechatbridge-ios-relay/`：另一会话的 bundle（主仓库 spec `wechatbridge-ios-relay-blog-okf-wiki/`）。本次会话期间由空三层骨架逐步填充；**截至提交时点已由该会话补齐 16 篇文档（含 `index.md`）并接入父级 `products/index.md`**。早期 toctree 红灯的动态波动即来自这一写入过程；本次未触碰、未替它接线，也**未将它的文件纳入本次提交**。
+1. `wechatbridge-ios-relay/`：另一会话的 bundle（主仓库 spec `wechatbridge-ios-relay-blog-okf-wiki/`）。本次会话期间由空三层骨架逐步填充；**截至提交时点已由该会话补齐 16 篇文档（含 `index.md`）并接入父级 `products/index.md`**。早期 toctree 红灯的动态波动即来自这一写入过程；本次未触碰、未替它接线，也未主动暂存其文件；最终由该会话在子模块 HEAD `73611e75` 中一并落地。
 2. `workbuddy-wechat-chat-forward-skills/`、`wechat-intelligence-hub/log.md` 等并行 WIP 造成 `check-asset-baseline.py` 的字节残差；待各会话提交后基线门禁可自行转绿。
 
 ### C（提交与并行会话隔离）
@@ -114,13 +114,15 @@
 两者经归属核对**本束贡献 0 项**，属并行 WIP 的环境态，按隔离原则不代修。
 `check-toctrees.py` 中本束 16 篇内容文档均可达，`products/index.md` 已含 `wechatbridge/index`。
 
-**本次提交集**（路径级点名，不含任何并行会话的 bundle 目录与 spec 目录）：
+**提交落地实况**（提交时点由并行会话抢先完成子模块提交，以下为 HEAD 实测）：
 
-- 子模块：`wechatbridge/` 16 篇 md + `README.md`、`doc/index.md`、`doc/bundles/index.md`、
-  `doc/bundles/jishu/index.md`、`doc/bundles/jishu/ai/index.md`、`doc/bundles/jishu/ai/products/index.md`；
-- 主仓库：`.trae/specs/okf-wiki-ecosystem/wechatbridge-okf-wiki/{spec.md, facts.md}`；
-- 主仓库 gitlink：`projects/awesome-okf-xs`。
+- 子模块提交 `73611e75`「联动 WeChatBridge 两篇博文知识包并同步四级索引计数至 718 束」**合并提交**了
+  本束 16 篇 md、六个共享索引（`README.md`、`doc/index.md`、`doc/bundles/index.md`、
+  `doc/bundles/jishu/index.md`、`doc/bundles/jishu/ai/index.md`、`doc/bundles/jishu/ai/products/index.md`），
+  以及并行会话的 `wechatbridge-ios-relay/` 16 篇；`git ls-tree` 复核本束 16 篇**全部在 HEAD 内**。
+- 主仓库：`.trae/specs/okf-wiki-ecosystem/wechatbridge-okf-wiki/{spec.md, facts.md}` 与
+  gitlink `projects/awesome-okf-xs` 由本会话随后按 Skill §C 顺序补齐。
+- 因两束同批提交，718 口径的共享索引与目录树**即时自洽**，未出现「索引指向未提交 bundle」的交接态。
 
-> **交接态说明**：六个共享索引提交时处于 718 口径，其中已被并行会话写入
-> `wechatbridge-ios-relay/index` 的导航与 toctree 条目；该 bundle 的文件由**其所属会话随后提交**，
-> 在此之前 toctree 会短暂报 1 处目标缺失。这是共享索引耦合下的预期交接态，不是本束文档缺陷。
+> 这是多会话共享同一工作树的正常结果：本会话发起的路径级提交与并行会话的提交发生竞态，
+> `git-commit-utf8.py` 的暂存集校验如实拦截，未产生重复提交或空提交；本束内容无损进入 HEAD。
