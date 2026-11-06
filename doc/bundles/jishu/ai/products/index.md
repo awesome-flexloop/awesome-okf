@@ -9,12 +9,14 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 
 面向终端任务的 AI 产品与工具——浏览器/移动端自动化、Agent 桌面工作台、网页数据采集、垂直创作工具、量化/翻译/CAD 等任务型产品与能力交易平台。
 
-本类共 **40 个知识包**，分布于 **40 个生态/项目目录**。
+本类共 **42 个知识包**，分布于 **42 个生态/项目目录**。
 
 ## 束导航
 
 | 知识包 | 束数 | 一句话简介 |
 |--------|------|-----------|
+| [💬 WeChatBridge（微信流）：合并转发直达 AI 与 Obsidian](wechatbridge/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——macOS Share Extension 把微信「合并转发」ZIP 送进 AI Agent 与 Obsidian，不读数据库/不注入/不修改微信进程；十二个内置入口、场景提示词与 SKILL.md、100 条限制与分批收集，含官方 README 安装与构建实操（未实机验证）；F-001~F-107 双份登记、18 项 P0 核验 14✅/4⚠️/0❌，四条口径差异（九→十二入口、平台扩展、签名公证、不调接口）在束首页显式标注，status: stable |
+| [📱 WeChatBridge iOS 版与「别聊需求，定验收」](wechatbridge-ios-relay/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化（flagged）——iOS 中转站的收/存/投与 Obsidian 沉淀、「先写计划再让它跑」两段提示词、S/R/T 编号化验收控制面与出口闸门、官方验收记录 9 项自修与两次复跑；F-001~F-084 双份登记、24 项 P0/P1 核验 12✅/8⚠️/4❌，V-21（iOS 完成态）与 V-22（灵动岛入口）两项核心声明被官方一手件证伪并三处落地，examples 均为非官方模板、未实机验证 |
 | [💬 微信聊天记录转发 WorkBuddy 与两个 Skill](workbuddy-wechat-chat-forward-skills/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化（flagged）——微信内「合并转发 → 转发到其他应用 → WorkBuddy」官方入口路径、工作群日报与家族群辟谣卡两个 Skill、五个可迁移模式；F-001~F-120 双份登记、20 项 P0/P1 核验与 E-1~E-6 勘误，「不怕封号」无官方依据、「都开源」不可验证、100 条上限与 ETC/微信收费引文出处已按权威口径勘误；zip 仅评论区置顶、未实跑，概念骨架无 examples |
 | [💬 WeChat Intelligence Hub 本地微信个人情报库](wechat-intelligence-hub/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——本地优先只读 Reader + 两个 Codex Skill、旗舰交互式日报与 Markdown/HTML 双报告、定向检索与承诺/待回复/商机信号、全虚构 Demo 与真实接入差距；22 项 P0/P1 核验 14✅/8⚠️/0❌（星标 1976/2000→2764 时效勘误、「不重签名」仅限 Reader 核心、UI 命名图注单源），概念骨架无 examples |
 | [书童 Pagekin 小说创作与人工审校](pagekin/index.md) | 1 | 开源星探公开文章经维护者文档核验：章节蓝图、连续性、审稿差异、模型与数据边界，44 条事实与两篇练习；百章效果未证实，flagged，操作未实测 |
@@ -100,4 +102,6 @@ craft-anything/index
 pagekin/index
 wechat-intelligence-hub/index
 workbuddy-wechat-chat-forward-skills/index
+wechatbridge/index
+wechatbridge-ios-relay/index
 ```
