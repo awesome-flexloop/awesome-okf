@@ -1,5 +1,11 @@
 # WeChatBridge iOS 版知识包变更日志
 
+## 2026-11-09 · 补齐 OKF v0.2 洞察与信源地图
+
+- 新增 `insights.md`：基于 F-001~F-084 提炼完成态证据、验收控制面、证据状态与动态数字四条洞察。
+- 新增 `references/sources.md`：登记产品方博文、官方仓库设计文档、验收记录与权威第三方转述的层级和四项核心口径冲突。
+- 更新根 `index.md` 与 `references/index.md` 的 toctree；保留 `status: flagged` 与“未实机验证”边界。
+
 ## 2026-11-06 · 初版生成（微信博文 → OKF Bundle，status: flagged）
 
 - **来源**：微信公众号「苍何」《开源微信流 APP，手机微信聊天记录，可以直接给 WorkBuddy 和 Obsidian 了》（2026-10-27 16:28 湖北，第 613 篇原创；F-001/F-002）

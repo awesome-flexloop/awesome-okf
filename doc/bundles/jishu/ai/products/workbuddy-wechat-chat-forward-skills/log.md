@@ -1,5 +1,11 @@
 # 变更日志
 
+## 2026-11-09　补齐 OKF v0.2 洞察与信源地图
+
+- 新增 `insights.md`：基于 F-001~F-120 提炼入口稳定性、流程分层、引文核对、输出分层、免责边界与人工闸门六条洞察。
+- 新增 `references/sources.md`：登记原文、WorkBuddy 官网、平台帮助、权威转述和辟谣来源的职责边界。
+- 更新根 `index.md` 与 `references/index.md` 的 toctree；按批准 spec 保持不设 `examples/`。
+
 ## 2026-11-06　创建：单篇微信博文 → OKF v0.2 知识包
 
 - **触发**：用户要求用 `/七概念` 方法论对 `https://mp.weixin.qq.com/s/BvTuiZelPTb1ZgLT3NoMHQ` 做「全面学习」，生成 OKF wiki 教程并落到 `doc/bundles/` 恰当位置。session=`sc-20261106-wechat-workbuddy-forward-skills`。

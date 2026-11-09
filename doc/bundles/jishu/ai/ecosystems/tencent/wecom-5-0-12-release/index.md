@@ -62,6 +62,12 @@ sources:
 
 5.0.10 把企业微信的办公模块**开放给** Agent（CLI/MCP），5.0.12 则让腾讯自有 Agent（WorkBuddy）**进入**企业通讯录与协作流，并同步补上协作载体（频道/知识库）与治理边界（AI 继承安全策略/对外管理）；但核验日的证据结构很说明阶段位置——互通主线多媒体可证，而大部分功能细节仍只有官方单源、通稿先行于产品文档，适合当作「方向已宣布、落地待复核」的版本快照使用。
 
+## 相关企业微信知识包
+
+- [企业微信 CLI（wecom-cli）](../wecom-cli/index.md)
+- [企业微信套件 Skill（wecom-unified）](../wecom-unified/index.md)
+- [企业微信智能机器人 Python SDK](../wecom-aibot-python-sdk/index.md)
+
 ```{toctree}
 :hidden:
 :maxdepth: 2

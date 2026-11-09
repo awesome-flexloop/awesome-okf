@@ -8,6 +8,7 @@ description: "F-001~F-120 双份事实登记与 P0 权威核验报告（含勘�
 
 | 文档 | 内容 |
 |------|------|
+| [信源地图](sources.md) | 原文、产品官网、平台帮助、权威转述与辟谣来源的层级、职责和引用边界 |
 | [原文事实清单](article-source.md) | 单篇博文逐条事实登记，F-001~F-120 连续无跳号；分 A 元信息 / B 入口 / C 野路子 / D 开源声明 / E 群日报 / F 辟谣卡 / G 提示词 / H 规划 / I 观点 / J 结构核验 / K 权威核验补充十一区；与 spec `facts.md` 双份一致 |
 | [P0 权威核验报告与勘误清单](verification.md) | 20 项 P0/P1 核验、勘误四张清单、E-1~E-6 六项勘误、`status: flagged` 依据、通过项与残留不确定性、复核安排 |
 
@@ -19,6 +20,7 @@ description: "F-001~F-120 双份事实登记与 P0 权威核验报告（含勘�
 :hidden:
 :maxdepth: 2
 
+sources
 article-source
 verification
 ```

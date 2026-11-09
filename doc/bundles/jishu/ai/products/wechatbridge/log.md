@@ -1,5 +1,11 @@
 # WeChatBridge 知识包变更日志
 
+## 2026-11-09 · 补齐 OKF v0.2 洞察与信源地图
+
+- 新增 `insights.md`：基于 F-001~F-107 提炼导出式入口、入口矩阵、权限透明、分批恢复与并列分支五条洞察，并保留 examples 未实机验证边界。
+- 新增 `references/sources.md`：登记第三方博文、官方 README、官方引用文档和核验补充的信源层级，以及九个/十二个入口等时点对照。
+- 更新 `references/index.md`：将 `sources.md` 接入参考文档 toctree；本次只修改本 bundle。
+
 ## 2026-11-06 · 初版生成（微信博文 → OKF Bundle）
 
 - **来源**：微信公众号「虾说AI实验室 / 虾哥」《微信聊天记录只能烂在手机里？开源 WeChatBridge 一键转给 AI 和 Obsidian》（2026-09-24 15:54 广东）

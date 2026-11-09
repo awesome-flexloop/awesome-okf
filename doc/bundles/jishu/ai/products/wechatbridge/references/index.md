@@ -3,6 +3,7 @@
 本目录存放博文溯源材料与官方核验报告（E 阶段「信源先行」最先生成的两篇）：
 
 - [article-source.md](article-source.md) — 原文事实清单（F-001~F-107 双份登记的 bundle 侧副本；含信源距离预判、图片缺口登记、七段事实表）
+- [sources.md](sources.md) — 第三方博文、官方 README、官方引用文档与核验补充的层级及九个/十二个入口等时点对照
 - [verification.md](verification.md) — P0 权威核验报告（18 项：14✅ / 4⚠️ / 0❌）+ 勘误四张清单（日期版本 / 成效溯源 / 口径对照 / 引文命令逐字）
 
 **信源结构**：
@@ -20,6 +21,7 @@
 :maxdepth: 1
 :caption: 参考文档
 
+sources
 article-source
 verification
 ```

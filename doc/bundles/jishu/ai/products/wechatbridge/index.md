@@ -67,6 +67,7 @@ Share Extension 在 macOS 沙盒中运行且没有网络权限（F-082）。三�
 4. [场景提示词、SKILL.md 与本地沉淀](concepts/03-scenes-skills-and-deposition.md)——Agent 路径与笔记路径是并列分支
 5. [100 条限制与分批收集](concepts/04-batch-collection-and-records.md)——官方补齐、源文完全没写的一块
 6. [边界、选型与三条可迁移模式](concepts/05-boundaries-selection-and-patterns.md)——四条前提与显式标注的编者洞察
+7. [洞察](insights.md)——导出式入口、入口矩阵、权限透明、分批恢复与并列分支
 
 **再动手实操（未实机验证）**
 
@@ -128,6 +129,7 @@ Share Extension 在 macOS 沙盒中运行且没有网络权限（F-082）。三�
 
 concepts/index
 examples/index
+insights
 references/index
 log
 ```

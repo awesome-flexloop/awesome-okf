@@ -48,6 +48,7 @@ sources:
 2. [官方入口、四步路径与「不怕封号」的证据边界](concepts/00-official-entry-and-path.md)
 3. [工作群日报 Skill](concepts/01-daily-report-skill.md) → [家族群辟谣卡](concepts/02-factcheck-card-skill.md)
 4. [可迁移模式、操作路径登记与可复现性边界](concepts/03-transferable-patterns-and-boundaries.md)
+5. [洞察](insights.md)：从入口稳定性、流程分层、引文核对和人工闸门提炼可迁移原则
 
 ## 核验摘要
 
@@ -85,6 +86,7 @@ sources:
 :maxdepth: 2
 
 concepts/index
+insights
 references/index
 log
 ```

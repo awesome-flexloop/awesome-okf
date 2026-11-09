@@ -57,6 +57,12 @@ sources:
 
 5.0.10 标志着企业微信从「应用内加 AI 功能」（大圆报告）走向「把办公底座整体暴露给 Agent」（CLI/MCP + 权限审批护栏）；至 2026-10-14 的 5.0.12，路线已推进到第三方 Agent（WorkBuddy）直接进入企业通讯录——开放模块从 7 个增至 11 个的演进速度，比任何单条功能都更值得追踪。
 
+## 相关企业微信知识包
+
+- [企业微信 CLI（wecom-cli）](../wecom-cli/index.md)
+- [企业微信套件 Skill（wecom-unified）](../wecom-unified/index.md)
+- [企业微信智能机器人 Python SDK](../wecom-aibot-python-sdk/index.md)
+
 ```{toctree}
 :hidden:
 :maxdepth: 2

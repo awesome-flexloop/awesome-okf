@@ -79,6 +79,7 @@ S1–S11 模拟器验收 / R1–R7 真机验收 / T0.1–T9.2 任务清单 / §1
 4. [03 · 验收控制面](concepts/03-spec-schedule-and-acceptance-gates.md)——S/R/T 编号、交付定义、出口闸门、工作规则、「不在 v1」
 5. [04 · 验收记录与勘误落实](concepts/04-verification-record-and-errata-implementation.md)——9 项自修 bug、两次复跑数字、4 项 ❌ 的正文落地
 6. [05 · 可迁移模式与采用边界](concepts/05-transferable-patterns-and-boundaries.md)——洞察四元组、三个可搬走做法、复核清单
+7. [洞察](insights.md)——完成态证据、验收控制面、证据状态与动态数字
 
 **再按证据状态动手（未实机验证）**
 
@@ -151,6 +152,7 @@ S1–S11 模拟器验收 / R1–R7 真机验收 / T0.1–T9.2 任务清单 / §1
 
 concepts/index
 examples/index
+insights
 references/index
 log
 ```
