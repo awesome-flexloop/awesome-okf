@@ -90,7 +90,7 @@ CMake 把产物拆成三类 [F-120]：
 
 设备运行时按开关追加到 `TVM_RUNTIME_BACKEND_LIBS`；LLVM 后端单独作为 `TVM_LLVM_BACKEND_LIB` [F-120]。这解释了为什么「运行不需要编译器」：导出的 `.so` 只需要 `tvm_runtime`，不需要 `tvm_tirx_compiler` [F-028]。
 
-wheel 只安装 `tvm_tirx` 与 `tvm_tirx_llvm_backend` 两个组件 [F-117]，其余后端是否进包取决于构建配置。
+wheel 的 CMake 安装组件为 `tvm_tirx` 与 `tvm_tirx_llvm_backend` [F-117]；Python 包本身包含全部后端钩子，但其他后端的原生库是否进包取决于构建开关与组件配置。
 
 ## 5. 后端覆盖的现实边界
 

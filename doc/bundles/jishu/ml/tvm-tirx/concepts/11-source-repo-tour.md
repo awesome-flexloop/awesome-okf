@@ -84,8 +84,9 @@ sources:
 ```bash
 git submodule update --init --recursive
 uv sync --no-default-groups
-uv run --no-sync cargo test --manifest-path rust/Cargo.toml
 ```
+
+Rust 测试单独执行（见第 6 节），不要与 Python 编辑安装混为一步。
 
 C++-only 构建：
 
