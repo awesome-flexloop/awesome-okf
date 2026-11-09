@@ -41,7 +41,7 @@ description: "技术知识超类——开源项目源码中文教程按技术生
 |------|------|-----------|
 | [📡 通信与网络（comm）](comm/index.md) | 9 | ZeroMQ 消息栈 · SSH 远程控制 · Protocol Buffers 序列化 · FFI/IDL/TVM FFI 与接口概念辨析 · WiFi 安全审计（wifit3） · Windows 移动热点共享出口（windows-mobile-hotspot） |
 | [📦 容器生态（containers）](containers/index.md) | 11 | OCI 运行时 · 存储驱动 · Podman 工具链 · AI 容器配方 |
-| [🧠 机器学习（ml）](ml/index.md) | 3 | ONNX 标准/转换器/编译器/推理后端 · Apache TVM 深度学习编译器 |
+| [🧠 机器学习（ml）](ml/index.md) | 12 | ONNX 标准/转换器/编译器/推理后端 · Apache TVM 深度学习编译器 · CAFFE · PyTorch 张量布局 · TVM TIRx 编译基础层 |
 | [🖥️ 系统与基础设施（systems）](systems/index.md) | 4 | WSL 子系统中文教程 · WSL 自定义发行版构建 · PowerShell 5 困境防御 · openKylin kylin-wlcom Wayland 合成器（wlroots 0.17）源码精读 |
 
 ### 🔧 开发与协作工具

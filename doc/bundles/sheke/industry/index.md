@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group
 title: "🏭 AI 行业与商业趋势"
-description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论、零基础 AI 实操赚钱项目教程、AI 科学创新工坊双赛道活动规则、千问Go!「我的应用」厂商公告、头条号变现体系、知乎盐言作者平台、WorkBuddy 1024 造物挑战大赛规则、豆包直播间嵌入抖音电商、抖音算力扩张与 AI 电商、AI 图像服务与内容变现、壁纸主题选择与上传判断、微信小店（入驻/保证金/结算/全域场景/优选联盟/合规）、剪流AI 员工手机（官网全站解构·四档定价·证据分层·三账验收）、快手发布壁纸作品引流（口令·发布·作业交付，ASR 转写讲师演示口径）、AI 漫剧 OPC 转向（知乎专栏转化：成本结构塌陷·内容判断力·注意力两层模型·组织职能上移·预测边界，flagged 单源访谈）等 45 束行业与平台分析。"
+description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚钱系统、成本优化、大模型对比与评测快报、能源管理、硬件设计、监管治理、平台生态、创业趋势、具身智能与运营商 AI 商业化（中标全栈/Token 经营）、互联网大厂从业者增量判据与赛道选择、个人变现方向发现方法论、零基础 AI 实操赚钱项目教程、AI 科学创新工坊双赛道活动规则、千问Go!「我的应用」厂商公告、头条号变现体系、知乎盐言作者平台、WorkBuddy 1024 造物挑战大赛规则、豆包直播间嵌入抖音电商、抖音算力扩张与 AI 电商、AI 图像服务与内容变现、壁纸主题选择与上传判断、微信小店（入驻/保证金/结算/全域场景/优选联盟/合规）、剪流AI 员工手机（官网全站解构·四档定价·证据分层·三账验收）、快手发布壁纸作品引流（口令·发布·作业交付，ASR 转写讲师演示口径）、AI 漫剧 OPC 转向（知乎专栏转化：成本结构塌陷·内容判断力·注意力两层模型·组织职能上移·预测边界，flagged 单源访谈）、WorkBuddy × 混元 Hy4「体验官」征集活动规则解构 Wiki 教程与定制参赛方案（活动页单源，flagged）等 46 束行业与平台分析。"
 ---
 
 # 🏭 AI 行业与商业趋势
@@ -55,6 +55,7 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 | [toutiao-monetization](toutiao-monetization/index.md) | 15 | 头条号变现体系——今日头条创作者变现规则级拆解：首发激励计划六档演进、文字分成公式三乘数与三次升级、创作者计划权益阶梯与信用分熔断、中视频计划存量处置、新锐领航认证权益点值、90 天推进节奏与八组社区口径勘误（平台规则分析包，非操作教程；flagged：121 条事实 F-001~F-121 挂 18 个官方源、15 条单源对照、3 项官方口径缺口、26 项对抗审查） |
 | [zhihu-salt-author-platform](zhihu-salt-author-platform/index.md) | 21 | 知乎盐言作者平台官方口径拆解——平台导航与创作五步流程、中长篇签约与完结双字数闸门、曝光与选题信号，以及一次征稿活动的完整规则解剖（字数区间·奖项结构·评审标准·流量激励·权利条款）（平台规则分析包，非操作教程；flagged：111 条事实 F-001~F-111 全平台单源、无第三方复核源、采集快照 2026-10-23） |
 | [workbuddy-1024-contest](workbuddy-1024-contest/index.md) | 8+2 | WorkBuddy「1024 造物挑战」程序员节应用创作大赛规则解构与定制参赛方案——117 条事实、三维评分 35/40/25、四档奖项与 130 分算术、13 项投稿表单字段全解、五条机制洞察，以及基于 OKF 知识库真实资产的定制参赛方案（平台赛事规则分析包，非操作教程；flagged：全部事实为活动页单源、18 条官方口径缺口、1 项推导待确认） |
+| [workbuddy-hy4-experience-campaign](workbuddy-hy4-experience-campaign/index.md) | 6+2 | WorkBuddy × 混元 Hy4「体验官」征集活动规则解构 Wiki 教程与定制参赛方案——72 条事实、70/20/10 评分与 521 名算术、8 项必填表单、8 类资格取消、四条机制洞察，以及基于 awesome-okf-xs 真实 HEAD 资产按七概念编排的参赛方案（活动规则分析包，非操作教程；flagged：全部事实为活动页单源、13 条官方口径缺口、1 项参与奖口径张力、1 项遗留代码张力，不输出获奖概率与名次预测） |
 | [ai-project-submission-and-content-publishing-guide](ai-project-submission-and-content-publishing-guide/index.md) | 15 | AI作品参赛准备与内容发布指南——知乎、WorkBuddy与头条｜2026-10-27研究快照，含待核项；83F/24G/7C/6E、三类选题、差异化写作、版权时序、三洞察与两项L1-draft方法（draft：头条实际入口未确认、R1未通过、R2 blocked，不生成真实投稿正文） |
 | [doubao-douyin-livestream-ecommerce](doubao-douyin-livestream-ecommerce/index.md) | 3+2 | 微信博文转化：豆包把抖音电商直播间嵌进 AI 回答——近一年电商功能时间线、4.19 亿月活与双 11 补贴实例、阿里/美团/京东 AI 电商对标（商业分析，非源码教程；flagged：核心新功能无官方口径、价格实例单次实测不可复核，43 条事实 F-001~F-043、9 项 P0 核验通过/8 项未能核验、10 项缺口） |
 | [douyin-compute-ai-ecommerce](douyin-compute-ai-ecommerce/index.md) | 3+2 | 微信博文转化：抖音突然成立大批公司——2026 年多地新设 6 家科技公司（注册资本合计 75 亿元）、廊坊算力禀赋与火山引擎四地算力中心（约 336 亿元）、抖音电商 AI 落地与转化，附阿里/腾讯同业对照（商业分析/战略资讯，非源码教程；flagged：源文含 1 项确定数据错误——数据中心 40 应为 36，另有时延来源/十强家数/双 11 增幅多组口径冲突，36 条事实 F-001~F-036、15 项 P0 核验通过/3 项部分通过/1 项未通过、6 项缺口） |
@@ -123,6 +124,7 @@ qianwen-go-my-apps/index
 toutiao-monetization/index
 zhihu-salt-author-platform/index
 workbuddy-1024-contest/index
+workbuddy-hy4-experience-campaign/index
 ai-project-submission-and-content-publishing-guide/index
 doubao-douyin-livestream-ecommerce/index
 douyin-compute-ai-ecommerce/index
