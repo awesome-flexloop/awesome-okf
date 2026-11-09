@@ -64,7 +64,7 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 | [kuaishou-wallpaper-publish-traffic](kuaishou-wallpaper-publish-traffic/index.md) | 16 | 快手发布壁纸作品引流——推图社小程序口令 → 发快手 → 选图编辑 → 引流文案与话题 → 发布前设置 → 发布交付的全流程还原；53 条事实 F-001~F-053、C1~C9 核验结论、勘误四张清单与 G1~G4 缺口（信源为源页面内嵌视频音轨的本地离线 ASR 转写，属讲师口播口径而非平台规则；flagged：图片数量三口径冲突无官方口径、「允许下载」效果无官方文档、UI 版本未标注） |
 | [ai-comic-drama-opc-transition](ai-comic-drama-opc-transition/index.md) | 18 | 知乎专栏转化：AI 漫剧 OPC 转向的结构化学习——成本结构塌陷、内容判断力、注意力第一性原理与总量/分配两层模型、组织职能上移、强预测降级（方法论学习包，非制作教程、非建议；flagged：单篇访谈单源，62 条事实 F-001~F-062、22 项 P0 核验 ✅9/⚠️7/⭕6/❌0、12 条勘误，预测与假设计算不得当事实） |
 | [content-creation-three-rules](content-creation-three-rules/index.md) | 14 | 内容创作三原则——课程课后复盘转化：模仿的结构层／表达层分层与平台原创条款反向约束、利他内容的两种价值与自拟选题三问、四指标映射改述为待检验假设与单变量记录法（40 条事实 F-001～F-040；flagged：单源商业培训材料、`route: chaptered-summary` 去品牌化、8 条四视角对抗审查全采纳、官方条款仅微信视频号适用，非操作教程、非法律意见） |
-| [short-story-writing-system](short-story-writing-system/index.md) | 17 | 短故事创作与投稿变现——付费课程公开面转化：三套目录对账、39 节课时分类计数、爆款拆解与素材路径、短篇文体规范、投稿变现三级分账、AI 辅助边界（60 条事实 F-001～F-060、8 条四视角对抗审查；flagged：课程正文未取得、`route: chaptered-summary` 去品牌化、非平台操作手册） |
+| [short-story-writing-system](short-story-writing-system/index.md) | 19 | 短故事创作与投稿变现——付费课程公开面转化：三套目录对账、39／40 节双时点快照与播放页 40 节小节级元数据、爆款拆解与素材路径、短篇文体规范、投稿变现三级分账、AI 辅助边界（80 条事实 F-001～F-080、两轮四视角对抗审查 8+6 条；flagged：课程正文未取得、`route: chaptered-summary` 去品牌化、非平台操作手册） |
 
 ## 阅读建议
 
@@ -82,7 +82,7 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 - **关注产业结构与预测读法**：[ai-comic-drama-opc-transition](ai-comic-drama-opc-transition/index.md) 用一篇单源访谈演示「成本塌陷 → 稀缺性迁移 → 注意力公理 → 组织职能上移 → 预测降级」的完整链条，适合与 [workbuddy-opc-whitepaper](workbuddy-opc-whitepaper/index.md)（厂商口径）和 [ai-solo-company-truth](ai-solo-company-truth/index.md)（个人自述）对照阅读三类不同主体的叙事。
 
 - **关注内容方法论的证据边界**：[内容创作三原则](content-creation-three-rules/index.md) 用一篇单源课后复盘演示「断言降级为待判断问题」——把「抄≠抄袭」拆成结构层／表达层，把四指标映射当假设而非结论，适合与 [壁纸主题选择与上传判断](wallpaper-selection-directions/index.md) 连读，比较「只有原则」与「只有清单」两类课程材料的转化方式。
-- **关注课程材料转化的口径分账**：[短故事创作与投稿变现](short-story-writing-system/index.md) 用一门付费写作课的公开面演示「三套目录对账 + 课时分类计数 + 承诺／观察／个案三级分账」，适合与 [内容创作三原则](content-creation-three-rules/index.md)、[壁纸主题选择与上传判断](wallpaper-selection-directions/index.md) 连读，比较「有完整目录」「只有原则」「只有清单」三类源材料的处理方式。
+- **关注课程材料转化的口径分账**：[短故事创作与投稿变现](short-story-writing-system/index.md) 用一门付费写作课的公开面演示「三套目录对账 + 课时分类计数 + 承诺／观察／个案三级分账」，并在第二轮补上「同一字段跨时点分账 + 逐条 id 对账」，适合与 [内容创作三原则](content-creation-three-rules/index.md)、[壁纸主题选择与上传判断](wallpaper-selection-directions/index.md) 连读，比较「有完整目录」「只有原则」「只有清单」三类源材料的处理方式。
 > **时效性提示**：本组内容多为 2026-07 前后的行业快照，定价、产品与监管条款请以官方最新发布为准。
 
 ```{toctree}

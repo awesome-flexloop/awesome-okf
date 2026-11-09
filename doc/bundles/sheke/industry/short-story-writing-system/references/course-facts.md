@@ -1,6 +1,6 @@
 ---
 type: Reference
-title: "课程事实与主张登记（F-001～F-060）"
+title: "课程事实与主张登记（F-001～F-080）"
 route: chaptered-summary
 sources:
   - id: facts
@@ -12,7 +12,7 @@ generated: { by: "process:seven-concepts-cmd", at: "2026-11-07T02:52:45Z" }
 
 # 课程事实与主张登记
 
-F-001～F-060 共 **60 条**，是本包唯一 F 台账，其它页面只引用编号，不建立第二份。分层：F-001～F-012 详情页页面事实，F-013～F-024 售卖页页面事实，F-025～F-040 宣传长图单源主张，F-041～F-054 第三方公开旁证，F-055～F-060 负向事实与适用边界。
+F-001～F-080 共 **80 条**，是本包唯一 F 台账，其它页面只引用编号，不建立第二份。分层：F-001～F-012 详情页页面事实，F-013～F-024 售卖页页面事实，F-025～F-040 宣传长图单源主张，F-041～F-054 第三方公开旁证，F-055～F-060 首轮负向事实与适用边界；**F-061～F-080 为 2026-11-09 播放页复核与开放平台检索新增**，不改写既有行。
 
 `page_fact` 只确认「页面字段／渲染文字写了什么」；`poster_claim` 只记录「宣传图怎么说」，单源、无样本、无对照；`third_party` 记录第三方主体怎么转述，不认证其真实性；`negative` 记录明确缺席；`scoped` 记录适用边界。逐项裁决见[核验与勘误](verification.md)。
 
@@ -79,6 +79,26 @@ F-001～F-060 共 **60 条**，是本包唯一 F 台账，其它页面只引用�
 | F-059 | 适用边界：s6 的风格清单是第三方开源项目自拟，非平台官方规则；同组知识包所记征文活动承诺书中的 AI 红线只适用该活动，不自动适用于日常投稿或本门课程 | scoped | s6 | 适用范围 | observed/scoped |
 | F-060 | 适用边界：七步骨架各版本与六种开篇钩子均非本门课程官方文本；媒体观察、平台生态数据、学员晒单三者主体不同，不能互证课程效果 | scoped | s4/s5/s7 | 适用范围 | observed/scoped |
 
+| F-061 | 播放页 URL 为 `/xen/market/training/training-video/{productId}/{sectionId}`；给定 `sectionId=2098475336661055368` 对应「导学01：如何靠写短篇小说变现？」，免登录 GET 返回 200，HTML `title` 与该节标题一致 | page_fact | s8 | 播放页 HTML head | observed |
+| F-062 | 播放页 SSR `<textarea id="resolved">` 的 `appContext.__connectedAutoFetch.trainingVideo.data` 含 8 个键：`rights`、`product`、`videoInfo`、`isUseNewProgressApi`、`bindDesktopInfo`、`noteCount`、`isShowAiEntry`、`extData` | page_fact | s8 | SSR JSON | observed |
+| F-063 | `GET /api/education/training/{cid}/video_page/catalog?limit=50&include=0&order_by=global_idx` 免登录返回 40 条，`paging.totals=40`、`is_end=true`、`is_start=true` | page_fact | s8 | 目录接口 | observed |
+| F-064 | 沿 `videoInfo.nextVideoHref` 连续取得 40 个播放页，逐节 `id`／`title`／`resource.data.duration` 与目录接口 40 条完全一致（0 处差异），`index.global` 0～39 连续、id 去重后 40 个，最后一节无 `nextVideoHref` | page_fact | s8 | 链式快照与接口对账 | observed |
+| F-065 | 2026-11-09 复核详情页：`onlineSectionCount=40`、`presetSectionCount=40`、`fishedSectionCount=0`；`chapter` 增至 7 项，新增「第二章-选题大纲设计」且 `firstSectionIdx=7` | page_fact | s8 | `base.course`、`base.chapter` | observed |
+| F-066 | 2026-11-09 复核售卖页：`catalog.paging.total=40`，`offset=0/20` 两页各 20 条按 `idx` 合并 0～39 连续，与播放页 40 条 `id`／`title` 逐条一致（0 处差异）；`extra.headerText` 仍为「已完结」 | page_fact | s8 | sku-detail SSR | observed |
+| F-067 | 新增小节 global 7「第4课：如何构思你的故事？」，属「第二章-选题大纲设计」，`meta.media="录播 · 32:53"`、`duration=1973302` ms；11-07 的 39 节快照无此节与该章节 | page_fact | s8 | 目录接口 idx 7 | observed |
+| F-068 | 40 节按 `section_type` 分为 `video` 37 节、`live_stream` 3 节；按 `chapter.title` 分为导学 3、开营 1、第一章 3、第二章 1、主题直播 1、答疑直播 1、赠课 30 | page_fact | s8 | 机械计数 | observed |
+| F-069 | 40 节 `resource.data.duration` 合计 86605844 ms（24 小时 3 分 25.844 秒）；37 节录播合计 73461910 ms，3 节直播回放合计 13143934 ms | page_fact | s8 | 标准库求和 | observed |
+| F-070 | 与短故事正课直接相关的录播为 7 节（导学 3 + 第一章 3 + 第二章 1），合计 11356281 ms（3 小时 9 分 16.281 秒），占 40 节的 17.5%；赠课 30 节占 75% | page_fact | s8 | 分类计数 | observed |
+| F-071 | 40 节的权限与资源字段取值一致：`right.ownership=false`、`purchased=false`、`can_experience=false`、`is_free=false`、`trial_duration=0`、`playlist/playlist_v2=null`、`file_list=[]`、`can_download_section_file=false` | page_fact | s8 | 逐条字段分布 | observed/scoped |
+| F-072 | `product.duration_text` 为「试看部分内容，观看完整内容请」，与 `trial_duration=0`、`can_experience=false` 并存；前者为模板文案，后两者为权限字段 | page_fact | s8 | `trainingVideo.data.product` | observed |
+| F-073 | 3 节直播在播放页 `meta.media="直播课 · 回放"`、`section_status=3`、`resource.data.status` 缺省；37 节录播 `section_status=2`、`status="started"`；售卖页同一 3 节仍标「直播 · 已结束」 | page_fact | s8 | 播放页／售卖页字段 | observed |
+| F-074 | `noteCount.data.total=0`；`GET /api/knowledge_school/courses/{cid}/sections/{sid}/notes` 返回空 `list`；`isShowAiEntry=false`、`bindDesktopInfo.show=false` | page_fact | s8 | 播放页与笔记接口 | observed |
+| F-075 | `video_page/detail` 返回 `serial_status="end"`、`is_on_shelf=false` 与 `on_shelves=true` 并存、`duration=0`、`section_unit="节"`、`authors` 仅 1 个机构账号；`create_time=1792777712` 按 +08:00 换算为 2026-10-24 01:48:32 | page_fact | s8 | 详情接口 | observed |
+| F-076 | 11-07 的 39 节／6 章节快照与 11-09 的 40 节／7 章节快照是同一组字段在两个时点的取值，不是页面之间的口径矛盾；按幂等规则并存登记，不改写 F-004、F-006、F-018 等既有行 | negative | s1/s2/s8 | 两轮快照比对 | observed/negative |
+| F-077 | 适用边界：`resource.data.status="started"` 是资源状态、`serial_status="end"` 是连载状态、`catalog.extra.headerText="已完结"` 是目录展示文案、`update_finished=true` 是课程级更新标志；四者对象不同，不能合并成「课程已结束且全部可看」 | scoped | s8 | 字段语义 | observed/scoped |
+| F-078 | 2026-11-09 复核后仍未取得任何一节视频画面（4 张小节封面帧除外）、音轨、字幕、讲义、作业正文、批改记录或课堂原始表格；F-055 的缺席结论在本轮仍成立 | negative | s8 | 采集边界 | observed/negative |
+| F-079 | 开放平台公开检索命中的结果以推广／引流文案为主，反复出现「七步故事法」「8G 素材包」「内部绿通」「导语」「付费节点」等说法，未出现课程正文、讲义或逐字转录 | third_party | s9 | 两次检索各 10 条 | single-source/scoped |
+| F-080 | 取回 4 张小节封面：有的为标题卡（含机构标识与小节标题），有的为视频内帧（含三行要点文字与一句字幕）；单帧不构成课程内容，本包不逐字转录、不用其推断课堂步骤 | negative | s8 | 图片读图 | observed/negative |
 ## 编号维护
 
-新增事实从 F-061 起顺延，不重排既有编号。若后续取得课程正文、原始对账单、平台规则全文或目录后续章节，应各自新增编号并在[核验与勘误](verification.md)补裁决，不修改本表已有行的结论。
+新增事实从 **F-081** 起顺延，不重排既有编号。2026-11-09 的第二轮复核已占用 F-061～F-080（触发条件为「课程目录继续解锁」），逐项裁决见[核验与勘误](verification.md)第二轮段，快照见[播放页 40 节快照](player-page-snapshot.md)。若后续取得课程正文、原始对账单、平台规则全文或目录后续章节，应各自新增编号并补裁决，不修改本表已有行的结论。
