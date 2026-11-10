@@ -9,7 +9,7 @@ description: "AI 工程方法论、上下文工程、安全红队与行业趋势
 
 AI 工程方法论、上下文工程、安全红队与行业趋势研究——Token 经济与成本、免费 API 生态、Agent 工作流实践、行业研究及博文核验转化束。
 
-本类共 **29 个知识包**，分布于 **27 个生态/项目目录**。
+本类共 **30 个知识包**，分布于 **28 个生态/项目目录**。
 
 ## 束导航
 
@@ -26,6 +26,7 @@ AI 工程方法论、上下文工程、安全红队与行业趋势研究——To
 | [🗣️ Verbi 单人 AI 口语陪练出海案例](verbi/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化（案例资讯非操作教程）——加拿大单人开发者 5.5 个月做到 30 天营收 $110,069/MRR $16,752（RevenueCat + TrustMRR 双锚核验）；「敢开口」错位定位、试用转化漏斗、ASO+内容+UGC 渠道勘误 E-1（8✅/6⚠️/1❌） |
 | [🚀 GPT-6 Astra 官方使用指南中文解读](gpt6-astra-usage-guide/index.md) | 1 | 微信博文经OKF v0.2七阶段转化（核验自 OpenAI 官方文档）——五项新特性（异步工具调用/response.steer 中途引导/切推理强度保缓存/偏离检测/限制）、五大行为模式与 11 个官方 Prompt 配方（非操作教程） |
 | [🤖 GPT-6 Sol/Luna 成本效率与 Agent 任务经济性](gpt6-sol-luna-cost-efficiency/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——GPT-6 Sol/Luna 模型分工与价格、DeepSeek 价格对照、Agent 每任务成本模型与选型边界；非操作教程，benchmark 与内部统计按厂商/第三方口径标注 |
+| [📘 Claude 模型选型：Fable、Opus、Sonnet 与 Haiku](claude-model-selection/index.md) | 1 | claude.dev 官方博文经 OKF v0.2 七阶段转化——四档模型价格与定位、按任务选型矩阵、每完成任务成本、混合编排（子代理/advisor/批量委派）、迁移兼容七项与自测闭环；含 2 篇可复现实践，benchmark 按厂商自述标注 |
 | [🖥️ GPT-6 Intelligent UI：从"回答问题"到"交付可交互对象"](gpt6-intelligent-ui/index.md) | 1 | APPSO 博文经 OKF v0.2 转化（产品功能测评/行业洞察，非操作教程）——Intelligent UI 定义、能力场景、组件库+界面编译器机制、黑盒随机性、局限（暂不支持 Pro effort/Astra）与交互范式转变；含诺奖书单实测案例（安妮·卡森经诺奖官网核验；13 项 P0/P1 核验 9✅/4⚠️/0❌） |
 | [💰 Fable5 成本优化](fable5-cost-optimization/index.md) | 1 | Fable5 定价背景、社区方案、官方优化与选型指南（AI 编程工具成本优化专题） |
 | [💻 Codex Agent 工作流实践](codex-agent-workflow-practices/index.md) | 1 | Anthropic Codex CLI 四杠杆降本实践——并行工作流/大闭环/对抗提升/真实需求驱动，243亿 token / $12,213 实测数据 |
@@ -57,6 +58,7 @@ token-economy-explosion/index
 verbi/index
 gpt6-astra-usage-guide/index
 gpt6-sol-luna-cost-efficiency/index
+claude-model-selection/index
 gpt6-intelligent-ui/index
 fable5-cost-optimization/index
 codex-agent-workflow-practices/index
