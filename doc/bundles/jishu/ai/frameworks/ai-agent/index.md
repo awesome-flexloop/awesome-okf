@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——工具调用、多代理编排、记忆与插件的源码教程，以及参考架构与治理学习"
-total_bundles: 65
+total_bundles: 66
 ---
 
 # 🤖 AI Agent 框架
@@ -88,6 +88,7 @@ total_bundles: 65
 | [agent-skills-spec](agent-skills-spec/index.md) | 技能规范 | 8+2+2+1=13 | Agent Skills开放标准——SKILL.md权威格式规范(name五规则/description≤1024/compatibility≤500)、渐进式披露三阶段token预算、eval驱动迭代(evals/grading双臂对照)、description触发率优化(3次/0.5阈值/60-40切分)、46客户端三层加载契约、skills-ref参考实现(parser四类ParseError/validator校验序列/to_prompt XML/CLI三子命令) |
 | [ai-agent-skills](ai-agent-skills/index.md) | 技能规范 | 12+1+13=26 | AI Agent Skills 生态六项目——agency-agents 部门化人格、awesun-mcp/skill/ui-locator 向日葵远程控制三件套、jira-skill 工程化集成、retro-skill 会话复盘，涵盖 SKILL.md 开放标准、MCP 工具协议、插件架构与渐进式披露 |
 | [jira-skill](jira-skill/index.md) | 技能插件 | 10+3+3=16 | Jira 官方开源插件（Netresearch v3.29.0）完整技术教程——jira-communication（API 交互）与 jira-syntax（语法规范）双技能架构、JQL 查询语言与查询/创建/流转/看板/冲刺全操作 |
+| [cnblogs-publish-skill](cnblogs-publish-skill/index.md) | 发布技能 | 8+3+3=14 | 博客园官方 Agent Skill 源码教程——12 个 CLI 命令、默认非公开发布、四平台凭据后端（Keychain/Credential Manager/secret-tool/keyring）、MetaWeblog 审核语义与 50 项安全不变量测试 |
 | [book-to-skill](book-to-skill/index.md) | 知识工具 | 4+1+1=6 | 书籍→Agent Skill编译器——确定性文本提取、7种文档格式解析器、13语言章节检测、四层产出流水线、多层安全防护 |
 | [learn-from-materials](learn-from-materials/index.md) | 学习工具 | 4+2+2+1=9 | 把 PDF/EPUB/DOCX/PPTX 材料转成可追溯、可测验、可做笔记的交互式学习网页——六板块机制、两种学习深度、宿主安装与三步实操，41 条事实与 10 项 P0 核验 |
 | [i-have-adhd](i-have-adhd/index.md) | 辅助技能 | 3+1+1=5 | ADHD认知辅助技能——10条ADHD友好输出规则、Session Hooks偏好持久化、10+IDE/Agent平台集成、Always-On跨应用模式 |
@@ -177,7 +178,7 @@ total_bundles: 65
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：65 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
+> **内容统计**：66 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
 
 ```{toctree}
 :hidden:
@@ -202,6 +203,7 @@ anthropics-skills/index
 agent-skills-spec/index
 ai-agent-skills/index
 jira-skill/index
+cnblogs-publish-skill/index
 eve/index
 orca/index
 book-to-skill/index
