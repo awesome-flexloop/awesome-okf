@@ -83,3 +83,52 @@ sources:
 ## 结论
 
 核心事实（GA 日期、收敛关系、包名、Harness 创建方式、托管 GA 状态、工作流与编排模式）均有官方文档或 Releases 交叉支持。未发现需要把 bundle 标为 `flagged` 的核心声明失败；两项厂商自述数据已显式标注，四项细节标为单源。bundle 状态定为 `stable`，`stale_after: 2027-05-31`。
+
+## 第二轮：源码核验（commit 098214127）
+
+### 方法
+
+- 信源：本地检出 `D:\spaces\SpecWeave\external\dao\action\agent-framework`，commit `098214127`。
+- 符号核验：`Select-String` 检索 `^class` / `^def` / `^    def`，逐项确认类名与方法名存在。
+- 版本核验：读取 `python/packages/core/pyproject.toml` 与 `dotnet/nuget/nuget-package.props`。
+- 计数核验：`Get-ChildItem ... | Measure-Object` 独立计数，不采信目测。
+- 未执行测试套件；结论为静态阅读 + 符号检索。
+
+### 逐项结论
+
+| # | 声明 | 源码核验 | 结论 |
+|---|------|---------|------|
+| 1 | Python core 版本 | `1.25.0` | ✅（F-124） |
+| 2 | .NET 版本 | `VersionPrefix 1.28.0` | ✅（F-125） |
+| 3 | Python 包数 | 44 个目录 | ✅ 脚本计数（F-123） |
+| 4 | .NET 项目数 | 38 个目录 | ✅ 脚本计数（F-126） |
+| 5 | core 顶层 py 文件 | 24 个 | ✅ 脚本计数（F-128） |
+| 6 | Harness 循环上限 | `DEFAULT_MAX_ITERATIONS = 10` | ✅（F-141） |
+| 7 | 后台代理等待 | `DEFAULT_BACKGROUND_AGENTS_WAIT_TIMEOUT_SECONDS = 300` | ✅（F-142） |
+| 8 | FIDES 仅 Python | `dotnet/src` 检索 `IntegrityLabel|Fides|FIDES` 零命中 | ✅（F-155） |
+| 9 | 检查点协议 | `save` / `load` / `list_checkpoints` | ✅（F-151） |
+| 10 | Go 独立仓库 | `go/` 仅 README 指向 agent-framework-go | ✅（F-127） |
+
+### 新增口径差异
+
+#### 1. Shell 并非“仅 .NET”（文档滞后）
+
+文档 F-040 写“Shell 执行（仅 .NET）”。源码 `_harness/_agent.py` 从 `agent_framework_tools.shell` 导入 `ShellExecutor`，并接受 `shell_executor` 参数（F-145）；该包版本 `1.0.0b261106`，为预发布（F-146）。
+
+正确表述：**Python Harness 已有 Shell 能力，但依赖预发布包，不在稳定安装面内。** 正文写“截至该 commit 可用（预发布）”，不把文档旧结论当永久事实（F-163）。
+
+#### 2. 源码 1.25.0 领先 Release 1.21.0
+
+F-008 记录最新 Release 为 `python-1.21.0`；源码为 `1.25.0`（F-124、F-164）。两者不矛盾，但**不能把源码行为直接写成已发布行为**。本知识包在源码篇统一标注“main 快照”。
+
+#### 3. “自动压缩”需要策略/预算（源码确认）
+
+源码提供 `disable_compaction`、`before_compaction_strategy`、`after_compaction_strategy`、`max_context_window_tokens` 与 9 种策略（F-136、F-139）。这确认了第一轮的判断：压缩是“可配置能力”，不是无条件默认行为（F-037）。
+
+### 残余风险（源码轮）
+
+1. 未运行 Python/.NET 测试；默认值与类关系可能随版本变化。
+2. 计数为目录/文件级，不等于 API 数或发布包数。
+3. 未读 Go 仓库源码；Go 结论仅来自主仓 README 与文档。
+4. 本地检出为 env-bound，复现需同一 commit。
+

@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: bundle
 title: "Microsoft Agent Framework：从 1.0 到 Build 2026 的代理与工作流"
-description: "微软 MAF 官方文档与 Build 2026 公告的系统化中文教程——四支柱、代理管道、Harness、工具/技能/MCP、记忆/RAG/FIDES、工作流、托管运维、迁移与 CodeAct"
+description: "微软 MAF 官方文档、Build 2026 公告与 1.25.0 源码的系统化中文教程——四支柱、代理管道、Harness、工具/技能/MCP、记忆/RAG/FIDES、工作流、托管运维、迁移、CodeAct 与源码实现"
 tags: [Microsoft Agent Framework, MAF, Agent, 多代理工作流, Harness, CodeAct, Foundry, FIDES, Python, .NET]
 generated: { by: "blog-article-to-okf-bundle", at: "2026-11-10T15:30:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-11-10T15:30:00+08:00" }
@@ -24,6 +24,9 @@ sources:
   - id: verify
     resource: /references/verification.md
     title: "本知识包核验报告"
+  - id: source
+    resource: https://github.com/microsoft/agent-framework/commit/098214127
+    title: "源码检出 commit 098214127（Python core 1.25.0 / .NET 1.28.0）"
 ---
 
 # Microsoft Agent Framework：从 1.0 到 Build 2026 的代理与工作流
@@ -43,7 +46,7 @@ Microsoft Agent Framework（MAF）在 2026-04-02 发布 1.0，把 AutoGen 与 Se
 
 ```text
 microsoft-agent-framework/
-├── concepts/                     # 10 篇概念
+├── concepts/                     # 16 篇概念（10 文档 + 6 源码）
 │   ├── 00-overview.md            # 定位、1.0、四支柱、语言矩阵
 │   ├── 01-quickstart.md          # 安装、最小代理、会话
 │   ├── 02-agent-architecture.md  # 管道、中间件、上下文、会话边界
@@ -53,16 +56,24 @@ microsoft-agent-framework/
 │   ├── 06-security-fides.md      # 提示注入与信息流控制
 │   ├── 07-workflows.md           # 图/函数式、检查点、HITL、编排
 │   ├── 08-hosting-operations.md  # Foundry/自托管、协议、Durable
-│   └── 09-build2026-migration.md # 四项公告、CodeAct、迁移
-├── examples/                     # 5 篇可演练示例
+│   ├── 09-build2026-migration.md # 四项公告、CodeAct、迁移
+│   ├── 10-repo-map.md            # monorepo、版本与构建入口
+│   ├── 11-core-agent-runtime.md  # Agent 组合、中间件、会话
+│   ├── 12-harness-implementation.md # Harness 参数与默认值
+│   ├── 13-workflow-runtime.md    # Builder、Runner、检查点
+│   ├── 14-fides-implementation.md # FIDES 类与作用域
+│   └── 15-codeact-and-dotnet.md  # Hyperlight、.NET 项目
+├── examples/                     # 6 篇示例（5 演练 + 1 源码阅读）
 │   ├── 00-hello-agent.md
 │   ├── 01-tool-and-approval.md
 │   ├── 02-harness-session.md
 │   ├── 03-workflow-checkpoint.md
-│   └── 04-hosted-and-handoff.md
+│   ├── 04-hosted-and-handoff.md
+│   └── 05-source-reading-map.md
 ├── references/                   # 信源与核验
-│   ├── article-source.md         # F-001 ~ F-120
-│   └── verification.md           # P0 对账与口径差异
+│   ├── article-source.md         # F-001 ~ F-170
+│   ├── verification.md           # P0 对账与口径差异
+│   └── source-code-map.md        # 源码信源、模块地图、计数口径
 ├── index.md
 └── log.md
 ```
@@ -87,6 +98,14 @@ microsoft-agent-framework/
 | 上线与运维 | [托管与运维](concepts/08-hosting-operations.md) | [示例 04](examples/04-hosted-and-handoff.md) |
 | 从 SK/AutoGen 迁移 | [Build 2026 与迁移](concepts/09-build2026-migration.md) | [工具文档](concepts/04-tools-skills-mcp.md) |
 
+### 源码路径（第二轮新增）
+
+1. [源码地图](concepts/10-repo-map.md)：先建立仓库与版本坐标系。
+2. [核心运行时](concepts/11-core-agent-runtime.md)：跟一次 `run` 的类调用链。
+3. [Harness 源码](concepts/12-harness-implementation.md) 与 [工作流源码](concepts/13-workflow-runtime.md)：看默认值与检查点协议。
+4. [FIDES 源码](concepts/14-fides-implementation.md) 与 [CodeAct/.NET](concepts/15-codeact-and-dotnet.md)：看安全与执行边界。
+5. [源码阅读示例](examples/05-source-reading-map.md)：用 6 条命令复现。
+
 ### 深读路径
 
 1. 先读 [FIDES](concepts/06-security-fides.md) 再读 [CodeAct](concepts/09-build2026-migration.md)：理解“沙箱隔离 ≠ 信息流控制”。
@@ -105,27 +124,28 @@ microsoft-agent-framework/
 
 ## 数量与完整性
 
-- 概念文档：**10 篇**
-- 实战示例：**5 篇**
-- 信源文档：**2 篇**（F-001 ~ F-120，18 项 P0 核验）
+- 概念文档：**16 篇**（10 篇文档 + 6 篇源码）
+- 示例：**6 篇**（5 篇演练 + 1 篇源码阅读）
+- 信源文档：**3 篇**（F-001 ~ F-170，18 项 P0 核验 + 源码核验）
 - 索引与日志：5 个文件
-- 合计：**22 个文件**
+- 合计：**30 个文件**
 
 ## 信任与生命周期
 
 - **生成方式**：官方文档与公告的检索、重构与核验；不是源码逐行解读。
 - **核验**：18 项 P0 对账，5 处口径差异已单列（见 [verification.md](references/verification.md)）。
-- **状态**：`stable`。核心事实有官方文档/Releases 交叉支持；两项厂商自述数据已标注。
-- **时效**：`stale_after: 2027-05-31`。MAF 从 1.0 到 1.21 仅约六个月（F-008），半年后应复核包名、默认行为与托管状态。
+- **状态**：`stable`。核心事实有官方文档/Releases 交叉支持，源码篇另以 commit 098214127 做符号级核验；两项厂商自述数据已标注。
+- **时效**：`stale_after: 2027-05-31`。Release 从 1.0 到 1.21 约六个月（F-008），源码快照已到 1.25.0/1.28.0（F-124、F-125）；半年后应复核包名、默认行为与托管状态。
 
 ## 已知边界
 
-1. **非源码教程**：不逐行解读 `agent-framework` 仓库；需要源码级内容请用源码类工作流。
-2. **不覆盖 Go 全貌**：Go 为公共预览，本文只说明状态与能力边界（F-005）。
-3. **CodeAct 基准为厂商自述**：52.4%/63.9% 未独立复现（F-105）。
-4. **托管细节为博文单源**：缩容到零、文件系统保留、每会话 VM 隔离等细节需查 Foundry 文档（F-087）。
-5. **示例非官方原文**：代码为最小化改写，版本升级后可能需调整。
-6. **不构成合规认证**：安全与多用户边界建议是工程实践，不替代你的威胁建模与合规评审。
+1. **非逐行注释**：第 10–15 篇做结构与符号级源码核验（类、方法、默认值、计数），不做逐行注释或完整调用链追踪。
+2. **不覆盖 Go 全貌**：Go 为公共预览且独立仓库，本文只说明状态与能力边界（F-005、F-127）。
+3. **源码为 main 快照**：commit 098214127，Python 1.25.0 / .NET 1.28.0，高于最新 Release 1.21（F-124、F-125、F-164）；源码结论不自动等同于已发布行为。
+4. **CodeAct 基准为厂商自述**：52.4%/63.9% 未独立复现（F-105）。
+5. **托管细节为博文单源**：缩容到零、文件系统保留、每会话 VM 隔离等细节需查 Foundry 文档（F-087）。
+6. **示例非官方原文**：代码为最小化改写，版本升级后可能需调整。
+7. **不构成合规认证**：安全与多用户边界建议是工程实践，不替代你的威胁建模与合规评审。
 
 ```{toctree}
 :hidden:

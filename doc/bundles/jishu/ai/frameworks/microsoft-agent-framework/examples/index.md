@@ -1,6 +1,6 @@
 # 实战示例
 
-本目录收录 5 个可演练示例，均从官方文档片段做最小化改写，用于验证环境与理解关键 API。命令、包名与代码结构以 2026-10 文档为准；运行前请替换模型部署名与终结点。
+本目录收录 6 个示例：5 个可演练示例 + 1 个源码阅读路径，均从官方文档片段做最小化改写，用于验证环境与理解关键 API。命令、包名与代码结构以 2026-10 文档为准；运行前请替换模型部署名与终结点。
 
 | 示例 | 目标 | 关键能力 |
 |------|------|---------|
@@ -9,6 +9,7 @@
 | [02 Harness 与会话](02-harness-session.md) | 用 Harness 做长任务 | `create_harness_agent`、会话复用、压缩预算 |
 | [03 工作流与检查点](03-workflow-checkpoint.md) | 图工作流、检查点、HITL | `WorkflowBuilder`、`CheckpointStorage`、`request_info` |
 | [04 托管与 Handoff](04-hosted-and-handoff.md) | 上线与多代理分诊 | Foundry Hosting、`HandoffBuilder` |
+| [05 源码阅读路径](05-source-reading-map.md) | 用检索命令走通请求链 | `Agent.run`、middleware、SessionContext、CheckpointStorage |
 
 ## 示例使用约定
 
@@ -26,4 +27,5 @@
 02-harness-session
 03-workflow-checkpoint
 04-hosted-and-handoff
+05-source-reading-map
 ```
