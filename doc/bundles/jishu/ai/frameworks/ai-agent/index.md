@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——工具调用、多代理编排、记忆与插件的源码教程，以及参考架构与治理学习"
-total_bundles: 63
+total_bundles: 64
 ---
 
 # 🤖 AI Agent 框架
@@ -106,6 +106,7 @@ total_bundles: 63
 | [opencode](opencode/index.md) | TypeScript | 5+1+1=7 | OpenCode Terminal Coding Agent——Bun+Turbo+SST技术栈、SessionV2会话模型(Context Epoch)、V2配置规范、infra模块(app/console/lake/stage/stats/secret)、Cloudflare+AWS混合云部署 |
 | [pi-cli](pi-cli/index.md) | TypeScript | 5+1+1=7 | Pi AI CLI——9包monorepo(ai/tui/agent/client/server/evals等)、AI包(models/oauth/cli/compat/images)、TUI差分渲染引擎、5个内置prompt(cl/is/pr/sa/wr)、锁步版本控制 |
 | [pi-agent-harness](pi-agent-harness/index.md) | 博文综述 | 3+2+1=6 | Pi Agent Harness 高层定位与竞品综述——pi-ai/pi-agent-core/pi-coding-agent/pi-tui 四层架构、默认工具集与 Skill/Extension/Package 扩展、与 Claude Code/Codex/OpenCode/LangGraph 对比 |
+| [mini-swe-agent](mini-swe-agent/index.md) | Python | 8+3+3=14 | 100 行极简 coding agent 源码教程——bash-only/线性历史/无状态 subprocess 三原则、Agent/Model/Environment 三协议、172 行主循环、六类执行环境、toolcall 与 textbased 双通道、74% 评测边界；90 条事实、4 条博客勘误 |
 
 ### 🔬 Tongyi-MAI 生态源码精读
 
@@ -175,7 +176,7 @@ total_bundles: 63
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：63 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
+> **内容统计**：64 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
 
 ```{toctree}
 :hidden:
@@ -243,5 +244,6 @@ cua/index
 openshell-reference-architecture/index
 learn-from-materials/index
 agent-autoloop/index
+mini-swe-agent/index
 agent-framework-selection-2026/index
 ```
