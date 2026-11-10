@@ -65,8 +65,8 @@ description: "AI 行业与商业趋势知识包——AI 变现指南、自动赚
 | [kuaishou-wallpaper-publish-traffic](kuaishou-wallpaper-publish-traffic/index.md) | 16 | 快手发布壁纸作品引流——推图社小程序口令 → 发快手 → 选图编辑 → 引流文案与话题 → 发布前设置 → 发布交付的全流程还原；53 条事实 F-001~F-053、C1~C9 核验结论、勘误四张清单与 G1~G4 缺口（信源为源页面内嵌视频音轨的本地离线 ASR 转写，属讲师口播口径而非平台规则；flagged：图片数量三口径冲突无官方口径、「允许下载」效果无官方文档、UI 版本未标注） |
 | [ai-comic-drama-opc-transition](ai-comic-drama-opc-transition/index.md) | 18 | 知乎专栏转化：AI 漫剧 OPC 转向的结构化学习——成本结构塌陷、内容判断力、注意力第一性原理与总量/分配两层模型、组织职能上移、强预测降级（方法论学习包，非制作教程、非建议；flagged：单篇访谈单源，62 条事实 F-001~F-062、22 项 P0 核验 ✅9/⚠️7/⭕6/❌0、12 条勘误，预测与假设计算不得当事实） |
 | [content-creation-three-rules](content-creation-three-rules/index.md) | 14 | 内容创作三原则——课程课后复盘转化：模仿的结构层／表达层分层与平台原创条款反向约束、利他内容的两种价值与自拟选题三问、四指标映射改述为待检验假设与单变量记录法（40 条事实 F-001～F-040；flagged：单源商业培训材料、`route: chaptered-summary` 去品牌化、8 条四视角对抗审查全采纳、官方条款仅微信视频号适用，非操作教程、非法律意见） |
-| [short-story-writing-system](short-story-writing-system/index.md) | 27 | 短故事创作与投稿变现——付费课程双通道转化：三套目录对账、39／40 节双时点快照、课堂方法链与按课次走查、全量录播覆盖矩阵与双包分账（139 条事实 F-001～F-139、四轮四视角对抗审查 8+6+6+6 条；flagged：本包课程本体 10/10、赠课 30 节另立包、讲义与课件画面未取得、`route: chaptered-summary` 去品牌化、非平台操作手册） |
-| [ai-assisted-content-operations](ai-assisted-content-operations/index.md) | 16 | AI 辅助内容运营——30 节搭售赠课独立成包：账号定位与人设、平台机制与冷启动、选题到脚本批量生产、视觉素材与成片收口、变现结构与付费投放次序、受众分层与异常诊断（30 条事实 F-001～F-030、30/30 内容级覆盖、8 条四视角对抗审查全采纳；flagged：单源商业培训材料、`route: chaptered-summary` 去品牌化、平台规则类说法均为待核验主张、收益与效果数字不采信、非平台操作手册、非变现承诺） |
+| [short-story-writing-system](short-story-writing-system/index.md) | 27 | 短故事创作与投稿变现——付费课程双通道转化：三套目录对账、39／40 节双时点快照、课堂方法链与按课次走查、全量录播覆盖矩阵与双包分账（事实台账按轮次顺延、五轮四视角对抗审查 8+6+6+6+5 条；flagged：本包课程本体 10/10 属 11-09 目录时点、赠课 30 节另立包、独立讲义附件与官方字幕轨未取得而课件画面文字载体已取得但不逐字转录、`route: chaptered-summary` 去品牌化、非平台操作手册） |
+| [ai-assisted-content-operations](ai-assisted-content-operations/index.md) | 16 | AI 辅助内容运营——30 节搭售赠课独立成包：账号定位与人设、平台机制与冷启动、选题到脚本批量生产、视觉素材与成片收口、变现结构与付费投放次序、受众分层与异常诊断（事实台账按轮次顺延、30/30 内容级覆盖属 11-09 目录时点、两轮四视角对抗审查 8+4 条全采纳；flagged：单源商业培训材料、`route: chaptered-summary` 去品牌化、平台规则类说法均为待核验主张、收益与效果数字不采信、非平台操作手册、非变现承诺） |
 
 ## 阅读建议
 

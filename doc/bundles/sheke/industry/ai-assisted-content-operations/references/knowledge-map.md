@@ -15,7 +15,7 @@ generated: { by: "process:seven-concepts-cmd", at: "2026-11-09T06:25:01Z" }
 
 | 层 | 内容 | 位置 |
 |---|---|---|
-| 事实层 | F-001～F-030 共 30 条：采集与加工 8 条、方法链与冲突 11 条、分账边界与模式 11 条 | [课程事实与主张登记](course-facts.md) |
+| 事实层 | F-001～F-036 共 36 条：首轮采集、方法链与分账 30 条，第五轮证据范围复核 6 条 | [课程事实与主张登记](course-facts.md) |
 | 洞察层 | 4 条洞察四元组 | 本页 |
 | 模式层 | L1 单案例模式「搭售内容独立成包」 | 本页 |
 
@@ -58,5 +58,5 @@ generated: { by: "process:seven-concepts-cmd", at: "2026-11-09T06:25:01Z" }
 | [变现结构与投放](../concepts/05-monetization-and-ads.md) | F-016～F-017、F-022 |
 | [运营与异常诊断](../concepts/06-operations-and-diagnosis.md) | F-018～F-019、F-022 |
 | [课堂覆盖与证据分层](lecture-coverage.md) | F-001～F-008、F-020～F-022 |
-| [核验与勘误](verification.md) | F-001～F-030 全量裁决 |
+| [核验与勘误](verification.md) | F-001～F-030 全量裁决（首轮）＋第二轮增量裁决 |
 | [对抗审查](adversarial-review.md) | F-023～F-028 |
