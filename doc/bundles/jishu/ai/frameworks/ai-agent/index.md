@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——工具调用、多代理编排、记忆与插件的源码教程，以及参考架构与治理学习"
-total_bundles: 62
+total_bundles: 63
 ---
 
 # 🤖 AI Agent 框架
@@ -115,6 +115,12 @@ total_bundles: 62
 | [mobile-world](mobile-world/index.md) | 评测框架精读 | 8+3+2+1=14 | MobileWorld 移动 GUI 智能体评测框架源码精读——DinD 单容器 Android 评测环境、agents/core/runtime/tasks 四层架构、BaseAgent 契约与九项注册表、任务快照+冻结时钟确定性复现、eval-server 大规模编排（40 容器/tmux）、MCP 工具注入、双 CLI 驱动，80 条事实全溯源（Qwen-UI-Agent 82.1% 成绩所在基准框架） |
 | [mobilepa-bench](mobilepa-bench/index.md) | 基准精读 | 5+0+2+1=8 | MobilePA-Bench 移动规划智能体基准精读——页面即仓库（零评测代码）、1,705 任务/212 工具四维加权（Tool 50%）、六类 checker 固定验证策略、v1.5 榜单 13 模型与 Cost 口径、并入 Qwen-UI-Agent 网站技术栈简析（Next.js 16），网站型项目无 examples |
 
+### 🧭 框架选型与横向对比
+
+| 知识包 | 类型 | 文档数 | 一句话简介 |
+|--------|------|--------|-----------|
+| [agent-framework-selection-2026](agent-framework-selection-2026/index.md) | 选型综述 | 5+0+2+1=8 | 2026 五框架横向选型——LangGraph 图状态机/checkpoint、CrewAI 角色协作、MAF 合并 SK+AutoGen 与 .NET/Python 对齐、Pydantic AI V2 capability/Harness、LlamaIndex Workflows 事件驱动 step；按主导约束决策 + 双框架分层 + token 成本与安全边界；81 条事实、13 项 P0（8✅3⚠️1❌1🏷️），含 LlamaIndex 1.0 年份勘误 |
+
 ### 📰 产品资讯
 
 | 知识包 | 类型 | 文档数 | 一句话简介 |
@@ -169,7 +175,7 @@ total_bundles: 62
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：62 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
+> **内容统计**：63 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
 
 ```{toctree}
 :hidden:
@@ -237,4 +243,5 @@ cua/index
 openshell-reference-architecture/index
 learn-from-materials/index
 agent-autoloop/index
+agent-framework-selection-2026/index
 ```
