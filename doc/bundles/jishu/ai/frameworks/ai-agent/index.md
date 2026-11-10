@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——工具调用、多代理编排、记忆与插件的源码教程，以及参考架构与治理学习"
-total_bundles: 64
+total_bundles: 65
 ---
 
 # 🤖 AI Agent 框架
@@ -69,6 +69,7 @@ total_bundles: 64
 | [deepseek-harness](deepseek-harness/index.md) | TypeScript | 10+4+1=15 | DeepSeek Agent框架——Cordis插件架构(50+包)、Phase状态机+Inbox双队列、defineTool类型安全工具、Event-Sourcing会话、MCP/ACP双协议、Skill分层系统（0.1.0-rc.5 旧版，架构已换代） |
 | [deepseek-harness-0-2](deepseek-harness-0-2/index.md) | TypeScript/Python | 11+5+2=18 | DeepSeek Harness 0.2 官方源码精读——一切皆插件的 Cordis 四抽象、profile/组合包四层叠加、Agent turn/step 状态机、SessionEvent 事件日志与两套 generation、工具执行流水线、LLM 抽象层、22 个能力 seam、沙箱/审批/权限预设三层安全模型，以及 CLI/Web/Desktop/Headless/ACP/Python SDK 六形态 |
 | [intelligent-terminal](intelligent-terminal/index.md) | C++/Rust | 10+4+1=15 | Windows Terminal原生Agent——双进程架构(Helper+Master)、COM协议服务器、命名管道传输、ACP JSON-RPC 2.0、OSC 133自动修复、Agent Pane XAML UI、wtcli命令工具 |
+| [swe-rex](swe-rex/index.md) | Python | 10+5+3=18 | SWE-ReX 沙箱执行后端——Deployment/Runtime 两级解耦、pexpect 会话状态机（PS1 哨兵+退出码旁路）、10 路由 HTTP 与 511 异常传输、7 种部署/3 种运行时、12 类异常与 89 个测试 |
 
 ### 🔌 Tier 2：中型框架/库
 
@@ -176,7 +177,7 @@ total_bundles: 64
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：64 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
+> **内容统计**：65 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
 
 ```{toctree}
 :hidden:
@@ -245,5 +246,6 @@ openshell-reference-architecture/index
 learn-from-materials/index
 agent-autoloop/index
 mini-swe-agent/index
+swe-rex/index
 agent-framework-selection-2026/index
 ```
