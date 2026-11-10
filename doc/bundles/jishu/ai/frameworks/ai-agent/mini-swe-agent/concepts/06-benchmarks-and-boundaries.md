@@ -13,7 +13,7 @@ sources:
     title: "博客事实清单（F-001 ~ F-034）"
   - id: repo-mini-swe-agent
     resource: /references/repo-source.md
-    title: "仓库事实清单（F-035 ~ F-090）"
+    title: "仓库事实清单（F-035 ~ F-100）"
   - id: verification
     resource: /references/verification.md
     title: "P0 核验报告"

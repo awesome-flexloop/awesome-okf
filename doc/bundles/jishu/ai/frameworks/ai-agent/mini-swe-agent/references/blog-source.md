@@ -27,7 +27,7 @@ sources:
 | F-003 | 博客称项目由 Princeton & Stanford 出品。 | 博客 | 通过（作者机构与论文署名一致，见 F-045） |
 | F-004 | 博客称项目有 26k+ GitHub Stars。 | 博客 | ❌ 勘误 E-1（实际 9,496，截至 2026-11-10） |
 | F-005 | 博客称项目达到 74% 的 SWE-bench verified 修复率。 | 博客 | 通过（官方 docs 同样声明 >74%，见 F-070） |
-| F-006 | 博客称核心代码约 100 行。 | 博客 | ⚠️ 口径（README 同样称 100 行；实际 default.py 172 行，见 F-075、F-079） |
+| F-006 | 博客称核心代码约 100 行。 | 博客 | ⚠️ 口径（README 同样称 100 行；实际 default.py 190 行、非空 172 行，见 F-075、F-079） |
 | F-007 | 博客称 SWE-agent 团队在 2024 年发布了 SWE-bench。 | 博客 | ❌ 勘误 E-2（SWE-bench arXiv 2310.06770 于 2023-10-10 提交） |
 | F-008 | 博客称 2024 年 SWE-agent 的架构为：精心设计的 Agent-Computer Interface（ACI）、专为 LLM 优化的工具调用格式、SWE-bench 上的 SOTA。 | 博客 | 通过（SWE-agent 论文与官方定位一致） |
 | F-009 | 博客提出的核心问题是：如果 Agent 框架简化 100 倍，效果还能保持吗？ | 博客 | 通过（README 原文 “What if our agent was 100x simpler”） |

@@ -33,7 +33,7 @@ sources:
 | P0-1 | 博客：项目有 26k+ GitHub Stars（F-004） | GitHub API：`stargazers_count = 9496`（F-036） | ❌ **不成立**，实际 9,496（E-1） |
 | P0-2 | 博客：SWE-agent 团队 2024 年发布 SWE-bench（F-007） | arXiv 2310.06770：Submitted on 10 Oct 2023（F-085） | ❌ **不成立**，SWE-bench 为 2023 年（E-2） |
 | P0-3 | 博客：74% SWE-bench verified（F-005、F-017） | 官方 docs：`Scores >74%` + News “Gemini 3 Pro reaches 74%”（F-070） | ⚠️ **成立但有口径边界**：官方未公开完整评测配置（F-088） |
-| P0-4 | 博客：核心代码约 100 行（F-006） | 源码：`default.py` 172 行，核心方法约 100 行（F-075、F-079） | ⚠️ **概数成立**，但不能按字面理解为整文件 100 行 |
+| P0-4 | 博客：核心代码约 100 行（F-006） | 源码：`default.py` 190 行（非空 172），核心方法约 100 行（F-075、F-079） | ⚠️ **概数成立**，但不能按字面理解为整文件 100 行 |
 | P0-5 | 博客：快速开始使用 `MiniSWEAgent`、`result.passed`、`result.patch`（F-028） | v2.4.6 源码：真实入口为 `DefaultAgent`，`run()` 返回 exit_status/submission（F-086） | ❌ **API 不存在**（E-3） |
 | P0-6 | 博客：没有工具、不需要 tool-calling（F-010） | v2 `LitellmModel` 默认 `tools=[BASH_TOOL]`（F-060） | ❌ **仅 v1/文本模式成立**（E-4） |
 | P0-7 | 仓库许可证为 MIT（F-037） | GitHub API `spdx_id = MIT` + LICENSE.md | ✅ 通过 |
@@ -87,7 +87,7 @@ sources:
 | 项目定位 | 100 行极简 coding agent | README 同定位 | ✅ 一致 |
 | 设计三原则 | bash-only / 线性历史 / 独立 subprocess | 源码与 FAQ 一致 | ✅ 一致（v1 语义） |
 | 74% | Gemini 3 Pro 74% | docs >74% + News 74% | ✅ 一致（口径待补） |
-| 代码规模 | 约 100 行 | README 约 100 行；文件 172 行 | ⚠️ 概数 |
+| 代码规模 | 约 100 行 | README 约 100 行；文件 190 行（非空 172） | ⚠️ 概数 |
 | 工具接口 | 无工具、不用 tool-calling | v2 默认 bash tool call | ❌ 版本差异（E-4） |
 | Stars | 26k+ | 9,496 | ❌ 硬错误（E-1） |
 | SWE-bench 年份 | 2024 | 2023-10-10 | ❌ 硬错误（E-2） |

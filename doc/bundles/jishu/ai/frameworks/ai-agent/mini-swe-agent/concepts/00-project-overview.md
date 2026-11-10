@@ -13,7 +13,7 @@ sources:
     title: "博客事实清单（F-001 ~ F-034）"
   - id: repo-mini-swe-agent
     resource: /references/repo-source.md
-    title: "仓库事实清单（F-035 ~ F-090）"
+    title: "仓库事实清单（F-035 ~ F-100）"
   - id: github-mini-swe-agent
     resource: https://github.com/SWE-agent/mini-swe-agent
     title: "SWE-agent/mini-swe-agent 官方仓库"
@@ -64,7 +64,7 @@ flowchart LR
 | 主要语言 | Python | F-037 |
 | 快照（2026-11-10） | stars 9,496 / forks 1,306 / open issues 140 | F-036 |
 | Python 要求 | >= 3.10 | F-045 |
-| 核心文件 | `agents/default.py` 172 行；`environments/local.py` 80 行；`models/litellm_model.py` 147 行；`run/mini.py` 86 行 | F-075 |
+| 核心文件 | `agents/default.py` 190 行（非空 172）；`environments/local.py` 92 行（非空 80）；`models/litellm_model.py` 164 行（非空 147）；`run/mini.py` 109 行（非空 86） | F-075 |
 
 > **Stars 勘误**：博客写“26k+ Stars”，2026-11-10 的 GitHub API 实际为 9,496（F-004、F-036、F-084，E-1）。差距 16,504，不可能是正常增长/回落，正文统一采用实测值。
 
@@ -81,7 +81,7 @@ flowchart LR
 |---|---|---|
 | “26k+ Stars” | 9,496（2026-11-10） | E-1 |
 | “没有工具、不用 tool-calling” | v1/文本模式成立；v2 默认使用 bash tool call | E-4、F-060 |
-| “核心就是 100 行” | README 概数；`default.py` 172 行，核心方法约 100 行 | F-079 |
+| “核心就是 100 行” | README 概数；`default.py` 190 行（非空 172），核心方法约 100 行 | F-079 |
 
 ## 6. 阅读建议
 

@@ -1,6 +1,6 @@
 ---
 type: Concept
-title: "架构解剖：三个 Protocol 与 172 行主循环"
+title: "架构解剖：三个 Protocol 与 190 行主循环"
 description: "Agent/Model/Environment 三协议、DefaultAgent 的 run→step→query→execute_actions 调用链、异常驱动的控制流、序列化格式与代码规模"
 tags: [架构, DefaultAgent, Protocol, 控制流, 异常, 轨迹]
 generated: { by: "seven-concepts-cmd/E", at: "2026-11-10T16:57:00+08:00" }
@@ -10,15 +10,15 @@ stale_after: 2027-03-31
 sources:
   - id: repo-mini-swe-agent
     resource: /references/repo-source.md
-    title: "仓库事实清单（F-035 ~ F-090）"
+    title: "仓库事实清单（F-035 ~ F-100）"
   - id: source-default-agent
     resource: https://github.com/SWE-agent/mini-swe-agent/blob/main/src/minisweagent/agents/default.py
     title: "agents/default.py（v2.4.6）"
 ---
 
-# 架构解剖：三个 Protocol 与 172 行主循环
+# 架构解剖：三个 Protocol 与 190 行主循环
 
-> 本知识包锁定 v2.4.6（commit `04d809ce`）。`agents/default.py` 实测 172 行（F-075），下面按真实代码结构拆。
+> 本知识包锁定 v2.4.6（commit `04d809ce`）。`agents/default.py` 实测 190 行（非空 172，F-075），下面按真实代码结构拆。
 
 ## 1. 组件地图
 
@@ -142,7 +142,7 @@ mini 用异常而不是返回值来表达“提前结束”（`exceptions.py`）
 | `models/utils/actions_text.py` | — | 三反引号解析（v1 兼容） |
 | `run/mini.py` | 86 | CLI 入口、配置加载、交互循环 |
 
-全仓 `src/` 共 59 个 `.py`、4,531 行；测试 56 个文件、460 个 `def test_`（F-075、F-076）。所谓“100 行”指的是 Agent 核心，不是整个项目。
+全仓 `src/` 共 59 个 `.py`、5,349 行（非空 4,531）；测试 56 个文件、447 个 `def test_`（F-075、F-076）。所谓“100 行”指的是 Agent 核心，不是整个项目。
 
 ## 7. 读源码的顺序
 

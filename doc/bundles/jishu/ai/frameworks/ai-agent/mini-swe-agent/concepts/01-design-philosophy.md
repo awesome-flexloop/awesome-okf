@@ -10,7 +10,7 @@ stale_after: 2027-03-31
 sources:
   - id: repo-mini-swe-agent
     resource: /references/repo-source.md
-    title: "仓库事实清单（F-035 ~ F-090）"
+    title: "仓库事实清单（F-035 ~ F-100）"
   - id: official-faq
     resource: https://mini-swe-agent.com/latest/faq/
     title: "mini-SWE-agent FAQ：Why no shell session?"

@@ -7,7 +7,7 @@
 | 编号 | 信源 | 类型 | 覆盖事实 |
 |---|---|---|---|
 | R1 | [博客事实清单](blog-source.md) | 第三方技术博客（2026-03-22） | F-001 ~ F-034 |
-| R2 | [仓库事实清单](repo-source.md) | 官方源码 v2.4.6 + docs + GitHub API | F-035 ~ F-090 |
+| R2 | [仓库事实清单](repo-source.md) | 官方源码 v2.4.6 + docs + GitHub API | F-035 ~ F-100 |
 | R3 | [P0 核验报告](verification.md) | GitHub API / arXiv / 官方 docs / 源码对账 | 11 项 P0 + 4 条硬勘误 + 6 条单源边界 |
 
 ## 事实编号索引
@@ -31,6 +31,7 @@
 | F-082 ~ F-083 | 采用者名单、启动速度（单源） | 06 |
 | F-084 ~ F-087 | 四条硬勘误（Stars/年份/API/tool-calling） | verification |
 | F-088 ~ F-090 | 74% 口径边界、对比表单源、知乎缺口 | verification |
+| F-091 ~ F-100 | Agent/环境注册表、配置查找、CLI 装配、模型重试、toolcall 校验、递归合并、SWE-bench 流程、测试地图、行数口径 | 08-source-map |
 
 ## 可信度图例
 

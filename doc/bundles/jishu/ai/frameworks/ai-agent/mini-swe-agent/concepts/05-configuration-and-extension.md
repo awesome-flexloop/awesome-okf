@@ -10,7 +10,7 @@ stale_after: 2027-03-31
 sources:
   - id: repo-mini-swe-agent
     resource: /references/repo-source.md
-    title: "仓库事实清单（F-035 ~ F-090）"
+    title: "仓库事实清单（F-035 ~ F-100）"
   - id: official-yaml
     resource: https://mini-swe-agent.com/latest/advanced/yaml_configuration/
     title: "官方文档：Yaml configuration files"
@@ -198,4 +198,4 @@ class AgentWithPythonFunctions(DefaultAgent):
 
 ## 8. 一句话总结
 
-mini 的扩展哲学是**“配置优先、子类兜底”**：能用 YAML 解决的绝不写代码；YAML 解决不了的，继承一个 172 行的类，重写一个方法即可。这比插件系统简单，但也意味着复杂扩展需要你理解主循环。
+mini 的扩展哲学是**“配置优先、子类兜底”**：能用 YAML 解决的绝不写代码；YAML 解决不了的，继承一个 190 行的类，重写一个方法即可。这比插件系统简单，但也意味着复杂扩展需要你理解主循环。

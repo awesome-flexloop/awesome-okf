@@ -1,6 +1,6 @@
 ---
 type: Reference
-title: "仓库信源事实清单（F-035 ~ F-090）"
+title: "仓库信源事实清单（F-035 ~ F-100）"
 description: "基于 mini-swe-agent v2.4.6（commit 04d809ce）源码、官方文档与 GitHub API 的逐条事实登记，含实现与 README 的差异"
 tags: [信源, 源码, mini-swe-agent, v2.4.6, F编号]
 generated: { by: "seven-concepts-cmd/R", at: "2026-11-10T16:40:00+08:00" }
@@ -19,7 +19,7 @@ sources:
     title: "GitHub API 仓库元数据快照（2026-11-10）"
 ---
 
-# 仓库信源事实清单（F-035 ~ F-090）
+# 仓库信源事实清单（F-035 ~ F-100）
 
 > 源码路径均相对于 `external/dao/SWE-agent/mini-swe-agent/`（本地浅克隆，不纳入版本控制）。数字均来自 2026-11-10 的实测或时点快照。
 
@@ -65,11 +65,11 @@ sources:
 | F-072 | FAQ 列出的默认限制：bash 以外无工具；文本模式从三反引号块解析；动作由 `subprocess.run` 独立执行；不能持久 `cd` 或 `export`，但可按动作设置环境变量。 | 官方文档 | 通过（docs/faq.md:39-50） |
 | F-073 | FAQ 解释“为何不用 shell session”的三条理由：命令终止难以判定、坏命令可能杀死会话、中断会污染后续输出。 | 官方文档 | 通过（docs/faq.md:103-121） |
 | F-074 | 轨迹序列化格式为 `mini-swe-agent-1.1`，包含 `info.model_stats`、`info.config`、`info.mini_version`、`info.exit_status`、`info.submission` 与完整 `messages`。 | 源码 | 通过（default.py:159-180） |
-| F-075 | 代码规模实测：`src/` 下 59 个 `.py`、共 4,531 行；`default.py` 172 行、`local.py` 80 行、`litellm_model.py` 147 行、`run/mini.py` 86 行。 | 源码 | 通过（本机计数） |
-| F-076 | 测试规模：`tests/` 下 56 个文件，`def test_` 共 460 处。 | 源码 | 通过（本机计数） |
+| F-075 | 代码规模实测：`src/` 下 59 个 `.py`、共 5,349 行（非空 4,531 行）；`default.py` 190 行（非空 172）、`local.py` 92 行（非空 80）、`litellm_model.py` 164 行（非空 147）、`run/mini.py` 109 行（非空 86）。 | 源码 | 通过（本机计数，含空行口径） |
+| F-076 | 测试规模：`tests/` 下 56 个文件（53 个 `.py` + 3 个 `.json`），`def test_` 共 447 处。 | 源码 | 通过（本机计数） |
 | F-077 | 文档站为 mkdocs，覆盖 quickstart、usage（mini/swebench/inspector/output_files/python_bindings）、advanced（control_flow/cookbook/environments/global_configuration/v2_migration/yaml_configuration）与 reference（agents/environments/models/run）。 | 官方文档 | 通过（docs/ 目录树） |
 | F-078 | README 与 FAQ 仍称“不需要 tool-calling 接口”，但 v2 默认实现正是 tool calling，构成文档滞后/自相矛盾。 | 源码+官方文档 | 通过（README:42、faq.md:46 vs litellm_model.py:69） |
-| F-079 | README 的“100 lines”为概数；`default.py` 实际 172 行（含注释、空行与序列化方法），核心 `run/step/query/execute_actions` 约 100 行。 | 源码 | 口径说明（非错误） |
+| F-079 | README 的“100 lines”为概数；`default.py` 实际 190 行（非空 172，含注释、空行与序列化方法），核心 `run/step/query/execute_actions` 约 100 行。 | 源码 | 口径说明（非错误） |
 | F-080 | 官方示例模型为 `anthropic/claude-sonnet-4-5-20250929`，通过 litellm 调用。 | 官方文档 | 通过（python_bindings.md、cookbook.md） |
 | F-081 | `pyproject.toml` 显式排除 litellm 1.82.7/1.82.8（安全原因）与 openai 1.100.0/1.100.1（issue #446）。 | 源码 | 通过（pyproject） |
 | F-082 | README 的采用者名单为机构自述，仓库内无对应案例或授权证明。 | 官方文档 | 单源（P1） |
@@ -81,6 +81,16 @@ sources:
 | F-088 | 74% 与官方 docs 一致，但官方未公开该成绩对应的完整评测配置（模型快照、成本上限、重试/步数、容器架构）。 | 核验 | ⚠️ 口径边界 |
 | F-089 | 博客表中的 Claude 3.7 Sonnet 65%、GPT-4o 42%、SWE-agent 1.0 54% 未在官方 docs 页面逐项复核。 | 核验 | 单源 |
 | F-090 | 知乎链接 `https://zhuanlan.zhihu.com/p/2011860096536314782` 在 2026-11-10 三次抓取均失败（zhuanlan 403、API 40362、www 404），未使用其内容。 | 核验 | 信源缺口 |
+| F-091 | `agents/__init__.py` 注册 `default`/`interactive` 两个 Agent 短名；`get_agent` 深拷贝配置、弹出 `agent_class` 后实例化。 | 源码 | 通过（L8-L27） |
+| F-092 | `environments/__init__.py` 注册 7 类环境：docker、singularity、local、swerex_docker、swerex_modal、bubblewrap、contree；`get_environment` 弹出 `environment_class` 后实例化。 | 源码 | 通过（L8-L31） |
+| F-093 | `config/__init__.py` 的查找顺序为：给定路径 → `MSWEA_CONFIG_DIR` → 包内 config → 包内 extra → 包内 benchmarks；`key=value` 规范用 `json.loads` 尝试解析值。 | 源码 | 通过（L12-L63） |
+| F-094 | `run/mini.py` 把多个 `-c` 配置与 CLI 覆盖追加进列表后 `recursive_merge`；默认 `environment=local`、`agent=interactive`；默认轨迹写入 `last_mini_run.traj.json`。 | 源码 | 通过（L55-L109） |
+| F-095 | `LitellmModel.query` 用 tenacity 重试，默认最多 10 次、指数退避 4~60 秒；成本经 `litellm.cost_calculator.completion_cost` 计算并计入 `GLOBAL_MODEL_STATS`；`FormatError` 时把 cost 与原始 response 写入异常消息。 | 源码 | 通过（L81-L136） |
+| F-096 | `parse_toolcall_actions` 要求至少一个 tool_call，函数名必须为 `bash`，参数 JSON 必须含 `command`；否则抛 `FormatError`，并携带 `finish_reason` 供模板区分截断与格式错误。 | 源码 | 通过（actions_toolcall.py L9-L78） |
+| F-097 | `utils/serialize.py` 定义 `UNSET` 哨兵；`recursive_merge` 跳过 UNSET、后者覆盖前者、嵌套字典递归合并。 | 源码 | 通过（L6-L29） |
+| F-098 | `swebench.process_instance` 为每个实例建独立目录，先删除旧的 preds 条目与轨迹，再建环境、跑 Agent，`finally` 中保存轨迹并在锁内更新 `preds.json`；Docker 镜像名为 `docker.io/swebench/sweb.eval.x86_64.<id>:latest`，实例 ID 中的 `__` 替换为 `_1776_`。 | 源码 | 通过（swebench.py L68-L179） |
+| F-099 | 测试地图：`tests/` 56 个文件、447 个 `def test_`；最大文件为 `test_interactive.py`（36 个）、`test_extra_config.py`（30 个）、`test_config.py`（29 个）、`test_swebench.py`（27 个）。 | 源码 | 通过（本机计数） |
+| F-100 | 行数口径：`src/` 总行 5,349 / 非空 4,531；`default.py` 190/172、`local.py` 92/80、`litellm_model.py` 164/147、`run/mini.py` 109/86。 | 源码 | 通过（`$lines.Count` 与去空行双计） |
 
 ```{toctree}
 :hidden:

@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: bundle
 title: "mini-SWE-agent：100 行 Agent 的极简工程学"
-description: "mini-SWE-agent v2.4.6 全栈中文教程——项目谱系与硬指标、bash-only/线性历史/无状态 subprocess 三原则、三协议与 172 行主循环、六类执行环境、toolcall 与 textbased 双通道、YAML 配置与扩展、74% 评测边界、七条可迁移经验；含 3 篇官方文档实操与 4 条博客勘误"
+description: "mini-SWE-agent v2.4.6 全栈中文教程——项目谱系与硬指标、bash-only/线性历史/无状态 subprocess 三原则、三协议与 190 行主循环、六类执行环境、toolcall 与 textbased 双通道、YAML 配置与扩展、74% 评测边界、七条可迁移经验；含源码地图（符号/行号/调用链）、3 篇官方文档实操与 4 条博客勘误"
 tags: [mini-swe-agent, SWE-agent, SWE-bench, Coding Agent, Python, bash, litellm, Docker, OKF]
 generated: { by: "seven-concepts-cmd/E", at: "2026-11-10T17:00:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-11-10T17:05:00+08:00" }
@@ -23,7 +23,7 @@ sources:
     title: "博客事实清单 F-001 ~ F-034"
   - id: repo-facts
     resource: /references/repo-source.md
-    title: "仓库事实清单 F-035 ~ F-090"
+    title: "仓库事实清单 F-035 ~ F-100"
   - id: verification
     resource: /references/verification.md
     title: "P0 核验报告与四条硬勘误"
@@ -40,7 +40,7 @@ mini-SWE-agent 是 SWE-bench / SWE-agent 团队的一次反向实验：把 codin
 | 信源 | 类型 | 覆盖范围 | 状态 |
 |---|---|---|---|
 | 博客《mini-SWE-agent：100 行代码如何击败了大多数 Agent 框架》 | 第三方解读（2026-03-22） | F-001 ~ F-034 | ✅ 已抓取；4 条勘误 |
-| GitHub 仓库 `SWE-agent/mini-swe-agent` | 官方源码 v2.4.6 | F-035 ~ F-090 | ✅ 浅克隆实读 |
+| GitHub 仓库 `SWE-agent/mini-swe-agent` | 官方源码 v2.4.6 | F-035 ~ F-100 | ✅ 浅克隆实读 |
 | 官方文档 `mini-swe-agent.com/latest` | 官方文档 | Quick Start / CLI / 环境 / 模型 / SWE-bench / FAQ / v2 migration | ✅ 已抓取 |
 | GitHub API | 官方元数据 | Stars / forks / license / created_at | ✅ 2026-11-10 快照 |
 | 知乎文章 `zhuanlan.zhihu.com/p/2011860096536314782` | 用户提供的第二信源 | — | ❌ 403/404，未使用（F-090） |
@@ -49,7 +49,7 @@ mini-SWE-agent 是 SWE-bench / SWE-agent 团队的一次反向实验：把 codin
 
 ```text
 mini-swe-agent/
-├── concepts/                          # 8 篇概念
+├── concepts/                          # 9 篇概念
 │   ├── 00-project-overview.md         # 身份、谱系、版本、硬指标、三个流行误说
 │   ├── 01-design-philosophy.md        # bash-only / 线性历史 / 无状态 subprocess
 │   ├── 02-architecture-and-code.md    # 三协议、run→step→query→execute_actions
@@ -57,14 +57,15 @@ mini-swe-agent/
 │   ├── 04-model-integration.md        # 十类模型、toolcall vs textbased、成本与重试
 │   ├── 05-configuration-and-extension.md  # YAML 三段、Jinja、轨迹、子类化
 │   ├── 06-benchmarks-and-boundaries.md    # 74% 口径、能力边界、不适用场景
-│   └── 07-transferable-lessons.md     # 七条可迁移工程经验
+│   ├── 07-transferable-lessons.md     # 七条可迁移工程经验
+│   └── 08-source-map.md               # 模块/符号/行号、调用链、数据契约、扩展点、测试地图
 ├── examples/                          # 3 篇官方文档实操（未本机实测）
 │   ├── 01-install-and-cli.md
 │   ├── 02-python-bindings.md
 │   └── 03-swebench-batch.md
 ├── references/
 │   ├── blog-source.md                 # F-001 ~ F-034
-│   ├── repo-source.md                 # F-035 ~ F-090
+│   ├── repo-source.md                 # F-035 ~ F-100
 │   └── verification.md                # 11 项 P0 + E-1~E-4 + 单源边界
 ├── index.md
 └── log.md
@@ -77,6 +78,7 @@ mini-swe-agent/
 3. **v2 已经转向 tool calling**：默认 `LitellmModel` 使用 `BASH_TOOL`，v1 的“无工具”说法只适用于 textbased 模式（F-060、E-4）。
 4. **74% 有官方背书但口径有限**：官方只公布结果与 Gemini 3 Pro 单点，不公开完整评测配置（F-070、F-088）。
 5. **博客有三处硬错误**：26k+ Stars（实际 9,496）、SWE-bench 2024（实际 2023）、`MiniSWEAgent`/`result.passed`（不存在）（E-1 ~ E-3）。
+6. **源码只有四个动作**：查限制 → 问模型 → 执行动作 → 追加观察；其余是注册、配置、环境适配、序列化与测试（F-091 ~ F-100）。
 
 ## 推荐阅读路径
 
@@ -86,6 +88,7 @@ mini-swe-agent/
 | 想动手跑起来 | 00 → examples/01 → examples/02 |
 | 想做评测/研究 | 01 → 06 → examples/03 |
 | 想改造/扩展 | 02 → 03 → 04 → 05 |
+| 想逐行读源码 | 02 → 08 |
 | 只想拿经验 | 07 |
 
 ## 主题关联
