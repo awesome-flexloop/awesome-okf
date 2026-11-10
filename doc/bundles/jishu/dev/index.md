@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group
 title: "🔧 开发工具与开源协作"
-description: "开发工具与开源协作实践——Git 版本控制与团队协作、Git 进阶、网盘同步、GitHub 平台（Gist/Actions/CLI）、开源项目参与与写作指南"
+description: "开发工具与开源协作实践——Git 版本控制与团队协作、Git 进阶、网盘同步、GitHub 平台（Gist/Actions/CLI）、开源项目参与与写作指南、Plane 项目管理自托管、钉钉工作区 CLI"
 ---
 
 # 🔧 开发工具与开源协作
@@ -19,6 +19,7 @@ description: "开发工具与开源协作实践——Git 版本控制与团队�
 | **GitHub** | Gist 代码片段分享、GitHub Actions 工作流、GitHub CLI 命令行工具 | [github/](github/index.md) |
 | **Opensource** | 开源参与指南、开启开源项目、README 模板、无版权图库、程序员常用网站、public-apis 公共 API 清单 | [opensource/](opensource/index.md) |
 | **Plane** | 开源项目管理平台自托管教程——Community/Commercial/Airgapped 三套版本与 AGPL 边界、Work Items/Cycles/Modules 三层时间尺度、五视图与 Pages/Wiki、部署运维与选型边界 | [plane/](plane/index.md) |
+| **钉钉工作区 CLI** | 面向人与 AI Agent 的钉钉命令行——命令契约模型、静态端点管线、20 个服务域、OAuth 多组织身份、输出与 Schema 契约、安全预览与审计、Agent 技能与事件、工程门禁与边界 | [dingtalk-workspace-cli/](dingtalk-workspace-cli/index.md) |
 
 ## 学习路径建议
 
@@ -38,4 +39,5 @@ git-baidu-sync/index
 github/index
 opensource/index
 plane/index
+dingtalk-workspace-cli/index
 ```

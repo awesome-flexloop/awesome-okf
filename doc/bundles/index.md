@@ -28,7 +28,7 @@ flowchart TD
     yixue["🌿 yixue/ 医学与养生（10 束）：中医经典·黄帝内经·道医·养生·房中"]
     sheke["👥 sheke/ 社会科学（96 束）：职场管理·亲密关系·性学经典·金融经济与理财·营销·个人成长·AI 行业趋势·具身智能·数字自由职业·数字经济与数字资产·民间信俗·市场与有效市场"]
     yishu["🎤 yishu/ 艺术（9 束）：艺术疗愈六束（总览·美术·音乐·舞动戏剧·表达性·中国）·声乐教学两束（美通咽音·手势教学）·红歌教学一束（曲谱库·赏析·歌谱合规·柯尔文手势）"]
-    jishu["⚙️ jishu/ 技术（528 束）：AI·文档工程·构建·通信·容器·数据·云API·IaC·物联网等 19 生态分组"]
+    jishu["⚙️ jishu/ 技术（529 束）：AI·文档工程·构建·通信·容器·数据·云API·IaC·物联网等 19 生态分组"]
     meta -->|"规范约束"| jishu
     jishu -->|"AI 辅助人文内容生成"| guoxue
     kexue -->|"科学元典与算学互参"| guoxue
@@ -134,7 +134,7 @@ flowchart TD
 | [🎤 声乐教学（Vocal）](yishu/vocal/index.md)   | 2  | 美通唱法与咽音体系（林俊卿咽音练声八步骤、嗓音科学、常见毛病纠正与每日练声清单）+ 手势辅助声乐教学（柯尔文手势、课堂五类手势、指挥基础、体态律动） |
 | [🚩 红歌教学（Hongge）](yishu/hongge/index.md)  | 1  | 红歌教学教程一束——曲谱库建设与版权合规、教学型赏析六步框架与三期曲目示范、歌谱正版获取、柯尔文手势与声乐合唱结合（完整教案·曲谱库指南·16 周路线） |
 
-### ⚙️ [技术](jishu/index.md) · 528 束 · 19 组
+### ⚙️ [技术](jishu/index.md) · 529 束 · 19 组
 
 | 分组                                               | 束数  | 说明                                                                                                         |
 | ------------------------------------------------ | --- | ---------------------------------------------------------------------------------------------------------- |
@@ -150,7 +150,7 @@ flowchart TD
 | [🌐 Web 开发（web）](jishu/web/index.md)             | 3   | FastAPI · GraphQL · HTML 声明式局部更新                                                                                          |
 | [🐍 Python 语言核心（python）](jishu/python/index.md)  | 2   | CPython 解释器核心架构 · Python 3.14 标准库新特性                                                                                            |
 | [💻 终端渲染（terminal）](jishu/terminal/index.md)     | 2   | Textualize 终端生态（rich/textual）与 OpenTUI 终端 UI（TypeScript API + Zig native core）源码中文教程                                                                       |
-| [🔧 开发与协作（dev）](jishu/dev/index.md)            | 6   | Git 版本控制 · GitHub 平台（Gist/Actions）· 开源实践（参与/项目准备/README 模板）· public-apis 公共 API 清单 · Plane 开源项目管理平台自托管教程（三套版本/三层时间尺度/部署运维）                                        |
+| [🔧 开发与协作（dev）](jishu/dev/index.md)            | 7   | Git 版本控制 · GitHub 平台（Gist/Actions）· 开源实践（参与/项目准备/README 模板）· public-apis 公共 API 清单 · Plane 开源项目管理平台自托管教程（三套版本/三层时间尺度/部署运维）· 钉钉工作区 CLI（命令契约/静态管线/Agent 集成）                                        |
 | [🚗 智能驾驶与无人驾驶（autonomous）](jishu/autonomous/index.md) | 4 | Autoware 安装与基础 · ROS2 概念 · DDS 与 QoS · 数据集/术语/资源生态                                            |
 | [🖥️ GUI 桌面开发（gui）](jishu/gui/index.md) | 6 | Qt/PyQt 桌面开发（Qt for Python 官方机制 · PyQt5 实战）· tkinter 标准库生态（GUI 设计 · 手册 · tkinterx 扩展库） |
 | [🏠 物联网（IoT）](jishu/iot/index.md) | 11 | Home Assistant 源码解读 · TuyaOpen IoT SDK · 向日葵远控产品矩阵 · 贝锐生态 · 厂商与工具横向对比 · 星辰300 端侧 AI 资讯核验 · 嵌入式周报·第三期资讯核验 · RISC-V 车规 MCU 博文核验 · openTPU 加速器源码精读 · HWE Bench LLM 硬件基准源码精读 · RTX Spark Windows本地AI PC概念教程 |
