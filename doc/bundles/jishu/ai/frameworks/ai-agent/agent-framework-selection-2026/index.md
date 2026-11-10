@@ -101,7 +101,7 @@ agent-framework-selection-2026/
 | [Pydantic AI 与 LlamaIndex](concepts/03-pydantic-ai-and-llamaindex.md) | 概念 | capability/Harness、schema 校验；事件驱动 step 与数据层定位 |
 | [选型矩阵与生产就绪](concepts/04-selection-and-production-readiness.md) | 概念 | 约束决策表、token 成本、双框架分层、安全边界 |
 | [博文事实清单](references/article-source.md) | 信源 | F-001~F-081 完整登记，观点/自述分层 |
-| [事实核验报告](references/verification.md) | 信源 | 8✅/3⚠️/1❌/1🏷️，含勘误与方法 |
+| [事实核验报告](references/verification.md) | 信源 | 7✅/3⚠️/1❌/2🏷️，含勘误与方法 |
 
 ## 三条核心结论
 
@@ -122,7 +122,7 @@ agent-framework-selection-2026/
 
 ## 核验摘要
 
-- P0 核验：13 项 → 8 项通过、3 项部分通过、1 项失败、1 项自述不可核验
+- P0 核验：13 项 → 7 项通过、3 项部分通过、1 项失败、2 项自述不可核验
 - 已确认勘误：1 项（LlamaIndex Workflows 1.0 年份）
 - 表述降级：2 项（MAF A2A“原生”、五框架“都支持 MCP”）
 - 单源标注：1 项（Replit 生产用户）

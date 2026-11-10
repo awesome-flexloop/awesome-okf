@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: 事实核验报告
-description: 2026 五框架对比文 13 项 P0 声明核验（8 通过 3 部分 1 失败 1 自述），含 LlamaIndex 1.0 年份勘误、A2A 表述降级、Replit 单源
+description: 2026 五框架对比文 13 项 P0 声明核验（7 通过 3 部分 1 失败 2 自述），含 LlamaIndex 1.0 年份勘误、A2A 表述降级、Replit 单源
 tags: [核验, P0, 勘误, LangGraph, CrewAI, MAF, Pydantic AI, LlamaIndex]
 generated: { by: "blog-article-to-okf-wiki", at: "2026-11-10T14:50:00+08:00" }
 status: stable
@@ -37,7 +37,7 @@ sources:
 
 > 核验对象：DEV/eCorpIT《2026 AI agent frameworks compared》。
 > 核验日期：2026-11-10。
-> 结果：**8 项通过（✅）、3 项部分通过（⚠️）、1 项失败（❌）、1 项自述不可核验（🏷️）**。
+> 结果：**7 项通过（✅）、3 项部分通过（⚠️）、1 项失败（❌）、2 项自述不可核验（🏷️）**。
 
 ## 1. 核验结论总览
 

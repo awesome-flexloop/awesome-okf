@@ -119,7 +119,7 @@ total_bundles: 63
 
 | 知识包 | 类型 | 文档数 | 一句话简介 |
 |--------|------|--------|-----------|
-| [agent-framework-selection-2026](agent-framework-selection-2026/index.md) | 选型综述 | 5+0+2+1=8 | 2026 五框架横向选型——LangGraph 图状态机/checkpoint、CrewAI 角色协作、MAF 合并 SK+AutoGen 与 .NET/Python 对齐、Pydantic AI V2 capability/Harness、LlamaIndex Workflows 事件驱动 step；按主导约束决策 + 双框架分层 + token 成本与安全边界；81 条事实、13 项 P0（8✅3⚠️1❌1🏷️），含 LlamaIndex 1.0 年份勘误 |
+| [agent-framework-selection-2026](agent-framework-selection-2026/index.md) | 选型综述 | 5+0+2+1=8 | 2026 五框架横向选型——LangGraph 图状态机/checkpoint、CrewAI 角色协作、MAF 合并 SK+AutoGen 与 .NET/Python 对齐、Pydantic AI V2 capability/Harness、LlamaIndex Workflows 事件驱动 step；按主导约束决策 + 双框架分层 + token 成本与安全边界；81 条事实、13 项 P0（7✅3⚠️1❌2🏷️），含 LlamaIndex 1.0 年份勘误 |
 
 ### 📰 产品资讯
 
