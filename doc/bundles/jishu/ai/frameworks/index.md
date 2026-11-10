@@ -9,7 +9,7 @@ description: "Agent 与 LLM 应用的开发框架、运行时与代码库教程�
 
 Agent 与 LLM 应用的开发框架、运行时与代码库教程——以 ai-agent（62 束）与 langchain-ai（19 束）两大仓库集群为核心，辅以极简框架、分词、推理、决策模型、AI 原生搜索引擎（XERJ）、嵌入式向量检索库（Zvec）与 JIT 编译量化 GEMM 内核库（Humming）等基础库。
 
-本类共 **95 个知识包**，分布于 **12 个生态/项目目录**。
+本类共 **96 个知识包**，分布于 **13 个生态/项目目录**。
 
 ## 束导航
 
@@ -27,6 +27,7 @@ Agent 与 LLM 应用的开发框架、运行时与代码库教程——以 ai-ag
 | [🦎 vLLM 高性能推理引擎](vllm/index.md) | 1 | vLLM 高性能大模型推理引擎源码教程——PagedAttention 显存管理、连续批处理调度、KV Cache 分块、量化与推测解码、分布式并行与 OpenAI 兼容服务 |
 | [🐦 Humming 量化 GEMM 内核库](humming/index.md) | 1 | JIT 编译的量化推理 GEMM 内核库源码教程——统一量化表示与支持矩阵、三层配置架构、三条 CUDA 流水线、MoE grouped 路径与 vLLM 集成 |
 | [⚡ Zvec 嵌入式向量数据库](zvec/index.md) | 1 | Alibaba 开源进程内向量检索库源码教程——四层 C++ 架构（ailego/turbo/core/db）、六种索引、RaBitQ 量化双轨、FTS/ANTLR 过滤引擎、混合检索与 MCP/zvec-grep Agent 集成 |
+| [Microsoft Agent Framework](microsoft-agent-framework/index.md) | 1 | 微软 MAF 官方文档与 Build 2026 公告中文教程——四支柱、代理管道、Harness、工具/技能/MCP、记忆/RAG/FIDES、工作流、托管运维、迁移与 CodeAct（10 概念 + 5 示例，F-001~F-120） |
 
 ```{toctree}
 :hidden:
@@ -44,4 +45,5 @@ xerj/index
 vllm/index
 humming/index
 zvec/index
+microsoft-agent-framework/index
 ```
