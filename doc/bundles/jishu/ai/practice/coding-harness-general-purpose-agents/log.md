@@ -12,7 +12,7 @@
 - 勘误 E-3：Codex SDK 与 app-server 是两条不同入口（stdio JSONL vs JSON-RPC），正文分栏。
 - 勘误 E-4：OpenCode 核验时文档为 V1，并给出 V2 入口；正文标注版本边界。
 - 事实登记双份比对：`F-001` 至 `F-047` 集合一致、连续无跳号。
-- 结构：6 篇概念 + 2 篇 references + index + log；无 examples。
+- 结构：7 篇概念 + 2 篇 references + index + log；无 examples。
 - 索引接入：practice/index.md、jishu/ai/index.md、jishu/index.md、bundles/index.md、doc/index.md 计数同步。
 - 机械门禁：check-utf8.py、check-toctrees.py、check-bundles-index.py、check-frontmatter（如可用）逐项执行，结果见 spec review.md。
 
@@ -23,6 +23,6 @@
 [CMD-LOG] | level=INFO | cmd=seven-concepts | step=S1 | event=SCENARIO_DETECTED | session=sc-20261110-coding-harness | msg=场景4 知识沉淀（R→I→E→V→C） | ctx={"confidence":"high"}
 [CMD-LOG] | level=INFO | cmd=seven-concepts | step=S2 | event=CHAIN_SELECTED | session=sc-20261110-coding-harness | msg=链路：R 事实采集 → I 三层拆分 → E 信源先行 → V 对抗审查 → C 原子提交
 [CMD-LOG] | level=INFO | cmd=seven-concepts | step=S3 | event=CONCEPT_COMPLETED | session=sc-20261110-coding-harness | msg=R 完成：47 条事实；P0 覆盖发布信息/四入口/运行时/护栏/相关 blip
-[CMD-LOG] | level=INFO | cmd=seven-concepts | step=S4 | event=GATE_PASSED | session=sc-20261110-coding-harness | msg=G1 事实无因果推断词；G2 六篇概念均含现象/机制/边界；G3 结构可迁移；G4 索引与计数收尾
+[CMD-LOG] | level=INFO | cmd=seven-concepts | step=S4 | event=GATE_PASSED | session=sc-20261110-coding-harness | msg=G1 事实无因果推断词；G2 七篇概念均含现象/机制/边界；G3 结构可迁移；G4 索引与计数收尾
 [CMD-LOG] | level=INFO | cmd=seven-concepts | step=S5 | event=CHAIN_COMPLETED | session=sc-20261110-coding-harness | msg=知识包生成完成，待原子提交
 ```
