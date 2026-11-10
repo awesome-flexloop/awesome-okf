@@ -106,7 +106,7 @@ total_bundles: 64
 | [opencode](opencode/index.md) | TypeScript | 5+1+1=7 | OpenCode Terminal Coding Agent——Bun+Turbo+SST技术栈、SessionV2会话模型(Context Epoch)、V2配置规范、infra模块(app/console/lake/stage/stats/secret)、Cloudflare+AWS混合云部署 |
 | [pi-cli](pi-cli/index.md) | TypeScript | 5+1+1=7 | Pi AI CLI——9包monorepo(ai/tui/agent/client/server/evals等)、AI包(models/oauth/cli/compat/images)、TUI差分渲染引擎、5个内置prompt(cl/is/pr/sa/wr)、锁步版本控制 |
 | [pi-agent-harness](pi-agent-harness/index.md) | 博文综述 | 3+2+1=6 | Pi Agent Harness 高层定位与竞品综述——pi-ai/pi-agent-core/pi-coding-agent/pi-tui 四层架构、默认工具集与 Skill/Extension/Package 扩展、与 Claude Code/Codex/OpenCode/LangGraph 对比 |
-| [mini-swe-agent](mini-swe-agent/index.md) | Python | 9+3+3=15 | 100 行极简 coding agent 源码教程——bash-only/线性历史/无状态 subprocess 三原则、Agent/Model/Environment 三协议、190 行主循环、六类执行环境、toolcall 与 textbased 双通道、74% 评测边界、逐模块源码地图（符号/行号/调用链）；100 条事实、4 条博客勘误 |
+| [mini-swe-agent](mini-swe-agent/index.md) | Python | 9+4+4=17 | 100 行极简 coding agent 源码教程——bash-only/线性历史/无状态 subprocess 三原则、Agent/Model/Environment 三协议、190 行主循环、六类执行环境、toolcall 与 textbased 双通道、74% 评测边界、逐模块源码地图、官方教程 50 行从零实现；114 条事实、4 条博客勘误 |
 
 ### 🔬 Tongyi-MAI 生态源码精读
 

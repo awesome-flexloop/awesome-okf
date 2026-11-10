@@ -9,6 +9,7 @@
 | R1 | [博客事实清单](blog-source.md) | 第三方技术博客（2026-03-22） | F-001 ~ F-034 |
 | R2 | [仓库事实清单](repo-source.md) | 官方源码 v2.4.6 + docs + GitHub API | F-035 ~ F-100 |
 | R3 | [P0 核验报告](verification.md) | GitHub API / arXiv / 官方 docs / 源码对账 | 11 项 P0 + 4 条硬勘误 + 6 条单源边界 |
+| R4 | [官方教程事实清单](tutorial-source.md) | minimal-agent.com 官方教程（2026-02-03） | F-101 ~ F-114 |
 
 ## 事实编号索引
 
@@ -32,6 +33,7 @@
 | F-084 ~ F-087 | 四条硬勘误（Stars/年份/API/tool-calling） | verification |
 | F-088 ~ F-090 | 74% 口径边界、对比表单源、知乎缺口 | verification |
 | F-091 ~ F-100 | Agent/环境注册表、配置查找、CLI 装配、模型重试、toolcall 校验、递归合并、SWE-bench 流程、测试地图、行数口径 | 08-source-map |
+| F-101 ~ F-114 | 官方教程的 50 行原型、三组件、两种动作格式、异常/格式纠错、环境变量、与生产代码的差异 | 04-minimal-agent-from-scratch |
 
 ## 可信度图例
 
@@ -48,5 +50,6 @@
 
 blog-source
 repo-source
+tutorial-source
 verification
 ```

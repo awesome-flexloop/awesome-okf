@@ -1,7 +1,7 @@
 ---
 type: Log
-title: "生成日志：从三份信源到 20 文件知识包"
-description: "mini-SWE-agent 知识包的 R→I→E→V→C 链路记录、CMD-LOG、G1-G4 质量门、20 文件清单、4 条勘误与信源缺口"
+title: "生成日志：从四份信源到 22 文件知识包"
+description: "mini-SWE-agent 知识包的 R→I→E→V→C 链路记录、CMD-LOG、G1-G4 质量门、22 文件清单、4 条勘误与信源缺口"
 tags: [日志, 七概念, R-I-E-V-C, 质量门, mini-swe-agent, 勘误]
 generated: { by: "seven-concepts-cmd/E", at: "2026-11-10T17:00:00+08:00" }
 verified: { by: "process:seven-concepts-v", at: "2026-11-10T17:05:00+08:00" }
@@ -19,7 +19,7 @@ sources:
     title: "本次任务 spec"
 ---
 
-# 生成日志：从三份信源到 20 文件知识包
+# 生成日志：从四份信源到 22 文件知识包
 
 ## CMD-LOG
 
@@ -49,8 +49,8 @@ sources:
   G4=行动项原子化（见 spec/tasks.md）
 
 [CMD-LOG] | step=S5 | event=CHAIN_COMPLETED
-  files=20
-  facts=100
+  files=22
+  facts=114
   errata=4
   source_gap=1（知乎）
 ```
@@ -59,9 +59,9 @@ sources:
 
 | 阶段 | 动作 | 产出 |
 |---|---|---|
-| **R（复盘/事实）** | 抓博客、克隆仓库、读源码与 docs、抓 GitHub API 与 arXiv、登记 F-001 ~ F-100 | `references/blog-source.md`、`references/repo-source.md` |
+| **R（复盘/事实）** | 抓博客、克隆仓库、读源码与 docs、抓 GitHub API 与 arXiv、读官方教程，登记 F-001 ~ F-114 | `references/blog-source.md`、`references/repo-source.md`、`references/tutorial-source.md` |
 | **I（洞察）** | 识别三条设计原则、三协议、v1/v2 错位、74% 口径边界；判定“源码教程 + 博客核验”混合型 | 9 篇 concepts 的骨架 |
-| **E（萃取/执行）** | 先写 references，再写 concepts/examples，最后写各级 index；把七条经验萃取为可迁移模式 | 20 个文件 |
+| **E（萃取/执行）** | 先写 references，再写 concepts/examples，最后写各级 index；把七条经验萃取为可迁移模式 | 22 个文件 |
 | **V（对抗审查）** | 四视角审查 + 双份 F 编号对账 + 链接/toctree/UTF-8/计数门禁 | `references/verification.md`、spec/review.md |
 | **C（原子提交）** | 子模块显式文件提交 → 主仓库 spec 提交 → 子模块指针更新 | 见 git log |
 
@@ -75,7 +75,7 @@ sources:
 | G4 | 行动项是否单一职责、可验证 | ✅ 见 `spec/tasks.md` 的 R/I/E/V/C 清单 |
 | V 门 | 审查意见是否 ≥5 条且有实质修正 | ✅ 4 条硬勘误 + 6 条单源边界 + 3 条结构修正 |
 
-## 文件清单（20）
+## 文件清单（22）
 
 | # | 文件 | 类型 |
 |---|---|---|
@@ -95,12 +95,14 @@ sources:
 | 14 | `examples/01-install-and-cli.md` | 示例 |
 | 15 | `examples/02-python-bindings.md` | 示例 |
 | 16 | `examples/03-swebench-batch.md` | 示例 |
-| 17 | `references/index.md` | 目录索引 |
-| 18 | `references/blog-source.md` | 信源 |
-| 19 | `references/repo-source.md` | 信源 |
-| 20 | `references/verification.md` | 核验 |
+| 17 | `examples/04-minimal-agent-from-scratch.md` | 示例 |
+| 18 | `references/index.md` | 目录索引 |
+| 19 | `references/blog-source.md` | 信源 |
+| 20 | `references/repo-source.md` | 信源 |
+| 21 | `references/tutorial-source.md` | 信源 |
+| 22 | `references/verification.md` | 核验 |
 
-> 计数口径：目录索引不计入“概念/示例/信源”篇数；bundle 表行写 `9+3+3=15`，另有 index 与 log 两篇。
+> 计数口径：目录索引不计入“概念/示例/信源”篇数；bundle 表行写 `9+4+4=17`，另有 index 与 log 两篇。
 
 ## 勘误与信源缺口
 
