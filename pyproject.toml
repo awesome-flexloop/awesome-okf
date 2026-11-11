@@ -24,4 +24,6 @@ doc = [
     "sphinx-contributors",
     "sphinxcontrib-mermaid>=0.9",
     "sphinx-comments",
+    # 中文搜索分词器：Sphinx 的 zh 搜索在缺少 jieba 时静默退化，只索引拉丁词元
+    "jieba",
 ]

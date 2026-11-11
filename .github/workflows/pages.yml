@@ -110,6 +110,18 @@ jobs:
         run: >-
           invoke build
           -o "-b html -d _build/doctrees --keep-going"
+      - name: Gate — 搜索索引中文词条自检 (缺 jieba 会静默退化为零中文词元)
+        run: |
+          python - <<'PY'
+          import json, pathlib, re, sys
+          text = pathlib.Path("_build/html/searchindex.js").read_text(encoding="utf-8")
+          data = json.loads(re.search(r"Search\.setIndex\((.*)\)\s*$", text, re.S).group(1))
+          cjk = [k for k in data["terms"] if any("\u4e00" <= ch <= "\u9fff" for ch in k)]
+          print(f"searchindex.js: {len(data['terms'])} 词条，其中中文词条 {len(cjk)} 个")
+          if len(cjk) < 1000:
+              sys.exit("✗ 中文词条过少: 请确认 doc 依赖已安装 jieba")
+          print("✓ 中文搜索索引正常")
+          PY
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _build/html
