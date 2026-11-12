@@ -233,6 +233,12 @@ else:
 html_title = "Awesome OKF for Xuanspace"
 html_static_path = ["_static"]
 
+# 中文搜索用户词典：浏览器端只按空格/标点切词，复合词必须在构建期由 jieba 整词登记，
+# 否则「微信小店」这类连写查询会因索引中无整词而 0 命中（详见词典文件内说明）。
+html_search_options = {
+    "dict": str(Path(__file__).parent / "_search" / "okf-userdict.txt"),
+}
+
 html_css_files = ["local.css"]
 html_last_updated_fmt = '%Y-%m-%d, %H:%M:%S'
 

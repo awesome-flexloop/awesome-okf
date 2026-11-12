@@ -61,6 +61,7 @@ awesome-okf-xs/
 ├── doc/                # Sphinx 文档工程（源文件目录）
 │   ├── bundles/        # OKF bundle 文档（结构化知识包）
 │   ├── _static/        # 静态资源（CSS/图片等）
+│   ├── _search/        # 中文搜索用户词典（jieba 复合词登记）
 │   ├── conf.py         # Sphinx 构建配置（含 frontmatter 日期兼容性钩子）
 │   └── index.md        # 文档首页
 ├── tasks/              # Invoke 任务包（命名空间组织）
@@ -112,6 +113,7 @@ awesome-okf-xs/
 - **修复落地验证**：修复完成后必须用 `git diff`/`git status` 核对变更实际写入，并运行构建/测试验证；禁止仅凭过程描述自认为"已完成"。**修复声明不构成修复证据**——必须以 HEAD 中的实际文件内容为准（2026-10-25 实测：曾被记录为"已移除"的 `from __future__ import annotations` 实际仍存在于 HEAD）
 - **Python 红线**：本仓 `requires-python >= 3.14`，注解默认按 PEP 649 惰性求值，禁止 `from __future__ import annotations`（PEP 563 样板，冗余且语义有别）；`invoke gates.redline` 以 AST 检测硬阻断，加回即红
 - **库规模基线口径**：资产数字一律锚定 HEAD 已提交事实（`git ls-tree -r -l HEAD -- doc/bundles`），禁用工作区 `find` 快照（含他方未提交 WIP、被 gitignore 的 `.spec/` 内部工作稿、CRLF 行尾膨胀）；字节数只在 HEAD 口径内引用，跨行尾口径不可比；`invoke gates.assetbaseline` 强制校验并自带行尾归一自证
+- **中文搜索分词**：Sphinx 只在构建期用 jieba 建索引，浏览器端仅按空格/标点切词，因此未登记的复合词（如「微信小店」）连写查询会 0 命中；新增平台/产品专名须登记到 [doc/_search/okf-userdict.txt](doc/_search/okf-userdict.txt)，重建索引后生效
 - **Frontmatter 日期兼容性**：OKF v0.2 的裸日期格式（如 `stale_after: 2026-09-23`）在 Sphinx 构建时由 `doc/conf.py` 的钩子自动处理，无需手动加引号
 - **路径引用**：Markdown 交叉引用使用相对路径，禁止 `file:///` 绝对路径
 - **派生产物溯源**：源自外部（如 xuanspace 或其他项目）的知识文档须在 frontmatter 中标注 `sources` 字段
