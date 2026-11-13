@@ -9,7 +9,7 @@ description: "以厂商、品牌与开源社区为中心的生态级知识包集
 
 以厂商、品牌与开源社区为中心的生态级知识包集群——多仓库组织目录（trae、anthropic、deepseek、tencent、datawhale 等）与单厂产品束并存。
 
-本类共 **105 个知识包**，分布于 **18 个生态/项目目录**。
+本类共 **106 个知识包**，分布于 **18 个生态/项目目录**。
 
 ## 束导航
 
@@ -26,7 +26,7 @@ description: "以厂商、品牌与开源社区为中心的生态级知识包集
 | [🔎 DeepSeek 网页搜索与抓取 API](deepseek-search-fetch/index.md) | 1 | Search/Fetch 双原始 JSON API——实时网页搜索与单页 Markdown 抓取、搜索语法、质量评分、错误重试、按次计费与账号级 QPS（与 deepseek 基础设施技术束互补区分） |
 | [🦞 网易有道开源生态](netease-youdao/index.md) | 6 | 网易有道开源生态——双语 Embedding/RAG（BCEmbedding/QAnything）、语音合成（Confucius4-TTS/EmotiVoice）、AI Agent 桌面应用（LobsterAI）与学术搜索（ScholarClaw） |
 | [🐧 腾讯开源生态](tencent/index.md) | 19 | 腾讯系开源与商业项目——CodeBuddy、WeKnora、AI 红队平台、ncnn 推理框架、Buddy 系列与 MusicBuddy、LightVela Personal Agent 产品观察、腾讯会议 CLI、TencentDB Agent Memory 记忆系统、企业微信 5.0.10/5.0.12 版本快照与「话题」场景示例页核验、WorkBuddy 官方站点与四区文档全站知识包、WorkBuddy 开放平台公告/智能硬件/开发者文档，以及资料库协作与工作台实践分析 |
-| [🚀 TRAE Community 生态](trae/index.md) | 16 | 字节跳动 AI 编程 IDE 社区——平台应用、技能/模板/MCP 扩展、学习资源、社区治理 |
+| [🚀 TRAE Community 生态](trae/index.md) | 17 | 字节跳动 AI 编程 IDE 社区——平台应用、技能/模板/MCP 扩展、学习资源、社区治理，以及「一键部署」对话式部署过程的厂商公告解读 |
 | [🌋 火山引擎（Volcengine）AI 产品生态](volcengine/index.md) | 1 | Ark 大模型平台、Computer-Use/Mobile-Use Agent、Viking AI 搜索推荐、机器学习平台与云手机等产品分析（与 volcengine-agent Agent 生态束并存互补） |
 | [🤝 火山引擎 Agent 生态（AgentKit + 共建计划）](volcengine-agent/index.md) | 1 | AgentKit 产品与架构（VEADK 框架、SDK/CLI、应用场景）与 Agent 共建计划（贡献方向、参与指南、奖励认可） |
 | [🧪 AtomGit AI 最佳实践](atomgit-ai/index.md) | 1 | AtomGit AI 平台最佳实践——平台能力、使用模式与工程化建议 |

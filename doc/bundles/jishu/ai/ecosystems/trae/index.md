@@ -2,10 +2,10 @@
 type: category
 title: "TRAE Community 生态"
 okf_version: "0.2"
-description: "TRAE Community 生态知识包——15个知识包、136篇内容文档（含82概念+36示例+18信源），覆盖平台应用、扩展系统、学习资源、社区治理、战略资讯五大板块"
-total_bundles: 15
-total_content_docs: 136
-total_md_files: 184
+description: "TRAE Community 生态知识包——16个知识包、142篇内容文档（含86概念+36示例+20信源），覆盖平台应用、扩展系统、学习资源、社区治理、战略资讯五大板块"
+total_bundles: 17
+total_content_docs: 142
+total_md_files: 194
 verified: grep-verified
 generated: true
 status: stable
@@ -36,9 +36,10 @@ status: stable
 | 📰 战略资讯 | [bytedance-ai-consolidation](bytedance-ai-consolidation/index.md) | L0 | 3 | 0 | 2 | 5 |
 | 📰 战略资讯 | [threeui](threeui/index.md) | L0 | 4 | 0 | 2 | 6 |
 | 📰 战略资讯 | [tushare-ai-office](tushare-ai-office/index.md) | L0 | 4 | 0 | 2 | 6 |
-| **合计** | **15 知识包** | | **82** | **36** | **18** | **136** |
+| 📰 战略资讯 | [trae-one-click-deploy](trae-one-click-deploy/index.md) | L0 | 4 | 0 | 2 | 6 |
+| **合计** | **16 知识包** | | **86** | **36** | **20** | **142** |
 
-> 注："内容文档"指 concepts/examples/references 目录下的实质性文档。含导航索引、spec 工作文件共 **184 个 .md 文件**。
+> 注："内容文档"指 concepts/examples/references 目录下的实质性文档。含导航索引与 `spec/` 规范工作文件共 **194 个 .md 文件**。按 bundles 计数口径（含 `index.md` 的目录即计束），本分组目录树共 **17 束**——上表列 16 个知识包，另含 `spec/` 规范工作目录 1 束（frontmatter `total_bundles: 17` 与此一致）。
 
 ## 🖥️ 平台应用层
 
@@ -79,6 +80,7 @@ status: stable
 | [bytedance-ai-consolidation](bytedance-ai-consolidation/index.md) | 字节跳动 2026 年 8 月 AI 业务整合商业分析——TRAE/扣子/飞书并入豆包的组织时间线、算力成本驱动逻辑（含 850 亿年份错配更正与多口径标注）、腾讯/阿里/字节 AI 办公三方竞争格局；博文作者标注"个人观点"，数据经 36 氪/南华早报/第一财经等多媒体核验 |
 | [threeui](threeui/index.md) | Meng To 开源的 Three.js/WebGL 视觉组件库——164 个 Community 效果、10 大分类（⚠️官网当前 9 个）、6 大组件类型、AI Coding 集成（Codex/Claude Code/Cursor）、MCP Server（Pro），WebGL UI 组件化趋势分析；P0 核验 4✅ 3⚠️ 0❌ |
 | [tushare-ai-office](tushare-ai-office/index.md) | Tushare 宣布上架 WorkBuddy/千问办公/TraeWork 三大 AI 办公平台——⚠️ P0 核验发现核心声明存疑（3✅ 2⚠️ 1❌），Tushare MCP 仍需手动配置，三平台官方预置连接器未获证实，status: flagged |
+| [trae-one-click-deploy](trae-one-click-deploy/index.md) | TRAE 插件市场「一键部署」限免公告解读——对话式部署六步链路、默认私有到公开的可见性模型、三类支持形态与硬边界（数据库/自定义域名/更多后端语言后续规划）、三个示例与飞书机器人·Open-Meteo 外部依赖口径；P0 核验 4✅ 10⚠️ 0❌，status: draft（厂商官方公告单源，非操作教程） |
 
 ## 学习路径推荐
 
@@ -156,6 +158,7 @@ trae-friends-events/index
 bytedance-ai-consolidation/index
 threeui/index
 tushare-ai-office/index
+trae-one-click-deploy/index
 spec/index
 trae-v3-3-74-release-notes
 log
