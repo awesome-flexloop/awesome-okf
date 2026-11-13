@@ -9,3 +9,9 @@
 微信支付商户号 5 n
 一键部署 20 n
 Open-Meteo 10 n
+mlc-llvm-static 10 n
+mlc-z3-static 10 n
+mlc-doxygen-bin 10 n
+原生工具链 10 n
+可重定位 10 n
+静态链接 20 n
