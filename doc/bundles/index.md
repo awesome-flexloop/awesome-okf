@@ -3,8 +3,8 @@ okf_version: "0.2"
 type: bundles-index
 title: "知识包总索引"
 description: "awesome-okf-xs 知识包（bundles）学科导航——按学科逻辑组织的开源项目源码中文教程与人文经典教程"
-total_bundles: 735
-groups: 64
+total_bundles: 737
+groups: 65
 domains: 9
 ---
 
@@ -12,7 +12,7 @@ domains: 9
 
 > **OKF (Open Knowledge Format)** 知识包是面向开源项目源码与人文经典的系统化中文教程，遵循 [OKF v0.2 规范](meta/okf-spec/index.md)，每个知识包包含概念文档（concepts/）、实战示例（examples/）、信源参考（references/）三层结构。
 >
-> 当前共 **735 个知识包**，按学科逻辑分为 **9 个技术域、64 个分组**（8 个学科域 + 1 个规范锚点）。
+> 当前共 **737 个知识包**，按学科逻辑分为 **9 个技术域、65 个分组**（8 个学科域 + 1 个规范锚点）。
 
 ***
 
@@ -21,7 +21,7 @@ domains: 9
 ```mermaid
 flowchart TD
     meta["📐 meta/ 规范与格式（3 束）：okf-spec 规范锚点 · okf-ecosystem 生态工具 · okf-desktop 桌面阅读器"]
-    guoxue["📜 guoxue/ 国学（50 束）：儒道释法墨易·河洛·阳明心学·算学·了凡"]
+    guoxue["📜 guoxue/ 国学（52 束）：儒道释法墨易·河洛·阳明心学·算学·了凡·史记人物·桑弘羊"]
     zhexue["💭 zhexue/ 哲学（8 束）：Ψhē 自指递归理论体系 · 思维方法论 · Agent Session 协作"]
     kexue["🔬 kexue/ 科学（17 束）：化学·物理学中西元典·国外数学经典·中西数学对读·前沿资讯"]
     wenxue["✒️ wenxue/ 文学（2 束）：中国古典文学经典 · 英语语法"]
@@ -57,7 +57,7 @@ flowchart TD
 | [🔧 OKF 生态系统（okf-ecosystem）](meta/okf-ecosystem/index.md) | 1  | okf-kit Python CLI 核心与 okf-desktop 桌面阅读器——Bundle 数据模型、爬取构建流水线、增量同步、MCP/Chat/HTTP 三模服务架构 |
 | [🖥️ OKF 桌面应用（okf-desktop）](meta/okf-desktop/index.md) | 1  | OKF Desktop 桌面阅读器完整教程——架构总览、快速开始、UI 界面、API 与数据流、打包分发、FAQ |
 
-### 📜 [国学](guoxue/index.md) · 50 束 · 16 组
+### 📜 [国学](guoxue/index.md) · 52 束 · 17 组
 
 | 分组                                                  | 束数 | 说明                                                             |
 | --------------------------------------------------- | -- | -------------------------------------------------------------- |
@@ -69,7 +69,7 @@ flowchart TD
 | [☯ 阴阳家（Yinyangjia）](guoxue/yinyangjia/index.md)     | 1  | 先秦阴阳家学派（邹衍、五德终始、大九州）——书志著录、辑佚残篇与传世材料的存佚分层阅读                    |
 | [☰ 周易（Zhouyi）](guoxue/zhouyi/index.md)              | 1  | 《周易》经传原文与权威解读——今本六十四卦经文全本（384 爻）、十翼选读、四大出土文本系统异文、历代注本与现代注本三线并收 |
 | [🔢 河图洛书（Hetu-Luoshu）](guoxue/hetu-luoshu/index.md) | 1  | 河图洛书与宋代图书学——名实三层框架、先秦原典双源核对、汉易数理零件、宋清图式考辨、出土文献与西传证据链           |
-| [⚖️ 法家（Legalism）](guoxue/legalism/index.md)         | 4  | 先秦法家经典——《韩非子》《商君书》《管子》及申不害·慎到辑佚的实抓原文核对、概念谱系与校本信源               |
+| [⚖️ 法家（Legalism）](guoxue/legalism/index.md)         | 5  | 先秦至汉法家脉络——《韩非子》《商君书》《管子》及申不害·慎到辑佚的实抓原文核对、概念谱系与校本信源，附桑弘羊财政实践与《盐铁论》三源对读               |
 | [📜 黄帝经典（Huangdi）](guoxue/huangdi/index.md)         | 1  | 《黄帝阴符经》知识包——权威原文双源核对版阅读教程                                      |
 | [🪷 佛家核心经典](guoxue/buddhism/index.md)               | 5  | 《心经》《金刚经》《六祖坛经》《阿弥陀经》《法华经》选读——般若、禅宗、净土、天台诸宗核心经典（中国化汉传佛教）       |
 | [🗡️ 鬼谷子（Guiguzi）](guoxue/guiguzi/index.md)         | 1  | 《鬼谷子》——先秦纵横家经典原文与解读教程                                          |
@@ -77,6 +77,7 @@ flowchart TD
 | [🧑‍🏫 王阳明心学（Yangming）](guoxue/yangming/index.md)   | 5  | 《传习录》精读、心即理·知行合一·致良知·四句教教义、功夫论实践、生平年谱与弟子流派及东亚传播                |
 | [🧮 算学（Suanxue）](guoxue/suanxue/index.md)           | 1  | 中国传统数学典籍——中国算经阅读教程（《九章算术》《周髀算经》、刘徽、宋元四大家）                      |
 | [📜 了凡（Liaofan）](guoxue/liaofan/index.md)           | 2  | 《了凡四训》古典层原文与阐释层现代解读双轨并收——立命改过之学与智然《了凡生意经》企业家研修课程对照阅读         |
+| [📜《史记》人物（Shiji Figures）](guoxue/shiji-renwu/index.md) | 1  | 《史记》列传人物研读——首束汲黯（？—约前112）：黄老治术、直谏伦理、《汲郑列传》合传结构与「卧治」形象层累，附异文对勘 |
 
 ### 💭 [哲学](zhexue/index.md) · 8 束 · 2 组
 
