@@ -1,5 +1,20 @@
 # 更新日志
 
+## 2026-11-16
+
+- **模式独立入库**：将 [五个可迁移模式](patterns.md) 逐条去重后登记入 SpecWeave 主仓方法论模式库，新增 5 个 L1-draft 条目——`base-first-minimal-customization`（governance-strategy）、`explain-only-reconnaissance`、`four-element-task-brief`、`screenshot-step-cost-trimming`（ai-collaboration）、`split-chain-triage`（tools-automation）。
+- **去重与重裁**：每条模式比对 4~6 个既有近邻条目，按「作用对象／核心动作／所处层级」三维裁定不重复，并为每条「不重复」裁定写出可证伪区分判据。库内成熟度维持 **L1-draft**：单案例 + 沉淀侧自审，且五者共享同一证据基座、互不构成独立验证。
+- **G3 复核（入库版）**：反模式由案例版 3 条/模式扩充为 **6 条/模式**（补充跨场景失效形态与代价），检验标准 5 条/模式；核心步骤 5~6 步/模式。扩充内容只在库内通用版，本包案例版未同步改写。
+- **回写范围**：仅 `patterns.md`（入库说明 + 库内路径表）与本文件；未改动 8 篇概念页、3 篇示例页、`references/` 事实登记与 `index.md`。
+- **跨仓引用口径**：库内条目以 `source` / `source_report` 单向指回本包 `index.md`；本包以主仓路径文本回指，不建跨仓相对路径链接（子模块独立发布时相对链接会越出仓库根）。
+
+### CMD-LOG
+
+```text
+[CMD-LOG] | level=INFO | cmd=seven-concepts | step=S0 | event=CMD_START | session=sc-20261116-trae-agent-camp-01-pattern | msg=模式沉淀开始：五模式独立入库 | ctx={"scenario":"knowledge","topic":"trae-agent-camp-01","depth":"standard"}
+[CMD-LOG] | level=INFO | cmd=seven-concepts | step=S99 | event=CHAIN_COMPLETED | session=sc-20261116-trae-agent-camp-01-pattern | msg=入库完成：5条L1-draft、3处索引登记、入库V门通过、上游已回写 | ctx={"patterns":5,"areas":3,"gates":["G3","V"]}
+```
+
 ## 2026-11-15
 
 - **创建知识包**：以 TRAE 训练营第二期 01 课课程文档（采集于 2026-11-15，revision_id 1236）为唯一主信源，按 R→I→E→V→C 链路生成 8 篇概念、3 篇示例、2 篇信源参考与 5 条洞察、5 个模式。

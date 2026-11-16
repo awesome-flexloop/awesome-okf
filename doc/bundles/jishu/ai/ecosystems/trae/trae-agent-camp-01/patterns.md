@@ -14,6 +14,18 @@ sources:
 # 五个可迁移模式
 
 > 成熟度统一为 **L1-draft**：均在本知识包内成型，尚未在第二个领域完整验证。升级条件见各模式末尾。
+>
+> **已独立入库（2026-11-16）**：五个模式已逐条去重后登记到 SpecWeave 主仓方法论模式库，**本节保留为案例版**（含本包特有的课程语境、事实编号与课程原文口径）；需要可迁移的通用版（含扩充反模式、可证伪区分判据与模式失效条件）请取库内版本。库内成熟度经重裁后维持 **L1-draft**——单案例 + 沉淀侧自审，且五者共享同一证据基座，**互不构成独立验证**，不因同批入库而相互抬升。
+
+**库内通用版位置**（SpecWeave 主仓路径，不在 awesome-okf-xs 子模块内，故不作相对路径链接）：
+
+| 本包模式 | 库内通用版路径 |
+|---|---|
+| P1 底座二次开发 | `docs/retrospective/patterns/methodology-patterns/governance-strategy/base-first-minimal-customization.md` |
+| P2 只讲不改勘察 | `docs/retrospective/patterns/methodology-patterns/ai-collaboration/explain-only-reconnaissance.md` |
+| P3 四要素任务书 | `docs/retrospective/patterns/methodology-patterns/ai-collaboration/four-element-task-brief.md` |
+| P4 分链排障 | `docs/retrospective/patterns/methodology-patterns/tools-automation/split-chain-triage.md` |
+| P5 截图成本裁剪 | `docs/retrospective/patterns/methodology-patterns/ai-collaboration/screenshot-step-cost-trimming.md` |
 
 ## P1 底座二次开发
 
