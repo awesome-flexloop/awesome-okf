@@ -28,7 +28,7 @@ sources:
 | 画板 | 0（无 whiteboard 块，未走 `whiteboard +export`） |
 | 评论 | 0（reference_map 无 comments 字段） |
 
-文档末尾列出的关联文档（F-038）：
+文档末尾列出的关联文档（F-038）。下表 URL 由 cite 块的 `file-type` 与 `doc-id` 拼出（`https://bytedance.larkoffice.com/<file-type>/<doc-id>`），非正文给出的可点击链接，访问前请以源文档末尾的引用块为准：
 
 | 文档 | 类型 | token |
 | --- | --- | --- |
