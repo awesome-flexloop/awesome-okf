@@ -226,7 +226,7 @@ jobs:
         if: steps.cache-domain-invs.outputs.cache-hit != 'true'
         timeout-minutes: 15
         run: invoke build-invs
-      # 等价替代 save-always:true — actions/cache/save + if: always() 功能完全对等且无 deprecated
+      # 等价替代旧版 always-save 语义 — actions/cache/save + if: always() 功能完全对等且无 deprecated
       - name: Save cache · domain-invs/*.inv（save-always 等价替换）
         uses: actions/cache/save@v5
         if: always()
