@@ -13,7 +13,20 @@ sources:
 
 # 六个可迁移模式
 
-> 成熟度统一为 **L1-draft**：均在本知识包内成型，尚未在第二个领域完整验证。本批模式**尚未**像第一课五个模式那样独立入库（截止 2026-11-16），如需入库需另行去重与登记。
+> 成熟度统一为 **L1-draft**：均在本知识包内成型，尚未在第二个领域完整验证。
+>
+> **已独立入库与并入（2026-11-16）**：本批 6 个模式已逐条去重后处置——**P2 四问成技、P4 证据先行、P5 单产出拆分、P6 双闸门**入库为独立模式（均 L1-draft）；**P1 三层改造面**并入 `base-first-minimal-customization`（步骤 3 增补「AI Agent 产品的三层映射」），**P3 试改验循环**并入 `edit-verify-separation`（增补 Step 6「同输入复测」），二者不新建独立篇目。本节保留为案例版（含本包课程语境与事实编号）。
+>
+> **库内通用版位置**（SpecWeave 主仓路径，不在 awesome-okf-xs 子模块内，故不作相对路径链接）：
+
+| 本包模式 | 库内处置与路径 |
+|---|---|
+| P1 三层改造面 | 已并入 `docs/retrospective/patterns/methodology-patterns/governance-strategy/base-first-minimal-customization.md` |
+| P2 四问成技 | `docs/retrospective/patterns/methodology-patterns/ai-collaboration/four-question-skill-spec.md` |
+| P3 试改验循环 | 已并入 `docs/retrospective/patterns/methodology-patterns/ai-collaboration/edit-verify-separation.md` |
+| P4 证据先行 | `docs/retrospective/patterns/methodology-patterns/tools-automation/evidence-first-repair.md` |
+| P5 单产出拆分 | `docs/retrospective/patterns/methodology-patterns/ai-collaboration/single-output-work-slicing.md` |
+| P6 双闸门 | `docs/retrospective/patterns/methodology-patterns/governance-strategy/dual-gate-irreversible-action.md` |
 
 ## P1 三层改造面
 

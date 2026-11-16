@@ -9,6 +9,7 @@
 - **V 审查**：四视角共 10 条意见，采纳 8 条、部分采纳 2 条、不采纳 0 条；采纳项已回归到 00、04、05、06、08 与 index 正文。
 - **与 01 课的关系**：同目录兄弟束，01 课讲「装好能用」，02 课讲「按你的习惯改造」；两包在「主题关联」中互链，口径差异（鸿蒙支持范围、确认关卡位置）在核验报告中并列。
 - **索引接入**：新增 `jishu/ai/ecosystems/trae/trae-agent-camp-02/`，并同步 trae 分组、ecosystems 分类、ai 域与 bundles 总索引四层计数。
+- **模式入库（2026-11-16）**：6 个模式逐条去重后处置——P2 四问成技、P4 证据先行、P5 单产出拆分、P6 双闸门入库为独立模式（L1-draft）；P1 三层改造面并入 `base-first-minimal-customization`，P3 试改验循环并入 `edit-verify-separation`（去重裁定为「核心动作同构」，不新建独立篇目）。库内路径见 `patterns.md` 头部表。
 
 ### 门禁记录
 
@@ -32,4 +33,6 @@
 [CMD-LOG] | level=INFO | cmd=seven-concepts | step=S5 | event=GATE_PASSED | session=sc-20261116-trae-agent-camp-02 | msg=G3模式要素完整，6个L1-draft | ctx={"patterns":6}
 [CMD-LOG] | level=INFO | cmd=seven-concepts | step=S6 | event=GATE_PASSED | session=sc-20261116-trae-agent-camp-02 | msg=V四视角10条意见，采纳8条部分采纳2条 | ctx={"adopted":10}
 [CMD-LOG] | level=INFO | cmd=seven-concepts | step=S99 | event=CHAIN_COMPLETED | session=sc-20261116-trae-agent-camp-02 | msg=知识包落盘完成 | ctx={"files":24}
+[CMD-LOG] | level=INFO | cmd=seven-concepts | step=S0 | event=CMD_START | session=sc-20261116-trae-agent-camp-02-pattern | msg=模式沉淀开始：6 个模式去重后入库 | ctx={"patterns":6,"mode":"dedup-then-persist"}
+[CMD-LOG] | level=INFO | cmd=seven-concepts | step=S99 | event=CHAIN_COMPLETED | session=sc-20261116-trae-agent-camp-02-pattern | msg=模式沉淀完成：4 篇新建 + 2 篇并入 | ctx={"created":4,"merged":2,"maturity":"L1-draft"}
 ```
