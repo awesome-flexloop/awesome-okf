@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——工具调用、多代理编排、记忆与插件的源码教程，以及参考架构与治理学习"
-total_bundles: 67
+total_bundles: 68
 ---
 
 # 🤖 AI Agent 框架
@@ -138,6 +138,7 @@ total_bundles: 67
 | [doubao-work-context-layer](doubao-work-context-layer/index.md) | 战略分析 | 4+2+1=7 | AI产品阿颖对豆包工作的Context Layer战略分析——飞书作为Agent组织上下文层、个人效率vs组织效率、Claude Tag(Slack)参照、Cat Wu上下文观(引语勘误)、Context竞争论、企业Agent四阶段演进、6项P0核验(4✅1⚠️1❌含10倍效率数据归因失实勘误) |
 | [doubao-work-org-productivity](doubao-work-org-productivity/index.md) | 行业分析 | 4+2+1=7 | 36氪深度分析豆包工作组织生产力——Agent=Model+Harness能力商品化、Deloitte 34%/37%企业AI落地落差、飞书账号级集成、理解→执行→协作→沉淀组织闭环、BCG 42%员工周省8h但组织价值未转化、权限治理分界线、信通院双项认证(⚠️待佐证)、6项P0核验(5✅1⚠️0❌本系列最高通过率) |
 | [doubao-work-remotion-photo-video](doubao-work-remotion-photo-video/index.md) | 工作流教程 | 4+0+5+1=10 | 豆包工作与 Remotion 照片视频制作：素材、分镜、静帧、声音及项目交付；36 条事实、官方文档核验与原创需求练习，flagged 保留安装、质检及成片复现缺口 |
+| [doubao-seedream-5-5](doubao-seedream-5-5/index.md) | 使用教程 | 6+3+3+1=13 | 豆包 Seedream 5.5 生图实战教程——四类能力边界（多轮编辑/RGBA/质感/小字）、9 条提示词技巧重排为写作顺序、保留变化双栏表、文字海报五字段、透明底触发词、六大场景模板与 40 组风格/美学词库；40 条事实，95% 小字准确率等厂商口径标 ⚠️，无实测、示例图未入库 |
 | [bytedance-ai-consolidation](bytedance-ai-consolidation/index.md) | 商业分析 | 5+0+2+1=8 | 运营派评论经官方公告核验转化——扣子企业版两阶段下线（11-30 停新售 / 2026-12-31 旧版 / 2027-12-31 新版）、TraeWork 与 TraeCode 合并为 TRAE（Agent+IDE 双模式）、TRAE CN 账号 11-18 并入豆包飞书；五条洞察与三个可迁移判读模式，49 条事实、13 项 P0（8✅/4⚠️/1❌）、5 项勘误（标题"陨落"证伪） |
 | [claude-vision-skill](claude-vision-skill/index.md) | 工具教程 | 3+2+2+1=8 | claude-vision-skill给纯文本模型装眼睛——视觉转录架构(图片→qwen-vl-max→文字→DeepSeek推理)、Claude Code Skill自动触发机制、安装避坑(SKILL.md硬编码路径3处/dotenv静默失败)、本地/URL/剪贴板三场景+回退逻辑、⏰博文当天DeepSeek官方视觉模型上线、6项P0核验全✅ |
 | [siemens-industrial-agent](siemens-industrial-agent/index.md) | 行业分析 | 4+2+1=7 | 量子位解析西门子工业Agent——工业Agent为何不能套壳(43%未部署/IT-OT断层)、Eigen工程智能体(ECAD集成/PLC标签/端到端执行/WAIC SAIL之星)、ICX编排层(下连PLM-ERP-MES-OT+Skill/Agent/Workflow)、Xcelerator三层生态与验证-沉淀-开发-分发飞轮、⚠️平台数字勘误(官方800款/500家非900/600)、报告系西门子联合发布、6项P0核验(3✅3⚠️) |
@@ -179,7 +180,7 @@ total_bundles: 67
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：67 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
+> **内容统计**：68 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
 
 ```{toctree}
 :hidden:
@@ -228,6 +229,7 @@ doubao-work/index
 doubao-work-context-layer/index
 doubao-work-org-productivity/index
 doubao-work-remotion-photo-video/index
+doubao-seedream-5-5/index
 claude-vision-skill/index
 siemens-industrial-agent/index
 agora-gemini-transcribe/index

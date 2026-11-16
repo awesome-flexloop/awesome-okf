@@ -15,3 +15,13 @@ mlc-doxygen-bin 10 n
 原生工具链 10 n
 可重定位 10 n
 静态链接 20 n
+多轮编辑 20 n
+多轮修正 10 n
+美学词 10 n
+风格词 10 n
+提示词骨架 10 n
+透明底 10 n
+透明素材 10 n
+像素级保持 10 n
+Seedream 20 n
+Seedance 10 n
