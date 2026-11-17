@@ -92,13 +92,17 @@ sources:
 
 ## 分支与安装包
 
-| 项 | 内容 |
-|----|------|
-| 分支 | https://github.com/aduoge/xiaoman/tree/camp/02-skill-builder（课程版源码未改） |
-| 获取 | 网页 Code → Download ZIP；会用 git 的执行 `git checkout camp/02-skill-builder` |
-| 说明 | 分支里 docs/skills.md 新增「在手机上用一句话新建、修改技能」一节 |
-| 安装包 | `xiaoman-skill-builder-0.2.0.zip`，解压出 apk 再安装 |
-| 签名 | 与课程版签名一致，可直接覆盖安装，记忆与技能都还在 |
+| 项 | 课程口径 | 源码/远端核验 |
+|----|----------|----------------|
+| 分支 | `camp/02-skill-builder` | 远端已存在；versionCode 2、versionName `0.2.0`（S-001、S-004） |
+| 获取 | Code → Download ZIP；或用 git checkout | 可直接获取该分支 |
+| 技能自建能力 | 手机上一句话新建、修改、删除技能 | 分支含 `SKILL_SAVE` 工具（校验完整 SKILL.md、展示草稿并确认后写入）与 `SkillAuthoringTest`（S-058） |
+| 安装包 | `xiaoman-skill-builder-0.2.0.zip` | 课程附件提供；仓库不包含该 zip，未取得校验和（仍为课程单源） |
+| 签名 | 与课程版一致，可覆盖安装 | 课程单源，未核验 |
+
+> **结论**：第 5 篇的分支与「手机自建技能」能力**已由源码确认**；剩余单源项只有安装包文件本身与签名一致性。练习时可直接 `git checkout camp/02-skill-builder` 对照代码。
+>
+> **课程口径补充**：第九部分称「课程版源码还在小满的 main 分支」；2026-11-18 复读时 main HEAD 08cd059 已是小满（`dev.xiaoman.app`），该说法成立；技能自建仍在 `camp/02-skill-builder`（F-122、S-001、S-003）。
 
 ### 回退的风险
 

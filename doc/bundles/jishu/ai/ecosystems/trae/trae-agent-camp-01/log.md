@@ -1,5 +1,49 @@
 # 更新日志
 
+## 2026-11-18
+
+- **复读课程文档**：revision_id 仍为 1236，与 2026-11-15 首次采集一致，正文未发现新增或删除章节（F-095）。
+- **补充事实**：新增 F-092（文档内鸿蒙表述双口径：开头「鸿蒙 5 以下」、收获段「鸿蒙 4.x 及以下」）、F-093（评论区鸿蒙 4.2.0 闪退、雷电模拟器可用）、F-094（评论区 401/404、`package info is null`、网盘镜像、OpenRouter 替代）。事实总数 91 → 95。
+- **正文回归**：00 篇补设备口径差异与社区反馈；03 篇补评论区排查线索；核验报告增第七节。
+- **结论**：P0 维持 7 ✅ / 3 ⚠️ / 0 ❌，`status: stable` 不变；社区反馈只作未核验线索，不写成标准步骤。
+- **门禁**：本轮结束复跑 toctree、总索引、UTF-8 与链接检查。
+
+### 源码复读（2026-11-18）
+
+- **仓库前进**：本地 main 由 580fdf7（PhonePal）前进到 08cd059（小满），包名统一为 `dev.xiaoman.app`；远端新增 `camp/02-skill-builder`；main 0.1.0、02 分支 0.2.0。
+- **事实更新**：S-001~S-007、S-035、S-038 改为当前状态；新增 S-052~S-059（MCP、网页版、iOS、11 个示例技能、SKILL_SAVE、docs 目录）。
+- **新增页面**：`concepts/08-source-map.md`（十一个模块、改动落点、读源码路径）。
+- **结论**：P0 维持 7 ✅ / 3 ⚠️ / 0 ❌；`status: stable` 不变；新增模块标为课后扩展，不改变课程主线。
+
+### 门禁记录（2026-11-18）
+
+| 门禁 | 结果 |
+|------|------|
+| toctree 完整性 | 通过 |
+| 总索引计数对账 | 通过：9 域 / 65 组 / 741 束 |
+| UTF-8 编码 | 通过：13389 个文件 |
+| Markdown 链接 | 通过：本束全部相对链接有效 |
+
+## 2026-11-17
+
+- **源码核验轮**：只读核验本地 `xiaoman` 仓库（`main` 580fdf7 与 `origin/camp/xiaoman`），新增 [源码核验事实登记](references/source-code.md)（S-001~S-051）。
+- **关键确认**：课程分支包名为 `dev.xiaoman.app`、CLI 入口 `cli/xiaoman.py`、版本 0.1.0；记忆为 Basic Memory Markdown，路径 `<external files>/memory/`；提醒使用 `AlarmManager.setAndAllowWhileIdle`（非精确、重启清空）；Sentinel 内置 17 个确认词、授权分 ONCE/TASK；许可证 MIT。
+- **P0 复核**：10 项 → **7 ✅ / 3 ⚠️ / 0 ❌**；G-03、G-05、G-06、G-07 关闭，G-01 部分关闭；G-02、G-04、G-08 仍开放。
+- **状态调整**：`status` 由 `draft` 升为 `stable`——核心机制已有源码或官方文档双重确认。
+- **正文改动**：第 2、3、4、7 篇追加源码小节；index 与 references/index 同步；示例与任务设计未改。
+- **门禁**：本轮结束复跑 toctree、总索引、UTF-8、链接与 Sphinx dummy 构建。
+
+### 门禁记录（2026-11-17）
+
+| 门禁 | 结果 |
+|------|------|
+| toctree 完整性 | 通过 |
+| 总索引计数对账 | 通过：9 域 / 65 组 / 741 束 |
+| UTF-8 编码 | 通过：13389 个文件 |
+| Markdown 链接 | 通过：本束全部相对链接有效 |
+| 库规模基线 | 通过：总索引 741；行尾归一残差 +43430 属未提交工作区变更 |
+| Sphinx dummy 构建 | 通过：构建成功，364 条既有警告，本束 0 告警 |
+
 ## 2026-11-16
 
 - **模式独立入库**：将 [五个可迁移模式](patterns.md) 逐条去重后登记入 SpecWeave 主仓方法论模式库，新增 5 个 L1-draft 条目——`base-first-minimal-customization`（governance-strategy）、`explain-only-reconnaissance`、`four-element-task-brief`、`screenshot-step-cost-trimming`（ai-collaboration）、`split-chain-triage`（tools-automation）。
