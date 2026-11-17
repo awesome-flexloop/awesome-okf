@@ -39,13 +39,14 @@ sources:
 
 ## 主题关联（豆包工作主题簇）
 
-本知识包与同组另外两篇豆包工作博文转化的知识包构成主题簇，建议按"功能实测 → 战略分析 → 组织生产力"顺序阅读：
+本知识包与同组另外三篇豆包工作博文转化的知识包构成主题簇，建议按"功能实测 → 战略分析 → 组织生产力"顺序阅读：
 
 | 知识包 | 视角与分工 | P0 核验 | 链接 |
 |--------|-----------|---------|------|
 | **doubao-work（本包）** | APPSO 媒体一手实测：产品功能、多模态生成、额度模型、飞书集成 | 8✅ 零勘误 | — |
 | doubao-work-context-layer | AI产品阿颖战略分析：飞书作为组织 Context Layer、个人 vs 组织效率、Context 竞争论 | 4✅ 1⚠️ 1❌ | [进入](../doubao-work-context-layer/index.md) |
 | doubao-work-org-productivity | 36氪行业分析：Deloitte/BCG 数据、组织 ROI、权限治理与组织闭环 | 5✅ 1⚠️ 0❌ | [进入](../doubao-work-org-productivity/index.md) |
+| bytedance-ai-consolidation | 事件整合：扣子企业版退场、TRAE 合并与账号统一、豆包承接工作场景；含三仪表/替换测试/定位表三个判读工具 | 8✅ 4⚠️ 1❌ | [进入](../bytedance-ai-consolidation/index.md) |
 
 2026-11-04 增补：[豆包工作与 Remotion 照片视频制作](../doubao-work-remotion-photo-video/index.md)聚焦素材、分镜、静帧、声音和项目交付。该包保留安装、质检与成片复现缺口，不改变本包历史实测的时点与结论。
 

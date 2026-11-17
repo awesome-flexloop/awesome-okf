@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——工具调用、多代理编排、记忆与插件的源码教程，以及参考架构与治理学习"
-total_bundles: 62
+total_bundles: 68
 ---
 
 # 🤖 AI Agent 框架
@@ -69,6 +69,7 @@ total_bundles: 62
 | [deepseek-harness](deepseek-harness/index.md) | TypeScript | 10+4+1=15 | DeepSeek Agent框架——Cordis插件架构(50+包)、Phase状态机+Inbox双队列、defineTool类型安全工具、Event-Sourcing会话、MCP/ACP双协议、Skill分层系统（0.1.0-rc.5 旧版，架构已换代） |
 | [deepseek-harness-0-2](deepseek-harness-0-2/index.md) | TypeScript/Python | 11+5+2=18 | DeepSeek Harness 0.2 官方源码精读——一切皆插件的 Cordis 四抽象、profile/组合包四层叠加、Agent turn/step 状态机、SessionEvent 事件日志与两套 generation、工具执行流水线、LLM 抽象层、22 个能力 seam、沙箱/审批/权限预设三层安全模型，以及 CLI/Web/Desktop/Headless/ACP/Python SDK 六形态 |
 | [intelligent-terminal](intelligent-terminal/index.md) | C++/Rust | 10+4+1=15 | Windows Terminal原生Agent——双进程架构(Helper+Master)、COM协议服务器、命名管道传输、ACP JSON-RPC 2.0、OSC 133自动修复、Agent Pane XAML UI、wtcli命令工具 |
+| [swe-rex](swe-rex/index.md) | Python | 10+5+3=18 | SWE-ReX 沙箱执行后端——Deployment/Runtime 两级解耦、pexpect 会话状态机（PS1 哨兵+退出码旁路）、10 路由 HTTP 与 511 异常传输、7 种部署/3 种运行时、12 类异常与 89 个测试 |
 
 ### 🔌 Tier 2：中型框架/库
 
@@ -87,6 +88,7 @@ total_bundles: 62
 | [agent-skills-spec](agent-skills-spec/index.md) | 技能规范 | 8+2+2+1=13 | Agent Skills开放标准——SKILL.md权威格式规范(name五规则/description≤1024/compatibility≤500)、渐进式披露三阶段token预算、eval驱动迭代(evals/grading双臂对照)、description触发率优化(3次/0.5阈值/60-40切分)、46客户端三层加载契约、skills-ref参考实现(parser四类ParseError/validator校验序列/to_prompt XML/CLI三子命令) |
 | [ai-agent-skills](ai-agent-skills/index.md) | 技能规范 | 12+1+13=26 | AI Agent Skills 生态六项目——agency-agents 部门化人格、awesun-mcp/skill/ui-locator 向日葵远程控制三件套、jira-skill 工程化集成、retro-skill 会话复盘，涵盖 SKILL.md 开放标准、MCP 工具协议、插件架构与渐进式披露 |
 | [jira-skill](jira-skill/index.md) | 技能插件 | 10+3+3=16 | Jira 官方开源插件（Netresearch v3.29.0）完整技术教程——jira-communication（API 交互）与 jira-syntax（语法规范）双技能架构、JQL 查询语言与查询/创建/流转/看板/冲刺全操作 |
+| [cnblogs-publish-skill](cnblogs-publish-skill/index.md) | 发布技能 | 8+3+3=14 | 博客园官方 Agent Skill 源码教程——12 个 CLI 命令、默认非公开发布、四平台凭据后端（Keychain/Credential Manager/secret-tool/keyring）、MetaWeblog 审核语义与 50 项安全不变量测试 |
 | [book-to-skill](book-to-skill/index.md) | 知识工具 | 4+1+1=6 | 书籍→Agent Skill编译器——确定性文本提取、7种文档格式解析器、13语言章节检测、四层产出流水线、多层安全防护 |
 | [learn-from-materials](learn-from-materials/index.md) | 学习工具 | 4+2+2+1=9 | 把 PDF/EPUB/DOCX/PPTX 材料转成可追溯、可测验、可做笔记的交互式学习网页——六板块机制、两种学习深度、宿主安装与三步实操，41 条事实与 10 项 P0 核验 |
 | [i-have-adhd](i-have-adhd/index.md) | 辅助技能 | 3+1+1=5 | ADHD认知辅助技能——10条ADHD友好输出规则、Session Hooks偏好持久化、10+IDE/Agent平台集成、Always-On跨应用模式 |
@@ -106,6 +108,7 @@ total_bundles: 62
 | [opencode](opencode/index.md) | TypeScript | 5+1+1=7 | OpenCode Terminal Coding Agent——Bun+Turbo+SST技术栈、SessionV2会话模型(Context Epoch)、V2配置规范、infra模块(app/console/lake/stage/stats/secret)、Cloudflare+AWS混合云部署 |
 | [pi-cli](pi-cli/index.md) | TypeScript | 5+1+1=7 | Pi AI CLI——9包monorepo(ai/tui/agent/client/server/evals等)、AI包(models/oauth/cli/compat/images)、TUI差分渲染引擎、5个内置prompt(cl/is/pr/sa/wr)、锁步版本控制 |
 | [pi-agent-harness](pi-agent-harness/index.md) | 博文综述 | 3+2+1=6 | Pi Agent Harness 高层定位与竞品综述——pi-ai/pi-agent-core/pi-coding-agent/pi-tui 四层架构、默认工具集与 Skill/Extension/Package 扩展、与 Claude Code/Codex/OpenCode/LangGraph 对比 |
+| [mini-swe-agent](mini-swe-agent/index.md) | Python | 9+4+4=17 | 100 行极简 coding agent 源码教程——bash-only/线性历史/无状态 subprocess 三原则、Agent/Model/Environment 三协议、190 行主循环、六类执行环境、toolcall 与 textbased 双通道、74% 评测边界、逐模块源码地图、官方教程 50 行从零实现；114 条事实、4 条博客勘误 |
 
 ### 🔬 Tongyi-MAI 生态源码精读
 
@@ -114,6 +117,12 @@ total_bundles: 62
 | [mai-ui](mai-ui/index.md) | 源码精读 | 7+2+2+1=12 | MAI-UI GUI Agent 基础模型家族源码精读——2B/8B/32B/235B-A22B 四尺寸、vLLM 推理外壳（4 包依赖）、grounding/navigation 双 Agent、TrajStep 轨迹记忆与上下文工程、999/1000 双坐标口径、双通道评估管线，54 条事实可溯源（Qwen-UI-Agent 前代） |
 | [mobile-world](mobile-world/index.md) | 评测框架精读 | 8+3+2+1=14 | MobileWorld 移动 GUI 智能体评测框架源码精读——DinD 单容器 Android 评测环境、agents/core/runtime/tasks 四层架构、BaseAgent 契约与九项注册表、任务快照+冻结时钟确定性复现、eval-server 大规模编排（40 容器/tmux）、MCP 工具注入、双 CLI 驱动，80 条事实全溯源（Qwen-UI-Agent 82.1% 成绩所在基准框架） |
 | [mobilepa-bench](mobilepa-bench/index.md) | 基准精读 | 5+0+2+1=8 | MobilePA-Bench 移动规划智能体基准精读——页面即仓库（零评测代码）、1,705 任务/212 工具四维加权（Tool 50%）、六类 checker 固定验证策略、v1.5 榜单 13 模型与 Cost 口径、并入 Qwen-UI-Agent 网站技术栈简析（Next.js 16），网站型项目无 examples |
+
+### 🧭 框架选型与横向对比
+
+| 知识包 | 类型 | 文档数 | 一句话简介 |
+|--------|------|--------|-----------|
+| [agent-framework-selection-2026](agent-framework-selection-2026/index.md) | 选型综述 | 5+0+2+1=8 | 2026 五框架横向选型——LangGraph 图状态机/checkpoint、CrewAI 角色协作、MAF 合并 SK+AutoGen 与 .NET/Python 对齐、Pydantic AI V2 capability/Harness、LlamaIndex Workflows 事件驱动 step；按主导约束决策 + 双框架分层 + token 成本与安全边界；81 条事实、13 项 P0（7✅3⚠️1❌2🏷️），含 LlamaIndex 1.0 年份勘误 |
 
 ### 📰 产品资讯
 
@@ -129,6 +138,8 @@ total_bundles: 62
 | [doubao-work-context-layer](doubao-work-context-layer/index.md) | 战略分析 | 4+2+1=7 | AI产品阿颖对豆包工作的Context Layer战略分析——飞书作为Agent组织上下文层、个人效率vs组织效率、Claude Tag(Slack)参照、Cat Wu上下文观(引语勘误)、Context竞争论、企业Agent四阶段演进、6项P0核验(4✅1⚠️1❌含10倍效率数据归因失实勘误) |
 | [doubao-work-org-productivity](doubao-work-org-productivity/index.md) | 行业分析 | 4+2+1=7 | 36氪深度分析豆包工作组织生产力——Agent=Model+Harness能力商品化、Deloitte 34%/37%企业AI落地落差、飞书账号级集成、理解→执行→协作→沉淀组织闭环、BCG 42%员工周省8h但组织价值未转化、权限治理分界线、信通院双项认证(⚠️待佐证)、6项P0核验(5✅1⚠️0❌本系列最高通过率) |
 | [doubao-work-remotion-photo-video](doubao-work-remotion-photo-video/index.md) | 工作流教程 | 4+0+5+1=10 | 豆包工作与 Remotion 照片视频制作：素材、分镜、静帧、声音及项目交付；36 条事实、官方文档核验与原创需求练习，flagged 保留安装、质检及成片复现缺口 |
+| [doubao-seedream-5-5](doubao-seedream-5-5/index.md) | 使用教程 | 6+3+3+1=13 | 豆包 Seedream 5.5 生图实战教程——四类能力边界（多轮编辑/RGBA/质感/小字）、9 条提示词技巧重排为写作顺序、保留变化双栏表、文字海报五字段、透明底触发词、六大场景模板与 40 组风格/美学词库；40 条事实，95% 小字准确率等厂商口径标 ⚠️，无实测、示例图未入库 |
+| [bytedance-ai-consolidation](bytedance-ai-consolidation/index.md) | 商业分析 | 5+0+2+1=8 | 运营派评论经官方公告核验转化——扣子企业版两阶段下线（11-30 停新售 / 2026-12-31 旧版 / 2027-12-31 新版）、TraeWork 与 TraeCode 合并为 TRAE（Agent+IDE 双模式）、TRAE CN 账号 11-18 并入豆包飞书；五条洞察与三个可迁移判读模式，49 条事实、13 项 P0（8✅/4⚠️/1❌）、5 项勘误（标题"陨落"证伪） |
 | [claude-vision-skill](claude-vision-skill/index.md) | 工具教程 | 3+2+2+1=8 | claude-vision-skill给纯文本模型装眼睛——视觉转录架构(图片→qwen-vl-max→文字→DeepSeek推理)、Claude Code Skill自动触发机制、安装避坑(SKILL.md硬编码路径3处/dotenv静默失败)、本地/URL/剪贴板三场景+回退逻辑、⏰博文当天DeepSeek官方视觉模型上线、6项P0核验全✅ |
 | [siemens-industrial-agent](siemens-industrial-agent/index.md) | 行业分析 | 4+2+1=7 | 量子位解析西门子工业Agent——工业Agent为何不能套壳(43%未部署/IT-OT断层)、Eigen工程智能体(ECAD集成/PLC标签/端到端执行/WAIC SAIL之星)、ICX编排层(下连PLM-ERP-MES-OT+Skill/Agent/Workflow)、Xcelerator三层生态与验证-沉淀-开发-分发飞轮、⚠️平台数字勘误(官方800款/500家非900/600)、报告系西门子联合发布、6项P0核验(3✅3⚠️) |
 | [agora-gemini-transcribe](agora-gemini-transcribe/index.md) | 资讯速报 | 4+2+1=7 | 声网(Agora官方)官宣集成Google Gemini 3.5 Transcribe——双API(Live流式`gemini-3.5-transcribe-live`亚秒延迟/Interactions预录音+说话人归属)、WER流式4.0%/非流式2.6%(Artificial Analysis)、85+语言、Agents SDK三语言(Python/TS/Go)与链式ASR+LLM+TTS/MLLM端到端两架构、Smart Transcription计划支持CRM/信息采集场景、⚠️"全球首个Realtime API"措辞勘误(API为OpenAI产品/Agora为首发语音合作方)、厂商自宣稿无成效数字、6项P0核验(5✅1⚠️) |
@@ -169,7 +180,7 @@ total_bundles: 62
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：62 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
+> **内容统计**：68 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
 
 ```{toctree}
 :hidden:
@@ -194,6 +205,7 @@ anthropics-skills/index
 agent-skills-spec/index
 ai-agent-skills/index
 jira-skill/index
+cnblogs-publish-skill/index
 eve/index
 orca/index
 book-to-skill/index
@@ -217,6 +229,7 @@ doubao-work/index
 doubao-work-context-layer/index
 doubao-work-org-productivity/index
 doubao-work-remotion-photo-video/index
+doubao-seedream-5-5/index
 claude-vision-skill/index
 siemens-industrial-agent/index
 agora-gemini-transcribe/index
@@ -237,4 +250,8 @@ cua/index
 openshell-reference-architecture/index
 learn-from-materials/index
 agent-autoloop/index
+mini-swe-agent/index
+swe-rex/index
+agent-framework-selection-2026/index
+bytedance-ai-consolidation/index
 ```
