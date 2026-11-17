@@ -101,7 +101,7 @@ trae-agent-camp-01/
 │   ├── 02-taobao-notebook-task.md    主线任务复现、结算页四项核对
 │   └── 03-memory-and-reminder.md     偏好与提醒的完整验收
 └── references/
-    ├── course-source.md              F-001~F-091 事实登记
+    ├── course-source.md              F-001~F-095 事实登记
     ├── source-code.md                源码核验事实（S-001~S-051）
     └── verification.md               P0 核验、勘误四清单、缺口、四视角审查
 ```
@@ -140,7 +140,7 @@ trae-agent-camp-01/
 
 | 文档 | 内容 |
 |------|------|
-| [课程事实登记](references/course-source.md) | F-001~F-091，十二类分组，课程原文与核验补充分开登记 |
+| [课程事实登记](references/course-source.md) | F-001~F-095，十二类分组，课程原文与核验补充分开登记；含 2026-11-18 复读补充 |
 | [源码核验事实登记](references/source-code.md) | S-001~S-051，包名与版本、目录、记忆/技能格式、Agent 循环、Sentinel、提醒、模型客户端、轨迹与 CLI |
 | [P0 核验与对抗审查](references/verification.md) | 10 项核验（源码轮后 7✅/3⚠️）、勘误四张清单、8 项缺口、四视角 7 条意见 |
 
