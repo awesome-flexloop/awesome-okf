@@ -1,7 +1,7 @@
 ---
 type: Reference
-title: "小满源码核验事实登记（选录 S-001~S-052，编号与 01 包一致）"
-description: "与 01 课包共用同一套源码事实编号，按 02 课主题选录 36 条：包名与路径、技能七字段与 channel 枚举、校验规则与 lint 输出、push 行为、轨迹与 logs、Agent 常量、Sentinel、提醒、02 分支与五个技能的存在性"
+title: "小满源码核验事实登记（选录 S-001~S-059，编号与 01 包一致）"
+description: "与 01 课包共用同一套源码事实编号，按 02 课主题选录 43 条：包名与路径、技能七字段与 channel 枚举、校验规则与 lint 输出、push 行为、轨迹与 logs、Agent 常量、Sentinel、提醒、02 分支与五个技能的存在性，以及 MCP/网页版/iOS 新模块"
 tags: [trae, agent, source-code, skills, cli, lint, channel, verification]
 generated: 2026-11-17
 verified: process:seven-concepts-v
@@ -28,11 +28,12 @@ sources:
 
 | 编号 | 事实 | 分支 |
 |------|------|------|
-| S-001 | 远端分支引用为 `main`、`camp/xiaoman`、`camp/xiaoman-web`、`ios/wda-hands`；**不存在** 02 课文档所称的 `camp/02-skill-builder`。 | 远端 |
-| S-003 | main 分支 applicationId 与 namespace 均为 `dev.phonepal.app`；camp/xiaoman 分支均为 `dev.xiaoman.app`。 | 两分支 |
-| S-004 | 两个分支的 versionCode 均为 1、versionName 均为 `0.1.0`；minSdk 30（Android 11），compileSdk 与 targetSdk 均为 35。 | 两分支 |
+| S-001 | 2026-11-18 复读时本地 main HEAD 为 08cd059（2026-11-07）；远端分支包括 `main`、`camp/xiaoman`、`camp/xiaoman-web`、`camp/02-skill-builder`、`ios/wda-hands`，02 课分支**已公开**。 | 远端 |
+| S-002 | 远端分支引用包括 `main`、`camp/xiaoman`、`camp/xiaoman-web`、`camp/02-skill-builder`、`ios/wda-hands`。 | 远端 |
+| S-003 | main 与 camp/xiaoman 的 applicationId 与 namespace 均为 `dev.xiaoman.app`；早期 main 的 `dev.phonepal.app` 已随改名合并。 | 两分支 |
+| S-004 | main 为 versionCode 1 / versionName `0.1.0`；`camp/02-skill-builder` 为 versionCode 2 / versionName `0.2.0`；minSdk 30，targetSdk 35。 | 两分支 |
 | S-005 | 构建需要 JDK 17 与 Android SDK 35；许可证为 MIT。 | 两分支 |
-| S-007 | 课程分支含 `docs/classroom.md` 学生手册；手册写明 Android 11 及以上、iPhone 不支持、TRAE 负责读代码改代码跑命令。 | camp/xiaoman |
+| S-007 | 课程分支含 `docs/classroom.md` 学生手册；2026-11-07 版把第二节场景换成呼声榜 TOP5，仍写明 Android 11 及以上、iPhone 不支持、TRAE 负责读代码改代码跑命令。 | camp/xiaoman |
 
 ## 二、路径与技能加载
 
@@ -48,10 +49,10 @@ sources:
 |------|------|------|
 | S-033 | 技能 frontmatter 的合法键恰为七个：`name`、`description`、`apps`、`channel`、`confirm_before`、`memory`、`deeplinks`；出现未知键即报错。 | 两分支 |
 | S-034 | `name` 必填且匹配 `[a-z0-9-]+`，应与文件夹同名（不一致会报告但仍按 name 加载）；`description` 必填、非空、单行；`apps` 每项须为包名；`deeplinks` 每项须为 `scheme://...`。 | 两分支 |
-| S-035 | `channel` 取值为 `api`、`cli`、`deeplink`、`gui`（默认）、`deeplink-then-gui`、`mixed`；**源码中没有 `chat` 取值**，camp/xiaoman 分支的 `docs/skills.md` 也未列出。 | 两分支 |
+| S-035 | `channel` 取值为 `api`、`cli`、`deeplink`、`gui`（默认）、`deeplink-then-gui`、`mixed`、`chat`；`chat` 已进入 `SkillChannel` 枚举与 `docs/skills.md` 的「聊天工作流」一节。 | 两分支 |
 | S-036 | `flow.yaml` 仅在 `SKILL.md` 有效后才校验；步骤类型为 `launch`、`deeplink`、`ai`、`confirm`、`tap`、`type`、`wait`、`assert`；每步恰好一个 `类型: 值`；`wait` 取 0..600000 毫秒。 | 两分支 |
 | S-037 | 课程分支内置示例含 `set-alarm`，`channel: gui`，操作系统时钟包，只新增闹钟、不改已有闹钟。 | camp/xiaoman |
-| S-038 | 02 课文档提到的 `today-plan`、`health-alarms`、`taobao-compare`、`daily-quiz`、`ai-news-brief` 五个技能，在公开的 camp/xiaoman 分支技能目录中均未出现。 | 远端 |
+| S-038 | `today-plan`、`health-alarms`、`taobao-compare`、`daily-quiz`、`ai-news-brief` 五个技能**已进入公开仓库** `skills/examples/`；示例技能合计 11 个。 | main |
 | S-052 | 本仓库与 camp/xiaoman 分支中没有 `superagent-lead` 目录或引用；课程称其为独立仓库。 | 两分支 |
 
 ## 四、开发者 CLI
@@ -73,6 +74,7 @@ sources:
 | S-018 | 设置页 `maxSteps` 可调 1..200；聊天与操作两个模型都配置完成才算整体 configured。 | 两分支 |
 | S-019 | 操作循环：观察 → 操作模型（JSON 模式）→ 宽松解析（最多 3 次解析失败）→ Sentinel 授权 → 执行 → 卡死检测；连续 3 次屏幕不变先警告，再次卡住则失败。 | 两分支 |
 | S-021 | 课程分支常量：`MAX_TOOL_ROUNDS=8`、`HISTORY_LIMIT=20`、`MEMORY_HITS=5`、`MAX_HOWTO_NOTES=3`；成功路径写入 `howto/<技能名或包名>`，类型与标签均为 `howto`。 | camp/xiaoman |
+| S-022 | 操作提示词按顺序拼装：目标（或子目标）、技能说明、技能引用的记忆、命中的 howto 笔记、最近 `historyWindow` 步历史、上一步反馈、节点列表（≤`maxNodes`）与截图。 | 两分支 |
 | S-024 | 拒绝：FLAG_SECURE 屏幕上的设备操作除 `back`、`home`、`wait` 外拒绝；密码框输入拒绝；技能声明 `apps` 时越界包拒绝（启动器与自身除外）。 | 两分支 |
 | S-025 | 询问：`tap`、`long_press`、`type` 的目标或节点文字命中确认词；`deeplink` 与技能模板 scheme/host 不匹配。 | 两分支 |
 | S-026 | 内置确认词 17 个：支付、付款、确认支付、立即支付、转账、发送、删除、下单、提交订单、确认呼叫、呼叫、购买、pay、send、delete、purchase、order；`confirm_before` 只能追加。 | 两分支 |
@@ -102,8 +104,20 @@ sources:
 | S-045 | 运行 ID：App 为 `app-YYYYMMDD-HHMMSS-xxxx`，CLI 为 `cli-YYYYMMDD-HHMMSS-xxxx`；调试广播可预置 run id。 | 两分支 |
 | S-051 | 课程分支记录 `test :app:assembleDebug` 通过，226 次 JUnit 测试执行、0 失败 0 错误（含 debug/release，非 226 个独立场景）。 | camp/xiaoman |
 
+## 八、2026-11-18 复读：新模块与 02 分支
+
+| 编号 | 事实 | 分支 |
+|------|------|------|
+| S-053 | 新增模块 `core-mcp`、`mcp`、`web-server`、`ios-hands`、`ios-runner`、`deploy`；`settings.gradle.kts` 纳入 core-mcp、ios-hands、ios-runner、web-server。 | main |
+| S-054 | MCP：聊天模型同时看到内置工具与 MCP 工具，工具名格式为 `服务器名__工具名`；每个服务器有 `confirm` 策略（writes/all/none）；需确认的调用在没有终端确认时一律拒绝；Key 只放环境变量并做掩码；内置目录在 `catalog.json`。 | main |
+| S-055 | 网页版：iPhone 不装 App，用 Safari 添加到主屏幕；不操作手机屏幕，靠 MCP 服务办事；记忆存浏览器 `localStorage`（最新 200 条、约 180KB），服务器不落盘；会话空闲 2 小时清空；网页不能后台提醒，改为「添加到日历」。 | main |
+| S-056 | iOS：`ios-hands` 的 `WdaDevice` 通过 WebDriverAgent 实现 `Device`；`ios-runner` 是 Mac 命令行，提供 `tools`、`call`、`ask`、`chat`。 | main |
+| S-057 | 示例技能共 11 个，包含课程五个场景与 `set-alarm`、`meituan-takeout-order`、`train-ticket-order` 等。 | main |
+| S-058 | `camp/02-skill-builder` 为 versionCode 2 / versionName `0.2.0`；分支含 `SKILL_SAVE` 工具（校验完整 SKILL.md、展示草稿并确认后新建或修改）与 `SkillAuthoringTest`。 | camp/02-skill-builder |
+| S-059 | docs 目录含 `ARCHITECTURE.md`、`classroom.md`、`ios.md`、`mcp.md`、`skills.md`、`ui-interaction.md`、`web.md`；README 增加课堂实践、MCP、网页版、iOS 说明。 | main |
+
 ## 编码说明
 
-- 采集时点：2026-11-17；采集方式：只读文件与 `git show`，未修改被学习的仓库。
+- 采集时点：2026-11-17；2026-11-18 复读补充 S-053~S-059（main HEAD 08cd059）。
 - 编号与 01 课包一致；同一编号在两包中指同一条事实。标注「两分支」表示 main 与 camp/xiaoman 一致。
-- 与课程文档冲突的项（`chat` channel、02 分支、五个技能、superagent-lead）在正文中显式标注，不静默覆盖课程口径。
+- 与课程文档冲突的项（`chat` channel、02 分支、五个技能、superagent-lead）已在正文中更新；02 分支与五个技能已公开，`chat` 已进入源码枚举。

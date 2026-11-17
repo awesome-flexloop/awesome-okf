@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: bundle
 title: "TRAE 训练营第二期 02 课：用 TRAE 改造你的 Agent 助手"
-description: "以 TRAE 官方训练营第二课为信源、并经小满源码核验的改造教程——记忆/技能/程序三层改造面、3-2-1 个人档案与 adb 推送、四问写成 SKILL.md、五场景试改验循环、程序层自建技能、多 Agent 总管技能与证据链排障（源码轮 8✅/3⚠️/0❌）"
+description: "以 TRAE 官方训练营第二课为信源、并经小满源码核验的改造教程——记忆/技能/程序三层改造面、3-2-1 个人档案与 adb 推送、四问写成 SKILL.md、五场景试改验循环、程序层自建技能、多 Agent 总管技能与证据链排障（源码复读 9✅/2⚠️/0❌）"
 tags:
   - trae
   - agent
@@ -15,7 +15,7 @@ tags:
   - course
 generated: 2026-11-16
 verified: process:seven-concepts-v
-status: draft
+status: stable
 stale_after: 2027-05-31
 sources:
   - id: course-doc
@@ -45,7 +45,7 @@ sources:
 
 > **内容性质**：厂商官方培训材料的系统化转写与核验（**改造教程**，非源码解读、非产品评测）。主信源为 TRAE 官方训练营第二课课程文档（课程于 2026-11-13 晚间结课；初采 2026-11-16 revision 1074，2026-11-18 复读 revision 1076），交叉核对源码仓库、方舟官方模型文档与 TRAE 官方社区。
 >
-> **核验结果**：初轮 P0 11 项 → 4 ✅ / 7 ⚠️；2026-11-17 源码核验后 → **8 ✅ / 3 ⚠️ / 0 ❌**。已由源码确认：仓库与版本、目录与记忆格式、技能七字段与 channel 枚举、lint/push 输出、轨迹与日志、Sentinel 规则、提醒实现。剩余 ⚠️ 为 02 课分支与 0.2.0 安装包、superagent-lead 仓库、401/404 归因，故仍取 `status: draft`。
+> **核验结果**：初轮 P0 11 项 → 4 ✅ / 7 ⚠️；2026-11-17 源码核验后 → 8 ✅ / 3 ⚠️；2026-11-18 源码复读后 → **9 ✅ / 2 ⚠️ / 0 ❌**。五个场景技能、`chat` channel、`camp/02-skill-builder` 与 0.2.0 均已由公开仓库确认；剩余 ⚠️ 为 superagent-lead 仓库可达性与 401/404 归因。
 >
 > **敏感度处理**：主信源托管于企业内部飞书域，本包按用户指定目录落盘。正文与信源层**不引用课程文档 URL**；不转载课堂体验额度的领取入口、IP 形式服务地址、令牌与个人登记信息（该额度已于 2026-11-13 过期）；附件与视频的一次性令牌不收录。
 
@@ -90,7 +90,8 @@ trae-agent-camp-02/
 │   ├── 05-program-layer.md                 程序层、三处改动、分支与安装包
 │   ├── 06-multi-agent-superagent.md        两种形态、五条原则、公众号小队
 │   ├── 07-evidence-debugging.md            证据三件套、logs/traces、最小修改
-│   └── 08-boundaries-and-safety.md         设备与能力边界、泄露面、双闸门
+│   ├── 08-boundaries-and-safety.md         设备与能力边界、泄露面、双闸门
+│   └── 09-module-internals.md              技能生命周期、循环参数、Sentinel、MCP、SKILL_SAVE
 ├── examples/
 │   ├── 01-profile-to-memory.md             3-2-1 → 档案 → 推送 → 验证
 │   ├── 02-today-plan.md                    今日开工卡
@@ -100,13 +101,13 @@ trae-agent-camp-02/
 │   └── 06-ai-news-brief.md                 资讯速览
 └── references/
     ├── course-source.md                    F-001~F-124 事实登记
-    ├── source-code.md                      源码核验事实（选录 S-001~S-052）
+    ├── source-code.md                      源码核验事实（选录 S-001~S-059）
     └── verification.md                     P0 核验、勘误四清单、缺口、四视角审查
 ```
 
 ## 分层导航
 
-### 概念文档（9 篇）
+### 概念文档（10 篇）
 
 | 序号 | 文档 | 核心内容 |
 |------|------|----------|
@@ -119,6 +120,7 @@ trae-agent-camp-02/
 | 06 | [多 Agent](concepts/06-multi-agent-superagent.md) | 两种形态、五条原则、总管技能安装用法、拆分四规则与交接单 |
 | 07 | [证据链排障](concepts/07-evidence-debugging.md) | 三件套、logs/traces、排错模板、先回退再取证 |
 | 08 | [边界与安全](concepts/08-boundaries-and-safety.md) | 硬边界、记忆与技能泄露面、双闸门、不可逆清单、脱敏 |
+| 09 | [模块内部](concepts/09-module-internals.md) | 技能生命周期、操作循环参数、Sentinel、MCP 路由、SKILL_SAVE 与三种运行形态 |
 
 ### 实战示例（6 篇）
 
@@ -143,28 +145,28 @@ trae-agent-camp-02/
 | 文档 | 内容 |
 |------|------|
 | [课程事实登记](references/course-source.md) | F-001~F-124，十类分组，课程原文与核验补充分开；含 2026-11-18 复读补充 |
-| [源码核验事实登记](references/source-code.md) | 选录 S-001~S-052，技能格式、校验、CLI、轨迹、Sentinel、提醒与 02 分支存在性 |
-| [P0 核验与对抗审查](references/verification.md) | 11 项核验（源码轮后 8✅/3⚠️）、勘误四张清单、10 项缺口、四视角 8 条意见 |
+| [源码核验事实登记](references/source-code.md) | 选录 S-001~S-059，技能格式、校验、CLI、轨迹、Sentinel、提醒、02 分支与新增模块 |
+| [P0 核验与对抗审查](references/verification.md) | 11 项核验（源码复读后 9✅/2⚠️）、勘误四张清单、10 项缺口、四视角 8 条意见 |
 
 ## 信任与生命周期
 
-- **P0 核验**：初轮 11 项中 4 项通过、7 项部分通过、0 项失败；2026-11-17 源码核验后为 8 项通过、3 项部分通过、0 项失败。
-- **事实分级**：课程原文 112 条、元信息 2 条、核验补充 3 条、社区反馈 1 条；源码核验另登记 36 条 S 事实；讲师个人实践（多助理小队、五条原则、公众号小队）均标【讲师口径】。
-- **status: draft 的理由**：02 课专属的 `camp/02-skill-builder` 分支、0.2.0 安装包、五个场景技能与 `channel: chat` 仍无公开来源；401/404 归因仍为课程经验口径（G-10）。
-- **stale_after**：2027-05-31。到期或触发以下任一条件时复核：① 训练营开设新一期或发布新安装包；② 02 课分支公开或合并回主干；③ superagent-lead 仓库变更可见性或安装方式。
+- **P0 核验**：初轮 11 项中 4 项通过、7 项部分通过、0 项失败；2026-11-17 源码核验后为 8 项通过、3 项部分通过；2026-11-18 源码复读后为 **9 项通过、2 项部分通过、0 项失败**。
+- **事实分级**：课程 F-001~F-124；源码核验另登记 43 条 S 事实（S-001~S-059 选录）；讲师个人实践（多助理小队、五条原则、公众号小队）均标【讲师口径】。
+- **status: stable 的理由**：五个场景技能、`chat` channel、`camp/02-skill-builder`、0.2.0 版本与 `SKILL_SAVE` 均已由公开仓库确认；剩余 ⚠️ 为 superagent-lead 仓库可达性与 401/404 归因，不影响教程主线。
+- **stale_after**：2027-05-31。到期或触发以下任一条件时复核：① 训练营开设新一期或发布新安装包；② 02 课分支合并回 main；③ superagent-lead 仓库变更可见性或安装方式。
 
 ## 已知边界
 
-1. **版本已确认一半**：公开的 main 与 camp/xiaoman 分支均为 versionName `0.1.0`；02 课的 `0.2.0` 安装包未取得（G-01 部分关闭，S-004）。
+1. **版本已确认**：main 为 `0.1.0`（versionCode 1），`camp/02-skill-builder` 为 `0.2.0`（versionCode 2）；0.2.0 安装包 zip 不在仓库中，只有课程附件（G-01 关闭，S-004）。
 2. **无校验信息**：课程安装包无校验和与签名信息（G-02）。
-3. **仓库已核验、分支缺失**：本地 clone 与 `origin` 均存在；远端只有 `main`、`camp/xiaoman`、`camp/xiaoman-web`、`ios/wda-hands`，**没有** `camp/02-skill-builder`；`superagent-lead` 是独立仓库，未核验（G-03 部分关闭，S-001、S-052）。
+3. **仓库与分支已核验**：远端包含 `main`、`camp/xiaoman`、`camp/xiaoman-web`、`camp/02-skill-builder`、`ios/wda-hands`；`superagent-lead` 是独立仓库，未核验（G-03 关闭，S-001、S-002、S-052）。
 4. **CLI 输出已核验**：`lint` 摘要为 `N skill(s) checked, N ok, N problem(s)`，`push` 输出 `pushed ...` 与 `skills reloaded`；`logs`、`traces pull/show` 行为与参数已确认（G-04 关闭，S-046~S-049）。
 5. **目录与格式已核验**：记忆、技能、轨迹目录与 Basic Memory 结构已由源码确认（G-05 关闭，S-008~S-013）。
 6. **多设备已核验**：CLI 原生支持 `--serial/-s`，可写在子命令前后（G-07 关闭，S-046）。
 7. **体验额度已过期**：课堂体验服务随结课失效，相关操作细节不收录（F-011、G-09）。
 8. **不做能力外推**：淘宝场景只比当天搜索结果，不承诺历史低价与跨平台；也不承诺能读微信/QQ 或控制电脑（F-100）。
-9. **02 课专属能力仍在公开分支之外**：五个场景技能（today-plan 等）与 `channel: chat` 未出现在公开的 camp/xiaoman 分支（G-10，S-035、S-038）。
-10. **时点边界**：本包反映 2026-11-18 的课程与源码口径；02 课分支若公开，第 3、5 篇的边界需复核。
+9. **02 课专属能力已公开**：五个场景技能、`channel: chat` 与 0.2.0 分支均已进入公开仓库（G-10 关闭，S-035、S-038、S-058）。
+10. **时点边界**：本包反映 2026-11-18 的课程与源码口径；新增的 MCP、网页版与 iOS 通道不在本课范围。
 
 ## 主题关联
 

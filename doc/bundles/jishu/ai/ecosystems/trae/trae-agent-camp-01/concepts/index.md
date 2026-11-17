@@ -12,6 +12,7 @@
 | 05 | [任务设计](05-task-prompt-design.md) | 四要素怎么落笔、长任务怎么拆、求助怎么写 |
 | 06 | [用 TRAE 读项目](06-trae-read-project.md) | 四个房间分别管什么、首次勘察怎么验收、改动落在哪一层 |
 | 07 | [安全与权限](07-safety-and-permissions.md) | 哪七个卡点必须人来做、屏幕内容去了哪里 |
+| 08 | [源码地图](08-source-map.md) | 十一个模块各管什么、想改一处该去哪个文件、怎么用 TRAE 读源码 |
 
 ```{toctree}
 :hidden:
@@ -25,4 +26,5 @@
 05-task-prompt-design
 06-trae-read-project
 07-safety-and-permissions
+08-source-map
 ```

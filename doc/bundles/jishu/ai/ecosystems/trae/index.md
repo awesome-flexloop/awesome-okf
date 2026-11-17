@@ -2,10 +2,10 @@
 type: category
 title: "TRAE Community 生态"
 okf_version: "0.2"
-description: "TRAE Community 生态知识包——19个知识包、180篇内容文档（含107概念+45示例+28信源），覆盖平台应用、扩展系统、学习资源、社区治理、战略资讯五大板块"
+description: "TRAE Community 生态知识包——19个知识包、182篇内容文档（含109概念+45示例+28信源），覆盖平台应用、扩展系统、学习资源、社区治理、战略资讯五大板块"
 total_bundles: 20
-total_content_docs: 180
-total_md_files: 256
+total_content_docs: 182
+total_md_files: 258
 verified: grep-verified
 generated: true
 status: stable
@@ -27,8 +27,8 @@ status: stable
 | 🔌 扩展系统 | [trae-templates](trae-templates/index.md) | L1 | 8 | 4 | 1 | 13 |
 | 🔌 扩展系统 | [trae-mcp](trae-mcp/index.md) | L1 | 6 | 3 | 1 | 10 |
 | 📚 学习资源 | [trae-learning](trae-learning/index.md) | L1 | 6 | 3 | 1 | 10 |
-| 📚 学习资源 | [trae-agent-camp-01](trae-agent-camp-01/index.md) | L1 | 8 | 3 | 3 | 14 |
-| 📚 学习资源 | [trae-agent-camp-02](trae-agent-camp-02/index.md) | L1 | 9 | 6 | 3 | 18 |
+| 📚 学习资源 | [trae-agent-camp-01](trae-agent-camp-01/index.md) | L1 | 9 | 3 | 3 | 15 |
+| 📚 学习资源 | [trae-agent-camp-02](trae-agent-camp-02/index.md) | L1 | 10 | 6 | 3 | 19 |
 | 📚 学习资源 | [awesome-trae](awesome-trae/index.md) | L0 | 3 | 1 | 1 | 5 |
 | 📚 学习资源 | [trae-demos](trae-demos/index.md) | L0 | 3 | 1 | 1 | 5 |
 | 👥 社区治理 | [trae-agents](trae-agents/index.md) | L0 | 3 | 1 | 1 | 5 |
@@ -40,9 +40,9 @@ status: stable
 | 📰 战略资讯 | [tushare-ai-office](tushare-ai-office/index.md) | L0 | 4 | 0 | 2 | 6 |
 | 📰 战略资讯 | [trae-one-click-deploy](trae-one-click-deploy/index.md) | L0 | 4 | 0 | 2 | 6 |
 | 📰 战略资讯 | [trae-weekly-update-20261115](trae-weekly-update-20261115/index.md) | L0 | 4 | 0 | 2 | 6 |
-| **合计** | **19 知识包** | | **107** | **45** | **28** | **180** |
+| **合计** | **19 知识包** | | **109** | **45** | **28** | **182** |
 
-> 注："内容文档"指 concepts/examples/references 目录下的实质性文档。含导航索引与 `spec/` 规范工作文件共 **256 个 .md 文件**。按 bundles 计数口径（含 `index.md` 的目录即计束），本分组目录树共 **20 束**——上表列 19 个知识包，另含 `spec/` 规范工作目录 1 束（frontmatter `total_bundles: 20` 与此一致）。
+> 注："内容文档"指 concepts/examples/references 目录下的实质性文档。含导航索引与 `spec/` 规范工作文件共 **258 个 .md 文件**。按 bundles 计数口径（含 `index.md` 的目录即计束），本分组目录树共 **20 束**——上表列 19 个知识包，另含 `spec/` 规范工作目录 1 束（frontmatter `total_bundles: 20` 与此一致）。
 
 ## 🖥️ 平台应用层
 
@@ -65,7 +65,7 @@ status: stable
 |--------|-----------|
 | [trae-learning](trae-learning/index.md) | 官方学习站——VitePress 文档站架构，自定义主题（Canvas 3D 地球仪+玻璃拟态），Vibecoding 理念（心流/意图/反馈），4 篇指南+6 篇实战教程三级递进，GitHub Pages 自动部署，双语 Issue 模板贡献闭环 |
 | [trae-agent-camp-01](trae-agent-camp-01/index.md) | 训练营第二期第一课教程——手机 Agent 的七件事与 ReAct 循环、安装与方舟双模型配置、记忆与提醒、任务四要素、用 TRAE 只读读项目、人类在环的七个卡点（源码轮 P0 7✅/3⚠️/0❌，stable） |
-| [trae-agent-camp-02](trae-agent-camp-02/index.md) | 训练营第二期第二课教程——记忆/技能/程序三层改造面、3-2-1 个人档案与 adb 推送、四问写成 SKILL.md、五场景试改验循环、程序层自建技能、多 Agent 总管技能与证据链排障（源码轮 P0 8✅/3⚠️/0❌，draft） |
+| [trae-agent-camp-02](trae-agent-camp-02/index.md) | 训练营第二期第二课教程——记忆/技能/程序三层改造面、3-2-1 个人档案与 adb 推送、四问写成 SKILL.md、五场景试改验循环、程序层自建技能、多 Agent 总管技能与证据链排障（源码复读 P0 9✅/2⚠️/0❌，stable） |
 | [awesome-trae](awesome-trae/index.md) | awesome-list 资源索引——8 大分类双层架构，跨仓库 hub 索引模式（导向姊妹仓库），中英双语维护，4 维权重评分审核机制（Relevance 30%+Quality 30%+Documentation 20%+Impact 20%） |
 | [trae-demos](trae-demos/index.md) | 期数制 Demo 展示——period-N 目录组织，Markdown 驱动双语 Demo 卡片，多场景 Issue 模板投稿，TRAE Usage 40% 权重差异化审核 |
 

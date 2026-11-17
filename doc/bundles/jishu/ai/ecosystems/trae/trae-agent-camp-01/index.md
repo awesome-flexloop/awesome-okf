@@ -95,20 +95,21 @@ trae-agent-camp-01/
 │   ├── 04-memory-and-reminders.md    偏好写入/覆盖/删除、提醒的真实边界
 │   ├── 05-task-prompt-design.md      四要素、官方示例拆解、模板与反模式
 │   ├── 06-trae-read-project.md       四个房间、三问勘察、改动落点顺序
-│   └── 07-safety-and-permissions.md  七个卡点、不可逆清单、截图出设备
+│   ├── 07-safety-and-permissions.md  七个卡点、不可逆清单、截图出设备
+│   └── 08-source-map.md              十一个模块、改动落点、源码阅读路径
 ├── examples/
 │   ├── 01-self-check-two-models.md   两条指令自检与失败分诊
 │   ├── 02-taobao-notebook-task.md    主线任务复现、结算页四项核对
 │   └── 03-memory-and-reminder.md     偏好与提醒的完整验收
 └── references/
     ├── course-source.md              F-001~F-095 事实登记
-    ├── source-code.md                源码核验事实（S-001~S-051）
+    ├── source-code.md                源码核验事实（S-001~S-059）
     └── verification.md               P0 核验、勘误四清单、缺口、四视角审查
 ```
 
 ## 分层导航
 
-### 概念文档（8 篇）
+### 概念文档（9 篇）
 
 | 序号 | 文档 | 核心内容 |
 |------|------|----------|
@@ -120,6 +121,7 @@ trae-agent-camp-01/
 | 05 | [任务设计](concepts/05-task-prompt-design.md) | 四要素、两个官方示例、可复制模板、五条反模式、求助模板 |
 | 06 | [用 TRAE 读项目](concepts/06-trae-read-project.md) | app/core-memory/skills/hands 四个房间、三问勘察、只讲不改、四步闭环 |
 | 07 | [安全与权限](concepts/07-safety-and-permissions.md) | 七个卡点、不可逆动作清单、Key 红线、截图出设备、最小权限建议 |
+| 08 | [源码地图](concepts/08-source-map.md) | 十一个模块的职责、改动落点速查、用 TRAE 读源码的三问 |
 
 ### 实战示例（3 篇）
 
@@ -141,7 +143,7 @@ trae-agent-camp-01/
 | 文档 | 内容 |
 |------|------|
 | [课程事实登记](references/course-source.md) | F-001~F-095，十二类分组，课程原文与核验补充分开登记；含 2026-11-18 复读补充 |
-| [源码核验事实登记](references/source-code.md) | S-001~S-051，包名与版本、目录、记忆/技能格式、Agent 循环、Sentinel、提醒、模型客户端、轨迹与 CLI |
+| [源码核验事实登记](references/source-code.md) | S-001~S-059，包名与版本、目录、记忆/技能格式、Agent 循环、Sentinel、提醒、模型客户端、轨迹、CLI 与新增 MCP/Web/iOS 模块 |
 | [P0 核验与对抗审查](references/verification.md) | 10 项核验（源码轮后 7✅/3⚠️）、勘误四张清单、8 项缺口、四视角 7 条意见 |
 
 ## 信任与生命周期
@@ -153,15 +155,16 @@ trae-agent-camp-01/
 
 ## 已知边界
 
-1. **版本已确认，构建号仍缺**：公开的 main 与 camp/xiaoman 分支均为 versionName `0.1.0`、versionCode 1；课程 APK 的具体构建号未提供（G-01 部分关闭，S-004）。
+1. **版本已确认，构建号仍缺**：main 为 `0.1.0`、versionCode 1；`camp/02-skill-builder` 为 `0.2.0`、versionCode 2；课程 APK 的具体构建号未提供（G-01 部分关闭，S-004）。
 2. **无附件校验信息**：未提供 APK 校验和与签名，无法验证附件完整性（G-02）。
-3. **仓库已核验**：本地 clone 与 `origin`（`aduoge/xiaoman`）均存在；02 课分支未公开（G-03 关闭，S-001）。
+3. **仓库已核验**：本地 clone 与 `origin`（`aduoge/xiaoman`）均存在；02 课分支 `camp/02-skill-builder` 现已公开（G-03 关闭，S-001、S-002）。
 4. **费用不可复核**：几毛到一块钱为讲师估计，无账单或用量截图（G-04）。
 5. **内部实现已核验**：记忆路径与 Basic Memory 格式、提醒调度（`AlarmManager.setAndAllowWhileIdle`、非精确、重启清空）均已由源码确认（G-05、G-06 关闭，S-011~S-013、S-030~S-032）。
 6. **许可证已确认**：MIT（G-07 关闭，S-005）。
-7. **设备覆盖有限**：仅安卓与鸿蒙 5 以下；iPhone 与鸿蒙 5 及以上本期不支持（F-005）。
+7. **课程手机端覆盖有限**：课程只讲安卓与鸿蒙 4.x 及以下；iPhone 与鸿蒙 5 及以上不在课程手机端范围（F-005、F-092）。源码另提供网页版与 iOS WDA 通道，属课后扩展，本包不展开。
 8. **课程运营内容已过期**：课堂体验额度有效期至 2026-11-13 21:00，本包不提供其操作细节（F-090）。
 9. **不做能力外推**：淘宝案例只证明「能停在确认前」，不证明可自动完成支付（见示例二的「不要外推」）。
+10. **新模块不在本课范围**：MCP、网页版、iOS 与技能自建分支是 2026-11 后新增能力，第一课只用到记忆、技能、手机操作与提醒（S-053~S-059）。
 
 ## 主题关联
 

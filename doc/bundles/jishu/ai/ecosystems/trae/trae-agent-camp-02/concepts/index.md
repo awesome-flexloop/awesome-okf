@@ -13,6 +13,7 @@
 | 06 | [多 Agent](06-multi-agent-superagent.md) | 什么时候该拆、五条原则、交接单怎么写、公众号小队怎么分 |
 | 07 | [证据链排障](07-evidence-debugging.md) | 运行 ID 与 traces 怎么取、怎么让 TRAE 只改最小一处 |
 | 08 | [边界与安全](08-boundaries-and-safety.md) | 本期不做什么、文件泄露面在哪、双闸门怎么守 |
+| 09 | [模块内部](09-module-internals.md) | 技能生命周期、循环参数、Sentinel、MCP 路由与 SKILL_SAVE 的实现 |
 
 ```{toctree}
 :hidden:
@@ -27,4 +28,5 @@
 06-multi-agent-superagent
 07-evidence-debugging
 08-boundaries-and-safety
+09-module-internals
 ```
