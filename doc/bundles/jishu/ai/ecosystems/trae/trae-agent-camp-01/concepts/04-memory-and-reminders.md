@@ -23,7 +23,28 @@ sources:
 记住：我买东西喜欢简单实用的款式。
 ```
 
-然后点开 App 底部的「记忆」页，能看到刚才这条（F-057）。课程说明记忆以 Markdown 文件形式存在手机的 App 目录里（F-058）。
+然后点开 App 底部的「记忆」页，能看到刚才这条（F-057）。源码确认：记忆是 Markdown 文件，课程分支位于 `/sdcard/Android/data/dev.xiaoman.app/files/memory/`，每篇笔记一个文件；只有 `memory_forget`（说「忘记……」）才会真正删除文件（S-008、S-011、S-015）。
+
+### 记忆文件的格式
+
+源码采用 Basic Memory 风格（S-013）：
+
+```markdown
+---
+title: 买东西的偏好
+type: preference
+permalink: preference/shopping
+tags: []
+
+---
+
+## Observations
+- [preference] 买东西先看评价，预算宁低勿高 (来源：对话)
+
+## Relations
+```
+
+观察行必须是 `- [类别] 内容 #标签 (上下文)`；整个目录可以直接拷进 Obsidian 编辑（S-014）。写入采用临时文件 + 原子重命名，但 adb push 是整文件覆盖，手动推送前先备份。
 
 这条设计值得注意：**记忆不是藏在模型参数里的「印象」，而是你能看见、能删除的文件**。这意味着三件事：
 
@@ -65,6 +86,8 @@ sources:
 发送后把 App 切到后台，等通知弹出来。
 
 ### 提醒的真实边界
+
+源码确认（S-030~S-032）：提醒由聊天工具 `reminder_set` 设置，时间参数是 ISO-8601 本地时间；调度使用 `AlarmManager.setAndAllowWhileIdle`——Doze 下也能触发，但属**非精确定时**，不需要精确闹钟权限；它只触发一次，手机重启会清空闹钟（代码注释写明尚无持久化）。通知需要 POST_NOTIFICATIONS 权限。
 
 课程明确了两条限制（F-069）：
 

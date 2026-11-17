@@ -82,6 +82,18 @@ App 要填两个模型：聊天模型与操作模型，操作模型要能看图�
 
 官方模型列表把 doubao-seed-2-1-pro-260915 的能力列为深度思考、文本生成、多模态理解、GUI 任务处理、工具调用与结构化输出（F-080）。**多模态理解**与 **GUI 任务处理**就是「操作模型要能看图」的官方依据。
 
+## 源码里的循环与模块
+
+| 源码事实 | 值 / 位置 |
+|----------|-----------|
+| Agent 默认参数 | `maxSteps=30`、`stuckRepeats=3`、`historyWindow=8`、`maxNodes=120`、`learnFromSuccess=true`（S-017） |
+| 解析失败上限 | 连续 3 次解析失败即结束本次任务（S-019） |
+| 聊天工具 | `memory_search`、`memory_read`、`memory_write`、`memory_forget`、`list_skills`、`phone_task`；课程分支另有 `reminder_set`（S-016） |
+| 模块映射 | `core-memory` 记忆、`core-skills` 技能、`hands` 读屏点击、`core-sentinel` 闸门、`core-agent` 循环、`app` 界面与运行时（S-008~S-010、S-019、S-024） |
+| 成功沉淀 | 任务成功后写入 `howto/<技能名或包名>`，下次任务检索同类笔记注入操作提示词（S-021、S-022） |
+
+> 这张表是 [源码核验事实登记](../references/source-code.md) 的摘要；课程讲的「五类部件」在代码里就是这些模块。
+
 ## 用这个结构做排障
 
 一旦你记住了「聊天」与「操作」是两条链，排障就不再靠猜：

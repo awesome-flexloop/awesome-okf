@@ -29,6 +29,16 @@ sources:
 
 > 这两条命令由 TRAE 运行。你只需要知道：**运行 ID 是这次执行的身份证，traces 是这次执行的分步记录。**
 
+### 这三样东西在源码里长什么样
+
+| 证据 | 源码事实 | 格式 |
+|------|----------|------|
+| 运行 ID | App 生成 `app-YYYYMMDD-HHMMSS-xxxx`，CLI 生成 `cli-YYYYMMDD-HHMMSS-xxxx`（S-045） | 同时是轨迹目录名 |
+| 轨迹 | 目录 `<external files>/traces/<run_id>/`（S-043） | `trace.jsonl` 每事件一行；`audit.jsonl` 每次闸门决策一行；`step-<n>.png` 逐步截图 |
+| 日志 | logcat 标签课程分支为 `Xiaoman`（S-044） | `<run_id> <EventKind> <json>` |
+
+`logs` 可按 `--run-id` 过滤；`traces show` 在本地找不到该 run 时会先 `adb pull`（S-049）。API Key 在轨迹里会被掩码为 `***`（S-042），但手机号、地址不会自动脱敏，分享前仍要自己处理。
+
 ## 交给 TRAE 的排错模板
 
 ```text

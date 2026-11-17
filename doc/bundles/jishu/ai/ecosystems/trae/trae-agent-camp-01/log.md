@@ -1,5 +1,25 @@
 # 更新日志
 
+## 2026-11-17
+
+- **源码核验轮**：只读核验本地 `xiaoman` 仓库（`main` 580fdf7 与 `origin/camp/xiaoman`），新增 [源码核验事实登记](references/source-code.md)（S-001~S-051）。
+- **关键确认**：课程分支包名为 `dev.xiaoman.app`、CLI 入口 `cli/xiaoman.py`、版本 0.1.0；记忆为 Basic Memory Markdown，路径 `<external files>/memory/`；提醒使用 `AlarmManager.setAndAllowWhileIdle`（非精确、重启清空）；Sentinel 内置 17 个确认词、授权分 ONCE/TASK；许可证 MIT。
+- **P0 复核**：10 项 → **7 ✅ / 3 ⚠️ / 0 ❌**；G-03、G-05、G-06、G-07 关闭，G-01 部分关闭；G-02、G-04、G-08 仍开放。
+- **状态调整**：`status` 由 `draft` 升为 `stable`——核心机制已有源码或官方文档双重确认。
+- **正文改动**：第 2、3、4、7 篇追加源码小节；index 与 references/index 同步；示例与任务设计未改。
+- **门禁**：本轮结束复跑 toctree、总索引、UTF-8、链接与 Sphinx dummy 构建。
+
+### 门禁记录（2026-11-17）
+
+| 门禁 | 结果 |
+|------|------|
+| toctree 完整性 | 通过 |
+| 总索引计数对账 | 通过：9 域 / 65 组 / 741 束 |
+| UTF-8 编码 | 通过：13389 个文件 |
+| Markdown 链接 | 通过：本束全部相对链接有效 |
+| 库规模基线 | 通过：总索引 741；行尾归一残差 +43430 属未提交工作区变更 |
+| Sphinx dummy 构建 | 通过：构建成功，364 条既有警告，本束 0 告警 |
+
 ## 2026-11-16
 
 - **模式独立入库**：将 [五个可迁移模式](patterns.md) 逐条去重后登记入 SpecWeave 主仓方法论模式库，新增 5 个 L1-draft 条目——`base-first-minimal-customization`（governance-strategy）、`explain-only-reconnaissance`、`four-element-task-brief`、`screenshot-step-cost-trimming`（ai-collaboration）、`split-chain-triage`（tools-automation）。

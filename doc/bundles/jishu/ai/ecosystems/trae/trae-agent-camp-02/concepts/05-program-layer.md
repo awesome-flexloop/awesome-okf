@@ -92,13 +92,15 @@ sources:
 
 ## 分支与安装包
 
-| 项 | 内容 |
-|----|------|
-| 分支 | https://github.com/aduoge/xiaoman/tree/camp/02-skill-builder（课程版源码未改） |
-| 获取 | 网页 Code → Download ZIP；会用 git 的执行 `git checkout camp/02-skill-builder` |
-| 说明 | 分支里 docs/skills.md 新增「在手机上用一句话新建、修改技能」一节 |
-| 安装包 | `xiaoman-skill-builder-0.2.0.zip`，解压出 apk 再安装 |
-| 签名 | 与课程版签名一致，可直接覆盖安装，记忆与技能都还在 |
+| 项 | 课程口径 | 源码/远端核验 |
+|----|----------|----------------|
+| 分支 | `camp/02-skill-builder` | 远端只有 `main`、`camp/xiaoman`、`camp/xiaoman-web`、`ios/wda-hands`，**未发现该分支**（S-001） |
+| 获取 | Code → Download ZIP；或用 git checkout | 按 S-001，课程链接可能返回 404 |
+| 技能自建能力 | 手机上一句话新建、修改、删除技能 | 公开的 `camp/xiaoman` 分支没有 skill-builder 代码，也没有 `chat` channel（S-035、S-052） |
+| 安装包 | `xiaoman-skill-builder-0.2.0.zip` | 课程单源，未取得该文件（S-004 只确认公开分支版本为 0.1.0） |
+| 签名 | 与课程版一致，可覆盖安装 | 课程单源，未核验 |
+
+> **结论**：第 5 篇的「手机自建技能」仍是**课程单源**；分支与 0.2.0 安装包无法从公开仓库核验。可行的学习路径是：先在公开的 `camp/xiaoman` 分支上练技能层（lint/push 与记忆格式都已由源码确认），程序层按课程步骤做；遇到链接 404 时以课程群与 TRAE 论坛的通知为准。
 
 ### 回退的风险
 

@@ -40,7 +40,9 @@ python cli/xiaoman.py lint skills/examples/<技能名>
 python cli/xiaoman.py push skills/examples/<技能名>
 ```
 
-回复里出现 `0 problem(s)` 与 `pushed`，表示校验通过且已推送。
+`lint` 把摘要输出到 stderr，格式为 `N skill(s) checked, N ok, N problem(s)`；每个问题输出 `path:line: message`，有问题的退出码为 1。`push` 会先 lint，未通过直接拒绝；通过后删除并重建远端 `skills/<技能名>/`，逐个 `adb push` 文件，再广播重新加载，输出 `pushed <本地目录> -> <远端目录> (<文件列表>)` 与 `skills reloaded; ...`（S-047、S-048）。
+
+> 课程口径说「看到 `0 problem(s)` 与 `pushed` 就算通过」，是同一件事的口语化：`0 problem(s)` 是摘要行的子串，`pushed` 是推送行的开头；**`skills reloaded` 才是推送完成的标志**（S-050）。只看 `0 problem(s)` 不构成推送成功。
 
 想单独再推一次，直接对 TRAE 说「把 skills/examples/today-plan 推送到手机」（F-044）。
 
@@ -103,6 +105,6 @@ python cli/xiaoman.py push skills/examples/<技能名>
 
 - [ ] 第 1 步的原话已经记下来（后面要原样复测）
 - [ ] 提示词里包含四问的四块：触发、步骤、检查、确认
-- [ ] TRAE 回复里有 `0 problem(s)` 与 `pushed`
+- [ ] TRAE 回复里出现 `N skill(s) checked, N ok, 0 problem(s)` 与 `pushed ...`，并出现 `skills reloaded`
 - [ ] 手机上原样复测，行为按新规则变化
 - [ ] 检查点（页面/列表/记忆/通知）逐项核对过
