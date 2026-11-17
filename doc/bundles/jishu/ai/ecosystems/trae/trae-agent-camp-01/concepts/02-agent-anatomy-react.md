@@ -4,11 +4,14 @@ title: "Agent 解剖：模型外面围着哪几块"
 description: "用七件事与 ReAct 循环解释手机 Agent 的组成：记忆、技能、工具、闸门、运行时各自负责什么，以及模型为什么不在手机上"
 tags: [trae, agent, react, architecture, memory, skills]
 generated: 2026-11-15
-status: draft
+status: stable
 sources:
   - id: course-doc
     resource: "/references/course-source.md"
     title: "课程事实登记"
+  - id: react-paper
+    resource: "https://arxiv.org/abs/2210.03629"
+    title: "ReAct: Synergizing Reasoning and Acting in Language Models"
 ---
 
 # Agent 解剖：模型外面围着哪几块
@@ -58,6 +61,26 @@ flowchart LR
 1. **每一轮都要「看一次屏幕」**。看屏幕不是免费的——课程说明手机操作时的截图会发给你配置的模型做判断（F-068）。所以步数直接决定成本，这一点在 [05 任务设计](05-task-prompt-design.md) 里会变成可操作的设计规则。
 2. **「拿不准就问」是循环里的正常分支**，不是失败。课程明确付款、发送、删除前都会先问你（F-067）。
 3. **循环可能被打断**。滑块、验证码、权限被系统回收都会让循环停住，恢复方式是人工处理后说「继续」（F-053）。
+
+## 论文里的 ReAct 与手机上的 ReAct
+
+课程说的 ReAct 与 2022 年论文 [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)（Yao et al., ICLR 2023）是同一个机制，但工程形态不同。论文用纯文本协议做少样本提示，手机 App 用「聊天模型 + 操作模型」两条链：
+
+| 维度 | 论文 ReAct（2022） | 小满（手机工程实现） |
+|------|--------------------|----------------------|
+| 推理载体 | 自然语言 `Thought:` | 聊天模型规划；操作模型直接输出 JSON 动作 |
+| 动作编码 | 文本 `Action: search[...]` | 结构化动作：点击、长按、输入、滑动、返回、等待、打开 App |
+| 观察 | 工具返回的文本 | 屏幕截图 + 无障碍节点树（≤120 节点） |
+| 循环上限 | 按任务设步数 | `maxSteps=30`；连续 3 次屏幕不变判卡住（S-017、S-019） |
+| 安全 | 论文未展开 | `core-sentinel` 拒绝/询问/允许，付款、发送、删除前确认（S-024~S-027） |
+| 经验沉淀 | 无 | 成功后写 `howto` 笔记，下次任务检索注入（S-021、S-022） |
+
+这张表有两个实操含义：
+
+- **Thought 不必是可见的自然语言**。小满的操作模型用 JSON 动作隐含了「这一步做什么」的判断；聊天模型负责把目标拆成子目标。看不到 `Thought:` 不等于没有推理。
+- **工程约束比论文更重**。论文的失败分析里 47% 是推理/循环错误、23% 是检索结果无用；手机场景还要再加一条「屏幕没变化」。所以 `maxSteps`、卡死检测与 Sentinel 不是附加功能，而是让循环可停、可接管、可审计的必要部件。
+
+论文的完整实验、失败模式与工程化对照见 Hello-Agents 知识包的 [智能体范式与 ReAct](../../../datawhale/hello-agents/concepts/agent-paradigms-react.md)。
 
 ## 七件事与五部件的对应关系
 

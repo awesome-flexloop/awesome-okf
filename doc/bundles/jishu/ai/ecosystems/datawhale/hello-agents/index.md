@@ -70,7 +70,7 @@ Hello-Agents 是一本理论与实战并重的智能体系统构建指南。教�
 
 | 概念 | 说明 |
 |------|------|
-| 智能体范式与ReAct | ReAct、Plan-and-Solve、Reflection三大经典范式的原理与实现 |
+| 智能体范式与ReAct | ReAct 论文实验与失败模式、Plan-and-Solve、Reflection 三大经典范式的原理、实现与工程化对照 |
 | Agent框架开发 | 从手动实现到框架抽象，AutoGen/AgentScope/CAMEL/LangGraph对比与HelloAgents自建 |
 | 记忆系统 | 四层记忆架构（工作/情景/语义/感知）与RAG检索增强生成 |
 | 上下文工程 | GSSC流水线、上下文腐蚀、JIT检索、长时程任务管理 |
