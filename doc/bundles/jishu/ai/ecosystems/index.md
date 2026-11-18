@@ -9,7 +9,7 @@ description: "以厂商、品牌与开源社区为中心的生态级知识包集
 
 以厂商、品牌与开源社区为中心的生态级知识包集群——多仓库组织目录（trae、anthropic、deepseek、tencent、datawhale 等）与单厂产品束并存。
 
-本类共 **110 个知识包**，分布于 **19 个生态/项目目录**。
+本类共 **114 个知识包**，分布于 **19 个生态/项目目录**。
 
 ## 束导航
 
@@ -26,12 +26,12 @@ description: "以厂商、品牌与开源社区为中心的生态级知识包集
 | [🔎 DeepSeek 网页搜索与抓取 API](deepseek-search-fetch/index.md) | 1 | Search/Fetch 双原始 JSON API——实时网页搜索与单页 Markdown 抓取、搜索语法、质量评分、错误重试、按次计费与账号级 QPS（与 deepseek 基础设施技术束互补区分） |
 | [🤗 Hugging Face Inference Providers × OpenRouter 路由教程](hf-openrouter-inference-providers/index.md) | 1 | 2026-11-16 HF 把语言模型路由切到 OpenRouter——三协议接入、默认路由与策略后缀、提示词缓存粘滞、无加价计费与按供应商用量拆分；附两家官方口径冲突登记与对抗审查（draft） |
 | [🦞 网易有道开源生态](netease-youdao/index.md) | 6 | 网易有道开源生态——双语 Embedding/RAG（BCEmbedding/QAnything）、语音合成（Confucius4-TTS/EmotiVoice）、AI Agent 桌面应用（LobsterAI）与学术搜索（ScholarClaw） |
-| [🐧 腾讯开源生态](tencent/index.md) | 19 | 腾讯系开源与商业项目——CodeBuddy、WeKnora、AI 红队平台、ncnn 推理框架、Buddy 系列与 MusicBuddy、LightVela Personal Agent 产品观察、腾讯会议 CLI、TencentDB Agent Memory 记忆系统、企业微信 5.0.10/5.0.12 版本快照与「话题」场景示例页核验、WorkBuddy 官方站点与四区文档全站知识包、WorkBuddy 开放平台公告/智能硬件/开发者文档，以及资料库协作与工作台实践分析 |
+| [🐧 腾讯开源生态](tencent/index.md) | 22 | 腾讯系开源与商业项目——CodeBuddy、WeKnora、AI 红队平台、ncnn 推理框架、Buddy 系列与 MusicBuddy、LightVela Personal Agent 产品观察、腾讯会议 CLI、TencentDB Agent Memory 记忆系统、企业微信 5.0.10/5.0.12 版本快照与「话题」场景示例页核验、企业微信智能机器人 Python SDK / CLI / 套件 Skill 源码教程、WorkBuddy 官方站点与四区文档全站知识包、WorkBuddy 开放平台公告/智能硬件/开发者文档，以及资料库协作与工作台实践分析 |
 | [🚀 TRAE Community 生态](trae/index.md) | 20 | 字节跳动 AI 编程 IDE 社区——平台应用、技能/模板/MCP 扩展、学习资源、社区治理，以及「一键部署」厂商公告解读与训练营两课的手机 Agent 教程（从零可用 → 记忆/技能/程序改造） |
 | [🌋 火山引擎（Volcengine）AI 产品生态](volcengine/index.md) | 1 | Ark 大模型平台、Computer-Use/Mobile-Use Agent、Viking AI 搜索推荐、机器学习平台与云手机等产品分析（与 volcengine-agent Agent 生态束并存互补） |
 | [🤝 火山引擎 Agent 生态（AgentKit + 共建计划）](volcengine-agent/index.md) | 1 | AgentKit 产品与架构（VEADK 框架、SDK/CLI、应用场景）与 Agent 共建计划（贡献方向、参与指南、奖励认可） |
 | [🧪 AtomGit AI 最佳实践](atomgit-ai/index.md) | 1 | AtomGit AI 平台最佳实践——平台能力、使用模式与工程化建议 |
-| [⚡ 秒悟（Miaowu/Meoo）AI 平台](miaowu/index.md) | 7 | 秒悟 AI 应用平台——大使入驻指南、实训案例（7 实操场景 + 5 步应用搭建法）、应用赏金广场（AI Builder Growth 共创计划：25 条共创技能清单）、产品增长 Skill 包选型与使用教程（22 条清单 + 六技能实战 + 五阶段闭环）、CLI 部署与开放平台集成指南、产品功能全景指南（14 官方页 150 条事实）、「豆掌柜」拼豆店门店管理副业案例拆解 |
+| [⚡ 秒悟（Miaowu/Meoo）AI 平台](miaowu/index.md) | 8 | 秒悟 AI 应用平台——大使入驻指南、实训案例（7 实操场景 + 5 步应用搭建法）、应用赏金广场（AI Builder Growth 共创计划：25 条共创技能清单）、产品增长 Skill 包选型与使用教程（22 条清单 + 六技能实战 + 五阶段闭环）、CLI 部署与开放平台集成指南、产品功能全景指南（14 官方页 150 条事实）、「豆掌柜」拼豆店门店管理副业案例拆解、副业接单操作教程（六步方法与 43 条教程构造） |
 | [🏢 Octo Platform 平台教程](octo-platform/index.md) | 1 | 明略科技 Octo 多 Agent 协作平台——平台架构、核心能力与使用指南 |
 | [Kanzan AI 场景与应用工程](kanzan/index.md) | 1 | 公开中文站点概念与方法教程——场景与知识治理、MCP/Skills、工作事件、产品边界、成本交付与研究验证；作者自述分层，非生产操作教程 |
 

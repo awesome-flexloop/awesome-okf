@@ -1,7 +1,7 @@
 ---
 okf_version: "0.2"
 title: 秒悟（Miaowu/Meoo）AI 平台
-description: 秒悟（Meoo）AI 应用平台中文教程——大使入驻指南、实训案例、应用赏金广场（AI Builder Growth 共创计划：25 条共创技能清单）、产品增长 Skill 包选型与使用教程（22 条清单与六技能实战）、CLI 部署与开放平台集成指南、产品功能全景指南、「豆掌柜」拼豆店门店管理副业案例拆解。
+description: 秒悟（Meoo）AI 应用平台中文教程——大使入驻指南、实训案例、应用赏金广场（AI Builder Growth 共创计划：25 条共创技能清单）、产品增长 Skill 包选型与使用教程（22 条清单与六技能实战）、CLI 部署与开放平台集成指南、产品功能全景指南、「豆掌柜」拼豆店门店管理副业案例拆解、副业接单操作教程（六步方法与 43 条教程构造）。
 ---
 
 # 秒悟（Miaowu/Meoo）AI 平台
@@ -15,6 +15,7 @@ description: 秒悟（Meoo）AI 应用平台中文教程——大使入驻指南
 * [miaowu-cli-open-guide/](miaowu-cli-open-guide/index.md) —— 秒悟 CLI 部署与开放平台集成指南（个人 CLI/阿里云 BYOC/团队 token 三路径，4 源 74 条事实）
 * [miaowu-product-guide/](miaowu-product-guide/index.md) —— 秒悟产品功能全景指南（14 官方页 150 条事实：模式/模型/Web/小程序/云服务/AI/素材/技能/连接器）
 * [miaowu-douzhanggui-case/](miaowu-douzhanggui-case/index.md) —— 「豆掌柜」拼豆店门店管理副业案例拆解（单源案例：需求发现/工具层降摩擦/客户开发与试用/成交边界与洞察，60 条事实）
+* [miaowu-side-hustle-tutorial/](miaowu-side-hustle-tutorial/index.md) —— 秒悟副业接单教程（六步：选题观察/需求假设/首版构建/跑店试用/报价维护/验收；与案例束互补，43 条教程构造）
 
 ```{toctree}
 :hidden:
@@ -27,5 +28,6 @@ miaowu-growth-skills/index
 miaowu-cli-open-guide/index
 miaowu-product-guide/index
 miaowu-douzhanggui-case/index
+miaowu-side-hustle-tutorial/index
 log
 ```
