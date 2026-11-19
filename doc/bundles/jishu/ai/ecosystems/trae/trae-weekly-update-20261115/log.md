@@ -94,6 +94,7 @@ status: draft
 - 主仓 `pre-commit` hook 全项 EXIT=0（敏感信息／模式文档／PEP 563／Ruff／并发安全），**未使用任何 `SKIP` 或 `--no-verify`**。
 - **干净克隆验证**：Windows 下 `git clone --local`（hardlink）在系统临时目录报 `Improper link` 而失败，改 `git -c core.longpaths=true clone --no-hardlinks` 成功；在克隆出的提交态复跑三脚本 + `check-asset-baseline` 全部 EXIT=0，残差 +0。工作区与 archive 的 UTF-8 文件数差 `13543 − 13529 = 14`，恰为被 gitignore 的 `.spec/` 内部工作稿 14 个 md，由 `check-asset-baseline` 的「.spec/ 泄漏守卫」独立印证，差额闭合。
 - **不 push**；未改写历史（无 `amend` / `reset`）；未代改他方 WIP（本次工作区无并发修改）。
+- 上表记录的是**主交付提交**；此后若仅为回填门禁结论或任务勾选再提交，不改变知识内容，子模块指针最终值一律以主仓 `git ls-tree HEAD projects/awesome-okf-xs` 为准。
 
 ## 2026-11-16
 
