@@ -2,7 +2,7 @@
 okf_version: "0.2"
 type: group
 title: "🔧 开发工具与开源协作"
-description: "开发工具与开源协作实践——Git 版本控制与团队协作、Git 进阶、网盘同步、GitHub 平台（Gist/Actions/CLI）、开源项目参与与写作指南、Plane 项目管理自托管、钉钉工作区 CLI"
+description: "开发工具与开源协作实践——Git 版本控制与团队协作、Git 进阶、网盘同步、GitHub 平台（Gist/Actions/CLI）、开源项目参与与写作指南、Plane 项目管理自托管、钉钉工作区 CLI、SkylineVPN CLI 发行工程"
 ---
 
 # 🔧 开发工具与开源协作
@@ -20,6 +20,7 @@ description: "开发工具与开源协作实践——Git 版本控制与团队�
 | **Opensource** | 开源参与指南、开启开源项目、README 模板、无版权图库、程序员常用网站、public-apis 公共 API 清单 | [opensource/](opensource/index.md) |
 | **Plane** | 开源项目管理平台自托管教程——Community/Commercial/Airgapped 三套版本与 AGPL 边界、Work Items/Cycles/Modules 三层时间尺度、五视图与 Pages/Wiki、部署运维与选型边界 | [plane/](plane/index.md) |
 | **钉钉工作区 CLI** | 面向人与 AI Agent 的钉钉命令行——命令契约模型、静态端点管线、20 个服务域、OAuth 多组织身份、输出与 Schema 契约、安全预览与审计、Agent 技能与事件、工程门禁与边界 | [dingtalk-workspace-cli/](dingtalk-workspace-cli/index.md) |
+| **SkylineVPN CLI** | 封闭二进制的公开发行工程——命令行与平台矩阵、CI 束→dist→Release 双寻址拓扑、安装期双哈希校验、命中数断言与递归泄漏扫描、身份锁与发布门、信任边界 | [skylinevpn-cli/](skylinevpn-cli/index.md) |
 
 ## 学习路径建议
 
@@ -27,7 +28,8 @@ description: "开发工具与开源协作实践——Git 版本控制与团队�
 2. **平台协作**：github（Gist 轻量分享 → Actions 自动化 → GitHub CLI 命令行）
 3. **开源实践**：opensource（参与贡献 → 开启项目 → README 写作 → 图库与网站资源）
 4. **项目协作平台**：plane（定版本 → 建三层工作模型 → 配视图与文档 → 部署与生产加固）
-5. **交叉阅读**：git 的分支模型配合 github 的 Actions 触发事件、opensource 的贡献流程构成「开源协作全链路」；plane 承接「代码协作之上的任务与进度协作」，其 GitHub/GitLab 集成与 github 束互补
+5. **产品发布**：skylinevpn-cli（发行拓扑 → 暂存管线 → 身份与泄漏门 → 发布 Runbook）
+6. **交叉阅读**：git 的分支模型配合 github 的 Actions 触发事件、opensource 的贡献流程构成「开源协作全链路」；plane 承接「代码协作之上的任务与进度协作」，其 GitHub/GitLab 集成与 github 束互补；skylinevpn-cli 把 github 束的 Release 概念推进到完整的供应链门禁
 
 ```{toctree}
 :hidden:
@@ -40,4 +42,5 @@ github/index
 opensource/index
 plane/index
 dingtalk-workspace-cli/index
+skylinevpn-cli/index
 ```
