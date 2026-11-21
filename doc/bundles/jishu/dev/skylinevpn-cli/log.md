@@ -10,7 +10,7 @@ status: stable
 
 ## 0. 任务与场景判定
 
-- **输入**：`\\10.16.11.3\ai\notebook\libs\skylinevpn\skylinevpn-cli`（HEAD `415d0bb`，v3.0.1）。
+- **输入**：[skyline-projext/skylinevpn-cli](https://github.com/skyline-projext/skylinevpn-cli)（HEAD `415d0bb`，v3.0.1）。
 - **产出**：OKF 知识包 `doc/bundles/jishu/dev/skylinevpn-cli/`。
 - **场景**：知识沉淀（R → I → E；V 与 C 按需）。理由：用户要求「全面学习 + 洞察」并产出教程，非故障处置或重构。
 - **边界**：只读研读；不执行二进制、不运行安装器、不访问服务端与 Release 页面。

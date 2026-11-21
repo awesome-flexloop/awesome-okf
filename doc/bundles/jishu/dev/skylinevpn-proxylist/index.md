@@ -14,7 +14,7 @@ delegates_to:
   - references/index.md
 sources:
   - id: repo
-    resource: "\\\\10.16.11.3\\ai\\notebook\\libs\\skylinevpn\\skylinevpn-proxylist"
+    resource: "https://github.com/skyline-projext/skylinevpn-proxylist"
     title: "skylinevpn-proxylist 规则数据仓（HEAD 9c6567c，2026-11-16）"
   - id: facts
     resource: /references/facts.md

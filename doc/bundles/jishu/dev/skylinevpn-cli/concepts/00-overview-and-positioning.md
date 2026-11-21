@@ -8,7 +8,7 @@ status: stable
 stale_after: 2027-05-31
 sources:
   - id: repo
-    resource: "\\\\10.16.11.3\\ai\\notebook\\libs\\skylinevpn\\skylinevpn-cli"
+    resource: "https://github.com/skyline-projext/skylinevpn-cli"
     title: "skylinevpn-cli 仓库（HEAD 415d0bb，v3.0.1）"
   - id: facts
     resource: /references/facts.md

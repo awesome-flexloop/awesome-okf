@@ -10,7 +10,7 @@ status: stable
 
 ## 0. 任务与场景判定
 
-- **输入**：`\\10.16.11.3\ai\notebook\libs\skylinevpn\skylinevpn-proxylist`（HEAD `9c6567c`，2026-11-16）。
+- **输入**：[skyline-projext/skylinevpn-proxylist](https://github.com/skyline-projext/skylinevpn-proxylist)（HEAD `9c6567c`，2026-11-16）。
 - **产出**：OKF 知识包 `doc/bundles/jishu/dev/skylinevpn-proxylist/`。
 - **场景**：知识沉淀（R → I → E；V 与 C 按需）。理由：用户要求「全面学习 + 洞察」并产出教程，非故障处置或重构。
 - **边界**：只读研读；不联网执行构建、不访问 Release 页面、不接入客户端。

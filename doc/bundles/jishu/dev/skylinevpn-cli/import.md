@@ -78,7 +78,7 @@ index.md → concepts/00 → 按角色取 1~3 篇概念 → references/verificat
 
 ## 三、上游更新后的重新导入
 
-源仓库：`\\10.16.11.3\ai\notebook\libs\skylinevpn\skylinevpn-cli`。更新时按「先事实、后概念、再索引」的顺序：
+源仓库：[skyline-projext/skylinevpn-cli](https://github.com/skyline-projext/skylinevpn-cli)。更新时按「先事实、后概念、再索引」的顺序：
 
 | 步骤 | 读什么 | 改什么 |
 |------|--------|--------|

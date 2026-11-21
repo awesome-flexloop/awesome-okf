@@ -2,7 +2,7 @@
 type: Reference
 title: "skylinevpn-cli 仓库事实登记（F-001 ~ F-072）"
 description: "对 skylinevpn-cli 发行仓库 HEAD 415d0bb（v3.0.1）的一手只读核验，逐条登记 72 项可追溯事实，供本束全部概念与示例文档引用"
-source_repo: "\\\\10.16.11.3\\ai\\notebook\\libs\\skylinevpn\\skylinevpn-cli"
+source_repo: "https://github.com/skyline-projext/skylinevpn-cli"
 source_commit: "415d0bb"
 source_version: "3.0.1"
 measured_at: "2026-11-21"
