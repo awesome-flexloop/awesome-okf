@@ -27,9 +27,13 @@ stale_after: 2027-02-28
 
 **关键修正**：R/I 阶段检出的两处机械问题已修复——① `sources.md` / `theory-api-mapping.md` 中跨 bundle 相对链接误写 `../../../cordis/...`（会解析到 `frameworks/cordis/`），经逐条路径解析修正为 `../../cordis/...`；② `sources.md` 中「上跳 3 层」的说明同步更正为「上跳 2 层到 `ai-agent/`」。
 
-## 机械门禁结果
+## 机械门禁结果（已复核）
 
-见 [P0 核验报告与对抗审查记录](references/verification.md) §5「机械门禁清单」，由收尾脚本统一复核后回填。
+全包 22 个 `.md`：frontmatter / UTF-8 / LF 行尾全部 PASS；143 条相对链接 0 断链；双份 F 编号 72/72 一致且连续；12 篇概念页 2420–3491 字符；三级 toctree（根 3 / concepts 12 / references 6）零断链；敏感信息 0 处。
+
+仓库门禁：`check-utf8.py`、`check-toctrees.py`、`check-bundles-index.py` 及其 `--self-test` 全部 EXIT=0；`check-asset-baseline.py` 在**干净克隆提交态** EXIT=0（提交前工作区因在途内容报残差 +212699，属预期）；Python 红线 pytest 12 passed。`invoke gates.all` 因本机 `invocations` 元数据缺失无法启动，已改为逐个运行其封装的同一批脚本与自检探针。
+
+提交态自证：子模块提交 `b8bac47f`；干净克隆（`-c core.longpaths=true --local --no-hardlinks`）复跑五门全绿，bundles 对账 752 束五面一致。逐项判据、检出并修复的三处问题见 [P0 核验报告与对抗审查记录](references/verification.md) §5。
 
 ## 并发说明
 
