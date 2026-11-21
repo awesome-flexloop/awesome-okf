@@ -9,7 +9,7 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 
 面向终端任务的 AI 产品与工具——浏览器/移动端自动化、Agent 桌面工作台、网页数据采集、垂直创作工具、量化/翻译/CAD 等任务型产品与能力交易平台。
 
-本类共 **42 个知识包**，分布于 **42 个生态/项目目录**。
+本类共 **43 个知识包**，分布于 **43 个生态/项目目录**。
 
 ## 束导航
 
@@ -57,6 +57,7 @@ description: "面向终端任务的 AI 产品与工具——浏览器/移动端�
 | [🎬 VibeKnow CLI 文档转视频终端工具](vibeknow-cli/index.md) | 1 | 源码级核验转化（tag v0.9.2 @ 93a26eca）——把文档/文本变成视频的 Cobra CLI：两阶段工作流、八档退出码契约、付费动作授权门（exit 8）、`--output` 三格式与 `vk_event=` 事件通道、preset 契约、预览产物与运行账本（104 条编号事实） |
 | [🎓 AgentMore × OpenMAIC 学习搭子教学 Skill](agentmore-openmaic/index.md) | 1 | 智谱清言 AgentMore 官方公告经 OpenMAIC 官方仓库交叉核验——学习搭子新增费曼学习/习题带练两项技能（各三轮法），同步上新 8 个面向教师/培训者的 OpenMAIC 教学 Skill（13 项 P0/P1 核验 7✅/6⚠️/0❌，Star 多口径与 License 三源互斥并列登记） |
 | [🧬 Craft Anything 净室复刻引擎](craft-anything/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——纯 Rust 开源（Apache-2.0）净室引擎：看懂任意软件后让 AI 造你自己的版本，Study→Build→Check→Ready 四步、1440/768/390 三宽度可量化相似度（布局+SSIM 均值，最多 6 轮或达 90%）、314 工具兼具 CLI 与 MCP 双入口，含安装实操与三项勘误（23 项 P0/P1 核验 12✅/11⚠️/0❌） |
+| [📊 Univer 嵌入式 Office SDK：人与 AI agent 共用一套 API](univer-office-sdk/index.md) | 1 | 微信博文经 OKF v0.2 七阶段转化——TypeScript/Apache-2.0 表格与文档引擎：preset 十几行嵌入、Facade API 与 Steady 生命周期、Command/Mutation/Operation 与 agent 命令闸门、Web/Server/AI 三 SDK 授权分界、JSON 快照 ≠ XLSX 导出；F-001~F-072 双份登记、24 项 P0 核验 17✅/7⚠️/0❌，七条口径勘误（26k→30,434 Star、CLI 写法演进、Steady 等待段被省略等）在束首页显式标注，status: stable，examples 为官方流程重组未实机运行 |
 
 ```{toctree}
 :hidden:
@@ -104,4 +105,5 @@ wechat-intelligence-hub/index
 workbuddy-wechat-chat-forward-skills/index
 wechatbridge/index
 wechatbridge-ios-relay/index
+univer-office-sdk/index
 ```
