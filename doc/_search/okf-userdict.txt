@@ -33,3 +33,11 @@ skylinevpn-cli 10 n
 双寻址 5 n
 身份锁 5 n
 发布门 5 n
+skylinevpn-proxylist 10 n
+proxylist 10 n
+gfwlist 20 n
+AutoProxy 10 n
+规则清单 10 n
+父后缀吸收 5 n
+叠加层并集 5 n
+固定下载地址 5 n
