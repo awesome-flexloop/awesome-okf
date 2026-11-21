@@ -9,12 +9,13 @@ description: "AI 工程方法论、上下文工程、安全红队与行业趋势
 
 AI 工程方法论、上下文工程、安全红队与行业趋势研究——Token 经济与成本、免费 API 生态、Agent 工作流实践、行业研究及博文核验转化束。
 
-本类共 **32 个知识包**，分布于 **30 个生态/项目目录**。
+本类共 **35 个知识包**，分布于 **33 个生态/项目目录**。
 
 ## 束导航
 
 | 知识包 | 束数 | 一句话简介 |
 |--------|------|-----------|
+| [⚙️ TokenEconomizer：经验驱动的黑盒成本控制](tokeneconomizer-experience-cost-control/index.md) | 1 | 微软研究院博客 + arXiv:2610.22732v1 + 项目页 + 开源仓库四信源转化教程——三类可回收成本、三条元策略、表 1/表 2 逐格数字与消融、论文参数与插件默认的分账（同名异义）、「可逆节流」可迁移模式；110 条事实 / 14 组 P0 核验 / 四视角 7 条对抗意见，非实测教程 |
 | [直播本地转录与 Agent 证据分析](live-transcription-agent/index.md) | 1 | 授权录制、本地 ASR、时轴与 JSONL、只读 Agent 引用核查；7 篇概念与 3 篇实践，28 条事实；flagged：真实录制与 ASR 未实测 |
 | [🧩 WSL + Python 打造 Agent 插件体系](wsl-python-agent-plugin-stack/index.md) | 1 | Win11 WSL2 + uv + 插件机制工程方案——环境自由三层栈（WSL 快照/uv 解释器/workspace 拓扑）、包可组合双轴（进程内 entry points/进程间 MCP）、插件三形态选型（Skills/Tools/Hooks）与端到端实战；架构教程，关键事实经官方文档核验 |
 | [🎁 云知声 U2Flash 免费月活动解读与接入排障](u2flash-free-month/index.md) | 1 | 群公告+官方模型页+官方教程+官方飞书 Q&A（rev.490）四源核验——免费资格三检（实名/余额非负/模型名）、512K 规格与 RPM100 真实限流、OpenAI 双协议与腾讯 WorkBuddy 五步接入、八问排障（欠费联锁/Base URL 两口径）、5 亿 token 赠品与限免淘金五查法；非操作实测教程（官方文档汇编），时效至 2026-11-15 |
@@ -44,7 +45,9 @@ AI 工程方法论、上下文工程、安全红队与行业趋势研究——To
 | [🛡️ ub-mode：用可打分的检查约束 AI 编码纪律](ub-mode-coding-discipline/index.md) | 1 | 公众号「开源日记」博文经 OKF v0.2 转化——unclebob 的 ub-mode 是只有 3 个文件的 agent skill，把 AI 编码纪律压成三步（Make it Work → Make it Right → Practice）+ 四个可打分工具（CRAP<10 / 相似度≥0.8）；勘误 E-1~E-4（概念解读非操作教程） |
 | [🐟 DeepSeek Harness 养鱼教程](dsh-pet-raising-tutorial/index.md) | 1 | 微信博文经 OKF v0.2 转化——把 DSH 接进 QQ／微信／飞书并放养到 B站抖音：四层运行时（模型/Harness/通道/平台）、人设五段结构（身份·性格·主人判定·说话风格·底线）、四通道证据等级与共享记忆成本、三层安全边界（工具白名单·不可说清单·指令来源）与「彩排—请示—正式」闸门；54 条事实，flagged：单源、零独立运行 |
 | [🧰 通用 Agent 的 Coding Harness（Trial）](coding-harness-general-purpose-agents/index.md) | 1 | Thoughtworks Radar Vol 35 Trial 级技术解读——复用编码 Agent 运行时；四入口（Claude/Codex/OpenCode/Pi）对照、运行时四能力、沙箱与审批差异、编码偏向与 token 成本、五步采用路径；47 条事实，4 条口径勘误，非操作教程 |
+| [✅ Claude Code 团队的验证方法论](claude-code-verification/index.md) | 1 | claude.dev 官方博文深度研读教程——E2E/属性/差分三类测试、verify skill 端到端冒烟、按 diff 触发的可靠性清单、检查不可自改、observe 模式门禁与漏检规则化；71 条事实分层登记，含 2 篇可复现实践 |
 | [🤖 Claude Agent SDK 生产级智能体构建指南](claude-agent-sdk-production/index.md) | 1 | Stackademic 博文经 OKF v0.2 七阶段转化并核验 Anthropic 官方文档——发布与更名、六项能力、安装与最小 agent、权限与 hooks、生产五纪律与 SDK/raw API 选型；87 条事实、11 个 P0 集群（✅8/⚠️3/❌0），勘误 E-1~E-4（非操作教程，无 examples） |
+| [🍎 Apple 健康 AI 使用研究（Apple Health AI Usage Study）教程](apple-health-ai-usage-study/index.md) | 1 | Apple Newsroom 2026-11-15 官方公告经七概念 R→I→E→A→V 转化——研究四轴（信任/回答质量/理解/日常健康行动）、OpenEvidence 临床接地与可回溯引文、隐私与非诊断护栏、准入门槛与 Apple 健康研究谱系，「公告四层核验」L1 可迁移模式；48 条 F 编号事实 / S1～S14 信源分层 / 媒体单源降级 / 四视角 8 条审查意见，非操作实测、非参与建议、非医疗建议 |
 
 ```{toctree}
 :hidden:
@@ -80,4 +83,7 @@ ub-mode-coding-discipline/index
 dsh-pet-raising-tutorial/index
 coding-harness-general-purpose-agents/index
 claude-agent-sdk-production/index
+claude-code-verification/index
+tokeneconomizer-experience-cost-control/index
+apple-health-ai-usage-study/index
 ```

@@ -85,7 +85,7 @@ status: stable
 | [bytedance-ai-consolidation](bytedance-ai-consolidation/index.md) | 字节跳动 2026 年 8 月 AI 业务整合商业分析——TRAE/扣子/飞书并入豆包的组织时间线、算力成本驱动逻辑（含 850 亿年份错配更正与多口径标注）、腾讯/阿里/字节 AI 办公三方竞争格局；博文作者标注"个人观点"，数据经 36 氪/南华早报/第一财经等多媒体核验 |
 | [threeui](threeui/index.md) | Meng To 开源的 Three.js/WebGL 视觉组件库——164 个 Community 效果、10 大分类（⚠️官网当前 9 个）、6 大组件类型、AI Coding 集成（Codex/Claude Code/Cursor）、MCP Server（Pro），WebGL UI 组件化趋势分析；P0 核验 4✅ 3⚠️ 0❌ |
 | [tushare-ai-office](tushare-ai-office/index.md) | Tushare 宣布上架 WorkBuddy/千问办公/TraeWork 三大 AI 办公平台——⚠️ P0 核验发现核心声明存疑（3✅ 2⚠️ 1❌），Tushare MCP 仍需手动配置，三平台官方预置连接器未获证实，status: flagged |
-| [trae-weekly-update-20261115](trae-weekly-update-20261115/index.md) | TRAE 2026-11-15 周报（一键部署/画中画/大赏赛/创作者计划）四项更新的可溯源解读——51 条事实、15 项 P0 核验、渠道差异登记，含可迁移的五步核验法教程；P0 9✅ 6⚠️ 0❌，draft（厂商官方公告单源，非操作教程） |
+| [trae-weekly-update-20261115](trae-weekly-update-20261115/index.md) | TRAE 2026-11-15 周报（一键部署/画中画/大赏赛/创作者计划）四项更新的可溯源解读——78 条事实（含 6 条图文层）、首轮 15 项 P0 + 11-19 复验批 8 项、CD/XREF 状态收敛，含可迁移的「读图 + 五步核验法」教程；P0 9✅6⚠️0❌ / 6✅2⚠️0❌，draft（厂商官方公告单源，非操作教程） |
 | [trae-one-click-deploy](trae-one-click-deploy/index.md) | TRAE 插件市场「一键部署」限免公告解读——对话式部署六步链路、默认私有到公开的可见性模型、三类支持形态与硬边界（数据库/自定义域名/更多后端语言后续规划）、三个示例与飞书机器人·Open-Meteo 外部依赖口径；P0 核验 4✅ 10⚠️ 0❌，status: draft（厂商官方公告单源，非操作教程） |
 
 ## 学习路径推荐
