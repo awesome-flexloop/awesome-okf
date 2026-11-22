@@ -17,6 +17,7 @@ description: "操作系统与基础设施知识包——WSL 子系统与 PowerSh
 | [wsl-custom-distro/](wsl-custom-distro/index.md) | WSL 自定义发行版构建 | rootfs tar、wsl-distribution.conf、OOBE、systemd 屏蔽、终端模板、.wsl 安装、分发清单与企业注册表覆盖 |
 | [powershell-hell/](powershell-hell/index.md) | PowerShell 5 困境防御 | AI 智能体在 PS5.1 环境的失败模式、防御模式与检查清单 |
 | [kylin-wayland-compositor/](kylin-wayland-compositor/index.md) | Wayland 合成器源码精读 | openKylin 默认显示服务器 kylin-wlcom（wlroots 0.17）：启动/后端/渲染/场景/输出/输入/视图工作区/特效/插件/协议/XWayland/安全门户/libkywc，16 概念 + 3 走读 + 851 条编号事实 |
+| [windows-baseline-protection/](windows-baseline-protection/index.md) | Win11 应用信任控制教程 | 智能应用控制与基线保护——首版 8 项检查 / 7 类口径、可版本化状态与三种读出、应用侧四档策略；48 条 F 编号事实、16 项 P0 核验与 1 处实质勘误（把开发者可选策略写成厂商既定策略），flagged 预览期 |
 
 ```{toctree}
 :hidden:
@@ -25,5 +26,6 @@ description: "操作系统与基础设施知识包——WSL 子系统与 PowerSh
 kylin-wayland-compositor/index
 wsl/index
 wsl-custom-distro/index
+windows-baseline-protection/index
 powershell-hell/index
 ```

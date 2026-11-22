@@ -30,3 +30,11 @@ description: "事实登记、核验报告与本束引用纪律——引用任何
 | 发布暂存 | `tools/build_release.py` |
 | 身份门 | `tools/check-identity.sh`、`tools/install-hooks.sh` |
 | 发布门 | `tools/publish-release.sh` |
+
+```{toctree}
+:hidden:
+:maxdepth: 7
+
+facts
+verification
+```

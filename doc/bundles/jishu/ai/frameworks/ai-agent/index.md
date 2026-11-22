@@ -3,7 +3,7 @@ okf_version: "0.2"
 type: group
 title: "🤖 AI Agent 框架"
 description: "AI Agent 运行时框架与架构模式——工具调用、多代理编排、记忆与插件的源码教程，以及参考架构与治理学习"
-total_bundles: 68
+total_bundles: 69
 ---
 
 # 🤖 AI Agent 框架
@@ -49,6 +49,12 @@ total_bundles: 68
 | 知识包 | 文档数 | 一句话简介 |
 |--------|--------|-----------|
 | [ai-agent-fundamentals](ai-agent-fundamentals/index.md) | 6+3+1=10 | Agent跨项目架构模式——6大核心模式对比（核心循环/Provider/插件/多Agent/记忆/MCP-ACP），4框架代码级对比，框架选型指南 |
+
+### 📐 理论范式与形式化基础
+
+| 知识包 | 类型 | 文档数 | 一句话简介 |
+|--------|------|--------|-----------|
+| [spatiotemporal-composability](spatiotemporal-composability/index.md) | 论文精读 | 12+6+1=19 | arXiv:2608.25512v1《A Programming Paradigm for Spatiotemporal Composability》系统化中文教程——可逆效应、响应式协同效应、统一上下文 Γ∞、动态组合演算九条规则与元理论七结果；72 条编号事实双份登记、13 项 P0 核验、四处口径勘误，Cordis / DeepSeek Harness 的形式化基础；依据活跃修订预印本，非部署实测 |
 
 ### 📡 协议与接口规范
 
@@ -180,7 +186,7 @@ total_bundles: 68
 > 
 > **生成时间**：2026-08-29 | **维护者**：OKF Wiki Bot
 > 
-> **内容统计**：68 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
+> **内容统计**：69 个知识包；每行文档数按概念、示例、信源及日志口径展示，不含目录索引。具体数量与边界以各包入口为准，不延用历史汇总数字。
 
 ```{toctree}
 :hidden:
@@ -198,6 +204,7 @@ deepseek-harness/index
 deepseek-harness-0-2/index
 intelligent-terminal/index
 cordis/index
+spatiotemporal-composability/index
 second-me/index
 agency-agents/index
 agency-agents-app/index

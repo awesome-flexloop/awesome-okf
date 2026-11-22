@@ -37,3 +37,12 @@ description: "事实登记、核验报告与本束引用纪律——引用任何
 - 条目数 = 「非空且不以 `#` 开头」的行数。
 - 节归属 = 最近一个 `## <name>` 标题之后的条目。
 - 行号 = 1 基，按 PowerShell `Get-Content` 的行序。
+
+```{toctree}
+:hidden:
+:maxdepth: 7
+
+facts
+verification
+import-verification
+```
