@@ -1,177 +1,128 @@
 ---
 type: Concept
 title: "配置系统"
-description: "Maple Mono config.json 声明式配置 + CLI 参数双层覆盖的合并顺序、优先级与完整 Schema 解读"
-tags: ["maple-mono", "config", "json-schema", "cli", "configuration"]
+description: "config.json、CLI 与旧版别名如何归一化为 ResolvedConfig，并由 BuildRuntimeContext 解析为运行期路径"
+tags: ["config", "cli", "resolved-config", "json-schema"]
 sources:
-  - id: CONFIG-JSON
-    resource: "config.json"
-    description: "默认构建配置文件"
-  - id: CONFIG-SCHEMA
-    resource: "source/schema.json"
-    description: "完整 JSON Schema 定义（含字段说明、枚举、默认值）"
-  - id: FONT-CONFIG-CLASS
-    resource: "build.py#FontConfig"
-    description: "配置加载与合并逻辑"
-prerequisites:
-  - "00-introduction"
-  - "01-build-pipeline"
-next:
-  - "03-feature-system"
-related:
-  - "../references/font-config-class.md"
-  - "../examples/custom-feature-build.md"
+  - id: config-json
+    resource: https://github.com/subframe7536/maple-font/blob/variable/config.json
+    title: config.json
+  - id: config-schema
+    resource: https://github.com/subframe7536/maple-font/blob/variable/sources/schema.json
+    title: Build Configuration Schema
+  - id: build-options
+    resource: https://github.com/subframe7536/maple-font/blob/variable/documentation/build-options.md
+    title: Build Options
+generated: { by: reference_agent/deepseek-v4.1-flash, at: "2026-11-22" }
 status: draft
 ---
 
 # 配置系统
 
-Maple Mono 的构建系统采用**声明式配置 + 命令覆盖**双层架构，这是理解其灵活性的关键。
-
-## 双层架构设计
+## 1. 三层输入，一次归一化
 
 ```
-┌─────────────────────────────────────────────────────┐
-│                  最终生效配置                         │
-└───────────────────────────┬─────────────────────────┘
-                            │ 从高到低优先级
-          ┌─────────────────┼─────────────────┐
-          ▼                 ▼                 ▼
-┌─────────────────┐  ┌───────────────┐  ┌───────────────┐
-│  CLI 参数       │  │ config.json   │  │ FontConfig    │
-│  python build.py │  │ 版本化 JSON   │  │ 默认值        │
-│  --nf --width   │  │ git-tracked   │  │ 代码硬编码     │
-│  slim --feat    │  │ 可共享        │  │ 不可变         │
-└─────────────────┘  └───────────────┘  └───────────────┘
+config.json ─┐
+CLI 参数 ────┼─→ BuildConfigResolver ─→ ResolvedConfig ─→ BuildRuntimeContext
+旧 --cn* ────┘                              （纯意图）          （路径与运行期）
 ```
 
-**合并顺序**（FontConfig.__init__ 内部）：
-1. 初始化代码硬编码的默认值
-2. 用 config.json 的值覆写（同名字段）
-3. 用 CLI 参数覆写（同名字段）
+- **优先级**：CLI > `config.json` > 代码默认值；
+- **归一化位置**：全部在 `scripts/config/` 内完成，阶段函数不再判断参数来源；
+- **校验位置**：`sources/schema.json` 声明 JSON 结构，解析器负责类型与取值校验。
 
-```python
-class FontConfig:
-    def __load_config(self):
-        """第 1 层：从 config.json 加载"""
-        with open("config.json") as f:
-            data = json.load(f)
-        for prop in ["family_name", "use_hinted", "nerd_font", "cn", ...]:
-            if prop in data:
-                val = data[prop]
-                setattr(self, prop, val if type(val) is not dict
-                               else {**getattr(self, prop), **val})
+## 2. ResolvedConfig 的六组子配置
 
-    def __load_args(self, args):
-        """第 2 层：CLI 参数覆写"""
-        self._apply_build_options(args)
-        self._apply_feature_options(args)
-        self._apply_nerd_font_options(args)
-        self._apply_cn_options(args)
-```
+`ResolvedConfig` 是一个聚合 dataclass，按职责拆为六组，另有独立的 `feature_freeze` 映射。
 
-**关键约束**：CLI 覆盖 config.json，但 config.json 始终存在且被 git 追踪——这是构建可复现性的保障。
+| 子配置 | 类 | 主要内容 |
+|--------|----|----------|
+| `behavior` | `BuildBehaviorConfig` | 归档、debug、缓存、最少样式、`--apply-fea-file`、CJK 输出形态、基础格式列表、`cjk-both` |
+| `feature` | `FeatureBuildConfig` | `normal`、`standard_zero`、`legacy_thin_weight_class`、`feat`、`hinted`、`liga`、`infinite_arrow`、`remove_tag_liga`、`line_height`、`width` |
+| `nerd_font` | `NerdFontBuildConfig` | `enable`、`version`、`mono`、`propo`、`variable`、`use_font_patcher`、`glyphs`、`extra_args` |
+| `cjk` | `CJKBuildSelection` | 四语种开关、自定义条目、公共选项（`with_nerd_font`、`fix_meta_table`、`clean_cache`、`narrow`、`use_hinted`、`scale_factor`） |
+| `identity` | `BuildIdentityConfig` | 基础族名、族名、紧凑名、版本标签、语义版本、内嵌字体版本、beta 标识 |
+| `metrics` | `BuildMetricsConfig` | 字重映射、Unicode 别名、垂直度量、字形宽度、CJK 窄宽度、ttfautohint 参数、进程池大小、GitHub 镜像 |
 
-## 完整配置字段解读
+`feature_freeze: dict[str, str]` 单独保存每个特征（`cvXX` / `ssXX` / `zero`）的三态值：`enable` / `disable` / `ignore`。
 
-### 顶层字段
+## 3. config.json 的关键字段
 
-| 字段 | 类型 | 默认值 | 说明 |
-|------|------|--------|------|
-| `family_name` | string | `"Maple Mono"` | 字体族名 |
-| `use_hinted` | bool | `true` | 用 hinted TTF 作为 NF/CN 构建的基座 |
-| `pool_size` | int | `4` | 并行任务数（Codespace 自动降为 1） |
-| `enable_ligature` | bool | `true` | 是否启用 calt 连字 |
-| `line_height` | float | `1.0` | 行高缩放因子 |
-| `width` | enum | `"default"` | `default`(600) / `narrow`(550) / `slim`(500) |
-| `infinite_arrow` | bool/null | `null` | 无限箭头连字（null=hinted禁用、unhinted启用） |
-| `github_mirror` | string | `"github.com"` | GitHub 下载镜像 |
+| 字段 | 类型 | 默认 | 作用 |
+|------|------|------|------|
+| `family_name` | string | `Maple Mono` | 字体族名 |
+| `font_version` | string | `8.003` | 内嵌三位版本号 |
+| `formats` | array | `["ttf","otf","woff2"]` | 请求的基础格式；Variable 始终构建 |
+| `use_hinted` | bool | `true` | NF / CJK 静态合并使用 hinted 还是 unhinted 基座 |
+| `legacy_thin_weight_class` | bool | `false` | Thin/ExtraLight 使用 250/275 |
+| `standard_zero` | bool | `false` | 恢复标准零号语义 |
+| `pool_size` | number | `4` | 并行任务数；Codespace 下解析为 1 |
+| `github_mirror` | string | `github.com` | 资源下载镜像 |
+| `infinite_arrow` | bool | `true` | 无限箭头连字 |
+| `remove_tag_liga` | bool | `false` | 移除 `[TODO]` 等纯文本标签连字 |
+| `line_height` | number | `1.0` | 行高缩放因子 |
+| `width` | string | `default` | `default`(600) / `narrow`(550) / `slim`(500) |
+| `weight_mapping` | object | 100…800 | 静态字体字重映射 |
+| `codepoint_alias` | object | `{}` | Unicode 码点别名，如 `{"U+E000":"U+E001"}` |
+| `feature_freeze` | object | 全 `ignore` | 每个特征的冻结模式 |
+| `nerd_font` | object | 见下 | Nerd Font 构建参数 |
+| `cjk` | object | 全部关闭 | CJK 选择与公共选项 |
 
-### feature_freeze 三模式配置
+`nerd_font` 默认值：`enable=true`、`version="3.5.0"`、`mono=false`、`propo=false`、`variable=false`、`use_font_patcher=false`、`glyphs=["--complete"]`、`extra_args=[]`。
 
-这是最强大也最容易忽略的配置段——控制每个 OpenType 特征的处理方式：
+`cjk` 默认值：`variable=false`、`locales={cn:false,jp:false,tc:false,kr:false,custom:[]}`、`with_nerd_font=true`、`fix_meta_table=true`、`clean_cache=false`、`narrow=false`、`use_hinted=false`、`scale_factor=[1.0,1.0]`。
 
-```json
-"feature_freeze": {
-  "cv01": "ignore",    // 不处理，保持动态
-  "ss08": "enable",    // 固化为默认字形（自动生效）
-  "zero": "disable"    // 移除该特征（即使手动启用也无效）
-}
-```
+## 4. CLI 参数分组
 
-| 模式 | 行为 | 典型用途 |
-|------|------|---------|
-| `ignore` | 不处理，保留原特征 | 默认配置 |
-| `enable` | 规则移入 calt，固化为默认字形 | 我就要这个变体当默认值 |
-| `disable` | 从字体表中移除该特征 | 我不想要这个连字/变体 |
+`config/cli.py` 把参数分为五组，便于 `--help` 阅读：
 
-CLI 对应：`--feat cv01,ss07,zero` 会把列出的特征置为 `enable`。
+| 组 | 关键参数 |
+|----|----------|
+| 通用 | `-v/--version`、`-d/--dry`、`--debug` |
+| 特征 | `-n/--normal`、`--standard-zero`、`--legacy-thin-weight-class`、`--feat`、`--apply-fea-file`、`--hinted/--no-hinted`、`--liga/--no-liga`、`--infinite-arrow/--no-infinite-arrow`、`--remove-tag-liga`、`--line-height`、`--width` |
+| 构建 | `--format`、`--least-styles`、`--cache`、`--archive` |
+| Nerd Font | `--nf/--no-nf`、`--nf-mono`、`--nf-propo`、`--nf-variable`、`--font-patcher` |
+| CJK | `--cjk`、`--cjk-variable`、`--cjk-narrow`、`--cjk-scale-factor`、`--cjk-both`、`--cjk-hinted/--no-cjk-hinted` |
 
-### nerd_font 配置段
+另有“Deprecated CN Options”组：`--cn`、`--no-cn`、`--cn-narrow`、`--cn-scale-factor`、`--cn-both`。它们先被解析为对应的 CJK 语义，再参与归一化，因此旧脚本仍可运行。
 
-```json
-"nerd_font": {
-  "enable": true,
-  "version": "3.4.0",
-  "mono": false,        // 固定宽度图标
-  "propo": false,       // 可变宽度图标（覆盖 mono）
-  "use_font_patcher": false,  // 用预构建基座 vs 运行时修补
-  "glyphs": ["--complete"],   // 符号字体参数
-  "extra_args": []
-}
-```
+## 5. 解析器的职责边界
 
-**关键决策**：`use_font_patcher` 控制 NF 构建路径：
-- `false`（默认）：下载预构建 `MapleMono-NF-Base.ttf` → merge_ttfonts 合并（快）
-- `true`：调用 font-patcher 运行时修补（慢但灵活，需 FontForge）
+`BuildConfigResolver`（`config/resolver.py`）按顺序执行：
 
-### cn 配置段
+1. `load_defaults()`：从代码默认值构造 `ResolvedConfig`；
+2. `_apply_json_config()`：读取并校验 `config.json`，分块应用到 identity / metrics / feature / behavior / nerd_font / cjk；
+3. `_apply_deprecated_cli_overrides()`：把旧 `--cn*` 参数翻译成 CJK 选择；
+4. `_apply_cli_overrides()`：按 behavior / feature / nerd_font 分块覆盖；
+5. `_apply_identity()`：根据版本标签与 beta 标识派生族名、紧凑名与内嵌版本。
 
-```json
-"cn": {
-  "enable": false,
-  "with_nerd_font": true,    // CN 版是否同时打 NF 补丁
-  "narrow": false,           // 压缩中文字形宽度
-  "scale_factor": 1.0,       // 中文字形缩放（可用 [1.2,1.1] 分别设宽高）
-  "use_static_base_font": true
-}
-```
+`resolve()` 是唯一公开入口；`resolve_project_config()` 用于只解析项目配置、不读取 CLI 的场景。
 
-`narrow: true` 会让字体**不再是等宽字体**——IntelliJ IDEA / Windows 记事本等应用可能渲染异常。配置里有明确的风险提示。
+## 6. BuildRuntimeContext：从意图到路径
 
-## CLI 参数速查表
+`BuildRuntimeContext.from_config(config)` 把配置解析为固定路径与运行期能力：
 
-CLI 分为两组：Feature Options（影响字形/特征）和 Build Options（影响构建行为）。
+| 字段 | 值 |
+|------|-----|
+| `src_dir` | `sources` |
+| `output_root` | `fonts` |
+| `output_ttf` / `output_ttf_hinted` | `fonts/TTF` / `fonts/TTF-AutoHint` |
+| `output_variable` / `output_otf` / `output_woff2` | `fonts/Variable` / `fonts/OTF` / `fonts/Woff2` |
+| `output_nf` | 由 `NerdFontVariant.directory_name` 决定：`fonts/NF`、`fonts/NFMono` 或 `fonts/NFPropo` |
+| `ttf_base_dir` | `use_hinted` 时取 `TTF-AutoHint`，否则取 `TTF` |
+| `effective_github_mirror` | 归一化后的镜像主机 |
+| `font_forge_bin` | FontForge 可执行路径或 `None` |
+| `resolved_vertical_metric` | 解析后的垂直度量 |
 
-### Feature Options
+它还提供 `feature_file_path(is_italic, is_cjk)`，用于定位 `sources/features/{regular,italic}{_cn,}.fea`；`to_dict()` 可输出可审计快照（`--dry` 即使用它）。
 
-| 参数 | 效果 | 影响 config 字段 |
-|------|------|-----------------|
-| `-n / --normal` | 启用 Normal 预设 | feature_freeze 中 12 项置 enable |
-| `--feat cv01,ss07` | 启用指定特征 | feature_freeze 中列出项置 enable |
-| `--hinted / --no-hinted` | 切换基座 hinting | use_hinted |
-| `--liga / --no-liga` | 切换连字 | enable_ligature |
-| `--infinite-arrow` | 强制启用无限箭头 | infinite_arrow |
-| `--width {default,narrow,slim}` | 三档字形宽度 | width |
-| `--nf-mono / --nf-propo` | NF 图标宽度 | nerd_font.mono / nerd_font.propo |
-| `--cn-narrow` | 压缩中文字形 | cn.narrow |
-| `--cn-scale-factor 1.1` | 中文字形缩放 | cn.scale_factor |
+## 7. 可复现性要点
 
-### Build Options
+- `fonts/build-config.json` 记录本次解析后的配置，可用于复现；
+- `--dry` 是检查归一化结果的唯一推荐方式，不要靠猜默认值；
+- 改动 `config.json` 后，若使用 `--cache`，阶段身份会因相关配置变化而失配，从而自动重建相关阶段。
 
-| 参数 | 效果 |
-|------|------|
-| `--nf / --no-nf` | 构建 NF 版 |
-| `--cn / --no-cn` | 构建 CN 版 |
-| `--ttf-only` | 只输出 TTF（跳过 OTF/WOFF2） |
-| `--least-styles` | 只构建 Regular/Bold/Italic/BoldItalic |
-| `--font-patcher` | 强制用 font-patcher 构建 NF |
-| `--cache` | 复用已有 TTF/OTF/WOFF2 缓存 |
-| `--archive` | 打包为 zip 归档（含 config + license） |
+## 8. 相关文档
 
-## 设计洞察
-
-1. **JSON Schema 即文档**：`source/schema.json` 完整声明了所有字段的类型、枚举、默认值、说明文字——既是运行时验证依据，也是最权威的 API 文档
-2. **Config 可复现性**：config.json 版本化提交，同一 config.json 产出同一字体。CLI 参数用于 CI 快速调整
-3. **布尔三态**：`infinite_arrow`、`cn.use_static_base_font` 等字段支持 `null`/`true`/`false` 三态——允许"根据其他参数自动决策"的语义
-4. **嵌套字典合并**：dict 类型字段（nerd_font、cn）采用 `{**默认, **配置}` 合并模式——只覆写指定子字段，其他保留默认
+- 配置字段对应的 API：[ResolvedConfig 参考](../references/resolved-config.md)
+- CLI 全量参数：[构建入口参考](../references/build-entrypoint.md)

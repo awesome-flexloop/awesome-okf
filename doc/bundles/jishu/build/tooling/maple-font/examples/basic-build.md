@@ -1,161 +1,129 @@
 ---
 type: Example
 title: "基本构建"
-description: "从零安装依赖到产出第一个 Maple Mono 字体文件——完整的新手友好流程"
-tags: ["maple-mono", "build", "basic", "setup"]
+description: "从零跑通 Maple Mono v8 的最小构建，并用 --dry 与目录清单验证产物"
+tags: ["build", "quickstart", "ttf", "variable"]
 sources:
-  - id: README-SETUP
-    resource: "README.md#Setup"
-    description: "官方安装指南"
-  - id: PYPROJECT
-    resource: "pyproject.toml"
-    description: "Python 依赖声明"
-prerequisites:
-  - "../concepts/00-introduction.md"
-  - "../concepts/01-build-pipeline.md"
+  - id: build-doc
+    resource: https://github.com/subframe7536/maple-font/blob/variable/documentation/build.md
+    title: Custom Build
+  - id: cli-doc
+    resource: https://github.com/subframe7536/maple-font/blob/variable/documentation/cli.md
+    title: build.py CLI
+generated: { by: reference_agent/deepseek-v4.1-flash, at: "2026-11-22" }
 status: draft
 ---
 
-# 示例 1：基本构建
+# 基本构建
 
-本示例带你从零开始构建自己的第一份 Maple Mono 字体。适合**第一次接触 Maple Mono 构建系统**的读者。
+## 目标
 
-## 前置条件
+用最少参数完成一次构建，并确认每个输出目录的来源。
 
-- Python 3.10+
-- 任意现代操作系统（macOS / Linux / Windows）
-- 网络连接（用于下载仓库）
+## 1. 准备
 
-## Step 1：克隆仓库
-
-```bash
-# 变量字体版本（v7 主版本推荐）
-git clone https://github.com/subframe7536/maple-font --depth 1 -b variable maple-font
-
+```sh
+git clone https://github.com/subframe7536/maple-font --depth 1 -b variable
 cd maple-font
+uv sync
 ```
 
-`--depth 1` 只拉最新 commit，`-b variable` 切换到变量字体分支。
+## 2. 先看解析结果
 
-## Step 2：安装依赖
-
-```bash
-# 推荐方式：pip + requirements.txt
-pip install -r requirements.txt
-
-# 或者用 pyproject.toml
-pip install -e .
+```sh
+uv run build.py --dry
 ```
 
-**核心依赖**：
+本地终端会打印两段带标签的 JSON：
 
-| 包 | 版本 | 作用 |
-|----|------|------|
-| `foundrytools-cli` | latest | 字体批处理（字形修正、hinting、转换） |
-| `fontTools` | latest | 低水平字体表操作 |
-| `ttfautohint` | latest | 自动 hinting |
-| `skia-pathops` | latest | 路径运算（可选） |
-| `fontfreeze` | optional | 参考实现（已内置到 freeze.py） |
+- `resolved_config`：归一化后的用户意图；
+- `runtime_context`：输出路径、镜像、FontForge 路径、垂直度量等。
 
-**验证安装**：
+在 CI 中只打印 `resolved_config`，便于脚本直接解析。`--dry` 不会创建 `BuildPlan`，也不会生成任何字体。
 
-```bash
-python -c "from build import FontConfig; print('OK')"
-# 应输出 OK
+## 3. 最小构建
+
+```sh
+uv run build.py --format ttf
 ```
 
-## Step 3：运行构建
+要点：
 
-最简单的构建命令：
+- **Variable 始终构建**，不受 `--format` 影响；
+- `--format ttf` 只请求静态 TTF；
+- 未请求 OTF/WOFF2 时不会产出对应目录；
+- 默认仍会构建 Nerd Font（`nerd_font.enable=true`）。
 
-```bash
-python build.py
-```
-
-这条命令会：
-1. 加载默认 config.json（不启用 NF/CN）
-2. 从源目录实例化 9 种字重的 TTF
-3. 并行构建基础字体 + hinted 版
-4. 输出到 `fonts/` 目录
-
-**预期输出结构**：
+产物：
 
 ```
-maple-font/fonts/
-├── Variable/
-│   ├── MapleMono[wght]-VF.ttf
-│   ├── MapleMono-Italic[wght]-VF.ttf
-├── TTF/
-│   ├── MapleMono-Regular.ttf
-│   ├── MapleMono-Bold.ttf
-│   ├── ... (9 个字重 × 2 种风格 = 18 个文件)
-├── TTF-AutoHint/
-│   └── ... (同 TTF/ 但含 hinting)
-├── OTF/
-│   └── ... (CFF 轮廓版本)
-└── Woff2/
-    └── ... (压缩 Web 字体版本)
+fonts/
+├── Variable/          # MapleMono[wght].ttf / MapleMono-Italic[wght].ttf
+├── TTF/               # 各字重静态 TTF
+├── TTF-AutoHint/      # 自动 hint 版本（NF/默认 hinted 消费）
+├── NF/                # 默认 Nerd Font 静态输出
+├── build-config.json  # 本次解析配置
+└── build-cache.json   # 仅完整成功后写入
 ```
 
-## Step 4：验证输出
+## 4. 快速迭代构建
 
-用任意字体查看器（如 FontForge、BirdFont、或在线 [glyphr](https://glyphrstudio.com/)）打开 `fonts/Variable/MapleMono[wght]-VF.ttf`，你应该能看到：
-
-- 字重滑块：可以在 100-900 之间连续调节
-- 智能连字：在支持的编辑器里输入 `=>` 显示为箭头连字
-- 变体切换：如果渲染器支持 OpenType CV/SS，可以手动切换
-
-## Step 5：安装到系统（可选）
-
-### macOS
-
-```bash
-cp fonts/Variable/*.ttf ~/Library/Fonts/
+```sh
+uv run build.py --format ttf --debug
 ```
 
-### Linux
+`--debug` 会：
 
-```bash
-sudo cp fonts/Variable/*.ttf /usr/local/share/fonts/
-fc-cache -f
+- 给族名加 `Debug`；
+- 打开 debug 日志；
+- 只构建 Regular / Italic；
+- 跳过 OTF、WOFF2 与 Nerd Font。
+
+适合改特征或源之后做快速验证。
+
+## 5. 完整构建
+
+```sh
+uv run build.py
 ```
 
-### Windows
+按 `config.json` 的 `formats`（默认 `ttf,otf,woff2`）产出全部基础格式，并构建默认 NF。
 
-把文件复制到 `C:\Windows\Fonts\` 或双击 TTF 文件点「安装」。
+## 6. 复用缓存
 
-## 常见问题排查
-
-### 依赖安装失败
-
-```bash
-# 某些字体处理库需要编译工具链
-# macOS:
-brew install freetype
-# Ubuntu:
-sudo apt install libfreetype-dev
+```sh
+uv run build.py --format ttf
+uv run build.py --format ttf --cache   # 第二次应命中已完成的阶段
 ```
 
-### 构建超时
+`--cache` 会读取 `fonts/build-cache.json`，按阶段身份、输出清单、文件存在性与内容摘要判定命中。日志中应出现 `Cache hit`。
 
-降低并行度：
-```bash
-python build.py --pool-size 2
+> 若刚改过 `scripts/`、依赖或 UFO 轮廓，先去掉 `--cache` 构建一次，详见 [并行构建与缓存](../concepts/08-parallel-build.md)。
+
+## 7. 验证产物
+
+```sh
+ls fonts/Variable fonts/TTF
 ```
 
-### SMB 网络盘慢
+- `fonts/Variable/MapleMono[wght].ttf` 应带 `fvar` 表；
+- `fonts/TTF/` 中应存在请求的字重；
+- `fonts/build-config.json` 中的 `formats`、`width`、`feature_freeze` 应与预期一致。
 
-把仓库移到本地盘。Maple Mono 会自动检测 SMB 并降级 pool_size=1，但最好直接移走。
+安装到系统后，用字体查看器确认族名与字重列表；若族名带 `Debug`，说明使用了 `--debug`。
 
-### Codespace 容器 OOM
+## 8. 常见问题
 
-使用 `--least-styles` 只构建 4 种基础字重：
-```bash
-python build.py --least-styles
-```
+| 现象 | 原因 | 处理 |
+|------|------|------|
+| 没有 `fonts/OTF/` | 未请求或使用了 `--debug` | 去掉 `--debug` 并确认 `formats` 含 `otf` |
+| 没有 `fonts/Woff2/` | 未请求或 debug | 同上 |
+| 没有 `fonts/NF/` | `--no-nf` 或 debug | 检查 `nerd_font.enable` |
+| 改动没生效 | 误用了 `--cache` | 去掉缓存重建 |
+| 下载失败 | GitHub 不可达 | 设置 `github_mirror` 或 `$GITHUB` |
 
-## 相关资源
+## 9. 下一步
 
-- [构建流水线概念](../concepts/01-build-pipeline.md)
-- [配置系统概念](../concepts/02-config-system.md)
-- [并行构建概念](../concepts/08-parallel-build.md)
+- 定制字形与连字：[自定义特征构建](custom-feature-build.md)
+- 生成图标版本：[Nerd Font 构建](nerd-font-build.md)
+- 生成中日韩版本：[CJK 构建](cjk-build.md)

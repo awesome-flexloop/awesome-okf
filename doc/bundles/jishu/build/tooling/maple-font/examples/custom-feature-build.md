@@ -1,176 +1,162 @@
 ---
 type: Example
 title: "自定义特征构建"
-description: "通过 --feat 参数和 config.json feature_freeze 段定制 OpenType 特征的三种模式"
-tags: ["maple-mono", "feature", "freeze", "customize", "cli"]
+description: "用 --feat 冻结字形变体、用 --apply-fea-file 直接编辑特征文件，并正确再生成签入产物"
+tags: ["feature-freeze", "fea", "normal", "custom-build"]
 sources:
-  - id: CONFIG-JSON
-    resource: "config.json#feature_freeze"
-    description: "feature_freeze 配置段默认值"
-  - id: BUILD-PY-FREEZE
-    resource: "build.py#FontConfig._apply_feature_options"
-    description: "Feature Options CLI 参数处理"
-prerequisites:
-  - "basic-build.md"
-  - "../concepts/02-config-system.md"
-  - "../concepts/03-feature-system.md"
-  - "../concepts/05-freeze-mechanism.md"
+  - id: build-options
+    resource: https://github.com/subframe7536/maple-font/blob/variable/documentation/build-options.md
+    title: Build Options
+  - id: feature-readme
+    resource: https://github.com/subframe7536/maple-font/blob/variable/scripts/feature/README.md
+    title: Maple Mono Feature Module
+generated: { by: reference_agent/deepseek-v4.1-flash, at: "2026-11-22" }
 status: draft
 ---
 
-# 示例 2：自定义特征构建
+# 自定义特征构建
 
-本示例展示三种定制 OpenType 特征的方法——CLI 快速试验、config.json 版本化配置、Feature Freeze 三模式精细控制。
+## 场景一：冻结字形变体
 
-## 方法 1：CLI --feat 参数（最快）
+目标：不依赖编辑器开启 OpenType 特性，直接得到喜欢的 `cvXX` / `ssXX`。
 
-想快速启用几个特征？用 `--feat`：
-
-```bash
-# 启用 cv01（@$%品牌化）、ss07（箭头变体）、zero（零斜杠）
-python build.py --feat cv01,ss07,zero
-
-# 启用 Normal 预设（12 项 JetBrains Mono 风格）
-python build.py --normal
+```sh
+uv run build.py --feat zero,cv01,ss07,ss08 --format ttf
 ```
 
-这等价于在 config.json 中把列出的特征置为 `enable` 模式。
+- `--feat` 是 `enable` 的批量写法，逗号分隔；
+- 启用的单一替换会被写入每个 UFO master，静态与变量输出一致；
+- 上下文规则移入 `calt`，默认渲染即可生效。
 
-## 方法 2：config.json feature_freeze 段（版本化）
-
-想让配置可以 git 追踪和共享？编辑 config.json：
-
-### 场景 A：我想要 cv01 品牌化字形当默认值
+等价配置：
 
 ```json
 {
   "feature_freeze": {
+    "zero": "enable",
     "cv01": "enable",
+    "ss07": "enable",
     "ss08": "enable"
   }
 }
 ```
 
-效果：最终字体中 cv01 的规则被固化到 calt，所有 `@` `$` `%` 自动显示品牌化圆角版本。
-
-### 场景 B：我不想要 zero 零斜杠
+若要“彻底禁止”某个特征：
 
 ```json
 {
   "feature_freeze": {
-    "zero": "disable"
+    "cv05": "disable"
   }
 }
 ```
 
-效果：从字体表中彻底移除 zero 特征——即使渲染器尝试启用也无效。
+## 场景二：`--normal` 预设
 
-### 场景 C：混合策略
+```sh
+uv run build.py --normal --format ttf
+```
+
+`--normal` 使用更接近 JetBrains Mono 的字形（例如中间带斜线的 `0`），并默认启用 12 个特征：
+
+```
+cv01 cv02 cv33 cv34 cv35 cv36 cv61 cv62 ss05 ss06 ss07 ss08
+```
+
+发布名会带 `Normal` 后缀；若同时 `--no-liga`，则为 `NormalNL`。
+
+## 场景三：标准零号语义
+
+```sh
+uv run build.py --standard-zero
+```
+
+默认行为是“`0` 斜零、启用 `zero` 显示点零”；加上该选项后改为“默认点零、启用 `zero` 显示斜零”。
+
+## 场景四：直接编辑 `.fea`
+
+1. 编辑 `sources/features/regular.fea` 或 `italic.fea`；
+2. 构建时加 `--apply-fea-file`：
+
+```sh
+uv run build.py --apply-fea-file --format ttf --debug
+```
+
+要点：
+
+- 该路径读取签入文件，而不是运行 Python 生成器；
+- `include` 在冻结规则之前解析；
+- 仍发生在源准备阶段，因此静态与变量输出一致；
+- CJK 静态字体在合并后使用 `regular_cn.fea` / `italic_cn.fea`，只冻结 CJK 专属替换。
+
+## 场景五：修改生成器后同步产物
+
+若改的是 `scripts/feature/` 下的 Python 规则：
+
+```sh
+uv run task.py fea
+```
+
+会刷新：
+
+- `sources/features/regular.fea`、`italic.fea`、`cn.fea`、`regular_cn.fea`、`italic_cn.fea`
+- `documentation/opentype-features.md`
+- `sources/schema.json` 与 `config.json` 的 feature-freeze 段
+- `scripts/in_browser.py` 的 moving-rule 列表
+
+然后逐文件审查 diff，再构建：
+
+```sh
+uv run build.py --format ttf --debug
+```
+
+## 场景六：字符宽度与连字
+
+```sh
+uv run build.py --width narrow --no-liga --format ttf
+```
+
+- `--width`：`default`(600) / `narrow`(550) / `slim`(500)；同样作用于 Variable、NF 与 CJK；
+- `--no-liga`：移除全部连字，发布名带 `NL`；
+- `--remove-tag-liga`：只移除 `[TODO]` 一类纯文本标签连字；
+- `--no-infinite-arrow`：关闭无限箭头。
+
+## 场景七：Unicode 与字重微调
 
 ```json
 {
-  "feature_freeze": {
-    "cv01": "enable",
-    "cv02": "ignore",
-    "ss05": "enable",
-    "ss08": "disable",
-    "zero": "ignore"
-  }
+  "codepoint_alias": { "U+E000": "U+E001" },
+  "weight_mapping": {
+    "regular": 350,
+    "bold": 700
+  },
+  "line_height": 1.1
 }
 ```
 
-- cv01 → 固化为默认
-- cv02 → 保留，渲染器可切换
-- ss05 → 固化为默认
-- ss08 → 彻底移除
-- zero → 保留
+- `codepoint_alias` 把缺失码点映射到已有字形；
+- `weight_mapping` 调整静态字体字重；
+- `line_height` 的最终行高为 `(ascender - descender) * line_height`。
 
-## 方法 3：width / hinted / ligature 等全局参数
+## 验证清单
 
-```bash
-# slim 宽度 + hinted 基座 + 禁用连字
-python build.py --width slim --no-hinted --no-liga
+1. `uv run build.py --dry`，确认 `feature_freeze`、`feat`、`width`、`normal` 已按预期归一化；
+2. 构建后检查 `GSUB`：`disable` 的特征应消失；
+3. 在编辑器中不开启任何特性，输入目标字符，确认 `enable` 生效；
+4. 对比 Variable 与静态 TTF 的同一字符，确认形态一致；
+5. 改了生成器源码时，确认构建未使用 `--cache`。
 
-# narrow 宽度 + 启用无限箭头
-python build.py --width narrow --infinite-arrow
-```
+## 常见陷阱
 
-### 参数速查
+| 陷阱 | 后果 | 正确做法 |
+|------|------|----------|
+| 改了 `scripts/feature/` 仍用 `--cache` | 旧阶段被误判命中 | 去掉 `--cache` |
+| 只改 `.fea` 却未加 `--apply-fea-file` | 构建仍走生成器 | 加 `--apply-fea-file` |
+| 手工编辑 `documentation/opentype-features.md` | 下次 `task.py fea` 被覆盖 | 改规则后重新生成 |
+| 同时要求 `--nf-mono` 与 `--nf-propo` | 语义冲突 | `propo` 优先生效；显式二选一 |
 
-| CLI 参数 | config.json 字段 | 效果 |
-|---------|-----------------|------|
-| `--width default` | `"width": "default"` (600) | 标准等宽 |
-| `--width narrow` | `"width": "narrow"` (550) | 略窄等宽 |
-| `--width slim` | `"width": "slim"` (500) | 紧凑等宽 |
-| `--no-hinted` | `"use_hinted": false` | 用 unhinted 基座 |
-| `--no-liga` | `"enable_ligature": false` | 禁用所有 calt 连字 |
-| `--infinite-arrow` | `"infinite_arrow": true` | 强制启用无限箭头 |
-| `--feat cv01,ss07` | `"feature_freeze": {...}` | 启用指定特征 |
-| `-n` / `--normal` | （预设，12 项） | JetBrains Mono 风格 |
+## 相关文档
 
-## 实战：构建一份 JetBrains Mono 风格的 Maple Mono
-
-目标：看起来像 JetBrains Mono 但字体更好看——圆角 + 更好的连字 + 草书斜体。
-
-```bash
-# 方式 1：CLI 一行搞定
-python build.py --normal --width narrow --no-hinted
-
-# 方式 2：写 config.json 版本化
-```
-
-```json
-// config.json
-{
-  "family_name": "Maple Mono JetBrains Style",
-  "use_hinted": false,
-  "width": "narrow",
-  "enable_ligature": true,
-  "feature_freeze": {
-    "cv01": "enable", "cv02": "enable", "cv33": "enable",
-    "cv34": "enable", "cv35": "enable", "cv36": "enable",
-    "cv61": "enable", "cv62": "enable",
-    "ss05": "enable", "ss06": "enable", "ss07": "enable",
-    "ss08": "enable"
-  }
-}
-```
-
-```bash
-# 然后运行
-python build.py
-```
-
-## 验证效果
-
-构建完成后，在支持 OpenType 的编辑器中验证：
-
-1. **vscode**：设置 `editor.fontFamily` 指向新字体
-2. **查看连字**：输入 `=>` `!=` `->` `>=` 看是否正确渲染
-3. **查看变体**：如果不确定 CV 是否生效，用 fontTools 检查：
-
-```bash
-python -c "
-from fontTools.ttLib import TTFont
-font = TTFont('fonts/Variable/MapleMono[wght]-VF.ttf')
-gsub = font['GSUB'].table
-print('GSUB features:', [f.FeatureTag for f in gsub.FeatureList.FeatureRecord])
-"
-```
-
-如果 cv01 被 enable 固化了，GSUB 中应该**没有** cv01 feature 了（规则已移入 calt）。
-
-## 常见问题
-
-### CLI 和 config.json 冲突时谁优先？
-
-CLI 参数优先级更高。`python build.py --feat cv01,ss07` 会把这两项覆盖 config.json 中的对应值。
-
-### enable 后怎么恢复原状？
-
-把该特征在 feature_freeze 中设为 `"ignore"`，或从 CLI --feat 参数中移除。
-
-### disable 和 enable 有什么区别？
-
-- `enable`：规则从 cvXX 搬到 calt，作为默认字形生效
-- `disable`：规则从字体中彻底删除，该 cvXX 不再存在
+- 三态模式与生效时机：[特征冻结机制](../concepts/05-freeze-mechanism.md)
+- AST 与编译入口：[特征 AST 生成器](../concepts/04-feature-ast-generator.md)
+- 参数级 API：[特征生成 API](../references/feature-generator-api.md)

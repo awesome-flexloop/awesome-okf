@@ -1,108 +1,102 @@
 ---
 type: Concept
-title: "Maple Mono 简介"
-description: "Maple Mono v7.9 等宽编程字体是什么——设计目标、版本演进、与 JetBrains Mono/Fira Code 的定位区别"
-tags: ["maple-mono", "font", "introduction", "typography", "monospace"]
+title: "Maple Mono 总体介绍"
+description: "Maple Mono 的定位、版本线、v8 新特性与构建系统仓库布局"
+tags: ["maple-mono", "font", "build-system", "v8"]
 sources:
-  - id: README-MAPLE
-    resource: "README.md"
-    description: "项目说明、功能列表、下载与使用方法"
-  - id: CONFIG-SCHEMA
-    resource: "source/schema.json"
-    description: "构建配置 JSON Schema 完整声明"
-  - id: CONFIG-JSON
-    resource: "config.json"
-    description: "默认构建配置"
-prerequisites: []
-next:
-  - "01-build-pipeline"
-related:
-  - "../examples/basic-build.md"
+  - id: maple-readme
+    resource: https://github.com/subframe7536/maple-font
+    title: Maple Mono README
+  - id: maple-build
+    resource: https://github.com/subframe7536/maple-font/blob/variable/documentation/build.md
+    title: Custom Build
+generated: { by: reference_agent/deepseek-v4.1-flash, at: "2026-11-22" }
 status: draft
 ---
 
-# Maple Mono 简介
+# Maple Mono 总体介绍
 
-## Maple Mono 是什么
+## 1. 字体定位
 
-Maple Mono 是一款**专为编程体验优化的开源等宽字体**，由 subframe7536 自 2020 年代起开发。v7 版本是一次完全重制，引入了变量字体格式和完整的构建源文件。
+Maple Mono 是一款面向编程场景的等宽字体，设计目标包括：
 
-**设计目标**：让编码更流畅——圆润的转角、优化的连字、圆角斜体字母（`f i j k l x y`）、清晰的 Nerd Font 图标集成。
+- **变量字重**：以 `wght` 轴提供从 Thin 到 ExtraBold 的连续字重；
+- **智能连字**：通过 `calt` 与 `cvXX` / `ssXX` 提供可选的连字与字形变体；
+- **Nerd Font 图标**：内置约 1 万个图标字形，形成 `NF` / `NFMono` / `NFPropo` 三种图标间距变体；
+- **CJK 扩展**：v8 将中文（简/繁）、日文、韩文纳入同一构建体系，并以 2:1 宽度比与拉丁字符对齐；
+- **可定制构建**：宽度、连字、字形预设、特征冻结、行高、字重映射、Unicode 别名均可配置。
 
-**版本演进**：
-- v1-v6：静态格式字体，广泛发行
-- **v7（当前）**：完全重制，变量字体（Variable Font），支持无限字重（100-900），源码构建系统公开
+## 2. 版本线：v7.9 与 v8
 
-**许可证**：SIL Open Font License 1.1（可自由使用、修改、分发）
+| 维度 | v7.9（稳定） | v8（开发中） |
+|------|--------------|--------------|
+| 分支 | 发布分支 | `variable` 分支 |
+| 包管理分发 | Scoop / Homebrew / Arch / Nix / CDN | 尚未发布，仅源码构建 |
+| 内嵌版本 | `7.900` | `8.003`（`v8.0-beta.3`） |
+| CJK 范围 | 以简体中文为主，`--cn*` 选项 | 简中/繁中/日/韩四语种，`--cjk*` 选项 |
+| 字符宽度 | 单一宽度 | `default`(600) / `narrow`(550) / `slim`(500) |
+| 代码组织 | `source/py/` 平铺模块 | `scripts/` 分包（config / pipeline / feature / cjk / font_ops / task / utils） |
+| 特征冻结 | 成品后处理 | 源准备期跨 master 冻结 |
+| 构建缓存 | 无统一阶段缓存 | 可选 `--cache` + `build-cache.json` |
 
-## 核心特性
+> 本文档描述 v8。若你安装的是发行版包管理器中的版本，实际运行的是 v7.9，命令与目录与本包不同。
 
-| 特性 | 说明 |
-|------|------|
-| ✨ Variable | 变量字体格式，字重可在 100-900 之间连续调节 |
-| ☁️ 优化字形 | 圆角 `@ $ % & Q ->`、斜体草书 `f i j k l x y` |
-| 💪 智能连字 | 大量上下文感知连字（`=>` `!=` `->` `//` `>=` 等） |
-| 🎨 Nerd Font | 一等公民支持，终端图标无缝集成 |
-| 🔨 定制化 | 通过 config.json / CLI 参数自由启用或禁用 OpenType 特征 |
-| 🇨🇳 中日韩 | 基于 Resource Han Rounded 的中日韩字形完整支持 |
+## 3. v8 的主要新增能力
 
-## 与同类字体的定位对比
+1. **四语种 CJK**：`--cjk cn,jp,tc,kr`，每种语言有独立预设、基座缓存与输出目录。
+2. **三档字符宽度**：`--width default|narrow|slim`，并贯穿 Variable、NF 与 CJK 输出。
+3. **标准零号语义**：`--standard-zero` 恢复“默认点零、启用 `zero` 显示斜零”的 OpenType 惯例。
+4. **旧字重类兼容**：`--legacy-thin-weight-class` 为 Thin/ExtraLight 静态字体使用 250/275，规避 Windows JetBrains IDE 的 GDI 伪粗体。
+5. **直接编辑特征文件**：`--apply-fea-file` 读取 `sources/features/{regular,italic}{_cn,}.fea`。
+6. **可选阶段缓存**：`--cache` 命中需要阶段身份、输出清单、文件存在性与内容摘要全部匹配。
+7. **文档重构**：README 精简为特性介绍，构建指南迁入 `documentation/`（上游 #850）。
 
-| 对比项 | Maple Mono | JetBrains Mono | Fira Code | Victor Mono |
-|--------|-----------|----------------|-----------|------------|
-| 变量字体 | ✅ v7+ | ✅ | ❌ | ❌ |
-| Nerd Font | ✅ 一等公民 | ✅ 可选补丁 | ✅ 可选补丁 | ✅ 可选补丁 |
-| 中文支持 | ✅ 内置 CN 版 | ❌ | ❌ | ❌ |
-| 构建系统 | ✅ Python DSL | 闭源 | 闭源 | 闭源 |
-| 自定义特征 | ✅ 三模式冻结 | 有限 | 有限 | 有限 |
-| 斜体风格 | 草书（手写感） | 倾斜 | 倾斜 | 草书 |
-| 圆角处理 | 全局圆角 | 直角为主 | 直角 | 部分圆角 |
-
-**核心差异**：Maple Mono 是少数**公开完整构建系统源码**的编程字体。这意味着你可以：
-- 定制 OpenType 特征规则（Python 代码）
-- 冻结特征到字形表
-- 调整字重映射
-- 直接修改 AST 风格的查找表生成逻辑
-
-## 构建系统全貌
-
-Maple Mono 的构建系统是一个**纯 Python 项目**，技术栈：
+## 4. 仓库布局
 
 ```
-Python 3.10+
-├── foundrytools-cli (ftcli)     ← 字体批处理（字形修正、dehint、converter）
-├── fontTools (TTLib)            ← 低水平字体表操作
-├── ttfautohint                  ← 自动 hinting
-├── skia-pathops                 ← 路径运算
-└── glyphslib                    ← Glyphs 文件支持
+maple-font/
+├── build.py                 # 发布构建入口（薄封装 → scripts.pipeline.main）
+├── task.py                  # 仓库维护任务入口（薄封装 → scripts.task.main）
+├── config.json              # 默认构建配置（JSON Schema 见 sources/schema.json）
+├── documentation/           # 用户文档：build / build-options / cli / cjk / choose / ...
+├── resources/               # 预览图与静态资源
+├── scripts/                 # 构建系统源码
+│   ├── config/              # 配置模型、CLI、解析器、运行时上下文
+│   ├── pipeline/            # 编排、Fontmake、派生输出、Nerd Font、CJK 集成、缓存
+│   ├── feature/             # OpenType 特征 AST、规则、编译器、应用
+│   ├── cjk/                 # CJK 配置、预设、源处理、变量/静态构建、解析回退
+│   ├── font_ops/            # 字体操作：命名、度量、合并、子集、hinting、OpenType
+│   ├── task/                # task.py 子命令适配器
+│   └── utils/               # 文件、进程、归档、下载、日志、版本
+├── sources/                 # 源与生成物
+│   ├── *.designspace, *.ufo # 已提交的设计源
+│   ├── features/*.fea       # 签入的特征文件（文件式构建路径）
+│   ├── MapleMono-NF-Base*.ttf  # 三份预构建 Nerd Font 基座
+│   ├── cjk/<locale>/        # CJK 预设配置、变量基座、静态实例与摘要
+│   └── schema.json          # config.json 的 JSON Schema
+└── fonts/                   # 构建输出（生成物，不入库）
 ```
 
-构建系统入口有两个：
-- **`build.py`**：主构建流水线（字体变换 + 输出）
-- **`task.py`**：开发辅助子命令（NF 基座更新、.fea 文件生成、版本发布等）
+## 5. 两种入口的分工
 
-## 基本使用
+| 入口 | 职责 | 典型命令 |
+|------|------|----------|
+| `build.py` | 发布构建：读取配置、编译字体、输出 `fonts/` | `uv run build.py --format ttf --debug` |
+| `task.py` | 仓库维护：特征再生成、设计源转换、NF 基座、CJK 基座、发布与上架 | `uv run task.py fea`、`uv run task.py cjk --preset cn` |
 
-最简单的本地构建：
+`task.py` 拥有 7 个子命令：`nf`、`fea`、`designspace`、`release`、`cjk`、`googlefonts`、`publish`。其中只有 `cjk` 会产出可被 `build.py` 复用的 CJK 基座，其余多为维护或发布流程。
 
-```bash
-git clone https://github.com/subframe7536/maple-font --depth 1 -b variable
-pip install -r requirements.txt
-python build.py
-```
+## 6. 依赖与运行环境
 
-详见 [基本构建示例](../examples/basic-build.md)。
+- Python `>= 3.10`；
+- 运行时依赖：`fontmake~=3.12`、`fonttools[woff]~=4.63`、`glyphsLib~=6.13`、`skia-pathops~=0.9`、`ttfautohint-py~=0.6`、`py7zr~=1.1`；
+- 开发依赖：`fontbakery`、`gftools`、`pyrefly`、`questionary`、`ruff`；
+- 使用 FontForge 动态修补 Nerd Font 时，需要额外安装 `fontforge`（以及可能的 `python3-fontforge`）。
 
-## 学习路径
+推荐使用 `uv`：`uv sync` 后以 `uv run build.py` 执行，可保证依赖与锁文件一致。
 
-```
-00-introduction（本文档）
-  → 01-build-pipeline：理解四阶段构建流水线
-    → 02-config-system：配置驱动的双层架构
-      → 03-feature-system：OpenType Feature 三层结构
-        → 04-feature-ast-generator：Python AST 生成器
-          → 05-freeze-mechanism：特征冻结三模式
-            → 06-nerd-font-patching：NF 补丁策略
-              → 07-cn-font-merge：中英合并
-                → 08-parallel-build：并行流水线
-```
+## 7. 下一步
+
+- 想理解一次构建的完整阶段：[构建流水线](01-build-pipeline.md)
+- 想直接跑一次最小构建：[基本构建示例](../examples/basic-build.md)
+- 想定制特征或 CJK：[特征冻结](05-freeze-mechanism.md)、[CJK 字体合并](07-cjk-font-merge.md)

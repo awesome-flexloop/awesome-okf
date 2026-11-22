@@ -2,23 +2,25 @@
 okf_version: "0.2"
 type: bundle-index
 title: "Maple Mono Font Builder"
-description: "Maple Mono v7.9 等宽编程字体构建系统源码中文教程——配置驱动流水线、OpenType Feature AST 生成器、特征冻结、Nerd Font 补丁、中英文字体合并"
-tags: ["maple-mono", "font", "opentype", "fonttools", "variable-font", "typography", "python"]
+description: "Maple Mono v8（8.003）等宽编程字体构建系统中文教程——阶段化流水线、ResolvedConfig/BuildPlan 双层配置、Python AST 特征生成、源准备期特征冻结、Nerd Font 三基座、四语种 CJK 合并、可选阶段缓存"
+tags: ["maple-mono", "font", "opentype", "fontmake", "fonttools", "variable-font", "cjk", "typography", "python"]
 total_concepts: 9
 total_examples: 4
 total_references: 3
 source_repository: "https://github.com/subframe7536/maple-font"
-source_version: "v7.9"
+source_version: "v8.0-beta.3 (8.003)"
 source_path: "notebook/libs/maple-font/"
-generated: { by: reference_agent/deepseek-v4.1-flash, at: "2026-11-21" }
+generated: { by: reference_agent/deepseek-v4.1-flash, at: "2026-11-22" }
 status: draft
 ---
 
 # Maple Mono Font Builder
 
-> Maple Mono 是一款专为编程体验优化的开源等宽字体，支持变量字重、智能连字、Nerd Font 图标补丁与中英文字符集嵌入。本知识包基于 Maple Mono **v7.9** 构建系统源码阅读撰写，覆盖从构建流水线到特征系统的完整架构。
+> Maple Mono 是一款专为编程体验优化的开源等宽字体，支持变量字重、智能连字、Nerd Font 图标补丁与中日韩字符集嵌入。本知识包基于 Maple Mono **v8（8.003）** 构建系统源码与官方文档重写，覆盖构建流水线、配置解析、特征系统、CJK 子系统的完整架构。
 
-本知识包基于 **Maple Mono v7.9** 源码阅读撰写，按七概念方法论的 R→I→E→C 链路交付：先采集客观事实（22+ 条），再形成四元组洞察（现象+根因+影响+建议），最后原子化为概念文档、实战示例与 API 参考三层结构。
+本知识包按七概念方法论的 R→I→E 链路交付：先采集客观事实，再形成四元组洞察（现象+根因+影响+建议），最后原子化为概念文档、实战示例与 API 参考三层结构。
+
+> **版本边界**：v8 目前位于上游 `variable` 分支，开发版本为 `v8.0-beta.3`（内嵌字体版本 `8.003`）；Scoop、Homebrew、Arch、Nix 与 CDN 分发的稳定包仍是 v7.9。本包描述的是 v8 构建系统，命令与目录均以 v8 源码为准。
 
 ## 快速导航
 
@@ -28,69 +30,74 @@ status: draft
 | 🧪 实战示例 | 4 | [实战示例索引](examples/index.md) |
 | 📚 API 参考 | 3 | [API 参考索引](references/index.md) |
 
-## 三分钟理解 Maple Mono 构建流水线
+## 三分钟理解 v8 构建流水线
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
-│                 原始源字体（source/）                              │
-│  MapleMono[wght]-VF.ttf  MapleMono-Italic[wght]-VF.ttf          │
-│  MapleMono-NF-Base.ttf（预构建 Nerd Font 基座）                    │
+│ 入口层：build.py（发布构建）        task.py（仓库维护任务）        │
+│   main(args, version)               nf / fea / designspace /      │
+│                                     release / cjk / googlefonts / │
+│                                     publish                      │
 └──────────────────────────┬───────────────────────────────────────┘
                            │
-    ┌──────────────────────┼──────────────────────┐
-    │                      │                      │
-    ▼                      ▼                      ▼
-┌─────────┐           ┌──────────┐          ┌──────────┐
-│ build.py│           │ Python AST│          │ config.json│
-│ FontConfig│         │ 特征生成器│          │ 声明式配置  │
-│ BuildOption│        │ generate_ │          │ CLI 覆盖层 │
-│ parse_args│         │ fea_string│          └──────────┘
-└────┬────┘           └─────┬────┘
-     │                       │
-     ▼                       │
-┌────────────────────────────▼──────┐
-│        并行构建核心逻辑             │
-│  run_build(PoolExecutor)          │
-│    ├─ build_mono() → TTF/OTF/WOFF2 │
-│    ├─ build_mono_autohint()       │
-│    ├─ build_nf()    → Nerd Font 版 │
-│    └─ build_cn()    → 中英合并版   │
-└────────────────────────────┬──────┘
-                             │
-                             ▼
-┌──────────────────────────────────────┐
-│  OpenType Feature 注入 + 特征冻结     │
-│  patch_font_feature()                │
-│  freeze_feature() → 动态规则固化      │
-└────────────────────────────┬─────────┘
-                             │
-                             ▼
-┌──────────────────────────────────────┐
-│  多格式输出：                       │
-│  Variable / TTF / TTF-AutoHint /     │
-│  OTF / WOFF2 / NF / CN / NF-CN       │
-└──────────────────────────────────────┘
+                           ▼
+┌──────────────────────────────────────────────────────────────────┐
+│ 配置层：config/                                                   │
+│  config.json（JSON + schema）                                     │
+│      ＋ CLI 参数（优先级更高）                                     │
+│      → BuildConfigResolver → ResolvedConfig（6 组子配置）          │
+│      → BuildRuntimeContext（路径、度量、镜像、FontForge）          │
+│      → --dry：打印后退出，不创建 BuildPlan                        │
+└──────────────────────────┬───────────────────────────────────────┘
+                           │
+                           ▼
+┌──────────────────────────────────────────────────────────────────┐
+│ 计划层：BuildPlan（一次性派生）                                    │
+│  目标样式 / 必需基础格式 / WOFF2 / Nerd Font / CJK 模式 /          │
+│  静态清理 / 归档                                                  │
+└──────────────────────────┬───────────────────────────────────────┘
+                           │
+                           ▼
+┌──────────────────────────────────────────────────────────────────┐
+│ 执行层：pipeline/                                                 │
+│  准备 Designspace/UFO → Fontmake 编译 Variable/TTF/OTF            │
+│  → 后处理（命名、度量、别名、宽度校验）                            │
+│  → AutoHint / WOFF2（派生阶段）                                    │
+│  → Nerd Font 阶段（预构建基座或 font-patcher）                     │
+│  → CJK 阶段（四语种 × 静态/变量 × 普通/NF 配置档）                  │
+│  → 清理未请求的 TTF → 写 build-config.json / build-cache.json      │
+│  → 可选 --archive 归档                                             │
+└──────────────────────────┬───────────────────────────────────────┘
+                           │
+                           ▼
+┌──────────────────────────────────────────────────────────────────┐
+│ 输出层：fonts/                                                    │
+│  Variable / TTF / TTF-AutoHint / OTF / Woff2 / NF / NFMono /      │
+│  NFPropo / <LOCALE> / NF-<LOCALE> / Variable-<LOCALE> / ...        │
+└──────────────────────────────────────────────────────────────────┘
 ```
 
 ## 核心洞察
 
-1. **声明式配置 + 命令覆盖双层架构**：`config.json` 承载默认值（可版本化、可共享），CLI 参数在运行时覆盖（快速实验、CI 流水线）。双层合并顺序固定：Config 默认 → CLI 参数覆写。这避免了"全靠命令行"的复杂度爆炸和"全靠配置文件"的灵活性缺失。
+1. **“解析—计划—执行”三段分离**：`ResolvedConfig` 只表达用户意图，`BuildPlan` 只做一次性阶段决策，`MapleBuildPipeline` 只负责依赖顺序与缓存。三者职责互斥，使 `--dry` 能在不触碰构建逻辑的前提下完整审计输入，也让阶段策略可以独立测试。
 
-2. **OpenType Feature 的 Python AST 生成器**：不手写 `.fea` 文件，而是用 Python 对象（`ast.FeatureWithDocs`、`ast.Lookup`、`ast.ClassDef`）组合生成特征字符串。这让特征规则可以根据构建参数（italic / cn / normal / calt / infinite / tag 等）动态重组，且每个特征自带文档描述。
+2. **配置归一化前移**：JSON、CLI、旧版 `--cn*` 别名都在 `config/` 内归一化，阶段内部不再判断“用户是怎么传参的”。这避免了默认值散落在各阶段导致的不可复现构建。
 
-3. **特征冻结（Feature Freeze）机制**：对静态字体，可将 `cvXX` / `ssXX` / `zero` 等动态特征固化到字形表。三种模式（`enable` / `disable` / `ignore`）让最终用户拿到的字体就是自己想要的样子——不需要字体渲染器支持 OpenType 特性切换。变量字体则将特征规则移入 `calt` 查找表。
+3. **特征编译双轨 + 源准备期冻结**：默认路径用 Python AST 生成特征源码；`--apply-fea-file` 则读取 `sources/features/*.fea`。两条路径都在 Fontmake 编译前进入源准备，把启用的单一替换写入每个 UFO master，因此静态与变量输出共享同一套冻结轮廓，而不是在成品字体上做后处理。
 
-4. **中英文字体的组合策略**：不重绘中文字形，而是下载预构建的中文基字体（Resource Han Rounded 变体），用 `merge_ttfonts()` 将等宽拉丁基字体与中文基字体合并。合并后再调整中文字形宽度比例，保持 2:1 对齐。
+4. **CJK 是独立子系统，不是一次合并步骤**：四语种各有预设、配置、变量基座、静态实例与独立摘要；主流水线只按“本地静态目录 → 本地静态归档 → 远程静态归档 → 本地变量 → 本地变量归档 → 远程变量归档 → 源重建”七级回退取用。这使 CJK 构建可以脱离主流水线单独维护与发布。
 
-5. **预构建 vs 动态生成的权衡**：Nerd Font 默认使用预构建的 NF Base 字体（`MapleMono-NF-Base.ttf`），只有在用户需要自定义 glyph 或 extra_args 时才回退到 `font-patcher` 运行时修补。这避免了每次构建都要调用 FontForge，显著加快构建速度。
+5. **缓存身份是一份显式契约**：阶段身份只包含相关解析配置、目标样式、Designspace 维度字典、生成特征文件指纹与上游阶段身份，**不包含**生成器源码、依赖版本、UFO 轮廓内容与 CJK 基座内容。改到这些未纳入身份的输入时，必须显式无缓存构建，否则会得到“看似命中、实际过期”的结果。
+
+6. **预构建优先、动态修补兜底**：Nerd Font 默认使用三份签入的 NF 基座（默认 / Mono / Propo），只有自定义 glyph、`extra_args` 或显式 `--font-patcher` 才回退到 FontForge 修补器，显著缩短常规构建时间。
 
 ## 文档结构
 
 ```
 maple-font/
 ├── index.md              ← 本文件（Bundle 首页）
-├── log.md                ← 生成日志
-├── concepts/             ← 8 篇概念文档
+├── log.md                ← 生成与更新日志
+├── concepts/             ← 9 篇概念文档
 │   ├── index.md
 │   ├── 00-introduction.md
 │   ├── 01-build-pipeline.md
@@ -99,18 +106,18 @@ maple-font/
 │   ├── 04-feature-ast-generator.md
 │   ├── 05-freeze-mechanism.md
 │   ├── 06-nerd-font-patching.md
-│   ├── 07-cn-font-merge.md
+│   ├── 07-cjk-font-merge.md
 │   └── 08-parallel-build.md
 ├── examples/             ← 4 个实战示例
 │   ├── index.md
 │   ├── basic-build.md
 │   ├── custom-feature-build.md
 │   ├── nerd-font-build.md
-│   └── cn-font-build.md
+│   └── cjk-build.md
 └── references/           ← 3 篇 API 参考
     ├── index.md
     ├── build-entrypoint.md
-    ├── font-config-class.md
+    ├── resolved-config.md
     └── feature-generator-api.md
 ```
 
@@ -118,7 +125,7 @@ maple-font/
 
 如果你是 Maple Mono 构建系统的新用户，从 [基本构建示例](examples/basic-build.md) 开始。
 
-如果你想理解架构，从 [构建流水线](concepts/01-build-pipeline.md) 开始按学习路径阅读。
+如果你想理解架构，从 [构建流水线](concepts/01-build-pipeline.md) 开始按学习路径阅读；若只关心某一子系统，可直接跳到 [特征冻结](concepts/05-freeze-mechanism.md)、[Nerd Font](concepts/06-nerd-font-patching.md) 或 [CJK 合并](concepts/07-cjk-font-merge.md)。
 
 ```{toctree}
 :hidden:

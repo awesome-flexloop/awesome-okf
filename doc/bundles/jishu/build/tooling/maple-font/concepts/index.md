@@ -1,45 +1,27 @@
 ---
-type: concepts-index
-title: "Maple Mono 概念文档索引"
-description: "Maple Mono v7.9 构建系统核心概念——按学习路径从入门到高级排列"
+okf_version: "0.2"
+type: index
+title: "概念文档索引"
+description: "Maple Mono v8 构建系统概念文档——从总体介绍到流水线、配置、特征、Nerd Font、CJK 与并行缓存"
 ---
 
-# Maple Mono 概念文档索引
+# 概念文档索引
 
-本索引列出 Maple Mono 构建系统核心概念的 9 篇文档，按学习路径从入门到高级排列。
+本目录按“先全局、再子系统、最后工程约束”的顺序组织 9 篇概念文档。建议首次阅读按编号顺序进行。
 
-## 入门篇
-
-| 序号 | 文档 | 说明 |
-|------|------|------|
-| 00 | [Maple Mono 简介](00-introduction.md) | Maple Mono 是什么、构建系统全貌、与 JetBrains Mono/Fira Code 的定位区别 |
-| 01 | [构建流水线](01-build-pipeline.md) | 从源字体到多格式输出的四阶段流水线：源字体加载→配置解析→并行构建→后处理 |
-| 02 | [配置系统](02-config-system.md) | config.json 声明式配置 + CLI 参数双层覆盖的合并顺序与优先级 |
-
-## 核心篇
-
-| 序号 | 文档 | 说明 |
-|------|------|------|
-| 03 | [OpenType Feature 系统](03-feature-system.md) | calt 连字查找表、cv 变体、ss 样式集三层结构与触发机制 |
-| 04 | [Feature AST 生成器](04-feature-ast-generator.md) | Python 对象组合生成 .fea 字符串的 DSL 设计——FeatureWithDocs/Lookup/ClassDef |
-| 05 | [特征冻结机制](05-freeze-mechanism.md) | enable/disable/ignore 三模式——把动态 OpenType 规则固化到字形表 |
-
-## 高级篇
-
-| 序号 | 文档 | 说明 |
-|------|------|------|
-| 06 | [Nerd Font 补丁策略](06-nerd-font-patching.md) | 预构建 NF Base 字体 vs font-patcher 运行时修补的权衡 |
-| 07 | [中英文字体合并](07-cn-font-merge.md) | Resource Han Rounded 基字体下载 + merge_ttfonts 合并 + 2:1 宽度对齐 |
-| 08 | [并行构建与性能](08-parallel-build.md) | ProcessPoolExecutor 并行流水线 + pool_size 配置 + 缓存策略 |
+| 编号 | 文档 | 核心问题 | 关键对象 |
+|------|------|----------|----------|
+| 00 | [总体介绍](00-introduction.md) | Maple Mono 是什么？v8 与 v7 有何不同？ | 版本线、构建方式、仓库布局 |
+| 01 | [构建流水线](01-build-pipeline.md) | 一次构建经历哪些阶段？各阶段由谁负责？ | `main()`、`BuildPlan`、`MapleBuildPipeline` |
+| 02 | [配置系统](02-config-system.md) | 配置如何从 JSON/CLI 归一化为可执行模型？ | `ResolvedConfig`、`BuildConfigResolver`、`BuildRuntimeContext` |
+| 03 | [特征系统](03-feature-system.md) | 特征规则如何组织、生成与应用？ | `feature/` 包、双轨应用路径 |
+| 04 | [特征 AST 生成器](04-feature-ast-generator.md) | 如何用 Python 对象生成 `.fea` 源码？ | `Clazz`、`Lookup`、`Feature`、`generate_fea_string` |
+| 05 | [特征冻结机制](05-freeze-mechanism.md) | 三种冻结模式在什么时机生效？ | `feature_freeze`、源准备期冻结、`calt` 承载 |
+| 06 | [Nerd Font 补丁](06-nerd-font-patching.md) | 预构建基座与动态修补如何取舍？ | `NerdFontVariant`、三份 NF 基座、`font-patcher` |
+| 07 | [CJK 字体合并](07-cjk-font-merge.md) | 四语种 CJK 如何生成、缓存与合并？ | `CJKBuilder`、`CJKBaseResolver`、2:1 对齐 |
+| 08 | [并行构建与缓存](08-parallel-build.md) | 并行执行与阶段缓存如何保证正确性？ | `Executor`、阶段身份、`build-cache.json` |
 
 ## 学习路径
-
-```
-00-introduction → 01-build-pipeline → 02-config-system
-  → 03-feature-system → 04-feature-ast-generator
-    → 05-freeze-mechanism → 06-nerd-font-patching
-      → 07-cn-font-merge → 08-parallel-build
-```
 
 ```{toctree}
 :hidden:
@@ -52,6 +34,11 @@ description: "Maple Mono v7.9 构建系统核心概念——按学习路径从�
 04-feature-ast-generator
 05-freeze-mechanism
 06-nerd-font-patching
-07-cn-font-merge
+07-cjk-font-merge
 08-parallel-build
 ```
+
+- **只读使用者**：00 → 01 → 对应示例
+- **构建配置定制**：00 → 02 → 05 → 06 → 07
+- **修改特征规则**：00 → 03 → 04 → 05
+- **维护流水线或 CI**：00 → 01 → 08

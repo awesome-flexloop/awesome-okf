@@ -1,176 +1,120 @@
 ---
 type: Concept
-title: "Nerd Font 补丁策略"
-description: "Maple Mono 预构建 NF Base 字体 vs font-patcher 运行时修补的权衡决策与三种输出模式"
-tags: ["maple-mono", "nerd-font", "font-patcher", "icons", "terminal"]
+title: "Nerd Font 补丁"
+description: "三种图标间距变体、三份预构建 NF 基座、font-patcher 回退条件与 NF 输出目录规则"
+tags: ["nerd-font", "font-patcher", "nf", "nfm", "nfp", "icons"]
 sources:
-  - id: BUILD-PY-NF
-    resource: "build.py#build_nf"
-    description: "build_nf 函数——NF 构建的两条路径"
-  - id: CONFIG-NF
-    resource: "config.json#nerd_font"
-    description: "nerd_font 配置段"
-  - id: TASK-PY-NF
-    resource: "task.py#nerdfont"
-    description: "NF 基座更新子命令"
-prerequisites:
-  - "01-build-pipeline"
-  - "02-config-system"
-next:
-  - "07-cn-font-merge"
-related:
-  - "../examples/nerd-font-build.md"
+  - id: nerd-font-source
+    resource: https://github.com/subframe7536/maple-font/blob/variable/scripts/font_ops/nerd_font.py
+    title: scripts/font_ops/nerd_font.py
+  - id: choose-nf
+    resource: https://github.com/subframe7536/maple-font/blob/variable/documentation/choose.md
+    title: Naming and Choosing Fonts
+generated: { by: reference_agent/deepseek-v4.1-flash, at: "2026-11-22" }
 status: draft
 ---
 
-# Nerd Font 补丁策略
+# Nerd Font 补丁
 
-Nerd Font 是将 [Font Awesome](https://fontawesome.com/)、[Devicons](https://devicon.dev/)、[Octicons](https://primer.style/octicons/) 等图标字体合并到编程字体的工具链。Maple Mono 将 Nerd Font 作为**一等公民**支持——构建时直接产出带图标的版本。
+## 1. 三种图标间距变体
 
-## 三条路径的决策树
+Nerd Font 图标的前进宽度与字形宽度可以不同，Maple Mono 因此提供三种变体：
 
-Maple Mono 的 Nerd Font 构建有三条路径，由 `config.json` 的 `nerd_font` 配置段和 CLI 参数共同决定：
+| 变体 | 目录/包标签 | 文件名标记 | 含义 |
+|------|-------------|------------|------|
+| 默认 | `NF` | `NF` | 每个图标占一个拉丁字符前进宽度，字形宽度可变 |
+| 固定宽 | `NFMono` | `NFM` | 图标固定为一个拉丁字符宽度 |
+| 比例宽 | `NFPropo` | `NFP` | 图标使用可变宽度 |
 
-```
-                         nerdfont.enable=true?
-                                │
-                    ┌───────────┴───────────┐
-                    ▼                       ▼
-                   否                      是
-                    │                       │
-              跳过 NF 构建          nerdfont.use_font_patcher=true?
-                                            │
-                                ┌───────────┴───────────┐
-                                ▼                       ▼
-                               否                      是
-                                │                       │
-                   ┌────────────┴─────┐        ┌────────┴────────┐
-                   ▼                  ▼        ▼                 ▼
-              预构建基座路径      自定义 glyph   font-patcher 路径  FontForge 依赖
-           merge_ttfonts 合并   列表差异检测   运行时修补           最慢
-```
+`NerdFontVariant`（`scripts/font_ops/nerd_font.py`）统一解析后缀、符号与路径：
 
-### 路径 1：预构建基座（默认，最快）
+- `suffix`：`""` / `"Mono"` / `"Propo"`；
+- `symbol`：`NF` / `NFM` / `NFP`；
+- `directory_name`：`NF` / `NFMono` / `NFPropo`；
+- `base_path`：`sources/MapleMono-NF-Base.ttf`、`MapleMono-NF-Base-Mono.ttf`、`MapleMono-NF-Base-Propo.ttf`。
 
-```python
-# build.py build_nf()
-def build_nf(...):
-    nf_base = find_nf_base_font()  # MapleMono-NF-Base.ttf
-    nf_extra = find_nf_extra()     # MapleMono-NF-Ext.ttf（如果有）
-    # merge_ttfonts 合并到基础 TTF
-    merge_ttfonts(base_font, nf_base, nf_extra)
-```
+`from_options(mono, propo, extra_args, reject_conflict)` 的判定顺序是：`propo`（或 `--variable-width-glyphs`）优先，其次 `mono`（或 `-s` / `--mono` / `--single-width-glyphs`），否则默认。`reject_conflict=True` 时同时指定 `mono` 与 `propo` 会直接报错。
 
-**来源**：Maple Mono 仓库维护了一个定期更新的 `MapleMono-NF-Base.ttf`——包含所有需要的图标字形，提前用 font-patcher 修补好。构建时直接 merge。
+## 2. 预构建基座优先
 
-**优点**：
-- **快**：不调用 FontForge，纯 fontTools 表合并
-- **可预测**：输出始终一致
-- **无外部依赖**：不需要 FontForge 安装
-
-**缺点**：
-- 图标版本跟随 Maple Mono 版本（不是最新 Nerd Font release）
-- 无法自定义图标子集
-
-### 路径 2：font-patcher 运行时（自定义场景）
-
-```python
-def build_nf_font_patcher(...):
-    import subprocess
-    subprocess.run([
-        "font-patcher", base_font,
-        "--glyphs", "complete",
-        "--output", output_path,
-        "--fontawesome", "--devicons",
-        # ... extra args
-    ])
-```
-
-**触发条件**：`nerd_font.use_font_patcher=true` 或 `python task.py nf` 发现本地 NF Base 与期望版本不匹配。
-
-**优点**：
-- 图标永远是最新 Nerd Font release
-- 支持 `--glyphs` 自定义子集（如只装 Octicons）
-- 支持 `--extra-args` 传递 font-patcher 原生参数
-
-**缺点**：
-- **慢**：FontForge 加载 + 修补一个字体通常需要 30-60 秒
-- **依赖 FontForge**：需要系统级别安装
-- **可能失败**：font-patcher 有边缘情况 bug
-
-### 路径 3：自动切换
-
-Maple Mono 在 `task.py nf` 中实现版本检测：
-
-```python
-# 伪代码
-def check_nf_base_version():
-    local_base_version = read_base_nf_version()
-    expected_version = nerd_font_version_from_config()
-    if local_base_version != expected_version:
-        # 下载新的 NF Base 或重新修补
-        download_or_repatch()
-```
-
-## 三种输出模式
-
-Nerd Font 图标有三种宽度策略，由 `nerd_font.mono` / `nerd_font.propo` 控制：
-
-| 模式 | 效果 | 默认 |
-|------|------|------|
-| **默认**（mono=false, propo=false） | 图标自适应等宽格子 | ✅ |
-| **Mono**（mono=true） | 所有图标固定一个等宽格子 | 终端更整齐 |
-| **Propo**（propo=true，覆盖 mono） | 图标按自然宽度显示 | 视觉更自然但可能导致终端错位 |
-
-CLI 对应：`--nf-mono` / `--nf-propo`
-
-## merge_ttfonts 合并机制
-
-无论是预构建基座路径还是 font-patcher 路径，最终都需要把图标字形合并到基础字体。这个操作由 `merge_ttfonts()` 完成：
+v8 在 `sources/` 下签入三份 NF 基座：
 
 ```
-┌──────────────────┐   ┌──────────────────┐
-│  基础 TTF        │   │  Nerd Font 基座   │
-│  Maple Mono      │   │  Nerd Font Icons │
-│  等宽拉丁 + 中英  │   │  纯图标字形       │
-└────────┬─────────┘   └────────┬─────────┘
-         │                       │
-         ▼                       ▼
-    ┌───────────────────────────────────────┐
-    │         merge_ttfonts()                │
-    │  ┌─────────────────────────────────┐  │
-    │  │  遍历 GSUB 表中所有 sub 规则      │  │
-    │  │  按 glyph id 或 name 去重合并    │  │
-    │  │  合并 name / head / OS / hmtx    │  │
-    │  └─────────────────────────────────┘  │
-    └───────────────────────────────────────┘
-                         │
-                         ▼
-              带图标的 Maple Mono NF 版
+sources/MapleMono-NF-Base.ttf
+sources/MapleMono-NF-Base-Mono.ttf
+sources/MapleMono-NF-Base-Propo.ttf
 ```
 
-合并的关键是**避免字形 ID 冲突**：两个字体可能有相同 glyph id 但不同字形。`merge_ttfonts` 先检查 glyph name，按名称匹配合并，重命名冲突项。
+常规构建直接把预构建基座与 Maple 字体合并，并应用命名与度量修正。相比每次调用 FontForge，这条路径显著更快，且结果稳定。
 
-## NF-CN 双重补丁
+## 3. 何时回退到 font-patcher
 
-当中文版同时需要 Nerd Font 图标时，构建顺序是：
+`NerdFontBuildConfig.uses_font_patcher()` 在以下任一条件成立时返回真：
 
-```
-源字体 → build_mono() → merge NF Base → merge CN Base → adjust CN width → 输出
-```
+- `extra_args` 非空；
+- `use_font_patcher=True`（对应 `--font-patcher`）；
+- `glyphs != ["--complete"]`。
 
-配置：
+此时流水线会调用 FontForge 修补器，需要使用 `nerd_font.extra_args` 调整参数。默认参数为 `-l --careful --outputdir dir`；`propo` 为真时追加 `--variable-width-glyphs`，`mono` 为真时追加 `--mono`。运行环境需要安装 `fontforge`，可能还需要 `python3-fontforge`。
+
+> 取舍：预构建路径快且可复现；修补器路径灵活但引入外部依赖与运行时间。只有确实需要自定义图标集或参数时才走后者。
+
+## 4. 构建选项
+
+| 选项 | 作用 |
+|------|------|
+| `--nf` / `--no-nf` | 构建 / 跳过 Nerd Font（默认构建） |
+| `--nf-mono` | 固定宽图标（`NFMono`） |
+| `--nf-propo` | 比例宽图标（`NFPropo`），优先于 `--nf-mono` |
+| `--nf-variable` | 以变量字体形式构建 NF |
+| `--font-patcher` | 强制使用 FontForge 修补器 |
+
+对应 `config.json` 的 `nerd_font` 对象：
 
 ```json
-"nerd_font": {"enable": true},
-"cn": {"enable": true, "with_nerd_font": true}
+{
+  "nerd_font": {
+    "enable": true,
+    "version": "3.5.0",
+    "mono": false,
+    "propo": false,
+    "variable": false,
+    "use_font_patcher": false,
+    "glyphs": ["--complete"],
+    "extra_args": []
+  }
+}
 ```
 
-产物：`MapleMono-NF-CN[wght].ttf`（同时带图标和中日韩字形）。
+`nerd_font.version` 必须与所下载的修补器版本匹配；`task.py nf` 会检查上游发布并同步该字段。
 
-## 设计洞察
+## 5. 输出目录
 
-1. **预构建 vs 动态生成的经典权衡**：预构建快但不灵活，动态生成灵活但慢。Maple Mono 的答案是"默认快，需要灵活时才慢"
-2. **版本一致性**：预构建基座的版本与 Maple Mono 主版本绑定，用 `task.py nf` 自动检查更新——避免图标版本漂移
-3. **合并顺序敏感**：先 NF 再 CN（或反过来？）会影响最终字形的宽度和定位。Maple Mono 通过 merge_ttfonts 的实现处理这个问题
-4. **font-patcher 是"最后选择"**：不是首选方案，但始终存在作为兜底——当预构建基座不可用或需要高度定制时，font-patcher 保证功能可用
+| 构建形态 | 输出目录 |
+|----------|----------|
+| 静态默认 NF | `fonts/NF/` |
+| 静态固定宽 | `fonts/NFMono/` |
+| 静态比例宽 | `fonts/NFPropo/` |
+| 变量默认 NF | `fonts/Variable-NF/` |
+| 变量固定宽 / 比例宽 | `fonts/Variable-NFMono/`、`fonts/Variable-NFPropo/` |
+| NF + CJK | `fonts/NF-<LOCALE>/` 等（见 CJK 文档） |
+
+静态 NF 的基座选择由 `use_hinted` 决定：为真时使用 `fonts/TTF-AutoHint/`，否则使用 `fonts/TTF/`。变量 NF 与 CJK 变量输出不受该静态 hinting 选择影响。
+
+## 6. 维护 NF 基座
+
+更新上游 Nerd Font 时：
+
+```sh
+uv run build.py --format ttf        # 先产出基础 TTF
+uv run task.py nf                   # 检查上游版本、更新 config.json、下载修补器、重写三份基座
+uv run task.py nf --no-update       # 版本已正确，仅重建本地 NF 输出
+```
+
+`task.py nf` 会更新 `nerd_font.version` 并写入 `sources/MapleMono-NF-Base*.ttf`；这些是签入产物，需要连同配置一起提交。
+
+## 7. 相关文档
+
+- 输出命名总表：[总体介绍](00-introduction.md)
+- CJK 与 NF 的组合：[CJK 字体合并](07-cjk-font-merge.md)
+- 动手构建：[Nerd Font 构建示例](../examples/nerd-font-build.md)

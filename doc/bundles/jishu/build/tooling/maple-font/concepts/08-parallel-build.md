@@ -1,197 +1,130 @@
 ---
 type: Concept
-title: "并行构建与性能"
-description: "Maple Mono 的 ProcessPoolExecutor 并行流水线、pool_size 自动降级策略、字体缓存机制"
-tags: ["maple-mono", "parallel", "performance", "pool-executor", "caching"]
+title: "并行构建与缓存"
+description: "进程/线程/同步执行器的选择、可 pickle 的工作函数约束，以及 build-cache.json 的阶段身份与失败语义"
+tags: ["parallel", "executor", "cache", "process-pool", "reproducibility"]
 sources:
-  - id: BUILD-PY-CORE
-    resource: "build.py#run_build"
-    description: "并行构建核心函数"
-  - id: CONFIG-POOL
-    resource: "config.json#pool_size"
-    description: "pool_size 配置默认值与降级逻辑"
-  - id: BUILD-PY-MAIN
-    resource: "build.py#main"
-    description: "主入口——构建调度与缓存检查"
-prerequisites:
-  - "01-build-pipeline"
-  - "06-nerd-font-patching"
-  - "07-cn-font-merge"
-next: []
-related:
-  - "../examples/basic-build.md"
+  - id: pipeline-cache
+    resource: https://github.com/subframe7536/maple-font/blob/variable/scripts/pipeline/README.md
+    title: Cache lifecycle and executor boundaries
+  - id: scripts-cache
+    resource: https://github.com/subframe7536/maple-font/blob/variable/scripts/README.md
+    title: Cache contract
+generated: { by: reference_agent/deepseek-v4.1-flash, at: "2026-11-22" }
 status: draft
 ---
 
-# 并行构建与性能
+# 并行构建与缓存
 
-字体构建天然适合并行——每个字重、每种变体都是独立的输入，可以完全独立处理。Maple Mono 用 ProcessPoolExecutor 实现了一个高效的并行流水线。
+## 1. 为什么需要并行
 
-## Embarrassingly Parallel 场景
+字体构建的耗时集中在三处：
 
-Maple Mono 的字体构建是经典的 Embarrassingly Parallel 场景——多个任务之间**没有数据依赖**：
+- Fontmake 编译 Variable / TTF / OTF 三个分支；
+- 对每个静态样式执行 AutoHint；
+- 对每个 CJK 语种 × 配置档 × 样式执行实例化与合并。
+
+这些任务彼此独立且多为 CPU 密集（轮廓运算、插值、子集化），适合进程级并行。v8 因此把执行器抽象为可替换组件，并让缓存按阶段粒度生效。
+
+## 2. 执行器选择
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                     源字体输入                                    │
-│     MapleMono[wght]-VF.ttf   (Variable Font, 包含所有字重)        │
-└───────────────────────────┬─────────────────────────────────────┘
-                            │
-                            │ 实例化 9 种字重
-                            │
-    ┌────┬────┬────┬────┬────┴────┬────┬────┬────┐
-    ▼    ▼    ▼    ▼    ▼         ▼    ▼    ▼    ▼
-  100  200  300  400  500  ...   800  900  Regular  Bold
-    │    │    │    │    │         │    │    │    │
-    ▼    ▼    ▼    ▼    ▼         ▼    ▼    ▼    ▼
-  ┌─────────────────────────────────────────────────┐
-  │  每个字重独立变换（ProcessPoolExecutor）           │
-  │  ├─ build_mono() → TTF                           │
-  │  ├─ build_mono_autohint() → TTF-AutoHint         │
-  │  ├─ build_nf() → NF-Base + merge                 │
-  │  └─ build_cn() → CN-Base + merge + 宽度调整      │
-  └─────────────────────────────────────────────────┘
+pool_size <= 1  → SynchronousExecutor（顺序执行）
+pool_size > 1   → create_process_executor(pool_size, fallback_to_threads=True)
 ```
 
-每个字重的处理流程完全独立，输出到独立文件。这是并行化的完美场景。
+- 代码默认 `pool_size` 为 1；存在 `CODESPACE_NAME` 时为 4；仓库 `config.json` 显式设为 4，因此常规构建是 4；
+- 主流水线（`MapleBuildPipeline`）只按 `pool_size` 选择执行器，**不会**因为 CI 自动降为单进程；
+- CJK 的 `create_font_executor()` 会在 `is_ci()` 为真时强制 `pool_size = 1`；
+- 独立调用 `run_process_jobs()` 时，`pool_size <= 1` 直接顺序执行；
+- 进程执行器创建失败时回退到线程，避免在不支持 `fork`/`spawn` 的环境直接崩溃。
 
-## ProcessPoolExecutor 使用模式
+## 3. 可 pickle 约束
 
-### run_build 核心函数
+进程执行器要求任务函数与任务数据类可在子进程重建，因此：
 
-```python
-# build.py
-from concurrent.futures import ProcessPoolExecutor, as_completed
+- 工作函数必须定义在**模块级**，不能是闭包或局部函数；
+- 任务参数使用 frozen dataclass（如 `NerdFontBuildJob`、`NerdFontVariableBuildJob`）；
+- 运行期上下文只传递必要字段，不传递打开的文件句柄或字体对象。
 
-def run_build(pool_size, fn, dir, target_styles=None):
-    """
-    并行运行 fn 函数处理 dir 下所有源文件
-    
-    fn: build_mono / build_mono_autohint / build_nf / build_cn
-    pool_size: 并行进程数
-    target_styles: 指定字重列表（None = 全部）
-    """
-    files = list_source_files(dir, target_styles)
-    
-    results = {}
-    with ProcessPoolExecutor(max_workers=pool_size) as executor:
-        futures = {executor.submit(fn, f): f for f in files}
-        for future in as_completed(futures):
-            src_file = futures[future]
-            results[src_file] = future.result()
-    
-    return results
+这条约束不是风格偏好：违反时会在运行期抛 pickle 错误，且往往只在多进程路径出现。
+
+## 4. 并行边界
+
+| 并行单元 | 说明 |
+|----------|------|
+| 基础格式分支 | Variable / TTF / OTF 从同一份已准备源并行编译 |
+| AutoHint | 按静态样式分发 |
+| Nerd Font | 静态 NF 任务按样式分发；变量 NF 任务独立 |
+| CJK | 按 locale × profile × style 分发；静态与变量模式分别处理 |
+
+临时工作区在 `finally` 中清理；领域异常继续向上传播，便于调用方与测试定位失败阶段。
+
+## 5. 缓存的启用方式
+
+缓存是**可选**的：
+
+```sh
+uv run build.py --cache
 ```
 
-**关键设计**：
-- `executor.submit(fn, f)` 提交任务，每个任务接收一个源文件
-- `as_completed(futures)` 按完成顺序收集结果
-- 进程间无数据共享（每个 worker 独立加载和处理字体）
+- 无 `--cache`：构建前清理生成的输出根目录与 WOFF2 目录；未请求 TTF 时在消费者完成后删除 `fonts/TTF/` 与 `fonts/TTF-AutoHint/`；
+- 有 `--cache`：`prepare_output_root` 读取 `fonts/build-cache.json`，保留已有输出与无关目录，逐阶段校验后复用。
 
-### 为什么不用 ThreadPoolExecutor
+缓存文件只有一处：`fonts/build-cache.json`。CJK 基座缓存位于 `sources/cjk/`，两者独立。
 
-| 问题 | ThreadPoolExecutor | ProcessPoolExecutor |
-|------|-------------------|---------------------|
-| Python GIL | ❌ CPU 密集被阻塞 | ✅ 每个进程独立 GIL |
-| fontTools 内部 | TTLib 是纯 Python，GIL 持有久 | ✅ 并行有效 |
-| ftcli (foundrytools) | 命令行子进程，GIL 不阻塞 | ✅ 效果相同 |
-| 进程启动开销 | 低 | 中等（每个 worker 需 import 大量模块） |
-| 总时间 | 串行接近 | 随 pool_size 线性减少 |
+## 6. 阶段命中条件
 
-Maple Mono 的构建 CPU 密集（解析字体表、轮廓运算、merge_ttfonts），GIL 是瓶颈——必须用进程而非线程。
+一个阶段被视为命中，必须同时满足：
 
-## pool_size 配置与自动降级
+1. 记录的**阶段身份**与当前身份一致；
+2. 记录的**输出路径清单**与期望清单完全一致；
+3. 每个输出文件存在；
+4. 每个输出文件的**内容摘要**一致。
 
-### 配置默认值
+命中时日志输出 `Cache hit`；未命中输出 `Cache miss`。若缓存记录整体不可用，每个请求阶段会在各自日志段报告 `missing-cache-record`，而不是依赖一个全局“未命中”。
 
-```json
-"pool_size": 4
-```
+CJK 未命中时只移除该阶段自己的缓存记录，其他语种与配置档的记录和文件保持不变。
 
-### 自动降级逻辑
+## 7. 阶段身份的组成
 
-```python
-def resolve_pool_size(user_pool_size):
-    # Codespace 环境（内存限制）
-    if is_codespace():
-        return 1
-    
-    # Windows 子系统（WSL / SMB 网络盘）
-    if running_on_smb_or_drive_d():
-        return 1
-    
-    # 用户显式指定
-    if user_pool_size is not None:
-        return user_pool_size
-    
-    # 默认 4
-    return 4
-```
+阶段身份包含：
 
-**降级场景**（Maple Mono 明确检测）：
+- 相关解析配置；
+- 目标样式；
+- regular 与 italic Designspace 的维度字典；
+- 生成特征文件的指纹；
+- 上游阶段身份。
 
-| 场景 | pool_size | 原因 |
-|------|-----------|------|
-| Codespace | 1 | 容器内存限制，多进程容易 OOM |
-| SMB 网络盘 / D 盘 | 1 | 跨挂载 IO 速度慢，多进程会争用 IO |
-| 正常环境（用户不指定） | 4 | 8 核机器的安全默认 |
-| 用户显式指定 | 自定义 | `--pool-size 8` |
+阶段身份**不包含**：
 
-## 构建流水线的并行调度
+- 生成器源码（`scripts/` 下的 Python 代码）；
+- 依赖版本（`pyproject.toml` / 锁文件）；
+- UFO 轮廓内容；
+- CJK 基座内容。
 
-主入口 `main()` 中，不同阶段之间按依赖关系调度：
+因此，修改上述任何未纳入身份的输入后，必须进行一次**不带 `--cache`** 的构建，否则可能得到“命中但已过期”的结果。
 
-```python
-def main(config):
-    # 阶段 1：基础构建（必须先完成，后续依赖）
-    mono_results = run_build(pool_size, build_mono, source_dir)
-    
-    # 阶段 2：hinting（可以和后续并行）
-    autohint_results = run_build(pool_size, build_mono_autohint, source_dir)
-    
-    # 阶段 3：NF / CN 派生（依赖阶段 1 产物）
-    nf_results = run_build(pool_size, build_nf, mono_output_dir)
-    cn_results = run_build(pool_size, build_cn, mono_output_dir)
-    
-    # 阶段 4：多格式转换
-    convert_results = run_build(pool_size, convert, "otf/woff2", output_dir)
-```
+## 8. 失败语义
 
-注意阶段 2-3 依赖阶段 1 完成——NF/CN 构建需要基础 TTF 作为输入。但阶段 2 内部（autohint 各字重）完全并行，阶段 3 内部（NF 各字重）也完全并行。
+- `build-config.json` 在构建开始前写入，成功结束时重写；
+- `build-cache.json` 只在完整流水线成功后由 `write_build_record()` 写入；
+- 若编译或后续阶段失败，可能留下“新配置 + 旧缓存/部分失效/无缓存”的组合；
+- 失败构建不会被标记为完成缓存，下一次构建会重新判定。
 
-## 字体缓存机制
+## 9. 实践建议
 
-Maple Mono 支持 `--cache` 参数启用缓存：
+| 场景 | 建议 |
+|------|------|
+| 只改 `config.json` | 可继续用 `--cache`，相关阶段身份会变化 |
+| 改 `scripts/feature/` 或生成器 | 必须去掉 `--cache` |
+| 升级依赖 | 必须去掉 `--cache` |
+| 改 UFO / Designspace 轮廓 | 必须去掉 `--cache`（维度字典未变时不会触发失配） |
+| 只改 CJK 基座内容 | 主流水线缓存不会感知，需重建相关 CJK 阶段 |
+| CI 环境 | 主流水线仍按 `pool_size` 并行；CJK 阶段会强制单进程 |
 
-```bash
-python build.py --cache
-# 复用已有的 TTF/OTF/WOFF2，只处理新/变更的字重
-```
+## 10. 相关文档
 
-缓存策略：
-- **key**：源文件路径 + 修改时间 + config.json 哈希
-- **value**：已生成的输出文件路径
-- **存储**：`.cache/` 目录或输出目录的 `.buildcache.json`
-
-当输入不变时跳过对应构建步骤——开发过程中反复调 config 时特别有用。
-
-## 性能实测参考
-
-以下是典型开发机上的构建时间（pool_size=4，100-900 全部字重，Variable + TTF + TTF-AutoHint + OTF + WOFF2 + NF + CN）：
-
-| 输出类型 | pool_size=1 | pool_size=4 | pool_size=8 |
-|---------|------------|------------|------------|
-| Variable | 5s | 5s | 5s（单文件，不并行） |
-| TTF | 15s | 6s | 5s |
-| TTF-AutoHint | 30s | 12s | 10s |
-| NF | 25s | 10s | 8s |
-| CN | 60s | 20s | 15s |
-| 全部合计 | ~135s | ~55s | ~43s |
-
-## 设计洞察
-
-1. **并行是默认，串行是降级**：Maple Mono 默认开启并行（pool_size=4），只在检测到 Codespace 或 SMB 等特殊环境时自动降级
-2. **进程数与任务数解耦**：pool_size 和实际任务数（字重数量）是独立参数——9 个字重 + pool_size=4 意味着 9 个任务分 4 批执行
-3. **IO 不是瓶颈，CPU 是**：TTLib 操作（解析/变换/合并）是 CPU 密集型。SMB 网络盘降级是因为 SMB 跨挂载 IO 延迟会抵消进程并行优势
-4. **构建流水线阶段间串行，阶段内并行**：必须等基础 TTF 完成后才能构建 NF/CN——但基础 TTF 本身是并行构建的
-5. **缓存让迭代更快**：config.json 改动不需要重跑全部构建，只重跑受影响的特征注入步骤
+- 流水线阶段顺序：[构建流水线](01-build-pipeline.md)
+- CJK 独立缓存与回退：[CJK 字体合并](07-cjk-font-merge.md)
+- 配置字段：[配置系统](02-config-system.md)

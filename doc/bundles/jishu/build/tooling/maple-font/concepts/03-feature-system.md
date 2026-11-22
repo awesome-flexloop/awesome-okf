@@ -1,188 +1,116 @@
 ---
 type: Concept
-title: "OpenType Feature 系统"
-description: "Maple Mono 三层 OpenType Feature——calt 连字查找表 + cv 语义变体 + ss 样式集的触发机制与 Python 代码组织"
-tags: ["maple-mono", "opentype", "feature", "calt", "cv", "ss", "ligature"]
+title: "特征系统"
+description: "scripts/feature 包的组织方式、生成式与文件式两条特征应用路径，以及特征标签的命名结构"
+tags: ["opentype", "feature", "calt", "cv", "ss", "fea"]
 sources:
-  - id: FEATURE-INIT
-    resource: "source/py/feature/__init__.py"
-    description: "generate_fea_string 主函数与 normal_enabled_features 预设"
-  - id: FEATURE-README
-    resource: "source/features/README.md"
-    description: "特征列表与使用说明"
-  - id: FEATURE-CALT
-    resource: "source/py/feature/calt/"
-    description: "calt 连字查找表生成（asciitilde/cross/equal_arrow/pipe/tag 等）"
-prerequisites:
-  - "01-build-pipeline"
-  - "02-config-system"
-next:
-  - "04-feature-ast-generator"
-related:
-  - "../examples/custom-feature-build.md"
+  - id: feature-readme
+    resource: https://github.com/subframe7536/maple-font/blob/variable/scripts/feature/README.md
+    title: Maple Mono Feature Module
+  - id: ot-features
+    resource: https://github.com/subframe7536/maple-font/blob/variable/documentation/opentype-features.md
+    title: OpenType Features
+generated: { by: reference_agent/deepseek-v4.1-flash, at: "2026-11-22" }
 status: draft
 ---
 
-# OpenType Feature 系统
+# 特征系统
 
-Maple Mono 的 OpenType Feature 系统是一个**三层结构**——从最基础的上下文感知连字到独立语义变体，每一层解决不同的排版需求。
+## 1. 为什么需要特征系统
 
-## 三层结构总览
+Maple Mono 的连字与字形变体数量多、版本迭代频繁。若全部手写 `.fea`：
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                      OpenType Feature 三层                        │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  Layer 1: calt (Contextual Alternates)                          │
-│  ┌─────────────────────────────────────────────────┐            │
-│  │  上下文感知连字——最复杂、最核心的层                 │            │
-│  │  按周围字形上下文决定替换为哪种连字                 │            │
-│  │  python 模块: source/py/feature/calt/           │            │
-│  └─────────────────────────────────────────────────┘            │
-│                                                                  │
-│  Layer 2: cvXX (Character Variants)                              │
-│  ┌─────────────────────────────────────────────────┐            │
-│  │  语义化字形变体——独立于上下文的字形替换              │            │
-│  │  cv01="@$%&Q→" 风格统一                         │            │
-│  │  cv02="a" 顶部一横变体                           │            │
-│  │  cv96-99 中文变体（全角标点、居中标点）            │            │
-│  │  python 模块: source/py/feature/cv/             │            │
-│  └─────────────────────────────────────────────────┘            │
-│                                                                  │
-│  Layer 3: ssXX (Stylistic Sets)                                  │
-│  ┌─────────────────────────────────────────────────┐            │
-│  │  样式集——组合多个字形变换成一个可选样式              │            │
-│  │  ss01="===" 等号连字断裂                         │            │
-│  │  ss05="\\" 反斜杠还原细线条                      │            │
-│  │  ss08=">>=" 双头箭头 + 反向箭头                   │            │
-│  │  python 模块: source/py/feature/ss/             │            │
-│  └─────────────────────────────────────────────────┘            │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
-```
+- 新增一个 `cvXX` 需要在多个位置同步修改；
+- 常规体与斜体的类定义大量重复；
+- 文档中的特性清单容易与实现脱节。
 
-## Layer 1: calt 上下文感知连字
+v8 因此把特征规则拆成“Python 对象定义 + 编译为 `.fea` 源码”，同时保留直接编辑 `.fea` 的文件式路径，供高级用户使用。
 
-calt（Contextual Alternates）是 Maple Mono 最核心也最复杂的 OpenType Feature。它不是简单的"两字合一"，而是**根据周围字形的上下文**决定是否替换为连字。
-
-### 代码组织
-
-`source/py/feature/calt/` 目录按连字类型拆分子模块：
-
-| 模块 | 连字类型 | 示例 |
-|------|---------|------|
-| `asciitilde.py` | `~=` 近似等于 | `a ~= b` |
-| `cross.py` | `≠ ≡ ≤ ≥` | `x ≠ y` |
-| `equal_arrow.py` | `⇒ ⇐ ⇒` 等号箭头 | `a => b => c` |
-| `escape.py` | `\\ \. \" \(` 转义符 | `path\\to\\file` |
-| `hyphen_arrow.py` | `→ ← ↔` 箭头 | `a -> b` |
-| `markup_like.py` | `[TODO] [FIXME]` 标签 | `[import os]` |
-| `pipe.py` | `|>= ||>= |>|` 管道箭头 | `text \|> pipe \|> output` |
-| `tag.py` | HTML 标签样式 | `<html>` `<html/>` |
-| `italic.py` | 斜体连字中断规则 | 避免 `al` `il` 等斜体字母连体 |
-| `whitespace/` | 空白相关连字 | `###` 注释标记、`___` 下划线连续、`:` 冒号 |
-| `_infinite_utils.py` | 无限箭头辅助 | `---->------>` 连续箭头 |
-
-### calt 的触发条件
-
-calt 查找表通常包含多条规则，每条规则有**匹配模式**和**替换动作**：
-
-```feature
-# 简化示例：`=` 后跟 `>` 替换为 `=>`
-lookup hyphen_arrow {
-    sub [=] by =>_arrow_1;
-    sub =>_arrow_1 [=] => by =>_arrow_2;
-} hyphen_arrow;
-```
-
-Maple Mono 的 Python 代码将这些规则组织成 AST 对象（详见 [04-Feature AST 生成器](04-feature-ast-generator.md)）。
-
-## Layer 2: cvXX 语义化字形变体
-
-cv（Character Variants）提供**独立于上下文**的字形替换。每个 cv 控制一个或一组相关字形的备选样式。
-
-### cv 编号规则
+## 2. 模块布局
 
 ```
-cv01-cv11:    常规字形变体（正则风格）
-cv31-cv44:    斜体专用变体
-cv61-cv66:    标点与符号变体
-cv96-cv99:    中文专用变体
+scripts/feature/
+├── ast.py          # 小型 AST：Line / Clazz / Lookup / Feature / FeatureWithDocs
+├── regular.py      # 常规体拉丁特征定义
+├── italic.py       # 斜体拉丁特征定义
+├── base/           # 共享基础特征：ccmp、locl、case、数字等
+├── calt/           # 上下文连字与纯文本标签
+├── cv/             # 字符变体 cv01–cv99
+├── ss/             # 风格集 ss01–ss13
+├── compiler.py     # 组装完整特征源码，暴露生成入口
+└── apply.py        # 在构建中选择生成式或文件式应用
 ```
 
-### 典型 cv 变体
+对照关系：
 
-| 编码 | 版本 | 控制字形 | 备选样式 |
-|------|------|---------|---------|
-| cv01 | v7.0 | `@ $ % & Q =>` | 品牌化圆角风格 |
-| cv02 | v7.0 | `a` | 顶部加一横（类似 Consolas） |
-| cv35 | v7.0 | 斜体 `l` | 去掉底部尾部 |
-| cv61 | v7.1 | `, ;` | 直尾巴风格 |
-| cv99 | v7.0 | 中文标点 | 居中对齐（传统风格） |
+| 目录/模块 | 产出 | 典型标签 |
+|-----------|------|----------|
+| `base/` | 基础替换与语言系统 | `ccmp`、`locl`、`case` |
+| `calt/` | 上下文连字、无限箭头、纯文本标签 | `calt` |
+| `cv/` | 字符变体 | `cv01`–`cv68`、`cv96`–`cv99` |
+| `ss/` | 风格集 | `ss01`–`ss13` |
 
-### 与 calt 的区别
+## 3. 三条特征层级
 
-- **calt** 有**上下文条件**——只有在"两个等号连写"时才触发连字
-- **cv** 无上下文——只要字形出现就按规则替换，除非被后续规则覆盖
+1. **Glyph class（字形类）**：`Clazz` 声明可复用的字形集合，例如 `@Digit = [zero one two three];`。
+2. **Lookup（查找）**：`Lookup` 把一个或多个替换组织为命名块，便于在特征内引用与复用。
+3. **Feature（特征）**：`Feature` 以 OpenType 标签（`calt`、`cv01`、`ss07`）包裹内容，并携带版本文档信息。
 
-## Layer 3: ssXX 样式集
+`FeatureWithDocs` 在其上增加 `id`、`desc`、`example` 与 `version`，用于生成 `documentation/opentype-features.md` 的特性清单；`CharacterVariant` 与 `StylisticSet` 进一步约束 `id` 范围并生成 `cvParameters` / `featureNames` 名称块。
 
-ss（Stylistic Sets）是**组合多个 cv / 连字变换为一个可选样式**。每个 ss 可以理解为"一键应用的风格预设"。
+## 4. 两条应用路径
 
-### 典型 ss 样式集
+### 4.1 生成式（默认）
 
-| 编码 | 版本 | 效果 | 适用场景 |
-|------|------|------|---------|
-| ss01 | v7.0 | `=== !== ====` 连字断裂 | 不想要多行连字 |
-| ss05 | v7.0 | `\ \" \.` 反斜杠还原细线条 | 还原 JetBrains Mono 风格 |
-| ss08 | v7.0 | `>>= -<< ->> >>-` 双头箭头 + 反向箭头 | 更丰富的箭头集合 |
-| ss03 | v7.0 | 标签允许任意大小写 | `[TODO]` `[todo]` `[Todo]` 都触发 |
+- 构建前为 regular 与 italic 各准备一份特征源码；
+- 启用的单一替换把目标字形轮廓与前进宽度复制到源字形，写入**每个 UFO master**；
+- 启用的上下文/连字查找挂到 `calt`；
+- `disable` 的特征规则被移除；
+- `ignore` 的特征保留为普通 OpenType 特征（默认不激活）。
 
-### 与 Normal 预设的关系
+### 4.2 文件式（`--apply-fea-file`）
 
-`--normal` 预设会自动启用以下特征（详见 `normal_enabled_features`）：
+- 读取 `sources/features/regular.fea` 或 `sources/features/italic.fea`；
+- 在同一源准备步骤中应用，`include` 在冻结规则之前解析；
+- CJK 静态字体在字形合并之后改用 `regular_cn.fea` / `italic_cn.fea`，只在该边界冻结 CJK 专属替换。
 
-```python
-normal_enabled_features = [
-    "cv01", "cv02", "cv33", "cv34", "cv35", "cv36",
-    "cv61", "cv62", "ss05", "ss06", "ss07", "ss08",
-]
+两条路径的共同点是“在 Fontmake 编译前进入源”，因此静态与变量输出得到一致的轮廓结果。
+
+## 5. 特征标签命名
+
+| 标签 | 含义 | 示例 |
+|------|------|------|
+| `calt` | 上下文连字 | `->`、`=>`、`::`、`[TODO]` |
+| `cvXX` | 字符变体 | `cv01` 规范化符号、`cv12` 无尾 `u`（v8 新增） |
+| `cv3X` | 斜体专属变体 | `cv31`–`cv45` |
+| `cv9X` | CJK 专属变体 | `cv96` 全角引号、`cv99` 传统居中标点 |
+| `ssXX` | 风格集 | `ss07` 放宽多大于号连字、`ss12/ss13` 西里尔字形 |
+
+v8 代码库中较新的特性包括 `cv12`、`cv45`、`cv67`、`cv68`、`ss12`、`ss13`。完整清单由 `task.py fea` 从特性定义自动生成到 `documentation/opentype-features.md`，不应手工维护。
+
+## 6. 同步与再生成
+
+修改 `scripts/feature/` 后运行：
+
+```sh
+uv run task.py fea
 ```
 
-Normal 预设让 Maple Mono 看起来更像 JetBrains Mono——去掉"品牌化"的字形变体，回归朴素。
+该任务会刷新以下签入产物：
 
-## Python 代码组织
+- `sources/features/regular.fea`
+- `sources/features/italic.fea`
+- `sources/features/cn.fea`
+- `sources/features/regular_cn.fea`
+- `sources/features/italic_cn.fea`
+- `documentation/opentype-features.md`
+- `sources/schema.json` 与 `config.json` 中的 feature-freeze 段
+- `scripts/in_browser.py` 中的 moving-rule 列表
 
-三层 Feature 在 Python 中的组织方式：
+生成后必须逐文件审查 diff，避免保留无关波动。
 
-```
-source/py/feature/
-├── __init__.py            ← generate_fea_string() 主函数
-├── ast.py                 ← FeatureWithDocs / Lookup / ClassDef AST
-├── calt/                  ← Layer 1: calt 连字模块
-│   ├── __init__.py        ← get_calt() / get_calt_lookup()
-│   ├── asciitilde.py      ← ~= 近似等于
-│   ├── cross.py           ← ≠ ≡ ≤ ≥
-│   ├── equal_arrow.py     ← 等号箭头
-│   ├── pipe.py            ← 管道箭头
-│   └── ...
-├── cv/                    ← Layer 2: cvXX 变体
-│   ├── cv01.py ... cv11.py
-│   ├── cv31.py ... cv44.py
-│   └── cv61.py ... cv99.py
-├── ss/                    ← Layer 3: ssXX 样式集
-│   └── ss01.py ... ss11.py
-├── base/                  ← 基础查找表（case/ccmp/clazz/lang/locl/number）
-├── regular.py             ← 正则风格的 class_list / cv_list / ss_list
-└── italic.py              ← 斜体风格的 class_list / cv_list / ss_list
-```
+## 7. 相关文档
 
-每层各有 `regular` 和 `italic` 两套变体列表——斜体的 cv 有完全不同的编号（cv31-cv44）。
-
-## 关键设计洞察
-
-1. **三层解耦**：calt 管上下文、cv 管单字形、ss 管组合样式——每层独立维护，互不干扰
-2. **regular / italic 双轨**：同一个 cv 对 regular 和 italic 字形有完全独立的备选，这在其他编程字体中很少见
-3. **Python 模块按功能拆分**：每个连字（asciitilde/cross/pipe）独立成模块——你要修改某种连字规则，改对应的 .py 文件即可
-4. **中文独立 cv 编号（cv96-99）**：避免与 ASCII 层冲突，语义清晰
+- AST 类与辅助函数：[特征 AST 生成器](04-feature-ast-generator.md)、[特征生成 API](../references/feature-generator-api.md)
+- 冻结模式与生效时机：[特征冻结机制](05-freeze-mechanism.md)
+- 动手修改特征：[自定义特征构建示例](../examples/custom-feature-build.md)

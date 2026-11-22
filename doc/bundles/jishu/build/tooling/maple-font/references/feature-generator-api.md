@@ -1,260 +1,308 @@
 ---
 type: Reference
-title: "Feature 生成器 API"
-description: "Maple Mono Python AST 风格 OpenType Feature 生成器——核心类与 generate_fea_string 主函数"
-tags: ["maple-mono", "feature", "ast", "reference", "api", "opentype"]
+title: "特征生成 API 参考"
+description: "ast.py 节点与辅助函数、compiler.py 生成入口、apply.py 冻结与应用接口的完整签名"
+tags: ["api", "opentype", "ast", "fea", "freeze"]
 sources:
-  - id: FEATURE-AST
-    resource: "source/py/feature/ast.py"
-    description: "AST 类定义"
-  - id: FEATURE-INIT
-    resource: "source/py/feature/__init__.py"
-    description: "generate_fea_string 主函数"
-  - id: FEATURE-CALT-INIT
-    resource: "source/py/feature/calt/__init__.py"
-    description: "calt 查找表组装"
-  - id: FEATURE-CV-REGULAR
-    resource: "source/py/feature/regular.py"
-    description: "regular 风格 cv 列表"
-prerequisites:
-  - "../concepts/03-feature-system.md"
-  - "../concepts/04-feature-ast-generator.md"
+  - id: ast-source
+    resource: https://github.com/subframe7536/maple-font/blob/variable/scripts/feature/ast.py
+    title: scripts/feature/ast.py
+  - id: compiler-source
+    resource: https://github.com/subframe7536/maple-font/blob/variable/scripts/feature/compiler.py
+    title: scripts/feature/compiler.py
+  - id: apply-source
+    resource: https://github.com/subframe7536/maple-font/blob/variable/scripts/feature/apply.py
+    title: scripts/feature/apply.py
+generated: { by: reference_agent/deepseek-v4.1-flash, at: "2026-11-22" }
+status: draft
 ---
 
-# Feature 生成器 API
+# 特征生成 API 参考
 
-Maple Mono 的 OpenType Feature 生成器是一个小型 DSL——用 Python 对象组合生成 .fea 字符串。以下是完整 API 参考。
-
-## 入口：generate_fea_string()
+## 1. 类型约定
 
 ```python
-from source.py.feature import generate_fea_string
-
-def generate_fea_string(
-    is_italic: bool,
-    is_cn: bool,
-    is_calt: bool,
-    enable_infinite: bool,
-    remove_italic_calt: bool,
-    feature_freeze: dict[str, Literal["enable", "disable", "ignore"]],
-) -> str:
-    """
-    生成完整的 OpenType Feature .fea 字符串
-    
-    参数:
-        is_italic: 是否斜体字体（决定用 regular 还是 italic 的 cv/ss 列表）
-        is_cn: 是否中文版（加入中文标点变体 cv96-99）
-        is_calt: 是否启用 calt 连字（false 则移除 calt 层）
-        enable_infinite: 是否启用无限箭头扩展（---->------>）
-        remove_italic_calt: 斜体时是否移除 calt 中破坏草书风格的规则
-        feature_freeze: {特征名: 模式} 三模式配置
-    
-    返回:
-        完整 .fea 文件字符串，可直接 addOpenTypeFeaturesFromString 注入
-    
-    示例:
-        >>> fea = generate_fea_string(
-        ...     is_italic=False, is_cn=False, is_calt=True,
-        ...     enable_infinite=True, remove_italic_calt=False,
-        ...     feature_freeze={"cv01": "enable", "zero": "disable"}
-        ... )
-        >>> fontTools.addOpenTypeFeaturesFromString(font, fea)
-    """
+GlyphContext = str | Clazz | Sequence[str | Clazz] | None
+FeatureContent = Clazz | Lookup | Line | Sequence["FeatureContent"] | None
 ```
 
-## AST 类（source/py/feature/ast.py）
+绝大多数函数接受“字形名字符串 / `Clazz` / 二者的序列”，内部统一展开为 `.fea` 文本。
 
-### FeatureWithDocs
+## 2. ast.py — 节点
+
+### Line
 
 ```python
-class FeatureWithDocs:
-    """带文档的 OpenType Feature"""
-    name: str
-    description: str
-    lookups: list[Lookup]
+class Line:
+    def __init__(self, text: str, level: int = 0) -> None: ...
+    def indent(self) -> "Line": ...
+```
 
-    def to_fea(self) -> str:
-        """生成 feature XXX { ... } XXX; 块"""
-        # 输出格式:
-        # # description
-        # feature name {
-        #   # Lookup.description
-        #   lookup_name {
-        #     sub ...;
-        #   } lookup_name;
-        # } name;
+`indent()` 返回层级 +1 的新行；空文本的层级归零，避免产生纯空白行。
+
+### Clazz
+
+```python
+class Clazz:
+    def __init__(self, name: str, glyphs: Sequence[str | Clazz] | None = None) -> None: ...
+    def use(self) -> str: ...      # "@Name"
+    def state(self) -> Line: ...   # "@Name = [g1 g2 ...];"
 ```
 
 ### Lookup
 
 ```python
 class Lookup:
-    """OpenType 查找表"""
-    sub: list[str]              # sub 规则字符串列表
-    description: str | None      # 文档注释
-    flags: int | None            # Lookup flag（如 UseMarkFilteringSet）
-    lookups: list[Lookup] | None  # 嵌套 lookup（calt 特殊情况）
-
-    def to_fea(self, indent: str = "  ") -> str:
-        """生成 lookup_name { ... } 块"""
+    def __init__(self, name: str, desc: str | None, content: list) -> None: ...
+    def use(self) -> Line: ...              # "lookup Name;"
+    def state(self) -> list[Line]: ...      # 带注释的完整 lookup 块
 ```
 
-### ClassDef
+### Feature
 
 ```python
-class ClassDef:
-    """字形类定义"""
-    name: str                    # "@A" / "@Base"
-    glyphs: list[str]            # ["a", "A", "à"]
-
-    def to_fea(self) -> str:
-        """生成 @name = [glyph1 glyph2 ...];"""
+class Feature:
+    def __init__(self, tag: str, content: Clazz | Lookup | Line | list, version) -> None: ...
+    def use(self) -> Line: ...                 # "feature tag;"
+    def get_name_lines(self) -> list[Line]: ... # 默认空
+    def state(self) -> list[Line]: ...          # "feature tag { ... } tag;"
 ```
 
-### ClassListWithDocs
+### FeatureWithDocs / CharacterVariant / StylisticSet
 
 ```python
-class ClassListWithDocs:
-    """带文档的字形类列表"""
-    class_list: list[ClassDef]
-    description: str
+class FeatureWithDocs(Feature):
+    def __init__(
+        self, id: int, tag: str, desc: str,
+        content: Clazz | Lookup | Line | list,
+        version: str, example: str,
+    ) -> None: ...
+    def desc_item(self) -> str: ...   # "- [vX.Y] tag: desc"
 
-    def to_fea(self) -> str:
-        """生成 .fea 顶部的所有 @classdef"""
+class CharacterVariant(FeatureWithDocs):
+    def __init__(self, id: int, desc: str, content, version: str, example: str) -> None: ...
+    # 1 <= id <= 99，tag = f"cv{id:02d}"，生成 cvParameters 名称块
+
+class StylisticSet(FeatureWithDocs):
+    def __init__(self, id: int, desc: str, content, version: str, example: str) -> None: ...
+    # 1 <= id <= 20，tag = f"ss{id:02d}"，生成 featureNames 名称块
 ```
 
-## calt 模块 API
-
-### calt.get_calt()
+## 3. ast.py — 辅助函数
 
 ```python
-from source.py.feature.calt import get_calt
+def gly(g: str | Clazz | Sequence[str | Clazz], suffix: str = "", overwrite=False) -> str: ...
+def gly_seq(g: str | list[str], variant: Literal["sta", "mid", "end"]) -> list[str]: ...
+def cls(glyphs: str | Clazz | Sequence[str | Clazz], *rest: str | Clazz) -> str: ...
+def cls_states(*cls: Clazz) -> list[Line]: ...
 
-def get_calt(
-    enable_infinite: bool = False,
+def langsys(script: str, lang: str) -> Line: ...
+def lang(lang: str) -> Line: ...
+def script(script: str) -> Line: ...
+
+def subst(
+    prefix: GlyphContext,
+    glyph: str | Clazz,
+    suffix: GlyphContext,
+    replace: str | Clazz,
+) -> Line: ...
+def subst_map(
+    glyphs: str | list[str],
+    source_suffix: str = "",
+    target_suffix: str = "",
+) -> list[Line]: ...
+def subst_liga(
+    source: str | list[str],
+    target: str | None = None,
+    lookup_name: str | None = None,
+    desc: str | None = None,
+    surround: list[tuple[GlyphContext, GlyphContext]] | None = None,
+    ign_prefix: str | Clazz | None = None,
+    ign_suffix: str | Clazz | None = None,
+) -> ...: ...
+def ign(prefix: GlyphContext, glyph: str | Clazz, suffix: GlyphContext) -> Line: ...
+
+def create(content: list, indent: int = 2) -> str: ...
+def recursive_iterate(data): ...
+def flatten_to_lines(data: Line | Clazz | Lookup | Feature | list | tuple) -> list[Line]: ...
+def clone_empty(feature: FeatureWithDocs, desc_prefix: str = "") -> ...: ...
+def filter_empty(features: list[FeatureWithDocs], full: bool) -> ...: ...
+```
+
+`subst` 的示例：
+
+```python
+subst(["-"], "b", cls, "d")   # Line("sub hyphen b' @cls by d;")
+```
+
+`subst_map` 的示例：
+
+```python
+subst_map(["Q", "all", gly("{{")], target_suffix=".cv01")
+# sub Q by Q.cv01;
+# sub all by all.cv01;
+# sub braceleft_braceleft.liga by braceleft_braceleft.liga.cv01;
+```
+
+`ign` 的示例：
+
+```python
+ign("{", "b", ["c", "d"])   # ignore sub braceleft b' c d;
+```
+
+## 4. compiler.py — 生成入口
+
+```python
+@dataclass(frozen=True)
+class FeatureGenOptions:
+    is_italic: bool = False
+    is_cn: bool = False
+    is_normal: bool = False
+    is_calt: bool = True
+    enable_infinite: bool = True
+    enable_tag: bool = True
+    remove_italic_calt: bool = False
+
+def generate_fea_string(
+    options: FeatureGenOptions | None = None,
+    *,
+    is_italic: bool = False,
+    is_cn: bool = False,
+    is_normal: bool = False,
+    is_calt: bool = True,
+    enable_infinite: bool = True,
+    enable_tag: bool = True,
     remove_italic_calt: bool = False,
-) -> list[FeatureWithDocs]:
-    """
-    获取 calt feature 的所有 lookup
-    
-    参数:
-        enable_infinite: 启用无限箭头扩展
-        remove_italic_calt: 移除斜体破坏规则
-    
-    返回:
-        list[FeatureWithDocs] — 通常只有一个，name="calt"
-    """
+) -> str: ...
 ```
 
-### 各子模块 get_xxx_lookup()
+- `options` 非空时忽略所有关键字参数；
+- 返回值是完整特征源码，包含字形类、语言系统、基础特征、风格变体与上下文规则；
+- 典型调用：`generate_fea_string(is_italic=False, is_cn=True)`。
 
-每个子模块导出一个纯函数，返回 Lookup 对象：
+其他公开辅助：
 
 ```python
-from source.py.feature.calt import (
-    asciitilde, cross, equal_arrow, escape,
-    hyphen_arrow, markup_like, pipe, tag,
-    whitespace,
+def generate_fea_string_cn_only() -> str: ...
+def get_all_calt_text() -> ...: ...
+def get_cv_desc() -> ...: ...
+def get_cv_italic_desc() -> ...: ...
+def get_cv_cn_desc() -> ...: ...
+def get_ss_desc() -> ...: ...
+def get_total_feat_dict() -> dict[str, str]: ...
+def get_freeze_moving_rules() -> list[str]: ...
+```
+
+常量：
+
+```python
+NORMAL_ENABLED_FEATURES = (
+    "cv01", "cv02", "cv33", "cv34", "cv35", "cv36",
+    "cv61", "cv62", "ss05", "ss06", "ss07", "ss08",
 )
-
-# 每个函数签名相同
-asciitilde.get_asciitilde_lookup() -> Lookup
-cross.get_cross_lookup() -> Lookup
-pipe.get_pipe_lookup() -> Lookup
-# ... 等等
+CJK_FEATURES = (cv96.cv96_feat_cn, cv97.cv97_feat_cn, cv98.cv98_feat_cn, cv99.cv99_feat_cn)
 ```
 
-## cv / ss 模块 API
+## 5. apply.py — 冻结与应用
 
-### regular.py
+### 数据类
 
 ```python
-from source.py.feature import regular
+@dataclass(frozen=True, slots=True)
+class FeatureSubstitution:
+    tag: str
+    source: str
+    target: str
 
-# 返回 regular 风格的所有 cv 变体 FeatureWithDocs
-regular.cv_list(is_cn: bool) -> list[FeatureWithDocs]
-regular.ss_list() -> list[FeatureWithDocs]
+@dataclass(frozen=True, slots=True)
+class PreparedFeatureSource:
+    source: str
+    substitutions: tuple[FeatureSubstitution, ...]
 ```
 
-### italic.py
+### 源准备
 
 ```python
-from source.py.feature import italic
-
-# 返回 italic 风格的所有 cv 变体（cv31-cv44）
-italic.cv_list() -> list[FeatureWithDocs]
-italic.ss_list() -> list[FeatureWithDocs]
+def prepare_feature_source(
+    config: ResolvedConfig,
+    *,
+    glyph_names: tuple[str, ...],
+    issue_fea_dir: str | Path,
+    is_italic: bool,
+    is_cn: bool,
+    fea_path: str,
+) -> PreparedFeatureSource: ...
 ```
 
-### 各 cv / ss 子模块
+职责：选择生成式或文件式输入 → 解析特征 → 应用冻结策略 → 收集需要烘焙的单一替换。解析失败时把问题源码写入 `issue_fea_dir` 并抛出 `SyntaxError`。
 
 ```python
-# cv 子模块（cv01-cv11, cv31-cv44, cv61-cv66, cv96-cv99）
-from source.py.feature.cv.cv01 import get_cv01_feature
-get_cv01_feature() -> FeatureWithDocs
-
-# ss 子模块（ss01-ss11）
-from source.py.feature.ss.ss07 import get_ss07_feature
-get_ss07_feature() -> FeatureWithDocs
+def prepare_designspace_features(
+    config: ResolvedConfig,
+    designspace: DesignSpaceDocument,
+    *,
+    issue_fea_dir: str | Path,
+    is_italic: bool,
+    fea_path: str,
+) -> PreparedFeatureSource: ...
 ```
 
-## base 模块（查找表基础设施）
+职责：在 Fontmake 之前冻结每个 master 的轮廓，并把最终特征源码写入各 UFO 的 `features.text`。若 `standard_zero` 为真，先调用 `apply_standard_zero()`。
 
-### base/case.py, ccmp.py, clazz.py, lang.py, locl.py, number.py
-
-这些模块提供 calt 查找表的基础设施：
-
-| 模块 | 作用 |
-|------|------|
-| `clazz` | 定义 @A / @B / @Base 等字形类 |
-| `ccmp` | Composition / Decomposition 替换规则 |
-| `case` | 大小写映射（calt 中间查找表） |
-| `locl` | 语言特定字形变体 |
-| `number` | 数字间距调整 |
-
-## 完整 import 链
-
-```
-build.py
-  └─ FontConfig.patch_font_feature()
-      └─ generate_fea_string()        ← 主入口
-          ├─ regular.cv_list()        ← regular 风格 cv 列表
-          ├─ italic.cv_list()         ← italic 风格 cv 列表
-          ├─ regular.ss_list()        ← ss 样式集
-          ├─ calt.get_calt()          ← calt 连字查找表
-          │   ├─ pipe.get_pipe_lookup()
-          │   ├─ asciitilde.get_asciitilde_lookup()
-          │   ├─ cross.get_cross_lookup()
-          │   └─ ... 10+ 子模块
-          └─ filter_by_freeze()        ← 应用 feature_freeze 三模式
-```
-
-## 扩展指南
-
-### 新增一种连字
-
-1. 在 `source/py/feature/calt/` 下新建 `.py` 文件，导出 `get_xxx_lookup() -> Lookup`
-2. 在 `source/py/feature/calt/__init__.py` 的 `get_calt_lookup()` 中导入并添加
-3. 在 `source/py/features/regular.fea` 中同步更新（font-patcher 模式需要）
-
-### 新增一个 cv 变体
-
-1. 在 `source/py/feature/cv/` 下新建 `cvNN.py`，导出 `get_cvNN_feature() -> FeatureWithDocs`
-2. 在 `source/py/feature/regular.py` 或 `italic.py` 的列表中添加
-3. 在 `source/py/features/regular.fea` 中同步更新
-4. 在 `config.json` 的 `feature_freeze` 默认值中添加对应条目
-
-### 测试你的改动
-
-```bash
-# 生成 .fea 查看效果
-python task.py fea
-cat source/features/regular.fea | head -100
-```
-
-或直接：
 ```python
-from source.py.feature import generate_fea_string
-fea = generate_fea_string(False, False, True, False, False, {})
-print(fea[:2000])
+def apply_standard_zero(designspace: DesignSpaceDocument) -> None: ...
+def apply_ufo_substitutions(
+    designspace: DesignSpaceDocument,
+    substitutions: tuple[FeatureSubstitution, ...],
+) -> None: ...
 ```
+
+`apply_standard_zero` 交换 `zero` 与 `zero.zero` 的轮廓，使注册的 `zero` 特征选择斜零。`apply_ufo_substitutions` 只替换轮廓，不替换元数据。
+
+### 二进制应用
+
+```python
+def apply_binary_features(
+    config: ResolvedConfig,
+    font: TTFont,
+    issue_fea_dir: str | Path,
+    *,
+    is_italic: bool,
+    is_cn: bool,
+    fea_path: str,
+    outline_tags: frozenset[str] = frozenset(),
+) -> None: ...
+```
+
+职责：对成品 TTFont 应用准备好的特征表；`outline_tags` 指定哪些标签的单一替换可以在二进制阶段继续烘焙（CJK 静态合并后的晚到字形即走此路径）。
+
+## 6. 使用示例
+
+```python
+from scripts.feature.compiler import generate_fea_string
+from scripts.feature.ast import Clazz, Lookup, Feature, subst, create
+
+# 直接生成完整源码
+fea = generate_fea_string(is_italic=False, is_cn=False)
+
+# 构造自定义片段
+cls_digit = Clazz("Digit", ["zero", "one", "two", "three"])
+lookup = Lookup(
+    name="example_lookup",
+    desc="Example substitution",
+    content=[subst("a", "b", None, "c")],
+)
+print(create([cls_digit, Feature("calt", [lookup], "1.0")]))
+```
+
+## 7. 稳定性说明
+
+- `ast.py`、`compiler.py` 的公开函数是特征模块的主要契约；
+- `apply.py` 的 `prepare_*` 与 `apply_binary_features` 供流水线调用，属于内部契约；
+- 下划线开头的函数（`_feature_source`、`_single_substitutions`、`_rewrite_feature_tree` 等）不保证跨版本稳定。
+
+## 相关文档
+
+- 规则组织与标签：[特征系统](../concepts/03-feature-system.md)
+- 生成器设计动机：[特征 AST 生成器](../concepts/04-feature-ast-generator.md)
+- 冻结语义：[特征冻结机制](../concepts/05-freeze-mechanism.md)
