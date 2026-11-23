@@ -23,7 +23,11 @@
 - `doc/conf.py` 的 `extensions` 追加 `"_ext.fea_lexer"`，与既有 `_ext.okf_inventory_builder` 同级；
 - 该代码块围栏还原为 ```fea```，保留源码语义标注。
 
-验证：以真实 `_ext` 模块、不含 `suppress_warnings` 的最小 `conf.py` 做包级作用域构建（`sphinx-build -b html -W --keep-going`），EXIT=0，产物 HTML 中含 `class="k">lookup`、`class="k">sub`、`class="k">by` 高亮片段。
+验证装置：复用真实 `doc/conf.py`，仅做三处覆盖——`master_doc` 指向本束首页、`intersphinx_mapping` 置空（离线取证）、仅从 `suppress_warnings` 中移除 `misc.highlighting_failure` 一条；srcdir 为只含本束与 `_ext`/`_static`/`_search` 的复制目录，经 `ssh ai@10.16.11.3`（py314，Sphinx 9.2.0 + myst-parser 5.1.0）串行执行 `sphinx-build -b html -W --keep-going`。
+
+验证结果：EXIT=0、0 条 WARNING，产物 HTML 含 `highlight-fea` 代码块与 `class="k">lookup`、`class="k">sub`、`class="k">by` 高亮片段。
+
+反证：同一装置注销 `_ext.fea_lexer` 后 EXIT=1，于 `concepts/04-feature-ast-generator.md:81` 报 `misc.highlighting_failure`（未知词法器 `fea`），说明零告警并非抑制项所致的假阳性。
 
 背景：全库 107 种围栏语言中 33 种未经 Pygments 注册（`mermaid` 1789 处已由 `myst_fence_as_directive` 转为指令，`ninja` 81、`shellscript` 76、`jinja2` 38、`jsonc` 30 等），逐一注册不可行，故 `misc.highlighting_failure` 仍保留在 `suppress_warnings`；`fea` 是本包正文语言，单独补齐。
 
