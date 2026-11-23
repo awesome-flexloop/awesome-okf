@@ -78,7 +78,7 @@ lookup_example = Lookup(
 
 输出：
 
-```fea
+```text
 # Example substitution
 lookup example_lookup {
   sub a b' by c;

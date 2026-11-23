@@ -1,5 +1,27 @@
 # Maple Mono OKF Bundle 生成日志
 
+## 2026-11-23
+
+### 验证执行（承接 2026-11-22 节「验证计划」）
+
+在服务器直连通道（`ssh ai@10.16.11.3`，py314）执行：
+
+| 质量门 | 命令 | 结果 |
+|---|---|---|
+| UTF-8 | `python scripts/check-utf8.py` | 通过：13 643 个文件均为有效 UTF-8 |
+| toctree 导航 | `python scripts/check-toctrees.py` | 通过：全部 index.md 引用有效，内容文档均可达 |
+| 总索引对账 | `python scripts/check-bundles-index.py` | 通过：9 域 / 65 组 / 756 束，计数五面一致 |
+| 构建零告警 | `sphinx-build -b html -W`（包级作用域） | 修复 1 条告警后通过，产出 23 个 HTML |
+
+### 缺陷与修复
+
+`concepts/04-feature-ast-generator.md:81` 的 FEA 代码块标注为 ```fea```，Pygments 无该词法器，触发 `misc.highlighting_failure`（`-W` 下等同构建失败）。已改为 ```text```，作用域重建零警告。
+
+### 取证边界
+
+- 全库 `-W` 构建未取得完整证据：本地 Python 3.14 环境 Sphinx 9.1.0 与 myst-parser 4 不兼容（`SphinxUnreferencedFootnotesDetector` 注册失败）；服务器全库构建 10 分钟仍处于读取阶段（CPU 0.2%），故改用「包级作用域构建 + 三条 CI 质量门」组合取证。
+- 三个子索引保留 `okf_version: "0.2"`：全仓 1394 个非根文件同为该写法，与规范 §12「仅 bundle 根可声明」的字面要求存在偏差，本包随全仓风格。
+
 ## 2026-11-22
 
 ### 触发
