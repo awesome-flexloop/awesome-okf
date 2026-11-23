@@ -15,7 +15,17 @@
 
 ### 缺陷与修复
 
-`concepts/04-feature-ast-generator.md:81` 的 FEA 代码块标注为 ```fea```，Pygments 无该词法器，触发 `misc.highlighting_failure`（`-W` 下等同构建失败）。已改为 ```text```，作用域重建零警告。
+`concepts/04-feature-ast-generator.md:81` 的 FEA 代码块标注为 ```fea```，Pygments 不内置该词法器，构建期抛出 `misc.highlighting_failure`（`-W` 下等同构建失败）。
+
+处置由「改写围栏语言」升级为「补齐词法器」：
+
+- 新增 `doc/_ext/fea_lexer.py`：以 `RegexLexer` 定义 `FeaLexer`（`aliases = ["fea"]`），覆盖注释、关键字、字形类 `@Class`、字形标记 `glyph'`、数字与标点，`setup(app)` 中调用 `app.add_lexer("fea", FeaLexer)`；
+- `doc/conf.py` 的 `extensions` 追加 `"_ext.fea_lexer"`，与既有 `_ext.okf_inventory_builder` 同级；
+- 该代码块围栏还原为 ```fea```，保留源码语义标注。
+
+验证：以真实 `_ext` 模块、不含 `suppress_warnings` 的最小 `conf.py` 做包级作用域构建（`sphinx-build -b html -W --keep-going`），EXIT=0，产物 HTML 中含 `class="k">lookup`、`class="k">sub`、`class="k">by` 高亮片段。
+
+背景：全库 107 种围栏语言中 33 种未经 Pygments 注册（`mermaid` 1789 处已由 `myst_fence_as_directive` 转为指令，`ninja` 81、`shellscript` 76、`jinja2` 38、`jsonc` 30 等），逐一注册不可行，故 `misc.highlighting_failure` 仍保留在 `suppress_warnings`；`fea` 是本包正文语言，单独补齐。
 
 ### 取证边界
 
