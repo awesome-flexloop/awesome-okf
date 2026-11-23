@@ -54,6 +54,25 @@ v8 的默认路径在 Fontmake 编译之前完成冻结：
 - **静态与变量一致**：变量字体由同一批 master 构建，冻结结果在 `gvar` 插值下保持同构，不会出现“静态对了、变量没对”。
 - **无需运行时特性开关**：单一替换已变成字形本身，渲染器无需理解 `cvXX`。
 
+```mermaid
+flowchart TD
+    FF["feature_freeze 每个特征一个三态值"] --> MODECHK{"模式判定"}
+    MODECHK -->|"enable"| E1["单一替换把轮廓与前进宽度复制到每个 master 上下文规则移入 calt"]
+    MODECHK -->|"disable"| D1["从 cvXX / ssXX / zero 中移除规则"]
+    MODECHK -->|"ignore"| I1["保留为普通 OpenType 特征 默认不激活"]
+    E1 --> PREP
+    D1 --> PREP
+    I1 --> PREP
+    subgraph PREP["源准备期 Fontmake 编译之前"]
+        P1["加载 regular 与 italic 的 Designspace 与 UFO"]
+        P2["应用构建度量与特征配置"]
+        P3["逐 master 执行冻结替换与规则挂载"]
+        P4["物化到一次性工作区"]
+        P1 --> P2 --> P3 --> P4
+    end
+    PREP --> FM["Fontmake 编译 静态与变量共享同一批冻结 master"]
+```
+
 ## 4. `calt` 承载上下文规则
 
 单一替换可以直接改轮廓；但上下文连字（如 `->`、`>>`、`[TODO]`）依赖前后文，不能简单替换轮廓。v8 的处理是：

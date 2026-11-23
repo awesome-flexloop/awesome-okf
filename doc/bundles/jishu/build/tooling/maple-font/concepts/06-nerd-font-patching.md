@@ -59,6 +59,20 @@ sources/MapleMono-NF-Base-Propo.ttf
 
 > 取舍：预构建路径快且可复现；修补器路径灵活但引入外部依赖与运行时间。只有确实需要自定义图标集或参数时才走后者。
 
+```mermaid
+flowchart TD
+    START["Nerd Font 构建请求"] --> VCHK{"变体判定 from_options"}
+    VCHK -->|"propo 或 --nf-propo 优先级最高"| VP["NFPropo 比例宽 标记 NFP"]
+    VCHK -->|"mono 或 --nf-mono"| VM["NFMono 固定宽 标记 NFM"]
+    VCHK -->|"两者皆否"| VD["NF 默认变体"]
+    VP --> PCHK
+    VM --> PCHK
+    VD --> PCHK
+    PCHK{"uses_font_patcher 三条件任一成立"}
+    PCHK -->|"extra_args 非空 或 --font-patcher 或 glyphs 不等于 --complete"| PATCH["FontForge font-patcher 动态修补 需安装 fontforge"]
+    PCHK -->|"均不成立"| BASE["三份预构建 NF 基座直接合并 快且可复现"]
+```
+
 ## 4. 构建选项
 
 | 选项 | 作用 |

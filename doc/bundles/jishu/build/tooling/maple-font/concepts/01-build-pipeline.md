@@ -49,28 +49,28 @@ def main(args: list[str] | None = None, version: str | None = None) -> None:
 
 ## 3. 正常调用顺序
 
-```
-build.py
-  └─ scripts.pipeline.main()
-       ├─ parse_args / BuildConfigResolver.resolve
-       ├─ BuildRuntimeContext.from_config
-       ├─ BuildPlan.from_config
-       ├─ MapleBuildPipeline.build()
-       │    ├─ prepare_output_root()          # 无 --cache 时清理输出根目录
-       │    ├─ write_build_config()           # 开始前写 fonts/build-config.json
-       │    ├─ _build_base_outputs()
-       │    │    ├─ prepare_fontmake_sources # Designspace/UFO + 度量 + 特征 + 冻结
-       │    │    ├─ compile_fontmake_formats # Variable / TTF / OTF 分支
-       │    │    └─ 基础后处理：命名、别名、宽度校验
-       │    ├─ _build_derived_outputs()
-       │    │    ├─ AutoHint → fonts/TTF-AutoHint/
-       │    │    └─ WOFF2    → fonts/Woff2/
-       │    ├─ Nerd Font 阶段 → fonts/NF/ 或 NFMono / NFPropo
-       │    ├─ CJK 阶段 → fonts/<LOCALE>/ 与 NF / Variable 变体
-       │    ├─ 清理未请求的 TTF / TTF-AutoHint
-       │    ├─ finish_build()：重写 build-config.json、写 build-cache.json
-       │    └─ archive_outputs()：仅在 --archive 时执行
-       └─ 异常：BuildDependencyError → 记录日志并以退出码 1 结束
+```mermaid
+flowchart TD
+    START["build.py"] --> MAIN["scripts.pipeline.main()"]
+    MAIN --> PARSE["parse_args 与 BuildConfigResolver.resolve"]
+    PARSE --> CTX["BuildRuntimeContext.from_config"]
+    CTX --> DRYCHK{"--dry?"}
+    DRYCHK -->|"是"| DRYOUT["打印 resolved_config 与 runtime_context 后返回 不创建 BuildPlan"]
+    DRYCHK -->|"否"| PLAN["BuildPlan.from_config 一次性派生"]
+    PLAN --> PIPE["MapleBuildPipeline.build()"]
+    PIPE --> S1["prepare_output_root 无 --cache 时清理输出根目录"]
+    S1 --> S2["write_build_config 开始前写 build-config.json"]
+    S2 --> S3["_build_base_outputs 源准备 Fontmake 编译 Variable/TTF/OTF 基础后处理"]
+    S3 --> S4["_build_derived_outputs AutoHint 与 WOFF2"]
+    S4 --> S5["Nerd Font 阶段 输出 NF / NFMono / NFPropo"]
+    S5 --> S6["CJK 阶段 输出各语种普通/NF 与变量变体"]
+    S6 --> S7["清理未请求的 TTF 与 TTF-AutoHint"]
+    S7 --> S8["finish_build 重写 build-config.json 写 build-cache.json"]
+    S8 --> ARCHIVECHK{"--archive?"}
+    ARCHIVECHK -->|"是"| S9["archive_outputs 归档已有输出"]
+    ARCHIVECHK -->|"否"| DONE["构建完成"]
+    S9 --> DONE
+    MAIN -.->|"BuildDependencyError"| ERR["记录日志 退出码 1"]
 ```
 
 整个正常流水线共享一个执行器，用于源准备、编译、后处理与派生阶段。`fonts/temp/` 下的 Fontmake 临时工作在基础阶段结束后清理，失败路径同样通过 `finally` 清理。

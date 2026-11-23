@@ -37,6 +37,29 @@
 - 本地 Python 环境另有限制：Sphinx 9.1.0 与 myst-parser 4 不兼容（`SphinxUnreferencedFootnotesDetector` 注册失败），故取证统一在服务器 py314（Sphinx 9.2.0 + myst-parser 5.1.0）执行。
 - 三个子索引保留 `okf_version: "0.2"`：全仓 1394 个非根文件同为该写法，与规范 §12「仅 bundle 根可声明」的字面要求存在偏差，本包随全仓风格。
 
+### Mermaid 可视化优化（七概念重构优化链路 I→F→A→V→C）
+
+触发：全束 21 个文件 0 处 mermaid，流程与判定信息依赖定宽 ASCII 图与编号列表承载。按重构优化场景链路执行，仅做图示优化，不改正文事实、不增删文件、不触动 toctree。
+
+变更清单（12 个文件、14 张图）：
+
+- 替换 5 处 ASCII 图：`index.md` 五层流水线框图、`concepts/01` 调用树（补 `--dry` 判定分支）、`concepts/02` 配置归一化小图（补解析器五步）、`concepts/08` 执行器选择图、`references/resolved-config.md` 模型关系图；
+- 新增 9 张：`concepts/00` 两入口分工、`03` 特征双轨汇合、`04` AST 对象组合编译流、`05` 三态冻结与源准备期流程、`06` NF 变体选择与 `uses_font_patcher()` 回退判定、`07` 两工作流边界与七级回退链（2 张）、`08` 缓存命中四条件判定、`references/build-entrypoint.md` `main()` 时序图（sequenceDiagram）；
+- 目录树类 ASCII（束结构树、`fonts/` 产物树）表达文件清单而非流程，保留；4 篇 examples 为命令式手册，相关机制图已在 concepts 交叉覆盖，不重复制图。
+
+编码约束：全部遵循《开发规范》Mermaid 安全编码六规则（块内无空行、中文标签加双引号、无 `<br/>`/`\n`、无 Markdown 列表触发符、subgraph 英文 ID、边标签 `-->|"..."|`），以 `mermaid` 围栏书写，由 `myst_fence_as_directive` 转为 `sphinxcontrib.mermaid` 指令。
+
+验证证据（服务器直连通道，py314）：
+
+| 验证项 | 结果 |
+|---|---|
+| 离线结构校验器（围栏闭合/引号配对/括号配对/节点定义/subgraph 与 alt 配对/六规则） | 14/14 块全部通过 |
+| `check-utf8.py` / `check-toctrees.py` / `check-bundles-index.py` | 全部通过（13 643 文件；756 束五面一致） |
+| `check-section-anchors.py` | 失败项 0 处涉及本束，为其他束既有基线问题 |
+| 紧作用域 `sphinx-build -b html -W --keep-going` | EXIT=0、0 警告；21 个 HTML，14 个 mermaid 容器分布于上述 12 个文件，中文标签与时序图完整 round-trip |
+
+取证边界：服务器无 Chromium 且 npm registry 响应超时，`@mermaid-js/parser` 权威解析未跑成，以自研离线结构校验器加 Sphinx 指令级渲染替代；mermaid 11.4.1 的浏览器端 JS 解析未做截图级验证。V 门对抗审查修正两处事实精度：配置图 JSON 输入边改指 `_apply_json_config`（R2）；七级回退图文件名对齐正文 `<locale>` 占位形式。
+
 ## 2026-11-22
 
 ### 触发

@@ -21,10 +21,26 @@ status: draft
 
 ## 1. 三层输入，一次归一化
 
-```
-config.json ─┐
-CLI 参数 ────┼─→ BuildConfigResolver ─→ ResolvedConfig ─→ BuildRuntimeContext
-旧 --cn* ────┘                              （纯意图）          （路径与运行期）
+```mermaid
+flowchart LR
+    subgraph INPUTS["三层输入"]
+        JSONCFG["config.json"]
+        CLIARGS["CLI 参数"]
+        OLD["旧 --cn* 弃用别名"]
+    end
+    subgraph RESOLVE["BuildConfigResolver 五步归一化"]
+        R1["load_defaults 代码默认值"]
+        R2["_apply_json_config 分块应用"]
+        R3["_apply_deprecated_cli_overrides 别名翻译"]
+        R4["_apply_cli_overrides CLI 覆盖"]
+        R5["_apply_identity 派生族名与版本"]
+    end
+    RC["ResolvedConfig 纯意图 六组子配置加 feature_freeze"]
+    RTC["BuildRuntimeContext 路径与运行期能力"]
+    JSONCFG --> R2
+    CLIARGS --> R4
+    OLD --> R3
+    R1 --> R2 --> R3 --> R4 --> R5 --> RC --> RTC
 ```
 
 - **优先级**：CLI > `config.json` > 代码默认值；

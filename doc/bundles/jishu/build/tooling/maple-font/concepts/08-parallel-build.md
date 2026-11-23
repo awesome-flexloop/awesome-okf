@@ -28,9 +28,16 @@ status: draft
 
 ## 2. 执行器选择
 
-```
-pool_size <= 1  → SynchronousExecutor（顺序执行）
-pool_size > 1   → create_process_executor(pool_size, fallback_to_threads=True)
+```mermaid
+flowchart TD
+    PS["pool_size 配置值"] --> C1{"pool_size <= 1"}
+    C1 -->|"是"| SYNC["SynchronousExecutor 顺序执行"]
+    C1 -->|"否"| CJKCHK{"CJK 执行器且 is_ci 为真"}
+    CJKCHK -->|"是"| SYNC
+    CJKCHK -->|"否"| PROC["create_process_executor 进程池 fallback_to_threads 为真"]
+    PROC --> C2{"进程执行器创建成功"}
+    C2 -->|"是"| PARALLEL["进程级并行"]
+    C2 -->|"否"| THREAD["回退线程执行器 避免环境不支持时崩溃"]
 ```
 
 - 代码默认 `pool_size` 为 1；存在 `CODESPACE_NAME` 时为 4；仓库 `config.json` 显式设为 4，因此常规构建是 4；
@@ -83,6 +90,19 @@ uv run build.py --cache
 4. 每个输出文件的**内容摘要**一致。
 
 命中时日志输出 `Cache hit`；未命中输出 `Cache miss`。若缓存记录整体不可用，每个请求阶段会在各自日志段报告 `missing-cache-record`，而不是依赖一个全局“未命中”。
+
+```mermaid
+flowchart TD
+    REQ["阶段缓存查询"] --> H1{"条件一 阶段身份与当前一致"}
+    H1 -->|"否"| MISS["Cache miss 重建该阶段"]
+    H1 -->|"是"| H2{"条件二 输出路径清单完全一致"}
+    H2 -->|"否"| MISS
+    H2 -->|"是"| H3{"条件三 每个输出文件存在"}
+    H3 -->|"否"| MISS
+    H3 -->|"是"| H4{"条件四 每个输出文件内容摘要一致"}
+    H4 -->|"否"| MISS
+    H4 -->|"是"| HIT["Cache hit 复用阶段输出"]
+```
 
 CJK 未命中时只移除该阶段自己的缓存记录，其他语种与配置档的记录和文件保持不变。
 

@@ -76,6 +76,22 @@ scripts/feature/
 
 两条路径的共同点是“在 Fontmake 编译前进入源”，因此静态与变量输出得到一致的轮廓结果。
 
+```mermaid
+flowchart TD
+    subgraph TRACK_A["生成式 默认路径"]
+        A1["scripts/feature Python 对象定义"]
+        A2["compiler 组装生成 .fea 源码"]
+    end
+    subgraph TRACK_B["文件式 --apply-fea-file"]
+        B1["sources/features regular.fea 与 italic.fea"]
+        B2["include 在冻结规则之前解析"]
+    end
+    A2 --> MERGE["同一源准备步骤 写入每个 UFO master"]
+    B2 --> MERGE
+    MERGE --> FREEZE["enable 替换冻结 disable 移除 ignore 保留 calt 承载上下文规则"]
+    FREEZE --> FONTMAKE["Fontmake 编译 静态与变量输出同构"]
+```
+
 ## 5. 特征标签命名
 
 | 标签 | 含义 | 示例 |

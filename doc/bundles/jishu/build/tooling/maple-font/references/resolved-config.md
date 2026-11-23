@@ -218,13 +218,15 @@ def format_freeze_config(config: dict[str, str]) -> str: ...
 
 ## 10. 与其他模型的关系
 
-```
-config.json + CLI
-      │  BuildConfigResolver
-      ▼
-ResolvedConfig ──from_config──▶ BuildRuntimeContext
-      │
-      └──from_config──▶ BuildPlan ──▶ MapleBuildPipeline
+```mermaid
+flowchart LR
+    INPUT["config.json 加 CLI"] -->|"BuildConfigResolver"| RC["ResolvedConfig 六组子配置加 feature_freeze"]
+    RC -->|"from_config"| RTC["BuildRuntimeContext 路径与运行期能力"]
+    RC -->|"from_config"| PLAN["BuildPlan 一次性阶段策略"]
+    RTC --> PIPE["MapleBuildPipeline"]
+    PLAN --> PIPE
+    RTC -.->|"不回写"| RC
+    PLAN -.->|"不回写"| RC
 ```
 
 - `BuildRuntimeContext` 只放路径与运行期能力；

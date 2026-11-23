@@ -32,49 +32,42 @@ status: draft
 
 ## 三分钟理解 v8 构建流水线
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│ 入口层：build.py（发布构建）        task.py（仓库维护任务）        │
-│   main(args, version)               nf / fea / designspace /      │
-│                                     release / cjk / googlefonts / │
-│                                     publish                      │
-└──────────────────────────┬───────────────────────────────────────┘
-                           │
-                           ▼
-┌──────────────────────────────────────────────────────────────────┐
-│ 配置层：config/                                                   │
-│  config.json（JSON + schema）                                     │
-│      ＋ CLI 参数（优先级更高）                                     │
-│      → BuildConfigResolver → ResolvedConfig（6 组子配置）          │
-│      → BuildRuntimeContext（路径、度量、镜像、FontForge）          │
-│      → --dry：打印后退出，不创建 BuildPlan                        │
-└──────────────────────────┬───────────────────────────────────────┘
-                           │
-                           ▼
-┌──────────────────────────────────────────────────────────────────┐
-│ 计划层：BuildPlan（一次性派生）                                    │
-│  目标样式 / 必需基础格式 / WOFF2 / Nerd Font / CJK 模式 /          │
-│  静态清理 / 归档                                                  │
-└──────────────────────────┬───────────────────────────────────────┘
-                           │
-                           ▼
-┌──────────────────────────────────────────────────────────────────┐
-│ 执行层：pipeline/                                                 │
-│  准备 Designspace/UFO → Fontmake 编译 Variable/TTF/OTF            │
-│  → 后处理（命名、度量、别名、宽度校验）                            │
-│  → AutoHint / WOFF2（派生阶段）                                    │
-│  → Nerd Font 阶段（预构建基座或 font-patcher）                     │
-│  → CJK 阶段（四语种 × 静态/变量 × 普通/NF 配置档）                  │
-│  → 清理未请求的 TTF → 写 build-config.json / build-cache.json      │
-│  → 可选 --archive 归档                                             │
-└──────────────────────────┬───────────────────────────────────────┘
-                           │
-                           ▼
-┌──────────────────────────────────────────────────────────────────┐
-│ 输出层：fonts/                                                    │
-│  Variable / TTF / TTF-AutoHint / OTF / Woff2 / NF / NFMono /      │
-│  NFPropo / <LOCALE> / NF-<LOCALE> / Variable-<LOCALE> / ...        │
-└──────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph ENTRY["入口层"]
+        BUILD["build.py 发布构建 main(args, version)"]
+        TASK["task.py 仓库维护 nf / fea / designspace / release / cjk / googlefonts / publish"]
+    end
+    subgraph CFG["配置层 config/"]
+        JSONCFG["config.json JSON 加 Schema"]
+        CLIARGS["CLI 参数 优先级更高"]
+        RESOLVER["BuildConfigResolver 归一化"]
+        RC["ResolvedConfig 六组子配置"]
+        RUNTIME["BuildRuntimeContext 路径 度量 镜像 FontForge"]
+    end
+    DRYCHK{"--dry?"}
+    DRYOUT["打印两段 JSON 后退出 不创建 BuildPlan"]
+    subgraph PLAN["计划层"]
+        BUILDPLAN["BuildPlan 一次性派生 目标样式 基础格式 WOFF2 Nerd Font CJK 模式 清理 归档"]
+    end
+    subgraph EXEC["执行层 pipeline/"]
+        PREP["准备 Designspace/UFO 特征冻结"]
+        COMPILE["Fontmake 编译 Variable / TTF / OTF"]
+        POST["后处理 命名 度量 别名 宽度校验"]
+        DERIVED["AutoHint / WOFF2 派生阶段"]
+        NFSTAGE["Nerd Font 阶段 预构建基座或 font-patcher"]
+        CJKSTAGE["CJK 阶段 四语种 静态/变量 普通/NF 配置档"]
+        RECORD["清理未请求 TTF 写 build-config.json 与 build-cache.json"]
+    end
+    OUT["输出层 fonts/ Variable / TTF / TTF-AutoHint / OTF / Woff2 / NF / NFMono / NFPropo / 各语种目录"]
+    BUILD --> RESOLVER
+    TASK --> RESOLVER
+    JSONCFG --> RESOLVER
+    CLIARGS --> RESOLVER
+    RESOLVER --> RC --> RUNTIME --> DRYCHK
+    DRYCHK -->|"是"| DRYOUT
+    DRYCHK -->|"否"| BUILDPLAN
+    BUILDPLAN --> PREP --> COMPILE --> POST --> DERIVED --> NFSTAGE --> CJKSTAGE --> RECORD --> OUT
 ```
 
 ## 核心洞察

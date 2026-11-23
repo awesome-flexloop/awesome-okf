@@ -86,6 +86,23 @@ maple-font/
 
 `task.py` 拥有 7 个子命令：`nf`、`fea`、`designspace`、`release`、`cjk`、`googlefonts`、`publish`。其中只有 `cjk` 会产出可被 `build.py` 复用的 CJK 基座，其余多为维护或发布流程。
 
+```mermaid
+flowchart LR
+    subgraph ENTRY_A["build.py 发布构建入口"]
+        B1["读取配置 编译字体 输出 fonts/"]
+    end
+    subgraph ENTRY_B["task.py 仓库维护入口 七个子命令"]
+        T1["nf 更新 NF 基座"]
+        T2["fea 特征再生成"]
+        T3["designspace 设计源转换"]
+        T4["release 版本发布"]
+        T5["cjk 重建 CJK 基座"]
+        T6["googlefonts 谷歌字体流程"]
+        T7["publish 归档上架"]
+    end
+    T5 -->|"唯一产出可被 build.py 复用的 CJK 基座"| B1
+```
+
 ## 6. 依赖与运行环境
 
 - Python `>= 3.10`；

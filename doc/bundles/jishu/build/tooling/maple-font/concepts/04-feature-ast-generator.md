@@ -41,6 +41,27 @@ OpenType `.fea` 是声明式文本，但 Maple Mono 的特征需要按构建参�
 
 `Clazz.use()` 返回 `@Name` 引用；`Clazz.state()` 返回类声明行。`Lookup.use()` 返回 `lookup Name;` 引用，`state()` 返回完整定义。
 
+```mermaid
+flowchart TD
+    HELPERS["辅助函数 cls / subst / subst_map / subst_liga"] --> LINE
+    subgraph NODES["AST 节点组合层级"]
+        LINE["Line 单行文本与缩进"]
+        CLZ["Clazz 字形类 序列化为 @Name = [...]"]
+        LK["Lookup 命名查找块"]
+        FT["Feature 特征块 以 OpenType 标签包裹"]
+        FWD["FeatureWithDocs 增加 id 与文档信息"]
+        CV["CharacterVariant cvXX 编号 1 到 99"]
+        SS["StylisticSet ssXX 编号 1 到 20"]
+        LINE --> CLZ --> LK --> FT --> FWD
+        FWD --> CV
+        FWD --> SS
+    end
+    OPTS["FeatureGenOptions 七个生成开关"] --> GEN["generate_fea_string 编译入口"]
+    NODES --> CREATE["create 与 flatten_to_lines 递归序列化"]
+    CREATE --> GEN
+    GEN --> FEA["完整 .fea 源码"]
+```
+
 ## 3. 辅助函数
 
 | 函数 | 签名要点 | 用途 |

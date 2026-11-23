@@ -50,6 +50,28 @@ def main(args: list[str] | None = None, version: str | None = None) -> None: ...
 8. `BuildDependencyError` → `logger.error` + `SystemExit(1)`；
 9. `finally` 中恢复临时设置的日志环境变量。
 
+```mermaid
+sequenceDiagram
+    participant U as 调用方
+    participant M as main
+    participant R as BuildConfigResolver
+    participant C as BuildRuntimeContext
+    participant P as MapleBuildPipeline
+    U->>M: "main(args, version)"
+    M->>M: parse_args 解析参数并调整日志级别
+    M->>R: resolve(parsed_args)
+    R-->>M: ResolvedConfig
+    M->>C: from_config(config)
+    C-->>M: RuntimeContext
+    alt --dry 模式
+        M-->>U: 打印 JSON 后返回 不创建 BuildPlan
+    else 正常构建
+        M->>P: build()
+        P-->>M: 流水线阶段执行完成
+        M-->>U: 正常结束 退出码 0
+    end
+```
+
 ## 3. `parse_args()`
 
 ```python

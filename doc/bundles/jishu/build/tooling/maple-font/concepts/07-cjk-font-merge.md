@@ -45,6 +45,21 @@ CJK 字形与拉丁字符采用 **2:1 宽度比**，用于保证多语言文本�
 
 两者缓存互不影响：`build.py --cache` 管 `fonts/`；`cjk.clean_cache` 管 CJK 变量/源回退工作，但**不删除文件**，也不会绕过有效的静态目录摘要。
 
+```mermaid
+flowchart LR
+    subgraph WF1["工作流一 构建可复用基座"]
+        T1["task.py cjk --preset locale"]
+        T2["sources/cjk/locale 变量基座 静态实例 摘要与归档"]
+        T1 --> T2
+    end
+    subgraph WF2["工作流二 构建发布字体"]
+        B1["build.py --cjk locale"]
+        B2["fonts/LOCALE 与 NF-LOCALE 等发布目录"]
+        B1 --> B2
+    end
+    T2 -->|"主流水线按七级回退取用基座"| B1
+```
+
 ## 4. 输出模式
 
 | 模式 | 每个配置档 | 目录 |
@@ -85,6 +100,31 @@ CJK 字形与拉丁字符采用 **2:1 宽度比**，用于保证多语言文本�
 7. **源重建**：以上都不可用时，按配置下载源并 `vf_only=True` 重建变量基座，再实例化静态样式。
 
 无效的静态目录不会被静默删除；所有可用来源都失败后抛出 `CJKBaseUnavailable`。变量模式发布输出使用同样的“本地文件 → 本地归档 → 远程归档 → 源重建”规则，但不要求静态目录。
+
+```mermaid
+flowchart TD
+    REQ["请求 CJK 静态基座"] --> L1{"① 本地静态目录与 static-<locale>.sha256 有效"}
+    L1 -->|"是"| USE["复用该来源产出静态样式"]
+    L1 -->|"否"| L2{"② 本地静态归档 <locale>-base-static.zip 有效"}
+    L2 -->|"是"| UNZIP1["校验并解压"]
+    L2 -->|"否"| L3{"③ 远程静态归档存在且校验通过"}
+    L3 -->|"是"| DL1["下载并校验"]
+    L3 -->|"否"| L4{"④ 本地变量基座齐全且 clean_cache 为假"}
+    L4 -->|"是"| INST1["本地实例化为静态样式"]
+    L4 -->|"否"| L5{"⑤ 本地变量归档 <locale>-base-variable.zip 有效"}
+    L5 -->|"是"| UNZIP2["校验并安装"]
+    L5 -->|"否"| L6{"⑥ 远程变量归档成员 fvar 与哈希校验通过"}
+    L6 -->|"是"| DL2["下载校验后实例化"]
+    L6 -->|"否"| L7["⑦ 源重建 下载源并以 vf_only 重建变量基座再实例化"]
+    UNZIP1 --> USE
+    DL1 --> USE
+    INST1 --> USE
+    UNZIP2 --> USE
+    DL2 --> USE
+    L7 --> USE
+    USE --> FAIL{"全部来源均失败"}
+    FAIL -->|"是"| ERR["抛出 CJKBaseUnavailable"]
+```
 
 ## 8. 配置面与构建阶段
 
