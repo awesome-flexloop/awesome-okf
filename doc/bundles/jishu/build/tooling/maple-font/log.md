@@ -33,7 +33,8 @@
 
 ### 取证边界
 
-- 全库 `-W` 构建未取得完整证据：本地 Python 3.14 环境 Sphinx 9.1.0 与 myst-parser 4 不兼容（`SphinxUnreferencedFootnotesDetector` 注册失败）；服务器全库构建 10 分钟仍处于读取阶段（CPU 0.2%），故改用「包级作用域构建 + 三条 CI 质量门」组合取证。
+- 全库与域级 `-W` 构建在本机不可复现，成因已实测定位而非推断：以 `OKF_BUILD_DOMAIN=jishu sphinx-build -b html -W --keep-going` 串行执行，600 s 上限内 `EXIT=124`、产出 0 个 HTML，日志停在「正在加载 Sphinx 互联清单」阶段；本机访问 `https://docs.python.org/3/objects.inv` 在 12 s 内无响应，而分片模式对另外 8 域回退到 `("../<域>/", None)`，未预热 `_build/domain-invs` 时逐域报 `FileNotFoundError`。CI 由 `invoke build-invs` 预热 9 份域清单且具备外网，该项验证属 CI 职责；本机以「包级作用域构建 + 五道质量门」取证。
+- 本地 Python 环境另有限制：Sphinx 9.1.0 与 myst-parser 4 不兼容（`SphinxUnreferencedFootnotesDetector` 注册失败），故取证统一在服务器 py314（Sphinx 9.2.0 + myst-parser 5.1.0）执行。
 - 三个子索引保留 `okf_version: "0.2"`：全仓 1394 个非根文件同为该写法，与规范 §12「仅 bundle 根可声明」的字面要求存在偏差，本包随全仓风格。
 
 ## 2026-11-22
