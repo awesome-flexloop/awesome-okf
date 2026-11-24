@@ -222,4 +222,5 @@ __marimo__/
 
 # temp
 .temp/
+.cowork-temp/
 _toc_test*/
