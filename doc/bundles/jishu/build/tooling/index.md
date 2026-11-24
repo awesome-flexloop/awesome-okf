@@ -23,6 +23,7 @@ description: "不绑定特定生态、可独立服务任意项目的通用开发
 | 4 | [invocations](invocations/index.md) | PyInvoke 官方任务集合——打包发布、测试（pytest）、文档（Sphinx）、CI 自动化、代码检查格式化、自动文档组合模式 |
 | 5 | [github-problem-matcher](github-problem-matcher/index.md) | GitHub Actions 错误注解——Problem Matcher JSON 模式、正则捕获组、测试验证、将编译器/linter 错误在 PR 中高亮显示 |
 | 6 | [podman-container-tools](podman-container-tools/index.md) | Podman 无守护进程容器引擎——OCI容器/Pod管理、rootless安全模式、Docker兼容CLI、Kubernetes YAML原生支持、双引擎(ABI/Tunnel)架构、REST API |
+| 7 | [maple-font](maple-font/index.md) | Maple Mono v8 等宽编程字体构建系统——ResolvedConfig/BuildPlan 双层配置、阶段化流水线、OpenType Feature AST 生成、源准备期特征冻结、Nerd Font 三基座、四语种 CJK 合并、可选阶段缓存 |
 
 ```{toctree}
 :hidden:
@@ -35,4 +36,5 @@ invocations/index
 github-problem-matcher/index
 nuitka/index
 podman-container-tools/index
+maple-font/index
 ```

@@ -25,7 +25,7 @@ def _has(mod: str) -> bool:
         return False
 
 
-extensions = ["myst_parser", "_ext.okf_inventory_builder"]
+extensions = ["myst_parser", "_ext.okf_inventory_builder", "_ext.fea_lexer"]
 
 _optional_extensions = [
     "sphinx_design",
