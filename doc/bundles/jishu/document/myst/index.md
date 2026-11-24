@@ -2,10 +2,10 @@
 okf_version: "0.2"
 type: group
 title: "📖 MyST Markdown 与 Executable Books 生态"
-description: "Executable Books 组织开源项目源码级中文教程——20个知识包、264篇内容文档（176概念+53示例+35信源）、401个.md文件，覆盖 MyST Markdown 解析器、Sphinx 集成、Jupyter Notebook 支持、主题设计、UI 组件扩展、基础设施工具与双教程整合（myst-tutorial）"
-total_bundles: 20
-total_content_docs: 264
-total_md_files: 401
+description: "Executable Books 组织开源项目源码级中文教程——19个知识包、251篇内容文档（166概念+51示例+34信源）、381个.md文件，覆盖 MyST Markdown 解析器、Sphinx 集成、Jupyter Notebook 支持、主题设计、UI 组件扩展、基础设施工具与双教程整合（myst-tutorial）"
+total_bundles: 19
+total_content_docs: 251
+total_md_files: 381
 verified: grep-verified
 generated: true
 status: stable
@@ -13,7 +13,7 @@ status: stable
 
 # 📖 MyST Markdown 与 Executable Books 生态
 
-[Executable Books](https://executablebooks.org) 是 [Jupyter Book](https://jupyterbook.org) 和 [MyST Markdown](https://mystmd.org) 等现代技术文档工具链的核心开源组织，致力于构建"可执行的书籍"——将 Markdown 文本、Jupyter Notebook 代码执行、交互式组件融为一体的下一代出版平台。本组知识包收录其 19 个核心项目的系统化中文源码教程，覆盖从 Markdown 解析到 Sphinx 扩展、从 Notebook 执行缓存到主题设计的完整技术栈。
+[Executable Books](https://executablebooks.org) 是 [Jupyter Book](https://jupyterbook.org) 和 [MyST Markdown](https://mystmd.org) 等现代技术文档工具链的核心开源组织，致力于构建"可执行的书籍"——将 Markdown 文本、Jupyter Notebook 代码执行、交互式组件融为一体的下一代出版平台。本组知识包收录其 18 个核心项目的系统化中文源码教程，覆盖从 Markdown 解析到 Sphinx 扩展、从 Notebook 执行缓存到主题设计的完整技术栈。
 
 所有知识包遵循 [OKF v0.2 规范](../../../meta/okf-spec/index.md)，通过源码深度阅读（R→I→E→V→C 五阶段链路）生成，所有 API 引用均经 Grep 级源码验证。
 
@@ -29,7 +29,6 @@ status: stable
 | **格式化工具** | [mdformat-myst](mdformat-myst/index.md) | 5 | 1 | 3 | 9 |
 | **格式化工具** | [mdformat-footnote](mdformat-footnote/index.md) | 4 | 1 | 3 | 8 |
 | **格式化工具** | [rst-to-myst](rst-to-myst/index.md) | 11 | 2 | 5 | 18 |
-| **Sphinx扩展** | [sphinx-book-theme](sphinx-book-theme/index.md) | 10 | 2 | 1 | 13 |
 | **Sphinx扩展** | [sphinx-design](sphinx-design/index.md) | 10 | 2 | 1 | 13 |
 | **Sphinx扩展** | [sphinx-copybutton](sphinx-copybutton/index.md) | 5 | 2 | 1 | 8 |
 | **Sphinx扩展** | [sphinx-togglebutton](sphinx-togglebutton/index.md) | 4 | 2 | 1 | 7 |
@@ -41,9 +40,9 @@ status: stable
 | **基础设施** | [github-activity](github-activity/index.md) | 5 | 1 | 1 | 7 |
 | **基础设施** | [web-compile](web-compile/index.md) | 5 | 1 | 1 | 7 |
 | **教程整合** | [myst-tutorial](myst-tutorial/index.md) | 25 | 10 | 4 | 39 |
-| **合计** | **20 知识包** | **176** | **53** | **35** | **264** |
+| **合计** | **19 知识包** | **166** | **51** | **34** | **251** |
 
-> 注："内容文档"指 concepts/examples/references 目录下的实质性文档（不含各目录 index.md 导航页）。含导航索引、日志文件、spec 元数据共 **401 个 .md 文件**（含 myst-tutorial 迁入 41 个）。
+> 注："内容文档"指 concepts/examples/references 目录下的实质性文档（不含各目录 index.md 导航页）。含导航索引、日志文件、spec 元数据共 **381 个 .md 文件**（含 myst-tutorial 迁入 41 个）。
 
 ## MyST 解析核心层
 
@@ -74,7 +73,6 @@ status: stable
 
 | 知识包 | 简介 |
 |--------|------|
-| [sphinx-book-theme](sphinx-book-theme/index.md) | Jupyter Book 主题——基于 PyData Sphinx Theme 的薄继承层、头部按钮系统、Margin 边注指令、全屏/TOC 隐藏/Thebe 交互、SCSS 样式体系 |
 | [sphinx-external-toc](sphinx-external-toc/index.md) | 外部目录扩展——`_toc.yml` 驱动站点导航、Sphinx toctree 桥接、多文档结构映射 |
 
 ### UI 组件
@@ -122,8 +120,7 @@ status: stable
 📄 MyST-Parser（MyST语法）
   → 📓 MyST-NB（Notebook支持）
     → 💾 jupyter-cache（执行缓存）
-      → 🎨 sphinx-book-theme（书籍主题）
-        → 🧩 sphinx-design（UI组件）
+      → 🧩 sphinx-design（UI组件）
 ```
 
 ### 路径三：Sphinx 扩展开发（从易到难）
@@ -193,7 +190,6 @@ MyST-NB/index
 mdformat-myst/index
 mdformat-footnote/index
 rst-to-myst/index
-sphinx-book-theme/index
 sphinx-design/index
 sphinx-copybutton/index
 sphinx-togglebutton/index

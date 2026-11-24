@@ -232,6 +232,16 @@ pydata_sphinx_theme/layout.html
     ← my_book_theme/layout.html
 ```
 
+## 资产哈希与缓存清除
+
+本书主题对自有静态资源做缓存清除（cache busting），确保 CSS/JS 更新后用户立即加载新版：
+
+- `_gen_hash(path)` 以 `hashlib.sha1(path.read_bytes()).hexdigest()` 计算内容哈希，并加 `@lru_cache(maxsize=None)` 缓存避免重复计算；
+- `hash_html_assets` 默认哈希 `scripts/sphinx-book-theme.js`；仅当 `html_theme == "sphinx_book_theme"` 时追加 `styles/sphinx-book-theme.css`（避免影响子主题）；
+- `hash_assets_for_files` 按扩展名分类资源（`.css → css_files`，其余 → `script_files`），删除旧条目后用 `app.add_css_file()` / `app.add_js_file()` 重新添加带 `?digest={hash}` 参数的版本。
+
+子主题如需同样效果，可复用导出的 `hash_assets_for_files`（见上文「子主题的 CSS 陷阱」）。
+
 ## 扩展主题配置
 
 如果子主题需要新的配置项，用 Sphinx 配置而不是硬编码：
@@ -248,7 +258,8 @@ def setup(app):
 
 主题文案走 message catalog：
 
-- 本书主题：catalog 名 `booktheme`，源文案在 `assets/translations/`。
+- 本书主题：catalog 名 `booktheme`（`MESSAGE_CATALOG_NAME`），翻译目录为 `theme/sphinx_book_theme/static/locales/`，源文案（JSON）位于 `assets/translations/jsons/`（共 22 个文件）。
+- 构建期编译：`pyproject.toml` 的 `additional-compiled-static-assets = ["locales/"]` 指定翻译在构建时编译。
 - 子主题：注册自己的 catalog，避免与父主题冲突。
 
 ```python
@@ -257,6 +268,33 @@ def setup(app):
 ```
 
 模板中用 `{{ translate("Download this page") }}`，不要硬编码中文或英文。
+
+### 内置翻译键（22 项）
+
+`By the`、`By`、`Contents`、`Copyright`、`Download notebook file`、`Download source file`、`Download this page`、`Edit this page`、`Fullscreen mode`、`Last updated on`、`Launch`、`Open an issue`、`Print to PDF`、`Source repository`、`Sphinx Book Theme`、`Theme by the`、`Toggle navigation`、`next page`、`open issue`、`previous page`、`repository`、`suggest edit`。
+
+按钮宏中的文本与 tooltip 亦经 `translate()` 处理，因此模板内硬编码的文案同样会被翻译。
+
+### 新增语言
+
+1. 在 Sphinx 项目声明语言（如 `language = "zh_CN"`）；
+2. 用 `sphinx-intl` 提取并翻译消息；
+3. 本书主题自带翻译位于其 `static/locales/`，随主题分发。
+
+## 与 Sphinx 扩展协作
+
+| 扩展 | 协作方式 |
+|------|---------|
+| sphinx-external-toc | 侧边栏由 `sbt-sidebar-nav.html` 调用父主题的 `generate_toctree_html()` 渲染；用外部目录替换原生 toctree 时，须确保该扩展在本书主题之后加载，侧边栏导航改由 SiteMap 控制 |
+| sphinx-copybutton | `_code.scss` 内容样式与复制按钮兼容，可直接并用 |
+| sphinx-togglebutton | 由 `_sphinx-togglebutton.scss` 内置样式适配，直接安装并加入 `extensions` 即可 |
+| myst-nb | 深度适配：自动检测 Notebook 页（`kernelspec` 元数据）显示启动按钮；MD 笔记本自动复制同名 `.ipynb` 到 `_sources` 并新增 ipynb 下载按钮；`_myst-nb.scss` 提供代码单元输出样式 |
+| ablog | 列于文档依赖，兼容博客式站点构建 |
+
+## 已弃用配置键
+
+- `single_page`：自 v0.3.4 起弃用，命中时以 `sphinxbooktheme` 类型发出 warning 并指向 CHANGELOG。
+- `expand_toc_sections`：`theme.conf` 中标记为待弃用（DEPRECATE）。
 
 ## 测试
 

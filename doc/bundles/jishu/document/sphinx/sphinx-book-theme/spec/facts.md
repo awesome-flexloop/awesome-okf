@@ -173,3 +173,73 @@ title: "sphinx-book-theme 源码事实清单"
 - F-138: `docs/reference/extensions.md` 覆盖 `sphinxcontrib-bibtex`、`ABlog`、`sphinx-togglebutton`、`sphinx-tabs`、`sphinxcontrib.youtube`、`sphinx-design`。
 - F-139: `docs/contributing/style.md` 声明设计原则：极简视觉、单书用例、Tufte 元素。
 - F-140: `docs/contributing/style.md` 声明 SCSS 用 `stb compile` 或 `tox -e compile` 编译，编译产物不入 git。
+
+## 补充事实（旧包合并回补）
+
+> 下列事实由原 `myst/sphinx-book-theme` 知识包合并回补（2026-11-24），编号自 F-141 顺延；与上文去重后保留旧包独有的逐文件／逐函数粒度事实。
+
+### 项目元数据（补）
+
+- F-141: `pyproject.toml` 配置 `additional-compiled-static-assets = ["locales/"]`，即翻译目录在构建时编译。
+- F-142: `pyproject.toml` 的 classifier 含 `Development Status :: 4 - Beta`。
+- F-143: 项目维护者为 Executable Books Team。
+- F-144: 文档地址为 `https://sphinx-book-theme.readthedocs.io/`；仓库地址为 `https://github.com/executablebooks/sphinx-book-theme`。
+
+### 主题配置与事件处理（补）
+
+- F-145: `theme.conf` 注释说明 `use_edit_page_button` 继承自 pydata-sphinx-theme。
+- F-146: `add_metadata_to_page` 处理 `root_doc`/`master_doc` 兼容（Sphinx 4.x 重命名）。
+- F-147: `page_description` 由遍历 doctree 中的 section、拼接文本并截取前 160 字符生成。
+- F-148: `_gen_hash(path)` 以 `hashlib.sha1` 计算文件哈希，并加 `@lru_cache(maxsize=None)` 缓存。
+- F-149: `hash_assets_for_files` 为资源追加 `?digest={hash}` 参数实现缓存清除；按扩展名分类：`.css → css_files`，否则 → `script_files`。
+- F-150: `DEFAULT_LOG_TYPE = "sphinxbooktheme"`。
+- F-151: `update_sourcename` 以 `config_provided_by_user` 判定用户是否已显式配置 `html_sourcelink_suffix`。
+- F-152: `_compat.py` 提供 `findall(node, *args, **kwargs)`：优先 `node.findall`（docutils v0.18+），回退 `node.traverse`。
+
+### 上下文注入与按钮常量（补）
+
+- F-153: `update_context_with_repository_info` 向 `html_context` 注入 `{provider}_user`、`{provider}_repo`、`{provider}_version`、`{provider}_url` 与 `doc_path`。
+- F-154: `get_repo_url(context)` 调用 `get_repo_parts`，拼接 `f"{provider_url}/{user}/{repo}"`。
+- F-155: 下载按钮组 `type="group"`、`tooltip="Download this page"`、`icon="fas fa-download"`。
+- F-156: 全屏按钮 `type="javascript"`、调用 `toggleFullScreen()`、`icon="fas fa-expand"`、`classes="pst-navbar-icon"`。
+- F-157: 启动按钮组 `type="group"`、`tooltip="Launch interactive content"`、`icon="fas fa-rocket"`。
+- F-158: 平台图标路径：Binder `_static/images/logo_binder.svg`、JupyterHub `logo_jupyterhub.svg`、Colab `logo_colab.png`、Deepnote `logo_deepnote.svg`、JupyterLite `logo_jupyterlite.svg`。
+- F-159: JupyterHub 启动 URL 为 `/hub/user-redirect/git-pull?repo=...&urlpath=...&branch=...`。
+- F-160: `notebook_interface` 支持 `"classic"`（路径前缀 `tree`）与 `"jupyterlab"`（`lab/tree`），默认 `"classic"`。
+- F-161: 页面源文件非 `.ipynb` 但同目录存在同名 `.ipynb` 时，自动把 extension 切换为 `.ipynb`。
+- F-162: `use_repository_button` 以 `fab fa-{provider}` 作为图标。
+- F-163: issue 按钮预填标题为 `"Issue on page /{pagename}.html"`。
+
+### 模板（补）
+
+- F-164: `macros/buttons.html` 的 `render_inner_html` 宏：fa 图标用 `<i>`，其他图标用 `<img>`。
+- F-165: `sbt-webpack-macros.html` 为 webpack 宏模板（位于 `static/`）。
+- F-166: `layout.html` 的 `#jb-print-docs-body` 打印目录区域含 `.onlyprint` 类 h1 与 `page-toc` 导航。
+
+### 边注节点（补）
+
+- F-167: `visit_SideNoteNode` 中 sidenote 类型额外输出 `<span>` 开始标签；`depart_SideNoteNode` 输出 `</span>`、`</label>` 与隐藏 `<input type='checkbox'>`。
+- F-168: checkbox 的 `id`/`name` 与 label 的 `for` 一致，构成纯 CSS 点击切换。
+- F-169: 嵌套检测循环向上遍历父节点直到 `section` 或 `document`；父节点为 `paragraph`/`footnote` 时继续上溯，否则执行 `replace_self`。
+
+### JavaScript index.js（补）
+
+- F-170: `sbRunWhenDOMLoaded(cb)`：DOM 就绪后执行回调，兼容 `addEventListener` 与 `attachEvent`。
+- F-171: `initTocHide()` 以 `IntersectionObserver` 实现：margin/sidenote 进入视口时隐藏次级侧边栏；经 `sbt-scroll-pixel-helper` 检测滚动切换 `body.scrolled`。
+- F-172: TOC 隐藏触发选择器类：`marginnote, sidenote, margin, margin-caption, full-width, sidebar, popout`。
+- F-173: 上述选择器同时匹配四种命名变体：`.{cls}`、`.tag_{cls}`、`.{cls_with_underscores}`、`.tag_{cls_with_underscores}`。
+- F-174: `initTocHide` 的 `rootMargin = "0px 0px -33% 0px"`。
+- F-175: `initThebeSBT()` 在 h1 后插入 `thebe-launch-button`，调用 sphinx-thebe 的 `initThebe()`。
+- F-176: `addNoPrint()` 为头部、侧边栏、页脚等导航元素添加 `noprint` 类。
+- F-177: `addBlurToButtons()` 在点击按钮后 `blur()` 以消除 tooltip 残留。
+- F-178: `fixSidebarToggle()` 在宽屏（≥992px）阻止切换按钮打开 dialog modal，改为切换 `pst-sidebar-hidden` 类。
+- F-179: `fixSidebarToggle` 以 capture phase（`addEventListener` 第三参 `true`）在 PST 处理之前拦截事件。
+- F-180: 全局暴露 `window.initThebeSBT`、`window.toggleFullScreen`。
+- F-181: DOM 就绪时初始化 `initTocHide`、`addNoPrint`、`addBlurToButtons`、`fixSidebarToggle`。
+
+### SCSS 与翻译（补）
+
+- F-182: SCSS 目录逐文件枚举：`abstracts/`（`_mixins.scss`、`_variables.scss`）；`base/`（`_base.scss`、`_print.scss`、`_typography.scss`）；`components/`（`_back-to-top.scss`、`_icon-links.scss`、`_logo.scss`、`_search.scss`）；`content/`（`_admonitions.scss`、`_code.scss`、`_images.scss`、`_margin.scss`、`_notebooks.scss`、`_quotes.scss`）；`extensions/`（`_comments.scss`、`_myst-nb.scss`、`_sphinx-design.scss`、`_sphinx-tabs.scss`、`_sphinx-togglebutton.scss`、`_thebe.scss`）；`sections/`（`_announcement.scss`、`_article-container.scss`、`_article.scss`、`_footer-article.scss`、`_footer-content.scss`、`_header-article.scss`、`_header-primary.scss`、`_sidebar-primary.scss`、`_sidebar-secondary.scss`）。
+- F-183: 翻译键全表（22 项）：`By the`、`By`、`Contents`、`Copyright`、`Download notebook file`、`Download source file`、`Download this page`、`Edit this page`、`Fullscreen mode`、`Last updated on`、`Launch`、`Open an issue`、`Print to PDF`、`Source repository`、`Sphinx Book Theme`、`Theme by the`、`Toggle navigation`、`next page`、`open issue`、`previous page`、`repository`、`suggest edit`。
+- F-184: 翻译函数由 `get_translation(MESSAGE_CATALOG_NAME)` 获取；`buttons.html` 中文本经 `translate()` 处理。
+- F-185: 静态资源输出：CSS `styles/sphinx-book-theme.css` 与 JS `scripts/sphinx-book-theme.js` 均由 webpack 编译（SCSS / `index.js` 及依赖）产出。
