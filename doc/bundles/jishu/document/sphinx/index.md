@@ -33,15 +33,17 @@ Sphinx 是 Python 生态最强大的文档生成工具，支持 reStructuredText
 | 顺序 | 知识包 | 一句话简介 |
 |------|--------|-----------|
 | 6 | [alabaster](alabaster/index.md) | Sphinx 默认主题——极简架构（核心仅130行Python）、50+配置选项、5个组件化侧边栏模板、配置驱动样式体系、主题开发最佳范本 |
-| 7 | [sphinxcontrib-jsmath](sphinxcontrib-jsmath/index.md) | 数学公式渲染——JavaScript 客户端渲染、智能 JS 按需加载、公式编号与交叉引用、并行构建安全（核心仅88行） |
-| 8 | [sphinxext-opengraph](sphinxext-opengraph/index.md) | Open Graph 社交卡片——自动生成 og:title/description/image 标签、智能描述提取、四级图片回退、Matplotlib 自动生成社交分享图 |
-| 9 | [sphinxext-rediraffe](sphinxext-rediraffe/index.md) | 页面重定向——自动生成 HTML 重定向页、Jinja2 模板系统、跨平台路径处理、变更检查 diff、链式重定向 |
+| 7 | [pydata-sphinx-theme](pydata-sphinx-theme/index.md) | PyData 生产级主题——Bootstrap 三栏布局、可折叠章节树、页内目录、双主题、版本切换器、搜索即输与可访问性实践 |
+| 8 | [sphinx-book-theme](sphinx-book-theme/index.md) | 交互式书籍主题——继承 pydata-sphinx-theme，Tufte 边注、Notebook 单元格样式、Binder/Colab/Thebe 启动按钮与数据驱动页眉工具箱 |
+| 9 | [sphinxcontrib-jsmath](sphinxcontrib-jsmath/index.md) | 数学公式渲染——JavaScript 客户端渲染、智能 JS 按需加载、公式编号与交叉引用、并行构建安全（核心仅88行） |
+| 10 | [sphinxext-opengraph](sphinxext-opengraph/index.md) | Open Graph 社交卡片——自动生成 og:title/description/image 标签、智能描述提取、四级图片回退、Matplotlib 自动生成社交分享图 |
+| 11 | [sphinxext-rediraffe](sphinxext-rediraffe/index.md) | 页面重定向——自动生成 HTML 重定向页、Jinja2 模板系统、跨平台路径处理、变更检查 diff、链式重定向 |
 
 ### 部署基础设施
 
 | 顺序 | 知识包 | 一句话简介 |
 |------|--------|-----------|
-| 10 | [sphinx-docker-images](sphinx-docker-images/index.md) | Sphinx Docker 构建镜像——base/latexpdf/ci 三级镜像、LaTeX PDF 编译、CI 集成、自定义构建流程 |
+| 12 | [sphinx-docker-images](sphinx-docker-images/index.md) | Sphinx Docker 构建镜像——base/latexpdf/ci 三级镜像、LaTeX PDF 编译、CI 集成、自定义构建流程 |
 
 ## 相关案例
 
@@ -57,6 +59,8 @@ sphinx-autobuild/index
 sphinx-intl/index
 sphinx-websupport/index
 alabaster/index
+pydata-sphinx-theme/index
+sphinx-book-theme/index
 sphinxcontrib-jsmath/index
 sphinxext-opengraph/index
 sphinxext-rediraffe/index
