@@ -26,6 +26,13 @@ bundles-knowledge-system
 bundles/index
 ```
 
+```{toctree}
+:caption: 报告
+:maxdepth: 2
+
+reports/index
+```
+
 ## 索引与搜索
 
 - {ref}`genindex` - 查看所有索引条目

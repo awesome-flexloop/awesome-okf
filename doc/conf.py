@@ -166,12 +166,14 @@ if _OKF_BUILD_DOMAIN:
             "index.md",
             "bundles/index.md",
             "bundles/meta/**",
+            "reports/**",
         ] + [f"bundles/{d}/index.md" for d in _OKF_DOMAINS]
     else:
         include_patterns = [
             "index.md",
             "bundles/index.md",
             f"bundles/{_OKF_BUILD_DOMAIN}/**",
+            "reports/**",
         ]
     exclude_patterns = list(exclude_patterns)  # 保留原 exclude（_build/.spec 等）
 # else: 全量构建 → **不**显式定义 include_patterns。Sphinx 内部 compile_matchers
